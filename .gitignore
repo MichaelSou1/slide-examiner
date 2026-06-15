@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# 测试与类型缓存
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# 虚拟环境
+.venv/
+venv/
+env/
+
+# 实验产物（由 CLI 生成，不入库）
+runs/
+models/
+reports/
+*.log
+
+# 编辑器/系统
+.DS_Store
+.idea/
+.vscode/
