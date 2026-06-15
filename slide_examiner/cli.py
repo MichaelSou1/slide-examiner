@@ -22,11 +22,11 @@ from .orchestrator import MatrixRunConfig, run_matrix
 from .panel import summarize_panel_ratings
 from .power import two_proportion_sample_size
 from .probe import ProbeRunner
-from .render import render_slide_html_file
+from .render import render_manifest, render_slide_html_file
 from .repair import repair_slide
 from .reports import write_analysis_report
 from .schemas import ManifestSample, Slide
-from .sft import export_sft_jsonl
+from .sft import export_llamafactory_jsonl, export_sft_jsonl
 from .synthetic import SyntheticBuildConfig, build_synthetic_manifest
 from .training import TrainingConfig, run_training, write_training_config
 
@@ -62,6 +62,24 @@ def _cmd_build_sft(args: argparse.Namespace) -> int:
     samples = [ManifestSample.from_mapping(item) for item in read_jsonl(args.manifest)]
     count = export_sft_jsonl(samples, args.output, mode=args.mode)
     print(f"Wrote {count} {args.mode} SFT records to {args.output}")
+    return 0
+
+
+def _cmd_render_manifest(args: argparse.Namespace) -> int:
+    target = render_manifest(
+        args.manifest,
+        args.output_dir,
+        output_manifest=args.output_manifest,
+        render_clean=not args.no_clean,
+    )
+    print(f"Rendered manifest images to {args.output_dir} and wrote {target}")
+    return 0
+
+
+def _cmd_export_llamafactory(args: argparse.Namespace) -> int:
+    samples = [ManifestSample.from_mapping(item) for item in read_jsonl(args.manifest)]
+    count = export_llamafactory_jsonl(samples, args.output, dataset_name=args.dataset_name)
+    print(f"Wrote {count} LLaMA-Factory records to {args.output} (dataset '{args.dataset_name}')")
     return 0
 
 
@@ -445,6 +463,23 @@ def build_parser() -> argparse.ArgumentParser:
     sft.add_argument("output")
     sft.add_argument("--mode", choices=["pointwise", "pairwise"], default="pointwise")
     sft.set_defaults(func=_cmd_build_sft)
+
+    render_manifest_parser = subparsers.add_parser(
+        "render-manifest", help="Render defective/clean slide images for a manifest and write image paths back."
+    )
+    render_manifest_parser.add_argument("manifest")
+    render_manifest_parser.add_argument("output_dir")
+    render_manifest_parser.add_argument("--output-manifest", help="Write the updated manifest here (default: in place).")
+    render_manifest_parser.add_argument("--no-clean", action="store_true", help="Render only the defective image.")
+    render_manifest_parser.set_defaults(func=_cmd_render_manifest)
+
+    export_lf = subparsers.add_parser(
+        "export-llamafactory", help="Export a LLaMA-Factory sharegpt+images SFT dataset (+dataset_info.json)."
+    )
+    export_lf.add_argument("manifest")
+    export_lf.add_argument("output")
+    export_lf.add_argument("--dataset-name", default="slide_examiner")
+    export_lf.set_defaults(func=_cmd_export_llamafactory)
 
     analyze = subparsers.add_parser("analyze", help="Summarize mock or real SlideProbe JSONL records.")
     analyze.add_argument("probe_jsonl")

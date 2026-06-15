@@ -35,31 +35,36 @@ def build_synthetic_manifest(
         for severity in severities:
             split = _split_for(defect_type, severity, cfg)
             for repetition in range(cfg.examples_per_cell):
-                if defect_type in SLIDE_INJECTORS:
-                    if not slides:
+                try:
+                    if defect_type in SLIDE_INJECTORS:
+                        if not slides:
+                            continue
+                        slide = slides[(repetition + int(float(severity) * 10)) % len(slides)]
+                        injected = inject_slide_defect(slide, defect_type, severity=severity)
+                        sample_id = _sample_id(slide.slide_id, defect_type, severity, repetition)
+                        sample = slide_sample_from_injection(
+                            injected,
+                            sample_id=sample_id,
+                            output_dir=output,
+                            template_condition=cfg.template_condition,
+                        )
+                    elif defect_type in DECK_INJECTORS:
+                        if not decks:
+                            continue
+                        deck = decks[(repetition + int(float(severity) * 10)) % len(decks)]
+                        injected = inject_deck_defect(deck, defect_type, severity=severity)
+                        sample_id = _sample_id(deck.deck_id, defect_type, severity, repetition)
+                        sample = deck_sample_from_injection(
+                            injected,
+                            sample_id=sample_id,
+                            output_dir=output,
+                            template_condition=cfg.template_condition,
+                        )
+                    else:
                         continue
-                    slide = slides[(repetition + int(float(severity) * 10)) % len(slides)]
-                    injected = inject_slide_defect(slide, defect_type, severity=severity)
-                    sample_id = _sample_id(slide.slide_id, defect_type, severity, repetition)
-                    sample = slide_sample_from_injection(
-                        injected,
-                        sample_id=sample_id,
-                        output_dir=output,
-                        template_condition=cfg.template_condition,
-                    )
-                elif defect_type in DECK_INJECTORS:
-                    if not decks:
-                        continue
-                    deck = decks[(repetition + int(float(severity) * 10)) % len(decks)]
-                    injected = inject_deck_defect(deck, defect_type, severity=severity)
-                    sample_id = _sample_id(deck.deck_id, defect_type, severity, repetition)
-                    sample = deck_sample_from_injection(
-                        injected,
-                        sample_id=sample_id,
-                        output_dir=output,
-                        template_condition=cfg.template_condition,
-                    )
-                else:
+                except Exception:
+                    # Real-world slides may lack a suitable target for a given defect
+                    # (e.g. an image-only slide for text overflow); skip that cell.
                     continue
                 sample = _with_metadata(sample, split=split, severity_grid_value=severity)
                 samples.append(sample)

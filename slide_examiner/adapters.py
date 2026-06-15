@@ -7,6 +7,7 @@ from collections.abc import Mapping
 from typing import Any
 
 from .schemas import DefectLabel, ManifestSample, oracle_view
+from .examiner_contract import SeverityLevel, normalize_contract_output
 
 
 MODALITIES = ("A", "B", "Bprime", "C")
@@ -220,16 +221,31 @@ def _balanced_json_objects(text: str) -> list[str]:
 
 
 def normalize_examiner_output(value: dict[str, Any]) -> dict[str, Any]:
+    contract = normalize_contract_output(value)
+    if contract is not None:
+        return contract
+
     defects = value.get("defects", [])
     normalized_defects: list[dict[str, Any]] = []
     for defect in defects:
         element_ids = defect.get("element_ids", defect.get("target_element_ids", []))
+        severity_value = defect.get("severity", 0.0)
+        severity_level = None
+        if isinstance(severity_value, str):
+            try:
+                severity_level = SeverityLevel(severity_value).value
+                severity_numeric = {"none": 0.0, "minor": 1.0, "moderate": 2.0, "severe": 3.0}[severity_level]
+            except ValueError:
+                severity_numeric = 0.0
+        else:
+            severity_numeric = float(severity_value)
         normalized_defects.append(
             {
                 "type": defect.get("type", "UNKNOWN"),
                 "present": bool(defect.get("present", True)),
                 "element_ids": list(element_ids),
-                "severity": float(defect.get("severity", 0.0)),
+                "severity": severity_numeric,
+                "severity_level": severity_level,
                 "confidence": float(defect.get("confidence", 1.0)),
                 "evidence": defect.get("evidence", ""),
                 "fix": defect.get("fix", ""),

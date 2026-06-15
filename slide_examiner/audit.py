@@ -25,6 +25,7 @@ def run_code_audit() -> dict:
         _check_module("slide_examiner.probe", ["ProbeRunner", "ProbeRunConfig"]),
         _check_module("slide_examiner.analysis", ["summarize_probe_records", "template_collapse", "variance_gates"]),
         _check_module("slide_examiner.repair", ["repair_slide", "repair_passes_linter"]),
+        _check_module("slide_examiner.examiner_contract", ["PageExamRequest", "DeckExamRequest", "parse_page_result", "parse_deck_result"]),
         _check_module("slide_examiner.sft", ["export_sft_jsonl", "build_pairwise_record"]),
         _check_module("slide_examiner.model_adapters", ["QwenVLTransformersAdapter", "OpenAICompatibleAdapter", "JSONLReplayAdapter"]),
         _check_module("slide_examiner.panel", ["PanelRating", "summarize_panel_ratings"]),

@@ -50,7 +50,7 @@ class QwenVLTransformersAdapter(ExaminerAdapter):
     def _complete(self, payload: dict[str, Any]) -> str:
         if self._model is None or self._processor is None:
             raise RuntimeError("Model was not loaded")
-        messages = [{"role": "user", "content": _payload_content(payload)}]
+        messages = payload.get("messages") or [{"role": "user", "content": _payload_content(payload)}]
         text = self._processor.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
         processor_kwargs: dict[str, Any] = {"text": [text], "return_tensors": "pt"}
         try:
@@ -127,7 +127,7 @@ class OpenAICompatibleAdapter(ExaminerAdapter):
         client = OpenAI(api_key=api_key, base_url=self.config.base_url)
         response = client.chat.completions.create(
             model=self.config.model,
-            messages=[{"role": "user", "content": _openai_content(payload)}],
+            messages=payload.get("messages") or [{"role": "user", "content": _openai_content(payload)}],
             max_tokens=self.config.max_tokens,
             temperature=self.config.temperature,
         )
