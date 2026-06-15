@@ -25,6 +25,9 @@ all = [
 [project.scripts]
 slide-examiner = "slide_examiner.cli:main"
 
+[tool.setuptools.packages.find]
+include = ["slide_examiner*"]
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["."]

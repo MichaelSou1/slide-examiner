@@ -18,12 +18,31 @@
 
 ## 安装
 
+本项目用 conda 管理环境。在仓库根目录：
+
 ```bash
-python -m pip install -e ".[dev]"
+conda env create -f environment.yml
+conda activate slide-examiner
 pytest
 ```
 
-安装后提供命令行入口 `slide-examiner`。
+环境以 `python=3.12` 为基底，依赖以 `pyproject.toml` 为单一来源、通过 pip 做可编辑安装，安装后提供命令行入口 `slide-examiner`。
+
+需要真实渲染 / VLM 推理 / 训练能力时再装可选 extras：
+
+```bash
+pip install -e ".[render]"   # Playwright + python-pptx
+pip install -e ".[vlm]"      # transformers + accelerate + pillow
+pip install -e ".[all]"      # 全部
+```
+
+> VLM 推理 / QLoRA 训练需要与本机 CUDA 匹配的 PyTorch；extras 默认拉取 CPU 版，建议按 PyTorch 官方指引单独安装 GPU 版。
+
+修改依赖后同步环境：
+
+```bash
+conda env update -f environment.yml --prune
+```
 
 -----
 

@@ -1,0 +1,10 @@
+name: slide-examiner
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pip
+  # 依赖以 pyproject.toml 为单一来源；此处用 pip 做可编辑安装。
+  # 需要渲染/VLM 能力时改成 -e .[all]（或 .[render] / .[vlm]）。
+  - pip:
+      - -e .[dev]
