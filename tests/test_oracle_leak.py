@@ -153,5 +153,5 @@ def test_bprime_caption_is_populated(tmp_path) -> None:
     assert isinstance(slide_sample.caption, str)
     assert slide_sample.caption != ""
 
-    payload = build_probe_payload(slide_sample, modality="Bprime", task="T1")
+    payload = build_probe_payload(slide_sample, modality="B_prime", task="T1")
     assert payload["caption"]

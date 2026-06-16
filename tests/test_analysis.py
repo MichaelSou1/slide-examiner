@@ -88,6 +88,16 @@ def test_modality_accuracy_gaps() -> None:
     assert gaps[0]["gap"] == 1.0
 
 
+def test_caption_oracle_gap_normalizes_legacy_bprime_name() -> None:
+    rows = [
+        classify_probe_record(record("s1", "Bprime", [])),
+        classify_probe_record(record("s1", "B", ["G1_TEXT_OVERFLOW"])),
+    ]
+    gaps = modality_accuracy_gaps(rows, left_modality="Bprime", right_modality="B")
+    assert gaps[0]["left_modality"] == "B_prime"
+    assert gaps[0]["gap"] == 1.0
+
+
 def test_template_collapse_summary() -> None:
     freeform = record("s1", "A", [])
     freeform["metadata"]["template_condition"] = "freeform"

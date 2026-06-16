@@ -8,8 +8,12 @@ def test_experiment_matrix_count() -> None:
     assert len(matrix.records()) == 4
 
 
+def test_default_matrix_uses_b_prime_modality() -> None:
+    matrix = ExperimentMatrix(models=("m",), tasks=("T1",), resolutions=(768,), seeds=(0,))
+    assert matrix.modalities == ("A", "B", "B_prime", "C")
+
+
 def test_write_matrix_json(tmp_path) -> None:
     path = write_matrix_json(ExperimentMatrix(models=("m",), resolutions=(768,), seeds=(0,)), tmp_path / "matrix.json")
     data = json.loads(path.read_text(encoding="utf-8"))
     assert data["matrix"]["planned_cells"] == len(data["records"])
-

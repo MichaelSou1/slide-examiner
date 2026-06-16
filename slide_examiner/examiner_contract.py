@@ -18,21 +18,7 @@ from .schemas import (
     Slide,
     oracle_view,
 )
-
-
-class DefectType(str, Enum):
-    G1_TEXT_OVERFLOW = "G1_TEXT_OVERFLOW"
-    G2_ELEMENT_OVERLAP = "G2_ELEMENT_OVERLAP"
-    G3_ALIGNMENT_OFFSET = "G3_ALIGNMENT_OFFSET"
-    G4_FONT_SIZE_INCONSISTENCY = "G4_FONT_SIZE_INCONSISTENCY"
-    G5_BRAND_COLOR_VIOLATION = "G5_BRAND_COLOR_VIOLATION"
-    G6_MARGIN_VIOLATION = "G6_MARGIN_VIOLATION"
-    S1_TITLE_BODY_MISMATCH = "S1_TITLE_BODY_MISMATCH"
-    S2_NARRATIVE_ORDER_BREAK = "S2_NARRATIVE_ORDER_BREAK"
-    S3_TERMINOLOGY_INCONSISTENCY = "S3_TERMINOLOGY_INCONSISTENCY"
-    S4_DENSITY_RULE_VIOLATION = "S4_DENSITY_RULE_VIOLATION"
-    S5_MISSING_LOGIC_SECTION = "S5_MISSING_LOGIC_SECTION"
-    S6_IMAGE_TEXT_CONTRADICTION = "S6_IMAGE_TEXT_CONTRADICTION"
+from .taxonomy import DefectType
 
 
 class ElementType(str, Enum):
@@ -217,6 +203,11 @@ class PageExamRequest(ContractModel):
     level: Literal[ExamLevel.PAGE] = ExamLevel.PAGE
     modality: Modality = Modality.C_BOTH
 
+    @field_validator("modality", mode="before")
+    @classmethod
+    def _normalize_page_modality(cls, value: Modality | str) -> Modality | str:
+        return normalize_modality(value)
+
     @field_validator("check_scope")
     @classmethod
     def _check_page_scope(cls, value: list[DefectType]) -> list[DefectType]:
@@ -260,6 +251,11 @@ class DeckExamRequest(ContractModel):
     mode: Literal[ExamMode.POINTWISE] = ExamMode.POINTWISE
     level: Literal[ExamLevel.DECK] = ExamLevel.DECK
     modality: Modality = Modality.C_BOTH
+
+    @field_validator("modality", mode="before")
+    @classmethod
+    def _normalize_deck_modality(cls, value: Modality | str) -> Modality | str:
+        return normalize_modality(value)
 
     @field_validator("check_scope")
     @classmethod
@@ -459,7 +455,7 @@ def page_request_from_sample(
     manifest = ManifestSample.from_mapping(sample)
     slide = _sample_slide(manifest)
     page_id = slide.slide_id if slide is not None else manifest.sample_id
-    mod = Modality(modality)
+    mod = normalize_modality(modality)
     image = _sample_image_base64(manifest) if mod in {Modality.A_IMAGE_ONLY, Modality.C_BOTH} else None
     elements = _elements_from_slide(slide) if slide is not None and mod in {Modality.B_STRUCT_ONLY, Modality.C_BOTH} else None
     if slide is None and mod in {Modality.B_STRUCT_ONLY, Modality.C_BOTH}:
@@ -491,7 +487,7 @@ def deck_request_from_sample(
     deck = _sample_deck(manifest)
     if deck is None:
         raise ValueError("deck request requires a deck sample")
-    mod = Modality(modality)
+    mod = normalize_modality(modality)
     fallback_image = _sample_image_base64(manifest) if mod in {Modality.A_IMAGE_ONLY, Modality.C_BOTH} else None
     pages: list[DeckPageInput] = []
     for index, slide in enumerate(deck.slides):
@@ -580,6 +576,17 @@ def build_messages_from_sample(
     if isinstance(request, DeckExamRequest):
         return build_deck_messages(request)
     return build_page_messages(request)
+
+
+def build_runtime_messages_from_sample(sample: ManifestSample | dict[str, Any]) -> list[dict[str, Any]]:
+    """Build the runtime examiner request.
+
+    Runtime calls always use modality C (image + structure). Attribution probes
+    and training export may still pass A/B/B_prime explicitly through the lower
+    level builders.
+    """
+
+    return build_messages_from_sample(sample, modality=Modality.C_BOTH)
 
 
 def normalize_contract_output(value: dict[str, Any]) -> dict[str, Any] | None:
@@ -893,6 +900,15 @@ def _load_json_object(raw: str | bytes | dict[str, Any]) -> dict[str, Any]:
     if fence:
         text = fence.group(1).strip()
     return json.loads(text)
+
+
+def normalize_modality(modality: Modality | str) -> Modality:
+    if isinstance(modality, Modality):
+        return modality
+    value = str(modality)
+    if value == "Bprime":
+        value = Modality.B_CAPTION_ONLY.value
+    return Modality(value)
 
 
 def _validate_modality_payload(modality: Modality, image: str | None, elements: list[Element] | None) -> None:

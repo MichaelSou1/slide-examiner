@@ -8,7 +8,8 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
-from .adapters import ExaminerAdapter, parse_examiner_json
+from .adapters import ExaminerAdapter, complete_and_parse_with_retries, parse_examiner_json
+from .examiner_contract import normalize_modality
 
 
 @dataclass(frozen=True)
@@ -30,8 +31,7 @@ class QwenVLTransformersAdapter(ExaminerAdapter):
 
     def examine(self, payload: dict[str, Any], *args: Any, **kwargs: Any) -> dict[str, Any]:
         self._ensure_loaded()
-        raw = self._complete(payload)
-        return parse_examiner_json(raw)
+        return complete_and_parse_with_retries(payload, self._complete)
 
     def _ensure_loaded(self) -> None:
         if self._model is not None:
@@ -85,11 +85,11 @@ class JSONLReplayAdapter(ExaminerAdapter):
                 if not line.strip():
                     continue
                 record = json.loads(line)
-                key = (str(record["sample_id"]), str(record["modality"]), str(record["task"]))
+                key = (str(record["sample_id"]), normalize_modality(str(record["modality"])).value, str(record["task"]))
                 self.records[key] = record
 
     def examine(self, payload: dict[str, Any], *args: Any, **kwargs: Any) -> dict[str, Any]:
-        key = (str(payload["sample_id"]), str(payload["modality"]), str(payload["task"]))
+        key = (str(payload["sample_id"]), normalize_modality(str(payload["modality"])).value, str(payload["task"]))
         if key not in self.records:
             raise KeyError(f"No replay record for {key}")
         record = self.records[key]
@@ -117,6 +117,9 @@ class OpenAICompatibleAdapter(ExaminerAdapter):
         self.name = f"openai-compatible:{config.model}"
 
     def examine(self, payload: dict[str, Any], *args: Any, **kwargs: Any) -> dict[str, Any]:
+        return complete_and_parse_with_retries(payload, self._complete)
+
+    def _complete(self, payload: dict[str, Any]) -> str:
         try:
             from openai import OpenAI
         except ImportError as exc:
@@ -131,8 +134,7 @@ class OpenAICompatibleAdapter(ExaminerAdapter):
             max_tokens=self.config.max_tokens,
             temperature=self.config.temperature,
         )
-        raw = response.choices[0].message.content or "{}"
-        return parse_examiner_json(raw)
+        return response.choices[0].message.content or "{}"
 
 
 def _payload_content(payload: dict[str, Any]) -> list[dict[str, Any]]:

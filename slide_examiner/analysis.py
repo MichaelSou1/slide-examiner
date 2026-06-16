@@ -5,6 +5,7 @@ from dataclasses import dataclass
 from typing import Any, Iterable
 
 from .adapters import normalize_examiner_output
+from .examiner_contract import Modality, normalize_modality
 from .statistics import variance_gated_effect
 
 
@@ -30,7 +31,11 @@ def summarize_probe_records(records: Iterable[dict[str, Any]]) -> dict[str, Any]
         "metrics": aggregate_metrics(rows),
         "attribution": attribute_failures(rows, repair_outcomes=_repair_outcomes(records)),
         "oracle_gaps": modality_accuracy_gaps(rows, left_modality="A", right_modality="B"),
-        "caption_oracle_gaps": modality_accuracy_gaps(rows, left_modality="Bprime", right_modality="B"),
+        "caption_oracle_gaps": modality_accuracy_gaps(
+            rows,
+            left_modality=Modality.B_CAPTION_ONLY.value,
+            right_modality=Modality.B_STRUCT_ONLY.value,
+        ),
         "template_collapse": template_collapse(rows),
         "variance_gates": variance_gates(rows),
         "psychometric_thresholds": psychometric_thresholds(rows),
@@ -46,7 +51,7 @@ def classify_probe_record(record: dict[str, Any]) -> Classification:
     return Classification(
         sample_id=str(record.get("sample_id", record.get("payload", {}).get("sample_id", ""))),
         model=_record_model(record),
-        modality=str(record.get("modality", record.get("payload", {}).get("modality", ""))),
+        modality=_record_modality(record),
         task=str(record.get("task", record.get("payload", {}).get("task", ""))),
         expected_types=expected_types,
         predicted_types=predicted_types,
@@ -190,6 +195,8 @@ def modality_accuracy_gaps(
     right_modality: str,
     task: str = "T1",
 ) -> list[dict[str, Any]]:
+    left_modality = _normalize_modality_name(left_modality)
+    right_modality = _normalize_modality_name(right_modality)
     grouped: dict[tuple[str | None, str, str | None], dict[str, list[Classification]]] = defaultdict(lambda: defaultdict(list))
     for row in rows:
         if row.task != task or row.modality not in {left_modality, right_modality}:
@@ -370,6 +377,18 @@ def _record_model(record: dict[str, Any]) -> str | None:
     if isinstance(payload, dict) and payload.get("model") is not None:
         return str(payload["model"])
     return None
+
+
+def _record_modality(record: dict[str, Any]) -> str:
+    value = record.get("modality", record.get("payload", {}).get("modality", ""))
+    return _normalize_modality_name(str(value))
+
+
+def _normalize_modality_name(value: str) -> str:
+    try:
+        return normalize_modality(value).value
+    except ValueError:
+        return value
 
 
 def _predicted_types(record: dict[str, Any]) -> tuple[str, ...]:

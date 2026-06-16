@@ -4,16 +4,27 @@ import json
 import re
 from abc import ABC, abstractmethod
 from collections.abc import Mapping
+from collections.abc import Callable
+from copy import deepcopy
 from typing import Any
 
 from .schemas import DefectLabel, ManifestSample, oracle_view
-from .examiner_contract import SeverityLevel, normalize_contract_output
+from .examiner_contract import Modality, SeverityLevel, normalize_contract_output, normalize_modality
 
 
-MODALITIES = ("A", "B", "Bprime", "C")
+MODALITIES = tuple(
+    modality.value
+    for modality in (
+        Modality.A_IMAGE_ONLY,
+        Modality.B_STRUCT_ONLY,
+        Modality.B_CAPTION_ONLY,
+        Modality.C_BOTH,
+    )
+)
 TASKS = ("T1", "T2", "T3")
 VALID_MODALITIES = set(MODALITIES)
 VALID_TASKS = set(TASKS)
+JSON_RETRY_INSTRUCTION = "OUTPUT VALID JSON ONLY. No prose, no markdown, no code fences."
 
 TASK_INSTRUCTIONS = {
     "T1": "Detect whether the requested slide defect is present. Return JSON only.",
@@ -61,9 +72,10 @@ def target_defect(sample: Any) -> Any:
 
 
 def validate_modality(modality: str) -> str:
-    if modality not in VALID_MODALITIES:
+    normalized = normalize_modality(modality).value
+    if normalized not in VALID_MODALITIES:
         raise ValueError(f"Unsupported modality: {modality}")
-    return modality
+    return normalized
 
 
 def validate_task(task: str) -> str:
@@ -80,13 +92,19 @@ class ExaminerAdapter(ABC):
         """Run an examiner on a prepared payload and return parsed JSON."""
 
 
+class ExaminerParseFailure(ValueError):
+    def __init__(self, message: str, attempts: list[dict[str, str]]) -> None:
+        super().__init__(message)
+        self.attempts = attempts
+
+
 def build_probe_payload(
     sample: ManifestSample | dict[str, Any],
     *,
     modality: str,
     task: str,
 ) -> dict[str, Any]:
-    validate_modality(modality)
+    modality = validate_modality(modality)
     validate_task(task)
 
     manifest = ManifestSample.from_mapping(sample)
@@ -113,7 +131,7 @@ def build_probe_payload(
             oracle = oracle_view(manifest.deck.to_dict())
         payload["oracle"] = oracle
         inputs["oracle"] = oracle
-    if modality == "Bprime":
+    if modality == Modality.B_CAPTION_ONLY.value:
         payload["caption"] = manifest.caption or ""
         inputs["caption"] = manifest.caption or ""
 
@@ -166,6 +184,50 @@ def parse_examiner_json(raw: str | bytes | dict[str, Any]) -> dict[str, Any]:
     detail = "; ".join(errors[-3:]) if errors else "no JSON object found"
     preview = text[:120].replace("\n", "\\n")
     raise ValueError(f"Could not parse examiner JSON: {detail}. Preview: {preview!r}")
+
+
+def complete_and_parse_with_retries(
+    payload: dict[str, Any],
+    complete: Callable[[dict[str, Any]], str],
+    *,
+    max_retries: int = 1,
+) -> dict[str, Any]:
+    attempts: list[dict[str, str]] = []
+    current_payload = payload
+    for attempt_index in range(max_retries + 1):
+        raw_output = complete(current_payload)
+        try:
+            return parse_examiner_json(raw_output)
+        except ValueError as exc:
+            attempts.append({"raw_output": raw_output, "error": str(exc)})
+            if attempt_index >= max_retries:
+                raise ExaminerParseFailure("Examiner output could not be parsed after retry", attempts) from exc
+            current_payload = payload_with_json_retry_instruction(payload)
+    raise ExaminerParseFailure("Examiner output could not be parsed after retry", attempts)
+
+
+def payload_with_json_retry_instruction(payload: dict[str, Any]) -> dict[str, Any]:
+    retried = deepcopy(payload)
+    messages = retried.get("messages")
+    if isinstance(messages, list) and messages:
+        _append_retry_instruction_to_messages(messages)
+    else:
+        prompt = str(retried.get("prompt", retried.get("instruction", ""))).strip()
+        retried["prompt"] = "\n".join(part for part in (prompt, JSON_RETRY_INSTRUCTION) if part)
+    retried["json_retry_instruction"] = JSON_RETRY_INSTRUCTION
+    return retried
+
+
+def _append_retry_instruction_to_messages(messages: list[Any]) -> None:
+    user_messages = [message for message in messages if isinstance(message, dict) and message.get("role") == "user"]
+    target = user_messages[-1] if user_messages else messages[-1]
+    content = target.get("content") if isinstance(target, dict) else None
+    if isinstance(content, list):
+        content.append({"type": "text", "text": JSON_RETRY_INSTRUCTION})
+    elif isinstance(content, str):
+        target["content"] = f"{content}\n{JSON_RETRY_INSTRUCTION}"
+    elif isinstance(target, dict):
+        target["content"] = [{"type": "text", "text": JSON_RETRY_INSTRUCTION}]
 
 
 def _json_candidates(text: str) -> list[str]:
@@ -297,8 +359,8 @@ class MockAdapter(ExaminerAdapter):
                 "parsed": parse_examiner_json(raw_output),
             }
 
-        raw_output = self.complete(payload)
-        return normalize_examiner_output(parse_examiner_json(raw_output))
+        parsed = complete_and_parse_with_retries(payload, self.complete)
+        return normalize_examiner_output(parsed)
 
     def _default_response(self, payload: Mapping[str, Any]) -> dict[str, Any]:
         labels = [DefectLabel.from_mapping(item) for item in payload.get("expected_labels", [])]

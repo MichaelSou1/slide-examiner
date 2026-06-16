@@ -48,7 +48,7 @@ def write_analysis_report(summary: dict[str, Any], path: str | Path, *, title: s
     lines.extend(["", "## Caption Oracle Gaps"])
     for item in summary.get("caption_oracle_gaps", []):
         lines.append(
-            "- {model}/{defect}/{template}: B-Bprime accuracy gap={gap:.3f}".format(
+            "- {model}/{defect}/{template}: B-B_prime accuracy gap={gap:.3f}".format(
                 model=item.get("model") or "unknown",
                 defect=item["defect_type"],
                 template=item.get("template_condition") or "unknown",

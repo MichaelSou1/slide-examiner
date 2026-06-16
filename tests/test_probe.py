@@ -1,6 +1,13 @@
-from slide_examiner.adapters import MockAdapter
+from slide_examiner.adapters import ExaminerAdapter, MockAdapter, complete_and_parse_with_retries
 from slide_examiner.probe import ProbeRunConfig, ProbeRunner
 from slide_examiner.schemas import DefectLabel, ManifestSample
+
+
+class BrokenAdapter(ExaminerAdapter):
+    name = "broken"
+
+    def examine(self, payload, *args, **kwargs):
+        return complete_and_parse_with_retries(payload, lambda _: "not json")
 
 
 def test_probe_runner_records_cross_product() -> None:
@@ -27,3 +34,11 @@ def test_probe_runner_writes_jsonl(tmp_path) -> None:
     assert len(records) == 1
     assert path.read_text(encoding="utf-8").strip()
 
+
+def test_probe_runner_records_examiner_parse_failure() -> None:
+    runner = ProbeRunner(BrokenAdapter(), ProbeRunConfig(modalities=("B_prime",), tasks=("T1",)))
+    records = runner.run([ManifestSample(sample_id="s1", caption="Caption", labels=())])
+    assert records[0]["modality"] == "B_prime"
+    assert records[0]["examiner_failure"] is True
+    assert records[0]["failure_type"] == "parse_error"
+    assert len(records[0]["parse_attempts"]) == 2

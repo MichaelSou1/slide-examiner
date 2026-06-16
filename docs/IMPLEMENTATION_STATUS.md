@@ -28,14 +28,15 @@ This document maps the research spec to the current codebase.
   - dataset source registry and explicit URL download helper
   - pre-registered model/modality/task/template/resolution/seed matrix
   - matrix runner for mock/replay/local/API adapters
-  - mock SlideProbe runner for A/B/Bprime/C and T1/T2/T3
+  - mock SlideProbe runner for A/B/B_prime/C and T1/T2/T3
+  - runtime request helper that always sends modality C (image + structure); A/B/B_prime are attribution/training-only paths
   - replay/local Qwen-VL adapter scaffolds
   - probe result JSONL
 - Analysis:
   - detection metrics
   - manifest/linter defect distribution summaries
   - A vs B perception/reasoning attribution
-  - B vs Bprime caption-oracle gap
+  - B vs B_prime caption-oracle gap
   - template-collapse summary
   - severity psychometric thresholds
   - variance gating
