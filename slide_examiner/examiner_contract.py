@@ -302,6 +302,12 @@ class Finding(ContractModel):
             raise ValueError("Finding severity cannot be 'none'")
         return severity
 
+    @model_validator(mode="after")
+    def _check_explanatory_fields(self) -> "Finding":
+        _validate_evidence_text(self)
+        _validate_fix_suggestion_text(self.fix_suggestion)
+        return self
+
 
 class PageExamResult(ContractModel):
     page_id: str
@@ -392,14 +398,17 @@ def build_deck_messages(req: DeckExamRequest) -> list[dict[str, Any]]:
             elements_txt = "\nELEMENTS:\n" + serialize_elements(page.elements)
 
         render_txt = f"\n{serialize_render(page.render)}" if page.render else ""
-        page_blocks.append(
-            f"PAGE {page.page_index} id={page.page_id}{render_txt}\n"
-            f"TITLE: {page.title_text}\n"
-            f"VISIBLE_TEXT: {page.visible_text}\n"
-            f"KEY_TERMS: {page.key_terms}\n"
-            f"FIGURES: {page.figure_summaries}"
-            f"{elements_txt}"
-        )
+        if req.modality == Modality.A_IMAGE_ONLY:
+            page_blocks.append(f"PAGE {page.page_index} id={page.page_id}{render_txt}")
+        else:
+            page_blocks.append(
+                f"PAGE {page.page_index} id={page.page_id}{render_txt}\n"
+                f"TITLE: {page.title_text}\n"
+                f"VISIBLE_TEXT: {page.visible_text}\n"
+                f"KEY_TERMS: {page.key_terms}\n"
+                f"FIGURES: {page.figure_summaries}"
+                f"{elements_txt}"
+            )
 
     instruction = (
         f"DECK_ID: {req.deck_id}\n"
@@ -413,6 +422,10 @@ def build_deck_messages(req: DeckExamRequest) -> list[dict[str, Any]]:
     )
     content.append({"type": "text", "text": instruction})
     return [{"role": "system", "content": SYSTEM_PROMPT_DECK}, {"role": "user", "content": content}]
+
+
+def image_content_from_path(path: str | Path) -> dict[str, Any]:
+    return {"type": "image_url", "image_url": {"url": image_url_from_path(path)}}
 
 
 def parse_page_result(raw: str | bytes | dict[str, Any]) -> PageExamResult:
@@ -489,9 +502,10 @@ def deck_request_from_sample(
         raise ValueError("deck request requires a deck sample")
     mod = normalize_modality(modality)
     fallback_image = _sample_image_base64(manifest) if mod in {Modality.A_IMAGE_ONLY, Modality.C_BOTH} else None
+    page_images = _page_image_base64s(manifest) if mod in {Modality.A_IMAGE_ONLY, Modality.C_BOTH} else []
     pages: list[DeckPageInput] = []
     for index, slide in enumerate(deck.slides):
-        image = fallback_image if index == 0 else None
+        image = page_images[index] if index < len(page_images) else (fallback_image if index == 0 else None)
         elements = _elements_from_slide(slide) if mod in {Modality.B_STRUCT_ONLY, Modality.C_BOTH} else None
         pages.append(
             DeckPageInput(
@@ -717,21 +731,54 @@ def _evidence_from_label(defect: DefectType, targets: list[str], level: ExamLeve
     target_text = ", ".join(targets) if targets else ("deck" if level == ExamLevel.DECK else "slide")
     if defect == DefectType.S2_NARRATIVE_ORDER_BREAK:
         swapped = metadata.get("swapped_indices")
-        return f"The deck page order is inconsistent around pages {swapped}; related pages: {target_text}."
+        return f"Page order is inconsistent around pages {swapped}; visible sequence includes {target_text}."
     if defect == DefectType.S3_TERMINOLOGY_INCONSISTENCY:
         canonical = metadata.get("canonical")
         variant = metadata.get("variant")
-        return f"The deck uses inconsistent terminology: {canonical!r} and {variant!r} appear for the same entity."
+        page = metadata.get("slide_id")
+        page_text = f" on page {page}" if page else ""
+        return f"Terms {canonical!r} and {variant!r} both appear for the same entity{page_text}."
     if defect == DefectType.S5_MISSING_LOGIC_SECTION:
         section = metadata.get("missing_section") or (targets[0] if targets else "required section")
-        return f"The deck is missing the required section {section!r}."
+        return f"Required section {section!r} is absent from the visible deck outline."
     if defect == DefectType.S4_DENSITY_RULE_VIOLATION:
-        return f"Element {target_text} exceeds the scene density rule with visible text over the configured limit."
+        words = metadata.get("target_words")
+        limit = metadata.get("max_words")
+        if words is not None and limit is not None:
+            return f"Element {target_text} has {words} visible words, above the {limit}-word scene density limit."
+        return f"Element {target_text} has visible text above the scene density limit."
     if defect == DefectType.S6_IMAGE_TEXT_CONTRADICTION:
-        return f"Elements {target_text} present a diagram/text claim that contradicts the visible slide content."
+        claim = metadata.get("diagram_claim")
+        if claim:
+            return f"Diagram/text elements {target_text} conflict: diagram claim {claim!r} and body text disagree."
+        return f"Diagram/text elements {target_text} conflict in the visible slide content."
     if defect == DefectType.S1_TITLE_BODY_MISMATCH:
-        return f"Title/body elements {target_text} describe different topics on the same slide."
-    return f"Visible element {target_text} shows {defect.value} in the rendered slide."
+        return f"Title/body elements {target_text} describe different visible topics on the same slide."
+    if defect == DefectType.G1_TEXT_OVERFLOW:
+        amount = _format_measurement(metadata.get("overflow_px"), suffix=" px")
+        return f"Element {target_text} text overflows its bounding box{amount} on the page."
+    if defect == DefectType.G2_ELEMENT_OVERLAP:
+        iou = _format_measurement(metadata.get("iou"), prefix=" with IoU ")
+        return f"Elements {target_text} visibly overlap on the page{iou}."
+    if defect == DefectType.G3_ALIGNMENT_OFFSET:
+        amount = _format_measurement(metadata.get("offset_px"), suffix=" px")
+        axis = metadata.get("axis")
+        axis_text = f" on the {axis} axis" if axis else ""
+        return f"Element {target_text} is offset from the visible alignment position{amount}{axis_text}."
+    if defect == DefectType.G4_FONT_SIZE_INCONSISTENCY:
+        amount = _format_measurement(metadata.get("delta_pt"), suffix=" pt")
+        return f"Element {target_text} font size differs from peer text{amount}."
+    if defect == DefectType.G5_BRAND_COLOR_VIOLATION:
+        amount = _format_measurement(metadata.get("delta_e"), prefix=" by delta-E ")
+        color = metadata.get("actual_color")
+        color_text = f" {color}" if color else ""
+        return f"Element {target_text} uses visible color{color_text} outside the brand palette{amount}."
+    if defect == DefectType.G6_MARGIN_VIOLATION:
+        amount = _format_measurement(metadata.get("bleed_px"), suffix=" px")
+        side = metadata.get("side")
+        side_text = f" {side}" if side else ""
+        return f"Element {target_text} crosses the{side_text} safe margin{amount}."
+    return f"Visible element {target_text} has a page-level layout problem in the rendered slide."
 
 
 def _fix_from_label(defect: DefectType, targets: list[str], level: ExamLevel, metadata: dict[str, Any]) -> str:
@@ -756,6 +803,83 @@ def _fix_from_label(defect: DefectType, targets: list[str], level: ExamLevel, me
         section = metadata.get("missing_section") or "missing required section"
         return f"Add a page or section covering {section!r}."
     return f"Revise {target_text} so the slide content matches the requested narrative and visible evidence."
+
+
+def _validate_evidence_text(finding: Finding) -> None:
+    text = finding.evidence.strip()
+    if not text:
+        raise ValueError("evidence must be non-empty")
+    lowered = text.lower()
+    for forbidden in _FORBIDDEN_EVIDENCE_PATTERNS:
+        if forbidden.search(lowered):
+            raise ValueError(f"evidence contains forbidden key {forbidden.pattern!r}")
+
+    normalized = re.sub(r"[^a-z0-9]+", " ", lowered).strip()
+    defect_words = re.sub(r"[^a-z0-9]+", " ", finding.type.value.lower()).strip()
+    defect_tokens = set(defect_words.split())
+    evidence_tokens = set(normalized.split())
+    if normalized == defect_words or (evidence_tokens and evidence_tokens <= defect_tokens):
+        raise ValueError("evidence cannot only restate the defect type")
+
+    if _has_visible_fact(text, finding.locator):
+        return
+    raise ValueError("evidence must cite a visible fact such as a page, element, text, term, order, or conflict")
+
+
+def _validate_fix_suggestion_text(value: str) -> None:
+    text = value.strip()
+    if not text:
+        raise ValueError("fix_suggestion must be non-empty")
+    if not re.search(
+        r"\b(add|adjust|align|change|correct|move|normalize|realign|reduce|remove|replace|resize|restore|revise|reorder|shorten|split|update)\b",
+        text,
+        flags=re.IGNORECASE,
+    ):
+        raise ValueError("fix_suggestion must describe an executable action")
+
+
+def _has_visible_fact(text: str, locator: Locator) -> bool:
+    lowered = text.lower()
+    candidates = [locator.page_id, locator.element_id, *locator.related_page_ids]
+    if any(candidate and str(candidate).lower() in lowered for candidate in candidates):
+        return True
+    visible_patterns = (
+        r"\bpage\s+\d+\b",
+        r"\bpage order\b",
+        r"\bsequence\b",
+        r"\belement\s+[\w.-]+\b",
+        r"\btitle/body\b",
+        r"\bdiagram/text\b",
+        r"\bvisible\s+(text|color|slide|deck|sequence)\b",
+        r"\b(term|terms|terminology)\b",
+        r"\b(conflict|contradict|overlap|margin|font|color|text|bounding box)\b",
+        r"\b\d+(?:\.\d+)?\s*(px|pt|words?)\b",
+        r"\biou\s+\d",
+        r"'[^']+'",
+        r"\"[^\"]+\"",
+    )
+    return any(re.search(pattern, lowered) for pattern in visible_patterns)
+
+
+def _format_measurement(value: Any, *, prefix: str = " by ", suffix: str = "") -> str:
+    if value is None:
+        return ""
+    try:
+        text = f"{float(value):.3g}"
+    except (TypeError, ValueError):
+        text = str(value)
+    return f"{prefix}{text}{suffix}"
+
+
+_FORBIDDEN_EVIDENCE_PATTERNS = tuple(
+    re.compile(pattern)
+    for pattern in (
+        r"\bexpected_[a-z0-9_]*\b",
+        r"\bdefect_type\b",
+        r"\bseverity\b",
+        r"\brepair_hint\b",
+    )
+)
 
 
 def _clean_dimensions(active_labels: list[Any], scope: frozenset[DefectType]) -> list[Dimension]:
@@ -860,6 +984,18 @@ def _sample_image_base64(manifest: ManifestSample) -> str | None:
     if not image_path.exists():
         return None
     return base64.b64encode(image_path.read_bytes()).decode("ascii")
+
+
+def _page_image_base64s(manifest: ManifestSample) -> list[str]:
+    paths = manifest.metadata.get("page_image_paths")
+    if not isinstance(paths, list | tuple):
+        return []
+    images: list[str] = []
+    for path in paths:
+        image_path = Path(str(path))
+        if image_path.exists():
+            images.append(base64.b64encode(image_path.read_bytes()).decode("ascii"))
+    return images
 
 
 def _data_image_url(image_png_base64: str | None) -> str:

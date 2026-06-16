@@ -38,13 +38,15 @@ def test_plan_render_jobs_deck_first_slide(tmp_path):
     assert len(jobs) == 1 and jobs[0][3] == "defective"
 
 
-def test_llamafactory_record_requires_image():
+def test_llamafactory_record_requires_image(tmp_path):
     label = DefectLabel("G1_TEXT_OVERFLOW", 16.0, ("t",))
     assert build_llamafactory_record(ManifestSample(sample_id="z", labels=(label,))) is None
 
-    sample = ManifestSample(sample_id="z", image_path="/tmp/x.png", labels=(label,))
+    image = tmp_path / "x.png"
+    image.write_bytes(b"png")
+    sample = ManifestSample(sample_id="z", image_path=str(image), labels=(label,))
     record = build_llamafactory_record(sample)
-    assert record["images"] == ["/tmp/x.png"]
+    assert record["images"] == [str(image)]
     assert "<image>" in record["messages"][0]["content"]
     assert record["messages"][0]["role"] == "user"
     assert record["messages"][1]["role"] == "assistant"
@@ -54,10 +56,12 @@ def test_llamafactory_record_requires_image():
 
 
 def test_export_llamafactory_jsonl_skips_imageless_and_writes_info(tmp_path):
+    image = tmp_path / "a.png"
+    image.write_bytes(b"png")
     samples = [
         {
             "sample_id": "a",
-            "image_path": str(tmp_path / "a.png"),
+            "image_path": str(image),
             "labels": [{"type": "G1_TEXT_OVERFLOW", "severity": 16, "target_element_ids": ["t"]}],
         },
         {  # no image -> skipped

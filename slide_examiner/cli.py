@@ -26,7 +26,7 @@ from .render import render_manifest, render_slide_html_file
 from .repair import repair_slide
 from .reports import write_analysis_report
 from .schemas import ManifestSample, Slide
-from .sft import export_llamafactory_jsonl, export_sft_jsonl
+from .sft import export_llamafactory_jsonl, export_sft_jsonl_with_stats
 from .synthetic import SyntheticBuildConfig, build_synthetic_manifest
 from .training import TrainingConfig, run_training, write_training_config
 
@@ -60,8 +60,19 @@ def _cmd_eval_examiner(args: argparse.Namespace) -> int:
 
 def _cmd_build_sft(args: argparse.Namespace) -> int:
     samples = [ManifestSample.from_mapping(item) for item in read_jsonl(args.manifest)]
-    count = export_sft_jsonl(samples, args.output, mode=args.mode)
-    print(f"Wrote {count} {args.mode} SFT records to {args.output}")
+    stats = export_sft_jsonl_with_stats(
+        samples,
+        args.output,
+        mode=args.mode,
+        min_a_image_only_ratio=args.min_a_image_only_ratio,
+        b_struct_ratio=args.b_struct_ratio,
+        c_both_ratio=args.c_both_ratio,
+        parse_summary_path=args.parse_summary,
+    )
+    print(
+        f"Wrote {stats.record_count} {args.mode} SFT records to {args.output}; "
+        f"modalities={stats.modality_counts}; parse_failures={stats.parse_failures}"
+    )
     return 0
 
 
@@ -462,6 +473,10 @@ def build_parser() -> argparse.ArgumentParser:
     sft.add_argument("manifest")
     sft.add_argument("output")
     sft.add_argument("--mode", choices=["pointwise", "pairwise"], default="pointwise")
+    sft.add_argument("--min-a-image-only-ratio", type=float, default=0.30)
+    sft.add_argument("--b-struct-ratio", type=float, default=0.35)
+    sft.add_argument("--c-both-ratio", type=float, default=0.35)
+    sft.add_argument("--parse-summary", help="Write SFT assistant JSON parse summary to this JSON file.")
     sft.set_defaults(func=_cmd_build_sft)
 
     render_manifest_parser = subparsers.add_parser(

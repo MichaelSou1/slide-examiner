@@ -6,6 +6,8 @@ from slide_examiner.examiner_contract import (
     DeckExamRequest,
     DefectType,
     ExamLevel,
+    Finding,
+    Locator,
     Modality,
     PageExamRequest,
     SeverityLevel,
@@ -16,6 +18,7 @@ from slide_examiner.examiner_contract import (
     parse_deck_result,
     parse_page_result,
     request_from_sample,
+    severity_level_for_label,
 )
 from slide_examiner.runtime import runtime_payload_from_sample
 from slide_examiner.schemas import BBox, Deck, DefectLabel, Element, ManifestSample, Slide
@@ -162,3 +165,79 @@ def test_page_result_rejects_bad_has_defect_invariant() -> None:
     result["has_defect"] = False
     with pytest.raises(ValueError):
         parse_page_result(result)
+
+
+def test_severity_level_grid_matches_contract() -> None:
+    cases = [
+        (DefectType.G1_TEXT_OVERFLOW, 4, SeverityLevel.MINOR),
+        (DefectType.G1_TEXT_OVERFLOW, 8, SeverityLevel.MINOR),
+        (DefectType.G1_TEXT_OVERFLOW, 16, SeverityLevel.MODERATE),
+        (DefectType.G1_TEXT_OVERFLOW, 32, SeverityLevel.MODERATE),
+        (DefectType.G1_TEXT_OVERFLOW, 64, SeverityLevel.SEVERE),
+        (DefectType.G2_ELEMENT_OVERLAP, 0.05, SeverityLevel.MINOR),
+        (DefectType.G2_ELEMENT_OVERLAP, 0.1, SeverityLevel.MODERATE),
+        (DefectType.G2_ELEMENT_OVERLAP, 0.2, SeverityLevel.MODERATE),
+        (DefectType.G2_ELEMENT_OVERLAP, 0.4, SeverityLevel.SEVERE),
+        (DefectType.G3_ALIGNMENT_OFFSET, 2, SeverityLevel.MINOR),
+        (DefectType.G3_ALIGNMENT_OFFSET, 4, SeverityLevel.MINOR),
+        (DefectType.G3_ALIGNMENT_OFFSET, 8, SeverityLevel.MODERATE),
+        (DefectType.G3_ALIGNMENT_OFFSET, 16, SeverityLevel.MODERATE),
+        (DefectType.G3_ALIGNMENT_OFFSET, 32, SeverityLevel.SEVERE),
+        (DefectType.G4_FONT_SIZE_INCONSISTENCY, 1, SeverityLevel.MINOR),
+        (DefectType.G4_FONT_SIZE_INCONSISTENCY, 2, SeverityLevel.MODERATE),
+        (DefectType.G4_FONT_SIZE_INCONSISTENCY, 4, SeverityLevel.MODERATE),
+        (DefectType.G4_FONT_SIZE_INCONSISTENCY, 8, SeverityLevel.SEVERE),
+        (DefectType.G5_BRAND_COLOR_VIOLATION, 3, SeverityLevel.MINOR),
+        (DefectType.G5_BRAND_COLOR_VIOLATION, 6, SeverityLevel.MODERATE),
+        (DefectType.G5_BRAND_COLOR_VIOLATION, 12, SeverityLevel.MODERATE),
+        (DefectType.G5_BRAND_COLOR_VIOLATION, 24, SeverityLevel.SEVERE),
+        (DefectType.G6_MARGIN_VIOLATION, 4, SeverityLevel.MINOR),
+        (DefectType.G6_MARGIN_VIOLATION, 8, SeverityLevel.MINOR),
+        (DefectType.G6_MARGIN_VIOLATION, 16, SeverityLevel.MODERATE),
+        (DefectType.G6_MARGIN_VIOLATION, 32, SeverityLevel.SEVERE),
+    ]
+    for defect, value, expected in cases:
+        assert severity_level_for_label(defect, value) == expected
+
+
+def test_s4_density_severity_uses_overage_ratio() -> None:
+    metadata = {"max_words": 100}
+    assert severity_level_for_label(DefectType.S4_DENSITY_RULE_VIOLATION, 120, metadata) == SeverityLevel.MINOR
+    assert severity_level_for_label(DefectType.S4_DENSITY_RULE_VIOLATION, 150, metadata) == SeverityLevel.MODERATE
+    assert severity_level_for_label(DefectType.S4_DENSITY_RULE_VIOLATION, 151, metadata) == SeverityLevel.SEVERE
+
+
+def test_finding_rejects_weak_or_leaky_evidence_and_non_actionable_fix() -> None:
+    locator = Locator(level=ExamLevel.PAGE, page_id="p1", element_id="title")
+    with pytest.raises(ValueError, match="restate"):
+        Finding(
+            type=DefectType.G1_TEXT_OVERFLOW,
+            severity=SeverityLevel.MINOR,
+            locator=locator,
+            evidence="G1_TEXT_OVERFLOW",
+            fix_suggestion="Shorten the text.",
+        )
+    with pytest.raises(ValueError, match="forbidden"):
+        Finding(
+            type=DefectType.G1_TEXT_OVERFLOW,
+            severity=SeverityLevel.MINOR,
+            locator=locator,
+            evidence="Element title has expected_bbox mismatch.",
+            fix_suggestion="Shorten the text.",
+        )
+    with pytest.raises(ValueError, match="visible fact"):
+        Finding(
+            type=DefectType.G1_TEXT_OVERFLOW,
+            severity=SeverityLevel.MINOR,
+            locator=locator,
+            evidence="This is a problem.",
+            fix_suggestion="Shorten the text.",
+        )
+    with pytest.raises(ValueError, match="action"):
+        Finding(
+            type=DefectType.G1_TEXT_OVERFLOW,
+            severity=SeverityLevel.MINOR,
+            locator=locator,
+            evidence="Element title text overflows its bounding box by 4 px.",
+            fix_suggestion="Looks bad.",
+        )

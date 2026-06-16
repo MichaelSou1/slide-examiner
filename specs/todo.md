@@ -62,40 +62,40 @@
 
 目标: 让训练样本真正符合 `EXAMINER_IO_CONTRACT.md`,避免 examiner 学偏。
 
-- [ ] 实现训练采样中 A_IMAGE_ONLY >= 30%。
-  - [ ] page 级样本至少 30% 只给图。
-  - [ ] deck 级样本至少 30% 只给缩略图或页图序列。
-  - [ ] B/C 样本比例可配置。
-  - [ ] 导出时把实际 modality 写进 metadata。
+- [x] 实现训练采样中 A_IMAGE_ONLY >= 30%。
+  - [x] page 级样本至少 30% 只给图。
+  - [x] deck 级样本至少 30% 只给缩略图或页图序列。
+  - [x] B/C 样本比例可配置。
+  - [x] 导出时把实际 modality 写进 metadata。
 
-- [ ] 让训练样本和运行时调用共用同一个 serializer。
-  - [ ] pointwise page 使用 `build_page_messages`。
-  - [ ] pointwise deck 使用 `build_deck_messages`。
-  - [ ] pairwise 共用底层元素、render、image 序列化函数。
-  - [ ] 不允许训练 prompt 和 runtime prompt 各写一套。
+- [x] 让训练样本和运行时调用共用同一个 serializer。
+  - [x] pointwise page 使用 `build_page_messages`。
+  - [x] pointwise deck 使用 `build_deck_messages`。
+  - [x] pairwise 共用底层元素、render、image 序列化函数。
+  - [x] 不允许训练 prompt 和 runtime prompt 各写一套。
 
-- [ ] 增加 evidence/fix_suggestion validator。
-  - [ ] evidence 非空。
-  - [ ] evidence 不能只复述缺陷名。
-  - [ ] evidence 至少包含一个可见事实: 页号、元素、文本片段、术语、页面顺序或图文冲突点。
-  - [ ] evidence 不包含 forbidden keys: `expected_*`、`defect_type`、`severity`、`repair_hint` 等。
-  - [ ] fix_suggestion 非空且可执行。
-  - [ ] 失败样本要重写或丢弃。
+- [x] 增加 evidence/fix_suggestion validator。
+  - [x] evidence 非空。
+  - [x] evidence 不能只复述缺陷名。
+  - [x] evidence 至少包含一个可见事实: 页号、元素、文本片段、术语、页面顺序或图文冲突点。
+  - [x] evidence 不包含 forbidden keys: `expected_*`、`defect_type`、`severity`、`repair_hint` 等。
+  - [x] fix_suggestion 非空且可执行。
+  - [x] 失败样本要重写或丢弃。
 
-- [ ] 补 severity 三档映射测试。
-  - [ ] G1 overflow: 4/8 minor,16/32 moderate,64 severe。
-  - [ ] G2 IoU: 0.05 minor,0.1/0.2 moderate,0.4 severe。
-  - [ ] G3 offset: 2/4 minor,8/16 moderate,32 severe。
-  - [ ] G4 font delta: 1 minor,2/4 moderate,8 severe。
-  - [ ] G5 delta E: 3 minor,6/12 moderate,24 severe。
-  - [ ] G6 margin: 4/8 minor,16 moderate,32 severe。
-  - [ ] S4 density 按超出比例定档。
+- [x] 补 severity 三档映射测试。
+  - [x] G1 overflow: 4/8 minor,16/32 moderate,64 severe。
+  - [x] G2 IoU: 0.05 minor,0.1/0.2 moderate,0.4 severe。
+  - [x] G3 offset: 2/4 minor,8/16 moderate,32 severe。
+  - [x] G4 font delta: 1 minor,2/4 moderate,8 severe。
+  - [x] G5 delta E: 3 minor,6/12 moderate,24 severe。
+  - [x] G6 margin: 4/8 minor,16 moderate,32 severe。
+  - [x] S4 density 按超出比例定档。
 
-- [ ] 让 SFT 导出产物能被 parser 逐条回读。
-  - [ ] 导出 pointwise JSONL。
-  - [ ] 导出 pairwise JSONL。
-  - [ ] 对每条 assistant JSON 跑 `parse_page_result` / `parse_deck_result` / `PairwiseResult`。
-  - [ ] 输出 parse failure 统计。
+- [x] 让 SFT 导出产物能被 parser 逐条回读。
+  - [x] 导出 pointwise JSONL。
+  - [x] 导出 pairwise JSONL。
+  - [x] 对每条 assistant JSON 跑 `parse_page_result` / `parse_deck_result` / `PairwiseResult`。
+  - [x] 输出 parse failure 统计。
 
 ## 4. 第三优先级: 真实数据准备
 

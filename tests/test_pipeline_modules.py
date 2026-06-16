@@ -145,6 +145,15 @@ def test_new_cli_commands_smoke(tmp_path) -> None:
     assert main(["distribution", str(manifest), "-o", str(tmp_path / "distribution.json")]) == 0
     assert main(["hypotheses", str(summary_path), "-o", str(tmp_path / "hypotheses.json")]) == 0
     assert main(["report", str(summary_path), str(tmp_path / "report.md")]) == 0
+    assert main([
+        "build-sft",
+        str(manifest),
+        str(tmp_path / "sft_export.jsonl"),
+        "--min-a-image-only-ratio",
+        "0",
+        "--parse-summary",
+        str(tmp_path / "sft_parse.json"),
+    ]) == 0
     assert main(["train-plan", str(tmp_path / "sft.jsonl"), str(tmp_path / "model")]) == 0
     assert main(["train-examiner", str(tmp_path / "sft.jsonl"), str(tmp_path / "model2")]) == 0
     assert main(["gepa-plan", "train.jsonl", "val.jsonl", "test.jsonl", str(tmp_path / "gepa.json")]) == 0
