@@ -26,6 +26,9 @@ This document maps the research spec to the current codebase.
   - optional LibreOffice PPTX to PDF render
 - Experiment execution:
   - dataset source registry and explicit URL download helper
+  - real-data directory initializer
+  - clean-corpus preparation helper for `.pptx`, project JSON IR, and annotated HTML
+  - SlidesBench/PPTBench subset-plan and task-adapter helpers
   - pre-registered model/modality/task/template/resolution/seed matrix
   - matrix runner for mock/replay/local/API adapters
   - mock SlideProbe runner for A/B/B_prime/C and T1/T2/T3
@@ -64,7 +67,11 @@ This document maps the research spec to the current codebase.
 slide-examiner matrix configs/slideprobe_matrix.json
 slide-examiner run-matrix data/manifest.jsonl configs/slideprobe_matrix.json runs/probe/matrix.jsonl --limit 10
 slide-examiner data-sources
+slide-examiner init-data-layout
 slide-examiner power 0.50 0.70
+slide-examiner prepare-clean-corpus pptagent_zenodo10k data/raw/zenodo10k data/ir/zenodo10k_clean data/manifests/zenodo10k_clean_candidates.jsonl --summary reports/data_prep/zenodo10k_cleaning_summary.json
+slide-examiner benchmark-plan pptbench reports/data_prep/pptbench_plan.json
+slide-examiner prepare-benchmark pptbench data/raw/pptbench/tasks.jsonl data/manifests/pptbench_tasks.jsonl --ir-dir data/ir/pptbench --summary reports/data_prep/pptbench_adapter_summary.json
 slide-examiner generate content.json runs/generated_html
 slide-examiner ingest deck.pptx data/deck_ir.json
 slide-examiner render data/slide_ir.json runs/rendered/slide.html

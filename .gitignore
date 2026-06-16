@@ -20,9 +20,25 @@ venv/
 env/
 
 # 实验产物（由 CLI 生成，不入库）
-runs/
+runs/*
+!runs/rendered/
+runs/rendered/*
+!runs/rendered/.gitkeep
+!runs/probe/
+runs/probe/*
+!runs/probe/.gitkeep
 models/
-reports/
+reports/*
+!reports/README.md
+!reports/data_prep/
+reports/data_prep/*
+!reports/data_prep/.gitkeep
+data/raw/*
+data/ir/*
+data/manifests/*
+!data/raw/.gitkeep
+!data/ir/.gitkeep
+!data/manifests/.gitkeep
 *.log
 
 # 编辑器/系统

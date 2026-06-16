@@ -19,7 +19,7 @@
 
 - [x] 对照研究 spec 审查代码结构。
 - [x] 确认当前仓库已有本地脚手架: IR、taxonomy、注入器、linter、probe、analysis、SFT、training plan、GEPA plan。
-- [x] 跑通当前测试集: `88 passed`。
+- [x] 跑通当前测试集: `112 passed`。
 - [x] 明确当前边界: 本地契约和 mock/dry-run 流程已通,真实 VLM 推理、真实训练、真实 GEPA、人工 panel 尚未完成。
 - [ ] 把 `docs/IMPLEMENTATION_STATUS.md` 更新成更口语化版本,区分“代码路径存在”和“真实实验已完成”。
 
@@ -101,35 +101,72 @@
 
 目标: 从“玩具样本”进入能支持 Part 1 pilot 的真实 deck 数据。
 
-- [ ] 建立数据目录约定。
-  - [ ] `data/raw/` 放原始下载或脱敏文件。
-  - [ ] `data/ir/` 放 Slide/Deck IR。
-  - [ ] `data/manifests/` 放 manifest JSONL。
-  - [ ] `runs/rendered/` 放渲染图片。
-  - [ ] `runs/probe/` 放模型输出。
-  - [ ] `reports/` 放分析报告。
+- [x] 建立数据目录约定。
+  - [x] `data/raw/` 放原始下载或脱敏文件。
+  - [x] `data/ir/` 放 Slide/Deck IR。
+  - [x] `data/manifests/` 放 manifest JSONL。
+  - [x] `runs/rendered/` 放渲染图片。
+  - [x] `runs/probe/` 放模型输出。
+  - [x] `reports/` 放分析报告。
+  - [x] 写入 `data/README.md`、`.gitkeep` 和 `.gitignore`,避免真实语料误入库。
+
+- [x] 建立真实数据准备命令和文档。
+  - [x] 新增 `slide-examiner init-data-layout`。
+  - [x] 新增 `slide-examiner prepare-clean-corpus`。
+  - [x] 新增 `slide-examiner benchmark-plan`。
+  - [x] 新增 `slide-examiner prepare-benchmark`。
+  - [x] 写入人工执行指南: `docs/REAL_DATA_PREP.md`。
+  - [x] 补数据准备单元测试: `tests/test_data_prep.py`。
 
 - [ ] 接入 Zenodo10K / PPTAgent 数据。
-  - [ ] 记录数据来源、下载命令和版本。
-  - [ ] 清洗不可解析、损坏或空页 deck。
-  - [ ] 抽取 clean slide/deck 候选。
-  - [ ] 记录清洗统计。
+  - [x] 记录公开入口和本地 manifest 覆盖机制: `slide_examiner/data_sources.py`, `docs/REAL_DATA_PREP.md`。
+  - [x] 记录下载/镜像命令模板: `docs/REAL_DATA_PREP.md`。
+  - [x] 实现清洗不可解析、损坏或空页 deck 的工具。
+  - [x] 实现抽取 clean slide/deck 候选 manifest 的工具。
+  - [x] 实现清洗统计输出: `reports/data_prep/*_cleaning_summary.json`。
+  - [x] 下载 Zenodo10K/PPTAgent pilot 子集并记录固定版本/revision。
+    - 2026-06-16: ModelScope 未找到 `Forceless/Zenodo10K`/`PPTAgent/Zenodo10K`;fallback 到 hf-mirror。
+    - artifact: `reports/data_prep/source_acquisition.json`。
+    - raw: `data/raw/zenodo10k_hfmirror_pilot/`,revision `e59bf3ec11f7518a6c84dc145d83c0675d412522`,50 个 PPTX。
+  - [x] 产出 pilot 清洗统计 artifact。
+    - artifact: `reports/data_prep/zenodo10k_hfmirror_pilot_cleaning_summary.json`。
+    - result: scanned 50, accepted decks 2, accepted slide samples 4, manifest records 6。
+  - [ ] 扩大 Zenodo10K/PPTAgent 下载规模,直到 clean 候选足够支持 Part 1 pilot。
+    - 阻塞 2026-06-16: 当前磁盘剩余约 94GB;全量 10448 个 PPTX 可能超过本机余量,需外部存储或分批策略。
 
-- [ ] 接入 SlidesBench / PPTBench 评估数据。
-  - [ ] 记录数据来源和版本。
-  - [ ] 确认可用于迁移评估的任务子集。
-  - [ ] 转成项目 IR 或建立适配器。
+- [x] 接入 PPTBench Detection/Understanding 评估数据。
+  - [x] 记录可用子集计划命令: `slide-examiner benchmark-plan`。
+  - [x] 确认本轮只接入迁移评估必需子集: PPTBench detection/understanding。
+  - [x] 联网搜索并排序 ModelScope/HF 候选数据集。
+    - artifact: `reports/data_prep/dataset_search_2026-06-16.md`。
+    - 结论: 本轮只下载 ModelScope `tyrionhuu/PPTBench-Detection` 和 `tyrionhuu/PPTBench-Understanding`;SlidesBench、Slides-Align、PPTBench generation/modification、Zenodo10K full 仅保留在搜索报告中,不进入当前执行清单。
+  - [x] 建立任务 JSON/JSONL 适配器: `slide-examiner prepare-benchmark`。
+  - [x] 下载 ModelScope PPTBench Detection/Understanding 真实任务数据,并记录固定版本/release。
+    - 建议版本: Detection `bf3310bd011bd2a4b2316646efc260243f0b95a8`;Understanding `d26501d5fb9a7e0daf68b3331aa14b4f1b699592`。
+    - artifact: `reports/data_prep/pptbench_modelscope_acquisition.json`。
+    - raw: `data/raw/pptbench_detection_modelscope/` 和 `data/raw/pptbench_understanding_modelscope/`。
+    - result: Detection 1200 examples, Understanding 1037 examples;本地 Arrow schema 已用 `pyarrow` 验证可读。
+  - [x] 将 PPTBench Arrow 转成 `prepare-benchmark` 可读的 JSON/JSONL adapter input。
+    - 新增命令: `python -m slide_examiner.cli convert-pptbench-arrow ...`。
+    - artifacts: `data/raw/pptbench_detection_modelscope_adapter_input.jsonl`, `data/raw/pptbench_understanding_modelscope_adapter_input.jsonl`。
+    - rendered inputs: `runs/rendered/pptbench_detection_modelscope/`, `runs/rendered/pptbench_understanding_modelscope/`。
+    - result: image records 2237, structure parse failures 0。
+  - [x] 产出真实 adapter summary。
+    - artifact: `reports/data_prep/pptbench_adapter_summary.json`。
+    - outputs: `data/manifests/pptbench_detection_tasks.jsonl`, `data/manifests/pptbench_understanding_tasks.jsonl`。
+    - handoff: task records 已包含 `task.image_path` 和 `task.structure`,可接后续真实模型 probing / 渲染质量核查。
 
-- [ ] 接入实习脱敏 deck。
-  - [ ] 确认脱敏策略。
-  - [ ] 移除客户名、敏感数字、内部项目名。
-  - [ ] 记录可公开/不可公开边界。
+# - [ ] 接入实习脱敏 deck。
+#  - [ ] 确认脱敏策略。
+#  - [ ] 移除客户名、敏感数字、内部项目名。
+#  - [ ] 记录可公开/不可公开边界。
 
-- [ ] 建立真实问题 deck 人工标注计划。
-  - [ ] 目标约 100 页。
-  - [ ] 使用同一套 12 类缺陷 taxonomy。
-  - [ ] severity 使用 minor/moderate/severe。
-  - [ ] 至少双人抽样复核一部分标签。
+- [x] 建立真实问题 deck 人工标注计划。
+  - [x] 目标约 100 页。
+  - [x] 使用同一套 12 类缺陷 taxonomy。
+  - [x] severity 使用 minor/moderate/severe。
+  - [x] 至少双人抽样复核一部分标签。
+  - [x] 计划写入 `docs/REAL_DATA_PREP.md`;真实标签 JSONL 和 summary 仍需后续人工采集后产出。
 
 ## 5. 第四优先级: 真实渲染打通
 

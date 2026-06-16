@@ -30,17 +30,29 @@ DEFAULT_SOURCES: dict[str, DataSource] = {
     "pptagent_zenodo10k": DataSource(
         name="pptagent_zenodo10k",
         purpose="Real deck corpus for clean deck extraction and sim2real transfer.",
-        landing_page="PPTAgent / Zenodo10K project page or paper artifact page",
+        landing_page="https://huggingface.co/datasets/Forceless/Zenodo10K",
+        license_note=(
+            "Public PPTAgent/Zenodo10K corpus entrypoint. Full acquisition is large; "
+            "pin the exact Hugging Face revision or mirror URL in a local data-source manifest."
+        ),
     ),
     "slidesbench": DataSource(
         name="slidesbench",
         purpose="Slide generation task suite for downstream GEPA evaluation.",
         landing_page="AutoPresent / SlidesBench project page",
+        license_note=(
+            "Use the project/paper artifact page to pin the task split and reference deck version "
+            "before publishing derived evaluation results."
+        ),
     ),
     "pptbench": DataSource(
         name="pptbench",
         purpose="External migration benchmark for slide detection/understanding tasks.",
         landing_page="PPTBench project page",
+        license_note=(
+            "Use detection/understanding subsets first; record the benchmark release, split, "
+            "and any local IR conversion losses."
+        ),
     ),
     "internal_desensitized": DataSource(
         name="internal_desensitized",
@@ -99,4 +111,3 @@ def download_data_source(
     with urllib.request.urlopen(download_url) as response, output.open("wb") as handle:
         shutil.copyfileobj(response, handle)
     return output
-

@@ -19,6 +19,7 @@ def run_code_audit() -> dict:
         _check_taxonomy,
         _check_module("slide_examiner.ingest", ["extract_pptx_geometry", "parse_annotated_html"]),
         _check_module("slide_examiner.data_sources", ["list_data_sources", "download_data_source"]),
+        _check_module("slide_examiner.data_prep", ["prepare_clean_deck_corpus", "prepare_benchmark_tasks"]),
         _check_module("slide_examiner.distribution", ["summarize_manifest_distribution", "summarize_linter_distribution"]),
         _check_module("slide_examiner.render", ["render_slide_html_file", "render_html_to_png", "render_pptx_to_pdf"]),
         _check_module("slide_examiner.synthetic", ["build_synthetic_manifest", "SyntheticBuildConfig"]),

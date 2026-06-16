@@ -8,6 +8,14 @@ from .audit import run_code_audit
 from .analysis import summarize_probe_records
 from .adapters import MockAdapter
 from .data_sources import download_data_source, list_data_sources
+from .data_prep import (
+    CleanCorpusConfig,
+    convert_pptbench_arrow_to_benchmark_input,
+    ensure_data_layout,
+    prepare_benchmark_tasks,
+    prepare_clean_deck_corpus,
+    write_benchmark_subset_plan,
+)
 from .distribution import summarize_linter_distribution, summarize_manifest_distribution
 from .experiment import inject_artifact_to_manifest
 from .gepa_runner import GEPARunConfig, write_gepa_condition_plan, write_gepa_plan
@@ -142,6 +150,71 @@ def _cmd_data_sources(args: argparse.Namespace) -> int:
 def _cmd_download_source(args: argparse.Namespace) -> int:
     output = download_data_source(args.name, args.output, manifest_path=args.manifest, url=args.url)
     print(f"Wrote data source {args.name} to {output}")
+    return 0
+
+
+def _cmd_init_data_layout(args: argparse.Namespace) -> int:
+    layout = ensure_data_layout(args.root)
+    print(json.dumps({"layout": layout}, ensure_ascii=False, indent=2))
+    return 0
+
+
+def _cmd_prepare_clean_corpus(args: argparse.Namespace) -> int:
+    stats = prepare_clean_deck_corpus(
+        CleanCorpusConfig(
+            source_name=args.source_name,
+            raw_path=args.raw_path,
+            ir_dir=args.ir_dir,
+            manifest_path=args.manifest,
+            summary_path=args.summary,
+            source_version=args.source_version,
+            source_url=args.source_url,
+            min_slides=args.min_slides,
+            max_decks=args.max_decks,
+            include_slide_samples=args.include_slide_samples,
+            reject_empty_slides=not args.allow_empty_slides,
+            require_linter_clean=not args.allow_linter_defects,
+        )
+    )
+    print(json.dumps(stats, ensure_ascii=False, indent=2))
+    return 0
+
+
+def _cmd_benchmark_plan(args: argparse.Namespace) -> int:
+    plan = write_benchmark_subset_plan(
+        args.source_name,
+        args.output,
+        source_version=args.source_version,
+    )
+    print(json.dumps(plan, ensure_ascii=False, indent=2))
+    return 0
+
+
+def _cmd_prepare_benchmark(args: argparse.Namespace) -> int:
+    summary = prepare_benchmark_tasks(
+        args.source_name,
+        args.input,
+        args.output,
+        ir_dir=args.ir_dir,
+        summary_path=args.summary,
+        source_version=args.source_version,
+        task_subset=args.task_subset,
+    )
+    print(json.dumps(summary, ensure_ascii=False, indent=2))
+    return 0
+
+
+def _cmd_convert_pptbench_arrow(args: argparse.Namespace) -> int:
+    summary = convert_pptbench_arrow_to_benchmark_input(
+        args.input,
+        args.output,
+        image_dir=args.image_dir,
+        summary_path=args.summary,
+        source_version=args.source_version,
+        task_subset=args.task_subset,
+        max_records=args.max_records,
+    )
+    print(json.dumps(summary, ensure_ascii=False, indent=2))
     return 0
 
 
@@ -394,6 +467,63 @@ def build_parser() -> argparse.ArgumentParser:
     download.add_argument("--manifest")
     download.add_argument("--url")
     download.set_defaults(func=_cmd_download_source)
+
+    init_layout = subparsers.add_parser("init-data-layout", help="Create the real-data directory layout.")
+    init_layout.add_argument("--root", default=".")
+    init_layout.set_defaults(func=_cmd_init_data_layout)
+
+    clean_corpus = subparsers.add_parser(
+        "prepare-clean-corpus",
+        help="Normalize real deck files into clean-candidate IR and manifest JSONL.",
+    )
+    clean_corpus.add_argument("source_name")
+    clean_corpus.add_argument("raw_path")
+    clean_corpus.add_argument("ir_dir")
+    clean_corpus.add_argument("manifest")
+    clean_corpus.add_argument("--summary")
+    clean_corpus.add_argument("--source-version")
+    clean_corpus.add_argument("--source-url")
+    clean_corpus.add_argument("--min-slides", type=int, default=1)
+    clean_corpus.add_argument("--max-decks", type=int)
+    clean_corpus.add_argument("--include-slide-samples", action="store_true")
+    clean_corpus.add_argument("--allow-empty-slides", action="store_true")
+    clean_corpus.add_argument("--allow-linter-defects", action="store_true")
+    clean_corpus.set_defaults(func=_cmd_prepare_clean_corpus)
+
+    benchmark_plan = subparsers.add_parser(
+        "benchmark-plan",
+        help="Write the selected SlidesBench/PPTBench migration subset plan.",
+    )
+    benchmark_plan.add_argument("source_name", choices=["slidesbench", "pptbench"])
+    benchmark_plan.add_argument("output")
+    benchmark_plan.add_argument("--source-version")
+    benchmark_plan.set_defaults(func=_cmd_benchmark_plan)
+
+    prepare_benchmark = subparsers.add_parser(
+        "prepare-benchmark",
+        help="Adapt SlidesBench/PPTBench-style task JSON/JSONL into project task records.",
+    )
+    prepare_benchmark.add_argument("source_name", choices=["slidesbench", "pptbench"])
+    prepare_benchmark.add_argument("input")
+    prepare_benchmark.add_argument("output")
+    prepare_benchmark.add_argument("--ir-dir")
+    prepare_benchmark.add_argument("--summary")
+    prepare_benchmark.add_argument("--source-version")
+    prepare_benchmark.add_argument("--task-subset")
+    prepare_benchmark.set_defaults(func=_cmd_prepare_benchmark)
+
+    convert_pptbench = subparsers.add_parser(
+        "convert-pptbench-arrow",
+        help="Convert PPTBench Arrow shards into prepare-benchmark JSONL input records.",
+    )
+    convert_pptbench.add_argument("input")
+    convert_pptbench.add_argument("output")
+    convert_pptbench.add_argument("--image-dir")
+    convert_pptbench.add_argument("--summary")
+    convert_pptbench.add_argument("--source-version")
+    convert_pptbench.add_argument("--task-subset", choices=["detection", "understanding"])
+    convert_pptbench.add_argument("--max-records", type=int)
+    convert_pptbench.set_defaults(func=_cmd_convert_pptbench_arrow)
 
     power = subparsers.add_parser("power", help="Estimate per-group sample size for two-proportion comparisons.")
     power.add_argument("baseline_rate", type=float)

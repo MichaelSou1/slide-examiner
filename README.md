@@ -84,6 +84,21 @@ slide-examiner build-synthetic runs/out data/manifest.jsonl data/slide_ir.json d
 # 数据源登记与下载
 slide-examiner data-sources
 slide-examiner download-source internal_desensitized data/internal.zip --url file:///path/to/internal.zip
+
+# 建立真实数据目录约定
+slide-examiner init-data-layout
+
+# 清洗真实 deck 候选并写出 clean manifest + 统计
+slide-examiner prepare-clean-corpus pptagent_zenodo10k data/raw/zenodo10k \
+  data/ir/zenodo10k_clean data/manifests/zenodo10k_clean_candidates.jsonl \
+  --summary reports/data_prep/zenodo10k_cleaning_summary.json \
+  --source-version "<pinned revision>" --include-slide-samples
+
+# 记录 SlidesBench / PPTBench 子集计划并适配任务 JSONL
+slide-examiner benchmark-plan pptbench reports/data_prep/pptbench_plan.json
+slide-examiner prepare-benchmark pptbench data/raw/pptbench/tasks.jsonl \
+  data/manifests/pptbench_tasks.jsonl --ir-dir data/ir/pptbench \
+  --summary reports/data_prep/pptbench_adapter_summary.json
 ```
 
 ### 2. 诊断（SlideProbe 矩阵 + 归因分析）
@@ -185,6 +200,7 @@ slide_examiner/
   reports.py        # 分析摘要 → Markdown
   distribution.py   # manifest/linter 缺陷分布
   data_sources.py   # 数据源登记/下载
+  data_prep.py      # 真实数据目录、清洗、benchmark 适配
 tests/              # 本地契约与冒烟管线测试
 specs/              # 研究 spec 与 novelty 分析
 docs/               # 实现状态对照
