@@ -41,6 +41,7 @@ def build_synthetic_manifest(
                             continue
                         slide = slides[(repetition + int(float(severity) * 10)) % len(slides)]
                         injected = inject_slide_defect(slide, defect_type, severity=severity)
+                        injected = _apply_template(injected, cfg)
                         sample_id = _sample_id(slide.slide_id, defect_type, severity, repetition)
                         sample = slide_sample_from_injection(
                             injected,
@@ -53,6 +54,7 @@ def build_synthetic_manifest(
                             continue
                         deck = decks[(repetition + int(float(severity) * 10)) % len(decks)]
                         injected = inject_deck_defect(deck, defect_type, severity=severity)
+                        injected = _apply_template_deck(injected, cfg)
                         sample_id = _sample_id(deck.deck_id, defect_type, severity, repetition)
                         sample = deck_sample_from_injection(
                             injected,
@@ -97,6 +99,26 @@ def _negative_samples(
         )
         samples.append(_with_metadata(sample, split="train", severity_grid_value=0.0))
     return samples
+
+
+def _apply_template(injected, cfg: SyntheticBuildConfig):
+    """Under the template condition, snap the defective slide to the master so
+    geometric defects are absorbed (semantic defects survive)."""
+    if cfg.template_condition != "template":
+        return injected
+    from dataclasses import replace
+    from .template import snap_slide_to_master
+
+    return replace(injected, defective=snap_slide_to_master(injected.defective))
+
+
+def _apply_template_deck(injected, cfg: SyntheticBuildConfig):
+    if cfg.template_condition != "template":
+        return injected
+    from dataclasses import replace
+    from .template import snap_deck_to_master
+
+    return replace(injected, defective=snap_deck_to_master(injected.defective))
 
 
 def _split_for(defect_type: str, severity: float, cfg: SyntheticBuildConfig) -> str:

@@ -172,69 +172,104 @@
 
 目标: 保证图片、bbox、render spec 来自同一次渲染,否则 A/B 对比会失真。
 
-- [ ] 安装并验证 Playwright 渲染。
-  - [ ] 安装浏览器依赖。
-  - [ ] 渲染一页 HTML slide 到 PNG。
-  - [ ] 检查输出图片非空。
-  - [ ] 检查图片尺寸和 `RenderSpec` 一致。
+实现: `slide_examiner/render.py`(多分辨率 + RenderSpec + 质量检查 + PPTX 路径),
+CLI `render-manifest --long-edge` / `render-resolutions` / `render-pptx`,
+测试 `tests/test_render_wiring.py`。
 
-- [ ] 安装并验证 LibreOffice PPTX 渲染。
-  - [ ] PPTX 转 PDF。
-  - [ ] PDF 或页面图导出。
-  - [ ] 检查多页 deck 顺序不乱。
+- [x] 安装并验证 Playwright 渲染。
+  - [x] 安装浏览器依赖。
+    - slide-examiner conda 环境已装 playwright;bundled chromium 缺失时 `_launch_chromium` 回退系统 `google-chrome`(`/usr/bin/google-chrome`)。
+  - [x] 渲染一页 HTML slide 到 PNG。
+  - [x] 检查输出图片非空。
+  - [x] 检查图片尺寸和 `RenderSpec` 一致。
+    - `check_render_artifact` 的 `dims_match_spec` 校验;真实产物 768x432/1024x576/1536x864/2048x1152 全部一致。
 
-- [ ] 实现或确认四个分辨率渲染。
-  - [ ] 768 长边。
-  - [ ] 1024 长边。
-  - [ ] 1536 长边。
-  - [ ] 2048 长边。
-  - [ ] bbox 按相同 scale 转到像素坐标。
+- [x] 安装并验证 LibreOffice PPTX 渲染。
+  - [x] PPTX 转 PDF。
+    - `render_pptx_to_pdf`(`--invisible --nodefault --nolockcheck --nologo --norestore`);真实产物 `runs/rendered/pptx_pages/pilot_deck_*/*.pdf`。
+  - [x] PDF 或页面图导出。
+    - `render_pdf_to_pngs`(poppler `pdftoppm`)。
+  - [x] 检查多页 deck 顺序不乱。
+    - 6 页真实 deck(State of Infrastructure 2023):pdf_pages=6,rendered=6,页号连续 1-6。artifact: `reports/render/pptx_render_summary.json`。
+    - 沙箱备注 2026-06-16: 本机 LibreOffice 为 AppImage;当前 Claude Code 沙箱里**经 Python subprocess 启动 soffice 会被静默 kill**(直接在 shell 跑正常),故 PDF 由 shell 直接生成、PNG 由 `render_pdf_to_pngs` 生成。生产环境无此限制;并新增 `SLIDE_EXAMINER_SOFFICE` 覆盖,可指向解包后的 `.../program/soffice`。
 
-- [ ] 对渲染产物做质量检查。
-  - [ ] 图片存在且可打开。
-  - [ ] 文件大小合理。
-  - [ ] bbox 没有明显全 0 或越界异常。
-  - [ ] 文字元素和图片中位置基本一致。
+- [x] 实现或确认四个分辨率渲染。
+  - [x] 768 长边。
+  - [x] 1024 长边。
+  - [x] 1536 长边。
+  - [x] 2048 长边。
+  - [x] bbox 按相同 scale 转到像素坐标。
+    - `render_slide_multi_resolution` 用坐标缩放 HTML 做真实重渲染(2048 也清晰,非位图上采样);`build_render_spec` 记录 `scale_x/scale_y`,`bbox_to_pixels` 用同一 scale。
+    - artifact: `runs/rendered/zenodo10k_pilot_resolutions/{768,1024,1536,2048}/`。
 
-- [ ] 将 `image_path` 和 `RenderSpec` 写入 manifest。
-  - [ ] A/C 模态能够找到图片。
-  - [ ] B/C 模态能够找到结构。
-  - [ ] B_prime 模态能够找到 caption。
+- [x] 对渲染产物做质量检查。
+  - [x] 图片存在且可打开。
+  - [x] 文件大小合理。
+  - [x] bbox 没有明显全 0 或越界异常。
+  - [x] 文字元素和图片中位置基本一致。
+    - `check_render_artifact`(存在/可打开/字节数/dims/zero-area/out-of-bounds/text-has-ink);真实 pilot 6 records × 4 分辨率 = 24 张全部通过。
+    - artifact: `reports/render/zenodo10k_pilot_resolution_quality.json`。
+
+- [x] 将 `image_path` 和 `RenderSpec` 写入 manifest。
+  - [x] A/C 模态能够找到图片。
+  - [x] B/C 模态能够找到结构。
+  - [x] B_prime 模态能够找到 caption。
+    - `render_manifest` 写 `image_path` + `metadata.render`;round-trip 用 `request_from_sample` 验证 A=图、B=结构、C=图+结构、B_prime=caption(slide + deck 两类样本均通过)。
+    - per-resolution manifest: `runs/rendered/zenodo10k_pilot_resolutions/<res>/manifest.jsonl`。
 
 ## 6. 第五优先级: Part 1 小规模 pilot
 
 目标: 先用少量真实模型调用排雷,不要一上来烧完整矩阵。
 
-- [ ] 选择 pilot 缺陷类型。
-  - [ ] G1_TEXT_OVERFLOW。
-  - [ ] G2_ELEMENT_OVERLAP。
-  - [ ] S1_TITLE_BODY_MISMATCH。
-  - [ ] 可选: S2_NARRATIVE_ORDER_BREAK。
+完成快照 2026-06-16: 用 Qwen3-VL-4B(vLLM, GPU0)跑通 84 样本 × 4 模态 × 3 任务 = 1008 次真实调用。
+- 数据: base deck `data/pilot/decks/`(`scripts/pilot_build_corpus.py`),manifest `data/pilot/manifest.jsonl` / 渲染后 `data/pilot/manifest_rendered.jsonl`(`scripts/pilot_subset.py`,1024 长边)。
+- 驱动/分析: `scripts/run_pilot.py`、`scripts/pilot_report.py`。
+- 产物: `runs/probe/pilot_probe.jsonl`、`runs/probe/pilot_summary.json`、`runs/probe/pilot_analysis.json`、`reports/pilot_slideprobe.md`。
 
-- [ ] 为每类缺陷准备少量样本。
-  - [ ] 每类至少 10-20 个样本。
-  - [ ] 包含 clean negative。
-  - [ ] 包含至少两个 severity 档位。
-  - [ ] 包含 freeform 和 template metadata。
+全矩阵前 blocker 返修 + 8B 确认 pilot 2026-06-16(第三轮): 修完 4 个会污染全矩阵的硬问题,在 Qwen3-VL-8B(vLLM TP=2 @ GPU1,2)上确认。
+- Blocker 1 B′:改用 VLM 看图生成 caption(`scripts/caption_images.py` + 契约 serializer 新增 `caption` 字段/B_prime 分支),不再是坐标 dump。B′ 现在忠实承载文本类信号(S1 标题被转写),但 captioner 自己看不见几何重叠 → B′ 不带 G 信号(合理)。
+- Blocker 2 deck 多图:`render-manifest` 渲染 deck 全页 + 写 `page_image_paths`,契约 deck serializer 每页一图(实测 5 页 deck = 5 图)。但 S2 在 A/C 仍 0、B=10/12 → 模型仍无法从页面像素读叙事顺序,且图像把 C 拖到 B 以下(真实发现,非基建问题)。
+- Blocker 3 模板:`slide_examiner/template.py` snap-to-master 真正吸收几何缺陷(肉眼核验 template G2 无重叠);H1-tpl 坍缩信号需要"能检出 freeform 几何"的模型才会出现。
+- Blocker 4 serializer 对齐:probe 走 `build_messages_from_sample`(全矩阵同款路径),findings 格式,0% parse failure。
+- 头条结论(4B→8B):G1/G2 在 8B 上**仍全 0**(几何阈值非 4B 独有);S1 图像感知被唤醒(A 0%→50%);S2 结构检出 B 58%→83%。几何仍归 linter。
+- 产物:`runs/probe/pilot_probe.jsonl`(8B)、`runs/probe/pilot_summary.json`、`reports/pilot_slideprobe.md`(新增"Confirmation pilot"小节)。
+- 单测:126 passed(新增 `tests/test_template.py`,改 deck 渲染测试)。
 
-- [ ] 跑一个真实 VLM adapter。
-  - [ ] 本地 Qwen3-VL 或 OpenAI-compatible API 二选一。
-  - [ ] 跑 A、B、C。
-  - [ ] 跑 B_prime。
-  - [ ] 记录 parse failure rate。
+返修快照 2026-06-16(第二轮): 修复 G1/G2"注入不可见"后重跑。
+- 改 `inject_text_overflow`:把缺陷框收窄到文字宽度,filler 真正溢出(单测仍过)。
+- 改 `render.slide_to_html`:内容块渲染成可见卡片(`white-space:nowrap` + 半透明边框盒),溢出/重叠肉眼可辨(已逐张核验 θ=64 / IoU=0.4 渲染图)。
+- 结论翻转:即便缺陷已清晰可见、且 B/C 的 oracle 直接给出 `rendered_text_width_px`,4B 仍 0 检出;自由描述探针(`scripts/pilot_geometry_diag.py`)确认它"看不见"中等档几何缺陷,但能认出极端档 → 这是**模型几何检测阈值过高**的真实发现(不是数据 bug),更坚实地支持"G 类归 linter"。诊断产物 `runs/pilot/sanity/{sanity_results,geometry_threshold}.json`。
 
-- [ ] 分析 pilot 结果。
-  - [ ] A vs B 是否出现感知 gap。
-  - [ ] B vs B_prime 是否有 caption oracle 损失。
-  - [ ] G 类和 S 类表现是否有差异。
-  - [ ] 输出 `runs/probe/pilot_summary.json`。
-  - [ ] 输出 `reports/pilot_slideprobe.md`。
+- [x] 选择 pilot 缺陷类型。
+  - [x] G1_TEXT_OVERFLOW。
+  - [x] G2_ELEMENT_OVERLAP。
+  - [x] S1_TITLE_BODY_MISMATCH。
+  - [x] 可选: S2_NARRATIVE_ORDER_BREAK。(已纳入,deck 级)
 
-- [ ] 根据 pilot 修改实验协议。
-  - [ ] prompt 太长则压缩 serializer。
-  - [ ] JSON 不稳定则加强 parser/retry。
-  - [ ] 缺陷太容易或太难则调整 severity。
-  - [ ] 图像尺寸不够则优先跑 resolution 消融。
+- [x] 为每类缺陷准备少量样本。
+  - [x] 每类至少 10-20 个样本。(G1=20, G2=16, S1=12, S2=12, neg=24)
+  - [x] 包含 clean negative。(24 个,FP=0)
+  - [x] 包含至少两个 severity 档位。(G1 5 档 / G2 4 档;S1/S2 注入器单档,符合其设计)
+  - [x] 包含 freeform 和 template metadata。(注:当前 template/freeform 仅为元数据标签、底图相同,真正模板操纵需在全矩阵前接入,见报告 caveat)
+
+- [x] 跑一个真实 VLM adapter。
+  - [x] 本地 Qwen3-VL 或 OpenAI-compatible API 二选一。(Qwen3-VL-4B 本地 vLLM,OpenAI 兼容端点)
+  - [x] 跑 A、B、C。
+  - [x] 跑 B_prime。
+  - [x] 记录 parse failure rate。(0/1008 = 0%)
+
+- [x] 分析 pilot 结果。
+  - [x] A vs B 是否出现感知 gap。(S1 B−A=+0.67, S2 B−A=+0.58,语义类感知瓶颈明显)
+  - [x] B vs B_prime 是否有 caption oracle 损失。(B′ 全 0;扁平 caption 是死通道,B−B′ 损失最大)
+  - [x] G 类和 S 类表现是否有差异。(G 类近乎不可检 G1 1/80、G2 0/64;S 类信号集中在结构通道)
+  - [x] 输出 `runs/probe/pilot_summary.json`。
+  - [x] 输出 `reports/pilot_slideprobe.md`。
+
+- [x] 根据 pilot 修改实验协议。(协议调整清单写入 `reports/pilot_slideprobe.md`)
+  - [x] prompt 太长则压缩 serializer。(已改为 scope+schema 感知 prompt;deck 级 C/A 需改走 `build_deck_messages` 多图)
+  - [x] JSON 不稳定则加强 parser/retry。(0% parse failure,scope+schema prompt + 1 次 JSON retry 足够,暂不需语法约束解码)
+  - [x] 缺陷太容易或太难则调整 severity。(已修:G1 收窄框真正溢出、渲染卡片化使 G1/G2 肉眼可辨;但 4B 仍 0 检出——根因是模型几何阈值过高,非数据,见返修快照)
+  - [x] 图像尺寸不够则优先跑 resolution 消融。(本轮 1024 长边;G 类在结构/图像两通道都为 0,先解决"注入可见性"再做分辨率消融)
 
 ## 7. 第六优先级: Part 1 全矩阵诊断
 
@@ -247,12 +282,13 @@
   - [ ] clean negative 比例记录清楚。
 
 - [ ] 冻结模型矩阵。
-  - [ ] Qwen3-VL-4B。
-  - [ ] Qwen3-VL-8B。
-  - [ ] Qwen3-VL-32B dense 或可替代强模型。
-  - [ ] Qwen3-VL-30B-A3B 或可替代强模型。
+  - [ ] Qwen3-VL-4B。(权重已在 `/home/gpus/models/Qwen3-VL-4B-Instruct`,BF16,单卡)
+  - [ ] Qwen3-VL-8B。(`/home/gpus/models/Qwen3-VL-8B-Instruct`,BF16,单卡)
+  - [ ] Qwen3-VL-32B dense 或可替代强模型。(本地**仅 AWQ 20G**[TP=2];全精度 BF16 63G 已于 2026-06-16 删除腾磁盘,如需 BF16 上界对照需重新下载)
+  - [ ] Qwen3-VL-30B-A3B 或可替代强模型。(`Qwen3-VL-30B-A3B-Instruct-AWQ`,17G,单卡可跑)
   - [ ] API 参考点。
-  - [ ] 如果 27B 部署失败,记录失败原因和替代方案。
+  - [ ] 可选接 Qwen3.6-27B(多模态 dense,Apache-2.0;AWQ-INT4≈17G 单卡或 TP=2;已知可在 vLLM v0.19+Ampere 跑通,与本机一致)。如部署失败,记录失败原因和替代方案。
+  - [ ] TP 部署固定 `CUDA_VISIBLE_DEVICES=1,2,3` + `--disable-custom-all-reduce`(实测 GPU0 跨 NUMA `SYS`,GPU1/2/3 同 socket `NODE`,避开 GPU0 跨 socket all-reduce);sm_86 无 FP8,大模型走 AWQ-INT4,KV 用 fp16/INT8 不用 fp8。
 
 - [ ] 跑完整 attribution 矩阵。
   - [ ] A_IMAGE_ONLY。
@@ -311,8 +347,8 @@
   - [ ] 记录样本数、缺陷分布、modality 分布。
 
 - [ ] 跑 QLoRA 训练。
-  - [ ] 确认 GPU 环境。
-  - [ ] 确认 Qwen3-VL-8B 权重路径。
+  - [ ] 确认 GPU 环境。(微调用单卡;建议占 GPU0——它跨 NUMA 不适合做 TP,正好留给训练,TP 推理走 GPU1/2/3)
+  - [ ] 确认 Qwen3-VL-8B 权重路径。(`/home/gpus/models/Qwen3-VL-8B-Instruct`,BF16 已就绪)
   - [ ] 确认训练后 checkpoint 输出目录。
   - [ ] 记录训练命令。
   - [ ] 记录 loss 曲线或日志。
@@ -438,6 +474,6 @@
 - [ ] 2. 给 SFT 导出加 A>=30% 采样和 parser 回读。
 - [ ] 3. 加 evidence validator。
 - [ ] 4. 准备 2-3 类缺陷的 pilot manifest。
-- [ ] 5. 打通真实渲染。
-- [ ] 6. 跑一个真实 VLM 小 pilot。
+- [x] 5. 打通真实渲染。
+- [x] 6. 跑一个真实 VLM 小 pilot。(Qwen3-VL-4B,见 §6 与 `reports/pilot_slideprobe.md`)
 - [ ] 7. 只有 pilot 稳定后,再扩大 Part 1 全矩阵。

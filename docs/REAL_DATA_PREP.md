@@ -148,6 +148,49 @@ python -m slide_examiner.cli prepare-benchmark pptbench \
 Required artifact before claiming PPTBench migration data is ready:
 `reports/data_prep/pptbench_adapter_summary.json`.
 
+## Rendering (validated 2026-06-16)
+
+The render pipeline lives in `slide_examiner/render.py`. Image, bbox and
+`RenderSpec` always come from the same render so modality A/B/C stay aligned.
+
+Render a manifest to images + render specs (native or one resolution):
+
+```bash
+slide-examiner render-manifest data/manifests/<name>.jsonl runs/rendered/<name> [--long-edge 1024]
+```
+
+Render every Part 1 ablation resolution (768/1024/1536/2048 long edge) with a
+quality report:
+
+```bash
+slide-examiner render-resolutions \
+  data/manifests/zenodo10k_hfmirror_pilot_clean_candidates.jsonl \
+  runs/rendered/zenodo10k_pilot_resolutions \
+  --quality-report reports/render/zenodo10k_pilot_resolution_quality.json
+```
+
+Each per-resolution manifest (`runs/rendered/.../<res>/manifest.jsonl`) carries
+`image_path` + `metadata.render`; structure (`slide`/`deck`) and `caption`
+(modality B') are preserved verbatim. Quality checks cover existence, openability,
+byte size, degenerate/out-of-bounds bbox, and whether text elements have ink at
+their bbox.
+
+Render a real PPTX deck to ordered page PNGs (LibreOffice -> PDF -> poppler):
+
+```bash
+slide-examiner render-pptx <deck>.pptx runs/rendered/pptx_pages/<deck> \
+  --summary reports/render/pptx_render_summary.json
+```
+
+The summary records page count and order; multi-page decks are checked for a
+contiguous page sequence (validated on a 6-page Zenodo10K deck).
+
+Sandbox caveat (this machine): LibreOffice is an AppImage that the current Claude
+Code sandbox silently kills when spawned from a Python subprocess. It runs fine
+when launched directly from a shell, and there is no such limit in the real
+research environment. Set `SLIDE_EXAMINER_SOFFICE` to an extracted
+`.../program/soffice` launcher to avoid the AppImage FUSE mount entirely.
+
 ## Human Annotation Plan
 
 Target roughly 100 real problem pages after clean-candidate extraction and manual
@@ -168,7 +211,7 @@ Recommended JSONL fields for `eval/human_real_defects.jsonl`:
 Process:
 
 1. Sample candidate pages/decks from `data/manifests/*clean_candidates.jsonl`.
-2. Render images after Part 5 rendering is validated.
+2. Render images with `render-resolutions` / `render-pptx` (rendering validated 2026-06-16).
 3. Have annotator A label all selected items.
 4. Have annotator B review at least 20-30% stratified by defect type and source.
 5. Resolve disagreements into a final JSONL and write

@@ -4,7 +4,7 @@ from dataclasses import dataclass, replace
 from random import Random
 
 from .geometry import _parse_rgb, color_delta_e
-from .schemas import Deck, DefectLabel, Element, Slide
+from .schemas import BBox, Deck, DefectLabel, Element, Slide
 
 
 @dataclass(frozen=True)
@@ -41,13 +41,24 @@ def inject_text_overflow(
     element = _choose_element(slide, element_id, require_text=True)
     font_size = float(element.style.get("font_size", element.style.get("font_size_pt", 24)))
     avg_char_width = float(element.style.get("avg_char_width_px", font_size * 0.55))
+    original_text = element.text or ""
     extra_chars = max(1, int(overflow_px // max(1.0, avg_char_width)) + 2)
     filler = "X" * extra_chars
     if rng.random() < 0.5:
-        text = f"{element.text} {filler}"
+        text = f"{original_text} {filler}"
     else:
-        text = f"{filler} {element.text}"
-    updated = element.with_text(text).with_metadata(rendered_text_width_px=element.bbox.width + overflow_px)
+        text = f"{filler} {original_text}"
+    # Shrink the box to fit only the original text on one line, so the appended
+    # filler genuinely spills past the (now snug) box in the render — not just in
+    # a metadata field. Width of the original text on one line at this font:
+    original_text_width = max(avg_char_width, len(original_text) * avg_char_width)
+    snug_width = min(element.bbox.width, original_text_width)
+    rendered_text_width = len(text) * avg_char_width
+    updated = (
+        element.with_text(text)
+        .with_bbox(BBox(element.bbox.x, element.bbox.y, snug_width, element.bbox.height))
+        .with_metadata(rendered_text_width_px=rendered_text_width)
+    )
     defective = slide.replace_element(updated)
     label = DefectLabel(
         type="G1_TEXT_OVERFLOW",

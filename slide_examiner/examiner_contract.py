@@ -197,6 +197,7 @@ class PageExamRequest(ContractModel):
     render: RenderSpec
     image_png_base64: str | None = None
     elements: list[Element] | None = None
+    caption: str | None = None  # natural-language description; modality B' oracle
     context: PageContext
     check_scope: list[DefectType] = Field(default_factory=lambda: _sorted_defects(PAGE_SCOPED_DEFECTS))
     mode: Literal[ExamMode.POINTWISE] = ExamMode.POINTWISE
@@ -246,6 +247,7 @@ class DeckContext(ContractModel):
 class DeckExamRequest(ContractModel):
     deck_id: str
     pages: list[DeckPageInput]
+    caption: str | None = None  # natural-language description; modality B' oracle
     context: DeckContext
     check_scope: list[DefectType] = Field(default_factory=lambda: _sorted_defects(DECK_SCOPED_DEFECTS))
     mode: Literal[ExamMode.POINTWISE] = ExamMode.POINTWISE
@@ -372,10 +374,15 @@ def build_page_messages(req: PageExamRequest) -> list[dict[str, Any]]:
     if req.modality in {Modality.B_STRUCT_ONLY, Modality.C_BOTH}:
         struct_txt = "ELEMENTS:\n" + serialize_elements(req.elements or []) + "\n"
 
+    caption_txt = ""
+    if req.modality == Modality.B_CAPTION_ONLY:
+        caption_txt = "CAPTION (natural-language description of the rendered slide):\n" + (req.caption or "") + "\n"
+
     instruction = (
         f"PAGE_ID: {req.page_id}\n"
         f"{serialize_render(req.render)}\n"
         f"{struct_txt}"
+        f"{caption_txt}"
         f"SCENE: {req.context.scene.value}\n"
         f"TEMPLATE_ID: {req.context.template_id}\n"
         f"PAGE_INDEX: {req.context.page_index}\n"
@@ -410,6 +417,10 @@ def build_deck_messages(req: DeckExamRequest) -> list[dict[str, Any]]:
                 f"{elements_txt}"
             )
 
+    caption_txt = ""
+    if req.modality == Modality.B_CAPTION_ONLY:
+        caption_txt = "CAPTION (natural-language description of the rendered deck):\n" + (req.caption or "") + "\n\n"
+
     instruction = (
         f"DECK_ID: {req.deck_id}\n"
         f"SCENE: {req.context.scene.value}\n"
@@ -418,6 +429,7 @@ def build_deck_messages(req: DeckExamRequest) -> list[dict[str, Any]]:
         f"REQUIRED_SECTIONS: {req.context.required_sections}\n"
         f"PROJECT_GLOSSARY: {req.context.project_glossary}\n"
         f"CHECK_SCOPE: {[item.value for item in req.check_scope]}\n\n"
+        f"{caption_txt}"
         + "\n\n".join(page_blocks)
     )
     content.append({"type": "text", "text": instruction})
@@ -473,11 +485,13 @@ def page_request_from_sample(
     elements = _elements_from_slide(slide) if slide is not None and mod in {Modality.B_STRUCT_ONLY, Modality.C_BOTH} else None
     if slide is None and mod in {Modality.B_STRUCT_ONLY, Modality.C_BOTH}:
         elements = []
+    caption = _optional_str(manifest.caption) if mod == Modality.B_CAPTION_ONLY else None
     return PageExamRequest(
         page_id=page_id,
         render=render_spec_from_slide(slide, manifest),
         image_png_base64=image,
         elements=elements,
+        caption=caption,
         context=PageContext(
             scene=_scene_from_metadata(manifest.metadata),
             template_id=_optional_str(manifest.metadata.get("template_id")),
@@ -520,9 +534,11 @@ def deck_request_from_sample(
                 figure_summaries=_figure_summaries(slide),
             )
         )
+    caption = _optional_str(manifest.caption) if mod == Modality.B_CAPTION_ONLY else None
     return DeckExamRequest(
         deck_id=deck.deck_id or manifest.sample_id,
         pages=pages,
+        caption=caption,
         context=DeckContext(
             scene=_scene_from_metadata(manifest.metadata),
             template_id=_optional_str(manifest.metadata.get("template_id")),

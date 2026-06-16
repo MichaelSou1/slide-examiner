@@ -4,6 +4,10 @@ This repository tracks the Slide-Examiner research implementation against
 `specs/SPEC_slide_examiner_attribution.md` and
 `specs/EXAMINER_IO_CONTRACT.md`.
 
+## Communication
+
+- 用中文与用户交互（回复、说明、总结一律用中文）。
+
 ## TODO Maintenance
 
 - Treat `specs/todo.md` as the project-level execution checklist.

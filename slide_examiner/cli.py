@@ -30,7 +30,13 @@ from .orchestrator import MatrixRunConfig, run_matrix
 from .panel import summarize_panel_ratings
 from .power import two_proportion_sample_size
 from .probe import ProbeRunner
-from .render import render_manifest, render_slide_html_file
+from .render import (
+    RESOLUTION_LONG_EDGES,
+    render_manifest,
+    render_manifest_resolutions,
+    render_pptx_to_pngs,
+    render_slide_html_file,
+)
 from .repair import repair_slide
 from .reports import write_analysis_report
 from .schemas import ManifestSample, Slide
@@ -90,8 +96,44 @@ def _cmd_render_manifest(args: argparse.Namespace) -> int:
         args.output_dir,
         output_manifest=args.output_manifest,
         render_clean=not args.no_clean,
+        long_edge=args.long_edge,
     )
-    print(f"Rendered manifest images to {args.output_dir} and wrote {target}")
+    suffix = f" at {args.long_edge}px long edge" if args.long_edge else ""
+    print(f"Rendered manifest images to {args.output_dir}{suffix} and wrote {target}")
+    return 0
+
+
+def _cmd_render_resolutions(args: argparse.Namespace) -> int:
+    long_edges = tuple(args.long_edges) if args.long_edges else RESOLUTION_LONG_EDGES
+    result = render_manifest_resolutions(
+        args.manifest,
+        args.output_root,
+        long_edges=long_edges,
+        render_clean=args.clean,
+        quality_report=args.quality_report,
+    )
+    for long_edge in long_edges:
+        summary = result["quality"].get(long_edge, {})
+        print(
+            f"  {long_edge}px: {summary.get('ok', 0)}/{summary.get('total', 0)} images passed quality checks "
+            f"-> {result['manifests'][long_edge]}"
+        )
+    if args.quality_report:
+        print(f"Wrote render quality report to {args.quality_report}")
+    return 0
+
+
+def _cmd_render_pptx(args: argparse.Namespace) -> int:
+    result = render_pptx_to_pngs(args.pptx, args.output_dir, dpi=args.dpi)
+    status = "ordered OK" if result.order_ok else "ORDER/COUNT MISMATCH"
+    print(
+        f"Rendered {result.page_count} page(s) from {args.pptx} to {args.output_dir} ({status})"
+    )
+    if args.summary:
+        summary_path = Path(args.summary)
+        summary_path.parent.mkdir(parents=True, exist_ok=True)
+        summary_path.write_text(json.dumps(result.to_dict(), ensure_ascii=False, indent=2), encoding="utf-8")
+        print(f"Wrote PPTX render summary to {args.summary}")
     return 0
 
 
@@ -616,7 +658,32 @@ def build_parser() -> argparse.ArgumentParser:
     render_manifest_parser.add_argument("output_dir")
     render_manifest_parser.add_argument("--output-manifest", help="Write the updated manifest here (default: in place).")
     render_manifest_parser.add_argument("--no-clean", action="store_true", help="Render only the defective image.")
+    render_manifest_parser.add_argument(
+        "--long-edge", type=int, default=None, help="Render at this long-edge resolution (default: native slide size)."
+    )
     render_manifest_parser.set_defaults(func=_cmd_render_manifest)
+
+    render_resolutions_parser = subparsers.add_parser(
+        "render-resolutions",
+        help="Render a manifest at every ablation resolution (768/1024/1536/2048) with per-resolution manifests + quality report.",
+    )
+    render_resolutions_parser.add_argument("manifest")
+    render_resolutions_parser.add_argument("output_root")
+    render_resolutions_parser.add_argument(
+        "--long-edges", type=int, nargs="+", default=None, help=f"Long-edge sizes to render (default: {list(RESOLUTION_LONG_EDGES)})."
+    )
+    render_resolutions_parser.add_argument("--clean", action="store_true", help="Also render the clean counterpart image.")
+    render_resolutions_parser.add_argument("--quality-report", help="Write a JSON render-quality report here.")
+    render_resolutions_parser.set_defaults(func=_cmd_render_resolutions)
+
+    render_pptx_parser = subparsers.add_parser(
+        "render-pptx", help="Render a PPTX deck to ordered page PNGs via LibreOffice + poppler."
+    )
+    render_pptx_parser.add_argument("pptx")
+    render_pptx_parser.add_argument("output_dir")
+    render_pptx_parser.add_argument("--dpi", type=int, default=150, help="Raster DPI for page images (default: 150).")
+    render_pptx_parser.add_argument("--summary", help="Write a JSON render summary here.")
+    render_pptx_parser.set_defaults(func=_cmd_render_pptx)
 
     export_lf = subparsers.add_parser(
         "export-llamafactory", help="Export a LLaMA-Factory sharegpt+images SFT dataset (+dataset_info.json)."
