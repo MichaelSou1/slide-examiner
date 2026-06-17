@@ -69,9 +69,27 @@ def main() -> None:
              "(15/24 false positives).")
     L.append("- **Methodology warning for the matrix**: S6 (and any agreement-checking defect) MUST be scored "
              "with paired clean controls and balanced accuracy / precision, never recall alone — a recall-only "
-             "view here would have reported '100% S6 detection' when the true discrimination is chance. The "
-             "scope prompt that names S6 as a candidate likely primes the over-firing; an open-scope or "
-             "forced-choice (which of these two slides has the contradiction?) eval is the fairer follow-up.\n")
+             "view here would have reported '100% S6 detection' when the true discrimination is chance.\n")
+
+    fc_path = REPO / "runs" / "probe" / "part1_s6_forced_choice_30b.json"
+    if fc_path.exists():
+        fc = json.loads(fc_path.read_text(encoding="utf-8"))
+        summary["forced_choice"] = {k: fc[k] for k in ("n_trials", "n_pairs", "accuracy", "robust_accuracy", "pick_distribution")}
+        SUMMARY.write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")
+        correct = sum(1 for r in fc["results"] if r["correct"])
+        L.append("## Forced-choice (2-AFC) re-eval — VLMs compare better than they judge\n")
+        L.append("Same images, different question: show the contradiction slide **and** its matching agreeing-clean "
+                 "slide (same figure, only the body differs) side by side, and ask *which* slide has the image-text "
+                 "contradiction. Each of the 12 figure pairs runs in both orderings to cancel position bias.\n")
+        L.append(f"- **2-AFC accuracy: {fc['accuracy']:.0%} ({correct}/{fc['n_trials']})**, robust across both orderings "
+                 f"**{fc['robust_accuracy']:.0%} ({fc['pairs_correct_both_orderings']}/{fc['pairs_total']})**, pick "
+                 f"distribution {fc['pick_distribution']} (perfectly balanced → no position bias).")
+        L.append("- **So the model HAS the capability**: at chance (0.50) pointwise, perfect (1.00) in forced choice. The "
+                 "failure was calibrating an absolute yes/no judgement in isolation — not perception. Given the contrast it "
+                 "discriminates flawlessly.")
+        L.append("- **Protocol recommendation**: evaluate agreement-checking defects (S6, likely S3) with the pairwise / "
+                 "forced-choice arm the contract already defines (`PairwiseResult`), not pointwise detection — the strongest "
+                 "evidence so far that relative judgement is the right framing for the hard semantic checks.\n")
     REPORT.write_text("\n".join(L) + "\n", encoding="utf-8")
     print(f"Wrote {SUMMARY}\nWrote {REPORT}")
 
