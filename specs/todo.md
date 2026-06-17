@@ -321,6 +321,13 @@ S6 二选一(2-AFC)强制选择复评 2026-06-16(`scripts/s6_forced_choice.py`,1
 - 边界:1024px、pointwise、每家一个实例;更高分辨率 + forced-choice 未测。
 - 产物:`reports/part1_encoder_geometry.md`、`runs/probe/part1_encoder_summary.json`、`runs/probe/part1_geom_{8b,penguin,internvl,ovis,kimi,30b}.jsonl`;脚本 `scripts/part1_encoder_report.py`、`penguin_geom_offline.py`、`penguin_sanity.py`。
 - 部署:InternVL3.5-8B / Ovis2.5-9B / Kimi-VL-A3B 都在 **vllm-qwen(0.19)主线支持**(从 ModelScope 拉,`vllm serve` + OpenAI 端点直接用 run_pilot)。Penguin-VL 需专用 0.11 env + 离线 LLM(见上一条)。
+
+分辨率 + forced-choice 复活实验 2026-06-17(只在最有信号的 G1/G3 上,24 对/缺陷,1536+2048,Qwen3-VL-8B 与 30B-A3B):**几何盲其实是两种不同的失败**。
+- **G1 文字溢出 = 校准失败,forced-choice 完全复活**:pointwise 随机(8B 0.50 / 30B 0.65),2-AFC **100%**(48/48,pick 平衡 {A:24,B:24},双向序都对)——8B、30B、两分辨率全 100%。溢出一直能看见,只是给不出"绝对 yes/no"。→ **pairwise/forced-choice examiner 能做溢出**。
+- **G3 对齐偏移 = 真·感知阈值,啥都救不了**:2-AFC **50% 且全选一边**(分不出两张图);1536/2048、8B/30B 全一样。2–32px 的位移就是在 VLM 感知阈值之下。
+- **分辨率(1536 vs 2048)毫无差别**——不是像素预算问题。
+- 结论(精炼 Part 1 分工):**细几何(对齐/字号/色差/小边距)归 linter(不可替代)**;**文字溢出可用 pairwise VLM 兜底**;**pointwise VLM 几何检测根本不该计分**。这跟 S6 一致:相对判断 >> 绝对打分。
+- 产物:`reports/part1_resolution_forcedchoice.md`、`runs/probe/part1_fc_summary.json`、`runs/probe/fc_{8b,30b}_{G1,G3}_{1536,2048}.json`;脚本 `scripts/g13_fc_build.py`、`g13_forced_choice.py`、`g13_fc_report.py`;数据 `data/part1_fc/`。
 - Penguin-VL-8B 部署配方(踩坑实录):hf-mirror 下载(ModelScope 无,`tencent-community/Penguin-VL-8B` 是社区镜像);专用 env `penguin-vl`(vllm==0.11.0,**transformers 降到 4.56.2**,vllm 默认拉的 5.x 删了 `all_special_tokens_extended`);插件补丁(`projector.py` 的 `TRANSFORMERS_CACHE` 回退、ViT 无 flash-attn 时回退 `TORCH_SDPA`、`tokenizer_class→Qwen2TokenizerFast`、`config.vision_encoder` 指向本地 `/home/gpus/models/Penguin-Encoder`);**插件 OpenAI HTTP server 与 pip vllm 0.11 漂移严重,改用离线 `LLM.chat`**(传 `chat_template_kwargs={"image_token":"<image>"}`);`HF_HUB_OFFLINE=1` + **从 /tmp 运行**(避开 triton 调 gcc 读 `./specs` 目录的老问题)。
 
 - [ ] 冻结 Part 1 数据集。

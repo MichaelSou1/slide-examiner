@@ -49,3 +49,4 @@ data/part1_img/*.jsonl
 .DS_Store
 .idea/
 .vscode/
+data/part1_fc/*.jsonl
