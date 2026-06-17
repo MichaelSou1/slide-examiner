@@ -330,57 +330,45 @@ S6 二选一(2-AFC)强制选择复评 2026-06-16(`scripts/s6_forced_choice.py`,1
 - 产物:`reports/part1_resolution_forcedchoice.md`、`runs/probe/part1_fc_summary.json`、`runs/probe/fc_{8b,30b}_{G1,G3}_{1536,2048}.json`;脚本 `scripts/g13_fc_build.py`、`g13_forced_choice.py`、`g13_fc_report.py`;数据 `data/part1_fc/`。
 - Penguin-VL-8B 部署配方(踩坑实录):hf-mirror 下载(ModelScope 无,`tencent-community/Penguin-VL-8B` 是社区镜像);专用 env `penguin-vl`(vllm==0.11.0,**transformers 降到 4.56.2**,vllm 默认拉的 5.x 删了 `all_special_tokens_extended`);插件补丁(`projector.py` 的 `TRANSFORMERS_CACHE` 回退、ViT 无 flash-attn 时回退 `TORCH_SDPA`、`tokenizer_class→Qwen2TokenizerFast`、`config.vision_encoder` 指向本地 `/home/gpus/models/Penguin-Encoder`);**插件 OpenAI HTTP server 与 pip vllm 0.11 漂移严重,改用离线 `LLM.chat`**(传 `chat_template_kwargs={"image_token":"<image>"}`);`HF_HUB_OFFLINE=1` + **从 /tmp 运行**(避开 triton 调 gcc 读 `./specs` 目录的老问题)。
 
-- [ ] 冻结 Part 1 数据集。
-  - [ ] 每缺陷 × 每 severity 至少达到 spec 目标或记录降级原因。
-  - [ ] 留出 held-out severity。
-  - [ ] 留出 1-2 个 held-out defect type。
-  - [ ] clean negative 比例记录清楚。
+**执行设计已按 pilot 实证固化为三轨(见 `specs/SPEC...md` §3.0)。原"所有缺陷×所有模态 pointwise 铺满"作废。**
 
-- [ ] 冻结模型矩阵。
-  - [ ] Qwen3-VL-4B。(权重已在 `/home/gpus/models/Qwen3-VL-4B-Instruct`,BF16,单卡)
-  - [ ] Qwen3-VL-8B。(`/home/gpus/models/Qwen3-VL-8B-Instruct`,BF16,单卡)
-  - [ ] Qwen3-VL-32B dense 或可替代强模型。(本地**仅 AWQ 20G**[TP=2];全精度 BF16 63G 已于 2026-06-16 删除腾磁盘,如需 BF16 上界对照需重新下载)
-  - [ ] Qwen3-VL-30B-A3B 或可替代强模型。(`Qwen3-VL-30B-A3B-Instruct-AWQ`,17G,单卡可跑)
-  - [ ] API 参考点。
-  - [ ] 可选接 Qwen3.6-27B(多模态 dense,Apache-2.0;AWQ-INT4≈17G 单卡或 TP=2;已知可在 vLLM v0.19+Ampere 跑通,与本机一致)。如部署失败,记录失败原因和替代方案。
-  - [ ] TP 部署固定 `CUDA_VISIBLE_DEVICES=1,2,3` + `--disable-custom-all-reduce`(实测 GPU0 跨 NUMA `SYS`,GPU1/2/3 同 socket `NODE`,避开 GPU0 跨 socket all-reduce);sm_86 无 FP8,大模型走 AWQ-INT4,KV 用 fp16/INT8 不用 fp8。
+- [ ] 冻结 Part 1 数据集(**配对优先**)。
+  - [ ] **每个正样本配一个同底图、仅缺陷不同的 clean 负样本**(balanced accuracy / pairwise 都要它)。
+  - [ ] 每缺陷 × 每 severity 达 spec 目标或记降级原因;clean negative 比例记录清楚。
+  - [ ] 留出 held-out severity + 1–2 个 held-out defect type。
+  - [ ] **带图 deck**(让 S6 可测)、**glossary 术语**(让 S3 可测);`template` 用真实 snap-to-master 而非元数据标签。
 
-- [ ] 跑完整 attribution 矩阵。
-  - [ ] A_IMAGE_ONLY。
-  - [ ] B_STRUCT_ONLY。
-  - [ ] B_prime caption oracle。
-  - [ ] C_BOTH。
-  - [ ] T1 检测。
-  - [ ] T2 定位。
-  - [ ] T3 修复建议。
-  - [ ] k=3 seeds。
+- [ ] 冻结模型矩阵(**跨尺寸即可,编码器扫已完成不再做**)。
+  - [ ] Qwen3-VL-4B / 8B(BF16,8B 单卡 KV 偏紧 → TP=2)、30B-A3B-AWQ(几何上界参照,TP=2)。
+  - [ ] 可选 API 参考点 ×1。32B-dense-AWQ / Qwen3.6-27B 视需要再加。
+  - [ ] TP 固定 `CUDA_VISIBLE_DEVICES=1,2,3` + `--disable-custom-all-reduce`;从无 `specs/` 的 cwd(如 /tmp)启动避 gcc;sm_86 走 AWQ-INT4 + fp16/INT8 KV。
+  - [ ] (不做)编码器家族扫——已完成且为负结果(5 家族几何全随机),见 `reports/part1_encoder_geometry.md`。
 
-- [ ] 跑分辨率消融。
-  - [ ] 768。
-  - [ ] 1024。
-  - [ ] 1536。
-  - [ ] 2048。
-  - [ ] 报告 G 组和 S 组对分辨率的敏感性差异。
+- [ ] 轨 L — G 组(G2–G6)由 **linter 主检测**。
+  - [ ] linter 跑全 G 组,产连续几何量(θ 读数);作 ground truth 与上界。
+  - [ ] VLM 对 G2–G6 只作稀疏交叉验证,**pointwise 不计入主结果**。
 
-- [ ] 跑模板维度实验。
-  - [ ] freeform 条件。
-  - [ ] template 条件。
-  - [ ] G3-G6 是否被模板显著吸收。
-  - [ ] G1/G2 和 S 组归因是否基本不变。
+- [ ] 轨 E — S 组语义(S1/S4/S5)pointwise A/B/B′/C 归因。
+  - [ ] A/B/B′/C × T1(主),T2/T3 视需要;k=3 seeds。
+  - [ ] **B′ = VLM 看图 caption**(`scripts/caption_images.py`),不是坐标 dump。
+  - [ ] 主指标 **balanced accuracy + precision/recall**(配对 clean);deck 按"缺陷×通道"画像(C 多图可能反而最差)。
+
+- [ ] 轨 P — pairwise/2-AFC(**G1 溢出、S6 图文矛盾、S3 术语**)。
+  - [ ] `PairwiseResult`/forced-choice,配对 clean,双向序消位置偏置;报 2-AFC accuracy。
+  - [ ] 验证"相对优于绝对"(G1/S6 已证 pointwise 随机 → forced-choice 满分)。
+
+- [ ] 分辨率消融(**收窄**):只在非地板 cell(G1-overflow pairwise、S1)抽测;**不再 768/1024/1536/2048 × 全缺陷**(1536≡2048 几何零差别)。
+
+- [ ] 模板坍缩(**解耦**):(a) 模板吸收量由 **linter** 度量(snap-to-master);(b) "VLM 检出随模板下降"仅在 30B+overflow 等非地板 cell 作可选观察。
 
 - [ ] 生成 Part 1 分析产物。
-  - [ ] `runs/probe/full_matrix.jsonl`。
-  - [ ] `runs/probe/summary.json`。
-  - [ ] `reports/slideprobe.md`。
-  - [ ] H1 gate 结果。
-  - [ ] H1-tpl gate 结果。
-  - [ ] 心理物理阈值表。
-  - [ ] caption oracle gap 表。
+  - [ ] `runs/probe/*` 原始 + `reports/slideprobe.md` 汇总(沿用现有 part1_* 报告骨架)。
+  - [ ] 三张主表:轨 E 的 S 组通道画像(balanced acc)、轨 P 的 2-AFC 对照、轨 L 的 linter 几何 + VLM 阈值(只标"破/没破随机")。
+  - [ ] H1/H1-tpl/H-rel gate 结果(按 SPEC §6 实证修订口径)。
 
 - [ ] 做 Go/No-Go 判断。
-  - [ ] 如果 H1 成立,进入 Part 2 训练。
-  - [ ] 如果 H1 不成立,记录负结果并调整论文定位。
-  - [ ] 如果 H1-tpl 不成立,模板坍缩降级为工程观察。
+  - [ ] H-rel(相对优于绝对)+ S 组 examiner 有效 → 进 Part 2(训 8B examiner,pointwise+pairwise 双输出)。
+  - [ ] G 组结论(归 linter)已稳,直接写进 Part 2/3 的混合架构设计。
 
 ## 8. 第七优先级: Part 2 examiner 训练
 
