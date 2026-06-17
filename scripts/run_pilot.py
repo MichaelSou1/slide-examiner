@@ -36,14 +36,24 @@ from slide_examiner.schemas import ManifestSample
 
 TASKS = ("T1", "T2", "T3")
 
-PAGE_SCOPE = ["G1_TEXT_OVERFLOW", "G2_ELEMENT_OVERLAP", "S1_TITLE_BODY_MISMATCH"]
-DECK_SCOPE = ["S2_NARRATIVE_ORDER_BREAK"]
+PAGE_SCOPE = ["G1_TEXT_OVERFLOW", "G2_ELEMENT_OVERLAP", "G3_ALIGNMENT_OFFSET",
+              "G4_FONT_SIZE_INCONSISTENCY", "G5_BRAND_COLOR_VIOLATION", "G6_MARGIN_VIOLATION",
+              "S1_TITLE_BODY_MISMATCH", "S4_DENSITY_RULE_VIOLATION", "S6_IMAGE_TEXT_CONTRADICTION"]
+DECK_SCOPE = ["S2_NARRATIVE_ORDER_BREAK", "S3_TERMINOLOGY_INCONSISTENCY", "S5_MISSING_LOGIC_SECTION"]
 
 DEFECT_DEFS = {
     "G1_TEXT_OVERFLOW": "text overflows or spills beyond the bounds of its box/placeholder",
     "G2_ELEMENT_OVERLAP": "two elements visually overlap or collide when they should not",
+    "G3_ALIGNMENT_OFFSET": "an element is misaligned / offset from where it should sit",
+    "G4_FONT_SIZE_INCONSISTENCY": "inconsistent font sizes among text that should match",
+    "G5_BRAND_COLOR_VIOLATION": "a color is off-brand / wrong for an element",
+    "G6_MARGIN_VIOLATION": "an element bleeds past the page margin or off the canvas edge",
     "S1_TITLE_BODY_MISMATCH": "the slide title does not match the body content / topic",
+    "S4_DENSITY_RULE_VIOLATION": "the slide is overcrowded / too dense with text",
+    "S6_IMAGE_TEXT_CONTRADICTION": "the image content contradicts the slide text",
     "S2_NARRATIVE_ORDER_BREAK": "the slides are out of their logical narrative order",
+    "S3_TERMINOLOGY_INCONSISTENCY": "a key term is used inconsistently across slides",
+    "S5_MISSING_LOGIC_SECTION": "a required section / logical step is missing from the deck",
 }
 
 TASK_LINE = {

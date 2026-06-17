@@ -1,0 +1,395 @@
+{
+  "deck_id": "part1img_deck1",
+  "slides": [
+    {
+      "slide_id": "imgslide_4",
+      "width": 1920,
+      "height": 1080,
+      "elements": [
+        {
+          "element_id": "s_title",
+          "type": "title",
+          "bbox": {
+            "x": 96,
+            "y": 72,
+            "width": 1728,
+            "height": 72
+          },
+          "text": "Performance update 5",
+          "style": {
+            "font_size_pt": 32,
+            "color": "#111111"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "title",
+            "text_level": "title"
+          }
+        },
+        {
+          "element_id": "s_fig",
+          "type": "image",
+          "bbox": {
+            "x": 120,
+            "y": 200,
+            "width": 760,
+            "height": 560
+          },
+          "text": "",
+          "style": {
+            "font_size_pt": 18,
+            "color": "#222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "diagram",
+            "diagram_claim": "The defect rate declined every sprint",
+            "diagram_false_claim": "The defect rate rose every sprint",
+            "diagram_trend": "down"
+          }
+        },
+        {
+          "element_id": "s_body0",
+          "type": "text",
+          "bbox": {
+            "x": 940,
+            "y": 220,
+            "width": 860,
+            "height": 80
+          },
+          "text": "The defect rate declined every sprint",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        },
+        {
+          "element_id": "s_body1",
+          "type": "text",
+          "bbox": {
+            "x": 940,
+            "y": 320,
+            "width": 860,
+            "height": 80
+          },
+          "text": "The chart on the left summarizes the trend.",
+          "style": {
+            "font_size_pt": 20,
+            "color": "#444444"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        }
+      ],
+      "metadata": {
+        "section": "evidence"
+      }
+    },
+    {
+      "slide_id": "imgslide_5",
+      "width": 1920,
+      "height": 1080,
+      "elements": [
+        {
+          "element_id": "s_title",
+          "type": "title",
+          "bbox": {
+            "x": 96,
+            "y": 72,
+            "width": 1728,
+            "height": 72
+          },
+          "text": "Performance update 6",
+          "style": {
+            "font_size_pt": 32,
+            "color": "#111111"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "title",
+            "text_level": "title"
+          }
+        },
+        {
+          "element_id": "s_fig",
+          "type": "image",
+          "bbox": {
+            "x": 120,
+            "y": 200,
+            "width": 760,
+            "height": 560
+          },
+          "text": "",
+          "style": {
+            "font_size_pt": 18,
+            "color": "#222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "diagram",
+            "diagram_claim": "Signups accelerated after the launch",
+            "diagram_false_claim": "Signups stalled after the launch",
+            "diagram_trend": "up"
+          }
+        },
+        {
+          "element_id": "s_body0",
+          "type": "text",
+          "bbox": {
+            "x": 940,
+            "y": 220,
+            "width": 860,
+            "height": 80
+          },
+          "text": "Signups accelerated after the launch",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        },
+        {
+          "element_id": "s_body1",
+          "type": "text",
+          "bbox": {
+            "x": 940,
+            "y": 320,
+            "width": 860,
+            "height": 80
+          },
+          "text": "The chart on the left summarizes the trend.",
+          "style": {
+            "font_size_pt": 20,
+            "color": "#444444"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        }
+      ],
+      "metadata": {
+        "section": "evidence"
+      }
+    },
+    {
+      "slide_id": "imgslide_6",
+      "width": 1920,
+      "height": 1080,
+      "elements": [
+        {
+          "element_id": "s_title",
+          "type": "title",
+          "bbox": {
+            "x": 96,
+            "y": 72,
+            "width": 1728,
+            "height": 72
+          },
+          "text": "Performance update 7",
+          "style": {
+            "font_size_pt": 32,
+            "color": "#111111"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "title",
+            "text_level": "title"
+          }
+        },
+        {
+          "element_id": "s_fig",
+          "type": "image",
+          "bbox": {
+            "x": 120,
+            "y": 200,
+            "width": 760,
+            "height": 560
+          },
+          "text": "",
+          "style": {
+            "font_size_pt": 18,
+            "color": "#222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "diagram",
+            "diagram_claim": "Operating costs fell quarter over quarter",
+            "diagram_false_claim": "Operating costs rose quarter over quarter",
+            "diagram_trend": "down"
+          }
+        },
+        {
+          "element_id": "s_body0",
+          "type": "text",
+          "bbox": {
+            "x": 940,
+            "y": 220,
+            "width": 860,
+            "height": 80
+          },
+          "text": "Operating costs fell quarter over quarter",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        },
+        {
+          "element_id": "s_body1",
+          "type": "text",
+          "bbox": {
+            "x": 940,
+            "y": 320,
+            "width": 860,
+            "height": 80
+          },
+          "text": "The chart on the left summarizes the trend.",
+          "style": {
+            "font_size_pt": 20,
+            "color": "#444444"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        }
+      ],
+      "metadata": {
+        "section": "evidence"
+      }
+    },
+    {
+      "slide_id": "imgslide_7",
+      "width": 1920,
+      "height": 1080,
+      "elements": [
+        {
+          "element_id": "s_title",
+          "type": "title",
+          "bbox": {
+            "x": 96,
+            "y": 72,
+            "width": 1728,
+            "height": 72
+          },
+          "text": "Performance update 8",
+          "style": {
+            "font_size_pt": 32,
+            "color": "#111111"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "title",
+            "text_level": "title"
+          }
+        },
+        {
+          "element_id": "s_fig",
+          "type": "image",
+          "bbox": {
+            "x": 120,
+            "y": 200,
+            "width": 760,
+            "height": 560
+          },
+          "text": "",
+          "style": {
+            "font_size_pt": 18,
+            "color": "#222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "diagram",
+            "diagram_claim": "NPS climbed into the eighties",
+            "diagram_false_claim": "NPS sank into the thirties",
+            "diagram_trend": "up"
+          }
+        },
+        {
+          "element_id": "s_body0",
+          "type": "text",
+          "bbox": {
+            "x": 940,
+            "y": 220,
+            "width": 860,
+            "height": 80
+          },
+          "text": "NPS climbed into the eighties",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        },
+        {
+          "element_id": "s_body1",
+          "type": "text",
+          "bbox": {
+            "x": 940,
+            "y": 320,
+            "width": 860,
+            "height": 80
+          },
+          "text": "The chart on the left summarizes the trend.",
+          "style": {
+            "font_size_pt": 20,
+            "color": "#444444"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        }
+      ],
+      "metadata": {
+        "section": "evidence"
+      }
+    }
+  ],
+  "metadata": {
+    "scenario": "full_proposal",
+    "required_sections": [
+      "evidence"
+    ]
+  }
+}

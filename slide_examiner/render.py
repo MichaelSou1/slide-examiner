@@ -54,6 +54,7 @@ class RenderQuality:
 # HTML serialization
 # --------------------------------------------------------------------------- #
 _CONTAINER_TYPES = {"text", "textbox", "placeholder", "title", "body", "subtitle", "footer", "shape", "table", "chart"}
+_FIGURE_TYPES = {"image", "chart", "diagram", "figure"}
 
 
 def slide_to_html(slide: Slide, *, scale: float = 1.0) -> str:
@@ -92,6 +93,20 @@ def slide_to_html(slide: Slide, *, scale: float = 1.0) -> str:
                 # darker intersection instead of one opaque card hiding another.
                 style += "background:rgba(150,170,200,0.18);"
         text = _escape_html(element.text)
+        # Figure/diagram elements depict content (a claim + a trend) that lives
+        # only in the rendered pixels (stripped from the structure oracle), so an
+        # image-text contradiction (S6) is perceivable from the image alone.
+        if element.type in _FIGURE_TYPES:
+            claim = str(element.metadata.get("diagram_claim", "") or "")
+            trend = str(element.metadata.get("diagram_trend", "") or "")
+            glyph = {"up": "▲", "down": "▼"}.get(trend, "▦")
+            color = {"up": "#1a7f37", "down": "#c0392b"}.get(trend, "#444")
+            style += "background:#eef3f8;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;"
+            inner = (
+                f'<div style="font-size:{64 * scale}pt;line-height:1;color:{color}">{glyph}</div>'
+                f'<div style="font-size:{18 * scale}pt;color:#222;padding:4px 8px">FIGURE: {_escape_html(claim)}</div>'
+            )
+            text = (text + inner) if text else inner
         elements.append(
             f'<div data-element-id="{element.element_id}" data-type="{element.type}" style="{style}">{text}</div>'
         )

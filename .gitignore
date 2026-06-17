@@ -39,8 +39,10 @@ data/manifests/*
 !data/raw/.gitkeep
 !data/ir/.gitkeep
 !data/manifests/.gitkeep
-# pilot manifests are regenerated from scripts/ + base decks; keep only the decks
+# pilot/part1 manifests are regenerated from scripts/ + base decks; keep only the decks
 data/pilot/*.jsonl
+data/part1/*.jsonl
+data/part1_img/*.jsonl
 *.log
 
 # 编辑器/系统

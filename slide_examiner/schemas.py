@@ -19,6 +19,8 @@ ORACLE_HIDDEN_ELEMENT_KEYS = frozenset(
         "expected_topic",
         "max_words",
         "diagram_claim",
+        "diagram_false_claim",
+        "diagram_trend",
     }
 )
 ORACLE_HIDDEN_CONTAINER_KEYS = frozenset(

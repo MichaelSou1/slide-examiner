@@ -275,6 +275,31 @@ CLI `render-manifest --long-edge` / `render-resolutions` / `render-pptx`,
 
 目标: 产出 H1 / H1-tpl / 心理物理曲线可报告结果。
 
+数据集扩充快照 2026-06-16: 扩到 12 个 base deck(`scripts/part1_build_corpus.py`),全 12 类缺陷 + 完整 severity 网格 + held-out severity(80)+ held-out defect(40: G4/S5)+ freeform/template,共 352 样本。
+- 产物: `data/part1/decks/`、`data/part1/manifest.jsonl` / 渲染后 `data/part1/manifest_rendered.jsonl`、几何子集 `data/part1/manifest_geometry.jsonl`(288)。
+- 构建脚本: `scripts/part1_build_dataset.py`。负样本 22.7%(略低于 30%,如需可调 negative_ratio)。
+
+几何阈值跨尺寸确认 2026-06-16(4B / 8B / 30B-A3B-AWQ,几何子集 288 × A/B/C × T1,0% parse failure):
+- **4B、8B 对 G1–G6 全部 0 检出**(图像/图像+结构两通道都为 0,即便缺陷清晰可见)。
+- **阈值在 30B-A3B 才首次突破,且只对最粗的"文字溢出"G1**(A=20/40=50%);细几何(G3 对齐、G5 色差)即便 30B 仍 0,G2/G4/G6 在 1–2/32 噪声内。
+- 结构 oracle **反而拖累**几何感知(30B G1:A=20/40 vs C=4/40);检出的溢出几乎不随 severity 分级;三个尺寸 0 误报。
+- 结论:**G1–G6 归符号 linter** 得到跨尺寸强证据;VLM 顶多在最大模型上做"溢出"兜底交叉验证。报告 `reports/part1_geometry_threshold.md`,汇总 `runs/probe/part1_geometry_summary.json`,脚本 `scripts/part1_geometry_report.py`,原始 `runs/probe/part1_geom_{4b,8b,30b}.jsonl`。
+- 部署备注:30B-A3B-AWQ(17G 权重)单卡 20G 放不下 KV,改 TP=2(GPU1,2)+ `--disable-custom-all-reduce` 跑通。
+
+S 组 30B 验证 2026-06-16(S1–S6 + 40 负样本,A/B/B′/C × T1,B′ 用 30B 看图 caption,0% parse failure):**语义类是 examiner 的主场,与几何完全相反**。
+- 30B 对 S 组检出 50–100%:S1 标题/正文 A=8/8(图像直读)、S5 缺段 ~88%、S4 密度 ~70%。
+- **deck 级语义里自然语言 caption(B′)是最强通道**(deck-S B′=20/24=83%,C=11/24):S2 乱序 B′=8/8、S3 术语 B′ 最好 → 坐实 B′-via-VLM-caption 修复有效(几何里 B′ 是死通道,语义里 B′ 反而最强)。
+- 多图堆叠(C)对 deck 语义反而最差(C<B′),与几何一致:堆 5 张页图分散注意力。
+- S6 图文矛盾在原合成语料全 0(无图像元素,不可见)。负样本 FP:A=3/40,B/B′/C=0。
+- 报告 `reports/part1_sgroup_30b.md`,汇总 `runs/probe/part1_sgroup_summary.json`,原始 `runs/probe/part1_sgroup_30b.jsonl`。
+
+S6 补带图 deck 后重测 2026-06-16(`scripts/part1_image_corpus.py`:figure 元素画 ▲/▼ + claim;`diagram_claim/false_claim/trend` 从 oracle 剥离,只在像素里可见):**S6 现在真正可测,但结果是负结果**。
+- 缺陷已真实可见(肉眼 + caption 都确认:绿色↑"revenue rose" vs 正文"revenue fell")——原 S6=0 是数据不可见的伪问题,已修。
+- **但 30B 做不了 S6**:图像通道(A/C)对**每张**带图幻灯片都报矛盾——真 S6 24/24、一致的 clean 也 24/24 → precision 0.50、**balanced accuracy 0.50 = 纯随机**。100% "recall" 是无脑过报。
+- 结构 B 精确但盲(0 FP / 3-24 recall,因 figure claim 被 oracle 剥离);B′ caption 仅略高于随机(bal_acc 0.58,15/24 FP)。
+- **方法论警告**:S6 这类"一致性核查"缺陷必须用配对 clean 控制 + balanced accuracy/precision 评,**绝不能只看 recall**(只看 recall 会误报"100% 检出")。scope prompt 点名 S6 可能助长过报,公平的后续是 open-scope 或二选一强制选择评测。
+- 报告 `reports/part1_s6_manifest.md`,汇总 `runs/probe/part1_s6_summary.json`,原始 `runs/probe/part1_s6_30b.jsonl`。
+
 - [ ] 冻结 Part 1 数据集。
   - [ ] 每缺陷 × 每 severity 至少达到 spec 目标或记录降级原因。
   - [ ] 留出 held-out severity。

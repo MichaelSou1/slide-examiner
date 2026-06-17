@@ -1,0 +1,395 @@
+{
+  "deck_id": "part1img_deck0",
+  "slides": [
+    {
+      "slide_id": "imgslide_0",
+      "width": 1920,
+      "height": 1080,
+      "elements": [
+        {
+          "element_id": "s_title",
+          "type": "title",
+          "bbox": {
+            "x": 96,
+            "y": 72,
+            "width": 1728,
+            "height": 72
+          },
+          "text": "Performance update 1",
+          "style": {
+            "font_size_pt": 32,
+            "color": "#111111"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "title",
+            "text_level": "title"
+          }
+        },
+        {
+          "element_id": "s_fig",
+          "type": "image",
+          "bbox": {
+            "x": 120,
+            "y": 200,
+            "width": 760,
+            "height": 560
+          },
+          "text": "",
+          "style": {
+            "font_size_pt": 18,
+            "color": "#222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "diagram",
+            "diagram_claim": "Quarterly revenue rose sharply in Q4",
+            "diagram_false_claim": "Quarterly revenue fell sharply in Q4",
+            "diagram_trend": "up"
+          }
+        },
+        {
+          "element_id": "s_body0",
+          "type": "text",
+          "bbox": {
+            "x": 940,
+            "y": 220,
+            "width": 860,
+            "height": 80
+          },
+          "text": "Quarterly revenue rose sharply in Q4",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        },
+        {
+          "element_id": "s_body1",
+          "type": "text",
+          "bbox": {
+            "x": 940,
+            "y": 320,
+            "width": 860,
+            "height": 80
+          },
+          "text": "The chart on the left summarizes the trend.",
+          "style": {
+            "font_size_pt": 20,
+            "color": "#444444"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        }
+      ],
+      "metadata": {
+        "section": "evidence"
+      }
+    },
+    {
+      "slide_id": "imgslide_1",
+      "width": 1920,
+      "height": 1080,
+      "elements": [
+        {
+          "element_id": "s_title",
+          "type": "title",
+          "bbox": {
+            "x": 96,
+            "y": 72,
+            "width": 1728,
+            "height": 72
+          },
+          "text": "Performance update 2",
+          "style": {
+            "font_size_pt": 32,
+            "color": "#111111"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "title",
+            "text_level": "title"
+          }
+        },
+        {
+          "element_id": "s_fig",
+          "type": "image",
+          "bbox": {
+            "x": 120,
+            "y": 200,
+            "width": 760,
+            "height": 560
+          },
+          "text": "",
+          "style": {
+            "font_size_pt": 18,
+            "color": "#222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "diagram",
+            "diagram_claim": "Customer churn dropped to a record low",
+            "diagram_false_claim": "Customer churn climbed to a record high",
+            "diagram_trend": "down"
+          }
+        },
+        {
+          "element_id": "s_body0",
+          "type": "text",
+          "bbox": {
+            "x": 940,
+            "y": 220,
+            "width": 860,
+            "height": 80
+          },
+          "text": "Customer churn dropped to a record low",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        },
+        {
+          "element_id": "s_body1",
+          "type": "text",
+          "bbox": {
+            "x": 940,
+            "y": 320,
+            "width": 860,
+            "height": 80
+          },
+          "text": "The chart on the left summarizes the trend.",
+          "style": {
+            "font_size_pt": 20,
+            "color": "#444444"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        }
+      ],
+      "metadata": {
+        "section": "evidence"
+      }
+    },
+    {
+      "slide_id": "imgslide_2",
+      "width": 1920,
+      "height": 1080,
+      "elements": [
+        {
+          "element_id": "s_title",
+          "type": "title",
+          "bbox": {
+            "x": 96,
+            "y": 72,
+            "width": 1728,
+            "height": 72
+          },
+          "text": "Performance update 3",
+          "style": {
+            "font_size_pt": 32,
+            "color": "#111111"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "title",
+            "text_level": "title"
+          }
+        },
+        {
+          "element_id": "s_fig",
+          "type": "image",
+          "bbox": {
+            "x": 120,
+            "y": 200,
+            "width": 760,
+            "height": 560
+          },
+          "text": "",
+          "style": {
+            "font_size_pt": 18,
+            "color": "#222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "diagram",
+            "diagram_claim": "Page load time got faster every release",
+            "diagram_false_claim": "Page load time got slower every release",
+            "diagram_trend": "down"
+          }
+        },
+        {
+          "element_id": "s_body0",
+          "type": "text",
+          "bbox": {
+            "x": 940,
+            "y": 220,
+            "width": 860,
+            "height": 80
+          },
+          "text": "Page load time got faster every release",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        },
+        {
+          "element_id": "s_body1",
+          "type": "text",
+          "bbox": {
+            "x": 940,
+            "y": 320,
+            "width": 860,
+            "height": 80
+          },
+          "text": "The chart on the left summarizes the trend.",
+          "style": {
+            "font_size_pt": 20,
+            "color": "#444444"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        }
+      ],
+      "metadata": {
+        "section": "evidence"
+      }
+    },
+    {
+      "slide_id": "imgslide_3",
+      "width": 1920,
+      "height": 1080,
+      "elements": [
+        {
+          "element_id": "s_title",
+          "type": "title",
+          "bbox": {
+            "x": 96,
+            "y": 72,
+            "width": 1728,
+            "height": 72
+          },
+          "text": "Performance update 4",
+          "style": {
+            "font_size_pt": 32,
+            "color": "#111111"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "title",
+            "text_level": "title"
+          }
+        },
+        {
+          "element_id": "s_fig",
+          "type": "image",
+          "bbox": {
+            "x": 120,
+            "y": 200,
+            "width": 760,
+            "height": 560
+          },
+          "text": "",
+          "style": {
+            "font_size_pt": 18,
+            "color": "#222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "diagram",
+            "diagram_claim": "Market share expanded across all regions",
+            "diagram_false_claim": "Market share contracted across all regions",
+            "diagram_trend": "up"
+          }
+        },
+        {
+          "element_id": "s_body0",
+          "type": "text",
+          "bbox": {
+            "x": 940,
+            "y": 220,
+            "width": 860,
+            "height": 80
+          },
+          "text": "Market share expanded across all regions",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        },
+        {
+          "element_id": "s_body1",
+          "type": "text",
+          "bbox": {
+            "x": 940,
+            "y": 320,
+            "width": 860,
+            "height": 80
+          },
+          "text": "The chart on the left summarizes the trend.",
+          "style": {
+            "font_size_pt": 20,
+            "color": "#444444"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        }
+      ],
+      "metadata": {
+        "section": "evidence"
+      }
+    }
+  ],
+  "metadata": {
+    "scenario": "full_proposal",
+    "required_sections": [
+      "evidence"
+    ]
+  }
+}

@@ -1,0 +1,395 @@
+{
+  "deck_id": "part1img_deck2",
+  "slides": [
+    {
+      "slide_id": "imgslide_8",
+      "width": 1920,
+      "height": 1080,
+      "elements": [
+        {
+          "element_id": "s_title",
+          "type": "title",
+          "bbox": {
+            "x": 96,
+            "y": 72,
+            "width": 1728,
+            "height": 72
+          },
+          "text": "Performance update 9",
+          "style": {
+            "font_size_pt": 32,
+            "color": "#111111"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "title",
+            "text_level": "title"
+          }
+        },
+        {
+          "element_id": "s_fig",
+          "type": "image",
+          "bbox": {
+            "x": 120,
+            "y": 200,
+            "width": 760,
+            "height": 560
+          },
+          "text": "",
+          "style": {
+            "font_size_pt": 18,
+            "color": "#222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "diagram",
+            "diagram_claim": "Uptime improved to four nines",
+            "diagram_false_claim": "Uptime degraded to two nines",
+            "diagram_trend": "up"
+          }
+        },
+        {
+          "element_id": "s_body0",
+          "type": "text",
+          "bbox": {
+            "x": 940,
+            "y": 220,
+            "width": 860,
+            "height": 80
+          },
+          "text": "Uptime improved to four nines",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        },
+        {
+          "element_id": "s_body1",
+          "type": "text",
+          "bbox": {
+            "x": 940,
+            "y": 320,
+            "width": 860,
+            "height": 80
+          },
+          "text": "The chart on the left summarizes the trend.",
+          "style": {
+            "font_size_pt": 20,
+            "color": "#444444"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        }
+      ],
+      "metadata": {
+        "section": "evidence"
+      }
+    },
+    {
+      "slide_id": "imgslide_9",
+      "width": 1920,
+      "height": 1080,
+      "elements": [
+        {
+          "element_id": "s_title",
+          "type": "title",
+          "bbox": {
+            "x": 96,
+            "y": 72,
+            "width": 1728,
+            "height": 72
+          },
+          "text": "Performance update 10",
+          "style": {
+            "font_size_pt": 32,
+            "color": "#111111"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "title",
+            "text_level": "title"
+          }
+        },
+        {
+          "element_id": "s_fig",
+          "type": "image",
+          "bbox": {
+            "x": 120,
+            "y": 200,
+            "width": 760,
+            "height": 560
+          },
+          "text": "",
+          "style": {
+            "font_size_pt": 18,
+            "color": "#222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "diagram",
+            "diagram_claim": "Support backlog shrank week over week",
+            "diagram_false_claim": "Support backlog grew week over week",
+            "diagram_trend": "down"
+          }
+        },
+        {
+          "element_id": "s_body0",
+          "type": "text",
+          "bbox": {
+            "x": 940,
+            "y": 220,
+            "width": 860,
+            "height": 80
+          },
+          "text": "Support backlog shrank week over week",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        },
+        {
+          "element_id": "s_body1",
+          "type": "text",
+          "bbox": {
+            "x": 940,
+            "y": 320,
+            "width": 860,
+            "height": 80
+          },
+          "text": "The chart on the left summarizes the trend.",
+          "style": {
+            "font_size_pt": 20,
+            "color": "#444444"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        }
+      ],
+      "metadata": {
+        "section": "evidence"
+      }
+    },
+    {
+      "slide_id": "imgslide_10",
+      "width": 1920,
+      "height": 1080,
+      "elements": [
+        {
+          "element_id": "s_title",
+          "type": "title",
+          "bbox": {
+            "x": 96,
+            "y": 72,
+            "width": 1728,
+            "height": 72
+          },
+          "text": "Performance update 11",
+          "style": {
+            "font_size_pt": 32,
+            "color": "#111111"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "title",
+            "text_level": "title"
+          }
+        },
+        {
+          "element_id": "s_fig",
+          "type": "image",
+          "bbox": {
+            "x": 120,
+            "y": 200,
+            "width": 760,
+            "height": 560
+          },
+          "text": "",
+          "style": {
+            "font_size_pt": 18,
+            "color": "#222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "diagram",
+            "diagram_claim": "Conversion rate doubled after the redesign",
+            "diagram_false_claim": "Conversion rate halved after the redesign",
+            "diagram_trend": "up"
+          }
+        },
+        {
+          "element_id": "s_body0",
+          "type": "text",
+          "bbox": {
+            "x": 940,
+            "y": 220,
+            "width": 860,
+            "height": 80
+          },
+          "text": "Conversion rate doubled after the redesign",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        },
+        {
+          "element_id": "s_body1",
+          "type": "text",
+          "bbox": {
+            "x": 940,
+            "y": 320,
+            "width": 860,
+            "height": 80
+          },
+          "text": "The chart on the left summarizes the trend.",
+          "style": {
+            "font_size_pt": 20,
+            "color": "#444444"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        }
+      ],
+      "metadata": {
+        "section": "evidence"
+      }
+    },
+    {
+      "slide_id": "imgslide_11",
+      "width": 1920,
+      "height": 1080,
+      "elements": [
+        {
+          "element_id": "s_title",
+          "type": "title",
+          "bbox": {
+            "x": 96,
+            "y": 72,
+            "width": 1728,
+            "height": 72
+          },
+          "text": "Performance update 12",
+          "style": {
+            "font_size_pt": 32,
+            "color": "#111111"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "title",
+            "text_level": "title"
+          }
+        },
+        {
+          "element_id": "s_fig",
+          "type": "image",
+          "bbox": {
+            "x": 120,
+            "y": 200,
+            "width": 760,
+            "height": 560
+          },
+          "text": "",
+          "style": {
+            "font_size_pt": 18,
+            "color": "#222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "diagram",
+            "diagram_claim": "Energy use per unit dropped steadily",
+            "diagram_false_claim": "Energy use per unit rose steadily",
+            "diagram_trend": "down"
+          }
+        },
+        {
+          "element_id": "s_body0",
+          "type": "text",
+          "bbox": {
+            "x": 940,
+            "y": 220,
+            "width": 860,
+            "height": 80
+          },
+          "text": "Energy use per unit dropped steadily",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        },
+        {
+          "element_id": "s_body1",
+          "type": "text",
+          "bbox": {
+            "x": 940,
+            "y": 320,
+            "width": 860,
+            "height": 80
+          },
+          "text": "The chart on the left summarizes the trend.",
+          "style": {
+            "font_size_pt": 20,
+            "color": "#444444"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        }
+      ],
+      "metadata": {
+        "section": "evidence"
+      }
+    }
+  ],
+  "metadata": {
+    "scenario": "full_proposal",
+    "required_sections": [
+      "evidence"
+    ]
+  }
+}

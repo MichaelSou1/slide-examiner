@@ -365,7 +365,11 @@ def inject_image_text_contradiction(
     diagram = slide.get(diagram_element_id) if diagram_element_id else _first_by_role(slide, "diagram")
     text = slide.get(text_element_id) if text_element_id else _first_by_role(slide, "body")
     claim = diagram.metadata.get("diagram_claim", "three-layer architecture")
-    updated = text.with_text(f"This slide describes a contradictory single-layer architecture, not {claim}.")
+    # Prefer an authored contradiction so the body asserts the opposite of what the
+    # figure visibly depicts (a real image-text contradiction the model can see).
+    false_claim = diagram.metadata.get("diagram_false_claim")
+    new_text = str(false_claim) if false_claim else f"This slide describes a contradictory single-layer architecture, not {claim}."
+    updated = text.with_text(new_text)
     defective = slide.replace_element(updated)
     label = DefectLabel(
         type="S6_IMAGE_TEXT_CONTRADICTION",
