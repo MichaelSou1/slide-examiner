@@ -1,8 +1,10 @@
 # Slide-Examiner TODO
 
-状态快照: 2026-06-16
-主参考: `specs/SPEC_slide_examiner_attribution.md`
+状态快照: 2026-06-17
+主参考: `specs/SPEC_slide_examiner_attribution.md`(Part 1 执行设计已按 pilot 实证固化为三轨,见 SPEC §3.0)
 接口参考: `specs/EXAMINER_IO_CONTRACT.md`
+
+> **Part 1 实证总纲(贯穿 §7–§10,与 SPEC §3.0 一致)**:G2–G6 细几何归 **linter**(VLM pointwise 几何不计分,跨 4B/8B/30B + 5 编码器家族全随机);S1/S4/S5 走 **examiner-pointwise A/B/B′/C 归因**(balanced accuracy + 配对 clean,B′=VLM 看图 caption);G1 溢出 / S6 / S3 走 **pairwise/2-AFC**(相对判断 >> 绝对打分)。主指标一律 balanced accuracy + 配对 clean,**严禁只看 recall**。
 
 这份 TODO 是项目当前的执行清单。完成任务后要及时把 `[ ]` 改成 `[x]`；如果任务内容变了,也要同步更新这里,不要让 TODO 变成过期愿望清单。
 
@@ -19,9 +21,9 @@
 
 - [x] 对照研究 spec 审查代码结构。
 - [x] 确认当前仓库已有本地脚手架: IR、taxonomy、注入器、linter、probe、analysis、SFT、training plan、GEPA plan。
-- [x] 跑通当前测试集: `112 passed`。
-- [x] 明确当前边界: 本地契约和 mock/dry-run 流程已通,真实 VLM 推理、真实训练、真实 GEPA、人工 panel 尚未完成。
-- [ ] 把 `docs/IMPLEMENTATION_STATUS.md` 更新成更口语化版本,区分“代码路径存在”和“真实实验已完成”。
+- [x] 跑通当前测试集: `126 passed`。
+- [x] 明确当前边界: 本地契约 + 真实 VLM pilot/几何阈值/编码器对照/S 组/S6 forced-choice 已完成(见 §6/§7);真实训练(Part 2)、真实 GEPA、人工 panel 尚未完成。
+- [x] 把 `docs/IMPLEMENTATION_STATUS.md` 更新成更口语化版本,区分“代码路径存在”和“真实实验已完成”。(已含全部 pilot 实证记录)
 
 ## 2. 第一优先级: 接口和命名返修
 
@@ -372,22 +374,22 @@ S6 二选一(2-AFC)强制选择复评 2026-06-16(`scripts/s6_forced_choice.py`,1
 
 ## 8. 第七优先级: Part 2 examiner 训练
 
-目标: 训练一个专用 8B examiner,验证它是否能在几何类检查上超过更大 zero-shot 模型。
+目标(按 Part 1 实证修订,见 SPEC §4.3 实证修订):训练专用 8B examiner,主力放在 **S 组语义 + 一致性核查(pairwise)**;**几何不靠 pointwise 检测**——G1 溢出走 pairwise(zero-shot 8B forced-choice 已 100%,微调强化),G2–G6 标签来自 **linter** 喂入,examiner 学"复述/兜底/修复建议"而非"从像素重新检测"。验证点:能否在 S 组逼近/超过更大 zero-shot 模型,并把 overflow-pairwise 做到逼近 linter。
 
 - [ ] 生成训练数据。
   - [ ] 20K-40K 合成样本。
-  - [ ] 覆盖 G1-G6。
-  - [ ] 覆盖 S1-S6。
-  - [ ] negative >= 30%。
-  - [ ] page/deck 都有 A-only 样本。
-  - [ ] 标注 template/freeform 来源。
+  - [ ] G2–G6:标签来自 **linter**(几何 ground truth),examiner 学复述/兜底,不做 pixel-level 检测目标。
+  - [ ] G1 溢出 + S6 + S3:**pairwise/配对样本为主**(clean vs defective 同底图)。
+  - [ ] S1/S4/S5:pointwise 结构化批评。
+  - [ ] negative >= 30%,且**每正样本配对同底图 clean**;page/deck 都有 A-only 样本。
+  - [ ] 标注 template/freeform 来源(template=真实 snap-to-master)。
 
 - [ ] 导出 SFT 数据。
-  - [ ] pointwise JSONL。
-  - [ ] pairwise JSONL。
+  - [ ] pointwise JSONL(S1/S4/S5 + G 复述)。
+  - [ ] **pairwise JSONL(重点:G1/S6/S3 的相对判断)**。
   - [ ] LLaMA-Factory dataset_info。
   - [ ] parser 回读全部 target JSON。
-  - [ ] 记录样本数、缺陷分布、modality 分布。
+  - [ ] 记录样本数、缺陷分布、modality 分布、pointwise/pairwise 比例。
 
 - [ ] 跑 QLoRA 训练。
   - [ ] 确认 GPU 环境。(微调用单卡;建议占 GPU0——它跨 NUMA 不适合做 TP,正好留给训练,TP 推理走 GPU1/2/3)
@@ -399,8 +401,8 @@ S6 二选一(2-AFC)强制选择复评 2026-06-16(`scripts/s6_forced_choice.py`,1
 - [ ] 做 in-domain held-out 评估。
   - [ ] held-out severity。
   - [ ] held-out defect type。
-  - [ ] precision、recall、F1。
-  - [ ] 过报率。
+  - [ ] **balanced accuracy + precision/recall/F1(配对 clean);pairwise 缺陷报 2-AFC accuracy**。
+  - [ ] 过报率(FPR on 配对 clean)——抑制过报是 examiner 相对 zero-shot 的关键卖点。
 
 - [ ] 做真实迁移评估。
   - [ ] 人工标注真实 deck。
@@ -410,10 +412,10 @@ S6 二选一(2-AFC)强制选择复评 2026-06-16(`scripts/s6_forced_choice.py`,1
   - [ ] finetuned-8B vs linter。
 
 - [ ] 生成 Part 2 报告。
-  - [ ] G 组结果表。
-  - [ ] S 组结果表。
-  - [ ] 真实迁移结果表。
-  - [ ] sim2real gap 讨论。
+  - [ ] G 组表:**overflow-pairwise vs linter**(不报 pointwise G 检测);其余 G2–G6 由 linter 承担。
+  - [ ] S 组表:pointwise channel 画像(balanced acc)+ S6/S3 的 pairwise。
+  - [ ] finetuned-8B vs zero-shot(8B/30B/API)vs linter,以及 **pointwise vs pairwise 增益**。
+  - [ ] 真实迁移结果表 + sim2real gap 讨论。
 
 ## 9. 第八优先级: Part 3 GEPA 下游效用
 
@@ -479,11 +481,14 @@ S6 二选一(2-AFC)强制选择复评 2026-06-16(`scripts/s6_forced_choice.py`,1
   - [ ] 明确切割 VLM Judges ranking-scoring decoupling。
   - [ ] 明确切割 LED Benchmark。
 
-- [ ] 写 Part 1 诊断章节。
-  - [ ] 归因协议。
-  - [ ] oracle 设计。
-  - [ ] 模板坍缩实验。
-  - [ ] 心理物理曲线。
+- [ ] 写 Part 1 诊断章节(按实证三轨叙事)。
+  - [ ] 三轨归因协议(linter / examiner-pointwise / pairwise)+ balanced accuracy + 配对 clean 方法学。
+  - [ ] oracle 设计(B′=VLM 看图 caption;deck 按通道画像,C 多图未必最好)。
+  - [ ] **几何盲两机制**:校准失败(G1 溢出,forced-choice 复活)vs 感知阈值(G3–G6,啥都救不了)。
+  - [ ] **编码器/分辨率负结果**:5 编码器家族 + 1536/2048 都不破几何 → 杠杆是尺寸/推理。
+  - [ ] **H-rel(相对优于绝对)**:G1 + S6 两组独立证据。
+  - [ ] 心理物理曲线**画在 linter 连续几何量上**;VLM 端只标"破/没破随机"。
+  - [ ] 模板坍缩:linter 度量吸收量(与模型解耦)。
 
 - [ ] 写 Part 2 训练章节。
   - [ ] 合成缺陷训练。
@@ -514,9 +519,11 @@ S6 二选一(2-AFC)强制选择复评 2026-06-16(`scripts/s6_forced_choice.py`,1
 建议先按这个顺序推进,不要直接跳到大规模实验:
 
 - [x] 1. 修 `B_prime` 命名和 `DefectType` 单一来源。
-- [ ] 2. 给 SFT 导出加 A>=30% 采样和 parser 回读。
-- [ ] 3. 加 evidence validator。
-- [ ] 4. 准备 2-3 类缺陷的 pilot manifest。
+- [x] 2. 给 SFT 导出加 A>=30% 采样和 parser 回读。(见 §3)
+- [x] 3. 加 evidence validator。(见 §3)
+- [x] 4. 准备 2-3 类缺陷的 pilot manifest。(见 §6 pilot)
 - [x] 5. 打通真实渲染。
-- [x] 6. 跑一个真实 VLM 小 pilot。(Qwen3-VL-4B,见 §6 与 `reports/pilot_slideprobe.md`)
-- [ ] 7. 只有 pilot 稳定后,再扩大 Part 1 全矩阵。
+- [x] 6. 跑一个真实 VLM 小 pilot。(Qwen3-VL-4B/8B/30B + 编码器对照,见 §6/§7 与 `reports/`)
+- [x] 7. pilot 稳定后把全矩阵**重设计成三轨**(见 §7 与 SPEC §3.0),放弃 pointwise 铺满。
+- [ ] 8. 按三轨**冻结数据集(配对优先)+ 跑全矩阵**,产出 Part 1 三张主表。
+- [ ] 9. H-rel + S 组 examiner 成立 → 进 Part 2(8B examiner,pointwise+pairwise 双输出,G 标签来自 linter)。
