@@ -334,43 +334,47 @@ S6 二选一(2-AFC)强制选择复评 2026-06-16(`scripts/s6_forced_choice.py`,1
 
 **执行设计已按 pilot 实证固化为三轨(见 `specs/SPEC...md` §3.0)。原"所有缺陷×所有模态 pointwise 铺满"作废。**
 
-- [ ] 冻结 Part 1 数据集(**配对优先**)。
-  - [ ] **每个正样本配一个同底图、仅缺陷不同的 clean 负样本**(balanced accuracy / pairwise 都要它)。
-  - [ ] 每缺陷 × 每 severity 达 spec 目标或记降级原因;clean negative 比例记录清楚。
-  - [ ] 留出 held-out severity + 1–2 个 held-out defect type。
-  - [ ] **带图 deck**(让 S6 可测)、**glossary 术语**(让 S3 可测);`template` 用真实 snap-to-master 而非元数据标签。
+全矩阵三轨完成快照 2026-06-17:数据集已冻结(sha256),三轨全跑通,三张主表 + 四道 gate + Go/No-Go=**GO**。产物索引见各条目;汇总 `reports/slideprobe.md` / `runs/probe/part1_gates.json`(`scripts/part1_synthesis.py`),126 passed。
 
-- [ ] 冻结模型矩阵(**跨尺寸即可,编码器扫已完成不再做**)。
-  - [ ] Qwen3-VL-4B / 8B(BF16,8B 单卡 KV 偏紧 → TP=2)、30B-A3B-AWQ(几何上界参照,TP=2)。
-  - [ ] 可选 API 参考点 ×1。32B-dense-AWQ / Qwen3.6-27B 视需要再加。
-  - [ ] TP 固定 `CUDA_VISIBLE_DEVICES=1,2,3` + `--disable-custom-all-reduce`;从无 `specs/` 的 cwd(如 /tmp)启动避 gcc;sm_86 走 AWQ-INT4 + fp16/INT8 KV。
-  - [ ] (不做)编码器家族扫——已完成且为负结果(5 家族几何全随机),见 `reports/part1_encoder_geometry.md`。
+- [x] 冻结 Part 1 数据集(**配对优先**)。`scripts/part1_freeze_dataset.py` → `reports/part1_dataset_freeze.md` / `runs/probe/part1_dataset_freeze.json`(sha256 锁定)。
+  - [x] **每个正样本配一个同底图、仅缺陷不同的 clean 负样本**。page 级 328/352 配对;deck 级 S2/S3/S5 按 deck 粒度配对。
+  - [x] 每缺陷 × 每 severity 达 spec 目标或记降级原因;clean negative 比例记录清楚。负样本 22.7%(<30%,记为降级)。
+  - [x] 留出 held-out severity(`ood_severity`=80)+ held-out defect(`ood_defect`=G4/S5=40)。
+  - [x] **带图 deck**(S6:`data/part1_img`)、**glossary 术语**(S3 deck 级 canonical/variant 已在 sgroup manifest);`template`=真实 snap-to-master(linter 实证吸收=1.0)。
 
-- [ ] 轨 L — G 组(G2–G6)由 **linter 主检测**。
-  - [ ] linter 跑全 G 组,产连续几何量(θ 读数);作 ground truth 与上界。
-  - [ ] VLM 对 G2–G6 只作稀疏交叉验证,**pointwise 不计入主结果**。
+- [x] 冻结模型矩阵(**跨尺寸即可,编码器扫已完成不再做**)。
+  - [x] Qwen3-VL-4B(单卡 GPU0)/ 8B(TP=2)、30B-A3B-AWQ(TP=2,fp8 KV,enforce-eager)。三轨全部用此矩阵。
+  - [x] 可选 API 参考点 ×1 —— 不做(本机跨尺寸已足够定阈值)。
+  - [x] TP `--disable-custom-all-reduce` + 从 /tmp 启动避 gcc;8B BF16 单卡 20G 放不下(weights 16.6G)→ TP=2。
+  - [x] (不做)编码器家族扫——已完成且为负结果,见 `reports/part1_encoder_geometry.md`。
 
-- [ ] 轨 E — S 组语义(S1/S4/S5)pointwise A/B/B′/C 归因。
-  - [ ] A/B/B′/C × T1(主),T2/T3 视需要;k=3 seeds。
-  - [ ] **B′ = VLM 看图 caption**(`scripts/caption_images.py`),不是坐标 dump。
-  - [ ] 主指标 **balanced accuracy + precision/recall**(配对 clean);deck 按"缺陷×通道"画像(C 多图可能反而最差)。
+- [x] 轨 L — G 组(G2–G6)由 **linter 主检测**。`scripts/part1_linter_track.py` → `reports/part1_linter_track.md` / `runs/probe/part1_linter_summary.json`。
+  - [x] linter 跑全 G 组,产连续几何量(overflow_px/iou/offset_px/delta_pt/delta_e/bleed_px),作 ground truth 与上界。freeform recall G1/G4/G5/G6=1.0,G2/G3 仅受 linter 自身阈值地板限制,全 80 clean **0 FP**。
+  - [x] VLM 对 G2–G6 只作稀疏交叉验证,**pointwise 不计入主结果**(只标"破/没破随机",见 Table 3)。
 
-- [ ] 轨 P — pairwise/2-AFC(**G1 溢出、S6 图文矛盾、S3 术语**)。
-  - [ ] `PairwiseResult`/forced-choice,配对 clean,双向序消位置偏置;报 2-AFC accuracy。
-  - [ ] 验证"相对优于绝对"(G1/S6 已证 pointwise 随机 → forced-choice 满分)。
+- [x] 轨 E — S 组语义(S1/S4/S5)pointwise A/B/B′/C 归因。`scripts/part1_sgroup_crosssize.py` → `reports/part1_sgroup_crosssize.md` / `runs/probe/part1_sgroup_crosssize_summary.json`。
+  - [x] A/B/B′/C × T1。temperature=0 确定性输出,k=3 seeds 退化为单次(无随机性);T2/T3 暂不需要。
+  - [x] **B′ = VLM 看图 caption**(跨尺寸固定用 30B caption,隔离"对固定 caption 的推理"与 caption 质量)。
+  - [x] 主指标 **balanced accuracy**(配对 clean,含补齐的 deck-clean 负样本)。page 4B 0.50→8B 0.58→**30B 0.745**;deck 30B B′=0.639 强通道。
 
-- [ ] 分辨率消融(**收窄**):只在非地板 cell(G1-overflow pairwise、S1)抽测;**不再 768/1024/1536/2048 × 全缺陷**(1536≡2048 几何零差别)。
+- [x] 轨 P — pairwise/2-AFC(**G1 溢出、S6 图文矛盾、S3 术语**)。
+  - [x] `PairwiseResult`/forced-choice,配对 clean,双向序消位置偏置;报 2-AFC accuracy。G1/G3 见 `runs/probe/part1_fc_summary.json`,S6 `part1_s6_forced_choice_30b.json`,S3 `scripts/s3_forced_choice.py`→`part1_s3_forced_choice_30b.json`。
+  - [x] 验证"相对优于绝对":G1 溢出 0.50→1.0 robust、S6 0.50→1.0;**S3 是诚实反例(62%、B 偏置、robust 2/8,未复活)**。
+  - [x] **S3 决策:移出 VLM examiner**。B 结构通道已喂全文(两变体都在)但仍 0.56 → 瓶颈是 OCR-from-pixels + pointwise yes/no,不是推理。改走**文字抽取模块**(抽 deck 文字 → 术语-出现表 → 符号编辑距离聚类[干净变体] ∪ text-LLM[真实模糊漂移如 K8s/Kubernetes],免图像)。
+  - [x] **模块已落地**:`slide_examiner/term_consistency.py`(`lint_deck` / `detect_terminology_inconsistency` / `build_term_occurrences`,支持 `--glossary`),CLI `slide-examiner lint-deck`,测试 `tests/test_term_consistency.py`(7 例)。冻结 S3 子集 head-to-head:**recall 1.00 / FP 0/40 / bal-acc 1.000**(对比 VLM 30B 最佳 0.69)。`scripts/part1_term_consistency_eval.py` → `reports/part1_term_consistency.md` / `runs/probe/part1_term_consistency_summary.json`。133 passed。
 
-- [ ] 模板坍缩(**解耦**):(a) 模板吸收量由 **linter** 度量(snap-to-master);(b) "VLM 检出随模板下降"仅在 30B+overflow 等非地板 cell 作可选观察。
+- [x] 分辨率消融(**收窄**):只测非地板 cell。`reports/part1_resolution_ablation.md`(+ `runs/probe/part1_s1_res_1536_30b.jsonl`)。结论"分辨率不是杠杆":G3 地板恒地板、G1/S1 天花板恒天花板(S1 1024→1536 bal-acc 0.96→0.97),1536≡2048。
 
-- [ ] 生成 Part 1 分析产物。
-  - [ ] `runs/probe/*` 原始 + `reports/slideprobe.md` 汇总(沿用现有 part1_* 报告骨架)。
-  - [ ] 三张主表:轨 E 的 S 组通道画像(balanced acc)、轨 P 的 2-AFC 对照、轨 L 的 linter 几何 + VLM 阈值(只标"破/没破随机")。
-  - [ ] H1/H1-tpl/H-rel gate 结果(按 SPEC §6 实证修订口径)。
+- [x] 模板坍缩(**解耦**):(a) 吸收量由 **linter** 度量——snap-to-master 对 G1/G2/G3/G6 **吸收=1.0**、对 G4/G5 **不吸收**(并入 `part1_linter_track.md`);(b) "VLM 检出随模板下降"在 4B/8B 几何本就地板无从测,留 30B+overflow 可选观察。
 
-- [ ] 做 Go/No-Go 判断。
-  - [ ] H-rel(相对优于绝对)+ S 组 examiner 有效 → 进 Part 2(训 8B examiner,pointwise+pairwise 双输出)。
-  - [ ] G 组结论(归 linter)已稳,直接写进 Part 2/3 的混合架构设计。
+- [x] 生成 Part 1 分析产物。
+  - [x] `runs/probe/*` 原始 + `reports/slideprobe.md` 汇总(三轨骨架)。
+  - [x] 三张主表:轨 E S 组通道画像(balanced acc)、轨 P 2-AFC 对照、轨 L linter 几何 + VLM 阈值。
+  - [x] H1/H1-tpl/H-rel gate 结果(`runs/probe/part1_gates.json`):三者全 **SUPPORTED**(H-rel 带 S3 边界)。
+
+- [x] 做 Go/No-Go 判断 → **GO to Part 2**。
+  - [x] H-rel(相对优于绝对)+ S 组 examiner 有效(30B page 0.745)→ 进 Part 2(训 8B examiner,pointwise S1/S4/S5 + pairwise G1-overflow/S6 双输出,G 标签来自 linter,**S3 移出 examiner → 文字抽取+术语一致性模块**)。
+  - [x] G 组结论(归 linter)已稳,直接写进 Part 2/3 的混合架构设计。
 
 ## 8. 第七优先级: Part 2 examiner 训练
 
@@ -525,5 +529,5 @@ S6 二选一(2-AFC)强制选择复评 2026-06-16(`scripts/s6_forced_choice.py`,1
 - [x] 5. 打通真实渲染。
 - [x] 6. 跑一个真实 VLM 小 pilot。(Qwen3-VL-4B/8B/30B + 编码器对照,见 §6/§7 与 `reports/`)
 - [x] 7. pilot 稳定后把全矩阵**重设计成三轨**(见 §7 与 SPEC §3.0),放弃 pointwise 铺满。
-- [ ] 8. 按三轨**冻结数据集(配对优先)+ 跑全矩阵**,产出 Part 1 三张主表。
+- [x] 8. 按三轨**冻结数据集(配对优先)+ 跑全矩阵**,产出 Part 1 三张主表。(2026-06-17,Go/No-Go=GO;见 §7 完成快照)
 - [ ] 9. H-rel + S 组 examiner 成立 → 进 Part 2(8B examiner,pointwise+pairwise 双输出,G 标签来自 linter)。

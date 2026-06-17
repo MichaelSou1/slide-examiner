@@ -23,6 +23,7 @@ from .generator import deck_from_content_json, load_content_json, write_deck_htm
 from .hacking import audit_deck_hacking, audit_slide_hacking
 from .hypotheses import evaluate_hypotheses
 from .geometry import lint_slide
+from .term_consistency import lint_deck
 from .ingest import extract_pptx_geometry, load_deck_json, parse_annotated_html, save_deck_json, save_slide_json
 from .io import read_jsonl
 from .matrix import ExperimentMatrix, write_matrix_json
@@ -48,6 +49,14 @@ from .training import TrainingConfig, run_training, write_training_config
 def _cmd_lint(args: argparse.Namespace) -> int:
     slide = Slide.from_mapping(json.loads(Path(args.slide_json).read_text(encoding="utf-8")))
     labels = [label.to_dict() for label in lint_slide(slide)]
+    print(json.dumps({"defects": labels}, ensure_ascii=False, indent=2))
+    return 0
+
+
+def _cmd_lint_deck(args: argparse.Namespace) -> int:
+    deck = load_deck_json(args.deck_json)
+    glossary = list(args.glossary) if args.glossary else None
+    labels = [label.to_dict() for label in lint_deck(deck, glossary=glossary)]
     print(json.dumps({"defects": labels}, ensure_ascii=False, indent=2))
     return 0
 
@@ -474,6 +483,13 @@ def build_parser() -> argparse.ArgumentParser:
     lint = subparsers.add_parser("lint", help="Run geometry linter on a slide JSON file.")
     lint.add_argument("slide_json")
     lint.set_defaults(func=_cmd_lint)
+
+    lint_deck_p = subparsers.add_parser(
+        "lint-deck", help="Run deck-level terminology-consistency linter (S3) on a deck JSON file.")
+    lint_deck_p.add_argument("deck_json")
+    lint_deck_p.add_argument("--glossary", nargs="*", default=None,
+                             help="Optional canonical terms; a near-variant of a glossary term is flagged.")
+    lint_deck_p.set_defaults(func=_cmd_lint_deck)
 
     repair = subparsers.add_parser("repair", help="Apply deterministic G1-G6 geometry repairs to a slide JSON file.")
     repair.add_argument("slide_json")
