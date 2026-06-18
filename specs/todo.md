@@ -412,7 +412,7 @@ S6 二选一(2-AFC)强制选择复评 2026-06-16(`scripts/s6_forced_choice.py`,1
 
 - [ ] 做真实迁移评估。
   - [ ] 人工标注真实 deck。(**阻塞 2026-06-18**:需人工标注 + 3 人 panel,本机不可产出)
-  - [ ] VLM-SlideEval / PPTBench 可用子任务。(**待办**:PPTBench 数据已就绪 `data/manifests/pptbench_*`,需标签格式适配后评分)
+  - [x] 真实公开数据迁移(替代 PPTBench)。PPTBench detection 实为属性 QA(字号差/最大元素 bbox/标题文本),**无缺陷 taxonomy 重叠**,不适合;改用 **SlideAudit**(arXiv 2508.03630,2400 真实人工标注 slide,19 维设计缺陷,经 kkgithub 镜像拉取——ModelScope/hf-mirror 均无、GitHub 直连被墙)。7 维映射到我方 taxonomy(G1-G6+S4),`scripts/slideaudit_fetch.py` + `part2_slideaudit_eval.py`,image-only 迁移评,见 `reports/part2.md` Table 5。**结论:真实 image-only 下几何全模型≈0.5(需 linter+结构);S4 仅 zero-shot 30B 有信号(0.70),ft 合成强项不迁移=sim2real gap**。
   - [x] finetuned-8B vs zero-shot 8B。(S 组 0.99 vs 0.64)
   - [x] finetuned-8B vs strong(zero-shot 30B)。(0.99 vs 0.785;**未接 API 强模型**)
   - [x] finetuned-8B vs linter。(几何:linter 主检测;ft 弃答/复述,见 Table 2)
@@ -421,7 +421,7 @@ S6 二选一(2-AFC)强制选择复评 2026-06-16(`scripts/s6_forced_choice.py`,1
   - [x] G 组表:linter vs ft(复述-B / 弃答-A);不报 pointwise G 检测。
   - [x] S 组表:pointwise channel 画像(balanced acc)+ G1/S6 pairwise 2-AFC。
   - [x] finetuned-8B vs zero-shot(8B/30B)vs linter;**pointwise vs pairwise** 对照(pairwise v1 位置偏置已记录,v2 修复)。
-  - [ ] 真实迁移结果表 + sim2real gap 讨论。(随人工标注阻塞)
+  - [x] 真实迁移结果表 + sim2real gap 讨论。(`reports/part2.md` Table 5 + "Real-data transfer reading":SlideAudit image-only;**人工标注 + 带结构的真实评估仍阻塞**,见上)
 
 ## 9. 第八优先级: Part 3 GEPA 下游效用
 

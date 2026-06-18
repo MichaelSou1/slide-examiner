@@ -192,19 +192,28 @@ def main():
              "linter (Table 2).")
     L.append("- **OOD severity generalization holds**: ft-8b semantic 0.917 on held-out "
              "severities (modality C) vs zero-shot ~0.5–0.6.")
+    L.append("\n## Real-data transfer reading (Table 5)\n")
+    L.append("- On **real** image-only slides, geometry (G1–G6) sits at ~0.50 for all models — "
+             "geometry is not VLM-detectable from pixels even on real data (consistent with Part 1); "
+             "it needs the symbolic linter, which needs element structure that bare images lack. "
+             "The finetuned model correctly **abstains** (recall ~0, FPR ~0).")
+    L.append("- **sim2real gap**: ft-8b's synthetic S4 density strength (0.97) does NOT transfer to "
+             "real image-only density (0.50); only **zero-shot 30B** shows real signal (G1 0.63, "
+             "S4 0.70) — scale, not finetuning, drives real image-only transfer. The examiner's "
+             "real value is in the **structured/pointwise** setting (Tables 1/4), not bare-pixel "
+             "real-world geometry.")
     L.append("\n## Limitations / honest negatives\n")
-    L.append("- **Pairwise (G1/S6) regressed under finetuning (v1 run)**: ft-8b 2-AFC G1 0.65 / "
-             "S6 0.50 vs zero-shot 8B 0.975 / 1.0. Root cause: v1 pairwise SFT always placed the "
-             "clean candidate first (answer always 'A') → the model learned a position bias "
-             "('always pick A'). Fix landed in `scripts/part2_build_sft.py` (randomized A/B order, "
-             "balanced answers); a corrected **v2** run uses it. Operationally, pairwise can also "
-             "be served zero-shot (already ~100% per Part 1).")
+    L.append("- **Pairwise position-bias (found and FIXED)**: the v1 pairwise SFT always placed the "
+             "clean candidate first (answer always 'A') → v1 ft-8b learned 'always pick A' (2-AFC "
+             "G1 0.65 / S6 0.50). Fixed in `scripts/part2_build_sft.py` (randomized A/B order); the "
+             "**v2** model reported here recovers 2-AFC **G1 1.0 / S6 1.0** with balanced picks "
+             "(Table 3).")
     L.append("- **Deck-level OOD (S2/S5) not fully scored**: the paired-clean control for "
              "deck-scope samples (multi-page) isn't constructed by the eval harness, so deck "
              "semantic cells show '—'. Page-level semantic (S1/S4) is fully scored.")
-    L.append("- **Real-deck human-panel transfer eval is BLOCKED** (needs human annotation); "
-             "tracked in todo §8. Automatable transfer (vs zero-shot 8B/30B, vs linter, OOD "
-             "severity/defect) is covered here.")
+    L.append("- **Real image-only transfer is weak for 8B** (Table 5): the examiner is meant to run "
+             "with structure (B/C) + linter, not bare real pixels; real-deck human-panel eval with "
+             "structure is **BLOCKED** on human annotation (todo §8).")
     L.append("\n## Notes\n")
     L.append("- finetuned (`ft-8b`) evaluated at its **trained** prompt format; zero-shot "
              "baselines at the **scoped** (schema-spelled-out) format — each at its intended "
