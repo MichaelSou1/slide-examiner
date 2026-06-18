@@ -118,7 +118,9 @@ def main():
     api.create_repo(args.repo_id, repo_type="model", private=args.private, exist_ok=True)
     api.upload_folder(
         repo_id=args.repo_id, repo_type="model", folder_path=str(adapter_dir),
-        allow_patterns=["adapter_*", "README.md", "*.json", "training_eval_loss.png"],
+        allow_patterns=["adapter_model.safetensors", "adapter_config.json", "README.md",
+                        "training_eval_loss.png", "all_results.json"],
+        ignore_patterns=["checkpoint-*/*", "checkpoint-*"],
     )
     print(f"uploaded {adapter_dir} -> https://huggingface.co/{args.repo_id}")
 
