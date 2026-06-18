@@ -22,7 +22,7 @@
 - [x] 对照研究 spec 审查代码结构。
 - [x] 确认当前仓库已有本地脚手架: IR、taxonomy、注入器、linter、probe、analysis、SFT、training plan、GEPA plan。
 - [x] 跑通当前测试集: `126 passed`。
-- [x] 明确当前边界: 本地契约 + 真实 VLM pilot/几何阈值/编码器对照/S 组/S6 forced-choice 已完成(见 §6/§7);真实训练(Part 2)、真实 GEPA、人工 panel 尚未完成。
+- [x] 明确当前边界: 本地契约 + 真实 VLM pilot/几何阈值/编码器对照/S 组/S6 forced-choice 已完成(见 §6/§7);真实训练(Part 2)、真实下游技能空间优化(SkillOpt/GEPA)、人工 panel 尚未完成。**注:Part 3(§9)非"代码已在、只差跑",而是 greenfield —— 真实 generator / SkillOpt 接入 / rollout 链路均未实现,仅有 GEPA dry-run 计划脚手架,见 §9 代码状态。**
 - [x] 把 `docs/IMPLEMENTATION_STATUS.md` 更新成更口语化版本,区分“代码路径存在”和“真实实验已完成”。(已含全部 pilot 实证记录)
 
 ## 2. 第一优先级: 接口和命名返修
@@ -423,62 +423,83 @@ S6 二选一(2-AFC)强制选择复评 2026-06-16(`scripts/s6_forced_choice.py`,1
   - [x] finetuned-8B vs zero-shot(8B/30B)vs linter;**pointwise vs pairwise** 对照(pairwise v1 位置偏置已记录,v2 修复)。
   - [x] 真实迁移结果表 + sim2real gap 讨论。(`reports/part2.md` Table 5 + "Real-data transfer reading":SlideAudit image-only;**人工标注 + 带结构的真实评估仍阻塞**,见上)
 
-## 9. 第八优先级: Part 3 GEPA 下游效用
+## 9. 第八优先级: Part 3 下游效用 — Examiner 质量 → 技能空间优化效率(SkillOpt 主 / GEPA 次)
 
-目标: 验证 examiner 质量是否能转化为 prompt 优化效率。
+目标(2026-06-18 重构,见 SPEC §5 重构块): 验证 examiner 内在质量(Part 1/2 度量)是否单调转化为**技能空间优化**的收敛效率与最终质量,且**与优化器族无关**;并验证**可验证 linter 选择门 + 学习型 examiner 反思**的解耦反馈架构优于任一单源。
 
-- [ ] 准备 GEPA 任务集。
-  - [ ] train 10 decks。
-  - [ ] val 10 decks。
-  - [ ] test 10 decks。
-  - [ ] 包含 SlidesBench 子集。
-<!--  - [ ] 包含实习场景任务包。 -->
+> **新颖性范围(三交集,勿越界宣称)**: 贡献 = 把"verifier-质量→效率"原理从 RL/text **迁到 text-space skill 优化(SkillOpt/GEPA)× design 域**的交集 + 解耦可验证/学习反馈 + design 反作弊审计。**不得宣称"发现反馈质量重要"**(RL 域已有:Gao 2210.10760 gold-vs-proxy、PRIME 2602.11570 verifier-acc→RLVR policy R²≈0.92-0.94)。slide 生成是**测试床不是 claim**;`generate→critique→revise` self-refine 环(EvoPresent ICLR2026 已占)**仅作 baseline**。换载体(GEPA→SkillOpt 主)直接消除"应用 GEPA 无新意"风险。**PDF 核验记录(2026-06-18,papers 在 `docs/refs/`)**: SkillOpt 2605.23904 gate/reflection 解耦+beats GEPA 52/52 已核;Gao 2210.10760 gold-vs-proxy 协议可忠实移植(本工作 gold=确定性 linter,更紧);**GEPA 2507.19457 全文无 "feedback engineering",μ/μ_f 为固定输入——原 spec 该归因已更正**;AeSlides 2604.22840(GRPO 权重空间 + "VLM 不适合作 reward source")/ EvoPresent 2510.05571(GRPO critic + self-refine)/ Visual-SDPO 2606.10334(权重空间自蒸馏,覆盖 slides)/ VLM-SlideEval 2510.22045(eval-only)**四个近邻均为不同范畴,新颖性边界(skill-space × design-reward)经直接核验仍成立**。
 
-- [ ] 接真实 slide generator。
-  - [ ] 场景识别 prompt。
-  - [ ] 页面类型生成 prompt。
-  - [ ] 组件库使用 prompt。
-  - [ ] 质检 checklist prompt。
-  - [ ] 结构化内容 JSON 到 HTML/PPTX 双渲染。
+> **代码状态(2026-06-18 核对;诚实标注 per §0 规则):本节绝大多数是 greenfield —— 不是"代码路径已在、只差跑实验",而是"真实链路尚未实现"。下面每条 `[ ]` 默认从零写,勿因 `gepa_runner` 存在就误判已接好。**
+> - **现有 = 仅 dry-run 规划脚手架**:`slide_examiner/gepa_runner.py`(`GEPARunConfig` + `FEEDBACK_CONDITIONS` 五条件字符串表 + `build_gepa_condition_plan` + `run_gepa_experiment(dry_run=True)` 只回计划字典;**非 dry-run 路径直接 `raise RuntimeError("Install GEPA...")`,且依赖尚不存在的 `generator/linter_fn/examiner_fn`**)、`slide_examiner/gepa_eval.py`(`evaluate_hybrid_feedback`:hybrid 分数合成 + ASI 文本,**作用于已算好的分数,无 rollout**)、`tests/test_gepa_eval.py`。line 23 所列"GEPA plan"= 这些 dry-run 计划器。
+> - **不存在(从零实现)**:① **真实 slide generator agent(被优化系统本体:4 prompt-skill 模块 + JSON→HTML/PPTX 双渲染)—— 最大缺口**;② SkillOpt 接入(microsoft/SkillOpt + adapter,主载体,全新);③ 真实 GEPA 链路(把 dry-run 接到真实 generator 的 rollout / metric);④ 任务集(SlidesBench 子集)接线;⑤ 任何 rollout 产物 / 报告(`runs/probe/part3*`、`reports/part3*` 均空)。
+> - **换载体影响**:现有 GEPA dry-run 脚手架降为**次载体参考**(其真实路径本就未实现);**SkillOpt 主载体完全 greenfield**。
 
-- [ ] 实现五个 GEPA feedback 条件。
-  - [ ] 纯 linter。
-  - [ ] zero-shot 8B。
-  - [ ] zero-shot strong/API。
-  - [ ] finetuned-8B。
-  - [ ] hybrid: linter 做选择信号,finetuned-8B 做反思文本。
+**实现路线图(P0→P9,按依赖排序;greenfield,每条标了复用 vs 新建 + 产物路径,产物未落不得勾选 per §0)。关键路径:P1 generator → P2 反馈接口 → P4 优化器载体 → P5 占位。P3 任务集可与 P1/P2 并行。**
 
-- [ ] 跑页面级预实验。
-  - [ ] 小 rollout budget。
-  - [ ] 估计方差。
-  - [ ] 检查是否有明显 reward hacking。
+- [ ] **P0 — 脚手架与复用盘点(便宜,先做)**。
+  - [ ] 建 `data/part3/`、`runs/probe/part3/`、`runs/part3/`、`reports/` 子约定 + `.gitignore` 防真实语料/大产物入库。
+  - [ ] 盘点可复用资产写进 `docs/PART3_PREP.md`:`render.py`(双渲染)、geometry linter、`term_consistency.py`(S3)、ft-8B examiner(`runs/part2/examiner_merged`)、contract serializer、vLLM serving(Part1/2 配方,见记忆 `vllm-serving-gotchas`)、`gepa_eval.evaluate_hybrid_feedback`、`gepa_runner`(dry-run 桩)。
+  - [ ] 定 best_skill / skill-doc 文本格式(SkillOpt 与 GEPA 共用同一可 add/delete/replace 的 skill 工件)。
 
-- [ ] 跑 deck 级正式实验。
-  - [ ] 每条件 rollout <= 200。
-  - [ ] k=3 seeds。
-  - [ ] 相同 GEPA 超参。
-  - [ ] 相同 reflection 模型。
+- [ ] **P1 — 被优化系统(slide generator agent)本体(最大缺口,核心前置)**。新建 `slide_examiner/generator.py` + `scripts/part3_generator_smoke.py`。
+  - [ ] 定义 task brief → 结构化内容 JSON(贴 Slide/Deck IR)的输入/输出 schema。
+  - [ ] 实现 4 组**可编辑** prompt/skill 模块:场景识别 / 页面类型生成指令 / 组件库使用说明 / 质检 checklist(每个模块文本即优化器编辑对象)。
+  - [ ] generator 调用链:task →(4 模块)→ 内容 JSON → **复用 `render.py` 双渲染(HTML + python-pptx)** → 渲染图 + 结构。
+  - [ ] 最小端到端 smoke:1 task → 渲染图 + 结构、无崩溃;产物落 `runs/rendered/part3_smoke/`。
+  - [ ] 单测:generator wiring + render round-trip(`tests/test_part3_generator.py`)。
 
-- [ ] 做终评。
-  - [ ] 人工 3 名 panel。
-  - [ ] 冻结 API judge。
-  - [ ] 与训练反馈源不同源。
-  - [ ] 汇总最终质量。
-  - [ ] 汇总达到阈值所需 rollout 数。
+- [ ] **P2 — 评分/反馈接口(选择信号 vs 反思信号 解耦)**。新建 `slide_examiner/feedback_sources.py`。
+  - [ ] 定义 `FeedbackSource` 抽象:渲染产物 → `(selection_score∈[0,1], reflection_text)`。
+  - [ ] 实现 5 档反馈源(**自变量 = 反馈源质量**,内在质量已由 Part1/2 度量,把 IV 值登进 config):
+    - [ ] linter-only(可验证几何违规量归一 → selection;reflection 极简/none)。
+    - [ ] zero-shot 8B(vLLM 端点,复用 serving 配方)。
+    - [ ] zero-shot 30B(API 强模型可选)。
+    - [ ] finetuned-8B(`runs/part2/examiner_merged`)。
+    - [ ] hybrid 解耦:linter 作 selection 门 + ft-8B 文本批评作 reflection ASI(复用 `gepa_eval.evaluate_hybrid_feedback`)。
+  - [ ] 单测:每档返回合法 `(score, text)`(`tests/test_feedback_sources.py`)。
 
-- [ ] 做 hacking 审计。
-  - [ ] overflow hidden。
-  - [ ] hidden/tiny text。
-  - [ ] off-canvas elements。
-  - [ ] texture background。
-  - [ ] covering overlays。
-  - [ ] 人工抽查可疑样本。
+- [ ] **P3 — 任务集 train/val/test(deck 级,split 固定;可与 P1/P2 并行)**。新建 `scripts/part3_build_tasks.py`。
+  - [ ] 拉 SlidesBench 子集 + 记录固定 revision(`reports/data_prep/part3_task_acquisition.json`)。
+  - [ ] 切 train 10 / val 10 / test 10,固定 `split_seed`;**test 锁到最终报告才用**。
+  - [ ] 每 task:brief +(可选参考)+ 评测 rubric;产物 `data/part3/tasks/{train,val,test}.jsonl` + freeze summary(sha256)。
+<!--  - [ ] 含实习场景任务包。 -->
 
-- [ ] 生成 Part 3 报告。
-  - [ ] 收敛曲线。
-  - [ ] 最终质量表。
-  - [ ] hacking 发生率。
-  - [ ] examiner 内在质量与下游效率的相关性。
+- [ ] **P4 — 优化器载体(SkillOpt 主 + GEPA 次,唯一变量=反馈源)**。
+  - [ ] SkillOpt(主):装 microsoft/SkillOpt env;新建 `slide_examiner/skillopt_adapter.py` —— skill doc 注入 generator → rollout → 回读 scored trajectory;**validation gate 接 `selection_score`、optimizer-model reflection 接 `reflection_text`**;reflection/optimizer LLM 冻结。
+  - [ ] GEPA(次):把 `gepa_runner` 非 dry-run 路径接到真实 generator + `FeedbackSource`(metric=`selection_score`,feedback_text=`reflection_text`);**删/改 `raise RuntimeError("Install GEPA...")` 桩**;reflection LLM 冻结。
+  - [ ] 两载体共用同一 generator / 任务集 / 评分管线,**唯一变量 = FeedbackSource**。
+  - [ ] 真实最小 run(1 condition × 极小 budget × 1 seed):确认 skill 真被编辑、score 真回读、轨迹可解析(**不是 dry-run**)。
+  - [ ] 单测:adapter 注入/回读 + 跨载体配置一致性(`tests/test_part3_optimizers.py`)。
+
+- [ ] **P5 — 页面级预实验(占位里程碑,先于 deck 级;锁 skill-space×design 角度防抢发)**。新建 `scripts/part3_pilot.py`。
+  - [ ] 5 档 × 2 载体,小 rollout budget(页面级便宜)。
+  - [ ] 估计方差 → 定 deck 级预算(variance gating,参 SPEC §7 风险行)。
+  - [ ] reward-hacking 初探针。
+  - [ ] 产物:`reports/part3_pilot.md` / `runs/probe/part3/pilot_summary.json`。
+
+- [ ] **P6 — deck 级正式实验**。新建 `scripts/part3_run.py`。
+  - [ ] 5 档 × 2 载体 × k=3 seeds,每条件 ≤200 rollouts。
+  - [ ] 相同优化器超参 + 冻结 reflection/optimizer LLM(隔离单一自变量)。
+  - [ ] 记录收敛曲线(达固定质量阈值所需 rollout 数)+ 每条件 best_skill。
+  - [ ] 产物:`runs/probe/part3/main.jsonl` + `runs/part3/best_skill/<condition>.md`。
+
+- [ ] **P7 — gold-vs-proxy reward-hacking 审计(移植 Gao 2210.10760 到 design)**。新建 `scripts/part3_hacking_audit.py`。
+  - [ ] held-out **可验证 linter 作 gold**;对每条件最优 skill 产物比 proxy(学习 examiner)分 vs gold 分,检测过优化(proxy 升、gold 不升)。
+  - [ ] AeSlides 式作弊清单逐项:隐藏/极小文字、越界元素、纹理背景遮挡、覆盖层、退化空页。
+  - [ ] 人工抽查可疑样本;按条件比较(预期 hybrid 可验证选择门最抗 hack)。
+  - [ ] 产物:`reports/part3_hacking.md` / `runs/probe/part3/hacking.json`。
+
+- [ ] **P8 — 终评(防 Goodhart,不同源)**。
+  - [ ] 不同源 panel:人工 3 名 + 冻结 API judge,与训练反馈源不同源。
+  - [ ] 汇总 held-out test 最终质量 + 达阈值所需 rollout 数。
+  - [ ] **阻塞预警**:3 人 panel 需人工,本机不可独立产出(同 §8 人工标注阻塞);先备评测协议 + 冻结 API judge 自动臂。
+
+- [ ] **P9 — Part 3 报告 + H3 判定**。新建 `scripts/part3_synthesis.py` → `reports/part3.md` / `runs/probe/part3/summary.json`。
+  - [ ] 收敛曲线(examiner 质量 × 优化器载体)。
+  - [ ] 最终质量表 + hacking 发生率。
+  - [ ] **examiner 内在质量 ↔ 下游效率相关性(design 域首条曲线)—— 核心结果**。
+  - [ ] 双载体 optimizer-agnostic robustness。
+  - [ ] **H3 gate 判定**(SPEC §6):收敛 rollout 数随 examiner 质量单调下降 + 混合 ≥ 任一单源;证伪即如实报 design 域 feedback-transfer 反例(仍有价值)。
 
 ## 10. 写作与交付
 
@@ -486,6 +507,9 @@ S6 二选一(2-AFC)强制选择复评 2026-06-16(`scripts/s6_forced_choice.py`,1
   - [ ] 明确切割 2512.21329。
   - [ ] 明确切割 VLM Judges ranking-scoring decoupling。
   - [ ] 明确切割 LED Benchmark。
+  - [ ] 明确切割 SkillOpt(2605.23904): 引为下游主载体 + gate/optimizer 解耦框架;本工作把"反馈源质量"当自变量(它固定反馈)。
+  - [ ] 明确切割 Gao 2210.10760(基础 gold-vs-proxy 过优化)+ PRIME 2602.11570(R²≈0.92-0.94 verifier→policy,数学)+ BoN/RLHF 强度差异(RewardBench2 2506.01937 r≈0.87 vs 2410.05584 弱相关): 反馈质量→效率 在 RL/text 已证;本工作贡献是迁到 skill-space × design,非重新发现。
+  - [ ] 明确切割 AeSlides(2604.22840) / EvoPresent-PresAesth(2510.05571): RL-slides + self-refine 已占;本工作落在 skill-space measurement,self-refine 仅作 baseline。AeSlides "VLM 打分 prone to reward hacking" + VLM-SlideEval(2510.22045) "calibrated selection gates" 反引为背书。
 
 - [ ] 写 Part 1 诊断章节(按实证三轨叙事)。
   - [ ] 三轨归因协议(linter / examiner-pointwise / pairwise)+ balanced accuracy + 配对 clean 方法学。
@@ -502,16 +526,17 @@ S6 二选一(2-AFC)强制选择复评 2026-06-16(`scripts/s6_forced_choice.py`,1
   - [ ] in-domain 和真实迁移。
 
 - [ ] 写 Part 3 下游章节。
-  - [ ] feedback source 作为自变量。
-  - [ ] hybrid 架构。
-  - [ ] GEPA 收敛效率。
-  - [ ] hacking 审计。
+  - [ ] 新颖性范围三交集(skill-space × design × 解耦可验证/学习反馈);明确不宣称"发现反馈质量重要"。
+  - [ ] feedback source 质量作为受控自变量(优化器内核冻结)。
+  - [ ] hybrid 解耦架构(可验证 linter 选择门 + 学习 examiner 反思)。
+  - [ ] 技能空间优化(SkillOpt 主 / GEPA 次)收敛效率 + optimizer-agnostic robustness。
+  - [ ] gold-vs-proxy reward-hacking 审计。
 
 - [ ] 整理工程交付文档。
   - [ ] 如何生成数据。
   - [ ] 如何跑 probe。
   - [ ] 如何训练 examiner。
-  - [ ] 如何跑 GEPA。
+  - [ ] 如何跑技能空间优化(SkillOpt 主 / GEPA 次)。
   - [ ] 哪些命令是真实执行,哪些仍是 dry-run。
 
 - [ ] 整理开源资产。
@@ -533,3 +558,4 @@ S6 二选一(2-AFC)强制选择复评 2026-06-16(`scripts/s6_forced_choice.py`,1
 - [x] 7. pilot 稳定后把全矩阵**重设计成三轨**(见 §7 与 SPEC §3.0),放弃 pointwise 铺满。
 - [x] 8. 按三轨**冻结数据集(配对优先)+ 跑全矩阵**,产出 Part 1 三张主表。(2026-06-17,Go/No-Go=GO;见 §7 完成快照)
 - [x] 9. H-rel + S 组 examiner 成立 → 进 Part 2(8B examiner,pointwise+pairwise 双输出,G 标签来自 linter)。(2026-06-18 完成:见 §8 完成快照与 `reports/part2.md`;头条 finetuned 8B S 组 0.99 > zero-shot 30B 0.785)
+- [ ] 10. Part 2 完成 → 进 **Part 3 下游效用**(§9;2026-06-18 重构:SkillOpt 主 / GEPA 次,examiner **反馈源质量为自变量**,解耦可验证 linter 选择门 + 学习型 examiner 反思)。执行子序:**先建真实 slide generator agent(被优化系统本体,最大缺口)→ 接 SkillOpt adapter + 5 档反馈梯度 → 页面级预实验占位(估方差 + reward-hacking 探针,锁 skill-space×design 角度防抢发)→ deck 级正式(每条件×每载体 ≤200 rollouts、k=3、冻结 optimizer LLM)→ gold-vs-proxy 反作弊审计 + 不同源 3 人 panel 终评**。新颖性限定"交集迁移 + 解耦反馈",**勿宣称"发现反馈质量重要"**(RL 域已证:Gao 2210.10760 / PRIME 2602.11570)。详见 §9 与 SPEC §5。**注:§9 为 greenfield、真实链路未实现,见 §9 代码状态。**

@@ -56,3 +56,7 @@ data/derisk/
 .idea/
 .vscode/
 data/part1_fc/*.jsonl
+
+# Part 3 reference papers (external arxiv PDFs, kept local for verification, not committed)
+docs/refs/
+docs/*.pdf
