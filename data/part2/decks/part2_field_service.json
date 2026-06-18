@@ -1,0 +1,576 @@
+{
+  "deck_id": "part2_field_service",
+  "slides": [
+    {
+      "slide_id": "part2_field_service_1",
+      "width": 1920,
+      "height": 1080,
+      "elements": [
+        {
+          "element_id": "s1_title",
+          "type": "title",
+          "bbox": {
+            "x": 96,
+            "y": 72,
+            "width": 1728,
+            "height": 72
+          },
+          "text": "Technician time is wasted",
+          "style": {
+            "font_size_pt": 34,
+            "color": "#111111"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "title",
+            "text_level": "title"
+          }
+        },
+        {
+          "element_id": "s1_body0",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 180,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "Risks are tracked weekly",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        },
+        {
+          "element_id": "s1_body1",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 272,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "DispatchPro has a clear rollback path",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        },
+        {
+          "element_id": "s1_body2",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 364,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "Compliance reviewed the design",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        }
+      ],
+      "metadata": {
+        "section": "baseline",
+        "page_type": null,
+        "prompt_modules": {
+          "scenario_classifier": "",
+          "page_type_instructions": "",
+          "component_library": "",
+          "quality_checklist": ""
+        }
+      }
+    },
+    {
+      "slide_id": "part2_field_service_2",
+      "width": 1920,
+      "height": 1080,
+      "elements": [
+        {
+          "element_id": "s2_title",
+          "type": "title",
+          "bbox": {
+            "x": 96,
+            "y": 72,
+            "width": 1728,
+            "height": 72
+          },
+          "text": "Root causes of idle time",
+          "style": {
+            "font_size_pt": 34,
+            "color": "#111111"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "title",
+            "text_level": "title"
+          }
+        },
+        {
+          "element_id": "s2_body0",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 180,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "Adoption grew month over month",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        },
+        {
+          "element_id": "s2_body1",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 272,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "DispatchPro now handles most volume",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        },
+        {
+          "element_id": "s2_body2",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 364,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "Support tickets fell steadily",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        }
+      ],
+      "metadata": {
+        "section": "diagnosis",
+        "page_type": null,
+        "prompt_modules": {
+          "scenario_classifier": "",
+          "page_type_instructions": "",
+          "component_library": "",
+          "quality_checklist": ""
+        }
+      }
+    },
+    {
+      "slide_id": "part2_field_service_3",
+      "width": 1920,
+      "height": 1080,
+      "elements": [
+        {
+          "element_id": "s3_title",
+          "type": "title",
+          "bbox": {
+            "x": 96,
+            "y": 72,
+            "width": 1728,
+            "height": 72
+          },
+          "text": "DispatchPro routes smarter",
+          "style": {
+            "font_size_pt": 34,
+            "color": "#111111"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "title",
+            "text_level": "title"
+          }
+        },
+        {
+          "element_id": "s3_body0",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 180,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "We need executive sponsorship",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        },
+        {
+          "element_id": "s3_body1",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 272,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "DispatchPro needs a small dedicated team",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        },
+        {
+          "element_id": "s3_body2",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 364,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "A decision is needed this quarter",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        }
+      ],
+      "metadata": {
+        "section": "levers",
+        "page_type": null,
+        "prompt_modules": {
+          "scenario_classifier": "",
+          "page_type_instructions": "",
+          "component_library": "",
+          "quality_checklist": ""
+        }
+      }
+    },
+    {
+      "slide_id": "part2_field_service_4",
+      "width": 1920,
+      "height": 1080,
+      "elements": [
+        {
+          "element_id": "s4_title",
+          "type": "title",
+          "bbox": {
+            "x": 96,
+            "y": 72,
+            "width": 1728,
+            "height": 72
+          },
+          "text": "Impact DispatchPro can deliver",
+          "style": {
+            "font_size_pt": 34,
+            "color": "#111111"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "title",
+            "text_level": "title"
+          }
+        },
+        {
+          "element_id": "s4_body0",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 180,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "DispatchPro is saturated at peak demand",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        },
+        {
+          "element_id": "s4_body1",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 272,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "A refresh is due within two quarters",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        },
+        {
+          "element_id": "s4_body2",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 364,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "Competitors already ship weekly",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        }
+      ],
+      "metadata": {
+        "section": "impact",
+        "page_type": null,
+        "prompt_modules": {
+          "scenario_classifier": "",
+          "page_type_instructions": "",
+          "component_library": "",
+          "quality_checklist": ""
+        }
+      }
+    },
+    {
+      "slide_id": "part2_field_service_5",
+      "width": 1920,
+      "height": 1080,
+      "elements": [
+        {
+          "element_id": "s5_title",
+          "type": "title",
+          "bbox": {
+            "x": 96,
+            "y": 72,
+            "width": 1728,
+            "height": 72
+          },
+          "text": "A ninety-day DispatchPro plan",
+          "style": {
+            "font_size_pt": 34,
+            "color": "#111111"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "title",
+            "text_level": "title"
+          }
+        },
+        {
+          "element_id": "s5_body0",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 180,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "Phase 1 stabilizes DispatchPro",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        },
+        {
+          "element_id": "s5_body1",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 272,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "Phase 2 replatforms the data tier",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        },
+        {
+          "element_id": "s5_body2",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 364,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "Phase 3 refactors the core",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        },
+        {
+          "element_id": "s5_body3",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 456,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "Phase 4 hardens DispatchPro for scale",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        },
+        {
+          "element_id": "s5_body4",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 548,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "Phase 5 hands off to operations",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        }
+      ],
+      "metadata": {
+        "section": "plan",
+        "page_type": null,
+        "prompt_modules": {
+          "scenario_classifier": "",
+          "page_type_instructions": "",
+          "component_library": "",
+          "quality_checklist": ""
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "scenario": "client_intro",
+    "required_sections": [
+      "baseline",
+      "diagnosis",
+      "levers",
+      "impact",
+      "plan"
+    ],
+    "prompt_modules": {
+      "scenario_classifier": "",
+      "page_type_instructions": "",
+      "component_library": "",
+      "quality_checklist": ""
+    },
+    "canonical_term": "DispatchPro",
+    "variant_term": "DispatchProX",
+    "project_glossary": {
+      "DispatchPro": [
+        "DispatchProX",
+        "dispatchpro"
+      ]
+    }
+  }
+}

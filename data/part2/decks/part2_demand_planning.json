@@ -1,0 +1,534 @@
+{
+  "deck_id": "part2_demand_planning",
+  "slides": [
+    {
+      "slide_id": "part2_demand_planning_1",
+      "width": 1920,
+      "height": 1080,
+      "elements": [
+        {
+          "element_id": "s1_title",
+          "type": "title",
+          "bbox": {
+            "x": 96,
+            "y": 72,
+            "width": 1728,
+            "height": 72
+          },
+          "text": "Forecasts and supply diverge",
+          "style": {
+            "font_size_pt": 34,
+            "color": "#111111"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "title",
+            "text_level": "title"
+          }
+        },
+        {
+          "element_id": "s1_body0",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 180,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "Shadow traffic before switching PlanSync",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        },
+        {
+          "element_id": "s1_body1",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 272,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "Automated rollback within five minutes",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        },
+        {
+          "element_id": "s1_body2",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 364,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "Cost and latency dashboards per service",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        }
+      ],
+      "metadata": {
+        "section": "problem",
+        "page_type": null,
+        "prompt_modules": {
+          "scenario_classifier": "",
+          "page_type_instructions": "",
+          "component_library": "",
+          "quality_checklist": ""
+        }
+      }
+    },
+    {
+      "slide_id": "part2_demand_planning_2",
+      "width": 1920,
+      "height": 1080,
+      "elements": [
+        {
+          "element_id": "s2_title",
+          "type": "title",
+          "bbox": {
+            "x": 96,
+            "y": 72,
+            "width": 1728,
+            "height": 72
+          },
+          "text": "PlanSync aligns the plan",
+          "style": {
+            "font_size_pt": 34,
+            "color": "#111111"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "title",
+            "text_level": "title"
+          }
+        },
+        {
+          "element_id": "s2_body0",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 180,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "Approve the phase 1 budget for PlanSync",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        },
+        {
+          "element_id": "s2_body1",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 272,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "Assign two platform engineers",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        },
+        {
+          "element_id": "s2_body2",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 364,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "Confirm the cutover freeze window",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        }
+      ],
+      "metadata": {
+        "section": "solution",
+        "page_type": null,
+        "prompt_modules": {
+          "scenario_classifier": "",
+          "page_type_instructions": "",
+          "component_library": "",
+          "quality_checklist": ""
+        }
+      }
+    },
+    {
+      "slide_id": "part2_demand_planning_3",
+      "width": 1920,
+      "height": 1080,
+      "elements": [
+        {
+          "element_id": "s3_title",
+          "type": "title",
+          "bbox": {
+            "x": 96,
+            "y": 72,
+            "width": 1728,
+            "height": 72
+          },
+          "text": "PlanSync accuracy in the trial",
+          "style": {
+            "font_size_pt": 34,
+            "color": "#111111"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "title",
+            "text_level": "title"
+          }
+        },
+        {
+          "element_id": "s3_body0",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 180,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "PlanSync reduces toil by a third",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        },
+        {
+          "element_id": "s3_body1",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 272,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "Teams adopt PlanSync daily",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        },
+        {
+          "element_id": "s3_body2",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 364,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "Payback under twelve months",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        }
+      ],
+      "metadata": {
+        "section": "evidence",
+        "page_type": null,
+        "prompt_modules": {
+          "scenario_classifier": "",
+          "page_type_instructions": "",
+          "component_library": "",
+          "quality_checklist": ""
+        }
+      }
+    },
+    {
+      "slide_id": "part2_demand_planning_4",
+      "width": 1920,
+      "height": 1080,
+      "elements": [
+        {
+          "element_id": "s4_title",
+          "type": "title",
+          "bbox": {
+            "x": 96,
+            "y": 72,
+            "width": 1728,
+            "height": 72
+          },
+          "text": "Scaling PlanSync across plants",
+          "style": {
+            "font_size_pt": 34,
+            "color": "#111111"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "title",
+            "text_level": "title"
+          }
+        },
+        {
+          "element_id": "s4_body0",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 180,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "Current process is mostly manual",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        },
+        {
+          "element_id": "s4_body1",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 272,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "PlanSync automates the repetitive work",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        },
+        {
+          "element_id": "s4_body2",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 364,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "Error rates drop sharply",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        }
+      ],
+      "metadata": {
+        "section": "rollout",
+        "page_type": null,
+        "prompt_modules": {
+          "scenario_classifier": "",
+          "page_type_instructions": "",
+          "component_library": "",
+          "quality_checklist": ""
+        }
+      }
+    },
+    {
+      "slide_id": "part2_demand_planning_5",
+      "width": 1920,
+      "height": 1080,
+      "elements": [
+        {
+          "element_id": "s5_title",
+          "type": "title",
+          "bbox": {
+            "x": 96,
+            "y": 72,
+            "width": 1728,
+            "height": 72
+          },
+          "text": "Decisions for planning this quarter",
+          "style": {
+            "font_size_pt": 34,
+            "color": "#111111"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "title",
+            "text_level": "title"
+          }
+        },
+        {
+          "element_id": "s5_body0",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 180,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "The pilot covered three regions",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        },
+        {
+          "element_id": "s5_body1",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 272,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "PlanSync beat the baseline by double digits",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        },
+        {
+          "element_id": "s5_body2",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 364,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "Results held across segments",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        }
+      ],
+      "metadata": {
+        "section": "next",
+        "page_type": null,
+        "prompt_modules": {
+          "scenario_classifier": "",
+          "page_type_instructions": "",
+          "component_library": "",
+          "quality_checklist": ""
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "scenario": "full_proposal",
+    "required_sections": [
+      "problem",
+      "solution",
+      "evidence",
+      "rollout",
+      "next"
+    ],
+    "prompt_modules": {
+      "scenario_classifier": "",
+      "page_type_instructions": "",
+      "component_library": "",
+      "quality_checklist": ""
+    },
+    "canonical_term": "PlanSync",
+    "variant_term": "PlanSyncX",
+    "project_glossary": {
+      "PlanSync": [
+        "PlanSyncX",
+        "plansync"
+      ]
+    }
+  }
+}

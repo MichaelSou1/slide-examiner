@@ -158,10 +158,10 @@
     - outputs: `data/manifests/pptbench_detection_tasks.jsonl`, `data/manifests/pptbench_understanding_tasks.jsonl`。
     - handoff: task records 已包含 `task.image_path` 和 `task.structure`,可接后续真实模型 probing / 渲染质量核查。
 
-# - [ ] 接入实习脱敏 deck。
-#  - [ ] 确认脱敏策略。
-#  - [ ] 移除客户名、敏感数字、内部项目名。
-#  - [ ] 记录可公开/不可公开边界。
+<!-- - [ ] 接入实习脱敏 deck。
+  - [ ] 确认脱敏策略。
+  - [ ] 移除客户名、敏感数字、内部项目名。
+  - [ ] 记录可公开/不可公开边界。 -->
 
 - [x] 建立真实问题 deck 人工标注计划。
   - [x] 目标约 100 页。
@@ -380,46 +380,48 @@ S6 二选一(2-AFC)强制选择复评 2026-06-16(`scripts/s6_forced_choice.py`,1
 
 目标(按 Part 1 实证修订,见 SPEC §4.3 实证修订):训练专用 8B examiner,主力放在 **S 组语义 + 一致性核查(pairwise)**;**几何不靠 pointwise 检测**——G1 溢出走 pairwise(zero-shot 8B forced-choice 已 100%,微调强化),G2–G6 标签来自 **linter** 喂入,examiner 学"复述/兜底/修复建议"而非"从像素重新检测"。验证点:能否在 S 组逼近/超过更大 zero-shot 模型,并把 overflow-pairwise 做到逼近 linter。
 
-- [ ] 生成训练数据。
-  - [ ] 20K-40K 合成样本。
-  - [ ] G2–G6:标签来自 **linter**(几何 ground truth),examiner 学复述/兜底,不做 pixel-level 检测目标。
-  - [ ] G1 溢出 + S6 + S3:**pairwise/配对样本为主**(clean vs defective 同底图)。
-  - [ ] S1/S4/S5:pointwise 结构化批评。
-  - [ ] negative >= 30%,且**每正样本配对同底图 clean**;page/deck 都有 A-only 样本。
-  - [ ] 标注 template/freeform 来源(template=真实 snap-to-master)。
+完成快照 2026-06-18:Part 2 全链路跑通(数据→渲染→SFT→QLoRA→eval→报告)。脚本 `scripts/part2_*.py`;配置 `configs/part2_qlora*.yaml`;报告 `reports/part2.md` / 汇总 `runs/probe/part2_summary.json`;wandb project `slide-examiner-part2`。**头条:finetuned 8B 在 S 组 pointwise(modality A)bal-acc ~0.99,胜过 zero-shot 8B(0.64)与 zero-shot 30B(0.785);几何在 image-only 下学会弃答(0 FPR,不从像素幻觉几何)。** 规模按用户决定取 ~5-8K(非 20-40K)。
 
-- [ ] 导出 SFT 数据。
-  - [ ] pointwise JSONL(S1/S4/S5 + G 复述)。
-  - [ ] **pairwise JSONL(重点:G1/S6/S3 的相对判断)**。
-  - [ ] LLaMA-Factory dataset_info。
-  - [ ] parser 回读全部 target JSON。
-  - [ ] 记录样本数、缺陷分布、modality 分布、pointwise/pairwise 比例。
+- [x] 生成训练数据。(`scripts/part2_build_corpus.py`+`part2_build_dataset.py`+`part2_build_sft.py`;5304 样本 manifest / 2142 SFT records)
+  - [ ] 20K-40K 合成样本。(**降级**:本轮按用户决定取 ~5-8K → 5304 manifest 样本 / 2142 训练 records;渲染 11568 PNG)
+  - [x] G2–G6:标签来自 **linter**,examiner 学**复述(modality B)+ 弃答(modality A,不做 pixel-level 检测目标)**。
+  - [x] G1 溢出 + S6:**pairwise/配对样本**(clean vs defective 同底图);**S3 移出 examiner → 术语一致性 linter**(承 Part 1 Go/No-Go)。
+  - [x] S1/S4:pointwise 结构化批评(S5 作 held-out defect 留 OOD 评估,不进训练)。
+  - [x] negative >= 30%(train 40.5% NO_DEFECT + 几何弃答负样本),**每正样本配对同底图 clean**;page/deck 都有 A-only。
+  - [x] 标注 template/freeform 来源(template=真实 snap-to-master)。
 
-- [ ] 跑 QLoRA 训练。
-  - [ ] 确认 GPU 环境。(微调用单卡;建议占 GPU0——它跨 NUMA 不适合做 TP,正好留给训练,TP 推理走 GPU1/2/3)
-  - [ ] 确认 Qwen3-VL-8B 权重路径。(`/home/gpus/models/Qwen3-VL-8B-Instruct`,BF16 已就绪)
-  - [ ] 确认训练后 checkpoint 输出目录。
-  - [ ] 记录训练命令。
-  - [ ] 记录 loss 曲线或日志。
+- [x] 导出 SFT 数据。(`scripts/part2_build_sft.py` → `data/part2/sft/`)
+  - [x] pointwise JSONL(S1/S4 + G 复述/弃答)。
+  - [x] **pairwise JSONL(G1/S6;v1 序固定有位置偏置 → v2 已随机化 A/B,答案均衡)**。
+  - [x] LLaMA-Factory dataset_info(`data/part2/sft/dataset_info.json`,sharegpt)。
+  - [x] parser 回读全部 target JSON(**0 parse failures**)。
+  - [x] 记录样本数/缺陷/modality/pointwise:pairwise 比例(`data/part2/sft/composition.json`)。
 
-- [ ] 做 in-domain held-out 评估。
-  - [ ] held-out severity。
-  - [ ] held-out defect type。
-  - [ ] **balanced accuracy + precision/recall/F1(配对 clean);pairwise 缺陷报 2-AFC accuracy**。
-  - [ ] 过报率(FPR on 配对 clean)——抑制过报是 examiner 相对 zero-shot 的关键卖点。
+- [x] 跑 QLoRA 训练。(`configs/part2_qlora.yaml`,LLaMA-Factory `qwen3_vl_nothink`,4-bit rank16 2ep)
+  - [x] 确认 GPU 环境。(单卡 GPU0 训练;TP 推理走 GPU1/2/3)
+  - [x] 确认 Qwen3-VL-8B 权重路径。(`/home/gpus/models/Qwen3-VL-8B-Instruct`)
+  - [x] checkpoint 输出目录。(`runs/part2/examiner_lora`,merged `runs/part2/examiner_merged`)
+  - [x] 记录训练命令。(`runs/part2/train.log`;config 入库)
+  - [x] 记录 loss 曲线。(wandb + `runs/part2/examiner_lora/training_eval_loss.png`;**eval_loss 0.099→0.018 单调降后平台,无过拟合/坍塌**)
+
+- [x] 做 in-domain held-out 评估。(`scripts/part2_eval.py` + `part2_serve_and_eval.sh`)
+  - [x] held-out severity。(`data/part2/manifest_eval_ood_severity_rendered.jsonl`,ft-8b 语义 C=0.917)
+  - [x] held-out defect type。(G4/S5,`..._ood_defect_...`;G4 image-only 弃答 0 FPR)
+  - [x] **balanced accuracy + precision/recall/F1(配对 clean);pairwise 报 2-AFC**。(`runs/probe/part2_eval/`)
+  - [x] 过报率(FPR on 配对 clean)。(ft-8b geometry image-only FPR=0;语义 page FPR≈0)
 
 - [ ] 做真实迁移评估。
-  - [ ] 人工标注真实 deck。
-  - [ ] VLM-SlideEval / PPTBench 可用子任务。
-  - [ ] finetuned-8B vs zero-shot 8B。
-  - [ ] finetuned-8B vs strong/API。
-  - [ ] finetuned-8B vs linter。
+  - [ ] 人工标注真实 deck。(**阻塞 2026-06-18**:需人工标注 + 3 人 panel,本机不可产出)
+  - [ ] VLM-SlideEval / PPTBench 可用子任务。(**待办**:PPTBench 数据已就绪 `data/manifests/pptbench_*`,需标签格式适配后评分)
+  - [x] finetuned-8B vs zero-shot 8B。(S 组 0.99 vs 0.64)
+  - [x] finetuned-8B vs strong(zero-shot 30B)。(0.99 vs 0.785;**未接 API 强模型**)
+  - [x] finetuned-8B vs linter。(几何:linter 主检测;ft 弃答/复述,见 Table 2)
 
-- [ ] 生成 Part 2 报告。
-  - [ ] G 组表:**overflow-pairwise vs linter**(不报 pointwise G 检测);其余 G2–G6 由 linter 承担。
-  - [ ] S 组表:pointwise channel 画像(balanced acc)+ S6/S3 的 pairwise。
-  - [ ] finetuned-8B vs zero-shot(8B/30B/API)vs linter,以及 **pointwise vs pairwise 增益**。
-  - [ ] 真实迁移结果表 + sim2real gap 讨论。
+- [x] 生成 Part 2 报告。(`reports/part2.md` / `runs/probe/part2_summary.json`,`scripts/part2_synthesis.py`)
+  - [x] G 组表:linter vs ft(复述-B / 弃答-A);不报 pointwise G 检测。
+  - [x] S 组表:pointwise channel 画像(balanced acc)+ G1/S6 pairwise 2-AFC。
+  - [x] finetuned-8B vs zero-shot(8B/30B)vs linter;**pointwise vs pairwise** 对照(pairwise v1 位置偏置已记录,v2 修复)。
+  - [ ] 真实迁移结果表 + sim2real gap 讨论。(随人工标注阻塞)
 
 ## 9. 第八优先级: Part 3 GEPA 下游效用
 
@@ -430,7 +432,7 @@ S6 二选一(2-AFC)强制选择复评 2026-06-16(`scripts/s6_forced_choice.py`,1
   - [ ] val 10 decks。
   - [ ] test 10 decks。
   - [ ] 包含 SlidesBench 子集。
-  - [ ] 包含实习场景任务包。
+<!--  - [ ] 包含实习场景任务包。 -->
 
 - [ ] 接真实 slide generator。
   - [ ] 场景识别 prompt。
@@ -480,7 +482,7 @@ S6 二选一(2-AFC)强制选择复评 2026-06-16(`scripts/s6_forced_choice.py`,1
 
 ## 10. 写作与交付
 
-- [ ] 更新 related work。
+- [ ] 更新 related work  （联网调研，截止至2026.6.18）。
   - [ ] 明确切割 2512.21329。
   - [ ] 明确切割 VLM Judges ranking-scoring decoupling。
   - [ ] 明确切割 LED Benchmark。
@@ -530,4 +532,4 @@ S6 二选一(2-AFC)强制选择复评 2026-06-16(`scripts/s6_forced_choice.py`,1
 - [x] 6. 跑一个真实 VLM 小 pilot。(Qwen3-VL-4B/8B/30B + 编码器对照,见 §6/§7 与 `reports/`)
 - [x] 7. pilot 稳定后把全矩阵**重设计成三轨**(见 §7 与 SPEC §3.0),放弃 pointwise 铺满。
 - [x] 8. 按三轨**冻结数据集(配对优先)+ 跑全矩阵**,产出 Part 1 三张主表。(2026-06-17,Go/No-Go=GO;见 §7 完成快照)
-- [ ] 9. H-rel + S 组 examiner 成立 → 进 Part 2(8B examiner,pointwise+pairwise 双输出,G 标签来自 linter)。
+- [x] 9. H-rel + S 组 examiner 成立 → 进 Part 2(8B examiner,pointwise+pairwise 双输出,G 标签来自 linter)。(2026-06-18 完成:见 §8 完成快照与 `reports/part2.md`;头条 finetuned 8B S 组 0.99 > zero-shot 30B 0.785)

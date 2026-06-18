@@ -1,0 +1,46 @@
+{
+  "manifest": "data/part2/manifest_train_rendered.jsonl",
+  "n_manifest_records": 2196,
+  "n_pointwise": 1872,
+  "n_pairwise": 270,
+  "n_train_total": 2142,
+  "pointwise_vs_pairwise": {
+    "pointwise": 1872,
+    "pairwise": 270,
+    "pairwise_fraction": 0.126
+  },
+  "track_distribution": {
+    "semantic": 936,
+    "geometry": 936
+  },
+  "modality_distribution": {
+    "A": 745,
+    "B": 712,
+    "C": 322,
+    "B_prime": 93
+  },
+  "defect_distribution": {
+    "G1_TEXT_OVERFLOW": 252,
+    "G2_ELEMENT_OVERLAP": 262,
+    "G3_ALIGNMENT_OFFSET": 196,
+    "G5_BRAND_COLOR_VIOLATION": 303,
+    "G6_MARGIN_VIOLATION": 175,
+    "NO_DEFECT": 600,
+    "S1_TITLE_BODY_MISMATCH": 84,
+    "S2_NARRATIVE_ORDER_BREAK": 84,
+    "S4_DENSITY_RULE_VIOLATION": 168,
+    "S6_IMAGE_TEXT_CONTRADICTION": 18
+  },
+  "exam_level_distribution": {
+    "PageExamResult": 1788,
+    "DeckExamResult": 84,
+    "PairwiseResult": 270
+  },
+  "image_record_count": 1337,
+  "text_only_record_count": 805,
+  "a_only_fraction_of_pointwise": 0.398,
+  "parse_failures": 0,
+  "excluded_defects": [
+    "S3_TERMINOLOGY_INCONSISTENCY"
+  ]
+}

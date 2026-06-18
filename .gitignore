@@ -30,6 +30,7 @@ runs/probe/*
 models/
 reports/*
 !reports/README.md
+!reports/*.md
 !reports/data_prep/
 reports/data_prep/*
 !reports/data_prep/.gitkeep
@@ -43,6 +44,11 @@ data/manifests/*
 data/pilot/*.jsonl
 data/part1/*.jsonl
 data/part1_img/*.jsonl
+# part2: keep base decks + small composition json; drop heavy regenerable manifests/sft
+data/part2/*.jsonl
+data/part2/shards/
+data/part2/sft/*.jsonl
+data/derisk/
 *.log
 
 # 编辑器/系统

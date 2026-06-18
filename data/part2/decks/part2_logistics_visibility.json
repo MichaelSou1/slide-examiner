@@ -1,0 +1,576 @@
+{
+  "deck_id": "part2_logistics_visibility",
+  "slides": [
+    {
+      "slide_id": "part2_logistics_visibility_1",
+      "width": 1920,
+      "height": 1080,
+      "elements": [
+        {
+          "element_id": "s1_title",
+          "type": "title",
+          "bbox": {
+            "x": 96,
+            "y": 72,
+            "width": 1728,
+            "height": 72
+          },
+          "text": "Shipments go dark in transit",
+          "style": {
+            "font_size_pt": 34,
+            "color": "#111111"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "title",
+            "text_level": "title"
+          }
+        },
+        {
+          "element_id": "s1_body0",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 180,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "Phase 1 stabilizes ShipEye",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        },
+        {
+          "element_id": "s1_body1",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 272,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "Phase 2 replatforms the data tier",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        },
+        {
+          "element_id": "s1_body2",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 364,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "Phase 3 refactors the core",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        },
+        {
+          "element_id": "s1_body3",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 456,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "Phase 4 hardens ShipEye for scale",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        },
+        {
+          "element_id": "s1_body4",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 548,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "Phase 5 hands off to operations",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        }
+      ],
+      "metadata": {
+        "section": "context",
+        "page_type": null,
+        "prompt_modules": {
+          "scenario_classifier": "",
+          "page_type_instructions": "",
+          "component_library": "",
+          "quality_checklist": ""
+        }
+      }
+    },
+    {
+      "slide_id": "part2_logistics_visibility_2",
+      "width": 1920,
+      "height": 1080,
+      "elements": [
+        {
+          "element_id": "s2_title",
+          "type": "title",
+          "bbox": {
+            "x": 96,
+            "y": 72,
+            "width": 1728,
+            "height": 72
+          },
+          "text": "Why visibility breaks down",
+          "style": {
+            "font_size_pt": 34,
+            "color": "#111111"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "title",
+            "text_level": "title"
+          }
+        },
+        {
+          "element_id": "s2_body0",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 180,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "Q1 foundation for ShipEye",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        },
+        {
+          "element_id": "s2_body1",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 272,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "Q2 first production workloads",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        },
+        {
+          "element_id": "s2_body2",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 364,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "Q3 migration and cutover",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        }
+      ],
+      "metadata": {
+        "section": "diagnosis",
+        "page_type": null,
+        "prompt_modules": {
+          "scenario_classifier": "",
+          "page_type_instructions": "",
+          "component_library": "",
+          "quality_checklist": ""
+        }
+      }
+    },
+    {
+      "slide_id": "part2_logistics_visibility_3",
+      "width": 1920,
+      "height": 1080,
+      "elements": [
+        {
+          "element_id": "s3_title",
+          "type": "title",
+          "bbox": {
+            "x": 96,
+            "y": 72,
+            "width": 1728,
+            "height": 72
+          },
+          "text": "ShipEye tracks every leg",
+          "style": {
+            "font_size_pt": 34,
+            "color": "#111111"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "title",
+            "text_level": "title"
+          }
+        },
+        {
+          "element_id": "s3_body0",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 180,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "Shadow traffic before switching ShipEye",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        },
+        {
+          "element_id": "s3_body1",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 272,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "Automated rollback within five minutes",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        },
+        {
+          "element_id": "s3_body2",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 364,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "Cost and latency dashboards per service",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        }
+      ],
+      "metadata": {
+        "section": "solution",
+        "page_type": null,
+        "prompt_modules": {
+          "scenario_classifier": "",
+          "page_type_instructions": "",
+          "component_library": "",
+          "quality_checklist": ""
+        }
+      }
+    },
+    {
+      "slide_id": "part2_logistics_visibility_4",
+      "width": 1920,
+      "height": 1080,
+      "elements": [
+        {
+          "element_id": "s4_title",
+          "type": "title",
+          "bbox": {
+            "x": 96,
+            "y": 72,
+            "width": 1728,
+            "height": 72
+          },
+          "text": "ShipEye impact on on-time delivery",
+          "style": {
+            "font_size_pt": 34,
+            "color": "#111111"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "title",
+            "text_level": "title"
+          }
+        },
+        {
+          "element_id": "s4_body0",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 180,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "Approve the phase 1 budget for ShipEye",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        },
+        {
+          "element_id": "s4_body1",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 272,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "Assign two platform engineers",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        },
+        {
+          "element_id": "s4_body2",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 364,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "Confirm the cutover freeze window",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        }
+      ],
+      "metadata": {
+        "section": "impact",
+        "page_type": null,
+        "prompt_modules": {
+          "scenario_classifier": "",
+          "page_type_instructions": "",
+          "component_library": "",
+          "quality_checklist": ""
+        }
+      }
+    },
+    {
+      "slide_id": "part2_logistics_visibility_5",
+      "width": 1920,
+      "height": 1080,
+      "elements": [
+        {
+          "element_id": "s5_title",
+          "type": "title",
+          "bbox": {
+            "x": 96,
+            "y": 72,
+            "width": 1728,
+            "height": 72
+          },
+          "text": "A pragmatic ShipEye plan",
+          "style": {
+            "font_size_pt": 34,
+            "color": "#111111"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "title",
+            "text_level": "title"
+          }
+        },
+        {
+          "element_id": "s5_body0",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 180,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "ShipEye reduces toil by a third",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        },
+        {
+          "element_id": "s5_body1",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 272,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "Teams adopt ShipEye daily",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        },
+        {
+          "element_id": "s5_body2",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 364,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "Payback under twelve months",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        }
+      ],
+      "metadata": {
+        "section": "plan",
+        "page_type": null,
+        "prompt_modules": {
+          "scenario_classifier": "",
+          "page_type_instructions": "",
+          "component_library": "",
+          "quality_checklist": ""
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "scenario": "client_intro",
+    "required_sections": [
+      "context",
+      "diagnosis",
+      "solution",
+      "impact",
+      "plan"
+    ],
+    "prompt_modules": {
+      "scenario_classifier": "",
+      "page_type_instructions": "",
+      "component_library": "",
+      "quality_checklist": ""
+    },
+    "canonical_term": "ShipEye",
+    "variant_term": "ShipEyeX",
+    "project_glossary": {
+      "ShipEye": [
+        "ShipEyeX",
+        "shipeye"
+      ]
+    }
+  }
+}

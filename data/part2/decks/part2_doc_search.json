@@ -1,0 +1,534 @@
+{
+  "deck_id": "part2_doc_search",
+  "slides": [
+    {
+      "slide_id": "part2_doc_search_1",
+      "width": 1920,
+      "height": 1080,
+      "elements": [
+        {
+          "element_id": "s1_title",
+          "type": "title",
+          "bbox": {
+            "x": 96,
+            "y": 72,
+            "width": 1728,
+            "height": 72
+          },
+          "text": "Teams cannot find documents",
+          "style": {
+            "font_size_pt": 34,
+            "color": "#111111"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "title",
+            "text_level": "title"
+          }
+        },
+        {
+          "element_id": "s1_body0",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 180,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "Current process is mostly manual",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        },
+        {
+          "element_id": "s1_body1",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 272,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "FindFast automates the repetitive work",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        },
+        {
+          "element_id": "s1_body2",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 364,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "Error rates drop sharply",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        }
+      ],
+      "metadata": {
+        "section": "context",
+        "page_type": null,
+        "prompt_modules": {
+          "scenario_classifier": "",
+          "page_type_instructions": "",
+          "component_library": "",
+          "quality_checklist": ""
+        }
+      }
+    },
+    {
+      "slide_id": "part2_doc_search_2",
+      "width": 1920,
+      "height": 1080,
+      "elements": [
+        {
+          "element_id": "s2_title",
+          "type": "title",
+          "bbox": {
+            "x": 96,
+            "y": 72,
+            "width": 1728,
+            "height": 72
+          },
+          "text": "FindFast indexes everything",
+          "style": {
+            "font_size_pt": 34,
+            "color": "#111111"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "title",
+            "text_level": "title"
+          }
+        },
+        {
+          "element_id": "s2_body0",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 180,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "The pilot covered three regions",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        },
+        {
+          "element_id": "s2_body1",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 272,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "FindFast beat the baseline by double digits",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        },
+        {
+          "element_id": "s2_body2",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 364,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "Results held across segments",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        }
+      ],
+      "metadata": {
+        "section": "insight",
+        "page_type": null,
+        "prompt_modules": {
+          "scenario_classifier": "",
+          "page_type_instructions": "",
+          "component_library": "",
+          "quality_checklist": ""
+        }
+      }
+    },
+    {
+      "slide_id": "part2_doc_search_3",
+      "width": 1920,
+      "height": 1080,
+      "elements": [
+        {
+          "element_id": "s3_title",
+          "type": "title",
+          "bbox": {
+            "x": 96,
+            "y": 72,
+            "width": 1728,
+            "height": 72
+          },
+          "text": "What FindFast changes day to day",
+          "style": {
+            "font_size_pt": 34,
+            "color": "#111111"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "title",
+            "text_level": "title"
+          }
+        },
+        {
+          "element_id": "s3_body0",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 180,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "FindFast integrates with existing tools",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        },
+        {
+          "element_id": "s3_body1",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 272,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "No data leaves the tenant",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        },
+        {
+          "element_id": "s3_body2",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 364,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "Setup takes under a week",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        }
+      ],
+      "metadata": {
+        "section": "action",
+        "page_type": null,
+        "prompt_modules": {
+          "scenario_classifier": "",
+          "page_type_instructions": "",
+          "component_library": "",
+          "quality_checklist": ""
+        }
+      }
+    },
+    {
+      "slide_id": "part2_doc_search_4",
+      "width": 1920,
+      "height": 1080,
+      "elements": [
+        {
+          "element_id": "s4_title",
+          "type": "title",
+          "bbox": {
+            "x": 96,
+            "y": 72,
+            "width": 1728,
+            "height": 72
+          },
+          "text": "Impact FindFast drives on time saved",
+          "style": {
+            "font_size_pt": 34,
+            "color": "#111111"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "title",
+            "text_level": "title"
+          }
+        },
+        {
+          "element_id": "s4_body0",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 180,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "Risks are tracked weekly",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        },
+        {
+          "element_id": "s4_body1",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 272,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "FindFast has a clear rollback path",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        },
+        {
+          "element_id": "s4_body2",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 364,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "Compliance reviewed the design",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        }
+      ],
+      "metadata": {
+        "section": "impact",
+        "page_type": null,
+        "prompt_modules": {
+          "scenario_classifier": "",
+          "page_type_instructions": "",
+          "component_library": "",
+          "quality_checklist": ""
+        }
+      }
+    },
+    {
+      "slide_id": "part2_doc_search_5",
+      "width": 1920,
+      "height": 1080,
+      "elements": [
+        {
+          "element_id": "s5_title",
+          "type": "title",
+          "bbox": {
+            "x": 96,
+            "y": 72,
+            "width": 1728,
+            "height": 72
+          },
+          "text": "The FindFast rollout plan",
+          "style": {
+            "font_size_pt": 34,
+            "color": "#111111"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "title",
+            "text_level": "title"
+          }
+        },
+        {
+          "element_id": "s5_body0",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 180,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "Adoption grew month over month",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        },
+        {
+          "element_id": "s5_body1",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 272,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "FindFast now handles most volume",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        },
+        {
+          "element_id": "s5_body2",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 364,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "Support tickets fell steadily",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        }
+      ],
+      "metadata": {
+        "section": "plan",
+        "page_type": null,
+        "prompt_modules": {
+          "scenario_classifier": "",
+          "page_type_instructions": "",
+          "component_library": "",
+          "quality_checklist": ""
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "scenario": "client_intro",
+    "required_sections": [
+      "context",
+      "insight",
+      "action",
+      "impact",
+      "plan"
+    ],
+    "prompt_modules": {
+      "scenario_classifier": "",
+      "page_type_instructions": "",
+      "component_library": "",
+      "quality_checklist": ""
+    },
+    "canonical_term": "FindFast",
+    "variant_term": "FindFastX",
+    "project_glossary": {
+      "FindFast": [
+        "FindFastX",
+        "findfast"
+      ]
+    }
+  }
+}

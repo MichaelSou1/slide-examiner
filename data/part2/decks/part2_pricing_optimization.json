@@ -1,0 +1,534 @@
+{
+  "deck_id": "part2_pricing_optimization",
+  "slides": [
+    {
+      "slide_id": "part2_pricing_optimization_1",
+      "width": 1920,
+      "height": 1080,
+      "elements": [
+        {
+          "element_id": "s1_title",
+          "type": "title",
+          "bbox": {
+            "x": 96,
+            "y": 72,
+            "width": 1728,
+            "height": 72
+          },
+          "text": "Pricing leaves margin behind",
+          "style": {
+            "font_size_pt": 34,
+            "color": "#111111"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "title",
+            "text_level": "title"
+          }
+        },
+        {
+          "element_id": "s1_body0",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 180,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "The pilot covered three regions",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        },
+        {
+          "element_id": "s1_body1",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 272,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "PriceWise beat the baseline by double digits",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        },
+        {
+          "element_id": "s1_body2",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 364,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "Results held across segments",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        }
+      ],
+      "metadata": {
+        "section": "problem",
+        "page_type": null,
+        "prompt_modules": {
+          "scenario_classifier": "",
+          "page_type_instructions": "",
+          "component_library": "",
+          "quality_checklist": ""
+        }
+      }
+    },
+    {
+      "slide_id": "part2_pricing_optimization_2",
+      "width": 1920,
+      "height": 1080,
+      "elements": [
+        {
+          "element_id": "s2_title",
+          "type": "title",
+          "bbox": {
+            "x": 96,
+            "y": 72,
+            "width": 1728,
+            "height": 72
+          },
+          "text": "PriceWise optimizes per segment",
+          "style": {
+            "font_size_pt": 34,
+            "color": "#111111"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "title",
+            "text_level": "title"
+          }
+        },
+        {
+          "element_id": "s2_body0",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 180,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "PriceWise integrates with existing tools",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        },
+        {
+          "element_id": "s2_body1",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 272,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "No data leaves the tenant",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        },
+        {
+          "element_id": "s2_body2",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 364,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "Setup takes under a week",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        }
+      ],
+      "metadata": {
+        "section": "solution",
+        "page_type": null,
+        "prompt_modules": {
+          "scenario_classifier": "",
+          "page_type_instructions": "",
+          "component_library": "",
+          "quality_checklist": ""
+        }
+      }
+    },
+    {
+      "slide_id": "part2_pricing_optimization_3",
+      "width": 1920,
+      "height": 1080,
+      "elements": [
+        {
+          "element_id": "s3_title",
+          "type": "title",
+          "bbox": {
+            "x": 96,
+            "y": 72,
+            "width": 1728,
+            "height": 72
+          },
+          "text": "PriceWise results from the test",
+          "style": {
+            "font_size_pt": 34,
+            "color": "#111111"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "title",
+            "text_level": "title"
+          }
+        },
+        {
+          "element_id": "s3_body0",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 180,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "Risks are tracked weekly",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        },
+        {
+          "element_id": "s3_body1",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 272,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "PriceWise has a clear rollback path",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        },
+        {
+          "element_id": "s3_body2",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 364,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "Compliance reviewed the design",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        }
+      ],
+      "metadata": {
+        "section": "evidence",
+        "page_type": null,
+        "prompt_modules": {
+          "scenario_classifier": "",
+          "page_type_instructions": "",
+          "component_library": "",
+          "quality_checklist": ""
+        }
+      }
+    },
+    {
+      "slide_id": "part2_pricing_optimization_4",
+      "width": 1920,
+      "height": 1080,
+      "elements": [
+        {
+          "element_id": "s4_title",
+          "type": "title",
+          "bbox": {
+            "x": 96,
+            "y": 72,
+            "width": 1728,
+            "height": 72
+          },
+          "text": "Scaling PriceWise across SKUs",
+          "style": {
+            "font_size_pt": 34,
+            "color": "#111111"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "title",
+            "text_level": "title"
+          }
+        },
+        {
+          "element_id": "s4_body0",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 180,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "Adoption grew month over month",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        },
+        {
+          "element_id": "s4_body1",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 272,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "PriceWise now handles most volume",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        },
+        {
+          "element_id": "s4_body2",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 364,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "Support tickets fell steadily",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        }
+      ],
+      "metadata": {
+        "section": "rollout",
+        "page_type": null,
+        "prompt_modules": {
+          "scenario_classifier": "",
+          "page_type_instructions": "",
+          "component_library": "",
+          "quality_checklist": ""
+        }
+      }
+    },
+    {
+      "slide_id": "part2_pricing_optimization_5",
+      "width": 1920,
+      "height": 1080,
+      "elements": [
+        {
+          "element_id": "s5_title",
+          "type": "title",
+          "bbox": {
+            "x": 96,
+            "y": 72,
+            "width": 1728,
+            "height": 72
+          },
+          "text": "Decisions for pricing this quarter",
+          "style": {
+            "font_size_pt": 34,
+            "color": "#111111"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "title",
+            "text_level": "title"
+          }
+        },
+        {
+          "element_id": "s5_body0",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 180,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "We need executive sponsorship",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        },
+        {
+          "element_id": "s5_body1",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 272,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "PriceWise needs a small dedicated team",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        },
+        {
+          "element_id": "s5_body2",
+          "type": "text",
+          "bbox": {
+            "x": 144,
+            "y": 364,
+            "width": 1512,
+            "height": 72
+          },
+          "text": "A decision is needed this quarter",
+          "style": {
+            "font_size_pt": 22,
+            "color": "#222222"
+          },
+          "z": 0,
+          "placeholder_id": null,
+          "metadata": {
+            "role": "body",
+            "text_level": "body"
+          }
+        }
+      ],
+      "metadata": {
+        "section": "next",
+        "page_type": null,
+        "prompt_modules": {
+          "scenario_classifier": "",
+          "page_type_instructions": "",
+          "component_library": "",
+          "quality_checklist": ""
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "scenario": "full_proposal",
+    "required_sections": [
+      "problem",
+      "solution",
+      "evidence",
+      "rollout",
+      "next"
+    ],
+    "prompt_modules": {
+      "scenario_classifier": "",
+      "page_type_instructions": "",
+      "component_library": "",
+      "quality_checklist": ""
+    },
+    "canonical_term": "PriceWise",
+    "variant_term": "PriceWiseX",
+    "project_glossary": {
+      "PriceWise": [
+        "PriceWiseX",
+        "pricewise"
+      ]
+    }
+  }
+}
