@@ -47,6 +47,7 @@ def merge_synth(out, parts):
     base["per_class"] = per_class
     base["config_per_class"] = configs
     base["coverage"] = {k: agg(v) for k, v in configs.items()}
+    base["router"] = {d: ROUTER.get(d) for d in per_class}  # refresh to current routing
     base.pop("classes", None)
     Path(out).write_text(json.dumps(base, indent=2, ensure_ascii=False), encoding="utf-8")
     print("merged synth ->", out)

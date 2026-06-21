@@ -32,6 +32,15 @@ Four claims map to the three protocols:
 4. The defensible contribution is the **per-defect bottleneck dichotomy + the G7 linter-blind class with a
    falsifiable criterion + real-data (SlideAudit) scoping**, not "beating DocReward."
 
+### Summary — claims ↔ evidence
+
+| Claim | Evidence (this report) | Cross-ref (Parts 1–2) |
+|---|---|---|
+| **1.** Changing *elicitation* (not the model) recovers detection that pointwise+rubric suppresses; C3-vs-C0 isolates "format suppression, not capability". | Result 1: C3 rescues G7 across Qwen 9B/27B/3.6 + Gemma4 (0.50/0.93/0.52/0.75 → 0.93–1.00); replicates over 4 families. C3>C0 on real SlideAudit too (Result 2b). | 30B free-form vs pointwise on the ToC slide (A.1.2). |
+| **2.** A static per-defect router gives a hybrid that covers **strictly more** than linter-alone or VLM-alone; G7 is caught by the VLM engine while the linter misses it. | Result 2a: hybrid **8/9 @ 0.885** vs linter 5/9 @0.70, VLM 2/9 @0.57; **G7: linter 0.00 / VLM-C0 0.50 / hybrid 1.00**. | linter 0.75–1.0 on geometry; DesignLab 0.149 placement recall. |
+| **3.** Published design reward models are insensitive to G7 / to perturbations that never render; a fidelity audit quantifies the "injected-but-not-rendered" hazard. | Result 3a: DocReward G7 pref **0.28** (CI below chance). Result 3b: **45%** of injected geometry defects snapped away; snap-absorbed → reward gap 0.0. | snap-bug byte/structure check (Part 2). |
+| **4.** The contribution is the **per-defect bottleneck dichotomy + the falsifiable G7 linter-blind class + real-data scoping**, not "beating DocReward". | All three Results + honest SlideAudit image-only degradation + S6 negative. | Part-1 sub-perceptual geometry; Part-2 examiner + linter routing. |
+
 ## Background facts this builds on (A.1)
 
 1. Three models (zs-8b / ft-8b / zs-30b) under pointwise+rubric+modality-A, whole-taxonomy single call, all return
@@ -227,6 +236,8 @@ freeform renders, mpd=40).
 | VLM-only (C0) | 0.57 | **2 / 9** (G2, S1) |
 | **hybrid (routed)** | **0.885** | **8 / 9** (all but S6) |
 
+![Per-defect coverage: linter vs single VLM vs routed hybrid](../docs/figs/p3_coverage_heatmap.png)
+
 **Reading.** The hybrid **strictly dominates** both single-engine critics — mean bal-acc 0.885 vs 0.70
 (linter) / 0.57 (VLM), and 8/9 classes covered vs 5/9 / 2/9 — because the engines are *complementary*, exactly as
 the bottleneck dichotomy predicts:
@@ -298,6 +309,8 @@ A reward blind to a class scores the defective slide no lower → paired prefere
 | S4 density | 1.00 [0.90, 1.00] | +2.22 | ✅ sensitive |
 | S6 image-text | 1.00 [0.82, 1.00] | +1.04 | ✅ sensitive |
 
+![DocReward preference accuracy per defect — blind to G7](../docs/figs/p3_reward_blindspot.png)
+
 **Reading.** DocReward cleanly penalises the defects it can see — declared overflow, overlap, density, image-text
 (0.95–1.00). But on **G7 its preference accuracy is 0.28, with the 95% CI entirely below chance**: it does not
 merely ignore the render-containment overflow, it *slightly prefers* the overflowing slide (negative reward gap —
@@ -356,3 +369,29 @@ text-semantic defects (non-geometric) survive. Two consequences:
   data; the full-power structural path needs native `.pptx` (only the Hermes deck on this box is native). Stated, not hidden.
 - The `demo_real/` real-world examples are **non-eval** (qualitative figures / cold-email hooks only); see
   `data/part3/demo_real/SOURCES.md`.
+- **OTHER bucket (off-taxonomy scan, A.3.1.2):** across 1,872 C1 free-form rows we logged 2,830 OTHER items, but
+  ~98% are the bare `OTHER` label (the C1 classifier's over-flagging on strong models — the same effect that
+  collapses C1 in Result 1), not a clean recurring class. The only repeated *off-taxonomy* candidates were
+  **low colour contrast** and **border/divider inconsistency** (1–2 hits each) — too sparse to promote to new
+  defect classes here, but consistent with SlideAudit's "Insufficient Color Contrast" dim that our taxonomy maps to
+  OTHER. Recorded as a weak signal, not a result.
+
+## Conclusion & future work
+
+**Conclusion.** A slide-defect critic should not be one model. Across three protocols on the same data we show: (1)
+the detection a pointwise+rubric VLM "loses" is mostly a *format* artifact — atomic-binary elicitation recovers it,
+and the effect replicates across 4 model families and transfers to real SlideAudit images; (2) routing each defect
+to its bottleneck-appropriate engine yields a hybrid that covers **8/9 classes (0.885)** where the best single
+engine covers 5/9 — and the linter-blind render class **G7 is caught only by the hybrid's VLM-C3 engine**; (3) a
+published neural reward model (DocReward) shares the linter's G7 blind spot (pref 0.28, below chance), and ~45% of
+IR-injected geometry defects never survive the standard snap renderer — so neither "just train a reward model" nor
+"trust the rendered labels" is sufficient. The defensible unit of contribution is the **per-defect bottleneck
+dichotomy, the falsifiable G7 class, and honest real-data scoping**.
+
+**Future work.** (a) A structured (modality-C) real eval to separate "missing structure" from "missing capability"
+on real geometry — currently annotation-blocked; (b) a held-out scalar-reward ablation (train BT on G1–G6/S, hold
+out G7) to confirm a pure neural scalar cannot cover the render class without explicit supervision; (c) a small
+deployable VLM (3B) specialised for G7-via-C3 to make the hybrid's render engine cheap, with a transfer test to
+real overflow; (d) extend the perturbation-fidelity audit to public slide-quality datasets to quantify their label
+noise; (e) audit a second published reward model (`MeiGen-AI/PosterReward_v1`) once an ms-swift runtime is
+available.

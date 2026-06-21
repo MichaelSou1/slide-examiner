@@ -11,7 +11,7 @@
 | S6 image-text | vlm | 0.50 p0.00 | 0.50 p0.00 | 0.50 p0.00 |
 | G1 overflow | linter | 1.00 p1.00 | 0.50 p0.00 | 1.00 p1.00 |
 | G7 render-overflow | vlm | 0.00 p0.00 | 0.50 p0.00 | 1.00 p1.00 |
-| S1 title-body | llm | 0.50 p0.00 | 0.94 p0.90 | 0.25 p0.09 |
+| S1 title-body | vlm | 0.50 p0.00 | 0.94 p0.90 | 0.94 p0.90 |
 | S4 density | llm | 0.50 p0.00 | 0.51 p0.67 | 0.72 p1.00 |
 
 | Critic config | mean bal-acc | classes covered (bal-acc≥0.70 & prec≥0.70) |

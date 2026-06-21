@@ -5,15 +5,15 @@
   "max_per_defect": 40,
   "metric": "paired-clean named-attribution balanced accuracy + precision",
   "router": {
-    "G1_TEXT_OVERFLOW": "linter",
     "G2_ELEMENT_OVERLAP": "linter",
     "G3_ALIGNMENT_OFFSET": "linter",
     "G5_BRAND_COLOR_VIOLATION": "linter",
     "G6_MARGIN_VIOLATION": "linter",
+    "S6_IMAGE_TEXT_CONTRADICTION": "vlm",
+    "G1_TEXT_OVERFLOW": "linter",
     "G7_RENDER_CONTAINMENT_OVERFLOW": "vlm",
-    "S1_TITLE_BODY_MISMATCH": "llm",
-    "S4_DENSITY_RULE_VIOLATION": "llm",
-    "S6_IMAGE_TEXT_CONTRADICTION": "vlm"
+    "S1_TITLE_BODY_MISMATCH": "vlm",
+    "S4_DENSITY_RULE_VIOLATION": "llm"
   },
   "vlm_elicit": {
     "G1_TEXT_OVERFLOW": "C2",
