@@ -1,0 +1,234 @@
+{
+  "model": "qwen35-27b",
+  "manifest": "data/part2/manifest_slideaudit.jsonl",
+  "modality": "A",
+  "metric": "paired (present vs confident_absent) named balanced accuracy + precision",
+  "linter_status": "N/A (image-only, no IR)",
+  "linter_note": "linter N/A on SlideAudit: 0/2400 records carry element structure (IR). image-only -> symbolic linter + text-LLM cannot run; hybrid degrades to its VLM engine.",
+  "per_class": {
+    "G1_TEXT_OVERFLOW": {
+      "n_pos": 40,
+      "n_neg": 40,
+      "C0": {
+        "recall": 0.1,
+        "specificity": 1.0,
+        "bal_acc": 0.55,
+        "bal_acc_ci": [
+          0.476,
+          0.615
+        ],
+        "precision": 1.0,
+        "precision_ci": [
+          0.51,
+          1.0
+        ],
+        "fpr": 0.0,
+        "f1": 0.182,
+        "recall_ci": [
+          0.04,
+          0.231
+        ],
+        "tp": 4,
+        "fn": 36,
+        "fp": 0,
+        "tn": 40,
+        "n_pos": 40,
+        "n_neg": 40
+      },
+      "C3": {
+        "recall": 0.325,
+        "specificity": 0.925,
+        "bal_acc": 0.625,
+        "bal_acc_ci": [
+          0.501,
+          0.727
+        ],
+        "precision": 0.812,
+        "precision_ci": [
+          0.57,
+          0.934
+        ],
+        "fpr": 0.075,
+        "f1": 0.464,
+        "recall_ci": [
+          0.201,
+          0.48
+        ],
+        "tp": 13,
+        "fn": 27,
+        "fp": 3,
+        "tn": 37,
+        "n_pos": 40,
+        "n_neg": 40
+      }
+    },
+    "G2_ELEMENT_OVERLAP": {
+      "n_pos": 40,
+      "n_neg": 40,
+      "C0": {
+        "recall": 1.0,
+        "specificity": 0.925,
+        "bal_acc": 0.963,
+        "bal_acc_ci": [
+          0.857,
+          0.987
+        ],
+        "precision": 0.93,
+        "precision_ci": [
+          0.814,
+          0.976
+        ],
+        "fpr": 0.075,
+        "f1": 0.964,
+        "recall_ci": [
+          0.912,
+          1.0
+        ],
+        "tp": 40,
+        "fn": 0,
+        "fp": 3,
+        "tn": 37,
+        "n_pos": 40,
+        "n_neg": 40
+      },
+      "C3": {
+        "recall": 0.925,
+        "specificity": 0.95,
+        "bal_acc": 0.938,
+        "bal_acc_ci": [
+          0.818,
+          0.98
+        ],
+        "precision": 0.949,
+        "precision_ci": [
+          0.831,
+          0.986
+        ],
+        "fpr": 0.05,
+        "f1": 0.937,
+        "recall_ci": [
+          0.801,
+          0.974
+        ],
+        "tp": 37,
+        "fn": 3,
+        "fp": 2,
+        "tn": 38,
+        "n_pos": 40,
+        "n_neg": 40
+      }
+    },
+    "G3_ALIGNMENT_OFFSET": {
+      "n_pos": 21,
+      "n_neg": 40,
+      "C0": {
+        "recall": 0.19,
+        "specificity": 0.925,
+        "bal_acc": 0.558,
+        "bal_acc_ci": [
+          0.439,
+          0.687
+        ],
+        "precision": 0.571,
+        "precision_ci": [
+          0.25,
+          0.842
+        ],
+        "fpr": 0.075,
+        "f1": 0.286,
+        "recall_ci": [
+          0.077,
+          0.4
+        ],
+        "tp": 4,
+        "fn": 17,
+        "fp": 3,
+        "tn": 37,
+        "n_pos": 21,
+        "n_neg": 40
+      },
+      "C3": {
+        "recall": 0.571,
+        "specificity": 0.875,
+        "bal_acc": 0.723,
+        "bal_acc_ci": [
+          0.552,
+          0.85
+        ],
+        "precision": 0.706,
+        "precision_ci": [
+          0.469,
+          0.867
+        ],
+        "fpr": 0.125,
+        "f1": 0.632,
+        "recall_ci": [
+          0.365,
+          0.755
+        ],
+        "tp": 12,
+        "fn": 9,
+        "fp": 5,
+        "tn": 35,
+        "n_pos": 21,
+        "n_neg": 40
+      }
+    },
+    "G4_FONT_SIZE_INCONSISTENCY": {
+      "n_pos": 40,
+      "n_neg": 40,
+      "C0": {
+        "recall": 0.225,
+        "specificity": 0.95,
+        "bal_acc": 0.588,
+        "bal_acc_ci": [
+          0.479,
+          0.681
+        ],
+        "precision": 0.818,
+        "precision_ci": [
+          0.523,
+          0.949
+        ],
+        "fpr": 0.05,
+        "f1": 0.353,
+        "recall_ci": [
+          0.123,
+          0.375
+        ],
+        "tp": 9,
+        "fn": 31,
+        "fp": 2,
+        "tn": 38,
+        "n_pos": 40,
+        "n_neg": 40
+      },
+      "C3": {
+        "recall": 0.375,
+        "specificity": 0.9,
+        "bal_acc": 0.637,
+        "bal_acc_ci": [
+          0.506,
+          0.745
+        ],
+        "precision": 0.789,
+        "precision_ci": [
+          0.567,
+          0.915
+        ],
+        "fpr": 0.1,
+        "f1": 0.508,
+        "recall_ci": [
+          0.242,
+          0.53
+        ],
+        "tp": 15,
+        "fn": 25,
+        "fp": 4,
+        "tn": 36,
+        "n_pos": 40,
+        "n_neg": 40
+      }
+    }
+  }
+}

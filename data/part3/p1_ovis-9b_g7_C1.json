@@ -1,0 +1,75 @@
+{
+  "condition": "C1",
+  "model": "ovis-9b",
+  "style": "scoped",
+  "manifest": "/home/gpus/slide-examiner/data/part3/manifest_g7_rendered.jsonl",
+  "modalities": [
+    "A"
+  ],
+  "defects": [
+    "G7_RENDER_CONTAINMENT_OVERFLOW"
+  ],
+  "n_jobs": 120,
+  "failures": 2,
+  "metrics": {
+    "A": {
+      "per_defect": {
+        "G7_RENDER_CONTAINMENT_OVERFLOW": {
+          "detection": {
+            "recall": 0.593,
+            "specificity": 0.678,
+            "bal_acc": 0.636,
+            "bal_acc_ci": [
+              0.508,
+              0.746
+            ],
+            "precision": 0.648,
+            "precision_ci": [
+              0.515,
+              0.762
+            ],
+            "fpr": 0.322,
+            "f1": 0.619,
+            "recall_ci": [
+              0.466,
+              0.709
+            ],
+            "tp": 35,
+            "fn": 24,
+            "fp": 19,
+            "tn": 40,
+            "n_pos": 59,
+            "n_neg": 59
+          },
+          "named": {
+            "recall": 0.017,
+            "specificity": 1.0,
+            "bal_acc": 0.508,
+            "bal_acc_ci": [
+              0.471,
+              0.545
+            ],
+            "precision": 1.0,
+            "precision_ci": [
+              0.207,
+              1.0
+            ],
+            "fpr": 0.0,
+            "f1": 0.033,
+            "recall_ci": [
+              0.003,
+              0.09
+            ],
+            "tp": 1,
+            "fn": 58,
+            "fp": 0,
+            "tn": 59,
+            "n_pos": 59,
+            "n_neg": 59
+          },
+          "headline_level": "detection"
+        }
+      }
+    }
+  }
+}

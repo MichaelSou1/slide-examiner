@@ -1,0 +1,166 @@
+{
+  "manifest": "data/part2/manifest_eval_test_rendered.jsonl",
+  "thr_channel_sum": 20,
+  "eps_changed_frac": 0.0005,
+  "per_defect": {
+    "G1_TEXT_OVERFLOW": {
+      "n": 54,
+      "ir_injected_rate": 1.0,
+      "freeform_effect": {
+        "median": 0.04646,
+        "mean": 0.04607,
+        "p90": 0.04925
+      },
+      "template_effect": {
+        "median": 0.00118,
+        "mean": 0.00329,
+        "p90": 0.00666
+      },
+      "rendered_freeform_rate": 1.0,
+      "rendered_template_rate": 0.796,
+      "template_absorption_rate": 0.204,
+      "absorption_among_rendered": 0.204,
+      "n_template_pairs": 54
+    },
+    "G2_ELEMENT_OVERLAP": {
+      "n": 54,
+      "ir_injected_rate": 1.0,
+      "freeform_effect": {
+        "median": 0.08964,
+        "mean": 0.09123,
+        "p90": 0.10924
+      },
+      "template_effect": {
+        "median": 0.0,
+        "mean": 0.0,
+        "p90": 0.0
+      },
+      "rendered_freeform_rate": 1.0,
+      "rendered_template_rate": 0.0,
+      "template_absorption_rate": 1.0,
+      "absorption_among_rendered": 1.0,
+      "n_template_pairs": 54
+    },
+    "G3_ALIGNMENT_OFFSET": {
+      "n": 36,
+      "ir_injected_rate": 1.0,
+      "freeform_effect": {
+        "median": 0.00666,
+        "mean": 0.00642,
+        "p90": 0.00789
+      },
+      "template_effect": {
+        "median": 0.0,
+        "mean": 0.0,
+        "p90": 0.0
+      },
+      "rendered_freeform_rate": 1.0,
+      "rendered_template_rate": 0.0,
+      "template_absorption_rate": 1.0,
+      "absorption_among_rendered": 1.0,
+      "n_template_pairs": 36
+    },
+    "G5_BRAND_COLOR_VIOLATION": {
+      "n": 54,
+      "ir_injected_rate": 1.0,
+      "freeform_effect": {
+        "median": 0.00249,
+        "mean": 0.00203,
+        "p90": 0.00342
+      },
+      "template_effect": {
+        "median": 0.00249,
+        "mean": 0.00203,
+        "p90": 0.00342
+      },
+      "rendered_freeform_rate": 0.667,
+      "rendered_template_rate": 0.667,
+      "template_absorption_rate": 0.0,
+      "absorption_among_rendered": 0.0,
+      "n_template_pairs": 54
+    },
+    "G6_MARGIN_VIOLATION": {
+      "n": 36,
+      "ir_injected_rate": 1.0,
+      "freeform_effect": {
+        "median": 0.01078,
+        "mean": 0.01079,
+        "p90": 0.01229
+      },
+      "template_effect": {
+        "median": 0.0,
+        "mean": 0.0,
+        "p90": 0.0
+      },
+      "rendered_freeform_rate": 1.0,
+      "rendered_template_rate": 0.0,
+      "template_absorption_rate": 1.0,
+      "absorption_among_rendered": 1.0,
+      "n_template_pairs": 36
+    },
+    "S1_TITLE_BODY_MISMATCH": {
+      "n": 18,
+      "ir_injected_rate": 1.0,
+      "freeform_effect": {
+        "median": 0.00737,
+        "mean": 0.00761,
+        "p90": 0.00866
+      },
+      "template_effect": {
+        "median": 0.00737,
+        "mean": 0.00761,
+        "p90": 0.00866
+      },
+      "rendered_freeform_rate": 1.0,
+      "rendered_template_rate": 1.0,
+      "template_absorption_rate": 0.0,
+      "absorption_among_rendered": 0.0,
+      "n_template_pairs": 18
+    },
+    "S4_DENSITY_RULE_VIOLATION": {
+      "n": 36,
+      "ir_injected_rate": 1.0,
+      "freeform_effect": {
+        "median": 0.00968,
+        "mean": 0.00971,
+        "p90": 0.0102
+      },
+      "template_effect": {
+        "median": 0.00968,
+        "mean": 0.00971,
+        "p90": 0.0102
+      },
+      "rendered_freeform_rate": 1.0,
+      "rendered_template_rate": 1.0,
+      "template_absorption_rate": 0.0,
+      "absorption_among_rendered": 0.0,
+      "n_template_pairs": 36
+    },
+    "S6_IMAGE_TEXT_CONTRADICTION": {
+      "n": 18,
+      "ir_injected_rate": 1.0,
+      "freeform_effect": {
+        "median": 0.00577,
+        "mean": 0.00578,
+        "p90": 0.00595
+      },
+      "template_effect": {
+        "median": 0.00577,
+        "mean": 0.00578,
+        "p90": 0.00595
+      },
+      "rendered_freeform_rate": 1.0,
+      "rendered_template_rate": 1.0,
+      "template_absorption_rate": 0.0,
+      "absorption_among_rendered": 0.0,
+      "n_template_pairs": 18
+    }
+  },
+  "overall": {
+    "n_defectives": 306,
+    "ir_injected_rate": 1.0,
+    "n_template_pairs": 306,
+    "template_absorption_rate": 0.448,
+    "note": "template_absorption_rate = fraction of injected defectives whose perturbation renders under freeform but is snapped away (clean) under template = silent label-noise = the perturbation-fidelity hazard."
+  }
+}

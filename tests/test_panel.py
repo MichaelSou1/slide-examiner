@@ -1,6 +1,22 @@
 from slide_examiner.panel import PanelRating, summarize_panel_ratings
 
 
+def test_inter_annotator_agreement_reported() -> None:
+    # two human raters agree on s1 (both present) and disagree on s2.
+    summary = summarize_panel_ratings(
+        [
+            PanelRating("s1", "h1", 0.9, "human"),
+            PanelRating("s1", "h2", 0.8, "human"),
+            PanelRating("s2", "h1", 0.9, "human"),
+            PanelRating("s2", "h2", 0.2, "human"),
+        ]
+    )
+    agr = summary["agreement"]
+    assert agr["n_rater_pairs"] == 2
+    assert agr["percent_agreement"] == 0.5  # agree on 1 of 2 sample-pairs
+    assert agr["cohen_kappa"] is not None
+
+
 def test_summarize_panel_ratings() -> None:
     summary = summarize_panel_ratings(
         [

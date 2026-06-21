@@ -38,6 +38,47 @@ class PanelRating:
         }
 
 
+def _binary_vote(rating: "PanelRating", threshold: float) -> bool:
+    return rating.passed if rating.passed is not None else rating.score >= threshold
+
+
+def inter_annotator_agreement(
+    by_sample: dict[str, list["PanelRating"]], *, pass_threshold: float = 0.7
+) -> dict[str, Any]:
+    """Percent agreement over all rater pairs on the binary present/absent vote,
+    plus Cohen's kappa for the common exactly-two-human-raters case. Samples with
+    a single rating are ignored (no pair to compare)."""
+
+    agree_pairs = total_pairs = 0
+    # 2x2 confusion over rater-A vs rater-B for samples rated by exactly two humans
+    both_pos = both_neg = a_only = b_only = 0
+    for ratings in by_sample.values():
+        humans = [r for r in ratings if r.source == "human"]
+        votes = [_binary_vote(r, pass_threshold) for r in humans]
+        for i in range(len(votes)):
+            for j in range(i + 1, len(votes)):
+                total_pairs += 1
+                if votes[i] == votes[j]:
+                    agree_pairs += 1
+        if len(votes) == 2:
+            a, b = votes
+            both_pos += int(a and b)
+            both_neg += int((not a) and (not b))
+            a_only += int(a and not b)
+            b_only += int((not a) and b)
+    percent = agree_pairs / total_pairs if total_pairs else None
+    kappa = None
+    n2 = both_pos + both_neg + a_only + b_only
+    if n2:
+        po = (both_pos + both_neg) / n2
+        pa = (both_pos + a_only) / n2
+        pb = (both_pos + b_only) / n2
+        pe = pa * pb + (1 - pa) * (1 - pb)
+        kappa = (po - pe) / (1 - pe) if pe != 1 else 1.0
+    return {"percent_agreement": percent, "cohen_kappa": kappa,
+            "n_rater_pairs": total_pairs, "n_two_rater_samples": n2}
+
+
 def summarize_panel_ratings(ratings: Iterable[PanelRating | dict[str, Any]], *, pass_threshold: float = 0.7) -> dict[str, Any]:
     parsed = [rating if isinstance(rating, PanelRating) else PanelRating.from_mapping(rating) for rating in ratings]
     by_sample: dict[str, list[PanelRating]] = defaultdict(list)
@@ -71,6 +112,7 @@ def summarize_panel_ratings(ratings: Iterable[PanelRating | dict[str, Any]], *, 
         "rating_count": len(parsed),
         "sample_count": len(samples),
         "overall_mean_score": mean([rating.score for rating in parsed]) if parsed else 0.0,
+        "agreement": inter_annotator_agreement(by_sample, pass_threshold=pass_threshold),
         "samples": samples,
         "sources": sources,
     }

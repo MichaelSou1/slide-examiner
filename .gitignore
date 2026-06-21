@@ -1,3 +1,6 @@
+# Secrets / local API config
+.env
+
 # Python
 __pycache__/
 *.py[cod]
@@ -56,6 +59,15 @@ data/derisk/
 .idea/
 .vscode/
 data/part1_fc/*.jsonl
+# part3: task sets + rendered rollouts are regenerable; keep code + reports only
+data/part3/*.jsonl
+data/part3/tasks/*.jsonl
+data/part3/**/*.jsonl
+data/part3/**/*.png
+data/part3/**/*.pptx
+
+# scratch / experiments not for the repo
+playground/
 
 # Part 3 reference papers (external arxiv PDFs, kept local for verification, not committed)
 docs/refs/

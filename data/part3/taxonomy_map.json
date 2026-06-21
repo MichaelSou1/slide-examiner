@@ -1,0 +1,73 @@
+{
+  "_meta": {
+    "purpose": "Bidirectional map between this project's G1-G7 / S1-S6 taxonomy and SlideAudit (UIST'25, arXiv 2508.03630) 19-dim design-deficiency taxonomy. All Part 3 quantitative eval/summary output is reported in SlideAudit-canonical categories for direct comparability; off-taxonomy items go to the OTHER bucket (A.3.1).",
+    "eval_canonical_taxonomy": "slideaudit",
+    "extends": "Part 2 8-dim mapping in scripts/slideaudit_fetch.py:MAP",
+    "g7_status": "our-extension (SlideAudit has no linter-blind render-containment class); refines 'Content Overflow/Cut-off' with the structural criterion declared-bbox-legal => geometry-linter-blind"
+  },
+
+  "slideaudit_taxonomy": {
+    "Poor Visual Hierarchy": "Composition & Layout",
+    "Cluttered Layout": "Composition & Layout",
+    "Unbalanced Space Distribution": "Composition & Layout",
+    "Content Alignment Issues": "Composition & Layout",
+    "Content Overflow/Cut-off": "Composition & Layout",
+    "Occluded Content": "Composition & Layout",
+    "Illegible Typeface Selection or Usage": "Typography",
+    "Improper Font Sizing": "Typography",
+    "Excessive Text Volume": "Typography",
+    "Improper Text Styling": "Typography",
+    "Improper Line/Character Spacing": "Typography",
+    "Poor Text Hierarchy": "Typography",
+    "Insufficient Color Contrast for Readability": "Color",
+    "Excessive or Inconsistent Color Usage": "Color",
+    "Inappropriate or Mismatched Color Combinations": "Color",
+    "Irrelevant Visual Content": "Imagery & Visualizations",
+    "Poor Image Quality/Editing": "Imagery & Visualizations",
+    "Improper Image Sizing": "Imagery & Visualizations",
+    "Inconsistent Visual Style Usage": "Imagery & Visualizations"
+  },
+
+  "our_to_slideaudit": {
+    "G1_TEXT_OVERFLOW":            {"slideaudit": ["Content Overflow/Cut-off"], "relation": "equivalent"},
+    "G2_ELEMENT_OVERLAP":         {"slideaudit": ["Occluded Content"], "relation": "equivalent"},
+    "G3_ALIGNMENT_OFFSET":        {"slideaudit": ["Content Alignment Issues"], "relation": "equivalent"},
+    "G4_FONT_SIZE_INCONSISTENCY": {"slideaudit": ["Improper Font Sizing"], "relation": "equivalent"},
+    "G5_BRAND_COLOR_VIOLATION":   {"slideaudit": ["Excessive or Inconsistent Color Usage", "Inappropriate or Mismatched Color Combinations"], "relation": "equivalent"},
+    "G6_MARGIN_VIOLATION":        {"slideaudit": ["Unbalanced Space Distribution"], "relation": "near-equivalent", "note": "SlideAudit's space-distribution dim subsumes our safe-margin bleed."},
+    "G7_RENDER_CONTAINMENT_OVERFLOW": {"slideaudit": ["Content Overflow/Cut-off"], "relation": "our_extension_refines", "also_related": ["Improper Image Sizing"], "note": "OUR EXTENSION. Same visual phenomenon as Content Overflow/Cut-off but adds the structural criterion declared-bbox-legal => linter-blind; the image-objectfit variant also touches Improper Image Sizing."},
+    "S1_TITLE_BODY_MISMATCH":     {"slideaudit": [], "relation": "off_taxonomy", "note": "Content-semantic (title vs body topic). SlideAudit's per-slide design taxonomy has no content-correctness dim."},
+    "S2_NARRATIVE_ORDER_BREAK":   {"slideaudit": [], "relation": "off_taxonomy", "note": "Deck-level narrative ordering. SlideAudit annotates single slides only."},
+    "S3_TERMINOLOGY_INCONSISTENCY": {"slideaudit": [], "relation": "off_taxonomy", "note": "Cross-slide terminology. Routed to a symbolic term-consistency linter in this project; SlideAudit has no analog."},
+    "S4_DENSITY_RULE_VIOLATION":  {"slideaudit": ["Excessive Text Volume"], "relation": "equivalent"},
+    "S5_MISSING_LOGIC_SECTION":   {"slideaudit": [], "relation": "off_taxonomy", "note": "Deck-level completeness. SlideAudit annotates single slides only."},
+    "S6_IMAGE_TEXT_CONTRADICTION":{"slideaudit": [], "relation": "off_taxonomy", "closest": "Irrelevant Visual Content", "note": "Image-text factual contradiction is content-semantic; SlideAudit's nearest dim ('Irrelevant Visual Content') is about relevance, not contradiction."}
+  },
+
+  "slideaudit_to_ours": {
+    "Content Overflow/Cut-off":   {"ours": "G1_TEXT_OVERFLOW", "also": ["G7_RENDER_CONTAINMENT_OVERFLOW"], "relation": "equivalent"},
+    "Occluded Content":           {"ours": "G2_ELEMENT_OVERLAP", "relation": "equivalent"},
+    "Content Alignment Issues":   {"ours": "G3_ALIGNMENT_OFFSET", "relation": "equivalent"},
+    "Improper Font Sizing":       {"ours": "G4_FONT_SIZE_INCONSISTENCY", "relation": "equivalent"},
+    "Excessive or Inconsistent Color Usage":          {"ours": "G5_BRAND_COLOR_VIOLATION", "relation": "equivalent"},
+    "Inappropriate or Mismatched Color Combinations": {"ours": "G5_BRAND_COLOR_VIOLATION", "relation": "equivalent"},
+    "Unbalanced Space Distribution": {"ours": "G6_MARGIN_VIOLATION", "relation": "near-equivalent"},
+    "Excessive Text Volume":      {"ours": "S4_DENSITY_RULE_VIOLATION", "relation": "equivalent"},
+    "Poor Visual Hierarchy":      {"ours": "OTHER", "closest": null, "note": "No 1:1 type; holistic composition judgement."},
+    "Cluttered Layout":           {"ours": "OTHER", "closest": "S4_DENSITY_RULE_VIOLATION", "note": "Density-adjacent but holistic; not a clean 1:1."},
+    "Illegible Typeface Selection or Usage": {"ours": "OTHER", "closest": null, "note": "Typeface choice; not modelled."},
+    "Improper Text Styling":      {"ours": "OTHER", "closest": null},
+    "Improper Line/Character Spacing": {"ours": "OTHER", "closest": null},
+    "Poor Text Hierarchy":        {"ours": "OTHER", "closest": "S1_TITLE_BODY_MISMATCH", "note": "Hierarchy of headings vs body; loose."},
+    "Insufficient Color Contrast for Readability": {"ours": "OTHER", "closest": "G5_BRAND_COLOR_VIOLATION", "note": "Contrast/readability, not brand-palette deviation."},
+    "Irrelevant Visual Content":  {"ours": "OTHER", "closest": "S6_IMAGE_TEXT_CONTRADICTION"},
+    "Poor Image Quality/Editing": {"ours": "OTHER", "closest": null},
+    "Improper Image Sizing":      {"ours": "OTHER", "closest": "G7_RENDER_CONTAINMENT_OVERFLOW", "note": "Image rendered too large/small for its frame; our G7 image-objectfit variant is a structural special case."},
+    "Inconsistent Visual Style Usage": {"ours": "OTHER", "closest": null}
+  },
+
+  "other_bucket": {
+    "definition": "Off-taxonomy free-form findings (C1 Stage-2) that map to no defined G/S type go here with their original text preserved. Cross-sample recurrence in OTHER => candidate new defect class (Phase 5). OTHER is excluded from defined-class precision/recall but its magnitude and recurrence are reported separately.",
+    "scored": false
+  }
+}

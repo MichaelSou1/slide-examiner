@@ -1,0 +1,124 @@
+{
+  "model": "DocReward-3B",
+  "model_path": "/home/gpus/models/DocReward-3B",
+  "metric": "paired preference accuracy = P(reward(clean) > reward(defective)); 0.5 = blind, 1.0 = always prefers the clean slide",
+  "results": [
+    {
+      "defect": "G7_RENDER_CONTAINMENT_OVERFLOW",
+      "variant": "freeform",
+      "n": 40,
+      "preference_accuracy": 0.275,
+      "preference_ci": [
+        0.161,
+        0.428
+      ],
+      "mean_reward_gap_clean_minus_def": -0.2327,
+      "median_gap": -0.2143,
+      "n_clean_preferred": 11
+    },
+    {
+      "defect": "G1_TEXT_OVERFLOW",
+      "variant": "freeform",
+      "n": 40,
+      "preference_accuracy": 0.95,
+      "preference_ci": [
+        0.835,
+        0.986
+      ],
+      "mean_reward_gap_clean_minus_def": 0.6303,
+      "median_gap": 0.6539,
+      "n_clean_preferred": 38
+    },
+    {
+      "defect": "G2_ELEMENT_OVERLAP",
+      "variant": "freeform",
+      "n": 40,
+      "preference_accuracy": 1.0,
+      "preference_ci": [
+        0.912,
+        1.0
+      ],
+      "mean_reward_gap_clean_minus_def": 2.1483,
+      "median_gap": 2.2527,
+      "n_clean_preferred": 40
+    },
+    {
+      "defect": "G5_BRAND_COLOR_VIOLATION",
+      "variant": "freeform",
+      "n": 40,
+      "preference_accuracy": 0.4,
+      "preference_ci": [
+        0.263,
+        0.554
+      ],
+      "mean_reward_gap_clean_minus_def": -0.0132,
+      "median_gap": -0.028,
+      "n_clean_preferred": 16
+    },
+    {
+      "defect": "S4_DENSITY_RULE_VIOLATION",
+      "variant": "freeform",
+      "n": 36,
+      "preference_accuracy": 1.0,
+      "preference_ci": [
+        0.904,
+        1.0
+      ],
+      "mean_reward_gap_clean_minus_def": 2.2161,
+      "median_gap": 2.2014,
+      "n_clean_preferred": 36
+    },
+    {
+      "defect": "S6_IMAGE_TEXT_CONTRADICTION",
+      "variant": "freeform",
+      "n": 18,
+      "preference_accuracy": 1.0,
+      "preference_ci": [
+        0.824,
+        1.0
+      ],
+      "mean_reward_gap_clean_minus_def": 1.036,
+      "median_gap": 1.041,
+      "n_clean_preferred": 18
+    },
+    {
+      "defect": "G2_ELEMENT_OVERLAP",
+      "variant": "template",
+      "n": 40,
+      "preference_accuracy": 0.0,
+      "preference_ci": [
+        0.0,
+        0.088
+      ],
+      "mean_reward_gap_clean_minus_def": 0.0,
+      "median_gap": 0.0,
+      "n_clean_preferred": 0
+    },
+    {
+      "defect": "G3_ALIGNMENT_OFFSET",
+      "variant": "template",
+      "n": 36,
+      "preference_accuracy": 0.0,
+      "preference_ci": [
+        0.0,
+        0.096
+      ],
+      "mean_reward_gap_clean_minus_def": 0.0,
+      "median_gap": 0.0,
+      "n_clean_preferred": 0
+    },
+    {
+      "defect": "G6_MARGIN_VIOLATION",
+      "variant": "template",
+      "n": 36,
+      "preference_accuracy": 0.0,
+      "preference_ci": [
+        0.0,
+        0.096
+      ],
+      "mean_reward_gap_clean_minus_def": 0.0,
+      "median_gap": 0.0,
+      "n_clean_preferred": 0
+    }
+  ]
+}

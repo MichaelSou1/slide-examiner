@@ -142,13 +142,29 @@ def run_pointwise(args):
     bydef = collections.defaultdict(list)
     for r in recs:
         bydef[defect_of(r)].append(r)
+    only = set(args.only_defects or [])
     pos: list[dict] = []
     for d, rs in bydef.items():
         if d == "NO_DEFECT":
             continue
+        if only and d not in only:
+            continue
+        if args.deck_only and not any(is_deck(r) for r in rs):
+            continue
         pos.extend(rs[: args.max_per_defect])
-    # build clean controls
+    if args.deck_only:
+        pos = [r for r in pos if is_deck(r)]
+    # build clean controls (page-level: same-base clean image)
     cleans = [c for r in pos if (c := clean_variant(r))]
+    # deck-level paired-clean controls (S2/S5): pre-rendered clean decks keyed by
+    # `<defective_id>__CLEAN`; only attach controls whose positive is in `pos`.
+    if args.deck_clean and Path(args.deck_clean).exists():
+        pos_ids = {r["sample_id"] for r in pos}
+        deck_controls = [json.loads(l) for l in Path(args.deck_clean).open() if l.strip()]
+        attached = [c for c in deck_controls
+                    if c["sample_id"].removesuffix("__CLEAN") in pos_ids]
+        cleans.extend(attached)
+        print(f"  + {len(attached)} deck clean controls from {args.deck_clean}")
 
     jobs = []
     for r in pos:
@@ -330,6 +346,13 @@ def main():
     ap.add_argument("--workers", type=int, default=16)
     ap.add_argument("--out", required=True)
     ap.add_argument("--dump-rows", default=None)
+    ap.add_argument("--deck-clean", default=None,
+                    help="JSONL of pre-rendered deck-level clean controls "
+                         "(part2_render_clean_decks.py output); enables S2/S5 deck cells.")
+    ap.add_argument("--deck-only", action="store_true",
+                    help="Probe only deck-scope positives (+ their deck clean controls).")
+    ap.add_argument("--only-defects", nargs="+", default=None,
+                    help="Restrict positives to these defect types (e.g. S1/S4 for robustness).")
     args = ap.parse_args()
     if args.mode == "pointwise":
         run_pointwise(args)

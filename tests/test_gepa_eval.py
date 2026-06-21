@@ -37,7 +37,7 @@ def test_build_gepa_condition_plan() -> None:
     assert {item["condition"] for item in plan} == {
         "linter",
         "zero_shot_8b",
-        "zero_shot_strong",
+        "zero_shot_30b",
         "finetuned_8b",
         "hybrid",
     }
