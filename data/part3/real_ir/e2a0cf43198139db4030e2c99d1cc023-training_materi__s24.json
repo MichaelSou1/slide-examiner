@@ -1,0 +1,104 @@
+{
+  "slide_id": "e2a0cf43198139db4030e2c99d1cc023-training_materi__s24",
+  "width": 960,
+  "height": 540,
+  "elements": [
+    {
+      "element_id": "shp307",
+      "type": "image",
+      "bbox": {
+        "x": 259.34,
+        "y": 262.0,
+        "width": 354.54,
+        "height": 270.0
+      },
+      "text": "",
+      "style": {},
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp308",
+      "type": "group",
+      "bbox": {
+        "x": 682.54,
+        "y": 262.95,
+        "width": 134.52,
+        "height": 85.46
+      },
+      "text": "",
+      "style": {},
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp311",
+      "type": "body",
+      "bbox": {
+        "x": -56.0,
+        "y": -8.0,
+        "width": 840.19,
+        "height": 51.72
+      },
+      "text": "GBIF",
+      "style": {
+        "font_size_pt": 20.0,
+        "color": "#000000"
+      },
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp312",
+      "type": "image",
+      "bbox": {
+        "x": 101.1,
+        "y": 12.88,
+        "width": 470.82,
+        "height": 239.05
+      },
+      "text": "",
+      "style": {},
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp313",
+      "type": "image",
+      "bbox": {
+        "x": 609.43,
+        "y": 12.58,
+        "width": 262.1,
+        "height": 233.42
+      },
+      "text": "",
+      "style": {},
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp314",
+      "type": "shape",
+      "bbox": {
+        "x": 68.2,
+        "y": 185.32,
+        "width": 41.1,
+        "height": 14.74
+      },
+      "text": "",
+      "style": {},
+      "z": 5,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

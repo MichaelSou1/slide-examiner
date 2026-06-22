@@ -1,0 +1,60 @@
+{
+  "slide_id": "a8dc2d0260a44588030f8fc0aed227f7-Alter-FAIR_Voca__s16",
+  "width": 1280,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp179",
+      "type": "title",
+      "bbox": {
+        "x": 88.0,
+        "y": 35.7,
+        "width": 1104.0,
+        "height": 33.17
+      },
+      "text": "Recommendations for IUSSP",
+      "style": {},
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp180",
+      "type": "body",
+      "bbox": {
+        "x": 88.0,
+        "y": 105.41,
+        "width": 872.97,
+        "height": 545.72
+      },
+      "text": "IUSSP should create a “FAIR Vocabulary of Demography”\nA FAIR Vocabulary of Demography will be an authoritative resource that other services can rely on\nIUSSP has a long history of producing multilingual dictionaries of demography\nPartnership between IUSSP and UN Population Division\nA FAIR vocabulary can be built on existing online resources\nDemopaedia\nDemoVoc\n\nOutreach to SDMX and DDI\n The FAIR Vocabulary of Demography  should export content in SDMX and DDI formats\nThe aim is to lower the cost of adoption of IUSSP definitions by other communities\n\nPromote data harmonization\nFacilitate and publicize standards for concepts, measures, and classifications in demography\n\nAppendix on Governance of a FAIR vocabulary",
+      "style": {},
+      "z": 1,
+      "placeholder_id": "BODY (2)",
+      "metadata": {
+        "role": "BODY (2)"
+      }
+    },
+    {
+      "element_id": "shp3",
+      "type": "image",
+      "bbox": {
+        "x": 980.2,
+        "y": 90.8,
+        "width": 282.83,
+        "height": 424.24
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

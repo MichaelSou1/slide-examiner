@@ -1,0 +1,133 @@
+{
+  "slide_id": "82fc6f07bed52bb8c371cc82eca7cb67-Marnix_van_Looc__s12",
+  "width": 1280,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp16",
+      "type": "body",
+      "bbox": {
+        "x": 73.9,
+        "y": 564.26,
+        "width": 1142.54,
+        "height": 67.48
+      },
+      "text": "EC50, 50% effective concentration; DENV, dengue virus; G, genotype; AI, Asian I; AII, Asian II; AA, Asian American; Am, American; C, Cosmopolitan; S, Sylvatic.\nData are displayed as mean EC50. *#DENV strain that carries a T108I* or T108A# mutation in NS4B. ▲To calculate the mean EC50 in Vero E6 cells, values below the 0.04 nM-threshold were set at 0.04 nM.",
+      "style": {
+        "font_size_pt": 12.0
+      },
+      "z": 0,
+      "placeholder_id": "BODY (2)",
+      "metadata": {
+        "role": "BODY (2)"
+      }
+    },
+    {
+      "element_id": "shp2",
+      "type": "body",
+      "bbox": {
+        "x": 69.56,
+        "y": 99.46,
+        "width": 1152.89,
+        "height": 38.78
+      },
+      "text": "Equipotent activity against the 4 serotypes",
+      "style": {
+        "font_size_pt": 24.0
+      },
+      "z": 1,
+      "placeholder_id": "BODY (2)",
+      "metadata": {
+        "role": "BODY (2)"
+      }
+    },
+    {
+      "element_id": "shp7",
+      "type": "title",
+      "bbox": {
+        "x": 63.56,
+        "y": 39.73,
+        "width": 1163.68,
+        "height": 77.55
+      },
+      "text": "JNJ-1802 provides excellent in vitro DENV serotype and genotype coverage",
+      "style": {
+        "font_size_pt": 24.0
+      },
+      "z": 2,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp8",
+      "type": "body",
+      "bbox": {
+        "x": 816.29,
+        "y": 235.08,
+        "width": 373.98,
+        "height": 184.77
+      },
+      "text": "DENV-specific antiviral activity: \n≥4000x less active against other flaviviruses (WNV, JEV and ZIKV) compared with DENV-2/16681",
+      "style": {
+        "font_size_pt": 16.7,
+        "fill_color": "#000099"
+      },
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp3",
+      "type": "image",
+      "bbox": {
+        "x": 146.52,
+        "y": 148.6,
+        "width": 559.05,
+        "height": 403.94
+      },
+      "text": "",
+      "style": {},
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp4",
+      "type": "body",
+      "bbox": {
+        "x": 73.9,
+        "y": 632.67,
+        "width": 1153.33,
+        "height": 16.72
+      },
+      "text": "Goethals et al. Nature 2023. Accepted for publication.",
+      "style": {},
+      "z": 5,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp5",
+      "type": "body",
+      "bbox": {
+        "x": 1222.08,
+        "y": 652.99,
+        "width": 47.71,
+        "height": 35.0
+      },
+      "text": "13",
+      "style": {},
+      "z": 6,
+      "placeholder_id": "SLIDE_NUMBER (13)",
+      "metadata": {
+        "role": "SLIDE_NUMBER (13)"
+      }
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

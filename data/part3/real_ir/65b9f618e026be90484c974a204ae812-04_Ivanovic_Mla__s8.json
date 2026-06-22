@@ -1,0 +1,58 @@
+{
+  "slide_id": "65b9f618e026be90484c974a204ae812-04_Ivanovic_Mla__s8",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp4",
+      "type": "body",
+      "bbox": {
+        "x": 532.92,
+        "y": 20.0,
+        "width": 337.98,
+        "height": 61.39
+      },
+      "text": "Horse Chestnut\nleaf miner (Cameraria ohridella)",
+      "style": {
+        "font_size_pt": 16.0
+      },
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp6",
+      "type": "image",
+      "bbox": {
+        "x": 11.29,
+        "y": 20.0,
+        "width": 350.0,
+        "height": 586.0
+      },
+      "text": "",
+      "style": {},
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp7",
+      "type": "image",
+      "bbox": {
+        "x": 374.16,
+        "y": 140.76,
+        "width": 585.84,
+        "height": 386.06
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

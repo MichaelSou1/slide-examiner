@@ -1,0 +1,28 @@
+{
+  "slide_id": "11271d0c1294680fce9eb2705c4ecc65-SAKRAMEN_DASAR___s8",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp2",
+      "type": "body",
+      "bbox": {
+        "x": 58.91,
+        "y": 32.0,
+        "width": 840.0,
+        "height": 649.48
+      },
+      "text": ". Sakramen juga berarti tanda keselamatan Allah yang diberikan kepada Manusia",
+      "style": {
+        "font_size_pt": 66.0
+      },
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

@@ -1,0 +1,273 @@
+{
+  "slide_id": "82fc6f07bed52bb8c371cc82eca7cb67-Marnix_van_Looc__s15",
+  "width": 1280,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp88",
+      "type": "body",
+      "bbox": {
+        "x": 496.23,
+        "y": 109.72,
+        "width": 681.77,
+        "height": 226.77
+      },
+      "text": "Dose-proportional increase from 50 to 150 mg and less than dose-proportionally for higher doses of JNJ-1802. \nTerminal half-life: 6.3 to 9.2 days; accumulation factor: from 4.3 to 7.3 after 10 days and 14.6 after 31 days. \nRenal elimination of JNJ-1802 was very limited (<0.001% of the dose).",
+      "style": {
+        "font_size_pt": 14.0
+      },
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp14",
+      "type": "body",
+      "bbox": {
+        "x": 533.8,
+        "y": 112.3,
+        "width": 249.78,
+        "height": 42.01
+      },
+      "text": "Pharmacokinetics",
+      "style": {
+        "font_size_pt": 20.0
+      },
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp90",
+      "type": "shape",
+      "bbox": {
+        "x": 497.09,
+        "y": 368.86,
+        "width": 680.91,
+        "height": 238.11
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp7",
+      "type": "title",
+      "bbox": {
+        "x": 63.5,
+        "y": 39.69,
+        "width": 1056.44,
+        "height": 43.09
+      },
+      "text": "JNJ-1802 was safe and well tolerated in first-in-human study",
+      "style": {
+        "font_size_pt": 26.7,
+        "color": "#212121"
+      },
+      "z": 3,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp4",
+      "type": "body",
+      "bbox": {
+        "x": 58.45,
+        "y": 633.89,
+        "width": 482.7,
+        "height": 29.08
+      },
+      "text": "Ackaert et al. Presented at ASTMH 2021 - Virtual meeting. P582.",
+      "style": {
+        "font_size_pt": 12.0
+      },
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp65",
+      "type": "body",
+      "bbox": {
+        "x": 497.09,
+        "y": 420.29,
+        "width": 680.91,
+        "height": 161.56
+      },
+      "text": "No deaths, serious adverse events (AEs) or AEs leading to JNJ-1802 discontinuation.\nNo clinically relevant changes in electrocardiograms, laboratory tests or vital signs.\nTwo grade 2 events of rash occurred, which were considered very likely related to JNJ-1802 by the investigator. These resolved after 35–47 days.",
+      "style": {
+        "font_size_pt": 14.0
+      },
+      "z": 5,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp12",
+      "type": "group",
+      "bbox": {
+        "x": 131.07,
+        "y": 149.26,
+        "width": 188.98,
+        "height": 189.39
+      },
+      "text": "",
+      "style": {},
+      "z": 6,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp85",
+      "type": "shape",
+      "bbox": {
+        "x": 130.47,
+        "y": 355.47,
+        "width": 190.18,
+        "height": 189.03
+      },
+      "text": "",
+      "style": {},
+      "z": 7,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp86",
+      "type": "body",
+      "bbox": {
+        "x": 131.67,
+        "y": 355.11,
+        "width": 188.98,
+        "height": 130.87
+      },
+      "text": "Part 2:\nMultiple ascending\ndose\nDaily doses 10 days\nDaily doses 31 days",
+      "style": {
+        "font_size_pt": 14.0,
+        "color": "#48BFB1"
+      },
+      "z": 8,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp87",
+      "type": "body",
+      "bbox": {
+        "x": 148.89,
+        "y": 489.08,
+        "width": 154.53,
+        "height": 54.93
+      },
+      "text": "JNJ-1802: n=38\nPlacebo: n=9",
+      "style": {
+        "font_size_pt": 14.0
+      },
+      "z": 9,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp13",
+      "type": "shape",
+      "bbox": {
+        "x": 348.65,
+        "y": 309.12,
+        "width": 102.72,
+        "height": 50.88
+      },
+      "text": "",
+      "style": {},
+      "z": 10,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp89",
+      "type": "body",
+      "bbox": {
+        "x": 533.8,
+        "y": 369.6,
+        "width": 92.09,
+        "height": 38.78
+      },
+      "text": "Safety",
+      "style": {},
+      "z": 11,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp91",
+      "type": "group",
+      "bbox": {
+        "x": 468.44,
+        "y": 352.59,
+        "width": 64.25,
+        "height": 64.25
+      },
+      "text": "",
+      "style": {},
+      "z": 12,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp99",
+      "type": "shape",
+      "bbox": {
+        "x": 468.44,
+        "y": 97.38,
+        "width": 64.25,
+        "height": 64.25
+      },
+      "text": "",
+      "style": {
+        "fill_color": "#000099"
+      },
+      "z": 13,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp17",
+      "type": "group",
+      "bbox": {
+        "x": 483.56,
+        "y": 112.49,
+        "width": 34.02,
+        "height": 34.02
+      },
+      "text": "",
+      "style": {},
+      "z": 14,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp2",
+      "type": "body",
+      "bbox": {
+        "x": 1222.08,
+        "y": 652.99,
+        "width": 47.71,
+        "height": 35.0
+      },
+      "text": "16",
+      "style": {},
+      "z": 15,
+      "placeholder_id": "SLIDE_NUMBER (13)",
+      "metadata": {
+        "role": "SLIDE_NUMBER (13)"
+      }
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

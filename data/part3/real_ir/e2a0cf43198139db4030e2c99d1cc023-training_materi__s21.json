@@ -1,0 +1,46 @@
+{
+  "slide_id": "e2a0cf43198139db4030e2c99d1cc023-training_materi__s21",
+  "width": 960,
+  "height": 540,
+  "elements": [
+    {
+      "element_id": "shp286",
+      "type": "body",
+      "bbox": {
+        "x": 27.03,
+        "y": 196.61,
+        "width": 917.8,
+        "height": 252.09
+      },
+      "text": "Depends on the information that needs to be extracted \n\nThe higher the granularity, the higher the materials citation detail\nHigh-level granularities require manual editing",
+      "style": {
+        "font_size_pt": 24.0
+      },
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp287",
+      "type": "body",
+      "bbox": {
+        "x": 11.64,
+        "y": 17.45,
+        "width": 894.55,
+        "height": 80.16
+      },
+      "text": "➤ Granularity",
+      "style": {
+        "font_size_pt": 28.0,
+        "color": "#000000"
+      },
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

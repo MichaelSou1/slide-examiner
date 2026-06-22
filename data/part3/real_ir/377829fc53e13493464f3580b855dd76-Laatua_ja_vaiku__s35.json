@@ -1,0 +1,64 @@
+{
+  "slide_id": "377829fc53e13493464f3580b855dd76-Laatua_ja_vaiku__s35",
+  "width": 960,
+  "height": 540,
+  "elements": [
+    {
+      "element_id": "shp329",
+      "type": "title",
+      "bbox": {
+        "x": 24.05,
+        "y": 16.66,
+        "width": 852.41,
+        "height": 60.13
+      },
+      "text": "CHECKLISTA: Har du koll på dina datafrågor?",
+      "style": {
+        "color": "#008568"
+      },
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp330",
+      "type": "body",
+      "bbox": {
+        "x": 24.05,
+        "y": 76.78,
+        "width": 894.55,
+        "height": 384.28
+      },
+      "text": "Planera noggrant: Vilka är de värdefulla resultaten som lämpar sig för lagring \u000bsom är viktiga med tanke på reproducerbarhet och ansvarsfullhet? \nÄr frågorna gällande avtal, underhåll och användarrättigheter under kontroll också med tanke på framtiden?\nHur länge lönar det sig att lagra olika resultat och när ska materialet eventuellt förstöras, till exempel onödiga versioner? Kraven från finansiären och organisationer i bakgrunden påverkar.\nÄr de publicerings- och lagringstjänster som du har valt tillförlitliga, lämpliga för ditt material, stöder de FAIR-principerna och är de specifika för olika vetenskapliga områden?\nHar du tänkt på framtida användare när du sammanställer och dokumenterar ditt material?\nHar du tagit hänsyn till att dina data eventuellt ska långtidslagras för att möjliggöra användning på nytt i enlighet med deras kulturarvsvärde eller finansiärernas krav? \nHar du berättat för din organisation om data som är värda att bevaras långsiktigt?\nHar du informerat forskningsdeltagarna hur materialet delas, lagras och publiceras?\nHar du kommit ihåg att hänvisa till data i publikationer som du har använt dem för?",
+      "style": {
+        "font_size_pt": 15.0
+      },
+      "z": 1,
+      "placeholder_id": "BODY (2)",
+      "metadata": {
+        "role": "BODY (2)"
+      }
+    },
+    {
+      "element_id": "shp2",
+      "type": "group",
+      "bbox": {
+        "x": 821.9,
+        "y": 42.07,
+        "width": 74.08,
+        "height": 69.42
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

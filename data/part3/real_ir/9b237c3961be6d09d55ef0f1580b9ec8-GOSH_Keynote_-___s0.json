@@ -1,0 +1,79 @@
+{
+  "slide_id": "9b237c3961be6d09d55ef0f1580b9ec8-GOSH_Keynote_-___s0",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp60",
+      "type": "body",
+      "bbox": {
+        "x": 35.14,
+        "y": 144.92,
+        "width": 761.1,
+        "height": 157.73
+      },
+      "text": "The current state of \nopen science hardware",
+      "style": {
+        "font_size_pt": 45.0,
+        "color": "#763086"
+      },
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp61",
+      "type": "shape",
+      "bbox": {
+        "x": -13.71,
+        "y": 387.44,
+        "width": 949.61,
+        "height": 145.57
+      },
+      "text": "",
+      "style": {
+        "fill_color": "#763086"
+      },
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp62",
+      "type": "body",
+      "bbox": {
+        "x": 41.14,
+        "y": 405.51,
+        "width": 861.7,
+        "height": 57.39
+      },
+      "text": "Jenny Molloy - Gathering for Open Science Hardware \njenny@openhardware.science | @jenny_molloy \nUniversity of Cambridge | jcm80@cam.ac.uk",
+      "style": {
+        "font_size_pt": 20.0,
+        "color": "#FFFFFF"
+      },
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp63",
+      "type": "image",
+      "bbox": {
+        "x": 543.36,
+        "y": 597.2,
+        "width": 371.88,
+        "height": 98.05
+      },
+      "text": "",
+      "style": {},
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

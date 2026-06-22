@@ -1,0 +1,90 @@
+{
+  "slide_id": "fa4cffb65fe50e0f7177efdcb72b7ffb-2022-11-16_USR___s16",
+  "width": 1280,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp2",
+      "type": "title",
+      "bbox": {
+        "x": 15.05,
+        "y": 12.24,
+        "width": 1249.9,
+        "height": 113.39
+      },
+      "text": "Spotting untapped potential: Excellent research (2), left unused by policy makers (3)\u000b(data sources: overton.io & scival.com) in example: SDG 9 > high FWCI, low policy citations",
+      "style": {
+        "font_size_pt": 31.0
+      },
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp5",
+      "type": "image",
+      "bbox": {
+        "x": 15.05,
+        "y": 140.41,
+        "width": 1027.64,
+        "height": 567.18
+      },
+      "text": "",
+      "style": {},
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp7",
+      "type": "shape",
+      "bbox": {
+        "x": 528.87,
+        "y": 440.69,
+        "width": 161.19,
+        "height": 113.39
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp10",
+      "type": "group",
+      "bbox": {
+        "x": 654.07,
+        "y": 332.84,
+        "width": 557.25,
+        "height": 277.93
+      },
+      "text": "",
+      "style": {},
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp4",
+      "type": "image",
+      "bbox": {
+        "x": 190.13,
+        "y": 200.58,
+        "width": 850.87,
+        "height": 43.15
+      },
+      "text": "",
+      "style": {},
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

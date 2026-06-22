@@ -1,0 +1,82 @@
+{
+  "slide_id": "377829fc53e13493464f3580b855dd76-Laatua_ja_vaiku__s19",
+  "width": 960,
+  "height": 540,
+  "elements": [
+    {
+      "element_id": "shp192",
+      "type": "title",
+      "bbox": {
+        "x": 32.72,
+        "y": 11.15,
+        "width": 894.55,
+        "height": 60.13
+      },
+      "text": "Synvinklar på bedömning av bevisad betydelse",
+      "style": {
+        "color": "#008568"
+      },
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp193",
+      "type": "body",
+      "bbox": {
+        "x": 32.72,
+        "y": 76.12,
+        "width": 894.55,
+        "height": 324.44
+      },
+      "text": "Har dina data använts för att utarbeta någon särskilt viktig publikation eller ett särskilt viktigt fynd?\nÄr dina data avgörande för den nationella eller globala infrastrukturen?\nHar dina data utnyttjats i betydande forskningssamarbete olika organisationer emellan?\nHar produktionen av dina data krävt betydande investeringar och resurser?\nHar till exempel en etisk kommitté bedömt dina data tidigare? Kommitténs bedömningsrapporter kan vara nyttiga i beslutsfattandet, ibland kan det vara av etiska orsaker grundat att lagra data.\nAnvisningar för etikprövning inom humanvetenskaperna",
+      "style": {
+        "color": "#595959"
+      },
+      "z": 1,
+      "placeholder_id": "BODY (2)",
+      "metadata": {
+        "role": "BODY (2)"
+      }
+    },
+    {
+      "element_id": "shp194",
+      "type": "image",
+      "bbox": {
+        "x": 845.36,
+        "y": 11.15,
+        "width": 64.16,
+        "height": 60.13
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp195",
+      "type": "body",
+      "bbox": {
+        "x": 65.42,
+        "y": 500.2,
+        "width": 765.76,
+        "height": 33.92
+      },
+      "text": "Krister Talvinen. (2019). Digital Preservation (Fairdata-PAS): Guidelines for UH Evaluators. Zenodo.",
+      "style": {
+        "font_size_pt": 9.0,
+        "color": "#000000"
+      },
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

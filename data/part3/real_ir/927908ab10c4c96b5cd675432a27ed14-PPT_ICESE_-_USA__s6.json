@@ -1,0 +1,78 @@
+{
+  "slide_id": "927908ab10c4c96b5cd675432a27ed14-PPT_ICESE_-_USA__s6",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp3",
+      "type": "body",
+      "bbox": {
+        "x": 16.0,
+        "y": 0.0,
+        "width": 544.0,
+        "height": 67.86
+      },
+      "text": "2nd ICESE\nInternational Conference Earth Science and Energy",
+      "style": {
+        "color": "#FF0000"
+      },
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp5",
+      "type": "body",
+      "bbox": {
+        "x": 648.21,
+        "y": 5.19,
+        "width": 287.79,
+        "height": 67.86
+      },
+      "text": "CONCLUSION",
+      "style": {
+        "font_size_pt": 36.0
+      },
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp8",
+      "type": "image",
+      "bbox": {
+        "x": 304.0,
+        "y": 622.17,
+        "width": 352.0,
+        "height": 97.83
+      },
+      "text": "",
+      "style": {},
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp2",
+      "type": "body",
+      "bbox": {
+        "x": 60.39,
+        "y": 134.97,
+        "width": 851.61,
+        "height": 436.22
+      },
+      "text": "1. A good phase to perform surfactant injection is the middle or lower phase\n2. The IFT value will continue to decrease along with the increase in the concentration of surfactants used until it reaches the critical micellar concentration.\n3. The recommended IFT value is 10-3 dyne / cm.\n4. Formation water and surfactant are said to be compatible if after the two are mixed with a clear colored solution and there is no precipitate\n5. The optimum surfactant concentration used is 0.6% with an IFT value of 0.00025 dyne / cm.",
+      "style": {
+        "font_size_pt": 24.0,
+        "fill_color": "#FFFF66"
+      },
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

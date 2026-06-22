@@ -1,0 +1,79 @@
+{
+  "slide_id": "5aed46f009ac84854c5c1cebd08f867d-DASH_Presentati__s0",
+  "width": 960,
+  "height": 540,
+  "elements": [
+    {
+      "element_id": "shp93",
+      "type": "title",
+      "bbox": {
+        "x": 32.72,
+        "y": 148.5,
+        "width": 894.55,
+        "height": 103.69
+      },
+      "text": "From White Light to Ultraviolet: Integrating Object Oriented Programming into Data Pipelines for the CCOR and SUVI Imagers",
+      "style": {
+        "font_size_pt": 19.0
+      },
+      "z": 0,
+      "placeholder_id": "CENTER_TITLE (3)",
+      "metadata": {
+        "role": "CENTER_TITLE (3)"
+      }
+    },
+    {
+      "element_id": "shp94",
+      "type": "subtitle",
+      "bbox": {
+        "x": 42.28,
+        "y": 297.55,
+        "width": 875.43,
+        "height": 207.78
+      },
+      "text": "Gabriel Dima1,2, Donald Schmit1,2, William Rowland2, Vicente Salinas1,2, Kevin Hallock1,2, Chris Bethge1,2, Jonathan Darnel1,2, Ann Mahon1,2, Elysia Lucas1,2, Alison Jarvis1,2, Ale Pacini2, Laurel Rachmeler2, Jeff Johnson1,3, Nathan Miles1,3, Vic Pizzo3, Steve Hill3, Natsuha Kuroda4, Arnaud Thernisien4, John Spitzak4, Nathan Rich4\n\n\n1-Cooperative Institute for Research in Environmental Science\n2-NOAA National Centers for Environmental Information\n3-NOAA Space Weather Prediction Center\n4-Naval Research Laboratory",
+      "style": {
+        "font_size_pt": 16.0
+      },
+      "z": 1,
+      "placeholder_id": "SUBTITLE (4)",
+      "metadata": {
+        "role": "SUBTITLE (4)"
+      }
+    },
+    {
+      "element_id": "shp95",
+      "type": "image",
+      "bbox": {
+        "x": 5.24,
+        "y": 21.34,
+        "width": 124.41,
+        "height": 124.41
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp96",
+      "type": "image",
+      "bbox": {
+        "x": 129.65,
+        "y": 34.67,
+        "width": 97.75,
+        "height": 97.75
+      },
+      "text": "",
+      "style": {},
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

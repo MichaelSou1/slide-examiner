@@ -1,0 +1,66 @@
+{
+  "slide_id": "377829fc53e13493464f3580b855dd76-Laatua_ja_vaiku__s9",
+  "width": 960,
+  "height": 540,
+  "elements": [
+    {
+      "element_id": "shp121",
+      "type": "title",
+      "bbox": {
+        "x": 32.72,
+        "y": 23.06,
+        "width": 894.55,
+        "height": 60.13
+      },
+      "text": "Om livscykeln för data (2): Skapa och förbereda",
+      "style": {
+        "font_size_pt": 24.0,
+        "color": "#008568"
+      },
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp122",
+      "type": "body",
+      "bbox": {
+        "x": 19.66,
+        "y": 98.76,
+        "width": 894.55,
+        "height": 402.77
+      },
+      "text": "Uppkomsten av data kan vara förknippad med olika instrument eller insamlingsmetoder, som är viktiga att dokumentera. \nFrån rådata till data som kan analyseras\nData som samlas in för forskning är i det första skedet så kallade rådata. Rådata är startpunkten för hanteringen av data och det vore bra att alltid kunna återkomma till dessa data.\nFör analyser ska rådata kvalitetsgranskas (dvs. valideras), beskrivas och ibland berikas och klassificeras de innan de kan analyseras. \nI beredningen av data används ofta olika kommandon eller annan kod\nKällkod (program code) är ett redskap med vilket data produceras. Till exempel finns det skäl att lagra, dokumentera och publicera använda modeller, analys- och datahanteringskoden (t.ex. R-skript), såvida det inte finns grund för att inte publicera.",
+      "style": {
+        "font_size_pt": 72.0,
+        "color": "#595959"
+      },
+      "z": 1,
+      "placeholder_id": "BODY (2)",
+      "metadata": {
+        "role": "BODY (2)"
+      }
+    },
+    {
+      "element_id": "shp123",
+      "type": "image",
+      "bbox": {
+        "x": 821.9,
+        "y": 42.07,
+        "width": 74.08,
+        "height": 69.42
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

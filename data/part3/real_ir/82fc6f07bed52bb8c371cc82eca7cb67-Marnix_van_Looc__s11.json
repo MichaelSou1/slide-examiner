@@ -1,0 +1,372 @@
+{
+  "slide_id": "82fc6f07bed52bb8c371cc82eca7cb67-Marnix_van_Looc__s11",
+  "width": 1280,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp20",
+      "type": "shape",
+      "bbox": {
+        "x": 0.17,
+        "y": 0.17,
+        "width": 0.17,
+        "height": 0.17
+      },
+      "text": "",
+      "style": {},
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp36",
+      "type": "body",
+      "bbox": {
+        "x": 63.56,
+        "y": 69.9,
+        "width": 1152.89,
+        "height": 38.78
+      },
+      "text": "The JNJ-1802 compound is being developed for two indications:",
+      "style": {
+        "font_size_pt": 24.0
+      },
+      "z": 1,
+      "placeholder_id": "BODY (2)",
+      "metadata": {
+        "role": "BODY (2)"
+      }
+    },
+    {
+      "element_id": "shp2",
+      "type": "title",
+      "bbox": {
+        "x": 63.56,
+        "y": 24.11,
+        "width": 1065.17,
+        "height": 60.59
+      },
+      "text": "Tackling dengue",
+      "style": {
+        "font_size_pt": 24.0
+      },
+      "z": 2,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp9",
+      "type": "image",
+      "bbox": {
+        "x": 606.99,
+        "y": 323.79,
+        "width": 649.33,
+        "height": 262.04
+      },
+      "text": "",
+      "style": {},
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp11",
+      "type": "shape",
+      "bbox": {
+        "x": 1062.17,
+        "y": 490.81,
+        "width": 36.83,
+        "height": 22.62
+      },
+      "text": "",
+      "style": {},
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp12",
+      "type": "body",
+      "bbox": {
+        "x": 896.62,
+        "y": 306.58,
+        "width": 363.61,
+        "height": 22.62
+      },
+      "text": "Yacoub, et al. 2014.Nature Reviews Cardiology.",
+      "style": {
+        "font_size_pt": 8.0,
+        "color": "#505050"
+      },
+      "z": 5,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp13",
+      "type": "shape",
+      "bbox": {
+        "x": 378.04,
+        "y": 511.09,
+        "width": 227.66,
+        "height": 58.06
+      },
+      "text": "",
+      "style": {
+        "fill_color": "#FFFFFF"
+      },
+      "z": 6,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp14",
+      "type": "body",
+      "bbox": {
+        "x": 405.92,
+        "y": 519.55,
+        "width": 181.83,
+        "height": 29.08
+      },
+      "text": "Incubation period",
+      "style": {
+        "font_size_pt": 12.0,
+        "color": "#505050"
+      },
+      "z": 7,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp15",
+      "type": "image",
+      "bbox": {
+        "x": 293.23,
+        "y": 279.75,
+        "width": 169.62,
+        "height": 94.99
+      },
+      "text": "",
+      "style": {},
+      "z": 8,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp16",
+      "type": "body",
+      "bbox": {
+        "x": 405.92,
+        "y": 540.07,
+        "width": 181.83,
+        "height": 29.08
+      },
+      "text": "3–8 days",
+      "style": {
+        "font_size_pt": 12.0,
+        "color": "#505050"
+      },
+      "z": 9,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp17",
+      "type": "shape",
+      "bbox": {
+        "x": 627.71,
+        "y": 417.46,
+        "width": 24.44,
+        "height": 33.93
+      },
+      "text": "",
+      "style": {
+        "font_size_pt": 15.0,
+        "color": "#000000"
+      },
+      "z": 10,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp18",
+      "type": "shape",
+      "bbox": {
+        "x": 627.71,
+        "y": 417.46,
+        "width": 24.44,
+        "height": 33.93
+      },
+      "text": "",
+      "style": {
+        "font_size_pt": 15.0,
+        "color": "#000000"
+      },
+      "z": 11,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp21",
+      "type": "body",
+      "bbox": {
+        "x": 81.09,
+        "y": 152.0,
+        "width": 529.77,
+        "height": 157.91
+      },
+      "text": "JNJ-1802 for the prevention of viral replication, disease development and further transmission",
+      "style": {
+        "font_size_pt": 14.0
+      },
+      "z": 12,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp30",
+      "type": "body",
+      "bbox": {
+        "x": 61.24,
+        "y": 117.91,
+        "width": 500.87,
+        "height": 42.01
+      },
+      "text": "1. Prophylaxis",
+      "style": {
+        "font_size_pt": 20.0,
+        "color": "#000000"
+      },
+      "z": 13,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp31",
+      "type": "body",
+      "bbox": {
+        "x": 610.86,
+        "y": 117.91,
+        "width": 522.19,
+        "height": 42.01
+      },
+      "text": "2. Treatment",
+      "style": {
+        "font_size_pt": 20.0,
+        "color": "#000000"
+      },
+      "z": 14,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp33",
+      "type": "body",
+      "bbox": {
+        "x": 295.82,
+        "y": 382.04,
+        "width": 164.44,
+        "height": 75.07
+      },
+      "text": "Dengue infection  through mosquito bite",
+      "style": {
+        "font_size_pt": 12.0,
+        "color": "#000000",
+        "fill_color": "#FFFFFF"
+      },
+      "z": 16,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp35",
+      "type": "shape",
+      "bbox": {
+        "x": 612.01,
+        "y": 538.44,
+        "width": 642.89,
+        "height": 47.4
+      },
+      "text": "",
+      "style": {
+        "fill_color": "#FFFFCC"
+      },
+      "z": 17,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp37",
+      "type": "shape",
+      "bbox": {
+        "x": 615.38,
+        "y": 151.53,
+        "width": 230.09,
+        "height": 157.91
+      },
+      "text": "",
+      "style": {},
+      "z": 18,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp23",
+      "type": "body",
+      "bbox": {
+        "x": 81.09,
+        "y": 587.14,
+        "width": 1175.24,
+        "height": 61.95
+      },
+      "text": "The objective is to develop a potent, pan-serotype, first-in-class antiviral drug for the treatment and prevention of dengue that would bring significant benefits to public health.",
+      "style": {
+        "font_size_pt": 16.7,
+        "fill_color": "#2E2EA2"
+      },
+      "z": 19,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp3",
+      "type": "body",
+      "bbox": {
+        "x": 637.44,
+        "y": 195.68,
+        "width": 192.61,
+        "height": 109.86
+      },
+      "text": "Suppression of viral replication, quicker resolution of sign & symptoms",
+      "style": {
+        "font_size_pt": 12.0
+      },
+      "z": 20,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp4",
+      "type": "body",
+      "bbox": {
+        "x": 1222.08,
+        "y": 652.99,
+        "width": 47.71,
+        "height": 35.0
+      },
+      "text": "12",
+      "style": {},
+      "z": 21,
+      "placeholder_id": "SLIDE_NUMBER (13)",
+      "metadata": {
+        "role": "SLIDE_NUMBER (13)"
+      }
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "slide_id": "5aa2630262e54a49db5680970f332b05-2024-05-Etapes___s0",
+  "width": 1280,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp4",
+      "type": "subtitle",
+      "bbox": {
+        "x": 611.37,
+        "y": 28.7,
+        "width": 488.12,
+        "height": 112.07
+      },
+      "text": "Bibliothèque de Sorbonne Université",
+      "style": {
+        "font_size_pt": 14.0
+      },
+      "z": 0,
+      "placeholder_id": "SUBTITLE (4)",
+      "metadata": {
+        "role": "SUBTITLE (4)"
+      }
+    },
+    {
+      "element_id": "shp5",
+      "type": "image",
+      "bbox": {
+        "x": 456.23,
+        "y": 547.15,
+        "width": 373.96,
+        "height": 124.65
+      },
+      "text": "",
+      "style": {},
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp6",
+      "type": "body",
+      "bbox": {
+        "x": 280.83,
+        "y": 473.4,
+        "width": 619.87,
+        "height": 38.78
+      },
+      "text": "2024",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp7",
+      "type": "image",
+      "bbox": {
+        "x": 987.76,
+        "y": 609.48,
+        "width": 183.23,
+        "height": 64.11
+      },
+      "text": "",
+      "style": {},
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp8",
+      "type": "title",
+      "bbox": {
+        "x": 161.11,
+        "y": 208.8,
+        "width": 1058.44,
+        "height": 177.66
+      },
+      "text": "Publication scientifique\u000bCircuit ; droit d’auteur",
+      "style": {
+        "font_size_pt": 20.0
+      },
+      "z": 4,
+      "placeholder_id": "CENTER_TITLE (3)",
+      "metadata": {
+        "role": "CENTER_TITLE (3)"
+      }
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

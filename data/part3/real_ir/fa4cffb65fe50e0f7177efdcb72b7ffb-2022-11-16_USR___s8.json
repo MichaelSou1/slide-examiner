@@ -1,0 +1,187 @@
+{
+  "slide_id": "fa4cffb65fe50e0f7177efdcb72b7ffb-2022-11-16_USR___s8",
+  "width": 1280,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp2",
+      "type": "title",
+      "bbox": {
+        "x": 15.05,
+        "y": 12.24,
+        "width": 1249.9,
+        "height": 113.39
+      },
+      "text": "Turning SDGs as a Leading Narrative:\u000bSDG classification as a Service | Multi-lingual | SDG Badges | Research, Courses and more",
+      "style": {
+        "font_size_pt": 32.0
+      },
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp5",
+      "type": "group",
+      "bbox": {
+        "x": 763.59,
+        "y": 157.14,
+        "width": 488.0,
+        "height": 359.64
+      },
+      "text": "",
+      "style": {},
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp4",
+      "type": "image",
+      "bbox": {
+        "x": 777.68,
+        "y": 460.42,
+        "width": 467.32,
+        "height": 204.79
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp14",
+      "type": "image",
+      "bbox": {
+        "x": 8.07,
+        "y": 167.06,
+        "width": 373.22,
+        "height": 516.42
+      },
+      "text": "",
+      "style": {},
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp15",
+      "type": "image",
+      "bbox": {
+        "x": 390.84,
+        "y": 204.55,
+        "width": 332.82,
+        "height": 416.93
+      },
+      "text": "",
+      "style": {},
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp12",
+      "type": "shape",
+      "bbox": {
+        "x": 664.62,
+        "y": 528.98,
+        "width": 124.66,
+        "height": 53.73
+      },
+      "text": "",
+      "style": {
+        "fill_color": "#00DEB9"
+      },
+      "z": 5,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp17",
+      "type": "image",
+      "bbox": {
+        "x": 1173.63,
+        "y": 558.56,
+        "width": 109.33,
+        "height": 53.73
+      },
+      "text": "",
+      "style": {},
+      "z": 6,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp6",
+      "type": "image",
+      "bbox": {
+        "x": 1123.82,
+        "y": 256.15,
+        "width": 112.15,
+        "height": 110.04
+      },
+      "text": "",
+      "style": {},
+      "z": 7,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp20",
+      "type": "image",
+      "bbox": {
+        "x": 1172.64,
+        "y": 648.63,
+        "width": 52.8,
+        "height": 16.58
+      },
+      "text": "",
+      "style": {},
+      "z": 8,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp21",
+      "type": "shape",
+      "bbox": {
+        "x": 333.76,
+        "y": 534.16,
+        "width": 66.52,
+        "height": 53.73
+      },
+      "text": "",
+      "style": {
+        "fill_color": "#00DEB9"
+      },
+      "z": 9,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp3",
+      "type": "body",
+      "bbox": {
+        "x": -35.98,
+        "y": 636.45,
+        "width": 1280.0,
+        "height": 87.24
+      },
+      "text": "Embed SDG badges: \nhttps://aurora-universities.eu/sdg-research/sdg-badges",
+      "style": {
+        "font_size_pt": 28.0,
+        "color": "#0095F7"
+      },
+      "z": 10,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

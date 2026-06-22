@@ -1,0 +1,75 @@
+{
+  "slide_id": "65b9f618e026be90484c974a204ae812-04_Ivanovic_Mla__s7",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp2051",
+      "type": "image",
+      "bbox": {
+        "x": 0.0,
+        "y": 78.17,
+        "width": 960.0,
+        "height": 470.42
+      },
+      "text": "",
+      "style": {},
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp4",
+      "type": "body",
+      "bbox": {
+        "x": 124.68,
+        "y": 543.42,
+        "width": 349.61,
+        "height": 29.08
+      },
+      "text": "Now widespread and endemic pest",
+      "style": {
+        "font_size_pt": 12.0
+      },
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp7",
+      "type": "image",
+      "bbox": {
+        "x": 449.76,
+        "y": 358.69,
+        "width": 494.61,
+        "height": 266.76
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp10",
+      "type": "body",
+      "bbox": {
+        "x": 480.0,
+        "y": 19.8,
+        "width": 480.0,
+        "height": 87.24
+      },
+      "text": "Red Palm Weevil (Rhynchophorus ferrugineus)  has spread rapidly on new palm planting material.",
+      "style": {
+        "font_size_pt": 16.0
+      },
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

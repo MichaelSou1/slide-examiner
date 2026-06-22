@@ -1,0 +1,111 @@
+{
+  "slide_id": "5aa2630262e54a49db5680970f332b05-2024-05-Etapes___s22",
+  "width": 1280,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp3",
+      "type": "body",
+      "bbox": {
+        "x": 574.49,
+        "y": -0.95,
+        "width": 705.51,
+        "height": 652.01
+      },
+      "text": "",
+      "style": {},
+      "z": 0,
+      "placeholder_id": "PICTURE (18)",
+      "metadata": {
+        "role": "PICTURE (18)"
+      }
+    },
+    {
+      "element_id": "shp2",
+      "type": "title",
+      "bbox": {
+        "x": 161.11,
+        "y": 103.92,
+        "width": 381.84,
+        "height": 120.0
+      },
+      "text": "Un contrat se négocie",
+      "style": {},
+      "z": 1,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp5",
+      "type": "body",
+      "bbox": {
+        "x": 161.11,
+        "y": 239.0,
+        "width": 383.13,
+        "height": 423.33
+      },
+      "text": "Publication « classique » chez O’Reilly : 47 €\n1ère édition, 2015 (diffusion en 9 langues)\n2nd édition, 2023\n\nNégociation de l’auteur avec l’éditeur pour la seconde édition : \nTraduire l’ouvrage en portugais\nDiffuser la traduction gratuitement et librement (CC-BY-NC-ND) : https://pythonfluente.com/ \n\n\n“A presente tradução foi autorizada pela O’Reilly Media para distribuição nos termos da licença CC BY-NC-ND. Os arquivos-fonte em formato Asciidoc estão no repositório público https://github.com/pythonfluente/pythonfluente2e.”",
+      "style": {},
+      "z": 2,
+      "placeholder_id": "BODY (2)",
+      "metadata": {
+        "role": "BODY (2)"
+      }
+    },
+    {
+      "element_id": "shp7",
+      "type": "body",
+      "bbox": {
+        "x": 574.49,
+        "y": 647.28,
+        "width": 705.51,
+        "height": 75.59
+      },
+      "text": "https://www.oreilly.com/library/view/fluent-python-2nd/9781492056348/",
+      "style": {},
+      "z": 3,
+      "placeholder_id": "BODY (2)",
+      "metadata": {
+        "role": "BODY (2)"
+      }
+    },
+    {
+      "element_id": "shp4",
+      "type": "body",
+      "bbox": {
+        "x": 161.39,
+        "y": 692.76,
+        "width": 302.36,
+        "height": 11.31
+      },
+      "text": "",
+      "style": {},
+      "z": 4,
+      "placeholder_id": "BODY (2)",
+      "metadata": {
+        "role": "BODY (2)"
+      }
+    },
+    {
+      "element_id": "shp17",
+      "type": "image",
+      "bbox": {
+        "x": 692.92,
+        "y": -0.95,
+        "width": 493.03,
+        "height": 646.85
+      },
+      "text": "",
+      "style": {},
+      "z": 5,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

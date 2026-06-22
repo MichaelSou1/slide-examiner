@@ -1,0 +1,79 @@
+{
+  "slide_id": "cbfe959b4df3bc871c759efa735ace6e-20191127_ChemE__s6",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp2",
+      "type": "title",
+      "bbox": {
+        "x": 185.1,
+        "y": 28.83,
+        "width": 746.08,
+        "height": 120.0
+      },
+      "text": "Data Champions",
+      "style": {
+        "font_size_pt": 44.0
+      },
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp3",
+      "type": "body",
+      "bbox": {
+        "x": 185.1,
+        "y": 168.0,
+        "width": 746.08,
+        "height": 488.0
+      },
+      "text": "Learn more\nTNW Data Champions",
+      "style": {},
+      "z": 1,
+      "placeholder_id": "BODY (2)",
+      "metadata": {
+        "role": "BODY (2)"
+      }
+    },
+    {
+      "element_id": "shp8",
+      "type": "image",
+      "bbox": {
+        "x": 678.17,
+        "y": 402.06,
+        "width": 197.67,
+        "height": 197.67
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp9",
+      "type": "body",
+      "bbox": {
+        "x": 671.02,
+        "y": 599.03,
+        "width": 191.89,
+        "height": 48.47
+      },
+      "text": "Marcel Bus",
+      "style": {
+        "font_size_pt": 24.0
+      },
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

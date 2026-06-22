@@ -1,0 +1,28 @@
+{
+  "slide_id": "e2a0cf43198139db4030e2c99d1cc023-training_materi__s1",
+  "width": 960,
+  "height": 540,
+  "elements": [
+    {
+      "element_id": "shp131",
+      "type": "body",
+      "bbox": {
+        "x": 69.78,
+        "y": 94.79,
+        "width": 820.44,
+        "height": 350.43
+      },
+      "text": "Material Citations",
+      "style": {
+        "font_size_pt": 45.0
+      },
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

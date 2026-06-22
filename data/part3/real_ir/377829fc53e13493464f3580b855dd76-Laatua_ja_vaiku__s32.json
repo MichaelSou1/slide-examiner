@@ -1,0 +1,82 @@
+{
+  "slide_id": "377829fc53e13493464f3580b855dd76-Laatua_ja_vaiku__s32",
+  "width": 960,
+  "height": 540,
+  "elements": [
+    {
+      "element_id": "shp304",
+      "type": "title",
+      "bbox": {
+        "x": 32.72,
+        "y": 46.72,
+        "width": 789.2,
+        "height": 60.13
+      },
+      "text": "Exempel på hänvisning till material som ändras",
+      "style": {
+        "color": "#008568"
+      },
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp305",
+      "type": "body",
+      "bbox": {
+        "x": 27.84,
+        "y": 98.22,
+        "width": 882.61,
+        "height": 352.41
+      },
+      "text": "Hänvisa till en delgrupp inom specifika data genom att nämna källan, exakta avgränsningar samt den permanenta identifieraren\nFiktivt exempel: Data Request T.Jansen; SAHFOS; Work published 2014 via SAHFOS; Area Def: 54–65 ° N, 0–45 ° W. Temporal Def: 1980–2012 (april–augusti) Taxonomic Def: All zooplankton; (dataset). https://doi.org/10.7487/2014.15.1.1  \nHänvisar till datakopian vid en viss tidpunkt.\nFiktivt exempel:  König-Langlo, G., och Sieger, R. (2010). BSRN snapshot 2010-01 as ISO image file (3,75 GB) [Data set]. PANGAEA - Data Publisher for Earth & Environmental Science. (dataset). https://doi.org/10.1594/pangaea.833424 \nHänvisa till data som uppdateras kontinuerligt genom att ange en exakt tidpunkt för hänvisningen. OBS! Denna metod möjliggör inte nödvändigtvis reproducerbarhet, men är ibland den enda möjliga metoden.\nFiktivt exempel: Doe, J. and R. Roe. 2001. The FOO Data Set. Version 2.3. The FOO Data Center. (dataset). https://doi.org/10.xxxx/notfoo.547983. Accessed 1 May 2011.\nHänvisa till en tidsstämplad databasförfrågan i den versionerade databasen.\nFiktivt exempel: R. Roe. 2017. \"The Moo Data Query\" created at 2017-07-21 10:25:30 PID https://doi.org/10.xxxx/notmoo.857988 Subset of Moo Database (dataset) PID https://doi.org/10.xxxx/bigmoo.360873",
+      "style": {
+        "font_size_pt": 15.0,
+        "color": "#0097A7"
+      },
+      "z": 1,
+      "placeholder_id": "BODY (2)",
+      "metadata": {
+        "role": "BODY (2)"
+      }
+    },
+    {
+      "element_id": "shp306",
+      "type": "body",
+      "bbox": {
+        "x": 65.37,
+        "y": 495.2,
+        "width": 807.56,
+        "height": 33.92
+      },
+      "text": "Baseras på DataCites anvisningar",
+      "style": {
+        "font_size_pt": 9.0
+      },
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp2",
+      "type": "group",
+      "bbox": {
+        "x": 821.9,
+        "y": 42.07,
+        "width": 74.08,
+        "height": 69.42
+      },
+      "text": "",
+      "style": {},
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

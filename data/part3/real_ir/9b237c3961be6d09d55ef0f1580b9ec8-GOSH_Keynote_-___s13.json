@@ -1,0 +1,79 @@
+{
+  "slide_id": "9b237c3961be6d09d55ef0f1580b9ec8-GOSH_Keynote_-___s13",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp154",
+      "type": "body",
+      "bbox": {
+        "x": 48.55,
+        "y": 33.06,
+        "width": 851.18,
+        "height": 119.59
+      },
+      "text": "Opportunities arising since the Roadmap - #1",
+      "style": {
+        "font_size_pt": 31.0,
+        "color": "#763086"
+      },
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp155",
+      "type": "body",
+      "bbox": {
+        "x": 48.2,
+        "y": 315.01,
+        "width": 863.59,
+        "height": 383.24
+      },
+      "text": "Progress since 2018\nData schema and standards e.g. Open Know-How, Open Know-Where & DIN SPEC 3105 \nTools focused on making it easier for developers to document the hardware and for people to build the hardware e,g.  Gitbuilding & DocuBricks.\nTools focused on training, quality assurance and data collection e.g. SurveyStack \nOpportunities\nEmbedding data schema and standards in the tools themselves\nExploring what would be created if developer-focus is merged with user-focus\nAttention on embedding quality assurance and calibration into documentation e.g. imagining the equivalent of unit tests for open hardware.",
+      "style": {
+        "font_size_pt": 18.0,
+        "color": "#763086"
+      },
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp156",
+      "type": "image",
+      "bbox": {
+        "x": 58.88,
+        "y": 166.9,
+        "width": 115.27,
+        "height": 115.27
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp157",
+      "type": "body",
+      "bbox": {
+        "x": 188.01,
+        "y": 177.66,
+        "width": 728.25,
+        "height": 93.73
+      },
+      "text": "Advancing technical documentation infrastructure for open science hardware",
+      "style": {
+        "font_size_pt": 23.0
+      },
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

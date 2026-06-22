@@ -1,8 +1,9 @@
+\pdfoutput=1   % arXiv: force pdfLaTeX (we ship PNG figures); must sit in the first ~5 lines
 % =====================================================================
 %  Slide-Examiner technical report
 %  Build:  pdflatex main && pdflatex main   (no bibtex; manual thebibliography)
 %  Figures live in ./figs/ (PNG). Requires a full TeX Live (newtx, booktabs, ...).
-%  NOTE: author block + a few \cite arXiv ids are placeholders — verify before posting.
+%  Citations: all arXiv ids verified 2026-06-22 (see thebibliography). Author block is final pending the author's eyeball.
 % =====================================================================
 \documentclass[10pt]{article}
 
@@ -17,7 +18,7 @@
 \usepackage{booktabs}
 \usepackage{array}
 \usepackage{multirow}
-\usepackage{xcolor}
+\usepackage[table]{xcolor}    % [table] -> colortbl, enables \columncolor in the reward table
 \definecolor{NavyBlue}{RGB}{31,90,135}
 \definecolor{Accent}{RGB}{31,111,139}
 \usepackage[font=small,labelfont=bf,skip=4pt]{caption}
@@ -60,11 +61,14 @@ a recovery that replicates across six VLMs and four families and transfers to th
 slides. This diagnosis prescribes the critic: a per-defect \emph{bottleneck-routed symbolic--neural hybrid}
 that covers 8/9 defect classes (balanced accuracy 0.885) where the best single engine covers 5/9. We sharpen
 the argument with a \emph{falsifiable} linter-blind render class, \g{G7} (declared box legal, rendered content
-overflows), that a symbolic linter \emph{and} a published neural reward model (DocReward, preference accuracy
-0.28, below chance) both miss---only the re-elicited VLM catches it. As supporting evidence, an 8B examiner
-finetuned on injected defects surpasses a zero-shot 30B on semantic inspection, and a perturbation-fidelity
-audit shows that 45\% of injected geometry defects never survive a standard renderer---a hazard any
-IR-labeled slide dataset inherits. We report the negatives plainly (deck-scope semantics, a sim2real gap, a
+overflows): a symbolic linter and two \emph{narrow} neural rewards (a document and an aesthetic scorer, both at
+chance, 0.48 and 0.57) miss it, while a capable \emph{general}-multimodal reward (0.79) catches it---so the blind
+spot is a property of narrow critics and \g{G7} needs a VLM engine, whether re-elicited by prompt or carried by a
+reward head. The diagnosis itself reproduces on \emph{real} CC-licensed slide layouts---a lossless tool-extracted
+oracle, no annotation---where fine alignment stays a capability floor in every channel while a margin bleed is
+structure-rescuable. As supporting evidence, an 8B examiner finetuned on injected defects surpasses a zero-shot
+30B on semantic inspection, and a perturbation-fidelity audit shows that 45\% of injected geometry defects never
+survive a standard renderer---a hazard any IR-labeled slide dataset inherits. We report the negatives plainly (deck-scope semantics, a sim2real gap, a
 small downstream effect); each sharpens rather than weakens the thesis.
 \end{abstract}
 
@@ -87,8 +91,9 @@ tool entirely. We treat that question as the design problem and answer it empiri
 slide-inspection failures are of two kinds---genuinely sub-perceptual (route to a symbolic linter) and merely
 format-suppressed (route to a VLM under a changed elicitation). Routing each defect to its bottleneck-appropriate
 engine yields a hybrid critic (Sec.~\ref{sec:hybrid}). The render-overflow class \g{G7} is the crux: a symbolic
-linter is blind to it by construction and a published neural reward model is blind to it empirically, so only the
-VLM engine---under atomic-binary elicitation---catches it.}
+linter is blind to it by construction and \emph{narrow} neural rewards (document, aesthetic) are blind to it
+empirically, while a capable general-VLM reward---and the VLM engine under atomic-binary elicitation---catches it,
+so \g{G7} routes to a VLM engine.}
 \label{fig:teaser}
 \end{figure}
 
@@ -120,22 +125,26 @@ false-positive rate; text and structural semantics go to a language model; and t
 perceivable classes go to a VLM, but only under the changed elicitation the diagnosis shows recovers them. To
 stress-test the design we construct an adversarial class, \g{G7} render-containment overflow, that is
 invisible to the linter by construction (the declared box is legal; only the rendered pixels overflow)
-and---we find---invisible to a published neural reward model as well, so it isolates exactly the slice of the
-problem that needs the VLM engine.
+and---we find---invisible to \emph{narrow} neural reward models (a document and an aesthetic scorer) as well,
+while a capable general-multimodal reward sees it, so it isolates exactly the slice of the problem that needs a
+VLM engine (prompted or reward-headed).
 
 \paragraph{Contributions.}
 \begin{itemize}
 \item \textbf{C1 -- A perception/reasoning attribution protocol for generation quality-inspection}, built on a
 lossless structured-geometry oracle, that separates failures into \emph{sub-perceptual} versus
-\emph{format-suppressed} (Sec.~\ref{sec:diag}).
+\emph{format-suppressed} (Sec.~\ref{sec:diag}) and reproduces on \emph{real} CC-licensed slide layouts via a
+tool-extracted lossless oracle---no human or self-annotation (Sec.~\ref{sec:external}).
 \item \textbf{C2 -- ``Format suppression, not capability.''} Relative and atomic-binary elicitation recover
 detection that the pointwise+rubric format suppresses; the contrast isolates format from capability,
 replicates across \emph{six VLMs / four families / three scales}, transfers to real human-annotated slides,
 and survives a localization check that rules out a lucky ``yes'' (Sec.~\ref{sec:hybrid}).
 \item \textbf{C3 -- A bottleneck-routed symbolic--neural hybrid critic and a falsifiable linter-blind class.}
-The hybrid covers 8/9 classes (0.885) versus 5/9 (linter) and 2/9 (single VLM); the render class \g{G7} is
-caught only by the VLM-under-changed-elicitation engine, while both a symbolic linter (0.00) and a published
-neural reward model (0.28, below chance) miss it---\emph{two-sided} blindness (Sec.~\ref{sec:hybrid}).
+The hybrid covers 8/9 classes (0.885) versus 5/9 (linter) and 2/9 (single VLM); the render class \g{G7} is caught
+only by a VLM engine, while a symbolic linter (0.00) and two \emph{narrow} neural rewards (a document reward 0.48
+and an aesthetic scorer 0.57, both at chance) miss it---yet a capable \emph{general}-multimodal reward catches it
+(0.79), so the blind spot is a property of \emph{narrow} critics and \g{G7} needs a VLM engine, prompted or
+reward-headed (Sec.~\ref{sec:hybrid}).
 \item \textbf{C4 -- A specialist examiner and a perturbation-fidelity audit (supporting).} An 8B examiner
 finetuned on injected defects surpasses a zero-shot 30B on semantic inspection and learns to abstain rather
 than hallucinate geometry; separately, 45\% of injected geometry defects never render under a standard
@@ -182,8 +191,9 @@ fine-grained aesthetics and is prone to reward hacking, and slide-evaluation stu
 for calibrated critic-in-the-loop selection. These motivate, rather than compete with, a routed critic: they
 observe the VLM's perceptual ceiling and route around it with rules, whereas we first \emph{diagnose} that
 ceiling and then show part of it is recoverable by elicitation. We use the human-annotated
-\textsc{SlideAudit} set~\cite{slideaudit} as our real-data probe and audit the published document reward model
-DocReward~\cite{docreward} as a neural-critic baseline.
+\textsc{SlideAudit} set~\cite{slideaudit} as our real-data probe and audit three published reward scorers---the
+document reward DocReward~\cite{docreward}, a general-multimodal value-head reward Skywork-VL-Reward~\cite{skyworkvl},
+and a LAION aesthetic CLIP predictor~\cite{laionaes}---as neural-critic baselines.
 
 \paragraph{Critic / reward-model training.}
 Training specialist critics from paired data is established for natural images and code; our examiner adapts
@@ -412,7 +422,7 @@ the \emph{rendered layout}, not just the text. We re-route \g{S1} to the VLM and
 a tuned result. We also do not hide the one class the hybrid fails to cover: \g{S6} image/text contradiction
 stays at 0.50 for every engine.
 
-\subsection{\g{G7}: a falsifiable class that two standard critics both miss}\label{sec:g7}
+\subsection{\g{G7}: a falsifiable class that the linter and narrow rewards miss}\label{sec:g7}
 
 \paragraph{The construction.}
 \g{G7} is defined to make the linter's blind spot falsifiable: a declared box that is legal (in-margin,
@@ -420,24 +430,55 @@ non-overlapping) but whose rendered content overflows its container. The IR carr
 the overflow lives in the renderer, not the IR, so the linter and any structure-only model are blind by
 construction. A self-check confirms the geometry linter returns zero findings on 90/90 \g{G7} defectives.
 
-\paragraph{A published neural reward model is also blind.}
-The natural rebuttal is ``just train a neural reward model.'' We test it directly by auditing
-DocReward~\cite{docreward}, a Qwen2.5-VL-3B document reward model with a Bradley--Terry head trained on 117K
-paired documents, on the same paired slides: does it score the clean slide above its defective twin? It cleanly
-penalizes the defects it can see---overflow, overlap, density, image/text (preference accuracy 0.95--1.00)---but
-on \g{G7} its preference accuracy is \textbf{0.28}, with the 95\% CI \emph{entirely below chance}: it slightly
-\emph{prefers} the overflowing slide, because the over-spilling card simply shows more content
-(Fig.~\ref{fig:reward}). This is the neural counterpart of the linter's blind spot: the linter misses \g{G7}
-because the declared box is legal; the reward model misses it because the overflow is an off-distribution render
-artifact its preference data never taught it to punish. For this class, \emph{both} standard critics fail, and
-only the VLM-with-C3 engine catches it---the empirical core of the hybrid thesis.
+\paragraph{Narrow neural rewards are also blind; a general-multimodal reward is not.}
+The natural rebuttal is ``just train a neural reward model.'' We test it directly by auditing \emph{three}
+published reward scorers spanning three categories and backbones on the same paired slides---does each score the
+clean slide above its defective twin? \textbf{DocReward}~\cite{docreward} is a Qwen2.5-VL-3B \emph{document} reward
+with a Bradley--Terry head trained on 117K paired documents; \textbf{Skywork-VL-Reward-7B}~\cite{skyworkvl} is a
+Qwen2.5-VL-7B \emph{general}-multimodal value-head reward; and \textbf{LAION-Aesthetic}~\cite{laionaes} is an
+\emph{aesthetic} linear head on CLIP-L/14. Each cleanly penalizes the in-taxonomy defects it can see (preference accuracy 0.72--1.00 on overflow,
+overlap, density, image/text), so each is a working reward, not a domain mismatch (Table~\ref{tab:reward},
+Fig.~\ref{fig:reward}). On \g{G7} the picture \emph{splits}: the symbolic linter (0.00), the document reward
+(DocReward 0.48, 95\% CI $[0.38,0.58]$) and the aesthetic scorer (LAION 0.57, $[0.46,0.66]$) all sit at
+chance---their CIs include 0.5, so they carry no reliable signal about the render-containment overflow---while the
+general-multimodal reward (Skywork-VL 0.79, $[0.69,0.86]$) \emph{does} catch it, its Qwen2.5-VL-7B backbone
+perceiving the overflow even without being told to look. So the \g{G7} blind spot is \emph{not} model-agnostic
+across all neural rewards; it is a property of \emph{narrow} critics---a rule-based linter and specialised
+document/aesthetic reward heads---whereas a capable general VLM catches it. This is the neural counterpart of the
+hybrid thesis: \g{G7} needs a capable VLM engine, and that engine works whether it is \emph{prompted} (the C3
+recovery above, 0.93--1.00) or carries a \emph{reward head} (Skywork 0.79). The honest revision of a single-model
+audit is therefore ``narrow rewards are blind to \g{G7}; a general VLM reward, like a re-elicited VLM, is
+not''---a reviewer who tests Skywork will find 0.79, and we report it. (Naming containment in Skywork's prompt
+lifts \g{G7} to 0.87, reinforcement rather than rescue; DocReward is meanwhile also blind to brand-color \g{G5} at
+0.37, a rule class the linter owns at 1.00.)
+
+\begin{table}[t]
+\centering\small
+\caption{Multi-reward audit: paired preference accuracy $P(r_{\text{clean}}>r_{\text{def}})$ per class (chance
+$=0.5$; \g{G7} with 95\% CI). Three published scorers spanning document, general-multimodal, and aesthetic
+categories; each is sensitive to several in-taxonomy classes. \g{G7} (boxed in Fig.~\ref{fig:reward}) splits them:
+the narrow document and aesthetic rewards sit at chance (CI spans 0.5), only the general-multimodal reward detects
+it.}
+\label{tab:reward}
+\begin{tabular}{@{}llccc>{\columncolor[gray]{0.92}}c cc@{}}
+\toprule
+Reward scorer & category & \g{G1} & \g{G2} & \g{G5} & \textbf{\g{G7}} & \g{S4} & \g{S6} \\
+\midrule
+DocReward-3B   & document   & 0.93 & 1.00 & 0.37 & \textbf{0.48}\,{\scriptsize$[.38,.58]$} & 1.00 & 1.00 \\
+Skywork-VL-7B  & general-mm & 0.94 & 0.72 & 0.46 & \textbf{0.79}\,{\scriptsize$[.69,.86]$} & 0.92 & 1.00 \\
+LAION-Aesth.   & aesthetic  & 0.37 & 0.91 & 0.57 & \textbf{0.57}\,{\scriptsize$[.46,.66]$} & 0.75 & 0.61 \\
+\bottomrule
+\end{tabular}
+\end{table}
 
 \begin{figure}[t]
 \centering
-\includegraphics[width=0.70\linewidth]{figs/fig4_reward_blindspot.png}
-\caption{\textbf{A published neural reward model shares the linter's blind spot.} DocReward preference accuracy
-per defect; it is sensitive to most classes but for \g{G7} sits \emph{below} chance (prefers the overflowing
-slide). Linter, pointwise-VLM, and neural reward all miss \g{G7}; only VLM-C3 catches it.}
+\includegraphics[width=\linewidth]{figs/fig4_reward_blindspot_multi.png}
+\caption{\textbf{Narrow rewards miss \g{G7}; a general-multimodal reward catches it.} Preference accuracy per
+reward model $\times$ defect class (green $=$ sensitive, red $=$ mis-ranks; chance $=0.5$). Every scorer is sensitive
+to several in-taxonomy classes, but for the boxed \g{G7} render class the document (DocReward 0.48) and aesthetic
+(LAION 0.57) rewards are at chance while the general-multimodal Skywork-VL (0.79) detects it---so \g{G7} is a blind
+spot of \emph{narrow} critics, caught by a capable VLM (prompted or reward-headed).}
 \label{fig:reward}
 \end{figure}
 
@@ -445,9 +486,10 @@ slide). Linter, pointwise-VLM, and neural reward all miss \g{G7}; only VLM-C3 ca
 The reward audit ties to the template result of Sec.~\ref{sec:diag}. Rendering every injected defective two
 ways---faithfully and snapped-to-master---we find 45\% of injected geometry defects (100\% of overlap,
 alignment, margin; 20\% of overflow) become pixel-identical to their clean twin after snapping. Feeding the
-\emph{snapped} pairs to DocReward gives preference accuracy 0.00 at a reward gap of exactly 0.000: the two
-images are identical, so no critic can react. Any reward model trained or evaluated on snap-rendered images
-with IR-derived labels inherits these zero-signal pairs. Perturbation fidelity must be checked at the pixel
+\emph{snapped} pairs to \emph{all three} reward scorers gives preference accuracy 0.00 at a reward gap of exactly
+0.000: the two images are pixel-identical, so no critic---document, general-multimodal, or aesthetic---can react.
+This part \emph{is} model-agnostic by construction, and any reward model trained or evaluated on snap-rendered
+images with IR-derived labels inherits these zero-signal pairs. Perturbation fidelity must be checked at the pixel
 level, not assumed from the IR---a prerequisite the field largely skips, and the reason our elicitation
 experiments render defectives faithfully.
 
@@ -526,6 +568,36 @@ mentions. The ranking on a novel defect is by general-VLM ability, not by the sp
 quality: the examiner learned a distribution, not universal quality. Feeding the flagged placeholders back to
 the agent's own generator for one revision pass drives the verifiable defect from 20 to 0.
 
+\paragraph{The structured attribution holds on real layouts.}
+The body runs the A/B/C attribution on synthetic slides; the cleanest discrimination needs it on \emph{real}
+geometry with a \emph{real} oracle, which seemed to require human or model annotation. We obtain it without either:
+\textsc{Zenodo10K}~\cite{zenodo10k} ships real CC-licensed \texttt{.pptx} with intact element XML, so
+\texttt{python-pptx} extracts a \emph{lossless} geometry/text/style oracle straight from the source
+file---no human, no self-annotation bias. From 26 real decks we inject one single-shape defect per slide
+\emph{in PPTX XML space} (overflow, overlap, alignment offset, font, margin) and render both the clean and the
+defective one-slide deck with the same real renderer (LibreOffice), so the paired pixel diff isolates the injected
+defect on real pixels (209 paired slides, 5 classes, 3 VLMs / 3 families). Two results follow. First, the
+\S\ref{sec:diag} ``snap absorbs 45\%'' hazard is \emph{template-specific}: real free-form decks absorb only
+\textbf{7\%} (render-fidelity 0.93), so the perturbation is faithfully present---a positive control on that claim.
+Second, \emph{all three} attribution outcomes appear on real geometry: coarse defects (overflow, overlap) are
+\textbf{image-sufficient} (balanced accuracy A~$0.70$--$0.74$, structure adds nothing); a margin bleed is a
+\textbf{perception bottleneck the oracle rescues} for the weaker VLMs (A~$0.59 \to$ B~$0.70$)---the exact
+``missing structure, not missing capability'' cell; and fine alignment is at chance in \emph{every} channel for
+\emph{every} model (A~$=$~B~$=$~C~$\approx 0.50$), a genuine capability floor the VLM-consumed oracle does not
+cross, confirming on real geometry that fine geometry must route to the symbolic linter rather than a VLM
+(Fig.~\ref{fig:real}).
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.82\linewidth]{figs/fig6_real_attribution.png}
+\caption{\textbf{The perception/capability split reproduces on real layouts} (\textsc{Zenodo10K} real renders +
+lossless \texttt{python-pptx} oracle; mean over 3 VLMs / 3 families, balanced accuracy on paired clean). Coarse
+defects (\g{G1} overflow, \g{G2} overlap) are image-sufficient; \g{G6} margin is a \emph{perception} bottleneck the
+structured oracle rescues (B${>}$A); \g{G3} alignment is a \emph{capability} floor at chance in every channel
+(A${=}$B${=}$C${\approx}0.5$), so it must route to the linter.}
+\label{fig:real}
+\end{figure}
+
 \paragraph{Does a better examiner help downstream? A small, honest effect.}
 We also asked whether examiner quality transfers to generation: vary the examiner across five intrinsic-quality
 levels, feed its critique into a self-refine loop, and measure an independent model-free quality. The direction
@@ -541,12 +613,15 @@ performance, not the downstream loop.
 \section{Limitations}\label{sec:limits}
 % =====================================================================
 
-The cleanest discriminating experiment we cannot run is a \emph{structured} (image+oracle) evaluation on real
-slides, which would separate ``missing structure'' from ``missing capability'' on real geometry; it requires
-human annotation this single-workstation project could not produce, and building our own real test set would
-invite a self-annotation bias, so our real signal stays the third-party \textsc{SlideAudit} set (image-only,
-hence the degraded geometry ceiling). We audit one published reward model; a second is downloadable but needs a
-runtime we did not stand up. Our attribution protocol shares its core with concurrent perception/reasoning
+We \emph{do} run the structured (image+oracle) evaluation on real slides that separates ``missing structure''
+from ``missing capability'' on real geometry (\S\ref{sec:external}): a lossless \texttt{python-pptx} oracle over
+real CC-licensed decks sidesteps both the annotation labour and the self-annotation bias, and the split
+reproduces---fine alignment is a capability floor in every channel while a margin bleed is structure-rescuable.
+Its scope is honest: the defects are \emph{injected} (real geometry, real renderer, real oracle, but not
+naturally-occurring), so the third-party \textsc{SlideAudit} set (image-only, naturally-defective) remains our
+complementary real probe. We audit three published reward scorers (document, general-multimodal, aesthetic); two
+further rewards are downloadable but need runtimes we did not stand up (an InternLM-family reward whose PLoRA image
+path failed to load, and a design reward needing a separate training runtime). Our attribution protocol shares its core with concurrent perception/reasoning
 work, differentiated by domain, the lossless oracle, and the loop to a critic. And the downstream effect is
 small under a strong generator. None of these is hidden; each is stated where it bites.
 
@@ -558,8 +633,9 @@ A slide-defect critic should not be one model. Telling apart the two blindnesses
 geometry versus format-suppressed perception---turns a vague ``VLMs are bad at layout'' into an actionable
 routing rule: rules to the linter, text semantics to an LLM, and the perceivable-but-suppressed classes to a
 VLM under an elicitation that the diagnosis proves recovers them. The resulting hybrid covers 8/9 classes where
-the best single engine covers 5/9, and a falsifiable render class \g{G7} shows that for the linter's blind spot
-a neural reward model is blind too---only the re-elicited VLM sees it. The recovery replicates across six VLMs
+the best single engine covers 5/9, and a falsifiable render class \g{G7} shows that the linter's blind spot is
+shared by \emph{narrow} neural rewards (document, aesthetic) but not by a capable general-multimodal reward---so
+\g{G7} needs a VLM engine, prompted or reward-headed, not a narrow critic. The recovery replicates across six VLMs
 and four families and transfers to real slides, which makes the central claim a property of the
 \emph{elicitation $\times$ defect} interaction rather than of any one model. The unit of contribution is the
 diagnosis-to-routing pipeline and the falsifiable class, not a leaderboard number---and the negatives we kept in
@@ -569,26 +645,32 @@ are part of the evidence.
 \section*{Reproducibility}
 % =====================================================================
 \small
-All analysis scripts, the defect injector, the two linters, the elicitation harness, the hybrid router, and
-the per-Part reports are released. Experiments ran on 4$\times$RTX~3080 (20\,GB) with vLLM-served open VLMs
-(Qwen3.5/3.6, Gemma4, InternVL3.5, Ovis2.5) and a QLoRA-finetuned Qwen3-VL-8B; serving recipes
+All analysis scripts, the defect injector, the two linters, the elicitation harness, the hybrid router, the
+multi-reward audit adapters, the real-layout (\textsc{Zenodo10K}) IR/inject/render pipeline, and the per-Part
+reports are released. Experiments ran on 4$\times$RTX~3080 (20\,GB) with vLLM-served open VLMs
+(Qwen3.5/3.6, Gemma4, InternVL3.5, Ovis2.5), a QLoRA-finetuned Qwen3-VL-8B, and three published reward scorers
+(DocReward-3B, Skywork-VL-Reward-7B, a LAION aesthetic predictor) behind a uniform adapter; serving recipes
 (tensor-parallel, AWQ, disabled thinking, fp8-KV caveats on Ampere) are in the repository. Weights, renders,
 and raw rollouts are not redistributed; balanced-accuracy cells are reported with Wilson intervals and paired
 tests in the source reports.
 
 % =====================================================================
 \begin{thebibliography}{99}\small
-% NOTE: arXiv ids transcribed from the project's novelty survey; verify before posting.
+% NOTE: arXiv titles/ids verified on 2026-06-22 (the 10 core ids via the arXiv API; skyworkvl 2505.07263 via
+% web search across arxiv.org + the HF model card). laionaes has no arXiv paper -- it is a 2022 software artifact, cited as such.
 \bibitem{chartbottleneck} On the Perception Bottleneck of VLMs for Chart Understanding. arXiv:2503.18435.
 \bibitem{hiddeninplainsight} Hidden in Plain Sight: VLMs Overlook Their Visual Representations. arXiv:2506.08008.
-\bibitem{reasoningbench} Your Reasoning Benchmark May Not Test Reasoning: Separating Perception and Reasoning in Visual Tasks. arXiv:2512.21329.
-\bibitem{led} LED: A Benchmark for Layout Error Detection via Distribution-Grounded Injection. arXiv:2507.23295.
-\bibitem{rankscore} VLM Judges Can Rank but Cannot Score: Calibrating Multimodal Judges. arXiv:2604.25235.
-\bibitem{aeslides} AeSlides: Aesthetic-Reward Slide Generation. arXiv:2604.22840.
-\bibitem{evopresent} EvoPresent / PresAesth: Aesthetic Critics for Presentation Generation. arXiv:2510.05571.
-\bibitem{vlmslideeval} VLM-SlideEval: Evaluating VLMs as Slide Critics. arXiv:2510.22045.
-\bibitem{slideaudit} SlideAudit: A Human-Annotated Benchmark of Slide Design Defects. arXiv:2508.03630.
-\bibitem{docreward} DocReward: A Document Structure-and-Style Reward Model. arXiv:2510.11391.
+\bibitem{reasoningbench} Your Reasoning Benchmark May Not Test Reasoning: Revealing Perception Bottleneck in Abstract Reasoning Benchmarks. arXiv:2512.21329.
+\bibitem{led} LED Benchmark: Diagnosing Structural Layout Errors for Document Layout Analysis. arXiv:2507.23295.
+\bibitem{rankscore} VLM Judges Can Rank but Cannot Score: Task-Dependent Uncertainty in Multimodal Evaluation. arXiv:2604.25235.
+\bibitem{aeslides} AeSlides: Incentivizing Aesthetic Layout in LLM-Based Slide Generation via Verifiable Rewards. arXiv:2604.22840.
+\bibitem{evopresent} Presenting a Paper is an Art: Self-Improvement Aesthetic Agents for Academic Presentations (EvoPresent/PresAesth). arXiv:2510.05571.
+\bibitem{vlmslideeval} VLM-SlideEval: Evaluating VLMs on Structured Comprehension and Perturbation Sensitivity in PPT. arXiv:2510.22045.
+\bibitem{slideaudit} SlideAudit: A Dataset and Taxonomy for Automated Evaluation of Presentation Slides. arXiv:2508.03630.
+\bibitem{docreward} DocReward: A Document Reward Model for Structuring and Stylizing. arXiv:2510.11391.
+\bibitem{skyworkvl} Skywork-VL Reward: An Effective Reward Model for Multimodal Understanding and Reasoning. arXiv:2505.07263; weights \texttt{Skywork/Skywork-VL-Reward-7B}.
+\bibitem{laionaes} LAION-AI. Aesthetic Predictor: a linear estimator on CLIP for image aesthetic quality (LAION-Aesthetics). Software, 2022. \url{https://github.com/LAION-AI/aesthetic-predictor}.
+\bibitem{zenodo10k} PPTAgent: Generating and Evaluating Presentations Beyond Text-to-Slides (introduces the Zenodo10K corpus of real \texttt{.pptx}). arXiv:2501.03936; dataset \texttt{Forceless/Zenodo10K}.
 \end{thebibliography}
 
 \end{document}

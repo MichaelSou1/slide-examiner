@@ -1,0 +1,75 @@
+{
+  "slide_id": "d605f14c1b4fad94d3f148b06071b2c2-ChipScope_nanoF__s4",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp42",
+      "type": "image",
+      "bbox": {
+        "x": 3.73,
+        "y": 87.84,
+        "width": 532.7,
+        "height": 342.29
+      },
+      "text": "",
+      "style": {},
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp43",
+      "type": "body",
+      "bbox": {
+        "x": 540.48,
+        "y": 201.55,
+        "width": 362.87,
+        "height": 113.09
+      },
+      "text": "Realization of the microfluidic system. A PCB demonstrator was used for proofing the temperature stabilization under microfluidic flow conditions.",
+      "style": {
+        "font_size_pt": 16.0
+      },
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp44",
+      "type": "group",
+      "bbox": {
+        "x": 3.73,
+        "y": 443.65,
+        "width": 944.86,
+        "height": 233.87
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp7",
+      "type": "body",
+      "bbox": {
+        "x": 170.04,
+        "y": 23.44,
+        "width": 801.35,
+        "height": 48.47
+      },
+      "text": "Requirements & example of a microfluidic system layout",
+      "style": {
+        "font_size_pt": 24.0
+      },
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

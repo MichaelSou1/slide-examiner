@@ -1,0 +1,77 @@
+{
+  "slide_id": "20d95200c4abf876205b85c17f55b2d3-FAIR_and_Open_D__s5",
+  "width": 1280,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp129",
+      "type": "body",
+      "bbox": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 1280.0,
+        "height": 117.03
+      },
+      "text": "Open Data Methods",
+      "style": {
+        "font_size_pt": 44.0
+      },
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp130",
+      "type": "body",
+      "bbox": {
+        "x": 1008.71,
+        "y": 697.38,
+        "width": 274.29,
+        "height": 22.62
+      },
+      "text": "Icons made by https://www.flaticon.com/authors/eucalyp",
+      "style": {
+        "font_size_pt": 8.0
+      },
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp131",
+      "type": "body",
+      "bbox": {
+        "x": 368.71,
+        "y": 131.19,
+        "width": 735.78,
+        "height": 533.16
+      },
+      "text": "Access control is also a method that can be applied to controlling patient data. \n\nWe can typically think of three tiers (outlined by the UK Data Service) of access control and these can be employed to restrict who can use these data:\n\nOpen\nData licensed for use with an ‘open licence’ are data which are not personal and have relatively few restrictions to use.\nSafeguarded\nData licensed for use in the 'safeguarded' category are not personal, but the data owner considers there to be a risk of disclosure resulting from linkage to other data, such as private databases.\nControlled\nControlled data are data which may be identifiable and thus potentially disclosive. These data are only available to users who have been accredited and their data usage has been approved by the relevant Data Access Committee. Controlled data require registration/authentication.",
+      "style": {
+        "font_size_pt": 18.0
+      },
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp132",
+      "type": "image",
+      "bbox": {
+        "x": 70.82,
+        "y": 237.3,
+        "width": 242.39,
+        "height": 242.39
+      },
+      "text": "",
+      "style": {},
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

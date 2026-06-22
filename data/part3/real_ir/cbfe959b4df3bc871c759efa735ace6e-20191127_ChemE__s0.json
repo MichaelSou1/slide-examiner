@@ -1,0 +1,95 @@
+{
+  "slide_id": "cbfe959b4df3bc871c759efa735ace6e-20191127_ChemE__s0",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp7",
+      "type": "shape",
+      "bbox": {
+        "x": 162.46,
+        "y": 0.0,
+        "width": 797.54,
+        "height": 720.0
+      },
+      "text": "",
+      "style": {
+        "fill_color": "#00A6D6"
+      },
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp118",
+      "type": "body",
+      "bbox": {
+        "x": -59.08,
+        "y": 32.31,
+        "width": 891.48,
+        "height": 572.49
+      },
+      "text": "FGS on tour ChemE\u000b27-11-2019\nResearch Data Management    at\nApplied Sciences",
+      "style": {
+        "font_size_pt": 24.0,
+        "color": "#FF0000"
+      },
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp121",
+      "type": "body",
+      "bbox": {
+        "x": 152.31,
+        "y": 669.38,
+        "width": 932.31,
+        "height": 50.62
+      },
+      "text": "Esther Plomp (e.plomp@tudelft.nl)",
+      "style": {
+        "font_size_pt": 16.0
+      },
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp4",
+      "type": "image",
+      "bbox": {
+        "x": 805.91,
+        "y": 592.01,
+        "width": 128.86,
+        "height": 45.09
+      },
+      "text": "",
+      "style": {},
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp5",
+      "type": "body",
+      "bbox": {
+        "x": 483.9,
+        "y": 588.62,
+        "width": 316.93,
+        "height": 48.47
+      },
+      "text": "https://edu.nl/7pq3t",
+      "style": {
+        "font_size_pt": 24.0
+      },
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

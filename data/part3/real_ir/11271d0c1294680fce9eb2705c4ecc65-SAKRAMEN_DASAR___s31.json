@@ -1,0 +1,29 @@
+{
+  "slide_id": "11271d0c1294680fce9eb2705c4ecc65-SAKRAMEN_DASAR___s31",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp2",
+      "type": "body",
+      "bbox": {
+        "x": 16.0,
+        "y": 16.0,
+        "width": 928.0,
+        "height": 707.64
+      },
+      "text": ". SAKRAMEN PENGUATAN\n(Kis 2: 14-18, 9:17-19, 10:45, 19:5-6, Titus 3:4-8)\nSakramen Penguatan menjadikan kita dewasa secara rohani dan menjadikan kita saksi-saksi Kristus. Penguatan hanya diterimakan satu kali untuk selamanya namun meninggalkan meterai rohani yang tidak dapat dihapuskan.",
+      "style": {
+        "font_size_pt": 36.0,
+        "color": "#FF0000"
+      },
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

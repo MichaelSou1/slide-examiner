@@ -1,0 +1,61 @@
+{
+  "slide_id": "e2a0cf43198139db4030e2c99d1cc023-training_materi__s12",
+  "width": 960,
+  "height": 540,
+  "elements": [
+    {
+      "element_id": "shp227",
+      "type": "body",
+      "bbox": {
+        "x": 4.13,
+        "y": 0.0,
+        "width": 872.47,
+        "height": 56.57
+      },
+      "text": "➤What will you do?",
+      "style": {
+        "font_size_pt": 23.0,
+        "color": "#000000"
+      },
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp228",
+      "type": "body",
+      "bbox": {
+        "x": 58.04,
+        "y": 56.42,
+        "width": 838.08,
+        "height": 116.35
+      },
+      "text": "First step - Split Material Citations correctly (fix boundaries)",
+      "style": {
+        "font_size_pt": 20.0
+      },
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp229",
+      "type": "image",
+      "bbox": {
+        "x": 185.49,
+        "y": 132.39,
+        "width": 536.53,
+        "height": 402.4
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "slide_id": "ad0aaf0547329b0a1dcf9a138241d6ea-GenOAWeek2021_2__s1",
+  "width": 1280,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp2",
+      "type": "body",
+      "bbox": {
+        "x": 55.43,
+        "y": 124.72,
+        "width": 642.97,
+        "height": 551.81
+      },
+      "text": "Open Access \u000bsignifica \n«accesso gratuito \u000be senza restrizioni \u000bai risultati della ricerca» \ntesti, dati, ma anche altro!\n\nFa parte di un concetto più ampio: \u000bOpen Science\n«Un approccio al processo scientifico che si concentra sulla diffusione della conoscenza non appena disponibile, utilizzando la tecnologia digitale e collaborativa»",
+      "style": {
+        "font_size_pt": 40.0
+      },
+      "z": 0,
+      "placeholder_id": "OBJECT (7)",
+      "metadata": {
+        "role": "OBJECT (7)"
+      }
+    },
+    {
+      "element_id": "shp3",
+      "type": "title",
+      "bbox": {
+        "x": 0.0,
+        "y": 11.34,
+        "width": 1280.0,
+        "height": 48.35
+      },
+      "text": "Una visione di insieme",
+      "style": {},
+      "z": 1,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp4",
+      "type": "body",
+      "bbox": {
+        "x": 10.08,
+        "y": 676.54,
+        "width": 1020.47,
+        "height": 37.8
+      },
+      "text": "Emma Lazzeri // GenOA Week 2021 // 29/10/2021",
+      "style": {},
+      "z": 2,
+      "placeholder_id": "FOOTER (15)",
+      "metadata": {
+        "role": "FOOTER (15)"
+      }
+    },
+    {
+      "element_id": "shp6",
+      "type": "image",
+      "bbox": {
+        "x": 55.43,
+        "y": 95.92,
+        "width": 105.12,
+        "height": 140.48
+      },
+      "text": "",
+      "style": {},
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp8",
+      "type": "image",
+      "bbox": {
+        "x": 743.75,
+        "y": 236.4,
+        "width": 496.86,
+        "height": 368.45
+      },
+      "text": "",
+      "style": {},
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp10",
+      "type": "image",
+      "bbox": {
+        "x": 713.19,
+        "y": 139.21,
+        "width": 557.98,
+        "height": 77.6
+      },
+      "text": "",
+      "style": {},
+      "z": 5,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

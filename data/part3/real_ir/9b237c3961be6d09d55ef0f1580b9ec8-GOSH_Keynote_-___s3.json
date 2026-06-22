@@ -1,0 +1,41 @@
+{
+  "slide_id": "9b237c3961be6d09d55ef0f1580b9ec8-GOSH_Keynote_-___s3",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp80",
+      "type": "image",
+      "bbox": {
+        "x": -159.75,
+        "y": -0.0,
+        "width": 1608.47,
+        "height": 745.98
+      },
+      "text": "",
+      "style": {},
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp81",
+      "type": "image",
+      "bbox": {
+        "x": 0.0,
+        "y": 427.79,
+        "width": 285.13,
+        "height": 294.46
+      },
+      "text": "",
+      "style": {},
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

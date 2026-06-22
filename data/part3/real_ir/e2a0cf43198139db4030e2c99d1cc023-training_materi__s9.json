@@ -1,0 +1,229 @@
+{
+  "slide_id": "e2a0cf43198139db4030e2c99d1cc023-training_materi__s9",
+  "width": 960,
+  "height": 540,
+  "elements": [
+    {
+      "element_id": "shp192",
+      "type": "image",
+      "bbox": {
+        "x": 43.66,
+        "y": 86.81,
+        "width": 760.03,
+        "height": 295.15
+      },
+      "text": "",
+      "style": {},
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp193",
+      "type": "body",
+      "bbox": {
+        "x": 263.9,
+        "y": 390.49,
+        "width": 191.72,
+        "height": 26.9
+      },
+      "text": "specimenCode",
+      "style": {
+        "fill_color": "#A4C2F4"
+      },
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp194",
+      "type": "body",
+      "bbox": {
+        "x": 475.59,
+        "y": 390.49,
+        "width": 191.72,
+        "height": 26.9
+      },
+      "text": "collectingCountry",
+      "style": {
+        "fill_color": "#FF9900"
+      },
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp195",
+      "type": "body",
+      "bbox": {
+        "x": 690.48,
+        "y": 390.49,
+        "width": 191.72,
+        "height": 26.9
+      },
+      "text": "collectingRegion",
+      "style": {
+        "fill_color": "#F6B26B"
+      },
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp196",
+      "type": "body",
+      "bbox": {
+        "x": 260.94,
+        "y": 425.71,
+        "width": 200.98,
+        "height": 36.13
+      },
+      "text": "collectingMunicipality",
+      "style": {
+        "fill_color": "#FFD966"
+      },
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp197",
+      "type": "body",
+      "bbox": {
+        "x": 476.5,
+        "y": 434.95,
+        "width": 191.72,
+        "height": 26.9
+      },
+      "text": "location",
+      "style": {
+        "fill_color": "#FFFF00"
+      },
+      "z": 5,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp198",
+      "type": "body",
+      "bbox": {
+        "x": 690.38,
+        "y": 434.95,
+        "width": 191.72,
+        "height": 26.9
+      },
+      "text": "geoCoordinate",
+      "style": {
+        "fill_color": "#F16A1C"
+      },
+      "z": 6,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp199",
+      "type": "body",
+      "bbox": {
+        "x": 690.38,
+        "y": 474.28,
+        "width": 191.72,
+        "height": 26.9
+      },
+      "text": "collectorName",
+      "style": {
+        "fill_color": "#7EE37E"
+      },
+      "z": 7,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp200",
+      "type": "body",
+      "bbox": {
+        "x": 478.73,
+        "y": 474.28,
+        "width": 191.72,
+        "height": 26.9
+      },
+      "text": "collectorDate",
+      "style": {
+        "fill_color": "#97E397"
+      },
+      "z": 8,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp201",
+      "type": "body",
+      "bbox": {
+        "x": 52.6,
+        "y": 390.49,
+        "width": 191.72,
+        "height": 26.9
+      },
+      "text": "specimenCount",
+      "style": {
+        "fill_color": "#4A86E8"
+      },
+      "z": 9,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp202",
+      "type": "body",
+      "bbox": {
+        "x": 263.9,
+        "y": 474.28,
+        "width": 191.72,
+        "height": 26.9
+      },
+      "text": "elevation",
+      "style": {
+        "fill_color": "#F13404"
+      },
+      "z": 10,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp203",
+      "type": "body",
+      "bbox": {
+        "x": 8.72,
+        "y": -1.7,
+        "width": 842.65,
+        "height": 64.85
+      },
+      "text": "➤ Attributes",
+      "style": {
+        "font_size_pt": 29.0,
+        "color": "#000000"
+      },
+      "z": 11,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp204",
+      "type": "image",
+      "bbox": {
+        "x": 23.57,
+        "y": 125.1,
+        "width": 873.07,
+        "height": 94.78
+      },
+      "text": "",
+      "style": {},
+      "z": 12,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

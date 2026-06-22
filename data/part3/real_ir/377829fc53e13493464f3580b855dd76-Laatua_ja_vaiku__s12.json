@@ -1,0 +1,65 @@
+{
+  "slide_id": "377829fc53e13493464f3580b855dd76-Laatua_ja_vaiku__s12",
+  "width": 960,
+  "height": 540,
+  "elements": [
+    {
+      "element_id": "shp142",
+      "type": "title",
+      "bbox": {
+        "x": 32.72,
+        "y": 46.72,
+        "width": 894.55,
+        "height": 60.13
+      },
+      "text": "CHECKLISTA: Är din forskning reproducerbar?",
+      "style": {
+        "color": "#008568"
+      },
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp143",
+      "type": "body",
+      "bbox": {
+        "x": 13.1,
+        "y": 106.85,
+        "width": 933.8,
+        "height": 358.68
+      },
+      "text": "Styr materialhanteringsplanen (DMP) arbetet under hela livscykeln för data så att hela datahanteringsprocessen är transparent och tillräckligt dokumenterad?\nHur har transparens och användningsbegränsningar för data beaktats under hela processen?\nUtnyttjar man i metadata och själva data gemensam praxis, till exempel standarder och ordlistor? \nHar forskningsmaterialets livscykel dokumenterats systematiskt och motsvarar beskrivningen verkligheten? Har så många skeden av datahanteringen som möjligt automatiserats och har koden sparats? Finns dokumentationen (den tekniska dokumentationen) av de program och inställningar som har använts tillgänglig?\nHar data och annan output versionerats? \nHar data och dokumentationen av dem sparats i ett hänvisningsbart format (permanenta identifierare och metadata)? \nGenom att ombesörja reproducerbarheten genomförs FAIR-principerna naturligt som en del av forskningsprocessen och varken data eller dokumentation behöver skapas separat i publiceringsskedet av artikeln eller ifrågavarande data",
+      "style": {
+        "font_size_pt": 16.0,
+        "color": "#464F55"
+      },
+      "z": 1,
+      "placeholder_id": "BODY (2)",
+      "metadata": {
+        "role": "BODY (2)"
+      }
+    },
+    {
+      "element_id": "shp144",
+      "type": "image",
+      "bbox": {
+        "x": 821.9,
+        "y": 42.07,
+        "width": 74.08,
+        "height": 69.42
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

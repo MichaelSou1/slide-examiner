@@ -1,0 +1,195 @@
+{
+  "slide_id": "82fc6f07bed52bb8c371cc82eca7cb67-Marnix_van_Looc__s5",
+  "width": 1280,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp3",
+      "type": "group",
+      "bbox": {
+        "x": 99.56,
+        "y": 116.11,
+        "width": 1044.7,
+        "height": 511.92
+      },
+      "text": "",
+      "style": {},
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp2",
+      "type": "title",
+      "bbox": {
+        "x": 70.3,
+        "y": 37.8,
+        "width": 1114.96,
+        "height": 43.08
+      },
+      "text": "Strategic operations & investments intend to seed, catalyze & accelerate lab to last mile efforts in collaboration with partners and collaborators",
+      "style": {
+        "font_size_pt": 24.0,
+        "color": "#000000"
+      },
+      "z": 1,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp4",
+      "type": "body",
+      "bbox": {
+        "x": 1222.08,
+        "y": 652.99,
+        "width": 47.71,
+        "height": 35.0
+      },
+      "text": "6",
+      "style": {},
+      "z": 2,
+      "placeholder_id": "SLIDE_NUMBER (13)",
+      "metadata": {
+        "role": "SLIDE_NUMBER (13)"
+      }
+    },
+    {
+      "element_id": "shp545",
+      "type": "body",
+      "bbox": {
+        "x": 541.97,
+        "y": 146.43,
+        "width": 131.0,
+        "height": 56.72
+      },
+      "text": "GPH Program \u000bSeed Investment\u000bUkraine",
+      "style": {
+        "font_size_pt": 9.7,
+        "color": "#000000"
+      },
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp546",
+      "type": "shape",
+      "bbox": {
+        "x": 587.36,
+        "y": 211.0,
+        "width": 80.11,
+        "height": 41.41
+      },
+      "text": "",
+      "style": {},
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp5",
+      "type": "group",
+      "bbox": {
+        "x": 314.65,
+        "y": 628.55,
+        "width": 650.7,
+        "height": 51.68
+      },
+      "text": "",
+      "style": {},
+      "z": 5,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp560",
+      "type": "shape",
+      "bbox": {
+        "x": 581.82,
+        "y": 539.53,
+        "width": 35.2,
+        "height": 0.31
+      },
+      "text": "",
+      "style": {},
+      "z": 6,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp561",
+      "type": "body",
+      "bbox": {
+        "x": 479.13,
+        "y": 525.59,
+        "width": 118.41,
+        "height": 56.77
+      },
+      "text": "J&J Satellite Center at H3D\nSouth Africa",
+      "style": {
+        "font_size_pt": 9.7,
+        "color": "#C8102E"
+      },
+      "z": 7,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp570",
+      "type": "body",
+      "bbox": {
+        "x": 413.38,
+        "y": 246.85,
+        "width": 126.86,
+        "height": 87.01
+      },
+      "text": "J&J Satellite Center at LSHTM\nUnited Kingdom",
+      "style": {
+        "font_size_pt": 9.7,
+        "color": "#C8102E"
+      },
+      "z": 8,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp575",
+      "type": "body",
+      "bbox": {
+        "x": 982.97,
+        "y": 536.05,
+        "width": 161.29,
+        "height": 56.72
+      },
+      "text": "J&J Satellite Center at Duke-NUS \nSingapore",
+      "style": {
+        "font_size_pt": 9.7,
+        "color": "#C8102E"
+      },
+      "z": 10,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp6",
+      "type": "shape",
+      "bbox": {
+        "x": 847.45,
+        "y": 438.21,
+        "width": 139.56,
+        "height": 110.16
+      },
+      "text": "",
+      "style": {},
+      "z": 11,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

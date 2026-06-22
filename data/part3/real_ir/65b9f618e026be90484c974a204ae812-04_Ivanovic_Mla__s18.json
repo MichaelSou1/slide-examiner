@@ -1,0 +1,90 @@
+{
+  "slide_id": "65b9f618e026be90484c974a204ae812-04_Ivanovic_Mla__s18",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp2",
+      "type": "title",
+      "bbox": {
+        "x": 39.17,
+        "y": 9.33,
+        "width": 887.5,
+        "height": 85.33
+      },
+      "text": "Syngenta Tree Micro Injection Application Kit",
+      "style": {},
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp1026",
+      "type": "image",
+      "bbox": {
+        "x": 33.97,
+        "y": 95.4,
+        "width": 405.34,
+        "height": 264.6
+      },
+      "text": "",
+      "style": {},
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp1027",
+      "type": "image",
+      "bbox": {
+        "x": 453.21,
+        "y": 321.52,
+        "width": 472.82,
+        "height": 295.51
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp10",
+      "type": "body",
+      "bbox": {
+        "x": 64.21,
+        "y": 397.8,
+        "width": 363.96,
+        "height": 59.04
+      },
+      "text": "Kit contains the equipment to make micro injection applications\n\nDeveloped by Syngenta specifically for tree micro injection\n\nA drill is also required",
+      "style": {
+        "font_size_pt": 18.0
+      },
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp5122",
+      "type": "image",
+      "bbox": {
+        "x": 523.39,
+        "y": 140.76,
+        "width": 332.46,
+        "height": 105.84
+      },
+      "text": "",
+      "style": {},
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

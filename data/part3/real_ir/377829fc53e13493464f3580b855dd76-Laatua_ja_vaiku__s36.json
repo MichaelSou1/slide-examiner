@@ -1,0 +1,94 @@
+{
+  "slide_id": "377829fc53e13493464f3580b855dd76-Laatua_ja_vaiku__s36",
+  "width": 960,
+  "height": 540,
+  "elements": [
+    {
+      "element_id": "shp337",
+      "type": "title",
+      "bbox": {
+        "x": 32.72,
+        "y": 51.75,
+        "width": 894.55,
+        "height": 60.13
+      },
+      "text": "Författare",
+      "style": {
+        "color": "#008568"
+      },
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp338",
+      "type": "body",
+      "bbox": {
+        "x": 32.72,
+        "y": 120.99,
+        "width": 385.42,
+        "height": 358.68
+      },
+      "text": "Anneli Lehtisalo\nAri Asmi\nHanna Koivula\nHeidi Troberg\nJessica Parland-von Essen\nJuha Hakala\nKatja Laine\nMaria Söderholm\nMarjut Vuorinen\nMika Virtanen",
+      "style": {},
+      "z": 1,
+      "placeholder_id": "BODY (2)",
+      "metadata": {
+        "role": "BODY (2)"
+      }
+    },
+    {
+      "element_id": "shp339",
+      "type": "body",
+      "bbox": {
+        "x": 506.94,
+        "y": 120.99,
+        "width": 314.96,
+        "height": 310.27
+      },
+      "text": "Nina-Mari Salminen\nPekka Nygren\nSaila Huuskonen\nSonja Sipponen\nTanja Lindholm\nTarja Mäkinen\nTimo Taskinen\nTomi Rosti\nTuomas Alaterä\nTuula Pääkkönen",
+      "style": {
+        "font_size_pt": 18.0
+      },
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp340",
+      "type": "image",
+      "bbox": {
+        "x": 764.77,
+        "y": 384.69,
+        "width": 162.51,
+        "height": 155.31
+      },
+      "text": "",
+      "style": {},
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp341",
+      "type": "image",
+      "bbox": {
+        "x": 32.72,
+        "y": 447.27,
+        "width": 200.87,
+        "height": 64.8
+      },
+      "text": "",
+      "style": {},
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

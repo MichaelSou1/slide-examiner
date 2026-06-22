@@ -1,0 +1,167 @@
+{
+  "slide_id": "f84df5643d99a205e6b6508baea351a5-GONNET_Research__s7",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp4",
+      "type": "group",
+      "bbox": {
+        "x": 210.48,
+        "y": 480.38,
+        "width": 644.68,
+        "height": 66.5
+      },
+      "text": "",
+      "style": {},
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp7",
+      "type": "group",
+      "bbox": {
+        "x": 60.36,
+        "y": 402.47,
+        "width": 760.04,
+        "height": 91.5
+      },
+      "text": "",
+      "style": {},
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp10",
+      "type": "body",
+      "bbox": {
+        "x": 394.01,
+        "y": 574.94,
+        "width": 471.8,
+        "height": 75.4
+      },
+      "text": "2018, Liège University : loss of the equivalent of 3 research posts/year due to increased journal subscription fees",
+      "style": {
+        "font_size_pt": 14.0
+      },
+      "z": 2,
+      "placeholder_id": "BODY (2)",
+      "metadata": {
+        "role": "BODY (2)"
+      }
+    },
+    {
+      "element_id": "shp11",
+      "type": "image",
+      "bbox": {
+        "x": 325.35,
+        "y": 556.37,
+        "width": 68.66,
+        "height": 76.07
+      },
+      "text": "",
+      "style": {},
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp13",
+      "type": "shape",
+      "bbox": {
+        "x": 57.23,
+        "y": 407.59,
+        "width": 824.28,
+        "height": 249.08
+      },
+      "text": "",
+      "style": {},
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp14",
+      "type": "image",
+      "bbox": {
+        "x": 438.32,
+        "y": 242.3,
+        "width": 81.56,
+        "height": 89.56
+      },
+      "text": "",
+      "style": {},
+      "z": 5,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp15",
+      "type": "image",
+      "bbox": {
+        "x": 651.17,
+        "y": 283.85,
+        "width": 184.99,
+        "height": 39.16
+      },
+      "text": "",
+      "style": {},
+      "z": 6,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp16",
+      "type": "image",
+      "bbox": {
+        "x": 113.94,
+        "y": 222.32,
+        "width": 193.07,
+        "height": 144.8
+      },
+      "text": "",
+      "style": {},
+      "z": 7,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp17",
+      "type": "body",
+      "bbox": {
+        "x": 24.68,
+        "y": 579.31,
+        "width": 259.44,
+        "height": 58.16
+      },
+      "text": "Financements Publiques",
+      "style": {},
+      "z": 8,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp18",
+      "type": "title",
+      "bbox": {
+        "x": 54.44,
+        "y": 40.9,
+        "width": 791.17,
+        "height": 151.2
+      },
+      "text": "Costs of publication",
+      "style": {},
+      "z": 9,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

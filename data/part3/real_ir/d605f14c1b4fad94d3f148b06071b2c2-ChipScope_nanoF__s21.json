@@ -1,0 +1,120 @@
+{
+  "slide_id": "d605f14c1b4fad94d3f148b06071b2c2-ChipScope_nanoF__s21",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp15",
+      "type": "body",
+      "bbox": {
+        "x": 3.73,
+        "y": 190.42,
+        "width": 585.0,
+        "height": 155.1
+      },
+      "text": "Functions of brain capillaries and the blood-brain barrier\n \n Provides oxygen and nutrients to the brain\n Removes waste products and carbon dioxide \n Prevents toxic agents entering the brain",
+      "style": {},
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp5",
+      "type": "body",
+      "bbox": {
+        "x": 152.84,
+        "y": 23.44,
+        "width": 807.16,
+        "height": 48.47
+      },
+      "text": "Application examples – blood-brain barrier models",
+      "style": {
+        "font_size_pt": 24.0
+      },
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp7",
+      "type": "shape",
+      "bbox": {
+        "x": 78.61,
+        "y": 381.63,
+        "width": 83.16,
+        "height": 38.85
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp10",
+      "type": "body",
+      "bbox": {
+        "x": 176.0,
+        "y": 381.67,
+        "width": 757.59,
+        "height": 38.78
+      },
+      "text": "also inhibits drugs to enter the brain (e.g. brain tumor or epilepsy drugs)",
+      "style": {},
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp11",
+      "type": "body",
+      "bbox": {
+        "x": 3.73,
+        "y": 95.4,
+        "width": 489.86,
+        "height": 42.01
+      },
+      "text": "Motivation to study the blood-brain barrier",
+      "style": {
+        "font_size_pt": 20.0
+      },
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp13",
+      "type": "shape",
+      "bbox": {
+        "x": 118.01,
+        "y": 479.91,
+        "width": 83.16,
+        "height": 38.85
+      },
+      "text": "",
+      "style": {},
+      "z": 5,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp14",
+      "type": "body",
+      "bbox": {
+        "x": 215.4,
+        "y": 479.95,
+        "width": 672.83,
+        "height": 38.78
+      },
+      "text": "High importance to investigate this barrier / gate",
+      "style": {},
+      "z": 6,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "slide_id": "ad0aaf0547329b0a1dcf9a138241d6ea-GenOAWeek2021_2__s23",
+  "width": 1280,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp155",
+      "type": "title",
+      "bbox": {
+        "x": 102.11,
+        "y": 184.59,
+        "width": 1076.24,
+        "height": 74.92
+      },
+      "text": "Varietà di contenuti",
+      "style": {},
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp156",
+      "type": "body",
+      "bbox": {
+        "x": 102.4,
+        "y": 274.13,
+        "width": 1027.19,
+        "height": 357.66
+      },
+      "text": "OS/OA basics  \n\nCome fare per…\n\nNovità\n\nEventi\n\nDocumenti e materiali\n\nCatalogo delle risorse",
+      "style": {
+        "font_size_pt": 18.7,
+        "color": "#000000"
+      },
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp157",
+      "type": "image",
+      "bbox": {
+        "x": 587.74,
+        "y": 67.2,
+        "width": 692.26,
+        "height": 652.8
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp158",
+      "type": "body",
+      "bbox": {
+        "x": 577.07,
+        "y": 671.2,
+        "width": 1027.19,
+        "height": 49.55
+      },
+      "text": "Image by Frauke Riether from Pixabay",
+      "style": {
+        "font_size_pt": 14.7,
+        "color": "#191B26"
+      },
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

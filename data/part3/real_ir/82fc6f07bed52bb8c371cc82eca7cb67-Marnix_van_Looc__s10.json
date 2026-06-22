@@ -1,0 +1,164 @@
+{
+  "slide_id": "82fc6f07bed52bb8c371cc82eca7cb67-Marnix_van_Looc__s10",
+  "width": 1280,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp20",
+      "type": "shape",
+      "bbox": {
+        "x": 0.17,
+        "y": 0.17,
+        "width": 0.17,
+        "height": 0.17
+      },
+      "text": "",
+      "style": {},
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp2",
+      "type": "title",
+      "bbox": {
+        "x": 70.3,
+        "y": 37.8,
+        "width": 1133.86,
+        "height": 45.35
+      },
+      "text": "Dengue is classified by the WHO amongst the top 10 global health threats",
+      "style": {
+        "font_size_pt": 24.0
+      },
+      "z": 1,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp8",
+      "type": "body",
+      "bbox": {
+        "x": 70.3,
+        "y": 105.95,
+        "width": 548.36,
+        "height": 245.69
+      },
+      "text": "Epidemiology and disease burden\nFlavivirus – 4 serotypes \nMost important mosquito-borne viral disease (WHO, 2019)\n4 billion people at risk, 390 million infections, yearly\n96 million symptomatic infections (WHO, 2020)\nEstimated global cost: $39 billion\n A global health concern",
+      "style": {
+        "font_size_pt": 14.0,
+        "color": "#000099"
+      },
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp12",
+      "type": "body",
+      "bbox": {
+        "x": 677.64,
+        "y": 397.93,
+        "width": 574.65,
+        "height": 121.09
+      },
+      "text": "Treatment\nNo dengue-specific antiviral treatment available\n\nPrevention\nDengvaxia® vaccine, Sanofi: approved in several countries for use in dengue-seropositive individuals only\nQDENGA® vaccine, Takeda: recently approved in Indonesia, the European Union and UK for use regardless of previous dengue exposure",
+      "style": {
+        "font_size_pt": 14.0,
+        "color": "#000099"
+      },
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp13",
+      "type": "group",
+      "bbox": {
+        "x": 283.34,
+        "y": 406.27,
+        "width": 380.52,
+        "height": 252.12
+      },
+      "text": "",
+      "style": {},
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp16",
+      "type": "body",
+      "bbox": {
+        "x": 70.3,
+        "y": 386.79,
+        "width": 257.66,
+        "height": 175.14
+      },
+      "text": "Pathogenesis\nDengue fever\nDengue hemorrhagic fever / dengue shock syndrome",
+      "style": {
+        "font_size_pt": 14.0,
+        "color": "#000099"
+      },
+      "z": 5,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp4",
+      "type": "body",
+      "bbox": {
+        "x": 663.86,
+        "y": 374.86,
+        "width": 588.42,
+        "height": 16.16
+      },
+      "text": "Houé V et al. Emerg Microbes Infect. 2019;8(1):542-555.",
+      "style": {
+        "font_size_pt": 10.0,
+        "color": "#212121"
+      },
+      "z": 6,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp11",
+      "type": "image",
+      "bbox": {
+        "x": 665.2,
+        "y": 105.83,
+        "width": 477.9,
+        "height": 261.57
+      },
+      "text": "",
+      "style": {},
+      "z": 7,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp5",
+      "type": "body",
+      "bbox": {
+        "x": 1222.08,
+        "y": 652.99,
+        "width": 47.71,
+        "height": 35.0
+      },
+      "text": "11",
+      "style": {},
+      "z": 8,
+      "placeholder_id": "SLIDE_NUMBER (13)",
+      "metadata": {
+        "role": "SLIDE_NUMBER (13)"
+      }
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

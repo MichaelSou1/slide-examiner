@@ -26,7 +26,8 @@ linter-blind render class (**G7**) that a symbolic linter and a published neural
 ## 1. Title candidates (VLM口径)
 
 1. **It's the Elicitation, Not the Eyes: Diagnosing the VLM Perception Bottleneck in Slide-Quality
-   Inspection and Routing a Symbolic–Neural Critic** ← recommended
+   Inspection and Routing a Symbolic–Neural Critic** ← recommended  
+   > Choose this one (#1)
 2. Format Suppression, Not Capability: A Perception/Reasoning Diagnosis of Rendered-Document QC
 3. Seeing but Not Saying: When VLM Slide Critics Fail at Elicitation, Not Perception
 

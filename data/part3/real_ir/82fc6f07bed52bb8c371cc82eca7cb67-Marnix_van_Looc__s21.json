@@ -1,0 +1,140 @@
+{
+  "slide_id": "82fc6f07bed52bb8c371cc82eca7cb67-Marnix_van_Looc__s21",
+  "width": 1280,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp7",
+      "type": "shape",
+      "bbox": {
+        "x": 0.14,
+        "y": 0.14,
+        "width": 0.14,
+        "height": 0.14
+      },
+      "text": "",
+      "style": {},
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp9",
+      "type": "shape",
+      "bbox": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 13.89,
+        "height": 13.89
+      },
+      "text": "",
+      "style": {},
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp33",
+      "type": "shape",
+      "bbox": {
+        "x": 837.55,
+        "y": 578.35,
+        "width": 407.61,
+        "height": 24.23
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp40",
+      "type": "body",
+      "bbox": {
+        "x": 34.84,
+        "y": 170.41,
+        "width": 629.16,
+        "height": 370.52
+      },
+      "text": "Mission\nEstablish a translational medicine group focused on exploratory drug discovery biology against flaviviruses. \n\nResearch Goal\nCollaborate on viral assays targeting different flaviviruses, preclinical animal model development, exploratory biology.​",
+      "style": {
+        "font_size_pt": 24.0,
+        "color": "#C800A1"
+      },
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp15",
+      "type": "body",
+      "bbox": {
+        "x": 0.0,
+        "y": 50.29,
+        "width": 716.0,
+        "height": 87.79
+      },
+      "text": "J&J Satellite Center for Global Health Discovery at Duke-NUS",
+      "style": {
+        "font_size_pt": 28.0,
+        "color": "#000000"
+      },
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp10",
+      "type": "image",
+      "bbox": {
+        "x": 733.33,
+        "y": 0.0,
+        "width": 546.67,
+        "height": 720.0
+      },
+      "text": "",
+      "style": {},
+      "z": 5,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp3",
+      "type": "image",
+      "bbox": {
+        "x": 777.33,
+        "y": 330.67,
+        "width": 502.67,
+        "height": 335.18
+      },
+      "text": "",
+      "style": {},
+      "z": 6,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp4",
+      "type": "body",
+      "bbox": {
+        "x": 755.33,
+        "y": 82.29,
+        "width": 502.67,
+        "height": 213.26
+      },
+      "text": "The Satellite Center opened its doors in June 2022, marked with an in-person gathering in Singapore. The scientific event brought together stakeholders across the innovation community to unpack the necessity of investing in flaviviruses research today and the ambitions of the new Satellite Center.",
+      "style": {
+        "font_size_pt": 18.0,
+        "color": "#FFFFFF"
+      },
+      "z": 7,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

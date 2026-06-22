@@ -1,0 +1,79 @@
+{
+  "slide_id": "5aa2630262e54a49db5680970f332b05-2024-05-Etapes___s14",
+  "width": 1280,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp2",
+      "type": "title",
+      "bbox": {
+        "x": 161.11,
+        "y": 103.92,
+        "width": 1118.89,
+        "height": 120.0
+      },
+      "text": "Que vérifier une fois une revue pré-sélectionnée ?",
+      "style": {},
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp3",
+      "type": "body",
+      "bbox": {
+        "x": 161.11,
+        "y": 239.0,
+        "width": 1058.44,
+        "height": 423.33
+      },
+      "text": "Vérifiez sa qualité scientifique \nLes articles déjà publiés vous semblent-ils de bonne qualité ?\nL’expertise des membres du comité de rédaction (editorial board) vous semble-t-elle pertinente ?\nQuel est le processus de peer-review (1 ou 2 reviewers ? Délais suffisants ?)\nLa revue a-t-elle une page dédiée à l’éthique ?\n\nVérifiez que votre article entre bien dans le périmètre de la revue\nPar son sujet : cf. la page « aims & scope » \nPar sa forme : cf. la page de type « guide for authors »\n\nVérifier la politique de diffusion et de libre accès de la revue\nPubliez vous en libre accès ou sur abonnement ? \nEn cas de publication en libre accès, y a-t-il des frais de publication ? \nQuels droits conservez-vous sur votre manuscrit ? Sur le PDF éditeur ?\n\nVérifiez sa qualité éditoriale\nLa revue utilise-t-elle des DOI CrossRef ? \nLa revue identifie-t-elle ses auteurs avec un identifiant ORCID ? \nLa revue est-elle indexée dans des bases ? Ces bases sont-elles sélectives ? (ex : MIAR, Scopus, Web of Science, DOAJ, Medline, etc.)",
+      "style": {},
+      "z": 1,
+      "placeholder_id": "BODY (2)",
+      "metadata": {
+        "role": "BODY (2)"
+      }
+    },
+    {
+      "element_id": "shp4",
+      "type": "body",
+      "bbox": {
+        "x": 161.39,
+        "y": 692.76,
+        "width": 302.36,
+        "height": 11.31
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": "BODY (2)",
+      "metadata": {
+        "role": "BODY (2)"
+      }
+    },
+    {
+      "element_id": "shp5",
+      "type": "body",
+      "bbox": {
+        "x": 161.11,
+        "y": 638.1,
+        "width": 977.84,
+        "height": 48.47
+      },
+      "text": "Lien utile\nTest Compass to Publish : est-ce une revue prédatrice ?",
+      "style": {
+        "font_size_pt": 12.0
+      },
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

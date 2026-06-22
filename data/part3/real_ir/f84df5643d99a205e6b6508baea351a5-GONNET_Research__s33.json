@@ -1,0 +1,82 @@
+{
+  "slide_id": "f84df5643d99a205e6b6508baea351a5-GONNET_Research__s33",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp2",
+      "type": "title",
+      "bbox": {
+        "x": 120.83,
+        "y": 103.92,
+        "width": 791.17,
+        "height": 120.0
+      },
+      "text": "Contacts",
+      "style": {},
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp3",
+      "type": "body",
+      "bbox": {
+        "x": 346.59,
+        "y": 693.02,
+        "width": 264.57,
+        "height": 11.31
+      },
+      "text": "Titre de la présentation",
+      "style": {
+        "font_size_pt": 7.0,
+        "color": "#E6332A"
+      },
+      "z": 1,
+      "placeholder_id": "FOOTER (15)",
+      "metadata": {
+        "role": "FOOTER (15)"
+      }
+    },
+    {
+      "element_id": "shp4",
+      "type": "body",
+      "bbox": {
+        "x": 120.83,
+        "y": 239.0,
+        "width": 793.83,
+        "height": 423.33
+      },
+      "text": "For any question relating to the referencing and deposit of publications in HAL Sorbonne University:\nhal@sorbonne-universite.fr\n\nFor any other question relating to publications: publications@sorbonne-universite.fr\n\nFor any questions about the data:\ndata-bsu@sorbonne-universite.fr",
+      "style": {},
+      "z": 2,
+      "placeholder_id": "BODY (2)",
+      "metadata": {
+        "role": "BODY (2)"
+      }
+    },
+    {
+      "element_id": "shp5",
+      "type": "body",
+      "bbox": {
+        "x": 121.04,
+        "y": 692.76,
+        "width": 226.77,
+        "height": 11.31
+      },
+      "text": "",
+      "style": {},
+      "z": 3,
+      "placeholder_id": "BODY (2)",
+      "metadata": {
+        "role": "BODY (2)"
+      }
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "slide_id": "82fc6f07bed52bb8c371cc82eca7cb67-Marnix_van_Looc__s19",
+  "width": 1280,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp15",
+      "type": "image",
+      "bbox": {
+        "x": -2.36,
+        "y": -0.24,
+        "width": 1260.0,
+        "height": 720.0
+      },
+      "text": "",
+      "style": {},
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp19",
+      "type": "shape",
+      "bbox": {
+        "x": 561.4,
+        "y": -0.24,
+        "width": 718.6,
+        "height": 720.0
+      },
+      "text": "",
+      "style": {},
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp2",
+      "type": "body",
+      "bbox": {
+        "x": 1216.44,
+        "y": 664.88,
+        "width": 47.71,
+        "height": 35.0
+      },
+      "text": "20",
+      "style": {},
+      "z": 2,
+      "placeholder_id": "SLIDE_NUMBER (13)",
+      "metadata": {
+        "role": "SLIDE_NUMBER (13)"
+      }
+    },
+    {
+      "element_id": "shp11",
+      "type": "shape",
+      "bbox": {
+        "x": 25.4,
+        "y": 34.42,
+        "width": 553.12,
+        "height": 630.46
+      },
+      "text": "",
+      "style": {},
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp14",
+      "type": "shape",
+      "bbox": {
+        "x": 899.84,
+        "y": 184.93,
+        "width": 240.1,
+        "height": 37.63
+      },
+      "text": "",
+      "style": {},
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp20",
+      "type": "body",
+      "bbox": {
+        "x": 640.26,
+        "y": 138.92,
+        "width": 564.59,
+        "height": 319.89
+      },
+      "text": "The J&J Centers for Global Health Discovery are an  essential pillar  of the J&J GPH discovery ecosystem, aimed at establishing innovative public private partnerships that drive effective discovery and early-stage translational research in the \u000bfield of public health.”",
+      "style": {
+        "font_size_pt": 24.0,
+        "color": "#FFFFFF"
+      },
+      "z": 5,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp3",
+      "type": "shape",
+      "bbox": {
+        "x": 671.74,
+        "y": 507.26,
+        "width": 113.17,
+        "height": 113.17
+      },
+      "text": "",
+      "style": {},
+      "z": 6,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp21",
+      "type": "body",
+      "bbox": {
+        "x": 794.85,
+        "y": 519.54,
+        "width": 365.85,
+        "height": 77.55
+      },
+      "text": "Ruxandra Draghia Akli, MD, PhD \nGlobal Head \nGlobal Public Health R&D",
+      "style": {
+        "font_size_pt": 14.0,
+        "color": "#FFFFFF"
+      },
+      "z": 7,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp18",
+      "type": "body",
+      "bbox": {
+        "x": 575.9,
+        "y": 56.52,
+        "width": 84.01,
+        "height": 242.34
+      },
+      "text": "“",
+      "style": {
+        "font_size_pt": 144.0,
+        "color": "#FFFFFF"
+      },
+      "z": 8,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp12",
+      "type": "body",
+      "bbox": {
+        "x": 428.39,
+        "y": 672.66,
+        "width": 139.0,
+        "height": 25.85
+      },
+      "text": "CONFIDENTIAL",
+      "style": {
+        "font_size_pt": 10.0,
+        "color": "#595959"
+      },
+      "z": 9,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

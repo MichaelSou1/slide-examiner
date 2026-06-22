@@ -1,0 +1,211 @@
+{
+  "slide_id": "82fc6f07bed52bb8c371cc82eca7cb67-Marnix_van_Looc__s20",
+  "width": 1280,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp8",
+      "type": "image",
+      "bbox": {
+        "x": 717.08,
+        "y": 130.54,
+        "width": 505.0,
+        "height": 506.92
+      },
+      "text": "",
+      "style": {},
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp7",
+      "type": "shape",
+      "bbox": {
+        "x": 0.14,
+        "y": 0.14,
+        "width": 0.14,
+        "height": 0.14
+      },
+      "text": "",
+      "style": {},
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp9",
+      "type": "shape",
+      "bbox": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 13.89,
+        "height": 13.89
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp10",
+      "type": "image",
+      "bbox": {
+        "x": 141.39,
+        "y": 232.84,
+        "width": 436.98,
+        "height": 367.35
+      },
+      "text": "",
+      "style": {},
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp11",
+      "type": "body",
+      "bbox": {
+        "x": 70.3,
+        "y": 150.24,
+        "width": 621.91,
+        "height": 74.32
+      },
+      "text": "DENV, ZIKV, JEV, WNV and YFV are the flaviviruses with the highest impact on public health to date*",
+      "style": {
+        "font_size_pt": 20.0,
+        "color": "#212121"
+      },
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp12",
+      "type": "body",
+      "bbox": {
+        "x": 328.58,
+        "y": 596.66,
+        "width": 259.36,
+        "height": 25.85
+      },
+      "text": "*Pierson et al. 2020, Nature Microbiology",
+      "style": {
+        "font_size_pt": 10.0,
+        "color": "#212121"
+      },
+      "z": 5,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp6",
+      "type": "body",
+      "bbox": {
+        "x": 1222.08,
+        "y": 662.99,
+        "width": 47.71,
+        "height": 35.0
+      },
+      "text": "21",
+      "style": {},
+      "z": 6,
+      "placeholder_id": "SLIDE_NUMBER (13)",
+      "metadata": {
+        "role": "SLIDE_NUMBER (13)"
+      }
+    },
+    {
+      "element_id": "shp2",
+      "type": "shape",
+      "bbox": {
+        "x": 717.08,
+        "y": 129.99,
+        "width": 505.0,
+        "height": 507.47
+      },
+      "text": "",
+      "style": {},
+      "z": 7,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp13",
+      "type": "body",
+      "bbox": {
+        "x": 70.3,
+        "y": 33.18,
+        "width": 1166.0,
+        "height": 76.34
+      },
+      "text": "Flaviviruses are a major unmet medical need",
+      "style": {
+        "font_size_pt": 24.0,
+        "color": "#212121"
+      },
+      "z": 8,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp52",
+      "type": "body",
+      "bbox": {
+        "x": 775.54,
+        "y": 167.02,
+        "width": 414.36,
+        "height": 24.23
+      },
+      "text": "Impact potential:",
+      "style": {
+        "font_size_pt": 20.0,
+        "color": "#FFFFFF"
+      },
+      "z": 9,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp15",
+      "type": "body",
+      "bbox": {
+        "x": 775.54,
+        "y": 209.72,
+        "width": 414.36,
+        "height": 402.29
+      },
+      "text": "Flaviviruses causes >400 million infections each year\nHalf of the world’s population is at-risk of becoming infected with flaviviruses including both LMICs and developed countries\nNo flavivirus-specific treatment available and no licensed vaccines for ZIKV and WNV\nClimate change, globalization, and urbanization are increasing flavivirus incidence globally",
+      "style": {
+        "font_size_pt": 18.0,
+        "color": "#FFFFFF"
+      },
+      "z": 10,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp3",
+      "type": "body",
+      "bbox": {
+        "x": 583.8,
+        "y": 672.14,
+        "width": 139.0,
+        "height": 25.85
+      },
+      "text": "CONFIDENTIAL",
+      "style": {
+        "font_size_pt": 10.0,
+        "color": "#595959"
+      },
+      "z": 11,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

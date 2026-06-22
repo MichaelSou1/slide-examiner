@@ -1,0 +1,90 @@
+{
+  "slide_id": "1c97b66974ae1a5985c6dc360dbdf9ae-overview__s7",
+  "width": 1280,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp23",
+      "type": "image",
+      "bbox": {
+        "x": 117.67,
+        "y": 304.36,
+        "width": 438.08,
+        "height": 399.14
+      },
+      "text": "",
+      "style": {},
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp3",
+      "type": "shape",
+      "bbox": {
+        "x": 0.0,
+        "y": 19.8,
+        "width": 1280.0,
+        "height": 59.36
+      },
+      "text": "",
+      "style": {
+        "fill_color": "#00205B"
+      },
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp4",
+      "type": "body",
+      "bbox": {
+        "x": 388.38,
+        "y": 12.33,
+        "width": 440.29,
+        "height": 74.32
+      },
+      "text": "Assembled Module",
+      "style": {
+        "font_size_pt": 40.0
+      },
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp10",
+      "type": "group",
+      "bbox": {
+        "x": 60.2,
+        "y": 129.38,
+        "width": 543.09,
+        "height": 187.68
+      },
+      "text": "",
+      "style": {},
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp22",
+      "type": "image",
+      "bbox": {
+        "x": 640.0,
+        "y": 224.32,
+        "width": 571.07,
+        "height": 354.09
+      },
+      "text": "",
+      "style": {},
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

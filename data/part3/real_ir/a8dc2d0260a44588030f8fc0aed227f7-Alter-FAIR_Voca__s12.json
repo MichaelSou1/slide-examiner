@@ -1,0 +1,45 @@
+{
+  "slide_id": "a8dc2d0260a44588030f8fc0aed227f7-Alter-FAIR_Voca__s12",
+  "width": 1280,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp153",
+      "type": "title",
+      "bbox": {
+        "x": 88.0,
+        "y": 24.35,
+        "width": 1104.0,
+        "height": 64.62
+      },
+      "text": "FAIR Vocabularies in the SDMX community",
+      "style": {},
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp154",
+      "type": "body",
+      "bbox": {
+        "x": 88.0,
+        "y": 102.96,
+        "width": 1104.0,
+        "height": 592.7
+      },
+      "text": "SDMX was created to standardize the exchange of data\nSDMX is endorsed by international authorities, like the UN Statistical Commission, and is an ISO standard\nSDMX registries share data and metadata\nRegistries are at international organizations (UN, OECD, ILO, World Bank…)\nDistribute SDMX concepts, codelists, and data structure definitions\nAggregate data from national statistical offices, national banks, etc.\nSDMX Global Registry shares global and “cross domain” artifacts\nE.g., UN Sustainable Development Goals (SDGs) as well as code lists for the Degree of Urbanisation, Civil Status, etc.\nSDMX is close to FAIR\nOpen source software for SDMX registries deploys common APIs\nMost SDMX registries assign URNs but could move to resolvable URIs\nCommunity is moving toward federated registries\nSDMX is still more rooted in data exchange than data sharing\nCodelists are not always coordinated across data aggregators\nExtracting metadata from SDMX APIs requires detailed knowledge of SDMX conventions and practices",
+      "style": {},
+      "z": 1,
+      "placeholder_id": "BODY (2)",
+      "metadata": {
+        "role": "BODY (2)"
+      }
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

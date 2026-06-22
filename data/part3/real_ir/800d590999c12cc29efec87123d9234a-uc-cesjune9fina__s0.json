@@ -1,0 +1,106 @@
+{
+  "slide_id": "800d590999c12cc29efec87123d9234a-uc-cesjune9fina__s0",
+  "width": 1058,
+  "height": 794,
+  "elements": [
+    {
+      "element_id": "shp100",
+      "type": "shape",
+      "bbox": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 1058.31,
+        "height": 793.67
+      },
+      "text": "",
+      "style": {},
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp4",
+      "type": "image",
+      "bbox": {
+        "x": -5.69,
+        "y": 661.11,
+        "width": 196.8,
+        "height": 131.2
+      },
+      "text": "",
+      "style": {},
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp105",
+      "type": "shape",
+      "bbox": {
+        "x": 0.0,
+        "y": 102.96,
+        "width": 62.71,
+        "height": 586.87
+      },
+      "text": "",
+      "style": {
+        "fill_color": "#4C5254"
+      },
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp94",
+      "type": "image",
+      "bbox": {
+        "x": 85.33,
+        "y": 290.22,
+        "width": 418.58,
+        "height": 212.35
+      },
+      "text": "",
+      "style": {},
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp2",
+      "type": "body",
+      "bbox": {
+        "x": 546.0,
+        "y": 150.37,
+        "width": 460.48,
+        "height": 308.58
+      },
+      "text": "University of Coimbra\n“WORKING CONDITIONS, TIME USAGE AND ACADEMIC PRODUCTION DURING THE COVID-19 CRISIS“\n\n- MAIN  RESULTS",
+      "style": {
+        "font_size_pt": 25.0,
+        "color": "#7F7F7F"
+      },
+      "z": 5,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp5",
+      "type": "image",
+      "bbox": {
+        "x": 184.46,
+        "y": 706.24,
+        "width": 242.39,
+        "height": 78.03
+      },
+      "text": "",
+      "style": {},
+      "z": 6,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

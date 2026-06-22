@@ -1,0 +1,94 @@
+{
+  "slide_id": "c2e4482c41b065a9c4342a5488e695b6-novita_GIUGNO_6__s0",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp2",
+      "type": "title",
+      "bbox": {
+        "x": 17.12,
+        "y": 140.81,
+        "width": 926.67,
+        "height": 120.0
+      },
+      "text": "Qualche novità\u000bElena Giglia",
+      "style": {
+        "font_size_pt": 31.0
+      },
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp7",
+      "type": "group",
+      "bbox": {
+        "x": 14.65,
+        "y": 677.6,
+        "width": 878.4,
+        "height": 45.9
+      },
+      "text": "",
+      "style": {},
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp22",
+      "type": "body",
+      "bbox": {
+        "x": 17.12,
+        "y": 500.77,
+        "width": 132.31,
+        "height": 38.78
+      },
+      "text": "Elena Giglia",
+      "style": {
+        "font_size_pt": 18.0
+      },
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp13",
+      "type": "body",
+      "bbox": {
+        "x": 310.52,
+        "y": 21.51,
+        "width": 621.91,
+        "height": 67.86
+      },
+      "text": "Università di Torino, CUAP data steward\n6 giugno 2024",
+      "style": {
+        "font_size_pt": 18.0
+      },
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp14",
+      "type": "group",
+      "bbox": {
+        "x": 14.65,
+        "y": 543.44,
+        "width": 203.72,
+        "height": 52.88
+      },
+      "text": "",
+      "style": {},
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

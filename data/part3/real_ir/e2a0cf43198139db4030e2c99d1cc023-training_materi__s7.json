@@ -1,0 +1,108 @@
+{
+  "slide_id": "e2a0cf43198139db4030e2c99d1cc023-training_materi__s7",
+  "width": 960,
+  "height": 540,
+  "elements": [
+    {
+      "element_id": "shp174",
+      "type": "image",
+      "bbox": {
+        "x": 156.53,
+        "y": 198.42,
+        "width": 757.95,
+        "height": 206.66
+      },
+      "text": "",
+      "style": {},
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp175",
+      "type": "body",
+      "bbox": {
+        "x": 8.72,
+        "y": 6.3,
+        "width": 894.55,
+        "height": 80.16
+      },
+      "text": "➤ Boundaries\n➛ Clues",
+      "style": {
+        "font_size_pt": 20.0,
+        "color": "#000000"
+      },
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp176",
+      "type": "body",
+      "bbox": {
+        "x": 319.15,
+        "y": 75.94,
+        "width": 209.1,
+        "height": 66.46
+      },
+      "text": "specimenCount",
+      "style": {
+        "font_size_pt": 18.0,
+        "color": "#EEEEEE",
+        "fill_color": "#79BB59"
+      },
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp177",
+      "type": "shape",
+      "bbox": {
+        "x": 211.98,
+        "y": 219.92,
+        "width": 126.14,
+        "height": 37.95
+      },
+      "text": "",
+      "style": {},
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp178",
+      "type": "shape",
+      "bbox": {
+        "x": 783.3,
+        "y": 219.92,
+        "width": 126.14,
+        "height": 37.95
+      },
+      "text": "",
+      "style": {},
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp179",
+      "type": "shape",
+      "bbox": {
+        "x": 555.69,
+        "y": 303.14,
+        "width": 126.14,
+        "height": 37.95
+      },
+      "text": "",
+      "style": {},
+      "z": 5,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

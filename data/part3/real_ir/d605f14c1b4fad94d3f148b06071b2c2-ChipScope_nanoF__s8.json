@@ -1,0 +1,107 @@
+{
+  "slide_id": "d605f14c1b4fad94d3f148b06071b2c2-ChipScope_nanoF__s8",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp12",
+      "type": "body",
+      "bbox": {
+        "x": 3.73,
+        "y": 95.4,
+        "width": 730.67,
+        "height": 106.63
+      },
+      "text": "Microfluidic layout with 2 ports – chip mounted on a dummy PCB\n\nSealing by adhesive foil",
+      "style": {
+        "font_size_pt": 20.0
+      },
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp7",
+      "type": "image",
+      "bbox": {
+        "x": 124.06,
+        "y": 205.69,
+        "width": 360.44,
+        "height": 366.65
+      },
+      "text": "",
+      "style": {},
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp8",
+      "type": "image",
+      "bbox": {
+        "x": 470.39,
+        "y": 245.48,
+        "width": 476.72,
+        "height": 260.58
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp6",
+      "type": "body",
+      "bbox": {
+        "x": 170.04,
+        "y": 23.44,
+        "width": 736.62,
+        "height": 48.47
+      },
+      "text": "Photolithographic patterning of microfluidic systems",
+      "style": {
+        "font_size_pt": 24.0
+      },
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp10",
+      "type": "body",
+      "bbox": {
+        "x": 60.54,
+        "y": 606.82,
+        "width": 166.99,
+        "height": 61.39
+      },
+      "text": "ports and tubes for fluid support",
+      "style": {
+        "font_size_pt": 16.0
+      },
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp11",
+      "type": "shape",
+      "bbox": {
+        "x": 120.96,
+        "y": 373.04,
+        "width": 106.57,
+        "height": 236.68
+      },
+      "text": "",
+      "style": {},
+      "z": 5,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

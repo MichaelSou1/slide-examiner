@@ -1,0 +1,121 @@
+{
+  "slide_id": "fa4cffb65fe50e0f7177efdcb72b7ffb-2022-11-16_USR___s3",
+  "width": 1280,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp22",
+      "type": "body",
+      "bbox": {
+        "x": 170.99,
+        "y": 203.26,
+        "width": 1041.33,
+        "height": 443.68
+      },
+      "text": "research intensive (1): publications as research output\nacademic excellence (2): field weighted citation impact\ndrive societal change (3): open accessible, \n\t\t\tused in policy documents,  \n\t\t\tused in patents,\n\t\t\tused in news\nsustainable development goals (4): filter SDG related research",
+      "style": {
+        "font_size_pt": 22.0,
+        "color": "#444444"
+      },
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp2",
+      "type": "title",
+      "bbox": {
+        "x": 15.05,
+        "y": 12.24,
+        "width": 1249.9,
+        "height": 113.39
+      },
+      "text": "Proxy Indicators",
+      "style": {},
+      "z": 1,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp4",
+      "type": "image",
+      "bbox": {
+        "x": 54.56,
+        "y": 129.2,
+        "width": 96.09,
+        "height": 91.3
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp16",
+      "type": "image",
+      "bbox": {
+        "x": 67.71,
+        "y": 388.23,
+        "width": 60.07,
+        "height": 60.07
+      },
+      "text": "",
+      "style": {},
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp18",
+      "type": "image",
+      "bbox": {
+        "x": 67.71,
+        "y": 299.93,
+        "width": 60.07,
+        "height": 60.07
+      },
+      "text": "",
+      "style": {},
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp20",
+      "type": "image",
+      "bbox": {
+        "x": 67.71,
+        "y": 220.5,
+        "width": 60.07,
+        "height": 60.07
+      },
+      "text": "",
+      "style": {},
+      "z": 5,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp13",
+      "type": "image",
+      "bbox": {
+        "x": 67.68,
+        "y": 590.8,
+        "width": 60.09,
+        "height": 60.09
+      },
+      "text": "",
+      "style": {},
+      "z": 6,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

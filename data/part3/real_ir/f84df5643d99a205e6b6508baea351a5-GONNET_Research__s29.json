@@ -1,0 +1,75 @@
+{
+  "slide_id": "f84df5643d99a205e6b6508baea351a5-GONNET_Research__s29",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp2",
+      "type": "title",
+      "bbox": {
+        "x": 120.83,
+        "y": 57.6,
+        "width": 791.17,
+        "height": 151.2
+      },
+      "text": "Peer Community in",
+      "style": {},
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp3",
+      "type": "body",
+      "bbox": {
+        "x": 346.59,
+        "y": 693.02,
+        "width": 264.57,
+        "height": 11.31
+      },
+      "text": "Titre de la présentation",
+      "style": {},
+      "z": 1,
+      "placeholder_id": "FOOTER (15)",
+      "metadata": {
+        "role": "FOOTER (15)"
+      }
+    },
+    {
+      "element_id": "shp4",
+      "type": "image",
+      "bbox": {
+        "x": 120.83,
+        "y": 216.36,
+        "width": 564.67,
+        "height": 447.33
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp5",
+      "type": "shape",
+      "bbox": {
+        "x": 260.76,
+        "y": 533.88,
+        "width": 181.44,
+        "height": 37.8
+      },
+      "text": "",
+      "style": {},
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

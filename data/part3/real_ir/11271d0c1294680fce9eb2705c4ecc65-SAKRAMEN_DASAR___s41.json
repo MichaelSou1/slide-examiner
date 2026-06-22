@@ -1,0 +1,28 @@
+{
+  "slide_id": "11271d0c1294680fce9eb2705c4ecc65-SAKRAMEN_DASAR___s41",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp2",
+      "type": "body",
+      "bbox": {
+        "x": 16.0,
+        "y": 56.0,
+        "width": 928.0,
+        "height": 542.85
+      },
+      "text": "7.\tSakramen immamat Atau tahbisan ( sakramen persekutuan dan perutusan umat beriman katholik. / PILIHAN HIDUP",
+      "style": {
+        "font_size_pt": 60.0
+      },
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

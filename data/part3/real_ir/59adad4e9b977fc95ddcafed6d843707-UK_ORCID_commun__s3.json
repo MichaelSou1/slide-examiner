@@ -1,0 +1,96 @@
+{
+  "slide_id": "59adad4e9b977fc95ddcafed6d843707-UK_ORCID_commun__s3",
+  "width": 960,
+  "height": 540,
+  "elements": [
+    {
+      "element_id": "shp2",
+      "type": "title",
+      "bbox": {
+        "x": 37.67,
+        "y": 35.67,
+        "width": 684.33,
+        "height": 35.86
+      },
+      "text": "UK PIDs for Open Access",
+      "style": {},
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp3",
+      "type": "body",
+      "bbox": {
+        "x": 37.67,
+        "y": 109.95,
+        "width": 684.33,
+        "height": 26.85
+      },
+      "text": "Community survey highlights",
+      "style": {},
+      "z": 1,
+      "placeholder_id": "BODY (2)",
+      "metadata": {
+        "role": "BODY (2)"
+      }
+    },
+    {
+      "element_id": "shp4",
+      "type": "body",
+      "bbox": {
+        "x": 37.67,
+        "y": 150.08,
+        "width": 821.05,
+        "height": 316.42
+      },
+      "text": "Adoption\nThe technical burden and costs of integration are too high, and the perceived value of PIDs is too low\nMetadata\nMetadata needs to be predictably present, contain more consistent elements, and be reliably maintained and updated\nBenefits\nPIDs are desired across the sector for their potential to enable better interoperability and data re-use for reporting and analysis\nPriorities\nRespondents want to see PIDs being used optimally in funding systems, content platforms which host research outputs, and RIM tools",
+      "style": {
+        "font_size_pt": 16.0
+      },
+      "z": 2,
+      "placeholder_id": "OBJECT (7)",
+      "metadata": {
+        "role": "OBJECT (7)"
+      }
+    },
+    {
+      "element_id": "shp5",
+      "type": "body",
+      "bbox": {
+        "x": 37.67,
+        "y": 485.44,
+        "width": 20.8,
+        "height": 37.8
+      },
+      "text": "4",
+      "style": {},
+      "z": 3,
+      "placeholder_id": "SLIDE_NUMBER (13)",
+      "metadata": {
+        "role": "SLIDE_NUMBER (13)"
+      }
+    },
+    {
+      "element_id": "shp6",
+      "type": "body",
+      "bbox": {
+        "x": 539.89,
+        "y": 24.66,
+        "width": 405.14,
+        "height": 118.75
+      },
+      "text": "We ran a survey through July and August 2020, which drew 93 responses.\n75% from the UK, 70% from research institutions, with the rest drawn from a range of community groups.",
+      "style": {},
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

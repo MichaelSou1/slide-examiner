@@ -1,0 +1,62 @@
+{
+  "slide_id": "377829fc53e13493464f3580b855dd76-Laatua_ja_vaiku__s4",
+  "width": 960,
+  "height": 540,
+  "elements": [
+    {
+      "element_id": "shp86",
+      "type": "title",
+      "bbox": {
+        "x": 32.72,
+        "y": 46.72,
+        "width": 894.55,
+        "height": 60.13
+      },
+      "text": "FAIR-principerna och forskaren",
+      "style": {
+        "color": "#008568"
+      },
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp87",
+      "type": "body",
+      "bbox": {
+        "x": 32.72,
+        "y": 111.49,
+        "width": 894.55,
+        "height": 358.68
+      },
+      "text": "Forskaren kan närma sig ämnet genom att fundera över hur väl en annan forskare skulle kunna replikera det utförda arbetet: Går det att hitta alla data och metoder, är de ömsesidigt förståeliga och användbara?\nForskningsfinansiärer och vetenskapliga förläggare kan förutsätta att FAIR-principerna efterlevs och ifrågavarande data hanteras.\nSyftet med anvisningarna i detta dokument är att stödja forskaren i planeringen av sitt arbete, så att det blir så enkelt som möjligt att efterleva FAIR-principerna. I slutet av varje kapitel finns forskarens checklista gällande kapitlets ämnen.",
+      "style": {},
+      "z": 1,
+      "placeholder_id": "BODY (2)",
+      "metadata": {
+        "role": "BODY (2)"
+      }
+    },
+    {
+      "element_id": "shp88",
+      "type": "image",
+      "bbox": {
+        "x": 283.97,
+        "y": 432.58,
+        "width": 298.22,
+        "height": 101.21
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

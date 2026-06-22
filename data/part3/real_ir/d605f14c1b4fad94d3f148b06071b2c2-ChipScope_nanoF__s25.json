@@ -1,0 +1,44 @@
+{
+  "slide_id": "d605f14c1b4fad94d3f148b06071b2c2-ChipScope_nanoF__s25",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp2",
+      "type": "image",
+      "bbox": {
+        "x": 293.13,
+        "y": 201.24,
+        "width": 373.75,
+        "height": 249.66
+      },
+      "text": "",
+      "style": {},
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp3",
+      "type": "body",
+      "bbox": {
+        "x": 238.08,
+        "y": 541.44,
+        "width": 516.93,
+        "height": 67.86
+      },
+      "text": "Thanks for your attention",
+      "style": {
+        "font_size_pt": 36.0,
+        "fill_color": "#FFFF00"
+      },
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

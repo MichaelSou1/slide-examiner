@@ -1,0 +1,182 @@
+{
+  "slide_id": "65b9f618e026be90484c974a204ae812-04_Ivanovic_Mla__s12",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp2",
+      "type": "title",
+      "bbox": {
+        "x": 39.17,
+        "y": 9.33,
+        "width": 887.5,
+        "height": 85.33
+      },
+      "text": "TMI Application Techniques",
+      "style": {},
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp3",
+      "type": "body",
+      "bbox": {
+        "x": 37.5,
+        "y": 127.1,
+        "width": 691.98,
+        "height": 496.67
+      },
+      "text": "Drench / Bark paint\nInjection through needle inserted in sapwood\nAtmospheric pressure\nUnder high pressure\n\nDrill holes\nImplants\nInjection at atmospheric pressure\nInjection under pressure\nWithout sealing plugs\nWith sealing plugs",
+      "style": {
+        "font_size_pt": 16.0
+      },
+      "z": 1,
+      "placeholder_id": "OBJECT (7)",
+      "metadata": {
+        "role": "OBJECT (7)"
+      }
+    },
+    {
+      "element_id": "shp11",
+      "type": "image",
+      "bbox": {
+        "x": 532.92,
+        "y": 193.68,
+        "width": 189.0,
+        "height": 141.7
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp12",
+      "type": "image",
+      "bbox": {
+        "x": 646.32,
+        "y": 12.24,
+        "width": 173.88,
+        "height": 173.88
+      },
+      "text": "",
+      "style": {},
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp13",
+      "type": "image",
+      "bbox": {
+        "x": 744.6,
+        "y": 193.68,
+        "width": 186.88,
+        "height": 140.39
+      },
+      "text": "",
+      "style": {},
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp14",
+      "type": "image",
+      "bbox": {
+        "x": 646.32,
+        "y": 367.56,
+        "width": 197.2,
+        "height": 122.92
+      },
+      "text": "",
+      "style": {},
+      "z": 5,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp18",
+      "type": "shape",
+      "bbox": {
+        "x": 127.5,
+        "y": 420.0,
+        "width": 96.0,
+        "height": 96.0
+      },
+      "text": "",
+      "style": {},
+      "z": 6,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp26",
+      "type": "image",
+      "bbox": {
+        "x": 517.8,
+        "y": 511.2,
+        "width": 177.71,
+        "height": 181.44
+      },
+      "text": "",
+      "style": {},
+      "z": 7,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp27",
+      "type": "group",
+      "bbox": {
+        "x": 721.92,
+        "y": 511.2,
+        "width": 204.12,
+        "height": 151.2
+      },
+      "text": "",
+      "style": {},
+      "z": 8,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp31",
+      "type": "image",
+      "bbox": {
+        "x": 33.97,
+        "y": 511.2,
+        "width": 242.49,
+        "height": 124.52
+      },
+      "text": "",
+      "style": {},
+      "z": 9,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp32",
+      "type": "image",
+      "bbox": {
+        "x": 328.8,
+        "y": 511.2,
+        "width": 151.2,
+        "height": 183.11
+      },
+      "text": "",
+      "style": {},
+      "z": 10,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

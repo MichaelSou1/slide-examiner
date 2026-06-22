@@ -1,0 +1,130 @@
+{
+  "slide_id": "82fc6f07bed52bb8c371cc82eca7cb67-Marnix_van_Looc__s4",
+  "width": 1280,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp6",
+      "type": "image",
+      "bbox": {
+        "x": -0.0,
+        "y": 0.0,
+        "width": 435.02,
+        "height": 350.11
+      },
+      "text": "",
+      "style": {},
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp7",
+      "type": "shape",
+      "bbox": {
+        "x": 0.0,
+        "y": 348.69,
+        "width": 435.02,
+        "height": 371.31
+      },
+      "text": "",
+      "style": {},
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp8",
+      "type": "body",
+      "bbox": {
+        "x": 38.37,
+        "y": 441.03,
+        "width": 358.28,
+        "height": 140.56
+      },
+      "text": "Explore the next generation of science that takes on emerging and developing diseases of concern",
+      "style": {
+        "font_size_pt": 20.0,
+        "color": "#FFFFFF"
+      },
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp9",
+      "type": "body",
+      "bbox": {
+        "x": 37.28,
+        "y": 77.21,
+        "width": 360.47,
+        "height": 177.74
+      },
+      "text": "Accelerate breakthrough science for the treatment and prevention of major global public health threats",
+      "style": {
+        "font_size_pt": 24.0,
+        "color": "#FFFFFF"
+      },
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp10",
+      "type": "body",
+      "bbox": {
+        "x": 500.38,
+        "y": 45.11,
+        "width": 699.11,
+        "height": 350.71
+      },
+      "text": "Dengue: Accelerate our first-in-class, pan-serotype antiviral with novel mechanism of action to address the world’s fastest spreading mosquito-borne viral disease. Moving prophylaxis and treatment indications into clinical development. \n\nTuberculosis: Accelerate the development of novel anti-TB compounds as part of Johnson & Johnson’s 10-year TB initiative, delivering a shorter, simpler next generation treatment regimen.\n\nLeprosy: Finalize protocol and prepare to begin Phase 3 treatment trial, progressing a new indication for bedaquiline to help the fight against an ancient disease.",
+      "style": {
+        "font_size_pt": 16.0,
+        "color": "#1E22AA"
+      },
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp11",
+      "type": "body",
+      "bbox": {
+        "x": 500.38,
+        "y": 408.72,
+        "width": 699.11,
+        "height": 302.93
+      },
+      "text": "Coronavirus Therapeutics: Accelerate the development of novel antiviral small molecules as part of Johnson & Johnson’s commitment to fighting coronaviruses.\nAnti-Microbial Resistance: Through external partnerships, progress strategy to deliver novel antibiotics that address unmet medical needs in low-to-middle income countries through exploratory investments.\nFlavivirus Therapeutics: Development of broad-spectrum therapeutics addressing several flaviviruses at once.",
+      "style": {
+        "font_size_pt": 16.0,
+        "color": "#00A3AD"
+      },
+      "z": 5,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp3",
+      "type": "body",
+      "bbox": {
+        "x": 1222.08,
+        "y": 652.99,
+        "width": 47.71,
+        "height": 35.0
+      },
+      "text": "5",
+      "style": {},
+      "z": 6,
+      "placeholder_id": "SLIDE_NUMBER (13)",
+      "metadata": {
+        "role": "SLIDE_NUMBER (13)"
+      }
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

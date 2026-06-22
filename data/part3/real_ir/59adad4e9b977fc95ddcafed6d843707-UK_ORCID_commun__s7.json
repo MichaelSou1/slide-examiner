@@ -1,0 +1,28 @@
+{
+  "slide_id": "59adad4e9b977fc95ddcafed6d843707-UK_ORCID_commun__s7",
+  "width": 960,
+  "height": 540,
+  "elements": [
+    {
+      "element_id": "shp9",
+      "type": "body",
+      "bbox": {
+        "x": 37.82,
+        "y": 35.67,
+        "width": 513.14,
+        "height": 238.5
+      },
+      "text": "Thank you\n\nChristopher Brown\n@chriscb\nchristopher.brown@jisc.ac.uk",
+      "style": {
+        "font_size_pt": 28.0
+      },
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

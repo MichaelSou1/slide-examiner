@@ -1,0 +1,28 @@
+{
+  "slide_id": "65b9f618e026be90484c974a204ae812-04_Ivanovic_Mla__s14",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp2",
+      "type": "title",
+      "bbox": {
+        "x": 75.83,
+        "y": 462.67,
+        "width": 816.0,
+        "height": 143.0
+      },
+      "text": "Syngenta Tree Micro Injection Solutions",
+      "style": {},
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

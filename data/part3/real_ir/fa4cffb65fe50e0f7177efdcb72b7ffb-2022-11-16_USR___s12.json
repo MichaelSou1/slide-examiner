@@ -1,0 +1,60 @@
+{
+  "slide_id": "fa4cffb65fe50e0f7177efdcb72b7ffb-2022-11-16_USR___s12",
+  "width": 1280,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp2",
+      "type": "title",
+      "bbox": {
+        "x": 15.05,
+        "y": 12.24,
+        "width": 1249.9,
+        "height": 113.39
+      },
+      "text": "Co-author Collaboration: research intensive (1): publications, segmented by SDGs (4)\u000bin example: co-authorship with institutes in Least Developing Countries (LDC)",
+      "style": {
+        "font_size_pt": 24.0
+      },
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp6",
+      "type": "image",
+      "bbox": {
+        "x": 114.7,
+        "y": 116.04,
+        "width": 1062.26,
+        "height": 591.71
+      },
+      "text": "",
+      "style": {},
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp5",
+      "type": "shape",
+      "bbox": {
+        "x": 1050.06,
+        "y": 214.86,
+        "width": 161.19,
+        "height": 113.39
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "slide_id": "5aed46f009ac84854c5c1cebd08f867d-DASH_Presentati__s2",
+  "width": 960,
+  "height": 540,
+  "elements": [
+    {
+      "element_id": "shp129",
+      "type": "image",
+      "bbox": {
+        "x": 492.26,
+        "y": 307.31,
+        "width": 460.55,
+        "height": 226.38
+      },
+      "text": "",
+      "style": {},
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp130",
+      "type": "title",
+      "bbox": {
+        "x": 57.13,
+        "y": 33.98,
+        "width": 367.84,
+        "height": 25.13
+      },
+      "text": "Solar Ultraviolet Imager (SUVI) series",
+      "style": {
+        "font_size_pt": 16.0
+      },
+      "z": 1,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp131",
+      "type": "body",
+      "bbox": {
+        "x": 32.81,
+        "y": 71.57,
+        "width": 396.19,
+        "height": 150.25
+      },
+      "text": "Vendor writes and controls the ground processing algorithm (GPA) for analyzing data between L0 -> L1 \nNCEI writes Python algorithms to generate L2 products (e.g thematic maps, flare predictions) made to run on SWPC systems\nL2 products are conceived in collaboration by NCEI/SWPC",
+      "style": {
+        "font_size_pt": 12.0
+      },
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp132",
+      "type": "body",
+      "bbox": {
+        "x": 483.82,
+        "y": 73.02,
+        "width": 443.69,
+        "height": 213.26
+      },
+      "text": "Vendor writes and delivers a starting working (IDL) pipeline for data processing from L0 -> L2, but does not process data after instrument commissioning\nNCEI/SWPC translate the pipeline to Python and run separate versions:\nSWPC / NCEI generate operational / retrospective L1 and L2 products\nMain difference lies in the data used for the background images and possibility for reprocessing to account for instrument degradation",
+      "style": {
+        "font_size_pt": 12.0
+      },
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp133",
+      "type": "body",
+      "bbox": {
+        "x": 9.76,
+        "y": 4.87,
+        "width": 598.05,
+        "height": 21.01
+      },
+      "text": "A tale of two Technical Task Agreements . . .",
+      "style": {
+        "font_size_pt": 13.0
+      },
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp134",
+      "type": "image",
+      "bbox": {
+        "x": 19.97,
+        "y": 247.55,
+        "width": 428.99,
+        "height": 286.14
+      },
+      "text": "",
+      "style": {},
+      "z": 5,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp135",
+      "type": "shape",
+      "bbox": {
+        "x": 463.85,
+        "y": 38.63,
+        "width": 1.26,
+        "height": 495.06
+      },
+      "text": "",
+      "style": {},
+      "z": 6,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp136",
+      "type": "title",
+      "bbox": {
+        "x": 540.51,
+        "y": 33.98,
+        "width": 383.18,
+        "height": 25.13
+      },
+      "text": "Compact CORonagraph (CCOR) series",
+      "style": {
+        "font_size_pt": 16.0
+      },
+      "z": 7,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

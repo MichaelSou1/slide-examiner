@@ -1,0 +1,61 @@
+{
+  "slide_id": "e2a0cf43198139db4030e2c99d1cc023-training_materi__s22",
+  "width": 960,
+  "height": 540,
+  "elements": [
+    {
+      "element_id": "shp292",
+      "type": "image",
+      "bbox": {
+        "x": 168.72,
+        "y": 130.84,
+        "width": 533.92,
+        "height": 401.34
+      },
+      "text": "",
+      "style": {},
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp293",
+      "type": "body",
+      "bbox": {
+        "x": 581.51,
+        "y": 625.89,
+        "width": 314.96,
+        "height": 37.17
+      },
+      "text": "https://www.gbif.org/",
+      "style": {
+        "font_size_pt": 11.0
+      },
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp294",
+      "type": "body",
+      "bbox": {
+        "x": 11.64,
+        "y": 0.0,
+        "width": 763.37,
+        "height": 256.94
+      },
+      "text": "➤ Where do data go?\nGBIF (Global Biodiversity Information Facility)\nProvides anyone, anywhere open access to to data about all types of life on Earth",
+      "style": {
+        "font_size_pt": 24.0,
+        "color": "#000000"
+      },
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

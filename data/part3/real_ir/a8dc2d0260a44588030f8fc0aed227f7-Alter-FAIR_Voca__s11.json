@@ -1,0 +1,45 @@
+{
+  "slide_id": "a8dc2d0260a44588030f8fc0aed227f7-Alter-FAIR_Voca__s11",
+  "width": 1280,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp147",
+      "type": "title",
+      "bbox": {
+        "x": 88.0,
+        "y": 38.33,
+        "width": 1104.0,
+        "height": 93.84
+      },
+      "text": "The Ecosystem of Demographic Data",
+      "style": {},
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp148",
+      "type": "body",
+      "bbox": {
+        "x": 88.0,
+        "y": 161.06,
+        "width": 1104.0,
+        "height": 520.61
+      },
+      "text": "Demographic data is produced by two communities\nEach has its own metadata standard: SDMX and DDI\nNational and international statistical agencies (SDMX)\nStandardized on Statistical Data and Metadata eXchange (SDMX) \nSDMX is supported by the UN, OECD, ILO, IMF, World Bank, Eurostat, European Central Bank, Bank for International Settlements, and national statistical offices\nInternational agreements on standards and content are expressed in SDMX \nSurveys and other microdata (DDI)\nData Documentation Initiative (DDI)\nData production is highly decentralized and uncoordinated\nUse of DDI in data production is limited but growing\nData repositories are coordinated and standardized on DDI\nCESSDA, DataPASS, Dataverse",
+      "style": {},
+      "z": 1,
+      "placeholder_id": "BODY (2)",
+      "metadata": {
+        "role": "BODY (2)"
+      }
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

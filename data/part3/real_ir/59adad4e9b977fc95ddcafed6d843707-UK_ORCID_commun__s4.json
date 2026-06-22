@@ -1,0 +1,77 @@
+{
+  "slide_id": "59adad4e9b977fc95ddcafed6d843707-UK_ORCID_commun__s4",
+  "width": 960,
+  "height": 540,
+  "elements": [
+    {
+      "element_id": "shp280",
+      "type": "title",
+      "bbox": {
+        "x": 37.67,
+        "y": 35.67,
+        "width": 684.33,
+        "height": 35.86
+      },
+      "text": "PIDs roadmap phase 2 - workflows",
+      "style": {},
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp283",
+      "type": "body",
+      "bbox": {
+        "x": 37.67,
+        "y": 485.44,
+        "width": 20.8,
+        "height": 37.8
+      },
+      "text": "5",
+      "style": {},
+      "z": 1,
+      "placeholder_id": "SLIDE_NUMBER (13)",
+      "metadata": {
+        "role": "SLIDE_NUMBER (13)"
+      }
+    },
+    {
+      "element_id": "shp282",
+      "type": "body",
+      "bbox": {
+        "x": 462.38,
+        "y": 129.69,
+        "width": 449.92,
+        "height": 330.27
+      },
+      "text": "Understanding the perfect PID flow\n\nWe are mapping out perfect world PID-enabled workflows for our priority areas:\nFunding\nInstitutional Research Management\nContent publication (articles and data)\n\nSearching for the perfect point in real-world activities to plug PIDs in and gather metadata\n\nUncover how every participant in the chain can add value for all the others",
+      "style": {
+        "font_size_pt": 18.0
+      },
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp284",
+      "type": "image",
+      "bbox": {
+        "x": 70.11,
+        "y": 78.29,
+        "width": 369.35,
+        "height": 426.04
+      },
+      "text": "",
+      "style": {},
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

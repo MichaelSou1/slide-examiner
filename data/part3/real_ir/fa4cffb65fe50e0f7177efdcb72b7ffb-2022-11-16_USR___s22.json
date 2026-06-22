@@ -1,0 +1,78 @@
+{
+  "slide_id": "fa4cffb65fe50e0f7177efdcb72b7ffb-2022-11-16_USR___s22",
+  "width": 1280,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp1026",
+      "type": "image",
+      "bbox": {
+        "x": 700.35,
+        "y": 260.75,
+        "width": 531.65,
+        "height": 198.5
+      },
+      "text": "",
+      "style": {},
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp1028",
+      "type": "image",
+      "bbox": {
+        "x": 48.0,
+        "y": 219.99,
+        "width": 605.0,
+        "height": 280.02
+      },
+      "text": "",
+      "style": {},
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp2",
+      "type": "title",
+      "bbox": {
+        "x": 88.0,
+        "y": 38.33,
+        "width": 1104.0,
+        "height": 139.17
+      },
+      "text": "Thank you",
+      "style": {
+        "font_size_pt": 44.0
+      },
+      "z": 2,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp3",
+      "type": "body",
+      "bbox": {
+        "x": 0.0,
+        "y": 507.89,
+        "width": 1280.0,
+        "height": 197.11
+      },
+      "text": "https://bit.ly/aurora-sdgs | https://aurora-universities.eu/sdg-research/ \n\nPlay with Dashboard: \nhttps://aurora-universities.eu/sdg-research/dashboard/",
+      "style": {
+        "font_size_pt": 32.0,
+        "color": "#0095F7"
+      },
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

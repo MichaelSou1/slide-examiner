@@ -43,7 +43,8 @@ Four claims map to the three protocols:
 | **1.** Changing *elicitation* (not the model) recovers detection that pointwise+rubric suppresses; C3-vs-C0 isolates "format suppression, not capability". | Result 1: C3 rescues G7 across Qwen 9B/27B/3.6 + Gemma4 (0.50/0.93/0.52/0.75 → 0.93–1.00); replicates over 4 families. C3>C0 on real SlideAudit too (Result 2b). | 30B free-form vs pointwise on the ToC slide (A.1.2). |
 | **2.** A static per-defect router gives a hybrid that covers **strictly more** than linter-alone or VLM-alone; G7 is caught by the VLM engine while the linter misses it. | Result 2a: hybrid **8/9 @ 0.885** vs linter 5/9 @0.70, VLM 2/9 @0.57; **G7: linter 0.00 / VLM-C0 0.50 / hybrid 1.00**. | linter 0.75–1.0 on geometry; DesignLab 0.149 placement recall. |
 | **3.** The G7 blind spot is a property of *narrow* critics, not all neural rewards; a fidelity audit quantifies the "injected-but-not-rendered" hazard. | Result 3a (3-RM, n=90): DocReward G7 **0.48**, LAION-aesthetic **0.57** (both CI-spanning-chance) vs Skywork-VL **0.79** (detects). Result 3b: **45%** snapped away; snap-absorbed → gap 0.0 for **all** rewards. | snap-bug byte/structure check (Part 2); Result-1 C3 = prompted VLM also detects G7. |
-| **4.** The contribution is the **per-defect bottleneck dichotomy + the falsifiable G7 linter-blind class + real-data scoping**, not "beating DocReward". | All three Results + honest SlideAudit image-only degradation + S6 negative. | Part-1 sub-perceptual geometry; Part-2 examiner + linter routing. |
+| **4.** The contribution is the **per-defect bottleneck dichotomy + the falsifiable G7 linter-blind class + real-data scoping**, not "beating DocReward". | All four Results + honest SlideAudit image-only degradation + S6 negative. | Part-1 sub-perceptual geometry; Part-2 examiner + linter routing. |
+| **5.** The perception/capability split **replicates on real layouts** with a lossless tool oracle (closes the §8 "can't run structured eval on real slides" hole). | Result 4 (Zenodo10K, 209 real pairs, 3 models): all 3 outcomes appear — G1/G2 image-sufficient, **G6 margin perception (B 0.70 > A 0.59, structure rescues weak VLMs)**, **G3 alignment capability (A=B=C≈0.50, → linter)**; real-deck render-fidelity 0.93 (vs synthetic 45% absorbed). | Part-1 A/B/C synthetic attribution; §4 template-absorption hazard (now shown template-specific). |
 
 ## Background facts this builds on (A.1)
 
@@ -393,6 +394,69 @@ text-semantic defects (non-geometric) survive. Two consequences:
   the transfer is real, so the G7 result (blind for DocReward, detected by Skywork) is genuine, not a domain artifact.
 - We trained no scalar baseline (Protocol-3b optional path) — the published-weight multi-RM audit is the stronger,
   non-derivative evidence and the QLoRA baseline is left as future work.
+
+## Result 4 — real-layout perception/capability attribution (R2; closes the §8 hole)
+
+**The hole.** The Diagnosis (Result-1 / paper §4) runs the A/B/C modality attribution on *synthetic* slides;
+the paper's Limitations flagged that the cleanest discrimination — a **structured (image+oracle) evaluation on
+*real* slides** — was not run, because a real oracle seemed to need human annotation (labour) or model
+self-annotation (bias). We close it with **Zenodo10K** (the PPTAgent corpus, arXiv:2501.03936): real CC-licensed
+`.pptx` whose element XML is intact, so `python-pptx` extracts a **lossless** geometry/text/style oracle straight
+from the source file — no human, no self-annotation bias.
+
+**Pipeline** (all new: `scripts/part3_pptx_to_ir.py` → `part3_real_inject.py` → `part3_pc_real.py` →
+`part3_pc_real_sweep.py` → `part3_pc_real_summary.py`): 26 real decks → 505 slide IRs (px @ 96 dpi, aligned to the
+VLM-SlideEval PPTX-XML-GT convention). For a sampled slide we build a one-slide deck and inject **one single-shape
+defect in PPTX XML space** — G1 overflow (autofit off + enlarge font), G2 overlap (move a shape onto a sibling),
+G3 alignment offset (nudge one axis), G4 font-size inconsistency (resize one block vs peers), G6 margin violation
+(push a shape off the slide edge) — then render **both** the clean and defective one-slide deck with the **same real
+renderer** (LibreOffice headless → PDF → PNG), so the paired pixel diff isolates exactly the injected defect on
+**real pixels**. A self-check drops any pair whose injection did not change the rendered pixels. **G5** (brand colour;
+real third-party decks declare no brand palette) and **G7** (already the synthetic falsifiable class; cannot be
+reproduced from a real text frame without leaking the overflow text into the oracle) are out of scope, stated
+honestly; the S-* semantic classes need content understanding to inject faithfully and stay synthetic. Final set:
+**209 paired (clean, defective) slides, 26 decks, 5 classes** (G1 45, G2 41, G3 40, G4 45, G6 38).
+*(Injection-quality gotcha, fixed: setting `shape.left` on a python-pptx placeholder that **inherits** its
+position synthesizes an `<a:off>` with the other coordinate defaulting to 0 — silently teleporting the shape; the
+geometry mutators now pin all four coords. 0/209 perpendicular-jump records after the fix.)*
+
+**Result-4b — render-fidelity on real decks re-checks the §4 hazard (`data/part3/pc_real_fidelity.json`).**
+The §4 "snap-to-master absorbs **45%** of injected geometry defects" hazard is **template-specific**: on real
+free-form decks only **7.1%** of injections are absorbed (render-fidelity rendered-rate **0.93**; per class G1 1.00
+/ G4 1.00 / G2 0.91 / G3 0.91 / G6 0.84). Real geometry renders the perturbation faithfully — exactly the regime the
+attribution needs, and a **positive control** on the §4 claim (the absorption is a property of enterprise templates,
+not of injection-on-real-layouts).
+
+**Result-4a — attribution, balanced accuracy on paired clean** (mean over 3 models / 3 families: Qwen3.5-27B,
+InternVL3.5-8B, Ovis2.5-9B; `data/part3/pc_real_summary.json`, Fig. `docs/figs/pc_real_attribution.png`):
+
+| class | A image | B oracle | C both | ΔB−A | verdict (mean) |
+|---|---|---|---|---|---|
+| G1 overflow  | **0.70** | 0.50 | 0.64 | −0.20 | image-sufficient |
+| G2 overlap   | **0.74** | 0.59 | 0.72 | −0.15 | image-sufficient |
+| G3 alignment | 0.51 | 0.49 | 0.50 | −0.03 | **capability / sub-perceptual** |
+| G4 font      | 0.61 | 0.62 | 0.62 | +0.01 | image-sufficient (ill-posed) |
+| G6 margin    | 0.59 | **0.70** | 0.66 | **+0.11** | **perception (structure rescues)** |
+
+**The three attribution outcomes the §8 experiment was meant to separate all appear, on real geometry:**
+1. **Image-sufficient** — G1 overflow, G2 overlap: a capable VLM *perceives* these directly on real renders
+   (27B A = 0.79 / 0.87, localize+repair 0.85–0.97 in C). The image is enough; structure adds nothing (B ≤ A).
+2. **Perception bottleneck, structure rescues** — **G6 margin**: the bleed is hard to *see* (mean A 0.59) but the
+   oracle, whose coordinates show the box crossing the slide boundary, **recovers** it (mean B 0.70, ΔB−A +0.11).
+   This is model-dependent: the strong 27B already *sees* the bleed (A 0.72, image-sufficient) while the weaker
+   InternVL/Ovis need the structure (A 0.50/0.54 → B 0.58/0.79). This is the exact "**missing structure, not
+   missing capability**" cell §8 said it could not isolate.
+3. **Capability / genuinely sub-perceptual** — **G3 alignment** is at chance in **every** channel for **every**
+   model (A = B = C ≈ 0.50; 27B/InternVL/Ovis all 0.47–0.53). A 20–44 px offset is invisible in the render *and*
+   the VLM cannot recover it from exact coordinates (the alignment arithmetic the symbolic linter does
+   deterministically). The structured oracle does **not** substitute for the linter — the cleanest real-data
+   confirmation of the paper's "fine geometry → linter" routing.
+
+**Takeaway.** On real layouts the perception/capability boundary the paper draws is **real and reproducible**:
+coarse geometry is image-sufficient, a margin bleed is a structure-rescuable *perception* bottleneck for weak VLMs,
+and fine alignment is a *capability* floor that neither the image nor the VLM-consumed oracle crosses — so it must
+route to the symbolic linter. Honest scoping: defects are *injected* (real geometry, real renderer, real oracle;
+not naturally-occurring), and SlideAudit remains the naturally-defective image-only probe.
 
 ## Honest scoping & negative results
 

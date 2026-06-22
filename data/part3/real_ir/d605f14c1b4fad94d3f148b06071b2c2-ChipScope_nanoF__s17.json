@@ -1,0 +1,139 @@
+{
+  "slide_id": "d605f14c1b4fad94d3f148b06071b2c2-ChipScope_nanoF__s17",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp12",
+      "type": "body",
+      "bbox": {
+        "x": 3.73,
+        "y": 95.4,
+        "width": 551.65,
+        "height": 42.01
+      },
+      "text": "Effects of long term light exposure on tissue cells",
+      "style": {
+        "font_size_pt": 20.0
+      },
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp13",
+      "type": "chart",
+      "bbox": {
+        "x": 27.17,
+        "y": 190.19,
+        "width": 480.91,
+        "height": 315.17
+      },
+      "text": "",
+      "style": {},
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp14",
+      "type": "body",
+      "bbox": {
+        "x": 15.4,
+        "y": 157.97,
+        "width": 479.09,
+        "height": 29.08
+      },
+      "text": "High throughput detection of intracellular peroxide in living cells",
+      "style": {
+        "font_size_pt": 12.0
+      },
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp16",
+      "type": "shape",
+      "bbox": {
+        "x": 461.82,
+        "y": 174.92,
+        "width": 448.37,
+        "height": 347.65
+      },
+      "text": "",
+      "style": {},
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp17",
+      "type": "body",
+      "bbox": {
+        "x": 470.6,
+        "y": 157.97,
+        "width": 489.4,
+        "height": 29.08
+      },
+      "text": "High throughput detection of light induced apoptosis",
+      "style": {
+        "font_size_pt": 12.0
+      },
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp18",
+      "type": "body",
+      "bbox": {
+        "x": 114.72,
+        "y": 519.05,
+        "width": 301.56,
+        "height": 67.86
+      },
+      "text": "strong peroxide production\u000b  in high frequency light",
+      "style": {},
+      "z": 5,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp19",
+      "type": "body",
+      "bbox": {
+        "x": 536.75,
+        "y": 519.05,
+        "width": 409.05,
+        "height": 67.86
+      },
+      "text": "high apoptosis in long term exposure, \u000b  especially at high frequency",
+      "style": {},
+      "z": 6,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp10",
+      "type": "body",
+      "bbox": {
+        "x": 170.04,
+        "y": 23.44,
+        "width": 595.2,
+        "height": 48.47
+      },
+      "text": "Evaluation of light-cell interaction",
+      "style": {
+        "font_size_pt": 24.0
+      },
+      "z": 7,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "slide_id": "fa4cffb65fe50e0f7177efdcb72b7ffb-2022-11-16_USR___s13",
+  "width": 1280,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp2",
+      "type": "title",
+      "bbox": {
+        "x": 15.05,
+        "y": 12.24,
+        "width": 1249.9,
+        "height": 113.39
+      },
+      "text": "Research excellence (2): field weighted citation impact \u000b(data source: scival.com)",
+      "style": {
+        "font_size_pt": 28.0
+      },
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp5",
+      "type": "image",
+      "bbox": {
+        "x": 110.34,
+        "y": 125.63,
+        "width": 1043.12,
+        "height": 573.98
+      },
+      "text": "",
+      "style": {},
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

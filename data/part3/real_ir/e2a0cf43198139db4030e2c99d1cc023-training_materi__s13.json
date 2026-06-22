@@ -1,0 +1,78 @@
+{
+  "slide_id": "e2a0cf43198139db4030e2c99d1cc023-training_materi__s13",
+  "width": 960,
+  "height": 540,
+  "elements": [
+    {
+      "element_id": "shp234",
+      "type": "body",
+      "bbox": {
+        "x": 121.19,
+        "y": 71.39,
+        "width": 690.27,
+        "height": 45.26
+      },
+      "text": "➧ Access by right click on material citation",
+      "style": {
+        "font_size_pt": 16.0
+      },
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp235",
+      "type": "body",
+      "bbox": {
+        "x": -6.71,
+        "y": -8.89,
+        "width": 946.08,
+        "height": 87.28
+      },
+      "text": "➤ How to parse materials citations in GGI (After splitting correctly)\n\tThis tool parses out details of individual material citations of each treatment",
+      "style": {
+        "font_size_pt": 18.0,
+        "color": "#000000"
+      },
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp236",
+      "type": "image",
+      "bbox": {
+        "x": 248.04,
+        "y": 135.09,
+        "width": 478.74,
+        "height": 364.65
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp237",
+      "type": "shape",
+      "bbox": {
+        "x": 512.23,
+        "y": 354.94,
+        "width": 29.35,
+        "height": 10.96
+      },
+      "text": "",
+      "style": {
+        "fill_color": "#F13404"
+      },
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

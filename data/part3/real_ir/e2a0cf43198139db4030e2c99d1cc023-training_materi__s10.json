@@ -1,0 +1,93 @@
+{
+  "slide_id": "e2a0cf43198139db4030e2c99d1cc023-training_materi__s10",
+  "width": 960,
+  "height": 540,
+  "elements": [
+    {
+      "element_id": "shp209",
+      "type": "image",
+      "bbox": {
+        "x": 111.43,
+        "y": 74.17,
+        "width": 565.94,
+        "height": 440.59
+      },
+      "text": "",
+      "style": {},
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp210",
+      "type": "body",
+      "bbox": {
+        "x": -7.69,
+        "y": -5.99,
+        "width": 894.55,
+        "height": 80.16
+      },
+      "text": "➤ How material citations are marked on GGI",
+      "style": {
+        "font_size_pt": 23.0,
+        "color": "#000000"
+      },
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp211",
+      "type": "shape",
+      "bbox": {
+        "x": 87.16,
+        "y": 303.17,
+        "width": 49.73,
+        "height": 25.07
+      },
+      "text": "",
+      "style": {
+        "fill_color": "#FFFFFF"
+      },
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp212",
+      "type": "shape",
+      "bbox": {
+        "x": 87.16,
+        "y": 360.87,
+        "width": 49.73,
+        "height": 23.21
+      },
+      "text": "",
+      "style": {
+        "fill_color": "#FFFFFF"
+      },
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp213",
+      "type": "shape",
+      "bbox": {
+        "x": 212.0,
+        "y": 74.17,
+        "width": 408.98,
+        "height": 30.71
+      },
+      "text": "",
+      "style": {},
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

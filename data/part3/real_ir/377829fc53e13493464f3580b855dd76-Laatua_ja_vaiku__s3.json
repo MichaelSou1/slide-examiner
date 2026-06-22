@@ -1,0 +1,50 @@
+{
+  "slide_id": "377829fc53e13493464f3580b855dd76-Laatua_ja_vaiku__s3",
+  "width": 960,
+  "height": 540,
+  "elements": [
+    {
+      "element_id": "shp80",
+      "type": "title",
+      "bbox": {
+        "x": 32.72,
+        "y": 46.72,
+        "width": 637.76,
+        "height": 60.13
+      },
+      "text": "Vad innebär FAIR-principer?",
+      "style": {
+        "color": "#008568"
+      },
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp81",
+      "type": "body",
+      "bbox": {
+        "x": 26.23,
+        "y": 111.49,
+        "width": 900.76,
+        "height": 404.5
+      },
+      "text": "Hittbarhet (Findable), tillgänglighet (Accessible), interoperabilitet (Interoperable) och återanvändningsbarhet (Reusable) är mål som när de beaktas stöder god datahantering samt forskningens kvalitet och verkningsfullhet\nMer om Fair-principerna: https://www.go-fair.org/fair-principles/ ja https://www.fairdata.fi/tietoa-fairdatasta/fair-periaatteet/ \nFAIR-principerna är avsedda för alla data, såväl kvantitativa som kvalitativa, och syftar till maskinläsbarhet och interoperabilitet för data.\nSamma principer gäller även metadata, med vilka data beskrivs och görs sökbara.\nFAIR-data är förståeliga för människan och kan även hanteras maskinellt. Till exempel är en läsarvänlig tabell i en pdf-fil inte enkel att redigera, medan en csv-fil är det. Väl strukturerade data kan till exempel kombineras med andra data av samma format eller så kan sökningar riktas till dem.",
+      "style": {
+        "font_size_pt": 19.0,
+        "color": "#595959"
+      },
+      "z": 1,
+      "placeholder_id": "BODY (2)",
+      "metadata": {
+        "role": "BODY (2)"
+      }
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

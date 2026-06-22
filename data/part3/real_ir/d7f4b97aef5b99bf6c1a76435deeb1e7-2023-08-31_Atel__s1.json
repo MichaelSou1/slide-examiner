@@ -1,0 +1,82 @@
+{
+  "slide_id": "d7f4b97aef5b99bf6c1a76435deeb1e7-2023-08-31_Atel__s1",
+  "width": 1280,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp2",
+      "type": "title",
+      "bbox": {
+        "x": 64.0,
+        "y": 12.24,
+        "width": 1152.0,
+        "height": 96.81
+      },
+      "text": "Programme",
+      "style": {},
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp7",
+      "type": "body",
+      "bbox": {
+        "x": 148.61,
+        "y": 155.83,
+        "width": 1067.39,
+        "height": 529.17
+      },
+      "text": "Introduction\nCaractéristiques d’une revue électronique\nPrésentation du logiciel OJS\nAtelier\nCréation d’un journal\nDu manuscrit à l’article publié\nAttribution des rôles\nExercices pratiques\nRésumé",
+      "style": {
+        "font_size_pt": 36.0,
+        "color": "#CF0063"
+      },
+      "z": 1,
+      "placeholder_id": "BODY (2)",
+      "metadata": {
+        "role": "BODY (2)"
+      }
+    },
+    {
+      "element_id": "shp3",
+      "type": "body",
+      "bbox": {
+        "x": 988.63,
+        "y": 20.74,
+        "width": 288.0,
+        "height": 29.3
+      },
+      "text": "2",
+      "style": {},
+      "z": 2,
+      "placeholder_id": "SLIDE_NUMBER (13)",
+      "metadata": {
+        "role": "SLIDE_NUMBER (13)"
+      }
+    },
+    {
+      "element_id": "shp8",
+      "type": "body",
+      "bbox": {
+        "x": 1146.51,
+        "y": 49.51,
+        "width": 130.12,
+        "height": 38.33
+      },
+      "text": "31.08.2023 Claivaz JB",
+      "style": {},
+      "z": 3,
+      "placeholder_id": "DATE (16)",
+      "metadata": {
+        "role": "DATE (16)"
+      }
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

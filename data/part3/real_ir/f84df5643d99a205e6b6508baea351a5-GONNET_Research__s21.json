@@ -1,0 +1,45 @@
+{
+  "slide_id": "f84df5643d99a205e6b6508baea351a5-GONNET_Research__s21",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp2",
+      "type": "title",
+      "bbox": {
+        "x": 102.01,
+        "y": 261.72,
+        "width": 771.11,
+        "height": 151.2
+      },
+      "text": "How to open the data ?",
+      "style": {},
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp3",
+      "type": "body",
+      "bbox": {
+        "x": 346.59,
+        "y": 693.02,
+        "width": 264.57,
+        "height": 11.31
+      },
+      "text": "Titre de la présentation",
+      "style": {},
+      "z": 1,
+      "placeholder_id": "FOOTER (15)",
+      "metadata": {
+        "role": "FOOTER (15)"
+      }
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

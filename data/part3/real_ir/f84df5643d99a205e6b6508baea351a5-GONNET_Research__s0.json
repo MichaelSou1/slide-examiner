@@ -1,0 +1,80 @@
+{
+  "slide_id": "f84df5643d99a205e6b6508baea351a5-GONNET_Research__s0",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp2",
+      "type": "title",
+      "bbox": {
+        "x": 120.83,
+        "y": 208.8,
+        "width": 793.83,
+        "height": 177.66
+      },
+      "text": "How can open science help fostering research integrity?",
+      "style": {
+        "font_size_pt": 48.0
+      },
+      "z": 0,
+      "placeholder_id": "CENTER_TITLE (3)",
+      "metadata": {
+        "role": "CENTER_TITLE (3)"
+      }
+    },
+    {
+      "element_id": "shp3",
+      "type": "subtitle",
+      "bbox": {
+        "x": 570.72,
+        "y": 79.54,
+        "width": 326.13,
+        "height": 42.72
+      },
+      "text": "NOVEMber 2023",
+      "style": {},
+      "z": 1,
+      "placeholder_id": "SUBTITLE (4)",
+      "metadata": {
+        "role": "SUBTITLE (4)"
+      }
+    },
+    {
+      "element_id": "shp7",
+      "type": "image",
+      "bbox": {
+        "x": 744.6,
+        "y": 602.27,
+        "width": 182.37,
+        "height": 63.81
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp8",
+      "type": "body",
+      "bbox": {
+        "x": 41.53,
+        "y": 631.97,
+        "width": 642.59,
+        "height": 48.84
+      },
+      "text": "Lea gonnet, training manager open science\nDepartment of Publications and open Acccess",
+      "style": {
+        "font_size_pt": 10.0,
+        "color": "#EAE8E5"
+      },
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

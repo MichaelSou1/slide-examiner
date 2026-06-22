@@ -1,0 +1,43 @@
+{
+  "slide_id": "ad0aaf0547329b0a1dcf9a138241d6ea-GenOAWeek2021_2__s18",
+  "width": 1280,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp123",
+      "type": "title",
+      "bbox": {
+        "x": 102.11,
+        "y": 184.59,
+        "width": 1076.24,
+        "height": 74.92
+      },
+      "text": "www.open-science.it",
+      "style": {},
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp124",
+      "type": "image",
+      "bbox": {
+        "x": 416.0,
+        "y": 280.84,
+        "width": 823.59,
+        "height": 417.83
+      },
+      "text": "",
+      "style": {},
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

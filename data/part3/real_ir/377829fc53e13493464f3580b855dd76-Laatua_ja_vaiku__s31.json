@@ -1,0 +1,64 @@
+{
+  "slide_id": "377829fc53e13493464f3580b855dd76-Laatua_ja_vaiku__s31",
+  "width": 960,
+  "height": 540,
+  "elements": [
+    {
+      "element_id": "shp296",
+      "type": "title",
+      "bbox": {
+        "x": 32.72,
+        "y": 46.72,
+        "width": 894.55,
+        "height": 60.13
+      },
+      "text": "Publicering av variabeldata",
+      "style": {
+        "color": "#008568"
+      },
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp297",
+      "type": "body",
+      "bbox": {
+        "x": 32.72,
+        "y": 98.22,
+        "width": 894.55,
+        "height": 412.94
+      },
+      "text": "Det finns olika typer av variabeldata. I kumulativa data ackumuleras materialet, och redan insamlade data ändras inte. I dynamiska data är retroaktiva ändringar också möjliga.\nI kumulativa data kan det nya materialet läggas till antingen som nya filer eller som uppdateringar av gamla filer. Kumulativa data kan publiceras i vissa tjänster. \nDatabaser som vetenskapliga material kräver särskild dokumentation, planering och underhåll. För beskrivningarna gäller dock samma rekommendationer som för publicering av statiska data.\nFör att förbli funktionella kräver databaser underhåll, som på lång sikt kan bli dyrt. Därför måste deras livscykel och underhållsarrangemang efter att finansieringen av forskningsprojekten upphör planeras på förhand.\nInteroperabilitet och utnyttjande av standarder som tillämpas inom långtidslagring förenklar vid behov överföringen av data till nya miljöer.\nMed anledning av forskningens reproducerbarhet finns det orsak att beakta behovet av exakta och entydiga hänvisningar. En permanent identifierare ska alltid styra användaren entydigt till rätta data.",
+      "style": {
+        "font_size_pt": 14.0
+      },
+      "z": 1,
+      "placeholder_id": "BODY (2)",
+      "metadata": {
+        "role": "BODY (2)"
+      }
+    },
+    {
+      "element_id": "shp2",
+      "type": "group",
+      "bbox": {
+        "x": 821.9,
+        "y": 42.07,
+        "width": 74.08,
+        "height": 69.42
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

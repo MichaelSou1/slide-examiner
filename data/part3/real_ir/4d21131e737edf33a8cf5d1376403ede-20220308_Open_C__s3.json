@@ -1,0 +1,131 @@
+{
+  "slide_id": "4d21131e737edf33a8cf5d1376403ede-20220308_Open_C__s3",
+  "width": 960,
+  "height": 540,
+  "elements": [
+    {
+      "element_id": "shp296",
+      "type": "title",
+      "bbox": {
+        "x": 99.45,
+        "y": 62.72,
+        "width": 811.81,
+        "height": 60.13
+      },
+      "text": "Open Science: Accessible, Reproducible & Inclusive…",
+      "style": {
+        "font_size_pt": 21.0,
+        "color": "#FFE599"
+      },
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp297",
+      "type": "shape",
+      "bbox": {
+        "x": 28.8,
+        "y": 121.6,
+        "width": 545.32,
+        "height": 0.28
+      },
+      "text": "",
+      "style": {},
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp298",
+      "type": "image",
+      "bbox": {
+        "x": 522.66,
+        "y": 122.85,
+        "width": 404.62,
+        "height": 404.62
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp299",
+      "type": "image",
+      "bbox": {
+        "x": -0.0,
+        "y": 524.86,
+        "width": 43.26,
+        "height": 15.14
+      },
+      "text": "",
+      "style": {},
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp300",
+      "type": "body",
+      "bbox": {
+        "x": 32.72,
+        "y": 128.43,
+        "width": 209.98,
+        "height": 351.21
+      },
+      "text": "Creates Research That Is:\nCited more \nCreates a bigger impact\nIncreases transparency \nGenerates more scholarly collaborations",
+      "style": {
+        "font_size_pt": 16.2,
+        "color": "#FFF2CC"
+      },
+      "z": 4,
+      "placeholder_id": "BODY (2)",
+      "metadata": {
+        "role": "BODY (2)"
+      }
+    },
+    {
+      "element_id": "shp301",
+      "type": "body",
+      "bbox": {
+        "x": 277.69,
+        "y": 128.43,
+        "width": 209.98,
+        "height": 351.21
+      },
+      "text": "Inclusive Science means More:\nCollaborative projects\nAccess to ‘hidden knowledge’\nEquitable Systems\nParticipation",
+      "style": {
+        "font_size_pt": 16.0,
+        "color": "#FFF2CC"
+      },
+      "z": 5,
+      "placeholder_id": "BODY (2)",
+      "metadata": {
+        "role": "BODY (2)"
+      }
+    },
+    {
+      "element_id": "shp302",
+      "type": "image",
+      "bbox": {
+        "x": 26.61,
+        "y": 41.89,
+        "width": 85.89,
+        "height": 71.85
+      },
+      "text": "",
+      "style": {},
+      "z": 6,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "slide_id": "5aa2630262e54a49db5680970f332b05-2024-05-Etapes___s30",
+  "width": 1280,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp2",
+      "type": "title",
+      "bbox": {
+        "x": 161.11,
+        "y": 103.92,
+        "width": 1054.89,
+        "height": 120.0
+      },
+      "text": "Services (Publications)",
+      "style": {},
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp3",
+      "type": "body",
+      "bbox": {
+        "x": 462.12,
+        "y": 693.02,
+        "width": 352.76,
+        "height": 11.31
+      },
+      "text": "Les bonnes pratiques de publication et d’ouverture",
+      "style": {},
+      "z": 1,
+      "placeholder_id": "FOOTER (15)",
+      "metadata": {
+        "role": "FOOTER (15)"
+      }
+    },
+    {
+      "element_id": "shp4",
+      "type": "body",
+      "bbox": {
+        "x": 280.83,
+        "y": 239.0,
+        "width": 502.8,
+        "height": 423.33
+      },
+      "text": "Questions / réponses \nhal@sorbonne-universite.fr \npublications@sorbonne-universite.fr \n\nPermanence HAL \nmardi de 14h à 15h \nvendredi de 11h à 12h \nhttps://us02web.zoom.us/j/87056231909\n\nChantiers de dépôts rétrospectifs à l’échelle d’une unité de recherche\n\nFormations \nhttps://www.sorbonne-universite.fr/lengagement-pour-la-science-ouverte",
+      "style": {},
+      "z": 2,
+      "placeholder_id": "BODY (2)",
+      "metadata": {
+        "role": "BODY (2)"
+      }
+    },
+    {
+      "element_id": "shp5",
+      "type": "body",
+      "bbox": {
+        "x": 161.39,
+        "y": 692.76,
+        "width": 302.36,
+        "height": 11.31
+      },
+      "text": "",
+      "style": {},
+      "z": 3,
+      "placeholder_id": "BODY (2)",
+      "metadata": {
+        "role": "BODY (2)"
+      }
+    },
+    {
+      "element_id": "shp6",
+      "type": "body",
+      "bbox": {
+        "x": 806.32,
+        "y": 239.0,
+        "width": 302.4,
+        "height": 347.8
+      },
+      "text": "Équipe HAL : 5 personnes\n\nMissions : \nveille sur les publications SU, \naccompagnement des chercheurs et chercheuses\nmodération des dépôts, \nchantiers de dépôts rétrospectifs, de correction et d’enrichissement de métadonnées",
+      "style": {
+        "font_size_pt": 14.0
+      },
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

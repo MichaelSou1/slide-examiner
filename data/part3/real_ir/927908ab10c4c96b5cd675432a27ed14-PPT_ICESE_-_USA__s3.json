@@ -1,0 +1,105 @@
+{
+  "slide_id": "927908ab10c4c96b5cd675432a27ed14-PPT_ICESE_-_USA__s3",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp3",
+      "type": "body",
+      "bbox": {
+        "x": 16.0,
+        "y": 0.0,
+        "width": 394.87,
+        "height": 96.94
+      },
+      "text": "2nd ICESE\nInternational Conference Earth Science and Energy",
+      "style": {
+        "color": "#FF0000"
+      },
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp5",
+      "type": "body",
+      "bbox": {
+        "x": 411.64,
+        "y": 14.54,
+        "width": 549.13,
+        "height": 67.86
+      },
+      "text": "RESULTS AND DISCUSSION",
+      "style": {
+        "font_size_pt": 36.0
+      },
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp8",
+      "type": "image",
+      "bbox": {
+        "x": 304.0,
+        "y": 622.17,
+        "width": 352.0,
+        "height": 97.83
+      },
+      "text": "",
+      "style": {},
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp2",
+      "type": "body",
+      "bbox": {
+        "x": 336.0,
+        "y": 129.22,
+        "width": 234.55,
+        "height": 38.78
+      },
+      "text": "aqueous stability test",
+      "style": {},
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp7",
+      "type": "table",
+      "bbox": {
+        "x": 144.0,
+        "y": 184.0,
+        "width": 680.0,
+        "height": 219.15
+      },
+      "text": "Surfactant Concentration (%) | Brine Concentration (PPM) |  |  |  |  | Information\n | 1000 | 2000 | 3000 | 4000 | 5000 | \n0.1 | Clear | Clear | Clear | Clear | Clear | Qualify\n0.5 | Clear | Clear | Clear | Clear | Clear | Qualify\n1.0 | Clear | Clear | Clear | Clear | Clear | Qualify\n1.5 | Clear | Clear | Clear | Clear | Clear | Qualify\n2.0 | Clear | Clear | Clear | Clear | Clear | Qualify",
+      "style": {},
+      "z": 5,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp13",
+      "type": "body",
+      "bbox": {
+        "x": 64.0,
+        "y": 440.0,
+        "width": 872.0,
+        "height": 155.1
+      },
+      "text": "The purpose of the compatibility test is to determine the solubility of surfactants with formation water.\nThis test was carried out by means of 0.6 ml of surfactant and 9.4 ml of formation water, shaken until homogeneous and then allowed to stand for 3 days and observed.",
+      "style": {},
+      "z": 6,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

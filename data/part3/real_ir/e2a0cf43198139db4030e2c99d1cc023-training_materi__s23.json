@@ -1,0 +1,74 @@
+{
+  "slide_id": "e2a0cf43198139db4030e2c99d1cc023-training_materi__s23",
+  "width": 960,
+  "height": 540,
+  "elements": [
+    {
+      "element_id": "shp299",
+      "type": "image",
+      "bbox": {
+        "x": 48.1,
+        "y": 42.77,
+        "width": 440.61,
+        "height": 485.28
+      },
+      "text": "",
+      "style": {},
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp300",
+      "type": "image",
+      "bbox": {
+        "x": 497.5,
+        "y": 95.17,
+        "width": 429.39,
+        "height": 322.29
+      },
+      "text": "",
+      "style": {},
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp301",
+      "type": "shape",
+      "bbox": {
+        "x": 787.11,
+        "y": 161.06,
+        "width": 42.9,
+        "height": 12.22
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp302",
+      "type": "body",
+      "bbox": {
+        "x": 32.0,
+        "y": 0.0,
+        "width": 807.4,
+        "height": 51.72
+      },
+      "text": "GBIF",
+      "style": {
+        "font_size_pt": 20.0,
+        "color": "#000000"
+      },
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "slide_id": "ad0aaf0547329b0a1dcf9a138241d6ea-GenOAWeek2021_2__s9",
+  "width": 1280,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp2",
+      "type": "body",
+      "bbox": {
+        "x": 53.44,
+        "y": 124.72,
+        "width": 1171.12,
+        "height": 499.77
+      },
+      "text": "training and support: il supporto, la consulenza e la formazione su Open Science, principi FAIR ed EOSC;\nempowerment: favorire l’integrazione dell’open science all’interno della pratica quotidiana dei diversi attori, attraverso l’acquisizione di competenze e la consapevolezza delle ricadute positive;\nprofessionalizzazione: progettare e promuovere la formazione strutturata e l’inserimento all’interno delle istituzioni di ricerca della nuova figura professionale del data steward;\nbest practices: favorire lo sviluppo e la condivisione delle conoscenze, di guide, linee guida, standard e buone pratiche, rendendo accessibili le risorse di formazione e informazione su Open Science, principi FAIR ed EOSC;\t\ntools and services: avere accesso a strumenti e servizi che permettano l’applicazione di buone pratiche relative all’Open Science e abilitino il FAIR by design sia tenendo conto delle specificità delle diverse comunità di ricerca sia favorendo lo scambio di esperienze tra settori.",
+      "style": {},
+      "z": 0,
+      "placeholder_id": "OBJECT (7)",
+      "metadata": {
+        "role": "OBJECT (7)"
+      }
+    },
+    {
+      "element_id": "shp3",
+      "type": "title",
+      "bbox": {
+        "x": 0.0,
+        "y": 11.34,
+        "width": 1280.0,
+        "height": 48.35
+      },
+      "text": "Un unico punto di riferimento nazionale per",
+      "style": {},
+      "z": 1,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp4",
+      "type": "body",
+      "bbox": {
+        "x": 10.08,
+        "y": 676.54,
+        "width": 1020.47,
+        "height": 37.8
+      },
+      "text": "Emma Lazzeri // GenOA Week 2021 // 29/10/2021",
+      "style": {},
+      "z": 2,
+      "placeholder_id": "FOOTER (15)",
+      "metadata": {
+        "role": "FOOTER (15)"
+      }
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

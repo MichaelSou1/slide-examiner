@@ -1,0 +1,26 @@
+{
+  "slide_id": "e2a0cf43198139db4030e2c99d1cc023-training_materi__s20",
+  "width": 960,
+  "height": 540,
+  "elements": [
+    {
+      "element_id": "shp281",
+      "type": "image",
+      "bbox": {
+        "x": 16.0,
+        "y": 145.24,
+        "width": 928.0,
+        "height": 282.02
+      },
+      "text": "",
+      "style": {},
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

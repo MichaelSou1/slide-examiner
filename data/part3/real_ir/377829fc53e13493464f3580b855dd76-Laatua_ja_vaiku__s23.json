@@ -1,0 +1,134 @@
+{
+  "slide_id": "377829fc53e13493464f3580b855dd76-Laatua_ja_vaiku__s23",
+  "width": 960,
+  "height": 540,
+  "elements": [
+    {
+      "element_id": "shp230",
+      "type": "title",
+      "bbox": {
+        "x": 32.72,
+        "y": 46.72,
+        "width": 894.55,
+        "height": 60.13
+      },
+      "text": "Data av hög kvalitet kan användas på nytt",
+      "style": {
+        "color": "#008568"
+      },
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp231",
+      "type": "image",
+      "bbox": {
+        "x": 839.69,
+        "y": 46.72,
+        "width": 64.16,
+        "height": 60.13
+      },
+      "text": "",
+      "style": {},
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp232",
+      "type": "body",
+      "bbox": {
+        "x": 67.21,
+        "y": 129.4,
+        "width": 313.01,
+        "height": 181.57
+      },
+      "text": "Maskinläsbarhet \nbeskriver om data har strukturerats så att de kan hanteras maskinellt och hanteringen är möjlig att genomföra i olika datasystem.",
+      "style": {
+        "font_size_pt": 13.0,
+        "fill_color": "#008568"
+      },
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp233",
+      "type": "body",
+      "bbox": {
+        "x": 429.68,
+        "y": 106.85,
+        "width": 371.32,
+        "height": 191.6
+      },
+      "text": "Användarrättigheter \nbeskriver hur användarrättigheterna för data har definierats och vad man kan göra med data, det vill säga i vilket användningssyfte datamaterialet kan utnyttjas.",
+      "style": {
+        "font_size_pt": 13.0,
+        "fill_color": "#008568"
+      },
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp235",
+      "type": "body",
+      "bbox": {
+        "x": 676.88,
+        "y": 302.89,
+        "width": 286.93,
+        "height": 177.45
+      },
+      "text": "Så öppet som möjligt, så begränsat som nödvändigt",
+      "style": {
+        "font_size_pt": 14.0,
+        "fill_color": "#277A8C"
+      },
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp234",
+      "type": "body",
+      "bbox": {
+        "x": 209.0,
+        "y": 298.44,
+        "width": 373.39,
+        "height": 177.45
+      },
+      "text": "Exakthet\n innebär att data är tillgängliga vid den angivna tidpunkten och kompletterade tillräckligt ofta.",
+      "style": {
+        "font_size_pt": 14.0,
+        "fill_color": "#008568"
+      },
+      "z": 5,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp236",
+      "type": "body",
+      "bbox": {
+        "x": 271.85,
+        "y": 496.99,
+        "width": 400.63,
+        "height": 33.92
+      },
+      "text": "https://www.stat.fi/org/vuosiohjelma/tietoaineistojen-laatukriteerit.html",
+      "style": {
+        "font_size_pt": 9.0
+      },
+      "z": 6,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

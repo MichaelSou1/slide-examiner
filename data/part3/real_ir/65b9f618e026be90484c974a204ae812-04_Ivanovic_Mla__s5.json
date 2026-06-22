@@ -1,0 +1,26 @@
+{
+  "slide_id": "65b9f618e026be90484c974a204ae812-04_Ivanovic_Mla__s5",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp6",
+      "type": "body",
+      "bbox": {
+        "x": 41.53,
+        "y": 480.96,
+        "width": 887.5,
+        "height": 85.33
+      },
+      "text": "Why tree injection is needed and useful today?",
+      "style": {},
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

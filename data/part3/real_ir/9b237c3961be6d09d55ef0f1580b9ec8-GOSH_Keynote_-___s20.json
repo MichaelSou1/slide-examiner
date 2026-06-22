@@ -1,0 +1,61 @@
+{
+  "slide_id": "9b237c3961be6d09d55ef0f1580b9ec8-GOSH_Keynote_-___s20",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp208",
+      "type": "body",
+      "bbox": {
+        "x": 72.64,
+        "y": 350.91,
+        "width": 790.24,
+        "height": 275.53
+      },
+      "text": "Critical mass has not been achieved for a particular technology in the same way that open hardware has been normalised for 3D printing and “maker” electronics. Targeted support is needed.\nUnderstanding how to track impact and separating the role of the hardware and of the “open” is crucial.",
+      "style": {
+        "font_size_pt": 22.0
+      },
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp209",
+      "type": "body",
+      "bbox": {
+        "x": 251.37,
+        "y": 93.56,
+        "width": 708.63,
+        "height": 179.37
+      },
+      "text": "Achieving critical mass: whether technology-focused or mission-focused",
+      "style": {
+        "font_size_pt": 30.0,
+        "color": "#763086"
+      },
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp210",
+      "type": "image",
+      "bbox": {
+        "x": 54.03,
+        "y": 101.1,
+        "width": 164.28,
+        "height": 164.28
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

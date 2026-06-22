@@ -1,0 +1,77 @@
+{
+  "slide_id": "927908ab10c4c96b5cd675432a27ed14-PPT_ICESE_-_USA__s1",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp3",
+      "type": "body",
+      "bbox": {
+        "x": 16.0,
+        "y": 0.0,
+        "width": 544.0,
+        "height": 67.86
+      },
+      "text": "2nd ICESE\nInternational Conference Earth Science and Energy",
+      "style": {
+        "color": "#FF0000"
+      },
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp5",
+      "type": "body",
+      "bbox": {
+        "x": 600.0,
+        "y": 8.22,
+        "width": 360.0,
+        "height": 67.86
+      },
+      "text": "INTRODUCTION",
+      "style": {
+        "font_size_pt": 36.0
+      },
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp7",
+      "type": "image",
+      "bbox": {
+        "x": 304.0,
+        "y": 622.17,
+        "width": 352.0,
+        "height": 97.83
+      },
+      "text": "",
+      "style": {},
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp4",
+      "type": "body",
+      "bbox": {
+        "x": 24.0,
+        "y": 104.0,
+        "width": 912.0,
+        "height": 513.77
+      },
+      "text": "The purpose of this study was to determine the suitability of a reservoir to the surfactant injection that will be carried out in that reservoir\n\nThe remaining petroleum in the reservoir during the production process using natural driving force (primary recovery and secondary recovery) which cannot be produced ranges from 60%-70% of the original volume of oil.\n\nSurfactant flooding is one of the methods used in Enhanced Oil Recovery\nSurfactants are able to reduce the surface tension between the injecting fluid and the oil",
+      "style": {
+        "font_size_pt": 24.0
+      },
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

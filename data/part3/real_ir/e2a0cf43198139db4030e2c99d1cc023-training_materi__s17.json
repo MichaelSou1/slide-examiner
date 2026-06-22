@@ -1,0 +1,28 @@
+{
+  "slide_id": "e2a0cf43198139db4030e2c99d1cc023-training_materi__s17",
+  "width": 960,
+  "height": 540,
+  "elements": [
+    {
+      "element_id": "shp262",
+      "type": "title",
+      "bbox": {
+        "x": 32.72,
+        "y": 225.81,
+        "width": 894.55,
+        "height": 88.38
+      },
+      "text": "Examples of parsing",
+      "style": {},
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

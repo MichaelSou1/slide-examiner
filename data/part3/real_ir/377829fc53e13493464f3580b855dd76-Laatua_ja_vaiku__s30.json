@@ -1,0 +1,64 @@
+{
+  "slide_id": "377829fc53e13493464f3580b855dd76-Laatua_ja_vaiku__s30",
+  "width": 960,
+  "height": 540,
+  "elements": [
+    {
+      "element_id": "shp288",
+      "type": "title",
+      "bbox": {
+        "x": 32.72,
+        "y": 28.88,
+        "width": 894.55,
+        "height": 60.13
+      },
+      "text": "Publicering av statiska data",
+      "style": {
+        "color": "#008568"
+      },
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp289",
+      "type": "body",
+      "bbox": {
+        "x": 32.72,
+        "y": 89.01,
+        "width": 894.55,
+        "height": 397.86
+      },
+      "text": "Statiska data är en oföränderlig helhet, till exempel forskningens bakgrundsmaterial eller data \u000bsom den publicerade artikeln baseras på. De kan även vara ett utdrag från andra datakällor. Till artikeln kopplas en hänvisning och information om tillgängligheten för ifrågavarande data (Data & Code availability statement).  Datasetet och versioner av det måste kunna identifieras entydigt. \nSom forskningsevidens räcker det ofta med en väl dokumenterad fil eller en samling av filer eller material, såvida det i samband med forskningen uppstår nytt material. Observera i sådana fall även program och koder samt delning av dessa.\nVälj ett transparent dokumenterat, allmänt och öppet filformat, eftersom detta skapar förutsättningar för fortsatt användning av data.\nGod dokumentation förutsätter oftast både beskrivande metadata som skapats av en människa och beskriver data, och automatiskt genererade metadata gällande de tekniska egenskaperna för data.\nOfta krävs även annan dokumentation och hänvisningar till olika källor, såsom standarder, ordlistor, metoder, koduppsättningar osv.",
+      "style": {
+        "font_size_pt": 14.0
+      },
+      "z": 1,
+      "placeholder_id": "BODY (2)",
+      "metadata": {
+        "role": "BODY (2)"
+      }
+    },
+    {
+      "element_id": "shp2",
+      "type": "group",
+      "bbox": {
+        "x": 821.9,
+        "y": 42.07,
+        "width": 74.08,
+        "height": 69.42
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

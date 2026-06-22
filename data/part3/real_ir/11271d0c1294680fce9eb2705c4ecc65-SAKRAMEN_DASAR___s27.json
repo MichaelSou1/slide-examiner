@@ -1,0 +1,29 @@
+{
+  "slide_id": "11271d0c1294680fce9eb2705c4ecc65-SAKRAMEN_DASAR___s27",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp2",
+      "type": "body",
+      "bbox": {
+        "x": 24.0,
+        "y": 24.0,
+        "width": 904.0,
+        "height": 591.32
+      },
+      "text": "3. SAKRAMEN EKARISTI\n(Yoh 6: 25-71, Mat 26:26-28, 1Kor 11:23-26, Luk 24:30-31)\nSakramen Ekaristi disebut juga Sakramen Maha Kudus atau Komuni Kudus.\nEkaristi bukanlah sekedar lambang belaka, tetapi adalah sungguh Tubuh, Darah, Jiwa dan Keallahan Yesus Kristus.",
+      "style": {
+        "font_size_pt": 36.0,
+        "color": "#FF0000"
+      },
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

@@ -1,0 +1,348 @@
+{
+  "slide_id": "82fc6f07bed52bb8c371cc82eca7cb67-Marnix_van_Looc__s6",
+  "width": 1280,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp7",
+      "type": "shape",
+      "bbox": {
+        "x": 0.17,
+        "y": 0.17,
+        "width": 0.17,
+        "height": 0.17
+      },
+      "text": "",
+      "style": {},
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp6",
+      "type": "shape",
+      "bbox": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 16.67,
+        "height": 16.67
+      },
+      "text": "",
+      "style": {
+        "fill_color": "#FFFF00"
+      },
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp10",
+      "type": "shape",
+      "bbox": {
+        "x": 1230.4,
+        "y": 258.71,
+        "width": 13.79,
+        "height": 23.6
+      },
+      "text": "",
+      "style": {},
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp23",
+      "type": "body",
+      "bbox": {
+        "x": 25.53,
+        "y": 226.96,
+        "width": 38.2,
+        "height": 25.85
+      },
+      "text": "Lab",
+      "style": {
+        "font_size_pt": 16.0,
+        "color": "#1E22AA"
+      },
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp24",
+      "type": "body",
+      "bbox": {
+        "x": 1151.05,
+        "y": 223.42,
+        "width": 92.39,
+        "height": 25.85
+      },
+      "text": "Last Mile",
+      "style": {
+        "font_size_pt": 16.0,
+        "color": "#1E22AA"
+      },
+      "z": 5,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp21",
+      "type": "body",
+      "bbox": {
+        "x": 108.99,
+        "y": 193.31,
+        "width": 262.42,
+        "height": 51.7
+      },
+      "text": "Discover and develop innovative R&D pipeline",
+      "style": {
+        "font_size_pt": 16.0,
+        "color": "#212121"
+      },
+      "z": 6,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp22",
+      "type": "shape",
+      "bbox": {
+        "x": 233.14,
+        "y": 263.6,
+        "width": 14.19,
+        "height": 13.82
+      },
+      "text": "",
+      "style": {},
+      "z": 7,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp49",
+      "type": "image",
+      "bbox": {
+        "x": 215.88,
+        "y": 134.21,
+        "width": 48.62,
+        "height": 46.51
+      },
+      "text": "",
+      "style": {},
+      "z": 8,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp15",
+      "type": "body",
+      "bbox": {
+        "x": 954.06,
+        "y": 193.31,
+        "width": 153.78,
+        "height": 51.7
+      },
+      "text": "Implement at scale",
+      "style": {
+        "font_size_pt": 16.0,
+        "color": "#212121"
+      },
+      "z": 9,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp16",
+      "type": "shape",
+      "bbox": {
+        "x": 1023.53,
+        "y": 263.6,
+        "width": 14.83,
+        "height": 13.82
+      },
+      "text": "",
+      "style": {},
+      "z": 10,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp50",
+      "type": "image",
+      "bbox": {
+        "x": 1003.25,
+        "y": 135.44,
+        "width": 48.62,
+        "height": 46.51
+      },
+      "text": "",
+      "style": {},
+      "z": 11,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp17",
+      "type": "body",
+      "bbox": {
+        "x": 515.43,
+        "y": 193.31,
+        "width": 240.82,
+        "height": 51.7
+      },
+      "text": "Create access for the most underserved",
+      "style": {
+        "font_size_pt": 16.0,
+        "color": "#212121"
+      },
+      "z": 12,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp19",
+      "type": "shape",
+      "bbox": {
+        "x": 628.43,
+        "y": 263.6,
+        "width": 14.83,
+        "height": 13.82
+      },
+      "text": "",
+      "style": {},
+      "z": 13,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp12",
+      "type": "image",
+      "bbox": {
+        "x": 609.51,
+        "y": 137.25,
+        "width": 48.62,
+        "height": 46.51
+      },
+      "text": "",
+      "style": {},
+      "z": 14,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp8",
+      "type": "group",
+      "bbox": {
+        "x": 0.28,
+        "y": 602.36,
+        "width": 1279.72,
+        "height": 42.59
+      },
+      "text": "",
+      "style": {},
+      "z": 15,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp27",
+      "type": "group",
+      "bbox": {
+        "x": 69.4,
+        "y": 288.56,
+        "width": 1135.11,
+        "height": 287.31
+      },
+      "text": "",
+      "style": {},
+      "z": 16,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp51",
+      "type": "body",
+      "bbox": {
+        "x": 64.0,
+        "y": 39.73,
+        "width": 1064.73,
+        "height": 77.55
+      },
+      "text": "We have strengthened our relationships with critical global health partners to advance our mission",
+      "style": {
+        "font_size_pt": 24.0,
+        "color": "#212121"
+      },
+      "z": 17,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp3",
+      "type": "image",
+      "bbox": {
+        "x": 904.27,
+        "y": 309.54,
+        "width": 142.59,
+        "height": 64.32
+      },
+      "text": "",
+      "style": {},
+      "z": 18,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp5",
+      "type": "image",
+      "bbox": {
+        "x": 203.03,
+        "y": 433.36,
+        "width": 93.83,
+        "height": 38.02
+      },
+      "text": "",
+      "style": {},
+      "z": 19,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp1026",
+      "type": "image",
+      "bbox": {
+        "x": 142.05,
+        "y": 343.17,
+        "width": 142.28,
+        "height": 54.11
+      },
+      "text": "",
+      "style": {},
+      "z": 20,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp13",
+      "type": "body",
+      "bbox": {
+        "x": 1222.08,
+        "y": 652.99,
+        "width": 47.71,
+        "height": 35.0
+      },
+      "text": "7",
+      "style": {},
+      "z": 21,
+      "placeholder_id": "SLIDE_NUMBER (13)",
+      "metadata": {
+        "role": "SLIDE_NUMBER (13)"
+      }
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

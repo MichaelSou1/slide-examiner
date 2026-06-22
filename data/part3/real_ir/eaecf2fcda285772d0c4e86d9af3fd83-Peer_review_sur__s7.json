@@ -1,0 +1,148 @@
+{
+  "slide_id": "eaecf2fcda285772d0c4e86d9af3fd83-Peer_review_sur__s7",
+  "width": 1280,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp12",
+      "type": "shape",
+      "bbox": {
+        "x": 810.67,
+        "y": 188.72,
+        "width": 452.35,
+        "height": 429.45
+      },
+      "text": "",
+      "style": {},
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp2",
+      "type": "title",
+      "bbox": {
+        "x": 88.0,
+        "y": 38.33,
+        "width": 1104.0,
+        "height": 139.17
+      },
+      "text": "Efficiency in peer review",
+      "style": {},
+      "z": 1,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp4",
+      "type": "chart",
+      "bbox": {
+        "x": 61.02,
+        "y": 197.26,
+        "width": 361.75,
+        "height": 357.75
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp5",
+      "type": "chart",
+      "bbox": {
+        "x": 432.77,
+        "y": 197.26,
+        "width": 330.0,
+        "height": 357.75
+      },
+      "text": "",
+      "style": {},
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp6",
+      "type": "chart",
+      "bbox": {
+        "x": 839.08,
+        "y": 197.26,
+        "width": 427.35,
+        "height": 367.57
+      },
+      "text": "",
+      "style": {},
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp7",
+      "type": "body",
+      "bbox": {
+        "x": 904.72,
+        "y": 576.82,
+        "width": 295.69,
+        "height": 38.78
+      },
+      "text": "From Peer Feedback survey",
+      "style": {},
+      "z": 5,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp8",
+      "type": "body",
+      "bbox": {
+        "x": 279.9,
+        "y": 579.39,
+        "width": 217.5,
+        "height": 38.78
+      },
+      "text": "Peer Review survey",
+      "style": {},
+      "z": 6,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp9",
+      "type": "image",
+      "bbox": {
+        "x": 20.5,
+        "y": 672.82,
+        "width": 170.74,
+        "height": 36.97
+      },
+      "text": "",
+      "style": {},
+      "z": 7,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp11",
+      "type": "body",
+      "bbox": {
+        "x": 16.98,
+        "y": 634.05,
+        "width": 177.78,
+        "height": 38.78
+      },
+      "text": "#bioPeerReview",
+      "style": {},
+      "z": 8,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

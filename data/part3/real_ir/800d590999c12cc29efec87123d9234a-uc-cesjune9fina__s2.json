@@ -1,0 +1,143 @@
+{
+  "slide_id": "800d590999c12cc29efec87123d9234a-uc-cesjune9fina__s2",
+  "width": 1058,
+  "height": 794,
+  "elements": [
+    {
+      "element_id": "shp9219",
+      "type": "body",
+      "bbox": {
+        "x": 37.48,
+        "y": 23.05,
+        "width": 916.04,
+        "height": 95.11
+      },
+      "text": "(Remote) Working conditions \n- Access to resources",
+      "style": {
+        "font_size_pt": 25.0,
+        "color": "#497C8B"
+      },
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp5",
+      "type": "shape",
+      "bbox": {
+        "x": 242.59,
+        "y": 736.59,
+        "width": 481.3,
+        "height": 44.11
+      },
+      "text": "",
+      "style": {},
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp7",
+      "type": "image",
+      "bbox": {
+        "x": 25.08,
+        "y": 709.62,
+        "width": 120.22,
+        "height": 84.05
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp8",
+      "type": "image",
+      "bbox": {
+        "x": 171.02,
+        "y": 727.45,
+        "width": 148.06,
+        "height": 49.98
+      },
+      "text": "",
+      "style": {},
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp12",
+      "type": "body",
+      "bbox": {
+        "x": 611.76,
+        "y": 116.42,
+        "width": 395.29,
+        "height": 410.4
+      },
+      "text": "Acess to some essential resources is not uniform – influenced bt gender, parental status, age and type of contract\nMen report greater accessibility to most listed resources, except access to outdoor space\n\nNegative effect of motherhood on internet speed\nNot of fatherhood \nMaternity as an importante factor hampering women´s access to all resources",
+      "style": {
+        "font_size_pt": 14.0,
+        "color": "#6D6D6D"
+      },
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp15",
+      "type": "body",
+      "bbox": {
+        "x": 20.61,
+        "y": 522.35,
+        "width": 1012.04,
+        "height": 151.53
+      },
+      "text": "Age and employment status:\nOwn working spaces and quite environments are less accessible at younger ages and to people with precarious contracts;\nYounger male academics do not experienced the relative disadvantage younger females face on access to proper housing conditions and quiet environments",
+      "style": {
+        "font_size_pt": 14.0,
+        "color": "#6D6D6D"
+      },
+      "z": 5,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp10",
+      "type": "image",
+      "bbox": {
+        "x": 85.19,
+        "y": 203.29,
+        "width": 526.58,
+        "height": 293.67
+      },
+      "text": "",
+      "style": {},
+      "z": 6,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp2",
+      "type": "body",
+      "bbox": {
+        "x": 85.19,
+        "y": 156.24,
+        "width": 427.75,
+        "height": 61.39
+      },
+      "text": "Resources for remote work (%)",
+      "style": {
+        "font_size_pt": 18.0,
+        "color": "#000000"
+      },
+      "z": 7,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

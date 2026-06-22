@@ -1,0 +1,29 @@
+{
+  "slide_id": "11271d0c1294680fce9eb2705c4ecc65-SAKRAMEN_DASAR___s10",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp2",
+      "type": "body",
+      "bbox": {
+        "x": 24.0,
+        "y": 32.0,
+        "width": 912.0,
+        "height": 707.64
+      },
+      "text": "Karena Sakramen sebagai tanda dan sarana keselamatan, maka menerima dan memahami sakramen hendaknya ditempatkan dalam kerangka iman dan didasarkan kepada iman.",
+      "style": {
+        "font_size_pt": 48.0,
+        "color": "#FF0000"
+      },
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

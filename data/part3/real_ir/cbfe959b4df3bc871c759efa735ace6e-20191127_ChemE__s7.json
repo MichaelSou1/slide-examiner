@@ -1,0 +1,50 @@
+{
+  "slide_id": "cbfe959b4df3bc871c759efa735ace6e-20191127_ChemE__s7",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp525",
+      "type": "title",
+      "bbox": {
+        "x": 185.1,
+        "y": 28.83,
+        "width": 746.08,
+        "height": 120.0
+      },
+      "text": "Upcoming",
+      "style": {
+        "font_size_pt": 44.0
+      },
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp526",
+      "type": "body",
+      "bbox": {
+        "x": 185.1,
+        "y": 168.0,
+        "width": 746.08,
+        "height": 488.0
+      },
+      "text": "Basic Programming workshops\nMonthly Coding Lunch & Data Crunch (12:00-14:00)\nMore information\nElectronic Lab Notebooks Pilot\nRSpace & eLABJournal\nApril 2019-2020\nMaking microscopy data Findable Accessible Interoperable and Re-usable (FAIR) (December 10)\nMore information",
+      "style": {
+        "font_size_pt": 24.0,
+        "color": "#00B0F0"
+      },
+      "z": 1,
+      "placeholder_id": "BODY (2)",
+      "metadata": {
+        "role": "BODY (2)"
+      }
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

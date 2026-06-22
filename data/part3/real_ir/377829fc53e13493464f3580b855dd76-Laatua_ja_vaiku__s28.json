@@ -1,0 +1,64 @@
+{
+  "slide_id": "377829fc53e13493464f3580b855dd76-Laatua_ja_vaiku__s28",
+  "width": 960,
+  "height": 540,
+  "elements": [
+    {
+      "element_id": "shp271",
+      "type": "title",
+      "bbox": {
+        "x": 32.72,
+        "y": 46.72,
+        "width": 894.55,
+        "height": 60.13
+      },
+      "text": "Val av lagrings- och publiceringstjänster",
+      "style": {
+        "color": "#008568"
+      },
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp272",
+      "type": "body",
+      "bbox": {
+        "x": 32.72,
+        "y": 120.99,
+        "width": 894.55,
+        "height": 390.83
+      },
+      "text": "FAIR-principerna förutsätter att forskningsresultaten har en permanent identifierare och att deras metadata är sökbara. \nI praktiken förutsätter detta utnyttjande av gemensamma tjänster avsedda för publicering av forskningsdata\nDefiniera minimikraven som publiceringstjänsten ska uppfylla.\nDataskydd, användbarhet, tillgänglighet, verktygsstöd, datamodeller, permanenta identifierare\nUtnyttja, om möjligt, tjänster som är specifika för olika vetenskapsområden.\nBeakta vem som kan utnyttja dina data vid ett senare tillfälle – var kan data enklare hittas?\nmaskinläsbarhet, sökbarhet för metadata\nVilka är de tillgängliga resurserna?\nKontrollera olika format, innehållets interoperabilitet och innehållets struktur\nKom ihåg att man från samma material kan skapa olika kopior för olika ändamål\nDefiniera användarrättigheter för ifrågavarande data.\nAvtalsmässiga kriterier\nFinansiärens och organisationens riktlinjer",
+      "style": {
+        "font_size_pt": 18.0
+      },
+      "z": 1,
+      "placeholder_id": "BODY (2)",
+      "metadata": {
+        "role": "BODY (2)"
+      }
+    },
+    {
+      "element_id": "shp2",
+      "type": "group",
+      "bbox": {
+        "x": 821.9,
+        "y": 42.07,
+        "width": 74.08,
+        "height": 69.42
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

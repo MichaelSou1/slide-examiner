@@ -1,0 +1,97 @@
+{
+  "slide_id": "9b237c3961be6d09d55ef0f1580b9ec8-GOSH_Keynote_-___s5",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp95",
+      "type": "shape",
+      "bbox": {
+        "x": 48.0,
+        "y": 28.7,
+        "width": 863.91,
+        "height": 120.22
+      },
+      "text": "",
+      "style": {},
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp96",
+      "type": "body",
+      "bbox": {
+        "x": 186.82,
+        "y": 106.56,
+        "width": 586.27,
+        "height": 336.66
+      },
+      "text": "❝❞\nIn academic conferences you have people that come talk for hours and then the most interesting discussions happen in the hallways. GOSH takes this whole thing and puts it the other way round, the ones in the hallways are brought to the middle, and not top down.\nAndre Chagas, interview 2019",
+      "style": {
+        "font_size_pt": 25.0,
+        "color": "#763086"
+      },
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp97",
+      "type": "body",
+      "bbox": {
+        "x": 87.81,
+        "y": 33.06,
+        "width": 775.78,
+        "height": 109.89
+      },
+      "text": "GOSH History in the Community’s Words\nhttps://thessaly.github.io/gosh-history/",
+      "style": {
+        "font_size_pt": 31.0,
+        "color": "#763086"
+      },
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp98",
+      "type": "body",
+      "bbox": {
+        "x": 171.65,
+        "y": 389.44,
+        "width": 616.69,
+        "height": 218.49
+      },
+      "text": "❝❞\nWe are going to bring the question “What is open science hardware to you?” to different cultural locations in the world, and let that question be answered in whatever way it is answered in that place.\nGreg Austic, interview 2019",
+      "style": {
+        "font_size_pt": 26.0,
+        "color": "#763086"
+      },
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp99",
+      "type": "body",
+      "bbox": {
+        "x": 28.58,
+        "y": 640.46,
+        "width": 902.83,
+        "height": 64.63
+      },
+      "text": "Arancio, Julieta C. \"Opening Up The Tools For Doing Science: The Case Of The Global Open Science Hardware Movement.\" (2020).",
+      "style": {
+        "color": "#763086"
+      },
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

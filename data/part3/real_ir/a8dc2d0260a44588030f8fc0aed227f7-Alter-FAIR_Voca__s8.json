@@ -1,0 +1,58 @@
+{
+  "slide_id": "a8dc2d0260a44588030f8fc0aed227f7-Alter-FAIR_Voca__s8",
+  "width": 1280,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp114",
+      "type": "title",
+      "bbox": {
+        "x": 88.0,
+        "y": 38.33,
+        "width": 1104.0,
+        "height": 139.17
+      },
+      "text": "Levels of Controlled Vocabularies in Population Science",
+      "style": {},
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp115",
+      "type": "table",
+      "bbox": {
+        "x": 82.78,
+        "y": 211.54,
+        "width": 1082.2,
+        "height": 422.4
+      },
+      "text": "Concept | Age | \nMeasure / Variable | Age at last birthday | Age group \n\nCode list / Value domain | (0, 1, 2, … 100) | (0-4, 5-9, 10-14, … 90 or older)\nCode mapping / Crosswalk | (0-4, 5-9, 10-14, … 65+)\n\n(0-14, 15-64, 65-85, 85+) | \n      (0-14, 15-64, 65+)",
+      "style": {},
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp116",
+      "type": "shape",
+      "bbox": {
+        "x": 766.12,
+        "y": 457.04,
+        "width": 35.16,
+        "height": 78.7
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

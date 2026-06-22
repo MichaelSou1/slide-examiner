@@ -1,0 +1,30 @@
+{
+  "slide_id": "131854ce0e149c5a8347df339a383b06-reunion06-bdenf__s1",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp3",
+      "type": "body",
+      "bbox": {
+        "x": 48.0,
+        "y": 42.48,
+        "width": 864.0,
+        "height": 600.68
+      },
+      "text": "3)     Após recebimento do material solicitado à Revista, a Secretaria Executiva encaminha pedido de Avaliação da Normalização da revista ao bibliotecário responsável;\n\n4)    Finalizada a etapa de avaliação da normalização da revista, o Coordenador da BVS Enfermagem indica e encaminha os documentos da avaliação para dois pareceristas ad hoc avaliarem o mérito – geralmente Editores de Revistas .\n\n5)    Após o resultado da avaliação, o Parecer é Homologado em Reunião do Comitê Consultivo da BVS Enfermagem ou BVS Enfermería. \n\n6)    Revista recebe o Parecer Final com as recomendações dos pareceristas e também as instruções sobre as etapas do fluxo de indexação na BASE de DADOS BDENF.",
+      "style": {
+        "font_size_pt": 20.0
+      },
+      "z": 0,
+      "placeholder_id": "OBJECT (7)",
+      "metadata": {
+        "role": "OBJECT (7)"
+      }
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

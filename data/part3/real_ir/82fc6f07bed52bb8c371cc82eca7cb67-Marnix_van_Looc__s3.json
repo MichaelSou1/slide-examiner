@@ -1,0 +1,244 @@
+{
+  "slide_id": "82fc6f07bed52bb8c371cc82eca7cb67-Marnix_van_Looc__s3",
+  "width": 1280,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp3",
+      "type": "body",
+      "bbox": {
+        "x": 1222.08,
+        "y": 652.99,
+        "width": 47.71,
+        "height": 35.0
+      },
+      "text": "4",
+      "style": {},
+      "z": 0,
+      "placeholder_id": "SLIDE_NUMBER (13)",
+      "metadata": {
+        "role": "SLIDE_NUMBER (13)"
+      }
+    },
+    {
+      "element_id": "shp4",
+      "type": "group",
+      "bbox": {
+        "x": 579.81,
+        "y": 85.75,
+        "width": 287.41,
+        "height": 322.0
+      },
+      "text": "",
+      "style": {},
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp8",
+      "type": "group",
+      "bbox": {
+        "x": 533.88,
+        "y": 92.71,
+        "width": 75.44,
+        "height": 63.63
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp9",
+      "type": "image",
+      "bbox": {
+        "x": 540.44,
+        "y": 94.12,
+        "width": 60.38,
+        "height": 60.36
+      },
+      "text": "",
+      "style": {},
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp10",
+      "type": "body",
+      "bbox": {
+        "x": 457.31,
+        "y": 108.83,
+        "width": 63.91,
+        "height": 26.36
+      },
+      "text": "Leprosy",
+      "style": {
+        "font_size_pt": 12.0,
+        "color": "#C9102E"
+      },
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp20",
+      "type": "group",
+      "bbox": {
+        "x": 324.13,
+        "y": 187.21,
+        "width": 222.6,
+        "height": 69.72
+      },
+      "text": "",
+      "style": {},
+      "z": 5,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp26",
+      "type": "group",
+      "bbox": {
+        "x": 446.85,
+        "y": 321.77,
+        "width": 279.24,
+        "height": 307.32
+      },
+      "text": "",
+      "style": {},
+      "z": 6,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp29",
+      "type": "group",
+      "bbox": {
+        "x": 200.53,
+        "y": 313.83,
+        "width": 280.58,
+        "height": 295.59
+      },
+      "text": "",
+      "style": {},
+      "z": 7,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp50",
+      "type": "group",
+      "bbox": {
+        "x": 700.17,
+        "y": 335.37,
+        "width": 284.7,
+        "height": 293.72
+      },
+      "text": "",
+      "style": {},
+      "z": 8,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp53",
+      "type": "body",
+      "bbox": {
+        "x": 36.4,
+        "y": 47.86,
+        "width": 405.04,
+        "height": 193.87
+      },
+      "text": "Global Public Health R&D fuels our global health equity agenda through \na comprehensive, integrated pipeline",
+      "style": {
+        "font_size_pt": 24.0,
+        "color": "#000000"
+      },
+      "z": 9,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp54",
+      "type": "group",
+      "bbox": {
+        "x": 966.53,
+        "y": 314.75,
+        "width": 293.75,
+        "height": 294.67
+      },
+      "text": "",
+      "style": {},
+      "z": 10,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp82",
+      "type": "group",
+      "bbox": {
+        "x": 845.87,
+        "y": 87.9,
+        "width": 240.11,
+        "height": 65.41
+      },
+      "text": "",
+      "style": {},
+      "z": 11,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp89",
+      "type": "group",
+      "bbox": {
+        "x": 892.53,
+        "y": 185.6,
+        "width": 240.09,
+        "height": 65.41
+      },
+      "text": "",
+      "style": {},
+      "z": 12,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp96",
+      "type": "shape",
+      "bbox": {
+        "x": 407.6,
+        "y": 315.16,
+        "width": 64.96,
+        "height": 65.52
+      },
+      "text": "",
+      "style": {},
+      "z": 13,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp99",
+      "type": "group",
+      "bbox": {
+        "x": 597.72,
+        "y": 26.94,
+        "width": 195.72,
+        "height": 66.68
+      },
+      "text": "",
+      "style": {},
+      "z": 14,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "slide_id": "fa4cffb65fe50e0f7177efdcb72b7ffb-2022-11-16_USR___s2",
+  "width": 1280,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp22",
+      "type": "body",
+      "bbox": {
+        "x": 320.57,
+        "y": 207.0,
+        "width": 926.76,
+        "height": 354.82
+      },
+      "text": "Aurora is a partnership of like-minded and closely collaborating \u000bresearch intensive (1) European universities,\u000b who use their academic excellence (2) \u000bto drive societal change (3) \u000band contribute to the sustainable development goals (4).",
+      "style": {
+        "font_size_pt": 22.0,
+        "color": "#444444"
+      },
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp2",
+      "type": "title",
+      "bbox": {
+        "x": 15.05,
+        "y": 12.24,
+        "width": 1249.9,
+        "height": 113.39
+      },
+      "text": "Aurora’s Collaborative Statement",
+      "style": {},
+      "z": 1,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp4",
+      "type": "image",
+      "bbox": {
+        "x": 17.41,
+        "y": 215.98,
+        "width": 303.16,
+        "height": 288.04
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp16",
+      "type": "image",
+      "bbox": {
+        "x": 260.5,
+        "y": 435.4,
+        "width": 60.07,
+        "height": 60.07
+      },
+      "text": "",
+      "style": {},
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp20",
+      "type": "image",
+      "bbox": {
+        "x": 260.5,
+        "y": 295.66,
+        "width": 60.07,
+        "height": 60.07
+      },
+      "text": "",
+      "style": {},
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp31",
+      "type": "image",
+      "bbox": {
+        "x": 260.48,
+        "y": 510.7,
+        "width": 60.09,
+        "height": 60.09
+      },
+      "text": "",
+      "style": {},
+      "z": 5,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp13",
+      "type": "image",
+      "bbox": {
+        "x": 260.5,
+        "y": 365.53,
+        "width": 60.07,
+        "height": 60.07
+      },
+      "text": "",
+      "style": {},
+      "z": 6,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

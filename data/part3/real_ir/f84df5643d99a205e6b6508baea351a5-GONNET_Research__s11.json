@@ -1,0 +1,112 @@
+{
+  "slide_id": "f84df5643d99a205e6b6508baea351a5-GONNET_Research__s11",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp3",
+      "type": "title",
+      "bbox": {
+        "x": 120.83,
+        "y": 125.64,
+        "width": 286.38,
+        "height": 98.28
+      },
+      "text": "Gold Open Access publication",
+      "style": {},
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp4",
+      "type": "body",
+      "bbox": {
+        "x": 120.35,
+        "y": 322.91,
+        "width": 287.35,
+        "height": 423.33
+      },
+      "text": "Managed entirely by the publisher\n\n\nAPC or BPC (Article / Book Processing Charges) \n~1500€ / article",
+      "style": {
+        "font_size_pt": 13.5,
+        "color": "#1D2769"
+      },
+      "z": 1,
+      "placeholder_id": "BODY (2)",
+      "metadata": {
+        "role": "BODY (2)"
+      }
+    },
+    {
+      "element_id": "shp5",
+      "type": "body",
+      "bbox": {
+        "x": 430.87,
+        "y": 647.28,
+        "width": 529.13,
+        "height": 75.59
+      },
+      "text": "Gold Open Access",
+      "style": {},
+      "z": 2,
+      "placeholder_id": "BODY (2)",
+      "metadata": {
+        "role": "BODY (2)"
+      }
+    },
+    {
+      "element_id": "shp6",
+      "type": "body",
+      "bbox": {
+        "x": 121.04,
+        "y": 692.76,
+        "width": 226.77,
+        "height": 11.31
+      },
+      "text": "",
+      "style": {},
+      "z": 3,
+      "placeholder_id": "BODY (2)",
+      "metadata": {
+        "role": "BODY (2)"
+      }
+    },
+    {
+      "element_id": "shp8",
+      "type": "image",
+      "bbox": {
+        "x": 124.65,
+        "y": 388.76,
+        "width": 39.69,
+        "height": 79.38
+      },
+      "text": "",
+      "style": {},
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp11",
+      "type": "image",
+      "bbox": {
+        "x": 498.33,
+        "y": 11.31,
+        "width": 394.21,
+        "height": 627.48
+      },
+      "text": "",
+      "style": {},
+      "z": 5,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

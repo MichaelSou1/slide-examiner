@@ -1,0 +1,81 @@
+{
+  "slide_id": "59adad4e9b977fc95ddcafed6d843707-UK_ORCID_commun__s5",
+  "width": 960,
+  "height": 540,
+  "elements": [
+    {
+      "element_id": "shp5",
+      "type": "title",
+      "bbox": {
+        "x": 37.67,
+        "y": 35.67,
+        "width": 727.69,
+        "height": 35.86
+      },
+      "text": "PIDs roadmap phase 2 - cost benefit analysis",
+      "style": {},
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp7",
+      "type": "body",
+      "bbox": {
+        "x": 37.67,
+        "y": 109.95,
+        "width": 684.33,
+        "height": 26.85
+      },
+      "text": "Highlights",
+      "style": {},
+      "z": 1,
+      "placeholder_id": "BODY (2)",
+      "metadata": {
+        "role": "BODY (2)"
+      }
+    },
+    {
+      "element_id": "shp6",
+      "type": "body",
+      "bbox": {
+        "x": 37.67,
+        "y": 150.08,
+        "width": 866.4,
+        "height": 316.42
+      },
+      "text": "We have pinpointed three areas where benefits accrue: \nMetadata re-use\nAutomation\nAggregation/analysis\nWe are currently collecting data and conducting interviews to enable us to quantify current and potential benefits from the use of PIDs\nWorkflow analysis - identify pain points in existing workflows\nData exchange mapping - scale and distribution\nBenefit quantification - time and effort savings from PID optimisations\nModelling - different adoption scenarios and timelines\nCommunity impact analysis - identify edge cases, unsupported needs and gaps",
+      "style": {
+        "font_size_pt": 16.0
+      },
+      "z": 2,
+      "placeholder_id": "OBJECT (7)",
+      "metadata": {
+        "role": "OBJECT (7)"
+      }
+    },
+    {
+      "element_id": "shp4",
+      "type": "body",
+      "bbox": {
+        "x": 37.67,
+        "y": 485.44,
+        "width": 20.8,
+        "height": 37.8
+      },
+      "text": "6",
+      "style": {},
+      "z": 3,
+      "placeholder_id": "SLIDE_NUMBER (13)",
+      "metadata": {
+        "role": "SLIDE_NUMBER (13)"
+      }
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

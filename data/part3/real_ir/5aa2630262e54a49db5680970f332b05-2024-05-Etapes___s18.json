@@ -1,0 +1,64 @@
+{
+  "slide_id": "5aa2630262e54a49db5680970f332b05-2024-05-Etapes___s18",
+  "width": 1280,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp4",
+      "type": "title",
+      "bbox": {
+        "x": 223.32,
+        "y": 155.88,
+        "width": 320.87,
+        "height": 126.0
+      },
+      "text": "Contrat éditeur : cession non exclusive",
+      "style": {
+        "font_size_pt": 31.0
+      },
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp5",
+      "type": "body",
+      "bbox": {
+        "x": 544.17,
+        "y": 103.67,
+        "width": 648.0,
+        "height": 511.67
+      },
+      "text": "",
+      "style": {},
+      "z": 1,
+      "placeholder_id": "PICTURE (18)",
+      "metadata": {
+        "role": "PICTURE (18)"
+      }
+    },
+    {
+      "element_id": "shp6",
+      "type": "body",
+      "bbox": {
+        "x": 226.13,
+        "y": 314.64,
+        "width": 309.62,
+        "height": 301.53
+      },
+      "text": "Cambridge University Press \nExemple d’un « Licence to publish » du British Journal of Psychiatry (BJPsych) du Royal college of psychiatrists",
+      "style": {},
+      "z": 2,
+      "placeholder_id": "BODY (2)",
+      "metadata": {
+        "role": "BODY (2)"
+      }
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

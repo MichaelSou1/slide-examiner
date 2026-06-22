@@ -1,0 +1,107 @@
+{
+  "slide_id": "65b9f618e026be90484c974a204ae812-04_Ivanovic_Mla__s23",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp74754",
+      "type": "title",
+      "bbox": {
+        "x": 39.17,
+        "y": 9.33,
+        "width": 887.5,
+        "height": 85.33
+      },
+      "text": "Tree Micro Injection: injection points",
+      "style": {},
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp2",
+      "type": "group",
+      "bbox": {
+        "x": 305.0,
+        "y": 164.0,
+        "width": 359.54,
+        "height": 361.68
+      },
+      "text": "",
+      "style": {},
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp18",
+      "type": "image",
+      "bbox": {
+        "x": 27.0,
+        "y": 264.02,
+        "width": 287.0,
+        "height": 186.87
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp19",
+      "type": "body",
+      "bbox": {
+        "x": 0.0,
+        "y": 559.0,
+        "width": 920.0,
+        "height": 96.94
+      },
+      "text": "Several injection points around tree trunk to cover whole canopy; \nDistance between injection points on circumference most often between 15 and 30 cm",
+      "style": {
+        "font_size_pt": 18.0
+      },
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp74755",
+      "type": "body",
+      "bbox": {
+        "x": 41.53,
+        "y": 80.28,
+        "width": 752.0,
+        "height": 76.83
+      },
+      "text": "Revive injected into sapwood is translocated in the xylem\nMain movement of water in xylem is vertical",
+      "style": {},
+      "z": 4,
+      "placeholder_id": "BODY (2)",
+      "metadata": {
+        "role": "BODY (2)"
+      }
+    },
+    {
+      "element_id": "shp20",
+      "type": "image",
+      "bbox": {
+        "x": 664.54,
+        "y": 276.34,
+        "width": 281.08,
+        "height": 187.39
+      },
+      "text": "",
+      "style": {},
+      "z": 5,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

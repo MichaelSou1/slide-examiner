@@ -1,0 +1,28 @@
+{
+  "slide_id": "11271d0c1294680fce9eb2705c4ecc65-SAKRAMEN_DASAR___s45",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp2",
+      "type": "body",
+      "bbox": {
+        "x": 24.0,
+        "y": 16.0,
+        "width": 904.0,
+        "height": 649.48
+      },
+      "text": "Mengapa kita memanggil para imam dengan sebutan Romo (Bapa)? Para Imam adalah bapa rohani Gereja. Mereka mempersembahkan hidup mereka bagi Gereja dengan mewartakan Injil dan menganugerahkan pengampunan Tuhan melalui sakramen-sakramen (1Kor 4:14-15, 1Tes 2:8-12).",
+      "style": {
+        "font_size_pt": 36.0
+      },
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

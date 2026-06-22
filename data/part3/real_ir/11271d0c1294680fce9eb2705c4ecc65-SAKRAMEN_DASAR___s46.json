@@ -1,0 +1,28 @@
+{
+  "slide_id": "11271d0c1294680fce9eb2705c4ecc65-SAKRAMEN_DASAR___s46",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp2",
+      "type": "body",
+      "bbox": {
+        "x": 24.0,
+        "y": 24.0,
+        "width": 912.0,
+        "height": 649.48
+      },
+      "text": "Mengapa para Imam hidup selibat? Para imam hidup seturut teladan dan ajaran Yesus Kristus (imam yang selibat), untuk mengurbankan kehidupan berkeluarga demi Kerajaan Allah (Mat 19:12, Luk 18:29-30, 1Kor 7).",
+      "style": {
+        "font_size_pt": 44.0
+      },
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

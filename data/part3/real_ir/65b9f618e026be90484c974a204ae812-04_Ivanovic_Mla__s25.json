@@ -1,0 +1,60 @@
+{
+  "slide_id": "65b9f618e026be90484c974a204ae812-04_Ivanovic_Mla__s25",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp2",
+      "type": "title",
+      "bbox": {
+        "x": 39.17,
+        "y": 9.33,
+        "width": 887.5,
+        "height": 85.33
+      },
+      "text": "Dicot Trees: Revive TMI",
+      "style": {},
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp3",
+      "type": "body",
+      "bbox": {
+        "x": 33.97,
+        "y": 201.24,
+        "width": 457.62,
+        "height": 391.26
+      },
+      "text": "During growing season\nInjection into root flair\nInjection points at 15-30 cm intervals around the trunk\nInjection hole: 4-6 cm deep with a 10 mm wood auger bit\nPlug in outermost layer of sapwood: sealing of injection hole\nInjection pressure <2 bars",
+      "style": {},
+      "z": 1,
+      "placeholder_id": "OBJECT (7)",
+      "metadata": {
+        "role": "OBJECT (7)"
+      }
+    },
+    {
+      "element_id": "shp5",
+      "type": "image",
+      "bbox": {
+        "x": 487.56,
+        "y": 80.28,
+        "width": 442.62,
+        "height": 295.27
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

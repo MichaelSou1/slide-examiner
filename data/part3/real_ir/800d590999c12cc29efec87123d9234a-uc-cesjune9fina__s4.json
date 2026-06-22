@@ -1,0 +1,156 @@
+{
+  "slide_id": "800d590999c12cc29efec87123d9234a-uc-cesjune9fina__s4",
+  "width": 1058,
+  "height": 794,
+  "elements": [
+    {
+      "element_id": "shp5",
+      "type": "shape",
+      "bbox": {
+        "x": 242.59,
+        "y": 736.59,
+        "width": 481.3,
+        "height": 44.11
+      },
+      "text": "",
+      "style": {},
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp7",
+      "type": "image",
+      "bbox": {
+        "x": 25.08,
+        "y": 709.62,
+        "width": 120.22,
+        "height": 84.05
+      },
+      "text": "",
+      "style": {},
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp8",
+      "type": "image",
+      "bbox": {
+        "x": 171.02,
+        "y": 727.45,
+        "width": 148.06,
+        "height": 49.98
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp10",
+      "type": "body",
+      "bbox": {
+        "x": 53.05,
+        "y": 16.57,
+        "width": 995.17,
+        "height": 93.46
+      },
+      "text": "Working conditions\n- Household work and personal time",
+      "style": {
+        "font_size_pt": 25.0,
+        "color": "#497C8B"
+      },
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp11",
+      "type": "shape",
+      "bbox": {
+        "x": 628.5,
+        "y": 187.77,
+        "width": 404.76,
+        "height": 539.68
+      },
+      "text": "",
+      "style": {},
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp12",
+      "type": "body",
+      "bbox": {
+        "x": 36.99,
+        "y": 511.41,
+        "width": 873.59,
+        "height": 153.62
+      },
+      "text": "The pandemic has disproportionately affected the personal time and dedication to domestic and care work of female academics and of younger academics with children; \nProminence of sex/gender to understand the effects of the working conditions imposed by Covid-10 pandemic.",
+      "style": {
+        "font_size_pt": 16.0,
+        "color": "#6D6D6D"
+      },
+      "z": 5,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp3",
+      "type": "body",
+      "bbox": {
+        "x": 73.02,
+        "y": 122.64,
+        "width": 912.3,
+        "height": 67.86
+      },
+      "text": "Changes in time allocation to personal and household tasks under lockdown (mean values) (N=281)",
+      "style": {
+        "font_size_pt": 18.0
+      },
+      "z": 6,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp2",
+      "type": "image",
+      "bbox": {
+        "x": 85.45,
+        "y": 187.77,
+        "width": 873.59,
+        "height": 301.94
+      },
+      "text": "",
+      "style": {},
+      "z": 7,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp13",
+      "type": "body",
+      "bbox": {
+        "x": 887.25,
+        "y": 286.29,
+        "width": 128.39,
+        "height": 80.78
+      },
+      "text": "*Scale: \n1 – Less time; \n2 – No difference; \n3 – More time.",
+      "style": {
+        "font_size_pt": 11.0
+      },
+      "z": 8,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

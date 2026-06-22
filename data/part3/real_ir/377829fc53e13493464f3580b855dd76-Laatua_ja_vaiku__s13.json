@@ -1,0 +1,45 @@
+{
+  "slide_id": "377829fc53e13493464f3580b855dd76-Laatua_ja_vaiku__s13",
+  "width": 960,
+  "height": 540,
+  "elements": [
+    {
+      "element_id": "shp149",
+      "type": "title",
+      "bbox": {
+        "x": 32.73,
+        "y": 40.63,
+        "width": 894.55,
+        "height": 215.5
+      },
+      "text": "Utvärdering av datas värde och kvalitet",
+      "style": {
+        "color": "#008568"
+      },
+      "z": 0,
+      "placeholder_id": "CENTER_TITLE (3)",
+      "metadata": {
+        "role": "CENTER_TITLE (3)"
+      }
+    },
+    {
+      "element_id": "shp150",
+      "type": "image",
+      "bbox": {
+        "x": 358.32,
+        "y": 294.74,
+        "width": 233.78,
+        "height": 219.09
+      },
+      "text": "",
+      "style": {},
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

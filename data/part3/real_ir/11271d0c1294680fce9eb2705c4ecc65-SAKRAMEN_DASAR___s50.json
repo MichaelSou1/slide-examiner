@@ -1,0 +1,28 @@
+{
+  "slide_id": "11271d0c1294680fce9eb2705c4ecc65-SAKRAMEN_DASAR___s50",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp2",
+      "type": "body",
+      "bbox": {
+        "x": 24.0,
+        "y": 24.0,
+        "width": 904.0,
+        "height": 630.09
+      },
+      "text": "Perkawinan tidak terceraikan, mengikat seumur hidup (1Kor 7:10-11, 39, Mat 19:4-9).\nPembatalan Perkawinan adalah suatu pernyataan yang dikeluarkan oleh Gereja yang menyatakan bahwa setelah dilakukan suatu penyelidikan yang mendalam oleh pengadilan gereja yang berwenang, unsur-unsur yang diperlukan untuk suatu perkawinan yang sah tidak ada pada saat perkawinan,",
+      "style": {
+        "font_size_pt": 32.0
+      },
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

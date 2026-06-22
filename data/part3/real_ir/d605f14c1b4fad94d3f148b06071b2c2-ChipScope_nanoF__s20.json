@@ -1,0 +1,60 @@
+{
+  "slide_id": "d605f14c1b4fad94d3f148b06071b2c2-ChipScope_nanoF__s20",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp5",
+      "type": "image",
+      "bbox": {
+        "x": 188.94,
+        "y": 155.88,
+        "width": 582.11,
+        "height": 462.96
+      },
+      "text": "",
+      "style": {},
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp4",
+      "type": "body",
+      "bbox": {
+        "x": 152.84,
+        "y": 23.44,
+        "width": 807.16,
+        "height": 48.47
+      },
+      "text": "Application examples - cell tracking",
+      "style": {
+        "font_size_pt": 24.0
+      },
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp6",
+      "type": "body",
+      "bbox": {
+        "x": 3.73,
+        "y": 95.4,
+        "width": 373.38,
+        "height": 42.01
+      },
+      "text": "Detection of cellular senescence",
+      "style": {
+        "font_size_pt": 20.0
+      },
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

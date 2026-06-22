@@ -1,0 +1,258 @@
+{
+  "slide_id": "59adad4e9b977fc95ddcafed6d843707-UK_ORCID_commun__s2",
+  "width": 960,
+  "height": 540,
+  "elements": [
+    {
+      "element_id": "shp2",
+      "type": "title",
+      "bbox": {
+        "x": 37.67,
+        "y": 35.67,
+        "width": 684.33,
+        "height": 35.86
+      },
+      "text": "UK PIDs for Open Access",
+      "style": {},
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp3",
+      "type": "body",
+      "bbox": {
+        "x": 37.67,
+        "y": 109.95,
+        "width": 684.33,
+        "height": 26.85
+      },
+      "text": "Discovery – stakeholders/task force",
+      "style": {},
+      "z": 1,
+      "placeholder_id": "BODY (2)",
+      "metadata": {
+        "role": "BODY (2)"
+      }
+    },
+    {
+      "element_id": "shp4",
+      "type": "body",
+      "bbox": {
+        "x": 37.67,
+        "y": 150.08,
+        "width": 606.16,
+        "height": 316.42
+      },
+      "text": "Governance\nA model needed that is sustainable and community driven\nInterventions\nPrioritise easy wins that add value to multiple PIDs. Think globally to maximise followership\nLeadership\nGet conversations to happen at high levels\nStrong support for a UK multi-PID consortium\nJisc and UKRI might set an example by using mandates\nOutreach\nProvide support to all stakeholders\nBring clarity to different PIDs and their possibilities",
+      "style": {
+        "font_size_pt": 16.0
+      },
+      "z": 2,
+      "placeholder_id": "OBJECT (7)",
+      "metadata": {
+        "role": "OBJECT (7)"
+      }
+    },
+    {
+      "element_id": "shp5",
+      "type": "body",
+      "bbox": {
+        "x": 37.67,
+        "y": 485.44,
+        "width": 20.8,
+        "height": 37.8
+      },
+      "text": "3",
+      "style": {},
+      "z": 3,
+      "placeholder_id": "SLIDE_NUMBER (13)",
+      "metadata": {
+        "role": "SLIDE_NUMBER (13)"
+      }
+    },
+    {
+      "element_id": "shp8",
+      "type": "group",
+      "bbox": {
+        "x": 606.71,
+        "y": 422.74,
+        "width": 115.29,
+        "height": 76.12
+      },
+      "text": "",
+      "style": {},
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp14",
+      "type": "body",
+      "bbox": {
+        "x": 623.72,
+        "y": 391.78,
+        "width": 82.99,
+        "height": 31.5
+      },
+      "text": "Outputs",
+      "style": {
+        "font_size_pt": 13.5
+      },
+      "z": 5,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp15",
+      "type": "image",
+      "bbox": {
+        "x": 779.83,
+        "y": 425.41,
+        "width": 139.84,
+        "height": 51.79
+      },
+      "text": "",
+      "style": {},
+      "z": 6,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp16",
+      "type": "body",
+      "bbox": {
+        "x": 782.49,
+        "y": 393.6,
+        "width": 131.46,
+        "height": 31.5
+      },
+      "text": "Organizations",
+      "style": {
+        "font_size_pt": 13.5
+      },
+      "z": 7,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp17",
+      "type": "image",
+      "bbox": {
+        "x": 585.92,
+        "y": 142.84,
+        "width": 142.9,
+        "height": 64.66
+      },
+      "text": "",
+      "style": {},
+      "z": 8,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp18",
+      "type": "body",
+      "bbox": {
+        "x": 620.41,
+        "y": 112.99,
+        "width": 73.92,
+        "height": 31.5
+      },
+      "text": "Grants",
+      "style": {
+        "font_size_pt": 13.5
+      },
+      "z": 9,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp19",
+      "type": "group",
+      "bbox": {
+        "x": 710.74,
+        "y": 266.98,
+        "width": 119.71,
+        "height": 97.48
+      },
+      "text": "",
+      "style": {},
+      "z": 10,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp37",
+      "type": "body",
+      "bbox": {
+        "x": 728.82,
+        "y": 237.27,
+        "width": 85.01,
+        "height": 31.5
+      },
+      "text": "Projects",
+      "style": {
+        "font_size_pt": 13.5
+      },
+      "z": 11,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp38",
+      "type": "image",
+      "bbox": {
+        "x": 820.81,
+        "y": 143.75,
+        "width": 69.15,
+        "height": 73.27
+      },
+      "text": "",
+      "style": {},
+      "z": 12,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp39",
+      "type": "body",
+      "bbox": {
+        "x": 809.83,
+        "y": 108.77,
+        "width": 86.05,
+        "height": 31.5
+      },
+      "text": "Persons",
+      "style": {
+        "font_size_pt": 13.5
+      },
+      "z": 13,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp6",
+      "type": "body",
+      "bbox": {
+        "x": 543.74,
+        "y": 24.09,
+        "width": 387.27,
+        "height": 77.55
+      },
+      "text": "28 attendees across 5 groups. 19 different organisations – from publishing trade groups to infrastructure providers to libraries",
+      "style": {
+        "font_size_pt": 14.0
+      },
+      "z": 14,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

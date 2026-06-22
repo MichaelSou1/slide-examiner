@@ -1,0 +1,43 @@
+{
+  "slide_id": "c2e4482c41b065a9c4342a5488e695b6-novita_GIUGNO_6__s2",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp4",
+      "type": "title",
+      "bbox": {
+        "x": 26.59,
+        "y": 21.15,
+        "width": 828.0,
+        "height": 139.17
+      },
+      "text": "..ettepareva…",
+      "style": {},
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp13",
+      "type": "group",
+      "bbox": {
+        "x": 0.0,
+        "y": 149.72,
+        "width": 960.0,
+        "height": 558.63
+      },
+      "text": "",
+      "style": {},
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "slide_id": "5aa2630262e54a49db5680970f332b05-2024-05-Etapes___s25",
+  "width": 1280,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp4",
+      "type": "body",
+      "bbox": {
+        "x": 481.15,
+        "y": 148.32,
+        "width": 738.4,
+        "height": 94.5
+      },
+      "text": "MerCI !",
+      "style": {},
+      "z": 0,
+      "placeholder_id": "BODY (2)",
+      "metadata": {
+        "role": "BODY (2)"
+      }
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

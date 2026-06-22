@@ -1,0 +1,73 @@
+{
+  "slide_id": "d605f14c1b4fad94d3f148b06071b2c2-ChipScope_nanoF__s2",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp3",
+      "type": "body",
+      "bbox": {
+        "x": 56.65,
+        "y": 155.88,
+        "width": 829.06,
+        "height": 96.94
+      },
+      "text": "Microfluidics is the science and technology that deals with the manipulation of fluids, usually in the range of microliters (10-6) to picoliters (10-12) and/or in networks of micrometer-size channels ...",
+      "style": {},
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp4",
+      "type": "image",
+      "bbox": {
+        "x": 245.64,
+        "y": 642.52,
+        "width": 505.03,
+        "height": 27.56
+      },
+      "text": "",
+      "style": {},
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp5",
+      "type": "image",
+      "bbox": {
+        "x": 55.42,
+        "y": 309.31,
+        "width": 847.94,
+        "height": 262.37
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp7",
+      "type": "body",
+      "bbox": {
+        "x": 170.04,
+        "y": 23.44,
+        "width": 801.35,
+        "height": 48.47
+      },
+      "text": "Definition of microfluidics",
+      "style": {
+        "font_size_pt": 24.0
+      },
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

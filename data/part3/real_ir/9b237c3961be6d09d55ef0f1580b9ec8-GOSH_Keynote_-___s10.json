@@ -1,0 +1,58 @@
+{
+  "slide_id": "9b237c3961be6d09d55ef0f1580b9ec8-GOSH_Keynote_-___s10",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp134",
+      "type": "image",
+      "bbox": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 509.22,
+        "height": 720.0
+      },
+      "text": "",
+      "style": {},
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp135",
+      "type": "image",
+      "bbox": {
+        "x": 604.83,
+        "y": 16.56,
+        "width": 240.05,
+        "height": 242.7
+      },
+      "text": "",
+      "style": {},
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp136",
+      "type": "body",
+      "bbox": {
+        "x": 529.23,
+        "y": 323.01,
+        "width": 422.55,
+        "height": 436.91
+      },
+      "text": "support individuals and forge partnerships to create the conditions under which OScH can\nflourish.\n\nRecommendations\n\nDraft a comprehensive guide for public and philanthropic funders on supporting OScH development\n Prepare and disseminate OScH documentation, testing and validation “best practices.” \nSupport the development of Free and Open Source tools for hardware design.\nProvide training sessions and workshops to support current OScH projects.",
+      "style": {
+        "font_size_pt": 16.0
+      },
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

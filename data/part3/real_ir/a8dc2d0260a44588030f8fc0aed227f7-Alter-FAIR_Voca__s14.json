@@ -1,0 +1,45 @@
+{
+  "slide_id": "a8dc2d0260a44588030f8fc0aed227f7-Alter-FAIR_Voca__s14",
+  "width": 1280,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp165",
+      "type": "title",
+      "bbox": {
+        "x": 88.0,
+        "y": 38.33,
+        "width": 1104.0,
+        "height": 139.17
+      },
+      "text": "FAIR Vocabularies in the DDI Community (2)",
+      "style": {},
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp166",
+      "type": "body",
+      "bbox": {
+        "x": 88.0,
+        "y": 191.67,
+        "width": 1104.0,
+        "height": 456.83
+      },
+      "text": "IPUMS occupies a unique position in the social science data world\nIPUMS harmonizes census microdata from 100+ countries\nHas developed hundreds of crosswalks between different coding schemas\nCensus microdata at IPUMS is also distributed as aggregate data in SDMX\nIPUMS crosswalks could be used to harmonize SDMX dataflows",
+      "style": {},
+      "z": 1,
+      "placeholder_id": "BODY (2)",
+      "metadata": {
+        "role": "BODY (2)"
+      }
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "slide_id": "65b9f618e026be90484c974a204ae812-04_Ivanovic_Mla__s10",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp2",
+      "type": "title",
+      "bbox": {
+        "x": 40.86,
+        "y": 11.11,
+        "width": 887.5,
+        "height": 85.33
+      },
+      "text": "Common crop protection products application techniques \u000bfor trees protection",
+      "style": {},
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp3078",
+      "type": "image",
+      "bbox": {
+        "x": 48.21,
+        "y": 94.67,
+        "width": 260.0,
+        "height": 300.0
+      },
+      "text": "",
+      "style": {},
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp3080",
+      "type": "image",
+      "bbox": {
+        "x": 351.28,
+        "y": 431.06,
+        "width": 317.22,
+        "height": 211.39
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp3081",
+      "type": "image",
+      "bbox": {
+        "x": 11.01,
+        "y": 428.04,
+        "width": 331.7,
+        "height": 205.96
+      },
+      "text": "",
+      "style": {},
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp3083",
+      "type": "image",
+      "bbox": {
+        "x": 351.25,
+        "y": 113.13,
+        "width": 266.72,
+        "height": 299.46
+      },
+      "text": "",
+      "style": {},
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp3084",
+      "type": "image",
+      "bbox": {
+        "x": 677.06,
+        "y": 433.71,
+        "width": 280.52,
+        "height": 210.39
+      },
+      "text": "",
+      "style": {},
+      "z": 5,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp3",
+      "type": "image",
+      "bbox": {
+        "x": 661.01,
+        "y": 99.82,
+        "width": 247.0,
+        "height": 322.0
+      },
+      "text": "",
+      "style": {},
+      "z": 6,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

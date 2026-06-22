@@ -1,0 +1,65 @@
+{
+  "slide_id": "377829fc53e13493464f3580b855dd76-Laatua_ja_vaiku__s14",
+  "width": 960,
+  "height": 540,
+  "elements": [
+    {
+      "element_id": "shp155",
+      "type": "title",
+      "bbox": {
+        "x": 32.72,
+        "y": 10.88,
+        "width": 894.55,
+        "height": 60.13
+      },
+      "text": "FAIR-principerna och datavärde",
+      "style": {
+        "font_size_pt": 32.4,
+        "color": "#008568"
+      },
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp156",
+      "type": "body",
+      "bbox": {
+        "x": 34.52,
+        "y": 65.88,
+        "width": 890.96,
+        "height": 391.65
+      },
+      "text": "Vidareutnyttjande av data ökar deras värde för vetenskapssamfundet och samhället. Forskaren har ansvar för att för sin egen del definiera värdet på data och se till att det bevaras.\nMaterialhantering i enlighet med FAIR-principerna möjliggör ansvarsfullt vidareutnyttjande av data och ökar forskningens genomslag. \nJu noggrannare ursprunget för ifrågavarande data dokumenteras, desto enklare är de att använda på nytt. Med anledning av detta måste arbetsflödet, med vilket man får forskningsdata av rådata som kan publiceras, sparas.\nForskaren kan samla in data för att lösa en fråga som hen själv har definierat inom sitt vetenskapliga område, men samma data kan även ha ett värde som en del av en större helhet, till exempel i organisationens databas, som jämförelsedata, som en del av metaanalysen eller inom något annat vetenskapligt område.\nUniciteten hos data och mängden resurser som används för att producera dem ökar vanligen datavärdet. Data har ofta även ett värde ur perspektivet för forskningens transparens och (referent)granskning.",
+      "style": {
+        "font_size_pt": 17.0
+      },
+      "z": 1,
+      "placeholder_id": "BODY (2)",
+      "metadata": {
+        "role": "BODY (2)"
+      }
+    },
+    {
+      "element_id": "shp157",
+      "type": "image",
+      "bbox": {
+        "x": 861.32,
+        "y": 23.68,
+        "width": 64.16,
+        "height": 60.13
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

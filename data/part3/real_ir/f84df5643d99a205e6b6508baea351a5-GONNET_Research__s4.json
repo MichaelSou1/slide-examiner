@@ -1,0 +1,97 @@
+{
+  "slide_id": "f84df5643d99a205e6b6508baea351a5-GONNET_Research__s4",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp3",
+      "type": "body",
+      "bbox": {
+        "x": 346.59,
+        "y": 693.02,
+        "width": 264.57,
+        "height": 11.31
+      },
+      "text": "Titre de la présentation",
+      "style": {},
+      "z": 0,
+      "placeholder_id": "FOOTER (15)",
+      "metadata": {
+        "role": "FOOTER (15)"
+      }
+    },
+    {
+      "element_id": "shp28",
+      "type": "image",
+      "bbox": {
+        "x": 173.28,
+        "y": -10.43,
+        "width": 611.18,
+        "height": 720.0
+      },
+      "text": "",
+      "style": {},
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp4",
+      "type": "body",
+      "bbox": {
+        "x": 744.6,
+        "y": 125.64,
+        "width": 189.0,
+        "height": 32.31
+      },
+      "text": "Transparency",
+      "style": {
+        "font_size_pt": 20.0,
+        "color": "#1D2769"
+      },
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp7",
+      "type": "body",
+      "bbox": {
+        "x": 52.75,
+        "y": 585.76,
+        "width": 189.0,
+        "height": 51.7
+      },
+      "text": "Citizen trust",
+      "style": {
+        "font_size_pt": 20.0,
+        "color": "#1D2769"
+      },
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp9",
+      "type": "body",
+      "bbox": {
+        "x": 714.72,
+        "y": 611.61,
+        "width": 243.96,
+        "height": 32.31
+      },
+      "text": "Quality of science",
+      "style": {
+        "font_size_pt": 20.0,
+        "color": "#1D2769"
+      },
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

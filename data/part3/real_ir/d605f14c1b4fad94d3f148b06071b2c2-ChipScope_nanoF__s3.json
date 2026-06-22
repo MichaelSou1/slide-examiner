@@ -1,0 +1,75 @@
+{
+  "slide_id": "d605f14c1b4fad94d3f148b06071b2c2-ChipScope_nanoF__s3",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp42",
+      "type": "body",
+      "bbox": {
+        "x": 170.04,
+        "y": 23.44,
+        "width": 801.35,
+        "height": 87.24
+      },
+      "text": "Requirements & example of a microfluidic system layout for live cell imaging",
+      "style": {
+        "font_size_pt": 24.0
+      },
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp43",
+      "type": "body",
+      "bbox": {
+        "x": 3.73,
+        "y": 132.41,
+        "width": 667.35,
+        "height": 106.63
+      },
+      "text": "Requirements:\nSupply with cell growth media and sample reagents\nTemperature control",
+      "style": {
+        "font_size_pt": 20.0
+      },
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp45",
+      "type": "image",
+      "bbox": {
+        "x": 138.16,
+        "y": 265.74,
+        "width": 683.68,
+        "height": 373.98
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp2",
+      "type": "shape",
+      "bbox": {
+        "x": 366.6,
+        "y": 465.84,
+        "width": 241.92,
+        "height": 189.0
+      },
+      "text": "",
+      "style": {},
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

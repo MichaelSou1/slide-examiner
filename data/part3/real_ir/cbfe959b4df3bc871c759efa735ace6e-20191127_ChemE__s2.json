@@ -1,0 +1,65 @@
+{
+  "slide_id": "cbfe959b4df3bc871c759efa735ace6e-20191127_ChemE__s2",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp2",
+      "type": "title",
+      "bbox": {
+        "x": 185.1,
+        "y": 28.83,
+        "width": 746.08,
+        "height": 120.0
+      },
+      "text": "Benefits of data management",
+      "style": {
+        "font_size_pt": 44.0
+      },
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp3",
+      "type": "body",
+      "bbox": {
+        "x": 183.66,
+        "y": 149.96,
+        "width": 746.08,
+        "height": 522.87
+      },
+      "text": "Prevent data loss/unfindable files\nAccess to more data\nCan you still use data when people leave?\nRecognition for all research outputs\nSet up an ORCID account and couple it with PURE\nhttps://www.tudelft.nl/library/orcid\nIncreased citations (25% Colavizza et al. arXiv:1907.02565v2)\nCollaboration\nIncreases quality of scientific practice \nCost/time efficient",
+      "style": {
+        "font_size_pt": 24.0,
+        "color": "#00B0F0"
+      },
+      "z": 1,
+      "placeholder_id": "BODY (2)",
+      "metadata": {
+        "role": "BODY (2)"
+      }
+    },
+    {
+      "element_id": "shp9",
+      "type": "image",
+      "bbox": {
+        "x": 802.91,
+        "y": 308.99,
+        "width": 102.4,
+        "height": 102.4
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

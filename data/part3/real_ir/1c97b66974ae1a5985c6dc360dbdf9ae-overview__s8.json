@@ -1,0 +1,105 @@
+{
+  "slide_id": "1c97b66974ae1a5985c6dc360dbdf9ae-overview__s8",
+  "width": 1280,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp2",
+      "type": "shape",
+      "bbox": {
+        "x": -12.64,
+        "y": 248.17,
+        "width": 494.27,
+        "height": 378.2
+      },
+      "text": "",
+      "style": {},
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp3",
+      "type": "shape",
+      "bbox": {
+        "x": 406.92,
+        "y": 248.17,
+        "width": 494.27,
+        "height": 378.2
+      },
+      "text": "",
+      "style": {},
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp6",
+      "type": "shape",
+      "bbox": {
+        "x": 826.49,
+        "y": 248.17,
+        "width": 494.27,
+        "height": 378.2
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp7",
+      "type": "shape",
+      "bbox": {
+        "x": 0.0,
+        "y": 19.8,
+        "width": 1280.0,
+        "height": 59.36
+      },
+      "text": "",
+      "style": {
+        "fill_color": "#00205B"
+      },
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp8",
+      "type": "body",
+      "bbox": {
+        "x": 409.16,
+        "y": 12.33,
+        "width": 398.72,
+        "height": 74.32
+      },
+      "text": "Output Spectrum",
+      "style": {
+        "font_size_pt": 40.0
+      },
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp9",
+      "type": "body",
+      "bbox": {
+        "x": -75.5,
+        "y": 106.34,
+        "width": 844.66,
+        "height": 213.26
+      },
+      "text": "532nm pump (CW)\n\n\n810nm output:",
+      "style": {},
+      "z": 5,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

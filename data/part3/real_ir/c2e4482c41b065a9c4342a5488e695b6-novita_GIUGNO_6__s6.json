@@ -1,0 +1,58 @@
+{
+  "slide_id": "c2e4482c41b065a9c4342a5488e695b6-novita_GIUGNO_6__s6",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp3",
+      "type": "image",
+      "bbox": {
+        "x": 352.7,
+        "y": 320.79,
+        "width": 545.68,
+        "height": 404.67
+      },
+      "text": "",
+      "style": {},
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp4",
+      "type": "title",
+      "bbox": {
+        "x": 26.59,
+        "y": 21.15,
+        "width": 828.0,
+        "height": 139.17
+      },
+      "text": "..ettepareva…",
+      "style": {},
+      "z": 1,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp13",
+      "type": "group",
+      "bbox": {
+        "x": -6.57,
+        "y": 49.64,
+        "width": 960.0,
+        "height": 592.33
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "slide_id": "377829fc53e13493464f3580b855dd76-Laatua_ja_vaiku__s7",
+  "width": 960,
+  "height": 540,
+  "elements": [
+    {
+      "element_id": "shp107",
+      "type": "title",
+      "bbox": {
+        "x": 27.59,
+        "y": 16.66,
+        "width": 894.55,
+        "height": 60.13
+      },
+      "text": "Datahanteringen börjar redan i forskningens planeringsskede \u000b(DMP – Data Management Plan)",
+      "style": {
+        "font_size_pt": 22.1,
+        "color": "#008568"
+      },
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp108",
+      "type": "body",
+      "bbox": {
+        "x": 32.72,
+        "y": 123.01,
+        "width": 894.55,
+        "height": 358.68
+      },
+      "text": "Genomförandet av FAIR-principerna görs under hela forskningen. Planera med andra ord:\nhela livscykeln för data och observera den i planeringen av forskningen (t.ex. versioner som ska lagras, långtidslagras och förstöras).\ntekniska data gällande ifrågavarande data samt frågor gällande rättigheter.\nde olika formerna av dokumentation (t.ex. källkod, koduppsättning, anvisningar) som tillsammans förbättrar transparensen.\nTill ansvarsfull forskning hör transparens i processen, det vill säga öppenhet gällande vad man har gjort med data och hur man har kommit fram till slutresultatet. Detta måste beaktas i materialhanteringsplanen, som ska upprättas redan i projektets planeringsskede och hållas uppdaterad under forskningens framskridande.",
+      "style": {
+        "color": "#595959"
+      },
+      "z": 1,
+      "placeholder_id": "BODY (2)",
+      "metadata": {
+        "role": "BODY (2)"
+      }
+    },
+    {
+      "element_id": "shp109",
+      "type": "image",
+      "bbox": {
+        "x": 821.9,
+        "y": 42.07,
+        "width": 74.08,
+        "height": 69.42
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

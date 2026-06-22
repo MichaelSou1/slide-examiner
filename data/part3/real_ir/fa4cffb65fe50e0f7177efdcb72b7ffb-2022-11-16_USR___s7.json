@@ -1,0 +1,93 @@
+{
+  "slide_id": "fa4cffb65fe50e0f7177efdcb72b7ffb-2022-11-16_USR___s7",
+  "width": 1280,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp198",
+      "type": "title",
+      "bbox": {
+        "x": 15.05,
+        "y": 12.24,
+        "width": 1249.9,
+        "height": 113.39
+      },
+      "text": "SDG classification service (104 languages) + API + Badges\u000bin example: classifies a text fragment; outputs 17 prediction percentages, and an SDG wheel",
+      "style": {
+        "font_size_pt": 36.0
+      },
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp3",
+      "type": "image",
+      "bbox": {
+        "x": 25.53,
+        "y": 125.27,
+        "width": 429.56,
+        "height": 594.37
+      },
+      "text": "",
+      "style": {},
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp10",
+      "type": "image",
+      "bbox": {
+        "x": 440.93,
+        "y": 170.89,
+        "width": 398.14,
+        "height": 456.95
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp7",
+      "type": "image",
+      "bbox": {
+        "x": 802.51,
+        "y": 113.44,
+        "width": 456.5,
+        "height": 571.87
+      },
+      "text": "",
+      "style": {},
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp2",
+      "type": "body",
+      "bbox": {
+        "x": 455.09,
+        "y": 636.45,
+        "width": 788.93,
+        "height": 87.24
+      },
+      "text": "Classify now : \nhttps://aurora-universities.eu/sdg-research/classify",
+      "style": {
+        "font_size_pt": 28.0,
+        "color": "#0095F7"
+      },
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

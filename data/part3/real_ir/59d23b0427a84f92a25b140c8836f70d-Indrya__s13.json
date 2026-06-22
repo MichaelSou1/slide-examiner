@@ -1,0 +1,60 @@
+{
+  "slide_id": "59d23b0427a84f92a25b140c8836f70d-Indrya__s13",
+  "width": 1280,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp4",
+      "type": "body",
+      "bbox": {
+        "x": 1134.32,
+        "y": 610.69,
+        "width": 57.68,
+        "height": 38.33
+      },
+      "text": "14",
+      "style": {},
+      "z": 0,
+      "placeholder_id": "SLIDE_NUMBER (13)",
+      "metadata": {
+        "role": "SLIDE_NUMBER (13)"
+      }
+    },
+    {
+      "element_id": "shp3",
+      "type": "image",
+      "bbox": {
+        "x": 0.0,
+        "y": 136.02,
+        "width": 1280.0,
+        "height": 565.72
+      },
+      "text": "",
+      "style": {},
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp5",
+      "type": "body",
+      "bbox": {
+        "x": 15.3,
+        "y": 17.07,
+        "width": 1200.81,
+        "height": 106.63
+      },
+      "text": "Perkumpulan Pengelola Jurnal Bahasa dan Sastra Indonesia serta Pengajarannya\n\nhttp://ppjb-sip.org/senarai",
+      "style": {
+        "font_size_pt": 24.0
+      },
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

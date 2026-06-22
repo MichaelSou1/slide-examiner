@@ -1,0 +1,142 @@
+{
+  "slide_id": "800d590999c12cc29efec87123d9234a-uc-cesjune9fina__s3",
+  "width": 1058,
+  "height": 794,
+  "elements": [
+    {
+      "element_id": "shp5",
+      "type": "shape",
+      "bbox": {
+        "x": 242.59,
+        "y": 736.59,
+        "width": 481.3,
+        "height": 44.11
+      },
+      "text": "",
+      "style": {},
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp7",
+      "type": "image",
+      "bbox": {
+        "x": 25.08,
+        "y": 709.62,
+        "width": 120.22,
+        "height": 84.05
+      },
+      "text": "",
+      "style": {},
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp8",
+      "type": "image",
+      "bbox": {
+        "x": 171.02,
+        "y": 727.45,
+        "width": 148.06,
+        "height": 49.98
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp12",
+      "type": "body",
+      "bbox": {
+        "x": 35.14,
+        "y": 469.11,
+        "width": 924.97,
+        "height": 229.19
+      },
+      "text": "Psychological impact particularly perverse for women (higher levels of sadness, anxiety, health and professional concerns, perceived lack of control) \nParenthood effect – academics with childrn more aprehensive about future\nYoung and precarious – young professionals and those with precarious contracts share concern about professional future, as well as stress, anxiety and sadness;",
+      "style": {
+        "font_size_pt": 15.0,
+        "color": "#6D6D6D"
+      },
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp10",
+      "type": "body",
+      "bbox": {
+        "x": 35.14,
+        "y": 28.69,
+        "width": 916.04,
+        "height": 95.11
+      },
+      "text": "(Remote) Working conditions \n- Emotional conditions to work",
+      "style": {
+        "font_size_pt": 25.0,
+        "color": "#497C8B"
+      },
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp11",
+      "type": "image",
+      "bbox": {
+        "x": 96.83,
+        "y": 199.98,
+        "width": 746.46,
+        "height": 249.17
+      },
+      "text": "",
+      "style": {},
+      "z": 5,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp6",
+      "type": "body",
+      "bbox": {
+        "x": 96.83,
+        "y": 134.49,
+        "width": 687.17,
+        "height": 90.47
+      },
+      "text": "Psychological/emotional effects of the lockdown (N= 281; mean values)*",
+      "style": {
+        "font_size_pt": 18.0,
+        "color": "#000000"
+      },
+      "z": 6,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp13",
+      "type": "body",
+      "bbox": {
+        "x": 877.18,
+        "y": 189.18,
+        "width": 93.18,
+        "height": 121.17
+      },
+      "text": "*Scale: \n1 – Never; \n2 – Rarely; \n3 – Often; \n4 - Always",
+      "style": {
+        "font_size_pt": 11.0
+      },
+      "z": 7,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

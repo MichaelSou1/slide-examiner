@@ -1,0 +1,93 @@
+{
+  "slide_id": "59d23b0427a84f92a25b140c8836f70d-Indrya__s1",
+  "width": 1280,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp5",
+      "type": "body",
+      "bbox": {
+        "x": 85.28,
+        "y": 608.69,
+        "width": 399.83,
+        "height": 38.33
+      },
+      "text": "ADD A FOOTER",
+      "style": {},
+      "z": 0,
+      "placeholder_id": "FOOTER (15)",
+      "metadata": {
+        "role": "FOOTER (15)"
+      }
+    },
+    {
+      "element_id": "shp6",
+      "type": "body",
+      "bbox": {
+        "x": 1134.32,
+        "y": 610.69,
+        "width": 57.68,
+        "height": 38.33
+      },
+      "text": "2",
+      "style": {},
+      "z": 1,
+      "placeholder_id": "SLIDE_NUMBER (13)",
+      "metadata": {
+        "role": "SLIDE_NUMBER (13)"
+      }
+    },
+    {
+      "element_id": "shp9",
+      "type": "body",
+      "bbox": {
+        "x": 28.49,
+        "y": 9.46,
+        "width": 629.99,
+        "height": 471.76
+      },
+      "text": "Sekretaris Jurusan Tadris/Pendidikan Bahasa Indonesia (2015 – sekarang)\n\nKetua Perkumpulan Pengelola Jurnal Bahasa dan Sastra Indonesia serta Pengajarannya (2018 – sekarang)\n\nEditor in Chief \nJurnal Indonesian Language Education and Literature (Jurusan Tadris Bahasa Indonesia, IAIN Syekh Nurjati Cirebon)\n\nMitra Bestari, antara lain: \nJurnal Ranah (Badan Pengembangan Bahasa)\nJurnal Retorika (Universitas Negeri Makassar)\n\nAnggota Relawan Jurnal Indonesia (RJI)",
+      "style": {
+        "font_size_pt": 20.0,
+        "color": "#C00000"
+      },
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp10",
+      "type": "body",
+      "bbox": {
+        "x": 45.63,
+        "y": 512.45,
+        "width": 439.48,
+        "height": 177.09
+      },
+      "text": "Pos-el: indrya.m@gmail.com\nWA: 089667890219\nID SINTA: 231535\nID Scopus: 57200991886\nID ORCID: 0000-0002-7147-6079",
+      "style": {},
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp12",
+      "type": "image",
+      "bbox": {
+        "x": 739.7,
+        "y": 79.77,
+        "width": 486.76,
+        "height": 487.14
+      },
+      "text": "",
+      "style": {},
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

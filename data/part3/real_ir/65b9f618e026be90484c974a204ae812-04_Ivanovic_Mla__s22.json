@@ -1,0 +1,60 @@
+{
+  "slide_id": "65b9f618e026be90484c974a204ae812-04_Ivanovic_Mla__s22",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp28",
+      "type": "group",
+      "bbox": {
+        "x": 26.41,
+        "y": 72.72,
+        "width": 582.11,
+        "height": 572.01
+      },
+      "text": "",
+      "style": {},
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp1036",
+      "type": "body",
+      "bbox": {
+        "x": 638.76,
+        "y": 231.48,
+        "width": 313.68,
+        "height": 360.28
+      },
+      "text": "Injection points\nDate palms at least 4, close to the ground\nCanariensis 2-4,  at least 2 m from top of stem\nDrill bit diameter 8 mm\nDrill depth 15-30 cm maximal, but not more than 1/3 of diameter:\nFor exampel: 60 cm DBH  Drillk depth < 20 cm\nInjection with palm lance\nClose hole with plug",
+      "style": {
+        "font_size_pt": 14.0
+      },
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp26",
+      "type": "title",
+      "bbox": {
+        "x": 39.17,
+        "y": 9.33,
+        "width": 887.5,
+        "height": 85.33
+      },
+      "text": "Palm Stem Injection: Phönix canariensis",
+      "style": {},
+      "z": 2,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

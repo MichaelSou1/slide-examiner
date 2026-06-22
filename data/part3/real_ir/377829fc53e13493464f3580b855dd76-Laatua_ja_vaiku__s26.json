@@ -1,0 +1,64 @@
+{
+  "slide_id": "377829fc53e13493464f3580b855dd76-Laatua_ja_vaiku__s26",
+  "width": 960,
+  "height": 540,
+  "elements": [
+    {
+      "element_id": "shp255",
+      "type": "title",
+      "bbox": {
+        "x": 32.72,
+        "y": 46.72,
+        "width": 894.55,
+        "height": 60.13
+      },
+      "text": "Om skeden i datahanteringen",
+      "style": {
+        "color": "#008568"
+      },
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp256",
+      "type": "body",
+      "bbox": {
+        "x": 22.49,
+        "y": 98.22,
+        "width": 919.59,
+        "height": 431.69
+      },
+      "text": "Datadelning (data sharing) kan göras redan under forskningsprojektets gång. Då kan datasetet vara aktivt. Datahantering och kuratering sker efter överenskommelse utgående från planeringen av datahanteringen, så att alla inblandade känner till rättigheter och ansvar med anknytning till ifrågavarande data, hur versionering görs och hur data överlag får och kan användas. Delning kan till exempel göras från webbaserad datalagring, en datapool eller med hjälp av e-post, eller i en tjänst avsedd för konfidentiell datadelning.\nNär data lagras (data storing), dokumenteras de noggrant och metadata som är väsentliga med tanke på användning och hantering ansluts till dem. Man kan använda en lämplig tjänst för datalagring (data repository eller data service).\nPublicering av data (publishing data) gör data till ett hänvisningsbart material som måste ha en permanent identifierare och hänvisningsanvisningar. Publicerade data har dokumenterats noggrant och åtminstone metadata som gör det möjligt att hitta dem har publicerats. I metadata anges hur man får tillgång till materialet och vilken kvalitet det har för att det ska kunna användas i reproduktionen av forskningen eller inom ny forskning. En lämplig tjänst används för publiceringen av data (data repository eller data service).\nLångtidslagring av data (digital preservation) är bevarande av materialets begriplighet och ofelbarhet på lång sikt, över årtionden och till med århundraden. I sådant fall beaktas till exempel förändringen av olika tekniker, medier och format. Även konfidentiellt material kan lagras långsiktigt i certifierade tjänster.\nObs! Åtkomsten till materialet kan i alla skeden vara begränsat. Man måste ombesörja ett tillräckligt dataskydd och tillräcklig datasäkerhet!",
+      "style": {
+        "font_size_pt": 52.0
+      },
+      "z": 1,
+      "placeholder_id": "BODY (2)",
+      "metadata": {
+        "role": "BODY (2)"
+      }
+    },
+    {
+      "element_id": "shp2",
+      "type": "group",
+      "bbox": {
+        "x": 821.9,
+        "y": 42.07,
+        "width": 74.08,
+        "height": 69.42
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "n_injected": 225,
+  "thr_channel_sum": 20,
+  "eps_changed_frac": 0.0008,
+  "per_defect": {
+    "G1_TEXT_OVERFLOW": {
+      "n_injected": 45,
+      "ir_injected_rate": 1.0,
+      "rendered_rate": 1.0,
+      "absorption_rate": 0.0,
+      "changed_frac_median": 0.02908
+    },
+    "G2_ELEMENT_OVERLAP": {
+      "n_injected": 45,
+      "ir_injected_rate": 1.0,
+      "rendered_rate": 0.911,
+      "absorption_rate": 0.089,
+      "changed_frac_median": 0.00979
+    },
+    "G3_ALIGNMENT_OFFSET": {
+      "n_injected": 45,
+      "ir_injected_rate": 1.0,
+      "rendered_rate": 0.889,
+      "absorption_rate": 0.111,
+      "changed_frac_median": 0.02009
+    },
+    "G4_FONT_SIZE_INCONSISTENCY": {
+      "n_injected": 45,
+      "ir_injected_rate": 1.0,
+      "rendered_rate": 1.0,
+      "absorption_rate": 0.0,
+      "changed_frac_median": 0.02069
+    },
+    "G6_MARGIN_VIOLATION": {
+      "n_injected": 45,
+      "ir_injected_rate": 1.0,
+      "rendered_rate": 0.844,
+      "absorption_rate": 0.156,
+      "changed_frac_median": 0.01049
+    }
+  },
+  "overall": {
+    "n_scored": 225,
+    "rendered_rate": 0.929,
+    "absorption_rate": 0.071,
+    "note": "Real free-form decks are NOT snap-to-master: injected geometry defects render faithfully (rendered_rate near 1.0), unlike the synthetic enterprise template that silently absorbs 45% of injected geometry defects (paper Sec.4 / Result-3b)."
+  }
+}

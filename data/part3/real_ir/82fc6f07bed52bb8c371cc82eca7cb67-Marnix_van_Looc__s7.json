@@ -1,0 +1,131 @@
+{
+  "slide_id": "82fc6f07bed52bb8c371cc82eca7cb67-Marnix_van_Looc__s7",
+  "width": 1280,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp2",
+      "type": "title",
+      "bbox": {
+        "x": 36.56,
+        "y": 39.73,
+        "width": 1206.88,
+        "height": 43.08
+      },
+      "text": "Public-private partnership for health care",
+      "style": {},
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp3",
+      "type": "body",
+      "bbox": {
+        "x": 71.07,
+        "y": 633.75,
+        "width": 1172.37,
+        "height": 22.01
+      },
+      "text": "Adapted from Hernandez-Morales I, Van Loock M. An Industry Perspective on Dengue Drug Discovery and Development. Adv Exp Med Biol. 2018;1062:333-353.",
+      "style": {},
+      "z": 1,
+      "placeholder_id": "BODY (2)",
+      "metadata": {
+        "role": "BODY (2)"
+      }
+    },
+    {
+      "element_id": "shp11",
+      "type": "body",
+      "bbox": {
+        "x": 38.23,
+        "y": 118.03,
+        "width": 638.93,
+        "height": 485.88
+      },
+      "text": "Characteristics for successful partnerships: \nShared mission and risks\nClear and realistic objectives, roles and responsibilities\nEqual participation and power for decision making\nMutual but distinct benefits for each partner\nTimely accomplished deliverables\nActive collaboration \nTransparency and accountability\nClear legal and regulatory framework\nPotential benefits: \nState of the art technology and research\nParticipation of pharmaceutical industry in NTD\nDevelopment of local capabilities in endemic (developing) countries\nInvestment and funding for NTD",
+      "style": {
+        "font_size_pt": 14.0,
+        "color": "#1A25AB"
+      },
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp12",
+      "type": "body",
+      "bbox": {
+        "x": 722.49,
+        "y": 398.8,
+        "width": 539.49,
+        "height": 164.37
+      },
+      "text": "Potential risks: \nConflict of interest for intellectual property\nExceed allocated budget\nUnforeseen situations not covered in the legal agreement",
+      "style": {
+        "font_size_pt": 14.0,
+        "color": "#1A25AB"
+      },
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp13",
+      "type": "body",
+      "bbox": {
+        "x": 72.82,
+        "y": 611.45,
+        "width": 787.42,
+        "height": 22.62
+      },
+      "text": "Source: (Widdus 2001, 2005, Austin 2000, Bagley 2013, Croft 2005, Demotes-Mainard J 2006)",
+      "style": {
+        "font_size_pt": 14.0,
+        "color": "#000000"
+      },
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp34",
+      "type": "group",
+      "bbox": {
+        "x": 750.15,
+        "y": 24.84,
+        "width": 432.0,
+        "height": 397.21
+      },
+      "text": "",
+      "style": {},
+      "z": 5,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp5",
+      "type": "body",
+      "bbox": {
+        "x": 1222.08,
+        "y": 652.99,
+        "width": 47.71,
+        "height": 35.0
+      },
+      "text": "8",
+      "style": {},
+      "z": 6,
+      "placeholder_id": "SLIDE_NUMBER (13)",
+      "metadata": {
+        "role": "SLIDE_NUMBER (13)"
+      }
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

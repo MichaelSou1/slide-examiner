@@ -1,0 +1,107 @@
+{
+  "slide_id": "d605f14c1b4fad94d3f148b06071b2c2-ChipScope_nanoF__s10",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp10",
+      "type": "body",
+      "bbox": {
+        "x": 170.04,
+        "y": 23.44,
+        "width": 695.51,
+        "height": 48.47
+      },
+      "text": "Alternative microfluidic system",
+      "style": {
+        "font_size_pt": 24.0
+      },
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp11",
+      "type": "body",
+      "bbox": {
+        "x": 3.73,
+        "y": 95.4,
+        "width": 360.48,
+        "height": 106.63
+      },
+      "text": "Detachable microfluidic system\n\nMotivation:",
+      "style": {
+        "font_size_pt": 20.0
+      },
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp14",
+      "type": "image",
+      "bbox": {
+        "x": 86.89,
+        "y": 201.24,
+        "width": 344.67,
+        "height": 138.67
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp17",
+      "type": "image",
+      "bbox": {
+        "x": 43.22,
+        "y": 373.48,
+        "width": 432.0,
+        "height": 120.27
+      },
+      "text": "",
+      "style": {},
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp18",
+      "type": "image",
+      "bbox": {
+        "x": 460.04,
+        "y": 178.56,
+        "width": 495.47,
+        "height": 298.0
+      },
+      "text": "",
+      "style": {},
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp19",
+      "type": "body",
+      "bbox": {
+        "x": 64.21,
+        "y": 555.08,
+        "width": 783.25,
+        "height": 42.01
+      },
+      "text": "Need for a realization of the microfluidics on the chip only (~ 7x4 mm)",
+      "style": {
+        "font_size_pt": 20.0
+      },
+      "z": 5,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

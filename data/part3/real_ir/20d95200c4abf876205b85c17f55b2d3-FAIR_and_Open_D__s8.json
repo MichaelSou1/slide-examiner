@@ -1,0 +1,158 @@
+{
+  "slide_id": "20d95200c4abf876205b85c17f55b2d3-FAIR_and_Open_D__s8",
+  "width": 1280,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp160",
+      "type": "body",
+      "bbox": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 1280.0,
+        "height": 117.03
+      },
+      "text": "Is Open Data Equal to Free Data?",
+      "style": {
+        "font_size_pt": 44.0
+      },
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp161",
+      "type": "body",
+      "bbox": {
+        "x": 1005.71,
+        "y": 698.53,
+        "width": 274.29,
+        "height": 22.62
+      },
+      "text": "Icons made by https://www.flaticon.com/authors/eucalyp",
+      "style": {
+        "font_size_pt": 8.0
+      },
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp162",
+      "type": "body",
+      "bbox": {
+        "x": 22.3,
+        "y": 144.78,
+        "width": 389.81,
+        "height": 140.24
+      },
+      "text": "This question can be interpreted in a number of ways are open data free to use, are they free to acquire and is there a cost to their proper management?",
+      "style": {
+        "font_size_pt": 16.0,
+        "color": "#595959"
+      },
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp163",
+      "type": "image",
+      "bbox": {
+        "x": 128.26,
+        "y": 295.31,
+        "width": 177.9,
+        "height": 177.9
+      },
+      "text": "",
+      "style": {},
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp164",
+      "type": "body",
+      "bbox": {
+        "x": 448.0,
+        "y": 139.27,
+        "width": 504.24,
+        "height": 242.34
+      },
+      "text": "When conducting proper research data management through the course of a project, data objects typically progress through a lifecycle from capture to analysis to eventual preservation. Each of the steps through this curation lifecycle will most likely entail a financial cost and in some cases this may be quite high.",
+      "style": {
+        "font_size_pt": 18.0
+      },
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp165",
+      "type": "image",
+      "bbox": {
+        "x": 968.73,
+        "y": 144.78,
+        "width": 215.48,
+        "height": 215.48
+      },
+      "text": "",
+      "style": {},
+      "z": 5,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp166",
+      "type": "image",
+      "bbox": {
+        "x": 412.11,
+        "y": 374.56,
+        "width": 263.75,
+        "height": 263.75
+      },
+      "text": "",
+      "style": {},
+      "z": 6,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp167",
+      "type": "body",
+      "bbox": {
+        "x": 781.82,
+        "y": 388.01,
+        "width": 487.75,
+        "height": 292.72
+      },
+      "text": "Therefore, open data do not necessarily mean that they are free data: \nCosts associated with preservation in a repository and/or archiving of data for long term posterity may be very high depending on the size of the data and costs per MB. \n\nUnlikely that the end user will incur charges to access the data, the data depositor will typically absorb the burden of these costs.",
+      "style": {
+        "font_size_pt": 15.0,
+        "color": "#3A3838"
+      },
+      "z": 7,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp168",
+      "type": "shape",
+      "bbox": {
+        "x": 675.86,
+        "y": 446.06,
+        "width": 89.21,
+        "height": 64.61
+      },
+      "text": "",
+      "style": {},
+      "z": 8,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

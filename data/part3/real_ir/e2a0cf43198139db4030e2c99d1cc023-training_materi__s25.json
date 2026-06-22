@@ -1,0 +1,61 @@
+{
+  "slide_id": "e2a0cf43198139db4030e2c99d1cc023-training_materi__s25",
+  "width": 960,
+  "height": 540,
+  "elements": [
+    {
+      "element_id": "shp319",
+      "type": "image",
+      "bbox": {
+        "x": 63.18,
+        "y": 112.02,
+        "width": 820.35,
+        "height": 378.7
+      },
+      "text": "",
+      "style": {},
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp320",
+      "type": "body",
+      "bbox": {
+        "x": 494.98,
+        "y": 486.83,
+        "width": 348.54,
+        "height": 38.77
+      },
+      "text": "http://plazi.org/resources/treatmentbank/",
+      "style": {
+        "font_size_pt": 12.0
+      },
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp321",
+      "type": "body",
+      "bbox": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 797.86,
+        "height": 105.04
+      },
+      "text": "➤ Where do data go?\nTreatment Bank - Plazi\nStores and provides access to treatment data",
+      "style": {
+        "font_size_pt": 24.0,
+        "color": "#000000"
+      },
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

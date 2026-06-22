@@ -1,0 +1,79 @@
+{
+  "slide_id": "9b237c3961be6d09d55ef0f1580b9ec8-GOSH_Keynote_-___s17",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp186",
+      "type": "body",
+      "bbox": {
+        "x": 48.55,
+        "y": 33.06,
+        "width": 851.18,
+        "height": 119.59
+      },
+      "text": "Challenges arising since the \nRoadmap - #2",
+      "style": {
+        "font_size_pt": 31.0,
+        "color": "#763086"
+      },
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp187",
+      "type": "body",
+      "bbox": {
+        "x": 169.07,
+        "y": 169.43,
+        "width": 743.75,
+        "height": 90.49
+      },
+      "text": "Still limited distribution channels and examples of sustainable commercialisation",
+      "style": {
+        "font_size_pt": 22.0
+      },
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp188",
+      "type": "body",
+      "bbox": {
+        "x": 53.37,
+        "y": 290.12,
+        "width": 863.59,
+        "height": 405.54
+      },
+      "text": "Progress since 2018\nMany small open hardware companies (>50) have started, typically as university spin-offs and some have seen commercial growth e.g. OpenTrons.\nIncrease in support for projects with a focus on meeting accessible, low-cost price points or establishing commercial enterprises.\nChallenges\nLow-cost is necessary and valuable but we believe that open hardware has specific benefits beyond affordability e.g. customisation, community development, repairability.\nAchieving scale and accessibility will require researchers buying kits and products, challenge of niche, long tail markets. Distribution and manufacturing alliances now being explored.",
+      "style": {
+        "font_size_pt": 18.0,
+        "color": "#763086"
+      },
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp189",
+      "type": "image",
+      "bbox": {
+        "x": 48.55,
+        "y": 157.35,
+        "width": 114.66,
+        "height": 114.66
+      },
+      "text": "",
+      "style": {},
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

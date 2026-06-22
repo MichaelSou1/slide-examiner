@@ -1,0 +1,62 @@
+{
+  "slide_id": "377829fc53e13493464f3580b855dd76-Laatua_ja_vaiku__s33",
+  "width": 960,
+  "height": 540,
+  "elements": [
+    {
+      "element_id": "shp313",
+      "type": "title",
+      "bbox": {
+        "x": 32.72,
+        "y": 46.72,
+        "width": 767.46,
+        "height": 60.13
+      },
+      "text": "Material med begränsad användning",
+      "style": {
+        "color": "#008568"
+      },
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp2",
+      "type": "group",
+      "bbox": {
+        "x": 821.9,
+        "y": 42.07,
+        "width": 74.08,
+        "height": 69.42
+      },
+      "text": "",
+      "style": {},
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp316",
+      "type": "body",
+      "bbox": {
+        "x": 42.13,
+        "y": 106.85,
+        "width": 917.86,
+        "height": 422.75
+      },
+      "text": "Användningen och lagringen av material kan vara förknippat med etiska, juridiska eller avtalsmässiga begränsningar.\nAvtalsmässiga åtgärder som krävs för användningen samt åtgärder med anknytning till processerna och dataskyddet beror på de materialspecifika begränsningarna.\nSärskild noggrannhet krävs av material som innehåller personuppgifter eller material som ägs av andra aktörer som är förknippade med avtal och villkor.\nKontakta datastödet inom din organisation om du är osäker på frågor med anknytning till användarrättigheter.  Även din organisations datapolicy kan innehålla anvisningar, som kan hjälpa dig att utföra ditt arbete med lugn i sinnet.\nFör att kunna hänvisa till ett användarbegränsat material, måste det finnas tillräckligt med beskrivande metadata om det, en identifierare och en målsida. I metadata anges vad begränsningarna baseras på och hur man får åtkomst till materialet.\nTill exempel CLARIN ACA-licensen, i vilken materialets användning är begränsat till forskningsbruk (innehåller personuppgifter), till exempel Språkbanken",
+      "style": {
+        "font_size_pt": 15.0
+      },
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

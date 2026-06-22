@@ -1,0 +1,62 @@
+{
+  "slide_id": "a8dc2d0260a44588030f8fc0aed227f7-Alter-FAIR_Voca__s15",
+  "width": 1280,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp172",
+      "type": "title",
+      "bbox": {
+        "x": 16.7,
+        "y": 15.3,
+        "width": 1246.61,
+        "height": 67.63
+      },
+      "text": "If we don’t define demographic terms, someone else will",
+      "style": {
+        "font_size_pt": 32.0
+      },
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp173",
+      "type": "table",
+      "bbox": {
+        "x": 27.83,
+        "y": 213.61,
+        "width": 1224.35,
+        "height": 491.09
+      },
+      "text": "Fertility | Fecundity\nDemopaedia (IUSSP’s online thesaurus)\nFertility and infertility  refer to reproductive performance rather than capacity, and are used according to whether there was actual childbearing or not during the period under review.  | \nThe capacity of a man, a woman or a couple to produce a live child is called fecundity. \nWikidata\nnatural capability to produce offspring | actual reproductive rate of an organism or population, measured by the number of gametes (eggs), seed set, or asexual propagules. \nGender, Sex, and Sexual Orientation Ontology (GSSO)\nThe ability of an individual to produce offspring. | A reproductive quality inhering in an organism or population by virtue of the bearer's potential reproductive capacity and measured by the number of gametes.\nMedical Subject Headings (MESH)\nThe capacity to conceive or to induce conception. It may refer to either the male or female. |",
+      "style": {},
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp174",
+      "type": "body",
+      "bbox": {
+        "x": 45.91,
+        "y": 82.93,
+        "width": 1161.74,
+        "height": 126.02
+      },
+      "text": "We searched for definitions “fertility” and “fecundity” in 19 online vocabularies\n7 vocabularies followed the conventions in demography\n12 vocabularies reversed the meanings of the terms",
+      "style": {
+        "font_size_pt": 24.0
+      },
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

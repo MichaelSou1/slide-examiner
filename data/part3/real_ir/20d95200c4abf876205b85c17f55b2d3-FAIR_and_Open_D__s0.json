@@ -1,0 +1,28 @@
+{
+  "slide_id": "20d95200c4abf876205b85c17f55b2d3-FAIR_and_Open_D__s0",
+  "width": 1280,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp65",
+      "type": "body",
+      "bbox": {
+        "x": 0.0,
+        "y": 441.17,
+        "width": 1280.0,
+        "height": 122.97
+      },
+      "text": "Open data vs FAIR data",
+      "style": {},
+      "z": 0,
+      "placeholder_id": "BODY (2)",
+      "metadata": {
+        "role": "BODY (2)"
+      }
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

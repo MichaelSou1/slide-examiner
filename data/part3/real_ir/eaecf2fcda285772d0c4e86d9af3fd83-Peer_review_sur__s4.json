@@ -1,0 +1,71 @@
+{
+  "slide_id": "eaecf2fcda285772d0c4e86d9af3fd83-Peer_review_sur__s4",
+  "width": 1280,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp4",
+      "type": "chart",
+      "bbox": {
+        "x": 31.18,
+        "y": 5.74,
+        "width": 755.51,
+        "height": 633.44
+      },
+      "text": "",
+      "style": {},
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp5",
+      "type": "chart",
+      "bbox": {
+        "x": 775.01,
+        "y": -4.11,
+        "width": 464.79,
+        "height": 633.44
+      },
+      "text": "",
+      "style": {},
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp7",
+      "type": "image",
+      "bbox": {
+        "x": 20.5,
+        "y": 672.82,
+        "width": 170.74,
+        "height": 36.97
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp9",
+      "type": "body",
+      "bbox": {
+        "x": 16.98,
+        "y": 634.05,
+        "width": 177.78,
+        "height": 38.78
+      },
+      "text": "#bioPeerReview",
+      "style": {},
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

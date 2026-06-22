@@ -1,0 +1,109 @@
+{
+  "slide_id": "d605f14c1b4fad94d3f148b06071b2c2-ChipScope_nanoF__s22",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp5",
+      "type": "body",
+      "bbox": {
+        "x": 152.84,
+        "y": 23.44,
+        "width": 807.16,
+        "height": 48.47
+      },
+      "text": "Application examples – blood-brain barrier models",
+      "style": {
+        "font_size_pt": 24.0
+      },
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp2",
+      "type": "image",
+      "bbox": {
+        "x": 198.13,
+        "y": 167.49,
+        "width": 563.74,
+        "height": 385.02
+      },
+      "text": "",
+      "style": {},
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp3",
+      "type": "body",
+      "bbox": {
+        "x": 328.28,
+        "y": 556.63,
+        "width": 303.43,
+        "height": 29.08
+      },
+      "text": "https://healthjade.net/blood-brain-barrier/",
+      "style": {
+        "font_size_pt": 12.0
+      },
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp8",
+      "type": "body",
+      "bbox": {
+        "x": 3.73,
+        "y": 95.4,
+        "width": 489.86,
+        "height": 42.01
+      },
+      "text": "Motivation to study the blood brain barrier",
+      "style": {
+        "font_size_pt": 20.0
+      },
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp7",
+      "type": "shape",
+      "bbox": {
+        "x": 593.4,
+        "y": 455.69,
+        "width": 143.64,
+        "height": 63.07
+      },
+      "text": "",
+      "style": {},
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp10",
+      "type": "body",
+      "bbox": {
+        "x": 189.03,
+        "y": 603.59,
+        "width": 581.94,
+        "height": 42.01
+      },
+      "text": "Tight junctions seal the paracellular transport route",
+      "style": {
+        "font_size_pt": 20.0
+      },
+      "z": 5,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "slide_id": "1c97b66974ae1a5985c6dc360dbdf9ae-overview__s15",
+  "width": 1280,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp4",
+      "type": "table",
+      "bbox": {
+        "x": 77.15,
+        "y": 437.48,
+        "width": 533.33,
+        "height": 215.2
+      },
+      "text": "Efficiencies  |  |  |  |  | \n |  |  |  |  | \n | 15, 2, 3, 3, 15, 117, 4, 3  |  |  |  | \n |  |  |  |  | \n |  |  |  |  | \n |  |  |  |  | \n | 25W |   | 50W |   | \n | 810_no /1550_no | 810_NF/1550_NF | 810_no /1550_no | 810_NF/1550_NF | \nη_1550 | 5,23% | 1,90% | 8,10% | 2,78% | \nη_810 | 1,28% | 0,49% | 2,12% | 0,65% |",
+      "style": {},
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

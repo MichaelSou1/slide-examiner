@@ -1,0 +1,43 @@
+{
+  "slide_id": "c2e4482c41b065a9c4342a5488e695b6-novita_GIUGNO_6__s9",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp2",
+      "type": "title",
+      "bbox": {
+        "x": 66.0,
+        "y": 38.33,
+        "width": 828.0,
+        "height": 139.17
+      },
+      "text": "Replacing academic journals",
+      "style": {},
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp13",
+      "type": "group",
+      "bbox": {
+        "x": 12.93,
+        "y": 29.17,
+        "width": 1045.34,
+        "height": 661.66
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

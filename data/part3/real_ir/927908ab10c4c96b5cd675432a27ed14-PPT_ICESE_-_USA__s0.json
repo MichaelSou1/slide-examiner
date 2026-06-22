@@ -1,0 +1,95 @@
+{
+  "slide_id": "927908ab10c4c96b5cd675432a27ed14-PPT_ICESE_-_USA__s0",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp1026",
+      "type": "image",
+      "bbox": {
+        "x": 16.0,
+        "y": 0.0,
+        "width": 423.0,
+        "height": 174.97
+      },
+      "text": "",
+      "style": {},
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp5",
+      "type": "body",
+      "bbox": {
+        "x": 99.61,
+        "y": 224.0,
+        "width": 757.16,
+        "height": 113.09
+      },
+      "text": "Compatibility Test For Screening Surfactant Flooding",
+      "style": {
+        "font_size_pt": 32.0
+      },
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp6",
+      "type": "subtitle",
+      "bbox": {
+        "x": 49.81,
+        "y": 352.0,
+        "width": 888.0,
+        "height": 184.0
+      },
+      "text": "Muhammad Dhafa1), Rini Setiati11a), Marmora Titi Malinda1) ,Afiat Anugrahadi2\n\na)Corresponding author: rinisetiati@trisakti.ac.id",
+      "style": {
+        "font_size_pt": 20.0
+      },
+      "z": 2,
+      "placeholder_id": "SUBTITLE (4)",
+      "metadata": {
+        "role": "SUBTITLE (4)"
+      }
+    },
+    {
+      "element_id": "shp8",
+      "type": "body",
+      "bbox": {
+        "x": 22.45,
+        "y": 538.58,
+        "width": 735.83,
+        "height": 116.49
+      },
+      "text": "1Department of  Petroleum Engineering\n2Geological Engineering\nFaculty of Earth Technology and Energy\nUNIVERSITAS TRISAKTI, JAKARTA",
+      "style": {
+        "font_size_pt": 18.0,
+        "color": "#422C16"
+      },
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp1027",
+      "type": "image",
+      "bbox": {
+        "x": 440.0,
+        "y": 0.0,
+        "width": 496.0,
+        "height": 137.85
+      },
+      "text": "",
+      "style": {},
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

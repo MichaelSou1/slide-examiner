@@ -1,0 +1,218 @@
+{
+  "slide_id": "ad0aaf0547329b0a1dcf9a138241d6ea-GenOAWeek2021_2__s2",
+  "width": 1280,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp6",
+      "type": "body",
+      "bbox": {
+        "x": 55.43,
+        "y": 124.72,
+        "width": 569.45,
+        "height": 86.5
+      },
+      "text": "Il percorso per la creazione delle Research Infrastructure",
+      "style": {},
+      "z": 0,
+      "placeholder_id": "BODY (2)",
+      "metadata": {
+        "role": "BODY (2)"
+      }
+    },
+    {
+      "element_id": "shp7",
+      "type": "body",
+      "bbox": {
+        "x": 55.43,
+        "y": 220.43,
+        "width": 569.45,
+        "height": 429.41
+      },
+      "text": "Le Research Infrastructures sono (infra)strutture che forniscono risorse e servizi alle comunità per portare avanti la ricerca e favorire l'innovazione\nNel 2002 viene costituito lo European Strategy Forum on Ris (ESFRI) con l’obiettivo di sviluppare un approccio a livello europeo per le ERA (European Research Area)\nAd oggi più di 50 RIs fanno parte di ESFRI, grazie ad un investimento complessivo di circa 20 milioni di euro",
+      "style": {},
+      "z": 1,
+      "placeholder_id": "OBJECT (7)",
+      "metadata": {
+        "role": "OBJECT (7)"
+      }
+    },
+    {
+      "element_id": "shp8",
+      "type": "body",
+      "bbox": {
+        "x": 655.12,
+        "y": 124.72,
+        "width": 569.45,
+        "height": 86.5
+      },
+      "text": "Il percorso verso politiche di scienza aperta",
+      "style": {},
+      "z": 2,
+      "placeholder_id": "BODY (2)",
+      "metadata": {
+        "role": "BODY (2)"
+      }
+    },
+    {
+      "element_id": "shp9",
+      "type": "body",
+      "bbox": {
+        "x": 655.12,
+        "y": 220.43,
+        "width": 569.45,
+        "height": 429.41
+      },
+      "text": "Dal 2007, con il programma FP7, la Commissione europea ha compiuto una scelta decisa a favore dell’Open Science",
+      "style": {},
+      "z": 3,
+      "placeholder_id": "OBJECT (7)",
+      "metadata": {
+        "role": "OBJECT (7)"
+      }
+    },
+    {
+      "element_id": "shp3",
+      "type": "body",
+      "bbox": {
+        "x": 10.08,
+        "y": 676.54,
+        "width": 1020.47,
+        "height": 37.8
+      },
+      "text": "Emma Lazzeri // GenOA Week 2021 // 29/10/2021",
+      "style": {},
+      "z": 4,
+      "placeholder_id": "FOOTER (15)",
+      "metadata": {
+        "role": "FOOTER (15)"
+      }
+    },
+    {
+      "element_id": "shp2",
+      "type": "title",
+      "bbox": {
+        "x": 0.0,
+        "y": 11.34,
+        "width": 1280.0,
+        "height": 48.35
+      },
+      "text": "Open Science in Europa: un percorso complesso",
+      "style": {},
+      "z": 5,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp17",
+      "type": "group",
+      "bbox": {
+        "x": 669.85,
+        "y": 307.43,
+        "width": 550.66,
+        "height": 228.05
+      },
+      "text": "",
+      "style": {},
+      "z": 6,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp25",
+      "type": "image",
+      "bbox": {
+        "x": 1072.94,
+        "y": 544.47,
+        "width": 203.76,
+        "height": 154.27
+      },
+      "text": "",
+      "style": {},
+      "z": 7,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp27",
+      "type": "image",
+      "bbox": {
+        "x": 752.36,
+        "y": 575.95,
+        "width": 173.76,
+        "height": 172.65
+      },
+      "text": "",
+      "style": {},
+      "z": 8,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp30",
+      "type": "image",
+      "bbox": {
+        "x": 559.03,
+        "y": 588.84,
+        "width": 163.1,
+        "height": 216.93
+      },
+      "text": "",
+      "style": {},
+      "z": 9,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp33",
+      "type": "image",
+      "bbox": {
+        "x": 683.1,
+        "y": 498.5,
+        "width": 120.98,
+        "height": 123.97
+      },
+      "text": "",
+      "style": {},
+      "z": 10,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp36",
+      "type": "image",
+      "bbox": {
+        "x": 928.9,
+        "y": 533.33,
+        "width": 174.48,
+        "height": 204.73
+      },
+      "text": "",
+      "style": {},
+      "z": 11,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp21",
+      "type": "image",
+      "bbox": {
+        "x": 813.72,
+        "y": 507.14,
+        "width": 179.11,
+        "height": 43.78
+      },
+      "text": "",
+      "style": {},
+      "z": 12,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

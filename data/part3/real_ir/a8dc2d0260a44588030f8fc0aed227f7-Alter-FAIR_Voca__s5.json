@@ -1,0 +1,45 @@
+{
+  "slide_id": "a8dc2d0260a44588030f8fc0aed227f7-Alter-FAIR_Voca__s5",
+  "width": 1280,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp121",
+      "type": "title",
+      "bbox": {
+        "x": 88.0,
+        "y": 38.33,
+        "width": 1104.0,
+        "height": 139.17
+      },
+      "text": "Why focus on FAIR vocabularies?",
+      "style": {},
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp122",
+      "type": "body",
+      "bbox": {
+        "x": 88.0,
+        "y": 151.65,
+        "width": 1104.0,
+        "height": 496.85
+      },
+      "text": "“Controlled vocabularies” create standards for terms and measurements\nControlled vocabularies are pervasive, e.g. industrial classifications, ICDs, geocodes (NUTS, FIPS, UN/LOCODE,…)\nFAIR vocabularies allow machines to answer basic questions\n\nHow do we know when two data sets are measuring the same thing?\nIf two variables have the same persistent identifier, a machine knows they are the same \n\nHow does a machine know the difference between the Crude Birth Rate, the General Fertility Rate, the Total Fertility Rate, …?\nMachines cannot read the PDF\nMachines can use standards (e.g., RDF, SKOS) to navigate relationships",
+      "style": {},
+      "z": 1,
+      "placeholder_id": "BODY (2)",
+      "metadata": {
+        "role": "BODY (2)"
+      }
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

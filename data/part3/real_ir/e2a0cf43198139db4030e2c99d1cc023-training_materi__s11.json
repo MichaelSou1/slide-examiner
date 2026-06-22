@@ -1,0 +1,93 @@
+{
+  "slide_id": "e2a0cf43198139db4030e2c99d1cc023-training_materi__s11",
+  "width": 960,
+  "height": 540,
+  "elements": [
+    {
+      "element_id": "shp218",
+      "type": "image",
+      "bbox": {
+        "x": 14.46,
+        "y": 119.94,
+        "width": 419.94,
+        "height": 333.68
+      },
+      "text": "",
+      "style": {},
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp219",
+      "type": "body",
+      "bbox": {
+        "x": 4.13,
+        "y": 0.0,
+        "width": 872.47,
+        "height": 56.57
+      },
+      "text": "➤ How to mark material citations on GGI",
+      "style": {
+        "font_size_pt": 23.0,
+        "color": "#000000"
+      },
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp220",
+      "type": "body",
+      "bbox": {
+        "x": 16.72,
+        "y": 76.85,
+        "width": 419.94,
+        "height": 372.82
+      },
+      "text": "Individual extractions",
+      "style": {},
+      "z": 2,
+      "placeholder_id": "BODY (2)",
+      "metadata": {
+        "role": "BODY (2)"
+      }
+    },
+    {
+      "element_id": "shp221",
+      "type": "body",
+      "bbox": {
+        "x": 491.34,
+        "y": 81.55,
+        "width": 419.94,
+        "height": 368.13
+      },
+      "text": "Via template",
+      "style": {},
+      "z": 3,
+      "placeholder_id": "BODY (2)",
+      "metadata": {
+        "role": "BODY (2)"
+      }
+    },
+    {
+      "element_id": "shp222",
+      "type": "image",
+      "bbox": {
+        "x": 450.07,
+        "y": 157.67,
+        "width": 440.34,
+        "height": 120.01
+      },
+      "text": "",
+      "style": {},
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

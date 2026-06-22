@@ -1,0 +1,79 @@
+{
+  "slide_id": "9b237c3961be6d09d55ef0f1580b9ec8-GOSH_Keynote_-___s16",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp178",
+      "type": "body",
+      "bbox": {
+        "x": 48.55,
+        "y": 33.06,
+        "width": 851.18,
+        "height": 119.59
+      },
+      "text": "Challenges arising since the \nRoadmap - #1",
+      "style": {
+        "font_size_pt": 31.0,
+        "color": "#763086"
+      },
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp179",
+      "type": "body",
+      "bbox": {
+        "x": 169.07,
+        "y": 185.43,
+        "width": 743.75,
+        "height": 90.49
+      },
+      "text": "Adoption has been promising in high-level policy but slow at an instutional level",
+      "style": {
+        "font_size_pt": 22.0
+      },
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp180",
+      "type": "body",
+      "bbox": {
+        "x": 53.37,
+        "y": 306.12,
+        "width": 863.59,
+        "height": 349.8
+      },
+      "text": "Progress since 2018\nOpen Hardware is included in upcoming UNESCO Open Science report\nFew institutions have pushed forward major initiatives on open hardware, typically still limited to individual labs (in 2019 over 500 papers were published).\nChallenges\nFor science hardware, the majority of the technology development is still taking place in universities and research institutions. There is a major need to engage university management and TTOs. Funders could play a major role in generating incentives.\nMany challenges echoing open data and open software at universities: career paths, incentives, time to document, inclusion in funding, advocacy, credit etc",
+      "style": {
+        "font_size_pt": 18.0,
+        "color": "#763086"
+      },
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp181",
+      "type": "image",
+      "bbox": {
+        "x": 57.51,
+        "y": 181.61,
+        "width": 98.13,
+        "height": 98.13
+      },
+      "text": "",
+      "style": {},
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

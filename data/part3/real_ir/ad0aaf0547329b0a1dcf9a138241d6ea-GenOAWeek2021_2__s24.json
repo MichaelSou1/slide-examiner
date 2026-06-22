@@ -1,0 +1,62 @@
+{
+  "slide_id": "ad0aaf0547329b0a1dcf9a138241d6ea-GenOAWeek2021_2__s24",
+  "width": 1280,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp2",
+      "type": "title",
+      "bbox": {
+        "x": 87.33,
+        "y": 205.62,
+        "width": 1104.0,
+        "height": 164.67
+      },
+      "text": "Grazie",
+      "style": {},
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp3",
+      "type": "body",
+      "bbox": {
+        "x": 87.33,
+        "y": 377.18,
+        "width": 1104.0,
+        "height": 106.76
+      },
+      "text": "emma.lazzeri@garr.it\ngina.pavone@isti.cnr.it",
+      "style": {},
+      "z": 1,
+      "placeholder_id": "BODY (2)",
+      "metadata": {
+        "role": "BODY (2)"
+      }
+    },
+    {
+      "element_id": "shp4",
+      "type": "body",
+      "bbox": {
+        "x": 87.33,
+        "y": 663.88,
+        "width": 581.52,
+        "height": 45.24
+      },
+      "text": "Emma Lazzeri // Etica e pragmatica dell’Open Access // 02-03/03/2021",
+      "style": {},
+      "z": 2,
+      "placeholder_id": "FOOTER (15)",
+      "metadata": {
+        "role": "FOOTER (15)"
+      }
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

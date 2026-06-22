@@ -1,0 +1,58 @@
+{
+  "slide_id": "ad0aaf0547329b0a1dcf9a138241d6ea-GenOAWeek2021_2__s22",
+  "width": 1280,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp148",
+      "type": "title",
+      "bbox": {
+        "x": 102.11,
+        "y": 184.59,
+        "width": 1076.28,
+        "height": 74.92
+      },
+      "text": "Doppio menù di navigazione",
+      "style": {},
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp149",
+      "type": "image",
+      "bbox": {
+        "x": 37.34,
+        "y": 259.51,
+        "width": 522.99,
+        "height": 298.05
+      },
+      "text": "",
+      "style": {},
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp150",
+      "type": "image",
+      "bbox": {
+        "x": 608.0,
+        "y": 270.38,
+        "width": 650.4,
+        "height": 415.76
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

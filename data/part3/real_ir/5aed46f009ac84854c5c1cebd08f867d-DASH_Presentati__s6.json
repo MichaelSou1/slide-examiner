@@ -1,0 +1,732 @@
+{
+  "slide_id": "5aed46f009ac84854c5c1cebd08f867d-DASH_Presentati__s6",
+  "width": 960,
+  "height": 540,
+  "elements": [
+    {
+      "element_id": "shp275",
+      "type": "body",
+      "bbox": {
+        "x": 115.03,
+        "y": 44.57,
+        "width": 137.83,
+        "height": 29.1
+      },
+      "text": "Input L0b FITS files",
+      "style": {
+        "font_size_pt": 9.0,
+        "color": "#000000"
+      },
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp276",
+      "type": "body",
+      "bbox": {
+        "x": 122.13,
+        "y": 103.4,
+        "width": 168.88,
+        "height": 40.41
+      },
+      "text": "Initialize CCOR Image class\nx = CCORProcNCEI()",
+      "style": {
+        "font_size_pt": 8.0,
+        "color": "#000000",
+        "fill_color": "#D9EAD3"
+      },
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp277",
+      "type": "body",
+      "bbox": {
+        "x": 118.87,
+        "y": 170.07,
+        "width": 175.4,
+        "height": 40.41
+      },
+      "text": "Bias subtract and rectify\nx.ccor_bias()",
+      "style": {
+        "font_size_pt": 8.0,
+        "color": "#000000",
+        "fill_color": "#D9EAD3"
+      },
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp278",
+      "type": "body",
+      "bbox": {
+        "x": 140.49,
+        "y": 400.49,
+        "width": 132.16,
+        "height": 40.41
+      },
+      "text": "Save DN to MSB factor\nx.get_calfac()",
+      "style": {
+        "font_size_pt": 8.0,
+        "color": "#000000",
+        "fill_color": "#D9EAD3"
+      },
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp279",
+      "type": "body",
+      "bbox": {
+        "x": 132.94,
+        "y": 457.8,
+        "width": 147.28,
+        "height": 54.93
+      },
+      "text": "L1a\nCCOR-2 Operational Input\nCCOR-1,2 Retrospective",
+      "style": {
+        "font_size_pt": 9.0,
+        "color": "#000000"
+      },
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp280",
+      "type": "shape",
+      "bbox": {
+        "x": 183.94,
+        "y": 73.67,
+        "width": 22.63,
+        "height": 29.72
+      },
+      "text": "",
+      "style": {},
+      "z": 5,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp286",
+      "type": "body",
+      "bbox": {
+        "x": 648.02,
+        "y": 368.84,
+        "width": 121.26,
+        "height": 79.18
+      },
+      "text": "Vignetting correction\nx.get_calimg()\nx.apply_flat_correction()",
+      "style": {
+        "font_size_pt": 8.0,
+        "color": "#000000",
+        "fill_color": "#D9EAD3"
+      },
+      "z": 10,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp287",
+      "type": "body",
+      "bbox": {
+        "x": 449.84,
+        "y": 192.59,
+        "width": 132.16,
+        "height": 40.41
+      },
+      "text": "Remove Background\nx.remove_backg()",
+      "style": {
+        "font_size_pt": 8.0,
+        "color": "#000000",
+        "fill_color": "#FFF2CC"
+      },
+      "z": 11,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp288",
+      "type": "body",
+      "bbox": {
+        "x": 639.74,
+        "y": 468.0,
+        "width": 137.83,
+        "height": 43.62
+      },
+      "text": "L2\nCCOR-1 Retrospective",
+      "style": {
+        "font_size_pt": 9.0,
+        "color": "#000000"
+      },
+      "z": 12,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp289",
+      "type": "body",
+      "bbox": {
+        "x": 434.69,
+        "y": 245.86,
+        "width": 162.46,
+        "height": 43.62
+      },
+      "text": "L1b\nCCOR-1 Operational Input",
+      "style": {
+        "font_size_pt": 9.0,
+        "color": "#000000"
+      },
+      "z": 13,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp290",
+      "type": "body",
+      "bbox": {
+        "x": 129.79,
+        "y": 289.9,
+        "width": 153.57,
+        "height": 40.41
+      },
+      "text": "Create bad pixel mask\nx.make_mask()",
+      "style": {
+        "font_size_pt": 8.0,
+        "color": "#000000",
+        "fill_color": "#D9EAD3"
+      },
+      "z": 14,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp284",
+      "type": "body",
+      "bbox": {
+        "x": 115.03,
+        "y": 343.05,
+        "width": 183.09,
+        "height": 40.41
+      },
+      "text": "Calculate image statistics\nx.calc_stats()",
+      "style": {
+        "font_size_pt": 8.0,
+        "color": "#000000",
+        "fill_color": "#D9EAD3"
+      },
+      "z": 15,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp291",
+      "type": "body",
+      "bbox": {
+        "x": 126.79,
+        "y": 230.75,
+        "width": 159.56,
+        "height": 40.41
+      },
+      "text": "Apply linearity correction\nx.apply_lincorr()",
+      "style": {
+        "font_size_pt": 8.0,
+        "color": "#000000",
+        "fill_color": "#D9EAD3"
+      },
+      "z": 16,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp293",
+      "type": "body",
+      "bbox": {
+        "x": 447.0,
+        "y": 122.83,
+        "width": 137.83,
+        "height": 53.32
+      },
+      "text": "Compute Background (previous 4 weeks)\nx.calc_l1b_backg()",
+      "style": {
+        "font_size_pt": 8.0,
+        "color": "#000000",
+        "fill_color": "#D9EAD3"
+      },
+      "z": 18,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp294",
+      "type": "body",
+      "bbox": {
+        "x": 639.74,
+        "y": 123.51,
+        "width": 137.83,
+        "height": 53.31
+      },
+      "text": "Compute Background\n(data ± two weeks)\nx.calc_l2_backg()",
+      "style": {
+        "font_size_pt": 8.0,
+        "color": "#000000",
+        "fill_color": "#D9EAD3"
+      },
+      "z": 19,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp295",
+      "type": "body",
+      "bbox": {
+        "x": 641.11,
+        "y": 191.99,
+        "width": 135.08,
+        "height": 40.41
+      },
+      "text": "Remove Background\nx.remove_backg()",
+      "style": {
+        "font_size_pt": 8.0,
+        "color": "#000000",
+        "fill_color": "#FFF2CC"
+      },
+      "z": 20,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp296",
+      "type": "body",
+      "bbox": {
+        "x": 517.16,
+        "y": 49.49,
+        "width": 245.48,
+        "height": 53.32
+      },
+      "text": "Divide by Exposure Time and binning\nx.norm_exposure()\nx.correct_binning()",
+      "style": {
+        "font_size_pt": 8.0,
+        "color": "#000000",
+        "fill_color": "#D9EAD3"
+      },
+      "z": 21,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp297",
+      "type": "shape",
+      "bbox": {
+        "x": 280.21,
+        "y": 76.16,
+        "width": 236.95,
+        "height": 409.11
+      },
+      "text": "",
+      "style": {},
+      "z": 22,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp298",
+      "type": "shape",
+      "bbox": {
+        "x": 515.92,
+        "y": 102.82,
+        "width": 123.98,
+        "height": 20.02
+      },
+      "text": "",
+      "style": {},
+      "z": 23,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp301",
+      "type": "shape",
+      "bbox": {
+        "x": 639.9,
+        "y": 102.82,
+        "width": 68.75,
+        "height": 20.7
+      },
+      "text": "",
+      "style": {},
+      "z": 26,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp302",
+      "type": "shape",
+      "bbox": {
+        "x": 708.65,
+        "y": 176.83,
+        "width": 0.0,
+        "height": 15.17
+      },
+      "text": "",
+      "style": {},
+      "z": 27,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp303",
+      "type": "shape",
+      "bbox": {
+        "x": 708.65,
+        "y": 232.4,
+        "width": 0.0,
+        "height": 11.96
+      },
+      "text": "",
+      "style": {},
+      "z": 28,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp306",
+      "type": "body",
+      "bbox": {
+        "x": 12.54,
+        "y": 44.57,
+        "width": 97.95,
+        "height": 29.1
+      },
+      "text": "NCEI LUT file",
+      "style": {
+        "font_size_pt": 9.0,
+        "color": "#000000"
+      },
+      "z": 30,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp307",
+      "type": "shape",
+      "bbox": {
+        "x": 61.52,
+        "y": 73.67,
+        "width": 145.05,
+        "height": 29.72
+      },
+      "text": "",
+      "style": {},
+      "z": 31,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp308",
+      "type": "body",
+      "bbox": {
+        "x": 257.37,
+        "y": 44.57,
+        "width": 169.48,
+        "height": 29.1
+      },
+      "text": "NCEI FITS header template",
+      "style": {
+        "font_size_pt": 9.0,
+        "color": "#000000"
+      },
+      "z": 32,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp309",
+      "type": "shape",
+      "bbox": {
+        "x": 206.57,
+        "y": 73.67,
+        "width": 135.53,
+        "height": 29.72
+      },
+      "text": "",
+      "style": {},
+      "z": 33,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp310",
+      "type": "shape",
+      "bbox": {
+        "x": 762.64,
+        "y": 76.16,
+        "width": 63.53,
+        "height": 0.42
+      },
+      "text": "",
+      "style": {},
+      "z": 34,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp312",
+      "type": "body",
+      "bbox": {
+        "x": 659.67,
+        "y": 304.94,
+        "width": 97.95,
+        "height": 40.41
+      },
+      "text": "Convert to MSB\nx.apply_calfac()",
+      "style": {
+        "font_size_pt": 8.0,
+        "color": "#000000",
+        "fill_color": "#D9EAD3"
+      },
+      "z": 35,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp314",
+      "type": "body",
+      "bbox": {
+        "x": 807.15,
+        "y": 124.83,
+        "width": 136.01,
+        "height": 53.31
+      },
+      "text": "Vignetting correction\nx.get_calimg()\nx.apply_flat_correction()",
+      "style": {
+        "font_size_pt": 8.0,
+        "color": "#000000",
+        "fill_color": "#D9EAD3"
+      },
+      "z": 37,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp311",
+      "type": "body",
+      "bbox": {
+        "x": 826.18,
+        "y": 56.38,
+        "width": 97.95,
+        "height": 40.41
+      },
+      "text": "Convert to MSB\nx.apply_calfac()",
+      "style": {
+        "font_size_pt": 8.0,
+        "color": "#000000",
+        "fill_color": "#D9EAD3"
+      },
+      "z": 38,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp315",
+      "type": "shape",
+      "bbox": {
+        "x": 875.15,
+        "y": 96.78,
+        "width": 0.0,
+        "height": 28.04
+      },
+      "text": "",
+      "style": {},
+      "z": 39,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp316",
+      "type": "body",
+      "bbox": {
+        "x": 803.4,
+        "y": 206.58,
+        "width": 143.5,
+        "height": 43.62
+      },
+      "text": "L15\nCCOR-2 Retrospective",
+      "style": {
+        "font_size_pt": 9.0,
+        "color": "#000000"
+      },
+      "z": 40,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp317",
+      "type": "body",
+      "bbox": {
+        "x": 812.49,
+        "y": 273.29,
+        "width": 125.32,
+        "height": 79.18
+      },
+      "text": "Compute Background\n(data ± one week)\nx.make_daily_med()\nx.make_monthly_min()",
+      "style": {
+        "font_size_pt": 8.0,
+        "color": "#000000",
+        "fill_color": "#D9EAD3"
+      },
+      "z": 41,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp318",
+      "type": "body",
+      "bbox": {
+        "x": 820.04,
+        "y": 379.58,
+        "width": 110.23,
+        "height": 53.31
+      },
+      "text": "Remove Background\nx.remove_backg()",
+      "style": {
+        "font_size_pt": 8.0,
+        "color": "#000000",
+        "fill_color": "#D9EAD3"
+      },
+      "z": 42,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp319",
+      "type": "body",
+      "bbox": {
+        "x": 801.51,
+        "y": 465.18,
+        "width": 147.28,
+        "height": 43.62
+      },
+      "text": "L2\nCCOR-2 Retrospective",
+      "style": {
+        "font_size_pt": 9.0,
+        "color": "#000000"
+      },
+      "z": 43,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp320",
+      "type": "shape",
+      "bbox": {
+        "x": 875.15,
+        "y": 178.14,
+        "width": 0.0,
+        "height": 28.44
+      },
+      "text": "",
+      "style": {},
+      "z": 44,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp324",
+      "type": "body",
+      "bbox": {
+        "x": 466.94,
+        "y": 314.72,
+        "width": 97.95,
+        "height": 40.41
+      },
+      "text": "Convert to MSB\nx.apply_calfac()",
+      "style": {
+        "font_size_pt": 8.0,
+        "color": "#000000",
+        "fill_color": "#D9EAD3"
+      },
+      "z": 48,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp325",
+      "type": "body",
+      "bbox": {
+        "x": 436.14,
+        "y": 388.32,
+        "width": 159.56,
+        "height": 53.32
+      },
+      "text": "Vignetting correction\nx.get_calimg()\nx.apply_flat_correction()",
+      "style": {
+        "font_size_pt": 8.0,
+        "color": "#000000",
+        "fill_color": "#D9EAD3"
+      },
+      "z": 49,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp326",
+      "type": "body",
+      "bbox": {
+        "x": 434.69,
+        "y": 466.94,
+        "width": 162.46,
+        "height": 43.62
+      },
+      "text": "L2\nCCOR-1 Operational Input",
+      "style": {
+        "font_size_pt": 9.0,
+        "color": "#000000"
+      },
+      "z": 50,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp304",
+      "type": "body",
+      "bbox": {
+        "x": 639.74,
+        "y": 244.36,
+        "width": 137.83,
+        "height": 43.62
+      },
+      "text": "L1b\nCCOR-1 Retrospective",
+      "style": {
+        "font_size_pt": 9.0,
+        "color": "#000000"
+      },
+      "z": 51,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp54",
+      "type": "body",
+      "bbox": {
+        "x": 271.73,
+        "y": 6.47,
+        "width": 432.05,
+        "height": 32.31
+      },
+      "text": "Implementation of CCOR pipeline in development",
+      "style": {},
+      "z": 57,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

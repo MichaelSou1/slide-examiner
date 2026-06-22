@@ -1,0 +1,89 @@
+{
+  "slide_id": "e2a0cf43198139db4030e2c99d1cc023-training_materi__s26",
+  "width": 960,
+  "height": 540,
+  "elements": [
+    {
+      "element_id": "shp326",
+      "type": "image",
+      "bbox": {
+        "x": 557.88,
+        "y": 23.59,
+        "width": 275.71,
+        "height": 245.54
+      },
+      "text": "",
+      "style": {},
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp327",
+      "type": "group",
+      "bbox": {
+        "x": 638.65,
+        "y": 295.83,
+        "width": 140.66,
+        "height": 112.0
+      },
+      "text": "",
+      "style": {},
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp330",
+      "type": "body",
+      "bbox": {
+        "x": -59.1,
+        "y": -8.0,
+        "width": 832.54,
+        "height": 48.47
+      },
+      "text": "Treatment Bank",
+      "style": {
+        "font_size_pt": 18.0,
+        "color": "#000000"
+      },
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp331",
+      "type": "image",
+      "bbox": {
+        "x": 23.85,
+        "y": 34.35,
+        "width": 516.58,
+        "height": 300.05
+      },
+      "text": "",
+      "style": {},
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp332",
+      "type": "image",
+      "bbox": {
+        "x": 336.76,
+        "y": 253.6,
+        "width": 286.49,
+        "height": 300.05
+      },
+      "text": "",
+      "style": {},
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

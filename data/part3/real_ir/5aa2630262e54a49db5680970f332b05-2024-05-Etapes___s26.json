@@ -1,0 +1,28 @@
+{
+  "slide_id": "5aa2630262e54a49db5680970f332b05-2024-05-Etapes___s26",
+  "width": 1280,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp4",
+      "type": "title",
+      "bbox": {
+        "x": 161.11,
+        "y": 208.8,
+        "width": 1058.44,
+        "height": 177.66
+      },
+      "text": "Annexes",
+      "style": {},
+      "z": 0,
+      "placeholder_id": "CENTER_TITLE (3)",
+      "metadata": {
+        "role": "CENTER_TITLE (3)"
+      }
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

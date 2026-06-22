@@ -1,0 +1,205 @@
+{
+  "slide_id": "65b9f618e026be90484c974a204ae812-04_Ivanovic_Mla__s20",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp2",
+      "type": "title",
+      "bbox": {
+        "x": 39.17,
+        "y": 9.33,
+        "width": 887.5,
+        "height": 85.33
+      },
+      "text": "Overview",
+      "style": {
+        "font_size_pt": 20.0
+      },
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp5",
+      "type": "body",
+      "bbox": {
+        "x": 756.33,
+        "y": 696.67,
+        "width": 172.0,
+        "height": 48.0
+      },
+      "text": "21",
+      "style": {},
+      "z": 1,
+      "placeholder_id": "SLIDE_NUMBER (13)",
+      "metadata": {
+        "role": "SLIDE_NUMBER (13)"
+      }
+    },
+    {
+      "element_id": "shp18",
+      "type": "body",
+      "bbox": {
+        "x": 118.0,
+        "y": 417.0,
+        "width": 293.0,
+        "height": 38.83
+      },
+      "text": "Container and Pump",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp19",
+      "type": "body",
+      "bbox": {
+        "x": 506.0,
+        "y": 417.0,
+        "width": 179.25,
+        "height": 42.01
+      },
+      "text": "Dosing chamber and injector",
+      "style": {},
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp20",
+      "type": "body",
+      "bbox": {
+        "x": 39.17,
+        "y": 480.0,
+        "width": 430.33,
+        "height": 164.79
+      },
+      "text": "Storing energy to refill the injector\nEnsure safe handling of the product\u000b(closed loop system)\nBuild pressure to refill the injector\nTransport product to from container to the dosing chamber",
+      "style": {
+        "font_size_pt": 16.0
+      },
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp21",
+      "type": "body",
+      "bbox": {
+        "x": 473.0,
+        "y": 480.0,
+        "width": 430.35,
+        "height": 138.94
+      },
+      "text": "Convenient handling\nDefine injection volume\nDefine injection pressure\nEnsure connection to the tree or palm\nVisualize injected volume",
+      "style": {
+        "font_size_pt": 16.0
+      },
+      "z": 5,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp13",
+      "type": "image",
+      "bbox": {
+        "x": 118.97,
+        "y": 87.36,
+        "width": 361.44,
+        "height": 301.93
+      },
+      "text": "",
+      "style": {},
+      "z": 6,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp14",
+      "type": "image",
+      "bbox": {
+        "x": 433.87,
+        "y": 155.16,
+        "width": 311.3,
+        "height": 207.54
+      },
+      "text": "",
+      "style": {},
+      "z": 7,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp15",
+      "type": "shape",
+      "bbox": {
+        "x": 568.81,
+        "y": 365.56,
+        "width": 53.62,
+        "height": 2.65
+      },
+      "text": "",
+      "style": {},
+      "z": 8,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp22",
+      "type": "body",
+      "bbox": {
+        "x": 621.47,
+        "y": 350.4,
+        "width": 123.13,
+        "height": 32.28
+      },
+      "text": "Dosing chamber",
+      "style": {
+        "font_size_pt": 12.0
+      },
+      "z": 9,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp23",
+      "type": "shape",
+      "bbox": {
+        "x": 675.57,
+        "y": 142.33,
+        "width": 53.62,
+        "height": 2.65
+      },
+      "text": "",
+      "style": {},
+      "z": 10,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp24",
+      "type": "body",
+      "bbox": {
+        "x": 724.23,
+        "y": 130.58,
+        "width": 123.13,
+        "height": 32.28
+      },
+      "text": "Injector",
+      "style": {
+        "font_size_pt": 12.0
+      },
+      "z": 11,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

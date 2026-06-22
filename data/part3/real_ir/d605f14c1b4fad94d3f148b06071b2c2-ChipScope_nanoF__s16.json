@@ -1,0 +1,58 @@
+{
+  "slide_id": "d605f14c1b4fad94d3f148b06071b2c2-ChipScope_nanoF__s16",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp21",
+      "type": "body",
+      "bbox": {
+        "x": 197.31,
+        "y": 540.46,
+        "width": 653.1,
+        "height": 67.86
+      },
+      "text": "Measured optical power as a function of the Poti level (potentiometer for controlling the output light power)",
+      "style": {},
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp6",
+      "type": "chart",
+      "bbox": {
+        "x": 109.6,
+        "y": 86.91,
+        "width": 740.81,
+        "height": 430.88
+      },
+      "text": "",
+      "style": {},
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp8",
+      "type": "body",
+      "bbox": {
+        "x": 170.04,
+        "y": 23.44,
+        "width": 595.2,
+        "height": 48.47
+      },
+      "text": "Evaluation of light-cell interaction",
+      "style": {
+        "font_size_pt": 24.0
+      },
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

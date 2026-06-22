@@ -1,0 +1,61 @@
+{
+  "slide_id": "fa4cffb65fe50e0f7177efdcb72b7ffb-2022-11-16_USR___s4",
+  "width": 1280,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp165",
+      "type": "title",
+      "bbox": {
+        "x": 15.05,
+        "y": 12.24,
+        "width": 1249.9,
+        "height": 113.39
+      },
+      "text": "5.1 AURORA SDG RESEARCH DASHBOARD\u000bWHAT IS THE OBJECTIVE FOR THIS TASK?",
+      "style": {},
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp166",
+      "type": "body",
+      "bbox": {
+        "x": 88.0,
+        "y": 191.67,
+        "width": 781.0,
+        "height": 456.83
+      },
+      "text": "To turn the SDGs into a leading narrative for research in the Aurora Alliance.\nResults in 2023:\nThe SDG Research Dashboard to become a robust and operational tool.\nThe SDG Research Dashboard is available for other universities and networks.",
+      "style": {
+        "font_size_pt": 28.0,
+        "color": "#0095F7"
+      },
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp167",
+      "type": "group",
+      "bbox": {
+        "x": 988.03,
+        "y": 138.48,
+        "width": 276.92,
+        "height": 501.0
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "slide_id": "377829fc53e13493464f3580b855dd76-Laatua_ja_vaiku__s16",
+  "width": 960,
+  "height": 540,
+  "elements": [
+    {
+      "element_id": "shp169",
+      "type": "title",
+      "bbox": {
+        "x": 32.72,
+        "y": 46.72,
+        "width": 894.55,
+        "height": 60.13
+      },
+      "text": "Publicerade anvisningar för utvärdering \u000bav datavärde och -kvalitet",
+      "style": {
+        "font_size_pt": 29.2,
+        "color": "#008568"
+      },
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp170",
+      "type": "body",
+      "bbox": {
+        "x": 32.72,
+        "y": 136.33,
+        "width": 921.54,
+        "height": 358.68
+      },
+      "text": "Det finns många olika sätt och kriterier att definiera värdet på data. Kvalitetsgranskningen kan till exempel baseras på hur välbevarade data man har, hur täckande, tillförlitliga och enhetliga de är. När alla data inte kan lagras, stöder definiering av värde och kvalitet i synnerhet urvalet av material för långtidslagring.\nHärnäst presenterar vi huvudpunkterna från två publicerade anvisningar, som forskare kan utnyttja och tillämpa vid utvärdering av värdet för och kvaliteten på sina data:\nHelsingfors universitets anvisning för definition av datavärde med tanke på långtidsförvaring: Krister Talvinen. (2019). Digital Preservation (Fairdata-PAS): Guidelines for UH Evaluators. Zenodo.\nStatistikcentralens ramverk för kvalitetssäkring av datamaterial (på finska).\n\nÄven Riksarkivets anvisningar (på finska) innehåller ett kapitel, som behandlar forskningsmaterial och definitionen av värdet i synnerhet ur ett arkivperspektiv.",
+      "style": {
+        "font_size_pt": 17.0
+      },
+      "z": 1,
+      "placeholder_id": "BODY (2)",
+      "metadata": {
+        "role": "BODY (2)"
+      }
+    },
+    {
+      "element_id": "shp171",
+      "type": "image",
+      "bbox": {
+        "x": 839.69,
+        "y": 46.72,
+        "width": 64.16,
+        "height": 60.13
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

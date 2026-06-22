@@ -1,0 +1,186 @@
+{
+  "slide_id": "d605f14c1b4fad94d3f148b06071b2c2-ChipScope_nanoF__s11",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp4",
+      "type": "image",
+      "bbox": {
+        "x": 638.76,
+        "y": 102.96,
+        "width": 287.28,
+        "height": 249.48
+      },
+      "text": "",
+      "style": {},
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp7",
+      "type": "image",
+      "bbox": {
+        "x": 79.33,
+        "y": 306.9,
+        "width": 211.68,
+        "height": 296.7
+      },
+      "text": "",
+      "style": {},
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp11",
+      "type": "body",
+      "bbox": {
+        "x": 3.73,
+        "y": 95.4,
+        "width": 360.48,
+        "height": 42.01
+      },
+      "text": "Detachable microfluidic system",
+      "style": {
+        "font_size_pt": 20.0
+      },
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp12",
+      "type": "image",
+      "bbox": {
+        "x": 18.85,
+        "y": 131.9,
+        "width": 540.08,
+        "height": 150.36
+      },
+      "text": "",
+      "style": {},
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp13",
+      "type": "shape",
+      "bbox": {
+        "x": 200.28,
+        "y": 331.44,
+        "width": 143.64,
+        "height": 94.79
+      },
+      "text": "",
+      "style": {},
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp15",
+      "type": "shape",
+      "bbox": {
+        "x": 195.43,
+        "y": 346.56,
+        "width": 148.5,
+        "height": 137.49
+      },
+      "text": "",
+      "style": {},
+      "z": 5,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp16",
+      "type": "body",
+      "bbox": {
+        "x": 343.92,
+        "y": 314.64,
+        "width": 232.27,
+        "height": 35.54
+      },
+      "text": "recess for bonding wires",
+      "style": {
+        "font_size_pt": 16.0
+      },
+      "z": 6,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp22",
+      "type": "body",
+      "bbox": {
+        "x": 11.29,
+        "y": 432.0,
+        "width": 68.04,
+        "height": 61.39
+      },
+      "text": "fluid tubes",
+      "style": {
+        "font_size_pt": 16.0
+      },
+      "z": 7,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp25",
+      "type": "body",
+      "bbox": {
+        "x": 743.14,
+        "y": 306.68,
+        "width": 137.53,
+        "height": 35.54
+      },
+      "text": "PDMS sealing",
+      "style": {
+        "font_size_pt": 16.0
+      },
+      "z": 8,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp26",
+      "type": "body",
+      "bbox": {
+        "x": 325.45,
+        "y": 434.83,
+        "width": 626.62,
+        "height": 213.26
+      },
+      "text": "Features:\nEasy detachment of the fluidics from the chip\n\t=> easy cleaning of chip and microfluidics\n\t=> same chip applicable for dry and for fluid imaging\n\t=> simple replacement in case of damage\nHighly transparent PMMA top layer\nFlexibility of the microfluidic channel geometry",
+      "style": {},
+      "z": 9,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp14",
+      "type": "body",
+      "bbox": {
+        "x": 170.04,
+        "y": 23.44,
+        "width": 695.51,
+        "height": 48.47
+      },
+      "text": "Alternative microfluidic system",
+      "style": {
+        "font_size_pt": 24.0
+      },
+      "z": 10,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "slide_id": "4d21131e737edf33a8cf5d1376403ede-20220308_Open_C__s0",
+  "width": 960,
+  "height": 540,
+  "elements": [
+    {
+      "element_id": "shp254",
+      "type": "title",
+      "bbox": {
+        "x": 32.73,
+        "y": 78.17,
+        "width": 894.55,
+        "height": 215.5
+      },
+      "text": "",
+      "style": {},
+      "z": 0,
+      "placeholder_id": "CENTER_TITLE (3)",
+      "metadata": {
+        "role": "CENTER_TITLE (3)"
+      }
+    },
+    {
+      "element_id": "shp255",
+      "type": "subtitle",
+      "bbox": {
+        "x": 32.72,
+        "y": 297.55,
+        "width": 894.55,
+        "height": 83.21
+      },
+      "text": "",
+      "style": {},
+      "z": 1,
+      "placeholder_id": "SUBTITLE (4)",
+      "metadata": {
+        "role": "SUBTITLE (4)"
+      }
+    },
+    {
+      "element_id": "shp256",
+      "type": "image",
+      "bbox": {
+        "x": 43.47,
+        "y": 0.0,
+        "width": 879.11,
+        "height": 540.0
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp257",
+      "type": "body",
+      "bbox": {
+        "x": 486.38,
+        "y": 434.04,
+        "width": 435.31,
+        "height": 87.28
+      },
+      "text": "So this is how I started to do science, on the cloud, with my big-data cloud computing colleagues….",
+      "style": {
+        "color": "#E2923E"
+      },
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp258",
+      "type": "image",
+      "bbox": {
+        "x": -0.0,
+        "y": 524.86,
+        "width": 43.26,
+        "height": 15.14
+      },
+      "text": "",
+      "style": {},
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

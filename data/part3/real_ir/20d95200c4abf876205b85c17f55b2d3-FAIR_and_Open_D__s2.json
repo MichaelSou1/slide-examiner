@@ -1,0 +1,112 @@
+{
+  "slide_id": "20d95200c4abf876205b85c17f55b2d3-FAIR_and_Open_D__s2",
+  "width": 1280,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp86",
+      "type": "body",
+      "bbox": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 1280.0,
+        "height": 117.03
+      },
+      "text": "Is Open Data Equal to FAIR Data?",
+      "style": {
+        "font_size_pt": 44.0
+      },
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp87",
+      "type": "body",
+      "bbox": {
+        "x": 1005.71,
+        "y": 698.53,
+        "width": 274.29,
+        "height": 22.62
+      },
+      "text": "Icons made by https://www.flaticon.com/authors/eucalyp",
+      "style": {
+        "font_size_pt": 8.0
+      },
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp88",
+      "type": "image",
+      "bbox": {
+        "x": 510.04,
+        "y": 331.1,
+        "width": 238.04,
+        "height": 238.04
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp89",
+      "type": "body",
+      "bbox": {
+        "x": 103.05,
+        "y": 146.92,
+        "width": 319.09,
+        "height": 264.62
+      },
+      "text": "A common misconception is that data that is FAIR compliant has to be open at the same time. \nThis is definitely not the case and a common phrase used in the community is “open as possible, closed as necessary”.",
+      "style": {
+        "font_size_pt": 16.0,
+        "color": "#595959"
+      },
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp90",
+      "type": "body",
+      "bbox": {
+        "x": 510.04,
+        "y": 146.92,
+        "width": 752.65,
+        "height": 184.18
+      },
+      "text": "There are numerous examples where data cannot be made open by default, at least in the first instance, including data that is subject to IPR issues and data that is sensitive in nature. \nIn the context of this MOOC, we will concentrate on the latter since patient data is sensitive.",
+      "style": {
+        "font_size_pt": 18.0
+      },
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp91",
+      "type": "body",
+      "bbox": {
+        "x": 810.52,
+        "y": 360.99,
+        "width": 370.29,
+        "height": 300.51
+      },
+      "text": "While there may be many hurdles that hinder the ability to make a dataset open (and/or FAIR) but established methods in health research are:\nanonymisation and/or \naccess control\nmaking sure that there are also consent forms in use where necessary",
+      "style": {
+        "font_size_pt": 18.0
+      },
+      "z": 5,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

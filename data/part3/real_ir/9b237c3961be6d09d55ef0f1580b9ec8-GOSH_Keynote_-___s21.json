@@ -1,0 +1,108 @@
+{
+  "slide_id": "9b237c3961be6d09d55ef0f1580b9ec8-GOSH_Keynote_-___s21",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp215",
+      "type": "body",
+      "bbox": {
+        "x": 54.41,
+        "y": 101.82,
+        "width": 851.18,
+        "height": 248.85
+      },
+      "text": "Thank you!\nQ&A",
+      "style": {
+        "font_size_pt": 55.0,
+        "color": "#763086"
+      },
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp216",
+      "type": "image",
+      "bbox": {
+        "x": 438.78,
+        "y": 485.79,
+        "width": 215.32,
+        "height": 83.62
+      },
+      "text": "",
+      "style": {},
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp217",
+      "type": "image",
+      "bbox": {
+        "x": 54.41,
+        "y": 504.56,
+        "width": 285.11,
+        "height": 155.55
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp218",
+      "type": "image",
+      "bbox": {
+        "x": 428.76,
+        "y": 601.4,
+        "width": 342.82,
+        "height": 97.36
+      },
+      "text": "",
+      "style": {},
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp219",
+      "type": "shape",
+      "bbox": {
+        "x": 5.2,
+        "y": 382.69,
+        "width": 949.61,
+        "height": 71.09
+      },
+      "text": "",
+      "style": {
+        "fill_color": "#763086"
+      },
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp220",
+      "type": "body",
+      "bbox": {
+        "x": 44.08,
+        "y": 382.7,
+        "width": 736.09,
+        "height": 71.09
+      },
+      "text": "GOSH funders and supporters",
+      "style": {
+        "font_size_pt": 32.0
+      },
+      "z": 5,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

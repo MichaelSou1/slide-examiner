@@ -1,0 +1,79 @@
+{
+  "slide_id": "9b237c3961be6d09d55ef0f1580b9ec8-GOSH_Keynote_-___s14",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp162",
+      "type": "body",
+      "bbox": {
+        "x": 48.55,
+        "y": 33.06,
+        "width": 851.18,
+        "height": 119.59
+      },
+      "text": "Opportunities arising since the Roadmap - #2",
+      "style": {
+        "font_size_pt": 31.0,
+        "color": "#763086"
+      },
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp163",
+      "type": "body",
+      "bbox": {
+        "x": 48.2,
+        "y": 315.01,
+        "width": 863.59,
+        "height": 377.67
+      },
+      "text": "Progress since 2018\nCOVID-19 has led to the establishment of initiatives with a focus on open technology approaches.\nGrowing recognition that open IP is insufficient and open know-how is critical for complex technologies - a fact long recongised in open hardware.\nLargest explosion of open hardware projects in history during 2020 - still learning from how they went, how open they really were, collaboration dynamics, impact. \nOpportunities\nPolicy alignment between open science hardware goals and the broader goal of equitable access to hardware - timely issue for policy makers.\nFunders are exploring this space to a greater extent.",
+      "style": {
+        "font_size_pt": 18.0,
+        "color": "#763086"
+      },
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp164",
+      "type": "body",
+      "bbox": {
+        "x": 188.01,
+        "y": 177.66,
+        "width": 728.25,
+        "height": 127.65
+      },
+      "text": "Broken supply chains during COVID-19 have turned a policy spotlight on equitable access to hardware (particularly biomedical hardware)",
+      "style": {
+        "font_size_pt": 22.0
+      },
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp165",
+      "type": "image",
+      "bbox": {
+        "x": 20.66,
+        "y": 158.83,
+        "width": 150.0,
+        "height": 150.0
+      },
+      "text": "",
+      "style": {},
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

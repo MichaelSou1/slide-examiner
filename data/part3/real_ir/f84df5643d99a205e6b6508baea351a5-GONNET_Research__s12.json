@@ -1,0 +1,43 @@
+{
+  "slide_id": "f84df5643d99a205e6b6508baea351a5-GONNET_Research__s12",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp3",
+      "type": "image",
+      "bbox": {
+        "x": 139.31,
+        "y": 137.04,
+        "width": 679.13,
+        "height": 475.3
+      },
+      "text": "",
+      "style": {},
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp4",
+      "type": "body",
+      "bbox": {
+        "x": 288.15,
+        "y": 629.54,
+        "width": 624.0,
+        "height": 29.08
+      },
+      "text": "Source : Open Access University of Cambridge – Update : October 2018",
+      "style": {
+        "font_size_pt": 12.0
+      },
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

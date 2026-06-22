@@ -1,0 +1,65 @@
+{
+  "slide_id": "377829fc53e13493464f3580b855dd76-Laatua_ja_vaiku__s11",
+  "width": 960,
+  "height": 540,
+  "elements": [
+    {
+      "element_id": "shp135",
+      "type": "title",
+      "bbox": {
+        "x": 32.72,
+        "y": 26.14,
+        "width": 894.55,
+        "height": 60.13
+      },
+      "text": "Anvisningar gällande livscykeln för data \u000boch dokumentering av den",
+      "style": {
+        "font_size_pt": 24.0,
+        "color": "#008568"
+      },
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp136",
+      "type": "body",
+      "bbox": {
+        "x": 10.6,
+        "y": 100.23,
+        "width": 949.39,
+        "height": 420.54
+      },
+      "text": "Spara rådata, såvida lagring av dem är möjligt och ändamålsenligt. \nDokumentera datakällorna. Använd permanenta identifierare om det är möjligt (t.ex. för rådatauppsättningar, infrastrukturer, sensorer, protokoll).\nDokumentera datahanteringen och dess principer noggrant, såsom valideringsprocessen, huruvida skrivfel har korrigerats samt konversioner osv.\nPlanera versioneringen, långtidslagringen och förstöringen också med tanke på rådata\nSäkerställ att du vid behov kan återgå bakåt i versionerna genom att se till att du skapar en tillräcklig mängd versioner under arbetets gång. Säkerställ att versionerna är entydigt identifierbara.\nSe till att filerna är oskadade genom att räkna kontrollsummor för dem och kom ihåg säkerhetskopieringen. Registrera även dessa åtgärder.\nFundera över vad som är nödvändigt med tanke på forskningens reproducerbarhet.\nI synnerhet med tanke på data som långtidslagras är noggrann dokumentation viktig, till exempel beträffande apparatur och program som har använts.",
+      "style": {
+        "font_size_pt": 16.5
+      },
+      "z": 1,
+      "placeholder_id": "BODY (2)",
+      "metadata": {
+        "role": "BODY (2)"
+      }
+    },
+    {
+      "element_id": "shp137",
+      "type": "image",
+      "bbox": {
+        "x": 821.9,
+        "y": 42.07,
+        "width": 74.08,
+        "height": 69.42
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

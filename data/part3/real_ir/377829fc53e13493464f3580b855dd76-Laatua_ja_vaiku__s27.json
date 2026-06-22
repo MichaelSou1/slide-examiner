@@ -1,0 +1,64 @@
+{
+  "slide_id": "377829fc53e13493464f3580b855dd76-Laatua_ja_vaiku__s27",
+  "width": 960,
+  "height": 540,
+  "elements": [
+    {
+      "element_id": "shp263",
+      "type": "title",
+      "bbox": {
+        "x": 24.1,
+        "y": 6.97,
+        "width": 894.55,
+        "height": 60.13
+      },
+      "text": "Sammanställning av dataset med tanke på fortsatt användning",
+      "style": {
+        "color": "#008568"
+      },
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp264",
+      "type": "body",
+      "bbox": {
+        "x": 10.05,
+        "y": 84.06,
+        "width": 939.91,
+        "height": 402.43
+      },
+      "text": "Dataset är en helhet som sammanställts av ifrågavarande data. När data publiceras \u000bmåste man ta ställning förutom till deras olika förädlingsgrader (level) och dokumentation, även till exempel till\ngranularitet och resolution (kornighet) och nödvändig hänvisningsnoggrannhet (identifierare)\nfilformat, hur data har fördelats i filer och hur de har dokumenterats (struktur, identifierare)\nhur det publicerade materialet eventuellt versioneras eller ackumuleras i framtiden\nangivelse av tidsserier och olika variabler i metadata och att göra dem sökbara mellan olika dataset.\nNär du beslutar om lösningar, observera FAIR-principerna – tänk på materialets hänvisningsbarhet, hittbarhet, interoperabilitet och fortsatta användning. \nDet är ofta enklare att dela in data i delar än att sammanföra dem på nytt från olika filer\nStora filer kan å andra sidan vara tunga att överföra och hantera\nFörsök tänka på framtida användare och nya användningssätt\nKom ihåg att man av dina data även kan ge ut sekundära publikationer (som inte är nya versioner av den primära publikationen)\nFölj god praxis inom ditt område",
+      "style": {
+        "font_size_pt": 16.0
+      },
+      "z": 1,
+      "placeholder_id": "BODY (2)",
+      "metadata": {
+        "role": "BODY (2)"
+      }
+    },
+    {
+      "element_id": "shp2",
+      "type": "group",
+      "bbox": {
+        "x": 821.9,
+        "y": 43.94,
+        "width": 74.08,
+        "height": 69.42
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

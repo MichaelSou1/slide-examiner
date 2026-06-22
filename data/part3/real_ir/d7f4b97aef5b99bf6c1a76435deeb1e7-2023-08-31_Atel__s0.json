@@ -1,0 +1,81 @@
+{
+  "slide_id": "d7f4b97aef5b99bf6c1a76435deeb1e7-2023-08-31_Atel__s0",
+  "width": 1280,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp2",
+      "type": "title",
+      "bbox": {
+        "x": 96.0,
+        "y": 118.08,
+        "width": 1088.0,
+        "height": 154.33
+      },
+      "text": "Héberger des revues électroniques",
+      "style": {
+        "font_size_pt": 44.0
+      },
+      "z": 0,
+      "placeholder_id": "CENTER_TITLE (3)",
+      "metadata": {
+        "role": "CENTER_TITLE (3)"
+      }
+    },
+    {
+      "element_id": "shp3",
+      "type": "subtitle",
+      "bbox": {
+        "x": 192.0,
+        "y": 302.42,
+        "width": 896.0,
+        "height": 184.0
+      },
+      "text": "Pourquoi ? Comment ?",
+      "style": {
+        "font_size_pt": 36.0
+      },
+      "z": 1,
+      "placeholder_id": "SUBTITLE (4)",
+      "metadata": {
+        "role": "SUBTITLE (4)"
+      }
+    },
+    {
+      "element_id": "shp4",
+      "type": "body",
+      "bbox": {
+        "x": 53.04,
+        "y": 531.76,
+        "width": 783.51,
+        "height": 38.78
+      },
+      "text": "Jean-Blaise Claivaz – DOI: 10.5281/zenodo.8349013",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp5",
+      "type": "body",
+      "bbox": {
+        "x": 821.44,
+        "y": 531.76,
+        "width": 393.11,
+        "height": 38.78
+      },
+      "text": "Journée LibreABC - 31 août 2023",
+      "style": {
+        "font_size_pt": 18.0
+      },
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

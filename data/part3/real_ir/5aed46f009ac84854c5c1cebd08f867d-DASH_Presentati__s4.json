@@ -1,0 +1,128 @@
+{
+  "slide_id": "5aed46f009ac84854c5c1cebd08f867d-DASH_Presentati__s4",
+  "width": 960,
+  "height": 540,
+  "elements": [
+    {
+      "element_id": "shp172",
+      "type": "title",
+      "bbox": {
+        "x": 66.0,
+        "y": 0.5,
+        "width": 828.0,
+        "height": 76.47
+      },
+      "text": "SPADES - CBL and RLC",
+      "style": {
+        "font_size_pt": 20.0
+      },
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp173",
+      "type": "body",
+      "bbox": {
+        "x": 453.13,
+        "y": 139.19,
+        "width": 501.04,
+        "height": 271.5
+      },
+      "text": "Example RLC\n\"dn_g16-sgps-l2-int1m_G16_20170901T000000Z_20170902T000000Z_c20210712T211317Z.json\":\n{\n    \"platform\": \"G16\",\n    \"start_time\": \"20170901T000000Z\",\n    \"end_time\": \"20170902T000000Z\",\n    \"delta_time\": 86400,\n    \"files_input\": {\n        \"sgps-l2-avg1m\": {\n            \"filenames\": [\n                \"/nfs/goesr_private/l2/data/goes16/sgps-l2-avg1m/2017/09/dn_sgps-l2-avg1m_g16_d20170901_v2-0-0.nc\"\n            ],\n            \"file_count\": 1\n        },\n        \"sgps-l2-int5m\": {\n            \"filenames\": [\n                \"/nfs/goesr_private/l2/data/goes16/sgps-l2-int5m/2017/09/dn_sgps-l2-int5m_g16_d20170901_v1-0-3.nc\"\n            ],\n            \"file_count\": 1\n        }\n    },\n    \"dir_outputs\": {\n        \"sgps-l2-int1m\": \"/nfs/goesr_private/l2/data/goes16/sgps-l2-int1m/2017/09\"\n    },\n    \"log_level\": \"WARNING\",\n    \"num_secs_to_int\": 60,\n    \"root_workspace_dir\": \"/nfs/goesr_private/workspaces/g16-sgps-l2-int1m/s201709010000_e201709230000\",\n    \"nc_master_int\": \"sgps/static_required/master_templates/MASTER_sgps-l2-int1m.nc\",\n    \"environment\": \"dn\"\n}",
+      "style": {
+        "font_size_pt": 8.0
+      },
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp174",
+      "type": "image",
+      "bbox": {
+        "x": 714.88,
+        "y": -2.0,
+        "width": 99.83,
+        "height": 132.55
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp175",
+      "type": "body",
+      "bbox": {
+        "x": 3.55,
+        "y": 84.97,
+        "width": 395.37,
+        "height": 416.91
+      },
+      "text": "Example CBL\n\"g16-sgps-l2-int1m.json\":\n{\n    \"name\": \"g16-sgps-l2-int1m\",\n    \"alg_id\": \"seis\",\n    \"algorithm\": \"sgps/src/python/sgps_int.py\",\n    \"dir_inputs\": {\n        \"sgps-l2-avg1m\": [\n            \"/nfs/goesr_private/l2/data/goes16/sgps-l2-avg1m\"\n        ],\n        \"sgps-l2-int5m\": [\n            \"/nfs/goesr_private/l2/data/goes16/sgps-l2-int5m\"\n        ]\n    },\n    \"base_cleanup_run_config_path\": \"/tmp/spades_seis_working/rlc/archive/g16-sgps-l2-int1m\",\n    \"base_cleanup_data_path\": \"/tmp/spades_seis_prod/archive/GOES-16\",\n    \"dir_config\": \"/nfs/goesr_private/workspaces/g16-sgps-l2-int1m/\",\n    \"dir_outputs\": {\n        \"sgps-l2-int1m\": \"/nfs/goesr_private/l2/data/goes16/sgps-l2-int1m\"\n    },\n    \"supported_environments\": [\n        \"dn\"\n    ],\n    \"input_platforms\": [\n        \"G16\"\n    ],\n    \"output_platform\": \"G16\",\n    \"duration_seconds\": 86400,\n    \"leading_buffer_seconds\": 0,\n    \"trailing_buffer_seconds\": 0,\n    \"timeout_to_ship_seconds\": 579,\n    \"force_timeout_millis\": 5000,\n    \"static_run_config\": {\n        \"num_secs_to_int\": 60,\n        \"root_workspace_dir\": \"/tmp/spades_seis_working\",\n        \"nc_master_int\": \"sgps/static_required/master_templates/MASTER_sgps-l2-int1m.nc\",\n        \"log_level\": \"WARNING\",\n        \"environment\": \"dn\"\n    },\n    \"retrospective_run_config\": {\n\t\"chunk_size_days\": 90,\n\t\"buffer_size_days\": 30,\n\t\"output_dir_format\": \"YYYY/MM\",\n\t\"alg_repo\": \"/nfs/goesr_private/goesr_l2_algs/goesr_l2_seiss_algs\"\n    }\n}",
+      "style": {
+        "font_size_pt": 8.0
+      },
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp176",
+      "type": "shape",
+      "bbox": {
+        "x": 527.27,
+        "y": -38.17,
+        "width": 49.01,
+        "height": 305.7
+      },
+      "text": "",
+      "style": {},
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp177",
+      "type": "body",
+      "bbox": {
+        "x": 398.92,
+        "y": 81.22,
+        "width": 293.39,
+        "height": 30.71
+      },
+      "text": "start time: 20170901T000000Z, end time: 20170902T000000Z",
+      "style": {
+        "font_size_pt": 7.0
+      },
+      "z": 5,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp178",
+      "type": "body",
+      "bbox": {
+        "x": 385.56,
+        "y": 416.4,
+        "width": 573.17,
+        "height": 116.35
+      },
+      "text": "Configurable Business Logic (CBL)\nInformation about how a system can execute an algorithm\nSpecifies path to algorithm script to execute, path to directories containing all possible input files, duration seconds of product window, static run configuration, etc\nRun Level Configuration (RLC)\nConfiguration parameters for a single invocation of an algorithm\nContains information such as specific input files, start and end time of processing window\nControl Segment\nGenerates one or more RLCs based on the information contained in a provided CBL",
+      "style": {
+        "font_size_pt": 7.0
+      },
+      "z": 6,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

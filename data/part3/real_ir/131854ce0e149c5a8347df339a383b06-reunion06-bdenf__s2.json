@@ -1,0 +1,26 @@
+{
+  "slide_id": "131854ce0e149c5a8347df339a383b06-reunion06-bdenf__s2",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp2",
+      "type": "table",
+      "bbox": {
+        "x": 41.53,
+        "y": 27.36,
+        "width": 876.95,
+        "height": 649.22
+      },
+      "text": "Seleção de Revistas BDENF \n Aprovadas por ano |  |  |  |  |  |  | \n2010 | 2011 | 2012 | 2013 | 2014 | 2015 | 2016 | 2017\nRevista cuidarte enfermagem | Enfermagem em Foco | Revista de Enfermagem do Centro-oeste Mineiro | Revista de Enfermagem e Atenção á Saúde  | Rev Enfermería Neurológica | Journal of Nursing and Health | Rev Enfermagem UFPI | Revista Feridas\nRevista de Pesquisa Cuidado é Fundamental online | Revista de Enfermagem da UFSM |   |   | Rev Enfermería IMSS | Enfoque Panamá |   | Revista Sanus\n  | HERE - História da Enfermagem |   |   | Rev Mexicana de Enfermería Cardiológica | Cuidarte Colômbia |   | \n  |   |   |   | Rev Enfermería Universitária |   |   |  \n  |   |   |   | Rev Horizontes em Salud |   |   |  \n  |   |   |   | Rev Enfermería Actual Costa Rica |   |   |  \n  |   |   |   | Rev Aladefe |   |   |  \n  |   |   |   | Rev Cuidarte Enfermería |   |   |",
+      "style": {},
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

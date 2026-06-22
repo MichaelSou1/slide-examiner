@@ -1,0 +1,45 @@
+{
+  "slide_id": "a8dc2d0260a44588030f8fc0aed227f7-Alter-FAIR_Voca__s9",
+  "width": 1280,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp133",
+      "type": "title",
+      "bbox": {
+        "x": 88.0,
+        "y": 38.33,
+        "width": 1104.0,
+        "height": 139.17
+      },
+      "text": "Data harmonization is becoming \u000bmore necessary and more difficult",
+      "style": {},
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp134",
+      "type": "body",
+      "bbox": {
+        "x": 88.0,
+        "y": 240.68,
+        "width": 1104.0,
+        "height": 407.82
+      },
+      "text": "Response schemas are becoming more diverse\nExample: Marital status\nThere used to be 4 categories: Single, Married, Divorced, Widowed\nEurostat now has 27 categories, including “Registered partnership” and “Consensual union”",
+      "style": {},
+      "z": 1,
+      "placeholder_id": "BODY (2)",
+      "metadata": {
+        "role": "BODY (2)"
+      }
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "slide_id": "a8dc2d0260a44588030f8fc0aed227f7-Alter-FAIR_Voca__s7",
+  "width": 1280,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp107",
+      "type": "title",
+      "bbox": {
+        "x": 88.0,
+        "y": 9.34,
+        "width": 1104.0,
+        "height": 139.17
+      },
+      "text": "Use cases for Controlled Vocabularies in Population Science",
+      "style": {},
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp108",
+      "type": "body",
+      "bbox": {
+        "x": 88.0,
+        "y": 159.23,
+        "width": 1104.0,
+        "height": 401.55
+      },
+      "text": "Data discovery\nExample:  Find data showing the level of infant mortality\nData merging\nExample: Compare infant mortality across countries\nData harmonization\nCombine data sets that are coded in different ways\nExample:\nData set A: Infant mortality (ages 0 to one year)\nData set B: Neo-natal (0 to 28 days) and Post-neonatal (28 to 365 days) infant mortality",
+      "style": {},
+      "z": 1,
+      "placeholder_id": "BODY (2)",
+      "metadata": {
+        "role": "BODY (2)"
+      }
+    },
+    {
+      "element_id": "shp109",
+      "type": "body",
+      "bbox": {
+        "x": 88.0,
+        "y": 611.75,
+        "width": 1138.81,
+        "height": 100.17
+      },
+      "text": "Data merging and data harmonization are very time consuming.\nFAIR data can lead to automation.",
+      "style": {
+        "font_size_pt": 28.0,
+        "color": "#C00000"
+      },
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

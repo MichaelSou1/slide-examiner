@@ -1,0 +1,219 @@
+{
+  "slide_id": "ad0aaf0547329b0a1dcf9a138241d6ea-GenOAWeek2021_2__s16",
+  "width": 1280,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp3",
+      "type": "title",
+      "bbox": {
+        "x": 0.0,
+        "y": 11.34,
+        "width": 1280.0,
+        "height": 48.35
+      },
+      "text": "Qualche numero da Dicembre 2020",
+      "style": {},
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp4",
+      "type": "body",
+      "bbox": {
+        "x": 10.08,
+        "y": 676.54,
+        "width": 1020.47,
+        "height": 37.8
+      },
+      "text": "Emma Lazzeri // GenOA Week 2021 // 29/10/2021",
+      "style": {},
+      "z": 1,
+      "placeholder_id": "FOOTER (15)",
+      "metadata": {
+        "role": "FOOTER (15)"
+      }
+    },
+    {
+      "element_id": "shp5",
+      "type": "body",
+      "bbox": {
+        "x": 1039.37,
+        "y": 676.54,
+        "width": 49.13,
+        "height": 37.8
+      },
+      "text": "17",
+      "style": {},
+      "z": 2,
+      "placeholder_id": "SLIDE_NUMBER (13)",
+      "metadata": {
+        "role": "SLIDE_NUMBER (13)"
+      }
+    },
+    {
+      "element_id": "shp8",
+      "type": "body",
+      "bbox": {
+        "x": 137.76,
+        "y": 169.97,
+        "width": 488.49,
+        "height": 358.67
+      },
+      "text": "4 corsi complete su Open Science e RDM\n5 Infrastrutture di ricerca coinvolte nella progettazione e nell’erogazione\n600+ ricercatori formati",
+      "style": {
+        "font_size_pt": 28.0
+      },
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp11",
+      "type": "image",
+      "bbox": {
+        "x": 41.37,
+        "y": 313.31,
+        "width": 74.28,
+        "height": 74.28
+      },
+      "text": "",
+      "style": {},
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp13",
+      "type": "image",
+      "bbox": {
+        "x": 40.34,
+        "y": 157.34,
+        "width": 74.28,
+        "height": 74.28
+      },
+      "text": "",
+      "style": {},
+      "z": 5,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp14",
+      "type": "image",
+      "bbox": {
+        "x": 46.31,
+        "y": 449.22,
+        "width": 74.28,
+        "height": 74.28
+      },
+      "text": "",
+      "style": {},
+      "z": 6,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp15",
+      "type": "body",
+      "bbox": {
+        "x": 715.38,
+        "y": 192.04,
+        "width": 400.43,
+        "height": 116.33
+      },
+      "text": "7 Open Science Café\n1300 partecipanti",
+      "style": {
+        "font_size_pt": 28.0
+      },
+      "z": 7,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp16",
+      "type": "image",
+      "bbox": {
+        "x": 1125.75,
+        "y": 175.14,
+        "width": 54.42,
+        "height": 54.42
+      },
+      "text": "",
+      "style": {},
+      "z": 8,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp17",
+      "type": "image",
+      "bbox": {
+        "x": 1115.82,
+        "y": 247.31,
+        "width": 74.28,
+        "height": 74.28
+      },
+      "text": "",
+      "style": {},
+      "z": 9,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp19",
+      "type": "body",
+      "bbox": {
+        "x": 795.71,
+        "y": 421.43,
+        "width": 557.2,
+        "height": 209.63
+      },
+      "text": "Abbiamo perso il conto \u000bdelle richieste \u000bdi supporto ma sono \u000bdavvero tante!",
+      "style": {
+        "font_size_pt": 28.0,
+        "fill_color": "#B4E402"
+      },
+      "z": 10,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp20",
+      "type": "shape",
+      "bbox": {
+        "x": -73.93,
+        "y": 139.03,
+        "width": 680.83,
+        "height": 423.63
+      },
+      "text": "",
+      "style": {},
+      "z": 11,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp21",
+      "type": "shape",
+      "bbox": {
+        "x": 715.38,
+        "y": 147.46,
+        "width": 637.53,
+        "height": 198.93
+      },
+      "text": "",
+      "style": {},
+      "z": 12,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

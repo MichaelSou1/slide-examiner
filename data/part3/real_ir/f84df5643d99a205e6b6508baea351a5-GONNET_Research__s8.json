@@ -1,0 +1,63 @@
+{
+  "slide_id": "f84df5643d99a205e6b6508baea351a5-GONNET_Research__s8",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp2",
+      "type": "title",
+      "bbox": {
+        "x": 260.76,
+        "y": 10.13,
+        "width": 699.24,
+        "height": 90.72
+      },
+      "text": "Worldwide justice",
+      "style": {
+        "color": "#1D2769"
+      },
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp6",
+      "type": "image",
+      "bbox": {
+        "x": 35.73,
+        "y": 139.36,
+        "width": 888.54,
+        "height": 542.9
+      },
+      "text": "",
+      "style": {},
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp7",
+      "type": "body",
+      "bbox": {
+        "x": -3.18,
+        "y": 690.92,
+        "width": 966.37,
+        "height": 29.08
+      },
+      "text": "Source : Worldwide inequality in access to full text scientific articles: the example of ophthalmology",
+      "style": {
+        "font_size_pt": 12.0,
+        "color": "#00B0F0"
+      },
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

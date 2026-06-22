@@ -1,0 +1,122 @@
+{
+  "slide_id": "5aa2630262e54a49db5680970f332b05-2024-05-Etapes___s13",
+  "width": 1280,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp2",
+      "type": "title",
+      "bbox": {
+        "x": 161.11,
+        "y": 103.92,
+        "width": 1054.89,
+        "height": 120.0
+      },
+      "text": "Comment choisir une revue pour publier ?",
+      "style": {},
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp3",
+      "type": "body",
+      "bbox": {
+        "x": 161.11,
+        "y": 239.0,
+        "width": 1058.44,
+        "height": 423.33
+      },
+      "text": "Prendre conseil auprès de son directeur ou directrice de thèse, des membres de votre laboratoire de rattachement\n\nConsulter les listes de revues sur sa discipline dans les bases de données\nDOAJ : base sélective d’indexation de revues en libre accès (filtres par sujet et « without fee »)\nOpenAlex : base non-sélective (filtres « keyword » et « type » > article, stat « source »)\nMaster Journal List : base sélective d’indexation de revue (filtre « category »)\nScielo : base sélective (filtre « list of journals by subject »)\n\nRegarder les bibliographies des articles consultés",
+      "style": {},
+      "z": 1,
+      "placeholder_id": "BODY (2)",
+      "metadata": {
+        "role": "BODY (2)"
+      }
+    },
+    {
+      "element_id": "shp4",
+      "type": "body",
+      "bbox": {
+        "x": 161.39,
+        "y": 692.76,
+        "width": 302.36,
+        "height": 11.31
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": "BODY (2)",
+      "metadata": {
+        "role": "BODY (2)"
+      }
+    },
+    {
+      "element_id": "shp5",
+      "type": "image",
+      "bbox": {
+        "x": 1168.07,
+        "y": 331.9,
+        "width": 108.32,
+        "height": 26.95
+      },
+      "text": "",
+      "style": {},
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp6",
+      "type": "image",
+      "bbox": {
+        "x": 1118.95,
+        "y": 382.68,
+        "width": 149.0,
+        "height": 41.0
+      },
+      "text": "",
+      "style": {},
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp7",
+      "type": "image",
+      "bbox": {
+        "x": 1015.04,
+        "y": 413.1,
+        "width": 103.91,
+        "height": 34.34
+      },
+      "text": "",
+      "style": {},
+      "z": 5,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp8",
+      "type": "image",
+      "bbox": {
+        "x": 821.44,
+        "y": 444.49,
+        "width": 83.95,
+        "height": 61.32
+      },
+      "text": "",
+      "style": {},
+      "z": 6,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

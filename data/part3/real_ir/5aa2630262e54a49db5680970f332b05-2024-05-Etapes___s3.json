@@ -1,0 +1,62 @@
+{
+  "slide_id": "5aa2630262e54a49db5680970f332b05-2024-05-Etapes___s3",
+  "width": 1280,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp4",
+      "type": "title",
+      "bbox": {
+        "x": 503.71,
+        "y": 212.58,
+        "width": 201.81,
+        "height": 170.06
+      },
+      "text": "1",
+      "style": {},
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp5",
+      "type": "body",
+      "bbox": {
+        "x": 514.0,
+        "y": 395.28,
+        "width": 705.55,
+        "height": 138.6
+      },
+      "text": "Qu’est ce que publier ?",
+      "style": {},
+      "z": 1,
+      "placeholder_id": "BODY (2)",
+      "metadata": {
+        "role": "BODY (2)"
+      }
+    },
+    {
+      "element_id": "shp6",
+      "type": "body",
+      "bbox": {
+        "x": 161.39,
+        "y": 692.76,
+        "width": 302.36,
+        "height": 11.31
+      },
+      "text": "Qu’est-ce que le droit d’auteur",
+      "style": {},
+      "z": 2,
+      "placeholder_id": "BODY (2)",
+      "metadata": {
+        "role": "BODY (2)"
+      }
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

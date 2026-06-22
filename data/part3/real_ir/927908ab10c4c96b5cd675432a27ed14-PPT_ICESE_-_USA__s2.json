@@ -1,0 +1,109 @@
+{
+  "slide_id": "927908ab10c4c96b5cd675432a27ed14-PPT_ICESE_-_USA__s2",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp3",
+      "type": "body",
+      "bbox": {
+        "x": 16.0,
+        "y": 0.0,
+        "width": 544.0,
+        "height": 67.86
+      },
+      "text": "2nd ICESE\nInternational Conference Earth Science and Energy",
+      "style": {
+        "color": "#FF0000"
+      },
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp7",
+      "type": "body",
+      "bbox": {
+        "x": 696.0,
+        "y": 8.22,
+        "width": 264.0,
+        "height": 67.86
+      },
+      "text": "METHODS",
+      "style": {
+        "font_size_pt": 36.0
+      },
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp9",
+      "type": "image",
+      "bbox": {
+        "x": 304.0,
+        "y": 622.17,
+        "width": 352.0,
+        "height": 97.83
+      },
+      "text": "",
+      "style": {},
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp2",
+      "type": "body",
+      "bbox": {
+        "x": 24.0,
+        "y": 104.0,
+        "width": 420.65,
+        "height": 203.57
+      },
+      "text": "To optimally the remaining oil, the type of surfactant that is suitable for the formation water and reservoir conditions is needed -> compatibility test",
+      "style": {
+        "font_size_pt": 24.0
+      },
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp3074",
+      "type": "image",
+      "bbox": {
+        "x": 452.65,
+        "y": 96.0,
+        "width": 475.35,
+        "height": 516.5
+      },
+      "text": "",
+      "style": {},
+      "z": 5,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp8",
+      "type": "body",
+      "bbox": {
+        "x": 27.35,
+        "y": 359.23,
+        "width": 420.65,
+        "height": 203.57
+      },
+      "text": "compatibility test consist of :\n1.Aqeous stability\n2.Phase behavior\n3. Emulsion \n4. IFT",
+      "style": {
+        "font_size_pt": 24.0
+      },
+      "z": 6,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

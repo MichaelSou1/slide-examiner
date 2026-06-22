@@ -1,0 +1,91 @@
+{
+  "slide_id": "9b237c3961be6d09d55ef0f1580b9ec8-GOSH_Keynote_-___s4",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp86",
+      "type": "shape",
+      "bbox": {
+        "x": 48.0,
+        "y": 28.7,
+        "width": 863.91,
+        "height": 120.22
+      },
+      "text": "",
+      "style": {},
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp87",
+      "type": "shape",
+      "bbox": {
+        "x": 48.0,
+        "y": 168.49,
+        "width": 863.91,
+        "height": 417.57
+      },
+      "text": "",
+      "style": {},
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp88",
+      "type": "shape",
+      "bbox": {
+        "x": -3.43,
+        "y": -0.03,
+        "width": 963.37,
+        "height": 723.46
+      },
+      "text": "",
+      "style": {
+        "fill_color": "#333333"
+      },
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp89",
+      "type": "image",
+      "bbox": {
+        "x": 486.83,
+        "y": -6.89,
+        "width": 726.8,
+        "height": 726.8
+      },
+      "text": "",
+      "style": {},
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp90",
+      "type": "body",
+      "bbox": {
+        "x": 20.57,
+        "y": 48.79,
+        "width": 479.97,
+        "height": 633.48
+      },
+      "text": "GOSH…\n\nchanges the culture of science\ndemocratizes science\nhas no high priests\nempowers people\nhas no black boxes\nis impactful tools\nallows multiple futures for science\n\nhttp://openhardware.science",
+      "style": {
+        "font_size_pt": 33.0,
+        "color": "#EEEEEE"
+      },
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

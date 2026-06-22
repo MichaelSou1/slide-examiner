@@ -1,0 +1,467 @@
+{
+  "model": "internvl-8b",
+  "manifest": "/home/gpus/slide-examiner/data/part3/manifest_real_rendered.jsonl",
+  "n_pairs": 209,
+  "failures": 0,
+  "per_modality": {
+    "A": {
+      "per_class": {
+        "G1_TEXT_OVERFLOW": {
+          "bal_acc": 0.622,
+          "bal_acc_ci": [
+            0.495,
+            0.731
+          ],
+          "recall": 0.378,
+          "recall_ci": [
+            0.251,
+            0.524
+          ],
+          "specificity": 0.867,
+          "fpr": 0.133,
+          "precision": 0.739,
+          "localize_rate": 0.412,
+          "repair_rate": 1.0,
+          "tp": 17,
+          "fp": 6,
+          "fn": 28,
+          "tn": 39,
+          "n_pos": 45,
+          "n_neg": 45
+        },
+        "G2_ELEMENT_OVERLAP": {
+          "bal_acc": 0.695,
+          "bal_acc_ci": [
+            0.549,
+            0.808
+          ],
+          "recall": 0.561,
+          "recall_ci": [
+            0.41,
+            0.701
+          ],
+          "specificity": 0.829,
+          "fpr": 0.171,
+          "precision": 0.767,
+          "localize_rate": 0.304,
+          "repair_rate": 0.957,
+          "tp": 23,
+          "fp": 7,
+          "fn": 18,
+          "tn": 34,
+          "n_pos": 41,
+          "n_neg": 41
+        },
+        "G3_ALIGNMENT_OFFSET": {
+          "bal_acc": 0.512,
+          "bal_acc_ci": [
+            0.43,
+            0.592
+          ],
+          "recall": 0.95,
+          "recall_ci": [
+            0.835,
+            0.986
+          ],
+          "specificity": 0.075,
+          "fpr": 0.925,
+          "precision": 0.507,
+          "localize_rate": 0.079,
+          "repair_rate": 1.0,
+          "tp": 38,
+          "fp": 37,
+          "fn": 2,
+          "tn": 3,
+          "n_pos": 40,
+          "n_neg": 40
+        },
+        "G4_FONT_SIZE_INCONSISTENCY": {
+          "bal_acc": 0.533,
+          "bal_acc_ci": [
+            0.411,
+            0.651
+          ],
+          "recall": 0.8,
+          "recall_ci": [
+            0.662,
+            0.891
+          ],
+          "specificity": 0.267,
+          "fpr": 0.733,
+          "precision": 0.522,
+          "localize_rate": 0.333,
+          "repair_rate": 0.972,
+          "tp": 36,
+          "fp": 33,
+          "fn": 9,
+          "tn": 12,
+          "n_pos": 45,
+          "n_neg": 45
+        },
+        "G6_MARGIN_VIOLATION": {
+          "bal_acc": 0.5,
+          "bal_acc_ci": [
+            0.353,
+            0.647
+          ],
+          "recall": 0.632,
+          "recall_ci": [
+            0.473,
+            0.766
+          ],
+          "specificity": 0.368,
+          "fpr": 0.632,
+          "precision": 0.5,
+          "localize_rate": 0.0,
+          "repair_rate": 1.0,
+          "tp": 24,
+          "fp": 24,
+          "fn": 14,
+          "tn": 14,
+          "n_pos": 38,
+          "n_neg": 38
+        }
+      }
+    },
+    "B": {
+      "per_class": {
+        "G1_TEXT_OVERFLOW": {
+          "bal_acc": 0.522,
+          "bal_acc_ci": [
+            0.392,
+            0.648
+          ],
+          "recall": 0.733,
+          "recall_ci": [
+            0.59,
+            0.84
+          ],
+          "specificity": 0.311,
+          "fpr": 0.689,
+          "precision": 0.516,
+          "localize_rate": 0.515,
+          "repair_rate": 1.0,
+          "tp": 33,
+          "fp": 31,
+          "fn": 12,
+          "tn": 14,
+          "n_pos": 45,
+          "n_neg": 45
+        },
+        "G2_ELEMENT_OVERLAP": {
+          "bal_acc": 0.476,
+          "bal_acc_ci": [
+            0.335,
+            0.621
+          ],
+          "recall": 0.366,
+          "recall_ci": [
+            0.236,
+            0.519
+          ],
+          "specificity": 0.585,
+          "fpr": 0.415,
+          "precision": 0.469,
+          "localize_rate": 0.067,
+          "repair_rate": 1.0,
+          "tp": 15,
+          "fp": 17,
+          "fn": 26,
+          "tn": 24,
+          "n_pos": 41,
+          "n_neg": 41
+        },
+        "G3_ALIGNMENT_OFFSET": {
+          "bal_acc": 0.487,
+          "bal_acc_ci": [
+            0.357,
+            0.62
+          ],
+          "recall": 0.725,
+          "recall_ci": [
+            0.572,
+            0.839
+          ],
+          "specificity": 0.25,
+          "fpr": 0.75,
+          "precision": 0.492,
+          "localize_rate": 0.138,
+          "repair_rate": 1.0,
+          "tp": 29,
+          "fp": 30,
+          "fn": 11,
+          "tn": 10,
+          "n_pos": 40,
+          "n_neg": 40
+        },
+        "G4_FONT_SIZE_INCONSISTENCY": {
+          "bal_acc": 0.633,
+          "bal_acc_ci": [
+            0.493,
+            0.752
+          ],
+          "recall": 0.778,
+          "recall_ci": [
+            0.637,
+            0.875
+          ],
+          "specificity": 0.489,
+          "fpr": 0.511,
+          "precision": 0.603,
+          "localize_rate": 0.6,
+          "repair_rate": 0.886,
+          "tp": 35,
+          "fp": 23,
+          "fn": 10,
+          "tn": 22,
+          "n_pos": 45,
+          "n_neg": 45
+        },
+        "G6_MARGIN_VIOLATION": {
+          "bal_acc": 0.579,
+          "bal_acc_ci": [
+            0.432,
+            0.711
+          ],
+          "recall": 0.395,
+          "recall_ci": [
+            0.256,
+            0.553
+          ],
+          "specificity": 0.763,
+          "fpr": 0.237,
+          "precision": 0.625,
+          "localize_rate": 0.6,
+          "repair_rate": 1.0,
+          "tp": 15,
+          "fp": 9,
+          "fn": 23,
+          "tn": 29,
+          "n_pos": 38,
+          "n_neg": 38
+        }
+      }
+    },
+    "C": {
+      "per_class": {
+        "G1_TEXT_OVERFLOW": {
+          "bal_acc": 0.556,
+          "bal_acc_ci": [
+            0.445,
+            0.657
+          ],
+          "recall": 0.889,
+          "recall_ci": [
+            0.765,
+            0.952
+          ],
+          "specificity": 0.222,
+          "fpr": 0.778,
+          "precision": 0.533,
+          "localize_rate": 0.525,
+          "repair_rate": 1.0,
+          "tp": 40,
+          "fp": 35,
+          "fn": 5,
+          "tn": 10,
+          "n_pos": 45,
+          "n_neg": 45
+        },
+        "G2_ELEMENT_OVERLAP": {
+          "bal_acc": 0.61,
+          "bal_acc_ci": [
+            0.46,
+            0.741
+          ],
+          "recall": 0.707,
+          "recall_ci": [
+            0.555,
+            0.824
+          ],
+          "specificity": 0.512,
+          "fpr": 0.488,
+          "precision": 0.592,
+          "localize_rate": 0.483,
+          "repair_rate": 0.966,
+          "tp": 29,
+          "fp": 20,
+          "fn": 12,
+          "tn": 21,
+          "n_pos": 41,
+          "n_neg": 41
+        },
+        "G3_ALIGNMENT_OFFSET": {
+          "bal_acc": 0.5,
+          "bal_acc_ci": [
+            0.456,
+            0.544
+          ],
+          "recall": 1.0,
+          "recall_ci": [
+            0.912,
+            1.0
+          ],
+          "specificity": 0.0,
+          "fpr": 1.0,
+          "precision": 0.5,
+          "localize_rate": 0.175,
+          "repair_rate": 1.0,
+          "tp": 40,
+          "fp": 40,
+          "fn": 0,
+          "tn": 0,
+          "n_pos": 40,
+          "n_neg": 40
+        },
+        "G4_FONT_SIZE_INCONSISTENCY": {
+          "bal_acc": 0.578,
+          "bal_acc_ci": [
+            0.468,
+            0.676
+          ],
+          "recall": 0.911,
+          "recall_ci": [
+            0.793,
+            0.965
+          ],
+          "specificity": 0.244,
+          "fpr": 0.756,
+          "precision": 0.547,
+          "localize_rate": 0.707,
+          "repair_rate": 0.902,
+          "tp": 41,
+          "fp": 34,
+          "fn": 4,
+          "tn": 11,
+          "n_pos": 45,
+          "n_neg": 45
+        },
+        "G6_MARGIN_VIOLATION": {
+          "bal_acc": 0.553,
+          "bal_acc_ci": [
+            0.41,
+            0.686
+          ],
+          "recall": 0.763,
+          "recall_ci": [
+            0.608,
+            0.87
+          ],
+          "specificity": 0.342,
+          "fpr": 0.658,
+          "precision": 0.537,
+          "localize_rate": 0.414,
+          "repair_rate": 1.0,
+          "tp": 29,
+          "fp": 25,
+          "fn": 9,
+          "tn": 13,
+          "n_pos": 38,
+          "n_neg": 38
+        }
+      }
+    }
+  },
+  "attribution": {
+    "G1_TEXT_OVERFLOW": {
+      "A_bal_acc": 0.622,
+      "B_bal_acc": 0.522,
+      "C_bal_acc": 0.556,
+      "delta_C_minus_A": -0.066,
+      "delta_B_minus_A": -0.1,
+      "mcnemar_C_vs_A": {
+        "p": 0.4885,
+        "gain": 23,
+        "loss": 29
+      },
+      "mcnemar_B_vs_A": {
+        "p": 0.3057,
+        "gain": 26,
+        "loss": 35
+      },
+      "verdict": "image_sufficient",
+      "repair_rate_A": 1.0,
+      "localize_rate_C": 0.525
+    },
+    "G2_ELEMENT_OVERLAP": {
+      "A_bal_acc": 0.695,
+      "B_bal_acc": 0.476,
+      "C_bal_acc": 0.61,
+      "delta_C_minus_A": -0.085,
+      "delta_B_minus_A": -0.219,
+      "mcnemar_C_vs_A": {
+        "p": 0.1671,
+        "gain": 6,
+        "loss": 13
+      },
+      "mcnemar_B_vs_A": {
+        "p": 0.0079,
+        "gain": 12,
+        "loss": 30
+      },
+      "verdict": "image_sufficient",
+      "repair_rate_A": 0.957,
+      "localize_rate_C": 0.483
+    },
+    "G3_ALIGNMENT_OFFSET": {
+      "A_bal_acc": 0.512,
+      "B_bal_acc": 0.487,
+      "C_bal_acc": 0.5,
+      "delta_C_minus_A": -0.012,
+      "delta_B_minus_A": -0.025,
+      "mcnemar_C_vs_A": {
+        "p": 1.0,
+        "gain": 2,
+        "loss": 3
+      },
+      "mcnemar_B_vs_A": {
+        "p": 0.845,
+        "gain": 12,
+        "loss": 14
+      },
+      "verdict": "capability",
+      "repair_rate_A": 1.0,
+      "localize_rate_C": 0.175
+    },
+    "G4_FONT_SIZE_INCONSISTENCY": {
+      "A_bal_acc": 0.533,
+      "B_bal_acc": 0.633,
+      "C_bal_acc": 0.578,
+      "delta_C_minus_A": 0.045,
+      "delta_B_minus_A": 0.1,
+      "mcnemar_C_vs_A": {
+        "p": 0.5034,
+        "gain": 12,
+        "loss": 8
+      },
+      "mcnemar_B_vs_A": {
+        "p": 0.1755,
+        "gain": 22,
+        "loss": 13
+      },
+      "verdict": "perception",
+      "repair_rate_A": 0.972,
+      "localize_rate_C": 0.707
+    },
+    "G6_MARGIN_VIOLATION": {
+      "A_bal_acc": 0.5,
+      "B_bal_acc": 0.579,
+      "C_bal_acc": 0.553,
+      "delta_C_minus_A": 0.053,
+      "delta_B_minus_A": 0.079,
+      "mcnemar_C_vs_A": {
+        "p": 0.424,
+        "gain": 9,
+        "loss": 5
+      },
+      "mcnemar_B_vs_A": {
+        "p": 0.405,
+        "gain": 21,
+        "loss": 15
+      },
+      "verdict": "capability",
+      "repair_rate_A": 1.0,
+      "localize_rate_C": 0.414
+    }
+  }
+}

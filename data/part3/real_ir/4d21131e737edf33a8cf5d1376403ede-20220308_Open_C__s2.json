@@ -1,0 +1,235 @@
+{
+  "slide_id": "4d21131e737edf33a8cf5d1376403ede-20220308_Open_C__s2",
+  "width": 960,
+  "height": 540,
+  "elements": [
+    {
+      "element_id": "shp278",
+      "type": "shape",
+      "bbox": {
+        "x": 197.59,
+        "y": 318.71,
+        "width": 36.03,
+        "height": 17.7
+      },
+      "text": "",
+      "style": {
+        "fill_color": "#001D38"
+      },
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp279",
+      "type": "image",
+      "bbox": {
+        "x": 290.54,
+        "y": 8.82,
+        "width": 153.6,
+        "height": 201.6
+      },
+      "text": "",
+      "style": {},
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp280",
+      "type": "image",
+      "bbox": {
+        "x": 506.29,
+        "y": 8.64,
+        "width": 153.6,
+        "height": 201.95
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp281",
+      "type": "image",
+      "bbox": {
+        "x": 74.79,
+        "y": 8.64,
+        "width": 153.6,
+        "height": 201.95
+      },
+      "text": "",
+      "style": {},
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp282",
+      "type": "image",
+      "bbox": {
+        "x": 727.89,
+        "y": 8.82,
+        "width": 153.6,
+        "height": 201.6
+      },
+      "text": "",
+      "style": {},
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp283",
+      "type": "image",
+      "bbox": {
+        "x": -0.0,
+        "y": 524.86,
+        "width": 43.26,
+        "height": 15.14
+      },
+      "text": "",
+      "style": {},
+      "z": 5,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp284",
+      "type": "image",
+      "bbox": {
+        "x": 64.18,
+        "y": 213.02,
+        "width": 847.82,
+        "height": 194.86
+      },
+      "text": "",
+      "style": {},
+      "z": 6,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp285",
+      "type": "shape",
+      "bbox": {
+        "x": 213.59,
+        "y": 438.71,
+        "width": 36.03,
+        "height": 17.7
+      },
+      "text": "",
+      "style": {
+        "fill_color": "#001D38"
+      },
+      "z": 7,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp286",
+      "type": "shape",
+      "bbox": {
+        "x": 685.59,
+        "y": 494.06,
+        "width": 36.03,
+        "height": 17.7
+      },
+      "text": "",
+      "style": {
+        "fill_color": "#001D38"
+      },
+      "z": 8,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp287",
+      "type": "shape",
+      "bbox": {
+        "x": 788.86,
+        "y": 237.68,
+        "width": 28.85,
+        "height": 10.05
+      },
+      "text": "",
+      "style": {
+        "fill_color": "#001D38"
+      },
+      "z": 9,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp288",
+      "type": "body",
+      "bbox": {
+        "x": 147.87,
+        "y": 415.68,
+        "width": 313.95,
+        "height": 121.2
+      },
+      "text": "Dr. Chelle Gentemann, Science Lead\nYvonne Ivey, Project Manager\nCyndi Hall, Community Coordinator\nIsabella Martinez, Curriculum Coordinator\nKarla Mastracchio, Communication Strategy \nYaitza Luna-Cruz, Science Coordinator\nElena Steponaitis, Science Advisor",
+      "style": {
+        "font_size_pt": 9.0
+      },
+      "z": 10,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp289",
+      "type": "body",
+      "bbox": {
+        "x": 435.87,
+        "y": 473.93,
+        "width": 370.71,
+        "height": 63.02
+      },
+      "text": "Kevin Murphy, Chief Science Data Officer SMD\nKatie Baynes, Deputy Chief Science Data Officer SMD\nDr. Steve Crawford, Science Data Officer SMD",
+      "style": {
+        "font_size_pt": 9.0
+      },
+      "z": 11,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp290",
+      "type": "body",
+      "bbox": {
+        "x": 744.44,
+        "y": 416.41,
+        "width": 198.33,
+        "height": 38.77
+      },
+      "text": "8 March 2022",
+      "style": {
+        "font_size_pt": 12.0
+      },
+      "z": 12,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp291",
+      "type": "image",
+      "bbox": {
+        "x": 0.0,
+        "y": 392.79,
+        "width": 165.2,
+        "height": 138.2
+      },
+      "text": "",
+      "style": {},
+      "z": 13,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "slide_id": "377829fc53e13493464f3580b855dd76-Laatua_ja_vaiku__s25",
+  "width": 960,
+  "height": 540,
+  "elements": [
+    {
+      "element_id": "shp248",
+      "type": "title",
+      "bbox": {
+        "x": 32.73,
+        "y": 40.63,
+        "width": 894.55,
+        "height": 215.5
+      },
+      "text": "Att dela och \nlagra data",
+      "style": {
+        "color": "#008568"
+      },
+      "z": 0,
+      "placeholder_id": "CENTER_TITLE (3)",
+      "metadata": {
+        "role": "CENTER_TITLE (3)"
+      }
+    },
+    {
+      "element_id": "shp249",
+      "type": "image",
+      "bbox": {
+        "x": 393.41,
+        "y": 351.3,
+        "width": 143.63,
+        "height": 134.6
+      },
+      "text": "",
+      "style": {},
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp250",
+      "type": "image",
+      "bbox": {
+        "x": 310.95,
+        "y": 256.13,
+        "width": 302.92,
+        "height": 283.87
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

@@ -1,0 +1,186 @@
+{
+  "slide_id": "d605f14c1b4fad94d3f148b06071b2c2-ChipScope_nanoF__s6",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp9",
+      "type": "body",
+      "bbox": {
+        "x": 170.04,
+        "y": 23.44,
+        "width": 736.62,
+        "height": 48.47
+      },
+      "text": "Photolithographic patterning of microfluidic systems",
+      "style": {
+        "font_size_pt": 24.0
+      },
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp12",
+      "type": "body",
+      "bbox": {
+        "x": 3.73,
+        "y": 95.4,
+        "width": 573.34,
+        "height": 42.01
+      },
+      "text": "Microfluidic layout with 2 ports for inlet and outlet",
+      "style": {
+        "font_size_pt": 20.0
+      },
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp19",
+      "type": "body",
+      "bbox": {
+        "x": 661.15,
+        "y": 284.6,
+        "width": 243.16,
+        "height": 35.54
+      },
+      "text": "fluid ports (inlet & outlet)",
+      "style": {
+        "font_size_pt": 16.0
+      },
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp15",
+      "type": "image",
+      "bbox": {
+        "x": 116.55,
+        "y": 137.41,
+        "width": 501.5,
+        "height": 529.13
+      },
+      "text": "",
+      "style": {},
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp18",
+      "type": "shape",
+      "bbox": {
+        "x": 198.68,
+        "y": 179.42,
+        "width": 462.47,
+        "height": 129.45
+      },
+      "text": "",
+      "style": {},
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp20",
+      "type": "shape",
+      "bbox": {
+        "x": 557.47,
+        "y": 219.63,
+        "width": 103.67,
+        "height": 76.72
+      },
+      "text": "",
+      "style": {},
+      "z": 5,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp21",
+      "type": "body",
+      "bbox": {
+        "x": 642.78,
+        "y": 353.85,
+        "width": 172.15,
+        "height": 61.39
+      },
+      "text": "resist-free areas for chip bonding",
+      "style": {
+        "font_size_pt": 16.0
+      },
+      "z": 6,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp22",
+      "type": "shape",
+      "bbox": {
+        "x": 573.47,
+        "y": 342.58,
+        "width": 69.31,
+        "height": 31.26
+      },
+      "text": "",
+      "style": {},
+      "z": 7,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp23",
+      "type": "body",
+      "bbox": {
+        "x": 650.43,
+        "y": 574.45,
+        "width": 172.15,
+        "height": 35.54
+      },
+      "text": "chip layout",
+      "style": {
+        "font_size_pt": 16.0
+      },
+      "z": 8,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp24",
+      "type": "shape",
+      "bbox": {
+        "x": 419.9,
+        "y": 582.59,
+        "width": 230.54,
+        "height": 11.85
+      },
+      "text": "",
+      "style": {},
+      "z": 9,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp26",
+      "type": "shape",
+      "bbox": {
+        "x": 251.27,
+        "y": 342.58,
+        "width": 382.98,
+        "height": 48.38
+      },
+      "text": "",
+      "style": {},
+      "z": 10,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

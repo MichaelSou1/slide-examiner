@@ -1,0 +1,45 @@
+{
+  "slide_id": "65b9f618e026be90484c974a204ae812-04_Ivanovic_Mla__s2",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp2",
+      "type": "title",
+      "bbox": {
+        "x": 39.17,
+        "y": 9.33,
+        "width": 887.5,
+        "height": 85.33
+      },
+      "text": "History of Tree Injection",
+      "style": {},
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp3",
+      "type": "body",
+      "bbox": {
+        "x": 37.5,
+        "y": 127.5,
+        "width": 888.17,
+        "height": 496.67
+      },
+      "text": "Stem injection: thinking by Leonardo da Vinci at the beginning of XV century in order keep the apples in his orchard.\n\nInjecting grape vines with copper sulphate in 1894. Insertion of dry salt in holes bored in the tree trunk. These holes are then closed with grafting wax. \n    It was first publication of tree injection, by Ivan Shevyrev in Russia.\nInjection of thousand apple trees suffering from chlorosis in Russia at the beggining of XX centrury  by introducing iron sulphate into canals cut in the bases of the diseased trees. The distribution of the substance was found to be irregular, so that individual branches were found to be uninjected.",
+      "style": {},
+      "z": 1,
+      "placeholder_id": "OBJECT (7)",
+      "metadata": {
+        "role": "OBJECT (7)"
+      }
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

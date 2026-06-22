@@ -1,0 +1,77 @@
+{
+  "slide_id": "377829fc53e13493464f3580b855dd76-Laatua_ja_vaiku__s6",
+  "width": 960,
+  "height": 540,
+  "elements": [
+    {
+      "element_id": "shp99",
+      "type": "title",
+      "bbox": {
+        "x": 32.72,
+        "y": 46.72,
+        "width": 512.82,
+        "height": 60.13
+      },
+      "text": "Gör hela forskningen FAIR",
+      "style": {
+        "color": "#008568"
+      },
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp100",
+      "type": "body",
+      "bbox": {
+        "x": 32.72,
+        "y": 99.09,
+        "width": 545.89,
+        "height": 353.2
+      },
+      "text": "FAIR-principerna får inte vara separata från forskningsprocessen.  De ska efterlevas under hela forskningen och tillämpade kan de användas i forskningens alla produkter.\nReproducerbarhet kan vara ett kriterium, enligt vilket man beslutar vad som ska lagras. Då måste man absolut även komma ihåg dokumentering och lagring.\nI FAIR by design-tänket strävar man efter att planera hela forskningsprocessen så att till exempel metadata ackumuleras automatiskt och de nödvändiga identifierarna är enkla att skapa.",
+      "style": {},
+      "z": 1,
+      "placeholder_id": "BODY (2)",
+      "metadata": {
+        "role": "BODY (2)"
+      }
+    },
+    {
+      "element_id": "shp102",
+      "type": "image",
+      "bbox": {
+        "x": 548.46,
+        "y": 181.11,
+        "width": 407.85,
+        "height": 271.18
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp101",
+      "type": "image",
+      "bbox": {
+        "x": 821.9,
+        "y": 42.07,
+        "width": 74.08,
+        "height": 69.42
+      },
+      "text": "",
+      "style": {},
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

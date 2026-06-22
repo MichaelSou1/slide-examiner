@@ -1,0 +1,60 @@
+{
+  "slide_id": "65b9f618e026be90484c974a204ae812-04_Ivanovic_Mla__s15",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp5",
+      "type": "title",
+      "bbox": {
+        "x": 38.16,
+        "y": 19.8,
+        "width": 887.5,
+        "height": 85.33
+      },
+      "text": "Tree Injection in XXI century by Syngenta",
+      "style": {},
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp2",
+      "type": "body",
+      "bbox": {
+        "x": 37.5,
+        "y": 127.5,
+        "width": 888.17,
+        "height": 496.67
+      },
+      "text": "Syngenta is entering the tree injection market: \nPine Wilt Nematode (PWN) in Japan and Korea\nInjection of Emamectine protects pine trees for over 5 years from infestation by PWN\nEmerald ash borer in the USA\n\nProblems in Europe:\nPine wilt nematode\nHorse chestnut leaf miner\nProcessionary moth on oak and pine\nRed palm weevil\nAsian longhorn beetle",
+      "style": {},
+      "z": 1,
+      "placeholder_id": "OBJECT (7)",
+      "metadata": {
+        "role": "OBJECT (7)"
+      }
+    },
+    {
+      "element_id": "shp6",
+      "type": "body",
+      "bbox": {
+        "x": 540.48,
+        "y": 360.0,
+        "width": 408.23,
+        "height": 194.7
+      },
+      "text": "Many obstacles in Europe:\nEnvironment concern\nNon target animals, as bees\nAplicator safety\nPhytotox / damage to trees",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "slide_id": "e2a0cf43198139db4030e2c99d1cc023-training_materi__s18",
+  "width": 960,
+  "height": 540,
+  "elements": [
+    {
+      "element_id": "shp267",
+      "type": "image",
+      "bbox": {
+        "x": 16.0,
+        "y": 16.0,
+        "width": 919.2,
+        "height": 241.05
+      },
+      "text": "",
+      "style": {},
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp268",
+      "type": "image",
+      "bbox": {
+        "x": 16.0,
+        "y": 270.69,
+        "width": 919.2,
+        "height": 250.13
+      },
+      "text": "",
+      "style": {},
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "slide_id": "ad0aaf0547329b0a1dcf9a138241d6ea-GenOAWeek2021_2__s4",
+  "width": 1280,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp2",
+      "type": "body",
+      "bbox": {
+        "x": 55.43,
+        "y": 226.62,
+        "width": 836.89,
+        "height": 355.42
+      },
+      "text": "È un tavolo di lavoro creato dai rappresentanti di alcune tra le principali Infrastrutture di Ricerca e Infrastrutture Digitali italiane \nHa l’obiettivo di promuovere sinergie a livello nazionale al fine di ottimizzare la partecipazione italiana alle attuali sfide europee in questo settore, tra cui la European Open Science Cloud (EOSC), la European Data Infrastructure (EDI) e HPC.\nIl Ministero dell’università e della ricerca è un osservatore\nHa ricevuto mandato dal MUR, nel novembre 2020, per rappresentare l’Italia all’interno della EOSC Association, di cui è membro fondatore",
+      "style": {},
+      "z": 0,
+      "placeholder_id": "OBJECT (7)",
+      "metadata": {
+        "role": "OBJECT (7)"
+      }
+    },
+    {
+      "element_id": "shp3",
+      "type": "title",
+      "bbox": {
+        "x": 0.0,
+        "y": 11.34,
+        "width": 1280.0,
+        "height": 89.06
+      },
+      "text": "Dall’Europa all’Italia:\u000bItalian Computing and Data Infrastructure - ICDI",
+      "style": {},
+      "z": 1,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp4",
+      "type": "body",
+      "bbox": {
+        "x": 10.08,
+        "y": 676.54,
+        "width": 1020.47,
+        "height": 37.8
+      },
+      "text": "Emma Lazzeri // GenOA Week 2021 // 29/10/2021",
+      "style": {},
+      "z": 2,
+      "placeholder_id": "FOOTER (15)",
+      "metadata": {
+        "role": "FOOTER (15)"
+      }
+    },
+    {
+      "element_id": "shp6",
+      "type": "image",
+      "bbox": {
+        "x": 936.99,
+        "y": 246.78,
+        "width": 253.89,
+        "height": 255.01
+      },
+      "text": "",
+      "style": {},
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

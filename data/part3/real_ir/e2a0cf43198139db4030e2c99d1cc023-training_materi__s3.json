@@ -1,0 +1,59 @@
+{
+  "slide_id": "e2a0cf43198139db4030e2c99d1cc023-training_materi__s3",
+  "width": 960,
+  "height": 540,
+  "elements": [
+    {
+      "element_id": "shp142",
+      "type": "body",
+      "bbox": {
+        "x": 8.72,
+        "y": 6.3,
+        "width": 894.55,
+        "height": 80.16
+      },
+      "text": "➤ Boundaries",
+      "style": {
+        "font_size_pt": 28.0,
+        "color": "#000000"
+      },
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp143",
+      "type": "body",
+      "bbox": {
+        "x": 80.02,
+        "y": 69.54,
+        "width": 493.04,
+        "height": 42.02
+      },
+      "text": "➤ WHAT DEFINES A MATERIAL CITATION?",
+      "style": {},
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp144",
+      "type": "image",
+      "bbox": {
+        "x": 139.31,
+        "y": 148.72,
+        "width": 547.99,
+        "height": 255.21
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

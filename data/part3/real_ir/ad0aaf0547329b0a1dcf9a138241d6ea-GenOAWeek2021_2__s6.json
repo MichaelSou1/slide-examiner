@@ -1,0 +1,92 @@
+{
+  "slide_id": "ad0aaf0547329b0a1dcf9a138241d6ea-GenOAWeek2021_2__s6",
+  "width": 1280,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp2",
+      "type": "body",
+      "bbox": {
+        "x": 52.29,
+        "y": 90.65,
+        "width": 587.71,
+        "height": 527.59
+      },
+      "text": "Il CC ICDI si inserisce in un più ampio contesto europeo di iniziative, infrastrutture di ricerca, e-infrastructure e progetti che hanno portato alla creazione di competenze specifiche e di nodi nazionali funzionali a Open Science e alla realizzazione di EOSC. \nNell’ultima parte del biennio 2018-2020, successivo al lancio di EOSC, si è consolidata l’esigenza della creazione di Competence Centre per il consolidamento delle competenze nate ed acquisite da parte dei partecipanti italiani alla rete europea. \nSi ritiene che i Competence Centre saranno di natura tematica, disciplinare o nazionale.",
+      "style": {},
+      "z": 0,
+      "placeholder_id": "OBJECT (7)",
+      "metadata": {
+        "role": "OBJECT (7)"
+      }
+    },
+    {
+      "element_id": "shp3",
+      "type": "title",
+      "bbox": {
+        "x": 0.0,
+        "y": 11.34,
+        "width": 1280.0,
+        "height": 48.35
+      },
+      "text": "Il Contesto del Competence Centre ICDI",
+      "style": {},
+      "z": 1,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp4",
+      "type": "body",
+      "bbox": {
+        "x": 10.08,
+        "y": 676.54,
+        "width": 1020.47,
+        "height": 37.8
+      },
+      "text": "Emma Lazzeri // GenOA Week 2021 // 29/10/2021",
+      "style": {},
+      "z": 2,
+      "placeholder_id": "FOOTER (15)",
+      "metadata": {
+        "role": "FOOTER (15)"
+      }
+    },
+    {
+      "element_id": "shp7",
+      "type": "image",
+      "bbox": {
+        "x": 658.84,
+        "y": 224.62,
+        "width": 608.57,
+        "height": 281.85
+      },
+      "text": "",
+      "style": {},
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp9",
+      "type": "body",
+      "bbox": {
+        "x": 819.93,
+        "y": 606.79,
+        "width": 394.54,
+        "height": 38.78
+      },
+      "text": "Photo by Sergey Pesterev on Unsplash",
+      "style": {},
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

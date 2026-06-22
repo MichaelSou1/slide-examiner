@@ -1,0 +1,190 @@
+{
+  "slide_id": "65b9f618e026be90484c974a204ae812-04_Ivanovic_Mla__s17",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp2",
+      "type": "title",
+      "bbox": {
+        "x": 389.28,
+        "y": 119.45,
+        "width": 559.0,
+        "height": 88.83
+      },
+      "text": "A specific tree care ME formulation",
+      "style": {},
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp4",
+      "type": "image",
+      "bbox": {
+        "x": 38.64,
+        "y": 358.8,
+        "width": 247.52,
+        "height": 72.35
+      },
+      "text": "",
+      "style": {},
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp5",
+      "type": "body",
+      "bbox": {
+        "x": 303.0,
+        "y": 218.98,
+        "width": 339.86,
+        "height": 83.0
+      },
+      "text": "Making the active mobile",
+      "style": {
+        "font_size_pt": 18.0,
+        "fill_color": "#2A866E"
+      },
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp6",
+      "type": "body",
+      "bbox": {
+        "x": 304.0,
+        "y": 406.98,
+        "width": 339.86,
+        "height": 83.0
+      },
+      "text": "Achieves a concentrated formulation",
+      "style": {
+        "font_size_pt": 18.0,
+        "fill_color": "#2A866E"
+      },
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp7",
+      "type": "body",
+      "bbox": {
+        "x": 305.0,
+        "y": 311.98,
+        "width": 339.86,
+        "height": 83.0
+      },
+      "text": "Avoids the need for dilution",
+      "style": {
+        "font_size_pt": 18.0,
+        "fill_color": "#2A866E"
+      },
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp18",
+      "type": "group",
+      "bbox": {
+        "x": 619.0,
+        "y": 219.98,
+        "width": 241.0,
+        "height": 83.0
+      },
+      "text": "",
+      "style": {},
+      "z": 5,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp14",
+      "type": "group",
+      "bbox": {
+        "x": 620.0,
+        "y": 312.98,
+        "width": 241.0,
+        "height": 83.0
+      },
+      "text": "",
+      "style": {},
+      "z": 6,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp17",
+      "type": "group",
+      "bbox": {
+        "x": 621.0,
+        "y": 407.98,
+        "width": 241.0,
+        "height": 83.0
+      },
+      "text": "",
+      "style": {},
+      "z": 7,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp20",
+      "type": "body",
+      "bbox": {
+        "x": 302.1,
+        "y": 499.45,
+        "width": 339.86,
+        "height": 83.0
+      },
+      "text": "Formulated and tested for trees and palms",
+      "style": {
+        "font_size_pt": 18.0,
+        "fill_color": "#2A866E"
+      },
+      "z": 8,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp21",
+      "type": "group",
+      "bbox": {
+        "x": 619.1,
+        "y": 500.45,
+        "width": 241.0,
+        "height": 83.0
+      },
+      "text": "",
+      "style": {},
+      "z": 9,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp25",
+      "type": "body",
+      "bbox": {
+        "x": 40.62,
+        "y": 29.88,
+        "width": 887.5,
+        "height": 85.33
+      },
+      "text": "A unique designed formulation for tree injection",
+      "style": {},
+      "z": 10,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

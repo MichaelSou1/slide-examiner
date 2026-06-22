@@ -1,0 +1,28 @@
+{
+  "slide_id": "11271d0c1294680fce9eb2705c4ecc65-SAKRAMEN_DASAR___s18",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp2",
+      "type": "body",
+      "bbox": {
+        "x": 48.0,
+        "y": 40.0,
+        "width": 816.0,
+        "height": 552.54
+      },
+      "text": "a.Memberi hidup\n\nb.Membersihkan dan (seperti banjir) memusnahkan dosa serta memusnahkan kejahatan",
+      "style": {
+        "font_size_pt": 48.0
+      },
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

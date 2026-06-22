@@ -1,0 +1,26 @@
+{
+  "slide_id": "d7f4b97aef5b99bf6c1a76435deeb1e7-2023-08-31_Atel__s4",
+  "width": 1280,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp15",
+      "type": "image",
+      "bbox": {
+        "x": 12.53,
+        "y": 4.68,
+        "width": 1247.38,
+        "height": 716.47
+      },
+      "text": "",
+      "style": {},
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

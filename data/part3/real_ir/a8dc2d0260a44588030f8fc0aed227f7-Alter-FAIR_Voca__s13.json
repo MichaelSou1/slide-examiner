@@ -1,0 +1,45 @@
+{
+  "slide_id": "a8dc2d0260a44588030f8fc0aed227f7-Alter-FAIR_Voca__s13",
+  "width": 1280,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp159",
+      "type": "title",
+      "bbox": {
+        "x": 88.0,
+        "y": 38.33,
+        "width": 1104.0,
+        "height": 72.97
+      },
+      "text": "FAIR Vocabularies in the DDI Community (1)",
+      "style": {},
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp160",
+      "type": "body",
+      "bbox": {
+        "x": 88.0,
+        "y": 131.58,
+        "width": 1104.0,
+        "height": 550.08
+      },
+      "text": "DDI Metadata is mostly created (re-created) at data repositories\nControlled vocabularies for concepts, variables, and coding are difficult to apply retroactively\nComparability of international surveys varies widely\nSome are designed for comparability (e.g., Demographic and Health Surveys)\nHarmonization of similar but uncoordinated surveys requires considerable effort \nVocabularies and tools are developing\nDDI-Lifecycle uses schemas for metadata-driven survey design\nCESSDA is developing vocabularies and a question bank\nEuropean Language Social Science Thesaurus (ELSST) is a FAIR multilingual thesaurus of social science concepts",
+      "style": {},
+      "z": 1,
+      "placeholder_id": "BODY (2)",
+      "metadata": {
+        "role": "BODY (2)"
+      }
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

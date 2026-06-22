@@ -1,0 +1,28 @@
+{
+  "slide_id": "11271d0c1294680fce9eb2705c4ecc65-SAKRAMEN_DASAR___s20",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp2",
+      "type": "body",
+      "bbox": {
+        "x": 13.71,
+        "y": 16.0,
+        "width": 944.0,
+        "height": 591.32
+      },
+      "text": "seorang pelayan Baptis/Romo mengucapkan: .....(Nama).....Aku membaptis \n    engkau dalam nama Bapa, dan Putra, dan Roh Kudus. Amin.\n    Rumus ini berasal dari perintah Yesus sendiri  (Matius 28:19)",
+      "style": {
+        "font_size_pt": 40.0
+      },
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "slide_id": "377829fc53e13493464f3580b855dd76-Laatua_ja_vaiku__s0",
+  "width": 960,
+  "height": 540,
+  "elements": [
+    {
+      "element_id": "shp54",
+      "type": "title",
+      "bbox": {
+        "x": 32.73,
+        "y": 40.63,
+        "width": 894.55,
+        "height": 215.5
+      },
+      "text": "Kvalitet och genomslag i forskningsarbete med hjälp av datahantering",
+      "style": {
+        "color": "#008568"
+      },
+      "z": 0,
+      "placeholder_id": "CENTER_TITLE (3)",
+      "metadata": {
+        "role": "CENTER_TITLE (3)"
+      }
+    },
+    {
+      "element_id": "shp55",
+      "type": "subtitle",
+      "bbox": {
+        "x": 32.72,
+        "y": 278.78,
+        "width": 894.55,
+        "height": 83.21
+      },
+      "text": "Hur dina data blir FAIR",
+      "style": {
+        "font_size_pt": 52.0,
+        "color": "#008568"
+      },
+      "z": 1,
+      "placeholder_id": "SUBTITLE (4)",
+      "metadata": {
+        "role": "SUBTITLE (4)"
+      }
+    },
+    {
+      "element_id": "shp56",
+      "type": "image",
+      "bbox": {
+        "x": 776.17,
+        "y": 362.43,
+        "width": 183.83,
+        "height": 177.57
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp57",
+      "type": "image",
+      "bbox": {
+        "x": 43.77,
+        "y": 410.26,
+        "width": 253.96,
+        "height": 81.92
+      },
+      "text": "",
+      "style": {},
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp2",
+      "type": "group",
+      "bbox": {
+        "x": 396.46,
+        "y": 354.99,
+        "width": 167.09,
+        "height": 167.09
+      },
+      "text": "",
+      "style": {},
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

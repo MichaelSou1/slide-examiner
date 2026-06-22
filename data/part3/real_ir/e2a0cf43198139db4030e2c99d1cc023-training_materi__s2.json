@@ -1,0 +1,47 @@
+{
+  "slide_id": "e2a0cf43198139db4030e2c99d1cc023-training_materi__s2",
+  "width": 960,
+  "height": 540,
+  "elements": [
+    {
+      "element_id": "shp136",
+      "type": "body",
+      "bbox": {
+        "x": 8.72,
+        "y": 6.3,
+        "width": 894.55,
+        "height": 80.16
+      },
+      "text": "➤ Definition",
+      "style": {
+        "font_size_pt": 28.0,
+        "color": "#000000"
+      },
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp137",
+      "type": "body",
+      "bbox": {
+        "x": 58.04,
+        "y": 72.42,
+        "width": 838.08,
+        "height": 446.02
+      },
+      "text": "A reference to or citation of one, a part of, or multiple specimens in scholarly publications (Agosti, Guidoti 2021)\n\nAllows separation in GBIF of material citation based data sets from those of specimen, observation, or sequence\n\nHelps to sort out confusion of duplications of digital specimen records (e.g., occurences in GBIF)",
+      "style": {
+        "font_size_pt": 24.0,
+        "color": "#000000"
+      },
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

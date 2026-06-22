@@ -1,0 +1,43 @@
+{
+  "slide_id": "d605f14c1b4fad94d3f148b06071b2c2-ChipScope_nanoF__s1",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp3",
+      "type": "body",
+      "bbox": {
+        "x": 56.0,
+        "y": 109.12,
+        "width": 135.35,
+        "height": 48.47
+      },
+      "text": "Content:",
+      "style": {
+        "font_size_pt": 24.0
+      },
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp2",
+      "type": "body",
+      "bbox": {
+        "x": 56.0,
+        "y": 200.21,
+        "width": 854.91,
+        "height": 416.83
+      },
+      "text": "Definition of microfluidics\n\nRequirements & example of a microfluidic system layout for live cell imaging\n\nPhotolithographic patterning of microfluidic systems\n\nAlternative microfluidic system involving custom seals\n\nBiological compatibility of sensor surfaces \n\nEvaluation of light-cell interaction\n\nApplication examples (cell tracking, blood-brain barrier models)",
+      "style": {},
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

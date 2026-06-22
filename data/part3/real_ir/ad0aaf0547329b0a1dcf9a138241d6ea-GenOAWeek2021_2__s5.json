@@ -1,0 +1,199 @@
+{
+  "slide_id": "ad0aaf0547329b0a1dcf9a138241d6ea-GenOAWeek2021_2__s5",
+  "width": 1280,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp2",
+      "type": "body",
+      "bbox": {
+        "x": 55.43,
+        "y": 124.72,
+        "width": 1169.13,
+        "height": 76.72
+      },
+      "text": "In questo panorama europeo in continua evoluzione abbiamo bisogno di punti di riferimento per il supporto e la formazione",
+      "style": {
+        "font_size_pt": 24.0
+      },
+      "z": 0,
+      "placeholder_id": "OBJECT (7)",
+      "metadata": {
+        "role": "OBJECT (7)"
+      }
+    },
+    {
+      "element_id": "shp3",
+      "type": "title",
+      "bbox": {
+        "x": 0.0,
+        "y": 11.34,
+        "width": 1280.0,
+        "height": 48.35
+      },
+      "text": "Ingredienti fondamentali: supporto e formazione",
+      "style": {},
+      "z": 1,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp4",
+      "type": "body",
+      "bbox": {
+        "x": 10.08,
+        "y": 676.54,
+        "width": 1020.47,
+        "height": 37.8
+      },
+      "text": "Emma Lazzeri // GenOA Week 2021 // 29/10/2021",
+      "style": {},
+      "z": 2,
+      "placeholder_id": "FOOTER (15)",
+      "metadata": {
+        "role": "FOOTER (15)"
+      }
+    },
+    {
+      "element_id": "shp6",
+      "type": "image",
+      "bbox": {
+        "x": 588.08,
+        "y": 249.23,
+        "width": 107.09,
+        "height": 107.36
+      },
+      "text": "",
+      "style": {},
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp7",
+      "type": "image",
+      "bbox": {
+        "x": 954.65,
+        "y": 255.65,
+        "width": 111.33,
+        "height": 114.18
+      },
+      "text": "",
+      "style": {},
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp8",
+      "type": "body",
+      "bbox": {
+        "x": 99.95,
+        "y": 359.16,
+        "width": 332.54,
+        "height": 53.51
+      },
+      "text": "Infrastrutture di Ricerca",
+      "style": {},
+      "z": 5,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp9",
+      "type": "body",
+      "bbox": {
+        "x": 100.81,
+        "y": 444.67,
+        "width": 331.69,
+        "height": 272.76
+      },
+      "text": "Supporto specifico per la comunità scientifica di riferimento\u000bwww.esfri.eu",
+      "style": {},
+      "z": 6,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp10",
+      "type": "body",
+      "bbox": {
+        "x": 448.46,
+        "y": 444.67,
+        "width": 386.32,
+        "height": 272.76
+      },
+      "text": "Supporto a livello nazionale da parte di esperti in Open Science, FAIR ed EOSC:\u000bhttps://www.icdi.it/it/attivita/tf-cc",
+      "style": {},
+      "z": 7,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp11",
+      "type": "body",
+      "bbox": {
+        "x": 844.48,
+        "y": 444.67,
+        "width": 331.69,
+        "height": 272.76
+      },
+      "text": "Supporto all’interno delle istituzioni di ricerca, per seguire al meglio le strategie interne all’organizzazione",
+      "style": {},
+      "z": 8,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp12",
+      "type": "body",
+      "bbox": {
+        "x": 842.27,
+        "y": 360.0,
+        "width": 332.54,
+        "height": 53.51
+      },
+      "text": "Istituzioni di ricerca",
+      "style": {},
+      "z": 9,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp13",
+      "type": "body",
+      "bbox": {
+        "x": 472.22,
+        "y": 359.16,
+        "width": 332.54,
+        "height": 53.51
+      },
+      "text": "Competence Centre",
+      "style": {},
+      "z": 10,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp14",
+      "type": "image",
+      "bbox": {
+        "x": 159.03,
+        "y": 267.54,
+        "width": 197.84,
+        "height": 88.52
+      },
+      "text": "",
+      "style": {},
+      "z": 11,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

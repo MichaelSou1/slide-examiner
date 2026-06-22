@@ -1,0 +1,28 @@
+{
+  "slide_id": "ad0aaf0547329b0a1dcf9a138241d6ea-GenOAWeek2021_2__s19",
+  "width": 1280,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp129",
+      "type": "title",
+      "bbox": {
+        "x": 102.11,
+        "y": 184.59,
+        "width": 1076.24,
+        "height": 74.92
+      },
+      "text": "Un portale su Open Science in Italiano\n\n\nObiettivo: informare la comunità italiana su argomenti,  novità e attività sull’Open Science e i suoi componenti\n\nPunto di riferimento per trovare materiali attinenti",
+      "style": {},
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

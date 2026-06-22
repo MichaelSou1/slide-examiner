@@ -1,0 +1,453 @@
+{
+  "slide_id": "5aa2630262e54a49db5680970f332b05-2024-05-Etapes___s7",
+  "width": 1280,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp2",
+      "type": "title",
+      "bbox": {
+        "x": 161.11,
+        "y": 103.92,
+        "width": 1054.89,
+        "height": 120.0
+      },
+      "text": "Publier, rendre public",
+      "style": {},
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp5",
+      "type": "body",
+      "bbox": {
+        "x": 442.0,
+        "y": 257.81,
+        "width": 210.57,
+        "height": 21.81
+      },
+      "text": "GOLD",
+      "style": {
+        "font_size_pt": 13.5,
+        "fill_color": "#FFC000"
+      },
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp6",
+      "type": "body",
+      "bbox": {
+        "x": 442.0,
+        "y": 304.94,
+        "width": 214.53,
+        "height": 65.43
+      },
+      "text": "L’auteur publie en libre accès dans une revue / sur une plateforme",
+      "style": {
+        "font_size_pt": 13.5,
+        "fill_color": "#FFC000"
+      },
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp7",
+      "type": "body",
+      "bbox": {
+        "x": 442.0,
+        "y": 374.82,
+        "width": 214.53,
+        "height": 87.24
+      },
+      "text": "Les auteurs ou leur institution paient les APC/BPC à l’éditeur",
+      "style": {
+        "font_size_pt": 13.5,
+        "fill_color": "#FFC000"
+      },
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp8",
+      "type": "body",
+      "bbox": {
+        "x": 674.95,
+        "y": 258.34,
+        "width": 207.34,
+        "height": 21.81
+      },
+      "text": "DIAMOND",
+      "style": {
+        "font_size_pt": 13.5
+      },
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp9",
+      "type": "body",
+      "bbox": {
+        "x": 675.14,
+        "y": 304.94,
+        "width": 211.88,
+        "height": 65.43
+      },
+      "text": "L’auteur publie en libre accès dans une revue / sur une plateforme",
+      "style": {
+        "font_size_pt": 13.5
+      },
+      "z": 5,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp10",
+      "type": "body",
+      "bbox": {
+        "x": 675.14,
+        "y": 374.82,
+        "width": 211.88,
+        "height": 87.24
+      },
+      "text": "Aucun APC/BPC ; subvention de l’institution pour des services supplémentaires",
+      "style": {
+        "font_size_pt": 13.5
+      },
+      "z": 6,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp11",
+      "type": "image",
+      "bbox": {
+        "x": 645.29,
+        "y": 291.23,
+        "width": 13.92,
+        "height": 22.16
+      },
+      "text": "",
+      "style": {},
+      "z": 7,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp12",
+      "type": "image",
+      "bbox": {
+        "x": 877.82,
+        "y": 292.92,
+        "width": 11.85,
+        "height": 18.78
+      },
+      "text": "",
+      "style": {},
+      "z": 8,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp13",
+      "type": "group",
+      "bbox": {
+        "x": 191.1,
+        "y": 301.42,
+        "width": 236.86,
+        "height": 155.36
+      },
+      "text": "",
+      "style": {},
+      "z": 9,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp20",
+      "type": "body",
+      "bbox": {
+        "x": 905.75,
+        "y": 257.18,
+        "width": 210.57,
+        "height": 21.81
+      },
+      "text": "GREEN",
+      "style": {
+        "font_size_pt": 13.5,
+        "fill_color": "#92D050"
+      },
+      "z": 10,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp21",
+      "type": "body",
+      "bbox": {
+        "x": 907.04,
+        "y": 280.05,
+        "width": 211.98,
+        "height": 87.24
+      },
+      "text": "L’auteur publie dans une revue à abonnement / une plateforme payante",
+      "style": {
+        "font_size_pt": 13.5
+      },
+      "z": 11,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp22",
+      "type": "body",
+      "bbox": {
+        "x": 905.04,
+        "y": 480.8,
+        "width": 211.28,
+        "height": 152.68
+      },
+      "text": "L’auteur sauvegarde l’article dans une archive ouverte (6 mois d’embargo selon la LPRN ou sans embargo si stratégie de non-cession des droits)",
+      "style": {
+        "font_size_pt": 13.5,
+        "fill_color": "#92D050"
+      },
+      "z": 12,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp23",
+      "type": "image",
+      "bbox": {
+        "x": 1097.78,
+        "y": 470.96,
+        "width": 11.34,
+        "height": 17.81
+      },
+      "text": "",
+      "style": {},
+      "z": 13,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp24",
+      "type": "body",
+      "bbox": {
+        "x": 905.77,
+        "y": 380.55,
+        "width": 214.53,
+        "height": 65.43
+      },
+      "text": "L’université paie l’abonnement / un particulier paie l’article",
+      "style": {
+        "font_size_pt": 13.5
+      },
+      "z": 14,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp25",
+      "type": "shape",
+      "bbox": {
+        "x": 384.33,
+        "y": 538.01,
+        "width": 46.58,
+        "height": 35.92
+      },
+      "text": "",
+      "style": {},
+      "z": 15,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp26",
+      "type": "body",
+      "bbox": {
+        "x": 192.46,
+        "y": 480.84,
+        "width": 196.34,
+        "height": 152.68
+      },
+      "text": "Archive ouverte",
+      "style": {
+        "font_size_pt": 13.5
+      },
+      "z": 16,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp27",
+      "type": "body",
+      "bbox": {
+        "x": 440.57,
+        "y": 479.63,
+        "width": 214.53,
+        "height": 152.68
+      },
+      "text": "L’auteur sauvegarde l’article dans une archive ouverte (sans embargo)",
+      "style": {
+        "font_size_pt": 13.5,
+        "fill_color": "#92D050"
+      },
+      "z": 17,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp28",
+      "type": "image",
+      "bbox": {
+        "x": 638.91,
+        "y": 470.72,
+        "width": 11.34,
+        "height": 17.81
+      },
+      "text": "",
+      "style": {},
+      "z": 18,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp30",
+      "type": "image",
+      "bbox": {
+        "x": 862.32,
+        "y": 471.9,
+        "width": 11.34,
+        "height": 17.81
+      },
+      "text": "",
+      "style": {},
+      "z": 19,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp34",
+      "type": "body",
+      "bbox": {
+        "x": 674.43,
+        "y": 480.8,
+        "width": 211.28,
+        "height": 152.68
+      },
+      "text": "L’auteur sauvegarde l’article dans une archive ouverte (sans embargo)",
+      "style": {
+        "font_size_pt": 13.5,
+        "fill_color": "#92D050"
+      },
+      "z": 20,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp35",
+      "type": "image",
+      "bbox": {
+        "x": 949.51,
+        "y": 653.57,
+        "width": 136.52,
+        "height": 66.43
+      },
+      "text": "",
+      "style": {},
+      "z": 21,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp40",
+      "type": "body",
+      "bbox": {
+        "x": 440.66,
+        "y": 641.59,
+        "width": 210.25,
+        "height": 72.7
+      },
+      "text": "Liste des éditeurs pour lesquels un accord « Publish & Read » a été conclus (APC pré-payés)",
+      "style": {
+        "font_size_pt": 9.0
+      },
+      "z": 22,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp41",
+      "type": "shape",
+      "bbox": {
+        "x": 290.08,
+        "y": 539.13,
+        "width": 265.19,
+        "height": 44.45
+      },
+      "text": "",
+      "style": {},
+      "z": 23,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp42",
+      "type": "image",
+      "bbox": {
+        "x": 675.14,
+        "y": 635.13,
+        "width": 202.68,
+        "height": 51.67
+      },
+      "text": "",
+      "style": {},
+      "z": 24,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp44",
+      "type": "image",
+      "bbox": {
+        "x": 662.58,
+        "y": 672.33,
+        "width": 139.8,
+        "height": 44.1
+      },
+      "text": "",
+      "style": {},
+      "z": 25,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp45",
+      "type": "image",
+      "bbox": {
+        "x": 798.04,
+        "y": 673.22,
+        "width": 109.05,
+        "height": 46.25
+      },
+      "text": "",
+      "style": {},
+      "z": 26,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

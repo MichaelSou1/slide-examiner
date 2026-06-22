@@ -1,0 +1,45 @@
+{
+  "slide_id": "a8dc2d0260a44588030f8fc0aed227f7-Alter-FAIR_Voca__s10",
+  "width": 1280,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp140",
+      "type": "title",
+      "bbox": {
+        "x": 88.0,
+        "y": 38.33,
+        "width": 1104.0,
+        "height": 139.17
+      },
+      "text": "FAIR Vocabularies make automation possible",
+      "style": {},
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp141",
+      "type": "body",
+      "bbox": {
+        "x": 88.0,
+        "y": 191.67,
+        "width": 1104.0,
+        "height": 456.83
+      },
+      "text": "Suppose that you want to know the population aged 18 to 24 in as many countries as possible\nYou will use a computer program to\nFind persistent identifiers for “Population” and “Age” \nSearch metadata files for data with dimensions “Population” and “Age” \nFilter results for data sets that can be aggregated to ages 18 to 24\nCodelists (e.g., [“0”, “1”, “2”,…] or [“0-4”, “5-9”,…]) will have persistent identifiers in the metadata file\nIn other words, FAIR vocabularies will automate “data wrangling”",
+      "style": {},
+      "z": 1,
+      "placeholder_id": "BODY (2)",
+      "metadata": {
+        "role": "BODY (2)"
+      }
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "slide_id": "eaecf2fcda285772d0c4e86d9af3fd83-Peer_review_sur__s9",
+  "width": 1280,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp2",
+      "type": "title",
+      "bbox": {
+        "x": 88.0,
+        "y": 38.33,
+        "width": 1104.0,
+        "height": 83.1
+      },
+      "text": "Informal feedback",
+      "style": {
+        "font_size_pt": 32.0
+      },
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp4",
+      "type": "chart",
+      "bbox": {
+        "x": 882.05,
+        "y": 193.64,
+        "width": 374.86,
+        "height": 387.92
+      },
+      "text": "",
+      "style": {},
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp5",
+      "type": "chart",
+      "bbox": {
+        "x": -9.03,
+        "y": 149.5,
+        "width": 411.08,
+        "height": 447.57
+      },
+      "text": "",
+      "style": {},
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp6",
+      "type": "chart",
+      "bbox": {
+        "x": 368.41,
+        "y": 161.99,
+        "width": 503.72,
+        "height": 435.17
+      },
+      "text": "",
+      "style": {},
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp7",
+      "type": "image",
+      "bbox": {
+        "x": 20.5,
+        "y": 672.82,
+        "width": 170.74,
+        "height": 36.97
+      },
+      "text": "",
+      "style": {},
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp9",
+      "type": "body",
+      "bbox": {
+        "x": 16.98,
+        "y": 634.05,
+        "width": 177.78,
+        "height": 38.78
+      },
+      "text": "#bioPeerReview",
+      "style": {},
+      "z": 5,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

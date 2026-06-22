@@ -1,0 +1,30 @@
+{
+  "key": "ixc-2.5",
+  "display_name": "IXC-2.5-Reward-7B",
+  "category": "general_mm",
+  "contract": "prompt_conditioned",
+  "backbone": "InternLM2-7B",
+  "trained_reward": true,
+  "model_path": "/home/gpus/models/IXC-2.5-Reward-7B",
+  "variant": "probe",
+  "elicitation": {
+    "question": "Assess whether every element on this presentation slide is fully contained within its box, with no text overflow, cut-off, or content spilling outside its container.",
+    "answer": "This is a high-quality, professional slide: every element is fully contained within its box, with no text overflow, cut-off, or content spilling outside its container."
+  },
+  "metric": "paired preference accuracy = P(reward(clean) > reward(defective)); 0.5 = blind, 1.0 = always prefers the clean slide",
+  "results": [
+    {
+      "defect": "G7_RENDER_CONTAINMENT_OVERFLOW",
+      "render": "freeform",
+      "n": 90,
+      "preference_accuracy": 0.289,
+      "preference_ci": [
+        0.205,
+        0.39
+      ],
+      "mean_reward_gap_clean_minus_def": -0.0503,
+      "median_gap": -0.0391,
+      "n_clean_preferred": 26
+    }
+  ]
+}

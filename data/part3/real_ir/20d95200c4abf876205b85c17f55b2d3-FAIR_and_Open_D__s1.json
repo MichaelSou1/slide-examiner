@@ -1,0 +1,194 @@
+{
+  "slide_id": "20d95200c4abf876205b85c17f55b2d3-FAIR_and_Open_D__s1",
+  "width": 1280,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp70",
+      "type": "body",
+      "bbox": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 1280.0,
+        "height": 117.03
+      },
+      "text": "What is Open Data?",
+      "style": {
+        "font_size_pt": 44.0
+      },
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp71",
+      "type": "body",
+      "bbox": {
+        "x": 29.26,
+        "y": 136.23,
+        "width": 200.23,
+        "height": 138.06
+      },
+      "text": "FAIR",
+      "style": {
+        "font_size_pt": 44.0,
+        "color": "#DA8200"
+      },
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp72",
+      "type": "body",
+      "bbox": {
+        "x": 6.86,
+        "y": 295.31,
+        "width": 240.47,
+        "height": 184.19
+      },
+      "text": "Now that we have explored what FAIR data looks like, let’s take a closer look at the concept of open data.",
+      "style": {
+        "font_size_pt": 18.0
+      },
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp73",
+      "type": "image",
+      "bbox": {
+        "x": 229.49,
+        "y": 234.06,
+        "width": 279.07,
+        "height": 279.07
+      },
+      "text": "",
+      "style": {},
+      "z": 3,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp74",
+      "type": "body",
+      "bbox": {
+        "x": 1005.71,
+        "y": 698.53,
+        "width": 274.29,
+        "height": 22.62
+      },
+      "text": "Icons made by https://www.flaticon.com/authors/eucalyp",
+      "style": {
+        "font_size_pt": 8.0
+      },
+      "z": 4,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp75",
+      "type": "body",
+      "bbox": {
+        "x": 888.69,
+        "y": 136.23,
+        "width": 370.29,
+        "height": 200.23
+      },
+      "text": "Open data is typically the product of open science or open research, and for the purposes of this module we’ll assume this to be the case, while in some cases it may retrospectively be made open.",
+      "style": {
+        "font_size_pt": 18.0,
+        "color": "#595959"
+      },
+      "z": 5,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp76",
+      "type": "body",
+      "bbox": {
+        "x": 508.56,
+        "y": 262.15,
+        "width": 427.89,
+        "height": 329.59
+      },
+      "text": "Open Knowledge Foundation definition:\n“Data is open if it can be freely accessed, used, modified and shared by anyone for any purpose - subject only, at most, to requirements to provide attribution and/or share-alike. Specifically, open data is defined by the Open Definition and requires that the data be:",
+      "style": {
+        "font_size_pt": 18.0
+      },
+      "z": 6,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp77",
+      "type": "shape",
+      "bbox": {
+        "x": 678.27,
+        "y": 554.74,
+        "width": 70.66,
+        "height": 39.51
+      },
+      "text": "",
+      "style": {},
+      "z": 7,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp78",
+      "type": "shape",
+      "bbox": {
+        "x": 885.84,
+        "y": 522.78,
+        "width": 70.66,
+        "height": 39.51
+      },
+      "text": "",
+      "style": {},
+      "z": 8,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp79",
+      "type": "body",
+      "bbox": {
+        "x": 443.8,
+        "y": 614.86,
+        "width": 521.14,
+        "height": 87.24
+      },
+      "text": "A. Legally open: that is, available under an open (data) license that permits anyone freely to access, reuse and redistribute",
+      "style": {
+        "font_size_pt": 16.0
+      },
+      "z": 9,
+      "placeholder_id": null,
+      "metadata": {}
+    },
+    {
+      "element_id": "shp80",
+      "type": "body",
+      "bbox": {
+        "x": 910.35,
+        "y": 453.3,
+        "width": 355.75,
+        "height": 138.94
+      },
+      "text": "B. Technically open: that is, that the data be available for no more than the cost of reproduction and in machine-readable and bulk form.",
+      "style": {
+        "font_size_pt": 16.0
+      },
+      "z": 10,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "slide_id": "11271d0c1294680fce9eb2705c4ecc65-SAKRAMEN_DASAR___s44",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp2",
+      "type": "body",
+      "bbox": {
+        "x": 32.0,
+        "y": 24.0,
+        "width": 888.0,
+        "height": 681.79
+      },
+      "text": "6. SAKRAMEN TAHBISAN\n(Kej 14:18, Ibr 5:5-10, Luk 22:19, Kis 6:6, 14: 23).\nTahbisan memungkinkan para Rasul Kristus dan penerus-penerus mereka untuk menerimakan Sakramen-sakramen.\nAda tiga jenjang Sakramen Tahbisan: diakon, imam, dan uskup. Hanya para imam dan uskup yang boleh menerimakan Sakramen Pengakuan serta mempersembahkan Kurban Misa.",
+      "style": {
+        "font_size_pt": 32.0,
+        "color": "#FF0000"
+      },
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}

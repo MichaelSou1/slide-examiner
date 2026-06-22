@@ -1,0 +1,63 @@
+{
+  "slide_id": "65b9f618e026be90484c974a204ae812-04_Ivanovic_Mla__s13",
+  "width": 960,
+  "height": 720,
+  "elements": [
+    {
+      "element_id": "shp2",
+      "type": "title",
+      "bbox": {
+        "x": 39.17,
+        "y": 9.33,
+        "width": 887.5,
+        "height": 85.33
+      },
+      "text": "TMI Application Techniques",
+      "style": {},
+      "z": 0,
+      "placeholder_id": "TITLE (1)",
+      "metadata": {
+        "role": "TITLE (1)"
+      }
+    },
+    {
+      "element_id": "shp3",
+      "type": "body",
+      "bbox": {
+        "x": 37.5,
+        "y": 127.1,
+        "width": 691.98,
+        "height": 496.67
+      },
+      "text": "Drench / Bark paint\nInjection through needle inserted in sapwood\nAtmospheric pressure\nUnder high pressure\n\nDrill holes\nImplants\nInjection at atmospheric pressure\nInjection under pressure\nWithout sealing plugs\nWith sealing plugs\n\nRequirements\nProduct safety  Closed system\nCommercial  Speed of application",
+      "style": {},
+      "z": 1,
+      "placeholder_id": "OBJECT (7)",
+      "metadata": {
+        "role": "OBJECT (7)"
+      }
+    },
+    {
+      "element_id": "shp5",
+      "type": "body",
+      "bbox": {
+        "x": 585.84,
+        "y": 121.29,
+        "width": 309.96,
+        "height": 498.95
+      },
+      "text": ": Phys-chem prop. ai\n\n: Speed\n: Damage of tree\n\n\n: Phys-chem prop. ai\n: Speed\n\n: Closed system",
+      "style": {
+        "font_size_pt": 19.0,
+        "color": "#FF0000"
+      },
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "scene": "full_proposal",
+    "source": "zenodo10k"
+  }
+}
