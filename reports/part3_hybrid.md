@@ -2,7 +2,8 @@
 
 > **Status:** Protocols 1–3 complete. Protocol-1 = elicitation recovery (6 models / 4 families); Protocol-2 =
 > hybrid-critic coverage (hybrid 8/9 @ 0.885 vs linter 5/9 / VLM 2/9) + honest SlideAudit image-only scoping;
-> Protocol-3 = published reward-model audit (DocReward blind to G7) + perturbation-fidelity audit (45% snap-absorbed).
+> Protocol-3 = multi-RM reward audit (3 scorers: narrow document/aesthetic rewards blind to G7, a general-VLM reward
+> detects it) + perturbation-fidelity audit (45% snap-absorbed, zero-signal across all rewards).
 > This is an **additive arm** to [part3.md](part3.md) (the self-refine / GEPA downstream-utility study) — a
 > separate mechanism-analysis of *how to detect* slide defects, output here and not over-writing that report.
 
@@ -27,8 +28,11 @@ Four claims map to the three protocols:
 2. **(Protocol 2)** A static router (defect→engine) gives a hybrid critic that **covers strictly more** than either
    the linter alone or a VLM alone; G7 is caught by the VLM engine while the linter **and** a pure-neural reward
    baseline both miss it.
-3. **(Protocol 3)** Published design reward models are **insensitive** to G7 / to perturbations that never render,
-   and a perturbation-fidelity audit quantifies the "injected-but-not-rendered" hazard.
+3. **(Protocol 3)** The G7 blind spot is a property of **narrow critics**: across 3 published reward scorers, a
+   document-structure reward and a pure-aesthetic scorer are insensitive to G7 (at chance), but a capable
+   general-multimodal reward detects it — so "G7 needs a VLM engine" holds whether that VLM is prompted (Result 1)
+   or reward-headed. A perturbation-fidelity audit further shows ~45% of injected defects never render (zero signal
+   for *every* reward).
 4. The defensible contribution is the **per-defect bottleneck dichotomy + the G7 linter-blind class with a
    falsifiable criterion + real-data (SlideAudit) scoping**, not "beating DocReward."
 
@@ -38,7 +42,7 @@ Four claims map to the three protocols:
 |---|---|---|
 | **1.** Changing *elicitation* (not the model) recovers detection that pointwise+rubric suppresses; C3-vs-C0 isolates "format suppression, not capability". | Result 1: C3 rescues G7 across Qwen 9B/27B/3.6 + Gemma4 (0.50/0.93/0.52/0.75 → 0.93–1.00); replicates over 4 families. C3>C0 on real SlideAudit too (Result 2b). | 30B free-form vs pointwise on the ToC slide (A.1.2). |
 | **2.** A static per-defect router gives a hybrid that covers **strictly more** than linter-alone or VLM-alone; G7 is caught by the VLM engine while the linter misses it. | Result 2a: hybrid **8/9 @ 0.885** vs linter 5/9 @0.70, VLM 2/9 @0.57; **G7: linter 0.00 / VLM-C0 0.50 / hybrid 1.00**. | linter 0.75–1.0 on geometry; DesignLab 0.149 placement recall. |
-| **3.** Published design reward models are insensitive to G7 / to perturbations that never render; a fidelity audit quantifies the "injected-but-not-rendered" hazard. | Result 3a: DocReward G7 pref **0.28** (CI below chance). Result 3b: **45%** of injected geometry defects snapped away; snap-absorbed → reward gap 0.0. | snap-bug byte/structure check (Part 2). |
+| **3.** The G7 blind spot is a property of *narrow* critics, not all neural rewards; a fidelity audit quantifies the "injected-but-not-rendered" hazard. | Result 3a (3-RM, n=90): DocReward G7 **0.48**, LAION-aesthetic **0.57** (both CI-spanning-chance) vs Skywork-VL **0.79** (detects). Result 3b: **45%** snapped away; snap-absorbed → gap 0.0 for **all** rewards. | snap-bug byte/structure check (Part 2); Result-1 C3 = prompted VLM also detects G7. |
 | **4.** The contribution is the **per-defect bottleneck dichotomy + the falsifiable G7 linter-blind class + real-data scoping**, not "beating DocReward". | All three Results + honest SlideAudit image-only degradation + S6 negative. | Part-1 sub-perceptual geometry; Part-2 examiner + linter routing. |
 
 ## Background facts this builds on (A.1)
@@ -246,8 +250,9 @@ the bottleneck dichotomy predicts:
    0.47–0.71, cannot name fine alignment/colour/margin from pixels — the Part-1 sub-perceptual result).
 2. **VLM owns the render class G7** — the load-bearing cell: **linter 0.00** (blind by construction), **VLM-C0
    0.50** (cannot *name* the off-taxonomy class), **hybrid 1.00 at precision 1.00** via the C3 atomic-binary engine.
-   No single standard engine covers G7; the hybrid does. (Result 3a shows a published neural reward model also
-   scores 0.28 here — so linter, pointwise-VLM, *and* neural reward all miss G7.)
+   No single *narrow* engine covers G7; the hybrid does. (Result 3a: the linter, a document-structure reward
+   (DocReward 0.48) and an aesthetic scorer (LAION 0.57) all miss G7, while a general-VLM reward (Skywork 0.79)
+   detects it — confirming the engine G7 needs is a capable VLM, prompted or reward-headed.)
 3. **LLM owns density** S4 (0.72 at precision 1.00, where linter and pointwise-VLM are at chance).
 4. **A data-driven routing finding:** S1 title-body mismatch was initially routed to the text-LLM, but the text-only
    probe **over-flags** (0.25, precision 0.09) while the image-bearing VLM names it reliably (**0.94, precision
@@ -284,43 +289,59 @@ honest ceiling, and it is set by **missing structure, not missing method**.
 
 ## Result 3 — reward-model audit + perturbation fidelity (Protocol 3)
 
-We do not retrain a reward model (expensive, derivative). Instead we **audit a published one** and
+We do not retrain a reward model (expensive, derivative). Instead we **audit published ones** and
 **audit the data pipeline itself**, two cheap experiments that yield a hard, falsifiable finding apiece.
 
-### Result 3a — a published design/document reward model is blind to G7
+### Result 3a — the G7 blind spot is a property of *narrow* critics, not of capable general VLMs (multi-RM audit)
 
-**Model.** `jeepliu/DocReward-3B` (DocReward, arXiv 2510.11391) — a Qwen2.5-VL-3B with a Bradley-Terry value
-head, trained on 117K paired documents to score **structure & style**, explicitly *textual-quality-agnostic*; it
-reports beating GPT-5 by 14.6 pts on document professionalism. We load its backbone + `value_head.bin`
-(`Linear(2048→1)` on an appended `<|regression|>` token) with plain transformers — no trl/llamafactory — and ask a
-single falsifiable question per defect class on the **same paired-clean slides** used by Protocols 1–2:
+We **audit four published scorers** spanning three categories and three
+backbone families on the **same paired-clean slides** (G7 at **90/90**; 18–54 pairs/synth class, freeform renders),
+behind a uniform `RewardAdapter` interface (`slide_examiner/reward_adapters.py`, `scripts/part3_p3_reward_audit.py`,
+`data/part3/p3_audit_multi.json`). The falsifiable question per class: `reward(clean) > reward(defective)`? A scorer
+blind to a class assigns the defective slide no lower reward → paired preference ≈ 0.5 (CI spanning chance).
 
-> does it score the clean slide above its defective twin, i.e. `reward(clean) > reward(defective)`?
-
-A reward blind to a class scores the defective slide no lower → paired preference accuracy ≈ 0.5
-(`scripts/part3_p3_reward_audit.py`, `data/part3/p3_audit.json`; 40 pairs/class, freeform renders).
-
-| Defect | preference acc [95% CI] | mean reward gap (clean − def) | verdict |
+| Reward scorer | category | backbone | contract |
 |---|---|---|---|
-| **G7 render-overflow** | **0.28 [0.16, 0.43]** | **−0.23** | ❌ **blind — prefers the broken slide** |
-| G5 colour | 0.40 [0.26, 0.55] | −0.01 | ❌ blind (≈ chance) |
-| G1 overflow | 0.95 [0.83, 0.99] | +0.63 | ✅ sensitive |
-| G2 overlap | 1.00 [0.91, 1.00] | +2.15 | ✅ sensitive |
-| S4 density | 1.00 [0.90, 1.00] | +2.22 | ✅ sensitive |
-| S6 image-text | 1.00 [0.82, 1.00] | +1.04 | ✅ sensitive |
+| **DocReward-3B** (`jeepliu/DocReward-3B`) | document structure/style | Qwen2.5-VL-3B | BT value head on `<\|regression\|>` (image-only) |
+| **Skywork-VL-Reward-7B** | general multimodal | Qwen2.5-VL-7B | value head, generic-quality prompt |
+| **LAION-Aesthetic** | pure aesthetic | CLIP ViT-L/14 | linear head on the image embedding |
+| *(IXC-2.5-Reward-7B)* | *general multimodal* | *InternLM2-7B* | *deferred — broken under transformers 5.6; see scoping* |
 
-![DocReward preference accuracy per defect — blind to G7](../docs/figs/p3_reward_blindspot.png)
+Each is scored under its native, **deployment-realistic contract with no defect named**; for the prompt-conditioned
+rewards we use a generic quality elicitation (and a defect-naming *probe* as a control). Preference accuracy per
+class (freeform; 95% CI; **G7 boldface**):
 
-**Reading.** DocReward cleanly penalises the defects it can see — declared overflow, overlap, density, image-text
-(0.95–1.00). But on **G7 its preference accuracy is 0.28, with the 95% CI entirely below chance**: it does not
-merely ignore the render-containment overflow, it *slightly prefers* the overflowing slide (negative reward gap —
-the over-spilling card simply shows more content). This is the **neural-reward counterpart of the linter's blind
-spot**: the linter misses G7 because the declared bbox is legal; the reward model misses G7 because the overflow is
-an off-distribution render artifact its preference data never taught it to punish. So for the linter-blind render
-class, **both the symbolic linter and a published neural reward model fail — only the VLM-with-C3 engine (Result 1 /
-Result 2) catches it.** That is the empirical core of the hybrid thesis: G7 needs an engine that *neither* of the
-two standard critics provides. (DocReward is also blind to brand-colour G5, a rule class the linter owns at
-bal-acc 1.0 — again complementary strengths.)
+| Reward scorer | G1 overflow | G2 overlap | G5 colour | **G7 render** | S4 density | S6 img-text |
+|---|---|---|---|---|---|---|
+| DocReward-3B (document) | 0.93 | 1.00 | 0.37 | **0.48 [0.38, 0.58]** | 1.00 | 1.00 |
+| Skywork-VL-7B (general-mm) | 0.94 | 0.72 | 0.46 | **0.79 [0.69, 0.86]** | 0.92 | 1.00 |
+| LAION-Aesthetic (aesthetic) | 0.37 | 0.91 | 0.57 | **0.57 [0.46, 0.66]** | 0.75 | 0.61 |
+
+![Reward preference per model × defect — narrow rewards miss G7, a general-VLM reward detects it](../docs/figs/p3_reward_blindspot_multi.png)
+
+**Reading.** Every scorer is clearly sensitive to several in-taxonomy classes (DocReward G1/G2/S4/S6 0.93–1.00;
+Skywork G1/S4/S6 0.92–1.00; LAION G2 0.91), so each is a *working* reward — its G7 behaviour is not a domain-mismatch
+artifact. On **G7 the picture splits**, and this refines our original single-model claim:
+
+- the **symbolic linter (0.00, Result 2)**, the **document-structure reward (DocReward 0.48 [0.38, 0.58], gap −0.09)**
+  and the **pure-aesthetic scorer (LAION 0.57 [0.46, 0.66], gap +0.03)** all sit **at chance** — their 95% CIs
+  include 0.5, i.e. they carry *no reliable signal* about the render-containment overflow;
+- the **general-multimodal reward (Skywork-VL 0.79 [0.69, 0.86], gap +1.36)** **does** detect it — its Qwen2.5-VL-7B
+  backbone perceives the overflow even without being told to look for it.
+
+So the G7 blind spot is **not model-agnostic across all neural rewards**; it is a property of **narrow critics** —
+rule-based linters and *specialised* (document / aesthetic) reward heads — whereas a **capable general VLM** catches
+it. This is consistent with, and an independent instance of, the hybrid thesis: **G7 needs a capable VLM engine, and
+that engine works whether it is *prompted* (Result-1 C3, 0.93–1.00) or carries a *reward head* (Skywork 0.79).** The
+honest revision of Protocol-3 is therefore: *the linter and narrow rewards motivate the VLM engine; a general VLM
+(prompted or reward-headed) closes the gap* — not "every neural reward is blind to G7." (DocReward is also blind to
+brand-colour G5 at 0.37, a rule class the linter owns at bal-acc 1.0; complementary strengths persist.)
+
+**Elicitation control (probe).** For the prompt-conditioned Skywork, naming containment/overflow in the prompt lifts
+G7 from 0.79 → **0.87** (gap +1.36 → +2.59) — same direction as Result-1's C0→C3, although Skywork already detects
+G7 under the generic prompt, so this is reinforcement, not rescue. (A 40-pair subset of a single G7 variant gave
+Skywork 0.58 with a CI spanning chance; the full 90-pair audit over all three variants resolves it to 0.79. We
+report the full-set number, and the n=40→n=90 shift is itself a note on per-variant heterogeneity.)
 
 ### Result 3b — perturbation-fidelity audit: ~45 % of injected geometry defects never render
 
@@ -346,21 +367,31 @@ text-semantic defects (non-geometric) survive. Two consequences:
 1. **Eval validity:** this is exactly why Protocols 1–2 use the freeform renderer — on the template renders ~45 % of
    the "defective" labels sit on visually-clean images (silent label noise). It also explains the latent FF/TPL
    interleaving in the legacy manifest (handled by filtering to freeform).
-2. **Reward-pipeline hazard (ties 3a↔3b):** feeding DocReward the **template** (snap-absorbed) pairs gives a
-   preference accuracy of **0.00 at a reward gap of exactly 0.000** on G2/G3/G6 — the two images are identical, so
-   *no* reward model can react. Any reward/critic trained or evaluated on snap-rendered images with IR-derived
+2. **Reward-pipeline hazard (ties 3a↔3b), now cross-RM:** feeding **all three** reward scorers the **template**
+   (snap-absorbed) pairs gives a preference accuracy of **0.00 at a reward gap of exactly 0.000** on G2/G3/G6
+   (`data/part3/p3_fidelity_multi.json`) — the two images are pixel-identical, so *no* scorer (document,
+   general-multimodal, *or* aesthetic) can react. This part **is** model-agnostic by construction. Any reward/critic
+   trained or evaluated on snap-rendered images with IR-derived
    labels inherits ~45 % zero-signal pairs. Perturbation fidelity must be verified at the pixel level, not assumed
    from the IR — a methodological prerequisite the field largely skips.
 
 ### Honest scoping (Protocol 3)
 
-- **One reward model audited.** DocReward is the most on-target public weight (document structure/style). A natural
-  second target, **`MeiGen-AI/PosterReward_v1`** (graphic-design reward, CVPR'26), is public and downloaded, but its
-  scorer is an *ms-swift* `seq_cls` head we could not reproduce faithfully without the swift runtime (installing it
-  risks the working serving envs mid-run); it is deferred, not claimed. The audit *method* is model-agnostic.
-- DocReward scores **documents**, not slides specifically; its G1/G2 sensitivity shows the transfer is real, so its
-  G7 failure is a genuine blind spot, not a domain mismatch artifact.
-- We trained no scalar baseline (Protocol-3b optional path) — the published-weight audit is the stronger,
+- **Three reward scorers audited (document / general-multimodal / aesthetic), not one.** This is the upgrade over
+  the original single-DocReward audit: the G7 blind spot is now shown to be a property of *narrow* critics
+  specifically (it does **not** generalise to a capable general-multimodal reward, Skywork-VL). That is the honest,
+  reviewer-proof finding — a reviewer who tested Skywork themselves would find 0.79, so we report it.
+- **IXC-2.5-Reward-7B (general-mm, InternLM2 backbone) attempted but deferred.** It loads on this box only with a
+  chain of transformers-5.6 workarounds (offline font, re-added `config.max_length`, vision tower built from config,
+  4-GPU `device_map`, `hd_num=1` to fit eager attention), but its **PLoRA image-token adapters do not load** under
+  that path (`lora_sft/dpo/web` reported missing → re-initialised), corrupting the image stream (it then *prefers*
+  the overlapping G2 slide, pref 0.00). The results are invalid and excluded; the adapter is committed
+  (`slide_examiner/reward_adapters.py:IXCRewardAdapter`) for a future single-large-GPU / PLoRA-aware re-run.
+- **`MeiGen-AI/PosterReward_v1`** (graphic-design reward, CVPR'26) is public but its *ms-swift* `seq_cls` head needs
+  the swift runtime (installing it risks the working serving envs); it remains deferred, not claimed.
+- DocReward / Skywork score **documents / general images**, not slides specifically; their G1/G2/S4 sensitivity shows
+  the transfer is real, so the G7 result (blind for DocReward, detected by Skywork) is genuine, not a domain artifact.
+- We trained no scalar baseline (Protocol-3b optional path) — the published-weight multi-RM audit is the stronger,
   non-derivative evidence and the QLoRA baseline is left as future work.
 
 ## Honest scoping & negative results
@@ -382,10 +413,12 @@ text-semantic defects (non-geometric) survive. Two consequences:
 the detection a pointwise+rubric VLM "loses" is mostly a *format* artifact — atomic-binary elicitation recovers it,
 and the effect replicates across 4 model families and transfers to real SlideAudit images; (2) routing each defect
 to its bottleneck-appropriate engine yields a hybrid that covers **8/9 classes (0.885)** where the best single
-engine covers 5/9 — and the linter-blind render class **G7 is caught only by the hybrid's VLM-C3 engine**; (3) a
-published neural reward model (DocReward) shares the linter's G7 blind spot (pref 0.28, below chance), and ~45% of
-IR-injected geometry defects never survive the standard snap renderer — so neither "just train a reward model" nor
-"trust the rendered labels" is sufficient. The defensible unit of contribution is the **per-defect bottleneck
+engine covers 5/9 — and the linter-blind render class **G7 is caught only by the hybrid's VLM-C3 engine**; (3) across
+three published reward scorers, the G7 blind spot is a property of **narrow critics** — a document-structure reward
+(DocReward 0.48) and a pure-aesthetic scorer (LAION 0.57) miss it at chance, while a capable general-multimodal
+reward (Skywork-VL 0.79) detects it — so "G7 needs a capable VLM" holds whether the VLM is prompted or reward-headed;
+and ~45% of IR-injected geometry defects never survive the standard snap renderer (zero signal for *every* reward) —
+so neither "just grab a narrow reward model" nor "trust the rendered labels" is sufficient. The defensible unit of contribution is the **per-defect bottleneck
 dichotomy, the falsifiable G7 class, and honest real-data scoping**.
 
 **Future work.** (a) A structured (modality-C) real eval to separate "missing structure" from "missing capability"

@@ -1,0 +1,84 @@
+{
+  "note": "Cross-RM perturbation-fidelity tie-in. The template (snap-to-master) render absorbs ~45% of injected geometry defects, making the defective image pixel-identical to its clean twin. Feeding those snap-absorbed pairs to each reward model yields preference≈0 / gap≈0 — so ANY reward trained or evaluated on snapped renders inherits zero-signal pairs. This is model-agnostic by construction (identical pixels).",
+  "pixel_level_absorption": {
+    "overall_template_absorption_rate": 0.448,
+    "per_defect_absorption": {
+      "G1_TEXT_OVERFLOW": 0.204,
+      "G2_ELEMENT_OVERLAP": 1.0,
+      "G3_ALIGNMENT_OFFSET": 1.0,
+      "G5_BRAND_COLOR_VIOLATION": 0.0,
+      "G6_MARGIN_VIOLATION": 1.0,
+      "S1_TITLE_BODY_MISMATCH": 0.0,
+      "S4_DENSITY_RULE_VIOLATION": 0.0,
+      "S6_IMAGE_TEXT_CONTRADICTION": 0.0
+    }
+  },
+  "per_reward_model": [
+    {
+      "key": "aesthetic",
+      "display_name": "LAION-Aesthetic (CLIP-L/14)",
+      "trained_reward": false,
+      "template_snap_absorbed": {
+        "G2_ELEMENT_OVERLAP": {
+          "preference_accuracy": 0.0,
+          "mean_gap": 0.0,
+          "n": 54
+        },
+        "G3_ALIGNMENT_OFFSET": {
+          "preference_accuracy": 0.0,
+          "mean_gap": 0.0,
+          "n": 36
+        },
+        "G6_MARGIN_VIOLATION": {
+          "preference_accuracy": 0.0,
+          "mean_gap": 0.0,
+          "n": 36
+        }
+      }
+    },
+    {
+      "key": "docreward",
+      "display_name": "DocReward-3B",
+      "trained_reward": true,
+      "template_snap_absorbed": {
+        "G2_ELEMENT_OVERLAP": {
+          "preference_accuracy": 0.0,
+          "mean_gap": 0.0,
+          "n": 54
+        },
+        "G3_ALIGNMENT_OFFSET": {
+          "preference_accuracy": 0.0,
+          "mean_gap": 0.0,
+          "n": 36
+        },
+        "G6_MARGIN_VIOLATION": {
+          "preference_accuracy": 0.0,
+          "mean_gap": 0.0,
+          "n": 36
+        }
+      }
+    },
+    {
+      "key": "skywork-vl",
+      "display_name": "Skywork-VL-Reward-7B",
+      "trained_reward": true,
+      "template_snap_absorbed": {
+        "G2_ELEMENT_OVERLAP": {
+          "preference_accuracy": 0.0,
+          "mean_gap": 0.0,
+          "n": 54
+        },
+        "G3_ALIGNMENT_OFFSET": {
+          "preference_accuracy": 0.0,
+          "mean_gap": 0.0,
+          "n": 36
+        },
+        "G6_MARGIN_VIOLATION": {
+          "preference_accuracy": 0.0,
+          "mean_gap": 0.0,
+          "n": 36
+        }
+      }
+    }
+  ]
+}

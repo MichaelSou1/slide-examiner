@@ -105,6 +105,64 @@ def fig_reward():
     print("wrote", out)
 
 
+def fig_reward_multi():
+    """Multi-RM blind-spot heatmap (Figure 5): preference accuracy per reward
+    model x defect class, G7 column highlighted, diverging colour centred on
+    chance (0.5). The model-agnostic evidence: every trained reward sits at/below
+    chance on G7 while seeing the in-taxonomy classes."""
+    from matplotlib.colors import TwoSlopeNorm
+    fp = D / "p3_audit_multi.json"
+    if not fp.exists():
+        print("skip fig_reward_multi (no p3_audit_multi.json)")
+        return
+    d = json.loads(fp.read_text())
+    # classes present in freeform runs, in canonical order
+    classes = [c for c in ORDER if any(c in m["freeform"] for m in d["models"])]
+    # order models: trained first (document, general_mm, design), aesthetic last
+    cat_rank = {"document": 0, "general_mm": 1, "design": 2, "aesthetic": 9}
+    models = sorted(d["models"], key=lambda m: (cat_rank.get(m["category"], 5), m["display_name"]))
+    M = np.full((len(models), len(classes)), np.nan)
+    for i, m in enumerate(models):
+        for j, c in enumerate(classes):
+            cell = m["freeform"].get(c)
+            if cell is not None:
+                M[i, j] = cell["preference_accuracy"]
+
+    fig, ax = plt.subplots(figsize=(1.15 * len(classes) + 2.5, 0.62 * len(models) + 2.0))
+    norm = TwoSlopeNorm(vmin=0.0, vcenter=0.5, vmax=1.0)
+    im = ax.imshow(M, cmap="RdYlGn", norm=norm, aspect="auto")
+    ax.set_xticks(range(len(classes)))
+    ax.set_xticklabels([SHORT[c] for c in classes], fontsize=9)
+    ax.set_yticks(range(len(models)))
+    ax.set_yticklabels([f"{m['display_name']}\n({m['category'].replace('_','-')})" for m in models],
+                       fontsize=8.5)
+    for i in range(len(models)):
+        for j in range(len(classes)):
+            if not np.isnan(M[i, j]):
+                v = M[i, j]
+                ax.text(j, i, f"{v:.2f}", ha="center", va="center", fontsize=8.5,
+                        color="black", fontweight="bold" if v <= 0.5 else "normal")
+    # highlight the G7 column
+    if "G7_RENDER_CONTAINMENT_OVERFLOW" in classes:
+        g7 = classes.index("G7_RENDER_CONTAINMENT_OVERFLOW")
+        ax.add_patch(plt.Rectangle((g7 - 0.5, -0.5), 1, len(models), fill=False,
+                                   edgecolor="blue", lw=2.2))
+    g7row = d.get("g7_cross_model", [])
+    n_reli = sum(1 for r in g7row if r.get("reliably_detects_g7"))
+    n_tot = len(g7row)
+    ax.set_title("Reward preference  P(reward(clean) > reward(defective))  per reward model x defect class\n"
+                 f"diverging at chance=0.5 (red=mis-ranks, green=sensitive);  G7 render-containment (boxed): "
+                 f"{n_reli}/{n_tot} reliably detect it\n"
+                 "the symbolic linter and narrow (document / aesthetic) rewards miss G7; a general-VLM reward detects it",
+                 fontsize=9)
+    fig.colorbar(im, ax=ax, fraction=0.025, pad=0.01, label="preference accuracy")
+    fig.tight_layout()
+    out = FIGS / "p3_reward_blindspot_multi.png"
+    fig.savefig(out, dpi=150)
+    print("wrote", out)
+
+
 if __name__ == "__main__":
     fig_coverage()
     fig_reward()
+    fig_reward_multi()

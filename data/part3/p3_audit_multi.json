@@ -1,0 +1,274 @@
+{
+  "metric": "paired preference accuracy = P(reward(clean) > reward(defective)); 0.5 = blind, 1.0 = always prefers the clean slide",
+  "chance": 0.5,
+  "n_models": 3,
+  "categories_covered": [
+    "aesthetic",
+    "document",
+    "general_mm"
+  ],
+  "models": [
+    {
+      "key": "aesthetic",
+      "display_name": "LAION-Aesthetic (CLIP-L/14)",
+      "category": "aesthetic",
+      "contract": "pointwise",
+      "backbone": "CLIP ViT-L/14",
+      "trained_reward": false,
+      "elicitation": null,
+      "freeform": {
+        "G7_RENDER_CONTAINMENT_OVERFLOW": {
+          "preference_accuracy": 0.567,
+          "preference_ci": [
+            0.464,
+            0.664
+          ],
+          "mean_gap": 0.0305,
+          "n": 90
+        },
+        "G1_TEXT_OVERFLOW": {
+          "preference_accuracy": 0.37,
+          "preference_ci": [
+            0.254,
+            0.504
+          ],
+          "mean_gap": -0.0484,
+          "n": 54
+        },
+        "G2_ELEMENT_OVERLAP": {
+          "preference_accuracy": 0.907,
+          "preference_ci": [
+            0.801,
+            0.96
+          ],
+          "mean_gap": 0.3133,
+          "n": 54
+        },
+        "G5_BRAND_COLOR_VIOLATION": {
+          "preference_accuracy": 0.574,
+          "preference_ci": [
+            0.442,
+            0.697
+          ],
+          "mean_gap": 0.004,
+          "n": 54
+        },
+        "S4_DENSITY_RULE_VIOLATION": {
+          "preference_accuracy": 0.75,
+          "preference_ci": [
+            0.589,
+            0.862
+          ],
+          "mean_gap": 0.1431,
+          "n": 36
+        },
+        "S6_IMAGE_TEXT_CONTRADICTION": {
+          "preference_accuracy": 0.611,
+          "preference_ci": [
+            0.386,
+            0.797
+          ],
+          "mean_gap": 0.0442,
+          "n": 18
+        }
+      }
+    },
+    {
+      "key": "docreward",
+      "display_name": "DocReward-3B",
+      "category": "document",
+      "contract": "pairwise_bt",
+      "backbone": "Qwen2.5-VL-3B",
+      "trained_reward": true,
+      "elicitation": null,
+      "freeform": {
+        "G7_RENDER_CONTAINMENT_OVERFLOW": {
+          "preference_accuracy": 0.478,
+          "preference_ci": [
+            0.378,
+            0.58
+          ],
+          "mean_gap": -0.0877,
+          "n": 90
+        },
+        "G1_TEXT_OVERFLOW": {
+          "preference_accuracy": 0.926,
+          "preference_ci": [
+            0.824,
+            0.971
+          ],
+          "mean_gap": 0.6712,
+          "n": 54
+        },
+        "G2_ELEMENT_OVERLAP": {
+          "preference_accuracy": 1.0,
+          "preference_ci": [
+            0.934,
+            1.0
+          ],
+          "mean_gap": 2.0919,
+          "n": 54
+        },
+        "G5_BRAND_COLOR_VIOLATION": {
+          "preference_accuracy": 0.37,
+          "preference_ci": [
+            0.254,
+            0.504
+          ],
+          "mean_gap": -0.0262,
+          "n": 54
+        },
+        "S4_DENSITY_RULE_VIOLATION": {
+          "preference_accuracy": 1.0,
+          "preference_ci": [
+            0.904,
+            1.0
+          ],
+          "mean_gap": 2.2161,
+          "n": 36
+        },
+        "S6_IMAGE_TEXT_CONTRADICTION": {
+          "preference_accuracy": 1.0,
+          "preference_ci": [
+            0.824,
+            1.0
+          ],
+          "mean_gap": 1.036,
+          "n": 18
+        }
+      }
+    },
+    {
+      "key": "skywork-vl",
+      "display_name": "Skywork-VL-Reward-7B",
+      "category": "general_mm",
+      "contract": "prompt_conditioned",
+      "backbone": "Qwen2.5-VL-7B",
+      "trained_reward": true,
+      "elicitation": {
+        "question": "Rate the overall visual quality, layout and professionalism of this presentation slide.",
+        "answer": "This is a high-quality, well-designed, professional slide with a clean, polished layout."
+      },
+      "freeform": {
+        "G7_RENDER_CONTAINMENT_OVERFLOW": {
+          "preference_accuracy": 0.789,
+          "preference_ci": [
+            0.694,
+            0.86
+          ],
+          "mean_gap": 1.3599,
+          "n": 90
+        },
+        "G1_TEXT_OVERFLOW": {
+          "preference_accuracy": 0.944,
+          "preference_ci": [
+            0.849,
+            0.981
+          ],
+          "mean_gap": 2.6996,
+          "n": 54
+        },
+        "G2_ELEMENT_OVERLAP": {
+          "preference_accuracy": 0.722,
+          "preference_ci": [
+            0.591,
+            0.824
+          ],
+          "mean_gap": 1.0868,
+          "n": 54
+        },
+        "G5_BRAND_COLOR_VIOLATION": {
+          "preference_accuracy": 0.463,
+          "preference_ci": [
+            0.337,
+            0.594
+          ],
+          "mean_gap": -0.0459,
+          "n": 54
+        },
+        "S4_DENSITY_RULE_VIOLATION": {
+          "preference_accuracy": 0.917,
+          "preference_ci": [
+            0.782,
+            0.971
+          ],
+          "mean_gap": 3.5746,
+          "n": 36
+        },
+        "S6_IMAGE_TEXT_CONTRADICTION": {
+          "preference_accuracy": 1.0,
+          "preference_ci": [
+            0.824,
+            1.0
+          ],
+          "mean_gap": 5.6992,
+          "n": 18
+        }
+      }
+    }
+  ],
+  "g7_cross_model": [
+    {
+      "key": "aesthetic",
+      "display_name": "LAION-Aesthetic (CLIP-L/14)",
+      "category": "aesthetic",
+      "trained_reward": false,
+      "preference_accuracy": 0.567,
+      "preference_ci": [
+        0.464,
+        0.664
+      ],
+      "mean_gap": 0.0305,
+      "below_chance": false,
+      "reliably_detects_g7": false
+    },
+    {
+      "key": "docreward",
+      "display_name": "DocReward-3B",
+      "category": "document",
+      "trained_reward": true,
+      "preference_accuracy": 0.478,
+      "preference_ci": [
+        0.378,
+        0.58
+      ],
+      "mean_gap": -0.0877,
+      "below_chance": true,
+      "reliably_detects_g7": false
+    },
+    {
+      "key": "skywork-vl",
+      "display_name": "Skywork-VL-Reward-7B",
+      "category": "general_mm",
+      "trained_reward": true,
+      "preference_accuracy": 0.789,
+      "preference_ci": [
+        0.694,
+        0.86
+      ],
+      "mean_gap": 1.3599,
+      "below_chance": false,
+      "reliably_detects_g7": true
+    }
+  ],
+  "prompt_sensitivity_g7": [
+    {
+      "key": "skywork-vl",
+      "display_name": "Skywork-VL-Reward-7B",
+      "g7_generic_pref": 0.789,
+      "g7_probe_pref": 0.867,
+      "g7_generic_gap": 1.3599,
+      "g7_probe_gap": 2.5896
+    }
+  ],
+  "verdict": {
+    "n_models": 3,
+    "n_trained_rewards": 2,
+    "n_scorers_reliably_detecting_g7_generic": 1,
+    "n_trained_below_chance_on_g7": 1,
+    "all_trained_rewards_at_or_below_chance_on_g7": false,
+    "no_trained_reward_reliably_detects_g7_generic": false,
+    "no_scorer_reliably_detects_g7_generic": false,
+    "statement": "Under deployment-realistic (generic) elicitation only 1/3 reward scorers reliably detect G7 (95% CI above chance). The G7 blind spot is a property of NARROW critics — the symbolic linter and specialised document / aesthetic rewards all miss it — while a capable GENERAL-multimodal reward detects it; every scorer is meanwhile clearly sensitive to its in-taxonomy classes. This refines 'neural rewards are blind to G7' to 'narrow rewards are; a general VLM reward (like a prompted VLM, Result-1) is not' — and validates routing G7 to a VLM engine."
+  }
+}
