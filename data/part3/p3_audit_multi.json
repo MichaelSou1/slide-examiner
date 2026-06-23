@@ -1,7 +1,7 @@
 {
   "metric": "paired preference accuracy = P(reward(clean) > reward(defective)); 0.5 = blind, 1.0 = always prefers the clean slide",
   "chance": 0.5,
-  "n_models": 3,
+  "n_models": 5,
   "categories_covered": [
     "aesthetic",
     "document",
@@ -74,6 +74,71 @@
       }
     },
     {
+      "key": "clip-iqa",
+      "display_name": "CLIP-IQA (ViT-L/14)",
+      "category": "aesthetic",
+      "contract": "pointwise",
+      "backbone": "CLIP ViT-L/14",
+      "trained_reward": false,
+      "elicitation": null,
+      "freeform": {
+        "G7_RENDER_CONTAINMENT_OVERFLOW": {
+          "preference_accuracy": 0.833,
+          "preference_ci": [
+            0.743,
+            0.896
+          ],
+          "mean_gap": 0.0696,
+          "n": 90
+        },
+        "G1_TEXT_OVERFLOW": {
+          "preference_accuracy": 0.444,
+          "preference_ci": [
+            0.32,
+            0.576
+          ],
+          "mean_gap": -0.0393,
+          "n": 54
+        },
+        "G2_ELEMENT_OVERLAP": {
+          "preference_accuracy": 0.5,
+          "preference_ci": [
+            0.371,
+            0.629
+          ],
+          "mean_gap": 0.0228,
+          "n": 54
+        },
+        "G5_BRAND_COLOR_VIOLATION": {
+          "preference_accuracy": 0.019,
+          "preference_ci": [
+            0.003,
+            0.098
+          ],
+          "mean_gap": -0.0131,
+          "n": 54
+        },
+        "S4_DENSITY_RULE_VIOLATION": {
+          "preference_accuracy": 0.5,
+          "preference_ci": [
+            0.345,
+            0.655
+          ],
+          "mean_gap": 0.0193,
+          "n": 36
+        },
+        "S6_IMAGE_TEXT_CONTRADICTION": {
+          "preference_accuracy": 0.722,
+          "preference_ci": [
+            0.491,
+            0.875
+          ],
+          "mean_gap": 0.0721,
+          "n": 18
+        }
+      }
+    },
+    {
       "key": "docreward",
       "display_name": "DocReward-3B",
       "category": "document",
@@ -134,6 +199,74 @@
             1.0
           ],
           "mean_gap": 1.036,
+          "n": 18
+        }
+      }
+    },
+    {
+      "key": "pickscore",
+      "display_name": "PickScore-v1",
+      "category": "general_mm",
+      "contract": "prompt_conditioned",
+      "backbone": "CLIP-H/14",
+      "trained_reward": true,
+      "elicitation": {
+        "question": "Rate the overall visual quality, layout and professionalism of this presentation slide.",
+        "answer": "This is a high-quality, well-designed, professional slide with a clean, polished layout."
+      },
+      "freeform": {
+        "G7_RENDER_CONTAINMENT_OVERFLOW": {
+          "preference_accuracy": 0.711,
+          "preference_ci": [
+            0.61,
+            0.795
+          ],
+          "mean_gap": 0.1196,
+          "n": 90
+        },
+        "G1_TEXT_OVERFLOW": {
+          "preference_accuracy": 0.741,
+          "preference_ci": [
+            0.611,
+            0.839
+          ],
+          "mean_gap": 0.1105,
+          "n": 54
+        },
+        "G2_ELEMENT_OVERLAP": {
+          "preference_accuracy": 0.593,
+          "preference_ci": [
+            0.46,
+            0.713
+          ],
+          "mean_gap": 0.023,
+          "n": 54
+        },
+        "G5_BRAND_COLOR_VIOLATION": {
+          "preference_accuracy": 0.037,
+          "preference_ci": [
+            0.01,
+            0.125
+          ],
+          "mean_gap": -0.0204,
+          "n": 54
+        },
+        "S4_DENSITY_RULE_VIOLATION": {
+          "preference_accuracy": 1.0,
+          "preference_ci": [
+            0.904,
+            1.0
+          ],
+          "mean_gap": 0.4933,
+          "n": 36
+        },
+        "S6_IMAGE_TEXT_CONTRADICTION": {
+          "preference_accuracy": 0.722,
+          "preference_ci": [
+            0.491,
+            0.875
+          ],
+          "mean_gap": 0.1579,
           "n": 18
         }
       }
@@ -224,6 +357,21 @@
       "reliably_detects_g7": false
     },
     {
+      "key": "clip-iqa",
+      "display_name": "CLIP-IQA (ViT-L/14)",
+      "category": "aesthetic",
+      "trained_reward": false,
+      "preference_accuracy": 0.833,
+      "preference_ci": [
+        0.743,
+        0.896
+      ],
+      "mean_gap": 0.0696,
+      "n": 90,
+      "below_chance": false,
+      "reliably_detects_g7": true
+    },
+    {
       "key": "docreward",
       "display_name": "DocReward-3B",
       "category": "document",
@@ -237,6 +385,21 @@
       "n": 90,
       "below_chance": true,
       "reliably_detects_g7": false
+    },
+    {
+      "key": "pickscore",
+      "display_name": "PickScore-v1",
+      "category": "general_mm",
+      "trained_reward": true,
+      "preference_accuracy": 0.711,
+      "preference_ci": [
+        0.61,
+        0.795
+      ],
+      "mean_gap": 0.1196,
+      "n": 90,
+      "below_chance": false,
+      "reliably_detects_g7": true
     },
     {
       "key": "skywork-vl",
@@ -254,6 +417,85 @@
       "reliably_detects_g7": true
     }
   ],
+  "g7_by_category": {
+    "aesthetic": {
+      "n_scorers": 2,
+      "n_reliably_detect_g7": 1,
+      "all_detect": false,
+      "all_blind": false,
+      "split": true,
+      "scorers": [
+        {
+          "display_name": "LAION-Aesthetic (CLIP-L/14)",
+          "preference_accuracy": 0.567,
+          "preference_ci": [
+            0.464,
+            0.664
+          ],
+          "trained_reward": false,
+          "reliably_detects_g7": false
+        },
+        {
+          "display_name": "CLIP-IQA (ViT-L/14)",
+          "preference_accuracy": 0.833,
+          "preference_ci": [
+            0.743,
+            0.896
+          ],
+          "trained_reward": false,
+          "reliably_detects_g7": true
+        }
+      ]
+    },
+    "document": {
+      "n_scorers": 1,
+      "n_reliably_detect_g7": 0,
+      "all_detect": false,
+      "all_blind": true,
+      "split": false,
+      "scorers": [
+        {
+          "display_name": "DocReward-3B",
+          "preference_accuracy": 0.478,
+          "preference_ci": [
+            0.378,
+            0.58
+          ],
+          "trained_reward": true,
+          "reliably_detects_g7": false
+        }
+      ]
+    },
+    "general_mm": {
+      "n_scorers": 2,
+      "n_reliably_detect_g7": 2,
+      "all_detect": true,
+      "all_blind": false,
+      "split": false,
+      "scorers": [
+        {
+          "display_name": "PickScore-v1",
+          "preference_accuracy": 0.711,
+          "preference_ci": [
+            0.61,
+            0.795
+          ],
+          "trained_reward": true,
+          "reliably_detects_g7": true
+        },
+        {
+          "display_name": "Skywork-VL-Reward-7B",
+          "preference_accuracy": 0.789,
+          "preference_ci": [
+            0.694,
+            0.86
+          ],
+          "trained_reward": true,
+          "reliably_detects_g7": true
+        }
+      ]
+    }
+  },
   "prompt_sensitivity_g7": [
     {
       "key": "skywork-vl",
@@ -265,13 +507,22 @@
     }
   ],
   "verdict": {
-    "n_models": 3,
-    "n_trained_rewards": 2,
-    "n_scorers_reliably_detecting_g7_generic": 1,
+    "n_models": 5,
+    "n_trained_rewards": 3,
+    "n_scorers_reliably_detecting_g7_generic": 3,
     "n_trained_below_chance_on_g7": 1,
     "all_trained_rewards_at_or_below_chance_on_g7": false,
     "no_trained_reward_reliably_detects_g7_generic": false,
+    "categories_with_ge2_scorers": [
+      "aesthetic",
+      "general_mm"
+    ],
+    "category_level_pattern": {
+      "aesthetic": "split",
+      "document": "all_blind",
+      "general_mm": "all_detect"
+    },
     "no_scorer_reliably_detects_g7_generic": false,
-    "statement": "Under deployment-realistic (generic) elicitation only 1/3 reward scorers reliably detect G7 (95% CI above chance). The G7 blind spot is a property of NARROW critics — the symbolic linter and specialised document / aesthetic rewards all miss it — while a capable GENERAL-multimodal reward detects it; every scorer is meanwhile clearly sensitive to its in-taxonomy classes. This refines 'neural rewards are blind to G7' to 'narrow rewards are; a general VLM reward (like a prompted VLM, Result-1) is not' — and validates routing G7 to a VLM engine."
+    "statement": "Under deployment-realistic (generic) elicitation only 3/5 reward scorers reliably detect G7 (95% CI above chance). The G7 blind spot is a property of NARROW critics — the symbolic linter and specialised document / aesthetic rewards all miss it — while a capable GENERAL-multimodal reward detects it; every scorer is meanwhile clearly sensitive to its in-taxonomy classes. This refines 'neural rewards are blind to G7' to 'narrow rewards are; a general VLM reward (like a prompted VLM, Result-1) is not' — and validates routing G7 to a VLM engine."
   }
 }

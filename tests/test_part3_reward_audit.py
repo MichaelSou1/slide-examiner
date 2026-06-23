@@ -20,22 +20,32 @@ def _load_merge():
     return mod
 
 
-def test_registry_has_four_adapters_and_three_categories() -> None:
-    assert set(RA.ADAPTERS) == {"docreward", "skywork-vl", "ixc-2.5", "aesthetic"}
+def test_registry_has_adapters_and_two_per_audited_category() -> None:
+    assert set(RA.ADAPTERS) == {"docreward", "skywork-vl", "ixc-2.5", "pickscore",
+                                "aesthetic", "clip-iqa"}
     cats = {cls.category for cls in RA.ADAPTERS.values()}
-    # document / general_mm / aesthetic span (general_mm shared by skywork+ixc)
     assert {"document", "general_mm", "aesthetic"} <= cats
+    # E4: the category claim needs >=2 scorers in >=2 categories. general_mm
+    # (skywork + ixc + pickscore) and aesthetic (LAION + clip-iqa) both qualify.
+    from collections import Counter
+    per_cat = Counter(cls.category for cls in RA.ADAPTERS.values())
+    assert per_cat["general_mm"] >= 2 and per_cat["aesthetic"] >= 2
 
 
 def test_contracts_and_trained_flags() -> None:
     assert RA.SkyworkVLAdapter.contract == RA.PROMPT_CONDITIONED
     assert RA.IXCRewardAdapter.contract == RA.PROMPT_CONDITIONED
+    assert RA.PickScoreAdapter.contract == RA.PROMPT_CONDITIONED
     assert RA.DocRewardAdapter.contract == RA.PAIRWISE_BT
     assert RA.AestheticAdapter.contract == RA.POINTWISE
-    # only the aesthetic CLIP head is a non-trained heuristic
+    assert RA.CLIPIQAAdapter.contract == RA.POINTWISE
+    # the two zero-shot CLIP heuristics are non-trained; the rest are trained RMs
     assert RA.AestheticAdapter.trained_reward is False
-    for k in ("docreward", "skywork-vl", "ixc-2.5"):
+    assert RA.CLIPIQAAdapter.trained_reward is False
+    for k in ("docreward", "skywork-vl", "ixc-2.5", "pickscore"):
         assert RA.ADAPTERS[k].trained_reward is True
+    # second general-mm reward is a DIFFERENT backbone family from Skywork
+    assert RA.PickScoreAdapter.backbone != RA.SkyworkVLAdapter.backbone
 
 
 def test_build_returns_unloaded_adapter_with_meta() -> None:
@@ -104,6 +114,36 @@ def test_merge_verdict_fails_if_a_trained_rm_sees_g7() -> None:
     }
     audit_multi, _ = merge.summarize(primary, {})
     assert audit_multi["verdict"]["all_trained_rewards_at_or_below_chance_on_g7"] is False
+
+
+def test_merge_category_level_aggregation_detects_split() -> None:
+    """E4: with >=2 scorers per category, the merge reports per-category G7
+    patterns (all_detect / all_blind / split). Mirrors the real E4 outcome:
+    general_mm all-detect, aesthetic split (one perceptual probe catches G7)."""
+    merge = _load_merge()
+    primary = {
+        # general_mm: two scorers, both DETECT (CI above chance)
+        "skywork-vl": _audit("skywork-vl", "Skywork-VL", "general_mm", "Qwen2.5-VL-7B",
+                             True, 0.79, [0.69, 0.86], 1.36),
+        "pickscore": _audit("pickscore", "PickScore-v1", "general_mm", "CLIP-H/14",
+                            True, 0.72, [0.62, 0.81], 0.4),
+        # aesthetic: two scorers, SPLIT (LAION blind, CLIP-IQA detects)
+        "aesthetic": _audit("aesthetic", "LAION-Aesthetic", "aesthetic", "CLIP ViT-L/14",
+                            False, 0.57, [0.46, 0.66], 0.03, contract=RA.POINTWISE),
+        "clip-iqa": _audit("clip-iqa", "CLIP-IQA", "aesthetic", "CLIP ViT-L/14",
+                           False, 0.83, [0.74, 0.90], 0.07, contract=RA.POINTWISE),
+        # document: one scorer, blind
+        "docreward": _audit("docreward", "DocReward-3B", "document", "Qwen2.5-VL-3B",
+                            True, 0.48, [0.38, 0.58], -0.09, contract=RA.PAIRWISE_BT),
+    }
+    audit_multi, _ = merge.summarize(primary, {})
+    bycat = audit_multi["g7_by_category"]
+    assert bycat["general_mm"]["n_scorers"] == 2 and bycat["general_mm"]["all_detect"]
+    assert bycat["aesthetic"]["n_scorers"] == 2 and bycat["aesthetic"]["split"]
+    assert bycat["document"]["all_blind"]
+    pat = audit_multi["verdict"]["category_level_pattern"]
+    assert pat == {"general_mm": "all_detect", "aesthetic": "split", "document": "all_blind"}
+    assert set(audit_multi["verdict"]["categories_with_ge2_scorers"]) == {"general_mm", "aesthetic"}
 
 
 def test_merge_elicitation_recoverability_pairs_generic_and_probe() -> None:

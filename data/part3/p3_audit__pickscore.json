@@ -1,0 +1,134 @@
+{
+  "key": "pickscore",
+  "display_name": "PickScore-v1",
+  "category": "general_mm",
+  "contract": "prompt_conditioned",
+  "backbone": "CLIP-H/14",
+  "trained_reward": true,
+  "model_path": "/home/gpus/models/PickScore_v1",
+  "variant": "generic",
+  "elicitation": {
+    "question": "Rate the overall visual quality, layout and professionalism of this presentation slide.",
+    "answer": "This is a high-quality, well-designed, professional slide with a clean, polished layout."
+  },
+  "metric": "paired preference accuracy = P(reward(clean) > reward(defective)); 0.5 = blind, 1.0 = always prefers the clean slide",
+  "results": [
+    {
+      "defect": "G7_RENDER_CONTAINMENT_OVERFLOW",
+      "render": "freeform",
+      "n": 90,
+      "preference_accuracy": 0.711,
+      "preference_ci": [
+        0.61,
+        0.795
+      ],
+      "mean_reward_gap_clean_minus_def": 0.1196,
+      "median_gap": 0.1302,
+      "n_clean_preferred": 64
+    },
+    {
+      "defect": "G1_TEXT_OVERFLOW",
+      "render": "freeform",
+      "n": 54,
+      "preference_accuracy": 0.741,
+      "preference_ci": [
+        0.611,
+        0.839
+      ],
+      "mean_reward_gap_clean_minus_def": 0.1105,
+      "median_gap": 0.1411,
+      "n_clean_preferred": 40
+    },
+    {
+      "defect": "G2_ELEMENT_OVERLAP",
+      "render": "freeform",
+      "n": 54,
+      "preference_accuracy": 0.593,
+      "preference_ci": [
+        0.46,
+        0.713
+      ],
+      "mean_reward_gap_clean_minus_def": 0.023,
+      "median_gap": 0.0372,
+      "n_clean_preferred": 32
+    },
+    {
+      "defect": "G5_BRAND_COLOR_VIOLATION",
+      "render": "freeform",
+      "n": 54,
+      "preference_accuracy": 0.037,
+      "preference_ci": [
+        0.01,
+        0.125
+      ],
+      "mean_reward_gap_clean_minus_def": -0.0204,
+      "median_gap": -0.0157,
+      "n_clean_preferred": 2
+    },
+    {
+      "defect": "S4_DENSITY_RULE_VIOLATION",
+      "render": "freeform",
+      "n": 36,
+      "preference_accuracy": 1.0,
+      "preference_ci": [
+        0.904,
+        1.0
+      ],
+      "mean_reward_gap_clean_minus_def": 0.4933,
+      "median_gap": 0.4953,
+      "n_clean_preferred": 36
+    },
+    {
+      "defect": "S6_IMAGE_TEXT_CONTRADICTION",
+      "render": "freeform",
+      "n": 18,
+      "preference_accuracy": 0.722,
+      "preference_ci": [
+        0.491,
+        0.875
+      ],
+      "mean_reward_gap_clean_minus_def": 0.1579,
+      "median_gap": 0.1841,
+      "n_clean_preferred": 13
+    },
+    {
+      "defect": "G2_ELEMENT_OVERLAP",
+      "render": "template",
+      "n": 54,
+      "preference_accuracy": 0.0,
+      "preference_ci": [
+        0.0,
+        0.066
+      ],
+      "mean_reward_gap_clean_minus_def": 0.0,
+      "median_gap": 0.0,
+      "n_clean_preferred": 0
+    },
+    {
+      "defect": "G3_ALIGNMENT_OFFSET",
+      "render": "template",
+      "n": 36,
+      "preference_accuracy": 0.0,
+      "preference_ci": [
+        0.0,
+        0.096
+      ],
+      "mean_reward_gap_clean_minus_def": 0.0,
+      "median_gap": 0.0,
+      "n_clean_preferred": 0
+    },
+    {
+      "defect": "G6_MARGIN_VIOLATION",
+      "render": "template",
+      "n": 36,
+      "preference_accuracy": 0.0,
+      "preference_ci": [
+        0.0,
+        0.096
+      ],
+      "mean_reward_gap_clean_minus_def": 0.0,
+      "median_gap": 0.0,
+      "n_clean_preferred": 0
+    }
+  ]
+}

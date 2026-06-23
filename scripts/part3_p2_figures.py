@@ -158,8 +158,9 @@ def fig_reward_multi():
     ax.set_title("Reward preference  P(reward(clean) > reward(defective))  per reward model x defect class\n"
                  f"diverging at chance=0.5 (red=mis-ranks, green=sensitive);  G7 render-containment (boxed): "
                  f"{n_reli}/{n_tot} reliably detect it\n"
-                 "the symbolic linter and narrow (document / aesthetic) rewards miss G7; a general-VLM reward detects it",
-                 fontsize=9)
+                 "G7-detection tracks perceptual capability, not domain label "
+                 "(both general-mm rewards + a quality probe catch it; document/aesthetic-appeal heads miss it)",
+                 fontsize=8.5)
     fig.colorbar(im, ax=ax, fraction=0.025, pad=0.01, label="preference accuracy")
     fig.tight_layout()
     out = FIGS / "p3_reward_blindspot_multi.png"

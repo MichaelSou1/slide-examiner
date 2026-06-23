@@ -37,8 +37,52 @@
       }
     },
     {
+      "key": "clip-iqa",
+      "display_name": "CLIP-IQA (ViT-L/14)",
+      "trained_reward": false,
+      "template_snap_absorbed": {
+        "G2_ELEMENT_OVERLAP": {
+          "preference_accuracy": 0.0,
+          "mean_gap": 0.0,
+          "n": 54
+        },
+        "G3_ALIGNMENT_OFFSET": {
+          "preference_accuracy": 0.0,
+          "mean_gap": 0.0,
+          "n": 36
+        },
+        "G6_MARGIN_VIOLATION": {
+          "preference_accuracy": 0.0,
+          "mean_gap": 0.0,
+          "n": 36
+        }
+      }
+    },
+    {
       "key": "docreward",
       "display_name": "DocReward-3B",
+      "trained_reward": true,
+      "template_snap_absorbed": {
+        "G2_ELEMENT_OVERLAP": {
+          "preference_accuracy": 0.0,
+          "mean_gap": 0.0,
+          "n": 54
+        },
+        "G3_ALIGNMENT_OFFSET": {
+          "preference_accuracy": 0.0,
+          "mean_gap": 0.0,
+          "n": 36
+        },
+        "G6_MARGIN_VIOLATION": {
+          "preference_accuracy": 0.0,
+          "mean_gap": 0.0,
+          "n": 36
+        }
+      }
+    },
+    {
+      "key": "pickscore",
+      "display_name": "PickScore-v1",
       "trained_reward": true,
       "template_snap_absorbed": {
         "G2_ELEMENT_OVERLAP": {

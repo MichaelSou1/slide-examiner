@@ -305,6 +305,93 @@ class IXCRewardAdapter(RewardAdapter):
 
 
 # ===========================================================================
+# PickScore-v1 — CLIP-H/14 fine-tuned on Pick-a-Pic (general preference reward)
+# ===========================================================================
+class PickScoreAdapter(RewardAdapter):
+    """yuvalkirstain/PickScore_v1. A *second* general-multimodal preference reward,
+    deliberately a DIFFERENT architecture from Skywork: a CONTRASTIVE CLIP-H/14
+    fine-tuned on 500K human pairwise choices (Pick-a-Pic), not a generative VLM
+    with a value head. The reward is the CLIP logit between the slide and a generic
+    'high-quality professional slide' caption (== the PROMPT_CONDITIONED positive
+    assertion), so the clean twin should match that caption more than the defective
+    one. Having two general rewards on *unrelated backbones* is what lets the G7
+    finding speak at the category level rather than per instance."""
+
+    key = "pickscore"
+    display_name = "PickScore-v1"
+    category = "general_mm"
+    contract = PROMPT_CONDITIONED
+    backbone = "CLIP-H/14"
+
+    def load(self):
+        import torch
+        from transformers import AutoModel, AutoProcessor
+        self.torch = torch
+        self.processor = AutoProcessor.from_pretrained(self.path)
+        self.model = AutoModel.from_pretrained(self.path, dtype=torch.float32).to("cuda").eval()
+        return self
+
+    def score(self, image_path: str, *, variant: str = DEFAULT_VARIANT) -> float:
+        from PIL import Image
+        torch = self.torch
+        # the positive assertion is a self-contained 'good slide' caption; generic vs
+        # probe differs only in naming containment/overflow (mirrors C0->C3 / Skywork).
+        _q, caption = ELICITATIONS[variant]
+        img = Image.open(_resolve(image_path, self.repo)).convert("RGB")
+        # logits_per_image == logit_scale * normalize(img_emb) . normalize(txt_emb), i.e.
+        # exactly the PickScore reward. (get_image_features returns an output object on
+        # transformers 5.x, so go through the full forward — same path as CLIP-IQA.)
+        inputs = self.processor(text=[caption], images=img, padding=True, truncation=True,
+                                max_length=77, return_tensors="pt").to("cuda")
+        with torch.no_grad():
+            score = self.model(**inputs).logits_per_image[0, 0]
+        return float(score)
+
+
+# ===========================================================================
+# CLIP-IQA — antonym-prompt zero-shot perceptual quality on CLIP ViT-L/14
+# ===========================================================================
+class CLIPIQAAdapter(RewardAdapter):
+    """CLIP-IQA-style zero-shot perceptual-quality scorer (Wang et al., 'Exploring
+    CLIP for Assessing the Look and Feel of Images', AAAI'23). Antonym-prompt
+    method: P('Good photo.') under softmax over {'Good photo.', 'Bad photo.'} from
+    the CLIP image-text logits — NO trained head. A *second* aesthetic/perceptual
+    foil whose METHOD differs from the LAION linear MSE head (it shares the CLIP
+    ViT-L/14 backbone, an honest caveat: the two aesthetic scorers are
+    method-diverse, not backbone-diverse). Pure perception, zero layout/document
+    supervision — shows a second aesthetic-class scorer also misses render-overflow."""
+
+    key = "clip-iqa"
+    display_name = "CLIP-IQA (ViT-L/14)"
+    category = "aesthetic"
+    contract = POINTWISE
+    backbone = "CLIP ViT-L/14"
+    trained_reward = False  # zero-shot antonym-prompt heuristic, not a preference RM
+
+    POS = "Good photo."
+    NEG = "Bad photo."
+
+    def load(self):
+        import torch
+        from transformers import CLIPModel, CLIPProcessor
+        self.torch = torch
+        self.model = CLIPModel.from_pretrained(self.path).to("cuda").eval()
+        self.processor = CLIPProcessor.from_pretrained(self.path)
+        return self
+
+    def score(self, image_path: str, *, variant: str = DEFAULT_VARIANT) -> float:
+        from PIL import Image
+        torch = self.torch
+        img = Image.open(_resolve(image_path, self.repo)).convert("RGB")
+        inputs = self.processor(text=[self.POS, self.NEG], images=img,
+                                return_tensors="pt", padding=True).to("cuda")
+        with torch.no_grad():
+            out = self.model(**inputs)
+            probs = out.logits_per_image.softmax(dim=-1)  # [1, 2]
+        return float(probs[0, 0])                          # P('Good photo.')
+
+
+# ===========================================================================
 # Aesthetic predictor — CLIP ViT-L/14 + LAION linear aesthetic head (pure aesthetic)
 # ===========================================================================
 class AestheticAdapter(RewardAdapter):
@@ -373,14 +460,18 @@ ADAPTERS: dict[str, type[RewardAdapter]] = {
     DocRewardAdapter.key: DocRewardAdapter,
     SkyworkVLAdapter.key: SkyworkVLAdapter,
     IXCRewardAdapter.key: IXCRewardAdapter,
+    PickScoreAdapter.key: PickScoreAdapter,
     AestheticAdapter.key: AestheticAdapter,
+    CLIPIQAAdapter.key: CLIPIQAAdapter,
 }
 
 DEFAULT_PATHS: dict[str, str] = {
     "docreward": "/home/gpus/models/DocReward-3B",
     "skywork-vl": "/home/gpus/models/Skywork-VL-Reward-7B",
     "ixc-2.5": "/home/gpus/models/IXC-2.5-Reward-7B",
+    "pickscore": "/home/gpus/models/PickScore_v1",
     "aesthetic": "/home/gpus/models/aesthetic/sac+logos+ava1-l14-linearMSE.pth",
+    "clip-iqa": "/home/gpus/models/clip-vit-large-patch14",
 }
 
 

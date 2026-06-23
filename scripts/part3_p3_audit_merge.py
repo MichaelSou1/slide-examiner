@@ -99,6 +99,34 @@ def summarize(primary: dict, probe: dict, pixel_fidelity: dict | None = None):
     verdict_none_reliable = bool(not_reliable_trained) and all(not_reliable_trained)
     verdict_no_scorer_reliable = (n_scorers_reliable == 0) and bool(g7_row)
 
+    # ---- category-level G7 aggregation (E4) --------------------------------
+    # The E4 question: is the narrow-vs-general split CATEGORY-level (>=2 scorers
+    # per category agree) or just instance-level? Per category we record every
+    # scorer's G7 verdict and whether the category is unanimous (all detect / all
+    # blind) or SPLIT — a split is the honestly-downgraded outcome (the dividing
+    # line is perceptual capability, not the training-domain label).
+    from collections import defaultdict
+    cat_acc = defaultdict(list)
+    for r in g7_row:
+        cat_acc[r["category"]].append(r)
+    g7_by_category = {}
+    for cat, rows in sorted(cat_acc.items()):
+        n_detect = sum(int(x["reliably_detects_g7"]) for x in rows)
+        g7_by_category[cat] = {
+            "n_scorers": len(rows),
+            "n_reliably_detect_g7": n_detect,
+            "all_detect": n_detect == len(rows),
+            "all_blind": n_detect == 0,
+            "split": 0 < n_detect < len(rows),
+            "scorers": [{"display_name": x["display_name"],
+                         "preference_accuracy": x["preference_accuracy"],
+                         "preference_ci": x["preference_ci"],
+                         "trained_reward": x["trained_reward"],
+                         "reliably_detects_g7": x["reliably_detects_g7"]} for x in rows],
+        }
+    # categories with >=2 scorers carry a category-level (not instance-level) claim
+    categories_ge2 = {c: v for c, v in g7_by_category.items() if v["n_scorers"] >= 2}
+
     # ---- elicitation recoverability (generic vs probe, on G7) --------------
     sensitivity = []
     for key, dp in probe.items():
@@ -123,6 +151,7 @@ def summarize(primary: dict, probe: dict, pixel_fidelity: dict | None = None):
         "categories_covered": sorted({m["category"] for m in models}),
         "models": models,
         "g7_cross_model": g7_row,
+        "g7_by_category": g7_by_category,
         "prompt_sensitivity_g7": sensitivity,
         "verdict": {
             "n_models": len(models),
@@ -131,6 +160,10 @@ def summarize(primary: dict, probe: dict, pixel_fidelity: dict | None = None):
             "n_trained_below_chance_on_g7": int(sum(below_trained)),
             "all_trained_rewards_at_or_below_chance_on_g7": verdict_all_blind,
             "no_trained_reward_reliably_detects_g7_generic": verdict_none_reliable,
+            "categories_with_ge2_scorers": sorted(categories_ge2),
+            "category_level_pattern": {c: ("all_detect" if v["all_detect"]
+                                           else "all_blind" if v["all_blind"] else "split")
+                                       for c, v in g7_by_category.items()},
             # the robust headline: under generic elicitation NO scorer (trained or
             # aesthetic) reliably detects G7 (no CI excludes chance from below).
             "no_scorer_reliably_detects_g7_generic": verdict_no_scorer_reliable,
@@ -196,6 +229,12 @@ def main():
         tr = "trained" if r["trained_reward"] else "heuristic"
         print(f"  {r['display_name']:28s} ({tr:9s}) pref={r['preference_accuracy']:.2f} "
               f"CI{r['preference_ci']} (n={r.get('n')}) gap={r['mean_gap']:+.3f}  [{flag}]")
+    print("\nG7 by category (>=2 scorers = category-level):")
+    for cat, v in audit_multi.get("g7_by_category", {}).items():
+        pat = ("ALL DETECT" if v["all_detect"] else "ALL BLIND" if v["all_blind"]
+               else "SPLIT")
+        print(f"  {cat:11s} {v['n_reliably_detect_g7']}/{v['n_scorers']} detect  [{pat}]  "
+              + ", ".join(f"{s['display_name']}={s['preference_accuracy']:.2f}" for s in v["scorers"]))
     print(f"\nVERDICT all_trained_rewards_<=_chance_on_G7 = "
           f"{audit_multi['verdict']['all_trained_rewards_at_or_below_chance_on_g7']}")
     if audit_multi["prompt_sensitivity_g7"]:

@@ -1,0 +1,131 @@
+{
+  "key": "clip-iqa",
+  "display_name": "CLIP-IQA (ViT-L/14)",
+  "category": "aesthetic",
+  "contract": "pointwise",
+  "backbone": "CLIP ViT-L/14",
+  "trained_reward": false,
+  "model_path": "/home/gpus/models/clip-vit-large-patch14",
+  "variant": "generic",
+  "elicitation": null,
+  "metric": "paired preference accuracy = P(reward(clean) > reward(defective)); 0.5 = blind, 1.0 = always prefers the clean slide",
+  "results": [
+    {
+      "defect": "G7_RENDER_CONTAINMENT_OVERFLOW",
+      "render": "freeform",
+      "n": 90,
+      "preference_accuracy": 0.833,
+      "preference_ci": [
+        0.743,
+        0.896
+      ],
+      "mean_reward_gap_clean_minus_def": 0.0696,
+      "median_gap": 0.0421,
+      "n_clean_preferred": 75
+    },
+    {
+      "defect": "G1_TEXT_OVERFLOW",
+      "render": "freeform",
+      "n": 54,
+      "preference_accuracy": 0.444,
+      "preference_ci": [
+        0.32,
+        0.576
+      ],
+      "mean_reward_gap_clean_minus_def": -0.0393,
+      "median_gap": -0.0153,
+      "n_clean_preferred": 24
+    },
+    {
+      "defect": "G2_ELEMENT_OVERLAP",
+      "render": "freeform",
+      "n": 54,
+      "preference_accuracy": 0.5,
+      "preference_ci": [
+        0.371,
+        0.629
+      ],
+      "mean_reward_gap_clean_minus_def": 0.0228,
+      "median_gap": 0.0033,
+      "n_clean_preferred": 27
+    },
+    {
+      "defect": "G5_BRAND_COLOR_VIOLATION",
+      "render": "freeform",
+      "n": 54,
+      "preference_accuracy": 0.019,
+      "preference_ci": [
+        0.003,
+        0.098
+      ],
+      "mean_reward_gap_clean_minus_def": -0.0131,
+      "median_gap": -0.009,
+      "n_clean_preferred": 1
+    },
+    {
+      "defect": "S4_DENSITY_RULE_VIOLATION",
+      "render": "freeform",
+      "n": 36,
+      "preference_accuracy": 0.5,
+      "preference_ci": [
+        0.345,
+        0.655
+      ],
+      "mean_reward_gap_clean_minus_def": 0.0193,
+      "median_gap": 0.0013,
+      "n_clean_preferred": 18
+    },
+    {
+      "defect": "S6_IMAGE_TEXT_CONTRADICTION",
+      "render": "freeform",
+      "n": 18,
+      "preference_accuracy": 0.722,
+      "preference_ci": [
+        0.491,
+        0.875
+      ],
+      "mean_reward_gap_clean_minus_def": 0.0721,
+      "median_gap": 0.0512,
+      "n_clean_preferred": 13
+    },
+    {
+      "defect": "G2_ELEMENT_OVERLAP",
+      "render": "template",
+      "n": 54,
+      "preference_accuracy": 0.0,
+      "preference_ci": [
+        0.0,
+        0.066
+      ],
+      "mean_reward_gap_clean_minus_def": 0.0,
+      "median_gap": 0.0,
+      "n_clean_preferred": 0
+    },
+    {
+      "defect": "G3_ALIGNMENT_OFFSET",
+      "render": "template",
+      "n": 36,
+      "preference_accuracy": 0.0,
+      "preference_ci": [
+        0.0,
+        0.096
+      ],
+      "mean_reward_gap_clean_minus_def": 0.0,
+      "median_gap": 0.0,
+      "n_clean_preferred": 0
+    },
+    {
+      "defect": "G6_MARGIN_VIOLATION",
+      "render": "template",
+      "n": 36,
+      "preference_accuracy": 0.0,
+      "preference_ci": [
+        0.0,
+        0.096
+      ],
+      "mean_reward_gap_clean_minus_def": 0.0,
+      "median_gap": 0.0,
+      "n_clean_preferred": 0
+    }
+  ]
+}
