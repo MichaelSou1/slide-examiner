@@ -1,0 +1,31 @@
+{
+  "condition": "AFC_clean",
+  "mode": "clean",
+  "model": "ovis-9b",
+  "style": "scoped",
+  "manifest": "/home/gpus/slide-examiner/data/part3/manifest_g7_rendered.jsonl",
+  "modalities": [
+    "A"
+  ],
+  "defects": [
+    "G7_RENDER_CONTAINMENT_OVERFLOW"
+  ],
+  "n_pairs": 90,
+  "failures": 0,
+  "afc": {
+    "G7_RENDER_CONTAINMENT_OVERFLOW": {
+      "mode": "clean",
+      "n_pairs": 90,
+      "n_judgements": 180,
+      "decisive_rate": 0.0,
+      "tie_rate": 1.0,
+      "pick_first_rate": null,
+      "n_pairs_both_orders_valid": 0,
+      "consistent_invention_rate": null,
+      "n_consistent_invention": 0,
+      "n_probe_worse": 0,
+      "n_partner_worse": 0,
+      "n_tie": 180
+    }
+  }
+}

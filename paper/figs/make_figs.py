@@ -154,9 +154,9 @@ def fig1():
     # G7 callout
     ax.add_patch(FancyBboxPatch((5.55, -0.0), 4.30, 0.0, boxstyle="round", linewidth=0))
     ax.text(7.70, -0.10,
-            "G7: linter-blind (declared bbox legal) + neural-reward-blind (DocReward 0.28 < chance)\n"
-            "=> only the VLM-C3 engine catches it",
-            ha="center", va="top", fontsize=8.3, color="#7A3B00",
+            "G7: linter-blind (declared bbox legal) + narrow-reward-blind (DocReward 0.48, LAION 0.57 ~ chance)\n"
+            "=> caught by a capable VLM: re-elicited (C3, 0.93-1.0) or a general-mm reward (Skywork 0.79)",
+            ha="center", va="top", fontsize=8.0, color="#7A3B00",
             bbox=dict(boxstyle="round,pad=0.35", fc=GOLD, ec="#D9A24B", lw=1.0))
 
     ax.text(5.0, 5.78, "Diagnosis -> architecture: route each defect to its bottleneck-appropriate engine",

@@ -1,0 +1,31 @@
+{
+  "condition": "AFC_clean",
+  "mode": "clean",
+  "model": "qwen36-27b",
+  "style": "scoped",
+  "manifest": "/home/gpus/slide-examiner/data/part3/manifest_g7_rendered.jsonl",
+  "modalities": [
+    "A"
+  ],
+  "defects": [
+    "G7_RENDER_CONTAINMENT_OVERFLOW"
+  ],
+  "n_pairs": 90,
+  "failures": 0,
+  "afc": {
+    "G7_RENDER_CONTAINMENT_OVERFLOW": {
+      "mode": "clean",
+      "n_pairs": 90,
+      "n_judgements": 180,
+      "decisive_rate": 0.083,
+      "tie_rate": 0.917,
+      "pick_first_rate": 0.867,
+      "n_pairs_both_orders_valid": 2,
+      "consistent_invention_rate": 1.0,
+      "n_consistent_invention": 2,
+      "n_probe_worse": 7,
+      "n_partner_worse": 8,
+      "n_tie": 165
+    }
+  }
+}

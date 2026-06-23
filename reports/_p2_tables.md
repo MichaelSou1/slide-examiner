@@ -2,23 +2,25 @@
 
 ### Result 2a — synthetic all-class coverage (qwen35-27b, named attribution, paired-clean bal-acc · precision; freeform renders, mpd=40)
 
-| Defect | route | linter-only | VLM-only (C0) | hybrid (routed) |
-|---|---|---|---|---|
-| G2 overlap | linter | 0.80 p1.00 | 0.71 p1.00 | 0.80 p1.00 |
-| G3 alignment | linter | 1.00 p1.00 | 0.47 p0.00 | 1.00 p1.00 |
-| G5 colour | linter | 1.00 p1.00 | 0.50 p0.00 | 1.00 p1.00 |
-| G6 margin | linter | 1.00 p1.00 | 0.50 p0.00 | 1.00 p1.00 |
-| S6 image-text | vlm | 0.50 p0.00 | 0.50 p0.00 | 0.50 p0.00 |
-| G1 overflow | linter | 1.00 p1.00 | 0.50 p0.00 | 1.00 p1.00 |
-| G7 render-overflow | vlm | 0.00 p0.00 | 0.50 p0.00 | 1.00 p1.00 |
-| S1 title-body | vlm | 0.50 p0.00 | 0.94 p0.90 | 0.94 p0.90 |
-| S4 density | llm | 0.50 p0.00 | 0.51 p0.67 | 0.72 p1.00 |
+| Defect | route | linter-only | VLM-only (C0) | VLM-C3 everywhere | linter+VLM-C3 | hybrid (routed) |
+|---|---|---|---|---|---|---|
+| G1 overflow | linter | 1.00 [0.91,1.00] p1.00 n=80 | 0.50 [0.46,0.54] p0.00 n=80 | 0.50 [0.46,0.54] p0.00 n=80 | 1.00 [0.91,1.00] p1.00 n=80 | 1.00 [0.91,1.00] p1.00 n=80 |
+| G2 overlap | linter | 0.80 [0.68,0.87] p1.00 n=80 | 0.71 [0.60,0.79] p1.00 n=80 | 0.86 [0.74,0.92] p1.00 n=80 | 0.80 [0.68,0.87] p1.00 n=80 | 0.80 [0.68,0.87] p1.00 n=80 |
+| G3 alignment | linter | 1.00 [0.90,1.00] p1.00 n=72 | 0.47 [0.41,0.54] p0.00 n=72 | 0.50 [0.45,0.55] p0.00 n=72 | 1.00 [0.90,1.00] p1.00 n=72 | 1.00 [0.90,1.00] p1.00 n=72 |
+| G5 colour | linter | 1.00 [0.91,1.00] p1.00 n=80 | 0.50 [0.46,0.54] p0.00 n=80 | 0.50 [0.46,0.54] p0.00 n=80 | 1.00 [0.91,1.00] p1.00 n=80 | 1.00 [0.91,1.00] p1.00 n=80 |
+| G6 margin | linter | 1.00 [0.90,1.00] p1.00 n=72 | 0.50 [0.45,0.55] p0.00 n=72 | 0.50 [0.45,0.55] p0.00 n=72 | 1.00 [0.90,1.00] p1.00 n=72 | 1.00 [0.90,1.00] p1.00 n=72 |
+| G7 render-overflow | vlm | 0.00 [0.00,0.54] p0.00 n=40 | 0.50 [0.46,0.54] p0.00 n=80 | 1.00 [0.91,1.00] p1.00 n=80 | 1.00 [0.91,1.00] p1.00 n=80 | 1.00 [0.91,1.00] p1.00 n=80 |
+| S1 title-body | vlm | 0.50 [0.41,0.59] p0.00 n=36 | 0.94 [0.75,0.98] p0.90 n=36 | 0.83 [0.63,0.92] p0.75 n=36 | 0.83 [0.63,0.92] p0.75 n=36 | 0.94 [0.75,0.98] p0.90 n=36 |
+| S4 density | llm | 0.50 [0.45,0.55] p0.00 n=72 | 0.51 [0.44,0.59] p0.67 n=72 | 0.93 [0.81,0.97] p1.00 n=72 | 0.93 [0.81,0.97] p1.00 n=72 | 0.72 [0.60,0.80] p1.00 n=72 |
+| S6 image-text | vlm | 0.50 [0.41,0.59] p0.00 n=36 | 0.50 [0.41,0.59] p0.00 n=36 | 0.50 [0.41,0.59] p0.00 n=36 | 0.50 [0.41,0.59] p0.00 n=36 | 0.50 [0.41,0.59] p0.00 n=36 |
 
 | Critic config | mean bal-acc | classes covered (bal-acc≥0.70 & prec≥0.70) |
 |---|---|---|
-| linter_only | 0.7 | 5 / 9 (G2 overlap, G3 alignment, G5 colour, G6 margin, G1 overflow) |
-| vlm_only | 0.571 | 2 / 9 (G2 overlap, S1 title-body) |
-| hybrid | 0.885 | 8 / 9 (G2 overlap, G3 alignment, G5 colour, G6 margin, G1 overflow, G7 render-overflow, S1 title-body, S4 density) |
+| linter_only | 0.7 | 5 / 9 (G1 overflow, G2 overlap, G3 alignment, G5 colour, G6 margin) |
+| vlm_only (C0) | 0.571 | 2 / 9 (G2 overlap, S1 title-body) |
+| vlm_c3_everywhere | 0.681 | 4 / 9 (G2 overlap, G7 render-overflow, S1 title-body, S4 density) |
+| linter_plus_vlmc3 | 0.896 | 8 / 9 (G1 overflow, G2 overlap, G3 alignment, G5 colour, G6 margin, G7 render-overflow, S1 title-body, S4 density) |
+| hybrid (routed) | 0.885 | 8 / 9 (G1 overflow, G2 overlap, G3 alignment, G5 colour, G6 margin, G7 render-overflow, S1 title-body, S4 density) |
 
 
 ### Result 2b — real data (SlideAudit, image-only) — qwen35-27b
@@ -27,13 +29,13 @@
 
 | Defect (SlideAudit) | VLM C0 | VLM C3 (atomic) | n₊/n₋ |
 |---|---|---|---|
-| G1 overflow | 0.55 p1.00 | 0.62 p0.81 | 40/40 |
-| G2 overlap | 0.96 p0.93 | 0.94 p0.95 | 40/40 |
-| G3 alignment | 0.56 p0.57 | 0.72 p0.71 | 21/40 |
-| G4 font | 0.59 p0.82 | 0.64 p0.79 | 40/40 |
-| G5 colour | 0.52 p1.00 | 0.81 p0.91 | 31/40 |
-| G6 margin | 0.51 p1.00 | 0.55 p0.64 | 40/40 |
-| S4 density | 0.68 p0.89 | 0.74 p0.88 | 40/40 |
+| G1 overflow | 0.55 [0.48,0.61] p1.00 | 0.62 [0.50,0.73] p0.81 | 40/40 |
+| G2 overlap | 0.96 [0.86,0.99] p0.93 | 0.94 [0.82,0.98] p0.95 | 40/40 |
+| G3 alignment | 0.56 [0.44,0.69] p0.57 | 0.72 [0.55,0.85] p0.71 | 21/40 |
+| G4 font | 0.59 [0.48,0.68] p0.82 | 0.64 [0.51,0.74] p0.79 | 40/40 |
+| G5 colour | 0.52 [0.46,0.58] p1.00 | 0.81 [0.67,0.90] p0.91 | 31/40 |
+| G6 margin | 0.51 [0.46,0.56] p1.00 | 0.55 [0.43,0.66] p0.64 | 40/40 |
+| S4 density | 0.68 [0.55,0.78] p0.89 | 0.74 [0.60,0.83] p0.88 | 40/40 |
 
 
 ### Result 3a — published reward-model audit (DocReward-3B)

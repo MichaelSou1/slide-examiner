@@ -16,9 +16,12 @@ import argparse
 import glob
 import json
 import statistics
+import sys
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(REPO))
+from slide_examiner.statistics import balanced_accuracy_ci  # noqa: E402
 CLASSES = ["G1_TEXT_OVERFLOW", "G2_ELEMENT_OVERLAP", "G3_ALIGNMENT_OFFSET",
            "G4_FONT_SIZE_INCONSISTENCY", "G6_MARGIN_VIOLATION"]
 SHORT = {"G1_TEXT_OVERFLOW": "G1 overflow", "G2_ELEMENT_OVERLAP": "G2 overlap",
@@ -47,6 +50,27 @@ def verdict(a, b, c):
     if a_fail and c < CHANCE:
         return "capability"
     return "image-sufficient"
+
+
+def _ci_n(d: dict, mod: str, cls: str) -> str:
+    """bal-acc [95% Wilson CI] (n=pos+neg) for one model/modality/class, pulled
+    from the per_modality cell that carries the interval (E2 — no bare points)."""
+    cell = d.get("per_modality", {}).get(mod, {}).get("per_class", {}).get(cls)
+    if not cell:
+        return "—"
+    ci = cell.get("bal_acc_ci") or [0, 0]
+    n = (cell.get("n_pos") or 0) + (cell.get("n_neg") or 0)
+    return f"{cell['bal_acc']:.2f} [{ci[0]:.2f}-{ci[1]:.2f}] (n={n})"
+
+
+def _class_n(models: dict, cls: str) -> int:
+    """Per-class pair count (pos+neg) read off any model's modality-A cell — the
+    eval set is shared across models, so it is constant; 0 if unavailable."""
+    for d in models.values():
+        cell = d.get("per_modality", {}).get("A", {}).get("per_class", {}).get(cls)
+        if cell:
+            return (cell.get("n_pos") or 0) + (cell.get("n_neg") or 0)
+    return 0
 
 
 def main():
@@ -95,20 +119,23 @@ def main():
              "Balanced accuracy on paired clean controls (real LibreOffice renders + lossless "
              "python-pptx oracle). A = image-only, B = structured oracle, C = image+oracle.\n",
              "## Per-class mean balanced accuracy across models\n",
-             "| Class | A (image) | B (oracle) | C (both) | ΔC−A | ΔB−A | verdict |",
-             "|---|---|---|---|---|---|---|"]
+             f"Mean over {len(models)} models; n = paired clean controls per model (shared eval set). "
+             "Per-model intervals are in the detail table below.\n",
+             "| Class | n/model | A (image) | B (oracle) | C (both) | ΔC−A | ΔB−A | verdict |",
+             "|---|---|---|---|---|---|---|---|"]
     for cls in CLASSES:
         a = agg.get(cls)
         if not a:
-            lines.append(f"| {SHORT[cls]} | — | — | — | — | — | — |")
+            lines.append(f"| {SHORT[cls]} | — | — | — | — | — | — | — |")
             continue
-        lines.append(f"| {SHORT[cls]} | {a['mean_A']:.2f} | {a['mean_B']:.2f} | {a['mean_C']:.2f} | "
-                     f"{a['delta_C_minus_A']:+.2f} | {a['delta_B_minus_A']:+.2f} | **{a['verdict']}** |")
+        lines.append(f"| {SHORT[cls]} | {_class_n(models, cls)} | {a['mean_A']:.2f} | {a['mean_B']:.2f} | "
+                     f"{a['mean_C']:.2f} | {a['delta_C_minus_A']:+.2f} | {a['delta_B_minus_A']:+.2f} | "
+                     f"**{a['verdict']}** |")
 
     lines.append("\n## Per-model detail (bal-acc [CI], McNemar C-vs-A)\n")
     for name, d in models.items():
         lines.append(f"\n### {name} (n_pairs={d['n_pairs']}, failures={d.get('failures')})\n")
-        lines.append("| Class | A | B | C | McNemar C-vs-A (p, +/−) | localize C | repair A |")
+        lines.append("| Class | A [CI] (n) | B [CI] (n) | C [CI] (n) | McNemar C-vs-A (p, +/−) | localize C | repair A |")
         lines.append("|---|---|---|---|---|---|---|")
         for cls in CLASSES:
             attr = d["attribution"].get(cls)
@@ -116,8 +143,8 @@ def main():
                 lines.append(f"| {SHORT[cls]} | — | — | — | — | — | — |")
                 continue
             mc = attr["mcnemar_C_vs_A"]
-            lines.append(f"| {SHORT[cls]} | {attr['A_bal_acc']:.2f} | {attr['B_bal_acc']:.2f} | "
-                         f"{attr['C_bal_acc']:.2f} | p={mc['p']} ({mc['gain']}/{mc['loss']}) | "
+            lines.append(f"| {SHORT[cls]} | {_ci_n(d, 'A', cls)} | {_ci_n(d, 'B', cls)} | "
+                         f"{_ci_n(d, 'C', cls)} | p={mc['p']} ({mc['gain']}/{mc['loss']}) | "
                          f"{attr.get('localize_rate_C')} | {attr.get('repair_rate_A')} |")
 
     # fidelity
@@ -163,9 +190,29 @@ def make_fig(agg, models, table, out_path):
     fig, ax = plt.subplots(figsize=(8.2, 4.2))
     colors = {"A": "#d9534f", "B": "#5bc0de", "C": "#5cb85c"}
     labels = {"A": "A: image-only", "B": "B: structured oracle", "C": "C: image+oracle"}
+
+    def pooled_ci(cls, mod):
+        """Pool tp/tn over models -> one balanced-accuracy 95% Wilson CI per cell,
+        so the bars carry an interval (E2). Returns (est, lo, hi) or None."""
+        tp = npos = tn = nneg = 0
+        for d in models.values():
+            c = d.get("per_modality", {}).get(mod, {}).get("per_class", {}).get(cls)
+            if not c:
+                continue
+            tp += c.get("tp", 0); npos += c.get("n_pos", 0)
+            tn += c.get("tn", 0); nneg += c.get("n_neg", 0)
+        if not npos or not nneg:
+            return None
+        b = balanced_accuracy_ci(tp, npos, tn, nneg)
+        return b.estimate, b.low, b.high
+
     for i, m in enumerate(MOD):
         vals = [agg[c][f"mean_{m}"] for c in classes]
-        ax.bar(x + (i - 1) * w, vals, w, label=labels[m], color=colors[m], edgecolor="#333", linewidth=0.5)
+        cis = [pooled_ci(c, m) for c in classes]
+        yerr = [[v - (ci[1] if ci else v) for v, ci in zip(vals, cis)],
+                [(ci[2] if ci else v) - v for v, ci in zip(vals, cis)]]
+        ax.bar(x + (i - 1) * w, vals, w, label=labels[m], color=colors[m], edgecolor="#333",
+               linewidth=0.5, yerr=yerr, error_kw={"elinewidth": 0.8, "capsize": 2, "ecolor": "#333"})
     ax.axhline(0.5, ls="--", c="#888", lw=1)
     ax.text(len(classes) - 0.5, 0.51, "chance", color="#888", fontsize=8, va="bottom", ha="right")
     ax.set_xticks(x)

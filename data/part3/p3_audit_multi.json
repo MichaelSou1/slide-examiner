@@ -219,6 +219,7 @@
         0.664
       ],
       "mean_gap": 0.0305,
+      "n": 90,
       "below_chance": false,
       "reliably_detects_g7": false
     },
@@ -233,6 +234,7 @@
         0.58
       ],
       "mean_gap": -0.0877,
+      "n": 90,
       "below_chance": true,
       "reliably_detects_g7": false
     },
@@ -247,6 +249,7 @@
         0.86
       ],
       "mean_gap": 1.3599,
+      "n": 90,
       "below_chance": false,
       "reliably_detects_g7": true
     }

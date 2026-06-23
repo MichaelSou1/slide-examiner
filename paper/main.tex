@@ -29,6 +29,7 @@
 \newcommand{\ba}{\textsc{bal-acc}}
 \newcommand{\g}[1]{\textsf{#1}}        % defect-class names
 \newcommand{\best}[1]{\textbf{#1}}
+\newcommand{\ci}[1]{\,{\scriptsize[#1]}}   % compact 95% Wilson interval subscript
 \setlist{nosep,leftmargin=1.4em}
 
 \title{\bf It's the Elicitation, Not the Eyes:\\[2pt]
@@ -57,9 +58,11 @@ scale (4B/8B/30B), five vision-encoder families, and two input resolutions, so t
 linter rather than a VLM. \textbf{Format-suppressed} defects only \emph{look} sub-perceptual: the capability
 is present but the conventional pointwise+rubric prompt suppresses it, and simply \emph{changing the
 elicitation}---a forced choice, or an atomic per-type query---recovers detection \emph{with the model frozen},
-a recovery that replicates across six VLMs and four families and transfers to third-party human-annotated
-slides. This diagnosis prescribes the critic: a per-defect \emph{bottleneck-routed symbolic--neural hybrid}
-that covers 8/9 defect classes (balanced accuracy 0.885) where the best single engine covers 5/9. We sharpen
+a recovery that replicates across the capable models (four of the six VLMs tested, four families) and
+transfers to third-party human-annotated slides. This diagnosis prescribes the critic: a minimal
+\emph{symbolic--neural hybrid}---linter for declared geometry plus one C3-prompted VLM for the rest---that
+covers 8/9 defect classes (balanced accuracy 0.896), matching the pre-registered routed hybrid's 8/9 coverage
+(0.885) where the best single engine covers 5/9. We sharpen
 the argument with a \emph{falsifiable} linter-blind render class, \g{G7} (declared box legal, rendered content
 overflows): a symbolic linter and two \emph{narrow} neural rewards (a document and an aesthetic scorer, both at
 chance, 0.48 and 0.57) miss it, while a capable \emph{general}-multimodal reward (0.79) catches it---so the blind
@@ -67,7 +70,8 @@ spot is a property of narrow critics and \g{G7} needs a VLM engine, whether re-e
 reward head. The diagnosis itself reproduces on \emph{real} CC-licensed slide layouts---a lossless tool-extracted
 oracle, no annotation---where fine alignment stays a capability floor in every channel while a margin bleed is
 structure-rescuable. As supporting evidence, an 8B examiner finetuned on injected defects surpasses a zero-shot
-30B on semantic inspection, and a perturbation-fidelity audit shows that 45\% of injected geometry defects never
+30B on \emph{in-distribution} semantic inspection (the edge does not transfer out-of-distribution; Sec.~\ref{sec:external}),
+and a perturbation-fidelity audit shows that 45\% of injected geometry defects never
 survive a standard renderer---a hazard any IR-labeled slide dataset inherits. We report the negatives plainly (deck-scope semantics, a sim2real gap, a
 small downstream effect); each sharpens rather than weakens the thesis.
 \end{abstract}
@@ -137,16 +141,18 @@ lossless structured-geometry oracle, that separates failures into \emph{sub-perc
 tool-extracted lossless oracle---no human or self-annotation (Sec.~\ref{sec:external}).
 \item \textbf{C2 -- ``Format suppression, not capability.''} Relative and atomic-binary elicitation recover
 detection that the pointwise+rubric format suppresses; the contrast isolates format from capability,
-replicates across \emph{six VLMs / four families / three scales}, transfers to real human-annotated slides,
+replicates across \emph{the capable models---four of six VLMs tested, four families, three scales}, transfers to real human-annotated slides,
 and survives a localization check that rules out a lucky ``yes'' (Sec.~\ref{sec:hybrid}).
-\item \textbf{C3 -- A bottleneck-routed symbolic--neural hybrid critic and a falsifiable linter-blind class.}
-The hybrid covers 8/9 classes (0.885) versus 5/9 (linter) and 2/9 (single VLM); the render class \g{G7} is caught
-only by a VLM engine, while a symbolic linter (0.00) and two \emph{narrow} neural rewards (a document reward 0.48
+\item \textbf{C3 -- A minimal symbolic--neural hybrid critic and a falsifiable linter-blind class.}
+The linter+VLM-C3 baseline covers 8/9 classes (0.896), matching the pre-registered routed hybrid (8/9, 0.885)
+and beating either single engine (linter 5/9, VLM-C3 4/9, VLM-C0 2/9); the render class \g{G7} is caught
+only by a C3 VLM engine, while a symbolic linter (0.00) and two \emph{narrow} neural rewards (a document reward 0.48
 and an aesthetic scorer 0.57, both at chance) miss it---yet a capable \emph{general}-multimodal reward catches it
 (0.79), so the blind spot is a property of \emph{narrow} critics and \g{G7} needs a VLM engine, prompted or
 reward-headed (Sec.~\ref{sec:hybrid}).
 \item \textbf{C4 -- A specialist examiner and a perturbation-fidelity audit (supporting).} An 8B examiner
-finetuned on injected defects surpasses a zero-shot 30B on semantic inspection and learns to abstain rather
+finetuned on injected defects surpasses a zero-shot 30B on \emph{in-distribution} semantic inspection (it does
+not transfer out-of-distribution, Sec.~\ref{sec:external}) and learns to abstain rather
 than hallucinate geometry; separately, 45\% of injected geometry defects never render under a standard
 template renderer---a hazard any IR-labeled slide dataset inherits (Secs.~\ref{sec:examiner},~\ref{sec:hybrid}).
 \end{itemize}
@@ -164,7 +170,9 @@ about where the perception/calibration boundary actually lies.
 \paragraph{The VLM perception bottleneck.}
 A growing line of work argues that VLM failures on visually grounded tasks are dominated by perception rather
 than reasoning---decomposing the bottleneck for chart understanding~\cite{chartbottleneck}, or showing that
-the needed visual information is present in the representation but unused~\cite{hiddeninplainsight}. We share
+the needed visual information is present in the representation but unused~\cite{hiddeninplainsight}; \textsc{MMVP}~\cite{mmvp}
+is the canonical demonstration that VLMs stumble on minimally-different image pairs humans solve trivially---the
+sub-perceptual acuity floor our title (``not the eyes'') deliberately echoes. We share
 the perception-first stance but ask it of a different task family---\emph{quality inspection of generated
 artifacts}---where the perception channel can be isolated exactly with structured geometry rather than
 approximated by captions, and where the answer feeds a critic architecture rather than a benchmark.
@@ -183,6 +191,10 @@ failures stem from recognition or reasoning---precisely the gap our attribution 
 Our finding that relative elicitation beats absolute scoring echoes work showing VLM judges can rank but
 cannot reliably score~\cite{rankscore}; that result concerns a judge's \emph{output mode}, orthogonal to our
 \emph{source of failure}, and we adopt it to motivate the pairwise and atomic-binary heads of our critic.
+More broadly, pairwise/relative elicitation is known to recover discriminative signal that pointwise scoring
+suppresses in LLM/VLM judges; our contribution is not that effect but its \emph{defect-class boundary}---it
+rescues \g{G1}/\g{S6} yet not \g{G3}/\g{S3}---which is what turns the elicitation effect into a
+perception/format attribution signal.% TODO(author): cite specific pairwise-vs-pointwise judge-calibration work (verify arXiv ids before posting).
 
 \paragraph{Slide generation, evaluation, and reward.}
 Slide and poster generation with design feedback is an active area; aesthetic-reward
@@ -209,7 +221,9 @@ semantic engine of a routed critic and the perception/reasoning attribution it e
 Every slide is an IR of typed elements with bounding boxes, text, and style; defects are injected
 programmatically into the IR and then rendered, giving exact labels and matched (defective, clean) pairs. The
 taxonomy (Table~\ref{tab:taxonomy}) has a \emph{geometry/perception} group \g{G1}--\g{G6}, a
-\emph{semantic/reasoning} group \g{S1}--\g{S6}, and one constructed render class \g{G7}. We add \g{G7} because
+\emph{semantic/reasoning} group \g{S1}--\g{S6}, and one constructed render class \g{G7}; the taxonomy is aligned
+to the expert-derived \textsc{SlideAudit} taxonomy~\cite{slideaudit} via a bidirectional map (results are
+reported in its canonical classes), with \g{G7} refining its ``content overflow/cut-off'' category. We add \g{G7} because
 it is the sharpest test of the linter's blind spot: its declared box is legal (inside the safe margin, no box
 overlap) but the rendered content overflows its container, so the defect exists \emph{only} in pixels.
 
@@ -254,7 +268,7 @@ controls}, never recall alone---a consistency defect scored by recall reads a fa
 the model simply always flags.
 
 \paragraph{Two linters.}
-A geometry linter detects \g{G1}--\g{G6} from coordinates and rules (brand color via CIELAB $\Delta E$, not RGB
+A geometry linter detects \g{G1}--\g{G6} from coordinates and rules (brand color via CIELAB $\Delta E_{2000}$, not RGB
 distance), at zero false positives on clean slides. A terminology linter handles \g{S3} from an occurrence
 table plus near-duplicate clustering, image-free. Both are the ``detectors of record'' the diagnosis routes to.
 
@@ -271,23 +285,27 @@ raising input resolution from 1536 to 2048 changes nothing. The lever is model s
 the encoder or the pixel budget---so for fine geometry the right detector is the symbolic linter, which reads
 the coordinates directly at balanced accuracy 0.75--1.0 and zero false positives.
 
-\paragraph{But some ``perceptual'' failures are format suppression.}
+\paragraph{But some ``perceptual'' failures are elicitation artifacts, not blind spots.}
 The same pointwise image-only setting hides a second, opposite phenomenon. For \g{G1} text overflow and \g{S6}
 image/text contradiction, pointwise balanced accuracy is 0.50---indistinguishable from the genuinely
 sub-perceptual classes---yet a two-alternative forced choice between the defective and clean slide jumps to
-\textbf{1.00} (Fig.~\ref{fig:rel}). The model could perceive these defects all along; the absolute pointwise
-format suppressed the signal. Crucially, the same forced-choice intervention does \emph{not} rescue \g{G3}
-alignment (it stays at 0.50): relative judgement is a real effect with a sharp boundary, and that boundary is
-exactly the perception/format split. This is two independent pieces of evidence (one geometric, one semantic)
-for the same mechanism, and it is the connective thread of the paper.
+\textbf{1.00} (Fig.~\ref{fig:rel}): the defect is perceivable, and the absolute pointwise call simply fails to
+elicit it. Crucially, the same forced-choice intervention does \emph{not} rescue \g{G3} alignment (it stays at
+0.50): relative judgement is a real effect with a sharp boundary, and that boundary is exactly the
+perception/elicitation split. (\emph{How} the elicitation helps differs by class---a named target on a single
+slide vs.\ a paired clean reference---and we decompose it in Sec.~\ref{sec:elicit} (Fig.~\ref{fig:decomp}),
+finding pure format suppression for the constructed render class \g{G7} and a milder availability-of-reference
+effect for \g{G1}/\g{S6}.) This recoverable-versus-sub-perceptual boundary---two independent instances, one
+geometric, one semantic---is the connective thread of the paper.
 
 \begin{figure}[t]
 \centering
 \includegraphics[width=0.72\linewidth]{figs/fig2_relative_vs_absolute.png}
 \caption{\textbf{Relative judgement separates the two blindnesses.} For \g{G1} overflow and \g{S6} image/text
 contradiction, pointwise (absolute) inspection is at chance but a forced choice recovers perfect detection
-(\emph{format-suppressed}). For \g{G3} alignment, the forced choice stays at chance (\emph{genuinely
-sub-perceptual}). Same model, same images; only the elicitation changes.}
+(\emph{elicitation-recoverable}). For \g{G3} alignment, the forced choice stays at chance (\emph{genuinely
+sub-perceptual}). Same model, same images; only the elicitation changes. What \emph{drives} the recovery (naming
+vs.\ a paired reference) is decomposed in Fig.~\ref{fig:decomp}.}
 \label{fig:rel}
 \end{figure}
 
@@ -332,7 +350,15 @@ capability gap.
 On the constructed render class \g{G7}, the atomic-binary C3 recovers detection that C0 suppresses, and it does
 so across four model families and three scales (Fig.~\ref{fig:c3}): Qwen3.5-9B $0.50\!\to\!0.93$,
 Qwen3.5-27B $0.93\!\to\!1.00$, Qwen3.6-27B $0.52\!\to\!1.00$, and Google Gemma4-31B $0.75\!\to\!1.00$, all at
-precision 0.88--1.00 with paired McNemar $p<0.05$. That the \emph{same} effect appears in models from different
+precision 0.88--1.00. As a \emph{cross-model} effect---the claim we actually make---the recovery is
+overwhelming: a stratified (Cochran) McNemar over the four models' matched pairs counts \textbf{149} \g{G7}
+items that C3 fixes against \textbf{zero} reversals ($\chi^2_1{=}149$, $p<10^{-30}$).\footnote{Per model the gain
+is individually significant for the three low-C0 models ($p\le 2\!\times\!10^{-9}$); on the already-strong
+Qwen3.5-27B (C0~$0.93$) only $9$ items can move and all $9$ go to C3 ($0$ reversals, exact $p{=}0.004$, individually
+n.s.\ after Holm over the full 59-test family)---a ceiling effect, not a fragile one. Holm (FWER) over all 59
+reported tests keeps the pooled \g{G7} recovery, the three low-C0 \g{G7} cells, both examiner contrasts
+($p_{\text{Holm}}{=}1.9\!\times\!10^{-5},\,4.7\!\times\!10^{-4}$) and the Skywork \g{G7} detection; full corrected
+table + the stratified test in the released multiplicity report.} That the \emph{same} effect appears in models from different
 vendors with different pretraining is the core model-agnostic evidence: C0's fixed taxonomy cannot \emph{name}
 an off-taxonomy render class, so it abstains; the atomic per-type binary restores it.
 
@@ -362,6 +388,37 @@ overflow and the pairwise contrast exposes it. And C1 free-form, which rescues w
 every clean slide (precision $\approx$0.50). There is no universal elicitation---which is precisely why the
 critic routes per defect and per model rather than adopting one prompt.
 
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.78\linewidth]{figs/fig7_elicitation_decomp.png}
+\caption{\textbf{What drives the recovery: naming vs.\ a paired reference.} Holding model and image fixed on the
+freeform set, the chance$\to$ceiling jump factors into a \emph{naming} component (C0\_named$-$C0: one slide, the
+defect named, \emph{no} reference) and a \emph{pairing} component (AFC$-$C0\_named: a clean twin supplied). For
+the constructed render class \g{G7} naming alone carries it (green); for declared geometry \g{G1} and semantic
+\g{S6} the paired reference does (blue). The AFC\_clean guess-floor (dotted) is near chance, so neither is a
+forced-pick artifact. Mean over the models that recover ($\text{AFC}\ge0.7$).}
+\label{fig:decomp}
+\end{figure}
+
+\paragraph{Naming vs.\ a paired reference: a defect-dependent answer.}
+A skeptic asks whether the chance$\to$1.00 recovery is genuine \emph{elicitation} (the model perceives the defect
+and the format suppressed it) or merely an \emph{easier task} (the forced choice hands over a clean reference and
+a named target the pointwise call withholds). We factor it, holding model and image fixed, into a \emph{naming}
+term (C0\_named: a single slide, the candidate defect named, no reference, no forced-evidence gate) and a
+\emph{pairing} term (the true 2-AFC against the clean twin), with a clean-vs-clean \emph{guess-floor} control
+(Fig.~\ref{fig:decomp}). The answer is \emph{defect-dependent} and consistent across all four capable models. For
+\g{G7}---the off-taxonomy render class C0 cannot \emph{name}---\textbf{naming alone} recovers it
+(Qwen3.5-9B $0.50\!\to\!0.93$, Qwen3.6-27B $0.51\!\to\!1.00$, Qwen3.5-27B $0.79\!\to\!1.00$, Gemma4-31B
+$0.69\!\to\!0.88$; paired-clean McNemar Holm-corrected $p\!\le\!0.002$), and the paired reference adds nothing on
+top: this is \emph{format suppression}, the model saw \g{G7} all along. For \g{G1}/\g{S6} the opposite holds:
+naming alone does \emph{not} help (C0\_named $\approx$0.50) and the recovery needs the paired clean reference
+(2-AFC $\to$0.97--1.00)---an \emph{availability-of-reference} effect, properly scoped as such. Crucially, the
+guess-floor control rules out a forced-pick artifact for both: on two \emph{clean} slides the capable models
+correctly answer ``tie'' 92--100\% of the time and fabricate a consistent winner on $\le$2\% of pairs, so the
+2-AFC ceiling is real signal, not always-pick-one. The paper's mechanism claim---\emph{format suppression, not
+the eyes}---is thus established for the constructed \g{G7} (and the C3 atomic recovery it mirrors); the declared
+\g{G1}/\g{S6} forced-choice recovery is the milder, honestly-labelled availability-of-reference effect.
+
 \paragraph{It transfers to real slides.}
 On the human-annotated \textsc{SlideAudit} set, even with no structure available (so no linter), C3 beats C0
 pointwise for every class---brand color $0.52\!\to\!0.81$, alignment $0.56\!\to\!0.72$---confirming the format
@@ -370,48 +427,52 @@ blatant overlap): real fine geometry still needs the linter, which needs the ele
 lack. The hybrid's full power requires native structure; on image-only real data it runs in a degraded
 VLM-only mode---a ceiling set by missing structure, not missing method.
 
-\subsection{The hybrid critic covers strictly more}\label{sec:coverage}
+\subsection{The minimal hybrid critic covers the most}\label{sec:coverage}
 
 \paragraph{Static routing, complementary engines.}
-A static router maps each defect to one of three engines over a single served model: the symbolic linter for
-declared geometry, a text LLM for density and deck semantics, and the VLM under its best per-class elicitation
-for the perceivable classes. Scoring \emph{named attribution} (the critic must emit the correct defect type on
-the defective image and not on its clean twin) on paired-clean synthetic slides, the routed hybrid covers
-\textbf{8/9} classes at mean balanced accuracy \textbf{0.885}, versus \textbf{5/9} at 0.70 for the linter alone
-and \textbf{2/9} at 0.57 for a single VLM (Fig.~\ref{fig:coverage}, Table~\ref{tab:coverage}). The engines are
-complementary exactly as the bottleneck dichotomy predicts: the linter owns declared geometry (0.80--1.00 at
-precision 1.0) where the VLM is at floor, and the VLM owns the render class where the linter is blind.
+We evaluate five critics by \emph{named attribution}: the correct defect must be emitted on the defective slide
+and not on its clean twin. The E3 control is decisive: the minimal hybrid---linter for declared geometry plus one
+C3-prompted VLM elsewhere---covers \textbf{8/9} classes at \textbf{0.896}, matching the pre-registered routed
+hybrid (\textbf{8/9}, \textbf{0.885}) and beating either single engine (linter: \textbf{5/9} at 0.70; VLM-C3:
+\textbf{4/9} at 0.681; VLM-C0: \textbf{2/9} at 0.57; Fig.~\ref{fig:coverage}, Table~\ref{tab:coverage}). The
+nine classes are the image-level paired-clean classes; \g{G4}/\g{S3} are linter-owned and \g{S2}/\g{S5} are
+deck-scope (Sec.~\ref{sec:examiner}). Thus the falsification branch strengthens the message: per-class routed
+prompt/LLM tuning is not load-bearing here; \emph{linter $\oplus$ C3-VLM} is the cleaner result.
 
 \begin{table}[t]
-\centering\small
-\caption{Per-class named-attribution balanced accuracy (precision in parentheses where $\ge$0.70). The hybrid
-routes each class to its engine. \g{G7} is the load-bearing cell: no single standard engine covers it.}
+\centering\scriptsize
+\setlength{\tabcolsep}{2pt}
+\caption{Per-class named-attribution balanced accuracy with 95\% Wilson intervals. E3 adds C3-everywhere and
+linter+VLM-C3: the minimal hybrid matches routed coverage and slightly exceeds its mean. $n$ = paired positives
+with matched clean controls; precision for every cell is in the released reports.}
 \label{tab:coverage}
-\begin{tabular}{@{}llccc@{}}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{@{}llcccccr@{}}
 \toprule
-Class & routed to & linter-only & single-VLM (C0) & \textbf{hybrid} \\
+Class & routed to & linter & VLM-C0 & VLM-C3 & linter+C3 & routed & $n$ \\
 \midrule
-\g{G1} overflow      & linter & 1.00 (1.0) & 0.50 & \best{1.00 (1.0)} \\
-\g{G2} overlap       & linter & 0.80 (1.0) & 0.71 (1.0) & \best{0.80 (1.0)} \\
-\g{G3} alignment     & linter & 1.00 (1.0) & 0.47 & \best{1.00 (1.0)} \\
-\g{G5} color         & linter & 1.00 (1.0) & 0.50 & \best{1.00 (1.0)} \\
-\g{G6} margin        & linter & 1.00 (1.0) & 0.50 & \best{1.00 (1.0)} \\
-\g{G7} render-overflow & VLM (C3) & \best{0.00} & 0.50 & \best{1.00 (1.0)} \\
-\g{S1} title/body    & VLM (C0) & 0.50 & 0.94 (0.90) & \best{0.94 (0.90)} \\
-\g{S4} density       & LLM & 0.50 & 0.51 & \best{0.72 (1.0)} \\
-\g{S6} image/text    & VLM & 0.50 & 0.50 & 0.50 \\
+\g{G1} overflow      & linter & 1.00\ci{.91,1} & 0.50\ci{.46,.54} & 0.50\ci{.46,.54} & \best{1.00\ci{.91,1}} & \best{1.00\ci{.91,1}} & 40 \\
+\g{G2} overlap       & linter & 0.80\ci{.68,.87} & 0.71\ci{.60,.79} & \best{0.86\ci{.74,.92}} & 0.80\ci{.68,.87} & 0.80\ci{.68,.87} & 40 \\
+\g{G3} alignment     & linter & 1.00\ci{.90,1} & 0.47\ci{.41,.54} & 0.50\ci{.45,.55} & \best{1.00\ci{.90,1}} & \best{1.00\ci{.90,1}} & 36 \\
+\g{G5} color         & linter & 1.00\ci{.91,1} & 0.50\ci{.46,.54} & 0.50\ci{.46,.54} & \best{1.00\ci{.91,1}} & \best{1.00\ci{.91,1}} & 40 \\
+\g{G6} margin        & linter & 1.00\ci{.90,1} & 0.50\ci{.45,.55} & 0.50\ci{.45,.55} & \best{1.00\ci{.90,1}} & \best{1.00\ci{.90,1}} & 36 \\
+\g{G7} render-overflow & VLM (C3) & 0.00\ci{0,.54} & 0.50\ci{.46,.54} & \best{1.00\ci{.91,1}} & \best{1.00\ci{.91,1}} & \best{1.00\ci{.91,1}} & 40 \\
+\g{S1} title/body    & VLM (C0) & 0.50\ci{.41,.59} & \best{0.94\ci{.75,.98}} & 0.83\ci{.63,.92} & 0.83\ci{.63,.92} & \best{0.94\ci{.75,.98}} & 18 \\
+\g{S4} density       & LLM & 0.50\ci{.45,.55} & 0.51\ci{.44,.59} & \best{0.93\ci{.81,.97}} & \best{0.93\ci{.81,.97}} & 0.72\ci{.60,.80} & 36 \\
+\g{S6} image/text    & VLM & 0.50\ci{.41,.59} & 0.50\ci{.41,.59} & 0.50\ci{.41,.59} & 0.50\ci{.41,.59} & 0.50\ci{.41,.59} & 18 \\
 \midrule
-\multicolumn{2}{@{}l}{mean / classes covered} & 0.70 \,/\, 5/9 & 0.57 \,/\, 2/9 & \best{0.885 \,/\, 8/9} \\
+\multicolumn{2}{@{}l}{mean / classes covered} & 0.70 \,/\, 5/9 & 0.57 \,/\, 2/9 & 0.681 \,/\, 4/9 & \best{0.896 \,/\, 8/9} & 0.885 \,/\, 8/9 & \\
 \bottomrule
 \end{tabular}
+}
 \end{table}
 
 \begin{figure}[t]
 \centering
 \includegraphics[width=0.86\linewidth]{figs/fig3_coverage_heatmap.png}
-\caption{\textbf{Coverage by engine.} Per-defect balanced accuracy for the linter, a single VLM, and the routed
-hybrid. The hybrid inherits the linter's geometry column and the VLM's render/semantic column; the \g{G7}
-column (boxed) is covered only by the hybrid.}
+\caption{\textbf{Coverage by engine.} Per-defect balanced accuracy for the linter, VLM-C0, VLM-C3,
+linter+VLM-C3, and the routed hybrid. Minimal linter$\oplus$C3 matches routed coverage; \g{G7} (boxed) is the
+linter-blind cell rescued by C3.}
 \label{fig:coverage}
 \end{figure}
 
@@ -467,6 +528,8 @@ Reward scorer & category & \g{G1} & \g{G2} & \g{G5} & \textbf{\g{G7}} & \g{S4} &
 DocReward-3B   & document   & 0.93 & 1.00 & 0.37 & \textbf{0.48}\,{\scriptsize$[.38,.58]$} & 1.00 & 1.00 \\
 Skywork-VL-7B  & general-mm & 0.94 & 0.72 & 0.46 & \textbf{0.79}\,{\scriptsize$[.69,.86]$} & 0.92 & 1.00 \\
 LAION-Aesth.   & aesthetic  & 0.37 & 0.91 & 0.57 & \textbf{0.57}\,{\scriptsize$[.46,.66]$} & 0.75 & 0.61 \\
+\midrule
+\multicolumn{2}{@{}l}{$n$ (paired)} & 54 & 54 & 54 & 90 & 36 & 18 \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -487,7 +550,8 @@ The reward audit ties to the template result of Sec.~\ref{sec:diag}. Rendering e
 ways---faithfully and snapped-to-master---we find 45\% of injected geometry defects (100\% of overlap,
 alignment, margin; 20\% of overflow) become pixel-identical to their clean twin after snapping. Feeding the
 \emph{snapped} pairs to \emph{all three} reward scorers gives preference accuracy 0.00 at a reward gap of exactly
-0.000: the two images are pixel-identical, so no critic---document, general-multimodal, or aesthetic---can react.
+0.000: the two images are pixel-identical, so no critic---document, general-multimodal, or aesthetic---can react---a
+dataset-integrity hazard (identical inputs force identical scores), not a reward-model deficiency.
 This part \emph{is} model-agnostic by construction, and any reward model trained or evaluated on snap-rendered
 images with IR-derived labels inherits these zero-signal pairs. Perturbation fidelity must be checked at the pixel
 level, not assumed from the IR---a prerequisite the field largely skips, and the reason our elicitation
@@ -502,7 +566,7 @@ finetune Qwen3-VL-8B with QLoRA on programmatically injected defects (2{,}142 ro
 pointwise, geometry restate-from-structure with image-only abstention, and \g{G1}/\g{S6} pairwise), and
 evaluate on held-out splits.
 
-\paragraph{An 8B examiner surpasses a zero-shot 30B on semantics.}
+\paragraph{An 8B examiner surpasses a zero-shot 30B on \emph{in-distribution} semantics.}
 On in-domain held-out page-semantic inspection, the finetuned 8B reaches balanced accuracy 1.000 on both
 \g{S1} title/body and \g{S4} density, beating zero-shot 8B (0.78 / 0.53) and zero-shot 30B (0.93 / 0.77)
 (Table~\ref{tab:examiner}). The largest gain is \g{S4} density recall, $0.0\!\to\!0.97$, where the
@@ -514,21 +578,22 @@ each model's best format. On held-out \emph{severities} the semantic edge holds 
 
 \begin{table}[t]
 \centering\small
-\caption{Page-semantic inspection, balanced accuracy on paired clean (best modality). The finetuned 8B
-examiner beats both zero-shot baselines, including the 30B. Deck-scope \g{S2}/\g{S5} are an honest negative
-(text).}
+\caption{Page-semantic inspection, balanced accuracy [95\% Wilson] on paired clean (best modality). The
+finetuned 8B examiner beats both zero-shot baselines, including the 30B, \emph{in-distribution}. Deck-scope
+\g{S2}/\g{S5} are an honest negative (text). $n$ = paired positives (2-AFC rows = forced-choice pairs);
+the \g{S6} 2-AFC rests on only 12 pairs (wide interval).}
 \label{tab:examiner}
-\begin{tabular}{@{}lccc@{}}
+\begin{tabular}{@{}lcccr@{}}
 \toprule
-class & \textbf{ft-8B} & zs-8B & zs-30B \\
+class & \textbf{ft-8B} & zs-8B & zs-30B & $n$ \\
 \midrule
-\g{S1} title/body  & \best{1.000} & 0.778 & 0.933 \\
-\g{S4} density     & \best{1.000} & 0.529 & 0.774 \\
-\g{G1} overflow (2-AFC) & \best{1.000} & 0.975 & 0.700 \\
-\g{S6} image/text (2-AFC) & \best{1.000} & 1.000 & 0.500 \\
+\g{S1} title/body  & \best{1.000}\ci{.95,1} & 0.778\ci{.69,.85} & 0.933\ci{.87,.95} & 36 \\
+\g{S4} density     & \best{1.000}\ci{.97,1} & 0.529\ci{.50,.58} & 0.774\ci{.69,.84} & 60 \\
+\g{G1} overflow (2-AFC) & \best{1.000}\ci{.97,1} & 0.975\ci{.93,.99} & 0.700\ci{.61,.77} & 120 \\
+\g{S6} image/text (2-AFC) & \best{1.000}\ci{.76,1} & 1.000\ci{.76,1} & 0.500\ci{.25,.75} & 12 \\
 \midrule
-\g{S2} narrative (deck) & 0.500$^\dagger$ & 0.646 & 0.549 \\
-\g{S5} missing-logic (deck) & 0.500 & 0.500 & 0.567 \\
+\g{S2} narrative (deck) & 0.500$^\dagger$\ci{.45,.53} & 0.646\ci{.53,.72} & 0.549\ci{.42,.66} & 36 \\
+\g{S5} missing-logic (deck) & 0.500\ci{.47,.53} & 0.500\ci{.47,.53} & 0.567\ci{.45,.68} & 60 \\
 \bottomrule
 \end{tabular}
 \\[2pt]
@@ -572,8 +637,9 @@ the agent's own generator for one revision pass drives the verifiable defect fro
 The body runs the A/B/C attribution on synthetic slides; the cleanest discrimination needs it on \emph{real}
 geometry with a \emph{real} oracle, which seemed to require human or model annotation. We obtain it without either:
 \textsc{Zenodo10K}~\cite{zenodo10k} ships real CC-licensed \texttt{.pptx} with intact element XML, so
-\texttt{python-pptx} extracts a \emph{lossless} geometry/text/style oracle straight from the source
-file---no human, no self-annotation bias. From 26 real decks we inject one single-shape defect per slide
+\texttt{python-pptx} extracts a geometry/text/style oracle \emph{lossless with respect to the declared IR}
+straight from the source file (the IR$\to$render gap that \g{G7} exploits is exactly what this oracle does
+\emph{not} capture, by design)---no human, no self-annotation bias. From 26 real decks we inject one single-shape defect per slide
 \emph{in PPTX XML space} (overflow, overlap, alignment offset, font, margin) and render both the clean and the
 defective one-slide deck with the same real renderer (LibreOffice), so the paired pixel diff isolates the injected
 defect on real pixels (209 paired slides, 5 classes, 3 VLMs / 3 families). Two results follow. First, the
@@ -591,10 +657,12 @@ cross, confirming on real geometry that fine geometry must route to the symbolic
 \centering
 \includegraphics[width=0.82\linewidth]{figs/fig6_real_attribution.png}
 \caption{\textbf{The perception/capability split reproduces on real layouts} (\textsc{Zenodo10K} real renders +
-lossless \texttt{python-pptx} oracle; mean over 3 VLMs / 3 families, balanced accuracy on paired clean). Coarse
+lossless \texttt{python-pptx} oracle; mean over 3 VLMs / 3 families, balanced accuracy on paired clean; error
+bars = 95\% Wilson on counts pooled across models, $n{=}76$--$90$ paired per class). Coarse
 defects (\g{G1} overflow, \g{G2} overlap) are image-sufficient; \g{G6} margin is a \emph{perception} bottleneck the
 structured oracle rescues (B${>}$A); \g{G3} alignment is a \emph{capability} floor at chance in every channel
-(A${=}$B${=}$C${\approx}0.5$), so it must route to the linter.}
+(A${=}$B${=}$C${\approx}0.5$), so it must route to the linter. Intervals on \g{G3}/\g{G4}/\g{G6} include chance,
+consistent with their small per-class $n$ (see released reports).}
 \label{fig:real}
 \end{figure}
 
@@ -625,18 +693,33 @@ path failed to load, and a design reward needing a separate training runtime). O
 work, differentiated by domain, the lossless oracle, and the loop to a critic. And the downstream effect is
 small under a strong generator. None of these is hidden; each is stated where it bites.
 
+Two further caveats temper the central claim and we state them plainly. First, the forced-choice and
+atomic-binary elicitations supply a contrastive reference and a named target that the pointwise format withholds,
+so one must ask whether the $0.50\!\to\!1.00$ recovery is \emph{elicitation} or \emph{reduced task difficulty}.
+We ran the clean ablation rather than leaving it to future work (the single-slide, defect-type-named
+\emph{absolute} condition C0\_named, plus a clean-vs-clean guess-floor control; Sec.~\ref{sec:elicit},
+Fig.~\ref{fig:decomp}), and the answer is defect-dependent: for the constructed render class \g{G7} naming alone
+recovers detection (format suppression), while for declared \g{G1}/\g{S6} the recovery genuinely requires the
+paired reference (availability-of-reference). We therefore make the strong mechanism claim only for \g{G7} and
+its C3 mirror, and label the \g{G1}/\g{S6} forced-choice effect as reference-availability; the guess-floor
+control (capable models answer ``tie'' on 92--100\% of clean pairs) rules out a forced-pick artifact for both.
+Second, the 8/9 coverage (0.896 for linter+VLM-C3; 0.885 for the pre-registered routed hybrid) is a
+\emph{native-structure} number; on image-only real decks (no IR for the linter) the hybrid degrades to its
+VLM-only mode, so that figure is an upper bound for IR-owning generation agents, not an open-world guarantee.
+
 % =====================================================================
 \section{Conclusion}
 % =====================================================================
 
 A slide-defect critic should not be one model. Telling apart the two blindnesses---genuinely sub-perceptual
 geometry versus format-suppressed perception---turns a vague ``VLMs are bad at layout'' into an actionable
-routing rule: rules to the linter, text semantics to an LLM, and the perceivable-but-suppressed classes to a
-VLM under an elicitation that the diagnosis proves recovers them. The resulting hybrid covers 8/9 classes where
-the best single engine covers 5/9, and a falsifiable render class \g{G7} shows that the linter's blind spot is
+routing rule: rules to the linter and perceivable-but-suppressed classes to a VLM under an elicitation that the
+diagnosis proves recovers them. The E3 control makes the rule simpler: linter plus one C3-prompted VLM covers
+8/9 classes, matching the pre-registered routed hybrid and beating either single engine. A falsifiable render
+class \g{G7} shows that the linter's blind spot is
 shared by \emph{narrow} neural rewards (document, aesthetic) but not by a capable general-multimodal reward---so
-\g{G7} needs a VLM engine, prompted or reward-headed, not a narrow critic. The recovery replicates across six VLMs
-and four families and transfers to real slides, which makes the central claim a property of the
+\g{G7} needs a VLM engine, prompted or reward-headed, not a narrow critic. The recovery replicates across four of
+the six VLMs tested and four families and transfers to real slides, which makes the central claim a property of the
 \emph{elicitation $\times$ defect} interaction rather than of any one model. The unit of contribution is the
 diagnosis-to-routing pipeline and the falsifiable class, not a leaderboard number---and the negatives we kept in
 are part of the evidence.
@@ -651,8 +734,10 @@ reports are released. Experiments ran on 4$\times$RTX~3080 (20\,GB) with vLLM-se
 (Qwen3.5/3.6, Gemma4, InternVL3.5, Ovis2.5), a QLoRA-finetuned Qwen3-VL-8B, and three published reward scorers
 (DocReward-3B, Skywork-VL-Reward-7B, a LAION aesthetic predictor) behind a uniform adapter; serving recipes
 (tensor-parallel, AWQ, disabled thinking, fp8-KV caveats on Ampere) are in the repository. Weights, renders,
-and raw rollouts are not redistributed; balanced-accuracy cells are reported with Wilson intervals and paired
-tests in the source reports.
+and raw rollouts are not redistributed. Every balanced-accuracy cell in the tables and figures carries its 95\%
+Wilson interval and per-cell $n$; the full family of paired tests is reported with Holm (FWER) and
+Benjamini--Hochberg (FDR) multiplicity correction over all 59 reported significance tests (released multiplicity
+report), and headline claims are stated as surviving or honestly downgraded under that correction.
 
 % =====================================================================
 \begin{thebibliography}{99}\small
@@ -660,6 +745,7 @@ tests in the source reports.
 % web search across arxiv.org + the HF model card). laionaes has no arXiv paper -- it is a 2022 software artifact, cited as such.
 \bibitem{chartbottleneck} On the Perception Bottleneck of VLMs for Chart Understanding. arXiv:2503.18435.
 \bibitem{hiddeninplainsight} Hidden in Plain Sight: VLMs Overlook Their Visual Representations. arXiv:2506.08008.
+\bibitem{mmvp} Tong et al. Eyes Wide Shut? Exploring the Visual Shortcomings of Multimodal LLMs. CVPR 2024; arXiv:2401.06209.
 \bibitem{reasoningbench} Your Reasoning Benchmark May Not Test Reasoning: Revealing Perception Bottleneck in Abstract Reasoning Benchmarks. arXiv:2512.21329.
 \bibitem{led} LED Benchmark: Diagnosing Structural Layout Errors for Document Layout Analysis. arXiv:2507.23295.
 \bibitem{rankscore} VLM Judges Can Rank but Cannot Score: Task-Dependent Uncertainty in Multimodal Evaluation. arXiv:2604.25235.

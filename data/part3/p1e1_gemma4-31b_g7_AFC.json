@@ -1,0 +1,32 @@
+{
+  "condition": "AFC",
+  "mode": "paired",
+  "model": "gemma4-31b",
+  "style": "scoped",
+  "manifest": "/home/gpus/slide-examiner/data/part3/manifest_g7_rendered.jsonl",
+  "modalities": [
+    "A"
+  ],
+  "defects": [
+    "G7_RENDER_CONTAINMENT_OVERFLOW"
+  ],
+  "n_pairs": 90,
+  "failures": 0,
+  "afc": {
+    "G7_RENDER_CONTAINMENT_OVERFLOW": {
+      "mode": "paired",
+      "n_pairs": 90,
+      "n_judgements": 180,
+      "decisive_rate": 0.978,
+      "tie_rate": 0.022,
+      "pick_first_rate": 0.523,
+      "n_pairs_both_orders_valid": 86,
+      "afc_accuracy_strict": 0.977,
+      "afc_accuracy_loose": 0.967,
+      "n_probe_worse_both": 84,
+      "n_probe_worse": 174,
+      "n_partner_worse": 2,
+      "n_tie": 4
+    }
+  }
+}

@@ -145,6 +145,58 @@ def engine_c0(client, model, rec, modality, target_defect, style, max_tokens):
 
 
 # --------------------------------------------------------------------------- #
+# C0_named — single-slide ABSOLUTE, NAMED target, atomic yes/no, NO evidence gate
+# (E1 decomposition: isolates "naming the target" from "pairing" (vs 2-AFC) and
+#  from "forced evidence/localization" (vs C3). Scored paired-clean exactly like
+#  C0/C3 — the clean twin gets the same named yes/no, so specificity is defined.)
+# --------------------------------------------------------------------------- #
+C0_NAMED_SYSTEM = (
+    "You are a meticulous slide-quality inspector. You will be asked whether ONE "
+    "specific named defect is present on a single slide. Look only at what is "
+    "visibly rendered. Answer with a single JSON object and nothing else."
+)
+
+C0_NAMED_SCHEMA_HINT = (
+    'Answer strictly as JSON: {{"present": true|false, "confidence": 0.0-1.0}}.\n'
+    "Judge only this one slide — there is no reference image. Answer present=true "
+    "only if the named defect is actually visible here."
+)
+
+
+def engine_c0_named(client, model, rec, modality, target_defect, style, max_tokens):
+    out = _blank_result(rec)
+    img = rec.get("image_path") or rec.get("metadata", {}).get("defective_image_path")
+    if not img:
+        out["failure"] = True
+        return out
+    question = question_for(target_defect)
+    text = f"Question: {question}\n\n{C0_NAMED_SCHEMA_HINT}"
+    content = [image_content_from_path(img), {"type": "text", "text": text}]
+    messages = [{"role": "system", "content": C0_NAMED_SYSTEM}, {"role": "user", "content": content}]
+    try:
+        raw = chat_complete(client, model, messages, max_tokens)
+    except Exception as exc:  # noqa: BLE001
+        out["failure"] = True
+        out["raw"] = f"ERR {exc}"[:300]
+        return out
+    out["raw"] = raw[:400]
+    try:
+        parsed = parse_examiner_json(raw)
+    except Exception:  # noqa: BLE001
+        out["failure"] = True
+        return out
+    present = bool(parsed.get("present"))
+    # detection == named: the target type is named in the question, but there is
+    # NO forced-evidence gate (the C3 differentiator) and NO clean reference (the
+    # 2-AFC differentiator).
+    out["has_defect"] = present
+    out["named_target"] = present
+    out["confidence"] = parsed.get("confidence")
+    out["predicted_types"] = [target_defect] if present else []
+    return out
+
+
+# --------------------------------------------------------------------------- #
 # C3 — atomic per-type binary + forced localization (PresentBench-style)
 # --------------------------------------------------------------------------- #
 def engine_c3(client, model, rec, modality, target_defect, style, max_tokens):
@@ -202,7 +254,181 @@ def engine_c2(client, model, rec, modality, target_defect, style, max_tokens):
     )
 
 
-ENGINES = {"C0": engine_c0, "C1": engine_c1, "C2": engine_c2, "C3": engine_c3}
+ENGINES = {"C0": engine_c0, "C0_named": engine_c0_named,
+           "C1": engine_c1, "C2": engine_c2, "C3": engine_c3}
+
+
+# --------------------------------------------------------------------------- #
+# AFC / AFC_clean — two-alternative forced choice (E1 pairing decomposition)
+# --------------------------------------------------------------------------- #
+# The paper's "2-AFC -> 1.00" recovery (Fig 2 / Table 4) is a forced choice between
+# a DEFECTIVE slide and its CLEAN twin. To split that recovery into a *pairing*
+# component vs a *guess-floor* artifact (DA-C1 / R1-W2) we run, on the same items:
+#   * AFC        (mode=paired): defective vs its own clean twin, both orders -> the
+#                 true 2-AFC accuracy (rate the model calls the defective worse).
+#   * AFC_clean  (mode=clean):  one clean slide vs a DISTINCT clean slide, both
+#                 orders -> the always-pick-one / position-bias floor that inflates
+#                 a forced choice when there is no real difference.
+# In BOTH, "probe" = the slide presented first in order 0 (the defective for paired,
+# an arbitrary clean for clean-mode). No rendering needed -> thread-safe.
+_AFC_PHRASE = {
+    "G1_TEXT_OVERFLOW": "text that visibly overflows or is clipped by its text box",
+    "S6_IMAGE_TEXT_CONTRADICTION": "a chart, diagram, or image that contradicts the text near it",
+    G7_RENDER_CONTAINMENT_OVERFLOW: "content spilling outside the box, card, or frame meant to contain it",
+}
+
+AFC_SYSTEM = ("You compare two slides and decide which one, if either, shows a specific "
+              "defect. Output ONLY a JSON object.")
+AFC_PROMPT = ('Candidate A and Candidate B are two different slides. Which candidate '
+              'shows {phrase}? If neither one does, answer "tie". '
+              'Output JSON: {{"worse": "A" | "B" | "tie"}}.')
+
+
+def afc_phrase(defect: str) -> str:
+    if defect in _AFC_PHRASE:
+        return _AFC_PHRASE[defect]
+    spec = DEFECTS.get(defect)
+    return spec.description if spec else defect.replace("_", " ").lower()
+
+
+def _img_of(rec: dict) -> str | None:
+    return rec.get("image_path") or (rec.get("metadata") or {}).get("defective_image_path")
+
+
+def build_afc_pairs(recs, defects, max_per_defect, mode):
+    """(defect, probe_rec, partner_rec) per pair.
+      mode='paired': probe = the DEFECTIVE record, partner = its clean twin (the
+                     true 2-AFC; probe-worse == correct detection).
+      mode='clean':  probe = a clean slide, partner = the NEXT distinct clean slide
+                     in the same defect pool (rotation; no correct answer)."""
+    bydef = collections.defaultdict(list)
+    for r in recs:
+        bydef[defect_of(r)].append(r)
+    targets = defects or [d for d in bydef if d != "NO_DEFECT"]
+    pairs = []
+    for d in targets:
+        pos = bydef.get(d, [])[:max_per_defect]
+        if mode == "paired":
+            for r in pos:
+                clean = clean_variant(r)
+                if clean and _img_of(r) and _img_of(clean):
+                    pairs.append((d, r, clean))
+        else:  # clean
+            cleans = [c for r in pos if (c := clean_variant(r))]
+            n = len(cleans)
+            if n < 2:
+                continue
+            for i, c in enumerate(cleans):
+                pairs.append((d, c, cleans[(i + 1) % n]))
+    return pairs
+
+
+def ask_afc(client, model, a_img, b_img, phrase, max_tokens):
+    content = [image_content_from_path(a_img), image_content_from_path(b_img),
+               {"type": "text", "text": AFC_PROMPT.format(phrase=phrase)}]
+    messages = [{"role": "system", "content": AFC_SYSTEM}, {"role": "user", "content": content}]
+    try:
+        raw = chat_complete(client, model, messages, max_tokens)
+        w = str(parse_examiner_json(raw).get("worse", "")).strip().lower()
+    except Exception:  # noqa: BLE001 - one bad call must not abort the sweep
+        return None
+    return w if w in {"a", "b", "tie"} else None
+
+
+def aggregate_afc(rows, defects, mode):
+    """Per-defect forced-choice metrics. Each row has pick_order0 / pick_order1 in
+    {a,b,tie,None}; order0 presents A=probe,B=partner and order1 swaps them, so a
+    judgement names the PROBE worse iff (order0='a') or (order1='b')."""
+    out = {}
+    targets = defects or sorted({r["defect"] for r in rows})
+    for d in targets:
+        drows = [r for r in rows if r["defect"] == d]
+        probe = partner = tie = first = second = 0
+        n_pairs_valid = probe_both = partner_both = 0
+        for r in drows:
+            p0, p1 = r["pick_order0"], r["pick_order1"]
+            for pos, pk in ((0, p0), (1, p1)):
+                # order0: A=probe,B=partner. order1: A=partner,B=probe.
+                if pk == "tie":
+                    tie += 1
+                elif pk == "a":            # picked the first-presented slide
+                    first += 1
+                    probe += 1 if pos == 0 else 0
+                    partner += 1 if pos == 1 else 0
+                elif pk == "b":            # picked the second-presented slide
+                    second += 1
+                    partner += 1 if pos == 0 else 0
+                    probe += 1 if pos == 1 else 0
+            if p0 in {"a", "b"} and p1 in {"a", "b"}:
+                n_pairs_valid += 1
+                if (p0, p1) == ("a", "b"):
+                    probe_both += 1
+                elif (p0, p1) == ("b", "a"):
+                    partner_both += 1
+        n_judg = probe + partner + tie
+        if not n_judg:
+            continue
+        decisive = probe + partner
+        cell = {
+            "mode": mode, "n_pairs": len(drows), "n_judgements": n_judg,
+            "decisive_rate": round(decisive / n_judg, 3),
+            "tie_rate": round(tie / n_judg, 3),
+            "pick_first_rate": round(first / decisive, 3) if decisive else None,  # 0.5=unbiased
+            "n_pairs_both_orders_valid": n_pairs_valid,
+        }
+        if mode == "paired":
+            # the true 2-AFC accuracy: how often the DEFECTIVE (probe) is called worse
+            cell["afc_accuracy_strict"] = round(probe_both / n_pairs_valid, 3) if n_pairs_valid else None
+            cell["afc_accuracy_loose"] = round(probe / n_judg, 3)
+            cell["n_probe_worse_both"] = probe_both          # raw count for downstream CIs
+            cell["n_probe_worse"], cell["n_partner_worse"], cell["n_tie"] = probe, partner, tie
+        else:
+            # purest guess-floor: a fabricated consistent winner between two clean slides
+            cell["consistent_invention_rate"] = (
+                round((probe_both + partner_both) / n_pairs_valid, 3) if n_pairs_valid else None)
+            cell["n_consistent_invention"] = probe_both + partner_both   # raw count for downstream CIs
+            cell["n_probe_worse"], cell["n_partner_worse"], cell["n_tie"] = probe, partner, tie
+        out[d] = cell
+    return out
+
+
+def run_afc(args, client, recs, mode):
+    label = "AFC" if mode == "paired" else "AFC_clean"
+    pairs = build_afc_pairs(recs, args.defects, args.max_per_defect, mode)
+    print(f"[{args.model}/{label}/{args.style}] {len(pairs)} {mode} pairs over "
+          f"defects={args.defects} (modality A, image-only)")
+    if not pairs:
+        raise SystemExit(f"{label}: no pairs (need clean twins; >=2 clean slides per defect for clean mode)")
+
+    def work(defect, probe, partner):
+        phrase = afc_phrase(defect)
+        ip, iq = _img_of(probe), _img_of(partner)
+        return {"defect": defect, "modality": "A", "mode": mode,
+                "probe_id": probe.get("sample_id"), "partner_id": partner.get("sample_id"),
+                "pick_order0": ask_afc(client, args.model, ip, iq, phrase, args.max_tokens),
+                "pick_order1": ask_afc(client, args.model, iq, ip, phrase, args.max_tokens)}
+
+    rows, t0 = [], time.time()
+    with ThreadPoolExecutor(max_workers=args.workers) as pool:
+        futs = [pool.submit(work, *pr) for pr in pairs]
+        done = 0
+        for fut in as_completed(futs):
+            rows.append(fut.result())
+            done += 1
+            if done % 50 == 0 or done == len(pairs):
+                print(f"  {done}/{len(pairs)} {time.time()-t0:.0f}s")
+
+    afc = aggregate_afc(rows, args.defects, mode)
+    failures = sum(1 for r in rows if not r["pick_order0"] and not r["pick_order1"])
+    result = {"condition": label, "mode": mode, "model": args.model, "style": args.style,
+              "manifest": args.manifest, "modalities": ["A"], "defects": args.defects,
+              "n_pairs": len(pairs), "failures": failures, "afc": afc}
+    Path(args.out).parent.mkdir(parents=True, exist_ok=True)
+    Path(args.out).write_text(json.dumps(result, indent=2, ensure_ascii=False), encoding="utf-8")
+    if args.dump_rows:
+        Path(args.dump_rows).write_text(
+            "".join(json.dumps(r, ensure_ascii=False) + "\n" for r in rows), encoding="utf-8")
+    print(json.dumps(afc, indent=2, ensure_ascii=False))
 
 
 # --------------------------------------------------------------------------- #
@@ -238,6 +464,17 @@ def run(args):
     client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY", "EMPTY"), base_url=args.base_url,
                     timeout=90.0, max_retries=1)
     recs = [json.loads(l) for l in Path(args.manifest).open() if l.strip()]
+    if args.freeform_only:
+        # Drop __template renders: the snap-to-master template absorbs ~45% of
+        # injected geometry (P2 gotcha), so a "defective" template render can be
+        # pixel-clean -> silent label noise. E1 holds the items fixed across all
+        # conditions and must not include those (no-op on G7, which has no twins).
+        before = len(recs)
+        recs = [r for r in recs if "__template" not in (r.get("image_path") or "")]
+        print(f"[freeform-only] kept {len(recs)}/{before} records")
+    if args.condition in ("AFC", "AFC_clean"):
+        # forced-choice paths: distinct scoring (pick-rate/bias), own run path.
+        return run_afc(args, client, recs, mode="paired" if args.condition == "AFC" else "clean")
     engine = ENGINES[args.condition]
     jobs = build_jobs(recs, args.defects, args.modalities, args.max_per_defect)
     if args.condition == "C2":
@@ -345,7 +582,7 @@ def score(rows, modalities, defects):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--condition", choices=list(ENGINES), required=True)
+    ap.add_argument("--condition", choices=list(ENGINES) + ["AFC", "AFC_clean"], required=True)
     ap.add_argument("--manifest", required=True)
     ap.add_argument("--base-url", default="http://localhost:8101/v1")
     ap.add_argument("--model", required=True)
@@ -355,6 +592,8 @@ def main():
                          "S6_IMAGE_TEXT_CONTRADICTION G7_RENDER_CONTAINMENT_OVERFLOW).")
     ap.add_argument("--modalities", nargs="+", default=["A"])
     ap.add_argument("--max-per-defect", type=int, default=60)
+    ap.add_argument("--freeform-only", action="store_true",
+                    help="drop __template renders (snap absorbs ~45% of geometry; E1 freeform set).")
     ap.add_argument("--max-tokens", type=int, default=512)
     ap.add_argument("--workers", type=int, default=12)
     ap.add_argument("--out", required=True)

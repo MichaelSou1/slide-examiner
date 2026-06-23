@@ -3,7 +3,7 @@
 Reads the Protocol-2 (hybrid coverage) and Protocol-3 (reward audit, fidelity)
 artifacts and renders the Result-2 / Result-3 tables. Offline.
 
-  data/part3/p2_synth.json       -> synthetic coverage (linter/VLM/hybrid)
+  data/part3/p2_synth.json       -> synthetic coverage (linter/VLM/C3 baselines/hybrid)
   data/part3/p2_slideaudit.json  -> real-data (image-only) VLM C0 vs C3
   data/part3/p3_audit.json       -> DocReward preference accuracy
   data/part3/p3_fidelity.json    -> perturbation-fidelity / snap absorption
@@ -28,10 +28,19 @@ SHORT = {
 }
 
 
-def cellstr(c):
+def cellstr(c, show_n=False):
+    """bal-acc [95% Wilson CI] · p=precision (· n=pos+neg when show_n). No bare
+    point estimate is emitted (E2): every cell carries its interval."""
     if not c:
         return "—"
-    return f"{c['bal_acc']:.2f} p{c['precision']:.2f}"
+    ci = c.get("bal_acc_ci")
+    ci_str = f" [{ci[0]:.2f},{ci[1]:.2f}]" if ci else ""
+    out = f"{c['bal_acc']:.2f}{ci_str} p{c['precision']:.2f}"
+    if show_n:
+        n = (c.get("n_pos") or 0) + (c.get("n_neg") or 0)
+        if n:
+            out += f" n={n}"
+    return out
 
 
 def load(name):
@@ -46,21 +55,36 @@ def synth_tables():
     L = [f"### Result 2a — synthetic all-class coverage ({d['model']}, "
          f"named attribution, paired-clean bal-acc · precision; freeform renders, "
          f"mpd={d['max_per_defect']})\n"]
-    L.append("| Defect | route | linter-only | VLM-only (C0) | hybrid (routed) |")
-    L.append("|---|---|---|---|---|")
+    L.append("| Defect | route | linter-only | VLM-only (C0) | VLM-C3 everywhere | linter+VLM-C3 | hybrid (routed) |")
+    L.append("|---|---|---|---|---|---|---|")
     pc = d["per_class"]
+    cp = d.get("config_per_class", {})
     route = d["router"]
     for dd, cell in pc.items():
         eng = route.get(dd, "?")
-        L.append(f"| {SHORT.get(dd, dd)} | {eng} | {cellstr(cell.get('linter'))} | "
-                 f"{cellstr(cell.get('vlm_c0'))} | {cellstr(cell.get(_routed_key(eng)))} |")
+        c3 = (cp.get("vlm_c3_everywhere", {}) or {}).get(dd) or cell.get("vlm_c3")
+        lpc3 = (cp.get("linter_plus_vlmc3", {}) or {}).get(dd)
+        L.append(f"| {SHORT.get(dd, dd)} | {eng} | {cellstr(cell.get('linter'), show_n=True)} | "
+                 f"{cellstr(cell.get('vlm_c0'), show_n=True)} | "
+                 f"{cellstr(c3, show_n=True)} | "
+                 f"{cellstr(lpc3, show_n=True)} | "
+                 f"{cellstr(cell.get(_routed_key(eng)), show_n=True)} |")
     cov = d["coverage"]
     L.append("")
     L.append("| Critic config | mean bal-acc | classes covered (bal-acc≥0.70 & prec≥0.70) |")
     L.append("|---|---|---|")
-    for k in ["linter_only", "vlm_only", "hybrid"]:
+    labels = {
+        "linter_only": "linter_only",
+        "vlm_only": "vlm_only (C0)",
+        "vlm_c3_everywhere": "vlm_c3_everywhere",
+        "linter_plus_vlmc3": "linter_plus_vlmc3",
+        "hybrid": "hybrid (routed)",
+    }
+    for k in ["linter_only", "vlm_only", "vlm_c3_everywhere", "linter_plus_vlmc3", "hybrid"]:
+        if k not in cov:
+            continue
         a = cov[k]
-        L.append(f"| {k} | {a['mean_bal_acc']} | {a['n_covered_0.70']} / {a['n_classes']} "
+        L.append(f"| {labels[k]} | {a['mean_bal_acc']} | {a['n_covered_0.70']} / {a['n_classes']} "
                  f"({', '.join(SHORT.get(c, c) for c in a['covered_classes'])}) |")
     return "\n".join(L) + "\n"
 

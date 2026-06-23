@@ -1,0 +1,46 @@
+{
+  "condition": "AFC_clean",
+  "mode": "clean",
+  "model": "qwen35-9b",
+  "style": "scoped",
+  "manifest": "/home/gpus/slide-examiner/data/part2/manifest_eval_test_rendered.jsonl",
+  "modalities": [
+    "A"
+  ],
+  "defects": [
+    "G1_TEXT_OVERFLOW",
+    "S6_IMAGE_TEXT_CONTRADICTION"
+  ],
+  "n_pairs": 72,
+  "failures": 0,
+  "afc": {
+    "G1_TEXT_OVERFLOW": {
+      "mode": "clean",
+      "n_pairs": 54,
+      "n_judgements": 108,
+      "decisive_rate": 0.519,
+      "tie_rate": 0.481,
+      "pick_first_rate": 0.964,
+      "n_pairs_both_orders_valid": 24,
+      "consistent_invention_rate": 0.083,
+      "n_consistent_invention": 2,
+      "n_probe_worse": 27,
+      "n_partner_worse": 29,
+      "n_tie": 52
+    },
+    "S6_IMAGE_TEXT_CONTRADICTION": {
+      "mode": "clean",
+      "n_pairs": 18,
+      "n_judgements": 36,
+      "decisive_rate": 0.083,
+      "tie_rate": 0.917,
+      "pick_first_rate": 1.0,
+      "n_pairs_both_orders_valid": 0,
+      "consistent_invention_rate": null,
+      "n_consistent_invention": 0,
+      "n_probe_worse": 1,
+      "n_partner_worse": 2,
+      "n_tie": 33
+    }
+  }
+}

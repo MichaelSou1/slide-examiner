@@ -1,0 +1,48 @@
+{
+  "condition": "AFC",
+  "mode": "paired",
+  "model": "internvl-8b",
+  "style": "scoped",
+  "manifest": "/home/gpus/slide-examiner/data/part2/manifest_eval_test_rendered.jsonl",
+  "modalities": [
+    "A"
+  ],
+  "defects": [
+    "G1_TEXT_OVERFLOW",
+    "S6_IMAGE_TEXT_CONTRADICTION"
+  ],
+  "n_pairs": 72,
+  "failures": 0,
+  "afc": {
+    "G1_TEXT_OVERFLOW": {
+      "mode": "paired",
+      "n_pairs": 54,
+      "n_judgements": 108,
+      "decisive_rate": 0.852,
+      "tie_rate": 0.148,
+      "pick_first_rate": 0.663,
+      "n_pairs_both_orders_valid": 38,
+      "afc_accuracy_strict": 0.026,
+      "afc_accuracy_loose": 0.176,
+      "n_probe_worse_both": 1,
+      "n_probe_worse": 19,
+      "n_partner_worse": 73,
+      "n_tie": 16
+    },
+    "S6_IMAGE_TEXT_CONTRADICTION": {
+      "mode": "paired",
+      "n_pairs": 18,
+      "n_judgements": 36,
+      "decisive_rate": 1.0,
+      "tie_rate": 0.0,
+      "pick_first_rate": 0.944,
+      "n_pairs_both_orders_valid": 18,
+      "afc_accuracy_strict": 0.111,
+      "afc_accuracy_loose": 0.556,
+      "n_probe_worse_both": 2,
+      "n_probe_worse": 20,
+      "n_partner_worse": 16,
+      "n_tie": 0
+    }
+  }
+}

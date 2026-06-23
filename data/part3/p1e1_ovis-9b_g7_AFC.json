@@ -1,0 +1,32 @@
+{
+  "condition": "AFC",
+  "mode": "paired",
+  "model": "ovis-9b",
+  "style": "scoped",
+  "manifest": "/home/gpus/slide-examiner/data/part3/manifest_g7_rendered.jsonl",
+  "modalities": [
+    "A"
+  ],
+  "defects": [
+    "G7_RENDER_CONTAINMENT_OVERFLOW"
+  ],
+  "n_pairs": 90,
+  "failures": 0,
+  "afc": {
+    "G7_RENDER_CONTAINMENT_OVERFLOW": {
+      "mode": "paired",
+      "n_pairs": 90,
+      "n_judgements": 179,
+      "decisive_rate": 0.899,
+      "tie_rate": 0.101,
+      "pick_first_rate": 0.429,
+      "n_pairs_both_orders_valid": 71,
+      "afc_accuracy_strict": 0.972,
+      "afc_accuracy_loose": 0.888,
+      "n_probe_worse_both": 69,
+      "n_probe_worse": 159,
+      "n_partner_worse": 2,
+      "n_tie": 18
+    }
+  }
+}

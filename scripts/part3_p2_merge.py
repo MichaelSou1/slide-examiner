@@ -3,8 +3,9 @@
   synth:      part3_p2_merge.py synth  <out> <partial1> <partial2> ...
   slideaudit: part3_p2_merge.py sa     <out> <partial1> <partial2> ...
 
-For synth, recomputes the linter-only / VLM-only / hybrid coverage over the union
-of per-class cells (identical logic to part3_p2_eval.py).
+For synth, recomputes the linter-only / VLM-only / VLM-C3-everywhere /
+linter+VLM-C3 / hybrid coverage over the union of per-class cells (identical
+logic to part3_p2_eval.py).
 """
 from __future__ import annotations
 
@@ -26,15 +27,29 @@ def _routed_cell(d, cell):
     return cell.get("vlm_best") or cell.get("vlm_c0")
 
 
+def _linter_plus_vlmc3_cell(d, cell):
+    if ROUTER.get(d) == LINTER:
+        return cell.get("linter")
+    return cell.get("vlm_c3")
+
+
 def merge_synth(out, parts):
     base = json.loads(Path(parts[0]).read_text())
     per_class = {}
     for p in parts:
         per_class.update(json.loads(Path(p).read_text()).get("per_class", {}))
-    configs = {"linter_only": {}, "vlm_only": {}, "hybrid": {}}
+    configs = {
+        "linter_only": {},
+        "vlm_only": {},
+        "vlm_c3_everywhere": {},
+        "linter_plus_vlmc3": {},
+        "hybrid": {},
+    }
     for d, cell in per_class.items():
         configs["linter_only"][d] = cell.get("linter")
         configs["vlm_only"][d] = cell.get("vlm_c0")
+        configs["vlm_c3_everywhere"][d] = cell.get("vlm_c3")
+        configs["linter_plus_vlmc3"][d] = _linter_plus_vlmc3_cell(d, cell)
         configs["hybrid"][d] = _routed_cell(d, cell)
 
     def agg(cfg):

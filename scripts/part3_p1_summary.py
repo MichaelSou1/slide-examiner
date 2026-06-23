@@ -103,6 +103,15 @@ def _fmt(cell: dict | None) -> str:
             f"p={h['precision']:.2f} r={h['recall']:.2f} fpr={h['fpr']:.2f} n={h['n_pos']}/{h['n_neg']}")
 
 
+def _baccstr(h: dict | None) -> str:
+    """bal-acc [95% Wilson CI] (n=pos+neg) — no bare point estimate (E2)."""
+    if not h:
+        return "—"
+    ci = h.get("bal_acc_ci") or [0, 0]
+    n = (h.get("n_pos") or 0) + (h.get("n_neg") or 0)
+    return f"{h['bal_acc']:.2f} [{ci[0]:.2f}-{ci[1]:.2f}] (n={n})"
+
+
 def judge(defect_results: dict, pos_hits: dict | None) -> dict:
     """A.4 rescue judgment for one (model,defect), two tiers:
       RESCUED  = Δbal-acc>0 AND McNemar p<0.05 (paired, same images) AND precision>=0.70
@@ -220,7 +229,10 @@ def md_tables(results: dict, judgments: dict, loc: dict) -> str:
                 _fmt(dr.get(c)) for c in CONDS) + f" | {verdict} |")
 
     lines += ["\n### C3 vs C0 — \"format suppression, not capability\" (same model/taxonomy/image)\n",
-              "| Model | Defect | C0 bal-acc | C3 bal-acc | Δ | C3 precision | McNemar p (paired) |",
+              "Cells = bal-acc [95% Wilson CI] (n=pos+neg). McNemar p is the paired exact test on "
+              "per-image correctness; the family-wise Holm-corrected p is reported in "
+              "`reports/part3_multiplicity.md` (E2).\n",
+              "| Model | Defect | C0 bal-acc [CI] (n) | C3 bal-acc [CI] (n) | Δ | C3 precision | McNemar p (paired) |",
               "|---|---|---|---|---|---|---|"]
     for model in sorted(results):
         for defect in DEFECT_ORDER:
@@ -232,7 +244,7 @@ def md_tables(results: dict, judgments: dict, loc: dict) -> str:
             if not c0 or not c3:
                 continue
             d = judgments[model][defect]["detail"].get("C3", {})
-            lines.append(f"| {model} | {SHORT[defect]} | {c0['bal_acc']:.2f} | {c3['bal_acc']:.2f} | "
+            lines.append(f"| {model} | {SHORT[defect]} | {_baccstr(c0)} | {_baccstr(c3)} | "
                          f"{c3['bal_acc']-c0['bal_acc']:+.2f} | {c3['precision']:.2f} | "
                          f"{d.get('mcnemar_p','—')} |")
 

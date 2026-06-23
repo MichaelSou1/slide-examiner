@@ -5,15 +5,15 @@
   "max_per_defect": 40,
   "metric": "paired-clean named-attribution balanced accuracy + precision",
   "router": {
+    "G1_TEXT_OVERFLOW": "linter",
     "G2_ELEMENT_OVERLAP": "linter",
     "G3_ALIGNMENT_OFFSET": "linter",
     "G5_BRAND_COLOR_VIOLATION": "linter",
     "G6_MARGIN_VIOLATION": "linter",
-    "S6_IMAGE_TEXT_CONTRADICTION": "vlm",
-    "G1_TEXT_OVERFLOW": "linter",
     "G7_RENDER_CONTAINMENT_OVERFLOW": "vlm",
     "S1_TITLE_BODY_MISMATCH": "vlm",
-    "S4_DENSITY_RULE_VIOLATION": "llm"
+    "S4_DENSITY_RULE_VIOLATION": "llm",
+    "S6_IMAGE_TEXT_CONTRADICTION": "vlm"
   },
   "vlm_elicit": {
     "G1_TEXT_OVERFLOW": "C2",
@@ -21,6 +21,103 @@
     "G7_RENDER_CONTAINMENT_OVERFLOW": "C3"
   },
   "per_class": {
+    "G1_TEXT_OVERFLOW": {
+      "linter": {
+        "recall": 1.0,
+        "specificity": 1.0,
+        "bal_acc": 1.0,
+        "bal_acc_ci": [
+          0.912,
+          1.0
+        ],
+        "precision": 1.0,
+        "precision_ci": [
+          0.912,
+          1.0
+        ],
+        "fpr": 0.0,
+        "f1": 1.0,
+        "recall_ci": [
+          0.912,
+          1.0
+        ],
+        "tp": 40,
+        "fn": 0,
+        "fp": 0,
+        "tn": 40,
+        "n_pos": 40,
+        "n_neg": 40
+      },
+      "vlm_c0": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "bal_acc_ci": [
+          0.456,
+          0.544
+        ],
+        "precision": 0.0,
+        "precision_ci": null,
+        "fpr": 0.0,
+        "f1": 0.0,
+        "recall_ci": [
+          0.0,
+          0.088
+        ],
+        "tp": 0,
+        "fn": 40,
+        "fp": 0,
+        "tn": 40,
+        "n_pos": 40,
+        "n_neg": 40
+      },
+      "vlm_best": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "bal_acc_ci": [
+          0.456,
+          0.544
+        ],
+        "precision": 0.0,
+        "precision_ci": null,
+        "fpr": 0.0,
+        "f1": 0.0,
+        "recall_ci": [
+          0.0,
+          0.088
+        ],
+        "tp": 0,
+        "fn": 40,
+        "fp": 0,
+        "tn": 40,
+        "n_pos": 40,
+        "n_neg": 40
+      },
+      "vlm_c3": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "bal_acc_ci": [
+          0.456,
+          0.544
+        ],
+        "precision": 0.0,
+        "precision_ci": null,
+        "fpr": 0.0,
+        "f1": 0.0,
+        "recall_ci": [
+          0.0,
+          0.088
+        ],
+        "tp": 0,
+        "fn": 40,
+        "fp": 0,
+        "tn": 40,
+        "n_pos": 40,
+        "n_neg": 40
+      }
+    },
     "G2_ELEMENT_OVERLAP": {
       "linter": {
         "recall": 0.6,
@@ -95,6 +192,32 @@
         ],
         "tp": 17,
         "fn": 23,
+        "fp": 0,
+        "tn": 40,
+        "n_pos": 40,
+        "n_neg": 40
+      },
+      "vlm_c3": {
+        "recall": 0.725,
+        "specificity": 1.0,
+        "bal_acc": 0.863,
+        "bal_acc_ci": [
+          0.742,
+          0.919
+        ],
+        "precision": 1.0,
+        "precision_ci": [
+          0.883,
+          1.0
+        ],
+        "fpr": 0.0,
+        "f1": 0.841,
+        "recall_ci": [
+          0.572,
+          0.839
+        ],
+        "tp": 29,
+        "fn": 11,
         "fp": 0,
         "tn": 40,
         "n_pos": 40,
@@ -179,6 +302,29 @@
         "tn": 34,
         "n_pos": 36,
         "n_neg": 36
+      },
+      "vlm_c3": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "bal_acc_ci": [
+          0.452,
+          0.548
+        ],
+        "precision": 0.0,
+        "precision_ci": null,
+        "fpr": 0.0,
+        "f1": 0.0,
+        "recall_ci": [
+          0.0,
+          0.096
+        ],
+        "tp": 0,
+        "fn": 36,
+        "fp": 0,
+        "tn": 36,
+        "n_pos": 36,
+        "n_neg": 36
       }
     },
     "G5_BRAND_COLOR_VIOLATION": {
@@ -232,6 +378,29 @@
         "n_neg": 40
       },
       "vlm_best": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "bal_acc_ci": [
+          0.456,
+          0.544
+        ],
+        "precision": 0.0,
+        "precision_ci": null,
+        "fpr": 0.0,
+        "f1": 0.0,
+        "recall_ci": [
+          0.0,
+          0.088
+        ],
+        "tp": 0,
+        "fn": 40,
+        "fp": 0,
+        "tn": 40,
+        "n_pos": 40,
+        "n_neg": 40
+      },
+      "vlm_c3": {
         "recall": 0.0,
         "specificity": 1.0,
         "bal_acc": 0.5,
@@ -327,39 +496,14 @@
         "tn": 36,
         "n_pos": 36,
         "n_neg": 36
-      }
-    },
-    "S6_IMAGE_TEXT_CONTRADICTION": {
-      "linter": {
-        "recall": 0.0,
-        "specificity": 1.0,
-        "bal_acc": 0.5,
-        "bal_acc_ci": [
-          0.412,
-          0.588
-        ],
-        "precision": 0.0,
-        "precision_ci": null,
-        "fpr": 0.0,
-        "f1": 0.0,
-        "recall_ci": [
-          0.0,
-          0.176
-        ],
-        "tp": 0,
-        "fn": 18,
-        "fp": 0,
-        "tn": 18,
-        "n_pos": 18,
-        "n_neg": 18
       },
-      "vlm_c0": {
+      "vlm_c3": {
         "recall": 0.0,
         "specificity": 1.0,
         "bal_acc": 0.5,
         "bal_acc_ci": [
-          0.412,
-          0.588
+          0.452,
+          0.548
         ],
         "precision": 0.0,
         "precision_ci": null,
@@ -367,111 +511,14 @@
         "f1": 0.0,
         "recall_ci": [
           0.0,
-          0.176
+          0.096
         ],
         "tp": 0,
-        "fn": 18,
+        "fn": 36,
         "fp": 0,
-        "tn": 18,
-        "n_pos": 18,
-        "n_neg": 18
-      },
-      "vlm_best": {
-        "recall": 0.0,
-        "specificity": 1.0,
-        "bal_acc": 0.5,
-        "bal_acc_ci": [
-          0.412,
-          0.588
-        ],
-        "precision": 0.0,
-        "precision_ci": null,
-        "fpr": 0.0,
-        "f1": 0.0,
-        "recall_ci": [
-          0.0,
-          0.176
-        ],
-        "tp": 0,
-        "fn": 18,
-        "fp": 0,
-        "tn": 18,
-        "n_pos": 18,
-        "n_neg": 18
-      }
-    },
-    "G1_TEXT_OVERFLOW": {
-      "linter": {
-        "recall": 1.0,
-        "specificity": 1.0,
-        "bal_acc": 1.0,
-        "bal_acc_ci": [
-          0.912,
-          1.0
-        ],
-        "precision": 1.0,
-        "precision_ci": [
-          0.912,
-          1.0
-        ],
-        "fpr": 0.0,
-        "f1": 1.0,
-        "recall_ci": [
-          0.912,
-          1.0
-        ],
-        "tp": 40,
-        "fn": 0,
-        "fp": 0,
-        "tn": 40,
-        "n_pos": 40,
-        "n_neg": 40
-      },
-      "vlm_c0": {
-        "recall": 0.0,
-        "specificity": 1.0,
-        "bal_acc": 0.5,
-        "bal_acc_ci": [
-          0.456,
-          0.544
-        ],
-        "precision": 0.0,
-        "precision_ci": null,
-        "fpr": 0.0,
-        "f1": 0.0,
-        "recall_ci": [
-          0.0,
-          0.088
-        ],
-        "tp": 0,
-        "fn": 40,
-        "fp": 0,
-        "tn": 40,
-        "n_pos": 40,
-        "n_neg": 40
-      },
-      "vlm_best": {
-        "recall": 0.0,
-        "specificity": 1.0,
-        "bal_acc": 0.5,
-        "bal_acc_ci": [
-          0.456,
-          0.544
-        ],
-        "precision": 0.0,
-        "precision_ci": null,
-        "fpr": 0.0,
-        "f1": 0.0,
-        "recall_ci": [
-          0.0,
-          0.088
-        ],
-        "tp": 0,
-        "fn": 40,
-        "fp": 0,
-        "tn": 40,
-        "n_pos": 40,
-        "n_neg": 40
+        "tn": 36,
+        "n_pos": 36,
+        "n_neg": 36
       }
     },
     "G7_RENDER_CONTAINMENT_OVERFLOW": {
@@ -522,6 +569,32 @@
         "n_neg": 40
       },
       "vlm_best": {
+        "recall": 1.0,
+        "specificity": 1.0,
+        "bal_acc": 1.0,
+        "bal_acc_ci": [
+          0.912,
+          1.0
+        ],
+        "precision": 1.0,
+        "precision_ci": [
+          0.912,
+          1.0
+        ],
+        "fpr": 0.0,
+        "f1": 1.0,
+        "recall_ci": [
+          0.912,
+          1.0
+        ],
+        "tp": 40,
+        "fn": 0,
+        "fp": 0,
+        "tn": 40,
+        "n_pos": 40,
+        "n_neg": 40
+      },
+      "vlm_c3": {
         "recall": 1.0,
         "specificity": 1.0,
         "bal_acc": 1.0,
@@ -649,6 +722,32 @@
         "tn": 8,
         "n_pos": 18,
         "n_neg": 18
+      },
+      "vlm_c3": {
+        "recall": 1.0,
+        "specificity": 0.667,
+        "bal_acc": 0.833,
+        "bal_acc_ci": [
+          0.631,
+          0.919
+        ],
+        "precision": 0.75,
+        "precision_ci": [
+          0.551,
+          0.88
+        ],
+        "fpr": 0.333,
+        "f1": 0.857,
+        "recall_ci": [
+          0.824,
+          1.0
+        ],
+        "tp": 18,
+        "fn": 0,
+        "fp": 6,
+        "tn": 12,
+        "n_pos": 18,
+        "n_neg": 18
       }
     },
     "S4_DENSITY_RULE_VIOLATION": {
@@ -752,11 +851,157 @@
         "tn": 36,
         "n_pos": 36,
         "n_neg": 36
+      },
+      "vlm_c3": {
+        "recall": 0.861,
+        "specificity": 1.0,
+        "bal_acc": 0.931,
+        "bal_acc_ci": [
+          0.808,
+          0.97
+        ],
+        "precision": 1.0,
+        "precision_ci": [
+          0.89,
+          1.0
+        ],
+        "fpr": 0.0,
+        "f1": 0.925,
+        "recall_ci": [
+          0.713,
+          0.939
+        ],
+        "tp": 31,
+        "fn": 5,
+        "fp": 0,
+        "tn": 36,
+        "n_pos": 36,
+        "n_neg": 36
+      }
+    },
+    "S6_IMAGE_TEXT_CONTRADICTION": {
+      "linter": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "bal_acc_ci": [
+          0.412,
+          0.588
+        ],
+        "precision": 0.0,
+        "precision_ci": null,
+        "fpr": 0.0,
+        "f1": 0.0,
+        "recall_ci": [
+          0.0,
+          0.176
+        ],
+        "tp": 0,
+        "fn": 18,
+        "fp": 0,
+        "tn": 18,
+        "n_pos": 18,
+        "n_neg": 18
+      },
+      "vlm_c0": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "bal_acc_ci": [
+          0.412,
+          0.588
+        ],
+        "precision": 0.0,
+        "precision_ci": null,
+        "fpr": 0.0,
+        "f1": 0.0,
+        "recall_ci": [
+          0.0,
+          0.176
+        ],
+        "tp": 0,
+        "fn": 18,
+        "fp": 0,
+        "tn": 18,
+        "n_pos": 18,
+        "n_neg": 18
+      },
+      "vlm_best": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "bal_acc_ci": [
+          0.412,
+          0.588
+        ],
+        "precision": 0.0,
+        "precision_ci": null,
+        "fpr": 0.0,
+        "f1": 0.0,
+        "recall_ci": [
+          0.0,
+          0.176
+        ],
+        "tp": 0,
+        "fn": 18,
+        "fp": 0,
+        "tn": 18,
+        "n_pos": 18,
+        "n_neg": 18
+      },
+      "vlm_c3": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "bal_acc_ci": [
+          0.412,
+          0.588
+        ],
+        "precision": 0.0,
+        "precision_ci": null,
+        "fpr": 0.0,
+        "f1": 0.0,
+        "recall_ci": [
+          0.0,
+          0.176
+        ],
+        "tp": 0,
+        "fn": 18,
+        "fp": 0,
+        "tn": 18,
+        "n_pos": 18,
+        "n_neg": 18
       }
     }
   },
   "config_per_class": {
     "linter_only": {
+      "G1_TEXT_OVERFLOW": {
+        "recall": 1.0,
+        "specificity": 1.0,
+        "bal_acc": 1.0,
+        "bal_acc_ci": [
+          0.912,
+          1.0
+        ],
+        "precision": 1.0,
+        "precision_ci": [
+          0.912,
+          1.0
+        ],
+        "fpr": 0.0,
+        "f1": 1.0,
+        "recall_ci": [
+          0.912,
+          1.0
+        ],
+        "tp": 40,
+        "fn": 0,
+        "fp": 0,
+        "tn": 40,
+        "n_pos": 40,
+        "n_neg": 40
+      },
       "G2_ELEMENT_OVERLAP": {
         "recall": 0.6,
         "specificity": 1.0,
@@ -861,55 +1106,6 @@
         "n_pos": 36,
         "n_neg": 36
       },
-      "S6_IMAGE_TEXT_CONTRADICTION": {
-        "recall": 0.0,
-        "specificity": 1.0,
-        "bal_acc": 0.5,
-        "bal_acc_ci": [
-          0.412,
-          0.588
-        ],
-        "precision": 0.0,
-        "precision_ci": null,
-        "fpr": 0.0,
-        "f1": 0.0,
-        "recall_ci": [
-          0.0,
-          0.176
-        ],
-        "tp": 0,
-        "fn": 18,
-        "fp": 0,
-        "tn": 18,
-        "n_pos": 18,
-        "n_neg": 18
-      },
-      "G1_TEXT_OVERFLOW": {
-        "recall": 1.0,
-        "specificity": 1.0,
-        "bal_acc": 1.0,
-        "bal_acc_ci": [
-          0.912,
-          1.0
-        ],
-        "precision": 1.0,
-        "precision_ci": [
-          0.912,
-          1.0
-        ],
-        "fpr": 0.0,
-        "f1": 1.0,
-        "recall_ci": [
-          0.912,
-          1.0
-        ],
-        "tp": 40,
-        "fn": 0,
-        "fp": 0,
-        "tn": 40,
-        "n_pos": 40,
-        "n_neg": 40
-      },
       "G7_RENDER_CONTAINMENT_OVERFLOW": {
         "recall": 0.0,
         "specificity": 0.0,
@@ -978,9 +1174,55 @@
         "tn": 36,
         "n_pos": 36,
         "n_neg": 36
+      },
+      "S6_IMAGE_TEXT_CONTRADICTION": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "bal_acc_ci": [
+          0.412,
+          0.588
+        ],
+        "precision": 0.0,
+        "precision_ci": null,
+        "fpr": 0.0,
+        "f1": 0.0,
+        "recall_ci": [
+          0.0,
+          0.176
+        ],
+        "tp": 0,
+        "fn": 18,
+        "fp": 0,
+        "tn": 18,
+        "n_pos": 18,
+        "n_neg": 18
       }
     },
     "vlm_only": {
+      "G1_TEXT_OVERFLOW": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "bal_acc_ci": [
+          0.456,
+          0.544
+        ],
+        "precision": 0.0,
+        "precision_ci": null,
+        "fpr": 0.0,
+        "f1": 0.0,
+        "recall_ci": [
+          0.0,
+          0.088
+        ],
+        "tp": 0,
+        "fn": 40,
+        "fp": 0,
+        "tn": 40,
+        "n_pos": 40,
+        "n_neg": 40
+      },
       "G2_ELEMENT_OVERLAP": {
         "recall": 0.425,
         "specificity": 1.0,
@@ -1079,52 +1321,6 @@
         "n_pos": 36,
         "n_neg": 36
       },
-      "S6_IMAGE_TEXT_CONTRADICTION": {
-        "recall": 0.0,
-        "specificity": 1.0,
-        "bal_acc": 0.5,
-        "bal_acc_ci": [
-          0.412,
-          0.588
-        ],
-        "precision": 0.0,
-        "precision_ci": null,
-        "fpr": 0.0,
-        "f1": 0.0,
-        "recall_ci": [
-          0.0,
-          0.176
-        ],
-        "tp": 0,
-        "fn": 18,
-        "fp": 0,
-        "tn": 18,
-        "n_pos": 18,
-        "n_neg": 18
-      },
-      "G1_TEXT_OVERFLOW": {
-        "recall": 0.0,
-        "specificity": 1.0,
-        "bal_acc": 0.5,
-        "bal_acc_ci": [
-          0.456,
-          0.544
-        ],
-        "precision": 0.0,
-        "precision_ci": null,
-        "fpr": 0.0,
-        "f1": 0.0,
-        "recall_ci": [
-          0.0,
-          0.088
-        ],
-        "tp": 0,
-        "fn": 40,
-        "fp": 0,
-        "tn": 40,
-        "n_pos": 40,
-        "n_neg": 40
-      },
       "G7_RENDER_CONTAINMENT_OVERFLOW": {
         "recall": 0.0,
         "specificity": 1.0,
@@ -1199,9 +1395,279 @@
         "tn": 35,
         "n_pos": 36,
         "n_neg": 36
+      },
+      "S6_IMAGE_TEXT_CONTRADICTION": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "bal_acc_ci": [
+          0.412,
+          0.588
+        ],
+        "precision": 0.0,
+        "precision_ci": null,
+        "fpr": 0.0,
+        "f1": 0.0,
+        "recall_ci": [
+          0.0,
+          0.176
+        ],
+        "tp": 0,
+        "fn": 18,
+        "fp": 0,
+        "tn": 18,
+        "n_pos": 18,
+        "n_neg": 18
       }
     },
-    "hybrid": {
+    "vlm_c3_everywhere": {
+      "G1_TEXT_OVERFLOW": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "bal_acc_ci": [
+          0.456,
+          0.544
+        ],
+        "precision": 0.0,
+        "precision_ci": null,
+        "fpr": 0.0,
+        "f1": 0.0,
+        "recall_ci": [
+          0.0,
+          0.088
+        ],
+        "tp": 0,
+        "fn": 40,
+        "fp": 0,
+        "tn": 40,
+        "n_pos": 40,
+        "n_neg": 40
+      },
+      "G2_ELEMENT_OVERLAP": {
+        "recall": 0.725,
+        "specificity": 1.0,
+        "bal_acc": 0.863,
+        "bal_acc_ci": [
+          0.742,
+          0.919
+        ],
+        "precision": 1.0,
+        "precision_ci": [
+          0.883,
+          1.0
+        ],
+        "fpr": 0.0,
+        "f1": 0.841,
+        "recall_ci": [
+          0.572,
+          0.839
+        ],
+        "tp": 29,
+        "fn": 11,
+        "fp": 0,
+        "tn": 40,
+        "n_pos": 40,
+        "n_neg": 40
+      },
+      "G3_ALIGNMENT_OFFSET": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "bal_acc_ci": [
+          0.452,
+          0.548
+        ],
+        "precision": 0.0,
+        "precision_ci": null,
+        "fpr": 0.0,
+        "f1": 0.0,
+        "recall_ci": [
+          0.0,
+          0.096
+        ],
+        "tp": 0,
+        "fn": 36,
+        "fp": 0,
+        "tn": 36,
+        "n_pos": 36,
+        "n_neg": 36
+      },
+      "G5_BRAND_COLOR_VIOLATION": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "bal_acc_ci": [
+          0.456,
+          0.544
+        ],
+        "precision": 0.0,
+        "precision_ci": null,
+        "fpr": 0.0,
+        "f1": 0.0,
+        "recall_ci": [
+          0.0,
+          0.088
+        ],
+        "tp": 0,
+        "fn": 40,
+        "fp": 0,
+        "tn": 40,
+        "n_pos": 40,
+        "n_neg": 40
+      },
+      "G6_MARGIN_VIOLATION": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "bal_acc_ci": [
+          0.452,
+          0.548
+        ],
+        "precision": 0.0,
+        "precision_ci": null,
+        "fpr": 0.0,
+        "f1": 0.0,
+        "recall_ci": [
+          0.0,
+          0.096
+        ],
+        "tp": 0,
+        "fn": 36,
+        "fp": 0,
+        "tn": 36,
+        "n_pos": 36,
+        "n_neg": 36
+      },
+      "G7_RENDER_CONTAINMENT_OVERFLOW": {
+        "recall": 1.0,
+        "specificity": 1.0,
+        "bal_acc": 1.0,
+        "bal_acc_ci": [
+          0.912,
+          1.0
+        ],
+        "precision": 1.0,
+        "precision_ci": [
+          0.912,
+          1.0
+        ],
+        "fpr": 0.0,
+        "f1": 1.0,
+        "recall_ci": [
+          0.912,
+          1.0
+        ],
+        "tp": 40,
+        "fn": 0,
+        "fp": 0,
+        "tn": 40,
+        "n_pos": 40,
+        "n_neg": 40
+      },
+      "S1_TITLE_BODY_MISMATCH": {
+        "recall": 1.0,
+        "specificity": 0.667,
+        "bal_acc": 0.833,
+        "bal_acc_ci": [
+          0.631,
+          0.919
+        ],
+        "precision": 0.75,
+        "precision_ci": [
+          0.551,
+          0.88
+        ],
+        "fpr": 0.333,
+        "f1": 0.857,
+        "recall_ci": [
+          0.824,
+          1.0
+        ],
+        "tp": 18,
+        "fn": 0,
+        "fp": 6,
+        "tn": 12,
+        "n_pos": 18,
+        "n_neg": 18
+      },
+      "S4_DENSITY_RULE_VIOLATION": {
+        "recall": 0.861,
+        "specificity": 1.0,
+        "bal_acc": 0.931,
+        "bal_acc_ci": [
+          0.808,
+          0.97
+        ],
+        "precision": 1.0,
+        "precision_ci": [
+          0.89,
+          1.0
+        ],
+        "fpr": 0.0,
+        "f1": 0.925,
+        "recall_ci": [
+          0.713,
+          0.939
+        ],
+        "tp": 31,
+        "fn": 5,
+        "fp": 0,
+        "tn": 36,
+        "n_pos": 36,
+        "n_neg": 36
+      },
+      "S6_IMAGE_TEXT_CONTRADICTION": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "bal_acc_ci": [
+          0.412,
+          0.588
+        ],
+        "precision": 0.0,
+        "precision_ci": null,
+        "fpr": 0.0,
+        "f1": 0.0,
+        "recall_ci": [
+          0.0,
+          0.176
+        ],
+        "tp": 0,
+        "fn": 18,
+        "fp": 0,
+        "tn": 18,
+        "n_pos": 18,
+        "n_neg": 18
+      }
+    },
+    "linter_plus_vlmc3": {
+      "G1_TEXT_OVERFLOW": {
+        "recall": 1.0,
+        "specificity": 1.0,
+        "bal_acc": 1.0,
+        "bal_acc_ci": [
+          0.912,
+          1.0
+        ],
+        "precision": 1.0,
+        "precision_ci": [
+          0.912,
+          1.0
+        ],
+        "fpr": 0.0,
+        "f1": 1.0,
+        "recall_ci": [
+          0.912,
+          1.0
+        ],
+        "tp": 40,
+        "fn": 0,
+        "fp": 0,
+        "tn": 40,
+        "n_pos": 40,
+        "n_neg": 40
+      },
       "G2_ELEMENT_OVERLAP": {
         "recall": 0.6,
         "specificity": 1.0,
@@ -1306,6 +1772,84 @@
         "n_pos": 36,
         "n_neg": 36
       },
+      "G7_RENDER_CONTAINMENT_OVERFLOW": {
+        "recall": 1.0,
+        "specificity": 1.0,
+        "bal_acc": 1.0,
+        "bal_acc_ci": [
+          0.912,
+          1.0
+        ],
+        "precision": 1.0,
+        "precision_ci": [
+          0.912,
+          1.0
+        ],
+        "fpr": 0.0,
+        "f1": 1.0,
+        "recall_ci": [
+          0.912,
+          1.0
+        ],
+        "tp": 40,
+        "fn": 0,
+        "fp": 0,
+        "tn": 40,
+        "n_pos": 40,
+        "n_neg": 40
+      },
+      "S1_TITLE_BODY_MISMATCH": {
+        "recall": 1.0,
+        "specificity": 0.667,
+        "bal_acc": 0.833,
+        "bal_acc_ci": [
+          0.631,
+          0.919
+        ],
+        "precision": 0.75,
+        "precision_ci": [
+          0.551,
+          0.88
+        ],
+        "fpr": 0.333,
+        "f1": 0.857,
+        "recall_ci": [
+          0.824,
+          1.0
+        ],
+        "tp": 18,
+        "fn": 0,
+        "fp": 6,
+        "tn": 12,
+        "n_pos": 18,
+        "n_neg": 18
+      },
+      "S4_DENSITY_RULE_VIOLATION": {
+        "recall": 0.861,
+        "specificity": 1.0,
+        "bal_acc": 0.931,
+        "bal_acc_ci": [
+          0.808,
+          0.97
+        ],
+        "precision": 1.0,
+        "precision_ci": [
+          0.89,
+          1.0
+        ],
+        "fpr": 0.0,
+        "f1": 0.925,
+        "recall_ci": [
+          0.713,
+          0.939
+        ],
+        "tp": 31,
+        "fn": 5,
+        "fp": 0,
+        "tn": 36,
+        "n_pos": 36,
+        "n_neg": 36
+      },
       "S6_IMAGE_TEXT_CONTRADICTION": {
         "recall": 0.0,
         "specificity": 1.0,
@@ -1328,7 +1872,9 @@
         "tn": 18,
         "n_pos": 18,
         "n_neg": 18
-      },
+      }
+    },
+    "hybrid": {
       "G1_TEXT_OVERFLOW": {
         "recall": 1.0,
         "specificity": 1.0,
@@ -1354,6 +1900,110 @@
         "tn": 40,
         "n_pos": 40,
         "n_neg": 40
+      },
+      "G2_ELEMENT_OVERLAP": {
+        "recall": 0.6,
+        "specificity": 1.0,
+        "bal_acc": 0.8,
+        "bal_acc_ci": [
+          0.679,
+          0.868
+        ],
+        "precision": 1.0,
+        "precision_ci": [
+          0.862,
+          1.0
+        ],
+        "fpr": 0.0,
+        "f1": 0.75,
+        "recall_ci": [
+          0.446,
+          0.737
+        ],
+        "tp": 24,
+        "fn": 16,
+        "fp": 0,
+        "tn": 40,
+        "n_pos": 40,
+        "n_neg": 40
+      },
+      "G3_ALIGNMENT_OFFSET": {
+        "recall": 1.0,
+        "specificity": 1.0,
+        "bal_acc": 1.0,
+        "bal_acc_ci": [
+          0.904,
+          1.0
+        ],
+        "precision": 1.0,
+        "precision_ci": [
+          0.904,
+          1.0
+        ],
+        "fpr": 0.0,
+        "f1": 1.0,
+        "recall_ci": [
+          0.904,
+          1.0
+        ],
+        "tp": 36,
+        "fn": 0,
+        "fp": 0,
+        "tn": 36,
+        "n_pos": 36,
+        "n_neg": 36
+      },
+      "G5_BRAND_COLOR_VIOLATION": {
+        "recall": 1.0,
+        "specificity": 1.0,
+        "bal_acc": 1.0,
+        "bal_acc_ci": [
+          0.912,
+          1.0
+        ],
+        "precision": 1.0,
+        "precision_ci": [
+          0.912,
+          1.0
+        ],
+        "fpr": 0.0,
+        "f1": 1.0,
+        "recall_ci": [
+          0.912,
+          1.0
+        ],
+        "tp": 40,
+        "fn": 0,
+        "fp": 0,
+        "tn": 40,
+        "n_pos": 40,
+        "n_neg": 40
+      },
+      "G6_MARGIN_VIOLATION": {
+        "recall": 1.0,
+        "specificity": 1.0,
+        "bal_acc": 1.0,
+        "bal_acc_ci": [
+          0.904,
+          1.0
+        ],
+        "precision": 1.0,
+        "precision_ci": [
+          0.904,
+          1.0
+        ],
+        "fpr": 0.0,
+        "f1": 1.0,
+        "recall_ci": [
+          0.904,
+          1.0
+        ],
+        "tp": 36,
+        "fn": 0,
+        "fp": 0,
+        "tn": 36,
+        "n_pos": 36,
+        "n_neg": 36
       },
       "G7_RENDER_CONTAINMENT_OVERFLOW": {
         "recall": 1.0,
@@ -1432,6 +2082,29 @@
         "tn": 36,
         "n_pos": 36,
         "n_neg": 36
+      },
+      "S6_IMAGE_TEXT_CONTRADICTION": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "bal_acc_ci": [
+          0.412,
+          0.588
+        ],
+        "precision": 0.0,
+        "precision_ci": null,
+        "fpr": 0.0,
+        "f1": 0.0,
+        "recall_ci": [
+          0.0,
+          0.176
+        ],
+        "tp": 0,
+        "fn": 18,
+        "fp": 0,
+        "tn": 18,
+        "n_pos": 18,
+        "n_neg": 18
       }
     }
   },
@@ -1441,11 +2114,11 @@
       "mean_bal_acc": 0.7,
       "n_covered_0.70": 5,
       "covered_classes": [
+        "G1_TEXT_OVERFLOW",
         "G2_ELEMENT_OVERLAP",
         "G3_ALIGNMENT_OFFSET",
         "G5_BRAND_COLOR_VIOLATION",
-        "G6_MARGIN_VIOLATION",
-        "G1_TEXT_OVERFLOW"
+        "G6_MARGIN_VIOLATION"
       ]
     },
     "vlm_only": {
@@ -1457,16 +2130,42 @@
         "S1_TITLE_BODY_MISMATCH"
       ]
     },
+    "vlm_c3_everywhere": {
+      "n_classes": 9,
+      "mean_bal_acc": 0.681,
+      "n_covered_0.70": 4,
+      "covered_classes": [
+        "G2_ELEMENT_OVERLAP",
+        "G7_RENDER_CONTAINMENT_OVERFLOW",
+        "S1_TITLE_BODY_MISMATCH",
+        "S4_DENSITY_RULE_VIOLATION"
+      ]
+    },
+    "linter_plus_vlmc3": {
+      "n_classes": 9,
+      "mean_bal_acc": 0.896,
+      "n_covered_0.70": 8,
+      "covered_classes": [
+        "G1_TEXT_OVERFLOW",
+        "G2_ELEMENT_OVERLAP",
+        "G3_ALIGNMENT_OFFSET",
+        "G5_BRAND_COLOR_VIOLATION",
+        "G6_MARGIN_VIOLATION",
+        "G7_RENDER_CONTAINMENT_OVERFLOW",
+        "S1_TITLE_BODY_MISMATCH",
+        "S4_DENSITY_RULE_VIOLATION"
+      ]
+    },
     "hybrid": {
       "n_classes": 9,
       "mean_bal_acc": 0.885,
       "n_covered_0.70": 8,
       "covered_classes": [
+        "G1_TEXT_OVERFLOW",
         "G2_ELEMENT_OVERLAP",
         "G3_ALIGNMENT_OFFSET",
         "G5_BRAND_COLOR_VIOLATION",
         "G6_MARGIN_VIOLATION",
-        "G1_TEXT_OVERFLOW",
         "G7_RENDER_CONTAINMENT_OVERFLOW",
         "S1_TITLE_BODY_MISMATCH",
         "S4_DENSITY_RULE_VIOLATION"

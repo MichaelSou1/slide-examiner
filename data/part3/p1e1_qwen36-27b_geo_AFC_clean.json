@@ -1,0 +1,46 @@
+{
+  "condition": "AFC_clean",
+  "mode": "clean",
+  "model": "qwen36-27b",
+  "style": "scoped",
+  "manifest": "/home/gpus/slide-examiner/data/part2/manifest_eval_test_rendered.jsonl",
+  "modalities": [
+    "A"
+  ],
+  "defects": [
+    "G1_TEXT_OVERFLOW",
+    "S6_IMAGE_TEXT_CONTRADICTION"
+  ],
+  "n_pairs": 72,
+  "failures": 0,
+  "afc": {
+    "G1_TEXT_OVERFLOW": {
+      "mode": "clean",
+      "n_pairs": 54,
+      "n_judgements": 108,
+      "decisive_rate": 0.019,
+      "tie_rate": 0.981,
+      "pick_first_rate": 1.0,
+      "n_pairs_both_orders_valid": 0,
+      "consistent_invention_rate": null,
+      "n_consistent_invention": 0,
+      "n_probe_worse": 1,
+      "n_partner_worse": 1,
+      "n_tie": 106
+    },
+    "S6_IMAGE_TEXT_CONTRADICTION": {
+      "mode": "clean",
+      "n_pairs": 18,
+      "n_judgements": 36,
+      "decisive_rate": 0.0,
+      "tie_rate": 1.0,
+      "pick_first_rate": null,
+      "n_pairs_both_orders_valid": 0,
+      "consistent_invention_rate": null,
+      "n_consistent_invention": 0,
+      "n_probe_worse": 0,
+      "n_partner_worse": 0,
+      "n_tie": 36
+    }
+  }
+}

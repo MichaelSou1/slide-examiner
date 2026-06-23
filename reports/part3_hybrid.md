@@ -1,7 +1,8 @@
 # Part 3 (Hybrid arm) — A symbolic–neural critic for slide defects, and recovering VLM detection that pointwise rubric grading suppresses
 
 > **Status:** Protocols 1–3 complete. Protocol-1 = elicitation recovery (6 models / 4 families); Protocol-2 =
-> hybrid-critic coverage (hybrid 8/9 @ 0.885 vs linter 5/9 / VLM 2/9) + honest SlideAudit image-only scoping;
+> hybrid-critic coverage (minimal linter+VLM-C3 8/9 @ 0.896; pre-registered routed hybrid 8/9 @ 0.885;
+> linter 5/9 / VLM-C0 2/9 / VLM-C3 4/9) + honest SlideAudit image-only scoping;
 > Protocol-3 = multi-RM reward audit (3 scorers: narrow document/aesthetic rewards blind to G7, a general-VLM reward
 > detects it) + perturbation-fidelity audit (45% snap-absorbed, zero-signal across all rewards).
 > This is an **additive arm** to [part3.md](part3.md) (the self-refine / GEPA downstream-utility study) — a
@@ -25,9 +26,10 @@ Four claims map to the three protocols:
 1. **(Protocol 1, load-bearing)** For the rescuable classes, changing *elicitation* — not the model — recovers
    detection that the pointwise+rubric format suppresses; the **C3-vs-C0** contrast isolates "format suppression,
    not capability."
-2. **(Protocol 2)** A static router (defect→engine) gives a hybrid critic that **covers strictly more** than either
-   the linter alone or a VLM alone; G7 is caught by the VLM engine while the linter **and** a pure-neural reward
-   baseline both miss it.
+2. **(Protocol 2)** A minimal hybrid critic — the symbolic linter plus one C3-prompted VLM — covers the same 8/9
+   classes as the pre-registered routed hybrid, and slightly higher mean bal-acc in this run (0.896 vs 0.885).
+   This falsifies "elaborate routing is necessary" and strengthens the cleaner claim: the key is
+   **linter ⊕ VLM-C3**, not per-class prompt tuning.
 3. **(Protocol 3)** The G7 blind spot is a property of **narrow critics**: across 3 published reward scorers, a
    document-structure reward and a pure-aesthetic scorer are insensitive to G7 (at chance), but a capable
    general-multimodal reward detects it — so "G7 needs a VLM engine" holds whether that VLM is prompted (Result 1)
@@ -41,7 +43,7 @@ Four claims map to the three protocols:
 | Claim | Evidence (this report) | Cross-ref (Parts 1–2) |
 |---|---|---|
 | **1.** Changing *elicitation* (not the model) recovers detection that pointwise+rubric suppresses; C3-vs-C0 isolates "format suppression, not capability". | Result 1: C3 rescues G7 across Qwen 9B/27B/3.6 + Gemma4 (0.50/0.93/0.52/0.75 → 0.93–1.00); replicates over 4 families. C3>C0 on real SlideAudit too (Result 2b). | 30B free-form vs pointwise on the ToC slide (A.1.2). |
-| **2.** A static per-defect router gives a hybrid that covers **strictly more** than linter-alone or VLM-alone; G7 is caught by the VLM engine while the linter misses it. | Result 2a: hybrid **8/9 @ 0.885** vs linter 5/9 @0.70, VLM 2/9 @0.57; **G7: linter 0.00 / VLM-C0 0.50 / hybrid 1.00**. | linter 0.75–1.0 on geometry; DesignLab 0.149 placement recall. |
+| **2.** The necessary hybrid is minimal: linter for declared geometry plus one C3-prompted VLM for the rest. Per-class routing buys little here. | Result 2a: **linter+VLM-C3 8/9 @ 0.896**, routed hybrid **8/9 @ 0.885**, linter 5/9 @0.70, VLM-C0 2/9 @0.57, VLM-C3 4/9 @0.681. **G7: linter 0.00 / VLM-C0 0.50 / VLM-C3 1.00**. | linter 0.75–1.0 on geometry; DesignLab 0.149 placement recall. |
 | **3.** The G7 blind spot is a property of *narrow* critics, not all neural rewards; a fidelity audit quantifies the "injected-but-not-rendered" hazard. | Result 3a (3-RM, n=90): DocReward G7 **0.48**, LAION-aesthetic **0.57** (both CI-spanning-chance) vs Skywork-VL **0.79** (detects). Result 3b: **45%** snapped away; snap-absorbed → gap 0.0 for **all** rewards. | snap-bug byte/structure check (Part 2); Result-1 C3 = prompted VLM also detects G7. |
 | **4.** The contribution is the **per-defect bottleneck dichotomy + the falsifiable G7 linter-blind class + real-data scoping**, not "beating DocReward". | All four Results + honest SlideAudit image-only degradation + S6 negative. | Part-1 sub-perceptual geometry; Part-2 examiner + linter routing. |
 | **5.** The perception/capability split **replicates on real layouts** with a lossless tool oracle (closes the §8 "can't run structured eval on real slides" hole). | Result 4 (Zenodo10K, 209 real pairs, 3 models): all 3 outcomes appear — G1/G2 image-sufficient, **G6 margin perception (B 0.70 > A 0.59, structure rescues weak VLMs)**, **G3 alignment capability (A=B=C≈0.50, → linter)**; real-deck render-fidelity 0.93 (vs synthetic 45% absorbed). | Part-1 A/B/C synthetic attribution; §4 template-absorption hazard (now shown template-specific). |
@@ -215,46 +217,50 @@ itself are deferred to Protocols 2–3.
 
 `slide_examiner/hybrid_critic.py` wires a **static router** (`defect → engine`) over three engines and one served
 VLM/LLM endpoint (Qwen3.5-27B): the symbolic **linter** (`lint_slide`/`lint_deck`, shipped defaults, ~0 FP), the
-**VLM** under its best Protocol-1 elicitation (G7→C3, S6/S1→C0), and a text-only **LLM** (S4 density, deck
-semantics). We score three *critic configurations* on the same paired-clean synthetic slides, per class, by **named
+**VLM** under either C0 or C3 elicitation, and the pre-registered text-only **LLM** route for S4 density / deck
+semantics. We score five *critic configurations* on the same paired-clean synthetic slides, per class, by **named
 attribution** (the critic must emit the *correct* defect type on the defective image and not on its clean twin),
 at paired-clean balanced accuracy · precision (`scripts/part3_p2_eval.py`, `data/part3/p2_synth.json`,
 freeform renders, mpd=40).
 
 ### Result 2a — synthetic all-class coverage
 
-| Defect | router | linter-only | VLM-only (C0) | **hybrid** |
-|---|---|---|---|---|
-| G1 overflow | linter | 1.00 p1.00 | 0.50 | **1.00 p1.00** |
-| G2 overlap | linter | 0.80 p1.00 | 0.71 p1.00 | **0.80 p1.00** |
-| G3 alignment | linter | 1.00 p1.00 | 0.47 | **1.00 p1.00** |
-| G5 colour | linter | 1.00 p1.00 | 0.50 | **1.00 p1.00** |
-| G6 margin | linter | 1.00 p1.00 | 0.50 | **1.00 p1.00** |
-| **G7 render-overflow** | VLM (C3) | **0.00** | 0.50 | **1.00 p1.00** |
-| S1 title-body | VLM (C0) | 0.50 | 0.94 p0.90 | **0.94 p0.90** |
-| S4 density | LLM | 0.50 | 0.51 | **0.72 p1.00** |
-| S6 image-text | VLM | 0.50 | 0.50 | 0.50 |
+| Defect | router | linter-only | VLM-C0 | VLM-C3 | linter+VLM-C3 | routed hybrid |
+|---|---|---|---|---|---|---|
+| G1 overflow | linter | 1.00 p1.00 | 0.50 | 0.50 | **1.00 p1.00** | **1.00 p1.00** |
+| G2 overlap | linter | 0.80 p1.00 | 0.71 p1.00 | **0.86 p1.00** | 0.80 p1.00 | 0.80 p1.00 |
+| G3 alignment | linter | 1.00 p1.00 | 0.47 | 0.50 | **1.00 p1.00** | **1.00 p1.00** |
+| G5 colour | linter | 1.00 p1.00 | 0.50 | 0.50 | **1.00 p1.00** | **1.00 p1.00** |
+| G6 margin | linter | 1.00 p1.00 | 0.50 | 0.50 | **1.00 p1.00** | **1.00 p1.00** |
+| **G7 render-overflow** | VLM (C3) | **0.00** | 0.50 | **1.00 p1.00** | **1.00 p1.00** | **1.00 p1.00** |
+| S1 title-body | VLM (C0) | 0.50 | **0.94 p0.90** | 0.83 p0.75 | 0.83 p0.75 | **0.94 p0.90** |
+| S4 density | LLM | 0.50 | 0.51 | **0.93 p1.00** | **0.93 p1.00** | 0.72 p1.00 |
+| S6 image-text | VLM | 0.50 | 0.50 | 0.50 | 0.50 | 0.50 |
 
 | Critic config | mean bal-acc | classes covered (bal-acc ≥ 0.70 & precision ≥ 0.70) |
 |---|---|---|
 | linter-only | 0.70 | **5 / 9** (G1, G2, G3, G5, G6 — all geometry) |
 | VLM-only (C0) | 0.57 | **2 / 9** (G2, S1) |
-| **hybrid (routed)** | **0.885** | **8 / 9** (all but S6) |
+| VLM-C3 everywhere | 0.681 | **4 / 9** (G2, G7, S1, S4) |
+| **linter+VLM-C3** | **0.896** | **8 / 9** (all but S6) |
+| routed hybrid | 0.885 | **8 / 9** (all but S6) |
 
-![Per-defect coverage: linter vs single VLM vs routed hybrid](../docs/figs/p3_coverage_heatmap.png)
+![Per-defect coverage: linter, VLM-C0, VLM-C3, linter+VLM-C3, routed hybrid](../docs/figs/p3_coverage_heatmap.png)
 
-**Reading.** The hybrid **strictly dominates** both single-engine critics — mean bal-acc 0.885 vs 0.70
-(linter) / 0.57 (VLM), and 8/9 classes covered vs 5/9 / 2/9 — because the engines are *complementary*, exactly as
-the bottleneck dichotomy predicts:
+**Reading.** E3 falsifies the stronger "elaborate routing is necessary" story. The minimal hybrid
+**linter+VLM-C3** reaches **8/9 @ 0.896**, matching coverage and slightly exceeding the pre-registered routed
+hybrid (**8/9 @ 0.885**). The cleaner claim is therefore: use the linter for declared geometry and one
+C3-prompted VLM for the non-linter residue; per-class VLM/LLM tuning is not load-bearing here.
 
 1. **Linter owns declared geometry** (G1–G6: 0.80–1.00 at precision 1.00) where the **VLM is at floor** (C0
-   0.47–0.71, cannot name fine alignment/colour/margin from pixels — the Part-1 sub-perceptual result).
+   0.47–0.71; C3 stays at 0.50 on G1/G3/G5/G6) — the Part-1 sub-perceptual result.
 2. **VLM owns the render class G7** — the load-bearing cell: **linter 0.00** (blind by construction), **VLM-C0
-   0.50** (cannot *name* the off-taxonomy class), **hybrid 1.00 at precision 1.00** via the C3 atomic-binary engine.
-   No single *narrow* engine covers G7; the hybrid does. (Result 3a: the linter, a document-structure reward
+   0.50** (cannot *name* the off-taxonomy class), **VLM-C3 1.00 at precision 1.00** via the atomic-binary engine.
+   No linter-only or C0-only engine covers G7; the minimal hybrid does. (Result 3a: the linter, a document-structure reward
    (DocReward 0.48) and an aesthetic scorer (LAION 0.57) all miss G7, while a general-VLM reward (Skywork 0.79)
    detects it — confirming the engine G7 needs is a capable VLM, prompted or reward-headed.)
-3. **LLM owns density** S4 (0.72 at precision 1.00, where linter and pointwise-VLM are at chance).
+3. **C3 also catches density** S4 (0.93 at precision 1.00), stronger than the pre-registered text-LLM route
+   (0.72). We do not retroactively tune the routed column; the result is reported as the falsification branch.
 4. **A data-driven routing finding:** S1 title-body mismatch was initially routed to the text-LLM, but the text-only
    probe **over-flags** (0.25, precision 0.09) while the image-bearing VLM names it reliably (**0.94, precision
    0.90**). Title-body mismatch needs the *rendered layout*, not just the text — so the router assigns S1→VLM. We
@@ -475,9 +481,10 @@ not naturally-occurring), and SlideAudit remains the naturally-defective image-o
 
 **Conclusion.** A slide-defect critic should not be one model. Across three protocols on the same data we show: (1)
 the detection a pointwise+rubric VLM "loses" is mostly a *format* artifact — atomic-binary elicitation recovers it,
-and the effect replicates across 4 model families and transfers to real SlideAudit images; (2) routing each defect
-to its bottleneck-appropriate engine yields a hybrid that covers **8/9 classes (0.885)** where the best single
-engine covers 5/9 — and the linter-blind render class **G7 is caught only by the hybrid's VLM-C3 engine**; (3) across
+and the effect replicates across 4 model families and transfers to real SlideAudit images; (2) the minimal hybrid
+baseline **linter+VLM-C3** covers **8/9 classes (0.896)**, essentially matching the pre-registered routed hybrid
+(8/9, 0.885), so the result is cleaner than "elaborate routing": the necessary ingredient is linter for declared
+geometry plus one C3-prompted VLM for the rest; (3) across
 three published reward scorers, the G7 blind spot is a property of **narrow critics** — a document-structure reward
 (DocReward 0.48) and a pure-aesthetic scorer (LAION 0.57) miss it at chance, while a capable general-multimodal
 reward (Skywork-VL 0.79) detects it — so "G7 needs a capable VLM" holds whether the VLM is prompted or reward-headed;

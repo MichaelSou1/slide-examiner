@@ -1,7 +1,7 @@
 """Part 3 main figures for reports/part3_hybrid.md (Phase 5).
 
-Fig 1: per-defect coverage heatmap (linter / VLM-C0 / hybrid) — shows the
-       bottleneck dichotomy and that the hybrid takes the per-class best.
+Fig 1: per-defect coverage heatmap (linter / VLM-C0 / VLM-C3 / linter+C3 /
+       hybrid) — shows the bottleneck dichotomy and the no-routing baselines.
 Fig 2: DocReward preference accuracy per defect with the chance line — the G7
        (and G5) blind spot of a published neural reward model.
 
@@ -40,8 +40,9 @@ def fig_coverage():
     # read the authoritative per-config cells the merge computed (do NOT recompute
     # routing from the json's `router` field, which can be stale after a re-route).
     cp = d["config_per_class"]
-    cfgs = ["linter_only", "vlm_only", "hybrid"]
-    labels = ["linter\nonly", "VLM only\n(C0)", "hybrid\n(routed)"]
+    cfgs = ["linter_only", "vlm_only", "vlm_c3_everywhere", "linter_plus_vlmc3", "hybrid"]
+    labels = ["linter\nonly", "VLM only\n(C0)", "VLM-C3\neverywhere",
+              "linter+\nVLM-C3", "hybrid\n(routed)"]
     M = np.full((len(cfgs), len(ORDER)), np.nan)
     for j, dd in enumerate(ORDER):
         for i, c in enumerate(cfgs):
@@ -49,7 +50,7 @@ def fig_coverage():
             if v is not None:
                 M[i, j] = v
 
-    fig, ax = plt.subplots(figsize=(11, 3.4))
+    fig, ax = plt.subplots(figsize=(11, 4.3))
     im = ax.imshow(M, cmap="RdYlGn", vmin=0.4, vmax=1.0, aspect="auto")
     ax.set_xticks(range(len(ORDER)))
     ax.set_xticklabels([SHORT[d] for d in ORDER], fontsize=9)
@@ -61,11 +62,15 @@ def fig_coverage():
                 ax.text(j, i, f"{M[i, j]:.2f}", ha="center", va="center", fontsize=9,
                         color="black")
     cov = d["coverage"]
-    ax.set_title("Per-defect detection (balanced accuracy) — symbolic linter vs a single VLM vs the routed hybrid\n"
+    ax.set_title("Per-defect detection (balanced accuracy) — linter/VLM baselines vs the routed hybrid\n"
                  f"covered (≥0.70 & prec≥0.70):  linter {cov['linter_only']['n_covered_0.70']}/9   "
                  f"VLM {cov['vlm_only']['n_covered_0.70']}/9   "
-                 f"hybrid {cov['hybrid']['n_covered_0.70']}/9   |   "
-                 f"mean bal-acc {cov['linter_only']['mean_bal_acc']} / {cov['vlm_only']['mean_bal_acc']} / {cov['hybrid']['mean_bal_acc']}",
+                 f"VLM-C3 {cov.get('vlm_c3_everywhere', {}).get('n_covered_0.70', 'NA')}/9   "
+                 f"linter+C3 {cov.get('linter_plus_vlmc3', {}).get('n_covered_0.70', 'NA')}/9   "
+                 f"hybrid {cov['hybrid']['n_covered_0.70']}/9\n"
+                 f"mean bal-acc {cov['linter_only']['mean_bal_acc']} / {cov['vlm_only']['mean_bal_acc']} / "
+                 f"{cov.get('vlm_c3_everywhere', {}).get('mean_bal_acc', 'NA')} / "
+                 f"{cov.get('linter_plus_vlmc3', {}).get('mean_bal_acc', 'NA')} / {cov['hybrid']['mean_bal_acc']}",
                  fontsize=9.5)
     # highlight G7 column
     g7 = ORDER.index("G7_RENDER_CONTAINMENT_OVERFLOW")

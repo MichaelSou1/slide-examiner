@@ -89,7 +89,7 @@ def summarize(primary: dict, probe: dict, pixel_fidelity: dict | None = None):
                        "category": m["category"], "trained_reward": m["trained_reward"],
                        "preference_accuracy": cell["preference_accuracy"],
                        "preference_ci": cell["preference_ci"],
-                       "mean_gap": cell["mean_gap"],
+                       "mean_gap": cell["mean_gap"], "n": cell.get("n"),
                        "below_chance": is_below, "reliably_detects_g7": reliably})
         n_scorers_reliable += int(reliably)
         if m["trained_reward"]:
@@ -195,7 +195,7 @@ def main():
         flag = "DETECTS" if r["reliably_detects_g7"] else "blind (CI spans chance)"
         tr = "trained" if r["trained_reward"] else "heuristic"
         print(f"  {r['display_name']:28s} ({tr:9s}) pref={r['preference_accuracy']:.2f} "
-              f"CI{r['preference_ci']} gap={r['mean_gap']:+.3f}  [{flag}]")
+              f"CI{r['preference_ci']} (n={r.get('n')}) gap={r['mean_gap']:+.3f}  [{flag}]")
     print(f"\nVERDICT all_trained_rewards_<=_chance_on_G7 = "
           f"{audit_multi['verdict']['all_trained_rewards_at_or_below_chance_on_g7']}")
     if audit_multi["prompt_sensitivity_g7"]:

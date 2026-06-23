@@ -30,6 +30,8 @@ LOG = REPO / "runs/part3/p1"
 PORT = 8101
 GPUS = "0,1"  # overridden by --gpus; the TP=2 card pair to serve on
 GPU_UTIL = None  # overridden by --gpu-util (e.g. 0.55 when sharing the user's GPUs)
+KILL_STRAY = True  # set False (--no-stray-kill) for a parallel 2-server shard so one
+#                    shard's teardown does not kill the OTHER shard's EngineCore workers
 GEO = REPO / "data/part2/manifest_eval_test_rendered.jsonl"
 G7 = REPO / "data/part3/manifest_g7_rendered.jsonl"
 NOTHINK = {"chat_template_kwargs": {"enable_thinking": False}}
@@ -121,9 +123,11 @@ def teardown(proc: subprocess.Popen):
     except Exception:  # noqa: BLE001
         pass
     # belt-and-suspenders: reap stray EngineCore workers (orchestrator cmdline
-    # doesn't contain the pattern, so pgrep can't match self)
-    subprocess.run("for p in $(pgrep -f 'VLLM::EngineCore'); do kill -9 $p; done",
-                   shell=True, stderr=subprocess.DEVNULL)
+    # doesn't contain the pattern, so pgrep can't match self). Skipped for a
+    # parallel shard (KILL_STRAY=False) — it would reap the sibling shard's workers.
+    if KILL_STRAY:
+        subprocess.run("for p in $(pgrep -f 'VLLM::EngineCore'); do kill -9 $p; done",
+                       shell=True, stderr=subprocess.DEVNULL)
     time.sleep(4)
 
 
@@ -142,7 +146,8 @@ def gpu_free_wait(timeout=120):
         time.sleep(4)
 
 
-def run_elicit(m, mpd: int, conds: list[str], tags: list[str]):
+def run_elicit(m, mpd: int, conds: list[str], tags: list[str], freeform_only: bool = False,
+               out_prefix: str = "p1"):
     base = f"http://127.0.0.1:{PORT}/v1"
     env = {**os.environ}
     if m.get("chat_kwargs"):
@@ -157,13 +162,15 @@ def run_elicit(m, mpd: int, conds: list[str], tags: list[str]):
     for tag in tags:
         manifest, defects = jobs[tag]
         for cond in conds:
-            log(f"  elicit {m['key']} {tag} {cond} (mpd={mpd}, workers={workers})")
+            log(f"  elicit {m['key']} {tag} {cond} (mpd={mpd}, workers={workers}, freeform_only={freeform_only})")
             cmd = [HARNESS_PY, str(REPO / "scripts/part3_elicit.py"), "--condition", cond,
                    "--manifest", str(manifest), "--base-url", base, "--model", m["key"],
                    "--style", "scoped", "--defects", *defects, "--modalities", "A",
                    "--max-per-defect", str(mpd), "--max-tokens", mt, "--workers", workers,
-                   "--out", str(OUT / f"p1_{m['key']}_{tag}_{cond}.json"),
-                   "--dump-rows", str(OUT / f"p1_{m['key']}_{tag}_{cond}_rows.jsonl")]
+                   "--out", str(OUT / f"{out_prefix}_{m['key']}_{tag}_{cond}.json"),
+                   "--dump-rows", str(OUT / f"{out_prefix}_{m['key']}_{tag}_{cond}_rows.jsonl")]
+            if freeform_only:
+                cmd.append("--freeform-only")
             with open(logf, "a") as lf:
                 rc = subprocess.run(cmd, cwd=str(REPO), env=env, stdout=lf, stderr=subprocess.STDOUT).returncode
             if rc != 0:
@@ -171,7 +178,7 @@ def run_elicit(m, mpd: int, conds: list[str], tags: list[str]):
 
 
 def main():
-    global GPUS, VLLM
+    global GPUS, VLLM, PORT, KILL_STRAY, GPU_UTIL
     ap = argparse.ArgumentParser()
     ap.add_argument("--models", nargs="+", default=[m["key"] for m in ROSTER])
     ap.add_argument("--mpd", type=int, default=60)
@@ -181,10 +188,24 @@ def main():
                     help="quick servability pass: mpd=2, C3 only, g7 only")
     ap.add_argument("--delete-downloads", action="store_true")
     ap.add_argument("--gpus", default="0,1", help="TP=2 card pair, e.g. '2,3'")
+    ap.add_argument("--port", type=int, default=PORT,
+                    help="vLLM port; use a 2nd port (e.g. 8102) for a parallel 2-server shard.")
+    ap.add_argument("--gpu-util", type=float, default=None,
+                    help="override gpu-memory-utilization for ALL models (e.g. 0.55 when sharing the box).")
+    ap.add_argument("--freeform-only", action="store_true",
+                    help="E1: drop __template renders on the geo manifest (no-op on g7).")
+    ap.add_argument("--out-prefix", default="p1",
+                    help="output file prefix (use 'p1e1' for the E1 decomposition so it "
+                         "does not clobber the unfiltered Result-1 p1_* files).")
+    ap.add_argument("--no-stray-kill", action="store_true",
+                    help="don't pgrep-kill stray EngineCore on teardown (use for a parallel 2-server shard).")
     ap.add_argument("--vllm", default=VLLM, help="vllm binary (use vllm-latest for gemma4)")
     args = ap.parse_args()
     GPUS = args.gpus
     VLLM = args.vllm
+    PORT = args.port
+    GPU_UTIL = args.gpu_util
+    KILL_STRAY = not args.no_stray_kill
     LOG.mkdir(parents=True, exist_ok=True)
     OUT.mkdir(parents=True, exist_ok=True)
     if args.validate:
@@ -202,7 +223,8 @@ def main():
         if not wait_ready(key, proc):
             teardown(proc); failed.append((key, "serve-fail")); continue
         try:
-            run_elicit(m, args.mpd, args.conds, args.tags)
+            run_elicit(m, args.mpd, args.conds, args.tags, freeform_only=args.freeform_only,
+                       out_prefix=args.out_prefix)
             ok.append(key)
         finally:
             teardown(proc)

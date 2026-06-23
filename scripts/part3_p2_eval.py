@@ -1,6 +1,6 @@
 """Part 3 Protocol-2 — hybrid-critic coverage on the synthetic all-class set (A.5).
 
-Compares three critic configurations on the SAME paired-clean synthetic slides,
+Compares five critic configurations on the SAME paired-clean synthetic slides,
 per defect class, by **named attribution** (does the critic emit the correct
 defect type on the defective image and not on its clean twin) at paired-clean
 balanced accuracy + precision:
@@ -9,6 +9,10 @@ balanced accuracy + precision:
                        lint_deck), the deployed default operating point (~0 FP).
   * **VLM-only**     — every class routed to one served VLM under C0 whole-taxonomy
                        pointwise (the realistic "just ask a VLM" single-pass critic).
+  * **VLM-C3 everywhere** — the same served VLM under one atomic C3 question for
+                       every image-level class; no linter and no per-class routing.
+  * **linter+VLM-C3** — the obvious minimal baseline: symbolic linter for declared
+                       geometry, one C3 VLM for everything else.
   * **hybrid**       — each class routed by ``hybrid_critic.ROUTER`` to its engine:
                        linter (declared geometry / terminology), VLM-with-best-
                        elicitation (G1->C2, G7->C3, S6->C0), LLM (S1/S2/S4 text).
@@ -139,6 +143,11 @@ def main():
     ap.add_argument("--workers", type=int, default=6)
     ap.add_argument("--classes", nargs="+", default=None,
                     help="subset of PAGE_CLASSES to run (for sharding across servers)")
+    ap.add_argument("--reuse-existing", default=None,
+                    help="existing p2_synth JSON whose per_class cells should be reused; "
+                         "missing vlm_c3 cells are still computed")
+    ap.add_argument("--force-c3", action="store_true",
+                    help="recompute vlm_c3 even when it already exists or can be reused from vlm_best")
     ap.add_argument("--out", default="data/part3/p2_synth.json")
     args = ap.parse_args()
     classes = args.classes or PAGE_CLASSES
@@ -153,6 +162,10 @@ def main():
     for r in synth:
         bydef.setdefault(defect_of(r), []).append(r)
     bydef["G7_RENDER_CONTAINMENT_OVERFLOW"] = g7
+    existing_per_class = {}
+    if args.reuse_existing:
+        existing = json.loads(Path(args.reuse_existing).read_text())
+        existing_per_class = existing.get("per_class", {})
 
     per_class = {}
     t0 = time.time()
@@ -160,32 +173,48 @@ def main():
         pos = bydef.get(d, [])[: args.max_per_defect]
         if not pos:
             continue
-        cell = {}
+        cell = json.loads(json.dumps(existing_per_class.get(d, {})))
         # linter engine (offline)
-        cell["linter"] = linter_cell(pos)
+        if not cell.get("linter"):
+            cell["linter"] = linter_cell(pos)
         # VLM-C0 (whole-taxonomy pointwise) — the VLM-only critic
-        cell["vlm_c0"] = vlm_llm_cell(client, args.model, pos, d, VLM, "C0",
-                                      args.modality, args.style, args.max_tokens, args.workers)
+        if not cell.get("vlm_c0"):
+            cell["vlm_c0"] = vlm_llm_cell(client, args.model, pos, d, VLM, "C0",
+                                          args.modality, args.style, args.max_tokens, args.workers)
         # VLM-best elicitation only for VLM-routed classes (G7->C3, S6->C0); other
         # classes are linter/LLM-routed so the special elicitation is not needed.
-        if ROUTER.get(d) == VLM:
+        if cell.get("vlm_best"):
+            pass
+        elif ROUTER.get(d) == VLM:
             best = VLM_ELICIT.get(d, "C0")
             cell["vlm_best"] = cell["vlm_c0"] if best == "C0" else vlm_llm_cell(
                 client, args.model, pos, d, VLM, best,
                 args.modality, args.style, args.max_tokens, args.workers)
         else:
             cell["vlm_best"] = cell["vlm_c0"]
+        # VLM-C3 everywhere baseline: one atomic visual question for every
+        # image-level class in this P2 set. Reuse the routed VLM cell when it is
+        # already C3 (currently G7), otherwise run the extra C3 cell explicitly.
+        if cell.get("vlm_c3") and not args.force_c3:
+            pass
+        elif ROUTER.get(d) == VLM and VLM_ELICIT.get(d, "C0") == "C3" and not args.force_c3:
+            cell["vlm_c3"] = cell["vlm_best"]
+        else:
+            cell["vlm_c3"] = vlm_llm_cell(client, args.model, pos, d, VLM, "C3",
+                                          args.modality, args.style, args.max_tokens,
+                                          args.workers)
         # LLM engine for the LLM-routed semantic classes
-        if ROUTER.get(d) == LLM:
+        if ROUTER.get(d) == LLM and not cell.get("llm"):
             cell["llm"] = vlm_llm_cell(client, args.model, pos, d, LLM, None,
                                        args.modality, args.style, args.max_tokens, args.workers)
         per_class[d] = cell
         eng = ROUTER.get(d)
         print(f"  {d:32s} linter={cell['linter']['bal_acc']:.2f} "
               f"vlm_c0={cell['vlm_c0']['bal_acc'] if cell['vlm_c0'] else 'NA'} "
+              f"vlm_c3={cell['vlm_c3']['bal_acc'] if cell['vlm_c3'] else 'NA'} "
               f"route={eng}  ({time.time()-t0:.0f}s)", flush=True)
 
-    # ----- assemble the three critic configs (named bal_acc + precision) ----- #
+    # ----- assemble the critic configs (named bal_acc + precision) ----- #
     def routed_cell(d):
         eng = ROUTER.get(d)
         if eng == LINTER:
@@ -194,10 +223,23 @@ def main():
             return per_class[d].get("llm")
         return per_class[d].get("vlm_best")  # VLM
 
-    configs = {"linter_only": {}, "vlm_only": {}, "hybrid": {}}
+    def linter_plus_vlmc3_cell(d):
+        if ROUTER.get(d) == LINTER:
+            return per_class[d]["linter"]
+        return per_class[d].get("vlm_c3")
+
+    configs = {
+        "linter_only": {},
+        "vlm_only": {},
+        "vlm_c3_everywhere": {},
+        "linter_plus_vlmc3": {},
+        "hybrid": {},
+    }
     for d, cell in per_class.items():
         configs["linter_only"][d] = cell["linter"]
         configs["vlm_only"][d] = cell["vlm_c0"]
+        configs["vlm_c3_everywhere"][d] = cell.get("vlm_c3")
+        configs["linter_plus_vlmc3"][d] = linter_plus_vlmc3_cell(d)
         configs["hybrid"][d] = routed_cell(d)
 
     def agg(cfg):
