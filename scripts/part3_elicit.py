@@ -72,11 +72,30 @@ _SPECIFIC_QUESTIONS = {
         "e.g. the text states a trend, label, or number that the figure does not "
         "show?"
     ),
+    # G3/G5 re-operationalised as INTERNAL contrast (E8): decidable from the slide
+    # alone — one item out of line with / a different colour from its sibling list.
+    "G3_ALIGNMENT_OFFSET": (
+        "Among a list of bullet/body items that should line up, is ONE of them "
+        "misaligned — indented or shifted so it does not line up with the rest?"
+    ),
+    "G5_BRAND_COLOR_VIOLATION": (
+        "Among a list of bullet/body items that share one text colour, does ONE of "
+        "them have a text colour that clearly differs from the others?"
+    ),
     G7_RENDER_CONTAINMENT_OVERFLOW: G7_SPEC.elicit_question,
 }
 
+# E8 re-operationalisation hooks: when set (via --question / --afc-phrase), the C3 /
+# C0_named atomic query and the 2-AFC phrase use a custom 口径 instead of the taxonomy
+# description. Used to re-pose G3/G5 as INTERNAL-contrast defects (one element
+# inconsistent with its siblings — decidable from the slide alone, no external ref).
+_Q_OVERRIDE: str | None = None
+_AFC_OVERRIDE: str | None = None
+
 
 def question_for(defect: str) -> str:
+    if _Q_OVERRIDE:  # E8 re-operationalisation: pass a custom 口径 (e.g. internal-contrast)
+        return _Q_OVERRIDE
     if defect in _SPECIFIC_QUESTIONS:
         return _SPECIFIC_QUESTIONS[defect]
     spec = DEFECTS.get(defect)
@@ -274,6 +293,8 @@ ENGINES = {"C0": engine_c0, "C0_named": engine_c0_named,
 _AFC_PHRASE = {
     "G1_TEXT_OVERFLOW": "text that visibly overflows or is clipped by its text box",
     "S6_IMAGE_TEXT_CONTRADICTION": "a chart, diagram, or image that contradicts the text near it",
+    "G3_ALIGNMENT_OFFSET": "a bullet that does not line up with the other bullets (indented differently from the rest)",
+    "G5_BRAND_COLOR_VIOLATION": "a bullet whose text colour clearly differs from the other bullets in the same list",
     G7_RENDER_CONTAINMENT_OVERFLOW: "content spilling outside the box, card, or frame meant to contain it",
 }
 
@@ -285,6 +306,8 @@ AFC_PROMPT = ('Candidate A and Candidate B are two different slides. Which candi
 
 
 def afc_phrase(defect: str) -> str:
+    if _AFC_OVERRIDE:
+        return _AFC_OVERRIDE
     if defect in _AFC_PHRASE:
         return _AFC_PHRASE[defect]
     spec = DEFECTS.get(defect)
@@ -598,7 +621,13 @@ def main():
     ap.add_argument("--workers", type=int, default=12)
     ap.add_argument("--out", required=True)
     ap.add_argument("--dump-rows", default=None)
+    ap.add_argument("--question", default=None,
+                    help="override the C3/C0_named atomic question (E8 internal-contrast 口径).")
+    ap.add_argument("--afc-phrase", default=None,
+                    help="override the 2-AFC defect phrase (E8 internal-contrast 口径).")
     args = ap.parse_args()
+    global _Q_OVERRIDE, _AFC_OVERRIDE
+    _Q_OVERRIDE, _AFC_OVERRIDE = args.question, args.afc_phrase
     run(args)
 
 

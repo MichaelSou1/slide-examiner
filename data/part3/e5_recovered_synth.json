@@ -1,0 +1,380 @@
+{
+  "mode": "synthetic",
+  "manifest": "data/part3/manifest_real_rendered.jsonl",
+  "model_id": "PaddlePaddle/PP-DocLayoutV2_safetensors",
+  "operating_point": {
+    "min_iou": 0.05,
+    "margin_px": 32.0,
+    "score_thr": 0.4,
+    "nms_iou": 0.7,
+    "norm_width": 960
+  },
+  "vlm_floor_source": "data/part3/pc_real_qwen35-27b.json",
+  "per_class": {
+    "G1_TEXT_OVERFLOW": {
+      "n": 45,
+      "native_ir": {
+        "bal_acc": 0.767,
+        "bal_acc_ci": [
+          0.626,
+          0.866
+        ],
+        "recall": 0.8,
+        "recall_ci": [
+          0.662,
+          0.891
+        ],
+        "specificity": 0.733,
+        "specificity_ci": [
+          0.59,
+          0.84
+        ],
+        "fpr": 0.267,
+        "tp": 36,
+        "fp": 12,
+        "fn": 9,
+        "tn": 33,
+        "n_pos": 45,
+        "n_neg": 45
+      },
+      "recovered": {
+        "bal_acc": 0.5,
+        "bal_acc_ci": [
+          0.461,
+          0.539
+        ],
+        "recall": 0.0,
+        "recall_ci": [
+          0.0,
+          0.079
+        ],
+        "specificity": 1.0,
+        "specificity_ci": [
+          0.921,
+          1.0
+        ],
+        "fpr": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 45,
+        "tn": 45,
+        "n_pos": 45,
+        "n_neg": 45
+      },
+      "vlm_only_A": {
+        "bal_acc": 0.789,
+        "bal_acc_ci": [
+          0.669,
+          0.863
+        ],
+        "n_pos": 45,
+        "n_neg": 45
+      },
+      "mcnemar_recov_vs_native": {
+        "p": 0.00072,
+        "gain_y": 12,
+        "loss_y": 36,
+        "n_discordant": 48
+      },
+      "recovery_fidelity": {
+        "mean_iou_matched": 0.639,
+        "recall_at_iou": 0.369,
+        "precision_at_iou": 0.281,
+        "mean_n_gt": 7.13,
+        "mean_n_rec": 11.82
+      }
+    },
+    "G2_ELEMENT_OVERLAP": {
+      "n": 41,
+      "native_ir": {
+        "bal_acc": 0.671,
+        "bal_acc_ci": [
+          0.522,
+          0.791
+        ],
+        "recall": 0.78,
+        "recall_ci": [
+          0.633,
+          0.88
+        ],
+        "specificity": 0.561,
+        "specificity_ci": [
+          0.41,
+          0.701
+        ],
+        "fpr": 0.439,
+        "tp": 32,
+        "fp": 18,
+        "fn": 9,
+        "tn": 23,
+        "n_pos": 41,
+        "n_neg": 41
+      },
+      "recovered": {
+        "bal_acc": 0.537,
+        "bal_acc_ci": [
+          0.405,
+          0.662
+        ],
+        "recall": 0.293,
+        "recall_ci": [
+          0.176,
+          0.445
+        ],
+        "specificity": 0.78,
+        "specificity_ci": [
+          0.633,
+          0.88
+        ],
+        "fpr": 0.22,
+        "tp": 12,
+        "fp": 9,
+        "fn": 29,
+        "tn": 32,
+        "n_pos": 41,
+        "n_neg": 41
+      },
+      "vlm_only_A": {
+        "bal_acc": 0.866,
+        "bal_acc_ci": [
+          0.731,
+          0.938
+        ],
+        "n_pos": 41,
+        "n_neg": 41
+      },
+      "mcnemar_recov_vs_native": {
+        "p": 0.10813,
+        "gain_y": 14,
+        "loss_y": 25,
+        "n_discordant": 39
+      },
+      "recovery_fidelity": {
+        "mean_iou_matched": 0.571,
+        "recall_at_iou": 0.295,
+        "precision_at_iou": 0.253,
+        "mean_n_gt": 3.93,
+        "mean_n_rec": 7.8
+      }
+    },
+    "G3_ALIGNMENT_OFFSET": {
+      "n": 40,
+      "native_ir": {
+        "bal_acc": 0.5,
+        "bal_acc_ci": [
+          0.456,
+          0.544
+        ],
+        "recall": 0.0,
+        "recall_ci": [
+          0.0,
+          0.088
+        ],
+        "specificity": 1.0,
+        "specificity_ci": [
+          0.912,
+          1.0
+        ],
+        "fpr": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 40,
+        "tn": 40,
+        "n_pos": 40,
+        "n_neg": 40
+      },
+      "recovered": {
+        "bal_acc": 0.5,
+        "bal_acc_ci": [
+          0.456,
+          0.544
+        ],
+        "recall": 0.0,
+        "recall_ci": [
+          0.0,
+          0.088
+        ],
+        "specificity": 1.0,
+        "specificity_ci": [
+          0.912,
+          1.0
+        ],
+        "fpr": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 40,
+        "tn": 40,
+        "n_pos": 40,
+        "n_neg": 40
+      },
+      "vlm_only_A": {
+        "bal_acc": 0.5,
+        "bal_acc_ci": [
+          0.352,
+          0.648
+        ],
+        "n_pos": 40,
+        "n_neg": 40
+      },
+      "mcnemar_recov_vs_native": {
+        "p": 1.0,
+        "gain_y": 0,
+        "loss_y": 0,
+        "n_discordant": 0
+      },
+      "recovery_fidelity": {
+        "mean_iou_matched": 0.642,
+        "recall_at_iou": 0.391,
+        "precision_at_iou": 0.232,
+        "mean_n_gt": 5.33,
+        "mean_n_rec": 12.32
+      }
+    },
+    "G4_FONT_SIZE_INCONSISTENCY": {
+      "n": 45,
+      "native_ir": {
+        "bal_acc": 0.5,
+        "bal_acc_ci": [
+          0.461,
+          0.539
+        ],
+        "recall": 0.0,
+        "recall_ci": [
+          0.0,
+          0.079
+        ],
+        "specificity": 1.0,
+        "specificity_ci": [
+          0.921,
+          1.0
+        ],
+        "fpr": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 45,
+        "tn": 45,
+        "n_pos": 45,
+        "n_neg": 45
+      },
+      "recovered": {
+        "bal_acc": 0.5,
+        "bal_acc_ci": [
+          0.461,
+          0.539
+        ],
+        "recall": 0.0,
+        "recall_ci": [
+          0.0,
+          0.079
+        ],
+        "specificity": 1.0,
+        "specificity_ci": [
+          0.921,
+          1.0
+        ],
+        "fpr": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 45,
+        "tn": 45,
+        "n_pos": 45,
+        "n_neg": 45
+      },
+      "vlm_only_A": {
+        "bal_acc": 0.667,
+        "bal_acc_ci": [
+          0.537,
+          0.77
+        ],
+        "n_pos": 45,
+        "n_neg": 45
+      },
+      "mcnemar_recov_vs_native": {
+        "p": 1.0,
+        "gain_y": 0,
+        "loss_y": 0,
+        "n_discordant": 0
+      },
+      "recovery_fidelity": {
+        "mean_iou_matched": 0.59,
+        "recall_at_iou": 0.321,
+        "precision_at_iou": 0.235,
+        "mean_n_gt": 5.47,
+        "mean_n_rec": 9.89
+      }
+    },
+    "G6_MARGIN_VIOLATION": {
+      "n": 38,
+      "native_ir": {
+        "bal_acc": 0.553,
+        "bal_acc_ci": [
+          0.475,
+          0.621
+        ],
+        "recall": 1.0,
+        "recall_ci": [
+          0.908,
+          1.0
+        ],
+        "specificity": 0.105,
+        "specificity_ci": [
+          0.042,
+          0.241
+        ],
+        "fpr": 0.895,
+        "tp": 38,
+        "fp": 34,
+        "fn": 0,
+        "tn": 4,
+        "n_pos": 38,
+        "n_neg": 38
+      },
+      "recovered": {
+        "bal_acc": 0.539,
+        "bal_acc_ci": [
+          0.468,
+          0.604
+        ],
+        "recall": 1.0,
+        "recall_ci": [
+          0.908,
+          1.0
+        ],
+        "specificity": 0.079,
+        "specificity_ci": [
+          0.027,
+          0.208
+        ],
+        "fpr": 0.921,
+        "tp": 38,
+        "fp": 35,
+        "fn": 0,
+        "tn": 3,
+        "n_pos": 38,
+        "n_neg": 38
+      },
+      "vlm_only_A": {
+        "bal_acc": 0.724,
+        "bal_acc_ci": [
+          0.569,
+          0.837
+        ],
+        "n_pos": 38,
+        "n_neg": 38
+      },
+      "mcnemar_recov_vs_native": {
+        "p": 1.0,
+        "gain_y": 1,
+        "loss_y": 2,
+        "n_discordant": 3
+      },
+      "recovery_fidelity": {
+        "mean_iou_matched": 0.508,
+        "recall_at_iou": 0.369,
+        "precision_at_iou": 0.224,
+        "mean_n_gt": 4.97,
+        "mean_n_rec": 12.18
+      }
+    }
+  }
+}

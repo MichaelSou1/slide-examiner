@@ -1,0 +1,450 @@
+{
+  "part2_sourced_pairs": 51,
+  "ir_present": 51,
+  "per_class": {
+    "G6_MARGIN_VIOLATION": {
+      "present": 7,
+      "n": 7
+    },
+    "G1_TEXT_OVERFLOW": {
+      "present": 9,
+      "n": 9
+    },
+    "S1_TITLE_BODY_MISMATCH": {
+      "present": 7,
+      "n": 7
+    },
+    "G5_BRAND_COLOR_VIOLATION": {
+      "present": 7,
+      "n": 7
+    },
+    "G3_ALIGNMENT_OFFSET": {
+      "present": 7,
+      "n": 7
+    },
+    "G2_ELEMENT_OVERLAP": {
+      "present": 7,
+      "n": 7
+    },
+    "S4_DENSITY_RULE_VIOLATION": {
+      "present": 7,
+      "n": 7
+    }
+  },
+  "rows": [
+    {
+      "pair_id": "000",
+      "class": "G6_MARGIN_VIOLATION",
+      "ir_present": true,
+      "detail": "bbox {'x': (96.0, 0.0)}"
+    },
+    {
+      "pair_id": "001",
+      "class": "G1_TEXT_OVERFLOW",
+      "ir_present": true,
+      "detail": "changed: text,bbox"
+    },
+    {
+      "pair_id": "002",
+      "class": "S6_IMAGE_TEXT_CONTRADICTION",
+      "scope": "dedicated-corpus",
+      "ir_present": null
+    },
+    {
+      "pair_id": "003",
+      "class": "S6_IMAGE_TEXT_CONTRADICTION",
+      "scope": "dedicated-corpus",
+      "ir_present": null
+    },
+    {
+      "pair_id": "004",
+      "class": "S1_TITLE_BODY_MISMATCH",
+      "ir_present": true,
+      "detail": "changed: text"
+    },
+    {
+      "pair_id": "005",
+      "class": "G5_BRAND_COLOR_VIOLATION",
+      "ir_present": true,
+      "detail": "color #111111->#444444 (\u0394E2000 23.8)"
+    },
+    {
+      "pair_id": "006",
+      "class": "S6_IMAGE_TEXT_CONTRADICTION",
+      "scope": "dedicated-corpus",
+      "ir_present": null
+    },
+    {
+      "pair_id": "007",
+      "class": "G3_ALIGNMENT_OFFSET",
+      "ir_present": true,
+      "detail": "x +4px IR (~2px @render; label 4.0)"
+    },
+    {
+      "pair_id": "008",
+      "class": "G3_ALIGNMENT_OFFSET",
+      "ir_present": true,
+      "detail": "x +4px IR (~2px @render; label 4.0)"
+    },
+    {
+      "pair_id": "009",
+      "class": "G7_RENDER_CONTAINMENT_OVERFLOW",
+      "scope": "dedicated-corpus",
+      "ir_present": null
+    },
+    {
+      "pair_id": "010",
+      "class": "G2_ELEMENT_OVERLAP",
+      "ir_present": true,
+      "detail": "changed: bbox"
+    },
+    {
+      "pair_id": "011",
+      "class": "G7_RENDER_CONTAINMENT_OVERFLOW",
+      "scope": "dedicated-corpus",
+      "ir_present": null
+    },
+    {
+      "pair_id": "012",
+      "class": "G3_ALIGNMENT_OFFSET",
+      "ir_present": true,
+      "detail": "x +32px IR (~17px @render; label 32.0)"
+    },
+    {
+      "pair_id": "013",
+      "class": "S1_TITLE_BODY_MISMATCH",
+      "ir_present": true,
+      "detail": "changed: text"
+    },
+    {
+      "pair_id": "014",
+      "class": "S1_TITLE_BODY_MISMATCH",
+      "ir_present": true,
+      "detail": "changed: text"
+    },
+    {
+      "pair_id": "015",
+      "class": "G5_BRAND_COLOR_VIOLATION",
+      "ir_present": true,
+      "detail": "color #111111->#181818 (\u0394E2000 3.2)"
+    },
+    {
+      "pair_id": "016",
+      "class": "G5_BRAND_COLOR_VIOLATION",
+      "ir_present": true,
+      "detail": "color #111111->#181818 (\u0394E2000 3.2)"
+    },
+    {
+      "pair_id": "017",
+      "class": "G7_RENDER_CONTAINMENT_OVERFLOW",
+      "scope": "dedicated-corpus",
+      "ir_present": null
+    },
+    {
+      "pair_id": "018",
+      "class": "S4_DENSITY_RULE_VIOLATION",
+      "ir_present": true,
+      "detail": "changed: text"
+    },
+    {
+      "pair_id": "019",
+      "class": "G3_ALIGNMENT_OFFSET",
+      "ir_present": true,
+      "detail": "x +32px IR (~17px @render; label 32.0)"
+    },
+    {
+      "pair_id": "020",
+      "class": "S4_DENSITY_RULE_VIOLATION",
+      "ir_present": true,
+      "detail": "changed: text"
+    },
+    {
+      "pair_id": "021",
+      "class": "S1_TITLE_BODY_MISMATCH",
+      "ir_present": true,
+      "detail": "changed: text"
+    },
+    {
+      "pair_id": "022",
+      "class": "G5_BRAND_COLOR_VIOLATION",
+      "ir_present": true,
+      "detail": "color #111111->#444444 (\u0394E2000 23.8)"
+    },
+    {
+      "pair_id": "023",
+      "class": "G7_RENDER_CONTAINMENT_OVERFLOW",
+      "scope": "dedicated-corpus",
+      "ir_present": null
+    },
+    {
+      "pair_id": "024",
+      "class": "S6_IMAGE_TEXT_CONTRADICTION",
+      "scope": "dedicated-corpus",
+      "ir_present": null
+    },
+    {
+      "pair_id": "025",
+      "class": "G2_ELEMENT_OVERLAP",
+      "ir_present": true,
+      "detail": "changed: bbox"
+    },
+    {
+      "pair_id": "026",
+      "class": "G1_TEXT_OVERFLOW",
+      "ir_present": true,
+      "detail": "changed: text,bbox"
+    },
+    {
+      "pair_id": "027",
+      "class": "G2_ELEMENT_OVERLAP",
+      "ir_present": true,
+      "detail": "changed: bbox"
+    },
+    {
+      "pair_id": "028",
+      "class": "G6_MARGIN_VIOLATION",
+      "ir_present": true,
+      "detail": "bbox {'x': (96.0, 28.0)}"
+    },
+    {
+      "pair_id": "029",
+      "class": "G1_TEXT_OVERFLOW",
+      "ir_present": true,
+      "detail": "changed: text,bbox"
+    },
+    {
+      "pair_id": "030",
+      "class": "G5_BRAND_COLOR_VIOLATION",
+      "ir_present": true,
+      "detail": "color #111111->#181818 (\u0394E2000 3.2)"
+    },
+    {
+      "pair_id": "031",
+      "class": "S6_IMAGE_TEXT_CONTRADICTION",
+      "scope": "dedicated-corpus",
+      "ir_present": null
+    },
+    {
+      "pair_id": "032",
+      "class": "S4_DENSITY_RULE_VIOLATION",
+      "ir_present": true,
+      "detail": "changed: text"
+    },
+    {
+      "pair_id": "033",
+      "class": "G7_RENDER_CONTAINMENT_OVERFLOW",
+      "scope": "dedicated-corpus",
+      "ir_present": null
+    },
+    {
+      "pair_id": "034",
+      "class": "G5_BRAND_COLOR_VIOLATION",
+      "ir_present": true,
+      "detail": "color #111111->#444444 (\u0394E2000 23.8)"
+    },
+    {
+      "pair_id": "035",
+      "class": "S6_IMAGE_TEXT_CONTRADICTION",
+      "scope": "dedicated-corpus",
+      "ir_present": null
+    },
+    {
+      "pair_id": "036",
+      "class": "G3_ALIGNMENT_OFFSET",
+      "ir_present": true,
+      "detail": "x +4px IR (~2px @render; label 4.0)"
+    },
+    {
+      "pair_id": "037",
+      "class": "S1_TITLE_BODY_MISMATCH",
+      "ir_present": true,
+      "detail": "changed: text"
+    },
+    {
+      "pair_id": "038",
+      "class": "G1_TEXT_OVERFLOW",
+      "ir_present": true,
+      "detail": "changed: text,bbox"
+    },
+    {
+      "pair_id": "039",
+      "class": "G7_RENDER_CONTAINMENT_OVERFLOW",
+      "scope": "dedicated-corpus",
+      "ir_present": null
+    },
+    {
+      "pair_id": "040",
+      "class": "S4_DENSITY_RULE_VIOLATION",
+      "ir_present": true,
+      "detail": "changed: text"
+    },
+    {
+      "pair_id": "041",
+      "class": "G6_MARGIN_VIOLATION",
+      "ir_present": true,
+      "detail": "bbox {'x': (96.0, 28.0)}"
+    },
+    {
+      "pair_id": "042",
+      "class": "S4_DENSITY_RULE_VIOLATION",
+      "ir_present": true,
+      "detail": "changed: text"
+    },
+    {
+      "pair_id": "043",
+      "class": "G2_ELEMENT_OVERLAP",
+      "ir_present": true,
+      "detail": "changed: bbox"
+    },
+    {
+      "pair_id": "044",
+      "class": "G3_ALIGNMENT_OFFSET",
+      "ir_present": true,
+      "detail": "x +4px IR (~2px @render; label 4.0)"
+    },
+    {
+      "pair_id": "045",
+      "class": "S1_TITLE_BODY_MISMATCH",
+      "ir_present": true,
+      "detail": "changed: text"
+    },
+    {
+      "pair_id": "046",
+      "class": "S6_IMAGE_TEXT_CONTRADICTION",
+      "scope": "dedicated-corpus",
+      "ir_present": null
+    },
+    {
+      "pair_id": "047",
+      "class": "G1_TEXT_OVERFLOW",
+      "ir_present": true,
+      "detail": "changed: text,bbox"
+    },
+    {
+      "pair_id": "048",
+      "class": "G7_RENDER_CONTAINMENT_OVERFLOW",
+      "scope": "dedicated-corpus",
+      "ir_present": null
+    },
+    {
+      "pair_id": "049",
+      "class": "G1_TEXT_OVERFLOW",
+      "ir_present": true,
+      "detail": "changed: text,bbox"
+    },
+    {
+      "pair_id": "050",
+      "class": "S4_DENSITY_RULE_VIOLATION",
+      "ir_present": true,
+      "detail": "changed: text"
+    },
+    {
+      "pair_id": "051",
+      "class": "G2_ELEMENT_OVERLAP",
+      "ir_present": true,
+      "detail": "changed: bbox"
+    },
+    {
+      "pair_id": "052",
+      "class": "G6_MARGIN_VIOLATION",
+      "ir_present": true,
+      "detail": "bbox {'x': (96.0, 0.0)}"
+    },
+    {
+      "pair_id": "053",
+      "class": "G7_RENDER_CONTAINMENT_OVERFLOW",
+      "scope": "dedicated-corpus",
+      "ir_present": null
+    },
+    {
+      "pair_id": "054",
+      "class": "G2_ELEMENT_OVERLAP",
+      "ir_present": true,
+      "detail": "changed: bbox"
+    },
+    {
+      "pair_id": "055",
+      "class": "G6_MARGIN_VIOLATION",
+      "ir_present": true,
+      "detail": "bbox {'x': (96.0, 0.0)}"
+    },
+    {
+      "pair_id": "056",
+      "class": "G1_TEXT_OVERFLOW",
+      "ir_present": true,
+      "detail": "changed: text,bbox"
+    },
+    {
+      "pair_id": "057",
+      "class": "S6_IMAGE_TEXT_CONTRADICTION",
+      "scope": "dedicated-corpus",
+      "ir_present": null
+    },
+    {
+      "pair_id": "058",
+      "class": "G3_ALIGNMENT_OFFSET",
+      "ir_present": true,
+      "detail": "x +4px IR (~2px @render; label 4.0)"
+    },
+    {
+      "pair_id": "059",
+      "class": "G6_MARGIN_VIOLATION",
+      "ir_present": true,
+      "detail": "bbox {'x': (96.0, 28.0)}"
+    },
+    {
+      "pair_id": "060",
+      "class": "G5_BRAND_COLOR_VIOLATION",
+      "ir_present": true,
+      "detail": "color #111111->#2a2a2a (\u0394E2000 12.0)"
+    },
+    {
+      "pair_id": "061",
+      "class": "G6_MARGIN_VIOLATION",
+      "ir_present": true,
+      "detail": "bbox {'x': (96.0, 0.0)}"
+    },
+    {
+      "pair_id": "062",
+      "class": "G2_ELEMENT_OVERLAP",
+      "ir_present": true,
+      "detail": "changed: bbox"
+    },
+    {
+      "pair_id": "063",
+      "class": "G1_TEXT_OVERFLOW",
+      "ir_present": true,
+      "detail": "changed: text,bbox"
+    },
+    {
+      "pair_id": "064",
+      "class": "G1_TEXT_OVERFLOW",
+      "ir_present": true,
+      "detail": "changed: text,bbox"
+    },
+    {
+      "pair_id": "065",
+      "class": "S6_IMAGE_TEXT_CONTRADICTION",
+      "scope": "dedicated-corpus",
+      "ir_present": null
+    },
+    {
+      "pair_id": "066",
+      "class": "S4_DENSITY_RULE_VIOLATION",
+      "ir_present": true,
+      "detail": "changed: text"
+    },
+    {
+      "pair_id": "067",
+      "class": "S1_TITLE_BODY_MISMATCH",
+      "ir_present": true,
+      "detail": "changed: text"
+    },
+    {
+      "pair_id": "068",
+      "class": "G7_RENDER_CONTAINMENT_OVERFLOW",
+      "scope": "dedicated-corpus",
+      "ir_present": null
+    }
+  ]
+}

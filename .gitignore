@@ -72,3 +72,7 @@ playground/
 # Part 3 reference papers (external arxiv PDFs, kept local for verification, not committed)
 docs/refs/
 docs/*.pdf
+
+# part3 real-deck render intermediates: keep only the lossless ir/*.json oracle
+data/part3/**/*.pdf
+data/part3/**/lo_prof/

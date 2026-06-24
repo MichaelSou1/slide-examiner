@@ -50,6 +50,8 @@ Four claims map to the three protocols:
 | **3.** G7-detection tracks *perceptual capability*, not the training-domain label; a fidelity audit quantifies the "injected-but-not-rendered" hazard. | Result 3a (**5-RM, 2/category, n=90**): document DocReward **0.48** + artistic-aesthetic LAION **0.57** miss (CI spans chance); **both** general-mm Skywork **0.79** + PickScore **0.71** detect (category-level, 2 backbones; Holm-corrected), as does CLIP-IQA quality probe **0.83**. Result 3b: **45%** snapped away; snap-absorbed → gap 0.0 for **all 5** rewards. | snap-bug byte/structure check (Part 2); Result-1 C3 = prompted VLM also detects G7. |
 | **4.** The contribution is the **per-defect bottleneck dichotomy + the falsifiable G7 linter-blind class + real-data scoping**, not "beating DocReward". | All four Results + honest SlideAudit image-only degradation + S6 negative. | Part-1 sub-perceptual geometry; Part-2 examiner + linter routing. |
 | **5.** The perception/capability split **replicates on real layouts** with a lossless tool oracle (closes the §8 "can't run structured eval on real slides" hole). | Result 4 (Zenodo10K, 209 real pairs, 3 models): all 3 outcomes appear — G1/G2 image-sufficient, **G6 margin perception (B 0.70 > A 0.59, structure rescues weak VLMs)**, **G3 alignment capability (A=B=C≈0.50, → linter)**; real-deck render-fidelity 0.93 (vs synthetic 45% absorbed). | Part-1 A/B/C synthetic attribution; §4 template-absorption hazard (now shown template-specific). |
+| **6.** Open-world (no native IR), structure **recovered from pixels does not restore the symbolic linter** — the critic is VLM-bound; the linter's edge needs clean native IR. | Result 5 (E5; PP-DocLayoutV2 → same linter): recovered linter only G2 0.54/0.55 (vs native 0.67, VLM 0.87), silent on G1/G3/G4/G5; over-segments (IoU recall@0.5 0.30–0.39); VLM dominates every coarse class on both real-layout (209) and image-only SlideAudit. | Result 2b image-only degradation; §8 deployment-scope Limitation. |
+| **7.** The downstream examiner→refinement effect is bounded by a **critique-axis mismatch**, not just generator saturation: unflooring the generator makes the effect *vanish*, not grow. | E6 (part3.md §1b): weak `Qwen3-VL-4B` gen has **1.43× more** headroom than the strong gen yet examiner-q↔gain corr **+0.66 → 0.00** and every `best_gain`=0.0; headroom is **coverage-dominated** (0.19), which neither linter nor examiner critiques. Actionability A/B: real geometry critique Δq +0.00, explicit coverage critique Δq **+0.32**/Δcov **+0.81** (same gen+task+seed) → null is an axis mismatch, not revision incapacity. | Part-1/2 examiner = perception/defect critic, not a content-completeness critic; §1 floored strong-gen result. |
 
 ## Background facts this builds on (A.1)
 
@@ -488,6 +490,65 @@ coarse geometry is image-sufficient, a margin bleed is a structure-rescuable *pe
 and fine alignment is a *capability* floor that neither the image nor the VLM-consumed oracle crosses — so it must
 route to the symbolic linter. Honest scoping: defects are *injected* (real geometry, real renderer, real oracle;
 not naturally-occurring), and SlideAudit remains the naturally-defective image-only probe.
+
+## Result 5 — open-world hybrid: linter on structure recovered from pixels (E5)
+
+**Question (R3-W1 / EIC-W1).** The routed hybrid's symbolic linter needs the native IR a `.pptx` carries; a
+third-party deck exported to PDF/PNG ships none, so on bare pixels the critic degrades to its VLM engine (Result 2b).
+*How much linter coverage survives if element structure is **recovered from the pixels**?* We run a
+transformers-native document-layout detector (**PP-DocLayoutV2**) on each render, apply class-agnostic NMS (the
+detector emits duplicate boxes across its label set — left in, they manufacture phantom overlaps), normalise the
+boxes into the canonical IR frame, and feed them to the **same** geometry linter at its shipped operating point
+(`min_iou=0.05`, `margin_px=32`). Code: `slide_examiner/structure_recovery.py`, `scripts/part3_e5_recovered.py`,
+and a `--recovered-structure` column in `scripts/part3_p2_slideaudit.py`.
+
+**5a — real-layout decks (Zenodo10K, 209 pairs; GT IR *and* render → the full ladder + IoU).** Balanced accuracy
+with Wilson CIs; recovery-fidelity = recovered boxes Hungarian-matched to GT IR boxes (same frame).
+
+| class | native-IR linter | pixel-recovered linter | VLM-only (image, A) | recovery fidelity (recall@IoU0.5; nGT→nRec) |
+|---|---|---|---|---|
+| G1 overflow | 0.77 [0.63, 0.87] | **0.50** [0.46, 0.54] (recall 0) | 0.79 | 0.37; 7.1→11.8 |
+| G2 overlap | 0.67 [0.52, 0.79] | **0.54** [0.41, 0.66] (recall 0.78→0.29) | 0.87 | 0.30; 3.9→7.8 |
+| G3 align | 0.50 [0.46, 0.54] | 0.50 | 0.50 | 0.39; 5.3→12.3 |
+| G4 font | 0.50 [0.46, 0.54] | 0.50 | 0.67 | 0.32; 5.5→9.9 |
+| G6 margin | 0.55 [0.47, 0.62] | 0.54 [0.47, 0.60] | 0.72 | 0.37; 5.0→12.2 |
+
+Paired McNemar (recovered vs native): G1 **p=7e-4** (native wins, gain/loss 36/12 — overflow is unrecoverable from
+boxes); G2 p=0.11 (n.s.); G3/G4 p=1.0 (both silent); G6 p=1.0.
+
+**5b — image-only SlideAudit (third-party, no IR; recovered vs VLM floor).**
+
+| class | pixel-recovered linter | VLM C0 | VLM C3 |
+|---|---|---|---|
+| G1 overflow | 0.50 (recall 0) | 0.55 | 0.63 |
+| G2 overlap | **0.55** (recall 0.30, fpr 0.20) | 0.96 | 0.94 |
+| G3 align | 0.50 (recall 0) | 0.56 | 0.72 |
+| G4 font | 0.50 (recall 0) | 0.59 | 0.64 |
+| G5 colour | 0.50 (recall 0) | 0.52 | 0.81 |
+| G6 margin | 0.49 (recall 0.80, fpr 0.82) | 0.51 | 0.55 |
+
+**Reading (the pre-registered falsification branch, confirmed and sharpened — Fig. 8).** Structure recovered from
+pixels does **not** restore the symbolic linter's coverage open-world. Three findings, consistent across both
+datasets:
+1. **Fine geometry is unrecoverable** — recovered G1/G3/G4/G5 sit at chance (the linter is silent: overflow needs
+   text capacity, alignment needs declared/expected positions, font needs point sizes, colour needs the brand
+   palette — none survive a pixel→box projection). Note even *native* IR from real decks already lacks the
+   expected-position/font bookkeeping the G3/G4 rules need (native G3/G4 = 0.50 too), so this is a property of real
+   third-party structure, not only of recovery.
+2. **Only overlap is partially rescued** — recovered G2 reaches 0.54–0.55 (well above the silent classes but far
+   below native 0.67). The detector **over-segments** (≈2× more boxes than the GT IR; recovery recall@IoU0.5 only
+   0.30–0.39 from the shape-vs-region granularity mismatch), so genuine element collisions are frequently split
+   apart and overlap recall collapses 0.78→0.29.
+3. **The VLM-only engine dominates every coarse class** — on real decks the symbolic linter's near-zero-FP
+   advantage *erodes* (margin specificity 0.11, overlap specificity 0.56) because tight real layouts trip its
+   thresholds, while the VLM judges perceptually (G2 0.87, G6 0.72 vs the linter's ~0.54). The linter's edge is an
+   in-distribution / clean-native-IR phenomenon.
+
+**Takeaway.** The hybrid's symbolic advantage requires native IR; on bare pixels — recovered or not — the
+open-world critic is **VLM-bound**. This quantifies and confirms the deployment scope the Limitations already
+stated (R3-W1 / EIC-W1): the full symbolic-neural critic is for IR-owning agents (native `.pptx`); for third-party
+image/PDF decks the deployable critic is the C3-elicited VLM. A negative result that *bounds* the contribution
+without touching the diagnostic thesis.
 
 ## Honest scoping & negative results
 

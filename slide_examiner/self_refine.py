@@ -66,10 +66,14 @@ def run_self_refine(
             complete=complete, render=render, revise=revise,
         )
         fb = feedback.score(art, task)
-        quality, _ = quality_fn(art, task)
+        quality, comps = quality_fn(art, task)
         history.append({
             "iter": it,
             "quality": float(quality),
+            # per-dimension breakdown (model-free DV) so the analysis can see WHERE
+            # headroom lives: coverage is unaddressable by the geometry linter / the
+            # injected-defect examiner, whereas geometry/conciseness/terms are.
+            "components": {k: float(v) for k, v in (comps or {}).items()},
             "selection_score": float(fb.selection_score),
             "degenerate": bool(art.degenerate),
             "n_slides": len(art.deck.slides),

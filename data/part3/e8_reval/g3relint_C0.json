@@ -1,0 +1,69 @@
+{
+  "condition": "C0",
+  "model": "qwen-vl-max",
+  "style": "scoped",
+  "manifest": "data/part3/g3_relmisalign.jsonl",
+  "modalities": [
+    "A"
+  ],
+  "defects": [
+    "G3_ALIGNMENT_OFFSET"
+  ],
+  "n_jobs": 16,
+  "failures": 0,
+  "metrics": {
+    "A": {
+      "per_defect": {
+        "G3_ALIGNMENT_OFFSET": {
+          "detection": {
+            "recall": 0.0,
+            "specificity": 1.0,
+            "bal_acc": 0.5,
+            "bal_acc_ci": [
+              0.338,
+              0.662
+            ],
+            "precision": 0.0,
+            "precision_ci": null,
+            "fpr": 0.0,
+            "f1": 0.0,
+            "recall_ci": [
+              0.0,
+              0.324
+            ],
+            "tp": 0,
+            "fn": 8,
+            "fp": 0,
+            "tn": 8,
+            "n_pos": 8,
+            "n_neg": 8
+          },
+          "named": {
+            "recall": 0.0,
+            "specificity": 1.0,
+            "bal_acc": 0.5,
+            "bal_acc_ci": [
+              0.338,
+              0.662
+            ],
+            "precision": 0.0,
+            "precision_ci": null,
+            "fpr": 0.0,
+            "f1": 0.0,
+            "recall_ci": [
+              0.0,
+              0.324
+            ],
+            "tp": 0,
+            "fn": 8,
+            "fp": 0,
+            "tn": 8,
+            "n_pos": 8,
+            "n_neg": 8
+          },
+          "headline_level": "detection"
+        }
+      }
+    }
+  }
+}

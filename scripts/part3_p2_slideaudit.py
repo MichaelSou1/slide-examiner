@@ -40,6 +40,46 @@ sys.path.insert(0, str(REPO / "scripts"))
 from slide_examiner.hybrid_critic import linter_types  # noqa: E402
 from part3_elicit import _blank_result, _cell, ENGINES  # noqa: E402
 
+
+def recovered_linter_cell(recs, pos, neg, d, args):
+    """E5 — linter coverage on structure *recovered from pixels* (open-world).
+
+    SlideAudit ships no IR, so the symbolic linter is normally N/A here. This runs
+    a document-layout detector (PP-DocLayoutV2) on each image, shapes the recovered
+    boxes into a Slide dict, and lints it — quantifying how much linter coverage
+    survives without native IR. Returns a paired (present vs confident_absent) cell.
+    """
+    from slide_examiner.geometry import lint_slide
+    from slide_examiner.schemas import Slide
+    from slide_examiner.structure_recovery import (
+        DEFAULT_MODEL, DetectionCache, LayoutDetector, recover_slide)
+
+    det = LayoutDetector(args.rec_model_id, device=args.rec_device,
+                         score_thr=args.rec_score_thr, nms_iou=args.rec_nms_iou)
+    cache = DetectionCache(args.rec_cache)
+
+    def fired(rec):
+        ip = rec["image_path"]
+        ip = ip if Path(ip).is_absolute() else str(REPO / ip)
+        slide = recover_slide(cache.get_or_compute(det, ip))
+        types = {x.type for x in lint_slide(Slide.from_mapping(slide),
+                                            min_iou=args.rec_min_iou, margin_px=args.rec_margin_px)}
+        return d in types
+
+    tp = sum(int(fired(r)) for r in pos)
+    fp = sum(int(fired(r)) for r in neg)
+    n_pos, n_neg = len(pos), len(neg)
+    tn = n_neg - fp
+    from slide_examiner.statistics import balanced_accuracy_ci, wilson_interval
+    bacc = balanced_accuracy_ci(tp, n_pos, tn, n_neg)
+    rec_ci = wilson_interval(tp, n_pos)
+    return {"bal_acc": round(bacc.estimate, 3),
+            "bal_acc_ci": [round(bacc.low, 3), round(bacc.high, 3)],
+            "recall": round(tp / n_pos, 3) if n_pos else None,
+            "recall_ci": [round(rec_ci.low, 3), round(rec_ci.high, 3)],
+            "fpr": round(fp / n_neg, 3) if n_neg else None,
+            "tp": tp, "fp": fp, "fn": n_pos - tp, "tn": tn, "n_pos": n_pos, "n_neg": n_neg}
+
 # SlideAudit-labelled classes (their geometry + density subset).
 SA_CLASSES = ["G1_TEXT_OVERFLOW", "G2_ELEMENT_OVERLAP", "G3_ALIGNMENT_OFFSET",
               "G4_FONT_SIZE_INCONSISTENCY", "G5_BRAND_COLOR_VIOLATION",
@@ -101,6 +141,16 @@ def main():
     ap.add_argument("--classes", nargs="+", default=None,
                     help="subset of SA_CLASSES to run (for sharding across servers)")
     ap.add_argument("--out", default="data/part3/p2_slideaudit.json")
+    # E5: linter on structure recovered from pixels (open-world, no native IR)
+    ap.add_argument("--recovered-structure", action="store_true",
+                    help="add a LINT_REC column: geometry linter on detector-recovered boxes")
+    ap.add_argument("--rec-model-id", default="PaddlePaddle/PP-DocLayoutV2_safetensors")
+    ap.add_argument("--rec-device", default=None)
+    ap.add_argument("--rec-cache", default="data/part3/e5_layout_cache_sa.jsonl")
+    ap.add_argument("--rec-score-thr", type=float, default=0.4)
+    ap.add_argument("--rec-nms-iou", type=float, default=0.7)
+    ap.add_argument("--rec-min-iou", type=float, default=0.05)
+    ap.add_argument("--rec-margin-px", type=float, default=32.0)
     args = ap.parse_args()
     sa_classes = args.classes or SA_CLASSES
 
@@ -127,11 +177,14 @@ def main():
         for cond in args.conds:
             cell[cond] = run_cell(client, args.model, pos, neg, d, cond,
                                   args.modality, args.style, args.max_tokens, args.workers)
+        if args.recovered_structure:
+            cell["LINT_REC"] = recovered_linter_cell(recs, pos, neg, d, args)
         per_class[d] = cell
         c0 = cell.get("C0", {}) or {}
         c3 = cell.get("C3", {}) or {}
+        lr = cell.get("LINT_REC", {}) or {}
         print(f"  {d:32s} C0={c0.get('bal_acc')} C3={c3.get('bal_acc')} "
-              f"(pos={len(pos)} neg={len(neg)}, {time.time()-t0:.0f}s)", flush=True)
+              f"LINT_REC={lr.get('bal_acc')} (pos={len(pos)} neg={len(neg)}, {time.time()-t0:.0f}s)", flush=True)
 
     out = {"model": args.model, "manifest": args.manifest, "modality": args.modality,
            "metric": "paired (present vs confident_absent) named balanced accuracy + precision",

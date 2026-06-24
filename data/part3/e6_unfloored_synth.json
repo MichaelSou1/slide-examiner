@@ -1,0 +1,133 @@
+{
+  "vehicle": "self_refine",
+  "n_iters": 4,
+  "q_threshold": 0.85,
+  "regime_mean_initial": 0.662,
+  "regime_mean_headroom": 0.338,
+  "per_condition": {
+    "linter": {
+      "quality_scalar": 0.5,
+      "mean_initial": 0.6653,
+      "mean_headroom": 0.3347,
+      "mean_gain": 0.0,
+      "mean_best_gain": 0.0,
+      "frac_improved": 0.0,
+      "mean_final_quality": 0.6653,
+      "mean_iters_to_threshold": null,
+      "frac_reached_threshold": 0.0,
+      "dim_initial": {
+        "coverage": 0.1944,
+        "geometry": 1.0,
+        "terms": 0.9167,
+        "conciseness": 1.0
+      },
+      "dim_delta": {
+        "coverage": 0.0,
+        "geometry": 0.0,
+        "terms": 0.0,
+        "conciseness": 0.0
+      },
+      "n": 9
+    },
+    "zero_shot_8b": {
+      "quality_scalar": 0.639,
+      "mean_initial": 0.6653,
+      "mean_headroom": 0.3347,
+      "mean_gain": 0.0,
+      "mean_best_gain": 0.0,
+      "frac_improved": 0.0,
+      "mean_final_quality": 0.6653,
+      "mean_iters_to_threshold": null,
+      "frac_reached_threshold": 0.0,
+      "dim_initial": {
+        "coverage": 0.1944,
+        "geometry": 1.0,
+        "terms": 0.9167,
+        "conciseness": 1.0
+      },
+      "dim_delta": {
+        "coverage": 0.0,
+        "geometry": 0.0,
+        "terms": 0.0,
+        "conciseness": 0.0
+      },
+      "n": 9
+    },
+    "zero_shot_30b": {
+      "quality_scalar": 0.785,
+      "mean_initial": 0.6528,
+      "mean_headroom": 0.3472,
+      "mean_gain": -0.0042,
+      "mean_best_gain": 0.0,
+      "frac_improved": 0.0,
+      "mean_final_quality": 0.6486,
+      "mean_iters_to_threshold": null,
+      "frac_reached_threshold": 0.0,
+      "dim_initial": {
+        "coverage": 0.1944,
+        "geometry": 1.0,
+        "terms": 0.8333,
+        "conciseness": 1.0
+      },
+      "dim_delta": {
+        "coverage": 0.0,
+        "geometry": 0.0,
+        "terms": -0.0278,
+        "conciseness": 0.0
+      },
+      "n": 9
+    },
+    "finetuned_8b": {
+      "quality_scalar": 1.0,
+      "mean_initial": 0.6611,
+      "mean_headroom": 0.3389,
+      "mean_gain": 0.0,
+      "mean_best_gain": 0.0,
+      "frac_improved": 0.0,
+      "mean_final_quality": 0.6611,
+      "mean_iters_to_threshold": null,
+      "frac_reached_threshold": 0.0,
+      "dim_initial": {
+        "coverage": 0.1944,
+        "geometry": 1.0,
+        "terms": 0.8889,
+        "conciseness": 1.0
+      },
+      "dim_delta": {
+        "coverage": 0.0,
+        "geometry": 0.0,
+        "terms": 0.0,
+        "conciseness": 0.0
+      },
+      "n": 9
+    },
+    "hybrid": {
+      "quality_scalar": 1.0,
+      "mean_initial": 0.6653,
+      "mean_headroom": 0.3347,
+      "mean_gain": 0.0,
+      "mean_best_gain": 0.0,
+      "frac_improved": 0.0,
+      "mean_final_quality": 0.6653,
+      "mean_iters_to_threshold": null,
+      "frac_reached_threshold": 0.0,
+      "dim_initial": {
+        "coverage": 0.1944,
+        "geometry": 1.0,
+        "terms": 0.9167,
+        "conciseness": 1.0
+      },
+      "dim_delta": {
+        "coverage": 0.0,
+        "geometry": 0.0,
+        "terms": 0.0,
+        "conciseness": 0.0
+      },
+      "n": 9
+    }
+  },
+  "examiner_quality_vs_gain_corr": -0.001,
+  "examiner_quality_vs_best_gain_corr": 0.0,
+  "examiner_quality_vs_final_corr": -0.142,
+  "note": "Downgraded Part 3 primary vehicle (lightweight). EvoPresent-style self-refine used as a controlled measurement of examiner-quality -> refinement gain; baseline-style, not headline."
+}

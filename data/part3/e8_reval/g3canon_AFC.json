@@ -1,0 +1,32 @@
+{
+  "condition": "AFC",
+  "mode": "paired",
+  "model": "qwen-vl-max",
+  "style": "scoped",
+  "manifest": "data/part3/manifest_g3g5_internal.jsonl",
+  "modalities": [
+    "A"
+  ],
+  "defects": [
+    "G3_ALIGNMENT_OFFSET"
+  ],
+  "n_pairs": 48,
+  "failures": 0,
+  "afc": {
+    "G3_ALIGNMENT_OFFSET": {
+      "mode": "paired",
+      "n_pairs": 48,
+      "n_judgements": 96,
+      "decisive_rate": 0.594,
+      "tie_rate": 0.406,
+      "pick_first_rate": 0.368,
+      "n_pairs_both_orders_valid": 22,
+      "afc_accuracy_strict": 0.955,
+      "afc_accuracy_loose": 0.583,
+      "n_probe_worse_both": 21,
+      "n_probe_worse": 56,
+      "n_partner_worse": 1,
+      "n_tie": 39
+    }
+  }
+}

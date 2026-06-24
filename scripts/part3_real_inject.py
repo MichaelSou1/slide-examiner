@@ -125,20 +125,38 @@ def _pin(sh, x, y, w, h):
     sh.height = Emu(int(round(h * EMU_PER_PX)))
 
 
-def mut_g3(slide, W, H, rng):
-    cands = [c for c in _geom_shapes(slide) if c[3] < 0.85 * W]  # not full-width
-    if not cands:
+def _aligned_column(slide, tol=12.0, min_members=3):
+    """>=min_members shapes that share (within ``tol`` px) a left edge — a visible
+    alignment column (e.g. a bullet/text-box stack). The basis for an INTERNAL-contrast
+    G3 (E8 re-operationalisation): one member nudged out of the column is decidable from
+    the slide alone, no invisible external expected-position. Returns the members sorted
+    top-to-bottom, or None when the real layout has no >=3-deep column."""
+    buckets: dict[int, list] = {}
+    for c in _geom_shapes(slide):
+        buckets.setdefault(round(c[1] / tol), []).append(c)
+    groups = [g for g in buckets.values() if len(g) >= min_members]
+    if not groups:
         return None
-    sh, x, y, w, h = rng.choice(cands)
+    group = max(groups, key=len)  # the deepest column
+    group.sort(key=lambda c: c[2])  # by y, top-to-bottom
+    return group
+
+
+def mut_g3(slide, W, H, rng):
+    """INTERNAL contrast: shift ONE member of an aligned left-edge column out of line
+    (well-posed — the outlier is decidable against its visible siblings)."""
+    group = _aligned_column(slide)
+    if group is None:
+        return None
+    sh, x, y, w, h = group[len(group) // 2]  # the middle member — clearly out of column
     offset = rng.choice([18, 26, 34, 44])
-    axis = "x" if rng.random() < 0.7 else "y"
-    if axis == "x":
-        nx = x - offset if x - offset > 2 else x + offset
-        _pin(sh, nx, y, w, h)
-    else:
-        ny = y - offset if y - offset > 2 else y + offset
-        _pin(sh, x, ny, w, h)
-    return sh.shape_id, float(offset), {"offset_px": offset, "axis": axis}
+    nx = x + offset
+    if nx + w > W - 2:           # would bleed off-slide -> shift the other way instead
+        nx = max(2.0, x - offset)
+    _pin(sh, nx, y, w, h)
+    col_left = sum(c[1] for c in group) / len(group)
+    return sh.shape_id, float(offset), {"offset_px": offset, "axis": "x", "mode": "internal",
+                                        "column_left_px": round(col_left, 1), "column_n": len(group)}
 
 
 def mut_g2(slide, W, H, rng):
@@ -291,7 +309,16 @@ def main():
     ap.add_argument("--max-per-deck", type=int, default=14)
     ap.add_argument("--dpi", type=int, default=150)
     ap.add_argument("--seed", type=int, default=20260622)
+    ap.add_argument("--classes", nargs="+", default=None,
+                    help="restrict to a subset of CLASSES (e.g. G3_ALIGNMENT_OFFSET for the "
+                         "E8 internal-G3 regen) so other classes' frozen renders are untouched.")
     args = ap.parse_args()
+
+    global CLASSES
+    if args.classes:
+        CLASSES = [c for c in CLASSES if c in set(args.classes)]
+        if not CLASSES:
+            raise SystemExit(f"--classes {args.classes} matched none of {list(MUTATORS)}")
 
     from pptx import Presentation
 
@@ -378,7 +405,7 @@ def main():
     rendered = batch_render(all_pptx, work, dpi=args.dpi)
 
     # assemble manifest + absorption self-check
-    records, absorbed, no_render = [], 0, 0
+    records, absorbed, no_render, ir_unfaithful = [], 0, 0, 0
     per_class_kept = {c: 0 for c in CLASSES}
     fidelity_rows = []  # every planned instance, kept or not (for the render-fidelity audit)
     for p in plan:
@@ -399,6 +426,19 @@ def main():
         if not rendered_ok:
             absorbed += 1
             continue  # injection did not change the real pixels -> drop (absorbed)
+        # IR-faithfulness self-check (G3 internal contrast): the offset must survive into
+        # the lossless oracle so the structure channel (modality B/C) is well-posed. A few
+        # placeholder-inherited shapes reflow in pixels but barely move in the IR -> drop.
+        if p["defect"] == "G3_ALIGNMENT_OFFSET":
+            off = float(p["label_meta"].get("offset_px", 0.0))
+            cx = {e["element_id"]: e for e in p["clean_ir"].to_dict()["elements"]}
+            dx = {e["element_id"]: e for e in p["def_ir"].to_dict()["elements"]}
+            ce, de = cx.get(p["target_id"]), dx.get(p["target_id"])
+            ir_dx = abs(de["bbox"]["x"] - ce["bbox"]["x"]) if ce and de else 0.0
+            if ir_dx < off * 0.5:
+                fidelity_rows[-1]["status"] = "ir_unfaithful"
+                ir_unfaithful += 1  # rendered, but defect not legible in the oracle -> drop
+                continue
         iw, ih = image_size(dpng)
         spec = build_render_spec(slide_width=p["W"], slide_height=p["H"], image_width=iw,
                                  image_height=ih, renderer="libreoffice", dpi=args.dpi)
@@ -453,6 +493,7 @@ def main():
     fid["overall"] = {
         "n_scored": n_scored, "rendered_rate": round(rendered_tot / n_scored, 3) if n_scored else None,
         "absorption_rate": round(absorbed / n_scored, 3) if n_scored else None,
+        "ir_unfaithful": ir_unfaithful,  # G3: rendered but offset not legible in the oracle (dropped)
         "note": ("Real free-form decks are NOT snap-to-master: injected geometry defects render "
                  "faithfully (rendered_rate near 1.0), unlike the synthetic enterprise template that "
                  "silently absorbs 45% of injected geometry defects (paper Sec.4 / Result-3b)."),
@@ -463,6 +504,7 @@ def main():
     print(f"[done] kept {len(records)}/{n} pairs -> {out}")
     print(f"  per-class kept: {per_class_kept}")
     print(f"  absorbed (rendered identical) = {absorbed}/{n} = {absorbed / n:.3f}" if n else "")
+    print(f"  ir-unfaithful (rendered but offset not in oracle) = {ir_unfaithful}/{n}")
     print(f"  no-render (soffice/pdftoppm miss) = {no_render}/{n}")
     print(f"  render-fidelity -> {fid_out}: overall rendered_rate={fid['overall']['rendered_rate']}")
 

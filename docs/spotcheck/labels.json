@@ -1,0 +1,404 @@
+{
+  "000": {
+    "cls": "G6_MARGIN_VIOLATION",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "001": {
+    "cls": "G1_TEXT_OVERFLOW",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "002": {
+    "cls": "S6_IMAGE_TEXT_CONTRADICTION",
+    "note": "",
+    "defect_visible": "yes",
+    "twin_clean": "yes"
+  },
+  "003": {
+    "cls": "S6_IMAGE_TEXT_CONTRADICTION",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "004": {
+    "cls": "S1_TITLE_BODY_MISMATCH",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "005": {
+    "cls": "G5_BRAND_COLOR_VIOLATION",
+    "note": "can't tell difference in colour"
+  },
+  "006": {
+    "cls": "S6_IMAGE_TEXT_CONTRADICTION",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "007": {
+    "cls": "G3_ALIGNMENT_OFFSET",
+    "defect_visible": "no",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "008": {
+    "cls": "G3_ALIGNMENT_OFFSET",
+    "defect_visible": "no",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "009": {
+    "cls": "G7_RENDER_CONTAINMENT_OVERFLOW",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "010": {
+    "cls": "G2_ELEMENT_OVERLAP",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "011": {
+    "cls": "G7_RENDER_CONTAINMENT_OVERFLOW",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "012": {
+    "cls": "G3_ALIGNMENT_OFFSET",
+    "defect_visible": "no",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "013": {
+    "cls": "S1_TITLE_BODY_MISMATCH",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "014": {
+    "cls": "S1_TITLE_BODY_MISMATCH",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "015": {
+    "cls": "G5_BRAND_COLOR_VIOLATION",
+    "note": "can't tell any difference in color"
+  },
+  "016": {
+    "cls": "G5_BRAND_COLOR_VIOLATION",
+    "note": "no difference"
+  },
+  "017": {
+    "cls": "G7_RENDER_CONTAINMENT_OVERFLOW",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "018": {
+    "cls": "S4_DENSITY_RULE_VIOLATION",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "019": {
+    "cls": "G3_ALIGNMENT_OFFSET",
+    "defect_visible": "no",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "020": {
+    "cls": "S4_DENSITY_RULE_VIOLATION",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "021": {
+    "cls": "S1_TITLE_BODY_MISMATCH",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "022": {
+    "cls": "G5_BRAND_COLOR_VIOLATION",
+    "note": "i can only see difference in font (bold v.s. not bold)"
+  },
+  "023": {
+    "cls": "G7_RENDER_CONTAINMENT_OVERFLOW",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "024": {
+    "cls": "S6_IMAGE_TEXT_CONTRADICTION",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "025": {
+    "cls": "G2_ELEMENT_OVERLAP",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "026": {
+    "cls": "G1_TEXT_OVERFLOW",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "027": {
+    "cls": "G2_ELEMENT_OVERLAP",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "028": {
+    "cls": "G6_MARGIN_VIOLATION",
+    "defect_visible": "no",
+    "note": "the defective one is not defective enough",
+    "twin_clean": "yes"
+  },
+  "029": {
+    "cls": "G1_TEXT_OVERFLOW",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "030": {
+    "cls": "G5_BRAND_COLOR_VIOLATION",
+    "note": "can't tell"
+  },
+  "031": {
+    "cls": "S6_IMAGE_TEXT_CONTRADICTION",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "032": {
+    "cls": "S4_DENSITY_RULE_VIOLATION",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "033": {
+    "cls": "G7_RENDER_CONTAINMENT_OVERFLOW",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "034": {
+    "cls": "G5_BRAND_COLOR_VIOLATION",
+    "note": "can't tell"
+  },
+  "035": {
+    "cls": "S6_IMAGE_TEXT_CONTRADICTION",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "036": {
+    "cls": "G3_ALIGNMENT_OFFSET",
+    "defect_visible": "no",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "037": {
+    "cls": "S1_TITLE_BODY_MISMATCH",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "038": {
+    "cls": "G1_TEXT_OVERFLOW",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "039": {
+    "cls": "G7_RENDER_CONTAINMENT_OVERFLOW",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "040": {
+    "cls": "S4_DENSITY_RULE_VIOLATION",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "041": {
+    "cls": "G6_MARGIN_VIOLATION",
+    "note": "still space til margin",
+    "defect_visible": "no",
+    "twin_clean": "yes"
+  },
+  "042": {
+    "cls": "S4_DENSITY_RULE_VIOLATION",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "043": {
+    "cls": "G2_ELEMENT_OVERLAP",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "044": {
+    "cls": "G3_ALIGNMENT_OFFSET",
+    "defect_visible": "no",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "045": {
+    "cls": "S1_TITLE_BODY_MISMATCH",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "046": {
+    "cls": "S6_IMAGE_TEXT_CONTRADICTION",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "047": {
+    "cls": "G1_TEXT_OVERFLOW",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "048": {
+    "cls": "G7_RENDER_CONTAINMENT_OVERFLOW",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "049": {
+    "cls": "G1_TEXT_OVERFLOW",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "050": {
+    "cls": "S4_DENSITY_RULE_VIOLATION",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "051": {
+    "cls": "G2_ELEMENT_OVERLAP",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "052": {
+    "cls": "G6_MARGIN_VIOLATION",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "053": {
+    "cls": "G7_RENDER_CONTAINMENT_OVERFLOW",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "054": {
+    "cls": "G2_ELEMENT_OVERLAP",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "055": {
+    "cls": "G6_MARGIN_VIOLATION",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "056": {
+    "cls": "G1_TEXT_OVERFLOW",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "057": {
+    "cls": "S6_IMAGE_TEXT_CONTRADICTION",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "058": {
+    "cls": "G3_ALIGNMENT_OFFSET",
+    "defect_visible": "no",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "059": {
+    "cls": "G6_MARGIN_VIOLATION",
+    "defect_visible": "no",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "060": {
+    "cls": "G5_BRAND_COLOR_VIOLATION",
+    "defect_visible": "no",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "061": {
+    "cls": "G6_MARGIN_VIOLATION",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "062": {
+    "cls": "G2_ELEMENT_OVERLAP",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "063": {
+    "cls": "G1_TEXT_OVERFLOW",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "064": {
+    "cls": "G1_TEXT_OVERFLOW",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "065": {
+    "cls": "S6_IMAGE_TEXT_CONTRADICTION",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "066": {
+    "cls": "S4_DENSITY_RULE_VIOLATION",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "067": {
+    "cls": "S1_TITLE_BODY_MISMATCH",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "068": {
+    "cls": "G7_RENDER_CONTAINMENT_OVERFLOW",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  }
+}

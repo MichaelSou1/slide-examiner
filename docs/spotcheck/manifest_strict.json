@@ -1,0 +1,338 @@
+[
+  {
+    "pair_id": "s00",
+    "class": "G3_ALIGNMENT_OFFSET",
+    "stratum": "4px",
+    "phrase": "an element shifted off its expected position",
+    "src_id": "part2_marketing_attribution_1_G3_ALIGNMENT_OFFSET_4_0045__freeform"
+  },
+  {
+    "pair_id": "s01",
+    "class": "G3_ALIGNMENT_OFFSET",
+    "stratum": "rel\u00b796px",
+    "phrase": "an element shifted off its expected position",
+    "src_id": "g3rel_96_04"
+  },
+  {
+    "pair_id": "s02",
+    "class": "G6_MARGIN_VIOLATION",
+    "stratum": "gap(x->28)",
+    "phrase": "an element too close to / over the slide edge",
+    "src_id": "part2_network_observability_5_G6_MARGIN_VIOLATION_4_0054__freeform"
+  },
+  {
+    "pair_id": "s03",
+    "class": "G5_BRAND_COLOR_VIOLATION",
+    "stratum": "\u0394E\u22483",
+    "phrase": "a wrong / off-brand text colour",
+    "src_id": "part2_knowledge_assistant_4_G5_BRAND_COLOR_VIOLATION_3_0043__freeform"
+  },
+  {
+    "pair_id": "s04",
+    "class": "G5_BRAND_COLOR_VIOLATION",
+    "stratum": "\u0394E\u224812\u00b7hue",
+    "phrase": "a wrong / off-brand text colour",
+    "src_id": "g5chroma_12_blue_01"
+  },
+  {
+    "pair_id": "s05",
+    "class": "G3_ALIGNMENT_OFFSET",
+    "stratum": "32px",
+    "phrase": "an element shifted off its expected position",
+    "src_id": "part2_network_observability_1_G3_ALIGNMENT_OFFSET_32_0050__freeform"
+  },
+  {
+    "pair_id": "s06",
+    "class": "G3_ALIGNMENT_OFFSET",
+    "stratum": "rel\u00b796px",
+    "phrase": "an element shifted off its expected position",
+    "src_id": "g3rel_96_06"
+  },
+  {
+    "pair_id": "s07",
+    "class": "G6_MARGIN_VIOLATION",
+    "stratum": "flush(x->0)",
+    "phrase": "an element too close to / over the slide edge",
+    "src_id": "part2_ops_efficiency_5_G6_MARGIN_VIOLATION_32_0059__freeform"
+  },
+  {
+    "pair_id": "s08",
+    "class": "G5_BRAND_COLOR_VIOLATION",
+    "stratum": "\u0394E\u224824",
+    "phrase": "a wrong / off-brand text colour",
+    "src_id": "part2_security_program_5_G5_BRAND_COLOR_VIOLATION_24_0029__freeform"
+  },
+  {
+    "pair_id": "s09",
+    "class": "G5_BRAND_COLOR_VIOLATION",
+    "stratum": "\u0394E\u224840\u00b7hue",
+    "phrase": "a wrong / off-brand text colour",
+    "src_id": "g5chroma_40_orange_11"
+  },
+  {
+    "pair_id": "s10",
+    "class": "G6_MARGIN_VIOLATION",
+    "stratum": "flush(x->0)",
+    "phrase": "an element too close to / over the slide edge",
+    "src_id": "part2_network_observability_1_G6_MARGIN_VIOLATION_32_0050__freeform"
+  },
+  {
+    "pair_id": "s11",
+    "class": "G3_ALIGNMENT_OFFSET",
+    "stratum": "4px",
+    "phrase": "an element shifted off its expected position",
+    "src_id": "part2_network_observability_4_G3_ALIGNMENT_OFFSET_4_0053__freeform"
+  },
+  {
+    "pair_id": "s12",
+    "class": "G5_BRAND_COLOR_VIOLATION",
+    "stratum": "\u0394E\u224824",
+    "phrase": "a wrong / off-brand text colour",
+    "src_id": "part2_supply_chain_4_G5_BRAND_COLOR_VIOLATION_24_0033__freeform"
+  },
+  {
+    "pair_id": "s13",
+    "class": "G5_BRAND_COLOR_VIOLATION",
+    "stratum": "\u0394E\u224824\u00b7hue",
+    "phrase": "a wrong / off-brand text colour",
+    "src_id": "g5chroma_24_blue_05"
+  },
+  {
+    "pair_id": "s14",
+    "class": "G3_ALIGNMENT_OFFSET",
+    "stratum": "4px",
+    "phrase": "an element shifted off its expected position",
+    "src_id": "part2_logistics_visibility_5_G3_ALIGNMENT_OFFSET_4_0044__freeform"
+  },
+  {
+    "pair_id": "s15",
+    "class": "G5_BRAND_COLOR_VIOLATION",
+    "stratum": "\u0394E\u22483",
+    "phrase": "a wrong / off-brand text colour",
+    "src_id": "part2_logistics_visibility_3_G5_BRAND_COLOR_VIOLATION_3_0052__freeform"
+  },
+  {
+    "pair_id": "s16",
+    "class": "G6_MARGIN_VIOLATION",
+    "stratum": "gap(x->28)",
+    "phrase": "an element too close to / over the slide edge",
+    "src_id": "part2_logistics_visibility_5_G6_MARGIN_VIOLATION_4_0044__freeform"
+  },
+  {
+    "pair_id": "s17",
+    "class": "G5_BRAND_COLOR_VIOLATION",
+    "stratum": "\u0394E\u224824",
+    "phrase": "a wrong / off-brand text colour",
+    "src_id": "part2_retail_analytics_5_G5_BRAND_COLOR_VIOLATION_24_0024__freeform"
+  },
+  {
+    "pair_id": "s18",
+    "class": "G3_ALIGNMENT_OFFSET",
+    "stratum": "32px",
+    "phrase": "an element shifted off its expected position",
+    "src_id": "part2_marketing_attribution_2_G3_ALIGNMENT_OFFSET_32_0046__freeform"
+  },
+  {
+    "pair_id": "s19",
+    "class": "G6_MARGIN_VIOLATION",
+    "stratum": "flush(x->0)",
+    "phrase": "an element too close to / over the slide edge",
+    "src_id": "part2_marketing_attribution_5_G6_MARGIN_VIOLATION_32_0049__freeform"
+  },
+  {
+    "pair_id": "s20",
+    "class": "G5_BRAND_COLOR_VIOLATION",
+    "stratum": "\u0394E\u224840\u00b7hue",
+    "phrase": "a wrong / off-brand text colour",
+    "src_id": "g5chroma_40_green_10"
+  },
+  {
+    "pair_id": "s21",
+    "class": "G3_ALIGNMENT_OFFSET",
+    "stratum": "32px",
+    "phrase": "an element shifted off its expected position",
+    "src_id": "part2_network_observability_4_G3_ALIGNMENT_OFFSET_32_0053__freeform"
+  },
+  {
+    "pair_id": "s22",
+    "class": "G3_ALIGNMENT_OFFSET",
+    "stratum": "32px",
+    "phrase": "an element shifted off its expected position",
+    "src_id": "part2_marketing_attribution_3_G3_ALIGNMENT_OFFSET_32_0047__freeform"
+  },
+  {
+    "pair_id": "s23",
+    "class": "G5_BRAND_COLOR_VIOLATION",
+    "stratum": "\u0394E\u224812",
+    "phrase": "a wrong / off-brand text colour",
+    "src_id": "part2_supply_chain_5_G5_BRAND_COLOR_VIOLATION_12_0014__freeform"
+  },
+  {
+    "pair_id": "s24",
+    "class": "G3_ALIGNMENT_OFFSET",
+    "stratum": "rel\u00b796px",
+    "phrase": "an element shifted off its expected position",
+    "src_id": "g3rel_96_07"
+  },
+  {
+    "pair_id": "s25",
+    "class": "G5_BRAND_COLOR_VIOLATION",
+    "stratum": "\u0394E\u224824",
+    "phrase": "a wrong / off-brand text colour",
+    "src_id": "part2_warehouse_robotics_5_G5_BRAND_COLOR_VIOLATION_24_0039__freeform"
+  },
+  {
+    "pair_id": "s26",
+    "class": "G3_ALIGNMENT_OFFSET",
+    "stratum": "rel\u00b748px",
+    "phrase": "an element shifted off its expected position",
+    "src_id": "g3rel_48_00"
+  },
+  {
+    "pair_id": "s27",
+    "class": "G5_BRAND_COLOR_VIOLATION",
+    "stratum": "\u0394E\u224824\u00b7hue",
+    "phrase": "a wrong / off-brand text colour",
+    "src_id": "g5chroma_24_orange_07"
+  },
+  {
+    "pair_id": "s28",
+    "class": "G5_BRAND_COLOR_VIOLATION",
+    "stratum": "\u0394E\u22483",
+    "phrase": "a wrong / off-brand text colour",
+    "src_id": "part2_marketing_attribution_5_G5_BRAND_COLOR_VIOLATION_3_0059__freeform"
+  },
+  {
+    "pair_id": "s29",
+    "class": "G5_BRAND_COLOR_VIOLATION",
+    "stratum": "\u0394E\u224812",
+    "phrase": "a wrong / off-brand text colour",
+    "src_id": "part2_warehouse_robotics_4_G5_BRAND_COLOR_VIOLATION_12_0018__freeform"
+  },
+  {
+    "pair_id": "s30",
+    "class": "G5_BRAND_COLOR_VIOLATION",
+    "stratum": "\u0394E\u224812",
+    "phrase": "a wrong / off-brand text colour",
+    "src_id": "part2_supply_chain_2_G5_BRAND_COLOR_VIOLATION_12_0011__freeform"
+  },
+  {
+    "pair_id": "s31",
+    "class": "G5_BRAND_COLOR_VIOLATION",
+    "stratum": "\u0394E\u224812\u00b7hue",
+    "phrase": "a wrong / off-brand text colour",
+    "src_id": "g5chroma_12_green_02"
+  },
+  {
+    "pair_id": "s32",
+    "class": "G5_BRAND_COLOR_VIOLATION",
+    "stratum": "\u0394E\u224812\u00b7hue",
+    "phrase": "a wrong / off-brand text colour",
+    "src_id": "g5chroma_12_red_00"
+  },
+  {
+    "pair_id": "s33",
+    "class": "G5_BRAND_COLOR_VIOLATION",
+    "stratum": "\u0394E\u224824\u00b7hue",
+    "phrase": "a wrong / off-brand text colour",
+    "src_id": "g5chroma_24_green_06"
+  },
+  {
+    "pair_id": "s34",
+    "class": "G5_BRAND_COLOR_VIOLATION",
+    "stratum": "\u0394E\u22483",
+    "phrase": "a wrong / off-brand text colour",
+    "src_id": "part2_marketing_attribution_4_G5_BRAND_COLOR_VIOLATION_3_0058__freeform"
+  },
+  {
+    "pair_id": "s35",
+    "class": "G3_ALIGNMENT_OFFSET",
+    "stratum": "rel\u00b748px",
+    "phrase": "an element shifted off its expected position",
+    "src_id": "g3rel_48_03"
+  },
+  {
+    "pair_id": "s36",
+    "class": "G6_MARGIN_VIOLATION",
+    "stratum": "flush(x->0)",
+    "phrase": "an element too close to / over the slide edge",
+    "src_id": "part2_marketing_attribution_3_G6_MARGIN_VIOLATION_32_0047__freeform"
+  },
+  {
+    "pair_id": "s37",
+    "class": "G3_ALIGNMENT_OFFSET",
+    "stratum": "rel\u00b748px",
+    "phrase": "an element shifted off its expected position",
+    "src_id": "g3rel_48_02"
+  },
+  {
+    "pair_id": "s38",
+    "class": "G6_MARGIN_VIOLATION",
+    "stratum": "gap(x->28)",
+    "phrase": "an element too close to / over the slide edge",
+    "src_id": "part2_marketing_attribution_2_G6_MARGIN_VIOLATION_4_0046__freeform"
+  },
+  {
+    "pair_id": "s39",
+    "class": "G6_MARGIN_VIOLATION",
+    "stratum": "gap(x->28)",
+    "phrase": "an element too close to / over the slide edge",
+    "src_id": "part2_ops_efficiency_2_G6_MARGIN_VIOLATION_4_0056__freeform"
+  },
+  {
+    "pair_id": "s40",
+    "class": "G5_BRAND_COLOR_VIOLATION",
+    "stratum": "\u0394E\u224812\u00b7hue",
+    "phrase": "a wrong / off-brand text colour",
+    "src_id": "g5chroma_12_orange_03"
+  },
+  {
+    "pair_id": "s41",
+    "class": "G3_ALIGNMENT_OFFSET",
+    "stratum": "rel\u00b748px",
+    "phrase": "an element shifted off its expected position",
+    "src_id": "g3rel_48_01"
+  },
+  {
+    "pair_id": "s42",
+    "class": "G3_ALIGNMENT_OFFSET",
+    "stratum": "4px",
+    "phrase": "an element shifted off its expected position",
+    "src_id": "part2_marketing_attribution_5_G3_ALIGNMENT_OFFSET_4_0049__freeform"
+  },
+  {
+    "pair_id": "s43",
+    "class": "G5_BRAND_COLOR_VIOLATION",
+    "stratum": "\u0394E\u224840\u00b7hue",
+    "phrase": "a wrong / off-brand text colour",
+    "src_id": "g5chroma_40_red_08"
+  },
+  {
+    "pair_id": "s44",
+    "class": "G3_ALIGNMENT_OFFSET",
+    "stratum": "rel\u00b796px",
+    "phrase": "an element shifted off its expected position",
+    "src_id": "g3rel_96_05"
+  },
+  {
+    "pair_id": "s45",
+    "class": "G5_BRAND_COLOR_VIOLATION",
+    "stratum": "\u0394E\u224812",
+    "phrase": "a wrong / off-brand text colour",
+    "src_id": "part2_security_program_2_G5_BRAND_COLOR_VIOLATION_12_0006__freeform"
+  },
+  {
+    "pair_id": "s46",
+    "class": "G5_BRAND_COLOR_VIOLATION",
+    "stratum": "\u0394E\u224840\u00b7hue",
+    "phrase": "a wrong / off-brand text colour",
+    "src_id": "g5chroma_40_blue_09"
+  },
+  {
+    "pair_id": "s47",
+    "class": "G5_BRAND_COLOR_VIOLATION",
+    "stratum": "\u0394E\u224824\u00b7hue",
+    "phrase": "a wrong / off-brand text colour",
+    "src_id": "g5chroma_24_red_04"
+  }
+]

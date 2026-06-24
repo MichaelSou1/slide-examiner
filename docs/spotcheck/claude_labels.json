@@ -1,0 +1,416 @@
+{
+  "000": {
+    "cls": "G6_MARGIN_VIOLATION",
+    "defect_visible": "no",
+    "twin_clean": "yes",
+    "note": "panels identical; no element touches/breaks margin"
+  },
+  "001": {
+    "cls": "G1_TEXT_OVERFLOW",
+    "defect_visible": "no",
+    "twin_clean": "yes",
+    "note": "XX marker on title, no real overflow (box extends past it)"
+  },
+  "002": {
+    "cls": "S6_IMAGE_TEXT_CONTRADICTION",
+    "defect_visible": "yes",
+    "twin_clean": "yes",
+    "note": "text 'costs rose' vs figure red down-triangle 'costs fell'; twin both say fell"
+  },
+  "003": {
+    "cls": "S6_IMAGE_TEXT_CONTRADICTION",
+    "defect_visible": "yes",
+    "twin_clean": "yes",
+    "note": "text 'NPS sank to thirties' vs figure up-triangle 'climbed to eighties'; twin agrees"
+  },
+  "004": {
+    "cls": "S1_TITLE_BODY_MISMATCH",
+    "defect_visible": "yes",
+    "twin_clean": "yes",
+    "note": "literal 'Unrelated:' injector prefix; body still on-topic (PeoplePulse)"
+  },
+  "005": {
+    "cls": "G5_BRAND_COLOR_VIOLATION",
+    "defect_visible": "no",
+    "twin_clean": "yes",
+    "note": "no visible color diff"
+  },
+  "006": {
+    "cls": "S6_IMAGE_TEXT_CONTRADICTION",
+    "defect_visible": "yes",
+    "twin_clean": "yes",
+    "note": "text 'rate halved' vs figure up-triangle 'rate doubled'; twin agrees"
+  },
+  "007": {
+    "cls": "G3_ALIGNMENT_OFFSET",
+    "defect_visible": "no",
+    "twin_clean": "yes",
+    "note": "only full-width title box width differs; body elements aligned"
+  },
+  "008": {
+    "cls": "G3_ALIGNMENT_OFFSET",
+    "defect_visible": "no",
+    "twin_clean": "yes",
+    "note": "no visible element misalignment between panels"
+  },
+  "009": {
+    "cls": "G7_RENDER_CONTAINMENT_OVERFLOW",
+    "defect_visible": "yes",
+    "twin_clean": "yes",
+    "note": "last 3 bullets spill below the orange card border; twin all bullets contained"
+  },
+  "010": {
+    "cls": "G2_ELEMENT_OVERLAP",
+    "defect_visible": "yes",
+    "twin_clean": "yes",
+    "note": "title box floats over/collides with first body row; twin title in own row"
+  },
+  "011": {
+    "cls": "G7_RENDER_CONTAINMENT_OVERFLOW",
+    "defect_visible": "yes",
+    "twin_clean": "yes",
+    "note": "last 3 bullets spill below blue card border; twin contained"
+  },
+  "012": {
+    "cls": "G3_ALIGNMENT_OFFSET",
+    "defect_visible": "no",
+    "twin_clean": "yes",
+    "note": "only full-width title box width differs; body elements aligned"
+  },
+  "013": {
+    "cls": "S1_TITLE_BODY_MISMATCH",
+    "defect_visible": "yes",
+    "twin_clean": "yes",
+    "note": "literal 'Unrelated:' injector prefix; body still on-topic (StockIQ)"
+  },
+  "014": {
+    "cls": "S1_TITLE_BODY_MISMATCH",
+    "defect_visible": "yes",
+    "twin_clean": "yes",
+    "note": "injector 'Unrelated:' prefix; title off-topic vs rollout-plan body"
+  },
+  "015": {
+    "cls": "G5_BRAND_COLOR_VIOLATION",
+    "defect_visible": "no",
+    "twin_clean": "yes",
+    "note": "no visible color diff between panels"
+  },
+  "016": {
+    "cls": "G5_BRAND_COLOR_VIOLATION",
+    "defect_visible": "no",
+    "twin_clean": "yes",
+    "note": "no visible color diff between panels"
+  },
+  "017": {
+    "cls": "G7_RENDER_CONTAINMENT_OVERFLOW",
+    "defect_visible": "yes",
+    "twin_clean": "yes",
+    "note": "striped image spills well below the card frame; clean contained"
+  },
+  "018": {
+    "cls": "S4_DENSITY_RULE_VIOLATION",
+    "defect_visible": "yes",
+    "twin_clean": "yes",
+    "note": "detail0..detail9 filler tokens spill past title box"
+  },
+  "019": {
+    "cls": "G3_ALIGNMENT_OFFSET",
+    "defect_visible": "no",
+    "twin_clean": "yes",
+    "note": "panels look identical; no visible misalignment"
+  },
+  "020": {
+    "cls": "S4_DENSITY_RULE_VIOLATION",
+    "defect_visible": "yes",
+    "twin_clean": "yes",
+    "note": "detail0..detail9 filler tokens spill past title box"
+  },
+  "021": {
+    "cls": "S1_TITLE_BODY_MISMATCH",
+    "defect_visible": "yes",
+    "twin_clean": "yes",
+    "note": "injector 'Unrelated:' prefix; title differs from clean ('Expanding StockIQ to all regions')"
+  },
+  "022": {
+    "cls": "G5_BRAND_COLOR_VIOLATION",
+    "defect_visible": "no",
+    "twin_clean": "yes",
+    "note": "no visible color diff between panels"
+  },
+  "023": {
+    "cls": "G7_RENDER_CONTAINMENT_OVERFLOW",
+    "defect_visible": "yes",
+    "twin_clean": "yes",
+    "note": "long URL does not wrap and clips at card right edge; clean wraps inside"
+  },
+  "024": {
+    "cls": "S6_IMAGE_TEXT_CONTRADICTION",
+    "defect_visible": "yes",
+    "twin_clean": "yes",
+    "note": "figure says revenue rose (up-triangle) but body text says revenue fell; clean text agrees with figure"
+  },
+  "025": {
+    "cls": "G2_ELEMENT_OVERLAP",
+    "defect_visible": "yes",
+    "twin_clean": "yes",
+    "note": "title dropped onto first bullet, overlapping it; clean title at top"
+  },
+  "026": {
+    "cls": "G1_TEXT_OVERFLOW",
+    "defect_visible": "no",
+    "twin_clean": "yes",
+    "note": "XXX marker prefix; title fits within its box, no real overflow"
+  },
+  "027": {
+    "cls": "G2_ELEMENT_OVERLAP",
+    "defect_visible": "yes",
+    "twin_clean": "yes",
+    "note": "title overlaps first bullet 'Adoption grew month over month'; clean separated"
+  },
+  "028": {
+    "cls": "G6_MARGIN_VIOLATION",
+    "defect_visible": "no",
+    "twin_clean": "yes",
+    "note": "defective and clean identical; nothing touches/breaks the margin"
+  },
+  "029": {
+    "cls": "G1_TEXT_OVERFLOW",
+    "defect_visible": "no",
+    "twin_clean": "yes",
+    "note": "XX marker prefix, no real overflow"
+  },
+  "030": {
+    "cls": "G5_BRAND_COLOR_VIOLATION",
+    "defect_visible": "no",
+    "twin_clean": "yes",
+    "note": "no visible color diff"
+  },
+  "031": {
+    "cls": "S6_IMAGE_TEXT_CONTRADICTION",
+    "defect_visible": "yes",
+    "twin_clean": "yes",
+    "note": "text 'backlog grew' vs figure 'backlog shrank'; clean text agrees with figure"
+  },
+  "032": {
+    "cls": "S4_DENSITY_RULE_VIOLATION",
+    "defect_visible": "yes",
+    "twin_clean": "yes",
+    "note": "detail0..detail8 filler tokens spill past title box"
+  },
+  "033": {
+    "cls": "G7_RENDER_CONTAINMENT_OVERFLOW",
+    "defect_visible": "yes",
+    "twin_clean": "yes",
+    "note": "last 3 bullets spill below card border"
+  },
+  "034": {
+    "cls": "G5_BRAND_COLOR_VIOLATION",
+    "defect_visible": "no",
+    "twin_clean": "yes",
+    "note": "no visible color diff"
+  },
+  "035": {
+    "cls": "S6_IMAGE_TEXT_CONTRADICTION",
+    "defect_visible": "yes",
+    "twin_clean": "yes",
+    "note": "text 'churn climbed to record high' vs figure 'churn dropped to record low'; clean agrees"
+  },
+  "036": {
+    "cls": "G3_ALIGNMENT_OFFSET",
+    "defect_visible": "no",
+    "twin_clean": "yes",
+    "note": "elements self-consistent; only overall indent differs from clean, no clear misalignment"
+  },
+  "037": {
+    "cls": "S1_TITLE_BODY_MISMATCH",
+    "defect_visible": "yes",
+    "twin_clean": "yes",
+    "note": "literal 'Unrelated:' injector prefix; title topically off vs body"
+  },
+  "038": {
+    "cls": "G1_TEXT_OVERFLOW",
+    "defect_visible": "no",
+    "twin_clean": "yes",
+    "note": "XXX marker prefix, no real overflow"
+  },
+  "039": {
+    "cls": "G7_RENDER_CONTAINMENT_OVERFLOW",
+    "defect_visible": "yes",
+    "twin_clean": "yes",
+    "note": "last 3 bullets spill below card border"
+  },
+  "040": {
+    "cls": "S4_DENSITY_RULE_VIOLATION",
+    "defect_visible": "yes",
+    "twin_clean": "yes",
+    "note": "detail0..detail8 filler tokens spill past title box"
+  },
+  "041": {
+    "cls": "G6_MARGIN_VIOLATION",
+    "defect_visible": "no",
+    "twin_clean": "yes",
+    "note": "defective and clean identical; nothing touches/breaks the margin"
+  },
+  "042": {
+    "cls": "S4_DENSITY_RULE_VIOLATION",
+    "defect_visible": "yes",
+    "twin_clean": "yes",
+    "note": "detail0..detail8 filler tokens spill title box"
+  },
+  "043": {
+    "cls": "G2_ELEMENT_OVERLAP",
+    "defect_visible": "yes",
+    "twin_clean": "yes",
+    "note": "title displaced down, overlaps 'Adoption grew' row"
+  },
+  "044": {
+    "cls": "G3_ALIGNMENT_OFFSET",
+    "defect_visible": "no",
+    "twin_clean": "yes",
+    "note": "defective and clean look identical, no visible misalignment"
+  },
+  "045": {
+    "cls": "S1_TITLE_BODY_MISMATCH",
+    "defect_visible": "yes",
+    "twin_clean": "yes",
+    "note": "literal 'Unrelated:' injector prefix; title off vs PeoplePulse body"
+  },
+  "046": {
+    "cls": "S6_IMAGE_TEXT_CONTRADICTION",
+    "defect_visible": "yes",
+    "twin_clean": "yes",
+    "note": "text says rate rose, FIGURE says declined; twin agrees"
+  },
+  "047": {
+    "cls": "G1_TEXT_OVERFLOW",
+    "defect_visible": "yes",
+    "twin_clean": "yes",
+    "note": "trailing XXX marker spills past right edge of title box"
+  },
+  "048": {
+    "cls": "G7_RENDER_CONTAINMENT_OVERFLOW",
+    "defect_visible": "yes",
+    "twin_clean": "yes",
+    "note": "striped figure spills below green card frame"
+  },
+  "049": {
+    "cls": "G1_TEXT_OVERFLOW",
+    "defect_visible": "no",
+    "twin_clean": "yes",
+    "note": "XX marker prepended but text stays within box, no real spill"
+  },
+  "050": {
+    "cls": "S4_DENSITY_RULE_VIOLATION",
+    "defect_visible": "yes",
+    "twin_clean": "yes",
+    "note": "detail0..detail8 filler tokens spill title box"
+  },
+  "051": {
+    "cls": "G2_ELEMENT_OVERLAP",
+    "defect_visible": "yes",
+    "twin_clean": "yes",
+    "note": "title displaced onto first body row, text collides"
+  },
+  "052": {
+    "cls": "G6_MARGIN_VIOLATION",
+    "defect_visible": "yes",
+    "twin_clean": "yes",
+    "note": "title box runs to left slide edge, breaks left margin"
+  },
+  "053": {
+    "cls": "G7_RENDER_CONTAINMENT_OVERFLOW",
+    "defect_visible": "yes",
+    "twin_clean": "yes",
+    "note": "striped figure spills below green card frame"
+  },
+  "054": {
+    "cls": "G2_ELEMENT_OVERLAP",
+    "defect_visible": "yes",
+    "twin_clean": "yes",
+    "note": "title displaced down, overlaps 'Current process' row"
+  },
+  "055": {
+    "cls": "G6_MARGIN_VIOLATION",
+    "defect_visible": "yes",
+    "twin_clean": "yes",
+    "note": "title box runs to left slide edge, breaks left margin"
+  },
+  "056": {
+    "cls": "G1_TEXT_OVERFLOW",
+    "defect_visible": "no",
+    "twin_clean": "yes",
+    "note": "XX marker reaches but does not spill the title box; no real overflow"
+  },
+  "057": {
+    "cls": "S6_IMAGE_TEXT_CONTRADICTION",
+    "defect_visible": "yes",
+    "twin_clean": "yes",
+    "note": "text 'Signups stalled' contradicts FIGURE '...accelerated' (up arrow); twin text agrees"
+  },
+  "058": {
+    "cls": "G3_ALIGNMENT_OFFSET",
+    "defect_visible": "no",
+    "twin_clean": "yes",
+    "note": "no visible misalignment between defective and clean"
+  },
+  "059": {
+    "cls": "G6_MARGIN_VIOLATION",
+    "defect_visible": "no",
+    "twin_clean": "yes",
+    "note": "no element breaks the margin; layouts essentially equivalent"
+  },
+  "060": {
+    "cls": "G5_BRAND_COLOR_VIOLATION",
+    "defect_visible": "no",
+    "twin_clean": "yes",
+    "note": "no visible color diff"
+  },
+  "061": {
+    "cls": "G6_MARGIN_VIOLATION",
+    "defect_visible": "yes",
+    "twin_clean": "yes",
+    "note": "title box flush to left slide edge (zero inset), runs past the margin vs inset clean twin"
+  },
+  "062": {
+    "cls": "G2_ELEMENT_OVERLAP",
+    "defect_visible": "yes",
+    "twin_clean": "yes",
+    "note": "title 'The GridCast deployment roadmap' overlaps/collides with the first body box"
+  },
+  "063": {
+    "cls": "G1_TEXT_OVERFLOW",
+    "defect_visible": "yes",
+    "twin_clean": "yes",
+    "note": "XXX spills past the title box right border"
+  },
+  "064": {
+    "cls": "G1_TEXT_OVERFLOW",
+    "defect_visible": "yes",
+    "twin_clean": "yes",
+    "note": "XXX spills past the title box right border"
+  },
+  "065": {
+    "cls": "S6_IMAGE_TEXT_CONTRADICTION",
+    "defect_visible": "yes",
+    "twin_clean": "yes",
+    "note": "text 'Uptime degraded to two nines' contradicts FIGURE 'improved to four nines'; twin agrees"
+  },
+  "066": {
+    "cls": "S4_DENSITY_RULE_VIOLATION",
+    "defect_visible": "yes",
+    "twin_clean": "yes",
+    "note": "detail0..detail9 filler tokens cram/spill the title"
+  },
+  "067": {
+    "cls": "S1_TITLE_BODY_MISMATCH",
+    "defect_visible": "yes",
+    "twin_clean": "yes",
+    "note": "literal 'Unrelated:' injector prefix; title off-topic vs DispatchPro body; twin title matches"
+  },
+  "068": {
+    "cls": "G7_RENDER_CONTAINMENT_OVERFLOW",
+    "defect_visible": "yes",
+    "twin_clean": "yes",
+    "note": "last 3 bullets spill below the green card frame; twin contains all bullets"
+  }
+}

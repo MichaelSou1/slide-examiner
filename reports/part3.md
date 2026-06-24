@@ -66,6 +66,49 @@ but this DV is coverage-weighted, so the 30B's semantic critique is more *action
 ft examiner's structural critique — consistent with Part 1's perception/semantics dissociation. The
 verifiable-gated `hybrid` recovers the top `best_gain` (0.0194).
 
+### 1b. Unfloored regime (E6) — weak generator does not make the effect material
+
+R3-W2/S1 (top-venue panel): the +0.66 cashes out to sub-1 % because a strong generator
+floors briefs at iter 0; we must show ≥1 regime *with headroom*. We re-ran the **identical**
+gradient (same tasks/seeds/iters/weak-seed/model-free DV) swapping only the generator for a
+**weak local `Qwen3-VL-4B-Instruct`** (vLLM, CUDA-graphs; examiner gradient served TP=2). The
+weak generator is genuinely unfloored — but the effect does not become material; it **vanishes**:
+
+| regime | mean first-draft q | headroom (1−init) | corr q↔gain | corr q↔best_gain | max best_gain | any condition ≥ thr |
+|---|---|---|---|---|---|---|
+| strong gen (`qwen3.6-flash`, §1) | 0.763 | 0.237 | **+0.659** | +0.558 | 0.0194 | 11 % |
+| **weak gen (`Qwen3-VL-4B`, E6)** | **0.662** | **0.338** (1.43×) | **−0.001** | **0.000** | **0.000** | 0 % |
+
+The weak generator leaves **43 % more headroom**, yet **no** examiner — linter → zs-8B → zs-30B →
+ft-8B → hybrid — buys *any* refinement gain (every `best_gain` = 0.0000; every per-dimension Δ ≈ 0).
+The cause is **where** the headroom sits: it is **coverage-dominated** (mean coverage component 0.19;
+geometry/terms/conciseness already ≈ 1.0), and *coverage* (deck completeness — are the required
+sections present?) is critiqued by **neither** the geometry linter **nor** the injected-defect examiner.
+The perception/defect critic has nothing to say on the axis where a weak generator actually has room.
+
+**Actionability A/B (the null is an axis mismatch, not revision incapacity).** Holding
+generator + task + seed fixed and varying **only the critique** (`data/part3/e6_actionability.json`,
+n = 3 first drafts):
+
+| critique fed to the (weak) generator | Δ quality | Δ coverage | deck size |
+|---|---|---|---|
+| **A. real geometry/structure critique** (linter on the clean draft → 0 violations) | **+0.00** | **+0.00** | 5→5, 8→8 |
+| **B. explicit coverage critique** (names the missing required sections) | **+0.32** | **+0.81** | 5→8, 5→9, 8→8 |
+
+The same weak 4B that ignores the geometry-clean critique (A) *adds the named missing sections*
+when told (B: e.g. a launch deck 5→8 slides, gaining `problem`/`solution`/`call_to_action`). So the
+downstream null is **not** that the weak generator can't revise — it is that the examiner critiques
+**perception/layout** while a weak generator's headroom is **content completeness**.
+
+**Takeaway (bounded, honest).** The examiner-quality→utility signal is squeezed from **both** sides:
+a *strong* generator leaves no headroom (§1), and a *weak* generator leaves headroom on an axis the
+perception critic cannot see (E6). The effect would be material only where the generator's deficit
+lies **in the examiner's competence** (perceptual/structural), which the A/B direction confirms in
+miniature. This sharpens — not threatens — the diagnostic thesis: the examiner's verifiable value is
+its **intrinsic** (Parts 1–2) and **case-study** (§6) performance, not this self-refine loop. See Fig.
+`docs/figs/p3_e6_unfloored.png`. _Artifacts: `data/part3/e6_unfloored_synth.json`,
+`e6_actionability.json`; runner `scripts/part3_e6_parallel.py`; probe `scripts/part3_e6_actionability.py`._
+
 ---
 
 ## 2. GEPA skill-space vehicle (SECONDARY)

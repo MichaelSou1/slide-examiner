@@ -30,6 +30,25 @@ def _choose_element(slide: Slide, element_id: str | None, *, require_text: bool 
     return candidates[0]
 
 
+# Saturated off-brand hues for the internal G5 colour swap (a real brand violation is a
+# hue change, not a gray-axis lightness step).
+_HUE_PALETTE = [(203, 36, 41), (26, 95, 180), (38, 162, 105), (224, 120, 20), (129, 61, 156)]
+
+
+def _chromatic_at_delta_e(base_rgb: tuple[int, int, int], delta_e: float,
+                          hue_rgb: tuple[int, int, int]) -> tuple[int, int, int]:
+    """Point on the segment base->hue whose CIEDE2000 to base is closest to delta_e —
+    a clearly-hued colour calibrated in perceptual magnitude."""
+    best, best_err = base_rgb, abs(color_delta_e(base_rgb, base_rgb) - delta_e)
+    for i in range(1, 201):
+        t = i / 200.0
+        cand = tuple(int(round(b + (h - b) * t)) for b, h in zip(base_rgb, hue_rgb))
+        err = abs(color_delta_e(base_rgb, cand) - delta_e)
+        if err < best_err:
+            best, best_err = cand, err
+    return best
+
+
 def inject_text_overflow(
     slide: Slide,
     *,
@@ -99,6 +118,21 @@ def inject_overlap(
     return InjectedSlide(clean=slide, defective=defective, label=label)
 
 
+def _aligned_sibling_group(slide: Slide) -> tuple[str, list[Element]] | None:
+    """Largest set of >=3 same-type elements sharing a (rounded) left edge — a visible
+    alignment column (e.g. body bullets). The basis for an INTERNAL-contrast defect:
+    one member out of line with the rest is decidable from the slide alone, no external
+    expected-position needed (E8 re-operationalisation)."""
+    buckets: dict[tuple[str, int], list[Element]] = {}
+    for el in slide.elements:
+        if el.type in {"text", "body", "textbox", "placeholder"} and el.text:
+            buckets.setdefault((el.type, round(el.bbox.x)), []).append(el)
+    groups = [(f"{t}@{x}", members) for (t, x), members in buckets.items() if len(members) >= 3]
+    if not groups:
+        return None
+    return max(groups, key=lambda g: len(g[1]))
+
+
 def inject_alignment_offset(
     slide: Slide,
     *,
@@ -106,18 +140,42 @@ def inject_alignment_offset(
     offset_px: float = 16.0,
     axis: str = "x",
 ) -> InjectedSlide:
-    element = _choose_element(slide, element_id)
-    expected = element.metadata.get("expected_bbox") or element.bbox.to_dict()
+    """G3 as an INTERNAL alignment inconsistency: shift ONE member of an aligned sibling
+    column out of line and tag the column with ``alignment_group`` so the linter's
+    internal rule (median-x deviation) detects it. Falls back to the legacy absolute
+    offset only when the slide has no >=3-member column."""
+    group = _aligned_sibling_group(slide)
     dx = offset_px if axis == "x" else 0.0
     dy = offset_px if axis == "y" else 0.0
+    if group is not None and element_id is None:
+        key, members = group
+        members.sort(key=lambda e: e.bbox.y)
+        target = members[len(members) // 2]  # the middle one — clearly out of the column
+        elements = list(slide.elements)
+        for i, el in enumerate(elements):
+            if any(el.element_id == m.element_id for m in members):
+                el = el.with_metadata(alignment_group=key)
+                if el.element_id == target.element_id:
+                    el = el.with_bbox(el.bbox.moved(dx=dx, dy=dy))
+                elements[i] = el
+        clean = replace(slide, elements=tuple(
+            e.with_metadata(alignment_group=key) if any(e.element_id == m.element_id for m in members) else e
+            for e in slide.elements))
+        defective = replace(slide, elements=tuple(elements))
+        label = DefectLabel(
+            type="G3_ALIGNMENT_OFFSET", severity=offset_px,
+            target_element_ids=(target.element_id,),
+            metadata={"offset_px": offset_px, "axis": axis, "alignment_group": key, "mode": "internal"})
+        return InjectedSlide(clean=clean, defective=defective, label=label)
+    # legacy fallback (no sibling column): absolute offset vs expected_bbox
+    element = _choose_element(slide, element_id)
+    expected = element.metadata.get("expected_bbox") or element.bbox.to_dict()
     updated = element.with_bbox(element.bbox.moved(dx=dx, dy=dy)).with_metadata(expected_bbox=expected)
     defective = slide.replace_element(updated)
     label = DefectLabel(
-        type="G3_ALIGNMENT_OFFSET",
-        severity=offset_px,
+        type="G3_ALIGNMENT_OFFSET", severity=offset_px,
         target_element_ids=(element.element_id,),
-        metadata={"offset_px": offset_px, "axis": axis, "expected_bbox": expected},
-    )
+        metadata={"offset_px": offset_px, "axis": axis, "expected_bbox": expected, "mode": "absolute_fallback"})
     return InjectedSlide(clean=slide, defective=defective, label=label)
 
 
@@ -219,6 +277,47 @@ def inject_brand_color_violation(
     delta_e: float = 24.0,
     color: str | None = None,
 ) -> InjectedSlide:
+    """G5 as an INTERNAL colour inconsistency: recolour ONE member of an aligned sibling
+    column so its text colour differs from the rest, and tag the column with
+    ``color_group`` so the linter's internal rule detects "which element is off". The
+    contrast is among the bullets themselves — decidable from the slide alone, no
+    external brand palette needed (E8 re-operationalisation). Falls back to the legacy
+    expected-colour shift only when there is no >=3-member column."""
+    group = _aligned_sibling_group(slide)
+    if group is not None and element_id is None:
+        key, members = group
+        members.sort(key=lambda e: e.bbox.y)
+        target = members[len(members) // 2]
+        sibling_hex = target.style.get("color") or target.style.get("fill_color") or "#111111"
+        if color is None:
+            sib_rgb = _parse_rgb(sibling_hex) or (17, 17, 17)
+            # A real off-brand colour is a HUE swap, not a gray-axis lightness step
+            # (`_color_at_delta_e` walks the gray axis -> perceptually weak even when
+            # internal). Pick a saturated hue deterministically from the target id.
+            hue = _HUE_PALETTE[sum(ord(c) for c in target.element_id) % len(_HUE_PALETTE)]
+            new_rgb = _chromatic_at_delta_e(sib_rgb, float(delta_e), hue)
+            color = _rgb_to_hex(new_rgb)
+            realized = color_delta_e(sib_rgb, new_rgb)
+        else:
+            realized = color_delta_e(_parse_rgb(sibling_hex) or (17, 17, 17), _parse_rgb(color) or (0, 0, 0))
+        elements = []
+        for el in slide.elements:
+            if any(el.element_id == m.element_id for m in members):
+                el = el.with_metadata(color_group=key)
+                if el.element_id == target.element_id:
+                    el = replace(el, style={**el.style, "color": color})
+            elements.append(el)
+        clean = replace(slide, elements=tuple(
+            e.with_metadata(color_group=key) if any(e.element_id == m.element_id for m in members) else e
+            for e in slide.elements))
+        defective = replace(slide, elements=tuple(elements))
+        label = DefectLabel(
+            type="G5_BRAND_COLOR_VIOLATION", severity=realized,
+            target_element_ids=(target.element_id,),
+            metadata={"delta_e": realized, "sibling_color": sibling_hex, "odd_color": color,
+                      "color_group": key, "mode": "internal"})
+        return InjectedSlide(clean=clean, defective=defective, label=label)
+    # legacy fallback (no sibling column): shift one element vs its own expected colour
     element = _choose_element(slide, element_id)
     expected = element.style.get("color") or element.style.get("fill_color") or "#000000"
     if color is None:
@@ -227,21 +326,14 @@ def inject_brand_color_violation(
         color = _rgb_to_hex(new_rgb)
         realized = color_delta_e(expected_rgb, new_rgb)
     else:
-        expected_rgb = _parse_rgb(expected)
-        actual_rgb = _parse_rgb(color)
-        if expected_rgb is not None and actual_rgb is not None:
-            realized = color_delta_e(expected_rgb, actual_rgb)
-        else:
-            realized = float(delta_e)
-    style = {**element.style, "color": color}
-    updated = replace(element, style=style).with_metadata(expected_color=expected)
+        expected_rgb, actual_rgb = _parse_rgb(expected), _parse_rgb(color)
+        realized = color_delta_e(expected_rgb, actual_rgb) if expected_rgb and actual_rgb else float(delta_e)
+    updated = replace(element, style={**element.style, "color": color}).with_metadata(expected_color=expected)
     defective = slide.replace_element(updated)
     label = DefectLabel(
-        type="G5_BRAND_COLOR_VIOLATION",
-        severity=realized,
+        type="G5_BRAND_COLOR_VIOLATION", severity=realized,
         target_element_ids=(element.element_id,),
-        metadata={"delta_e": realized, "expected_color": expected, "actual_color": color},
-    )
+        metadata={"delta_e": realized, "expected_color": expected, "actual_color": color, "mode": "absolute_fallback"})
     return InjectedSlide(clean=slide, defective=defective, label=label)
 
 

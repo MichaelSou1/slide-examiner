@@ -25,7 +25,9 @@ from slide_examiner.feedback_sources import DEFAULT_INTRINSIC_QUALITY, FEEDBACK_
 from slide_examiner.generator import GeneratorConfig
 from slide_examiner.io import read_jsonl
 from slide_examiner.self_refine import refinement_summary, run_self_refine
-from slide_examiner.skill_doc import DEFAULT_PROMPT_MODULES, WEAK_PROMPT_MODULES
+from slide_examiner.skill_doc import DEFAULT_PROMPT_MODULES, VERBOSE_PROMPT_MODULES, WEAK_PROMPT_MODULES
+
+_SEED_MODULES = {"default": DEFAULT_PROMPT_MODULES, "weak": WEAK_PROMPT_MODULES, "verbose": VERBOSE_PROMPT_MODULES}
 
 load_dotenv(REPO / ".env")
 _GEN = resolve_role("GEN", default_model="qwen3.6-flash")
@@ -54,6 +56,9 @@ def main() -> None:
     ap.add_argument("--max-slides", type=int, default=15)
     ap.add_argument("--gen-max-tokens", type=int, default=2048)
     ap.add_argument("--weak-seed", action="store_true", help="start from WEAK seed skill (fair, matches GEPA)")
+    ap.add_argument("--seed-modules", choices=list(_SEED_MODULES), default=None,
+                    help="explicit seed skill (default/weak/verbose); overrides --weak-seed. "
+                         "'verbose' (E6) piles the deficit into addressable geometry/conciseness.")
     ap.add_argument("--out", default=str(REPO / "runs/probe/part3/self_refine.jsonl"))
     ap.add_argument("--summary", default=str(REPO / "runs/probe/part3/self_refine_summary.json"))
     ap.add_argument("--from-jsonl", default=None, help="aggregate an existing merged jsonl (skip running; for multi-phase merge)")
@@ -66,7 +71,10 @@ def main() -> None:
     args = ap.parse_args()
 
     tasks = read_jsonl(args.tasks)[: args.max_tasks]
-    seed_modules = WEAK_PROMPT_MODULES if args.weak_seed else DEFAULT_PROMPT_MODULES
+    if args.seed_modules:
+        seed_modules = _SEED_MODULES[args.seed_modules]
+    else:
+        seed_modules = WEAK_PROMPT_MODULES if args.weak_seed else DEFAULT_PROMPT_MODULES
     gen_cfg = GeneratorConfig(
         model=_GEN["model"], base_url=_GEN["base_url"], api_key_env=_GEN["api_key_env"],
         api_style=_GEN["api_style"], max_tokens=args.gen_max_tokens, max_slides=args.max_slides,
@@ -123,6 +131,7 @@ def _aggregate_and_write(records: list[dict], args) -> None:
     iv_path = REPO / "runs/probe/part3/feedback_iv.json"
     if iv_path.exists():
         iv = (json.loads(iv_path.read_text()).get("conditions") or {})
+    _DIMS = ("coverage", "geometry", "terms", "conciseness")
     per_condition = {}
     for cond in FEEDBACK_SOURCE_ORDER:
         ok = [r for r in records if r["condition"] == cond and r.get("ok") and r.get("summary")]
@@ -133,16 +142,36 @@ def _aggregate_and_write(records: list[dict], args) -> None:
         # iter-2 can regress below the peak, so final-initial understates whether the
         # examiner's critique EVER helped. best_gain isolates "did the examiner buy any lift".
         best_gains = [r["summary"].get("best_gain", r["summary"]["best"] - r["summary"]["initial"]) for r in ok]
+        initials = [r["summary"]["initial"] for r in ok]
         finals = [r["summary"]["final"] for r in ok]
         reached = [r["summary"]["iters_to_threshold"] for r in ok if r["summary"]["iters_to_threshold"] is not None]
+        # Per-dimension Δ (final − initial) so the analysis can attribute the (small)
+        # downstream gain to the addressable dims (geometry/terms/conciseness) vs the
+        # coverage dim that neither the linter nor the injected-defect examiner critiques.
+        dim_delta: dict[str, float] = {}
+        dim_init: dict[str, float] = {}
+        for d in _DIMS:
+            di, dd = [], []
+            for r in ok:
+                hist = r.get("history") or []
+                comps = [h.get("components") or {} for h in hist]
+                if comps and d in comps[0] and d in comps[-1]:
+                    di.append(comps[0][d]); dd.append(comps[-1][d] - comps[0][d])
+            if di:
+                dim_init[d] = round(statistics.mean(di), 4)
+                dim_delta[d] = round(statistics.mean(dd), 4)
         per_condition[cond] = {
             "quality_scalar": (iv.get(cond, {}) or {}).get("quality_scalar"),
+            "mean_initial": round(statistics.mean(initials), 4),
+            "mean_headroom": round(1.0 - statistics.mean(initials), 4),
             "mean_gain": round(statistics.mean(gains), 4),
             "mean_best_gain": round(statistics.mean(best_gains), 4),
             "frac_improved": round(sum(1 for g in best_gains if g > 1e-6) / len(ok), 3),
             "mean_final_quality": round(statistics.mean(finals), 4),
             "mean_iters_to_threshold": round(statistics.mean(reached), 2) if reached else None,
             "frac_reached_threshold": round(len(reached) / len(ok), 3),
+            "dim_initial": dim_init,
+            "dim_delta": dim_delta,
             "n": len(ok),
         }
 
@@ -151,9 +180,12 @@ def _aggregate_and_write(records: list[dict], args) -> None:
     corr_gain = _pearson(qs, [per_condition[c]["mean_gain"] for c in ordered])
     corr_best_gain = _pearson(qs, [per_condition[c]["mean_best_gain"] for c in ordered])
     corr_final = _pearson(qs, [per_condition[c]["mean_final_quality"] for c in ordered])
+    all_init = [pc["mean_initial"] for pc in per_condition.values() if pc.get("mean_initial") is not None]
     summary = {
         "vehicle": "self_refine",
         "n_iters": args.n_iters, "q_threshold": args.q,
+        "regime_mean_initial": round(statistics.mean(all_init), 4) if all_init else None,
+        "regime_mean_headroom": round(1.0 - statistics.mean(all_init), 4) if all_init else None,
         "per_condition": per_condition,
         "examiner_quality_vs_gain_corr": corr_gain,        # expect > 0: better examiner -> bigger refinement gain
         "examiner_quality_vs_best_gain_corr": corr_best_gain,  # robust variant (best-over-iters)

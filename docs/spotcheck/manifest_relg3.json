@@ -1,0 +1,58 @@
+[
+  {
+    "pair_id": "s00",
+    "class": "G3_ALIGNMENT_OFFSET",
+    "stratum": "rel\u00b748px",
+    "phrase": "an element shifted off its expected position",
+    "src_id": "g3rel_48_00"
+  },
+  {
+    "pair_id": "s01",
+    "class": "G3_ALIGNMENT_OFFSET",
+    "stratum": "rel\u00b796px",
+    "phrase": "an element shifted off its expected position",
+    "src_id": "g3rel_96_05"
+  },
+  {
+    "pair_id": "s02",
+    "class": "G3_ALIGNMENT_OFFSET",
+    "stratum": "rel\u00b748px",
+    "phrase": "an element shifted off its expected position",
+    "src_id": "g3rel_48_02"
+  },
+  {
+    "pair_id": "s03",
+    "class": "G3_ALIGNMENT_OFFSET",
+    "stratum": "rel\u00b796px",
+    "phrase": "an element shifted off its expected position",
+    "src_id": "g3rel_96_06"
+  },
+  {
+    "pair_id": "s04",
+    "class": "G3_ALIGNMENT_OFFSET",
+    "stratum": "rel\u00b748px",
+    "phrase": "an element shifted off its expected position",
+    "src_id": "g3rel_48_03"
+  },
+  {
+    "pair_id": "s05",
+    "class": "G3_ALIGNMENT_OFFSET",
+    "stratum": "rel\u00b796px",
+    "phrase": "an element shifted off its expected position",
+    "src_id": "g3rel_96_07"
+  },
+  {
+    "pair_id": "s06",
+    "class": "G3_ALIGNMENT_OFFSET",
+    "stratum": "rel\u00b748px",
+    "phrase": "an element shifted off its expected position",
+    "src_id": "g3rel_48_01"
+  },
+  {
+    "pair_id": "s07",
+    "class": "G3_ALIGNMENT_OFFSET",
+    "stratum": "rel\u00b796px",
+    "phrase": "an element shifted off its expected position",
+    "src_id": "g3rel_96_04"
+  }
+]

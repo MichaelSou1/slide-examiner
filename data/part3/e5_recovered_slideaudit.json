@@ -1,0 +1,195 @@
+{
+  "mode": "slideaudit",
+  "manifest": "data/part2/manifest_slideaudit.jsonl",
+  "model_id": "PaddlePaddle/PP-DocLayoutV2_safetensors",
+  "operating_point": {
+    "min_iou": 0.05,
+    "margin_px": 32.0,
+    "score_thr": 0.4,
+    "nms_iou": 0.7,
+    "norm_width": 960
+  },
+  "vlm_floor_source": "data/part3/p2_slideaudit.json",
+  "per_class": {
+    "G1_TEXT_OVERFLOW": {
+      "recovered": {
+        "bal_acc": 0.5,
+        "bal_acc_ci": [
+          0.47,
+          0.53
+        ],
+        "recall": 0.0,
+        "recall_ci": [
+          0.0,
+          0.06
+        ],
+        "specificity": 1.0,
+        "specificity_ci": [
+          0.94,
+          1.0
+        ],
+        "fpr": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 60,
+        "tn": 60,
+        "n_pos": 60,
+        "n_neg": 60
+      },
+      "vlm_only": {
+        "C0": 0.55,
+        "C3": 0.625
+      }
+    },
+    "G2_ELEMENT_OVERLAP": {
+      "recovered": {
+        "bal_acc": 0.55,
+        "bal_acc_ci": [
+          0.441,
+          0.653
+        ],
+        "recall": 0.3,
+        "recall_ci": [
+          0.199,
+          0.425
+        ],
+        "specificity": 0.8,
+        "specificity_ci": [
+          0.682,
+          0.882
+        ],
+        "fpr": 0.2,
+        "tp": 18,
+        "fp": 12,
+        "fn": 42,
+        "tn": 48,
+        "n_pos": 60,
+        "n_neg": 60
+      },
+      "vlm_only": {
+        "C0": 0.963,
+        "C3": 0.938
+      }
+    },
+    "G3_ALIGNMENT_OFFSET": {
+      "recovered": {
+        "bal_acc": 0.5,
+        "bal_acc_ci": [
+          0.47,
+          0.577
+        ],
+        "recall": 0.0,
+        "recall_ci": [
+          0.0,
+          0.155
+        ],
+        "specificity": 1.0,
+        "specificity_ci": [
+          0.94,
+          1.0
+        ],
+        "fpr": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 21,
+        "tn": 60,
+        "n_pos": 21,
+        "n_neg": 60
+      },
+      "vlm_only": {
+        "C0": 0.558,
+        "C3": 0.723
+      }
+    },
+    "G4_FONT_SIZE_INCONSISTENCY": {
+      "recovered": {
+        "bal_acc": 0.5,
+        "bal_acc_ci": [
+          0.47,
+          0.53
+        ],
+        "recall": 0.0,
+        "recall_ci": [
+          0.0,
+          0.06
+        ],
+        "specificity": 1.0,
+        "specificity_ci": [
+          0.94,
+          1.0
+        ],
+        "fpr": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 60,
+        "tn": 60,
+        "n_pos": 60,
+        "n_neg": 60
+      },
+      "vlm_only": {
+        "C0": 0.588,
+        "C3": 0.637
+      }
+    },
+    "G5_BRAND_COLOR_VIOLATION": {
+      "recovered": {
+        "bal_acc": 0.5,
+        "bal_acc_ci": [
+          0.47,
+          0.555
+        ],
+        "recall": 0.0,
+        "recall_ci": [
+          0.0,
+          0.11
+        ],
+        "specificity": 1.0,
+        "specificity_ci": [
+          0.94,
+          1.0
+        ],
+        "fpr": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 31,
+        "tn": 60,
+        "n_pos": 31,
+        "n_neg": 60
+      },
+      "vlm_only": {
+        "C0": 0.516,
+        "C3": 0.814
+      }
+    },
+    "G6_MARGIN_VIOLATION": {
+      "recovered": {
+        "bal_acc": 0.492,
+        "bal_acc_ci": [
+          0.391,
+          0.592
+        ],
+        "recall": 0.8,
+        "recall_ci": [
+          0.676,
+          0.884
+        ],
+        "specificity": 0.183,
+        "specificity_ci": [
+          0.106,
+          0.299
+        ],
+        "fpr": 0.817,
+        "tp": 44,
+        "fp": 49,
+        "fn": 11,
+        "tn": 11,
+        "n_pos": 55,
+        "n_neg": 60
+      },
+      "vlm_only": {
+        "C0": 0.512,
+        "C3": 0.55
+      }
+    }
+  }
+}

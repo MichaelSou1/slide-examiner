@@ -1,0 +1,32 @@
+{
+  "condition": "AFC",
+  "mode": "paired",
+  "model": "qwen-vl-max",
+  "style": "scoped",
+  "manifest": "data/part3/manifest_g3g5_internal.jsonl",
+  "modalities": [
+    "A"
+  ],
+  "defects": [
+    "G5_BRAND_COLOR_VIOLATION"
+  ],
+  "n_pairs": 48,
+  "failures": 0,
+  "afc": {
+    "G5_BRAND_COLOR_VIOLATION": {
+      "mode": "paired",
+      "n_pairs": 48,
+      "n_judgements": 96,
+      "decisive_rate": 0.406,
+      "tie_rate": 0.594,
+      "pick_first_rate": 0.462,
+      "n_pairs_both_orders_valid": 18,
+      "afc_accuracy_strict": 1.0,
+      "afc_accuracy_loose": 0.406,
+      "n_probe_worse_both": 18,
+      "n_probe_worse": 39,
+      "n_partner_worse": 0,
+      "n_tie": 57
+    }
+  }
+}

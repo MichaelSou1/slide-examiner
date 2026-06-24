@@ -52,7 +52,7 @@ DEFECTS: dict[str, DefectSpec] = {
         "geometry",
         (2, 4, 8, 16, 32),
         "strong",
-        "An element is displaced from its placeholder or alignment group.",
+        "One element in an aligned group is out of line with its siblings (internal-contrast).",
     ),
     DefectType.G4_FONT_SIZE_INCONSISTENCY.value: DefectSpec(
         DefectType.G4_FONT_SIZE_INCONSISTENCY.value,
@@ -68,7 +68,7 @@ DEFECTS: dict[str, DefectSpec] = {
         "geometry",
         (3, 6, 12, 24),
         "strong",
-        "Element color deviates from expected theme or brand palette.",
+        "One element's text colour differs from its same-list siblings (internal-contrast).",
     ),
     DefectType.G6_MARGIN_VIOLATION.value: DefectSpec(
         DefectType.G6_MARGIN_VIOLATION.value,

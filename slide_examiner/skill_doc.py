@@ -97,6 +97,25 @@ WEAK_PROMPT_MODULES = PromptModules(
 )
 
 
+#: Verbose seed — deliberately steers the generator to over-produce (long titles,
+#: 12–16 dense bullets per slide). This piles the first-draft deficit into the
+#: *addressable* dimensions (geometry overflow + conciseness) that the geometry
+#: linter and the injected-defect examiner CAN critique — the complement of
+#: ``WEAK_PROMPT_MODULES``, whose weak-generator deficit pools in coverage (which
+#: neither feedback channel sees). Used by E6 to test whether examiner quality buys
+#: a material refinement gain when the headroom lies on an axis feedback can move.
+VERBOSE_PROMPT_MODULES = PromptModules(
+    scenario_classifier="Read the brief and decide what the deck is about.",
+    page_type_instructions="Produce a thorough sequence of slides covering every angle of the brief.",
+    component_library=(
+        "Each slide must be exhaustive: a long descriptive title and 12 to 16 "
+        "detailed bullet points, every bullet a complete sentence with specifics, "
+        "metrics, and caveats. Never summarise; include everything."
+    ),
+    quality_checklist="Be maximally comprehensive; longer and denser is always better; never trim.",
+)
+
+
 def parse_skill_doc(markdown: str) -> PromptModules:
     """Parse a skill markdown document into ``PromptModules``.
 

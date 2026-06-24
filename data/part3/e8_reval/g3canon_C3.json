@@ -1,0 +1,75 @@
+{
+  "condition": "C3",
+  "model": "qwen-vl-max",
+  "style": "scoped",
+  "manifest": "data/part3/manifest_g3g5_internal.jsonl",
+  "modalities": [
+    "A"
+  ],
+  "defects": [
+    "G3_ALIGNMENT_OFFSET"
+  ],
+  "n_jobs": 240,
+  "failures": 0,
+  "metrics": {
+    "A": {
+      "per_defect": {
+        "G3_ALIGNMENT_OFFSET": {
+          "detection": {
+            "recall": 0.642,
+            "specificity": 1.0,
+            "bal_acc": 0.821,
+            "bal_acc_ci": [
+              0.761,
+              0.861
+            ],
+            "precision": 1.0,
+            "precision_ci": [
+              0.952,
+              1.0
+            ],
+            "fpr": 0.0,
+            "f1": 0.782,
+            "recall_ci": [
+              0.553,
+              0.722
+            ],
+            "tp": 77,
+            "fn": 43,
+            "fp": 0,
+            "tn": 120,
+            "n_pos": 120,
+            "n_neg": 120
+          },
+          "named": {
+            "recall": 0.642,
+            "specificity": 1.0,
+            "bal_acc": 0.821,
+            "bal_acc_ci": [
+              0.761,
+              0.861
+            ],
+            "precision": 1.0,
+            "precision_ci": [
+              0.952,
+              1.0
+            ],
+            "fpr": 0.0,
+            "f1": 0.782,
+            "recall_ci": [
+              0.553,
+              0.722
+            ],
+            "tp": 77,
+            "fn": 43,
+            "fp": 0,
+            "tn": 120,
+            "n_pos": 120,
+            "n_neg": 120
+          },
+          "headline_level": "detection"
+        }
+      }
+    }
+  }
+}

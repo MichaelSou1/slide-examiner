@@ -195,10 +195,11 @@ failures stem from recognition or reasoning---precisely the gap our attribution 
 Our finding that relative elicitation beats absolute scoring echoes work showing VLM judges can rank but
 cannot reliably score~\cite{rankscore}; that result concerns a judge's \emph{output mode}, orthogonal to our
 \emph{source of failure}, and we adopt it to motivate the pairwise and atomic-binary heads of our critic.
-More broadly, pairwise/relative elicitation is known to recover discriminative signal that pointwise scoring
-suppresses in LLM/VLM judges; our contribution is not that effect but its \emph{defect-class boundary}---it
+More broadly, comparative/relative elicitation is known to recover discriminative signal that pointwise scoring
+suppresses in LLM/VLM judges~\cite{comparative}, even though the protocol choice is not bias-free and can itself
+distort preferences~\cite{pairpoint}; our contribution is not that effect but its \emph{defect-class boundary}---it
 rescues \g{G1}/\g{S6} yet not \g{G3}/\g{S3}---which is what turns the elicitation effect into a
-perception/format attribution signal.% TODO(author): cite specific pairwise-vs-pointwise judge-calibration work (verify arXiv ids before posting).
+perception/format attribution signal.
 
 \paragraph{Slide generation, evaluation, and reward.}
 Slide and poster generation with design feedback is an active area; aesthetic-reward
@@ -687,16 +688,77 @@ consistent with their small per-class $n$ (see released reports).}
 \label{fig:real}
 \end{figure}
 
-\paragraph{Does a better examiner help downstream? A small, honest effect.}
+\paragraph{Open-world: structure recovered from pixels does not restore the linter.}
+The hybrid's symbolic engine needs the declared IR a \texttt{.pptx} carries; a third-party deck exported to
+PDF/PNG ships none, so the natural question is whether \emph{recovering} element structure from the rendered
+pixels can re-arm the linter. We test it directly: a transformers-native document-layout detector
+(PP-DocLayoutV2) returns region boxes on each render, class-agnostic NMS removes the detector's cross-class
+duplicate boxes (which would otherwise manufacture phantom overlaps), and the boxes---normalised into the IR
+coordinate frame---feed the \emph{same} geometry linter at its shipped operating point. On the real-layout set
+(GT IR \emph{and} render available, so the full ladder and a recovery-fidelity IoU coexist) the answer is a
+clean, pre-registered negative (Fig.~\ref{fig:openworld}): recovered structure leaves the linter at chance on
+\g{G1}/\g{G3}/\g{G4} (overflow needs text capacity, alignment needs declared positions, font needs point
+sizes---none survive a pixel$\to$box projection), and rescues only overlap partially (\g{G2} balanced accuracy
+$0.54$ vs.\ native-IR $0.67$ vs.\ VLM-only $0.87$). The detector \emph{over-segments}---$\approx2\times$ more
+boxes than the GT IR, recovery recall at IoU${\geq}0.5$ only $0.30$--$0.39$---so genuine element collisions are
+split apart and overlap recall falls $0.78\to0.29$. The same picture holds on image-only \textsc{SlideAudit}
+(no IR at all): the recovered linter clears chance only on \g{G2} ($0.55$) while the C3-elicited VLM reaches
+$0.94$. Two points sharpen the deployment scope. First, on real third-party decks even \emph{native} IR is
+weakened---the decks carry no expected-position/font bookkeeping, so the linter's \g{G3}/\g{G4} rules are also at
+chance, and its margin/overlap rules \emph{over-fire} on tight real layouts (specificity $0.11$/$0.56$), eroding
+the near-zero-false-positive advantage it enjoys on clean synthetic IR. Second, as a direct consequence the
+VLM-only engine \emph{dominates every coarse class} on real decks. The linter's edge is an in-distribution,
+clean-native-IR phenomenon; open-world---recovered or not---the deployable critic is VLM-bound. This bounds the
+contribution without touching the diagnostic thesis: the full symbolic--neural critic is for IR-owning generation
+agents, and for bare third-party pixels the critic is the C3-elicited VLM.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figs/fig8_open_world_recovery.png}
+\caption{\textbf{Open-world hybrid (E5): structure recovered from pixels does not restore the symbolic linter.}
+A document-layout detector (PP-DocLayoutV2) recovers element boxes from the render; the \emph{same} geometry
+linter runs on them. \textbf{(A)} real-layout decks (GT IR + render, $n{\approx}40$/class): native-IR linter vs.\
+pixel-recovered linter vs.\ VLM-only floor, Wilson CIs; recovered structure rescues only overlap (\g{G2}) and is
+silent on fine geometry, while the VLM dominates every class. \textbf{(B)} image-only \textsc{SlideAudit} (no IR,
+third-party): the recovered linter clears chance only on \g{G2}; the C3-elicited VLM is far stronger. The linter's
+near-zero-FP advantage requires clean native IR.}
+\label{fig:openworld}
+\end{figure}
+
+\paragraph{Does a better examiner help downstream? A bounded effect, and why (E6).}\label{sec:downstream-e6}
 We also asked whether examiner quality transfers to generation: vary the examiner across five intrinsic-quality
 levels, feed its critique into a self-refine loop, and measure an independent model-free quality. The direction
 is the hypothesized one---examiner quality correlates $+0.66$ with refinement gain, ranking the linter last and
 the strong semantic examiners first---but the magnitude is sub-1\% because a mainstream generator floors most
-briefs at the first draft, leaving little headroom; a second vehicle (skill-space optimization) even reverses
-sign as an artifact of its efficiency metric. We report this as a bounded, honest negative on
-\emph{magnitude}, not as a downstream-utility claim: in this floored regime the examiner-quality-to-utility
-signal is real but small, and the verifiable evidence for the examiner is its intrinsic and case-study
-performance, not the downstream loop.
+briefs at the first draft, leaving little headroom. A natural rebuttal is that the effect would be material with
+headroom, so we re-ran the \emph{identical} gradient with a weak local generator (Qwen3-VL-4B). The weak
+generator is genuinely unfloored---$1.43\times$ the headroom of the strong one---yet the effect does not grow, it
+\emph{vanishes}: the examiner-quality$\leftrightarrow$gain correlation collapses from $+0.66$ to $0.00$ and
+\emph{no} examiner buys any gain (Fig.~\ref{fig:unfloored}A). The reason is \emph{where} the headroom sits: it is
+coverage-dominated (deck completeness; component $0.19$), and coverage is critiqued by neither the geometry linter
+nor the injected-defect examiner---a perception/defect critic has nothing to say on that axis. A controlled
+actionability A/B (generator, task, and seed fixed; only the critique varied) confirms the null is an
+\emph{axis mismatch}, not a revision incapacity: the real geometry-clean critique moves quality by $+0.00$, while
+an explicit coverage critique moves it by $+0.32$ (coverage $+0.81$), the same weak model adding the named missing
+sections (Fig.~\ref{fig:unfloored}B). The signal is therefore squeezed from both sides---a strong generator
+leaves no headroom, a weak one leaves headroom off the critique axis---so the verifiable evidence for the examiner
+is its intrinsic (Secs.~\ref{sec:elicit}, \ref{sec:examiner}) and case-study performance, not this loop. A second
+optimization-efficiency vehicle reverses sign as an artifact of its metric, consistent with this reading.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figs/fig9_unfloored_downstream.png}
+\caption{\textbf{Unfloored downstream (E6): more headroom, no gain---a critique-axis mismatch.}
+\textbf{(A)} examiner intrinsic quality vs.\ best refinement gain on a model-free quality. The strong (flooring)
+generator gives the hypothesised slope ($r{=}{+}0.56$) at tiny magnitude; the weak generator---despite
+$1.43\times$ the first-draft headroom---is flat ($r{=}0.00$), no condition reaching the material threshold.
+\textbf{(B)} the weak generator's headroom by dimension is dominated by \emph{coverage} (red), which neither the
+linter nor the examiner critiques; the inset actionability A/B (same generator/task/seed, only the critique
+varies) shows the real geometry critique recovers nothing ($\Delta q{=}{+}0.00$) while an explicit coverage
+critique recovers $\Delta q{=}{+}0.32$ ($\Delta\text{cov}{=}{+}0.81$)---so the null is an axis mismatch, not an
+inability to revise.}
+\label{fig:unfloored}
+\end{figure}
 
 % =====================================================================
 \section{Limitations}\label{sec:limits}
@@ -713,7 +775,9 @@ aesthetic), with the document category at one (a second document/design reward, 
 \texttt{seq\_cls} runtime we did not stand up, as does an InternLM-family reward whose PLoRA image path failed to
 load); the category-level reads are therefore solid for general-multimodal and aesthetic and instance-level for document. Our attribution protocol shares its core with concurrent perception/reasoning
 work, differentiated by domain, the lossless oracle, and the loop to a critic. And the downstream effect is
-small under a strong generator. None of these is hidden; each is stated where it bites.
+bounded on both sides---small under a strong generator (no headroom) and absent under a weak one (its headroom is
+coverage, off the examiner's perception/layout axis; \S\ref{sec:downstream-e6}, Fig.~\ref{fig:unfloored}). None of
+these is hidden; each is stated where it bites.
 
 Two further caveats temper the central claim and we state them plainly. First, the forced-choice and
 atomic-binary elicitations supply a contrastive reference and a named target that the pointwise format withholds,
@@ -728,6 +792,10 @@ control (capable models answer ``tie'' on 92--100\% of clean pairs) rules out a 
 Second, the 8/9 coverage (0.896 for linter+VLM-C3; 0.885 for the pre-registered routed hybrid) is a
 \emph{native-structure} number; on image-only real decks (no IR for the linter) the hybrid degrades to its
 VLM-only mode, so that figure is an upper bound for IR-owning generation agents, not an open-world guarantee.
+We do not leave this to assertion: recovering element structure from the pixels with a layout detector and
+re-running the linter does \emph{not} close the gap (\S\ref{sec:external}, Fig.~\ref{fig:openworld})---it rescues
+only overlap, partially, and the VLM-only engine dominates every coarse class on real decks, so the open-world
+critic is VLM-bound.
 
 % =====================================================================
 \section{Conclusion}
@@ -767,12 +835,19 @@ report), and headline claims are stated as surviving or honestly downgraded unde
 \begin{thebibliography}{99}\small
 % NOTE: arXiv titles/ids verified on 2026-06-22 (the 10 core ids via the arXiv API; skyworkvl 2505.07263 via
 % web search across arxiv.org + the HF model card). laionaes has no arXiv paper -- it is a 2022 software artifact, cited as such.
+% NOTE: 2026-06-24 (E7) re-verified the concurrent-2026 ids by web search w/ independent corroboration:
+% rankscore 2604.25235 (github.com/divake/VLM-Judge-Uncertainty), aeslides 2604.22840 (github.com/ympan0508/aeslides, HF papers),
+% reasoningbench 2512.21329 (arXiv html v2) -- all real concurrent work, not forward-fabricated. Added comparative 2307.07889
+% (Liusie et al., EACL 2024 = 2024.eacl-long.8) and pairpoint 2504.14716 (Tripathi et al., OpenReview uyX5Vnow3U) for the
+% relative-vs-absolute elicitation claim in Sec. Related Work.
 \bibitem{chartbottleneck} On the Perception Bottleneck of VLMs for Chart Understanding. arXiv:2503.18435.
 \bibitem{hiddeninplainsight} Hidden in Plain Sight: VLMs Overlook Their Visual Representations. arXiv:2506.08008.
 \bibitem{mmvp} Tong et al. Eyes Wide Shut? Exploring the Visual Shortcomings of Multimodal LLMs. CVPR 2024; arXiv:2401.06209.
 \bibitem{reasoningbench} Your Reasoning Benchmark May Not Test Reasoning: Revealing Perception Bottleneck in Abstract Reasoning Benchmarks. arXiv:2512.21329.
 \bibitem{led} LED Benchmark: Diagnosing Structural Layout Errors for Document Layout Analysis. arXiv:2507.23295.
 \bibitem{rankscore} VLM Judges Can Rank but Cannot Score: Task-Dependent Uncertainty in Multimodal Evaluation. arXiv:2604.25235.
+\bibitem{comparative} Liusie, Manakul, Gales. LLM Comparative Assessment: Zero-shot NLG Evaluation through Pairwise Comparisons using Large Language Models. EACL 2024; arXiv:2307.07889.
+\bibitem{pairpoint} Tripathi, Wadhwa, Durrett, Niekum. Pairwise or Pointwise? Evaluating Feedback Protocols for Bias in LLM-Based Evaluation. arXiv:2504.14716.
 \bibitem{aeslides} AeSlides: Incentivizing Aesthetic Layout in LLM-Based Slide Generation via Verifiable Rewards. arXiv:2604.22840.
 \bibitem{evopresent} Presenting a Paper is an Art: Self-Improvement Aesthetic Agents for Academic Presentations (EvoPresent/PresAesth). arXiv:2510.05571.
 \bibitem{vlmslideeval} VLM-SlideEval: Evaluating VLMs on Structured Comprehension and Perturbation Sensitivity in PPT. arXiv:2510.22045.

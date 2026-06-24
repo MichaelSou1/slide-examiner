@@ -1,0 +1,692 @@
+[
+  {
+    "pair_id": "000",
+    "class": "G6_MARGIN_VIOLATION",
+    "short": "G6",
+    "phrase": "an element breaks the slide margin (touches / runs past the edge)",
+    "src_id": "part2_network_observability_5_G6_MARGIN_VIOLATION_32_0054__freeform",
+    "defective_path": "runs/part2/rendered/part2_network_observability_5_G6_MARGIN_VIOLATION_32_0054__freeform/defective.png",
+    "clean_path": "runs/part2/rendered/part2_network_observability_5_G6_MARGIN_VIOLATION_32_0054__freeform/clean.png",
+    "composite": "pairs/pair_000_G6.png"
+  },
+  {
+    "pair_id": "001",
+    "class": "G1_TEXT_OVERFLOW",
+    "short": "G1",
+    "phrase": "text overflows or is clipped by its text box",
+    "src_id": "part2_marketing_attribution_1_G1_TEXT_OVERFLOW_4_0045__freeform",
+    "defective_path": "runs/part2/rendered/part2_marketing_attribution_1_G1_TEXT_OVERFLOW_4_0045__freeform/defective.png",
+    "clean_path": "runs/part2/rendered/part2_marketing_attribution_1_G1_TEXT_OVERFLOW_4_0045__freeform/clean.png",
+    "composite": "pairs/pair_001_G1.png"
+  },
+  {
+    "pair_id": "002",
+    "class": "S6_IMAGE_TEXT_CONTRADICTION",
+    "short": "S6",
+    "phrase": "a chart / image contradicts the text near it",
+    "src_id": "imgslide_6_S6_IMAGE_TEXT_CONTRADICTION_1_0008__freeform",
+    "defective_path": "runs/part1_img/rendered/imgslide_6_S6_IMAGE_TEXT_CONTRADICTION_1_0008__freeform/defective.png",
+    "clean_path": "runs/part1_img/rendered/imgslide_6_S6_IMAGE_TEXT_CONTRADICTION_1_0008__freeform/clean.png",
+    "composite": "pairs/pair_002_S6.png"
+  },
+  {
+    "pair_id": "003",
+    "class": "S6_IMAGE_TEXT_CONTRADICTION",
+    "short": "S6",
+    "phrase": "a chart / image contradicts the text near it",
+    "src_id": "imgslide_7_S6_IMAGE_TEXT_CONTRADICTION_1_0009__freeform",
+    "defective_path": "runs/part1_img/rendered/imgslide_7_S6_IMAGE_TEXT_CONTRADICTION_1_0009__freeform/defective.png",
+    "clean_path": "runs/part1_img/rendered/imgslide_7_S6_IMAGE_TEXT_CONTRADICTION_1_0009__freeform/clean.png",
+    "composite": "pairs/pair_003_S6.png"
+  },
+  {
+    "pair_id": "004",
+    "class": "S1_TITLE_BODY_MISMATCH",
+    "short": "S1",
+    "phrase": "the title does not match the body content",
+    "src_id": "part2_hr_analytics_4_S1_TITLE_BODY_MISMATCH_1_0053__freeform",
+    "defective_path": "runs/part2/rendered/part2_hr_analytics_4_S1_TITLE_BODY_MISMATCH_1_0053__freeform/defective.png",
+    "clean_path": "runs/part2/rendered/part2_hr_analytics_4_S1_TITLE_BODY_MISMATCH_1_0053__freeform/clean.png",
+    "composite": "pairs/pair_004_S1.png"
+  },
+  {
+    "pair_id": "005",
+    "class": "G5_BRAND_COLOR_VIOLATION",
+    "short": "G5",
+    "phrase": "an off-brand / wrong colour is used",
+    "src_id": "part2_security_program_2_G5_BRAND_COLOR_VIOLATION_24_0026__freeform",
+    "defective_path": "runs/part2/rendered/part2_security_program_2_G5_BRAND_COLOR_VIOLATION_24_0026__freeform/defective.png",
+    "clean_path": "runs/part2/rendered/part2_security_program_2_G5_BRAND_COLOR_VIOLATION_24_0026__freeform/clean.png",
+    "composite": "pairs/pair_005_G5.png"
+  },
+  {
+    "pair_id": "006",
+    "class": "S6_IMAGE_TEXT_CONTRADICTION",
+    "short": "S6",
+    "phrase": "a chart / image contradicts the text near it",
+    "src_id": "imgslide_10_S6_IMAGE_TEXT_CONTRADICTION_1_0000__freeform",
+    "defective_path": "runs/part1_img/rendered/imgslide_10_S6_IMAGE_TEXT_CONTRADICTION_1_0000__freeform/defective.png",
+    "clean_path": "runs/part1_img/rendered/imgslide_10_S6_IMAGE_TEXT_CONTRADICTION_1_0000__freeform/clean.png",
+    "composite": "pairs/pair_006_S6.png"
+  },
+  {
+    "pair_id": "007",
+    "class": "G3_ALIGNMENT_OFFSET",
+    "short": "G3",
+    "phrase": "an element is visibly misaligned (off its expected edge/position)",
+    "src_id": "part2_ops_efficiency_1_G3_ALIGNMENT_OFFSET_4_0055__freeform",
+    "defective_path": "runs/part2/rendered/part2_ops_efficiency_1_G3_ALIGNMENT_OFFSET_4_0055__freeform/defective.png",
+    "clean_path": "runs/part2/rendered/part2_ops_efficiency_1_G3_ALIGNMENT_OFFSET_4_0055__freeform/clean.png",
+    "composite": "pairs/pair_007_G3.png"
+  },
+  {
+    "pair_id": "008",
+    "class": "G3_ALIGNMENT_OFFSET",
+    "short": "G3",
+    "phrase": "an element is visibly misaligned (off its expected edge/position)",
+    "src_id": "part2_network_observability_2_G3_ALIGNMENT_OFFSET_4_0051__freeform",
+    "defective_path": "runs/part2/rendered/part2_network_observability_2_G3_ALIGNMENT_OFFSET_4_0051__freeform/defective.png",
+    "clean_path": "runs/part2/rendered/part2_network_observability_2_G3_ALIGNMENT_OFFSET_4_0051__freeform/clean.png",
+    "composite": "pairs/pair_008_G3.png"
+  },
+  {
+    "pair_id": "009",
+    "class": "G7_RENDER_CONTAINMENT_OVERFLOW",
+    "short": "G7",
+    "phrase": "content spills outside the box / card / frame meant to contain it",
+    "src_id": "g7_card_height_008",
+    "defective_path": "data/part3/g7_images/g7_card_height_008_def.png",
+    "clean_path": "data/part3/g7_images/g7_card_height_008_clean.png",
+    "composite": "pairs/pair_009_G7.png"
+  },
+  {
+    "pair_id": "010",
+    "class": "G2_ELEMENT_OVERLAP",
+    "short": "G2",
+    "phrase": "two elements overlap / collide",
+    "src_id": "part2_field_service_4_G2_ELEMENT_OVERLAP_0p2_0051__freeform",
+    "defective_path": "runs/part2/rendered/part2_field_service_4_G2_ELEMENT_OVERLAP_0p2_0051__freeform/defective.png",
+    "clean_path": "runs/part2/rendered/part2_field_service_4_G2_ELEMENT_OVERLAP_0p2_0051__freeform/clean.png",
+    "composite": "pairs/pair_010_G2.png"
+  },
+  {
+    "pair_id": "011",
+    "class": "G7_RENDER_CONTAINMENT_OVERFLOW",
+    "short": "G7",
+    "phrase": "content spills outside the box / card / frame meant to contain it",
+    "src_id": "g7_card_height_011",
+    "defective_path": "data/part3/g7_images/g7_card_height_011_def.png",
+    "clean_path": "data/part3/g7_images/g7_card_height_011_clean.png",
+    "composite": "pairs/pair_011_G7.png"
+  },
+  {
+    "pair_id": "012",
+    "class": "G3_ALIGNMENT_OFFSET",
+    "short": "G3",
+    "phrase": "an element is visibly misaligned (off its expected edge/position)",
+    "src_id": "part2_ops_efficiency_1_G3_ALIGNMENT_OFFSET_32_0055__freeform",
+    "defective_path": "runs/part2/rendered/part2_ops_efficiency_1_G3_ALIGNMENT_OFFSET_32_0055__freeform/defective.png",
+    "clean_path": "runs/part2/rendered/part2_ops_efficiency_1_G3_ALIGNMENT_OFFSET_32_0055__freeform/clean.png",
+    "composite": "pairs/pair_012_G3.png"
+  },
+  {
+    "pair_id": "013",
+    "class": "S1_TITLE_BODY_MISMATCH",
+    "short": "S1",
+    "phrase": "the title does not match the body content",
+    "src_id": "part2_inventory_optimization_5_S1_TITLE_BODY_MISMATCH_1_0059__freeform",
+    "defective_path": "runs/part2/rendered/part2_inventory_optimization_5_S1_TITLE_BODY_MISMATCH_1_0059__freeform/defective.png",
+    "clean_path": "runs/part2/rendered/part2_inventory_optimization_5_S1_TITLE_BODY_MISMATCH_1_0059__freeform/clean.png",
+    "composite": "pairs/pair_013_S1.png"
+  },
+  {
+    "pair_id": "014",
+    "class": "S1_TITLE_BODY_MISMATCH",
+    "short": "S1",
+    "phrase": "the title does not match the body content",
+    "src_id": "part2_hr_analytics_5_S1_TITLE_BODY_MISMATCH_1_0054__freeform",
+    "defective_path": "runs/part2/rendered/part2_hr_analytics_5_S1_TITLE_BODY_MISMATCH_1_0054__freeform/defective.png",
+    "clean_path": "runs/part2/rendered/part2_hr_analytics_5_S1_TITLE_BODY_MISMATCH_1_0054__freeform/clean.png",
+    "composite": "pairs/pair_014_S1.png"
+  },
+  {
+    "pair_id": "015",
+    "class": "G5_BRAND_COLOR_VIOLATION",
+    "short": "G5",
+    "phrase": "an off-brand / wrong colour is used",
+    "src_id": "part2_marketing_attribution_5_G5_BRAND_COLOR_VIOLATION_3_0059__freeform",
+    "defective_path": "runs/part2/rendered/part2_marketing_attribution_5_G5_BRAND_COLOR_VIOLATION_3_0059__freeform/defective.png",
+    "clean_path": "runs/part2/rendered/part2_marketing_attribution_5_G5_BRAND_COLOR_VIOLATION_3_0059__freeform/clean.png",
+    "composite": "pairs/pair_015_G5.png"
+  },
+  {
+    "pair_id": "016",
+    "class": "G5_BRAND_COLOR_VIOLATION",
+    "short": "G5",
+    "phrase": "an off-brand / wrong colour is used",
+    "src_id": "part2_marketing_attribution_1_G5_BRAND_COLOR_VIOLATION_3_0055__freeform",
+    "defective_path": "runs/part2/rendered/part2_marketing_attribution_1_G5_BRAND_COLOR_VIOLATION_3_0055__freeform/defective.png",
+    "clean_path": "runs/part2/rendered/part2_marketing_attribution_1_G5_BRAND_COLOR_VIOLATION_3_0055__freeform/clean.png",
+    "composite": "pairs/pair_016_G5.png"
+  },
+  {
+    "pair_id": "017",
+    "class": "G7_RENDER_CONTAINMENT_OVERFLOW",
+    "short": "G7",
+    "phrase": "content spills outside the box / card / frame meant to contain it",
+    "src_id": "g7_image_objectfit_029",
+    "defective_path": "data/part3/g7_images/g7_image_objectfit_029_def.png",
+    "clean_path": "data/part3/g7_images/g7_image_objectfit_029_clean.png",
+    "composite": "pairs/pair_017_G7.png"
+  },
+  {
+    "pair_id": "018",
+    "class": "S4_DENSITY_RULE_VIOLATION",
+    "short": "S4",
+    "phrase": "the slide is over-dense (too much content crammed in)",
+    "src_id": "part2_logistics_visibility_5_S4_DENSITY_RULE_VIOLATION_60_0044__freeform",
+    "defective_path": "runs/part2/rendered/part2_logistics_visibility_5_S4_DENSITY_RULE_VIOLATION_60_0044__freeform/defective.png",
+    "clean_path": "runs/part2/rendered/part2_logistics_visibility_5_S4_DENSITY_RULE_VIOLATION_60_0044__freeform/clean.png",
+    "composite": "pairs/pair_018_S4.png"
+  },
+  {
+    "pair_id": "019",
+    "class": "G3_ALIGNMENT_OFFSET",
+    "short": "G3",
+    "phrase": "an element is visibly misaligned (off its expected edge/position)",
+    "src_id": "part2_network_observability_2_G3_ALIGNMENT_OFFSET_32_0051__freeform",
+    "defective_path": "runs/part2/rendered/part2_network_observability_2_G3_ALIGNMENT_OFFSET_32_0051__freeform/defective.png",
+    "clean_path": "runs/part2/rendered/part2_network_observability_2_G3_ALIGNMENT_OFFSET_32_0051__freeform/clean.png",
+    "composite": "pairs/pair_019_G3.png"
+  },
+  {
+    "pair_id": "020",
+    "class": "S4_DENSITY_RULE_VIOLATION",
+    "short": "S4",
+    "phrase": "the slide is over-dense (too much content crammed in)",
+    "src_id": "part2_warehouse_robotics_1_S4_DENSITY_RULE_VIOLATION_120_0055__freeform",
+    "defective_path": "runs/part2/rendered/part2_warehouse_robotics_1_S4_DENSITY_RULE_VIOLATION_120_0055__freeform/defective.png",
+    "clean_path": "runs/part2/rendered/part2_warehouse_robotics_1_S4_DENSITY_RULE_VIOLATION_120_0055__freeform/clean.png",
+    "composite": "pairs/pair_020_S4.png"
+  },
+  {
+    "pair_id": "021",
+    "class": "S1_TITLE_BODY_MISMATCH",
+    "short": "S1",
+    "phrase": "the title does not match the body content",
+    "src_id": "part2_inventory_optimization_4_S1_TITLE_BODY_MISMATCH_1_0058__freeform",
+    "defective_path": "runs/part2/rendered/part2_inventory_optimization_4_S1_TITLE_BODY_MISMATCH_1_0058__freeform/defective.png",
+    "clean_path": "runs/part2/rendered/part2_inventory_optimization_4_S1_TITLE_BODY_MISMATCH_1_0058__freeform/clean.png",
+    "composite": "pairs/pair_021_S1.png"
+  },
+  {
+    "pair_id": "022",
+    "class": "G5_BRAND_COLOR_VIOLATION",
+    "short": "G5",
+    "phrase": "an off-brand / wrong colour is used",
+    "src_id": "part2_security_program_1_G5_BRAND_COLOR_VIOLATION_24_0025__freeform",
+    "defective_path": "runs/part2/rendered/part2_security_program_1_G5_BRAND_COLOR_VIOLATION_24_0025__freeform/defective.png",
+    "clean_path": "runs/part2/rendered/part2_security_program_1_G5_BRAND_COLOR_VIOLATION_24_0025__freeform/clean.png",
+    "composite": "pairs/pair_022_G5.png"
+  },
+  {
+    "pair_id": "023",
+    "class": "G7_RENDER_CONTAINMENT_OVERFLOW",
+    "short": "G7",
+    "phrase": "content spills outside the box / card / frame meant to contain it",
+    "src_id": "g7_unbreakable_text_012",
+    "defective_path": "data/part3/g7_images/g7_unbreakable_text_012_def.png",
+    "clean_path": "data/part3/g7_images/g7_unbreakable_text_012_clean.png",
+    "composite": "pairs/pair_023_G7.png"
+  },
+  {
+    "pair_id": "024",
+    "class": "S6_IMAGE_TEXT_CONTRADICTION",
+    "short": "S6",
+    "phrase": "a chart / image contradicts the text near it",
+    "src_id": "imgslide_0_S6_IMAGE_TEXT_CONTRADICTION_1_0002__freeform",
+    "defective_path": "runs/part1_img/rendered/imgslide_0_S6_IMAGE_TEXT_CONTRADICTION_1_0002__freeform/defective.png",
+    "clean_path": "runs/part1_img/rendered/imgslide_0_S6_IMAGE_TEXT_CONTRADICTION_1_0002__freeform/clean.png",
+    "composite": "pairs/pair_024_S6.png"
+  },
+  {
+    "pair_id": "025",
+    "class": "G2_ELEMENT_OVERLAP",
+    "short": "G2",
+    "phrase": "two elements overlap / collide",
+    "src_id": "part2_fraud_detection_4_G2_ELEMENT_OVERLAP_0p4_0054__freeform",
+    "defective_path": "runs/part2/rendered/part2_fraud_detection_4_G2_ELEMENT_OVERLAP_0p4_0054__freeform/defective.png",
+    "clean_path": "runs/part2/rendered/part2_fraud_detection_4_G2_ELEMENT_OVERLAP_0p4_0054__freeform/clean.png",
+    "composite": "pairs/pair_025_G2.png"
+  },
+  {
+    "pair_id": "026",
+    "class": "G1_TEXT_OVERFLOW",
+    "short": "G1",
+    "phrase": "text overflows or is clipped by its text box",
+    "src_id": "part2_marketing_attribution_1_G1_TEXT_OVERFLOW_32_0045__freeform",
+    "defective_path": "runs/part2/rendered/part2_marketing_attribution_1_G1_TEXT_OVERFLOW_32_0045__freeform/defective.png",
+    "clean_path": "runs/part2/rendered/part2_marketing_attribution_1_G1_TEXT_OVERFLOW_32_0045__freeform/clean.png",
+    "composite": "pairs/pair_026_G1.png"
+  },
+  {
+    "pair_id": "027",
+    "class": "G2_ELEMENT_OVERLAP",
+    "short": "G2",
+    "phrase": "two elements overlap / collide",
+    "src_id": "part2_field_service_2_G2_ELEMENT_OVERLAP_0p4_0047__freeform",
+    "defective_path": "runs/part2/rendered/part2_field_service_2_G2_ELEMENT_OVERLAP_0p4_0047__freeform/defective.png",
+    "clean_path": "runs/part2/rendered/part2_field_service_2_G2_ELEMENT_OVERLAP_0p4_0047__freeform/clean.png",
+    "composite": "pairs/pair_027_G2.png"
+  },
+  {
+    "pair_id": "028",
+    "class": "G6_MARGIN_VIOLATION",
+    "short": "G6",
+    "phrase": "an element breaks the slide margin (touches / runs past the edge)",
+    "src_id": "part2_logistics_visibility_5_G6_MARGIN_VIOLATION_4_0044__freeform",
+    "defective_path": "runs/part2/rendered/part2_logistics_visibility_5_G6_MARGIN_VIOLATION_4_0044__freeform/defective.png",
+    "clean_path": "runs/part2/rendered/part2_logistics_visibility_5_G6_MARGIN_VIOLATION_4_0044__freeform/clean.png",
+    "composite": "pairs/pair_028_G6.png"
+  },
+  {
+    "pair_id": "029",
+    "class": "G1_TEXT_OVERFLOW",
+    "short": "G1",
+    "phrase": "text overflows or is clipped by its text box",
+    "src_id": "part2_ops_efficiency_4_G1_TEXT_OVERFLOW_4_0058__freeform",
+    "defective_path": "runs/part2/rendered/part2_ops_efficiency_4_G1_TEXT_OVERFLOW_4_0058__freeform/defective.png",
+    "clean_path": "runs/part2/rendered/part2_ops_efficiency_4_G1_TEXT_OVERFLOW_4_0058__freeform/clean.png",
+    "composite": "pairs/pair_029_G1.png"
+  },
+  {
+    "pair_id": "030",
+    "class": "G5_BRAND_COLOR_VIOLATION",
+    "short": "G5",
+    "phrase": "an off-brand / wrong colour is used",
+    "src_id": "part2_logistics_visibility_2_G5_BRAND_COLOR_VIOLATION_3_0051__freeform",
+    "defective_path": "runs/part2/rendered/part2_logistics_visibility_2_G5_BRAND_COLOR_VIOLATION_3_0051__freeform/defective.png",
+    "clean_path": "runs/part2/rendered/part2_logistics_visibility_2_G5_BRAND_COLOR_VIOLATION_3_0051__freeform/clean.png",
+    "composite": "pairs/pair_030_G5.png"
+  },
+  {
+    "pair_id": "031",
+    "class": "S6_IMAGE_TEXT_CONTRADICTION",
+    "short": "S6",
+    "phrase": "a chart / image contradicts the text near it",
+    "src_id": "imgslide_9_S6_IMAGE_TEXT_CONTRADICTION_1_0011__freeform",
+    "defective_path": "runs/part1_img/rendered/imgslide_9_S6_IMAGE_TEXT_CONTRADICTION_1_0011__freeform/defective.png",
+    "clean_path": "runs/part1_img/rendered/imgslide_9_S6_IMAGE_TEXT_CONTRADICTION_1_0011__freeform/clean.png",
+    "composite": "pairs/pair_031_S6.png"
+  },
+  {
+    "pair_id": "032",
+    "class": "S4_DENSITY_RULE_VIOLATION",
+    "short": "S4",
+    "phrase": "the slide is over-dense (too much content crammed in)",
+    "src_id": "part2_marketing_attribution_2_S4_DENSITY_RULE_VIOLATION_60_0046__freeform",
+    "defective_path": "runs/part2/rendered/part2_marketing_attribution_2_S4_DENSITY_RULE_VIOLATION_60_0046__freeform/defective.png",
+    "clean_path": "runs/part2/rendered/part2_marketing_attribution_2_S4_DENSITY_RULE_VIOLATION_60_0046__freeform/clean.png",
+    "composite": "pairs/pair_032_S4.png"
+  },
+  {
+    "pair_id": "033",
+    "class": "G7_RENDER_CONTAINMENT_OVERFLOW",
+    "short": "G7",
+    "phrase": "content spills outside the box / card / frame meant to contain it",
+    "src_id": "g7_card_height_000",
+    "defective_path": "data/part3/g7_images/g7_card_height_000_def.png",
+    "clean_path": "data/part3/g7_images/g7_card_height_000_clean.png",
+    "composite": "pairs/pair_033_G7.png"
+  },
+  {
+    "pair_id": "034",
+    "class": "G5_BRAND_COLOR_VIOLATION",
+    "short": "G5",
+    "phrase": "an off-brand / wrong colour is used",
+    "src_id": "part2_retail_analytics_5_G5_BRAND_COLOR_VIOLATION_24_0024__freeform",
+    "defective_path": "runs/part2/rendered/part2_retail_analytics_5_G5_BRAND_COLOR_VIOLATION_24_0024__freeform/defective.png",
+    "clean_path": "runs/part2/rendered/part2_retail_analytics_5_G5_BRAND_COLOR_VIOLATION_24_0024__freeform/clean.png",
+    "composite": "pairs/pair_034_G5.png"
+  },
+  {
+    "pair_id": "035",
+    "class": "S6_IMAGE_TEXT_CONTRADICTION",
+    "short": "S6",
+    "phrase": "a chart / image contradicts the text near it",
+    "src_id": "imgslide_1_S6_IMAGE_TEXT_CONTRADICTION_1_0003__freeform",
+    "defective_path": "runs/part1_img/rendered/imgslide_1_S6_IMAGE_TEXT_CONTRADICTION_1_0003__freeform/defective.png",
+    "clean_path": "runs/part1_img/rendered/imgslide_1_S6_IMAGE_TEXT_CONTRADICTION_1_0003__freeform/clean.png",
+    "composite": "pairs/pair_035_S6.png"
+  },
+  {
+    "pair_id": "036",
+    "class": "G3_ALIGNMENT_OFFSET",
+    "short": "G3",
+    "phrase": "an element is visibly misaligned (off its expected edge/position)",
+    "src_id": "part2_ops_efficiency_2_G3_ALIGNMENT_OFFSET_4_0056__freeform",
+    "defective_path": "runs/part2/rendered/part2_ops_efficiency_2_G3_ALIGNMENT_OFFSET_4_0056__freeform/defective.png",
+    "clean_path": "runs/part2/rendered/part2_ops_efficiency_2_G3_ALIGNMENT_OFFSET_4_0056__freeform/clean.png",
+    "composite": "pairs/pair_036_G3.png"
+  },
+  {
+    "pair_id": "037",
+    "class": "S1_TITLE_BODY_MISMATCH",
+    "short": "S1",
+    "phrase": "the title does not match the body content",
+    "src_id": "part2_hr_analytics_1_S1_TITLE_BODY_MISMATCH_1_0050__freeform",
+    "defective_path": "runs/part2/rendered/part2_hr_analytics_1_S1_TITLE_BODY_MISMATCH_1_0050__freeform/defective.png",
+    "clean_path": "runs/part2/rendered/part2_hr_analytics_1_S1_TITLE_BODY_MISMATCH_1_0050__freeform/clean.png",
+    "composite": "pairs/pair_037_S1.png"
+  },
+  {
+    "pair_id": "038",
+    "class": "G1_TEXT_OVERFLOW",
+    "short": "G1",
+    "phrase": "text overflows or is clipped by its text box",
+    "src_id": "part2_marketing_attribution_5_G1_TEXT_OVERFLOW_32_0049__freeform",
+    "defective_path": "runs/part2/rendered/part2_marketing_attribution_5_G1_TEXT_OVERFLOW_32_0049__freeform/defective.png",
+    "clean_path": "runs/part2/rendered/part2_marketing_attribution_5_G1_TEXT_OVERFLOW_32_0049__freeform/clean.png",
+    "composite": "pairs/pair_038_G1.png"
+  },
+  {
+    "pair_id": "039",
+    "class": "G7_RENDER_CONTAINMENT_OVERFLOW",
+    "short": "G7",
+    "phrase": "content spills outside the box / card / frame meant to contain it",
+    "src_id": "g7_card_height_018",
+    "defective_path": "data/part3/g7_images/g7_card_height_018_def.png",
+    "clean_path": "data/part3/g7_images/g7_card_height_018_clean.png",
+    "composite": "pairs/pair_039_G7.png"
+  },
+  {
+    "pair_id": "040",
+    "class": "S4_DENSITY_RULE_VIOLATION",
+    "short": "S4",
+    "phrase": "the slide is over-dense (too much content crammed in)",
+    "src_id": "part2_supply_chain_2_S4_DENSITY_RULE_VIOLATION_120_0051__freeform",
+    "defective_path": "runs/part2/rendered/part2_supply_chain_2_S4_DENSITY_RULE_VIOLATION_120_0051__freeform/defective.png",
+    "clean_path": "runs/part2/rendered/part2_supply_chain_2_S4_DENSITY_RULE_VIOLATION_120_0051__freeform/clean.png",
+    "composite": "pairs/pair_040_S4.png"
+  },
+  {
+    "pair_id": "041",
+    "class": "G6_MARGIN_VIOLATION",
+    "short": "G6",
+    "phrase": "an element breaks the slide margin (touches / runs past the edge)",
+    "src_id": "part2_network_observability_5_G6_MARGIN_VIOLATION_4_0054__freeform",
+    "defective_path": "runs/part2/rendered/part2_network_observability_5_G6_MARGIN_VIOLATION_4_0054__freeform/defective.png",
+    "clean_path": "runs/part2/rendered/part2_network_observability_5_G6_MARGIN_VIOLATION_4_0054__freeform/clean.png",
+    "composite": "pairs/pair_041_G6.png"
+  },
+  {
+    "pair_id": "042",
+    "class": "S4_DENSITY_RULE_VIOLATION",
+    "short": "S4",
+    "phrase": "the slide is over-dense (too much content crammed in)",
+    "src_id": "part2_warehouse_robotics_3_S4_DENSITY_RULE_VIOLATION_120_0057__freeform",
+    "defective_path": "runs/part2/rendered/part2_warehouse_robotics_3_S4_DENSITY_RULE_VIOLATION_120_0057__freeform/defective.png",
+    "clean_path": "runs/part2/rendered/part2_warehouse_robotics_3_S4_DENSITY_RULE_VIOLATION_120_0057__freeform/clean.png",
+    "composite": "pairs/pair_042_S4.png"
+  },
+  {
+    "pair_id": "043",
+    "class": "G2_ELEMENT_OVERLAP",
+    "short": "G2",
+    "phrase": "two elements overlap / collide",
+    "src_id": "part2_field_service_2_G2_ELEMENT_OVERLAP_0p05_0051__freeform",
+    "defective_path": "runs/part2/rendered/part2_field_service_2_G2_ELEMENT_OVERLAP_0p05_0051__freeform/defective.png",
+    "clean_path": "runs/part2/rendered/part2_field_service_2_G2_ELEMENT_OVERLAP_0p05_0051__freeform/clean.png",
+    "composite": "pairs/pair_043_G2.png"
+  },
+  {
+    "pair_id": "044",
+    "class": "G3_ALIGNMENT_OFFSET",
+    "short": "G3",
+    "phrase": "an element is visibly misaligned (off its expected edge/position)",
+    "src_id": "part2_ops_efficiency_5_G3_ALIGNMENT_OFFSET_4_0059__freeform",
+    "defective_path": "runs/part2/rendered/part2_ops_efficiency_5_G3_ALIGNMENT_OFFSET_4_0059__freeform/defective.png",
+    "clean_path": "runs/part2/rendered/part2_ops_efficiency_5_G3_ALIGNMENT_OFFSET_4_0059__freeform/clean.png",
+    "composite": "pairs/pair_044_G3.png"
+  },
+  {
+    "pair_id": "045",
+    "class": "S1_TITLE_BODY_MISMATCH",
+    "short": "S1",
+    "phrase": "the title does not match the body content",
+    "src_id": "part2_hr_analytics_2_S1_TITLE_BODY_MISMATCH_1_0051__freeform",
+    "defective_path": "runs/part2/rendered/part2_hr_analytics_2_S1_TITLE_BODY_MISMATCH_1_0051__freeform/defective.png",
+    "clean_path": "runs/part2/rendered/part2_hr_analytics_2_S1_TITLE_BODY_MISMATCH_1_0051__freeform/clean.png",
+    "composite": "pairs/pair_045_S1.png"
+  },
+  {
+    "pair_id": "046",
+    "class": "S6_IMAGE_TEXT_CONTRADICTION",
+    "short": "S6",
+    "phrase": "a chart / image contradicts the text near it",
+    "src_id": "imgslide_4_S6_IMAGE_TEXT_CONTRADICTION_1_0006__freeform",
+    "defective_path": "runs/part1_img/rendered/imgslide_4_S6_IMAGE_TEXT_CONTRADICTION_1_0006__freeform/defective.png",
+    "clean_path": "runs/part1_img/rendered/imgslide_4_S6_IMAGE_TEXT_CONTRADICTION_1_0006__freeform/clean.png",
+    "composite": "pairs/pair_046_S6.png"
+  },
+  {
+    "pair_id": "047",
+    "class": "G1_TEXT_OVERFLOW",
+    "short": "G1",
+    "phrase": "text overflows or is clipped by its text box",
+    "src_id": "part2_ops_efficiency_4_G1_TEXT_OVERFLOW_32_0058__freeform",
+    "defective_path": "runs/part2/rendered/part2_ops_efficiency_4_G1_TEXT_OVERFLOW_32_0058__freeform/defective.png",
+    "clean_path": "runs/part2/rendered/part2_ops_efficiency_4_G1_TEXT_OVERFLOW_32_0058__freeform/clean.png",
+    "composite": "pairs/pair_047_G1.png"
+  },
+  {
+    "pair_id": "048",
+    "class": "G7_RENDER_CONTAINMENT_OVERFLOW",
+    "short": "G7",
+    "phrase": "content spills outside the box / card / frame meant to contain it",
+    "src_id": "g7_image_objectfit_013",
+    "defective_path": "data/part3/g7_images/g7_image_objectfit_013_def.png",
+    "clean_path": "data/part3/g7_images/g7_image_objectfit_013_clean.png",
+    "composite": "pairs/pair_048_G7.png"
+  },
+  {
+    "pair_id": "049",
+    "class": "G1_TEXT_OVERFLOW",
+    "short": "G1",
+    "phrase": "text overflows or is clipped by its text box",
+    "src_id": "part2_marketing_attribution_2_G1_TEXT_OVERFLOW_4_0046__freeform",
+    "defective_path": "runs/part2/rendered/part2_marketing_attribution_2_G1_TEXT_OVERFLOW_4_0046__freeform/defective.png",
+    "clean_path": "runs/part2/rendered/part2_marketing_attribution_2_G1_TEXT_OVERFLOW_4_0046__freeform/clean.png",
+    "composite": "pairs/pair_049_G1.png"
+  },
+  {
+    "pair_id": "050",
+    "class": "S4_DENSITY_RULE_VIOLATION",
+    "short": "S4",
+    "phrase": "the slide is over-dense (too much content crammed in)",
+    "src_id": "part2_retail_analytics_4_S4_DENSITY_RULE_VIOLATION_120_0043__freeform",
+    "defective_path": "runs/part2/rendered/part2_retail_analytics_4_S4_DENSITY_RULE_VIOLATION_120_0043__freeform/defective.png",
+    "clean_path": "runs/part2/rendered/part2_retail_analytics_4_S4_DENSITY_RULE_VIOLATION_120_0043__freeform/clean.png",
+    "composite": "pairs/pair_050_S4.png"
+  },
+  {
+    "pair_id": "051",
+    "class": "G2_ELEMENT_OVERLAP",
+    "short": "G2",
+    "phrase": "two elements overlap / collide",
+    "src_id": "part2_energy_forecasting_4_G2_ELEMENT_OVERLAP_0p4_0044__freeform",
+    "defective_path": "runs/part2/rendered/part2_energy_forecasting_4_G2_ELEMENT_OVERLAP_0p4_0044__freeform/defective.png",
+    "clean_path": "runs/part2/rendered/part2_energy_forecasting_4_G2_ELEMENT_OVERLAP_0p4_0044__freeform/clean.png",
+    "composite": "pairs/pair_051_G2.png"
+  },
+  {
+    "pair_id": "052",
+    "class": "G6_MARGIN_VIOLATION",
+    "short": "G6",
+    "phrase": "an element breaks the slide margin (touches / runs past the edge)",
+    "src_id": "part2_ops_efficiency_2_G6_MARGIN_VIOLATION_32_0056__freeform",
+    "defective_path": "runs/part2/rendered/part2_ops_efficiency_2_G6_MARGIN_VIOLATION_32_0056__freeform/defective.png",
+    "clean_path": "runs/part2/rendered/part2_ops_efficiency_2_G6_MARGIN_VIOLATION_32_0056__freeform/clean.png",
+    "composite": "pairs/pair_052_G6.png"
+  },
+  {
+    "pair_id": "053",
+    "class": "G7_RENDER_CONTAINMENT_OVERFLOW",
+    "short": "G7",
+    "phrase": "content spills outside the box / card / frame meant to contain it",
+    "src_id": "g7_image_objectfit_012",
+    "defective_path": "data/part3/g7_images/g7_image_objectfit_012_def.png",
+    "clean_path": "data/part3/g7_images/g7_image_objectfit_012_clean.png",
+    "composite": "pairs/pair_053_G7.png"
+  },
+  {
+    "pair_id": "054",
+    "class": "G2_ELEMENT_OVERLAP",
+    "short": "G2",
+    "phrase": "two elements overlap / collide",
+    "src_id": "part2_energy_forecasting_5_G2_ELEMENT_OVERLAP_0p2_0047__freeform",
+    "defective_path": "runs/part2/rendered/part2_energy_forecasting_5_G2_ELEMENT_OVERLAP_0p2_0047__freeform/defective.png",
+    "clean_path": "runs/part2/rendered/part2_energy_forecasting_5_G2_ELEMENT_OVERLAP_0p2_0047__freeform/clean.png",
+    "composite": "pairs/pair_054_G2.png"
+  },
+  {
+    "pair_id": "055",
+    "class": "G6_MARGIN_VIOLATION",
+    "short": "G6",
+    "phrase": "an element breaks the slide margin (touches / runs past the edge)",
+    "src_id": "part2_logistics_visibility_4_G6_MARGIN_VIOLATION_32_0043__freeform",
+    "defective_path": "runs/part2/rendered/part2_logistics_visibility_4_G6_MARGIN_VIOLATION_32_0043__freeform/defective.png",
+    "clean_path": "runs/part2/rendered/part2_logistics_visibility_4_G6_MARGIN_VIOLATION_32_0043__freeform/clean.png",
+    "composite": "pairs/pair_055_G6.png"
+  },
+  {
+    "pair_id": "056",
+    "class": "G1_TEXT_OVERFLOW",
+    "short": "G1",
+    "phrase": "text overflows or is clipped by its text box",
+    "src_id": "part2_ops_efficiency_5_G1_TEXT_OVERFLOW_4_0059__freeform",
+    "defective_path": "runs/part2/rendered/part2_ops_efficiency_5_G1_TEXT_OVERFLOW_4_0059__freeform/defective.png",
+    "clean_path": "runs/part2/rendered/part2_ops_efficiency_5_G1_TEXT_OVERFLOW_4_0059__freeform/clean.png",
+    "composite": "pairs/pair_056_G1.png"
+  },
+  {
+    "pair_id": "057",
+    "class": "S6_IMAGE_TEXT_CONTRADICTION",
+    "short": "S6",
+    "phrase": "a chart / image contradicts the text near it",
+    "src_id": "imgslide_5_S6_IMAGE_TEXT_CONTRADICTION_1_0007__freeform",
+    "defective_path": "runs/part1_img/rendered/imgslide_5_S6_IMAGE_TEXT_CONTRADICTION_1_0007__freeform/defective.png",
+    "clean_path": "runs/part1_img/rendered/imgslide_5_S6_IMAGE_TEXT_CONTRADICTION_1_0007__freeform/clean.png",
+    "composite": "pairs/pair_057_S6.png"
+  },
+  {
+    "pair_id": "058",
+    "class": "G3_ALIGNMENT_OFFSET",
+    "short": "G3",
+    "phrase": "an element is visibly misaligned (off its expected edge/position)",
+    "src_id": "part2_marketing_attribution_2_G3_ALIGNMENT_OFFSET_4_0046__freeform",
+    "defective_path": "runs/part2/rendered/part2_marketing_attribution_2_G3_ALIGNMENT_OFFSET_4_0046__freeform/defective.png",
+    "clean_path": "runs/part2/rendered/part2_marketing_attribution_2_G3_ALIGNMENT_OFFSET_4_0046__freeform/clean.png",
+    "composite": "pairs/pair_058_G3.png"
+  },
+  {
+    "pair_id": "059",
+    "class": "G6_MARGIN_VIOLATION",
+    "short": "G6",
+    "phrase": "an element breaks the slide margin (touches / runs past the edge)",
+    "src_id": "part2_marketing_attribution_4_G6_MARGIN_VIOLATION_4_0048__freeform",
+    "defective_path": "runs/part2/rendered/part2_marketing_attribution_4_G6_MARGIN_VIOLATION_4_0048__freeform/defective.png",
+    "clean_path": "runs/part2/rendered/part2_marketing_attribution_4_G6_MARGIN_VIOLATION_4_0048__freeform/clean.png",
+    "composite": "pairs/pair_059_G6.png"
+  },
+  {
+    "pair_id": "060",
+    "class": "G5_BRAND_COLOR_VIOLATION",
+    "short": "G5",
+    "phrase": "an off-brand / wrong colour is used",
+    "src_id": "part2_security_program_5_G5_BRAND_COLOR_VIOLATION_12_0009__freeform",
+    "defective_path": "runs/part2/rendered/part2_security_program_5_G5_BRAND_COLOR_VIOLATION_12_0009__freeform/defective.png",
+    "clean_path": "runs/part2/rendered/part2_security_program_5_G5_BRAND_COLOR_VIOLATION_12_0009__freeform/clean.png",
+    "composite": "pairs/pair_060_G5.png"
+  },
+  {
+    "pair_id": "061",
+    "class": "G6_MARGIN_VIOLATION",
+    "short": "G6",
+    "phrase": "an element breaks the slide margin (touches / runs past the edge)",
+    "src_id": "part2_ops_efficiency_3_G6_MARGIN_VIOLATION_32_0057__freeform",
+    "defective_path": "runs/part2/rendered/part2_ops_efficiency_3_G6_MARGIN_VIOLATION_32_0057__freeform/defective.png",
+    "clean_path": "runs/part2/rendered/part2_ops_efficiency_3_G6_MARGIN_VIOLATION_32_0057__freeform/clean.png",
+    "composite": "pairs/pair_061_G6.png"
+  },
+  {
+    "pair_id": "062",
+    "class": "G2_ELEMENT_OVERLAP",
+    "short": "G2",
+    "phrase": "two elements overlap / collide",
+    "src_id": "part2_energy_forecasting_5_G2_ELEMENT_OVERLAP_0p4_0045__freeform",
+    "defective_path": "runs/part2/rendered/part2_energy_forecasting_5_G2_ELEMENT_OVERLAP_0p4_0045__freeform/defective.png",
+    "clean_path": "runs/part2/rendered/part2_energy_forecasting_5_G2_ELEMENT_OVERLAP_0p4_0045__freeform/clean.png",
+    "composite": "pairs/pair_062_G2.png"
+  },
+  {
+    "pair_id": "063",
+    "class": "G1_TEXT_OVERFLOW",
+    "short": "G1",
+    "phrase": "text overflows or is clipped by its text box",
+    "src_id": "part2_marketing_attribution_4_G1_TEXT_OVERFLOW_32_0048__freeform",
+    "defective_path": "runs/part2/rendered/part2_marketing_attribution_4_G1_TEXT_OVERFLOW_32_0048__freeform/defective.png",
+    "clean_path": "runs/part2/rendered/part2_marketing_attribution_4_G1_TEXT_OVERFLOW_32_0048__freeform/clean.png",
+    "composite": "pairs/pair_063_G1.png"
+  },
+  {
+    "pair_id": "064",
+    "class": "G1_TEXT_OVERFLOW",
+    "short": "G1",
+    "phrase": "text overflows or is clipped by its text box",
+    "src_id": "part2_logistics_visibility_3_G1_TEXT_OVERFLOW_32_0042__freeform",
+    "defective_path": "runs/part2/rendered/part2_logistics_visibility_3_G1_TEXT_OVERFLOW_32_0042__freeform/defective.png",
+    "clean_path": "runs/part2/rendered/part2_logistics_visibility_3_G1_TEXT_OVERFLOW_32_0042__freeform/clean.png",
+    "composite": "pairs/pair_064_G1.png"
+  },
+  {
+    "pair_id": "065",
+    "class": "S6_IMAGE_TEXT_CONTRADICTION",
+    "short": "S6",
+    "phrase": "a chart / image contradicts the text near it",
+    "src_id": "imgslide_8_S6_IMAGE_TEXT_CONTRADICTION_1_0010__freeform",
+    "defective_path": "runs/part1_img/rendered/imgslide_8_S6_IMAGE_TEXT_CONTRADICTION_1_0010__freeform/defective.png",
+    "clean_path": "runs/part1_img/rendered/imgslide_8_S6_IMAGE_TEXT_CONTRADICTION_1_0010__freeform/clean.png",
+    "composite": "pairs/pair_065_S6.png"
+  },
+  {
+    "pair_id": "066",
+    "class": "S4_DENSITY_RULE_VIOLATION",
+    "short": "S4",
+    "phrase": "the slide is over-dense (too much content crammed in)",
+    "src_id": "part2_marketing_attribution_1_S4_DENSITY_RULE_VIOLATION_60_0045__freeform",
+    "defective_path": "runs/part2/rendered/part2_marketing_attribution_1_S4_DENSITY_RULE_VIOLATION_60_0045__freeform/defective.png",
+    "clean_path": "runs/part2/rendered/part2_marketing_attribution_1_S4_DENSITY_RULE_VIOLATION_60_0045__freeform/clean.png",
+    "composite": "pairs/pair_066_S4.png"
+  },
+  {
+    "pair_id": "067",
+    "class": "S1_TITLE_BODY_MISMATCH",
+    "short": "S1",
+    "phrase": "the title does not match the body content",
+    "src_id": "part2_field_service_3_S1_TITLE_BODY_MISMATCH_1_0042__freeform",
+    "defective_path": "runs/part2/rendered/part2_field_service_3_S1_TITLE_BODY_MISMATCH_1_0042__freeform/defective.png",
+    "clean_path": "runs/part2/rendered/part2_field_service_3_S1_TITLE_BODY_MISMATCH_1_0042__freeform/clean.png",
+    "composite": "pairs/pair_067_S1.png"
+  },
+  {
+    "pair_id": "068",
+    "class": "G7_RENDER_CONTAINMENT_OVERFLOW",
+    "short": "G7",
+    "phrase": "content spills outside the box / card / frame meant to contain it",
+    "src_id": "g7_card_height_004",
+    "defective_path": "data/part3/g7_images/g7_card_height_004_def.png",
+    "clean_path": "data/part3/g7_images/g7_card_height_004_clean.png",
+    "composite": "pairs/pair_068_G7.png"
+  }
+]

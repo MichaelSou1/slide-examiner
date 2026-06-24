@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections import defaultdict
+from collections import Counter, defaultdict
 from math import sqrt
 from statistics import median
 
@@ -235,6 +235,33 @@ def detect_brand_color_violations(slide: Slide, min_delta_e: float = 1.5) -> lis
     return labels
 
 
+def detect_color_inconsistency(slide: Slide, min_delta_e: float = 1.5) -> list[DefectLabel]:
+    """INTERNAL colour-consistency rule (E8): within a ``color_group`` of >=3 elements,
+    flag any member whose text colour differs from the group majority by >= min_delta_e.
+    Decidable from the slide alone — no external brand palette (cf. the expected/palette
+    path in ``detect_brand_color_violations``)."""
+    labels: list[DefectLabel] = []
+    groups: dict[str, list[Element]] = defaultdict(list)
+    for element in slide.elements:
+        group = element.metadata.get("color_group")
+        if group and _element_color(element) is not None:
+            groups[str(group)].append(element)
+    for group, members in groups.items():
+        if len(members) < 3:
+            continue
+        colors = [_element_color(m) for m in members]
+        majority = Counter(colors).most_common(1)[0][0]  # the consensus colour
+        for member, current in zip(members, colors):
+            delta = color_delta_e(current, majority)
+            if delta >= min_delta_e:
+                labels.append(DefectLabel(
+                    type="G5_BRAND_COLOR_VIOLATION", severity=delta,
+                    target_element_ids=(member.element_id,),
+                    metadata={"delta_e": delta, "actual_rgb": current, "majority_rgb": majority,
+                              "color_group": group}))
+    return labels
+
+
 def lint_slide(
     slide: Slide,
     *,
@@ -251,6 +278,7 @@ def lint_slide(
         *detect_alignment_offsets(slide, min_offset_px=min_alignment_offset_px),
         *detect_font_size_inconsistencies(slide, min_delta_pt=min_font_delta_pt),
         *detect_brand_color_violations(slide, min_delta_e=min_color_delta_e),
+        *detect_color_inconsistency(slide, min_delta_e=min_color_delta_e),
         *detect_margin_violations(slide, margin_px=margin_px),
     ]
 

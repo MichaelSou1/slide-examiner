@@ -1,0 +1,75 @@
+{
+  "condition": "C3",
+  "model": "qwen-vl-max",
+  "style": "scoped",
+  "manifest": "data/part1_img/manifest_s6_rendered.jsonl",
+  "modalities": [
+    "A"
+  ],
+  "defects": [
+    "S6_IMAGE_TEXT_CONTRADICTION"
+  ],
+  "n_jobs": 48,
+  "failures": 0,
+  "metrics": {
+    "A": {
+      "per_defect": {
+        "S6_IMAGE_TEXT_CONTRADICTION": {
+          "detection": {
+            "recall": 1.0,
+            "specificity": 0.0,
+            "bal_acc": 0.5,
+            "bal_acc_ci": [
+              0.431,
+              0.569
+            ],
+            "precision": 0.5,
+            "precision_ci": [
+              0.364,
+              0.636
+            ],
+            "fpr": 1.0,
+            "f1": 0.667,
+            "recall_ci": [
+              0.862,
+              1.0
+            ],
+            "tp": 24,
+            "fn": 0,
+            "fp": 24,
+            "tn": 0,
+            "n_pos": 24,
+            "n_neg": 24
+          },
+          "named": {
+            "recall": 1.0,
+            "specificity": 0.0,
+            "bal_acc": 0.5,
+            "bal_acc_ci": [
+              0.431,
+              0.569
+            ],
+            "precision": 0.5,
+            "precision_ci": [
+              0.364,
+              0.636
+            ],
+            "fpr": 1.0,
+            "f1": 0.667,
+            "recall_ci": [
+              0.862,
+              1.0
+            ],
+            "tp": 24,
+            "fn": 0,
+            "fp": 24,
+            "tn": 0,
+            "n_pos": 24,
+            "n_neg": 24
+          },
+          "headline_level": "detection"
+        }
+      }
+    }
+  }
+}

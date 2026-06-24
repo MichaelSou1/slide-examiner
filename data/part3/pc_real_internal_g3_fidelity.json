@@ -1,0 +1,21 @@
+{
+  "n_injected": 46,
+  "thr_channel_sum": 20,
+  "eps_changed_frac": 0.0008,
+  "per_defect": {
+    "G3_ALIGNMENT_OFFSET": {
+      "n_injected": 46,
+      "ir_injected_rate": 1.0,
+      "rendered_rate": 0.891,
+      "absorption_rate": 0.065,
+      "changed_frac_median": 0.01056
+    }
+  },
+  "overall": {
+    "n_scored": 46,
+    "rendered_rate": 0.891,
+    "absorption_rate": 0.065,
+    "ir_unfaithful": 2,
+    "note": "Real free-form decks are NOT snap-to-master: injected geometry defects render faithfully (rendered_rate near 1.0), unlike the synthetic enterprise template that silently absorbs 45% of injected geometry defects (paper Sec.4 / Result-3b)."
+  }
+}

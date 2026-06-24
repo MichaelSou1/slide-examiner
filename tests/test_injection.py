@@ -131,3 +131,44 @@ def test_semantic_deck_injections_label_expected_defects() -> None:
         "S3_TERMINOLOGY_INCONSISTENCY",
         "S5_MISSING_LOGIC_SECTION",
     ]
+
+
+# --------------------------------------------------------------------------- #
+# E8 re-operationalisation: G3/G5 as INTERNAL contrast (one item out of line /
+# off-colour vs its sibling list — decidable from the slide alone). The linter's
+# internal rules (alignment_group / color_group) detect the defective; the clean
+# twin lints clean.
+# --------------------------------------------------------------------------- #
+from slide_examiner.geometry import detect_color_inconsistency, lint_slide  # noqa: E402
+from slide_examiner.schemas import BBox, Element, Slide  # noqa: E402
+
+
+def _bullet_slide() -> Slide:
+    return Slide(slide_id="b1", elements=tuple(
+        Element(element_id=f"body{i}", type="text", bbox=BBox(144, 180 + i * 90, 1512, 72),
+                text=f"Bullet {i}", style={"color": "#111111", "font_size_pt": 18})
+        for i in range(3)))
+
+
+def test_internal_alignment_offset_is_detected_internally() -> None:
+    inj = inject_alignment_offset(_bullet_slide(), offset_px=40)
+    assert inj.label.metadata["mode"] == "internal"
+    g3 = lambda s: [l for l in lint_slide(s) if l.type == "G3_ALIGNMENT_OFFSET"]
+    assert not g3(inj.clean)                       # clean column lints clean
+    hit = g3(inj.defective)
+    assert hit and hit[0].target_element_ids == inj.label.target_element_ids
+
+
+def test_internal_color_inconsistency_is_detected_internally() -> None:
+    inj = inject_brand_color_violation(_bullet_slide(), delta_e=40)
+    assert inj.label.metadata["mode"] == "internal"
+    assert not detect_color_inconsistency(inj.clean)          # all siblings same colour
+    hit = detect_color_inconsistency(inj.defective)
+    assert hit and hit[0].target_element_ids == inj.label.target_element_ids
+
+
+def test_no_sibling_column_falls_back_to_absolute() -> None:
+    one = Slide(slide_id="x", elements=(Element(element_id="t", type="text",
+                bbox=BBox(96, 72, 800, 60), text="solo", style={"color": "#111111"}),))
+    assert inject_alignment_offset(one, offset_px=16).label.metadata["mode"] == "absolute_fallback"
+    assert inject_brand_color_violation(one, delta_e=24).label.metadata["mode"] == "absolute_fallback"

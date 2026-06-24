@@ -1,0 +1,76 @@
+{
+  "G3_ALIGNMENT_OFFSET|rel\u00b748px": {
+    "unaided": {
+      "k": 4,
+      "n": 4,
+      "ci": {
+        "estimate": 1.0,
+        "low": 0.5101091635454027,
+        "high": 1.0,
+        "n": 4
+      }
+    },
+    "aided": {
+      "k": 4,
+      "n": 4,
+      "ci": {
+        "estimate": 1.0,
+        "low": 0.5101091635454027,
+        "high": 1.0,
+        "n": 4
+      }
+    }
+  },
+  "G3_ALIGNMENT_OFFSET|rel\u00b796px": {
+    "unaided": {
+      "k": 4,
+      "n": 4,
+      "ci": {
+        "estimate": 1.0,
+        "low": 0.5101091635454027,
+        "high": 1.0,
+        "n": 4
+      }
+    },
+    "aided": {
+      "k": 4,
+      "n": 4,
+      "ci": {
+        "estimate": 1.0,
+        "low": 0.5101091635454027,
+        "high": 1.0,
+        "n": 4
+      }
+    }
+  },
+  "G3_ALIGNMENT_OFFSET|ALL": {
+    "unaided": {
+      "k": 8,
+      "n": 8
+    },
+    "aided": {
+      "k": 8,
+      "n": 8
+    }
+  },
+  "G5_BRAND_COLOR_VIOLATION|ALL": {
+    "unaided": {
+      "k": 0,
+      "n": 0
+    },
+    "aided": {
+      "k": 0,
+      "n": 0
+    }
+  },
+  "G6_MARGIN_VIOLATION|ALL": {
+    "unaided": {
+      "k": 0,
+      "n": 0
+    },
+    "aided": {
+      "k": 0,
+      "n": 0
+    }
+  }
+}

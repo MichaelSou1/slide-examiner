@@ -1,0 +1,156 @@
+{
+  "G3 alignment": {
+    "defect": "G3_ALIGNMENT_OFFSET",
+    "by_cond": {
+      "C0": {
+        "realistic": {
+          "est": 0.5,
+          "lo": 0.338,
+          "hi": 0.662,
+          "n": 8,
+          "kind": "bal"
+        },
+        "original": {
+          "est": 0.5,
+          "lo": 0.47,
+          "hi": 0.53,
+          "n": 60,
+          "kind": "bal"
+        }
+      },
+      "C3": {
+        "realistic": {
+          "est": 0.75,
+          "lo": 0.445,
+          "hi": 0.892,
+          "n": 8,
+          "kind": "bal"
+        },
+        "original": {
+          "est": 0.5,
+          "lo": 0.47,
+          "hi": 0.53,
+          "n": 60,
+          "kind": "bal"
+        }
+      },
+      "AFC": {
+        "realistic": {
+          "est": 0.75,
+          "lo": null,
+          "hi": null,
+          "n": 8,
+          "kind": "AFC",
+          "dec": 0.75,
+          "tie": 0.25
+        },
+        "original": {
+          "est": 0.0,
+          "lo": null,
+          "hi": null,
+          "n": 60,
+          "kind": "AFC",
+          "dec": 0.0,
+          "tie": 1.0
+        }
+      }
+    },
+    "verdict": "**INJECTION ARTIFACT** — original ~chance but realistic variant is detected; the 'at chance' claim must be rewritten."
+  },
+  "G5 brand-colour": {
+    "defect": "G5_BRAND_COLOR_VIOLATION",
+    "by_cond": {
+      "C0": {
+        "realistic": {
+          "est": 0.5,
+          "lo": 0.379,
+          "hi": 0.621,
+          "n": 12,
+          "kind": "bal"
+        },
+        "original": {
+          "est": 0.5,
+          "lo": 0.457,
+          "hi": 0.543,
+          "n": 60,
+          "kind": "bal"
+        }
+      },
+      "C3": {
+        "realistic": {
+          "est": 0.5,
+          "lo": 0.379,
+          "hi": 0.621,
+          "n": 12,
+          "kind": "bal"
+        },
+        "original": {
+          "est": 0.5,
+          "lo": 0.47,
+          "hi": 0.53,
+          "n": 60,
+          "kind": "bal"
+        }
+      },
+      "AFC": {
+        "realistic": {
+          "est": 0.083,
+          "lo": null,
+          "hi": null,
+          "n": 12,
+          "kind": "AFC",
+          "dec": 0.083,
+          "tie": 0.917
+        },
+        "original": {
+          "est": 0.0,
+          "lo": null,
+          "hi": null,
+          "n": 60,
+          "kind": "AFC",
+          "dec": 0.0,
+          "tie": 1.0
+        }
+      }
+    },
+    "verdict": "sub-perceptual claim **survives** — even the realistic variant stays ~chance."
+  },
+  "S6 image/text": {
+    "defect": "S6_IMAGE_TEXT_CONTRADICTION",
+    "by_cond": {
+      "C0": {
+        "realistic": {
+          "est": 0.5,
+          "lo": 0.431,
+          "hi": 0.569,
+          "n": 24,
+          "kind": "bal"
+        },
+        "original": null
+      },
+      "C3": {
+        "realistic": {
+          "est": 0.5,
+          "lo": 0.431,
+          "hi": 0.569,
+          "n": 24,
+          "kind": "bal"
+        },
+        "original": null
+      },
+      "AFC": {
+        "realistic": {
+          "est": 1.0,
+          "lo": null,
+          "hi": null,
+          "n": 24,
+          "kind": "AFC",
+          "dec": 1.0,
+          "tie": 0.0
+        },
+        "original": null
+      }
+    },
+    "verdict": "realistic-only (original degenerate set has no clean twin; compare to paper's reported chance)."
+  }
+}

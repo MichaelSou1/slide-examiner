@@ -34,6 +34,7 @@ KILL_STRAY = True  # set False (--no-stray-kill) for a parallel 2-server shard s
 #                    shard's teardown does not kill the OTHER shard's EngineCore workers
 GEO = REPO / "data/part2/manifest_eval_test_rendered.jsonl"
 G7 = REPO / "data/part3/manifest_g7_rendered.jsonl"
+INTERNAL = REPO / "data/part3/manifest_g3g5_internal.jsonl"  # E8 redo: internal-contrast G3/G5
 NOTHINK = {"chat_template_kwargs": {"enable_thinking": False}}
 
 # key | source (local path or ms:owner/name) | family | tier | serve_extra | max_tokens | chat_kwargs

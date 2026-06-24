@@ -1,0 +1,72 @@
+{
+  "condition": "C0",
+  "model": "qwen-vl-max",
+  "style": "scoped",
+  "manifest": "data/part2/manifest_eval_test_rendered.jsonl",
+  "modalities": [
+    "A"
+  ],
+  "defects": [
+    "G5_BRAND_COLOR_VIOLATION"
+  ],
+  "n_jobs": 120,
+  "failures": 0,
+  "metrics": {
+    "A": {
+      "per_defect": {
+        "G5_BRAND_COLOR_VIOLATION": {
+          "detection": {
+            "recall": 0.017,
+            "specificity": 0.983,
+            "bal_acc": 0.5,
+            "bal_acc_ci": [
+              0.457,
+              0.543
+            ],
+            "precision": 0.5,
+            "precision_ci": [
+              0.095,
+              0.905
+            ],
+            "fpr": 0.017,
+            "f1": 0.032,
+            "recall_ci": [
+              0.003,
+              0.089
+            ],
+            "tp": 1,
+            "fn": 59,
+            "fp": 1,
+            "tn": 59,
+            "n_pos": 60,
+            "n_neg": 60
+          },
+          "named": {
+            "recall": 0.0,
+            "specificity": 1.0,
+            "bal_acc": 0.5,
+            "bal_acc_ci": [
+              0.47,
+              0.53
+            ],
+            "precision": 0.0,
+            "precision_ci": null,
+            "fpr": 0.0,
+            "f1": 0.0,
+            "recall_ci": [
+              0.0,
+              0.06
+            ],
+            "tp": 0,
+            "fn": 60,
+            "fp": 0,
+            "tn": 60,
+            "n_pos": 60,
+            "n_neg": 60
+          },
+          "headline_level": "detection"
+        }
+      }
+    }
+  }
+}

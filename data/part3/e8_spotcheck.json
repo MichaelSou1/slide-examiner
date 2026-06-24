@@ -1,0 +1,548 @@
+{
+  "n_pairs": 69,
+  "human": {
+    "defect_visible": {
+      "G1_TEXT_OVERFLOW": {
+        "k": 9,
+        "n": 9,
+        "ci": {
+          "estimate": 1.0,
+          "low": 0.7008549515804562,
+          "high": 1.0,
+          "n": 9
+        }
+      },
+      "G2_ELEMENT_OVERLAP": {
+        "k": 7,
+        "n": 7,
+        "ci": {
+          "estimate": 1.0,
+          "low": 0.6456695649333126,
+          "high": 1.0,
+          "n": 7
+        }
+      },
+      "G3_ALIGNMENT_OFFSET": {
+        "k": 0,
+        "n": 7,
+        "ci": {
+          "estimate": 0.0,
+          "low": 0.0,
+          "high": 0.3543304350666873,
+          "n": 7
+        }
+      },
+      "G6_MARGIN_VIOLATION": {
+        "k": 4,
+        "n": 7,
+        "ci": {
+          "estimate": 0.5714285714285714,
+          "low": 0.25045836452765724,
+          "high": 0.8417801447485302,
+          "n": 7
+        }
+      },
+      "G7_RENDER_CONTAINMENT_OVERFLOW": {
+        "k": 9,
+        "n": 9,
+        "ci": {
+          "estimate": 1.0,
+          "low": 0.7008549515804562,
+          "high": 1.0,
+          "n": 9
+        }
+      },
+      "G5_BRAND_COLOR_VIOLATION": {
+        "k": 0,
+        "n": 7,
+        "ci": {
+          "estimate": 0.0,
+          "low": 0.0,
+          "high": 0.3543304350666873,
+          "n": 7
+        }
+      },
+      "S1_TITLE_BODY_MISMATCH": {
+        "k": 7,
+        "n": 7,
+        "ci": {
+          "estimate": 1.0,
+          "low": 0.6456695649333126,
+          "high": 1.0,
+          "n": 7
+        }
+      },
+      "S4_DENSITY_RULE_VIOLATION": {
+        "k": 7,
+        "n": 7,
+        "ci": {
+          "estimate": 1.0,
+          "low": 0.6456695649333126,
+          "high": 1.0,
+          "n": 7
+        }
+      },
+      "S6_IMAGE_TEXT_CONTRADICTION": {
+        "k": 9,
+        "n": 9,
+        "ci": {
+          "estimate": 1.0,
+          "low": 0.7008549515804562,
+          "high": 1.0,
+          "n": 9
+        }
+      },
+      "overall": {
+        "k": 52,
+        "n": 69,
+        "ci": {
+          "estimate": 0.7536231884057971,
+          "low": 0.6403933718423956,
+          "high": 0.8401022218298245,
+          "n": 69
+        }
+      }
+    },
+    "twin_clean": {
+      "G1_TEXT_OVERFLOW": {
+        "k": 9,
+        "n": 9,
+        "ci": {
+          "estimate": 1.0,
+          "low": 0.7008549515804562,
+          "high": 1.0,
+          "n": 9
+        }
+      },
+      "G2_ELEMENT_OVERLAP": {
+        "k": 7,
+        "n": 7,
+        "ci": {
+          "estimate": 1.0,
+          "low": 0.6456695649333126,
+          "high": 1.0,
+          "n": 7
+        }
+      },
+      "G3_ALIGNMENT_OFFSET": {
+        "k": 7,
+        "n": 7,
+        "ci": {
+          "estimate": 1.0,
+          "low": 0.6456695649333126,
+          "high": 1.0,
+          "n": 7
+        }
+      },
+      "G6_MARGIN_VIOLATION": {
+        "k": 7,
+        "n": 7,
+        "ci": {
+          "estimate": 1.0,
+          "low": 0.6456695649333126,
+          "high": 1.0,
+          "n": 7
+        }
+      },
+      "G7_RENDER_CONTAINMENT_OVERFLOW": {
+        "k": 9,
+        "n": 9,
+        "ci": {
+          "estimate": 1.0,
+          "low": 0.7008549515804562,
+          "high": 1.0,
+          "n": 9
+        }
+      },
+      "G5_BRAND_COLOR_VIOLATION": {
+        "k": 7,
+        "n": 7,
+        "ci": {
+          "estimate": 1.0,
+          "low": 0.6456695649333126,
+          "high": 1.0,
+          "n": 7
+        }
+      },
+      "S1_TITLE_BODY_MISMATCH": {
+        "k": 7,
+        "n": 7,
+        "ci": {
+          "estimate": 1.0,
+          "low": 0.6456695649333126,
+          "high": 1.0,
+          "n": 7
+        }
+      },
+      "S4_DENSITY_RULE_VIOLATION": {
+        "k": 7,
+        "n": 7,
+        "ci": {
+          "estimate": 1.0,
+          "low": 0.6456695649333126,
+          "high": 1.0,
+          "n": 7
+        }
+      },
+      "S6_IMAGE_TEXT_CONTRADICTION": {
+        "k": 9,
+        "n": 9,
+        "ci": {
+          "estimate": 1.0,
+          "low": 0.7008549515804562,
+          "high": 1.0,
+          "n": 9
+        }
+      },
+      "overall": {
+        "k": 69,
+        "n": 69,
+        "ci": {
+          "estimate": 1.0,
+          "low": 0.9472627418109483,
+          "high": 1.0,
+          "n": 69
+        }
+      }
+    }
+  },
+  "flagged": [
+    {
+      "pair_id": "005",
+      "class": "G5_BRAND_COLOR_VIOLATION",
+      "defect_not_visible": true,
+      "twin_not_clean": false,
+      "note": "can't tell difference in colour [E8-coded: indeterminate->not-verified]"
+    },
+    {
+      "pair_id": "007",
+      "class": "G3_ALIGNMENT_OFFSET",
+      "defect_not_visible": true,
+      "twin_not_clean": false,
+      "note": ""
+    },
+    {
+      "pair_id": "008",
+      "class": "G3_ALIGNMENT_OFFSET",
+      "defect_not_visible": true,
+      "twin_not_clean": false,
+      "note": ""
+    },
+    {
+      "pair_id": "012",
+      "class": "G3_ALIGNMENT_OFFSET",
+      "defect_not_visible": true,
+      "twin_not_clean": false,
+      "note": ""
+    },
+    {
+      "pair_id": "015",
+      "class": "G5_BRAND_COLOR_VIOLATION",
+      "defect_not_visible": true,
+      "twin_not_clean": false,
+      "note": "can't tell any difference in color [E8-coded: indeterminate->not-verified]"
+    },
+    {
+      "pair_id": "016",
+      "class": "G5_BRAND_COLOR_VIOLATION",
+      "defect_not_visible": true,
+      "twin_not_clean": false,
+      "note": "no difference [E8-coded: indeterminate->not-verified]"
+    },
+    {
+      "pair_id": "019",
+      "class": "G3_ALIGNMENT_OFFSET",
+      "defect_not_visible": true,
+      "twin_not_clean": false,
+      "note": ""
+    },
+    {
+      "pair_id": "022",
+      "class": "G5_BRAND_COLOR_VIOLATION",
+      "defect_not_visible": true,
+      "twin_not_clean": false,
+      "note": "i can only see difference in font (bold v.s. not bold) [E8-coded: indeterminate->not-verified]"
+    },
+    {
+      "pair_id": "028",
+      "class": "G6_MARGIN_VIOLATION",
+      "defect_not_visible": true,
+      "twin_not_clean": false,
+      "note": "the defective one is not defective enough"
+    },
+    {
+      "pair_id": "030",
+      "class": "G5_BRAND_COLOR_VIOLATION",
+      "defect_not_visible": true,
+      "twin_not_clean": false,
+      "note": "can't tell [E8-coded: indeterminate->not-verified]"
+    },
+    {
+      "pair_id": "034",
+      "class": "G5_BRAND_COLOR_VIOLATION",
+      "defect_not_visible": true,
+      "twin_not_clean": false,
+      "note": "can't tell [E8-coded: indeterminate->not-verified]"
+    },
+    {
+      "pair_id": "036",
+      "class": "G3_ALIGNMENT_OFFSET",
+      "defect_not_visible": true,
+      "twin_not_clean": false,
+      "note": ""
+    },
+    {
+      "pair_id": "041",
+      "class": "G6_MARGIN_VIOLATION",
+      "defect_not_visible": true,
+      "twin_not_clean": false,
+      "note": "still space til margin"
+    },
+    {
+      "pair_id": "044",
+      "class": "G3_ALIGNMENT_OFFSET",
+      "defect_not_visible": true,
+      "twin_not_clean": false,
+      "note": ""
+    },
+    {
+      "pair_id": "058",
+      "class": "G3_ALIGNMENT_OFFSET",
+      "defect_not_visible": true,
+      "twin_not_clean": false,
+      "note": ""
+    },
+    {
+      "pair_id": "059",
+      "class": "G6_MARGIN_VIOLATION",
+      "defect_not_visible": true,
+      "twin_not_clean": false,
+      "note": ""
+    },
+    {
+      "pair_id": "060",
+      "class": "G5_BRAND_COLOR_VIOLATION",
+      "defect_not_visible": true,
+      "twin_not_clean": false,
+      "note": ""
+    }
+  ],
+  "claude": {
+    "defect_visible": {
+      "G1_TEXT_OVERFLOW": {
+        "k": 3,
+        "n": 9,
+        "ci": {
+          "estimate": 0.3333333333333333,
+          "low": 0.12058381838691101,
+          "high": 0.6457978644196037,
+          "n": 9
+        }
+      },
+      "G2_ELEMENT_OVERLAP": {
+        "k": 7,
+        "n": 7,
+        "ci": {
+          "estimate": 1.0,
+          "low": 0.6456695649333126,
+          "high": 1.0,
+          "n": 7
+        }
+      },
+      "G3_ALIGNMENT_OFFSET": {
+        "k": 0,
+        "n": 7,
+        "ci": {
+          "estimate": 0.0,
+          "low": 0.0,
+          "high": 0.3543304350666873,
+          "n": 7
+        }
+      },
+      "G6_MARGIN_VIOLATION": {
+        "k": 3,
+        "n": 7,
+        "ci": {
+          "estimate": 0.42857142857142855,
+          "low": 0.1582198552514697,
+          "high": 0.7495416354723428,
+          "n": 7
+        }
+      },
+      "G7_RENDER_CONTAINMENT_OVERFLOW": {
+        "k": 9,
+        "n": 9,
+        "ci": {
+          "estimate": 1.0,
+          "low": 0.7008549515804562,
+          "high": 1.0,
+          "n": 9
+        }
+      },
+      "G5_BRAND_COLOR_VIOLATION": {
+        "k": 0,
+        "n": 7,
+        "ci": {
+          "estimate": 0.0,
+          "low": 0.0,
+          "high": 0.3543304350666873,
+          "n": 7
+        }
+      },
+      "S1_TITLE_BODY_MISMATCH": {
+        "k": 7,
+        "n": 7,
+        "ci": {
+          "estimate": 1.0,
+          "low": 0.6456695649333126,
+          "high": 1.0,
+          "n": 7
+        }
+      },
+      "S4_DENSITY_RULE_VIOLATION": {
+        "k": 7,
+        "n": 7,
+        "ci": {
+          "estimate": 1.0,
+          "low": 0.6456695649333126,
+          "high": 1.0,
+          "n": 7
+        }
+      },
+      "S6_IMAGE_TEXT_CONTRADICTION": {
+        "k": 9,
+        "n": 9,
+        "ci": {
+          "estimate": 1.0,
+          "low": 0.7008549515804562,
+          "high": 1.0,
+          "n": 9
+        }
+      },
+      "overall": {
+        "k": 45,
+        "n": 69,
+        "ci": {
+          "estimate": 0.6521739130434783,
+          "low": 0.5344787754895757,
+          "high": 0.7538185807137565,
+          "n": 69
+        }
+      }
+    },
+    "twin_clean": {
+      "G1_TEXT_OVERFLOW": {
+        "k": 9,
+        "n": 9,
+        "ci": {
+          "estimate": 1.0,
+          "low": 0.7008549515804562,
+          "high": 1.0,
+          "n": 9
+        }
+      },
+      "G2_ELEMENT_OVERLAP": {
+        "k": 7,
+        "n": 7,
+        "ci": {
+          "estimate": 1.0,
+          "low": 0.6456695649333126,
+          "high": 1.0,
+          "n": 7
+        }
+      },
+      "G3_ALIGNMENT_OFFSET": {
+        "k": 7,
+        "n": 7,
+        "ci": {
+          "estimate": 1.0,
+          "low": 0.6456695649333126,
+          "high": 1.0,
+          "n": 7
+        }
+      },
+      "G6_MARGIN_VIOLATION": {
+        "k": 7,
+        "n": 7,
+        "ci": {
+          "estimate": 1.0,
+          "low": 0.6456695649333126,
+          "high": 1.0,
+          "n": 7
+        }
+      },
+      "G7_RENDER_CONTAINMENT_OVERFLOW": {
+        "k": 9,
+        "n": 9,
+        "ci": {
+          "estimate": 1.0,
+          "low": 0.7008549515804562,
+          "high": 1.0,
+          "n": 9
+        }
+      },
+      "G5_BRAND_COLOR_VIOLATION": {
+        "k": 7,
+        "n": 7,
+        "ci": {
+          "estimate": 1.0,
+          "low": 0.6456695649333126,
+          "high": 1.0,
+          "n": 7
+        }
+      },
+      "S1_TITLE_BODY_MISMATCH": {
+        "k": 7,
+        "n": 7,
+        "ci": {
+          "estimate": 1.0,
+          "low": 0.6456695649333126,
+          "high": 1.0,
+          "n": 7
+        }
+      },
+      "S4_DENSITY_RULE_VIOLATION": {
+        "k": 7,
+        "n": 7,
+        "ci": {
+          "estimate": 1.0,
+          "low": 0.6456695649333126,
+          "high": 1.0,
+          "n": 7
+        }
+      },
+      "S6_IMAGE_TEXT_CONTRADICTION": {
+        "k": 9,
+        "n": 9,
+        "ci": {
+          "estimate": 1.0,
+          "low": 0.7008549515804562,
+          "high": 1.0,
+          "n": 9
+        }
+      },
+      "overall": {
+        "k": 69,
+        "n": 69,
+        "ci": {
+          "estimate": 1.0,
+          "low": 0.9472627418109483,
+          "high": 1.0,
+          "n": 69
+        }
+      }
+    },
+    "agreement": {
+      "defect_visible": {
+        "n": 69,
+        "raw_agreement": 0.8985507246376812,
+        "kappa": 0.7600596125186289
+      },
+      "twin_clean": {
+        "n": 69,
+        "raw_agreement": 1.0,
+        "kappa": 1.0
+      }
+    }
+  }
+}
