@@ -5,6 +5,10 @@ dependencies:
   - python=3.12
   - pip
   # 依赖以 pyproject.toml 为单一来源；此处用 pip 做可编辑安装。
-  # 需要渲染/VLM 能力时改成 -e .[all]（或 .[render] / .[vlm]）。
+  # `.[dev]` = 可移植测试基线（analysis+render+data+pytest+ruff，纯 CPU、跨平台）：
+  #   建完环境直接 `pytest` 应全绿，无需 GPU/网络。
+  # 需要全部可移植能力（+api +figures）：装 `-e .[all]`，并 `playwright install chromium`。
+  # 需要 GPU 栈（本地 VLM 推理 / 训练 / vLLM serving）：先按本机 CUDA 自装 torch，
+  #   再 `-e .[vlm]` / `-e .[train]`——详见 docs/ENVIRONMENT.md。
   - pip:
       - -e .[dev]

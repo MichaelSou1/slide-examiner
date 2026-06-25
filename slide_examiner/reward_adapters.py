@@ -35,8 +35,14 @@ the audit harness computes the SAME paired metric over all of them.
 """
 from __future__ import annotations
 
+import os
 from abc import ABC, abstractmethod
 from pathlib import Path
+
+# Base directory for locally-downloaded reward/VLM weights. Override per-machine
+# with ``SLIDE_EXAMINER_MODELS_DIR`` (weights are not redistributed; see
+# docs/ENVIRONMENT.md). The dev-box default is kept for back-compat.
+MODELS_DIR = os.environ.get("SLIDE_EXAMINER_MODELS_DIR", "/home/gpus/models")
 
 # ---- input contracts -------------------------------------------------------
 POINTWISE = "pointwise"
@@ -408,7 +414,7 @@ class AestheticAdapter(RewardAdapter):
     trained_reward = False  # heuristic aesthetic head, not a preference-trained RM
 
     def __init__(self, path: str, *a,
-                 clip_path: str = "/home/gpus/models/clip-vit-large-patch14", **k):
+                 clip_path: str = f"{MODELS_DIR}/clip-vit-large-patch14", **k):
         super().__init__(path, *a, **k)
         self.clip_path = clip_path
 
@@ -466,12 +472,12 @@ ADAPTERS: dict[str, type[RewardAdapter]] = {
 }
 
 DEFAULT_PATHS: dict[str, str] = {
-    "docreward": "/home/gpus/models/DocReward-3B",
-    "skywork-vl": "/home/gpus/models/Skywork-VL-Reward-7B",
-    "ixc-2.5": "/home/gpus/models/IXC-2.5-Reward-7B",
-    "pickscore": "/home/gpus/models/PickScore_v1",
-    "aesthetic": "/home/gpus/models/aesthetic/sac+logos+ava1-l14-linearMSE.pth",
-    "clip-iqa": "/home/gpus/models/clip-vit-large-patch14",
+    "docreward": f"{MODELS_DIR}/DocReward-3B",
+    "skywork-vl": f"{MODELS_DIR}/Skywork-VL-Reward-7B",
+    "ixc-2.5": f"{MODELS_DIR}/IXC-2.5-Reward-7B",
+    "pickscore": f"{MODELS_DIR}/PickScore_v1",
+    "aesthetic": f"{MODELS_DIR}/aesthetic/sac+logos+ava1-l14-linearMSE.pth",
+    "clip-iqa": f"{MODELS_DIR}/clip-vit-large-patch14",
 }
 
 

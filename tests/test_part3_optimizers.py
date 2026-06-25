@@ -48,6 +48,7 @@ def test_control_signature_isolates_feedback_source(tmp_path) -> None:
 
 
 def test_skillopt_adapter_rollout_offline(tmp_path) -> None:
+    pytest.importorskip("skillopt")  # deferred upstream pkg (not pip-installable); skip when absent
     from slide_examiner.skillopt_adapter import build_env_adapter
 
     cfg = _cfg(tmp_path, condition="linter", carrier="skillopt")
