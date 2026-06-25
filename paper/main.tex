@@ -590,8 +590,12 @@ perception is present; a specialised read-out suppresses it. The hybrid thesis i
 \g{G7} needs a perceptually-capable engine, and that engine works whether it is \emph{prompted} (the C3 recovery,
 0.93--1.00) or carries a \emph{reward head} (two general-mm rewards, 0.71--0.79)---a reviewer who tests either will
 find detection, and we report the full split, including the aesthetic scorers that disagree. (Naming containment in
-Skywork's prompt lifts \g{G7} to 0.87, reinforcement rather than rescue; the two CLIP-based scorers are meanwhile
-both blind to brand-color \g{G5}, $\le0.04$, a rule class the linter owns at 1.00---complementary strengths persist.)
+Skywork's prompt lifts \g{G7} to 0.87, reinforcement rather than rescue. On \g{G5}---re-operationalised as an
+internal chromatic clash, one element hue-swapped against its aligned sibling column and so visible from the slide
+alone (Sec.~\ref{sec:diag})---\emph{most} scorers now react (0.65--0.78; only Skywork is marginal at 0.57), exactly
+as the perceptual-capability reading predicts for a visible defect: a chromatic inconsistency is \emph{not} the
+linter-only blind spot \g{G7} is. The linter still owns \g{G5} at 1.00, but its advantage there is exactness, zero
+false positives, and knowledge of the \emph{declared} palette---not that the clash is imperceptible.)
 
 \begin{table}[t]
 \centering\small
@@ -601,21 +605,23 @@ $=0.5$; \g{G7} with 95\% CI, $n{=}90$). \textbf{Five} published scorers, now \em
 \g{G7} read is category- not instance-level. \g{G7} (boxed in Fig.~\ref{fig:reward}) is detected (CI above 0.5)
 by \emph{both} general-mm rewards and by the zero-shot perceptual-quality probe (CLIP-IQA), and missed (CI spans
 0.5) by the document reward and the artistic-aesthetic head---so detection tracks perceptual capability, not the
-training-domain label. \checkmark/$\times$ in the \g{G7} column marks reliable detection.}
+training-domain label. \checkmark/$\times$ in the \g{G7} column marks reliable detection. \g{G5} is the
+internal-chromatic re-operationalisation of Sec.~\ref{sec:diag} (one element hue-swapped vs.\ its sibling column,
+$n{=}80$), a \emph{visible} defect most scorers catch---not the linter-only blind spot \g{G7} is.}
 \label{tab:reward}
 \begin{tabular}{@{}llccc>{\columncolor[gray]{0.92}}c cc@{}}
 \toprule
 Reward scorer & category & \g{G1} & \g{G2} & \g{G5} & \textbf{\g{G7}} & \g{S4} & \g{S6} \\
 \midrule
-DocReward-3B   & document   & 0.93 & 1.00 & 0.37 & $\times$\,\textbf{0.48}\,{\scriptsize$[.38,.58]$} & 1.00 & 1.00 \\
+DocReward-3B   & document   & 0.93 & 1.00 & 0.72 & $\times$\,\textbf{0.48}\,{\scriptsize$[.38,.58]$} & 1.00 & 1.00 \\
 \midrule
-Skywork-VL-7B  & general-mm & 0.94 & 0.72 & 0.46 & \checkmark\,\textbf{0.79}\,{\scriptsize$[.69,.86]$} & 0.92 & 1.00 \\
-PickScore-v1   & general-mm & 0.74 & 0.59 & 0.04 & \checkmark\,\textbf{0.71}\,{\scriptsize$[.61,.80]$} & 1.00 & 0.72 \\
+Skywork-VL-7B  & general-mm & 0.94 & 0.72 & 0.57 & \checkmark\,\textbf{0.79}\,{\scriptsize$[.69,.86]$} & 0.92 & 1.00 \\
+PickScore-v1   & general-mm & 0.74 & 0.59 & 0.70 & \checkmark\,\textbf{0.71}\,{\scriptsize$[.61,.80]$} & 1.00 & 0.72 \\
 \midrule
-LAION-Aesth.   & aesthetic  & 0.37 & 0.91 & 0.57 & $\times$\,\textbf{0.57}\,{\scriptsize$[.46,.66]$} & 0.75 & 0.61 \\
-CLIP-IQA       & aesthetic  & 0.44 & 0.50 & 0.02 & \checkmark\,\textbf{0.83}\,{\scriptsize$[.74,.90]$} & 0.50 & 0.72 \\
+LAION-Aesth.   & aesthetic  & 0.37 & 0.91 & 0.78 & $\times$\,\textbf{0.57}\,{\scriptsize$[.46,.66]$} & 0.75 & 0.61 \\
+CLIP-IQA       & aesthetic  & 0.44 & 0.50 & 0.65 & \checkmark\,\textbf{0.83}\,{\scriptsize$[.74,.90]$} & 0.50 & 0.72 \\
 \midrule
-\multicolumn{2}{@{}l}{$n$ (paired)} & 54 & 54 & 54 & 90 & 36 & 18 \\
+\multicolumn{2}{@{}l}{$n$ (paired)} & 54 & 54 & 80 & 90 & 36 & 18 \\
 \bottomrule
 \end{tabular}
 \end{table}

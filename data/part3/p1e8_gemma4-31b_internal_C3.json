@@ -1,0 +1,131 @@
+{
+  "condition": "C3",
+  "model": "gemma4-31b",
+  "style": "scoped",
+  "manifest": "/home/gpus/slide-examiner/data/part3/manifest_g3g5_internal.jsonl",
+  "modalities": [
+    "A"
+  ],
+  "defects": [
+    "G3_ALIGNMENT_OFFSET",
+    "G5_BRAND_COLOR_VIOLATION"
+  ],
+  "n_jobs": 480,
+  "failures": 15,
+  "metrics": {
+    "A": {
+      "per_defect": {
+        "G3_ALIGNMENT_OFFSET": {
+          "detection": {
+            "recall": 0.558,
+            "specificity": 1.0,
+            "bal_acc": 0.779,
+            "bal_acc_ci": [
+              0.719,
+              0.822
+            ],
+            "precision": 1.0,
+            "precision_ci": [
+              0.946,
+              1.0
+            ],
+            "fpr": 0.0,
+            "f1": 0.717,
+            "recall_ci": [
+              0.469,
+              0.644
+            ],
+            "tp": 67,
+            "fn": 53,
+            "fp": 0,
+            "tn": 120,
+            "n_pos": 120,
+            "n_neg": 120
+          },
+          "named": {
+            "recall": 0.558,
+            "specificity": 1.0,
+            "bal_acc": 0.779,
+            "bal_acc_ci": [
+              0.719,
+              0.822
+            ],
+            "precision": 1.0,
+            "precision_ci": [
+              0.946,
+              1.0
+            ],
+            "fpr": 0.0,
+            "f1": 0.717,
+            "recall_ci": [
+              0.469,
+              0.644
+            ],
+            "tp": 67,
+            "fn": 53,
+            "fp": 0,
+            "tn": 120,
+            "n_pos": 120,
+            "n_neg": 120
+          },
+          "headline_level": "detection"
+        },
+        "G5_BRAND_COLOR_VIOLATION": {
+          "detection": {
+            "recall": 0.542,
+            "specificity": 1.0,
+            "bal_acc": 0.771,
+            "bal_acc_ci": [
+              0.709,
+              0.814
+            ],
+            "precision": 1.0,
+            "precision_ci": [
+              0.944,
+              1.0
+            ],
+            "fpr": 0.0,
+            "f1": 0.703,
+            "recall_ci": [
+              0.453,
+              0.628
+            ],
+            "tp": 65,
+            "fn": 55,
+            "fp": 0,
+            "tn": 105,
+            "n_pos": 120,
+            "n_neg": 105
+          },
+          "named": {
+            "recall": 0.542,
+            "specificity": 1.0,
+            "bal_acc": 0.771,
+            "bal_acc_ci": [
+              0.709,
+              0.814
+            ],
+            "precision": 1.0,
+            "precision_ci": [
+              0.944,
+              1.0
+            ],
+            "fpr": 0.0,
+            "f1": 0.703,
+            "recall_ci": [
+              0.453,
+              0.628
+            ],
+            "tp": 65,
+            "fn": 55,
+            "fp": 0,
+            "tn": 105,
+            "n_pos": 120,
+            "n_neg": 105
+          },
+          "headline_level": "detection"
+        }
+      }
+    }
+  }
+}

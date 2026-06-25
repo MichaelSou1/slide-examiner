@@ -1,0 +1,43 @@
+{
+  "key": "skywork-vl",
+  "display_name": "Skywork-VL-Reward-7B",
+  "category": "general_mm",
+  "contract": "prompt_conditioned",
+  "backbone": "Qwen2.5-VL-7B",
+  "trained_reward": true,
+  "model_path": "/home/gpus/models/Skywork-VL-Reward-7B",
+  "variant": "generic",
+  "elicitation": {
+    "question": "Rate the overall visual quality, layout and professionalism of this presentation slide.",
+    "answer": "This is a high-quality, well-designed, professional slide with a clean, polished layout."
+  },
+  "metric": "paired preference accuracy = P(reward(clean) > reward(defective)); 0.5 = blind, 1.0 = always prefers the clean slide",
+  "results": [
+    {
+      "defect": "G5_BRAND_COLOR_VIOLATION",
+      "render": "freeform",
+      "n": 80,
+      "preference_accuracy": 0.575,
+      "preference_ci": [
+        0.466,
+        0.677
+      ],
+      "mean_reward_gap_clean_minus_def": 0.1358,
+      "median_gap": 0.0721,
+      "n_clean_preferred": 46
+    },
+    {
+      "defect": "G3_ALIGNMENT_OFFSET",
+      "render": "template",
+      "n": 80,
+      "preference_accuracy": 0.263,
+      "preference_ci": [
+        0.179,
+        0.368
+      ],
+      "mean_reward_gap_clean_minus_def": 0.0239,
+      "median_gap": 0.0,
+      "n_clean_preferred": 21
+    }
+  ]
+}

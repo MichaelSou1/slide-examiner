@@ -45,13 +45,14 @@
           "n": 54
         },
         "G5_BRAND_COLOR_VIOLATION": {
-          "preference_accuracy": 0.574,
+          "preference_accuracy": 0.775,
           "preference_ci": [
-            0.442,
-            0.697
+            0.672,
+            0.853
           ],
-          "mean_gap": 0.004,
-          "n": 54
+          "mean_gap": 0.0399,
+          "n": 80,
+          "operationalisation": "internal_chromatic"
         },
         "S4_DENSITY_RULE_VIOLATION": {
           "preference_accuracy": 0.75,
@@ -110,13 +111,14 @@
           "n": 54
         },
         "G5_BRAND_COLOR_VIOLATION": {
-          "preference_accuracy": 0.019,
+          "preference_accuracy": 0.65,
           "preference_ci": [
-            0.003,
-            0.098
+            0.541,
+            0.745
           ],
-          "mean_gap": -0.0131,
-          "n": 54
+          "mean_gap": 0.0091,
+          "n": 80,
+          "operationalisation": "internal_chromatic"
         },
         "S4_DENSITY_RULE_VIOLATION": {
           "preference_accuracy": 0.5,
@@ -175,13 +177,14 @@
           "n": 54
         },
         "G5_BRAND_COLOR_VIOLATION": {
-          "preference_accuracy": 0.37,
+          "preference_accuracy": 0.725,
           "preference_ci": [
-            0.254,
-            0.504
+            0.619,
+            0.811
           ],
-          "mean_gap": -0.0262,
-          "n": 54
+          "mean_gap": 0.1711,
+          "n": 80,
+          "operationalisation": "internal_chromatic"
         },
         "S4_DENSITY_RULE_VIOLATION": {
           "preference_accuracy": 1.0,
@@ -243,13 +246,14 @@
           "n": 54
         },
         "G5_BRAND_COLOR_VIOLATION": {
-          "preference_accuracy": 0.037,
+          "preference_accuracy": 0.7,
           "preference_ci": [
-            0.01,
-            0.125
+            0.592,
+            0.789
           ],
-          "mean_gap": -0.0204,
-          "n": 54
+          "mean_gap": 0.0403,
+          "n": 80,
+          "operationalisation": "internal_chromatic"
         },
         "S4_DENSITY_RULE_VIOLATION": {
           "preference_accuracy": 1.0,
@@ -311,13 +315,14 @@
           "n": 54
         },
         "G5_BRAND_COLOR_VIOLATION": {
-          "preference_accuracy": 0.463,
+          "preference_accuracy": 0.575,
           "preference_ci": [
-            0.337,
-            0.594
+            0.466,
+            0.677
           ],
-          "mean_gap": -0.0459,
-          "n": 54
+          "mean_gap": 0.1358,
+          "n": 80,
+          "operationalisation": "internal_chromatic"
         },
         "S4_DENSITY_RULE_VIOLATION": {
           "preference_accuracy": 0.917,
@@ -524,5 +529,6 @@
     },
     "no_scorer_reliably_detects_g7_generic": false,
     "statement": "Under deployment-realistic (generic) elicitation only 3/5 reward scorers reliably detect G7 (95% CI above chance). The G7 blind spot is a property of NARROW critics — the symbolic linter and specialised document / aesthetic rewards all miss it — while a capable GENERAL-multimodal reward detects it; every scorer is meanwhile clearly sensitive to its in-taxonomy classes. This refines 'neural rewards are blind to G7' to 'narrow rewards are; a general VLM reward (like a prompted VLM, Result-1) is not' — and validates routing G7 to a VLM engine."
-  }
+  },
+  "g5_operationalisation_note": "G5 re-operationalised (E8) to internal chromatic contrast (one element hue-swapped vs its sibling column, decidable from the slide alone) and re-audited n=80 freeform; supersedes the pre-E8 absolute brand-palette G5 (which was at chance because no general reward knows the declared palette)."
 }

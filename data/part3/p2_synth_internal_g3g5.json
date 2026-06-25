@@ -1,0 +1,418 @@
+{
+  "model": "qwen35-27b",
+  "manifest": "/home/gpus/slide-examiner/data/part3/manifest_coverage_internal.jsonl",
+  "modality": "A",
+  "max_per_defect": 120,
+  "metric": "paired-clean named-attribution balanced accuracy + precision",
+  "router": {
+    "G1_TEXT_OVERFLOW": "linter",
+    "G2_ELEMENT_OVERLAP": "linter",
+    "G3_ALIGNMENT_OFFSET": "linter",
+    "G5_BRAND_COLOR_VIOLATION": "linter",
+    "G6_MARGIN_VIOLATION": "linter",
+    "G7_RENDER_CONTAINMENT_OVERFLOW": "vlm",
+    "S1_TITLE_BODY_MISMATCH": "vlm",
+    "S4_DENSITY_RULE_VIOLATION": "llm",
+    "S6_IMAGE_TEXT_CONTRADICTION": "vlm"
+  },
+  "vlm_elicit": {
+    "G1_TEXT_OVERFLOW": "C2",
+    "S6_IMAGE_TEXT_CONTRADICTION": "C0",
+    "G7_RENDER_CONTAINMENT_OVERFLOW": "C3"
+  },
+  "per_class": {
+    "G3_ALIGNMENT_OFFSET": {
+      "linter": {
+        "recall": 0.857,
+        "specificity": 1.0,
+        "bal_acc": 0.929,
+        "bal_acc_ci": [
+          0.852,
+          0.96
+        ],
+        "precision": 1.0,
+        "precision_ci": [
+          0.94,
+          1.0
+        ],
+        "fpr": 0.0,
+        "f1": 0.923,
+        "recall_ci": [
+          0.757,
+          0.921
+        ],
+        "tp": 60,
+        "fn": 10,
+        "fp": 0,
+        "tn": 70,
+        "n_pos": 70,
+        "n_neg": 70
+      },
+      "vlm_c0": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "bal_acc_ci": [
+          0.35,
+          0.677
+        ],
+        "precision": 0.0,
+        "precision_ci": null,
+        "fpr": 0.0,
+        "f1": 0.0,
+        "recall_ci": [
+          0.0,
+          0.354
+        ],
+        "tp": 0,
+        "fn": 7,
+        "fp": 0,
+        "tn": 9,
+        "n_pos": 7,
+        "n_neg": 9
+      },
+      "vlm_best": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "bal_acc_ci": [
+          0.35,
+          0.677
+        ],
+        "precision": 0.0,
+        "precision_ci": null,
+        "fpr": 0.0,
+        "f1": 0.0,
+        "recall_ci": [
+          0.0,
+          0.354
+        ],
+        "tp": 0,
+        "fn": 7,
+        "fp": 0,
+        "tn": 9,
+        "n_pos": 7,
+        "n_neg": 9
+      },
+      "vlm_c3": {
+        "recall": 0.406,
+        "specificity": 1.0,
+        "bal_acc": 0.703,
+        "bal_acc_ci": [
+          0.621,
+          0.764
+        ],
+        "precision": 1.0,
+        "precision_ci": [
+          0.871,
+          1.0
+        ],
+        "fpr": 0.0,
+        "f1": 0.578,
+        "recall_ci": [
+          0.295,
+          0.529
+        ],
+        "tp": 26,
+        "fn": 38,
+        "fp": 0,
+        "tn": 69,
+        "n_pos": 64,
+        "n_neg": 69
+      }
+    },
+    "G5_BRAND_COLOR_VIOLATION": {
+      "linter": {
+        "recall": 1.0,
+        "specificity": 1.0,
+        "bal_acc": 1.0,
+        "bal_acc_ci": [
+          0.912,
+          1.0
+        ],
+        "precision": 1.0,
+        "precision_ci": [
+          0.912,
+          1.0
+        ],
+        "fpr": 0.0,
+        "f1": 1.0,
+        "recall_ci": [
+          0.912,
+          1.0
+        ],
+        "tp": 40,
+        "fn": 0,
+        "fp": 0,
+        "tn": 40,
+        "n_pos": 40,
+        "n_neg": 40
+      },
+      "vlm_c0": null,
+      "vlm_best": null,
+      "vlm_c3": null
+    }
+  },
+  "config_per_class": {
+    "linter_only": {
+      "G3_ALIGNMENT_OFFSET": {
+        "recall": 0.857,
+        "specificity": 1.0,
+        "bal_acc": 0.929,
+        "bal_acc_ci": [
+          0.852,
+          0.96
+        ],
+        "precision": 1.0,
+        "precision_ci": [
+          0.94,
+          1.0
+        ],
+        "fpr": 0.0,
+        "f1": 0.923,
+        "recall_ci": [
+          0.757,
+          0.921
+        ],
+        "tp": 60,
+        "fn": 10,
+        "fp": 0,
+        "tn": 70,
+        "n_pos": 70,
+        "n_neg": 70
+      },
+      "G5_BRAND_COLOR_VIOLATION": {
+        "recall": 1.0,
+        "specificity": 1.0,
+        "bal_acc": 1.0,
+        "bal_acc_ci": [
+          0.912,
+          1.0
+        ],
+        "precision": 1.0,
+        "precision_ci": [
+          0.912,
+          1.0
+        ],
+        "fpr": 0.0,
+        "f1": 1.0,
+        "recall_ci": [
+          0.912,
+          1.0
+        ],
+        "tp": 40,
+        "fn": 0,
+        "fp": 0,
+        "tn": 40,
+        "n_pos": 40,
+        "n_neg": 40
+      }
+    },
+    "vlm_only": {
+      "G3_ALIGNMENT_OFFSET": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "bal_acc_ci": [
+          0.35,
+          0.677
+        ],
+        "precision": 0.0,
+        "precision_ci": null,
+        "fpr": 0.0,
+        "f1": 0.0,
+        "recall_ci": [
+          0.0,
+          0.354
+        ],
+        "tp": 0,
+        "fn": 7,
+        "fp": 0,
+        "tn": 9,
+        "n_pos": 7,
+        "n_neg": 9
+      },
+      "G5_BRAND_COLOR_VIOLATION": null
+    },
+    "vlm_c3_everywhere": {
+      "G3_ALIGNMENT_OFFSET": {
+        "recall": 0.406,
+        "specificity": 1.0,
+        "bal_acc": 0.703,
+        "bal_acc_ci": [
+          0.621,
+          0.764
+        ],
+        "precision": 1.0,
+        "precision_ci": [
+          0.871,
+          1.0
+        ],
+        "fpr": 0.0,
+        "f1": 0.578,
+        "recall_ci": [
+          0.295,
+          0.529
+        ],
+        "tp": 26,
+        "fn": 38,
+        "fp": 0,
+        "tn": 69,
+        "n_pos": 64,
+        "n_neg": 69
+      },
+      "G5_BRAND_COLOR_VIOLATION": null
+    },
+    "linter_plus_vlmc3": {
+      "G3_ALIGNMENT_OFFSET": {
+        "recall": 0.857,
+        "specificity": 1.0,
+        "bal_acc": 0.929,
+        "bal_acc_ci": [
+          0.852,
+          0.96
+        ],
+        "precision": 1.0,
+        "precision_ci": [
+          0.94,
+          1.0
+        ],
+        "fpr": 0.0,
+        "f1": 0.923,
+        "recall_ci": [
+          0.757,
+          0.921
+        ],
+        "tp": 60,
+        "fn": 10,
+        "fp": 0,
+        "tn": 70,
+        "n_pos": 70,
+        "n_neg": 70
+      },
+      "G5_BRAND_COLOR_VIOLATION": {
+        "recall": 1.0,
+        "specificity": 1.0,
+        "bal_acc": 1.0,
+        "bal_acc_ci": [
+          0.912,
+          1.0
+        ],
+        "precision": 1.0,
+        "precision_ci": [
+          0.912,
+          1.0
+        ],
+        "fpr": 0.0,
+        "f1": 1.0,
+        "recall_ci": [
+          0.912,
+          1.0
+        ],
+        "tp": 40,
+        "fn": 0,
+        "fp": 0,
+        "tn": 40,
+        "n_pos": 40,
+        "n_neg": 40
+      }
+    },
+    "hybrid": {
+      "G3_ALIGNMENT_OFFSET": {
+        "recall": 0.857,
+        "specificity": 1.0,
+        "bal_acc": 0.929,
+        "bal_acc_ci": [
+          0.852,
+          0.96
+        ],
+        "precision": 1.0,
+        "precision_ci": [
+          0.94,
+          1.0
+        ],
+        "fpr": 0.0,
+        "f1": 0.923,
+        "recall_ci": [
+          0.757,
+          0.921
+        ],
+        "tp": 60,
+        "fn": 10,
+        "fp": 0,
+        "tn": 70,
+        "n_pos": 70,
+        "n_neg": 70
+      },
+      "G5_BRAND_COLOR_VIOLATION": {
+        "recall": 1.0,
+        "specificity": 1.0,
+        "bal_acc": 1.0,
+        "bal_acc_ci": [
+          0.912,
+          1.0
+        ],
+        "precision": 1.0,
+        "precision_ci": [
+          0.912,
+          1.0
+        ],
+        "fpr": 0.0,
+        "f1": 1.0,
+        "recall_ci": [
+          0.912,
+          1.0
+        ],
+        "tp": 40,
+        "fn": 0,
+        "fp": 0,
+        "tn": 40,
+        "n_pos": 40,
+        "n_neg": 40
+      }
+    }
+  },
+  "coverage": {
+    "linter_only": {
+      "n_classes": 2,
+      "mean_bal_acc": 0.965,
+      "n_covered_0.70": 2,
+      "covered_classes": [
+        "G3_ALIGNMENT_OFFSET",
+        "G5_BRAND_COLOR_VIOLATION"
+      ]
+    },
+    "vlm_only": {
+      "n_classes": 1,
+      "mean_bal_acc": 0.5,
+      "n_covered_0.70": 0,
+      "covered_classes": []
+    },
+    "vlm_c3_everywhere": {
+      "n_classes": 1,
+      "mean_bal_acc": 0.703,
+      "n_covered_0.70": 1,
+      "covered_classes": [
+        "G3_ALIGNMENT_OFFSET"
+      ]
+    },
+    "linter_plus_vlmc3": {
+      "n_classes": 2,
+      "mean_bal_acc": 0.965,
+      "n_covered_0.70": 2,
+      "covered_classes": [
+        "G3_ALIGNMENT_OFFSET",
+        "G5_BRAND_COLOR_VIOLATION"
+      ]
+    },
+    "hybrid": {
+      "n_classes": 2,
+      "mean_bal_acc": 0.965,
+      "n_covered_0.70": 2,
+      "covered_classes": [
+        "G3_ALIGNMENT_OFFSET",
+        "G5_BRAND_COLOR_VIOLATION"
+      ]
+    }
+  }
+}

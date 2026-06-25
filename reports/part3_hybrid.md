@@ -10,6 +10,19 @@
 > This is an **additive arm** to [part3.md](part3.md) (the self-refine / GEPA downstream-utility study) — a
 > separate mechanism-analysis of *how to detect* slide defects, output here and not over-writing that report.
 
+> **⚠ E8 RE-OPERATIONALISATION (2026-06-25 — supersedes earlier G3/G5 framing below).** The original G3/G5
+> injections used an **invisible external reference** (absolute expected-position / brand palette), making "is it
+> wrong?" undecidable from the slide alone — so they read as "sub-perceptual" for the wrong reason. E8 re-poses
+> both as an **internal contrast** (one element shifted/recoloured vs its aligned sibling column, decidable from the
+> slide alone). Corrected results (authoritative; in `paper/main.tex` Figs 10–11 + `reports/_e8_*.md`):
+> **(i)** fine geometry is **magnitude-gated, not a flat floor** — G3 2-AFC saturates to 1.00 by 16px (0.83% w) and
+> atomic C3 to a ≈0.90 plateau by 48–64px; G5 chromatic C3 to 0.99 by ΔE40 / 2-AFC 1.00 by ΔE12; only the
+> **sub-threshold tail** (≤8px, ≤6 ΔE) is genuinely sub-perceptual. **(ii)** Re-audited on the internal-chromatic
+> G5 (n=80), most reward scorers **do** react (DocReward 0.72, PickScore 0.70, LAION 0.78, CLIP-IQA 0.65; Skywork
+> marginal 0.57) — a *visible* clash, unlike the linter-only G7. **(iii)** G6 page-offset is a *genuine* perceptual
+> blind spot (2-AFC at floor on all 6 models); S6 was a render data-bug (figure omitted), 2-AFC 1.00 on the valid
+> corpus. The "VLMs can't judge G3/G5" verdict in the pre-E8 cells below is **wrong** and kept only for provenance.
+
 ## Thesis (A.0)
 
 The ideal slide-defect critic is **symbolic–neural hybrid**, routed by a per-defect bottleneck:
@@ -59,8 +72,12 @@ Four claims map to the three protocols:
    `has_defect=false` on a real "table-of-contents overflow" slide.
 2. The *same* image and *same* 30B, asked freely, names the "05 overflow" correctly → the failure is at the
    **calibration / format** layer, not raw perception.
-3. Fine geometry (G3 2–32px, tiny G2) stays at floor across resolution / encoder / scale / forced-choice →
-   **sub-perceptual, not rescuable → keep the linter** (Parts 1–2).
+3. Fine geometry is **magnitude-gated** (E8 internal-contrast 口径; see the E8 note above). Above an acuity
+   threshold G3/G5 are format-suppressed-then-recoverable (2-AFC → 1.00 by 16px / ΔE12; atomic C3 → ≈0.90 plateau
+   by 48–64px); only the **sub-threshold tail** (≤8px, ≤6 ΔE) and tiny G2 are genuinely sub-perceptual. Declared
+   geometry still routes to the linter — exact + ~0 FP where the IR exists, **not** because the VLM is blind.
+   *(The pre-E8 "G3 stays at floor under forced-choice → not rescuable" claim was an artifact of the ill-posed
+   absolute reference and is superseded.)*
 4. The linter judges the **declared bbox**; its blind spot is **structurally legal but renders broken** = **G7**.
 
 ## Methods
@@ -258,7 +275,9 @@ hybrid (**8/9 @ 0.885**). The cleaner claim is therefore: use the linter for dec
 C3-prompted VLM for the non-linter residue; per-class VLM/LLM tuning is not load-bearing here.
 
 1. **Linter owns declared geometry** (G1–G6: 0.80–1.00 at precision 1.00) where the **VLM is at floor** (C0
-   0.47–0.71; C3 stays at 0.50 on G1/G3/G5/G6) — the Part-1 sub-perceptual result.
+   0.47–0.71; C3 stays at 0.50 on G1/G6, and on the *absolute* G3/G5 of this **pre-E8** snapshot). *Under the E8
+   internal 口径 C3 recovers supra-threshold G3 (→0.71 in the paper Table 2) and G5 above ΔE12 — see the E8 note;
+   the Table-2 cells in `paper/main.tex` carry the corrected internal numbers.*
 2. **VLM owns the render class G7** — the load-bearing cell: **linter 0.00** (blind by construction), **VLM-C0
    0.50** (cannot *name* the off-taxonomy class), **VLM-C3 1.00 at precision 1.00** via the atomic-binary engine.
    No linter-only or C0-only engine covers G7; the minimal hybrid does. (Result 3a: the linter, a document-structure reward
@@ -326,15 +345,15 @@ Each is scored under its native, **deployment-realistic contract with no defect 
 rewards we use a generic quality elicitation (and a defect-naming *probe* as a control). Preference accuracy per
 class (freeform; 95% CI; **G7 boldface**):
 
-| Reward scorer | G1 overflow | G2 overlap | G5 colour | **G7 render** | S4 density | S6 img-text |
+| Reward scorer | G1 overflow | G2 overlap | G5 colour (internal) | **G7 render** | S4 density | S6 img-text |
 |---|---|---|---|---|---|---|
-| DocReward-3B (document) | 0.93 | 1.00 | 0.37 | **0.48 [0.38, 0.58]** ✗ | 1.00 | 1.00 |
-| Skywork-VL-7B (general-mm) | 0.94 | 0.72 | 0.46 | **0.79 [0.69, 0.86]** ✓ | 0.92 | 1.00 |
-| PickScore-v1 (general-mm) | 0.74 | 0.59 | 0.04 | **0.71 [0.61, 0.80]** ✓ | 1.00 | 0.72 |
-| LAION-Aesthetic (aesthetic) | 0.37 | 0.91 | 0.57 | **0.57 [0.46, 0.66]** ✗ | 0.75 | 0.61 |
-| CLIP-IQA (aesthetic) | 0.44 | 0.50 | 0.02 | **0.83 [0.74, 0.90]** ✓ | 0.50 | 0.72 |
+| DocReward-3B (document) | 0.93 | 1.00 | 0.72 | **0.48 [0.38, 0.58]** ✗ | 1.00 | 1.00 |
+| Skywork-VL-7B (general-mm) | 0.94 | 0.72 | 0.57 | **0.79 [0.69, 0.86]** ✓ | 0.92 | 1.00 |
+| PickScore-v1 (general-mm) | 0.74 | 0.59 | 0.70 | **0.71 [0.61, 0.80]** ✓ | 1.00 | 0.72 |
+| LAION-Aesthetic (aesthetic) | 0.37 | 0.91 | 0.78 | **0.57 [0.46, 0.66]** ✗ | 0.75 | 0.61 |
+| CLIP-IQA (aesthetic) | 0.44 | 0.50 | 0.65 | **0.83 [0.74, 0.90]** ✓ | 0.50 | 0.72 |
 
-*(n paired: G1/G2/G5 54, G7 90, S4 36, S6 18. ✓ = 95% CI above chance; both general-mm cells + the PickScore/Skywork
+*(n paired: G1/G2 54, **G5 80 (internal-chromatic re-op, E8)**, G7 90, S4 36, S6 18. ✓ = 95% CI above chance; both general-mm cells + the PickScore/Skywork
 G7 detections survive Holm over the 61-test family — Skywork p_Holm=2e-6, PickScore 2.6e-3, CLIP-IQA ~0.)*
 
 **Category-level pattern** (`p3_audit_multi.json:g7_by_category`): **general-mm 2/2 detect** (ALL-DETECT, two
@@ -360,8 +379,12 @@ whereas a head tuned to a **specialised** objective (document structure, artisti
 (CLIP-IQA vs. LAION) the two share a backbone. This is the **reward-side counterpart of Result-1's C0→C3**: the
 perception is present; a specialised read-out suppresses it. The hybrid thesis is unchanged and now **category-level**:
 **G7 needs a perceptually-capable engine, prompted (Result-1 C3, 0.93–1.00) or reward-headed (two general-mm rewards,
-0.71–0.79).** (Both CLIP-based scorers are meanwhile blind to brand-colour G5 at ≤0.04, a rule class the linter owns at
-bal-acc 1.0; complementary strengths persist.)
+0.71–0.79).** (On the re-operationalised **internal-chromatic** G5 — one element hue-swapped vs its sibling column, visible from
+the slide alone — most scorers now react (0.65–0.78; only Skywork marginal at 0.57), as the perceptual-capability
+reading predicts for a *visible* defect; the linter still owns G5 at bal-acc 1.0, but its edge there is
+exactness + ~0 FP + knowing the *declared* palette, **not** that the clash is imperceptible. The old "rewards
+blind to G5 ≤0.04" was the pre-E8 *absolute* brand-palette 口径 — undecidable without the palette — and is
+superseded.)
 
 **Elicitation control (probe).** For the prompt-conditioned Skywork, naming containment/overflow in the prompt lifts
 G7 from 0.79 → **0.87** (gap +1.36 → +2.59) — same direction as Result-1's C0→C3, although Skywork already detects
@@ -467,7 +490,7 @@ InternVL3.5-8B, Ovis2.5-9B; `data/part3/pc_real_summary.json`, Fig. `docs/figs/p
 |---|---|---|---|---|---|
 | G1 overflow  | **0.70** | 0.50 | 0.64 | −0.20 | image-sufficient |
 | G2 overlap   | **0.74** | 0.59 | 0.72 | −0.15 | image-sufficient |
-| G3 alignment | 0.51 | 0.49 | 0.50 | −0.03 | **capability / sub-perceptual** |
+| G3 alignment | 0.51 | 0.49 | 0.50 | −0.03 | **clutter-limited on real decks** (not a capability floor — recovers on clean slides ≥threshold, E8 Fig 10) |
 | G4 font      | 0.61 | 0.62 | 0.62 | +0.01 | image-sufficient (ill-posed) |
 | G6 margin    | 0.59 | **0.70** | 0.66 | **+0.11** | **perception (structure rescues)** |
 
@@ -479,11 +502,15 @@ InternVL3.5-8B, Ovis2.5-9B; `data/part3/pc_real_summary.json`, Fig. `docs/figs/p
    This is model-dependent: the strong 27B already *sees* the bleed (A 0.72, image-sufficient) while the weaker
    InternVL/Ovis need the structure (A 0.50/0.54 → B 0.58/0.79). This is the exact "**missing structure, not
    missing capability**" cell §8 said it could not isolate.
-3. **Capability / genuinely sub-perceptual** — **G3 alignment** is at chance in **every** channel for **every**
-   model (A = B = C ≈ 0.50; 27B/InternVL/Ovis all 0.47–0.53). A 20–44 px offset is invisible in the render *and*
-   the VLM cannot recover it from exact coordinates (the alignment arithmetic the symbolic linter does
-   deterministically). The structured oracle does **not** substitute for the linter — the cleanest real-data
-   confirmation of the paper's "fine geometry → linter" routing.
+3. **Clutter-limited on real decks (NOT a hard capability floor — corrected by E8)** — **G3 alignment** is at
+   chance in **every** channel for **every** model on these real cluttered layouts (A = B = C ≈ 0.50;
+   27B/InternVL/Ovis all 0.47–0.53), and the internal-contrast re-run at a supra-threshold 44px offset reproduces
+   it (A 0.54 / B 0.51 / C 0.52, n=41). But this is **not** sub-perceptual capability: on **clean** synthetic
+   slides the same alignment defect **recovers** under targeted/relative elicitation once it clears acuity (E8
+   Fig 10 — 2-AFC 1.00 by 16px). On real layouts the misaligned element cannot be isolated among many genuine ones
+   and the VLM cannot do the alignment arithmetic the linter does deterministically, so the structured oracle does
+   **not** substitute for the linter — declared geometry routes to the linter regardless. *(The earlier "genuinely
+   sub-perceptual" label for G3 here is superseded — see the E8 note.)*
 
 **Takeaway.** On real layouts the perception/capability boundary the paper draws is **real and reproducible**:
 coarse geometry is image-sufficient, a margin bleed is a structure-rescuable *perception* bottleneck for weak VLMs,
