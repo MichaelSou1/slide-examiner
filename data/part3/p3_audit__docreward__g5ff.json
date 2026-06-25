@@ -1,0 +1,40 @@
+{
+  "key": "docreward",
+  "display_name": "DocReward-3B",
+  "category": "document",
+  "contract": "pairwise_bt",
+  "backbone": "Qwen2.5-VL-3B",
+  "trained_reward": true,
+  "model_path": "/home/gpus/models/DocReward-3B",
+  "variant": "generic",
+  "elicitation": null,
+  "metric": "paired preference accuracy = P(reward(clean) > reward(defective)); 0.5 = blind, 1.0 = always prefers the clean slide",
+  "results": [
+    {
+      "defect": "G5_BRAND_COLOR_VIOLATION",
+      "render": "freeform",
+      "n": 40,
+      "preference_accuracy": 0.725,
+      "preference_ci": [
+        0.572,
+        0.839
+      ],
+      "mean_reward_gap_clean_minus_def": 0.1711,
+      "median_gap": 0.1321,
+      "n_clean_preferred": 29
+    },
+    {
+      "defect": "G3_ALIGNMENT_OFFSET",
+      "render": "template",
+      "n": 40,
+      "preference_accuracy": 0.45,
+      "preference_ci": [
+        0.307,
+        0.602
+      ],
+      "mean_reward_gap_clean_minus_def": -0.0339,
+      "median_gap": -0.029,
+      "n_clean_preferred": 18
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "key": "pickscore",
+  "display_name": "PickScore-v1",
+  "category": "general_mm",
+  "contract": "prompt_conditioned",
+  "backbone": "CLIP-H/14",
+  "trained_reward": true,
+  "model_path": "/home/gpus/models/PickScore_v1",
+  "variant": "generic",
+  "elicitation": {
+    "question": "Rate the overall visual quality, layout and professionalism of this presentation slide.",
+    "answer": "This is a high-quality, well-designed, professional slide with a clean, polished layout."
+  },
+  "metric": "paired preference accuracy = P(reward(clean) > reward(defective)); 0.5 = blind, 1.0 = always prefers the clean slide",
+  "results": [
+    {
+      "defect": "G5_BRAND_COLOR_VIOLATION",
+      "render": "freeform",
+      "n": 40,
+      "preference_accuracy": 0.7,
+      "preference_ci": [
+        0.546,
+        0.819
+      ],
+      "mean_reward_gap_clean_minus_def": 0.0403,
+      "median_gap": 0.0315,
+      "n_clean_preferred": 28
+    },
+    {
+      "defect": "G3_ALIGNMENT_OFFSET",
+      "render": "template",
+      "n": 40,
+      "preference_accuracy": 0.425,
+      "preference_ci": [
+        0.285,
+        0.578
+      ],
+      "mean_reward_gap_clean_minus_def": -0.0151,
+      "median_gap": -0.0074,
+      "n_clean_preferred": 17
+    }
+  ]
+}

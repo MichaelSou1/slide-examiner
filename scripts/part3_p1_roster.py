@@ -34,7 +34,9 @@ KILL_STRAY = True  # set False (--no-stray-kill) for a parallel 2-server shard s
 #                    shard's teardown does not kill the OTHER shard's EngineCore workers
 GEO = REPO / "data/part2/manifest_eval_test_rendered.jsonl"
 G7 = REPO / "data/part3/manifest_g7_rendered.jsonl"
-INTERNAL = REPO / "data/part3/manifest_g3g5_internal.jsonl"  # E8 redo: internal-contrast G3/G5
+INTERNAL = REPO / "data/part3/manifest_g3g5_internal.jsonl"  # E8 redo: internal-contrast G3/G5 (Row 1, modality A)
+GEO_INTERNAL = REPO / "data/part1/manifest_geometry_internal.jsonl"  # E8 redo: internal-G3 modality ablation (Row 2)
+COVERAGE_INTERNAL2 = REPO / "data/part3/manifest_coverage_internal.jsonl"  # corrected Row-1 diagnosis (matched twins)
 NOTHINK = {"chat_template_kwargs": {"enable_thinking": False}}
 
 # key | source (local path or ms:owner/name) | family | tier | serve_extra | max_tokens | chat_kwargs
@@ -148,7 +150,7 @@ def gpu_free_wait(timeout=120):
 
 
 def run_elicit(m, mpd: int, conds: list[str], tags: list[str], freeform_only: bool = False,
-               out_prefix: str = "p1"):
+               out_prefix: str = "p1", modalities: list[str] | None = None):
     base = f"http://127.0.0.1:{PORT}/v1"
     env = {**os.environ}
     if m.get("chat_kwargs"):
@@ -157,16 +159,26 @@ def run_elicit(m, mpd: int, conds: list[str], tags: list[str], freeform_only: bo
         env.pop("PART3_CHAT_KWARGS", None)
     mt = str(m.get("max_tokens", 512))
     workers = str(m.get("workers", 12))
+    # E8 internal-口径 tags: 'internal' = Row-1 diagnosis (g3g5, modality A); 'geo_internal'
+    # = Row-2 modality A/B/C ablation on internal-G3 (the part1 geometry manifest carries IR).
     jobs = {"geo": (GEO, ["G1_TEXT_OVERFLOW", "S6_IMAGE_TEXT_CONTRADICTION"]),
-            "g7": (G7, ["G7_RENDER_CONTAINMENT_OVERFLOW"])}
+            "g7": (G7, ["G7_RENDER_CONTAINMENT_OVERFLOW"]),
+            "internal": (INTERNAL, ["G3_ALIGNMENT_OFFSET", "G5_BRAND_COLOR_VIOLATION"]),
+            # 'covint' = the CORRECTED diagnosis manifest: per-deck MATCHED clean twins
+            # (g3g5_internal shared one clean across all 240 -> degenerate spec + confounded
+            # 2-AFC; coverage_internal has 100/100 distinct same-deck twins + finer strata).
+            "covint": (COVERAGE_INTERNAL2, ["G3_ALIGNMENT_OFFSET", "G5_BRAND_COLOR_VIOLATION"]),
+            "geo_internal": (GEO_INTERNAL, ["G3_ALIGNMENT_OFFSET"])}
+    mods = modalities or ["A"]
     logf = LOG / f"elicit_{m['key']}.log"
     for tag in tags:
         manifest, defects = jobs[tag]
         for cond in conds:
-            log(f"  elicit {m['key']} {tag} {cond} (mpd={mpd}, workers={workers}, freeform_only={freeform_only})")
+            log(f"  elicit {m['key']} {tag} {cond} (mpd={mpd}, workers={workers}, "
+                f"mods={mods}, freeform_only={freeform_only})")
             cmd = [HARNESS_PY, str(REPO / "scripts/part3_elicit.py"), "--condition", cond,
                    "--manifest", str(manifest), "--base-url", base, "--model", m["key"],
-                   "--style", "scoped", "--defects", *defects, "--modalities", "A",
+                   "--style", "scoped", "--defects", *defects, "--modalities", *mods,
                    "--max-per-defect", str(mpd), "--max-tokens", mt, "--workers", workers,
                    "--out", str(OUT / f"{out_prefix}_{m['key']}_{tag}_{cond}.json"),
                    "--dump-rows", str(OUT / f"{out_prefix}_{m['key']}_{tag}_{cond}_rows.jsonl")]
@@ -195,6 +207,9 @@ def main():
                     help="override gpu-memory-utilization for ALL models (e.g. 0.55 when sharing the box).")
     ap.add_argument("--freeform-only", action="store_true",
                     help="E1: drop __template renders on the geo manifest (no-op on g7).")
+    ap.add_argument("--modalities", nargs="+", default=["A"],
+                    help="E8 Row-2: modalities to sweep (A image / B IR-text / C hybrid). "
+                         "Only the geo_internal tag carries IR for B/C; 'internal' is A-only.")
     ap.add_argument("--out-prefix", default="p1",
                     help="output file prefix (use 'p1e1' for the E1 decomposition so it "
                          "does not clobber the unfiltered Result-1 p1_* files).")
@@ -225,7 +240,7 @@ def main():
             teardown(proc); failed.append((key, "serve-fail")); continue
         try:
             run_elicit(m, args.mpd, args.conds, args.tags, freeform_only=args.freeform_only,
-                       out_prefix=args.out_prefix)
+                       out_prefix=args.out_prefix, modalities=args.modalities)
             ok.append(key)
         finally:
             teardown(proc)

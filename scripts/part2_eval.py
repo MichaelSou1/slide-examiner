@@ -99,8 +99,15 @@ def build_messages(rec: dict, modality: str, style: str) -> list[dict]:
 
 
 def call(client, model, messages, max_tokens):
-    resp = client.chat.completions.create(model=model, messages=messages,
-                                          max_tokens=max_tokens, temperature=0.0)
+    # Forward PART3_CHAT_KWARGS (e.g. enable_thinking:false) as extra_body so thinking
+    # VLMs (Qwen3.5/3.6) emit an answer instead of spending the whole token budget on
+    # <think> — without this, p2_eval/pc_real on a thinking body model spin to max_tokens
+    # every call (~37 tok/s, never finishing). Mirrors the elicit path. Empty body -> no-op.
+    from slide_examiner.elicit_common import ELICIT_EXTRA_BODY  # late import: reads env at import
+    kwargs = {"model": model, "messages": messages, "max_tokens": max_tokens, "temperature": 0.0}
+    if ELICIT_EXTRA_BODY:
+        kwargs["extra_body"] = ELICIT_EXTRA_BODY
+    resp = client.chat.completions.create(**kwargs)
     return resp.choices[0].message.content or "{}"
 
 

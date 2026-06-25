@@ -1,0 +1,111 @@
+{
+  "model": "qwen35-27b",
+  "manifest": "/home/gpus/slide-examiner/data/part3/manifest_real_internal_g3.jsonl",
+  "n_pairs": 41,
+  "failures": 0,
+  "per_modality": {
+    "A": {
+      "per_class": {
+        "G3_ALIGNMENT_OFFSET": {
+          "bal_acc": 0.537,
+          "bal_acc_ci": [
+            0.388,
+            0.679
+          ],
+          "recall": 0.561,
+          "recall_ci": [
+            0.41,
+            0.701
+          ],
+          "specificity": 0.512,
+          "fpr": 0.488,
+          "precision": 0.535,
+          "localize_rate": 0.174,
+          "repair_rate": 0.957,
+          "tp": 23,
+          "fp": 20,
+          "fn": 18,
+          "tn": 21,
+          "n_pos": 41,
+          "n_neg": 41
+        }
+      }
+    },
+    "B": {
+      "per_class": {
+        "G3_ALIGNMENT_OFFSET": {
+          "bal_acc": 0.512,
+          "bal_acc_ci": [
+            0.386,
+            0.637
+          ],
+          "recall": 0.244,
+          "recall_ci": [
+            0.138,
+            0.393
+          ],
+          "specificity": 0.78,
+          "fpr": 0.22,
+          "precision": 0.526,
+          "localize_rate": 0.4,
+          "repair_rate": 1.0,
+          "tp": 10,
+          "fp": 9,
+          "fn": 31,
+          "tn": 32,
+          "n_pos": 41,
+          "n_neg": 41
+        }
+      }
+    },
+    "C": {
+      "per_class": {
+        "G3_ALIGNMENT_OFFSET": {
+          "bal_acc": 0.524,
+          "bal_acc_ci": [
+            0.45,
+            0.595
+          ],
+          "recall": 0.073,
+          "recall_ci": [
+            0.025,
+            0.194
+          ],
+          "specificity": 0.976,
+          "fpr": 0.024,
+          "precision": 0.75,
+          "localize_rate": 0.667,
+          "repair_rate": 1.0,
+          "tp": 3,
+          "fp": 1,
+          "fn": 38,
+          "tn": 40,
+          "n_pos": 41,
+          "n_neg": 41
+        }
+      }
+    }
+  },
+  "attribution": {
+    "G3_ALIGNMENT_OFFSET": {
+      "A_bal_acc": 0.537,
+      "B_bal_acc": 0.512,
+      "C_bal_acc": 0.524,
+      "delta_C_minus_A": -0.013,
+      "delta_B_minus_A": -0.025,
+      "mcnemar_C_vs_A": {
+        "p": 1.0,
+        "gain": 20,
+        "loss": 21
+      },
+      "mcnemar_B_vs_A": {
+        "p": 0.883,
+        "gain": 22,
+        "loss": 24
+      },
+      "verdict": "capability",
+      "repair_rate_A": 0.957,
+      "localize_rate_C": 0.667
+    }
+  }
+}

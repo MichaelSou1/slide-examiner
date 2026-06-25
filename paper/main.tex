@@ -52,24 +52,28 @@ they routinely pass slides whose text visibly overflows its box. Whether this re
 rarely asked---and the answer decides whether the remedy is a larger model, a different prompt, or a different
 tool. We answer it with an attribution protocol built on a \emph{lossless structured-geometry oracle}
 (element boxes, text, and style, rather than a model-written caption that re-injects perceptual error), and
-find that VLM ``blindness'' on rendered documents is two failures of opposite character.
-\textbf{Genuinely sub-perceptual} defects---fine alignment, font, color, margin---stay at chance across model
-scale (4B/8B/30B), five vision-encoder families, and two input resolutions, so they belong to a symbolic
-linter rather than a VLM. \textbf{Format-suppressed} defects only \emph{look} sub-perceptual: the capability
-is present but the conventional pointwise+rubric prompt suppresses it, and simply \emph{changing the
-elicitation}---a forced choice, or an atomic per-type query---recovers detection \emph{with the model frozen},
-a recovery that replicates across the capable models (four of the six VLMs tested, four families) and
-transfers to third-party human-annotated slides. This diagnosis prescribes the critic: a minimal
+find that VLM ``blindness'' on rendered documents is largely a protocol artifact with a magnitude-gated floor.
+Many defects that \emph{look} sub-perceptual under the conventional pointwise+rubric prompt are
+\textbf{format-suppressed}---including fine alignment and color above a small magnitude threshold: the
+capability is present, and simply \emph{changing the elicitation}---a forced choice, or an atomic per-type
+query---recovers detection \emph{with the model frozen} (for alignment the paired forced choice saturates to
+$1.00$ once the offset clears $\approx\!0.8\%$ of slide width). A \textbf{genuine acuity floor} remains only in
+the sub-threshold tail (a few-pixel offset, a near-isoluminant color shift) and for OCR-bound terminology, where
+even a side-by-side forced choice stays at chance. Declared geometry routes to a symbolic linter regardless---
+exact and cheap where the structured IR exists, not because the VLM cannot see the defect---while the
+format-suppression recovery replicates across the capable models (four of the six VLMs tested, four families)
+and transfers to third-party human-annotated slides. This diagnosis prescribes the critic: a minimal
 \emph{symbolic--neural hybrid}---linter for declared geometry plus one C3-prompted VLM for the rest---that
-covers 8/9 defect classes (balanced accuracy 0.896), matching the pre-registered routed hybrid's 8/9 coverage
-(0.885) where the best single engine covers 5/9. We sharpen
+covers 8/9 defect classes (balanced accuracy 0.89), matching the pre-registered routed hybrid's 8/9 coverage
+(0.88) where the best single engine covers 5/9. We sharpen
 the argument with a \emph{falsifiable} linter-blind render class, \g{G7} (declared box legal, rendered content
 overflows), and audit \emph{five} published reward scorers (two per category) over it: a symbolic linter (0.00), a
 document reward (0.48) and an artistic-aesthetic head (0.57) miss it, while \emph{both} general-multimodal rewards
 (0.79, 0.71 on distinct backbones---a category-level result) and even a zero-shot perceptual-quality probe (0.83)
 catch it. So \g{G7}-detection tracks \emph{perceptual capability, not the training-domain label}, and \g{G7} needs a
 perceptually-capable engine, whether re-elicited by prompt or carried by a reward head. The diagnosis itself reproduces on \emph{real} CC-licensed slide layouts---a lossless tool-extracted
-oracle, no annotation---where fine alignment stays a capability floor in every channel while a margin bleed is
+oracle, no annotation---where fine alignment stays near chance in every channel on real cluttered decks (it
+recovers on clean slides above a magnitude threshold, but real clutter defeats it) while a margin bleed is
 structure-rescuable. As supporting evidence, an 8B examiner finetuned on injected defects surpasses a zero-shot
 30B on \emph{in-distribution} semantic inspection (the edge does not transfer out-of-distribution; Sec.~\ref{sec:external}),
 and a perturbation-fidelity audit shows that 45\% of injected geometry defects never
@@ -93,8 +97,9 @@ tool entirely. We treat that question as the design problem and answer it empiri
 \centering
 \includegraphics[width=\linewidth]{figs/fig1_routing.png}
 \caption{\textbf{The paper in one picture.} A perception/reasoning diagnosis (Sec.~\ref{sec:diag}) shows
-slide-inspection failures are of two kinds---genuinely sub-perceptual (route to a symbolic linter) and merely
-format-suppressed (route to a VLM under a changed elicitation). Routing each defect to its bottleneck-appropriate
+slide-inspection failures are of two kinds---declared-geometry (exact and cheap for a symbolic linter, plus a
+sub-threshold acuity tail nothing recovers) and merely format-suppressed (route to a VLM under a changed
+elicitation). Routing each defect to its bottleneck-appropriate
 engine yields a hybrid critic (Sec.~\ref{sec:hybrid}). The render-overflow class \g{G7} is the crux: a symbolic
 linter is blind to it by construction and a document reward and an artistic-aesthetic head are blind empirically,
 while \emph{both} general-multimodal rewards (two backbones), a perceptual-quality probe, and the VLM engine under
@@ -147,7 +152,7 @@ detection that the pointwise+rubric format suppresses; the contrast isolates for
 replicates across \emph{the capable models---four of six VLMs tested, four families, three scales}, transfers to real human-annotated slides,
 and survives a localization check that rules out a lucky ``yes'' (Sec.~\ref{sec:hybrid}).
 \item \textbf{C3 -- A minimal symbolic--neural hybrid critic and a falsifiable linter-blind class.}
-The linter+VLM-C3 baseline covers 8/9 classes (0.896), matching the pre-registered routed hybrid (8/9, 0.885)
+The linter+VLM-C3 baseline covers 8/9 classes (0.89), matching the pre-registered routed hybrid (8/9, 0.88)
 and beating either single engine (linter 5/9, VLM-C3 4/9, VLM-C0 2/9); the render class \g{G7} is caught
 only by a C3 VLM engine, while a symbolic linter (0.00), a document reward (0.48) and an artistic-aesthetic head
 (0.57) miss it---yet across \emph{five} audited reward scorers (two per category) \emph{both} general-multimodal
@@ -283,37 +288,63 @@ table plus near-duplicate clustering, image-free. Both are the ``detectors of re
 \section{Diagnosis: two kinds of blindness}\label{sec:diag}
 % =====================================================================
 
-\paragraph{Fine geometry is genuinely sub-perceptual.}
+\paragraph{Pointwise image-only inspection floors fine geometry.}
 Under pointwise image-only inspection, \g{G2}--\g{G6} sit at chance for 4B and 8B models, and a 30B model breaks
-only the coarsest class (\g{G1} overflow). This floor is invariant to the things one would tune first: swapping
-the vision encoder across \emph{five} families (SigLIP2, an LLM-based encoder, InternViT, a native-resolution
-NaViT, and MoonViT) leaves every model at the random line, differing only in abstain-vs-over-flag bias, and
-raising input resolution from 1536 to 2048 changes nothing. The lever is model scale and the elicitation, not
-the encoder or the pixel budget---so for fine geometry the right detector is the symbolic linter, which reads
-the coordinates directly at balanced accuracy 0.75--1.0 and zero false positives.
+only the coarsest class (\g{G1} overflow). This pointwise floor is invariant to the things one would tune first:
+swapping the vision encoder across \emph{five} families (SigLIP2, an LLM-based encoder, InternViT, a
+native-resolution NaViT, and MoonViT) leaves every model at the random line, differing only in
+abstain-vs-over-flag bias, and raising input resolution from 1536 to 2048 changes nothing. The lever is the
+elicitation and the defect magnitude, not the encoder or the pixel budget (the next paragraph and
+Fig.~\ref{fig:sat} show targeted/relative elicitation lifts supra-threshold alignment well above chance)---so
+the floor is a property of the \emph{pointwise} protocol, not a hard capability limit. Either way the right
+detector for declared geometry is the symbolic linter: it reads the coordinates directly at balanced accuracy
+0.75--1.0 with zero false positives---cheaper and exact where the IR is available, not because the VLM cannot
+see the defect.
 
 \paragraph{But some ``perceptual'' failures are elicitation artifacts, not blind spots.}
 The same pointwise image-only setting hides a second, opposite phenomenon. For \g{G1} text overflow and \g{S6}
 image/text contradiction, pointwise balanced accuracy is 0.50---indistinguishable from the genuinely
 sub-perceptual classes---yet a two-alternative forced choice between the defective and clean slide jumps to
 \textbf{1.00} (Fig.~\ref{fig:rel}): the defect is perceivable, and the absolute pointwise call simply fails to
-elicit it. Crucially, the same forced-choice intervention does \emph{not} rescue \g{G3} alignment (it stays at
-0.50): relative judgement is a real effect with a sharp boundary, and that boundary is exactly the
-perception/elicitation split. (\emph{How} the elicitation helps differs by class---a named target on a single
-slide vs.\ a paired clean reference---and we decompose it in Sec.~\ref{sec:elicit} (Fig.~\ref{fig:decomp}),
-finding pure format suppression for the constructed render class \g{G7} and a milder availability-of-reference
-effect for \g{G1}/\g{S6}.) This recoverable-versus-sub-perceptual boundary---two independent instances, one
-geometric, one semantic---is the connective thread of the paper.
+elicit it. The same is true of \g{G3} alignment, but only \emph{above a magnitude threshold}: when we sweep the
+injected offset as an internal contrast (one element shifted out of its aligned sibling column, decidable from
+the slide alone) across $2$--$64$\,px ($0.1$--$3.3\%$ of slide width), the forced choice saturates to
+\textbf{1.00 by 16\,px} ($0.83\%$) and single-slide atomic elicitation climbs to a $\approx0.90$ plateau by
+$48$--$64$\,px, while the \emph{sub-threshold tail} ($\le8$\,px) stays at chance even side by side
+(Fig.~\ref{fig:sat}). So fine alignment is not a class-level capability floor: it is format-suppressed and
+recoverable wherever the offset clears acuity, with a genuinely sub-perceptual residue only in the small-offset
+tail. (\emph{How} the elicitation helps differs by class---a named target on a single slide vs.\ a paired clean
+reference---and we decompose it in Sec.~\ref{sec:elicit} (Fig.~\ref{fig:decomp}), finding pure format
+suppression for the constructed render class \g{G7} and a milder availability-of-reference effect for
+\g{G1}/\g{S6}.) The connective thread is therefore a \emph{magnitude-gated} recoverable-versus-sub-perceptual
+boundary rather than a clean geometric/semantic split---and \g{S3} terminology (below) remains the one defect no
+elicitation rescues.
 
 \begin{figure}[t]
 \centering
 \includegraphics[width=0.72\linewidth]{figs/fig2_relative_vs_absolute.png}
-\caption{\textbf{Relative judgement separates the two blindnesses.} For \g{G1} overflow and \g{S6} image/text
-contradiction, pointwise (absolute) inspection is at chance but a forced choice recovers perfect detection
-(\emph{elicitation-recoverable}). For \g{G3} alignment, the forced choice stays at chance (\emph{genuinely
-sub-perceptual}). Same model, same images; only the elicitation changes. What \emph{drives} the recovery (naming
-vs.\ a paired reference) is decomposed in Fig.~\ref{fig:decomp}.}
+\caption{\textbf{Relative judgement recovers absolute-pointwise blind spots.} For \g{G1} overflow and \g{S6}
+image/text contradiction, pointwise (absolute) inspection is at chance but a forced choice recovers perfect
+detection (\emph{elicitation-recoverable}). \g{G3} alignment behaves the same way above a magnitude threshold
+(forced choice $1.00$ once the offset clears $\approx0.8\%$ of slide width; Fig.~\ref{fig:sat}); only its
+sub-threshold tail and \g{S3} terminology stay at chance side by side. Same model, same images; only the
+elicitation changes. What \emph{drives} the recovery (naming vs.\ a paired reference) is decomposed in
+Fig.~\ref{fig:decomp}.}
 \label{fig:rel}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figs/fig10_g3_saturation.png}
+\caption{\textbf{Fine geometry is magnitude-gated, not a flat capability floor.} Roster-mean balanced accuracy
+(6 VLMs, matched-twin internal-contrast set) versus injected magnitude for \g{G3} alignment (left; px and \%
+of slide width) and \g{G5} brand color (right; $\Delta E_{2000}$). Open pointwise (C0) lags; atomic targeted
+elicitation (C3) recovers to a $\approx0.90$ plateau by $48$--$64$\,px / $0.99$ by $\Delta E\,40$; the paired
+2-AFC saturates to $1.00$ by $16$\,px ($0.83\%$) / $\Delta E\,12$. The sub-threshold tail ($\le8$\,px,
+$\le6\,\Delta E$) stays at chance under every protocol---the genuinely sub-perceptual residue. Single-slide C3
+plateaus below $1.0$, a residual ceiling on \emph{absolute} spatial judgement that contrastive elicitation does
+not share.}
+\label{fig:sat}
 \end{figure}
 
 \paragraph{One honest counterexample: terminology.}
@@ -440,9 +471,9 @@ VLM-only mode---a ceiling set by missing structure, not missing method.
 \paragraph{Static routing, complementary engines.}
 We evaluate five critics by \emph{named attribution}: the correct defect must be emitted on the defective slide
 and not on its clean twin. The E3 control is decisive: the minimal hybrid---linter for declared geometry plus one
-C3-prompted VLM elsewhere---covers \textbf{8/9} classes at \textbf{0.896}, matching the pre-registered routed
-hybrid (\textbf{8/9}, \textbf{0.885}) and beating either single engine (linter: \textbf{5/9} at 0.70; VLM-C3:
-\textbf{4/9} at 0.681; VLM-C0: \textbf{2/9} at 0.57; Fig.~\ref{fig:coverage}, Table~\ref{tab:coverage}). The
+C3-prompted VLM elsewhere---covers \textbf{8/9} classes at \textbf{0.89}, matching the pre-registered routed
+hybrid (\textbf{8/9}, \textbf{0.88}) and beating either single engine (linter: \textbf{5/9} at 0.69; VLM-C3:
+\textbf{4/9} at 0.72; VLM-C0: \textbf{2/9} at 0.59; Fig.~\ref{fig:coverage}, Table~\ref{tab:coverage}). The
 nine classes are the image-level paired-clean classes; \g{G4}/\g{S3} are linter-owned and \g{S2}/\g{S5} are
 deck-scope (Sec.~\ref{sec:examiner}). Thus the falsification branch strengthens the message: per-class routed
 prompt/LLM tuning is not load-bearing here; \emph{linter $\oplus$ C3-VLM} is the cleaner result.
@@ -461,15 +492,15 @@ Class & routed to & linter & VLM-C0 & VLM-C3 & linter+C3 & routed & $n$ \\
 \midrule
 \g{G1} overflow      & linter & 1.00\ci{.91,1} & 0.50\ci{.46,.54} & 0.50\ci{.46,.54} & \best{1.00\ci{.91,1}} & \best{1.00\ci{.91,1}} & 40 \\
 \g{G2} overlap       & linter & 0.80\ci{.68,.87} & 0.71\ci{.60,.79} & \best{0.86\ci{.74,.92}} & 0.80\ci{.68,.87} & 0.80\ci{.68,.87} & 40 \\
-\g{G3} alignment     & linter & 1.00\ci{.90,1} & 0.47\ci{.41,.54} & 0.50\ci{.45,.55} & \best{1.00\ci{.90,1}} & \best{1.00\ci{.90,1}} & 36 \\
-\g{G5} color         & linter & 1.00\ci{.91,1} & 0.50\ci{.46,.54} & 0.50\ci{.46,.54} & \best{1.00\ci{.91,1}} & \best{1.00\ci{.91,1}} & 40 \\
+\g{G3} alignment     & linter & 0.93\ci{.85,.96} & 0.62\ci{.55,.68} & 0.71\ci{.63,.77} & \best{0.93\ci{.85,.96}} & \best{0.93\ci{.85,.96}} & 70 \\
+\g{G5} color         & linter & 1.00\ci{.91,1} & 0.50\ci{.46,.54} & 0.68\ci{.57,.75} & \best{1.00\ci{.91,1}} & \best{1.00\ci{.91,1}} & 40 \\
 \g{G6} margin        & linter & 1.00\ci{.90,1} & 0.50\ci{.45,.55} & 0.50\ci{.45,.55} & \best{1.00\ci{.90,1}} & \best{1.00\ci{.90,1}} & 36 \\
 \g{G7} render-overflow & VLM (C3) & 0.00\ci{0,.54} & 0.50\ci{.46,.54} & \best{1.00\ci{.91,1}} & \best{1.00\ci{.91,1}} & \best{1.00\ci{.91,1}} & 40 \\
 \g{S1} title/body    & VLM (C0) & 0.50\ci{.41,.59} & \best{0.94\ci{.75,.98}} & 0.83\ci{.63,.92} & 0.83\ci{.63,.92} & \best{0.94\ci{.75,.98}} & 18 \\
 \g{S4} density       & LLM & 0.50\ci{.45,.55} & 0.51\ci{.44,.59} & \best{0.93\ci{.81,.97}} & \best{0.93\ci{.81,.97}} & 0.72\ci{.60,.80} & 36 \\
 \g{S6} image/text    & VLM & 0.50\ci{.41,.59} & 0.50\ci{.41,.59} & 0.50\ci{.41,.59} & 0.50\ci{.41,.59} & 0.50\ci{.41,.59} & 18 \\
 \midrule
-\multicolumn{2}{@{}l}{mean / classes covered} & 0.70 \,/\, 5/9 & 0.57 \,/\, 2/9 & 0.681 \,/\, 4/9 & \best{0.896 \,/\, 8/9} & 0.885 \,/\, 8/9 & \\
+\multicolumn{2}{@{}l}{mean / classes covered} & 0.69 \,/\, 5/9 & 0.59 \,/\, 2/9 & 0.72 \,/\, 4/9 & \best{0.89 \,/\, 8/9} & 0.88 \,/\, 8/9 & \\
 \bottomrule
 \end{tabular}
 }
@@ -670,10 +701,13 @@ defect on real pixels (209 paired slides, 5 classes, 3 VLMs / 3 families). Two r
 Second, \emph{all three} attribution outcomes appear on real geometry: coarse defects (overflow, overlap) are
 \textbf{image-sufficient} (balanced accuracy A~$0.70$--$0.74$, structure adds nothing); a margin bleed is a
 \textbf{perception bottleneck the oracle rescues} for the weaker VLMs (A~$0.59 \to$ B~$0.70$)---the exact
-``missing structure, not missing capability'' cell; and fine alignment is at chance in \emph{every} channel for
-\emph{every} model (A~$=$~B~$=$~C~$\approx 0.50$), a genuine capability floor the VLM-consumed oracle does not
-cross, confirming on real geometry that fine geometry must route to the symbolic linter rather than a VLM
-(Fig.~\ref{fig:real}).
+``missing structure, not missing capability'' cell; and fine alignment stays near chance in \emph{every}
+channel for \emph{every} model (A~$=$~B~$=$~C~$\approx 0.50$; the internal-contrast re-run at a supra-threshold
+$44$\,px offset reproduces this, A~$0.54$/B~$0.51$/C~$0.52$, $n{=}41$). This is \emph{not} a hard capability
+floor---on clean synthetic slides the same alignment defect recovers under targeted/relative elicitation once it
+clears acuity (Fig.~\ref{fig:sat})---but on real cluttered layouts the misaligned element cannot be isolated
+among many genuine ones and specificity collapses, so for declared geometry the symbolic linter (which reads the
+coordinates) remains the reliable detector regardless (Fig.~\ref{fig:real}).
 
 \begin{figure}[t]
 \centering
@@ -682,9 +716,10 @@ cross, confirming on real geometry that fine geometry must route to the symbolic
 lossless \texttt{python-pptx} oracle; mean over 3 VLMs / 3 families, balanced accuracy on paired clean; error
 bars = 95\% Wilson on counts pooled across models, $n{=}76$--$90$ paired per class). Coarse
 defects (\g{G1} overflow, \g{G2} overlap) are image-sufficient; \g{G6} margin is a \emph{perception} bottleneck the
-structured oracle rescues (B${>}$A); \g{G3} alignment is a \emph{capability} floor at chance in every channel
-(A${=}$B${=}$C${\approx}0.5$), so it must route to the linter. Intervals on \g{G3}/\g{G4}/\g{G6} include chance,
-consistent with their small per-class $n$ (see released reports).}
+structured oracle rescues (B${>}$A); \g{G3} alignment stays near chance in every channel on these real cluttered
+decks (A${=}$B${=}$C${\approx}0.5$)---not a hard capability floor (it recovers on clean slides above threshold,
+Fig.~\ref{fig:sat}) but unreliable enough on real layouts that it must route to the linter. Intervals on
+\g{G3}/\g{G4}/\g{G6} include chance, consistent with their small per-class $n$ (see released reports).}
 \label{fig:real}
 \end{figure}
 
@@ -767,7 +802,8 @@ inability to revise.}
 We \emph{do} run the structured (image+oracle) evaluation on real slides that separates ``missing structure''
 from ``missing capability'' on real geometry (\S\ref{sec:external}): a lossless \texttt{python-pptx} oracle over
 real CC-licensed decks sidesteps both the annotation labour and the self-annotation bias, and the split
-reproduces---fine alignment is a capability floor in every channel while a margin bleed is structure-rescuable.
+reproduces---fine alignment stays near chance in every channel on real cluttered decks (it recovers on clean
+slides above a magnitude threshold, but real clutter defeats it) while a margin bleed is structure-rescuable.
 Its scope is honest: the defects are \emph{injected} (real geometry, real renderer, real oracle, but not
 naturally-occurring), so the third-party \textsc{SlideAudit} set (image-only, naturally-defective) remains our
 complementary real probe. We audit five published reward scorers, two per audited category (general-multimodal,
@@ -789,7 +825,7 @@ recovers detection (format suppression), while for declared \g{G1}/\g{S6} the re
 paired reference (availability-of-reference). We therefore make the strong mechanism claim only for \g{G7} and
 its C3 mirror, and label the \g{G1}/\g{S6} forced-choice effect as reference-availability; the guess-floor
 control (capable models answer ``tie'' on 92--100\% of clean pairs) rules out a forced-pick artifact for both.
-Second, the 8/9 coverage (0.896 for linter+VLM-C3; 0.885 for the pre-registered routed hybrid) is a
+Second, the 8/9 coverage (0.89 for linter+VLM-C3; 0.88 for the pre-registered routed hybrid) is a
 \emph{native-structure} number; on image-only real decks (no IR for the linter) the hybrid degrades to its
 VLM-only mode, so that figure is an upper bound for IR-owning generation agents, not an open-world guarantee.
 We do not leave this to assertion: recovering element structure from the pixels with a layout detector and
@@ -801,8 +837,8 @@ critic is VLM-bound.
 \section{Conclusion}
 % =====================================================================
 
-A slide-defect critic should not be one model. Telling apart the two blindnesses---genuinely sub-perceptual
-geometry versus format-suppressed perception---turns a vague ``VLMs are bad at layout'' into an actionable
+A slide-defect critic should not be one model. Telling apart the two blindnesses---a magnitude-gated acuity
+floor versus format-suppressed perception---turns a vague ``VLMs are bad at layout'' into an actionable
 routing rule: rules to the linter and perceivable-but-suppressed classes to a VLM under an elicitation that the
 diagnosis proves recovers them. The E3 control makes the rule simpler: linter plus one C3-prompted VLM covers
 8/9 classes, matching the pre-registered routed hybrid and beating either single engine. A falsifiable render

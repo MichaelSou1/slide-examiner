@@ -58,8 +58,23 @@ PAGE_CLASSES = [
 ]
 
 
+def _is_template(rec):
+    """True if this record is a snap-to-master TEMPLATE render (defect can be
+    snap-absorbed -> defective==clean -> silent label noise). The AUTHORITATIVE flag
+    is metadata.template_condition (the E8 corpora carry it); fall back to image-path
+    heuristics for legacy manifests without it. (Path matching alone is fragile: the
+    E8 corpus uses a '/template/' DIRECTORY not a '__template' suffix, and the
+    saturation-tail addendum used '/template_g3sat/' — both slipped past suffix-only
+    checks, polluting coverage/diagnosis evals with invisible-defect records.)"""
+    tc = (rec.get("metadata") or {}).get("template_condition")
+    if tc is not None:
+        return tc == "template"
+    p = rec.get("image_path") or ""
+    return "__template" in p or "/template/" in p
+
+
 def freeform_only(recs):
-    return [r for r in recs if "__template" not in (r.get("image_path") or "")]
+    return [r for r in recs if not _is_template(r)]
 
 
 def llm_clean_rec(rec):

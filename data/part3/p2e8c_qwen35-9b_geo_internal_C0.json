@@ -1,0 +1,192 @@
+{
+  "condition": "C0",
+  "model": "qwen35-9b",
+  "style": "scoped",
+  "manifest": "/home/gpus/slide-examiner/data/part1/manifest_geometry_internal.jsonl",
+  "modalities": [
+    "A",
+    "B",
+    "C"
+  ],
+  "defects": [
+    "G3_ALIGNMENT_OFFSET"
+  ],
+  "n_jobs": 336,
+  "failures": 146,
+  "metrics": {
+    "A": {
+      "per_defect": {
+        "G3_ALIGNMENT_OFFSET": {
+          "detection": {
+            "recall": 0.554,
+            "specificity": 1.0,
+            "bal_acc": 0.777,
+            "bal_acc_ci": [
+              0.535,
+              0.838
+            ],
+            "precision": 1.0,
+            "precision_ci": [
+              0.89,
+              1.0
+            ],
+            "fpr": 0.0,
+            "f1": 0.713,
+            "recall_ci": [
+              0.424,
+              0.676
+            ],
+            "tp": 31,
+            "fn": 25,
+            "fp": 0,
+            "tn": 7,
+            "n_pos": 56,
+            "n_neg": 7
+          },
+          "named": {
+            "recall": 0.411,
+            "specificity": 1.0,
+            "bal_acc": 0.705,
+            "bal_acc_ci": [
+              0.469,
+              0.771
+            ],
+            "precision": 1.0,
+            "precision_ci": [
+              0.857,
+              1.0
+            ],
+            "fpr": 0.0,
+            "f1": 0.582,
+            "recall_ci": [
+              0.292,
+              0.541
+            ],
+            "tp": 23,
+            "fn": 33,
+            "fp": 0,
+            "tn": 7,
+            "n_pos": 56,
+            "n_neg": 7
+          },
+          "headline_level": "detection"
+        }
+      }
+    },
+    "B": {
+      "per_defect": {
+        "G3_ALIGNMENT_OFFSET": {
+          "detection": {
+            "recall": 0.107,
+            "specificity": 1.0,
+            "bal_acc": 0.554,
+            "bal_acc_ci": [
+              0.375,
+              0.607
+            ],
+            "precision": 1.0,
+            "precision_ci": [
+              0.61,
+              1.0
+            ],
+            "fpr": 0.0,
+            "f1": 0.194,
+            "recall_ci": [
+              0.05,
+              0.215
+            ],
+            "tp": 6,
+            "fn": 50,
+            "fp": 0,
+            "tn": 9,
+            "n_pos": 56,
+            "n_neg": 9
+          },
+          "named": {
+            "recall": 0.0,
+            "specificity": 1.0,
+            "bal_acc": 0.5,
+            "bal_acc_ci": [
+              0.35,
+              0.532
+            ],
+            "precision": 0.0,
+            "precision_ci": null,
+            "fpr": 0.0,
+            "f1": 0.0,
+            "recall_ci": [
+              0.0,
+              0.064
+            ],
+            "tp": 0,
+            "fn": 56,
+            "fp": 0,
+            "tn": 9,
+            "n_pos": 56,
+            "n_neg": 9
+          },
+          "headline_level": "detection"
+        }
+      }
+    },
+    "C": {
+      "per_defect": {
+        "G3_ALIGNMENT_OFFSET": {
+          "detection": {
+            "recall": 0.618,
+            "specificity": 1.0,
+            "bal_acc": 0.809,
+            "bal_acc_ci": [
+              0.566,
+              0.867
+            ],
+            "precision": 1.0,
+            "precision_ci": [
+              0.898,
+              1.0
+            ],
+            "fpr": 0.0,
+            "f1": 0.764,
+            "recall_ci": [
+              0.486,
+              0.735
+            ],
+            "tp": 34,
+            "fn": 21,
+            "fp": 0,
+            "tn": 7,
+            "n_pos": 55,
+            "n_neg": 7
+          },
+          "named": {
+            "recall": 0.473,
+            "specificity": 1.0,
+            "bal_acc": 0.736,
+            "bal_acc_ci": [
+              0.496,
+              0.801
+            ],
+            "precision": 1.0,
+            "precision_ci": [
+              0.871,
+              1.0
+            ],
+            "fpr": 0.0,
+            "f1": 0.642,
+            "recall_ci": [
+              0.347,
+              0.602
+            ],
+            "tp": 26,
+            "fn": 29,
+            "fp": 0,
+            "tn": 7,
+            "n_pos": 55,
+            "n_neg": 7
+          },
+          "headline_level": "detection"
+        }
+      }
+    }
+  }
+}

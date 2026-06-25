@@ -1,0 +1,5097 @@
+{
+  "qwen35-9b": {
+    "C0_named": {
+      "G3_ALIGNMENT_OFFSET|all": {
+        "bal_acc": 0.657,
+        "recall": 0.4,
+        "specificity": 0.914,
+        "n_pos": 70,
+        "n_neg": 70,
+        "recall_ci": [
+          0.293,
+          0.517
+        ],
+        "spec_ci": [
+          0.825,
+          0.96
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|16.0": {
+        "bal_acc": 0.6,
+        "recall": 0.3,
+        "specificity": 0.9,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.108,
+          0.603
+        ],
+        "spec_ci": [
+          0.596,
+          0.982
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|2.0": {
+        "bal_acc": 0.45,
+        "recall": 0.0,
+        "specificity": 0.9,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.596,
+          0.982
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|4.0": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|32.0": {
+        "bal_acc": 0.85,
+        "recall": 0.7,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.397,
+          0.892
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|48.0": {
+        "bal_acc": 0.85,
+        "recall": 0.7,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.397,
+          0.892
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|8.0": {
+        "bal_acc": 0.55,
+        "recall": 0.3,
+        "specificity": 0.8,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.108,
+          0.603
+        ],
+        "spec_ci": [
+          0.49,
+          0.943
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|64.0": {
+        "bal_acc": 0.8,
+        "recall": 0.8,
+        "specificity": 0.8,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.49,
+          0.943
+        ],
+        "spec_ci": [
+          0.49,
+          0.943
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|all": {
+        "bal_acc": 0.525,
+        "recall": 0.05,
+        "specificity": 1.0,
+        "n_pos": 40,
+        "n_neg": 40,
+        "recall_ci": [
+          0.014,
+          0.165
+        ],
+        "spec_ci": [
+          0.912,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|6": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|24": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|12": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|40": {
+        "bal_acc": 0.6,
+        "recall": 0.2,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.057,
+          0.51
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      }
+    },
+    "C0_det": {
+      "G3_ALIGNMENT_OFFSET|all": {
+        "bal_acc": 0.636,
+        "recall": 0.557,
+        "specificity": 0.714,
+        "n_pos": 70,
+        "n_neg": 70,
+        "recall_ci": [
+          0.441,
+          0.668
+        ],
+        "spec_ci": [
+          0.599,
+          0.807
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|16.0": {
+        "bal_acc": 0.6,
+        "recall": 0.4,
+        "specificity": 0.8,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.168,
+          0.687
+        ],
+        "spec_ci": [
+          0.49,
+          0.943
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|2.0": {
+        "bal_acc": 0.55,
+        "recall": 0.3,
+        "specificity": 0.8,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.108,
+          0.603
+        ],
+        "spec_ci": [
+          0.49,
+          0.943
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|4.0": {
+        "bal_acc": 0.4,
+        "recall": 0.2,
+        "specificity": 0.6,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.057,
+          0.51
+        ],
+        "spec_ci": [
+          0.313,
+          0.832
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|32.0": {
+        "bal_acc": 0.75,
+        "recall": 0.9,
+        "specificity": 0.6,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.596,
+          0.982
+        ],
+        "spec_ci": [
+          0.313,
+          0.832
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|48.0": {
+        "bal_acc": 0.8,
+        "recall": 0.8,
+        "specificity": 0.8,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.49,
+          0.943
+        ],
+        "spec_ci": [
+          0.49,
+          0.943
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|8.0": {
+        "bal_acc": 0.55,
+        "recall": 0.4,
+        "specificity": 0.7,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.168,
+          0.687
+        ],
+        "spec_ci": [
+          0.397,
+          0.892
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|64.0": {
+        "bal_acc": 0.8,
+        "recall": 0.9,
+        "specificity": 0.7,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.596,
+          0.982
+        ],
+        "spec_ci": [
+          0.397,
+          0.892
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|all": {
+        "bal_acc": 0.625,
+        "recall": 0.325,
+        "specificity": 0.925,
+        "n_pos": 40,
+        "n_neg": 40,
+        "recall_ci": [
+          0.201,
+          0.48
+        ],
+        "spec_ci": [
+          0.801,
+          0.974
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|6": {
+        "bal_acc": 0.45,
+        "recall": 0.1,
+        "specificity": 0.8,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.018,
+          0.404
+        ],
+        "spec_ci": [
+          0.49,
+          0.943
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|24": {
+        "bal_acc": 0.75,
+        "recall": 0.6,
+        "specificity": 0.9,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.313,
+          0.832
+        ],
+        "spec_ci": [
+          0.596,
+          0.982
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|12": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|40": {
+        "bal_acc": 0.8,
+        "recall": 0.6,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.313,
+          0.832
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      }
+    },
+    "C3_named": {
+      "G3_ALIGNMENT_OFFSET|all": {
+        "bal_acc": 0.743,
+        "recall": 0.557,
+        "specificity": 0.929,
+        "n_pos": 70,
+        "n_neg": 70,
+        "recall_ci": [
+          0.441,
+          0.668
+        ],
+        "spec_ci": [
+          0.843,
+          0.969
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|2.0": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|16.0": {
+        "bal_acc": 0.85,
+        "recall": 0.7,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.397,
+          0.892
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|4.0": {
+        "bal_acc": 0.45,
+        "recall": 0.0,
+        "specificity": 0.9,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.596,
+          0.982
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|32.0": {
+        "bal_acc": 0.95,
+        "recall": 1.0,
+        "specificity": 0.9,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.722,
+          1.0
+        ],
+        "spec_ci": [
+          0.596,
+          0.982
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|48.0": {
+        "bal_acc": 0.95,
+        "recall": 1.0,
+        "specificity": 0.9,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.722,
+          1.0
+        ],
+        "spec_ci": [
+          0.596,
+          0.982
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|64.0": {
+        "bal_acc": 0.95,
+        "recall": 1.0,
+        "specificity": 0.9,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.722,
+          1.0
+        ],
+        "spec_ci": [
+          0.596,
+          0.982
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|8.0": {
+        "bal_acc": 0.55,
+        "recall": 0.2,
+        "specificity": 0.9,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.057,
+          0.51
+        ],
+        "spec_ci": [
+          0.596,
+          0.982
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|all": {
+        "bal_acc": 0.738,
+        "recall": 0.475,
+        "specificity": 1.0,
+        "n_pos": 40,
+        "n_neg": 40,
+        "recall_ci": [
+          0.329,
+          0.625
+        ],
+        "spec_ci": [
+          0.912,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|6": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|24": {
+        "bal_acc": 0.95,
+        "recall": 0.9,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.596,
+          0.982
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|12": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|40": {
+        "bal_acc": 1.0,
+        "recall": 1.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.722,
+          1.0
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      }
+    },
+    "C3_det": {
+      "G3_ALIGNMENT_OFFSET|all": {
+        "bal_acc": 0.743,
+        "recall": 0.557,
+        "specificity": 0.929,
+        "n_pos": 70,
+        "n_neg": 70,
+        "recall_ci": [
+          0.441,
+          0.668
+        ],
+        "spec_ci": [
+          0.843,
+          0.969
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|2.0": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|16.0": {
+        "bal_acc": 0.85,
+        "recall": 0.7,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.397,
+          0.892
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|4.0": {
+        "bal_acc": 0.45,
+        "recall": 0.0,
+        "specificity": 0.9,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.596,
+          0.982
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|32.0": {
+        "bal_acc": 0.95,
+        "recall": 1.0,
+        "specificity": 0.9,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.722,
+          1.0
+        ],
+        "spec_ci": [
+          0.596,
+          0.982
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|48.0": {
+        "bal_acc": 0.95,
+        "recall": 1.0,
+        "specificity": 0.9,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.722,
+          1.0
+        ],
+        "spec_ci": [
+          0.596,
+          0.982
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|64.0": {
+        "bal_acc": 0.95,
+        "recall": 1.0,
+        "specificity": 0.9,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.722,
+          1.0
+        ],
+        "spec_ci": [
+          0.596,
+          0.982
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|8.0": {
+        "bal_acc": 0.55,
+        "recall": 0.2,
+        "specificity": 0.9,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.057,
+          0.51
+        ],
+        "spec_ci": [
+          0.596,
+          0.982
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|all": {
+        "bal_acc": 0.738,
+        "recall": 0.475,
+        "specificity": 1.0,
+        "n_pos": 40,
+        "n_neg": 40,
+        "recall_ci": [
+          0.329,
+          0.625
+        ],
+        "spec_ci": [
+          0.912,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|6": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|24": {
+        "bal_acc": 0.95,
+        "recall": 0.9,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.596,
+          0.982
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|12": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|40": {
+        "bal_acc": 1.0,
+        "recall": 1.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.722,
+          1.0
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      }
+    },
+    "AFC": {
+      "G3_ALIGNMENT_OFFSET|all": {
+        "afc_strict": 0.884,
+        "n_pairs": 43,
+        "ci": [
+          0.755,
+          0.949
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|16.0": {
+        "afc_strict": 1.0,
+        "n_pairs": 8,
+        "ci": [
+          0.676,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|32.0": {
+        "afc_strict": 1.0,
+        "n_pairs": 10,
+        "ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|2.0": {
+        "afc_strict": 0.0,
+        "n_pairs": 1,
+        "ci": [
+          0.0,
+          0.793
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|4.0": {
+        "afc_strict": 0.0,
+        "n_pairs": 1,
+        "ci": [
+          0.0,
+          0.793
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|48.0": {
+        "afc_strict": 1.0,
+        "n_pairs": 10,
+        "ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|64.0": {
+        "afc_strict": 1.0,
+        "n_pairs": 10,
+        "ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|8.0": {
+        "afc_strict": 0.0,
+        "n_pairs": 3,
+        "ci": [
+          0.0,
+          0.561
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|all": {
+        "afc_strict": 1.0,
+        "n_pairs": 21,
+        "ci": [
+          0.845,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|24": {
+        "afc_strict": 1.0,
+        "n_pairs": 10,
+        "ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|40": {
+        "afc_strict": 1.0,
+        "n_pairs": 10,
+        "ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|12": {
+        "afc_strict": 1.0,
+        "n_pairs": 1,
+        "ci": [
+          0.207,
+          1.0
+        ]
+      }
+    }
+  },
+  "internvl-8b": {
+    "C0_named": {
+      "G3_ALIGNMENT_OFFSET|all": {
+        "bal_acc": 0.564,
+        "recall": 0.229,
+        "specificity": 0.9,
+        "n_pos": 70,
+        "n_neg": 70,
+        "recall_ci": [
+          0.146,
+          0.34
+        ],
+        "spec_ci": [
+          0.808,
+          0.951
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|2.0": {
+        "bal_acc": 0.5,
+        "recall": 0.1,
+        "specificity": 0.9,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.018,
+          0.404
+        ],
+        "spec_ci": [
+          0.596,
+          0.982
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|16.0": {
+        "bal_acc": 0.55,
+        "recall": 0.2,
+        "specificity": 0.9,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.057,
+          0.51
+        ],
+        "spec_ci": [
+          0.596,
+          0.982
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|4.0": {
+        "bal_acc": 0.55,
+        "recall": 0.2,
+        "specificity": 0.9,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.057,
+          0.51
+        ],
+        "spec_ci": [
+          0.596,
+          0.982
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|32.0": {
+        "bal_acc": 0.55,
+        "recall": 0.2,
+        "specificity": 0.9,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.057,
+          0.51
+        ],
+        "spec_ci": [
+          0.596,
+          0.982
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|48.0": {
+        "bal_acc": 0.6,
+        "recall": 0.3,
+        "specificity": 0.9,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.108,
+          0.603
+        ],
+        "spec_ci": [
+          0.596,
+          0.982
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|64.0": {
+        "bal_acc": 0.7,
+        "recall": 0.5,
+        "specificity": 0.9,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.237,
+          0.763
+        ],
+        "spec_ci": [
+          0.596,
+          0.982
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|8.0": {
+        "bal_acc": 0.5,
+        "recall": 0.1,
+        "specificity": 0.9,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.018,
+          0.404
+        ],
+        "spec_ci": [
+          0.596,
+          0.982
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|all": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 40,
+        "n_neg": 40,
+        "recall_ci": [
+          0.0,
+          0.088
+        ],
+        "spec_ci": [
+          0.912,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|6": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|24": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|12": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|40": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      }
+    },
+    "C0_det": {
+      "G3_ALIGNMENT_OFFSET|all": {
+        "bal_acc": 0.579,
+        "recall": 0.3,
+        "specificity": 0.857,
+        "n_pos": 70,
+        "n_neg": 70,
+        "recall_ci": [
+          0.205,
+          0.415
+        ],
+        "spec_ci": [
+          0.757,
+          0.921
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|2.0": {
+        "bal_acc": 0.5,
+        "recall": 0.2,
+        "specificity": 0.8,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.057,
+          0.51
+        ],
+        "spec_ci": [
+          0.49,
+          0.943
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|16.0": {
+        "bal_acc": 0.55,
+        "recall": 0.3,
+        "specificity": 0.8,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.108,
+          0.603
+        ],
+        "spec_ci": [
+          0.49,
+          0.943
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|4.0": {
+        "bal_acc": 0.55,
+        "recall": 0.2,
+        "specificity": 0.9,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.057,
+          0.51
+        ],
+        "spec_ci": [
+          0.596,
+          0.982
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|32.0": {
+        "bal_acc": 0.6,
+        "recall": 0.3,
+        "specificity": 0.9,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.108,
+          0.603
+        ],
+        "spec_ci": [
+          0.596,
+          0.982
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|48.0": {
+        "bal_acc": 0.6,
+        "recall": 0.4,
+        "specificity": 0.8,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.168,
+          0.687
+        ],
+        "spec_ci": [
+          0.49,
+          0.943
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|64.0": {
+        "bal_acc": 0.75,
+        "recall": 0.6,
+        "specificity": 0.9,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.313,
+          0.832
+        ],
+        "spec_ci": [
+          0.596,
+          0.982
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|8.0": {
+        "bal_acc": 0.5,
+        "recall": 0.1,
+        "specificity": 0.9,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.018,
+          0.404
+        ],
+        "spec_ci": [
+          0.596,
+          0.982
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|all": {
+        "bal_acc": 0.45,
+        "recall": 0.15,
+        "specificity": 0.75,
+        "n_pos": 40,
+        "n_neg": 40,
+        "recall_ci": [
+          0.071,
+          0.291
+        ],
+        "spec_ci": [
+          0.598,
+          0.858
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|6": {
+        "bal_acc": 0.45,
+        "recall": 0.2,
+        "specificity": 0.7,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.057,
+          0.51
+        ],
+        "spec_ci": [
+          0.397,
+          0.892
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|24": {
+        "bal_acc": 0.45,
+        "recall": 0.0,
+        "specificity": 0.9,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.596,
+          0.982
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|12": {
+        "bal_acc": 0.5,
+        "recall": 0.3,
+        "specificity": 0.7,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.108,
+          0.603
+        ],
+        "spec_ci": [
+          0.397,
+          0.892
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|40": {
+        "bal_acc": 0.4,
+        "recall": 0.1,
+        "specificity": 0.7,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.018,
+          0.404
+        ],
+        "spec_ci": [
+          0.397,
+          0.892
+        ]
+      }
+    },
+    "C3_named": {
+      "G3_ALIGNMENT_OFFSET|all": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 70,
+        "n_neg": 70,
+        "recall_ci": [
+          0.0,
+          0.052
+        ],
+        "spec_ci": [
+          0.948,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|2.0": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|16.0": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|32.0": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|4.0": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|48.0": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|64.0": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|8.0": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|all": {
+        "bal_acc": 0.613,
+        "recall": 0.225,
+        "specificity": 1.0,
+        "n_pos": 40,
+        "n_neg": 40,
+        "recall_ci": [
+          0.123,
+          0.375
+        ],
+        "spec_ci": [
+          0.912,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|6": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|24": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|12": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|40": {
+        "bal_acc": 0.95,
+        "recall": 0.9,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.596,
+          0.982
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      }
+    },
+    "C3_det": {
+      "G3_ALIGNMENT_OFFSET|all": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 70,
+        "n_neg": 70,
+        "recall_ci": [
+          0.0,
+          0.052
+        ],
+        "spec_ci": [
+          0.948,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|2.0": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|16.0": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|32.0": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|4.0": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|48.0": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|64.0": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|8.0": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|all": {
+        "bal_acc": 0.613,
+        "recall": 0.225,
+        "specificity": 1.0,
+        "n_pos": 40,
+        "n_neg": 40,
+        "recall_ci": [
+          0.123,
+          0.375
+        ],
+        "spec_ci": [
+          0.912,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|6": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|24": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|12": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|40": {
+        "bal_acc": 0.95,
+        "recall": 0.9,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.596,
+          0.982
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      }
+    },
+    "AFC": {}
+  },
+  "ovis-9b": {
+    "C0_named": {
+      "G3_ALIGNMENT_OFFSET|all": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 70,
+        "n_neg": 70,
+        "recall_ci": [
+          0.0,
+          0.052
+        ],
+        "spec_ci": [
+          0.948,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|16.0": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|2.0": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|32.0": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|4.0": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|48.0": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|64.0": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|8.0": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|all": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 40,
+        "n_neg": 40,
+        "recall_ci": [
+          0.0,
+          0.088
+        ],
+        "spec_ci": [
+          0.912,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|6": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|24": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|12": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|40": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      }
+    },
+    "C0_det": {
+      "G3_ALIGNMENT_OFFSET|all": {
+        "bal_acc": 0.55,
+        "recall": 0.157,
+        "specificity": 0.943,
+        "n_pos": 70,
+        "n_neg": 70,
+        "recall_ci": [
+          0.09,
+          0.26
+        ],
+        "spec_ci": [
+          0.862,
+          0.978
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|16.0": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|2.0": {
+        "bal_acc": 0.45,
+        "recall": 0.0,
+        "specificity": 0.9,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.596,
+          0.982
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|32.0": {
+        "bal_acc": 0.5,
+        "recall": 0.1,
+        "specificity": 0.9,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.018,
+          0.404
+        ],
+        "spec_ci": [
+          0.596,
+          0.982
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|4.0": {
+        "bal_acc": 0.6,
+        "recall": 0.4,
+        "specificity": 0.8,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.168,
+          0.687
+        ],
+        "spec_ci": [
+          0.49,
+          0.943
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|48.0": {
+        "bal_acc": 0.6,
+        "recall": 0.2,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.057,
+          0.51
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|64.0": {
+        "bal_acc": 0.55,
+        "recall": 0.1,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.018,
+          0.404
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|8.0": {
+        "bal_acc": 0.65,
+        "recall": 0.3,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.108,
+          0.603
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|all": {
+        "bal_acc": 0.513,
+        "recall": 0.1,
+        "specificity": 0.925,
+        "n_pos": 40,
+        "n_neg": 40,
+        "recall_ci": [
+          0.04,
+          0.231
+        ],
+        "spec_ci": [
+          0.801,
+          0.974
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|6": {
+        "bal_acc": 0.5,
+        "recall": 0.1,
+        "specificity": 0.9,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.018,
+          0.404
+        ],
+        "spec_ci": [
+          0.596,
+          0.982
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|24": {
+        "bal_acc": 0.5,
+        "recall": 0.1,
+        "specificity": 0.9,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.018,
+          0.404
+        ],
+        "spec_ci": [
+          0.596,
+          0.982
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|12": {
+        "bal_acc": 0.5,
+        "recall": 0.1,
+        "specificity": 0.9,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.018,
+          0.404
+        ],
+        "spec_ci": [
+          0.596,
+          0.982
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|40": {
+        "bal_acc": 0.55,
+        "recall": 0.1,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.018,
+          0.404
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      }
+    },
+    "C3_named": {
+      "G3_ALIGNMENT_OFFSET|all": {
+        "bal_acc": 0.632,
+        "recall": 0.265,
+        "specificity": 1.0,
+        "n_pos": 68,
+        "n_neg": 70,
+        "recall_ci": [
+          0.174,
+          0.38
+        ],
+        "spec_ci": [
+          0.948,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|2.0": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|16.0": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|4.0": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|32.0": {
+        "bal_acc": 0.6,
+        "recall": 0.2,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.057,
+          0.51
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|48.0": {
+        "bal_acc": 0.938,
+        "recall": 0.875,
+        "specificity": 1.0,
+        "n_pos": 8,
+        "n_neg": 10,
+        "recall_ci": [
+          0.529,
+          0.978
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|8.0": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|64.0": {
+        "bal_acc": 0.95,
+        "recall": 0.9,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.596,
+          0.982
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|all": {
+        "bal_acc": 0.775,
+        "recall": 0.575,
+        "specificity": 0.975,
+        "n_pos": 40,
+        "n_neg": 40,
+        "recall_ci": [
+          0.422,
+          0.715
+        ],
+        "spec_ci": [
+          0.871,
+          0.996
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|6": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|24": {
+        "bal_acc": 0.95,
+        "recall": 1.0,
+        "specificity": 0.9,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.722,
+          1.0
+        ],
+        "spec_ci": [
+          0.596,
+          0.982
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|12": {
+        "bal_acc": 0.65,
+        "recall": 0.3,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.108,
+          0.603
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|40": {
+        "bal_acc": 1.0,
+        "recall": 1.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.722,
+          1.0
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      }
+    },
+    "C3_det": {
+      "G3_ALIGNMENT_OFFSET|all": {
+        "bal_acc": 0.632,
+        "recall": 0.265,
+        "specificity": 1.0,
+        "n_pos": 68,
+        "n_neg": 70,
+        "recall_ci": [
+          0.174,
+          0.38
+        ],
+        "spec_ci": [
+          0.948,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|2.0": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|16.0": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|4.0": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|32.0": {
+        "bal_acc": 0.6,
+        "recall": 0.2,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.057,
+          0.51
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|48.0": {
+        "bal_acc": 0.938,
+        "recall": 0.875,
+        "specificity": 1.0,
+        "n_pos": 8,
+        "n_neg": 10,
+        "recall_ci": [
+          0.529,
+          0.978
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|8.0": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|64.0": {
+        "bal_acc": 0.95,
+        "recall": 0.9,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.596,
+          0.982
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|all": {
+        "bal_acc": 0.775,
+        "recall": 0.575,
+        "specificity": 0.975,
+        "n_pos": 40,
+        "n_neg": 40,
+        "recall_ci": [
+          0.422,
+          0.715
+        ],
+        "spec_ci": [
+          0.871,
+          0.996
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|6": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|24": {
+        "bal_acc": 0.95,
+        "recall": 1.0,
+        "specificity": 0.9,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.722,
+          1.0
+        ],
+        "spec_ci": [
+          0.596,
+          0.982
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|12": {
+        "bal_acc": 0.65,
+        "recall": 0.3,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.108,
+          0.603
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|40": {
+        "bal_acc": 1.0,
+        "recall": 1.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.722,
+          1.0
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      }
+    },
+    "AFC": {
+      "G3_ALIGNMENT_OFFSET|all": {
+        "afc_strict": 1.0,
+        "n_pairs": 16,
+        "ci": [
+          0.806,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|32.0": {
+        "afc_strict": 1.0,
+        "n_pairs": 4,
+        "ci": [
+          0.51,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|48.0": {
+        "afc_strict": 1.0,
+        "n_pairs": 7,
+        "ci": [
+          0.646,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|64.0": {
+        "afc_strict": 1.0,
+        "n_pairs": 5,
+        "ci": [
+          0.566,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|all": {
+        "afc_strict": 1.0,
+        "n_pairs": 22,
+        "ci": [
+          0.851,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|24": {
+        "afc_strict": 1.0,
+        "n_pairs": 10,
+        "ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|40": {
+        "afc_strict": 1.0,
+        "n_pairs": 10,
+        "ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|12": {
+        "afc_strict": 1.0,
+        "n_pairs": 2,
+        "ci": [
+          0.342,
+          1.0
+        ]
+      }
+    }
+  },
+  "qwen36-27b": {
+    "C0_named": {
+      "G3_ALIGNMENT_OFFSET|all": {
+        "bal_acc": 0.571,
+        "recall": 0.143,
+        "specificity": 1.0,
+        "n_pos": 70,
+        "n_neg": 70,
+        "recall_ci": [
+          0.079,
+          0.243
+        ],
+        "spec_ci": [
+          0.948,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|16.0": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|2.0": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|32.0": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|4.0": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|48.0": {
+        "bal_acc": 0.75,
+        "recall": 0.5,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.237,
+          0.763
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|64.0": {
+        "bal_acc": 0.75,
+        "recall": 0.5,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.237,
+          0.763
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|8.0": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|all": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 40,
+        "n_neg": 40,
+        "recall_ci": [
+          0.0,
+          0.088
+        ],
+        "spec_ci": [
+          0.912,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|6": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|24": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|12": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|40": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      }
+    },
+    "C0_det": {
+      "G3_ALIGNMENT_OFFSET|all": {
+        "bal_acc": 0.493,
+        "recall": 0.986,
+        "specificity": 0.0,
+        "n_pos": 70,
+        "n_neg": 70,
+        "recall_ci": [
+          0.923,
+          0.997
+        ],
+        "spec_ci": [
+          0.0,
+          0.052
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|16.0": {
+        "bal_acc": 0.5,
+        "recall": 1.0,
+        "specificity": 0.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.722,
+          1.0
+        ],
+        "spec_ci": [
+          0.0,
+          0.278
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|2.0": {
+        "bal_acc": 0.5,
+        "recall": 1.0,
+        "specificity": 0.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.722,
+          1.0
+        ],
+        "spec_ci": [
+          0.0,
+          0.278
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|32.0": {
+        "bal_acc": 0.5,
+        "recall": 1.0,
+        "specificity": 0.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.722,
+          1.0
+        ],
+        "spec_ci": [
+          0.0,
+          0.278
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|4.0": {
+        "bal_acc": 0.5,
+        "recall": 1.0,
+        "specificity": 0.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.722,
+          1.0
+        ],
+        "spec_ci": [
+          0.0,
+          0.278
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|48.0": {
+        "bal_acc": 0.5,
+        "recall": 1.0,
+        "specificity": 0.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.722,
+          1.0
+        ],
+        "spec_ci": [
+          0.0,
+          0.278
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|64.0": {
+        "bal_acc": 0.5,
+        "recall": 1.0,
+        "specificity": 0.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.722,
+          1.0
+        ],
+        "spec_ci": [
+          0.0,
+          0.278
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|8.0": {
+        "bal_acc": 0.45,
+        "recall": 0.9,
+        "specificity": 0.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.596,
+          0.982
+        ],
+        "spec_ci": [
+          0.0,
+          0.278
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|all": {
+        "bal_acc": 0.5,
+        "recall": 1.0,
+        "specificity": 0.0,
+        "n_pos": 40,
+        "n_neg": 40,
+        "recall_ci": [
+          0.912,
+          1.0
+        ],
+        "spec_ci": [
+          0.0,
+          0.088
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|6": {
+        "bal_acc": 0.5,
+        "recall": 1.0,
+        "specificity": 0.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.722,
+          1.0
+        ],
+        "spec_ci": [
+          0.0,
+          0.278
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|24": {
+        "bal_acc": 0.5,
+        "recall": 1.0,
+        "specificity": 0.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.722,
+          1.0
+        ],
+        "spec_ci": [
+          0.0,
+          0.278
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|12": {
+        "bal_acc": 0.5,
+        "recall": 1.0,
+        "specificity": 0.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.722,
+          1.0
+        ],
+        "spec_ci": [
+          0.0,
+          0.278
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|40": {
+        "bal_acc": 0.5,
+        "recall": 1.0,
+        "specificity": 0.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.722,
+          1.0
+        ],
+        "spec_ci": [
+          0.0,
+          0.278
+        ]
+      }
+    },
+    "C3_named": {
+      "G3_ALIGNMENT_OFFSET|all": {
+        "bal_acc": 0.729,
+        "recall": 0.457,
+        "specificity": 1.0,
+        "n_pos": 70,
+        "n_neg": 70,
+        "recall_ci": [
+          0.346,
+          0.573
+        ],
+        "spec_ci": [
+          0.948,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|2.0": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|16.0": {
+        "bal_acc": 0.6,
+        "recall": 0.2,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.057,
+          0.51
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|4.0": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|32.0": {
+        "bal_acc": 1.0,
+        "recall": 1.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.722,
+          1.0
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|48.0": {
+        "bal_acc": 1.0,
+        "recall": 1.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.722,
+          1.0
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|64.0": {
+        "bal_acc": 1.0,
+        "recall": 1.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.722,
+          1.0
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|8.0": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|all": {
+        "bal_acc": 0.662,
+        "recall": 0.325,
+        "specificity": 1.0,
+        "n_pos": 40,
+        "n_neg": 40,
+        "recall_ci": [
+          0.201,
+          0.48
+        ],
+        "spec_ci": [
+          0.912,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|6": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|24": {
+        "bal_acc": 0.65,
+        "recall": 0.3,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.108,
+          0.603
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|12": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|40": {
+        "bal_acc": 1.0,
+        "recall": 1.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.722,
+          1.0
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      }
+    },
+    "C3_det": {
+      "G3_ALIGNMENT_OFFSET|all": {
+        "bal_acc": 0.729,
+        "recall": 0.457,
+        "specificity": 1.0,
+        "n_pos": 70,
+        "n_neg": 70,
+        "recall_ci": [
+          0.346,
+          0.573
+        ],
+        "spec_ci": [
+          0.948,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|2.0": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|16.0": {
+        "bal_acc": 0.6,
+        "recall": 0.2,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.057,
+          0.51
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|4.0": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|32.0": {
+        "bal_acc": 1.0,
+        "recall": 1.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.722,
+          1.0
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|48.0": {
+        "bal_acc": 1.0,
+        "recall": 1.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.722,
+          1.0
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|64.0": {
+        "bal_acc": 1.0,
+        "recall": 1.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.722,
+          1.0
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|8.0": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|all": {
+        "bal_acc": 0.662,
+        "recall": 0.325,
+        "specificity": 1.0,
+        "n_pos": 40,
+        "n_neg": 40,
+        "recall_ci": [
+          0.201,
+          0.48
+        ],
+        "spec_ci": [
+          0.912,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|6": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|24": {
+        "bal_acc": 0.65,
+        "recall": 0.3,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.108,
+          0.603
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|12": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|40": {
+        "bal_acc": 1.0,
+        "recall": 1.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.722,
+          1.0
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      }
+    },
+    "AFC": {
+      "G3_ALIGNMENT_OFFSET|all": {
+        "afc_strict": 1.0,
+        "n_pairs": 30,
+        "ci": [
+          0.886,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|16.0": {
+        "afc_strict": 1.0,
+        "n_pairs": 1,
+        "ci": [
+          0.207,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|32.0": {
+        "afc_strict": 1.0,
+        "n_pairs": 9,
+        "ci": [
+          0.701,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|48.0": {
+        "afc_strict": 1.0,
+        "n_pairs": 10,
+        "ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|64.0": {
+        "afc_strict": 1.0,
+        "n_pairs": 10,
+        "ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|all": {
+        "afc_strict": 1.0,
+        "n_pairs": 19,
+        "ci": [
+          0.832,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|24": {
+        "afc_strict": 1.0,
+        "n_pairs": 9,
+        "ci": [
+          0.701,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|40": {
+        "afc_strict": 1.0,
+        "n_pairs": 10,
+        "ci": [
+          0.722,
+          1.0
+        ]
+      }
+    }
+  },
+  "qwen35-27b": {
+    "C0_named": {
+      "G3_ALIGNMENT_OFFSET|all": {
+        "bal_acc": 0.621,
+        "recall": 0.243,
+        "specificity": 1.0,
+        "n_pos": 70,
+        "n_neg": 70,
+        "recall_ci": [
+          0.158,
+          0.355
+        ],
+        "spec_ci": [
+          0.948,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|16.0": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|2.0": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|4.0": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|32.0": {
+        "bal_acc": 0.65,
+        "recall": 0.3,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.108,
+          0.603
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|48.0": {
+        "bal_acc": 0.9,
+        "recall": 0.8,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.49,
+          0.943
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|8.0": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|64.0": {
+        "bal_acc": 0.8,
+        "recall": 0.6,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.313,
+          0.832
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|all": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 40,
+        "n_neg": 40,
+        "recall_ci": [
+          0.0,
+          0.088
+        ],
+        "spec_ci": [
+          0.912,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|6": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|24": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|12": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|40": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      }
+    },
+    "C0_det": {
+      "G3_ALIGNMENT_OFFSET|all": {
+        "bal_acc": 0.636,
+        "recall": 0.671,
+        "specificity": 0.6,
+        "n_pos": 70,
+        "n_neg": 70,
+        "recall_ci": [
+          0.555,
+          0.77
+        ],
+        "spec_ci": [
+          0.483,
+          0.707
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|16.0": {
+        "bal_acc": 0.5,
+        "recall": 0.5,
+        "specificity": 0.5,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.237,
+          0.763
+        ],
+        "spec_ci": [
+          0.237,
+          0.763
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|2.0": {
+        "bal_acc": 0.45,
+        "recall": 0.4,
+        "specificity": 0.5,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.168,
+          0.687
+        ],
+        "spec_ci": [
+          0.237,
+          0.763
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|4.0": {
+        "bal_acc": 0.55,
+        "recall": 0.4,
+        "specificity": 0.7,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.168,
+          0.687
+        ],
+        "spec_ci": [
+          0.397,
+          0.892
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|32.0": {
+        "bal_acc": 0.85,
+        "recall": 1.0,
+        "specificity": 0.7,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.722,
+          1.0
+        ],
+        "spec_ci": [
+          0.397,
+          0.892
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|48.0": {
+        "bal_acc": 0.8,
+        "recall": 1.0,
+        "specificity": 0.6,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.722,
+          1.0
+        ],
+        "spec_ci": [
+          0.313,
+          0.832
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|8.0": {
+        "bal_acc": 0.5,
+        "recall": 0.4,
+        "specificity": 0.6,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.168,
+          0.687
+        ],
+        "spec_ci": [
+          0.313,
+          0.832
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|64.0": {
+        "bal_acc": 0.8,
+        "recall": 1.0,
+        "specificity": 0.6,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.722,
+          1.0
+        ],
+        "spec_ci": [
+          0.313,
+          0.832
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|all": {
+        "bal_acc": 0.525,
+        "recall": 0.35,
+        "specificity": 0.7,
+        "n_pos": 40,
+        "n_neg": 40,
+        "recall_ci": [
+          0.221,
+          0.505
+        ],
+        "spec_ci": [
+          0.546,
+          0.819
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|6": {
+        "bal_acc": 0.6,
+        "recall": 0.6,
+        "specificity": 0.6,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.313,
+          0.832
+        ],
+        "spec_ci": [
+          0.313,
+          0.832
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|24": {
+        "bal_acc": 0.5,
+        "recall": 0.2,
+        "specificity": 0.8,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.057,
+          0.51
+        ],
+        "spec_ci": [
+          0.49,
+          0.943
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|12": {
+        "bal_acc": 0.5,
+        "recall": 0.3,
+        "specificity": 0.7,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.108,
+          0.603
+        ],
+        "spec_ci": [
+          0.397,
+          0.892
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|40": {
+        "bal_acc": 0.5,
+        "recall": 0.3,
+        "specificity": 0.7,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.108,
+          0.603
+        ],
+        "spec_ci": [
+          0.397,
+          0.892
+        ]
+      }
+    },
+    "C3_named": {
+      "G3_ALIGNMENT_OFFSET|all": {
+        "bal_acc": 0.707,
+        "recall": 0.414,
+        "specificity": 1.0,
+        "n_pos": 70,
+        "n_neg": 70,
+        "recall_ci": [
+          0.306,
+          0.531
+        ],
+        "spec_ci": [
+          0.948,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|2.0": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|16.0": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|4.0": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|32.0": {
+        "bal_acc": 0.95,
+        "recall": 0.9,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.596,
+          0.982
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|48.0": {
+        "bal_acc": 1.0,
+        "recall": 1.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.722,
+          1.0
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|8.0": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|64.0": {
+        "bal_acc": 1.0,
+        "recall": 1.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.722,
+          1.0
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|all": {
+        "bal_acc": 0.675,
+        "recall": 0.35,
+        "specificity": 1.0,
+        "n_pos": 40,
+        "n_neg": 40,
+        "recall_ci": [
+          0.221,
+          0.505
+        ],
+        "spec_ci": [
+          0.912,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|6": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|24": {
+        "bal_acc": 0.7,
+        "recall": 0.4,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.168,
+          0.687
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|12": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|40": {
+        "bal_acc": 1.0,
+        "recall": 1.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.722,
+          1.0
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      }
+    },
+    "C3_det": {
+      "G3_ALIGNMENT_OFFSET|all": {
+        "bal_acc": 0.707,
+        "recall": 0.414,
+        "specificity": 1.0,
+        "n_pos": 70,
+        "n_neg": 70,
+        "recall_ci": [
+          0.306,
+          0.531
+        ],
+        "spec_ci": [
+          0.948,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|2.0": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|16.0": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|4.0": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|32.0": {
+        "bal_acc": 0.95,
+        "recall": 0.9,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.596,
+          0.982
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|48.0": {
+        "bal_acc": 1.0,
+        "recall": 1.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.722,
+          1.0
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|8.0": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|64.0": {
+        "bal_acc": 1.0,
+        "recall": 1.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.722,
+          1.0
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|all": {
+        "bal_acc": 0.675,
+        "recall": 0.35,
+        "specificity": 1.0,
+        "n_pos": 40,
+        "n_neg": 40,
+        "recall_ci": [
+          0.221,
+          0.505
+        ],
+        "spec_ci": [
+          0.912,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|6": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|24": {
+        "bal_acc": 0.7,
+        "recall": 0.4,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.168,
+          0.687
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|12": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|40": {
+        "bal_acc": 1.0,
+        "recall": 1.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.722,
+          1.0
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      }
+    },
+    "AFC": {
+      "G3_ALIGNMENT_OFFSET|all": {
+        "afc_strict": 1.0,
+        "n_pairs": 30,
+        "ci": [
+          0.886,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|32.0": {
+        "afc_strict": 1.0,
+        "n_pairs": 10,
+        "ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|48.0": {
+        "afc_strict": 1.0,
+        "n_pairs": 10,
+        "ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|64.0": {
+        "afc_strict": 1.0,
+        "n_pairs": 10,
+        "ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|all": {
+        "afc_strict": 1.0,
+        "n_pairs": 19,
+        "ci": [
+          0.832,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|24": {
+        "afc_strict": 1.0,
+        "n_pairs": 9,
+        "ci": [
+          0.701,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|40": {
+        "afc_strict": 1.0,
+        "n_pairs": 10,
+        "ci": [
+          0.722,
+          1.0
+        ]
+      }
+    }
+  },
+  "gemma4-31b": {
+    "C0_named": {
+      "G3_ALIGNMENT_OFFSET|all": {
+        "bal_acc": 0.657,
+        "recall": 0.343,
+        "specificity": 0.971,
+        "n_pos": 70,
+        "n_neg": 70,
+        "recall_ci": [
+          0.242,
+          0.46
+        ],
+        "spec_ci": [
+          0.902,
+          0.992
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|16.0": {
+        "bal_acc": 0.6,
+        "recall": 0.2,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.057,
+          0.51
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|2.0": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|4.0": {
+        "bal_acc": 0.55,
+        "recall": 0.2,
+        "specificity": 0.9,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.057,
+          0.51
+        ],
+        "spec_ci": [
+          0.596,
+          0.982
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|32.0": {
+        "bal_acc": 0.8,
+        "recall": 0.7,
+        "specificity": 0.9,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.397,
+          0.892
+        ],
+        "spec_ci": [
+          0.596,
+          0.982
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|48.0": {
+        "bal_acc": 0.8,
+        "recall": 0.6,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.313,
+          0.832
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|64.0": {
+        "bal_acc": 0.85,
+        "recall": 0.7,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.397,
+          0.892
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|8.0": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|all": {
+        "bal_acc": 0.55,
+        "recall": 0.1,
+        "specificity": 1.0,
+        "n_pos": 40,
+        "n_neg": 40,
+        "recall_ci": [
+          0.04,
+          0.231
+        ],
+        "spec_ci": [
+          0.912,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|6": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|24": {
+        "bal_acc": 0.55,
+        "recall": 0.1,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.018,
+          0.404
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|12": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|40": {
+        "bal_acc": 0.65,
+        "recall": 0.3,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.108,
+          0.603
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      }
+    },
+    "C0_det": {
+      "G3_ALIGNMENT_OFFSET|all": {
+        "bal_acc": 0.629,
+        "recall": 0.771,
+        "specificity": 0.486,
+        "n_pos": 70,
+        "n_neg": 70,
+        "recall_ci": [
+          0.66,
+          0.854
+        ],
+        "spec_ci": [
+          0.372,
+          0.6
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|16.0": {
+        "bal_acc": 0.6,
+        "recall": 0.7,
+        "specificity": 0.5,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.397,
+          0.892
+        ],
+        "spec_ci": [
+          0.237,
+          0.763
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|2.0": {
+        "bal_acc": 0.5,
+        "recall": 0.5,
+        "specificity": 0.5,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.237,
+          0.763
+        ],
+        "spec_ci": [
+          0.237,
+          0.763
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|4.0": {
+        "bal_acc": 0.55,
+        "recall": 0.8,
+        "specificity": 0.3,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.49,
+          0.943
+        ],
+        "spec_ci": [
+          0.108,
+          0.603
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|32.0": {
+        "bal_acc": 0.65,
+        "recall": 1.0,
+        "specificity": 0.3,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.722,
+          1.0
+        ],
+        "spec_ci": [
+          0.108,
+          0.603
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|48.0": {
+        "bal_acc": 0.75,
+        "recall": 0.9,
+        "specificity": 0.6,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.596,
+          0.982
+        ],
+        "spec_ci": [
+          0.313,
+          0.832
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|64.0": {
+        "bal_acc": 0.8,
+        "recall": 1.0,
+        "specificity": 0.6,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.722,
+          1.0
+        ],
+        "spec_ci": [
+          0.313,
+          0.832
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|8.0": {
+        "bal_acc": 0.55,
+        "recall": 0.5,
+        "specificity": 0.6,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.237,
+          0.763
+        ],
+        "spec_ci": [
+          0.313,
+          0.832
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|all": {
+        "bal_acc": 0.562,
+        "recall": 0.45,
+        "specificity": 0.675,
+        "n_pos": 40,
+        "n_neg": 40,
+        "recall_ci": [
+          0.307,
+          0.602
+        ],
+        "spec_ci": [
+          0.52,
+          0.799
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|6": {
+        "bal_acc": 0.5,
+        "recall": 0.4,
+        "specificity": 0.6,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.168,
+          0.687
+        ],
+        "spec_ci": [
+          0.313,
+          0.832
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|24": {
+        "bal_acc": 0.55,
+        "recall": 0.4,
+        "specificity": 0.7,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.168,
+          0.687
+        ],
+        "spec_ci": [
+          0.397,
+          0.892
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|12": {
+        "bal_acc": 0.55,
+        "recall": 0.4,
+        "specificity": 0.7,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.168,
+          0.687
+        ],
+        "spec_ci": [
+          0.397,
+          0.892
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|40": {
+        "bal_acc": 0.65,
+        "recall": 0.6,
+        "specificity": 0.7,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.313,
+          0.832
+        ],
+        "spec_ci": [
+          0.397,
+          0.892
+        ]
+      }
+    },
+    "C3_named": {
+      "G3_ALIGNMENT_OFFSET|all": {
+        "bal_acc": 0.771,
+        "recall": 0.543,
+        "specificity": 1.0,
+        "n_pos": 70,
+        "n_neg": 70,
+        "recall_ci": [
+          0.427,
+          0.654
+        ],
+        "spec_ci": [
+          0.948,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|2.0": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|16.0": {
+        "bal_acc": 0.85,
+        "recall": 0.7,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.397,
+          0.892
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|4.0": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|32.0": {
+        "bal_acc": 1.0,
+        "recall": 1.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.722,
+          1.0
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|48.0": {
+        "bal_acc": 1.0,
+        "recall": 1.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.722,
+          1.0
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|8.0": {
+        "bal_acc": 0.55,
+        "recall": 0.1,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.018,
+          0.404
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|64.0": {
+        "bal_acc": 1.0,
+        "recall": 1.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.722,
+          1.0
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|all": {
+        "bal_acc": 0.713,
+        "recall": 0.45,
+        "specificity": 0.975,
+        "n_pos": 40,
+        "n_neg": 40,
+        "recall_ci": [
+          0.307,
+          0.602
+        ],
+        "spec_ci": [
+          0.871,
+          0.996
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|6": {
+        "bal_acc": 0.45,
+        "recall": 0.0,
+        "specificity": 0.9,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.596,
+          0.982
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|24": {
+        "bal_acc": 0.9,
+        "recall": 0.8,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.49,
+          0.943
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|12": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|40": {
+        "bal_acc": 1.0,
+        "recall": 1.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.722,
+          1.0
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      }
+    },
+    "C3_det": {
+      "G3_ALIGNMENT_OFFSET|all": {
+        "bal_acc": 0.771,
+        "recall": 0.543,
+        "specificity": 1.0,
+        "n_pos": 70,
+        "n_neg": 70,
+        "recall_ci": [
+          0.427,
+          0.654
+        ],
+        "spec_ci": [
+          0.948,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|2.0": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|16.0": {
+        "bal_acc": 0.85,
+        "recall": 0.7,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.397,
+          0.892
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|4.0": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|32.0": {
+        "bal_acc": 1.0,
+        "recall": 1.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.722,
+          1.0
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|48.0": {
+        "bal_acc": 1.0,
+        "recall": 1.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.722,
+          1.0
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|8.0": {
+        "bal_acc": 0.55,
+        "recall": 0.1,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.018,
+          0.404
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|64.0": {
+        "bal_acc": 1.0,
+        "recall": 1.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.722,
+          1.0
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|all": {
+        "bal_acc": 0.713,
+        "recall": 0.45,
+        "specificity": 0.975,
+        "n_pos": 40,
+        "n_neg": 40,
+        "recall_ci": [
+          0.307,
+          0.602
+        ],
+        "spec_ci": [
+          0.871,
+          0.996
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|6": {
+        "bal_acc": 0.45,
+        "recall": 0.0,
+        "specificity": 0.9,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.596,
+          0.982
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|24": {
+        "bal_acc": 0.9,
+        "recall": 0.8,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.49,
+          0.943
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|12": {
+        "bal_acc": 0.5,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.0,
+          0.278
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|40": {
+        "bal_acc": 1.0,
+        "recall": 1.0,
+        "specificity": 1.0,
+        "n_pos": 10,
+        "n_neg": 10,
+        "recall_ci": [
+          0.722,
+          1.0
+        ],
+        "spec_ci": [
+          0.722,
+          1.0
+        ]
+      }
+    },
+    "AFC": {
+      "G3_ALIGNMENT_OFFSET|all": {
+        "afc_strict": 1.0,
+        "n_pairs": 30,
+        "ci": [
+          0.886,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|32.0": {
+        "afc_strict": 1.0,
+        "n_pairs": 10,
+        "ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|48.0": {
+        "afc_strict": 1.0,
+        "n_pairs": 10,
+        "ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G3_ALIGNMENT_OFFSET|64.0": {
+        "afc_strict": 1.0,
+        "n_pairs": 10,
+        "ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|all": {
+        "afc_strict": 1.0,
+        "n_pairs": 17,
+        "ci": [
+          0.816,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|24": {
+        "afc_strict": 1.0,
+        "n_pairs": 6,
+        "ci": [
+          0.61,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|40": {
+        "afc_strict": 1.0,
+        "n_pairs": 10,
+        "ci": [
+          0.722,
+          1.0
+        ]
+      },
+      "G5_BRAND_COLOR_VIOLATION|12": {
+        "afc_strict": 1.0,
+        "n_pairs": 1,
+        "ci": [
+          0.207,
+          1.0
+        ]
+      }
+    }
+  }
+}

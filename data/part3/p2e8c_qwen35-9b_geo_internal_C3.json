@@ -1,0 +1,27 @@
+{
+  "condition": "C3",
+  "model": "qwen35-9b",
+  "style": "scoped",
+  "manifest": "/home/gpus/slide-examiner/data/part1/manifest_geometry_internal.jsonl",
+  "modalities": [
+    "A",
+    "B",
+    "C"
+  ],
+  "defects": [
+    "G3_ALIGNMENT_OFFSET"
+  ],
+  "n_jobs": 336,
+  "failures": 336,
+  "metrics": {
+    "A": {
+      "per_defect": {}
+    },
+    "B": {
+      "per_defect": {}
+    },
+    "C": {
+      "per_defect": {}
+    }
+  }
+}

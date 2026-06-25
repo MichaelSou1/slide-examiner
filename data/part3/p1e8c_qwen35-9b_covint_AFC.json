@@ -1,0 +1,48 @@
+{
+  "condition": "AFC",
+  "mode": "paired",
+  "model": "qwen35-9b",
+  "style": "scoped",
+  "manifest": "/home/gpus/slide-examiner/data/part3/manifest_coverage_internal.jsonl",
+  "modalities": [
+    "A"
+  ],
+  "defects": [
+    "G3_ALIGNMENT_OFFSET",
+    "G5_BRAND_COLOR_VIOLATION"
+  ],
+  "n_pairs": 110,
+  "failures": 0,
+  "afc": {
+    "G3_ALIGNMENT_OFFSET": {
+      "mode": "paired",
+      "n_pairs": 70,
+      "n_judgements": 140,
+      "decisive_rate": 0.714,
+      "tie_rate": 0.286,
+      "pick_first_rate": 0.6,
+      "n_pairs_both_orders_valid": 43,
+      "afc_accuracy_strict": 0.884,
+      "afc_accuracy_loose": 0.614,
+      "n_probe_worse_both": 38,
+      "n_probe_worse": 86,
+      "n_partner_worse": 14,
+      "n_tie": 40
+    },
+    "G5_BRAND_COLOR_VIOLATION": {
+      "mode": "paired",
+      "n_pairs": 40,
+      "n_judgements": 80,
+      "decisive_rate": 0.575,
+      "tie_rate": 0.425,
+      "pick_first_rate": 0.522,
+      "n_pairs_both_orders_valid": 21,
+      "afc_accuracy_strict": 1.0,
+      "afc_accuracy_loose": 0.537,
+      "n_probe_worse_both": 21,
+      "n_probe_worse": 43,
+      "n_partner_worse": 3,
+      "n_tie": 34
+    }
+  }
+}

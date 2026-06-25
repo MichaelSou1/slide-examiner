@@ -488,12 +488,21 @@ def run(args):
                     timeout=90.0, max_retries=1)
     recs = [json.loads(l) for l in Path(args.manifest).open() if l.strip()]
     if args.freeform_only:
-        # Drop __template renders: the snap-to-master template absorbs ~45% of
+        # Drop template renders: the snap-to-master template absorbs ~45% of
         # injected geometry (P2 gotcha), so a "defective" template render can be
         # pixel-clean -> silent label noise. E1 holds the items fixed across all
         # conditions and must not include those (no-op on G7, which has no twins).
+        # AUTHORITATIVE flag = metadata.template_condition (E8 corpora carry it);
+        # path heuristics are fragile (the corpus uses a '/template/' DIRECTORY, not
+        # a '__template' suffix) so fall back to them only when the field is absent.
+        def _is_tmpl(r):
+            tc = (r.get("metadata") or {}).get("template_condition")
+            if tc is not None:
+                return tc == "template"
+            p = r.get("image_path") or ""
+            return "__template" in p or "/template/" in p
         before = len(recs)
-        recs = [r for r in recs if "__template" not in (r.get("image_path") or "")]
+        recs = [r for r in recs if not _is_tmpl(r)]
         print(f"[freeform-only] kept {len(recs)}/{before} records")
     if args.condition in ("AFC", "AFC_clean"):
         # forced-choice paths: distinct scoring (pick-rate/bias), own run path.

@@ -1,0 +1,40 @@
+{
+  "key": "aesthetic",
+  "display_name": "LAION-Aesthetic (CLIP-L/14)",
+  "category": "aesthetic",
+  "contract": "pointwise",
+  "backbone": "CLIP ViT-L/14",
+  "trained_reward": false,
+  "model_path": "/home/gpus/models/aesthetic/sac+logos+ava1-l14-linearMSE.pth",
+  "variant": "generic",
+  "elicitation": null,
+  "metric": "paired preference accuracy = P(reward(clean) > reward(defective)); 0.5 = blind, 1.0 = always prefers the clean slide",
+  "results": [
+    {
+      "defect": "G5_BRAND_COLOR_VIOLATION",
+      "render": "freeform",
+      "n": 40,
+      "preference_accuracy": 0.775,
+      "preference_ci": [
+        0.625,
+        0.877
+      ],
+      "mean_reward_gap_clean_minus_def": 0.0399,
+      "median_gap": 0.0169,
+      "n_clean_preferred": 31
+    },
+    {
+      "defect": "G3_ALIGNMENT_OFFSET",
+      "render": "template",
+      "n": 40,
+      "preference_accuracy": 0.525,
+      "preference_ci": [
+        0.375,
+        0.671
+      ],
+      "mean_reward_gap_clean_minus_def": -0.0083,
+      "median_gap": 0.0031,
+      "n_clean_preferred": 21
+    }
+  ]
+}
