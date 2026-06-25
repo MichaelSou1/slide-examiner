@@ -356,6 +356,35 @@ the yes/no framing, not reasoning. \g{S3} therefore leaves the VLM entirely for 
 which reaches balanced accuracy 1.000 against the VLM's 0.69. A negative result that \emph{re-routes} a class
 is exactly the kind the diagnosis is for.
 
+\paragraph{The falsifiable counterpart: a genuine geometric blind spot.}
+The re-operationalisation matters only if it can also \emph{fail} to rescue---otherwise ``change the
+elicitation'' would be an unfalsifiable escape hatch. It fails cleanly on one class. We re-pose \g{G6} margin as
+a \emph{page offset}: the whole content block is shifted toward one edge---every element together, so internal
+alignment is preserved and the defect cannot be misalignment---leaving one margin crowded against (or running
+off) the edge and the opposite side empty, decidable from the slide alone.\footnote{The original \g{S6} render
+omitted the figure element, so the cross-modal contradiction was literally unseeable (recall $0$); on the
+valid-figure corpus the \g{S6} 2-AFC reproduces at $0.75$--$1.00$ across all six VLMs, confirming it is a
+render artifact, not blindness.} Across all six VLMs and both pointwise framings (absolute ``past the safe
+margin'' and relative ``shifted to one side'') the page offset stays at chance (roster-mean C3 $0.50$), and the
+discriminative 2-AFC---the very test that separated \emph{data artifacts} (\g{S6} image/text contradiction,
+which recovers to perfect once the figure is actually rendered) from genuine blindness---leaves \g{G6} on the
+floor for \emph{every} model (Fig.~\ref{fig:artifact}): none can tell a page-offset slide from a balanced one
+until the content is clipped by the page boundary. So unlike \g{G3}/\g{G5} (format-suppressed, recoverable) and
+\g{S6} (a rendering artifact, recoverable), page offset is a \emph{genuine} perceptual blind spot---VLMs do not
+represent global content positioning---which is exactly why declared geometry routes to the linter.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.92\linewidth]{figs/fig11_artifact_vs_genuine.png}
+\caption{\textbf{The re-operationalisation is falsifiable.} Per-model 2-AFC discrimination (fraction of paired
+slides where the defective is consistently called worse in both presentation orders; ties count as
+not-discriminated). Single-image pointwise puts both classes at chance, but the forced choice \emph{separates}
+them: the data artifact \g{S6} (image/text contradiction, on the fixed valid-figure corpus) recovers on every
+model, while the re-operationalised \g{G6} page offset stays at the floor on every model---a genuine blind spot,
+not an elicitation or data artifact.}
+\label{fig:artifact}
+\end{figure}
+
 \paragraph{A methodological aside that becomes load-bearing.}
 Enterprise ``snap-to-master'' templates re-fit element boxes to a grid before rendering. Measuring this, we
 find a template silently \emph{absorbs} 45\% of injected geometry defects: overlap, alignment, and margin
@@ -518,9 +547,16 @@ linter-blind cell rescued by C3.}
 \paragraph{A data-driven routing correction, reported as such.}
 We initially routed \g{S1} title/body mismatch to the text LLM, but the text-only probe over-flags (0.25,
 precision 0.09) while the image-bearing VLM names it reliably (0.94, precision 0.90): title/body mismatch needs
-the \emph{rendered layout}, not just the text. We re-route \g{S1} to the VLM and report it as a refinement, not
-a tuned result. We also do not hide the one class the hybrid fails to cover: \g{S6} image/text contradiction
-stays at 0.50 for every engine.
+the \emph{rendered layout}, not just the text. We re-route \g{S1} to the VLM---and specifically to its
+\emph{open} pointwise prompt (C0, $0.94$) rather than the atomic C3 ($0.83$): recall is already saturated on
+\g{S1} (both elicitations catch all 18 defectives), so the forced yes/no of C3 only adds false positives,
+dropping specificity $0.89\!\to\!0.67$. Atomic elicitation is therefore \emph{not} a free lunch---it recovers
+recall-limited classes (\g{G7}, \g{S4}) but inflates false positives on subjective ones---which is itself the
+reason the critic routes the \emph{elicitation} per class instead of forcing C3 everywhere. We also do not hide
+the one image-level class the deployable hybrid fails to cover: \g{S6} image/text contradiction stays at $0.50$
+single-image for every engine---but the 2-AFC diagnosis (Fig.~\ref{fig:artifact}) shows the model \emph{does}
+perceive it (it over-asserts pointwise rather than missing it; recall $1.0$, specificity $\sim0$), so the gap is
+availability-of-reference, not blindness---in pointed contrast to the genuine \g{G6} page-offset blind spot.
 
 \subsection{\g{G7}: a falsifiable class that the linter and specialised rewards miss}\label{sec:g7}
 

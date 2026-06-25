@@ -36,7 +36,11 @@ def inject_slide_defect(slide: Slide, defect_type: str, *, severity: float | Non
     if defect_type == "G5_BRAND_COLOR_VIOLATION":
         return inject_brand_color_violation(slide, delta_e=float(severity or 24))
     if defect_type == "G6_MARGIN_VIOLATION":
-        return inject_margin_violation(slide, bleed_px=float(severity or 16))
+        # E8 page-offset口径: severity = the resulting shifted-side margin (px from the slide
+        # edge; <=0 = content touches/overruns it). The WHOLE block translates so the leftmost
+        # element lands there. `is not None` so the margin=0 / negative strata survive `or`.
+        return inject_margin_violation(
+            slide, page_margin_px=float(severity) if severity is not None else 16.0)
     if defect_type == "S1_TITLE_BODY_MISMATCH":
         return inject_title_body_mismatch(slide)
     if defect_type == "S4_DENSITY_RULE_VIOLATION":

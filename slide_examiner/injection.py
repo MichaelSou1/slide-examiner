@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass, replace
 from random import Random
+from statistics import median
 
 from .geometry import _parse_rgb, color_delta_e
 from .schemas import BBox, Deck, DefectLabel, Element, Slide
@@ -186,7 +187,30 @@ def inject_margin_violation(
     bleed_px: float = 16.0,
     side: str = "left",
     margin_px: float = 32.0,
+    page_margin_px: float | None = None,
 ) -> InjectedSlide:
+    """G6 as a PAGE-OFFSET margin defect (E8 re-operationalisation): translate the WHOLE
+    content block toward one edge so the shifted-side margin shrinks to ``page_margin_px``
+    (px from the slide edge; <=0 = content touches / overruns the edge), leaving asymmetric
+    whitespace on the far side. Distinct from G3 misalignment BY CONSTRUCTION — every element
+    moves together, so the elements stay internally aligned; only the block-vs-page position
+    is wrong (the defect a single-element shift would instead read as misalignment). Decidable
+    from the slide alone (asymmetric margins + edge-crowding), no invisible reference. Legacy
+    absolute single-element path (``bleed_px`` vs ``margin_px``) kept as fallback when
+    ``page_margin_px`` is None. The existing absolute linter (``detect_margin_violations``)
+    scores it: it fires once the shifted-side element is < margin_px from the edge, never on
+    the balanced clean twin; the mild-asymmetry tail (margin still comfortable) is the residue."""
+    if page_margin_px is not None and side == "left" and slide.elements:
+        orig_min = float(min(e.bbox.x for e in slide.elements))  # the page's left margin
+        dx = float(page_margin_px) - orig_min  # < 0 shifts the whole block left
+        defective = replace(slide, elements=tuple(e.with_bbox(e.bbox.moved(dx=dx)) for e in slide.elements))
+        label = DefectLabel(
+            type="G6_MARGIN_VIOLATION", severity=float(orig_min - page_margin_px),
+            target_element_ids=tuple(e.element_id for e in slide.elements),
+            metadata={"left_margin_px": float(page_margin_px), "shift_px": float(orig_min - page_margin_px),
+                      "orig_min_x": orig_min, "side": side, "mode": "internal_page_offset"})
+        return InjectedSlide(clean=slide, defective=defective, label=label)
+    # legacy absolute fallback (single element vs an invisible margin standard)
     element = _choose_element(slide, element_id)
     bbox = element.bbox
     if side == "left":
@@ -205,7 +229,7 @@ def inject_margin_violation(
         type="G6_MARGIN_VIOLATION",
         severity=bleed_px,
         target_element_ids=(element.element_id,),
-        metadata={"bleed_px": bleed_px, "side": side, "margin_px": margin_px},
+        metadata={"bleed_px": bleed_px, "side": side, "margin_px": margin_px, "mode": "absolute_fallback"},
     )
     return InjectedSlide(clean=slide, defective=defective, label=label)
 

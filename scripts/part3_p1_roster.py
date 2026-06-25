@@ -37,6 +37,8 @@ G7 = REPO / "data/part3/manifest_g7_rendered.jsonl"
 INTERNAL = REPO / "data/part3/manifest_g3g5_internal.jsonl"  # E8 redo: internal-contrast G3/G5 (Row 1, modality A)
 GEO_INTERNAL = REPO / "data/part1/manifest_geometry_internal.jsonl"  # E8 redo: internal-G3 modality ablation (Row 2)
 COVERAGE_INTERNAL2 = REPO / "data/part3/manifest_coverage_internal.jsonl"  # corrected Row-1 diagnosis (matched twins)
+G6_INTERNAL = REPO / "data/part3/manifest_g6_internal.jsonl"  # E8 G6 page-offset re-op
+S6_VALID = REPO / "data/part1_img/manifest_s6_rendered.jsonl"  # E8 S6 fix: valid-figure corpus (has images)
 NOTHINK = {"chat_template_kwargs": {"enable_thinking": False}}
 
 # key | source (local path or ms:owner/name) | family | tier | serve_extra | max_tokens | chat_kwargs
@@ -168,7 +170,9 @@ def run_elicit(m, mpd: int, conds: list[str], tags: list[str], freeform_only: bo
             # (g3g5_internal shared one clean across all 240 -> degenerate spec + confounded
             # 2-AFC; coverage_internal has 100/100 distinct same-deck twins + finer strata).
             "covint": (COVERAGE_INTERNAL2, ["G3_ALIGNMENT_OFFSET", "G5_BRAND_COLOR_VIOLATION"]),
-            "geo_internal": (GEO_INTERNAL, ["G3_ALIGNMENT_OFFSET"])}
+            "geo_internal": (GEO_INTERNAL, ["G3_ALIGNMENT_OFFSET"]),
+            "g6": (G6_INTERNAL, ["G6_MARGIN_VIOLATION"]),          # E8 G6 page-offset re-op
+            "s6": (S6_VALID, ["S6_IMAGE_TEXT_CONTRADICTION"])}     # E8 S6 fix (valid figures)
     mods = modalities or ["A"]
     logf = LOG / f"elicit_{m['key']}.log"
     for tag in tags:

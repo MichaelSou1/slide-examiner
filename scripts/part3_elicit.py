@@ -82,6 +82,13 @@ _SPECIFIC_QUESTIONS = {
         "Among a list of bullet/body items that share one text colour, does ONE of "
         "them have a text colour that clearly differs from the others?"
     ),
+    # G6 re-operationalised as a PAGE-OFFSET (E8): the whole content block is shifted
+    # toward one side -> asymmetric margins (decidable from the slide alone).
+    "G6_MARGIN_VIOLATION": (
+        "Is the slide's whole block of content shifted toward one side, leaving clearly "
+        "unequal left/right margins — one side crowded against (or running off) the edge "
+        "while the opposite side is noticeably empty?"
+    ),
     G7_RENDER_CONTAINMENT_OVERFLOW: G7_SPEC.elicit_question,
 }
 
@@ -295,6 +302,7 @@ _AFC_PHRASE = {
     "S6_IMAGE_TEXT_CONTRADICTION": "a chart, diagram, or image that contradicts the text near it",
     "G3_ALIGNMENT_OFFSET": "a bullet that does not line up with the other bullets (indented differently from the rest)",
     "G5_BRAND_COLOR_VIOLATION": "a bullet whose text colour clearly differs from the other bullets in the same list",
+    "G6_MARGIN_VIOLATION": "all the content shifted to one side, with one margin crowded against the edge and the opposite side noticeably empty",
     G7_RENDER_CONTAINMENT_OVERFLOW: "content spilling outside the box, card, or frame meant to contain it",
 }
 

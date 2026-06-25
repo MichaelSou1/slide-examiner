@@ -1,0 +1,32 @@
+{
+  "condition": "AFC",
+  "mode": "paired",
+  "model": "qwen36-27b",
+  "style": "scoped",
+  "manifest": "/home/gpus/slide-examiner/data/part3/manifest_g6_internal.jsonl",
+  "modalities": [
+    "A"
+  ],
+  "defects": [
+    "G6_MARGIN_VIOLATION"
+  ],
+  "n_pairs": 80,
+  "failures": 0,
+  "afc": {
+    "G6_MARGIN_VIOLATION": {
+      "mode": "paired",
+      "n_pairs": 80,
+      "n_judgements": 160,
+      "decisive_rate": 0.175,
+      "tie_rate": 0.825,
+      "pick_first_rate": 0.643,
+      "n_pairs_both_orders_valid": 11,
+      "afc_accuracy_strict": 0.909,
+      "afc_accuracy_loose": 0.169,
+      "n_probe_worse_both": 10,
+      "n_probe_worse": 27,
+      "n_partner_worse": 1,
+      "n_tie": 132
+    }
+  }
+}
