@@ -576,6 +576,7 @@ S6 二选一(2-AFC)强制选择复评 2026-06-16(`scripts/s6_forced_choice.py`,1
   - [ ] SlideProbe 诊断集。
   - [ ] 缺陷注入器。
   - [ ] 分析脚本。
+  - [x] 大模型 API 配置示例: `.env.example`(仅 API 路由,不含本机路径/密钥)。
   - [ ] README 快速复现路径。
 
 ## 11. 近期建议执行顺序
