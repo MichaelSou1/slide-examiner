@@ -1,0 +1,72 @@
+{
+  "condition": "C0",
+  "model": "qwen3.7-max-2026-06-08",
+  "style": "scoped",
+  "manifest": "data/part3/manifest_g7_rendered.jsonl",
+  "modalities": [
+    "A"
+  ],
+  "defects": [
+    "G7_RENDER_CONTAINMENT_OVERFLOW"
+  ],
+  "n_jobs": 80,
+  "failures": 0,
+  "metrics": {
+    "A": {
+      "per_defect": {
+        "G7_RENDER_CONTAINMENT_OVERFLOW": {
+          "detection": {
+            "recall": 0.85,
+            "specificity": 0.75,
+            "bal_acc": 0.8,
+            "bal_acc_ci": [
+              0.654,
+              0.894
+            ],
+            "precision": 0.773,
+            "precision_ci": [
+              0.63,
+              0.872
+            ],
+            "fpr": 0.25,
+            "f1": 0.81,
+            "recall_ci": [
+              0.709,
+              0.929
+            ],
+            "tp": 34,
+            "fn": 6,
+            "fp": 10,
+            "tn": 30,
+            "n_pos": 40,
+            "n_neg": 40
+          },
+          "named": {
+            "recall": 0.0,
+            "specificity": 1.0,
+            "bal_acc": 0.5,
+            "bal_acc_ci": [
+              0.456,
+              0.544
+            ],
+            "precision": 0.0,
+            "precision_ci": null,
+            "fpr": 0.0,
+            "f1": 0.0,
+            "recall_ci": [
+              0.0,
+              0.088
+            ],
+            "tp": 0,
+            "fn": 40,
+            "fp": 0,
+            "tn": 40,
+            "n_pos": 40,
+            "n_neg": 40
+          },
+          "headline_level": "detection"
+        }
+      }
+    }
+  }
+}

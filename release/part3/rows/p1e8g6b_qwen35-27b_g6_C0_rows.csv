@@ -1,0 +1,521 @@
+sample_id,defect,modality,is_clean,failure,has_defect,named_target,predicted_types,locator,confidence,other,raw,level
+part2_churn_prediction_1_G6_MARGIN_VIOLATION_0_0000__freeform,G6_MARGIN_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_churn_prediction_3_G6_MARGIN_VIOLATION_0_0002__freeform,G6_MARGIN_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_churn_prediction_2_G6_MARGIN_VIOLATION_0_0001__freeform,G6_MARGIN_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_churn_prediction_5_G6_MARGIN_VIOLATION_0_0004__freeform,G6_MARGIN_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_churn_prediction_4_G6_MARGIN_VIOLATION_0_0003__freeform,G6_MARGIN_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_clinical_triage_5_G6_MARGIN_VIOLATION_0_0009__freeform,G6_MARGIN_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_clinical_triage_2_G6_MARGIN_VIOLATION_0_0006__freeform,G6_MARGIN_VIOLATION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_clinical_triage_2"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'Why triage is the bottleneck' implies an explanation of a problem, but the body content lists a project timeline (Q1 foundation, Q2 workloads, Q3 migration) which does not e",page
+part2_contract_review_2_G6_MARGIN_VIOLATION_16_0001__freeform,G6_MARGIN_VIOLATION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_contract_review_2"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'ClauseScan flags risky clauses' describes a product feature, but the body content lists project management tasks ('Approve budget', 'Assign engineers', 'Confirm cutover') wh",page
+part2_clinical_triage_1_G6_MARGIN_VIOLATION_0_0005__freeform,G6_MARGIN_VIOLATION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_clinical_triage_1"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'ER wait times keep rising' describes a problem or trend, but the body content lists a technical implementation roadmap (e.g., 'Phase 2 replatforms the data tier', 'Phase 3 r",page
+part2_clinical_triage_4_G6_MARGIN_VIOLATION_0_0008__freeform,G6_MARGIN_VIOLATION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_clinical_triage_4"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide title 'TriageAI impact on wait times' suggests a results or data analysis slide, but the body content lists administrative action items ('Approve budget', 'Assign engineers',",page
+part2_clinical_triage_3_G6_MARGIN_VIOLATION_0_0007__freeform,G6_MARGIN_VIOLATION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_clinical_triage_3"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'TriageAI prioritizes acuity' suggests the slide will explain how the system ranks cases by severity. However, the body content lists deployment and operational strategies ",page
+part2_contract_review_4_G6_MARGIN_VIOLATION_16_0003__freeform,G6_MARGIN_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_customer_support_ai_2_G6_MARGIN_VIOLATION_16_0006__freeform,G6_MARGIN_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_contract_review_1_G6_MARGIN_VIOLATION_16_0000__freeform,G6_MARGIN_VIOLATION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_contract_review_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Manual contract review is slow' describes a problem with legal processes, but the body conte",page
+part2_customer_support_ai_3_G6_MARGIN_VIOLATION_16_0007__freeform,G6_MARGIN_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_customer_support_ai_4_G6_MARGIN_VIOLATION_16_0008__freeform,G6_MARGIN_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_customer_support_ai_5_G6_MARGIN_VIOLATION_16_0009__freeform,G6_MARGIN_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_doc_search_1_G6_MARGIN_VIOLATION_32_0000__freeform,G6_MARGIN_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_doc_search_2_G6_MARGIN_VIOLATION_32_0001__freeform,G6_MARGIN_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_doc_search_3_G6_MARGIN_VIOLATION_32_0002__freeform,G6_MARGIN_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_contract_review_3_G6_MARGIN_VIOLATION_16_0002__freeform,G6_MARGIN_VIOLATION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_contract_review_3"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide title is 'ClauseScan pilot accuracy', but the body content lists business benefits ('reduces toil', 'teams adopt', 'payback') rather than accuracy metrics or data."", ""fix_sug",page
+part2_energy_forecasting_2_G6_MARGIN_VIOLATION_32_0006__freeform,G6_MARGIN_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_contract_review_5_G6_MARGIN_VIOLATION_16_0004__freeform,G6_MARGIN_VIOLATION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_contract_review_5"", ""element_id"": ""null"", ""related_page_ids"": []}, ""evidence"": ""The title 'Next steps for ClauseScan' implies a list of future actions or a roadmap. However, the body content lists past results and observations ('The pilot covered...', 'ClauseS",page
+part2_customer_support_ai_1_G6_MARGIN_VIOLATION_16_0005__freeform,G6_MARGIN_VIOLATION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_customer_support_ai_1"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'Support queues keep growing' suggests a problem statement or trend analysis, but the body text describes a successful pilot program ('HelpBot beat the baseline', 'Resu",page
+part2_energy_forecasting_4_G6_MARGIN_VIOLATION_32_0008__freeform,G6_MARGIN_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_energy_forecasting_5_G6_MARGIN_VIOLATION_32_0009__freeform,G6_MARGIN_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_doc_search_5_G6_MARGIN_VIOLATION_32_0004__freeform,G6_MARGIN_VIOLATION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_doc_search_5"", ""element_id"": ""null"", ""related_page_ids"": []}, ""evidence"": ""The title 'The FindFast rollout plan' implies a schedule or strategy, but the body content lists outcomes/metrics ('Adoption grew', 'handles most volume', 'tickets fell') rather than a ",page
+part2_hr_analytics_3_G6_MARGIN_VIOLATION_48_0002__freeform,G6_MARGIN_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_hr_analytics_4_G6_MARGIN_VIOLATION_48_0003__freeform,G6_MARGIN_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_hr_analytics_5_G6_MARGIN_VIOLATION_48_0004__freeform,G6_MARGIN_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_doc_search_4_G6_MARGIN_VIOLATION_32_0003__freeform,G6_MARGIN_VIOLATION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_doc_search_4"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Impact FindFast drives on time saved' suggests a focus on efficiency metrics or time-saving res",page
+part2_energy_forecasting_1_G6_MARGIN_VIOLATION_32_0005__freeform,G6_MARGIN_VIOLATION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_energy_forecasting_1"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Demand spikes strain the grid' describes a problem or context, but the body content lis",page
+part2_inventory_optimization_1_G6_MARGIN_VIOLATION_48_0005__freeform,G6_MARGIN_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_inventory_optimization_3_G6_MARGIN_VIOLATION_48_0007__freeform,G6_MARGIN_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_inventory_optimization_4_G6_MARGIN_VIOLATION_48_0008__freeform,G6_MARGIN_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_inventory_optimization_5_G6_MARGIN_VIOLATION_48_0009__freeform,G6_MARGIN_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_logistics_visibility_1_G6_MARGIN_VIOLATION_64_0000__freeform,G6_MARGIN_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_logistics_visibility_1_G6_MARGIN_VIOLATION_8_0000__freeform,G6_MARGIN_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_hr_analytics_1_G6_MARGIN_VIOLATION_48_0000__freeform,G6_MARGIN_VIOLATION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_hr_analytics_1"", ""element_id"": ""null"", ""related_page_ids"": []}, ""evidence"": ""The title 'Attrition is rising quietly' suggests a negative trend in user retention, but the body points ('Adoption grew', 'Support tickets fell') describe positive growth and stability",page
+part2_hr_analytics_2_G6_MARGIN_VIOLATION_48_0001__freeform,G6_MARGIN_VIOLATION,A,False,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_hr_analytics_2"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains only four short text lines with excessive white space, failing to utilize the canvas effectively and appearing under-dense rather than overcrowded, but in the cont",page
+part2_logistics_visibility_3_G6_MARGIN_VIOLATION_64_0002__freeform,G6_MARGIN_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_energy_forecasting_3_G6_MARGIN_VIOLATION_32_0007__freeform,G6_MARGIN_VIOLATION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_energy_forecasting_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'How GridCast models weather', but the body content lists project management tasks such",page
+part2_logistics_visibility_3_G6_MARGIN_VIOLATION_8_0002__freeform,G6_MARGIN_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_logistics_visibility_5_G6_MARGIN_VIOLATION_64_0004__freeform,G6_MARGIN_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_logistics_visibility_5_G6_MARGIN_VIOLATION_8_0004__freeform,G6_MARGIN_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_inventory_optimization_2_G6_MARGIN_VIOLATION_48_0006__freeform,G6_MARGIN_VIOLATION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_inventory_optimization_2"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide title 'StockIQ rebalances inventory nightly' describes a specific operational function, while the body content lists a 5-phase technical roadmap (stabilizing, replatfo",page
+part2_logistics_visibility_4_G6_MARGIN_VIOLATION_8_0003__freeform,G6_MARGIN_VIOLATION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_logistics_visibility_4"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'ShipEye impact on on-time delivery' implies a results or data slide, but the body content lists administrative action items (budget approval, assigning engineers, confi",page
+part2_logistics_visibility_2_G6_MARGIN_VIOLATION_8_0001__freeform,G6_MARGIN_VIOLATION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_logistics_visibility_2"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'Why visibility breaks down', which implies an explanation of problems or failure poi",page
+part2_logistics_visibility_2_G6_MARGIN_VIOLATION_64_0001__freeform,G6_MARGIN_VIOLATION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_logistics_visibility_2"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Why visibility breaks down' implies an analysis of problems or failure points. However,",page
+part2_logistics_visibility_4_G6_MARGIN_VIOLATION_64_0003__freeform,G6_MARGIN_VIOLATION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_logistics_visibility_4"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'ShipEye impact on on-time delivery' suggests a presentation of results or data analys",page
+part2_marketing_attribution_3_G6_MARGIN_VIOLATION_64_0007__freeform,G6_MARGIN_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_marketing_attribution_3_G6_MARGIN_VIOLATION_8_0007__freeform,G6_MARGIN_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_marketing_attribution_4_G6_MARGIN_VIOLATION_64_0008__freeform,G6_MARGIN_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_marketing_attribution_4_G6_MARGIN_VIOLATION_8_0008__freeform,G6_MARGIN_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_marketing_attribution_5_G6_MARGIN_VIOLATION_64_0009__freeform,G6_MARGIN_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_marketing_attribution_5_G6_MARGIN_VIOLATION_8_0009__freeform,G6_MARGIN_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_payments_modernization_1_G6_MARGIN_VIOLATION_80_0000__freeform,G6_MARGIN_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_marketing_attribution_1_G6_MARGIN_VIOLATION_64_0005__freeform,G6_MARGIN_VIOLATION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_marketing_attribution_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Spend is hard to attribute' suggests a discussion on financial attribution challenges,",page
+part2_payments_modernization_3_G6_MARGIN_VIOLATION_80_0002__freeform,G6_MARGIN_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_payments_modernization_4_G6_MARGIN_VIOLATION_80_0003__freeform,G6_MARGIN_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_marketing_attribution_1_G6_MARGIN_VIOLATION_8_0005__freeform,G6_MARGIN_VIOLATION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_marketing_attribution_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Spend is hard to attribute' suggests a discussion on financial tracking or marketing a",page
+part2_pricing_optimization_1_G6_MARGIN_VIOLATION_80_0005__freeform,G6_MARGIN_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_pricing_optimization_2_G6_MARGIN_VIOLATION_80_0006__freeform,G6_MARGIN_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_pricing_optimization_3_G6_MARGIN_VIOLATION_80_0007__freeform,G6_MARGIN_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_pricing_optimization_4_G6_MARGIN_VIOLATION_80_0008__freeform,G6_MARGIN_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_marketing_attribution_2_G6_MARGIN_VIOLATION_64_0006__freeform,G6_MARGIN_VIOLATION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_marketing_attribution_2"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'How Attrib models touchpoints' suggests a technical explanation of a modeling process, but",page
+part2_pricing_optimization_5_G6_MARGIN_VIOLATION_80_0009__freeform,G6_MARGIN_VIOLATION,A,False,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_marketing_attribution_2_G6_MARGIN_VIOLATION_8_0006__freeform,G6_MARGIN_VIOLATION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_marketing_attribution_2"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'How Attrib models touchpoints' suggests a technical explanation of a modeling process, but",page
+part2_retail_analytics_2_G6_MARGIN_VIOLATION_-16_0001__freeform,G6_MARGIN_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_retail_analytics_3_G6_MARGIN_VIOLATION_-16_0002__freeform,G6_MARGIN_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_retail_analytics_4_G6_MARGIN_VIOLATION_-16_0003__freeform,G6_MARGIN_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_retail_analytics_5_G6_MARGIN_VIOLATION_-16_0004__freeform,G6_MARGIN_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_security_program_1_G6_MARGIN_VIOLATION_-16_0005__freeform,G6_MARGIN_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_security_program_2_G6_MARGIN_VIOLATION_-16_0006__freeform,G6_MARGIN_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_security_program_4_G6_MARGIN_VIOLATION_-16_0008__freeform,G6_MARGIN_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_churn_prediction_1_G6_MARGIN_VIOLATION_0_0000__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_churn_prediction_2_G6_MARGIN_VIOLATION_0_0001__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_payments_modernization_2_G6_MARGIN_VIOLATION_80_0001__freeform,G6_MARGIN_VIOLATION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_payments_modernization_2"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'Gaps in the current stack', but the body content lists positive achievements and r",page
+part2_churn_prediction_3_G6_MARGIN_VIOLATION_0_0002__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_churn_prediction_4_G6_MARGIN_VIOLATION_0_0003__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_churn_prediction_5_G6_MARGIN_VIOLATION_0_0004__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_payments_modernization_5_G6_MARGIN_VIOLATION_80_0004__freeform,G6_MARGIN_VIOLATION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_payments_modernization_5"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'What PayCore needs to launch' implies a list of requirements or future actions. However, th",page
+part2_retail_analytics_1_G6_MARGIN_VIOLATION_-16_0000__freeform,G6_MARGIN_VIOLATION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_retail_analytics_1"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'Stores fly blind on stock' describes a problem or pain point, but the body content lists a technical implementation roadmap (Phase 1-5) for 'DemandSense' without explicit",page
+part2_security_program_3_G6_MARGIN_VIOLATION_-16_0007__freeform,G6_MARGIN_VIOLATION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_security_program_3"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'The ZeroTrust controls we deploy', but the body content lists administrative project m",page
+part2_clinical_triage_5_G6_MARGIN_VIOLATION_0_0009__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_security_program_5_G6_MARGIN_VIOLATION_-16_0009__freeform,G6_MARGIN_VIOLATION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_security_program_5"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'The investment we request' implies a financial ask or budget breakdown, but the body cont",page
+part2_clinical_triage_2_G6_MARGIN_VIOLATION_0_0006__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_clinical_triage_2"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'Why triage is the bottleneck' implies an explanation of a problem, but the body content lists a project timeline (Q1 foundation, Q2 workloads, Q3 migration) which does not e",page
+part2_clinical_triage_1_G6_MARGIN_VIOLATION_0_0005__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_clinical_triage_1"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'ER wait times keep rising' describes a problem or metric, but the body content lists a technical implementation roadmap (Phases 1-5) without explicitly connecting the phas",page
+part2_contract_review_4_G6_MARGIN_VIOLATION_16_0003__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_clinical_triage_3_G6_MARGIN_VIOLATION_0_0007__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_clinical_triage_3"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'TriageAI prioritizes acuity' suggests the slide should explain how the system prioritizes urgent cases. However, the body content lists deployment and monitoring strategie",page
+part2_clinical_triage_4_G6_MARGIN_VIOLATION_0_0008__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_clinical_triage_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'TriageAI impact on wait times' suggests a data-driven analysis or results summary. However, ",page
+part2_customer_support_ai_2_G6_MARGIN_VIOLATION_16_0006__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_contract_review_2_G6_MARGIN_VIOLATION_16_0001__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_contract_review_2"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'ClauseScan flags risky clauses' describes a feature or capability, but the body content lists administrative action items ('Approve budget', 'Assign engineers', 'Confirm win",page
+part2_customer_support_ai_3_G6_MARGIN_VIOLATION_16_0007__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_customer_support_ai_4_G6_MARGIN_VIOLATION_16_0008__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_contract_review_1_G6_MARGIN_VIOLATION_16_0000__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_contract_review_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Manual contract review is slow' describes a problem with legal processes, but the body conte",page
+part2_customer_support_ai_5_G6_MARGIN_VIOLATION_16_0009__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_contract_review_3_G6_MARGIN_VIOLATION_16_0002__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_contract_review_3"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide title is 'ClauseScan pilot accuracy', but the body content lists general benefits and adoption metrics ('reduces toil', 'teams adopt', 'payback') rather than specific data ",page
+part2_doc_search_1_G6_MARGIN_VIOLATION_32_0000__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_doc_search_2_G6_MARGIN_VIOLATION_32_0001__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_doc_search_3_G6_MARGIN_VIOLATION_32_0002__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_doc_search_5_G6_MARGIN_VIOLATION_32_0004__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_contract_review_5_G6_MARGIN_VIOLATION_16_0004__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_contract_review_5"", ""element_id"": ""null"", ""related_page_ids"": []}, ""evidence"": ""The slide title is 'Next steps for ClauseScan', but the body content lists past results and pilot outcomes (e.g., 'The pilot covered three regions', 'ClauseScan beat the baseline'), ",page
+part2_energy_forecasting_2_G6_MARGIN_VIOLATION_32_0006__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_energy_forecasting_4_G6_MARGIN_VIOLATION_32_0008__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_customer_support_ai_1_G6_MARGIN_VIOLATION_16_0005__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_customer_support_ai_1"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'Support queues keep growing' suggests a problem statement or negative trend, but the body text describes a successful pilot ('HelpBot beat the baseline', 'Results held",page
+part2_energy_forecasting_5_G6_MARGIN_VIOLATION_32_0009__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_energy_forecasting_1_G6_MARGIN_VIOLATION_32_0005__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_energy_forecasting_1"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'Demand spikes strain the grid' describes a problem or context, but the body content lists a project timeline (Q1 foundation, Q2 workloads, Q3 migration) with no connectio",page
+part2_hr_analytics_4_G6_MARGIN_VIOLATION_48_0003__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_hr_analytics_1_G6_MARGIN_VIOLATION_48_0000__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_hr_analytics_1"", ""element_id"": ""null"", ""related_page_ids"": []}, ""evidence"": ""The title 'Attrition is rising quietly' suggests a negative trend in user retention, but the body points ('Adoption grew', 'Support tickets fell') describe positive growth and efficienc",page
+part2_hr_analytics_5_G6_MARGIN_VIOLATION_48_0004__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_doc_search_4_G6_MARGIN_VIOLATION_32_0003__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_doc_search_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Impact FindFast drives on time saved' suggests a focus on efficiency metrics or time-saving resul",page
+part2_inventory_optimization_1_G6_MARGIN_VIOLATION_48_0005__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_inventory_optimization_2_G6_MARGIN_VIOLATION_48_0006__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_energy_forecasting_3_G6_MARGIN_VIOLATION_32_0007__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_energy_forecasting_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'How GridCast models weather', but the body content lists administrative project manage",page
+part2_inventory_optimization_4_G6_MARGIN_VIOLATION_48_0008__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_logistics_visibility_1_G6_MARGIN_VIOLATION_64_0000__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_inventory_optimization_5_G6_MARGIN_VIOLATION_48_0009__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_hr_analytics_3_G6_MARGIN_VIOLATION_48_0002__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_hr_analytics_3"", ""element_id"": ""null"", ""related_page_ids"": []}, ""evidence"": ""The title 'Actions PeoplePulse recommends' implies a list of recommendations or steps to take. However, the body content lists three factual statements or observations ('saturated at ",page
+part2_logistics_visibility_1_G6_MARGIN_VIOLATION_8_0000__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_hr_analytics_2_G6_MARGIN_VIOLATION_48_0001__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_hr_analytics_2"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'PeoplePulse surfaces early signals' describes a product capability, but the body content lists resour",page
+part2_logistics_visibility_3_G6_MARGIN_VIOLATION_64_0002__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_logistics_visibility_3_G6_MARGIN_VIOLATION_8_0002__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_logistics_visibility_5_G6_MARGIN_VIOLATION_64_0004__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_logistics_visibility_5_G6_MARGIN_VIOLATION_8_0004__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_inventory_optimization_3_G6_MARGIN_VIOLATION_48_0007__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_inventory_optimization_3"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canvas empty. This indicates the slide is under-populated and lacks sufficient cont",page
+part2_logistics_visibility_4_G6_MARGIN_VIOLATION_64_0003__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_logistics_visibility_4"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'ShipEye impact on on-time delivery' suggests a results or analysis slide, but the body content lists administrative action items (budget approval, assigning engineers, ",page
+part2_logistics_visibility_2_G6_MARGIN_VIOLATION_8_0001__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_logistics_visibility_2"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'Why visibility breaks down' suggests a problem analysis or root cause discussion, but the body content lists a project timeline ('Q1 foundation', 'Q2 first production',",page
+part2_logistics_visibility_2_G6_MARGIN_VIOLATION_64_0001__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_logistics_visibility_2"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Why visibility breaks down' suggests an analysis of problems or failure points. However",page
+part2_marketing_attribution_3_G6_MARGIN_VIOLATION_64_0007__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_logistics_visibility_4_G6_MARGIN_VIOLATION_8_0003__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_logistics_visibility_4"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'ShipEye impact on on-time delivery' suggests a presentation of results or data analys",page
+part2_marketing_attribution_3_G6_MARGIN_VIOLATION_8_0007__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_marketing_attribution_4_G6_MARGIN_VIOLATION_64_0008__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_marketing_attribution_4_G6_MARGIN_VIOLATION_8_0008__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_marketing_attribution_5_G6_MARGIN_VIOLATION_64_0009__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_marketing_attribution_5_G6_MARGIN_VIOLATION_8_0009__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_marketing_attribution_1_G6_MARGIN_VIOLATION_64_0005__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_marketing_attribution_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Spend is hard to attribute' suggests a discussion on financial attribution challenges,",page
+part2_payments_modernization_1_G6_MARGIN_VIOLATION_80_0000__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_payments_modernization_4_G6_MARGIN_VIOLATION_80_0003__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_payments_modernization_3_G6_MARGIN_VIOLATION_80_0002__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_marketing_attribution_2_G6_MARGIN_VIOLATION_8_0006__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_marketing_attribution_2"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'How Attrib models touchpoints' implies a technical explanation of a modeling process, but the body text lists business outcomes ('Adoption grew', 'handles most volume'",page
+part2_pricing_optimization_1_G6_MARGIN_VIOLATION_80_0005__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_marketing_attribution_1_G6_MARGIN_VIOLATION_8_0005__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_marketing_attribution_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Spend is hard to attribute' suggests a discussion on financial attribution challenges,",page
+part2_pricing_optimization_2_G6_MARGIN_VIOLATION_80_0006__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_pricing_optimization_3_G6_MARGIN_VIOLATION_80_0007__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_pricing_optimization_4_G6_MARGIN_VIOLATION_80_0008__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_marketing_attribution_2_G6_MARGIN_VIOLATION_64_0006__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_marketing_attribution_2"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'How Attrib models touchpoints' suggests a technical explanation of a modeling process, but",page
+part2_pricing_optimization_5_G6_MARGIN_VIOLATION_80_0009__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_retail_analytics_1_G6_MARGIN_VIOLATION_-16_0000__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_retail_analytics_2_G6_MARGIN_VIOLATION_-16_0001__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_retail_analytics_3_G6_MARGIN_VIOLATION_-16_0002__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_retail_analytics_4_G6_MARGIN_VIOLATION_-16_0003__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_retail_analytics_5_G6_MARGIN_VIOLATION_-16_0004__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_security_program_2_G6_MARGIN_VIOLATION_-16_0006__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_security_program_4_G6_MARGIN_VIOLATION_-16_0008__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_payments_modernization_2_G6_MARGIN_VIOLATION_80_0001__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_payments_modernization_2"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'Gaps in the current stack', but the body text lists positive pilot results ('PayCo",page
+part2_payments_modernization_5_G6_MARGIN_VIOLATION_80_0004__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_payments_modernization_5"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'What PayCore needs to launch' implies a list of requirements or future actions. However, th",page
+part2_security_program_1_G6_MARGIN_VIOLATION_-16_0005__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_security_program_1"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'Our exposure is growing fast' implies a problem or risk scenario, but the body content lists a positive implementation roadmap ('Q1 foundation', 'Q2 production', 'Q3 migrat",page
+part2_security_program_3_G6_MARGIN_VIOLATION_-16_0007__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_security_program_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'The ZeroTrust controls we deploy', but the body content lists project management tasks (",page
+part2_security_program_5_G6_MARGIN_VIOLATION_-16_0009__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_security_program_5"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'The investment we request' implies a financial ask or budget details, but the body content li",page

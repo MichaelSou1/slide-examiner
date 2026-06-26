@@ -1,0 +1,892 @@
+sample_id,defect,modality,is_clean,failure,has_defect,named_target,predicted_types,locator,confidence,other,raw,level
+g7_card_height_000,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+g7_card_height_006,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+g7_card_height_003,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+g7_card_height_005,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+g7_card_height_009,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+g7_card_height_011,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+g7_card_height_008,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+g7_card_height_007,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+g7_card_height_001,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+g7_card_height_010,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+g7_card_height_014,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+g7_card_height_004,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+g7_card_height_013,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+g7_card_height_012,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+g7_card_height_015,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+g7_card_height_016,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+g7_card_height_017,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+g7_card_height_018,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+g7_card_height_019,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+g7_card_height_020,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+g7_card_height_021,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+g7_card_height_022,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+g7_card_height_023,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+g7_card_height_024,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+g7_card_height_026,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+g7_card_height_027,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+g7_card_height_028,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+g7_card_height_029,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+g7_unbreakable_text_003,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+g7_unbreakable_text_002,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+g7_unbreakable_text_006,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+g7_card_height_002,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW"",""S4_DENSITY_RULE_VIOLATION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_002"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'Integration debt' overflows beyond the bounds of the box."",
+      ""fix_suggestion"": ""Adjust the font size or",page
+g7_unbreakable_text_000,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_000"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'https://portal.enterprise-customer.example.com/onboarding/2' overflows beyond the bounds of its box."",
+  ",page
+g7_unbreakable_text_001,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_001"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'https://portal.enterprise-customer.example.com/onboarding/' overflows beyond the bounds of its box."",
+   ",page
+g7_unbreakable_text_008,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+g7_unbreakable_text_005,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_005"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'https://portal.enterprise-customer.example.com/onboarding/2' overflows beyond the bounds of its box."",
+  ",page
+g7_unbreakable_text_004,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_004"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'Endpoint: arn:aws:iam::920183746551:role/acme-global-manufacturing-pr' overflows beyond the bounds of its",page
+g7_card_height_025,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW"",""S4_DENSITY_RULE_VIOLATION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_025"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'Integration debt' overflows beyond the bounds of the orange box."",
+      ""fix_suggestion"": ""Adjust the font ",page
+g7_unbreakable_text_013,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+g7_unbreakable_text_014,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+g7_unbreakable_text_015,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+g7_unbreakable_text_009,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_009"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'https://portal.enterprise-customer.example.com/onboarding/' overflows beyond the bounds of its box."",
+   ",page
+g7_unbreakable_text_007,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_007"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'Endpoint: C:\\Users\\enterprise\\Deployments\\2026\\Q3\\acme-global-manufacturing' overflows beyond the b",page
+g7_unbreakable_text_018,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+g7_unbreakable_text_011,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_011"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'Endpoint: C:\\Users\\enterprise\\Deployments\\2026\\Q3\\acme-global-manufacturing' overflows beyond the b",page
+g7_unbreakable_text_012,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_012"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'Endpoint: https://portal.enterprise-customer.example.com/onboarding/2' overflows beyond the bounds of its",page
+g7_unbreakable_text_020,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+g7_unbreakable_text_016,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_016"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'Endpoint: C:\\Users\\enterprise\\Deployments\\2026\\Q3\\acme-global-manufacturing' overflows beyond the b",page
+g7_unbreakable_text_023,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+g7_unbreakable_text_017,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_017"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'Endpoint: arn:aws:iam::920183746551:role/acme-global-manufacturing-pr' overflows the bounds of its box."",",page
+g7_unbreakable_text_019,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_019"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'Endpoint: C:\\Users\\enterprise\\Deployments\\2026\\Q3\\acme-global-manufacturing' overflows beyond the b",page
+g7_unbreakable_text_010,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW"",""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_010"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'Endpoint: arn:aws:iam::920183746551:role/acme-global-manufacturing-pr' overflows the bounds of its box."",",page
+g7_unbreakable_text_021,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_021"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'https://portal.enterprise-customer.example.com/onboarding/' overflows beyond the bounds of its box."",
+   ",page
+g7_unbreakable_text_022,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_022"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'https://portal.enterprise-customer.example.com/onboarding/' overflows beyond the bounds of its box."",
+   ",page
+g7_unbreakable_text_024,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_024"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'Endpoint: arn:aws:iam::920183746551:role/acme-global-manufacturing-pr' overflows the bounds of its box."",",page
+g7_unbreakable_text_026,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_026"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'Endpoint: C:\\Users\\enterprise\\Deployments\\2026\\Q3\\acme-global-manufacturing' overflows beyond the b",page
+g7_card_height_000__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+g7_unbreakable_text_027,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_027"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'registry.internal.acme-global.example/ml-platform/inference' overflows beyond the bounds of its box."",
+  ",page
+g7_card_height_001__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+g7_card_height_002__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+g7_card_height_003__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+g7_card_height_004__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+g7_unbreakable_text_029,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_029"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'Endpoint: C:\\Users\\enterprise\\Deployments\\2026\\Q3\\acme-global-manufacturing' overflows beyond the b",page
+g7_card_height_005__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+g7_card_height_006__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+g7_card_height_007__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+g7_card_height_008__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+g7_card_height_009__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+g7_card_height_010__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+g7_card_height_011__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+g7_card_height_013__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+g7_card_height_012__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+g7_card_height_014__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+g7_card_height_015__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+g7_card_height_017__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+g7_card_height_016__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+g7_card_height_018__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+g7_card_height_019__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+g7_card_height_020__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+g7_card_height_021__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+g7_card_height_022__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+g7_card_height_023__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+g7_card_height_024__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+g7_card_height_025__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+g7_unbreakable_text_025,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW"",""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_025"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'Endpoint: arn:aws:iam::920183746551:role/acme-global-manufacturing-pr' overflows the bounds of its box."",",page
+g7_card_height_026__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+g7_card_height_027__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+g7_card_height_028__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+g7_card_height_029__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+g7_unbreakable_text_028,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW"",""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_028"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'https://portal.enterprise-customer.example.com/onboarding/' overflows beyond the bounds of its box."",
+   ",page
+g7_unbreakable_text_003__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""G1_TEXT_OVERFLOW"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_unbreakable_text_003"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The text within the box exceeds the bounds of the box."", ""fix_suggestion"": ""Resize the box or shorten the text to fit within the box.""}]}",page
+g7_unbreakable_text_000__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_000"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text under 'Endpoint' overflows beyond the bounds of the box."",
+      ""fix_suggestion"": ""Adjust the text box si",page
+g7_unbreakable_text_001__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_001"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text under 'Endpoint' overflows beyond the bounds of the box."",
+      ""fix_suggestion"": ""Adjust the font size o",page
+g7_unbreakable_text_002__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_002"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the green box overflows beyond the bounds of the box."",
+      ""fix_suggestion"": ""Resize the text box or",page
+g7_unbreakable_text_005__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_005"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text under 'Endpoint' overflows beyond the bounds of the box."",
+      ""fix_suggestion"": ""Adjust the text box si",page
+g7_unbreakable_text_004__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_004"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text within the box exceeds the width of the box, causing overflow."",
+      ""fix_suggestion"": ""Adjust the width",page
+g7_unbreakable_text_006__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_006"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text under 'Endpoint:' spills beyond the bounds of the orange box."",
+      ""fix_suggestion"": ""Adjust the font s",page
+g7_unbreakable_text_008__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_008"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text within the box exceeds the width of the box, causing overflow."",
+      ""fix_suggestion"": ""Adjust the width",page
+g7_unbreakable_text_009__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_009"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text within the box exceeds the width of the box, causing overflow."",
+      ""fix_suggestion"": ""Adjust the width",page
+g7_unbreakable_text_010__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_010"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text under 'Endpoint' spills beyond the bounds of its box."",
+      ""fix_suggestion"": ""Adjust the text box size ",page
+g7_unbreakable_text_011__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_011"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the 'Endpoint' field overflows beyond the bounds of its box."",
+      ""fix_suggestion"": ""Resize the text",page
+g7_unbreakable_text_014__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+g7_unbreakable_text_012__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_012"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text under 'Endpoint' overflows beyond the bounds of the box."",
+      ""fix_suggestion"": ""Adjust the text box si",page
+g7_unbreakable_text_018__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+g7_unbreakable_text_007__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_007"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the box exceeds the width of the box."",
+      ""fix_suggestion"": ""Resize the box or adjust the text to f",page
+g7_unbreakable_text_021__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+g7_unbreakable_text_013__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_013"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text under 'Endpoint' spills beyond the bounds of its box."",
+      ""fix_suggestion"": ""Adjust the text box size ",page
+g7_unbreakable_text_015__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_015"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text under 'Endpoint' spills beyond the bounds of its box."",
+      ""fix_suggestion"": ""Adjust the text box size ",page
+g7_unbreakable_text_016__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_016"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text under 'Endpoint:' spills beyond the bounds of the box."",
+      ""fix_suggestion"": ""Adjust the text box size",page
+g7_unbreakable_text_017__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_017"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text under 'Endpoint' spills beyond the bounds of its box."",
+      ""fix_suggestion"": ""Adjust the text box size ",page
+g7_unbreakable_text_019__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_019"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the box exceeds the width of the box."",
+      ""fix_suggestion"": ""Resize the box or adjust the text to f",page
+g7_unbreakable_text_020__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_020"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text under 'Endpoint' spills beyond the bounds of its box."",
+      ""fix_suggestion"": ""Adjust the text box size ",page
+g7_unbreakable_text_022__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_022"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text under 'Endpoint' overflows beyond the bounds of the box."",
+      ""fix_suggestion"": ""Adjust the font size o",page
+g7_unbreakable_text_023__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_023"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text under 'Endpoint:' spills beyond the bounds of the box."",
+      ""fix_suggestion"": ""Adjust the text box size",page
+g7_unbreakable_text_024__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_024"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text under 'Endpoint:' spills beyond the bounds of the box."",
+      ""fix_suggestion"": ""Adjust the text box size",page
+g7_unbreakable_text_025__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_025"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text under 'Endpoint' spills beyond the bounds of its box."",
+      ""fix_suggestion"": ""Adjust the text box size ",page
+g7_unbreakable_text_026__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_026"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text under 'Endpoint' spills beyond the bounds of the box."",
+      ""fix_suggestion"": ""Adjust the text box size ",page
+g7_unbreakable_text_027__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_027"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text under 'Endpoint' spills beyond the bounds of its box."",
+      ""fix_suggestion"": ""Adjust the text box size ",page
+g7_unbreakable_text_028__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_028"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the box overflows beyond the bounds of the box."",
+      ""fix_suggestion"": ""Resize the box or adjust the",page
+g7_unbreakable_text_029__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_029"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the box exceeds the width of the box."",
+      ""fix_suggestion"": ""Resize the box or adjust the text to f",page

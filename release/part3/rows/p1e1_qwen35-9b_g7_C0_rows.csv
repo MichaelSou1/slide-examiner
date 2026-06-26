@@ -1,0 +1,877 @@
+sample_id,defect,modality,is_clean,failure,has_defect,named_target,predicted_types,locator,confidence,other,raw,level
+g7_card_height_001,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""minor"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_card_height_001"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The main slide title is 'Platform Architecture', but the body content is split into two distinct lists. The first list (inside the green box) matches the title, while the second list (outsid",page
+g7_card_height_010,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_010"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The main slide title is 'Solution Overview', but the body content inside the box also starts with 'Solution Overvie",page
+g7_card_height_004,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""minor"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_card_height_004"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The main slide title is 'Solution Overview', but the body content is split into two distinct sections: one inside a green box and one outside. The title does not accurately reflect the entir",page
+g7_card_height_011,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_011"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The main slide title is 'Risk Register', but the body content inside the box is also labeled 'Risk Register' redund",page
+g7_card_height_009,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_009"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'Risk Register', but the body content includes items outside the main box (Latency regressions, ",page
+g7_card_height_007,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_007"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The main slide title is 'Success Metrics', but the body content is split into two distinct sections: one inside a b",page
+g7_card_height_005,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_005"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'Implementation Roadmap', but the body content inside the box is also titled 'Implementation Roa",page
+g7_card_height_002,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_002"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The main slide title is 'Risk Register', but the body content includes items outside the green box (Latency regress",page
+g7_card_height_003,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_003"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'Q3 Go-to-Market Plan', but the body content inside the green box also starts with 'Q3 Go-to-",page
+g7_card_height_006,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_006"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'Platform Architecture', but the body content lists components that are not typically part of a ",page
+g7_card_height_008,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_008"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'Q3 Go-to-Market Plan', but the body content is split into two distinct sections: one inside ",page
+g7_card_height_000,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_000"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'Solution Overview', but the bulleted list inside the box also starts with 'Solution Overview",page
+g7_card_height_013,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""minor"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_card_height_013"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide title is 'Implementation Roadmap', but the body content lists 'Quarterly business review' as the final item, which is typically a recurring meeting rather than a step in an impleme",page
+g7_card_height_014,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_014"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'Platform Architecture', but the body content lists specific components (Ingestion service, F",page
+g7_card_height_020,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""minor"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_card_height_020"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide title is 'Implementation Roadmap', but the body content lists 'Quarterly business review' as the final item, which is typically a recurring activity rather than a step in an implem",page
+g7_card_height_019,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_019"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The main slide title is 'Solution Overview', but the body content inside the box also starts with 'Solution Overvie",page
+g7_card_height_012,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_012"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'Implementation Roadmap', but the body content inside the box is also titled 'Implementation Roa",page
+g7_card_height_016,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_016"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The main slide title is 'Success Metrics', but the body content is split into two distinct sections: one inside a b",page
+g7_card_height_023,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""minor"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_card_height_023"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide title is 'Implementation Roadmap', but the body content lists 'Quarterly business review' as the final item, which is typically a recurring activity rather than a step in an implem",page
+g7_card_height_017,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""minor"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_card_height_017"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The main slide title is 'Platform Architecture', but the body content is split into two distinct lists. The first list (inside the box) is titled 'Platform Architecture', while the second li",page
+g7_card_height_015,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_015"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'Success Metrics', but the body content inside the box is also titled 'Success Metrics', creatin",page
+g7_card_height_018,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_018"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'Q3 Go-to-Market Plan', but the body content is split into two distinct sections: one inside ",page
+g7_card_height_021,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_021"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'Success Metrics', but the body content inside the box is also titled 'Success Metrics', creatin",page
+g7_card_height_022,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_022"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The main slide title is 'Solution Overview', but the body content inside the box is also titled 'Solution Overview'",page
+g7_unbreakable_text_000,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""G1_TEXT_OVERFLOW"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_unbreakable_text_000"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The URL text at the end of the line is cut off, with the final character '2' missing from the visible content."", ""fix_suggestion"": ""Increase the width of the container or adjust the font siz",page
+g7_unbreakable_text_001,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""G1_TEXT_OVERFLOW"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_unbreakable_text_001"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The URL text at the end of the line is cut off, with the final character '2' missing from the visible content."", ""fix_suggestion"": ""Increase the width of the container or adjust the font siz",page
+g7_card_height_028,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""minor"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_card_height_028"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide title 'Q3 Go-to-Market Plan' is repeated inside the content box, which is redundant and creates a mismatch between the title and the body content structure."", ""fix_suggestion"": ""Re",page
+g7_card_height_027,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""minor"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_card_height_027"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The main slide title is 'Q3 Go-to-Market Plan', but the body content inside the green box also starts with 'Q3 Go-to-Market Plan' as a sub-header, which is redundant and creates a mismatch i",page
+g7_card_height_024,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_024"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'Implementation Roadmap', but the body content inside the box is also titled 'Implementation Roa",page
+g7_unbreakable_text_002,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_002"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'acme-global-manufact...' at the end of the Endpoint line is cut off and spills beyond the right edge of t",page
+g7_unbreakable_text_003,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""G1_TEXT_OVERFLOW"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_unbreakable_text_003"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The endpoint URL text 'registry.internal.acme-global.example/ml-platform/inference' is cut off at the right edge of the slide, indicating it overflows the visible area."", ""fix_suggestion"": """,page
+g7_card_height_025,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_025"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The main slide title is 'Risk Register', but the body content includes items outside the main box (Latency regressi",page
+g7_unbreakable_text_004,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""G1_TEXT_OVERFLOW"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_unbreakable_text_004"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The text 'acme-global-manufacturing-pr' at the end of the Endpoint line is cut off and spills beyond the right edge of the slide canvas."", ""fix_suggestion"": ""Shorten the role name or adjust ",page
+g7_card_height_026,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_026"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'Success Metrics', but the body content includes metrics that are not typically considered 'succ",page
+g7_unbreakable_text_005,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""G1_TEXT_OVERFLOW"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_unbreakable_text_005"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The URL text at the end of the line is cut off, with the final character '2' missing from the visible content."", ""fix_suggestion"": ""Increase the width of the container or adjust the font siz",page
+g7_card_height_029,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_029"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The main slide title is 'Success Metrics', but the body content inside the box is also titled 'Success Metrics', cr",page
+g7_unbreakable_text_007,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""G1_TEXT_OVERFLOW"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_unbreakable_text_007"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The text 'acme-global-manufac' at the end of the Endpoint line is cut off and spills beyond the right edge of the slide canvas."", ""fix_suggestion"": ""Shorten the file path or adjust the slide",page
+g7_unbreakable_text_008,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""G1_TEXT_OVERFLOW"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_unbreakable_text_008"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The text 'acme-global-manufacturing-pr' at the end of the Endpoint line is cut off and spills beyond the right edge of the slide canvas."", ""fix_suggestion"": ""Shorten the role name or adjust ",page
+g7_unbreakable_text_009,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""G1_TEXT_OVERFLOW"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_unbreakable_text_009"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The URL text at the end of the line is cut off, with the final character '2' missing from the visible content."", ""fix_suggestion"": ""Increase the width of the container or wrap the long URL t",page
+g7_unbreakable_text_006,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_006"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'acme-global-manufact...' at the end of the Endpoint path is cut off and spills beyond the right edge of t",page
+g7_unbreakable_text_010,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""G1_TEXT_OVERFLOW"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_unbreakable_text_010"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The text 'acme-global-manufacturing-pr' at the end of the Endpoint line is cut off and spills beyond the right edge of the slide canvas."", ""fix_suggestion"": ""Shorten the endpoint value or ad",page
+g7_unbreakable_text_012,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""G1_TEXT_OVERFLOW"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_unbreakable_text_012"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The URL text at the end of the line is cut off, with the final character '2' missing from the visible content."", ""fix_suggestion"": ""Increase the width of the text container or reduce the fon",page
+g7_unbreakable_text_013,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""G1_TEXT_OVERFLOW"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_unbreakable_text_013"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The text 'acme-global-manufacturing-pr' at the end of the Endpoint line is cut off and spills beyond the right edge of the slide canvas."", ""fix_suggestion"": ""Shorten the text or increase the",page
+g7_unbreakable_text_014,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""G1_TEXT_OVERFLOW"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_unbreakable_text_014"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The text 'acme-global-manufacturing-pr' at the end of the Endpoint value is cut off and spills beyond the right edge of the slide canvas."", ""fix_suggestion"": ""Shorten the role name or adjust",page
+g7_unbreakable_text_016,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""G1_TEXT_OVERFLOW"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_unbreakable_text_016"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The text 'acme-global-manufact...' at the end of the endpoint path is cut off and spills beyond the right edge of the slide canvas."", ""fix_suggestion"": ""Shorten the endpoint path or increase",page
+g7_unbreakable_text_017,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""G1_TEXT_OVERFLOW"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_unbreakable_text_017"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The text 'acme-global-manufacturing-pr' at the end of the Endpoint line is cut off and spills beyond the right edge of the slide canvas."", ""fix_suggestion"": ""Shorten the role name or adjust ",page
+g7_unbreakable_text_011,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_011"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'acme-global-manufac' at the end of the Endpoint line is cut off and spills beyond the right edge of the s",page
+g7_unbreakable_text_015,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_015"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The endpoint URL text 'registry.internal.acme-global.example/ml-platform/inference' is cut off at the right edge of",page
+g7_unbreakable_text_020,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""G1_TEXT_OVERFLOW"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_unbreakable_text_020"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The endpoint URL text 'registry.internal.acme-global.example/ml-platform/inference...' is cut off at the right edge of the slide, spilling beyond the visible canvas boundary."", ""fix_suggesti",page
+g7_unbreakable_text_021,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""G1_TEXT_OVERFLOW"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_unbreakable_text_021"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The URL text at the end of the line is cut off, with the final character '2' missing from the visible content."", ""fix_suggestion"": ""Increase the width of the text container or reduce the fon",page
+g7_unbreakable_text_022,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""G1_TEXT_OVERFLOW"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_unbreakable_text_022"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The URL text at the end of the line is cut off, with the final character '2' missing from the visible content."", ""fix_suggestion"": ""Increase the width of the text container or reduce the fon",page
+g7_unbreakable_text_019,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_019"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'acme-global-manufac' at the end of the Endpoint line is cut off and spills beyond the right edge of the s",page
+g7_unbreakable_text_018,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_018"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The endpoint URL text 'registry.internal.acme-global.example/ml-platform/inference...' is cut off at the right edge",page
+g7_unbreakable_text_024,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""G1_TEXT_OVERFLOW"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_unbreakable_text_024"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The text 'acme-global-manufacturing-pr' at the end of the Endpoint line is cut off and spills beyond the right edge of the slide canvas."", ""fix_suggestion"": ""Shorten the role name or adjust ",page
+g7_unbreakable_text_025,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""G1_TEXT_OVERFLOW"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_unbreakable_text_025"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The text 'acme-global-manufacturing-pr' at the end of the Endpoint line is cut off and spills beyond the right edge of the slide canvas."", ""fix_suggestion"": ""Shorten the endpoint value or ad",page
+g7_unbreakable_text_026,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""G1_TEXT_OVERFLOW"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_unbreakable_text_026"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The text 'acme-global-manufact...' at the end of the Endpoint line is cut off and spills beyond the right edge of the slide canvas."", ""fix_suggestion"": ""Shorten the file path or adjust the t",page
+g7_unbreakable_text_028,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""G1_TEXT_OVERFLOW"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_unbreakable_text_028"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The URL text at the end of the line is cut off, with the final character '2' missing from the visible content."", ""fix_suggestion"": ""Increase the width of the container or adjust the font siz",page
+g7_unbreakable_text_023,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_023"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'acme-global-manufac' at the end of the endpoint path is cut off and spills beyond the right edge of the s",page
+g7_unbreakable_text_027,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""G1_TEXT_OVERFLOW"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_unbreakable_text_027"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The endpoint URL text 'registry.internal.acme-global.example/ml-platform/inference' is cut off at the right edge of the slide, indicating it overflows the visible area."", ""fix_suggestion"": """,page
+g7_unbreakable_text_029,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_029"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'acme-global-manufac' at the end of the endpoint path is cut off and spills beyond the right edge of the s",page
+g7_card_height_001__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""minor"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_card_height_001"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The main slide title is 'Platform Architecture', but the body content inside the box also starts with 'Platform Architecture' as a header, which is redundant and creates a mismatch in struct",page
+g7_card_height_004__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""minor"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_card_height_004"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The main slide title is 'Solution Overview', but the body content inside the box also has a header 'Solution Overview' which is redundant and creates a mismatch in hierarchy/structure."", ""fi",page
+g7_card_height_006__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""minor"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_card_height_006"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The main slide title is 'Platform Architecture', but the body content inside the box also uses 'Platform Architecture' as a sub-header, which is redundant and creates a mismatch in hierarchy",page
+g7_card_height_005__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""minor"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_card_height_005"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The main slide title is 'Implementation Roadmap', but the body content inside the box also has the title 'Implementation Roadmap' as a header, which is redundant and creates a mismatch in hi",page
+g7_card_height_000__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_000"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'Solution Overview', but the body content inside the box also starts with 'Solution Overview' as",page
+g7_card_height_007__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_007"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The main slide title is 'Success Metrics', but the body content inside the box also has a title 'Success Metrics' w",page
+g7_card_height_002__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_002"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The main slide title is 'Risk Register', but the body content inside the box is also labeled 'Risk Register' redund",page
+g7_card_height_003__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_003"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The main slide title is 'Q3 Go-to-Market Plan', but the body content inside the box also has the title 'Q3 Go-to-Ma",page
+g7_card_height_008__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_008"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Q3 Go-to-Market Plan' is repeated inside the content box, which is redundant and creates a mismatc",page
+g7_card_height_010__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_010"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The main slide title is 'Solution Overview', but the body content inside the box also has a title 'Solution Overvie",page
+g7_card_height_009__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_009"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The main slide title is 'Risk Register', but the body content inside the box also has a header 'Risk Register' whic",page
+g7_card_height_013__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""minor"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_card_height_013"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The main slide title is 'Implementation Roadmap', but the body content inside the box also has a title 'Implementation Roadmap' which is redundant and creates a mismatch in hierarchy/structu",page
+g7_card_height_011__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_011"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The main slide title is 'Risk Register', but the body content also has a header 'Risk Register' inside the box, whi",page
+g7_card_height_012__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""minor"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_card_height_012"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The main slide title is 'Implementation Roadmap', but the body content inside the box also has the title 'Implementation Roadmap' as a header, which is redundant and creates a mismatch in hi",page
+g7_card_height_016__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""minor"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_card_height_016"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The main slide title is 'Success Metrics', but the body content inside the box also has a title 'Success Metrics' which is redundant and creates a mismatch in hierarchy/structure."", ""fix_sug",page
+g7_card_height_014__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""minor"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_card_height_014"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide title is 'Platform Architecture', but the body content inside the box also lists 'Platform Architecture' as a header, which is redundant and creates a mismatch in the intended hier",page
+g7_card_height_017__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""minor"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_card_height_017"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The main slide title is 'Platform Architecture', but the body content inside the box also starts with 'Platform Architecture' as a header, which is redundant and creates a mismatch in struct",page
+g7_card_height_015__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_015"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'Success Metrics', but the body content inside the box also has the title 'Success Metrics' at t",page
+g7_card_height_020__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""minor"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_card_height_020"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The main slide title is 'Implementation Roadmap', but the body content inside the box also has a title 'Implementation Roadmap' which is redundant and creates a mismatch in hierarchy/structu",page
+g7_card_height_021__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""minor"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_card_height_021"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The main slide title is 'Success Metrics', but the body content inside the box also has a header 'Success Metrics' which is redundant and creates a mismatch in hierarchy/structure."", ""fix_su",page
+g7_card_height_019__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_019"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The main slide title is 'Solution Overview', but the body content inside the box also has a title 'Solution Overvie",page
+g7_card_height_018__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_018"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Q3 Go-to-Market Plan' is repeated inside the content box, which is redundant and creates a mismatc",page
+g7_card_height_022__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_022"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The main slide title is 'Solution Overview', but the body content inside the box also starts with 'Solution Overvie",page
+g7_card_height_023__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""minor"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_card_height_023"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The main slide title is 'Implementation Roadmap', but the body content inside the box also has a title 'Implementation Roadmap' which is redundant and creates a mismatch in hierarchy/structu",page
+g7_card_height_026__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""minor"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_card_height_026"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The main slide title is 'Success Metrics', but the body content inside the box is also titled 'Success Metrics', creating a redundant and mismatched structure where the title and body header",page
+g7_card_height_024__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_024"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The main slide title is 'Implementation Roadmap', but the body content inside the box also uses 'Implementation Roa",page
+g7_card_height_029__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""minor"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_card_height_029"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The main slide title is 'Success Metrics', but the body content inside the box also has a header 'Success Metrics' which is redundant and creates a mismatch in hierarchy/structure."", ""fix_su",page
+g7_unbreakable_text_001__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""G1_TEXT_OVERFLOW"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_unbreakable_text_001"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The URL text in the body box overflows the right edge of the container, with the final characters 'elf-serve' cut off and not visible."", ""fix_suggestion"": ""Wrap the URL text to a new line ",page
+g7_card_height_025__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_025"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'Risk Register', but the body content also uses 'Risk Register' as a header inside the box, whic",page
+g7_card_height_027__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_027"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The main slide title is 'Q3 Go-to-Market Plan', but the body content inside the box also has the title 'Q3 Go-to-Ma",page
+g7_unbreakable_text_000__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""G1_TEXT_OVERFLOW"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_unbreakable_text_000"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The URL text in the body box overflows the right boundary of the container, with the last part 'elf-serve' appearing on a new line below the main URL line, indicating it was cut off or wra",page
+g7_card_height_028__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_028"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Q3 Go-to-Market Plan' is repeated inside the content box, which is redundant and creates a mismatc",page
+g7_unbreakable_text_002__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_002"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The file path text in the body box is broken across two lines with a line break in the middle of the word 'manufa",page
+g7_unbreakable_text_003__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_003"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The endpoint URL text in the body box is broken across multiple lines and appears to overflow the container's wid",page
+g7_unbreakable_text_004__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""G1_TEXT_OVERFLOW"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_unbreakable_text_004"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The text 'ng-prod-inference-gateway-cross-account-readonly-2026q3' in the Endpoint field is split across two lines, with the second line starting with 'ng-', indicating a line break within",page
+g7_unbreakable_text_005__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_005"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The URL text in the body box overflows the right boundary of the container, with 'elf-serve' appearing on a new lin",page
+g7_unbreakable_text_009__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""G1_TEXT_OVERFLOW"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_unbreakable_text_009"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The URL text in the body box overflows the container boundaries, specifically spilling over the right edge of the box."", ""fix_suggestion"": ""Wrap the long URL text to multiple lines within ",page
+g7_unbreakable_text_007__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""G1_TEXT_OVERFLOW"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_unbreakable_text_007"", ""element_id"": ""text_box"", ""related_page_ids"": []}, ""evidence"": ""The text 'nufacturing' in the file path is split across two lines with a line break in the middle of the word, causing it to overflow the intended single-line layout within the text ",page
+g7_unbreakable_text_006__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_006"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The file path text in the body box overflows the right boundary of the container, with the last part of the path ",page
+g7_unbreakable_text_010__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_unbreakable_text_010"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide title is 'Implementation Roadmap', but the body content displays an AWS IAM role ARN, which is a technical identifier and does not represent a roadmap or implementation pla",page
+g7_unbreakable_text_011__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_011"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The file path text in the body box overflows the right boundary of the container, with 'manufacturing' split acro",page
+g7_unbreakable_text_012__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_012"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The URL text in the body box overflows the right boundary of the container, with the last part 'elf-serve' appear",page
+g7_unbreakable_text_008__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_008"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'ng-prod-inference-gateway-cross-account-readonly-2026q3' in the Endpoint field is split across two line",page
+g7_unbreakable_text_014__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""G1_TEXT_OVERFLOW"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_unbreakable_text_014"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The 'Endpoint' value text is wrapped and continues onto the second line within the box, but the line break appears mid-word ('manufacturing' is split as 'manufacturi' on line 1 and 'ng' on",page
+g7_unbreakable_text_016__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""G1_TEXT_OVERFLOW"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_unbreakable_text_016"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The file path text in the body box overflows the right boundary of the container, with the last part of the filename ('ufacturing\\production\\...') cut off and not wrapping to a new line.",page
+g7_unbreakable_text_013__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_013"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'ng-prod-inference-gateway-cross-account-readonly-2026q3' in the Endpoint field is split across two line",page
+g7_unbreakable_text_015__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_015"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The endpoint URL text within the box is broken across multiple lines and appears to overflow the right boundary o",page
+g7_unbreakable_text_017__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""G1_TEXT_OVERFLOW"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_unbreakable_text_017"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The text 'ng-prod-inference-gateway-cross-account-readonly-2026q3' in the Endpoint value is split across two lines, with the second line starting with 'ng-', indicating a line break within",page
+g7_unbreakable_text_021__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""G1_TEXT_OVERFLOW"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_unbreakable_text_021"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The URL text in the body box overflows the right edge of the container, with 'elf-serve' appearing on a new line below the main URL line, indicating it was cut off or wrapped improperly wi",page
+g7_unbreakable_text_019__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_019"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The file path text in the body box is broken across two lines with a line break in the middle of the word 'manufa",page
+g7_unbreakable_text_020__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_020"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The endpoint URL text in the body box is broken across multiple lines and spills beyond the right boundary of the b",page
+g7_unbreakable_text_018__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_018"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The endpoint URL text within the box is broken across multiple lines and the final word 'containment' is split ('",page
+g7_unbreakable_text_022__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""G1_TEXT_OVERFLOW"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_unbreakable_text_022"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The URL text in the body box overflows the right boundary of the container, with 'elf-serve' appearing on a new line below the main URL line, indicating it was cut off or wrapped improperl",page
+g7_unbreakable_text_023__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_023"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the 'Endpoint' field is broken across two lines with a line break in the middle of the word 'manufact",page
+g7_unbreakable_text_026__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_unbreakable_text_026"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide title is 'Q3 Go-to-Market Plan', but the body content displays a file path for an 'acme-global-manufacturing' inference gateway config, which is completely unrelated to a go-",page
+g7_unbreakable_text_024__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_024"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'ng-prod-inference-gateway-cross-account-readonly-2026q3' in the Endpoint value is broken across two lin",page
+g7_unbreakable_text_027__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_027"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The endpoint URL text in the body box is broken across multiple lines and spills beyond the right boundary of the b",page
+g7_unbreakable_text_025__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_025"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'ng-prod-inference-gateway-cross-account-readonly-2026q3' in the Endpoint field is split across two line",page
+g7_unbreakable_text_028__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_028"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The URL text inside the box overflows the right boundary of the box, with 'elf-serve' appearing on a new line bel",page
+g7_unbreakable_text_029__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""G1_TEXT_OVERFLOW"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_unbreakable_text_029"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The text 'manufacturing' in the file path is split across two lines with a line break in the middle of the word, causing it to overflow the intended single-line layout within the box."", ""f",page

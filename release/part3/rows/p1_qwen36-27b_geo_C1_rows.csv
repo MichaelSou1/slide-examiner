@@ -1,0 +1,2921 @@
+sample_id,defect,modality,is_clean,failure,has_defect,named_target,predicted_types,locator,confidence,other,raw,stage2_raw,level
+part2_logistics_visibility_4_G1_TEXT_OVERFLOW_32_0043__template,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY""]",,,"[{""text"":""Title contains unreplaced placeholder text XXX"",""raw_type"":""OTHER""},{""text"":""Low-quality styling with thin gray borders"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Placeholder Text**
+*   **Location:** Top Title Bar.
+*   **Issue:** The title reads ""ShipEye impact on on-time delivery **XXX**"". The ""XXX"" is clearly a placeholder that was not replaced with actual data or a specific metric.
+
+**2. Excessive White Space (Poor Layout)**
+*   **Location:** The entire bottom half of the slide.
+*   **Issue:*","{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Title contains unreplaced placeholder text XXX""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Content clustered in top quarter leaving bottom empty""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator""",page
+part2_logistics_visibility_4_G1_TEXT_OVERFLOW_32_0043__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY""]",,,"[{""text"":""Title contains placeholder text XXX"",""raw_type"":""OTHER""},{""text"":""Non-standard bullet point formatting"",""raw_type"":""OTHER""},{""text"":""Excessive empty space on slide"",""raw_type"":""OTHER""},{""text"":""Repetitive wording in title text"",""raw_type"":""OTHER""},{""text"":""Missing logo, date, and context"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Placeholder Text in Title**
+*   **Where:** Top left, in the slide title.
+*   **Problem:** The title begins with ""XXX"". This is clearly a placeholder that was not replaced with the actual topic or date.
+
+**2. Misaligned Highlight Box**
+*   **Where:** Behind the title text.
+*   **Problem:** There is a light blue rectangular highlight box","{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Title contains placeholder text XXX""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Highlight box misaligned with title text""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Non-standard bullet point formattin",page
+part2_logistics_visibility_3_G1_TEXT_OVERFLOW_32_0042__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION""]",,,"[{""text"":""Title contains unreplaced placeholder text XXX"",""raw_type"":""OTHER""},{""text"":""Outdated serif font used for all text"",""raw_type"":""OTHER""},{""text"":""Bullet points lack visual hierarchy indicators"",""raw_type"":""OTHER""},{""text"":""Low contrast text on light blue background"",""raw_type"":""OTHER""},{""text"":""Slide lacks supporting diagrams or visuals"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Placeholder Text Left in Title**
+*   **Location:** Top left, in the main title.
+*   **Issue:** The text reads ""ShipEye tracks every leg **XXX**"". The ""XXX"" is clearly a placeholder that was not replaced with the intended content.
+
+**2. Excessive White Space (Poor Layout)**
+*   **Location:** The entire bottom half and right side of the ","{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Title contains unreplaced placeholder text XXX""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Content clustered top-left, leaving empty space""
+    },
+    {
+      ""type"": ""G5_BRAND_COLOR_VIOLATION"",
+      ""locator"":",page
+part2_logistics_visibility_4_G1_TEXT_OVERFLOW_4_0043__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,[],"Here is a breakdown of the issues visible on this slide:
+
+**1. Title Formatting and Content**
+*   **Location:** Top left header area.
+*   **Issue:** The title text (""ShipEye impact on on-time delivery XX"") is sitting inside a visible, light-blue rectangular box. This looks like a leftover text box border or a formatting error rather than a deliberate design choice.
+*   **Issue:** The title ends wi","{
+  ""defects"": [
+    {
+      ""type"": ""G5_BRAND_COLOR_VIOLATION"",
+      ""locator"": ""Title text box visible border""
+    },
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Title promises impact analysis, body lists admin tasks""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""lo",page
+part2_logistics_visibility_3_G1_TEXT_OVERFLOW_32_0042__template,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET""]",,,"[{""text"":""Title bar placeholder text XXX"",""raw_type"":""OTHER""},{""text"":""Excessive white space bottom half"",""raw_type"":""OTHER""},{""text"":""Low-quality background box styling"",""raw_type"":""OTHER""},{""text"":""Identical styling for sub-points"",""raw_type"":""OTHER""},{""text"":""Missing icons or diagrams"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Placeholder Text**
+*   **Location:** Top left corner of the title bar.
+*   **Issue:** The text begins with ""XXX"". This is clearly a placeholder or a typo that was not removed before rendering the slide.
+
+**2. Excessive White Space (Poor Layout)**
+*   **Location:** The entire bottom half of the slide.
+*   **Issue:** The content is clust","{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Title bar placeholder text XXX""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Excessive white space bottom half""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Sub-points indented relative to title""
+    },
+ ",page
+part2_logistics_visibility_3_G1_TEXT_OVERFLOW_4_0042__freeform,G1_TEXT_OVERFLOW,A,False,True,False,False,[],,,[],ERR Request timed out.,,page
+part2_logistics_visibility_3_G1_TEXT_OVERFLOW_4_0042__template,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY""]",,,"[{""text"":""Title contains placeholder text XX"",""raw_type"":""OTHER""},{""text"":""Inconsistent spacing between elements"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Placeholder Text in Title**
+*   **Location:** Top header bar.
+*   **Issue:** The text reads ""ShipEye tracks every leg **XX**"". The ""XX"" appears to be a placeholder or a typo that was not removed. It makes the headline look unfinished and unprofessional.
+
+**2. Excessive White Space (Poor Layout)**
+*   **Location:** The bottom two-thirds","{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Title contains placeholder text XX""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Content clustered top, excessive bottom whitespace""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Sub-points m",page
+part2_logistics_visibility_5_G1_TEXT_OVERFLOW_32_0044__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION""]",,,"[{""text"":""Outdated serif font choice for business"",""raw_type"":""OTHER""},{""text"":""Lack of visual hierarchy between title and body"",""raw_type"":""OTHER""},{""text"":""Unconventional text boxes instead of bullet points"",""raw_type"":""OTHER""},{""text"":""Missing supporting visuals like icons or charts"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Excessive White Space:** The slide is severely unbalanced. All content is crammed into the top 20% of the canvas, leaving the bottom 80% completely empty. This makes the slide look unfinished or like a draft.
+*   **Left Alignment:** The content is strictly left-aligned without any visual anchoring or ","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Content crammed into top 20% of canvas""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""Text too small for audience readability""
+    },
+    {
+      ""type"": ""G5_BRAND_COLOR_VIOLATION"",
+      ""loca",page
+part2_logistics_visibility_5_G1_TEXT_OVERFLOW_32_0044__template,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION""]",,,"[{""text"":""Placeholder text XXX in title"",""raw_type"":""OTHER""},{""text"":""Excessive white space at bottom"",""raw_type"":""OTHER""},{""text"":""Weak and vague bullet point copy"",""raw_type"":""OTHER""},{""text"":""Outdated serif font choice"",""raw_type"":""OTHER""},{""text"":""Low contrast text and background"",""raw_type"":""OTHER""},{""text"":""Lack of visual hierarchy"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Excessive White Space:** The bottom two-thirds of the slide are completely empty. The content is clustered at the top, making the slide look unfinished or like a draft.
+*   **Misaligned Widths:** The three content boxes (""ShipEye reduces..."", ""Teams adopt..."", ""Payback..."") are significantly narrower ","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Content boxes narrower than title box""
+    },
+    {
+      ""type"": ""G5_BRAND_COLOR_VIOLATION"",
+      ""locator"": ""Inconsistent blue shades in boxes""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Placeholder text XXX ",page
+part2_logistics_visibility_4_G1_TEXT_OVERFLOW_4_0043__template,G1_TEXT_OVERFLOW,A,False,True,False,False,[],,,[],ERR Request timed out.,,page
+part2_logistics_visibility_5_G1_TEXT_OVERFLOW_4_0044__template,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S5_MISSING_LOGIC_SECTION""]",,,"[{""text"":""Placeholder text 'XX' in title"",""raw_type"":""OTHER""},{""text"":""Excessive white space at bottom"",""raw_type"":""OTHER""},{""text"":""Weak and vague bullet point copy"",""raw_type"":""OTHER""},{""text"":""No visuals or icons present"",""raw_type"":""OTHER""},{""text"":""Outdated serif font choice"",""raw_type"":""OTHER""},{""text"":""Missing branding and logo"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Excessive White Space:** The bottom two-thirds of the slide are completely empty. The content is clustered at the top, making the slide look unfinished or like a draft.
+*   **Misaligned Widths:** The three content boxes below the title are significantly narrower than the title box itself. This creates","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Content boxes narrower than title box""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""Title and bullets have identical font sizes""
+    },
+    {
+      ""type"": ""G5_BRAND_COLOR_VIOLATION"",
+      ""l",page
+part2_marketing_attribution_1_G1_TEXT_OVERFLOW_32_0045__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]",,,"[{""text"":""Placeholder text 'XXX' in title"",""raw_type"":""OTHER""},{""text"":""Lack of visual hierarchy in bullets"",""raw_type"":""OTHER""},{""text"":""No icons or graphics for visual interest"",""raw_type"":""OTHER""},{""text"":""Outdated serif font choice"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Alignment Issues**
+*   **Title Alignment:** The title text (""XXX Spend is hard to attribute"") is not centered over its background highlight box. The text starts significantly to the left of the box's left edge, creating an unbalanced look.
+*   **List Alignment:** The three bullet-point boxes are aligned to the left margin bu","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Title text not centered in highlight box""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""List items misaligned with title box""
+    },
+    {
+      ""type"": ""G6_MARGIN_VIOLATION"",
+      ""locator"": ""Excess",page
+part2_logistics_visibility_5_G1_TEXT_OVERFLOW_4_0044__freeform,G1_TEXT_OVERFLOW,A,False,True,False,False,[],,,[],ERR Request timed out.,,page
+part2_marketing_attribution_1_G1_TEXT_OVERFLOW_32_0045__template,G1_TEXT_OVERFLOW,A,False,True,False,False,[],,,[],ERR Request timed out.,,page
+part2_marketing_attribution_2_G1_TEXT_OVERFLOW_32_0046__template,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY""]",,,"[{""text"":""Title contains placeholder text XXX"",""raw_type"":""OTHER""},{""text"":""Excessive white space at bottom"",""raw_type"":""OTHER""},{""text"":""Low-quality design elements and lack of visuals"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Placeholder Text in Title**
+*   **Where:** The main title at the top.
+*   **Issue:** The text reads ""How Attrib models touchpoints **XXX**"". The ""XXX"" is clearly a placeholder that was not replaced with actual content.
+
+**2. Excessive White Space (Poor Layout)**
+*   **Where:** The bottom two-thirds of the slide.
+*   **Issue:** The slid","{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Title contains placeholder text XXX""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Excessive white space at bottom""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Inconsistent text alignment in bullet points",page
+part2_marketing_attribution_2_G1_TEXT_OVERFLOW_32_0046__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,"[{""text"":""Placeholder text 'XXX' in title"",""raw_type"":""OTHER""},{""text"":""Excessive white space, poor layout"",""raw_type"":""OTHER""},{""text"":""Generic default styling, lacks hierarchy"",""raw_type"":""OTHER""},{""text"":""No data visualization for trends"",""raw_type"":""OTHER""},{""text"":""Outdated serif font, small size"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Placeholder Text in Title**
+*   **Where:** Top left, in the slide title.
+*   **Problem:** The title begins with ""XXX"". This is clearly a placeholder or a forgotten editing note that was not removed before rendering the slide.
+
+**2. Misleading Title vs. Content**
+*   **Where:** The relationship between the Title and the three bullet poi","{
+  ""defects"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Title suggests process, content lists outcomes""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Placeholder text 'XXX' in title""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Excessive white space, poor la",page
+part2_marketing_attribution_2_G1_TEXT_OVERFLOW_4_0046__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,"[{""text"":""Placeholder text XX in title"",""raw_type"":""OTHER""},{""text"":""Excessive white space, poor layout"",""raw_type"":""OTHER""},{""text"":""Low-quality visual styling of boxes"",""raw_type"":""OTHER""},{""text"":""Lack of data visualization for trends"",""raw_type"":""OTHER""},{""text"":""Vague copywriting lacking specific metrics"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Placeholder Text in Title**
+*   **Where:** Top left, in the main title.
+*   **Problem:** The title reads ""**XX** How Attrib models touchpoints."" The ""XX"" appears to be a placeholder for a slide number or section code that was never replaced.
+
+**2. Misleading Title vs. Content**
+*   **Where:** The relationship between the Title and the ","{
+  ""defects"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Title implies process, content lists outcomes""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Placeholder text XX in title""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Excessive white space, poor layout",page
+part2_marketing_attribution_1_G1_TEXT_OVERFLOW_4_0045__freeform,G1_TEXT_OVERFLOW,A,False,True,False,False,[],,,[],ERR Request timed out.,,page
+part2_marketing_attribution_1_G1_TEXT_OVERFLOW_4_0045__template,G1_TEXT_OVERFLOW,A,False,True,False,False,[],,,[],ERR Request timed out.,,page
+part2_marketing_attribution_3_G1_TEXT_OVERFLOW_32_0047__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""S4_DENSITY_RULE_VIOLATION""]",,,"[{""text"":""Title contains placeholder text XXX"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide, categorized by element:
+
+**1. Title Area (Top Left)**
+*   **Placeholder Text:** The title begins with ""XXX,"" which is clearly a placeholder or draft marker that was not removed.
+*   **Formatting:** The title text is sitting inside a visible light-blue rectangular box. This looks like a raw text box or a formatting artifact rather than a clea","{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Title contains placeholder text XXX""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Title sits awkwardly close to top edge""
+    },
+    {
+      ""type"": ""G5_BRAND_COLOR_VIOLATION"",
+      ""locator"": ""Monotonous light b",page
+part2_marketing_attribution_2_G1_TEXT_OVERFLOW_4_0046__template,G1_TEXT_OVERFLOW,A,False,True,False,False,[],,,[],ERR Request timed out.,,page
+part2_marketing_attribution_3_G1_TEXT_OVERFLOW_32_0047__template,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,"[{""text"":""Title contains placeholder text XXX"",""raw_type"":""OTHER""},{""text"":""Content clustered leaving excessive white space"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Placeholder Text in Title**
+*   **Where:** The top header bar.
+*   **Problem:** The text begins with ""XXX"". This is clearly a placeholder or a drafting error that was not removed before rendering the slide.
+
+**2. Inconsistent Vertical Spacing (Gaps)**
+*   **Where:** Between the three lower text boxes.
+*   **Problem:** The vertical gap ","{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Title contains placeholder text XXX""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Inconsistent vertical spacing between text boxes""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Content clustered leaving e",page
+part2_marketing_attribution_4_G1_TEXT_OVERFLOW_32_0048__template,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET""]",,,"[{""text"":""Title contains unreplaced placeholder text XXX"",""raw_type"":""OTHER""},{""text"":""Title text is inappropriately underlined"",""raw_type"":""OTHER""},{""text"":""Redundant borders and fills on bullet boxes"",""raw_type"":""OTHER""},{""text"":""Insufficient vertical spacing between content boxes"",""raw_type"":""OTHER""},{""text"":""Massive empty space in bottom half of slide"",""raw_type"":""OTHER""},{""text"":""Low contrast text color on light background"",""raw_type"":""OTHER""},{""text"":""Inappropriate serif font choice for presentation"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide, categorized by element:
+
+**1. Title Bar (Top Region)**
+*   **Placeholder Text:** The title begins with ""XXX,"" which is clearly a placeholder that was not replaced with actual content.
+*   **Formatting:** The text is underlined. In professional presentations, titles are typically bolded or sized up, not underlined (which is often associated w","{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Title contains unreplaced placeholder text XXX""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Title text is inappropriately underlined""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Title alignment mismatch",page
+part2_marketing_attribution_3_G1_TEXT_OVERFLOW_4_0047__freeform,G1_TEXT_OVERFLOW,A,False,True,False,False,[],,,[],ERR Request timed out.,,page
+part2_marketing_attribution_3_G1_TEXT_OVERFLOW_4_0047__template,G1_TEXT_OVERFLOW,A,False,True,False,False,[],,,[],ERR Request timed out.,,page
+part2_marketing_attribution_4_G1_TEXT_OVERFLOW_32_0048__freeform,G1_TEXT_OVERFLOW,A,False,True,False,False,[],,,[],ERR Request timed out.,,page
+part2_marketing_attribution_4_G1_TEXT_OVERFLOW_4_0048__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION""]",,,"[{""text"":""Serif font inappropriate for presentation"",""raw_type"":""OTHER""},{""text"":""Content clustered in top-left corner"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide, categorized by element:
+
+**1. Title Area (Top Left)**
+*   **Broken Highlighting:** The light blue background box behind the title text is misaligned. It only highlights the first half of the sentence (""Rolling Attrib out by channel""), leaving the ""XX"" hanging outside the box. This looks like a formatting error or a copy-paste mistake.
+*   **","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Title highlight box misaligned with text""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""Inconsistent bolding in title text""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""T",page
+part2_marketing_attribution_5_G1_TEXT_OVERFLOW_32_0049__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET""]",,,"[{""text"":""Title contains placeholder text XXX"",""raw_type"":""OTHER""},{""text"":""Poor canvas usage and excessive whitespace"",""raw_type"":""OTHER""},{""text"":""Lack of visual hierarchy in list"",""raw_type"":""OTHER""},{""text"":""Generic and unengaging overall design"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Placeholder Text in Title**
+*   **Location:** Top left title area.
+*   **Issue:** The text begins with ""XXX"", which is clearly a placeholder or a note to self that was left in the final design. It looks unprofessional and unfinished.
+
+**2. Inconsistent and Poor Spacing**
+*   **Location:** The list of five phases.
+*   **Issue:** The ver","{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Title contains placeholder text XXX""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Inconsistent vertical text alignment in boxes""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Poor canvas usage and excessiv",page
+part2_marketing_attribution_4_G1_TEXT_OVERFLOW_4_0048__template,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION""]",,,"[{""text"":""Placeholder text 'channel XX' not updated"",""raw_type"":""OTHER""},{""text"":""Outdated serif font used instead of sans-serif"",""raw_type"":""OTHER""},{""text"":""Weak visual hierarchy between title and body"",""raw_type"":""OTHER""},{""text"":""Massive empty space at bottom of slide"",""raw_type"":""OTHER""},{""text"":""Inconsistent vertical spacing between boxes"",""raw_type"":""OTHER""},{""text"":""No clear action or insight provided"",""raw_type"":""OTHER""},{""text"":""Ambiguous jargon-heavy title"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide, categorized by element:
+
+**1. Layout and Spacing**
+*   **Massive Empty Space:** The bottom 60–70% of the slide is completely blank. The content is crammed into the top section, making the slide look unfinished or like a draft.
+*   **Inconsistent Margins:** The top header box (""Rolling Attrib..."") starts further to the left than the three bul","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Header box left-aligned differently than body boxes""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""Body text too small relative to slide size""
+    },
+    {
+      ""type"": ""G5_BRAND_COLOR_VIOLATI",page
+part2_marketing_attribution_5_G1_TEXT_OVERFLOW_32_0049__template,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION""]",,,"[{""text"":""Title contains placeholder text XXX"",""raw_type"":""OTHER""},{""text"":""Lack of visual hierarchy and graphics"",""raw_type"":""OTHER""},{""text"":""Repetitive stacked boxes create visual clutter"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Placeholder Text in Title**
+*   **Where:** Top left, in the main title bar.
+*   **Problem:** The text reads ""XXX What Attrib needs next."" The ""XXX"" is clearly a placeholder or a typo that was not removed. It looks unprofessional and unfinished.
+
+**2. Excessive White Space (Poor Layout)**
+*   **Where:** The entire bottom half of the sli","{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Title contains placeholder text XXX""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Content clustered top, leaving bottom empty""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Lack of visual hierarchy and gra",page
+part2_marketing_attribution_5_G1_TEXT_OVERFLOW_4_0049__template,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION""]",,,"[{""text"":""Title area contains placeholder text XX"",""raw_type"":""OTHER""},{""text"":""Content clustered top, excessive bottom whitespace"",""raw_type"":""OTHER""},{""text"":""Lack of icons or graphics"",""raw_type"":""OTHER""},{""text"":""Repetitive stacked box design for list"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Placeholder Text**
+*   **Location:** Top left title area.
+*   **Issue:** The text begins with ""**XX**"". This is clearly a placeholder or a typo that was not removed before rendering. It looks unprofessional and unfinished.
+
+**2. Excessive White Space (Layout)**
+*   **Location:** The entire bottom half of the slide.
+*   **Issue:** The c","{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Title area contains placeholder text XX""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Content clustered top, excessive bottom whitespace""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""Title and list",page
+part2_marketing_attribution_5_G1_TEXT_OVERFLOW_4_0049__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]",,,[],"Here is a breakdown of the issues visible on this slide:
+
+**1. Title Formatting and Content**
+*   **Location:** Top left corner.
+*   **Issue:** The title text (""What Attrib needs next XX"") is split into two distinct styles. ""What Attrib needs next"" is inside a light blue box, while ""XX"" is outside of it in plain black text. This looks like a formatting error or an unfinished placeholder.
+*   **Iss","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Title text split across two styles""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""Title uses serif font unlike body""
+    },
+    {
+      ""type"": ""G6_MARGIN_VIOLATION"",
+      ""locator"": ""Text lac",page
+part2_network_observability_1_G1_TEXT_OVERFLOW_32_0050__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY""]",,,"[{""text"":""Title area contains placeholder text XXX"",""raw_type"":""OTHER""},{""text"":""Serif font used instead of sans-serif"",""raw_type"":""OTHER""},{""text"":""Visually heavy and distracting blue boxes"",""raw_type"":""OTHER""},{""text"":""Missing diagrams or visual aids"",""raw_type"":""OTHER""},{""text"":""Text placement awkward within wide boxes"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Placeholder Text**
+*   **Location:** Top left, in the title area.
+*   **Issue:** The text begins with ""XXX"". This is clearly a placeholder or draft marker that was not removed before rendering.
+
+**2. Inconsistent Font Styling**
+*   **Location:** The title (""Outages are hard to diagnose"") and the three bullet points.
+*   **Issue:** The ","{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Title area contains placeholder text XXX""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Serif font used instead of sans-serif""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Content clustered in top-left cor",page
+part2_network_observability_1_G1_TEXT_OVERFLOW_4_0050__template,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G7_RENDER_CONTAINMENT_OVERFLOW""]",,,"[{""text"":""Title contains leftover placeholder text XX"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Placeholder Text in Title**
+*   **Where:** Top header bar.
+*   **Issue:** The text reads ""Outages are hard to diagnose **XX**"". The ""XX"" appears to be leftover placeholder text or a typo that was not removed.
+
+**2. Broken Text Rendering (First Bullet)**
+*   **Where:** The first bullet point box (""TraceGrid integrates..."").
+*   **Issue:","{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Title contains leftover placeholder text XX""
+    },
+    {
+      ""type"": ""G7_RENDER_CONTAINMENT_OVERFLOW"",
+      ""locator"": ""First bullet text clipped at top""
+    },
+    {
+      ""type"": ""G7_RENDER_CONTAINMENT_OVERFLOW"",
+      ""locator"": ",page
+part2_network_observability_1_G1_TEXT_OVERFLOW_4_0050__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY""]",,,"[{""text"":""Title contains placeholder text XX"",""raw_type"":""OTHER""},{""text"":""Content clustered top-left, empty space"",""raw_type"":""OTHER""},{""text"":""Lack of visual hierarchy in points"",""raw_type"":""OTHER""},{""text"":""Boxes too wide for short text"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Placeholder Text in Title**
+*   **Where:** Top left, in the main title.
+*   **Problem:** The text reads ""**XX** Outages are hard to diagnose."" The ""XX"" appears to be a placeholder or a typo that was not replaced with a specific number or removed.
+
+**2. Misaligned Text Baselines**
+*   **Where:** Inside the three light blue rectangular b","{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Title contains placeholder text XX""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Text baselines misaligned in boxes""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Content clustered top-left, empty space""
+ ",page
+part2_network_observability_2_G1_TEXT_OVERFLOW_32_0051__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION""]",,,"[{""text"":""Title contains placeholder text XXX"",""raw_type"":""OTHER""},{""text"":""Unfinished wireframe aesthetic with harsh borders"",""raw_type"":""OTHER""},{""text"":""Poor use of space, top-heavy layout"",""raw_type"":""OTHER""},{""text"":""Lack of visual hierarchy in bullet points"",""raw_type"":""OTHER""},{""text"":""Dry text presentation lacking visual aids"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Placeholder Text in Title**
+*   **Location:** Top left title area.
+*   **Issue:** The title begins with ""XXX,"" which is clearly a placeholder or draft marker that was not removed. It makes the slide look unfinished and unprofessional.
+
+**2. Inconsistent and Poor Title Formatting**
+*   **Location:** The title text ""XXX One pane with Tra","{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Title contains placeholder text XXX""
+    },
+    {
+      ""type"": ""G5_BRAND_COLOR_VIOLATION"",
+      ""locator"": ""Inconsistent background highlighting in title""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Unfinished wireframe aest",page
+part2_network_observability_2_G1_TEXT_OVERFLOW_32_0051__template,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,"[{""text"":""Placeholder text XXX not replaced"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing**
+*   **Massive Empty Space:** The bottom 60–70% of the slide is completely empty white space. The content is clustered entirely in the top section, making the slide look unfinished or like a draft.
+*   **Inconsistent Indentation:** The three lower text boxes are indented to the right relative to the top header box. ","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Lower boxes indented relative to header""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Right edges of boxes misaligned""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""Heade",page
+part2_network_observability_2_G1_TEXT_OVERFLOW_4_0051__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S4_DENSITY_RULE_VIOLATION""]",,,"[{""text"":""Placeholder text artifact 'XX' in title"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Massive Empty Space:** The bottom 60–70% of the slide is completely empty white space. The content is clustered entirely in the top section, making the slide look unfinished or like a draft.
+*   **Misaligned Title:** The title ""XX One pane with TraceGrid"" is left-aligned but sits awkwardly above the c","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Title misaligned relative to content blocks""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""Title lacks visual hierarchy from body text""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+",page
+part2_network_observability_1_G1_TEXT_OVERFLOW_32_0050__template,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S4_DENSITY_RULE_VIOLATION""]",,,"[{""text"":""Placeholder text in title"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Placeholder Text Left in Title**
+*   **Location:** Top header bar.
+*   **Issue:** The text ""XXX"" at the end of the title (""Outages are hard to diagnose XXX"") appears to be a placeholder or a typo that was not removed. It looks unprofessional and unfinished.
+
+**2. Severe Vertical Spacing and Alignment Issues**
+*   **Location:** The thre","{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Placeholder text in title""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Inconsistent vertical spacing between boxes""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Uneven box widths breaking s",page
+part2_network_observability_3_G1_TEXT_OVERFLOW_32_0052__template,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S5_MISSING_LOGIC_SECTION""]",,,"[{""text"":""Title contains unreplaced placeholder text XXX"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Placeholder Text in Title**
+*   **Where:** The main title at the top.
+*   **Issue:** The text reads ""The TraceGrid architecture **XXX**"". The ""XXX"" is clearly a placeholder that was not replaced with the actual topic or subtitle.
+
+**2. Excessive White Space (Poor Layout)**
+*   **Where:** The bottom two-thirds of the slide.
+*   **Issue:","{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Title contains unreplaced placeholder text XXX""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Content boxes misaligned with title""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""Bullet p",page
+part2_network_observability_3_G1_TEXT_OVERFLOW_4_0052__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""S4_DENSITY_RULE_VIOLATION""]",,,"[{""text"":""Title uses outdated serif font"",""raw_type"":""OTHER""},{""text"":""Non-standard rectangular bullet points"",""raw_type"":""OTHER""},{""text"":""Generic text lacks specific data"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Title Formatting and Content**
+*   **Location:** Top left header area.
+*   **Issue:** The title ""The TraceGrid architecture XX"" is split into two visual styles. ""The TraceGrid architecture"" is inside a light blue box, while ""XX"" is outside of it in plain black text. This looks like a formatting error or a placeholder (""XX"") that was le","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Title 'XX' outside blue box""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Title uses outdated serif font""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Non-standard rectangular bullet points""
+    },
+    {
+",page
+part2_network_observability_3_G1_TEXT_OVERFLOW_4_0052__template,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION""]",,,"[{""text"":""Placeholder text XX in title"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Massive Empty Space:** The bottom 60–70% of the slide is completely empty white space. The content is clustered entirely at the top, making the slide look unfinished or like a draft.
+*   **Poor Alignment:** The three content boxes are left-aligned but do not span the width of the slide. They look like","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Content boxes clustered top-left""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Placeholder text XX in title""
+    },
+    {
+      ""type"": ""G5_BRAND_COLOR_VIOLATION"",
+      ""locator"": ""Title box blue shade mismatch""
+",page
+part2_network_observability_2_G1_TEXT_OVERFLOW_4_0051__template,G1_TEXT_OVERFLOW,A,False,True,False,False,[],,,[],ERR Request timed out.,,page
+part2_network_observability_3_G1_TEXT_OVERFLOW_32_0052__freeform,G1_TEXT_OVERFLOW,A,False,True,False,False,[],,,[],ERR Request timed out.,,page
+part2_network_observability_4_G1_TEXT_OVERFLOW_32_0053__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET""]",,,"[{""text"":""Top left title area placeholder text"",""raw_type"":""OTHER""},{""text"":""Low-effort design of light blue boxes"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Placeholder Text**
+*   **Location:** Top left title area.
+*   **Issue:** The text begins with ""XXX"". This is clearly a placeholder that was not replaced with the actual company or project name.
+
+**2. Layout and Spacing (The ""Empty Slide"" Problem)**
+*   **Location:** The entire slide canvas.
+*   **Issue:** The content is clustered entir","{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Top left title area placeholder text""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Content clustered in top 20% of slide""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Bullet points awkwardly",page
+part2_network_observability_4_G1_TEXT_OVERFLOW_32_0053__template,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]",,,"[{""text"":""Title area placeholder text"",""raw_type"":""OTHER""},{""text"":""Disconnected UI element boxes"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Placeholder Text**
+*   **Location:** Top left corner (Title area).
+*   **Issue:** The text begins with ""XXX"". This is clearly a placeholder that was not replaced with the actual company or project name.
+
+**2. Layout and Spacing (The ""Empty Slide"" Problem)**
+*   **Location:** The entire slide canvas.
+*   **Issue:** The content is cluste","{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Title area placeholder text""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Content clustered top 20%""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Disconnected UI element boxes""
+    },
+    {
+      ""type"": ",page
+part2_network_observability_5_G1_TEXT_OVERFLOW_4_0054__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G4_FONT_SIZE_INCONSISTENCY"",""S1_TITLE_BODY_MISMATCH""]",,,"[{""text"":""Placeholder text XX in slide title"",""raw_type"":""OTHER""},{""text"":""Excessive white space, top-heavy layout"",""raw_type"":""OTHER""},{""text"":""Low-quality generic design, lacks visual hierarchy"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Placeholder Text in Title**
+*   **Where:** Top left, in the slide title.
+*   **Problem:** The text reads ""**XX** The TraceGrid roadmap."" The ""XX"" appears to be a placeholder for a slide number or section code that was never replaced with actual content.
+
+**2. Misleading Title vs. Content**
+*   **Where:** The title (""The TraceGrid roadm","{
+  ""defects"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Title promises roadmap, body shows static status""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""Title serif font vs body sans-serif font""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"":",page
+part2_network_observability_4_G1_TEXT_OVERFLOW_4_0053__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S5_MISSING_LOGIC_SECTION""]",,,"[{""text"":""Placeholder text XX in title"",""raw_type"":""OTHER""},{""text"":""Outdated serif font choice"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing**
+*   **Massive Empty Space:** The bottom 60–70% of the slide is completely empty white space. The content is crammed into the top section, making the slide look unfinished or like a draft.
+*   **Title Alignment:** The title ""XX TraceGrid data governance"" is left-aligned but sits awkwardly close to the top edge witho","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Title sits awkwardly close to top edge""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Text boxes float on left side""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Placeholder text XX in title""",page
+part2_network_observability_5_G1_TEXT_OVERFLOW_32_0054__template,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S4_DENSITY_RULE_VIOLATION""]",,,"[{""text"":""Unreplaced placeholder text in title"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major Issues)**
+*   **Massive Empty Space:** The bottom 60–70% of the slide is completely empty white space. The content is crammed into the top section, making the slide look unfinished or like a draft.
+*   **Misaligned Indentation:** The three content boxes are indented significantly to the right compared to the t","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Content boxes misaligned with title bar""
+    },
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""locator"": ""Excessive empty space, low content density""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Unreplace",page
+part2_network_observability_5_G1_TEXT_OVERFLOW_32_0054__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""S1_TITLE_BODY_MISMATCH""]",,,"[{""text"":""Title contains placeholder text XXX"",""raw_type"":""OTHER""},{""text"":""Basic design lacks visual hierarchy"",""raw_type"":""OTHER""},{""text"":""Poor typography and spacing in boxes"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Placeholder Text in Title**
+*   **Location:** Top left, in the slide title.
+*   **Issue:** The title reads ""XXX The TraceGrid roadmap."" The ""XXX"" appears to be a placeholder or a typo that was not removed. It looks unprofessional and unfinished.
+
+**2. Excessive White Space (Poor Layout)**
+*   **Location:** The entire bottom two-thirds ","{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Title contains placeholder text XXX""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Content clustered top, leaving empty space""
+    },
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Title says roadm",page
+part2_network_observability_5_G1_TEXT_OVERFLOW_4_0054__template,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""S6_IMAGE_TEXT_CONTRADICTION""]",,,"[{""text"":""Title contains placeholder text XX"",""raw_type"":""OTHER""},{""text"":""Low-quality flat design of boxes"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Placeholder Text in Title**
+*   **Where:** Top left, in the main title bar.
+*   **Problem:** The text reads ""**XX** The TraceGrid roadmap."" The ""XX"" appears to be a placeholder for a slide number or section code that was never filled in or removed.
+
+**2. Excessive White Space (Poor Layout)**
+*   **Where:** The entire bottom half of the","{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Title contains placeholder text XX""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Content clustered in top quarter""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Low-quality flat design of boxes""
+    },
+   ",page
+part2_network_observability_4_G1_TEXT_OVERFLOW_4_0053__template,G1_TEXT_OVERFLOW,A,False,True,False,False,[],,,[],ERR Request timed out.,,page
+part2_ops_efficiency_1_G1_TEXT_OVERFLOW_32_0055__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G6_MARGIN_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,"[{""text"":""Title contains placeholder text XXX"",""raw_type"":""OTHER""},{""text"":""Excessive white space, content clustered at top"",""raw_type"":""OTHER""},{""text"":""Inconsistent styling and visual weight between title and body"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Placeholder Text in Title**
+*   **Location:** Top left title area.
+*   **Issue:** The title begins with ""XXX"". This is clearly a placeholder or a forgotten editing tag that was not removed before rendering the slide.
+
+**2. Content/Title Mismatch**
+*   **Location:** The entire slide content vs. the title.
+*   **Issue:** The title reads ","{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Title contains placeholder text XXX""
+    },
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Title implies financial analysis, body lists action items""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Excessive white",page
+part2_ops_efficiency_1_G1_TEXT_OVERFLOW_32_0055__template,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,"[{""text"":""Placeholder text XXX not replaced with actual data"",""raw_type"":""OTHER""},{""text"":""Excessive whitespace and poor content distribution"",""raw_type"":""OTHER""},{""text"":""Outdated serif font and rigid boxy aesthetic"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Content and Text Errors**
+*   **Placeholder Text:** The title contains the text **""XXX""** (""Where operating cost sits today XXX""). This is a clear placeholder that was not replaced with actual data.
+*   **Logical Disconnect:** The title refers to ""operating cost,"" but the three bullet points below it are project management tasks (appro","{
+  ""defects"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Title mentions operating cost, bullets list project tasks""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Content boxes indented relative to left-aligned title""
+    },
+    {
+      ""type"": ""G5_BRAND_",page
+part2_ops_efficiency_1_G1_TEXT_OVERFLOW_4_0055__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G5_BRAND_COLOR_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,"[{""text"":""Title contains placeholder text XX"",""raw_type"":""OTHER""},{""text"":""Excessive empty white space on slide"",""raw_type"":""OTHER""},{""text"":""Body text lacks visual hierarchy and icons"",""raw_type"":""OTHER""},{""text"":""Body text lacks specific actionable details"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Placeholder Text in Title**
+*   **Location:** Top left, in the slide title.
+*   **Issue:** The title begins with ""**XX**"". This is clearly a placeholder or a numbering error that was not removed before rendering. It looks unprofessional and unfinished.
+
+**2. Content/Title Mismatch**
+*   **Location:** The entire slide content vs. the ti","{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Title contains placeholder text XX""
+    },
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Title implies financial analysis, body lists tasks""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Excessive empty white s",page
+part2_ops_efficiency_2_G1_TEXT_OVERFLOW_32_0056__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH"",""S5_MISSING_LOGIC_SECTION""]",,,"[{""text"":""Title contains unreplaced placeholder text"",""raw_type"":""OTHER""},{""text"":""Excessive white space and poor layout"",""raw_type"":""OTHER""},{""text"":""Weak visual hierarchy in bullet points"",""raw_type"":""OTHER""},{""text"":""Generic default styling of elements"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Placeholder Text in Title**
+*   **Where:** Top left, in the main title area.
+*   **Problem:** The text reads ""XXX Root causes behind the cost."" The ""XXX"" is clearly a placeholder that was not replaced with actual content.
+
+**2. Logical Contradiction (Content vs. Title)**
+*   **Where:** The relationship between the title and the three b","{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Title contains unreplaced placeholder text""
+    },
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Title contradicts body content""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Excessive white space and poor layo",page
+part2_ops_efficiency_1_G1_TEXT_OVERFLOW_4_0055__template,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,"[{""text"":""Placeholder text 'XX' visible in title bar"",""raw_type"":""OTHER""},{""text"":""Lack of visual hierarchy for action items"",""raw_type"":""OTHER""},{""text"":""Excessive empty space at bottom of slide"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Content Mismatch (Title vs. Body)**
+*   **Where:** The entire slide structure.
+*   **Problem:** The title is ""XX Where operating cost sits today,"" which implies a financial analysis or data visualization. However, the body text lists project management action items (""Approve the phase 1 budget,"" ""Assign two platform engineers,"" ""Confir","{
+  ""defects"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Title implies financial analysis, body lists action items""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Placeholder text 'XX' visible in title bar""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locat",page
+part2_ops_efficiency_2_G1_TEXT_OVERFLOW_32_0056__template,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""S1_TITLE_BODY_MISMATCH""]",,,"[{""text"":""Title contains placeholder text XXX"",""raw_type"":""OTHER""},{""text"":""Inconsistent serif and sans-serif fonts"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Content and Logic Mismatch**
+*   **The Title:** The title reads ""XXX Root causes behind the cost.""
+*   **The Body Text:** The three bullet points (""RouteOpt reduces toil..."", ""Teams adopt RouteOpt daily"", ""Payback under twelve months"") describe **benefits** and **ROI**, not root causes of costs.
+*   **The Problem:** The content directl","{
+  ""defects"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Title claims root causes, body lists benefits""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Title contains placeholder text XXX""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Content clust",page
+part2_ops_efficiency_2_G1_TEXT_OVERFLOW_4_0056__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S1_TITLE_BODY_MISMATCH"",""S5_MISSING_LOGIC_SECTION""]",,,[],"Here is a breakdown of the issues visible on this slide:
+
+**1. Content and Logic Errors**
+*   **Title:** The title reads ""XX Root causes behind the cost."" The ""XX"" appears to be a placeholder that was not filled in. Furthermore, the content below (reducing toil, adoption, payback) describes *solutions* or *benefits*, not ""root causes."" The title contradicts the body content.
+*   **Body Text:** The","{
+  ""defects"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Title says root causes, body lists solutions""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Boxes clustered at top, bottom empty""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ",page
+part2_logistics_visibility_3_G1_TEXT_OVERFLOW_32_0042__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""S5_MISSING_LOGIC_SECTION""]",,,[],"Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Empty Space:** The bottom 60% of the slide is completely empty white space. The content is clustered entirely at the top, making the slide look unfinished or like a draft.
+*   **Alignment:** The three sub-points are indented relative to the main title, but there is no visual hierarchy (like bullet poi","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Sub-points indented without visual hierarchy""
+    },
+    {
+      ""type"": ""G5_BRAND_COLOR_VIOLATION"",
+      ""locator"": ""Light blue backgrounds look like placeholders""
+    },
+    {
+      ""type"": ""G5_BRAND_COLOR_VIOLATION"",
+ ",page
+part2_logistics_visibility_3_G1_TEXT_OVERFLOW_32_0042__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""S5_MISSING_LOGIC_SECTION""]",,,[],"Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Empty Space:** The bottom 60% of the slide is completely empty white space. The content is clustered entirely at the top, making the slide look unfinished or like a draft.
+*   **Alignment:** The three sub-points are indented relative to the main title, but there is no visual hierarchy (like bullet poi","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Sub-points indented without visual hierarchy""
+    },
+    {
+      ""type"": ""G5_BRAND_COLOR_VIOLATION"",
+      ""locator"": ""Light blue backgrounds look like placeholders""
+    },
+    {
+      ""type"": ""G5_BRAND_COLOR_VIOLATION"",
+ ",page
+part2_logistics_visibility_3_G1_TEXT_OVERFLOW_4_0042__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""S5_MISSING_LOGIC_SECTION""]",,,[],"Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Empty Space:** The bottom 60% of the slide is completely empty white space. The content is clustered entirely at the top, making the slide look unfinished or like a draft.
+*   **Alignment:** The three sub-points are indented relative to the main title, but there is no visual hierarchy (like bullet poi","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Sub-points indented without visual hierarchy""
+    },
+    {
+      ""type"": ""G5_BRAND_COLOR_VIOLATION"",
+      ""locator"": ""Light blue backgrounds look like placeholders""
+    },
+    {
+      ""type"": ""G5_BRAND_COLOR_VIOLATION"",
+ ",page
+part2_logistics_visibility_3_G1_TEXT_OVERFLOW_4_0042__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""S5_MISSING_LOGIC_SECTION""]",,,[],"Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Empty Space:** The bottom 60% of the slide is completely empty white space. The content is clustered entirely at the top, making the slide look unfinished or like a draft.
+*   **Alignment:** The three sub-points are indented relative to the main title, but there is no visual hierarchy (like bullet poi","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Sub-points indented without visual hierarchy""
+    },
+    {
+      ""type"": ""G5_BRAND_COLOR_VIOLATION"",
+      ""locator"": ""Light blue backgrounds look like placeholders""
+    },
+    {
+      ""type"": ""G5_BRAND_COLOR_VIOLATION"",
+ ",page
+part2_ops_efficiency_2_G1_TEXT_OVERFLOW_4_0056__template,G1_TEXT_OVERFLOW,A,False,True,False,False,[],,,[],ERR Request timed out.,,page
+part2_logistics_visibility_5_G1_TEXT_OVERFLOW_32_0044__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S4_DENSITY_RULE_VIOLATION""]",,,[],"Here is a review of the visible issues on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Massive Empty Space:** The bottom two-thirds of the slide is completely empty white space. The content is clustered in the top quarter, making the slide look unfinished or like a draft.
+*   **Misaligned Widths:** The title bar at the top extends almost the full width of the slide, while the three content","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Content boxes narrower than title bar""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""Title and body text similar sizes""
+    },
+    {
+      ""type"": ""G5_BRAND_COLOR_VIOLATION"",
+      ""locator"": """,page
+part2_logistics_visibility_4_G1_TEXT_OVERFLOW_32_0043__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,True,False,False,[],,,[],ERR Request timed out.,,page
+part2_logistics_visibility_5_G1_TEXT_OVERFLOW_32_0044__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION""]",,,"[{""text"":""Vague and unprofessional phrasing"",""raw_type"":""OTHER""},{""text"":""Lack of visual hierarchy"",""raw_type"":""OTHER""}]","Here is a review of the visible issues on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Massive Empty Space:** The bottom two-thirds of the slide is completely empty white space. The content is clustered in the top quarter, making the slide look unfinished or like a draft.
+*   **Misaligned Widths:** The title bar at the top extends almost the full width of the slide, while the three content","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Content boxes narrower than title bar""
+    },
+    {
+      ""type"": ""G5_BRAND_COLOR_VIOLATION"",
+      ""locator"": ""Washed out light blue boxes""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""Small ",page
+part2_logistics_visibility_4_G1_TEXT_OVERFLOW_32_0043__template__CLEAN,G1_TEXT_OVERFLOW,A,True,True,False,False,[],,,[],ERR Request timed out.,,page
+part2_logistics_visibility_4_G1_TEXT_OVERFLOW_4_0043__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,True,False,False,[],,,[],ERR Request timed out.,,page
+part2_logistics_visibility_4_G1_TEXT_OVERFLOW_4_0043__template__CLEAN,G1_TEXT_OVERFLOW,A,True,True,False,False,[],,,[],ERR Request timed out.,,page
+part2_marketing_attribution_1_G1_TEXT_OVERFLOW_32_0045__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION""]",,,[],"Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Massive Empty Space:** The bottom 60–70% of the slide is completely empty white space. The content is clustered entirely in the top section, making the slide look unfinished or like a draft.
+*   **Misaligned Widths:** The top header bar (""Spend is hard to attribute"") extends almost the full width of t","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Bars narrower than header bar""
+    },
+    {
+      ""type"": ""G5_BRAND_COLOR_VIOLATION"",
+      ""locator"": ""Faint borders and pale backgrounds""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""Mixed s",page
+part2_logistics_visibility_5_G1_TEXT_OVERFLOW_4_0044__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION""]",,,"[{""text"":""Vague and unprofessional phrasing"",""raw_type"":""OTHER""},{""text"":""Lack of visual hierarchy"",""raw_type"":""OTHER""}]","Here is a review of the visible issues on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Massive Empty Space:** The bottom two-thirds of the slide is completely empty white space. The content is clustered in the top quarter, making the slide look unfinished or like a draft.
+*   **Misaligned Widths:** The title bar at the top extends almost the full width of the slide, while the three content","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Content boxes narrower than title bar""
+    },
+    {
+      ""type"": ""G5_BRAND_COLOR_VIOLATION"",
+      ""locator"": ""Washed out light blue boxes""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""Small ",page
+part2_logistics_visibility_5_G1_TEXT_OVERFLOW_4_0044__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION""]",,,"[{""text"":""Vague and unprofessional phrasing"",""raw_type"":""OTHER""},{""text"":""Lack of visual hierarchy"",""raw_type"":""OTHER""}]","Here is a review of the visible issues on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Massive Empty Space:** The bottom two-thirds of the slide is completely empty white space. The content is clustered in the top quarter, making the slide look unfinished or like a draft.
+*   **Misaligned Widths:** The title bar at the top extends almost the full width of the slide, while the three content","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Content boxes narrower than title bar""
+    },
+    {
+      ""type"": ""G5_BRAND_COLOR_VIOLATION"",
+      ""locator"": ""Washed out light blue boxes""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""Small ",page
+part2_marketing_attribution_1_G1_TEXT_OVERFLOW_4_0045__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION""]",,,[],"Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Massive Empty Space:** The bottom 60–70% of the slide is completely empty white space. The content is clustered entirely in the top section, making the slide look unfinished or like a draft.
+*   **Misaligned Widths:** The top header bar (""Spend is hard to attribute"") extends almost the full width of t","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Bars narrower than header bar""
+    },
+    {
+      ""type"": ""G5_BRAND_COLOR_VIOLATION"",
+      ""locator"": ""Faint borders and pale backgrounds""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""Mixed s",page
+part2_marketing_attribution_1_G1_TEXT_OVERFLOW_32_0045__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION""]",,,"[{""text"":""Massive empty space at bottom"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Massive Empty Space:** The bottom 60–70% of the slide is completely empty white space. The content is clustered entirely in the top section, making the slide look unfinished or like a draft.
+*   **Misaligned Widths:** The top header bar (""Spend is hard to attribute"") extends almost the full width of t","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Bars misaligned with header bar edges""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""Mixed serif and sans-serif fonts""
+    },
+    {
+      ""type"": ""G5_BRAND_COLOR_VIOLATION"",
+      ""locator"": ""F",page
+part2_marketing_attribution_1_G1_TEXT_OVERFLOW_4_0045__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION""]",,,[],"Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Massive Empty Space:** The bottom 60–70% of the slide is completely empty white space. The content is clustered entirely in the top section, making the slide look unfinished or like a draft.
+*   **Misaligned Widths:** The top header bar (""Spend is hard to attribute"") extends almost the full width of t","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Bars narrower than header bar""
+    },
+    {
+      ""type"": ""G5_BRAND_COLOR_VIOLATION"",
+      ""locator"": ""Faint borders and pale backgrounds""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""Mixed s",page
+part2_marketing_attribution_2_G1_TEXT_OVERFLOW_32_0046__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,[],"Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Massive Empty Space:** The bottom 60–70% of the slide is completely empty white space. The content is crammed into the top section, making the slide look unfinished or like a draft.
+*   **Misaligned Widths:** The three content boxes (""Adoption grew..."", ""Attrib now..."", ""Support tickets..."") are signi","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Content boxes narrower than title box""
+    },
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Title promises model, body has text""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": """,page
+part2_marketing_attribution_2_G1_TEXT_OVERFLOW_32_0046__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,[],"Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Massive Empty Space:** The bottom 60–70% of the slide is completely empty white space. The content is crammed into the top section, making the slide look unfinished or like a draft.
+*   **Misaligned Widths:** The three content boxes (""Adoption grew..."", ""Attrib now..."", ""Support tickets..."") are signi","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Content boxes narrower than title box""
+    },
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Title promises model, body has text""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": """,page
+part2_marketing_attribution_2_G1_TEXT_OVERFLOW_4_0046__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,"[{""text"":""Excessive empty space at bottom"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Massive Empty Space:** The bottom 60–70% of the slide is completely empty white space. The content is crammed into the top section, making the slide look unfinished or like a draft.
+*   **Misaligned Widths:** The three content boxes (""Adoption grew..."", ""Attrib now..."", ""Support tickets..."") are signi","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Content boxes narrower than title box""
+    },
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Title promises model, body has text""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": """,page
+part2_marketing_attribution_2_G1_TEXT_OVERFLOW_4_0046__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""S1_TITLE_BODY_MISMATCH""]",,,"[{""text"":""Unpolished placeholder aesthetic and font choice"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Massive Empty Space:** The bottom 60–70% of the slide is completely empty white space. The content is crammed into the top section, making the slide look unfinished or like a draft.
+*   **Misaligned Widths:** The three content boxes (""Adoption grew..."", ""Attrib now..."", ""Support tickets..."") are signi","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Content boxes narrower than title box""
+    },
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Title promises model, body has text""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": """,page
+part2_marketing_attribution_3_G1_TEXT_OVERFLOW_32_0047__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""S5_MISSING_LOGIC_SECTION""]",,,"[{""text"":""Unnecessary decorative boxes clutter design"",""raw_type"":""OTHER""},{""text"":""Unclear acronym in title"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Empty Space:** The bottom 60% of the slide is completely empty white space. The content is clustered entirely at the top, making the slide look unfinished or like a draft.
+*   **Alignment:** The three sub-points are indented relative to the main title, but there is no visual hierarchy (like bullet poi","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Content clustered at top, bottom empty""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""Title and body text visually identical""
+    },
+    {
+      ""type"": ""S5_MISSING_LOGIC_SECTION"",
+      ""locat",page
+part2_marketing_attribution_3_G1_TEXT_OVERFLOW_32_0047__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S3_TERMINOLOGY_INCONSISTENCY""]",,,"[{""text"":""Inconsistent tone and voice in text"",""raw_type"":""OTHER""},{""text"":""Outdated serif font choice"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Empty Space:** The bottom 60% of the slide is completely empty white space. The content is clustered entirely at the top, making the slide look unfinished or like a draft.
+*   **Alignment:** The three sub-points are indented relative to the main title, but there is no visual hierarchy (like bullet poi","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Content clustered at top, bottom empty""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Sub-points indented without visual hierarchy""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""loca",page
+part2_marketing_attribution_3_G1_TEXT_OVERFLOW_4_0047__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""S3_TERMINOLOGY_INCONSISTENCY""]",,,"[{""text"":""Outdated serif font choice"",""raw_type"":""OTHER""},{""text"":""Cluttered boxed text styling"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Empty Space:** The bottom 60% of the slide is completely empty white space. The content is clustered entirely at the top, making the slide look unfinished or like a draft.
+*   **Alignment:** The three sub-points are indented relative to the main title, but there is no visual hierarchy (like bullet poi","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Content clustered at top, bottom empty""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""Title and body text visually identical""
+    },
+    {
+      ""type"": ""S3_TERMINOLOGY_INCONSISTENCY"",
+      ""l",page
+part2_marketing_attribution_4_G1_TEXT_OVERFLOW_32_0048__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S4_DENSITY_RULE_VIOLATION""]",,,[],"Here is a review of the slide based on professional presentation design standards:
+
+**1. Layout & Spacing (Major Issues)**
+*   **Massive Empty Space:** The bottom 60–70% of the slide is completely empty white space. This makes the slide look unfinished and wastes valuable real estate that could be used for data, charts, or supporting details.
+*   **Misaligned Indentation:** The three content boxes","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Content boxes misaligned with title start""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Inconsistent box widths relative to title""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""loca",page
+part2_marketing_attribution_4_G1_TEXT_OVERFLOW_32_0048__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S4_DENSITY_RULE_VIOLATION""]",,,[],"Here is a review of the slide based on professional presentation design standards:
+
+**1. Layout & Spacing (Major Issues)**
+*   **Massive Empty Space:** The bottom 60–70% of the slide is completely empty white space. This makes the slide look unfinished and wastes valuable real estate that could be used for data, charts, or supporting details.
+*   **Misaligned Indentation:** The three content boxes","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Content boxes misaligned with title start""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Inconsistent box widths relative to title""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""loca",page
+part2_marketing_attribution_3_G1_TEXT_OVERFLOW_4_0047__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S3_TERMINOLOGY_INCONSISTENCY"",""S4_DENSITY_RULE_VIOLATION""]",,,"[{""text"":""Inconsistent tone between active and passive voice"",""raw_type"":""OTHER""},{""text"":""Outdated serif font choice"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Empty Space:** The bottom 60% of the slide is completely empty white space. The content is clustered entirely at the top, making the slide look unfinished or like a draft.
+*   **Alignment:** The three sub-points are indented relative to the main title, but there is no visual hierarchy (like bullet poi","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Sub-points indented without visual hierarchy""
+    },
+    {
+      ""type"": ""G5_BRAND_COLOR_VIOLATION"",
+      ""locator"": ""Faint blue boxes add visual noise""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""loca",page
+part2_marketing_attribution_4_G1_TEXT_OVERFLOW_4_0048__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S4_DENSITY_RULE_VIOLATION""]",,,[],"Here is a review of the slide based on professional presentation design standards:
+
+**1. Layout & Spacing (Major Issues)**
+*   **Massive Empty Space:** The bottom 60–70% of the slide is completely empty white space. This makes the slide look unfinished and wastes valuable real estate that could be used for data, charts, or supporting details.
+*   **Misaligned Indentation:** The three content boxes","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Content boxes misaligned with title start""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Inconsistent box widths relative to title""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""loca",page
+part2_marketing_attribution_5_G1_TEXT_OVERFLOW_32_0049__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION""]",,,[],"Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Massive Empty Space:** The bottom half of the slide is completely empty. The content is clustered at the top, making the slide look unfinished or like a draft.
+*   **Poor Alignment:** The title bar and the five content bars are not aligned with the left margin of the slide. They appear to be floating ","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Title and content bars misaligned with left margin""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""Title font size same as body text""
+    },
+    {
+      ""type"": ""G5_BRAND_COLOR_VIOLATION"",
+     ",page
+part2_marketing_attribution_5_G1_TEXT_OVERFLOW_32_0049__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION""]",,,"[{""text"":""Massive empty space at bottom"",""raw_type"":""OTHER""},{""text"":""Excessive vertical gaps between items"",""raw_type"":""OTHER""},{""text"":""Inconsistent styling with repetitive boxes"",""raw_type"":""OTHER""},{""text"":""Lack of visual flow for phases"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Massive Empty Space:** The bottom half of the slide is completely empty. The content is clustered entirely in the top third, making the slide look unfinished or like a draft.
+*   **Excessive Vertical Gaps:** There is too much white space between the title bar and the first list item, and between each ","{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Massive empty space at bottom""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Excessive vertical gaps between items""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Inconsistent styling with repetitive boxes""
+    },
+    {
+ ",page
+part2_marketing_attribution_5_G1_TEXT_OVERFLOW_4_0049__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION""]",,,[],"Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Massive Empty Space:** The bottom half of the slide is completely empty. The content is clustered at the top, making the slide look unfinished or like a draft.
+*   **Poor Alignment:** The title bar and the five content bars are not aligned with the left margin of the slide. They appear to be floating ","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Title and content bars misaligned with left margin""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""Title font size same as body text""
+    },
+    {
+      ""type"": ""G5_BRAND_COLOR_VIOLATION"",
+     ",page
+part2_marketing_attribution_5_G1_TEXT_OVERFLOW_4_0049__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]",,,[],"Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Massive Empty Space:** The bottom half of the slide is completely empty. The content is clustered at the top, making the slide look unfinished or like a draft.
+*   **Poor Alignment:** The title bar and the five content bars are not aligned with the left margin of the slide. They appear to be floating ","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Title and content bars misaligned with left margin""
+    },
+    {
+      ""type"": ""G6_MARGIN_VIOLATION"",
+      ""locator"": ""Inconsistent spacing between title and content bars""
+    },
+    {
+      ""type"": ""G5_BRAND_COLOR_VIOLAT",page
+part2_network_observability_1_G1_TEXT_OVERFLOW_32_0050__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S4_DENSITY_RULE_VIOLATION"",""S5_MISSING_LOGIC_SECTION""]",,,[],"Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Massive Empty Space:** The bottom 60–70% of the slide is completely empty white space. The content is crammed into the top quarter, making the slide look unfinished or like a draft.
+*   **Misaligned Boxes:** The three lower boxes are indented significantly to the right compared to the top header box. ","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Lower boxes indented right relative to header""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""Body text too small and hard to read""
+    },
+    {
+      ""type"": ""G5_BRAND_COLOR_VIOLATION"",
+      """,page
+part2_marketing_attribution_4_G1_TEXT_OVERFLOW_4_0048__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S4_DENSITY_RULE_VIOLATION""]",,,[],"Here is a review of the slide based on professional presentation design standards:
+
+**1. Layout & Spacing (Major Issues)**
+*   **Massive Empty Space:** The bottom 60–70% of the slide is completely empty white space. This makes the slide look unfinished and wastes valuable real estate that could be used for data, charts, or supporting details.
+*   **Misaligned Indentation:** The three content boxes","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Content boxes misaligned with title start""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Inconsistent box widths relative to title""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""loca",page
+part2_network_observability_1_G1_TEXT_OVERFLOW_32_0050__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S4_DENSITY_RULE_VIOLATION"",""S5_MISSING_LOGIC_SECTION""]",,,[],"Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Massive Empty Space:** The bottom 60–70% of the slide is completely empty white space. The content is crammed into the top quarter, making the slide look unfinished or like a draft.
+*   **Misaligned Boxes:** The three lower boxes are indented significantly to the right compared to the top header box. ","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Lower boxes indented right relative to header""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""Body text too small and hard to read""
+    },
+    {
+      ""type"": ""G5_BRAND_COLOR_VIOLATION"",
+      """,page
+part2_network_observability_1_G1_TEXT_OVERFLOW_4_0050__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S4_DENSITY_RULE_VIOLATION""]",,,[],"Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Massive Empty Space:** The bottom 60–70% of the slide is completely empty white space. The content is crammed into the top quarter, making the slide look unfinished or like a draft.
+*   **Misaligned Boxes:** The three lower boxes are indented significantly to the right compared to the top header box. ","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Lower boxes indented right relative to header""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""Body text too small and hard to read""
+    },
+    {
+      ""type"": ""G5_BRAND_COLOR_VIOLATION"",
+      """,page
+part2_network_observability_1_G1_TEXT_OVERFLOW_4_0050__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S4_DENSITY_RULE_VIOLATION"",""S5_MISSING_LOGIC_SECTION""]",,,[],"Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Massive Empty Space:** The bottom 60–70% of the slide is completely empty white space. The content is crammed into the top quarter, making the slide look unfinished or like a draft.
+*   **Misaligned Boxes:** The three lower boxes are indented significantly to the right compared to the top header box. ","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Lower boxes indented right relative to header""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""Body text too small and hard to read""
+    },
+    {
+      ""type"": ""G5_BRAND_COLOR_VIOLATION"",
+      """,page
+part2_network_observability_2_G1_TEXT_OVERFLOW_32_0051__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""S4_DENSITY_RULE_VIOLATION""]",,,"[{""text"":""Missing logo, footer, and slide number"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Massive Empty Space:** The bottom 60–70% of the slide is completely empty white space. The content is clustered entirely at the top, making the slide look unfinished or like a draft.
+*   **Misaligned Widths:** The title box (""One pane with TraceGrid"") spans nearly the full width of the slide, while th","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Title and bullet boxes misaligned""
+    },
+    {
+      ""type"": ""G6_MARGIN_VIOLATION"",
+      ""locator"": ""Inconsistent left margins for elements""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""Bull",page
+part2_network_observability_2_G1_TEXT_OVERFLOW_32_0051__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""S4_DENSITY_RULE_VIOLATION""]",,,"[{""text"":""Missing logo, branding, and footer"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Massive Empty Space:** The bottom 60–70% of the slide is completely empty white space. The content is clustered entirely at the top, making the slide look unfinished or like a draft.
+*   **Misaligned Widths:** The title box (""One pane with TraceGrid"") spans nearly the full width of the slide, while th","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Title and bullet boxes misaligned""
+    },
+    {
+      ""type"": ""G6_MARGIN_VIOLATION"",
+      ""locator"": ""Inconsistent left margins for elements""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""Bull",page
+part2_network_observability_2_G1_TEXT_OVERFLOW_4_0051__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION""]",,,"[{""text"":""Mixed serif and sans-serif fonts"",""raw_type"":""OTHER""},{""text"":""Lack of visual hierarchy between title and body"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Massive Empty Space:** The bottom 60–70% of the slide is completely empty white space. The content is clustered entirely at the top, making the slide look unfinished or like a draft.
+*   **Misaligned Widths:** The title box (""One pane with TraceGrid"") spans nearly the full width of the slide. The thre","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Bullet boxes narrower than title box""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""Bullet text too small for projection""
+    },
+    {
+      ""type"": ""G5_BRAND_COLOR_VIOLATION"",
+      ""locator"":",page
+part2_network_observability_3_G1_TEXT_OVERFLOW_32_0052__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,[],"Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Massive Empty Space:** The bottom two-thirds of the slide is completely empty white space. The content is clustered entirely in the top section, making the slide look unfinished or like a draft.
+*   **Misaligned Widths:** The title bar at the top extends almost the full width of the slide, while the t","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Content boxes narrower than title bar""
+    },
+    {
+      ""type"": ""G5_BRAND_COLOR_VIOLATION"",
+      ""locator"": ""Pale blue boxes lack contrast""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""Titl",page
+part2_network_observability_2_G1_TEXT_OVERFLOW_4_0051__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,True,False,False,[],,,[],ERR Request timed out.,,page
+part2_network_observability_3_G1_TEXT_OVERFLOW_32_0052__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,[],"Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Massive Empty Space:** The bottom two-thirds of the slide is completely empty white space. The content is clustered entirely in the top section, making the slide look unfinished or like a draft.
+*   **Misaligned Widths:** The title bar at the top extends almost the full width of the slide, while the t","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Content boxes narrower than title bar""
+    },
+    {
+      ""type"": ""G5_BRAND_COLOR_VIOLATION"",
+      ""locator"": ""Pale blue boxes lack contrast""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""Titl",page
+part2_network_observability_3_G1_TEXT_OVERFLOW_4_0052__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,[],"Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Massive Empty Space:** The bottom two-thirds of the slide is completely empty white space. The content is clustered entirely in the top section, making the slide look unfinished or like a draft.
+*   **Misaligned Widths:** The title bar at the top extends almost the full width of the slide, while the t","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Content boxes narrower than title bar""
+    },
+    {
+      ""type"": ""G5_BRAND_COLOR_VIOLATION"",
+      ""locator"": ""Pale blue boxes lack contrast""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""Titl",page
+part2_network_observability_3_G1_TEXT_OVERFLOW_4_0052__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,[],"Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Massive Empty Space:** The bottom two-thirds of the slide is completely empty white space. The content is clustered entirely in the top section, making the slide look unfinished or like a draft.
+*   **Misaligned Widths:** The title bar at the top extends almost the full width of the slide, while the t","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Content boxes narrower than title bar""
+    },
+    {
+      ""type"": ""G5_BRAND_COLOR_VIOLATION"",
+      ""locator"": ""Pale blue boxes lack contrast""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""Titl",page
+part2_network_observability_5_G1_TEXT_OVERFLOW_32_0054__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,[],"Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Massive Empty Space:** The bottom 60–70% of the slide is completely empty white space. The content is crammed into the top section, making the slide look unfinished or like a draft.
+*   **Misaligned Widths:** The title bar (""The TraceGrid roadmap"") extends almost to the full width of the slide, while ","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Bullet points narrower than title bar""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""Small text size relative to slide""
+    },
+    {
+      ""type"": ""G5_BRAND_COLOR_VIOLATION"",
+      ""locator"": """,page
+part2_network_observability_4_G1_TEXT_OVERFLOW_4_0053__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION""]",,,"[{""text"":""Massive empty space at bottom of slide"",""raw_type"":""OTHER""},{""text"":""Spreadsheet aesthetic with thin gray borders"",""raw_type"":""OTHER""},{""text"":""Passive and weak language in text"",""raw_type"":""OTHER""},{""text"":""Lack of context or reasoning for requirements"",""raw_type"":""OTHER""},{""text"":""Outdated serif font choice"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Massive Empty Space:** The bottom 60–70% of the slide is completely empty white space. The content is crammed into the top section, making the slide look unfinished or like a draft.
+*   **Misaligned Widths:** The title box at the top spans nearly the full width of the slide. The three content boxes be","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Content boxes narrower and left-aligned vs title""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""Title and body text use same font size""
+    },
+    {
+      ""type"": ""G5_BRAND_COLOR_VIOLATION"",
+  ",page
+part2_network_observability_5_G1_TEXT_OVERFLOW_32_0054__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S4_DENSITY_RULE_VIOLATION""]",,,[],"Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Massive Empty Space:** The bottom 60–70% of the slide is completely empty white space. The content is crammed into the top section, making the slide look unfinished or like a draft.
+*   **Misaligned Widths:** The title bar (""The TraceGrid roadmap"") extends almost to the full width of the slide, while ","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Bullet points narrower than title bar""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""Title and body use different fonts""
+    },
+    {
+      ""type"": ""G5_BRAND_COLOR_VIOLATION"",
+      ""locator"": ",page
+part2_network_observability_4_G1_TEXT_OVERFLOW_32_0053__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,True,False,False,[],,,[],ERR Request timed out.,,page
+part2_network_observability_4_G1_TEXT_OVERFLOW_32_0053__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION""]",,,"[{""text"":""Excessive empty space at bottom"",""raw_type"":""OTHER""},{""text"":""Spreadsheet aesthetic with gray borders"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Massive Empty Space:** The bottom 60–70% of the slide is completely empty white space. The content is crammed into the top section, making the slide look unfinished or like a draft.
+*   **Misaligned Widths:** The title box at the top spans nearly the full width of the slide. The three content boxes be","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Content boxes narrower than title""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""Title and body same font size""
+    },
+    {
+      ""type"": ""G5_BRAND_COLOR_VIOLATION"",
+      ""locator"": ""Pale blu",page
+part2_network_observability_4_G1_TEXT_OVERFLOW_4_0053__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION""]",,,"[{""text"":""Excessive empty space at bottom"",""raw_type"":""OTHER""},{""text"":""Spreadsheet aesthetic with gray borders"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Massive Empty Space:** The bottom 60–70% of the slide is completely empty white space. The content is crammed into the top section, making the slide look unfinished or like a draft.
+*   **Misaligned Widths:** The title box at the top spans nearly the full width of the slide. The three content boxes be","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Content boxes narrower than title""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""Title and body same font size""
+    },
+    {
+      ""type"": ""G5_BRAND_COLOR_VIOLATION"",
+      ""locator"": ""Pale blu",page
+part2_network_observability_5_G1_TEXT_OVERFLOW_4_0054__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,[],"Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Massive Empty Space:** The bottom 60–70% of the slide is completely empty white space. The content is crammed into the top section, making the slide look unfinished or like a draft.
+*   **Misaligned Widths:** The title bar (""The TraceGrid roadmap"") extends almost to the full width of the slide, while ","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Bullet points narrower than title bar""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""Small text size relative to slide""
+    },
+    {
+      ""type"": ""G5_BRAND_COLOR_VIOLATION"",
+      ""locator"": """,page
+part2_network_observability_5_G1_TEXT_OVERFLOW_4_0054__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,[],"Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Massive Empty Space:** The bottom 60–70% of the slide is completely empty white space. The content is crammed into the top section, making the slide look unfinished or like a draft.
+*   **Misaligned Widths:** The title bar (""The TraceGrid roadmap"") extends almost to the full width of the slide, while ","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Bullet points narrower than title bar""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""Small text size relative to slide""
+    },
+    {
+      ""type"": ""G5_BRAND_COLOR_VIOLATION"",
+      ""locator"": """,page
+part2_ops_efficiency_1_G1_TEXT_OVERFLOW_32_0055__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S1_TITLE_BODY_MISMATCH"",""S4_DENSITY_RULE_VIOLATION"",""S5_MISSING_LOGIC_SECTION""]",,,[],"Here is a breakdown of the issues visible on this slide:
+
+**1. Severe Content/Context Mismatch**
+*   **Where:** The relationship between the Title and the Body text.
+*   **The Problem:** The title is ""Where operating cost sits today,"" which implies a financial analysis, chart, or data breakdown. However, the body text lists project management action items (""Approve the phase 1 budget,"" ""Assign two","{
+  ""defects"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Title and body text content mismatch""
+    },
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""locator"": ""Body text boxes stacked too closely""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Co",page
+part2_ops_efficiency_1_G1_TEXT_OVERFLOW_32_0055__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S1_TITLE_BODY_MISMATCH"",""S4_DENSITY_RULE_VIOLATION"",""S5_MISSING_LOGIC_SECTION""]",,,[],"Here is a breakdown of the issues visible on this slide:
+
+**1. Severe Content/Context Mismatch**
+*   **Where:** The relationship between the Title and the Body text.
+*   **The Problem:** The title is ""Where operating cost sits today,"" which implies a financial analysis, chart, or data breakdown. However, the body text lists project management action items (""Approve the phase 1 budget,"" ""Assign two","{
+  ""defects"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Title and body text content mismatch""
+    },
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""locator"": ""Body text boxes stacked too closely""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Co",page
+part2_ops_efficiency_1_G1_TEXT_OVERFLOW_4_0055__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S1_TITLE_BODY_MISMATCH"",""S4_DENSITY_RULE_VIOLATION"",""S5_MISSING_LOGIC_SECTION""]",,,[],"Here is a breakdown of the issues visible on this slide:
+
+**1. Severe Content/Context Mismatch**
+*   **Where:** The relationship between the Title and the Body text.
+*   **The Problem:** The title is ""Where operating cost sits today,"" which implies a financial analysis, chart, or data breakdown. However, the body text lists project management action items (""Approve the phase 1 budget,"" ""Assign two","{
+  ""defects"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Title and body text content mismatch""
+    },
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""locator"": ""Body text boxes stacked too closely""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Co",page
+part2_ops_efficiency_1_G1_TEXT_OVERFLOW_4_0055__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S1_TITLE_BODY_MISMATCH"",""S4_DENSITY_RULE_VIOLATION"",""S5_MISSING_LOGIC_SECTION""]",,,[],"Here is a breakdown of the issues visible on this slide:
+
+**1. Severe Content/Context Mismatch**
+*   **Where:** The relationship between the Title and the Body text.
+*   **The Problem:** The title is ""Where operating cost sits today,"" which implies a financial analysis, chart, or data breakdown. However, the body text lists project management action items (""Approve the phase 1 budget,"" ""Assign two","{
+  ""defects"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Title and body text content mismatch""
+    },
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""locator"": ""Body text boxes stacked too closely""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Co",page
+part2_field_service_3_S6_IMAGE_TEXT_CONTRADICTION_1_0042__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""S1_TITLE_BODY_MISMATCH""]",,,"[{""text"":""Massive empty space, poor visual hierarchy"",""raw_type"":""OTHER""},{""text"":""Outdated serif font choice"",""raw_type"":""OTHER""},{""text"":""Monotonous color scheme, flat design"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Massive Empty Space:** The bottom 60–70% of the slide is completely empty white space. The content is crammed into the top quarter, making the slide look unfinished or like a text document rather than a presentation slide.
+*   **Lack of Visual Hierarchy:** The title and the three bullet points are vis","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Boxes arbitrarily placed, no grid alignment""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""Title and bullets identical font size""
+    },
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""loc",page
+part2_ops_efficiency_2_G1_TEXT_OVERFLOW_32_0056__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,True,False,False,[],,,[],ERR Request timed out.,,page
+part2_field_service_3_S6_IMAGE_TEXT_CONTRADICTION_1_0042__template,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""S1_TITLE_BODY_MISMATCH""]",,,"[{""text"":""Massive empty space, poor visual hierarchy"",""raw_type"":""OTHER""},{""text"":""Outdated serif font choice"",""raw_type"":""OTHER""},{""text"":""Monotonous color scheme, flat design"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Massive Empty Space:** The bottom 60–70% of the slide is completely empty white space. The content is crammed into the top quarter, making the slide look unfinished or like a text document rather than a presentation slide.
+*   **Lack of Visual Hierarchy:** The title and the three bullet points are vis","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Boxes arbitrarily placed, no grid alignment""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""Title and bullets identical font size""
+    },
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""loc",page
+part2_ops_efficiency_2_G1_TEXT_OVERFLOW_32_0056__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,"[{""text"":""Excessive white space and unbalanced layout"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide, categorized by design, content, and layout:
+
+**1. Content & Logic Errors**
+*   **Title vs. Content Mismatch:** The title is ""Root causes behind the cost,"" but the bullet points describe *benefits* and *outcomes* (reducing toil, adoption rates, payback period). These are not ""root causes"" of a cost; they are value propositions or results. The","{
+  ""defects"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Title says root causes, content lists benefits""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Title and content boxes misaligned left edges""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",",page
+part2_ops_efficiency_2_G1_TEXT_OVERFLOW_4_0056__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,"[{""text"":""Excessive white space and poor visual hierarchy"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide, categorized by design, content, and layout:
+
+**1. Content & Logic Errors**
+*   **Title vs. Content Mismatch:** The title is ""Root causes behind the cost,"" but the bullet points describe *benefits* and *outcomes* (reducing toil, adoption rates, payback period). These are not ""root causes"" of a cost; they are value propositions or results. The","{
+  ""defects"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Title says root causes, content lists benefits""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Inconsistent spacing between title and bullets""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY""",page
+part2_ops_efficiency_2_G1_TEXT_OVERFLOW_4_0056__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,"[{""text"":""Excessive white space and poor visual hierarchy"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide, categorized by design, content, and layout:
+
+**1. Content & Logic Errors**
+*   **Title vs. Content Mismatch:** The title is ""Root causes behind the cost,"" but the bullet points describe *benefits* and *outcomes* (reducing toil, adoption rates, payback period). These are not ""root causes"" of a cost; they are value propositions or results. The","{
+  ""defects"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Title says root causes, content lists benefits""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Inconsistent spacing between title and bullets""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY""",page
+part2_field_service_4_S6_IMAGE_TEXT_CONTRADICTION_1_0043__template,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,[],"Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major Issues)**
+*   **Excessive White Space:** The bottom 60% of the slide is completely empty. The content is crammed into the top quarter, making the slide look unfinished or like a draft.
+*   **Misaligned Boxes:** The four text boxes are not aligned with each other. The top box (""Impact..."") starts further to the","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Top box misaligned with lower boxes""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""Title font size too small""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""Body tex",page
+part2_field_service_4_S6_IMAGE_TEXT_CONTRADICTION_1_0043__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S1_TITLE_BODY_MISMATCH"",""S4_DENSITY_RULE_VIOLATION""]",,,[],"Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major Issues)**
+*   **Excessive White Space:** The bottom 50% of the slide is completely empty. The content is clustered at the top, making the slide look unfinished or like a draft.
+*   **Misaligned Boxes:** The four text boxes are not aligned with each other. The top box (""Impact..."") starts further to the left th","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Top box misaligned left relative to others""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Content boxes indented relative to title box""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      """,page
+part2_field_service_5_S6_IMAGE_TEXT_CONTRADICTION_1_0044__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S5_MISSING_LOGIC_SECTION"",""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""Meta-commentary contradicts slide content purpose"",""quote"":""""}",,[],"Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Excessive White Space:** The bottom half of the slide is completely empty. The content is clustered in the top third, making the slide look unfinished or like a document rather than a presentation slide.
+*   **Vertical Gaps:** There are inconsistent and excessive gaps between the text boxes. The space","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Text boxes not aligned with margins""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""Title and body text sizes too similar""
+    },
+    {
+      ""type"": ""G5_BRAND_COLOR_VIOLATION"",
+      ""locator"":",page
+part2_field_service_5_S6_IMAGE_TEXT_CONTRADICTION_1_0044__template,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S5_MISSING_LOGIC_SECTION"",""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""Meta-commentary contradicts slide content purpose"",""quote"":""""}",,[],"Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Excessive White Space:** The bottom half of the slide is completely empty. The content is clustered in the top third, making the slide look unfinished or like a document rather than a presentation slide.
+*   **Vertical Gaps:** There are inconsistent and excessive gaps between the text boxes. The space","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Text boxes not aligned with margins""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""Title and body text sizes too similar""
+    },
+    {
+      ""type"": ""G5_BRAND_COLOR_VIOLATION"",
+      ""locator"":",page
+part2_fraud_detection_1_S6_IMAGE_TEXT_CONTRADICTION_1_0045__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S3_TERMINOLOGY_INCONSISTENCY"",""S5_MISSING_LOGIC_SECTION""]",,,[],"Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Excessive White Space:** The bottom 60% of the slide is completely empty. The content is crammed into the top quarter, making the slide look unfinished or like a draft.
+*   **Misaligned Widths:** The four text boxes have inconsistent widths. The top box (""Fraud losses..."") is wider than the three boxe","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Inconsistent text box widths and margins""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""Identical font size for headline and bullets""
+    },
+    {
+      ""type"": ""S5_MISSING_LOGIC_SECTION"",
+    ",page
+part2_fraud_detection_1_S6_IMAGE_TEXT_CONTRADICTION_1_0045__template,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""S2_NARRATIVE_ORDER_BREAK"",""S4_DENSITY_RULE_VIOLATION"",""S5_MISSING_LOGIC_SECTION""]",,,"[{""text"":""Internal meta-commentary text in content"",""raw_type"":""OTHER""},{""text"":""Lack of visual hierarchy and anchors"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Excessive White Space:** The bottom 60% of the slide is completely empty. The content is crammed into the top quarter, making the slide look unfinished or like a draft.
+*   **Misaligned Widths:** The four text boxes have inconsistent widths. The top box (""Fraud losses..."") is wider than the three boxe","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Inconsistent text box widths and margins""
+    },
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""locator"": ""Excessive white space, content crammed top""
+    },
+    {
+      ""type"": ""S5_MISSING_LOGIC_SECTION"",
+      """,page
+part2_fraud_detection_2_S6_IMAGE_TEXT_CONTRADICTION_1_0046__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S1_TITLE_BODY_MISMATCH"",""S5_MISSING_LOGIC_SECTION""]",,,[],"Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing**
+*   **Massive Empty Space:** The bottom 60–70% of the slide is completely blank. The content is crammed into the top section, creating a severe imbalance.
+*   **Misaligned Widths:** The four text boxes have inconsistent widths. The title box is wider than the three bullet-point boxes below it, creating a jagged lef","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Inconsistent text box widths and vertical spacing""
+    },
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Title claim contradicts negative bullet points""
+    },
+    {
+      ""type"": ""S5_MISSING_LOGIC_SECTION",page
+part2_fraud_detection_3_S6_IMAGE_TEXT_CONTRADICTION_1_0047__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""S1_TITLE_BODY_MISMATCH"",""S5_MISSING_LOGIC_SECTION""]",,,[],"Here is a breakdown of the issues visible on this slide, categorized by element:
+
+**1. Layout and Spacing (Major Issues)**
+*   **Excessive Vertical Spacing:** There is a massive amount of empty white space between the title and the first content box, and between each subsequent content box. The elements are not grouped together, making the slide look unfinished or like a wireframe.
+*   **Left Alig","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Excessive vertical spacing between elements""
+    },
+    {
+      ""type"": ""S5_MISSING_LOGIC_SECTION"",
+      ""locator"": ""Missing Phase 1 in sequence""
+    },
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Erro",page
+part2_fraud_detection_4_S6_IMAGE_TEXT_CONTRADICTION_1_0048__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S4_DENSITY_RULE_VIOLATION"",""S5_MISSING_LOGIC_SECTION""]",,,[],"Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Massive Empty Space:** The bottom 60–70% of the slide is completely empty white space. The content is crammed into the top quarter, making the slide look unfinished or like a placeholder.
+*   **Misaligned Boxes:** The four text boxes are not aligned to a consistent grid. The top box (""GuardML..."") is ","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Text boxes not aligned to consistent grid""
+    },
+    {
+      ""type"": ""G5_BRAND_COLOR_VIOLATION"",
+      ""locator"": ""Top box blue shade differs from others""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""lo",page
+part2_fraud_detection_4_S6_IMAGE_TEXT_CONTRADICTION_1_0048__template,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S4_DENSITY_RULE_VIOLATION"",""S5_MISSING_LOGIC_SECTION""]",,,[],"Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Massive Empty Space:** The bottom 60–70% of the slide is completely empty white space. The content is crammed into the top quarter, making the slide look unfinished or like a placeholder.
+*   **Misaligned Boxes:** The four text boxes are not aligned to a consistent grid. The top box (""GuardML..."") is ","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Text boxes not aligned to consistent grid""
+    },
+    {
+      ""type"": ""G5_BRAND_COLOR_VIOLATION"",
+      ""locator"": ""Top box blue shade differs from others""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""lo",page
+part2_fraud_detection_2_S6_IMAGE_TEXT_CONTRADICTION_1_0046__template,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,"[{""text"":""Placeholder editorial text left in slide"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing**
+*   **Massive Empty Space:** The bottom 60–70% of the slide is completely blank. The content is crammed into the top section, creating a severe imbalance.
+*   **Misaligned Widths:** The four text boxes have inconsistent widths. The title box is wider than the three bullet-point boxes below it, creating a jagged lef","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Inconsistent text box widths and vertical spacing""
+    },
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Title claim contradicts negative bullet points""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTEN",page
+part2_fraud_detection_5_S6_IMAGE_TEXT_CONTRADICTION_1_0049__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""S1_TITLE_BODY_MISMATCH""]",,,"[{""text"":""Title lacks bold emphasis"",""raw_type"":""OTHER""},{""text"":""Body text font size too small"",""raw_type"":""OTHER""},{""text"":""Disconnected boxes lack list structure"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Content and Tone (Text)**
+*   **Location:** The second text box (the first bullet point).
+*   **Problem:** The text reads: *""This slide describes a contradictory single-layer architecture, not three-layer architecture.""* This appears to be an internal note, a placeholder, or a critique left in by mistake. It is meta-commentary about th","{
+  ""defects"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Second text box contains meta-commentary""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Content clustered in top 25% of slide""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locato",page
+part2_fraud_detection_3_S6_IMAGE_TEXT_CONTRADICTION_1_0047__template,S6_IMAGE_TEXT_CONTRADICTION,A,False,True,False,False,[],,,[],ERR Request timed out.,,page
+part2_fraud_detection_5_S6_IMAGE_TEXT_CONTRADICTION_1_0049__template,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""S1_TITLE_BODY_MISMATCH""]",,,"[{""text"":""List items are separate boxes instead of single container"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Content and Tone (Text)**
+*   **Location:** The second text box (the first bullet point).
+*   **Problem:** The text reads: *""This slide describes a contradictory single-layer architecture, not three-layer architecture.""* This appears to be an internal note, a placeholder, or a critique left in by mistake. It is meta-commentary about th","{
+  ""defects"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Text box contains meta-commentary about slide""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Content clustered in top 25% leaving bottom empty""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+   ",page
+part2_hr_analytics_1_S6_IMAGE_TEXT_CONTRADICTION_1_0050__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S1_TITLE_BODY_MISMATCH"",""S5_MISSING_LOGIC_SECTION""]",,,[],"Here is a breakdown of the issues visible on this slide:
+
+**1. Content and Logic Errors**
+*   **The Second Bullet Point:** The text ""This slide describes a contradictory single-layer architecture, not three-layer architecture"" appears to be a meta-commentary or a placeholder note left by a designer. It does not fit the context of the other points (which are about business metrics like attrition an","{
+  ""defects"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Title does not match body content""
+    },
+    {
+      ""type"": ""S5_MISSING_LOGIC_SECTION"",
+      ""locator"": ""Missing data visualization for quantitative claims""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+  ",page
+part2_hr_analytics_1_S6_IMAGE_TEXT_CONTRADICTION_1_0050__template,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""S1_TITLE_BODY_MISMATCH"",""S5_MISSING_LOGIC_SECTION""]",,,"[{""text"":""Outdated serif font choice"",""raw_type"":""OTHER""},{""text"":""Lack of visual hierarchy"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Content and Logic Errors**
+*   **The Second Bullet Point:** The text ""This slide describes a contradictory single-layer architecture, not three-layer architecture"" appears to be a meta-commentary or a placeholder note left by a designer. It does not fit the context of the other points (which are about business metrics like attrition an","{
+  ""defects"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Title does not match body content""
+    },
+    {
+      ""type"": ""S5_MISSING_LOGIC_SECTION"",
+      ""locator"": ""Irrelevant meta-commentary breaks logical flow""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locato",page
+part2_hr_analytics_2_S6_IMAGE_TEXT_CONTRADICTION_1_0051__template,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S1_TITLE_BODY_MISMATCH"",""S4_DENSITY_RULE_VIOLATION""]",,,"[{""text"":""Outdated serif font choice"",""raw_type"":""OTHER""}]","Here is a review of the visible issues on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Massive Empty Space:** The bottom 60–70% of the slide is completely empty white space. The content is crammed into the top quarter, making the slide look unfinished or like a text document rather than a presentation slide.
+*   **Lack of Hierarchy:** The title and the three bullet points are visually iden","{
+  ""defects"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""locator"": ""Massive empty space, content crammed top""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""Title and bullets identical font size""
+    },
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      """,page
+part2_hr_analytics_3_S6_IMAGE_TEXT_CONTRADICTION_1_0052__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,"[{""text"":""Serif font inconsistent with modern standards"",""raw_type"":""OTHER""},{""text"":""Excessive empty space at bottom"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Massive Empty Space:** The bottom 60–70% of the slide is completely empty white space. The content is crammed into the top section, making the slide look unfinished or like a draft.
+*   **Misaligned Widths:** The title bar at the top extends almost the full width of the slide, while the three content ","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Content boxes narrower than title bar""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""Title lacks size differentiation from body""
+    },
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""loca",page
+part2_hr_analytics_3_S6_IMAGE_TEXT_CONTRADICTION_1_0052__template,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,"[{""text"":""Serif font inconsistent with modern standards"",""raw_type"":""OTHER""},{""text"":""Excessive empty space at bottom"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Massive Empty Space:** The bottom 60–70% of the slide is completely empty white space. The content is crammed into the top section, making the slide look unfinished or like a draft.
+*   **Misaligned Widths:** The title bar at the top extends almost the full width of the slide, while the three content ","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Content boxes narrower than title bar""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""Title lacks size differentiation from body""
+    },
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""loca",page
+part2_hr_analytics_4_S6_IMAGE_TEXT_CONTRADICTION_1_0053__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""S1_TITLE_BODY_MISMATCH"",""S5_MISSING_LOGIC_SECTION""]",,,"[{""text"":""Low contrast text on light blue background"",""raw_type"":""OTHER""},{""text"":""Placeholder meta-comment left in bullet point"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Content and Logic Errors**
+*   **Title vs. Content Mismatch:** The title is ""Impact PeoplePulse can drive,"" but the bullet points describe a technical project plan (e.g., ""Phase 2 replatforms the data tier""). These are actions, not impacts or outcomes.
+*   **Contradictory Text:** The first bullet point reads: ""This slide describes a co","{
+  ""defects"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Title describes impact, bullets describe technical plan""
+    },
+    {
+      ""type"": ""S5_MISSING_LOGIC_SECTION"",
+      ""locator"": ""Phase 1 is missing from the list""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+     ",page
+part2_hr_analytics_4_S6_IMAGE_TEXT_CONTRADICTION_1_0053__template,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""S1_TITLE_BODY_MISMATCH"",""S5_MISSING_LOGIC_SECTION""]",,,"[{""text"":""Low contrast text on light blue background"",""raw_type"":""OTHER""},{""text"":""Placeholder meta-comment left in bullet point"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Content and Logic Errors**
+*   **Title vs. Content Mismatch:** The title is ""Impact PeoplePulse can drive,"" but the bullet points describe a technical project plan (e.g., ""Phase 2 replatforms the data tier""). These are actions, not impacts or outcomes.
+*   **Contradictory Text:** The first bullet point reads: ""This slide describes a co","{
+  ""defects"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Title describes impact, bullets describe technical plan""
+    },
+    {
+      ""type"": ""S5_MISSING_LOGIC_SECTION"",
+      ""locator"": ""Phase 1 is missing from the list""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+     ",page
+part2_hr_analytics_2_S6_IMAGE_TEXT_CONTRADICTION_1_0051__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S1_TITLE_BODY_MISMATCH"",""S4_DENSITY_RULE_VIOLATION"",""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""Contradictory architecture claim unexplained"",""quote"":""""}",,"[{""text"":""Unprofessional boxed text layout"",""raw_type"":""OTHER""}]","Here is a review of the visible issues on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Massive Empty Space:** The bottom 60–70% of the slide is completely empty white space. The content is crammed into the top quarter, making the slide look unfinished or like a text document rather than a presentation slide.
+*   **Lack of Hierarchy:** The title and the three bullet points are visually iden","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Content crammed into top quarter""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""Title and body fonts inconsistent""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""Tex",page
+part2_hr_analytics_5_S6_IMAGE_TEXT_CONTRADICTION_1_0054__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S1_TITLE_BODY_MISMATCH"",""S4_DENSITY_RULE_VIOLATION""]",,,"[{""text"":""Unprofessional serif font choice"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Massive Empty Space:** The bottom 60–70% of the slide is completely empty white space. The content is crammed into the top section, making the slide look unfinished or like a text document rather than a presentation slide.
+*   **Lack of Visual Hierarchy:** The title and the three body points are forma","{
+  ""defects"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""locator"": ""Content crammed into top section""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""Title and body formatted identically""
+    },
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"":",page
+part2_hr_analytics_5_S6_IMAGE_TEXT_CONTRADICTION_1_0054__template,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S1_TITLE_BODY_MISMATCH"",""S4_DENSITY_RULE_VIOLATION""]",,,"[{""text"":""Unprofessional serif font choice"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Massive Empty Space:** The bottom 60–70% of the slide is completely empty white space. The content is crammed into the top section, making the slide look unfinished or like a text document rather than a presentation slide.
+*   **Lack of Visual Hierarchy:** The title and the three body points are forma","{
+  ""defects"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""locator"": ""Content crammed into top section""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""Title and body formatted identically""
+    },
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"":",page
+part2_inventory_optimization_1_S6_IMAGE_TEXT_CONTRADICTION_1_0055__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S1_TITLE_BODY_MISMATCH"",""S5_MISSING_LOGIC_SECTION""]",,,[],"Here is a breakdown of the issues visible on this slide, categorized by design, content, and layout:
+
+**1. Content & Logic Errors (Critical)**
+*   **The Second Bullet Point:** The text ""This slide describes a contradictory single-layer architecture, not three-layer architecture"" is completely irrelevant to the slide's title (""Stockouts erode loyalty""). This appears to be a placeholder, a meta-comm","{
+  ""defects"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Second bullet irrelevant to title""
+    },
+    {
+      ""type"": ""S5_MISSING_LOGIC_SECTION"",
+      ""locator"": ""Missing data or charts for claim""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Inconsist",page
+part2_inventory_optimization_1_S6_IMAGE_TEXT_CONTRADICTION_1_0055__template,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S1_TITLE_BODY_MISMATCH"",""S5_MISSING_LOGIC_SECTION""]",,,[],"Here is a breakdown of the issues visible on this slide, categorized by design, content, and layout:
+
+**1. Content & Logic Errors (Critical)**
+*   **The Second Bullet Point:** The text ""This slide describes a contradictory single-layer architecture, not three-layer architecture"" is completely irrelevant to the slide's title (""Stockouts erode loyalty""). This appears to be a placeholder, a meta-comm","{
+  ""defects"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Second bullet irrelevant to title""
+    },
+    {
+      ""type"": ""S5_MISSING_LOGIC_SECTION"",
+      ""locator"": ""Missing data or charts for claim""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Jagged le",page
+part2_inventory_optimization_3_S6_IMAGE_TEXT_CONTRADICTION_1_0057__template,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""S1_TITLE_BODY_MISMATCH"",""S5_MISSING_LOGIC_SECTION""]",,,"[{""text"":""Internal comment left on slide"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Empty Space:** The bottom 60% of the slide is completely empty white space. The content is clustered at the top, making the slide look unfinished or like a placeholder.
+*   **Alignment:** The four text boxes are left-aligned but lack a clear visual hierarchy or connection to one another. They look lik","{
+  ""defects"": [
+    {
+      ""type"": ""S5_MISSING_LOGIC_SECTION"",
+      ""locator"": ""Missing data supporting stockout claim""
+    },
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Timeline items disconnected from title""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""lo",page
+part2_inventory_optimization_3_S6_IMAGE_TEXT_CONTRADICTION_1_0057__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S1_TITLE_BODY_MISMATCH"",""S5_MISSING_LOGIC_SECTION"",""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""Title claims data but none shown"",""quote"":""""}",,[],"Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Empty Space:** The bottom 60% of the slide is completely empty white space. The content is clustered at the top, making the slide look unfinished or like a placeholder.
+*   **Alignment:** The four text boxes are left-aligned but lack a clear visual hierarchy or connection to one another. They look lik","{
+  ""defects"": [
+    {
+      ""type"": ""S5_MISSING_LOGIC_SECTION"",
+      ""locator"": ""Bottom 60% empty space""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Floating text boxes lack hierarchy""
+    },
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Internal comment l",page
+part2_inventory_optimization_4_S6_IMAGE_TEXT_CONTRADICTION_1_0058__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""S1_TITLE_BODY_MISMATCH"",""S5_MISSING_LOGIC_SECTION""]",,,[],"Here is a breakdown of the issues visible on this slide:
+
+**1. Content and Tone (Text)**
+*   **Location:** The second text box (the first bullet point).
+*   **Issue:** The text reads: *""This slide describes a contradictory single-layer architecture, not three-layer architecture.""* This appears to be an internal note, a placeholder, or a critique left in by mistake. It is meta-commentary about the ","{
+  ""defects"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Meta-commentary in first bullet point""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Inconsistent vertical spacing between title and content""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY""",page
+part2_inventory_optimization_2_S6_IMAGE_TEXT_CONTRADICTION_1_0056__template,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,"[{""text"":""Internal meta-commentary left in content"",""raw_type"":""OTHER""},{""text"":""Excessive white space, unfinished look"",""raw_type"":""OTHER""},{""text"":""Lack of visual hierarchy in list"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing**
+*   **Excessive White Space:** The bottom half of the slide is completely empty. The content is clustered in the top third, making the slide look unfinished or like a draft.
+*   **Misaligned Widths:** The text boxes for the bullet points (Phases 2–5) are significantly narrower than the title box and the first text ","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Text boxes have jagged, uneven left margins""
+    },
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Title does not match body content""
+    },
+    {
+      ""type"": ""G5_BRAND_COLOR_VIOLATION"",
+      ""locator"":",page
+part2_inventory_optimization_2_S6_IMAGE_TEXT_CONTRADICTION_1_0056__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""S1_TITLE_BODY_MISMATCH"",""S2_NARRATIVE_ORDER_BREAK"",""S5_MISSING_LOGIC_SECTION""]",,,[],"Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing**
+*   **Excessive White Space:** The bottom half of the slide is completely empty. The content is clustered in the top third, making the slide look unfinished or like a draft.
+*   **Misaligned Widths:** The text boxes for the bullet points (Phases 2–5) are significantly narrower than the title box and the first text ","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Text boxes have jagged, uneven left margins""
+    },
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Title does not match body content""
+    },
+    {
+      ""type"": ""S2_NARRATIVE_ORDER_BREAK"",
+      ""locator"":",page
+part2_inventory_optimization_4_S6_IMAGE_TEXT_CONTRADICTION_1_0058__template,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""S1_TITLE_BODY_MISMATCH"",""S4_DENSITY_RULE_VIOLATION""]",,,"[{""text"":""Serif font used instead of sans-serif"",""raw_type"":""OTHER""},{""text"":""Missing bullet points or numbering"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Content and Tone (Text)**
+*   **Location:** The second text box (the first bullet point).
+*   **Issue:** The text reads: *""This slide describes a contradictory single-layer architecture, not three-layer architecture.""* This appears to be an internal note, a placeholder, or a critique left in by mistake. It is meta-commentary about the ","{
+  ""defects"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""First bullet contains meta-commentary""
+    },
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""locator"": ""Excessive white space, content clustered top""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""loc",page
+part2_inventory_optimization_5_S6_IMAGE_TEXT_CONTRADICTION_1_0059__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""S1_TITLE_BODY_MISMATCH"",""S5_MISSING_LOGIC_SECTION""]",,,"[{""text"":""Internal note text in bullet point"",""raw_type"":""OTHER""},{""text"":""Outdated serif font choice"",""raw_type"":""OTHER""},{""text"":""Excessive empty white space bottom"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Empty Space:** The bottom 60% of the slide is completely empty white space. The content is clustered at the top, making the slide look unfinished or like a draft.
+*   **Alignment:** The text boxes are left-aligned but do not span the width of the slide. They look like narrow columns floating on the le","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Text boxes narrow, floating left""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""Title and body identical visual weight""
+    },
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Ti",page
+part2_inventory_optimization_5_S6_IMAGE_TEXT_CONTRADICTION_1_0059__template,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""S1_TITLE_BODY_MISMATCH"",""S5_MISSING_LOGIC_SECTION""]",,,"[{""text"":""Internal note text in bullet point"",""raw_type"":""OTHER""},{""text"":""Outdated serif font choice"",""raw_type"":""OTHER""},{""text"":""Excessive empty white space bottom"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Empty Space:** The bottom 60% of the slide is completely empty white space. The content is clustered at the top, making the slide look unfinished or like a draft.
+*   **Alignment:** The text boxes are left-aligned but do not span the width of the slide. They look like narrow columns floating on the le","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Text boxes narrow, floating left""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""Title and body identical visual weight""
+    },
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Ti",page
+part2_field_service_3_S6_IMAGE_TEXT_CONTRADICTION_1_0042__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION""]",,,"[{""text"":""Massive empty space at bottom"",""raw_type"":""OTHER""},{""text"":""Outdated serif font choice"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Massive Empty Space:** The bottom 60–70% of the slide is completely empty white space. The content is clustered entirely at the top, making the slide look unfinished or like a draft.
+*   **Misaligned Boxes:** The three lower text boxes are indented significantly to the right compared to the top title ","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Lower boxes indented right of title""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""Title and body boxes identical style""
+    },
+    {
+      ""type"": ""G5_BRAND_COLOR_VIOLATION"",
+      ""locator"": ",page
+part2_field_service_5_S6_IMAGE_TEXT_CONTRADICTION_1_0044__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""S3_TERMINOLOGY_INCONSISTENCY""]",,,"[{""text"":""Excessive white space at bottom"",""raw_type"":""OTHER""},{""text"":""Inconsistent use of background boxes"",""raw_type"":""OTHER""},{""text"":""List format instead of process diagram"",""raw_type"":""OTHER""}]","Here are the specific issues with the slide:
+
+1.  **Excessive White Space (Layout):** The bottom half of the slide is completely empty. The content is clustered at the top, making the slide look unfinished and unbalanced.
+2.  **Poor Visual Hierarchy (Color/Contrast):** The title (""A ninety-day DispatchPro plan"") and the five phase items use the exact same font size, weight, and color. There is no ","{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Excessive white space at bottom""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""Title and items same font size""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Inconsistent use of background boxes""
+    ",page
+part2_field_service_5_S6_IMAGE_TEXT_CONTRADICTION_1_0044__template__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""S3_TERMINOLOGY_INCONSISTENCY""]",,,"[{""text"":""Excessive white space at bottom"",""raw_type"":""OTHER""},{""text"":""Inconsistent use of background boxes"",""raw_type"":""OTHER""},{""text"":""List format instead of process diagram"",""raw_type"":""OTHER""}]","Here are the specific issues with the slide:
+
+1.  **Excessive White Space (Layout):** The bottom half of the slide is completely empty. The content is clustered at the top, making the slide look unfinished and unbalanced.
+2.  **Poor Visual Hierarchy (Color/Contrast):** The title (""A ninety-day DispatchPro plan"") and the five phase items use the exact same font size, weight, and color. There is no ","{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Excessive white space at bottom""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""Title and items same font size""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Inconsistent use of background boxes""
+    ",page
+part2_field_service_4_S6_IMAGE_TEXT_CONTRADICTION_1_0043__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,True,False,False,[],,,[],ERR Request timed out.,,page
+part2_field_service_3_S6_IMAGE_TEXT_CONTRADICTION_1_0042__template__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION""]",,,"[{""text"":""Massive empty space at bottom"",""raw_type"":""OTHER""},{""text"":""Outdated serif font choice"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Massive Empty Space:** The bottom 60–70% of the slide is completely empty white space. The content is clustered entirely at the top, making the slide look unfinished or like a draft.
+*   **Misaligned Boxes:** The three lower text boxes are indented significantly to the right compared to the top title ","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Lower boxes indented right of title""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""Title and body boxes identical style""
+    },
+    {
+      ""type"": ""G5_BRAND_COLOR_VIOLATION"",
+      ""locator"": ",page
+part2_field_service_4_S6_IMAGE_TEXT_CONTRADICTION_1_0043__template__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,[],"Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Massive Empty Space:** The bottom 60–70% of the slide is completely empty white space. The content is crammed into the top section, making the slide look unfinished or like a draft.
+*   **Poor Alignment:** The three bullet points are left-aligned but do not align with the title above them. The title s","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Bullet points misaligned with title""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""Inconsistent font styles between title and bullets""
+    },
+    {
+      ""type"": ""G5_BRAND_COLOR_VIOLATION"",
+   ",page
+part2_fraud_detection_1_S6_IMAGE_TEXT_CONTRADICTION_1_0045__template__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,True,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""S4_DENSITY_RULE_VIOLATION"",""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""Headline claims climbing losses without data"",""quote"":""""}",,[],"Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major Issues)**
+*   **Massive Empty Space:** The bottom 60–70% of the slide is completely empty white space. This makes the slide look unfinished and wastes valuable presentation real estate.
+*   **Misaligned Widths:** The top header box (""Fraud losses are climbing"") spans the full width of the slide. The three boxe","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Lower boxes narrower than header""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""Headline and body same font size""
+    },
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""locator"": ""Exces",page
+part2_fraud_detection_1_S6_IMAGE_TEXT_CONTRADICTION_1_0045__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,True,False,False,[],,,[],ERR Request timed out.,,page
+part2_fraud_detection_3_S6_IMAGE_TEXT_CONTRADICTION_1_0047__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION""]",,,"[{""text"":""Lack of visual hierarchy for phases"",""raw_type"":""OTHER""},{""text"":""No visual cues for sequential flow"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide, categorized by element:
+
+**1. Layout and Spacing (Major Issues)**
+*   **Excessive White Space:** The bottom half of the slide is completely empty. The content is clustered entirely in the top third, making the slide look unfinished or like a draft.
+*   **Vertical Gaps:** There are inconsistent and excessive gaps between the five phase boxes.","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Content clustered in top third""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Boxes left-aligned, narrow column""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""Text very sm",page
+part2_fraud_detection_4_S6_IMAGE_TEXT_CONTRADICTION_1_0048__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G4_FONT_SIZE_INCONSISTENCY"",""S1_TITLE_BODY_MISMATCH""]",,,"[{""text"":""Excessive white space and poor layout"",""raw_type"":""OTHER""},{""text"":""Low-quality visual design and hierarchy"",""raw_type"":""OTHER""},{""text"":""Poor internal spacing within elements"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Severe Content Mismatch (Title vs. Body)**
+*   **Where:** The top header bar vs. the three content bars below it.
+*   **Problem:** The title reads ""GuardML detection metrics,"" implying the slide should display data, charts, or performance numbers. However, the body text lists a project timeline (""Q1 foundation,"" ""Q2 first production,"" ","{
+  ""defects"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Title vs body content mismatch""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Excessive white space and poor layout""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Low-quality visual design and hierarchy""",page
+part2_fraud_detection_3_S6_IMAGE_TEXT_CONTRADICTION_1_0047__template__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S5_MISSING_LOGIC_SECTION""]",,,"[{""text"":""Lack of visual hierarchy in boxes"",""raw_type"":""OTHER""},{""text"":""Repetitive structure with Phase X"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide, categorized by element:
+
+**1. Layout and Spacing (Major Issues)**
+*   **Excessive White Space:** The bottom half of the slide is completely empty. The content is clustered entirely in the top third, making the slide look unfinished or like a draft.
+*   **Vertical Gaps:** There are inconsistent and excessive gaps between the five phase boxes.","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Content clustered in top third""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Inconsistent gaps between phase boxes""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Boxes lack clea",page
+part2_fraud_detection_2_S6_IMAGE_TEXT_CONTRADICTION_1_0046__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION""]",,,"[{""text"":""Unprofessional boxed style with gray borders"",""raw_type"":""OTHER""},{""text"":""Outdated serif font choice for presentation"",""raw_type"":""OTHER""},{""text"":""Weak title lacking benefit or insight"",""raw_type"":""OTHER""},{""text"":""Vague and ambiguous bullet point content"",""raw_type"":""OTHER""},{""text"":""Missing visuals or data to support claims"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Massive Empty Space:** The bottom 60–70% of the slide is completely empty white space. The content is clustered entirely at the top, making the slide look unfinished or like a draft.
+*   **Poor Vertical Alignment:** The three bullet points are stacked too high up. They should be vertically centered or","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Content clustered at top, poor vertical alignment""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Title and content boxes have inconsistent indentation""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSI",page
+part2_fraud_detection_4_S6_IMAGE_TEXT_CONTRADICTION_1_0048__template__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G6_MARGIN_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,[],"Here is a breakdown of the issues visible on this slide:
+
+**1. Severe Content Mismatch (Title vs. Body)**
+*   **Where:** The top header bar vs. the three content bars below it.
+*   **Problem:** The title reads ""GuardML detection metrics,"" implying the slide should display data, charts, or performance numbers. However, the body text lists a project timeline (""Q1 foundation,"" ""Q2 first production,"" ","{
+  ""defects"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Title vs body content mismatch""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Title and sub-boxes misaligned left""
+    },
+    {
+      ""type"": ""G6_MARGIN_VIOLATION"",
+      ""locator"": ""Text cramped a",page
+part2_fraud_detection_2_S6_IMAGE_TEXT_CONTRADICTION_1_0046__template__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,True,False,False,[],,,[],ERR Request timed out.,,page
+part2_fraud_detection_5_S6_IMAGE_TEXT_CONTRADICTION_1_0049__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""S1_TITLE_BODY_MISMATCH""]",,,[],"Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Massive Empty Space:** The bottom 60–70% of the slide is completely empty white space. The content is crammed into the top section, making the slide look unfinished or like a draft.
+*   **Poor Vertical Alignment:** The title box and the three content boxes are not aligned with each other. The title bo","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Title box misaligned with content boxes""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""Inconsistent font styles for title and body""
+    },
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""l",page
+part2_fraud_detection_5_S6_IMAGE_TEXT_CONTRADICTION_1_0049__template__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""S1_TITLE_BODY_MISMATCH""]",,,[],"Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Massive Empty Space:** The bottom 60–70% of the slide is completely empty white space. The content is crammed into the top section, making the slide look unfinished or like a draft.
+*   **Poor Vertical Alignment:** The title box and the three content boxes are not aligned with each other. The title bo","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Title box misaligned with content boxes""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""Inconsistent font styles for title and body""
+    },
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""l",page
+part2_hr_analytics_2_S6_IMAGE_TEXT_CONTRADICTION_1_0051__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""S1_TITLE_BODY_MISMATCH""]",,,"[{""text"":""Excessive empty space at bottom"",""raw_type"":""OTHER""},{""text"":""Placeholder aesthetic design quality"",""raw_type"":""OTHER""}]","Here is a review of the visible issues on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Massive Empty Space:** The bottom 60–70% of the slide is completely empty white space. The content is clustered entirely at the top, making the slide look unfinished or like a draft.
+*   **Inconsistent Margins:** The top header box (""PeoplePulse surfaces early signals"") extends almost to the right edge o","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Header box extends beyond bullet alignment""
+    },
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Headline disconnected from bullet content""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      """,page
+part2_hr_analytics_2_S6_IMAGE_TEXT_CONTRADICTION_1_0051__template__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""S1_TITLE_BODY_MISMATCH""]",,,"[{""text"":""Excessive empty space at bottom"",""raw_type"":""OTHER""},{""text"":""Placeholder aesthetic design quality"",""raw_type"":""OTHER""}]","Here is a review of the visible issues on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Massive Empty Space:** The bottom 60–70% of the slide is completely empty white space. The content is clustered entirely at the top, making the slide look unfinished or like a draft.
+*   **Inconsistent Margins:** The top header box (""PeoplePulse surfaces early signals"") extends almost to the right edge o","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Header box extends beyond bullet alignment""
+    },
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Headline disconnected from bullet content""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      """,page
+part2_hr_analytics_3_S6_IMAGE_TEXT_CONTRADICTION_1_0052__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,[],"Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Massive Empty Space:** The bottom 60–70% of the slide is completely empty white space. The content is clustered entirely at the top, making the slide look unfinished or like a draft.
+*   **Poor Alignment:** The three content boxes are left-aligned but do not span the width of the slide. They look like","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Content clustered top-left, not centered""
+    },
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Title says actions, bullets are observations""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ",page
+part2_hr_analytics_3_S6_IMAGE_TEXT_CONTRADICTION_1_0052__template__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,[],"Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Massive Empty Space:** The bottom 60–70% of the slide is completely empty white space. The content is clustered entirely at the top, making the slide look unfinished or like a draft.
+*   **Poor Alignment:** The three content boxes are left-aligned but do not span the width of the slide. They look like","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Content clustered top-left, not centered""
+    },
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Title says actions, body lists observations""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      """,page
+part2_hr_analytics_1_S6_IMAGE_TEXT_CONTRADICTION_1_0050__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,True,False,False,[],,,[],ERR Request timed out.,,page
+part2_hr_analytics_1_S6_IMAGE_TEXT_CONTRADICTION_1_0050__template__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,True,False,False,[],,,[],ERR Request timed out.,,page
+part2_hr_analytics_4_S6_IMAGE_TEXT_CONTRADICTION_1_0053__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,[],"Here is a breakdown of the issues visible on this slide:
+
+**1. Content Mismatch (Title vs. Body)**
+*   **Where:** The entire slide.
+*   **Problem:** The title reads ""Impact PeoplePulse can drive,"" which suggests a slide about business value, ROI, or outcomes. However, the body text lists a technical implementation roadmap (stabilizing, replatforming, refactoring). The content does not support the ","{
+  ""defects"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Title vs body content mismatch""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Content crammed in top 30%""
+    },
+    {
+      ""type"": ""G5_BRAND_COLOR_VIOLATION"",
+      ""locator"": ""Heavy light-blue r",page
+part2_hr_analytics_4_S6_IMAGE_TEXT_CONTRADICTION_1_0053__template__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,[],"Here is a breakdown of the issues visible on this slide:
+
+**1. Content Mismatch (Title vs. Body)**
+*   **Where:** The entire slide.
+*   **Problem:** The title reads ""Impact PeoplePulse can drive,"" which suggests a slide about business value, ROI, or outcomes. However, the body text lists a technical implementation roadmap (stabilizing, replatforming, refactoring). The content does not support the ","{
+  ""defects"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Title vs body content mismatch""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Content crammed in top 30%""
+    },
+    {
+      ""type"": ""G5_BRAND_COLOR_VIOLATION"",
+      ""locator"": ""Heavy light-blue r",page
+part2_hr_analytics_5_S6_IMAGE_TEXT_CONTRADICTION_1_0054__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""S4_DENSITY_RULE_VIOLATION""]",,,"[{""text"":""Sub-items lack visual connection for timeline"",""raw_type"":""OTHER""},{""text"":""Missing icons or color coding for quarters"",""raw_type"":""OTHER""}]","Here is a review of the visible issues on this slide:
+
+**1. Massive Wasted Space (Layout)**
+*   **Where:** The entire bottom half of the slide.
+*   **Issue:** The content is clustered in the top 20% of the canvas, leaving the remaining 80% completely empty. This makes the slide look unfinished and unbalanced.
+
+**2. Poor Visual Hierarchy (Layout & Color)**
+*   **Where:** The title (""PeoplePulse rol","{
+  ""defects"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""locator"": ""Content clustered in top 20% of canvas""
+    },
+    {
+      ""type"": ""G5_BRAND_COLOR_VIOLATION"",
+      ""locator"": ""Title and body use identical background colors""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+     ",page
+part2_hr_analytics_5_S6_IMAGE_TEXT_CONTRADICTION_1_0054__template__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S5_MISSING_LOGIC_SECTION""]",,,[],"Here is a review of the visible issues on this slide:
+
+**1. Massive Wasted Space (Layout)**
+*   **Where:** The entire bottom half of the slide.
+*   **Issue:** The content is clustered in the top 20% of the canvas, leaving the remaining 80% completely empty. This makes the slide look unfinished and unbalanced.
+
+**2. Poor Visual Hierarchy (Layout & Color)**
+*   **Where:** The title (""PeoplePulse rol","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Title and sub-items misaligned left edges""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""Title and body text similar font sizes""
+    },
+    {
+      ""type"": ""G5_BRAND_COLOR_VIOLATION"",
+      ""lo",page
+part2_inventory_optimization_1_S6_IMAGE_TEXT_CONTRADICTION_1_0055__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION""]",,,"[{""text"":""Excessive empty space wastes presentation real estate"",""raw_type"":""OTHER""},{""text"":""Generic placeholder aesthetic lacks visual polish"",""raw_type"":""OTHER""},{""text"":""Basic serif font unprofessional for presentations"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major Issues)**
+*   **Massive Empty Space:** The bottom 60–70% of the slide is completely empty white space. This makes the slide look unfinished and wastes valuable presentation real estate.
+*   **Misaligned Widths:** The top header box (""Stockouts erode loyalty"") spans the full width of the content area, while the","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Lower boxes indented relative to top header""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""Title and body text use similar sizes""
+    },
+    {
+      ""type"": ""G5_BRAND_COLOR_VIOLATION"",
+      ""l",page
+part2_inventory_optimization_2_S6_IMAGE_TEXT_CONTRADICTION_1_0056__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""S1_TITLE_BODY_MISMATCH"",""S4_DENSITY_RULE_VIOLATION""]",,,[],"Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Massive Empty Space:** The bottom half of the slide is completely empty. The content is clustered entirely in the top third, making the slide look unfinished or like a draft.
+*   **Excessive Vertical Gaps:** There is a large, unnecessary gap between the main title (""StockIQ rebalances..."") and the fir","{
+  ""defects"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""locator"": ""Massive empty space, content clustered top""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Boxes not aligned to clear grid""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator",page
+part2_inventory_optimization_2_S6_IMAGE_TEXT_CONTRADICTION_1_0056__template__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""S1_TITLE_BODY_MISMATCH"",""S4_DENSITY_RULE_VIOLATION""]",,,[],"Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Massive Empty Space:** The bottom half of the slide is completely empty. The content is clustered entirely in the top third, making the slide look unfinished or like a draft.
+*   **Excessive Vertical Gaps:** There is a large, unnecessary gap between the main title (""StockIQ rebalances..."") and the fir","{
+  ""defects"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""locator"": ""Massive empty space, content clustered top""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Boxes not aligned to clear grid""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator",page
+part2_inventory_optimization_3_S6_IMAGE_TEXT_CONTRADICTION_1_0057__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""S1_TITLE_BODY_MISMATCH""]",,,[],"Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Massive Empty Space:** The bottom 60–70% of the slide is completely blank. The content is crammed into the top section, making the slide look unfinished or like a draft.
+*   **Misaligned Widths:** The title bar at the top extends almost to the full width of the slide, while the three content bars belo","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Content bars narrower than title bar""
+    },
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Title claims results, body lists timeline""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locato",page
+part2_inventory_optimization_3_S6_IMAGE_TEXT_CONTRADICTION_1_0057__template__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""S1_TITLE_BODY_MISMATCH""]",,,[],"Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Massive Empty Space:** The bottom 60–70% of the slide is completely blank. The content is crammed into the top section, making the slide look unfinished or like a draft.
+*   **Misaligned Widths:** The title bar at the top extends almost to the full width of the slide, while the three content bars belo","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Content bars narrower than title bar""
+    },
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Title outcome mismatches timeline content""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locato",page
+part2_inventory_optimization_1_S6_IMAGE_TEXT_CONTRADICTION_1_0055__template__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,True,False,False,[],,,[],ERR Request timed out.,,page
+part2_inventory_optimization_4_S6_IMAGE_TEXT_CONTRADICTION_1_0058__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION""]",,,"[{""text"":""Unnecessary individual text boxes"",""raw_type"":""OTHER""},{""text"":""Missing visual aids"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Massive Wasted Space (Layout)**
+*   **Where:** The entire bottom half of the slide.
+*   **Problem:** The content is clustered in the top quarter of the canvas, leaving approximately 75% of the slide completely empty. This makes the slide look unfinished and unbalanced.
+
+**2. Poor Visual Hierarchy (Color & Contrast)**
+*   **Where:** The","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Content clustered in top quarter""
+    },
+    {
+      ""type"": ""G5_BRAND_COLOR_VIOLATION"",
+      ""locator"": ""Low contrast background boxes""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Inconsistent box",page
+part2_inventory_optimization_4_S6_IMAGE_TEXT_CONTRADICTION_1_0058__template__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION""]",,,"[{""text"":""Unnecessary individual text boxes"",""raw_type"":""OTHER""},{""text"":""Missing visual aids"",""raw_type"":""OTHER""}]","Here is a breakdown of the issues visible on this slide:
+
+**1. Massive Wasted Space (Layout)**
+*   **Where:** The entire bottom half of the slide.
+*   **Problem:** The content is clustered in the top quarter of the canvas, leaving approximately 75% of the slide completely empty. This makes the slide look unfinished and unbalanced.
+
+**2. Poor Visual Hierarchy (Color & Contrast)**
+*   **Where:** The","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Content clustered in top quarter""
+    },
+    {
+      ""type"": ""G5_BRAND_COLOR_VIOLATION"",
+      ""locator"": ""Low contrast background boxes""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Inconsistent box",page
+part2_inventory_optimization_5_S6_IMAGE_TEXT_CONTRADICTION_1_0059__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,[],"Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Massive Empty Space:** The bottom 60–70% of the slide is completely empty white space. The content is crammed into the top section, making the slide look unfinished or like a draft.
+*   **Misaligned Widths:** The title bar at the top extends almost to the right edge of the slide, while the three conte","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Content boxes narrower than title bar""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Asymmetrical left and right margins""
+    },
+    {
+      ""type"": ""G5_BRAND_COLOR_VIOLATION"",
+      ""locator"": ""Pale ",page
+part2_inventory_optimization_5_S6_IMAGE_TEXT_CONTRADICTION_1_0059__template__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,[],"Here is a breakdown of the issues visible on this slide:
+
+**1. Layout and Spacing (Major)**
+*   **Massive Empty Space:** The bottom 60–70% of the slide is completely empty white space. The content is crammed into the top section, making the slide look unfinished or like a draft.
+*   **Misaligned Widths:** The title bar at the top extends almost to the right edge of the slide, while the three conte","{
+  ""defects"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Content boxes narrower than title bar""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Asymmetrical left and right margins""
+    },
+    {
+      ""type"": ""G5_BRAND_COLOR_VIOLATION"",
+      ""locator"": ""Pale ",page

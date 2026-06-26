@@ -1,0 +1,301 @@
+sample_id,defect,modality,is_clean,failure,has_defect,named_target,predicted_types,locator,confidence,other,raw,level
+imgslide_11_S6_IMAGE_TEXT_CONTRADICTION_1_0001__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S6_IMAGE_TEXT_CONTRADICTION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""imgslide_11"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text box states 'Energy use per unit rose steadily', while the figure caption and the downward-pointing red ar",page
+imgslide_10_S6_IMAGE_TEXT_CONTRADICTION_1_0000__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S6_IMAGE_TEXT_CONTRADICTION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""imgslide_10"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text box on the right states 'Conversion rate halved after the redesign', while the figure caption on the left",page
+imgslide_1_S6_IMAGE_TEXT_CONTRADICTION_1_0003__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S6_IMAGE_TEXT_CONTRADICTION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""imgslide_1"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text box on the right states 'Customer churn climbed to a record high', while the figure caption on the left st",page
+imgslide_0_S6_IMAGE_TEXT_CONTRADICTION_1_0002__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S6_IMAGE_TEXT_CONTRADICTION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""imgslide_0"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text box states 'Quarterly revenue fell sharply in Q4', but the figure caption below the green upward-pointing ",page
+imgslide_3_S6_IMAGE_TEXT_CONTRADICTION_1_0005__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S6_IMAGE_TEXT_CONTRADICTION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""imgslide_3"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text box states 'Market share contracted across all regions', while the figure caption below the green upward-p",page
+imgslide_2_S6_IMAGE_TEXT_CONTRADICTION_1_0004__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S6_IMAGE_TEXT_CONTRADICTION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""imgslide_2"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text box states 'Page load time got slower every release', but the figure caption below the red downward arrow ",page
+imgslide_5_S6_IMAGE_TEXT_CONTRADICTION_1_0007__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S6_IMAGE_TEXT_CONTRADICTION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""imgslide_5"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text box on the right states 'Signups stalled after the launch', while the figure caption on the left states 'S",page
+imgslide_6_S6_IMAGE_TEXT_CONTRADICTION_1_0008__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S6_IMAGE_TEXT_CONTRADICTION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""imgslide_6"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text box on the right states 'Operating costs rose quarter over quarter', while the figure caption on the left ",page
+imgslide_4_S6_IMAGE_TEXT_CONTRADICTION_1_0006__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S6_IMAGE_TEXT_CONTRADICTION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""imgslide_4"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text on the right states 'The defect rate rose every sprint', but the figure caption on the left states 'The de",page
+imgslide_8_S6_IMAGE_TEXT_CONTRADICTION_1_0010__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S6_IMAGE_TEXT_CONTRADICTION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""imgslide_8"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text box on the right states 'Uptime degraded to two nines', while the figure caption on the left states 'Uptim",page
+imgslide_7_S6_IMAGE_TEXT_CONTRADICTION_1_0009__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S6_IMAGE_TEXT_CONTRADICTION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""imgslide_7"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text on the right states 'NPS sank into the thirties', while the figure caption on the left states 'NPS climbed",page
+imgslide_9_S6_IMAGE_TEXT_CONTRADICTION_1_0011__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S6_IMAGE_TEXT_CONTRADICTION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""imgslide_9"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text box states 'Support backlog grew week over week', but the figure caption on the left states 'Support backl",page
+imgslide_1_S6_IMAGE_TEXT_CONTRADICTION_1_0003__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S6_IMAGE_TEXT_CONTRADICTION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""imgslide_1"", ""element_id"": ""null"", ""related_page_ids"": []}, ""evidence"": ""The text states 'Customer churn dropped to a record low' and 'The chart on the left summarizes the trend', but the visual element on the left is a red downward-pointing triangle icon, not a ",page
+imgslide_10_S6_IMAGE_TEXT_CONTRADICTION_1_0000__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S6_IMAGE_TEXT_CONTRADICTION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""imgslide_10"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text states 'Conversion rate doubled' and 'The chart on the left summarizes the trend', but the visual element",page
+imgslide_0_S6_IMAGE_TEXT_CONTRADICTION_1_0002__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S6_IMAGE_TEXT_CONTRADICTION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""imgslide_0"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text states 'Quarterly revenue rose sharply in Q4' and 'The chart on the left summarizes the trend,' but the vi",page
+imgslide_11_S6_IMAGE_TEXT_CONTRADICTION_1_0001__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S6_IMAGE_TEXT_CONTRADICTION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""imgslide_11"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text states 'Energy use per unit dropped steadily' and 'The chart on the left summarizes the trend,' but the v",page
+imgslide_3_S6_IMAGE_TEXT_CONTRADICTION_1_0005__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S6_IMAGE_TEXT_CONTRADICTION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""imgslide_3"",
+        ""element_id"": ""chart_placeholder"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text states 'Market share expanded across all regions' and 'The chart on the left summarizes the t",page
+imgslide_2_S6_IMAGE_TEXT_CONTRADICTION_1_0004__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S6_IMAGE_TEXT_CONTRADICTION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""imgslide_2"",
+        ""element_id"": ""chart_placeholder"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text states 'Page load time got faster every release' and 'The chart on the left summarizes the tr",page
+imgslide_4_S6_IMAGE_TEXT_CONTRADICTION_1_0006__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S6_IMAGE_TEXT_CONTRADICTION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""imgslide_4"",
+        ""element_id"": ""chart_placeholder"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text states 'The defect rate declined every sprint' and 'The chart on the left summarizes the tren",page
+imgslide_5_S6_IMAGE_TEXT_CONTRADICTION_1_0007__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S6_IMAGE_TEXT_CONTRADICTION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""imgslide_5"",
+        ""element_id"": ""chart_placeholder"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text states 'Signups accelerated after the launch' and 'The chart on the left summarizes the trend",page
+imgslide_6_S6_IMAGE_TEXT_CONTRADICTION_1_0008__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S6_IMAGE_TEXT_CONTRADICTION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""imgslide_6"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text states 'Operating costs fell quarter over quarter' and 'The chart on the left summarizes the trend,' but t",page
+imgslide_7_S6_IMAGE_TEXT_CONTRADICTION_1_0009__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S6_IMAGE_TEXT_CONTRADICTION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""imgslide_7"",
+        ""element_id"": ""chart_placeholder"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text states 'NPS climbed into the eighties' and 'The chart on the left summarizes the trend', but ",page
+imgslide_8_S6_IMAGE_TEXT_CONTRADICTION_1_0010__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S6_IMAGE_TEXT_CONTRADICTION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""imgslide_8"",
+        ""element_id"": ""chart_placeholder"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text states 'Uptime improved to four nines' and 'The chart on the left summarizes the trend,' but ",page
+imgslide_9_S6_IMAGE_TEXT_CONTRADICTION_1_0011__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S6_IMAGE_TEXT_CONTRADICTION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""imgslide_9"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text states 'Support backlog shrank week over week' and 'The chart on the left summarizes the trend,' but the i",page

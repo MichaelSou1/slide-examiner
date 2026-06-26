@@ -1,0 +1,2284 @@
+sample_id,defect,modality,is_clean,failure,has_defect,named_target,predicted_types,locator,confidence,other,raw,level
+g7_card_height_000,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET""]",,,[],"```json
+{
+""has_defect"": true,
+""findings"": [
+{
+""type"": ""G3_ALIGNMENT_OFFSET"",
+""severity"": ""moderate"",
+""locator"": {
+""level"": ""page"",
+""page_id"": ""g7_card_height_000"",
+""element_id"": ""null"",
+""related_page_ids"": []
+},
+""evidence"": ""The bullet points 'Cost attribution', 'Multi-tenant isolation', and 'Zero-downtime upgrades' are visually separated from the preceding list items and fall outside the containi",page
+g7_card_height_004,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET""]",,,[],"```json
+{
+""has_defect"": true,
+""findings"": [
+{
+""type"": ""G3_ALIGNMENT_OFFSET"",
+""severity"": ""moderate"",
+""locator"": {
+""level"": ""page"",
+""page_id"": ""g7_card_height_004"",
+""element_id"": ""null"",
+""related_page_ids"": []
+},
+""evidence"": ""The bullet points 'Cost attribution', 'Multi-tenant isolation', and 'Zero-downtime upgrades' are visually separated from the preceding list items and fall outside the green co",page
+g7_card_height_001,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET""]",,,[],"```json
+{
+""has_defect"": true,
+""findings"": [
+{
+""type"": ""G3_ALIGNMENT_OFFSET"",
+""severity"": ""moderate"",
+""locator"": {
+""level"": ""page"",
+""page_id"": ""g7_card_height_001"",
+""element_id"": ""null"",
+""related_page_ids"": []
+},
+""evidence"": ""The bullet points 'Offline eval harness', 'Drift monitors', and 'Cost governor' are visually misaligned with the preceding list items inside the green box. They appear to be o",page
+g7_card_height_003,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET""]",,,[],"```json
+{
+""has_defect"": true,
+""findings"": [
+{
+""type"": ""G3_ALIGNMENT_OFFSET"",
+""severity"": ""moderate"",
+""locator"": {
+""level"": ""page"",
+""page_id"": ""g7_card_height_003"",
+""element_id"": ""null"",
+""related_page_ids"": []
+},
+""evidence"": ""The bullet points 'Pilot usage-based billing', 'Stand up a customer council', and 'Ship the self-serve trial' are visually separated from the main list inside the green box an",page
+g7_card_height_005,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_005"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The bullet points 'Enablement & training', 'SLA hardening', and 'Quarterly business review' are positione",page
+g7_card_height_002,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET""]",,,[],"```json
+{
+""has_defect"": true,
+""findings"": [
+{
+""type"": ""G3_ALIGNMENT_OFFSET"",
+""severity"": ""moderate"",
+""locator"": {
+""level"": ""page"",
+""page_id"": ""g7_card_height_002"",
+""element_id"": ""null"",
+""related_page_ids"": []
+},
+""evidence"": ""The bullet points 'Latency regressions', 'Cost overrun', and 'Change-management gaps' are visually misaligned with the list inside the green box. They appear to be outside the",page
+g7_card_height_006,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET""]",,,[],"```json
+{
+""has_defect"": true,
+""findings"": [
+{
+""type"": ""G3_ALIGNMENT_OFFSET"",
+""severity"": ""moderate"",
+""locator"": {
+""level"": ""page"",
+""page_id"": ""g7_card_height_006"",
+""element_id"": ""null"",
+""related_page_ids"": []
+},
+""evidence"": ""The bullet points 'Offline eval harness', 'Drift monitors', and 'Cost governor' are visually misaligned with the preceding list items inside the box. They appear to be outside",page
+g7_card_height_008,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET""]",,,[],"```json
+{
+""has_defect"": true,
+""findings"": [
+{
+""type"": ""G3_ALIGNMENT_OFFSET"",
+""severity"": ""moderate"",
+""locator"": {
+""level"": ""page"",
+""page_id"": ""g7_card_height_008"",
+""element_id"": ""null"",
+""related_page_ids"": []
+},
+""evidence"": ""The bullet points 'Pilot usage-based billing', 'Stand up a customer council', and 'Ship the self-serve trial' are visually separated from the main list inside the box and are ",page
+g7_card_height_007,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_007"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The bullet points 'Inference cost', 'Ticket deflection', and 'Logo retention' are visually separated from",page
+g7_card_height_009,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET""]",,,[],"```json
+{
+""has_defect"": true,
+""findings"": [
+{
+""type"": ""G3_ALIGNMENT_OFFSET"",
+""severity"": ""moderate"",
+""locator"": {
+""level"": ""page"",
+""page_id"": ""g7_card_height_009"",
+""element_id"": ""null"",
+""related_page_ids"": []
+},
+""evidence"": ""The bullet points 'Latency regressions', 'Cost overrun', and 'Change-management gaps' are visually misaligned with the list inside the box. They appear to be outside the conta",page
+g7_card_height_010,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET""]",,,[],"```json
+{
+""has_defect"": true,
+""findings"": [
+{
+""type"": ""G3_ALIGNMENT_OFFSET"",
+""severity"": ""moderate"",
+""locator"": {
+""level"": ""page"",
+""page_id"": ""g7_card_height_010"",
+""element_id"": ""null"",
+""related_page_ids"": []
+},
+""evidence"": ""The bullet points 'Cost attribution', 'Multi-tenant isolation', and 'Zero-downtime upgrades' are visually misaligned with the list inside the box. They appear to be outside th",page
+g7_card_height_011,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET""]",,,[],"```json
+{
+""has_defect"": true,
+""findings"": [
+{
+""type"": ""G3_ALIGNMENT_OFFSET"",
+""severity"": ""moderate"",
+""locator"": {
+""level"": ""page"",
+""page_id"": ""g7_card_height_011"",
+""element_id"": ""null"",
+""related_page_ids"": []
+},
+""evidence"": ""The bullet points 'Latency regressions', 'Cost overrun', and 'Change-management gaps' are visually misaligned with the list inside the box. They appear to be outside the conta",page
+g7_card_height_012,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET""]",,,[],"```json
+{
+""has_defect"": true,
+""findings"": [
+{
+""type"": ""G3_ALIGNMENT_OFFSET"",
+""severity"": ""moderate"",
+""locator"": {
+""level"": ""page"",
+""page_id"": ""g7_card_height_012"",
+""element_id"": ""null"",
+""related_page_ids"": []
+},
+""evidence"": ""The bullet points 'Enablement & training', 'SLA hardening', and 'Quarterly business review' are visually separated from the main list and sit outside the blue border box, brea",page
+g7_card_height_013,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET""]",,,[],"```json
+{
+""has_defect"": true,
+""findings"": [
+{
+""type"": ""G3_ALIGNMENT_OFFSET"",
+""severity"": ""moderate"",
+""locator"": {
+""level"": ""page"",
+""page_id"": ""g7_card_height_013"",
+""element_id"": ""null"",
+""related_page_ids"": []
+},
+""evidence"": ""The bullet points 'Enablement & training', 'SLA hardening', and 'Quarterly business review' are visually separated from the main list and sit outside the blue border box, brea",page
+g7_card_height_014,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET""]",,,[],"```json
+{
+""has_defect"": true,
+""findings"": [
+{
+""type"": ""G3_ALIGNMENT_OFFSET"",
+""severity"": ""moderate"",
+""locator"": {
+""level"": ""page"",
+""page_id"": ""g7_card_height_014"",
+""element_id"": ""null"",
+""related_page_ids"": []
+},
+""evidence"": ""The bullet points 'Offline eval harness', 'Drift monitors', and 'Cost governor' are visually aligned with the list inside the box but are positioned outside the box boundary, ",page
+g7_card_height_015,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET""]",,,[],"```json
+{
+""has_defect"": true,
+""findings"": [
+{
+""type"": ""G3_ALIGNMENT_OFFSET"",
+""severity"": ""moderate"",
+""locator"": {
+""level"": ""page"",
+""page_id"": ""g7_card_height_015"",
+""element_id"": ""null"",
+""related_page_ids"": []
+},
+""evidence"": ""The bulleted list items 'Inference cost -31%', 'Ticket deflection 44%', and 'Logo retention 96%' are visually separated from the preceding list items and the containing box, a",page
+g7_card_height_017,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET""]",,,[],"```json
+{
+""has_defect"": true,
+""findings"": [
+{
+""type"": ""G3_ALIGNMENT_OFFSET"",
+""severity"": ""moderate"",
+""locator"": {
+""level"": ""page"",
+""page_id"": ""g7_card_height_017"",
+""element_id"": ""null"",
+""related_page_ids"": []
+},
+""evidence"": ""The bullet points 'Offline eval harness', 'Drift monitors', and 'Cost governor' are visually misaligned with the preceding list items inside the green box. They appear to be o",page
+g7_card_height_016,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_016"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The bulleted list items 'Inference cost', 'Ticket deflection', and 'Logo retention' are visually separate",page
+g7_card_height_018,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET""]",,,[],"```json
+{
+""has_defect"": true,
+""findings"": [
+{
+""type"": ""G3_ALIGNMENT_OFFSET"",
+""severity"": ""moderate"",
+""locator"": {
+""level"": ""page"",
+""page_id"": ""g7_card_height_018"",
+""element_id"": ""null"",
+""related_page_ids"": []
+},
+""evidence"": ""The bullet points 'Pilot usage-based billing', 'Stand up a customer council', and 'Ship the self-serve trial' are visually separated from the main list inside the box and are ",page
+g7_card_height_020,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET""]",,,[],"```json
+{
+""has_defect"": true,
+""findings"": [
+{
+""type"": ""G3_ALIGNMENT_OFFSET"",
+""severity"": ""moderate"",
+""locator"": {
+""level"": ""page"",
+""page_id"": ""g7_card_height_020"",
+""element_id"": ""null"",
+""related_page_ids"": []
+},
+""evidence"": ""The bullet points 'Enablement & training', 'SLA hardening', and 'Quarterly business review' are visually aligned with the list inside the blue box, but they are positioned out",page
+g7_card_height_019,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET""]",,,[],"```json
+{
+""has_defect"": true,
+""findings"": [
+{
+""type"": ""G3_ALIGNMENT_OFFSET"",
+""severity"": ""moderate"",
+""locator"": {
+""level"": ""page"",
+""page_id"": ""g7_card_height_019"",
+""element_id"": ""null"",
+""related_page_ids"": []
+},
+""evidence"": ""The bullet points 'Cost attribution', 'Multi-tenant isolation', and 'Zero-downtime upgrades' are visually misaligned with the list inside the box. They appear to be outside th",page
+g7_card_height_022,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET""]",,,[],"```json
+{
+""has_defect"": true,
+""findings"": [
+{
+""type"": ""G3_ALIGNMENT_OFFSET"",
+""severity"": ""moderate"",
+""locator"": {
+""level"": ""page"",
+""page_id"": ""g7_card_height_022"",
+""element_id"": ""null"",
+""related_page_ids"": []
+},
+""evidence"": ""The bullet points 'Cost attribution', 'Multi-tenant isolation', and 'Zero-downtime upgrades' are visually outside the blue bordered box, breaking the list's alignment and cont",page
+g7_card_height_023,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET""]",,,[],"```json
+{
+""has_defect"": true,
+""findings"": [
+{
+""type"": ""G3_ALIGNMENT_OFFSET"",
+""severity"": ""moderate"",
+""locator"": {
+""level"": ""page"",
+""page_id"": ""g7_card_height_023"",
+""element_id"": ""null"",
+""related_page_ids"": []
+},
+""evidence"": ""The bullet points 'Enablement & training', 'SLA hardening', and 'Quarterly business review' are visually separated from the main list and sit outside the blue container box, b",page
+g7_card_height_021,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET""]",,,[],"```json
+{
+""has_defect"": true,
+""findings"": [
+{
+""type"": ""G3_ALIGNMENT_OFFSET"",
+""severity"": ""moderate"",
+""locator"": {
+""level"": ""page"",
+""page_id"": ""g7_card_height_021"",
+""element_id"": ""null"",
+""related_page_ids"": []
+},
+""evidence"": ""The bulleted list items 'Inference cost -31%', 'Ticket deflection 44%', and 'Logo retention 96%' are visually separated from the preceding list items and fall outside the blue",page
+g7_card_height_024,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_024"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The bullet points 'Enablement & training', 'SLA hardening', and 'Quarterly business review' are visually ",page
+g7_card_height_025,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET""]",,,[],"```json
+{
+""has_defect"": true,
+""findings"": [
+{
+""type"": ""G3_ALIGNMENT_OFFSET"",
+""severity"": ""moderate"",
+""locator"": {
+""level"": ""page"",
+""page_id"": ""g7_card_height_025"",
+""element_id"": ""null"",
+""related_page_ids"": []
+},
+""evidence"": ""The bullet points 'Latency regressions', 'Cost overrun', and 'Change-management gaps' are visually misaligned with the list inside the box. They appear to be outside the conta",page
+g7_card_height_026,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET""]",,,[],"```json
+{
+""has_defect"": true,
+""findings"": [
+{
+""type"": ""G3_ALIGNMENT_OFFSET"",
+""severity"": ""moderate"",
+""locator"": {
+""level"": ""page"",
+""page_id"": ""g7_card_height_026"",
+""element_id"": ""null"",
+""related_page_ids"": []
+},
+""evidence"": ""The bullet points 'Inference cost -31%', 'Ticket deflection 44%', and 'Logo retention 96%' are visually misaligned with the preceding list items inside the green box, appearin",page
+g7_card_height_027,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET""]",,,[],"```json
+{
+""has_defect"": true,
+""findings"": [
+{
+""type"": ""G3_ALIGNMENT_OFFSET"",
+""severity"": ""moderate"",
+""locator"": {
+""level"": ""page"",
+""page_id"": ""g7_card_height_027"",
+""element_id"": ""null"",
+""related_page_ids"": []
+},
+""evidence"": ""The bullet points 'Pilot usage-based billing', 'Stand up a customer council', and 'Ship the self-serve trial' are visually separated from the main list inside the green box an",page
+g7_card_height_028,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET""]",,,[],"```json
+{
+""has_defect"": true,
+""findings"": [
+{
+""type"": ""G3_ALIGNMENT_OFFSET"",
+""severity"": ""moderate"",
+""locator"": {
+""level"": ""page"",
+""page_id"": ""g7_card_height_028"",
+""element_id"": ""null"",
+""related_page_ids"": []
+},
+""evidence"": ""The bullet points 'Pilot usage-based billing', 'Stand up a customer council', and 'Ship the self-serve trial' are visually separated from the main list inside the box and are ",page
+g7_card_height_029,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET""]",,,[],"```json
+{
+""has_defect"": true,
+""findings"": [
+{
+""type"": ""G3_ALIGNMENT_OFFSET"",
+""severity"": ""moderate"",
+""locator"": {
+""level"": ""page"",
+""page_id"": ""g7_card_height_029"",
+""element_id"": ""null"",
+""related_page_ids"": []
+},
+""evidence"": ""The bulleted list items 'Inference cost -31%', 'Ticket deflection 44%', and 'Logo retention 96%' are visually separated from the preceding list items and fall outside the blue",page
+g7_unbreakable_text_001,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_001"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text string 'https://portal.enterprise-customer.example.com/onboarding/2' extends beyond the right bo",page
+g7_unbreakable_text_000,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_000"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text string 'https://portal.enterprise-customer.example.com/onboarding/2' extends beyond the right bo",page
+g7_unbreakable_text_003,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_003"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text string 'registry.internal.acme-global.example/ml-platform/inference' extends beyond the right bo",page
+g7_unbreakable_text_002,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_002"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text string 'C:\\Users\\enterprise\\Deployments\\2026\\Q3\\acme-global-manufac' extends beyond the ri",page
+g7_unbreakable_text_004,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_004"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text string 'arn:aws:iam::920183746551:role/acme-global-manufacturing-pr...' extends beyond the right",page
+g7_unbreakable_text_005,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_005"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text string 'https://portal.enterprise-customer.example.com/onboarding/2' extends beyond the right bo",page
+g7_unbreakable_text_006,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_006"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text string 'C:\\Users\\enterprise\\Deployments\\2026\\Q3\\acme-global-manufac' extends beyond the ri",page
+g7_unbreakable_text_007,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_007"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text string 'C:\\Users\\enterprise\\Deployments\\2026\\Q3\\acme-global-manufac' extends beyond the ri",page
+g7_unbreakable_text_008,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_008"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text string 'Endpoint: arn:aws:iam::920183746551:role/acme-global-manufacturing-pr' extends beyond th",page
+g7_unbreakable_text_009,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_009"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text string 'Endpoint: https://portal.enterprise-customer.example.com/onboarding/2' extends beyond th",page
+g7_unbreakable_text_011,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_011"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text string 'C:\\Users\\enterprise\\Deployments\\2026\\Q3\\acme-global-manufac' extends beyond the ri",page
+g7_unbreakable_text_010,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_010"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text string 'Endpoint: arn:aws:iam::920183746551:role/acme-global-manufacturing-pr' extends beyond th",page
+g7_unbreakable_text_012,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_012"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text string 'https://portal.enterprise-customer.example.com/onboarding/2' extends beyond the right bo",page
+g7_unbreakable_text_013,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_013"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text string 'arn:aws:iam::920183746551:role/acme-global-manufacturing-pr' extends beyond the right bo",page
+g7_unbreakable_text_015,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_015"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text string 'registry.internal.acme-global.example/ml-platform/inference' extends beyond the right bo",page
+g7_unbreakable_text_014,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_014"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text string 'arn:aws:iam::920183746551:role/acme-global-manufacturing-pr' extends beyond the right ed",page
+g7_unbreakable_text_016,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_016"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text string 'C:\\Users\\enterprise\\Deployments\\2026\\Q3\\acme-global-manufac...' extends beyond the r",page
+g7_unbreakable_text_017,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_017"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text string 'arn:aws:iam::920183746551:role/acme-global-manufacturing-pr' extends beyond the right ed",page
+g7_unbreakable_text_018,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_018"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text string 'registry.internal.acme-global.example/ml-platform/inference' extends beyond the right bo",page
+g7_unbreakable_text_020,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_020"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text string 'registry.internal.acme-global.example/ml-platform/inference' extends beyond the right bo",page
+g7_unbreakable_text_019,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_019"",
+        ""element_id"": ""endpoint_text"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text string 'C:\\Users\\enterprise\\Deployments\\2026\\Q3\\acme-global-manufac...' extends b",page
+g7_unbreakable_text_021,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_021"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text string 'Endpoint: https://portal.enterprise-customer.example.com/onboarding/2' extends beyond th",page
+g7_unbreakable_text_022,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_022"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text string 'Endpoint: https://portal.enterprise-customer.example.com/onboarding/2' extends beyond th",page
+g7_unbreakable_text_023,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_023"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text string 'C:\\Users\\enterprise\\Deployments\\2026\\Q3\\acme-global-manufac...' extends beyond the r",page
+g7_unbreakable_text_024,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_024"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text string 'arn:aws:iam::920183746551:role/acme-global-manufacturing-pr...' extends beyond the right",page
+g7_unbreakable_text_027,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_027"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text string 'registry.internal.acme-global.example/ml-platform/inference' extends beyond the right boun",page
+g7_unbreakable_text_025,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_025"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text string 'Endpoint: arn:aws:iam::920183746551:role/acme-global-manufacturing-pr' extends beyond th",page
+g7_unbreakable_text_026,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_026"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text string 'C:\\Users\\enterprise\\Deployments\\2026\\Q3\\acme-global-manufac' extends beyond the ri",page
+g7_unbreakable_text_028,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_028"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text string 'Endpoint: https://portal.enterprise-customer.example.com/onboarding/2' extends beyond th",page
+g7_unbreakable_text_029,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_029"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text string 'Endpoint: C:\\Users\\enterprise\\Deployments\\2026\\Q3\\acme-global-manufac' extends bey",page
+g7_image_objectfit_001,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G2_ELEMENT_OVERLAP""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""G2_ELEMENT_OVERLAP"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_image_objectfit_001"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""A large graphical element (diagonal stripes) overlaps the text 'Reference architecture...' and the caption 'Figure 1: architecture', obscuring them."", ""fix_suggestion"": ""Adjust the z-index ",page
+g7_image_objectfit_002,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G2_ELEMENT_OVERLAP""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""G2_ELEMENT_OVERLAP"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_image_objectfit_002"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""A large diagonal striped pattern (likely a rendering artifact or misplaced image) overlaps the text 'Reference architecture...' and the figure caption 'Figure 1: architecture', obscuring th",page
+g7_image_objectfit_003,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G2_ELEMENT_OVERLAP""]",,,[],"```json
+{
+""has_defect"": true,
+""findings"": [
+{
+""type"": ""G2_ELEMENT_OVERLAP"",
+""severity"": ""severe"",
+""locator"": {
+""level"": ""page"",
+""page_id"": ""g7_image_objectfit_003"",
+""element_id"": null,
+""related_page_ids"": []
+},
+""evidence"": ""A large green diagonal striped graphic overlaps the text 'Reference architecture for the proposed deployment' and the caption 'Figure 1: architecture', obscuring parts of the t",page
+g7_image_objectfit_004,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G2_ELEMENT_OVERLAP""]",,,[],"```json
+{
+""has_defect"": true,
+""findings"": [
+{
+""type"": ""G2_ELEMENT_OVERLAP"",
+""severity"": ""severe"",
+""locator"": {
+""level"": ""page"",
+""page_id"": ""g7_image_objectfit_004"",
+""element_id"": null,
+""related_page_ids"": []
+},
+""evidence"": ""A large blue diagonal pattern graphic overlaps and obscures the text 'Reference architecture for the proposed deployment' and the 'Figure 1: architecture' label, making them di",page
+g7_image_objectfit_005,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G2_ELEMENT_OVERLAP""]",,,[],"```json
+{
+""has_defect"": true,
+""findings"": [
+{
+""type"": ""G2_ELEMENT_OVERLAP"",
+""severity"": ""severe"",
+""locator"": {
+""level"": ""page"",
+""page_id"": ""g7_image_objectfit_005"",
+""element_id"": null,
+""related_page_ids"": []
+},
+""evidence"": ""A large blue diagonal pattern graphic overlaps and obscures the text 'Reference architecture for the proposed deployment' and the 'Figure 1: architecture' label, making them di",page
+g7_image_objectfit_000,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G2_ELEMENT_OVERLAP"",""G6_MARGIN_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G2_ELEMENT_OVERLAP"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_image_objectfit_000"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""A large green diagonal striped graphic overlaps the text 'Reference architecture...' and the caption 'Figu",page
+g7_image_objectfit_006,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G2_ELEMENT_OVERLAP""]",,,[],"```json
+{
+""has_defect"": true,
+""findings"": [
+{
+""type"": ""G2_ELEMENT_OVERLAP"",
+""severity"": ""severe"",
+""locator"": {
+""level"": ""page"",
+""page_id"": ""g7_image_objectfit_006"",
+""element_id"": null,
+""related_page_ids"": []
+},
+""evidence"": ""A large graphical element consisting of diagonal stripes overlaps and obscures the text 'Reference architecture for the proposed deployment' and the caption 'Figure 1: architec",page
+g7_image_objectfit_008,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G2_ELEMENT_OVERLAP""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""G2_ELEMENT_OVERLAP"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_image_objectfit_008"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The large diagonal striped image pattern overlaps and obscures the text 'Reference architecture...' and the figure caption 'Figure 1: architecture'."", ""fix_suggestion"": ""Resize or repositio",page
+g7_image_objectfit_007,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G2_ELEMENT_OVERLAP""]",,,[],"```json
+{
+""has_defect"": true,
+""findings"": [
+{
+""type"": ""G2_ELEMENT_OVERLAP"",
+""severity"": ""severe"",
+""locator"": {
+""level"": ""page"",
+""page_id"": ""g7_image_objectfit_007"",
+""element_id"": null,
+""related_page_ids"": []
+},
+""evidence"": ""A large graphical element consisting of diagonal stripes overlaps the text 'Reference architecture for the proposed deployment' and the caption 'Figure 1: architecture', obscur",page
+g7_image_objectfit_010,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G2_ELEMENT_OVERLAP""]",,,[],"```json
+{
+""has_defect"": true,
+""findings"": [
+{
+""type"": ""G2_ELEMENT_OVERLAP"",
+""severity"": ""severe"",
+""locator"": {
+""level"": ""page"",
+""page_id"": ""g7_image_objectfit_010"",
+""element_id"": null,
+""related_page_ids"": []
+},
+""evidence"": ""A large graphical element consisting of diagonal stripes overlaps the text 'Reference architecture...' and the caption 'Figure 1: architecture', obscuring them and making them ",page
+g7_image_objectfit_014,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G2_ELEMENT_OVERLAP""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""G2_ELEMENT_OVERLAP"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_image_objectfit_014"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""A large blue diagonal pattern graphic overlaps the text 'Reference architecture...' and the caption 'Figure 1: architecture', obscuring the content."", ""fix_suggestion"": ""Reposition the grap",page
+g7_image_objectfit_011,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G2_ELEMENT_OVERLAP""]",,,[],"```json
+{
+""has_defect"": true,
+""findings"": [
+{
+""type"": ""G2_ELEMENT_OVERLAP"",
+""severity"": ""severe"",
+""locator"": {
+""level"": ""page"",
+""page_id"": ""g7_image_objectfit_011"",
+""element_id"": null,
+""related_page_ids"": []
+},
+""evidence"": ""A large graphical element consisting of diagonal orange stripes overlaps and obscures the text 'Reference architecture...' and the figure caption 'Figure 1: architecture' withi",page
+g7_image_objectfit_012,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G2_ELEMENT_OVERLAP""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G2_ELEMENT_OVERLAP"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_image_objectfit_012"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""A large green diagonal striped graphic overlaps the text 'Reference architecture for the proposed deployme",page
+g7_image_objectfit_016,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G2_ELEMENT_OVERLAP""]",,,[],"```json
+{
+""has_defect"": true,
+""findings"": [
+{
+""type"": ""G2_ELEMENT_OVERLAP"",
+""severity"": ""severe"",
+""locator"": {
+""level"": ""page"",
+""page_id"": ""g7_image_objectfit_016"",
+""element_id"": null,
+""related_page_ids"": []
+},
+""evidence"": ""A large blue diagonal striped graphic overlaps the text 'Reference architecture for the proposed deployment...' and the 'Figure 1: architecture' label, obscuring the content."",",page
+g7_image_objectfit_013,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G2_ELEMENT_OVERLAP"",""S1_TITLE_BODY_MISMATCH""]",,,[],"```json
+{
+""has_defect"": true,
+""findings"": [
+{
+""type"": ""G2_ELEMENT_OVERLAP"",
+""severity"": ""severe"",
+""locator"": {
+""level"": ""page"",
+""page_id"": ""g7_image_objectfit_013"",
+""element_id"": null,
+""related_page_ids"": []
+},
+""evidence"": ""A large green diagonal striped graphic overlaps the text 'Reference architecture for the proposed deployment' and the caption 'Figure 1: architecture', obscuring them and makin",page
+g7_image_objectfit_009,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW"",""G2_ELEMENT_OVERLAP"",""S1_TITLE_BODY_MISMATCH""]",,,[],"```json
+{
+""has_defect"": true,
+""findings"": [
+{
+""type"": ""S1_TITLE_BODY_MISMATCH"",
+""severity"": ""severe"",
+""locator"": {
+""level"": ""page"",
+""page_id"": ""g7_image_objectfit_009"",
+""element_id"": null,
+""related_page_ids"": []
+},
+""evidence"": ""The slide title is 'Risk Register', but the body content describes a 'Reference architecture for the proposed deployment' and includes a figure caption for 'architecture'. ",page
+g7_image_objectfit_015,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G2_ELEMENT_OVERLAP"",""G6_MARGIN_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G2_ELEMENT_OVERLAP"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_image_objectfit_015"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""A large graphical element consisting of diagonal stripes overlaps the text 'Reference architecture...' and",page
+g7_image_objectfit_017,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G2_ELEMENT_OVERLAP"",""G6_MARGIN_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G2_ELEMENT_OVERLAP"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_image_objectfit_017"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""A large green diagonal striped graphic overlaps the text 'Reference architecture for the proposed deployme",page
+g7_image_objectfit_020,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G2_ELEMENT_OVERLAP""]",,,[],"```json
+{
+""has_defect"": true,
+""findings"": [
+{
+""type"": ""G2_ELEMENT_OVERLAP"",
+""severity"": ""severe"",
+""locator"": {
+""level"": ""page"",
+""page_id"": ""g7_image_objectfit_020"",
+""element_id"": null,
+""related_page_ids"": []
+},
+""evidence"": ""A large blue diagonal striped graphic overlaps the text 'Reference architecture for the proposed deployment...' and the caption 'Figure 1: architecture', obscuring the content ",page
+g7_image_objectfit_018,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G2_ELEMENT_OVERLAP"",""S1_TITLE_BODY_MISMATCH""]",,,[],"```json
+{
+""has_defect"": true,
+""findings"": [
+{
+""type"": ""S1_TITLE_BODY_MISMATCH"",
+""severity"": ""severe"",
+""locator"": {
+""level"": ""page"",
+""page_id"": ""g7_image_objectfit_018"",
+""element_id"": null,
+""related_page_ids"": []
+},
+""evidence"": ""The slide title is 'Risk Register', but the body content describes a 'Reference architecture for the proposed deployment' and includes an image captioned 'Figure 1: archite",page
+g7_image_objectfit_023,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G2_ELEMENT_OVERLAP""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""G2_ELEMENT_OVERLAP"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_image_objectfit_023"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""A large diagonal striped pattern (likely a rendering artifact or misplaced image) overlaps the text 'Reference architecture...' and the caption 'Figure 1: architecture', obscuring them."", """,page
+g7_image_objectfit_024,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G2_ELEMENT_OVERLAP""]",,,[],"```json
+{
+""has_defect"": true,
+""findings"": [
+{
+""type"": ""G2_ELEMENT_OVERLAP"",
+""severity"": ""severe"",
+""locator"": {
+""level"": ""page"",
+""page_id"": ""g7_image_objectfit_024"",
+""element_id"": null,
+""related_page_ids"": []
+},
+""evidence"": ""A large blue diagonal striped graphic overlaps the text 'Reference architecture for the proposed deployment...' and the 'Figure 1: architecture' label, obscuring the content."",",page
+g7_image_objectfit_019,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G2_ELEMENT_OVERLAP"",""S1_TITLE_BODY_MISMATCH""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_image_objectfit_019"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'Risk Register', but the body content describes a 'Reference architecture for the p",page
+g7_image_objectfit_022,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G2_ELEMENT_OVERLAP"",""S1_TITLE_BODY_MISMATCH""]",,,[],"```json
+{
+""has_defect"": true,
+""findings"": [
+{
+""type"": ""S1_TITLE_BODY_MISMATCH"",
+""severity"": ""severe"",
+""locator"": {
+""level"": ""page"",
+""page_id"": ""g7_image_objectfit_022"",
+""element_id"": null,
+""related_page_ids"": []
+},
+""evidence"": ""The slide title is 'Success Metrics', but the body content describes a 'Reference architecture' and includes a caption 'Figure 1: architecture'. The content does not match ",page
+g7_image_objectfit_021,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G2_ELEMENT_OVERLAP"",""G6_MARGIN_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,[],"```json
+{
+""has_defect"": true,
+""findings"": [
+{
+""type"": ""S1_TITLE_BODY_MISMATCH"",
+""severity"": ""severe"",
+""locator"": {
+""level"": ""page"",
+""page_id"": ""g7_image_objectfit_021"",
+""element_id"": null,
+""related_page_ids"": []
+},
+""evidence"": ""The slide title is 'Risk Register', but the body text describes a 'Reference architecture for the proposed deployment' and references a 'component diagram'. The content doe",page
+g7_image_objectfit_026,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G2_ELEMENT_OVERLAP""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""G2_ELEMENT_OVERLAP"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_image_objectfit_026"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""A large graphical element (diagonal stripes) overlaps the text 'Reference architecture...' and the caption 'Figure 1: architecture', obscuring them."", ""fix_suggestion"": ""Reposition the grap",page
+g7_image_objectfit_028,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G2_ELEMENT_OVERLAP""]",,,[],"```json
+{
+""has_defect"": true,
+""findings"": [
+{
+""type"": ""G2_ELEMENT_OVERLAP"",
+""severity"": ""severe"",
+""locator"": {
+""level"": ""page"",
+""page_id"": ""g7_image_objectfit_028"",
+""element_id"": null,
+""related_page_ids"": []
+},
+""evidence"": ""A large green diagonal striped graphic overlaps the text 'Reference architecture for the proposed deployment' and the caption 'Figure 1: architecture', obscuring the content an",page
+g7_image_objectfit_025,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G2_ELEMENT_OVERLAP"",""G6_MARGIN_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G2_ELEMENT_OVERLAP"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_image_objectfit_025"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""A large graphical element consisting of diagonal stripes overlaps the text 'Reference architecture...' and",page
+g7_image_objectfit_029,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G2_ELEMENT_OVERLAP""]",,,[],"```json
+{
+""has_defect"": true,
+""findings"": [
+{
+""type"": ""G2_ELEMENT_OVERLAP"",
+""severity"": ""severe"",
+""locator"": {
+""level"": ""page"",
+""page_id"": ""g7_image_objectfit_029"",
+""element_id"": null,
+""related_page_ids"": []
+},
+""evidence"": ""A large green diagonal striped graphic overlaps the text 'Reference architecture for the proposed deployment' and the caption 'Figure 1: architecture', obscuring the content."",",page
+g7_card_height_000__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_000"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains very little content (a title and a short list of 4 items) but occupies a large amo",page
+g7_card_height_001__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_001"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains a large green container box that occupies the majority of the canvas but is almost e",page
+g7_image_objectfit_027,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G2_ELEMENT_OVERLAP"",""S1_TITLE_BODY_MISMATCH""]",,,[],"```json
+{
+""has_defect"": true,
+""findings"": [
+{
+""type"": ""G2_ELEMENT_OVERLAP"",
+""severity"": ""severe"",
+""locator"": {
+""level"": ""page"",
+""page_id"": ""g7_image_objectfit_027"",
+""element_id"": null,
+""related_page_ids"": []
+},
+""evidence"": ""A large green diagonal striped graphic overlaps the text 'Reference architecture for the proposed deployment' and the caption 'Figure 1: architecture', obscuring them and makin",page
+g7_card_height_005__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"```json
+{
+  ""has_defect"": false,
+  ""findings"": []
+}
+```",page
+g7_card_height_002__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_002"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains a large green container box that occupies the majority of the canvas, yet it only ",page
+g7_card_height_003__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_003"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains very little content (a title and four short bullet points) but occupies a large am",page
+g7_card_height_004__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_004"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains a large green box that occupies the majority of the canvas, but the text content i",page
+g7_card_height_006__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_006"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains very little content (a title and a short list of 4 items) but occupies a large amoun",page
+g7_card_height_008__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_008"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains very little content (a title and a short list of 4 items) but occupies a large amoun",page
+g7_card_height_007__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_007"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains very little content (only 4 bullet points) but occupies a large visual area with a",page
+g7_card_height_010__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_010"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains a large amount of empty white space below the content box, while the content itsel",page
+g7_card_height_009__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_009"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains a large bordered container that occupies the majority of the canvas, yet it only h",page
+g7_card_height_011__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_011"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains a large bordered container that occupies the majority of the canvas, yet it only h",page
+g7_card_height_012__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_012"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains a large rectangular container that is mostly empty, with only a small list of four i",page
+g7_card_height_014__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_014"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains a large rectangular container that is mostly empty white space, with only a small li",page
+g7_card_height_013__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_013"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains a large rectangular container that is mostly empty, with only a small list of four i",page
+g7_card_height_015__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_015"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains very little content (only 4 bullet points) but occupies a large portion of the can",page
+g7_card_height_016__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_016"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains a large empty area on the right side and bottom, while the content is clustered in",page
+g7_card_height_017__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+""has_defect"": true,
+""findings"": [
+{
+""type"": ""S4_DENSITY_RULE_VIOLATION"",
+""severity"": ""moderate"",
+""locator"": {
+""level"": ""page"",
+""page_id"": ""g7_card_height_017"",
+""element_id"": null,
+""related_page_ids"": []
+},
+""evidence"": ""The slide contains a large green container box that occupies the majority of the canvas, yet it only holds a short list of four items, leaving a significant amount of empt",page
+g7_card_height_018__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_018"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains very little content (a title and a short list of 4 items) but occupies a large amoun",page
+g7_card_height_019__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_019"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains a large amount of empty white space below the content box, while the content itsel",page
+g7_card_height_020__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_020"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains a large rectangular container that is mostly empty, with only a small list of four i",page
+g7_card_height_021__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_021"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains very little content (only 4 bullet points) but occupies a large portion of the can",page
+g7_card_height_026__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"```json
+{
+  ""has_defect"": false,
+  ""findings"": []
+}
+```",page
+g7_card_height_022__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_022"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains very little content (a title and a short list) but occupies a large amount of empty ",page
+g7_card_height_023__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_023"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains a large rectangular container that is mostly empty, with only a small list of four i",page
+g7_card_height_025__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_025"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains a large empty area below the content box, indicating the content is too sparse and",page
+g7_card_height_024__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_024"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains a large empty beige box that occupies the majority of the canvas, while the actual c",page
+g7_card_height_027__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_027"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains very little content (a title and four short bullet points) but occupies a large am",page
+g7_card_height_028__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_028"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains very little content (only 4 bullet points) but occupies a large portion of the canva",page
+g7_card_height_029__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_card_height_029"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains very little content (only 4 bullet points) but occupies a large portion of the can",page
+g7_unbreakable_text_000__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_000"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'Implementation Roadmap', but the body content consists solely of a single API e",page
+g7_unbreakable_text_001__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_001"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'Solution Overview', and the body content box also has a header 'Solution Overview'",page
+g7_unbreakable_text_002__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_002"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'Risk Register', but the body content displays a file system path ('Endpoint: C:\\",page
+g7_unbreakable_text_003__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_003"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The long endpoint URL string inside the 'Success Metrics' box is broken awkwardly across three lines (e.g",page
+g7_unbreakable_text_005__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_005"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'Implementation Roadmap', but the body content consists solely of a single API e",page
+g7_unbreakable_text_004__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_004"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'Platform Architecture', but the body content consists solely of a specific AWS ",page
+g7_unbreakable_text_006__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_006"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'Risk Register', but the body content displays a file system path labeled 'Endpoin",page
+g7_unbreakable_text_007__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_007"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'Implementation Roadmap', but the body content consists solely of a specific local",page
+g7_unbreakable_text_008__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_008"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'Platform Architecture', but the body content consists solely of a specific AWS ",page
+g7_unbreakable_text_009__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_009"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'Platform Architecture', but the body content consists solely of a specific API en",page
+g7_unbreakable_text_010__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_010"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'Implementation Roadmap', but the body content contains a specific AWS IAM role ",page
+g7_unbreakable_text_011__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_011"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'Risk Register', but the body content displays a file system path labeled 'Endpoin",page
+g7_unbreakable_text_012__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_012"",
+        ""element_id"": ""endpoint_text"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The long URL text starting with 'https://portal...' breaks awkwardly in the middle of words (e",page
+g7_unbreakable_text_014__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_014"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'Platform Architecture', but the body content consists solely of a specific AWS ",page
+g7_unbreakable_text_013__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_013"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'Risk Register', but the body content displays a technical AWS IAM ARN string labe",page
+g7_unbreakable_text_015__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_015"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The long endpoint URL string inside the box is broken mid-word ('infe' / 'rence' and 'containme' / 'nt'",page
+g7_unbreakable_text_016__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_016"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'Solution Overview', but the body content displays a raw local file path ('C:\\U",page
+g7_unbreakable_text_017__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_017"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'Implementation Roadmap', but the body content contains a specific AWS IAM ARN str",page
+g7_unbreakable_text_018__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_018"",
+        ""element_id"": ""text-block"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The long endpoint URL string breaks awkwardly in the middle of the word 'inference' (splitting it",page
+g7_unbreakable_text_020__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_020"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The long endpoint URL string inside the content box is broken awkwardly across three lines (e.g., 'infe',",page
+g7_unbreakable_text_019__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_019"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'Success Metrics', but the body content displays a file path labeled 'Endpoint' (C",page
+g7_unbreakable_text_021__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_021"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'Implementation Roadmap', but the body content consists solely of a single speci",page
+g7_unbreakable_text_022__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_022"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'Implementation Roadmap', but the body content consists solely of a single speci",page
+g7_unbreakable_text_023__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_023"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'Success Metrics', but the body content displays a file path labeled 'Endpoint' (C",page
+g7_unbreakable_text_024__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_024"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'Implementation Roadmap', but the body content consists solely of a specific AWS",page
+g7_unbreakable_text_026__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_026"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'Q3 Go-to-Market Plan', but the body content displays a raw local file system path",page
+g7_unbreakable_text_025__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_025"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'Implementation Roadmap', but the body content contains a specific AWS IAM role ",page
+g7_unbreakable_text_027__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_027"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The long endpoint URL string inside the box breaks awkwardly in the middle of the word 'containment' (spl",page
+g7_unbreakable_text_028__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_028"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'Implementation Roadmap', but the body content consists solely of a specific API",page
+g7_unbreakable_text_029__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_unbreakable_text_029"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'Platform Architecture', but the body content displays a specific local file path ",page
+g7_image_objectfit_002__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S6_IMAGE_TEXT_CONTRADICTION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S6_IMAGE_TEXT_CONTRADICTION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_image_objectfit_002"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The text describes a 'Reference architecture' and 'detailed component diagram', but the image placeholder contains only a generic diagonal stripe pattern with no architectural cont",page
+g7_image_objectfit_000__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S6_IMAGE_TEXT_CONTRADICTION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S6_IMAGE_TEXT_CONTRADICTION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_image_objectfit_000"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text describes a 'Reference architecture' and refers to a 'detailed component diagram', but t",page
+g7_image_objectfit_001__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S6_IMAGE_TEXT_CONTRADICTION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S6_IMAGE_TEXT_CONTRADICTION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_image_objectfit_001"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'Implementation Roadmap' and the body text refers to a 'Reference architecture",page
+g7_image_objectfit_003__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G2_ELEMENT_OVERLAP""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G2_ELEMENT_OVERLAP"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_image_objectfit_003"",
+        ""element_id"": ""image-caption"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The caption text 'Figure 1: architecture' is overlaid directly on top of the image content (t",page
+g7_image_objectfit_004__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G2_ELEMENT_OVERLAP""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G2_ELEMENT_OVERLAP"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_image_objectfit_004"",
+        ""element_id"": ""figure-caption"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The caption text 'Figure 1: architecture' is overlaid directly on top of the image content (",page
+g7_image_objectfit_006__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S6_IMAGE_TEXT_CONTRADICTION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S6_IMAGE_TEXT_CONTRADICTION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_image_objectfit_006"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide text describes a 'Reference architecture' and a 'detailed component diagram', but the image placeholder contains only a generic diagonal stripe pattern (a missing image i",page
+g7_image_objectfit_005__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G2_ELEMENT_OVERLAP""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G2_ELEMENT_OVERLAP"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_image_objectfit_005"",
+        ""element_id"": ""figure-caption"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The caption text 'Figure 1: architecture' is overlaid directly on top of the image content (",page
+g7_image_objectfit_008__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S6_IMAGE_TEXT_CONTRADICTION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S6_IMAGE_TEXT_CONTRADICTION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_image_objectfit_008"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The text describes a 'Reference architecture' and 'detailed component diagram', but the image placeholder contains only a generic striped pattern with no architectural content."", """,page
+g7_image_objectfit_007__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S6_IMAGE_TEXT_CONTRADICTION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S6_IMAGE_TEXT_CONTRADICTION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_image_objectfit_007"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text describes a 'Reference architecture' and refers to a 'detailed component diagram', but t",page
+g7_image_objectfit_010__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G2_ELEMENT_OVERLAP""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G2_ELEMENT_OVERLAP"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_image_objectfit_010"",
+        ""element_id"": ""figure-caption"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The caption text 'Figure 1: architecture' is overlaid directly on top of the image content (",page
+g7_image_objectfit_009__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S6_IMAGE_TEXT_CONTRADICTION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S6_IMAGE_TEXT_CONTRADICTION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_image_objectfit_009"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The image placeholder displays a generic hazard pattern (diagonal stripes) and is labeled 'Figure",page
+g7_image_objectfit_011__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S6_IMAGE_TEXT_CONTRADICTION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S6_IMAGE_TEXT_CONTRADICTION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_image_objectfit_011"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text describes a 'Reference architecture' and refers to 'Figure 1: architecture', but the ima",page
+g7_image_objectfit_014__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S6_IMAGE_TEXT_CONTRADICTION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S6_IMAGE_TEXT_CONTRADICTION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_image_objectfit_014"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide title is 'Implementation Roadmap' and the body text refers to a 'Reference architecture', but the image displayed is a generic blue diagonal stripe placeholder pattern, n",page
+g7_image_objectfit_012__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S6_IMAGE_TEXT_CONTRADICTION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S6_IMAGE_TEXT_CONTRADICTION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_image_objectfit_012"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title and body text describe a 'Platform Architecture' and 'Reference architecture', bu",page
+g7_image_objectfit_015__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S6_IMAGE_TEXT_CONTRADICTION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S6_IMAGE_TEXT_CONTRADICTION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_image_objectfit_015"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The text describes a 'Reference architecture' and 'detailed component diagram', but the image placeholder contains only a generic striped pattern with no architectural content."", """,page
+g7_image_objectfit_016__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S6_IMAGE_TEXT_CONTRADICTION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S6_IMAGE_TEXT_CONTRADICTION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_image_objectfit_016"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide text describes a 'Reference architecture' and a 'detailed component diagram', but the image displayed is a generic blue diagonal stripe placeholder pattern, which does no",page
+g7_image_objectfit_017__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S6_IMAGE_TEXT_CONTRADICTION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S6_IMAGE_TEXT_CONTRADICTION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_image_objectfit_017"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text describes a 'Reference architecture' and a 'detailed component diagram', but the image d",page
+g7_image_objectfit_018__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S6_IMAGE_TEXT_CONTRADICTION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S6_IMAGE_TEXT_CONTRADICTION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_image_objectfit_018"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text describes a 'Reference architecture' and a 'detailed component diagram', but the image d",page
+g7_image_objectfit_019__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S6_IMAGE_TEXT_CONTRADICTION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S6_IMAGE_TEXT_CONTRADICTION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_image_objectfit_019"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text describes a 'Reference architecture' and a 'detailed component diagram', but the image d",page
+g7_image_objectfit_013__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH"",""S6_IMAGE_TEXT_CONTRADICTION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S6_IMAGE_TEXT_CONTRADICTION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_image_objectfit_013"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The image placeholder contains a generic 'missing image' icon (diagonal stripes) and is captioned",page
+g7_image_objectfit_020__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S6_IMAGE_TEXT_CONTRADICTION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S6_IMAGE_TEXT_CONTRADICTION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_image_objectfit_020"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text describes a 'Reference architecture' and a 'detailed component diagram', but the image d",page
+g7_image_objectfit_023__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S6_IMAGE_TEXT_CONTRADICTION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S6_IMAGE_TEXT_CONTRADICTION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_image_objectfit_023"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The text describes a 'Reference architecture' and 'detailed component diagram', but the image placeholder contains only a generic striped pattern with no architectural content."", """,page
+g7_image_objectfit_021__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S6_IMAGE_TEXT_CONTRADICTION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S6_IMAGE_TEXT_CONTRADICTION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_image_objectfit_021"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The image placeholder displays a generic hazard pattern (diagonal stripes) and is labeled 'Figure",page
+g7_image_objectfit_025__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S6_IMAGE_TEXT_CONTRADICTION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S6_IMAGE_TEXT_CONTRADICTION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_image_objectfit_025"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The text describes a 'Reference architecture' and 'detailed component diagram', but the image placeholder contains only a generic striped pattern with no architectural content."", """,page
+g7_image_objectfit_024__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G2_ELEMENT_OVERLAP""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G2_ELEMENT_OVERLAP"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_image_objectfit_024"",
+        ""element_id"": ""figure-caption"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The caption text 'Figure 1: architecture' is overlaid directly on top of the image content (",page
+g7_image_objectfit_026__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S6_IMAGE_TEXT_CONTRADICTION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S6_IMAGE_TEXT_CONTRADICTION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_image_objectfit_026"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The text describes a 'Reference architecture' and a 'detailed component diagram', but the image placeholder contains only a generic diagonal stripe pattern with no architectural co",page
+g7_image_objectfit_028__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S6_IMAGE_TEXT_CONTRADICTION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S6_IMAGE_TEXT_CONTRADICTION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_image_objectfit_028"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The text describes a 'Reference architecture' and a 'detailed component diagram', but the image displayed is a generic green-and-white striped placeholder pattern, which contradict",page
+g7_image_objectfit_029__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S6_IMAGE_TEXT_CONTRADICTION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S6_IMAGE_TEXT_CONTRADICTION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""g7_image_objectfit_029"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide text describes a 'Reference architecture' and a 'detailed component diagram', but the image displayed is a generic green-and-white striped placeholder pattern, which does",page
+g7_image_objectfit_022__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH"",""S6_IMAGE_TEXT_CONTRADICTION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_image_objectfit_022"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'Success Metrics', but the body content describes a 'Reference architecture' and di",page
+g7_image_objectfit_027__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH"",""S6_IMAGE_TEXT_CONTRADICTION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S6_IMAGE_TEXT_CONTRADICTION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""g7_image_objectfit_027"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The image placeholder contains a generic 'missing image' icon (diagonal stripes) and is captioned",page

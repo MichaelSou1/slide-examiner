@@ -1,0 +1,1279 @@
+sample_id,defect,modality,is_clean,failure,has_defect,named_target,predicted_types,locator,confidence,other,raw,level
+part2_churn_prediction_2_G6_MARGIN_VIOLATION_0_0001__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title and the three content blocks"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title and the three content blocks"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_churn_prediction_3_G6_MARGIN_VIOLATION_0_0002__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title and the three bullet point text blocks"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title and the three bullet point text blocks"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_clinical_triage_1_G6_MARGIN_VIOLATION_0_0005__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the entire list of phase items and the title"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the entire list of phase items and the title"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_churn_prediction_1_G6_MARGIN_VIOLATION_0_0000__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title 'Churn is quietly compounding' and the three bullet points below it"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title 'Churn is quietly compounding' and the three bullet points below it"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_churn_prediction_5_G6_MARGIN_VIOLATION_0_0004__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title 'What RetainML needs to ship' and the three list items below it"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title 'What RetainML needs to ship' and the three list items below it"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_churn_prediction_4_G6_MARGIN_VIOLATION_0_0003__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title 'Rolling RetainML into CRM' and the three bullet point boxes"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title 'Rolling RetainML into CRM' and the three bullet point boxes"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_clinical_triage_3_G6_MARGIN_VIOLATION_0_0007__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the entire text block including the title and list items"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the entire text block including the title and list items"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_clinical_triage_2_G6_MARGIN_VIOLATION_0_0006__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title 'Why triage is the bottleneck' and the three list items below it"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title 'Why triage is the bottleneck' and the three list items below it"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_clinical_triage_5_G6_MARGIN_VIOLATION_0_0009__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title and the three bullet point text blocks"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title and the three bullet point text blocks"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_contract_review_2_G6_MARGIN_VIOLATION_16_0001__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title and the three list items"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title and the three list items"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_contract_review_1_G6_MARGIN_VIOLATION_16_0000__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the entire text block including the title and list items"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the entire text block including the title and list items"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_clinical_triage_4_G6_MARGIN_VIOLATION_0_0008__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title 'TriageAI impact on wait times' and the three list items below it"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title 'TriageAI impact on wait times' and the three list items below it"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_contract_review_5_G6_MARGIN_VIOLATION_16_0004__freeform,G6_MARGIN_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": ""empty"",
+  ""confidence"": 1.0
+}
+```",page
+part2_contract_review_3_G6_MARGIN_VIOLATION_16_0002__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title and the three text blocks below it"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title and the three text blocks below it"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_contract_review_4_G6_MARGIN_VIOLATION_16_0003__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title and the three bullet point text blocks"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title and the three bullet point text blocks"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_customer_support_ai_1_G6_MARGIN_VIOLATION_16_0005__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title and the three bullet point text blocks"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title and the three bullet point text blocks"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_customer_support_ai_2_G6_MARGIN_VIOLATION_16_0006__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the entire text block including the title and list items"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the entire text block including the title and list items"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_customer_support_ai_3_G6_MARGIN_VIOLATION_16_0007__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the entire content block including the title 'HelpBot pilot results' and the three list items"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the entire content block including the title 'HelpBot pilot results' and the three list items"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_customer_support_ai_4_G6_MARGIN_VIOLATION_16_0008__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title 'Scaling HelpBot safely' and the three bullet point text blocks"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title 'Scaling HelpBot safely' and the three bullet point text blocks"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_doc_search_3_G6_MARGIN_VIOLATION_32_0002__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title and the three content blocks"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title and the three content blocks"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_doc_search_2_G6_MARGIN_VIOLATION_32_0001__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the entire text block including the title and list items"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the entire text block including the title and list items"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_customer_support_ai_5_G6_MARGIN_VIOLATION_16_0009__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the entire content block including the title 'Next steps for HelpBot' and the three list items"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the entire content block including the title 'Next steps for HelpBot' and the three list items"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_doc_search_1_G6_MARGIN_VIOLATION_32_0000__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the entire text block including the title 'Teams cannot find documents' and the three list items"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the entire text block including the title 'Teams cannot find documents' and the three list items"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_doc_search_4_G6_MARGIN_VIOLATION_32_0003__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the entire content block including the title and the three list items"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the entire content block including the title and the three list items"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_energy_forecasting_2_G6_MARGIN_VIOLATION_32_0006__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the entire text block including the title and list items"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the entire text block including the title and list items"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_doc_search_5_G6_MARGIN_VIOLATION_32_0004__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title 'The FindFast rollout plan' and the three content blocks below it"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title 'The FindFast rollout plan' and the three content blocks below it"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_energy_forecasting_4_G6_MARGIN_VIOLATION_32_0008__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title and the three bullet point boxes"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title and the three bullet point boxes"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_energy_forecasting_1_G6_MARGIN_VIOLATION_32_0005__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title and the three list items (Q1, Q2, Q3)"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title and the three list items (Q1, Q2, Q3)"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_energy_forecasting_3_G6_MARGIN_VIOLATION_32_0007__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title 'How GridCast models weather' and the three list items below it"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title 'How GridCast models weather' and the three list items below it"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_energy_forecasting_5_G6_MARGIN_VIOLATION_32_0009__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title and the three content boxes"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title and the three content boxes"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_hr_analytics_2_G6_MARGIN_VIOLATION_48_0001__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the entire content block including the title and list items"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the entire content block including the title and list items"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_hr_analytics_4_G6_MARGIN_VIOLATION_48_0003__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the entire list of phases and the title"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the entire list of phases and the title"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_hr_analytics_1_G6_MARGIN_VIOLATION_48_0000__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the entire text block including the title 'Attrition is rising quietly' and the three bullet points"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the entire text block including the title 'Attrition is rising quietly' and the three bullet points"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_hr_analytics_3_G6_MARGIN_VIOLATION_48_0002__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the entire content block including the title 'Actions PeoplePulse recommends' and the three list items"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the entire content block including the title 'Actions PeoplePulse recommends' and the three list items"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_hr_analytics_5_G6_MARGIN_VIOLATION_48_0004__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title 'PeoplePulse rollout plan' and the three list items below it"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title 'PeoplePulse rollout plan' and the three list items below it"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_inventory_optimization_1_G6_MARGIN_VIOLATION_48_0005__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the entire text block including the title 'Stockouts erode loyalty' and the three bullet points"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the entire text block including the title 'Stockouts erode loyalty' and the three bullet points"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_inventory_optimization_2_G6_MARGIN_VIOLATION_48_0006__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the entire list of phases and the title"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the entire list of phases and the title"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_inventory_optimization_3_G6_MARGIN_VIOLATION_48_0007__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the entire content block including the title and the three timeline items"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the entire content block including the title and the three timeline items"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_logistics_visibility_1_G6_MARGIN_VIOLATION_64_0000__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the entire list of phases and the title"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the entire list of phases and the title"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_logistics_visibility_1_G6_MARGIN_VIOLATION_8_0000__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the entire list of phase items and the title"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the entire list of phase items and the title"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_inventory_optimization_5_G6_MARGIN_VIOLATION_48_0009__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title 'Funding the StockIQ rollout' and the three bullet points below it"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title 'Funding the StockIQ rollout' and the three bullet points below it"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_inventory_optimization_4_G6_MARGIN_VIOLATION_48_0008__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the entire content block including the title 'Expanding StockIQ to all regions' and the three list items"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the entire content block including the title 'Expanding StockIQ to all regions' and the three list items"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_logistics_visibility_2_G6_MARGIN_VIOLATION_64_0001__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title 'Why visibility breaks down' and the three list items below it"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title 'Why visibility breaks down' and the three list items below it"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_logistics_visibility_4_G6_MARGIN_VIOLATION_64_0003__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title and the three list items"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title and the three list items"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_logistics_visibility_2_G6_MARGIN_VIOLATION_8_0001__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the entire content block including the title 'Why visibility breaks down' and the three list items"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the entire content block including the title 'Why visibility breaks down' and the three list items"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_logistics_visibility_4_G6_MARGIN_VIOLATION_8_0003__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title and the three list items"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title and the three list items"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_logistics_visibility_3_G6_MARGIN_VIOLATION_64_0002__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the entire text block including the title 'ShipEye tracks every leg' and the three list items"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the entire text block including the title 'ShipEye tracks every leg' and the three list items"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_logistics_visibility_3_G6_MARGIN_VIOLATION_8_0002__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the entire content block including the title 'ShipEye tracks every leg' and the three list items"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the entire content block including the title 'ShipEye tracks every leg' and the three list items"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_logistics_visibility_5_G6_MARGIN_VIOLATION_64_0004__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title and the three bullet point text blocks"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title and the three bullet point text blocks"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_logistics_visibility_5_G6_MARGIN_VIOLATION_8_0004__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title and the three bullet point boxes"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title and the three bullet point boxes"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_marketing_attribution_2_G6_MARGIN_VIOLATION_64_0006__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title and the three text blocks below it"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title and the three text blocks below it"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_marketing_attribution_2_G6_MARGIN_VIOLATION_8_0006__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title and the three text boxes below it"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title and the three text boxes below it"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_marketing_attribution_1_G6_MARGIN_VIOLATION_64_0005__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the entire content block including the title 'Spend is hard to attribute' and the three list items"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the entire content block including the title 'Spend is hard to attribute' and the three list items"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_marketing_attribution_1_G6_MARGIN_VIOLATION_8_0005__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the entire text block including the title 'Spend is hard to attribute' and the list items"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the entire text block including the title 'Spend is hard to attribute' and the list items"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_marketing_attribution_3_G6_MARGIN_VIOLATION_64_0007__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title and the three bullet point text blocks"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title and the three bullet point text blocks"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_marketing_attribution_3_G6_MARGIN_VIOLATION_8_0007__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title and the three bullet point text blocks"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title and the three bullet point text blocks"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_marketing_attribution_4_G6_MARGIN_VIOLATION_64_0008__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title and the three text boxes below it"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title and the three text boxes below it"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_marketing_attribution_5_G6_MARGIN_VIOLATION_64_0009__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the entire list of phases and the title"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the entire list of phases and the title"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_marketing_attribution_4_G6_MARGIN_VIOLATION_8_0008__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title and the three text boxes below it"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title and the three text boxes below it"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_marketing_attribution_5_G6_MARGIN_VIOLATION_8_0009__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the entire list of phase items and the title"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the entire list of phase items and the title"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_payments_modernization_1_G6_MARGIN_VIOLATION_80_0000__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title and the three bullet point boxes"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title and the three bullet point boxes"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_payments_modernization_2_G6_MARGIN_VIOLATION_80_0001__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title 'Gaps in the current stack' and the three bullet point boxes"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title 'Gaps in the current stack' and the three bullet point boxes"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_payments_modernization_3_G6_MARGIN_VIOLATION_80_0002__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title 'The PayCore design' and the three content boxes below it"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title 'The PayCore design' and the three content boxes below it"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_pricing_optimization_1_G6_MARGIN_VIOLATION_80_0005__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title and the three bullet point text blocks"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title and the three bullet point text blocks"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_payments_modernization_4_G6_MARGIN_VIOLATION_80_0003__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title 'PayCore risks and mitigations' and the three content boxes below it"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title 'PayCore risks and mitigations' and the three content boxes below it"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_payments_modernization_5_G6_MARGIN_VIOLATION_80_0004__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title 'What PayCore needs to launch' and the three bullet points below it"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title 'What PayCore needs to launch' and the three bullet points below it"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_pricing_optimization_2_G6_MARGIN_VIOLATION_80_0006__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the entire content block including the title and the three feature boxes"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the entire content block including the title and the three feature boxes"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_pricing_optimization_4_G6_MARGIN_VIOLATION_80_0008__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title and the three bullet point text blocks"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title and the three bullet point text blocks"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_pricing_optimization_5_G6_MARGIN_VIOLATION_80_0009__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title and the three bullet point text blocks"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title and the three bullet point text blocks"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_retail_analytics_1_G6_MARGIN_VIOLATION_-16_0000__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the entire list of phase items and the title"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the entire list of phase items and the title"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_pricing_optimization_3_G6_MARGIN_VIOLATION_80_0007__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the entire content block including the title 'PriceWise results from the test' and the three list items"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the entire content block including the title 'PriceWise results from the test' and the three list items"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_retail_analytics_2_G6_MARGIN_VIOLATION_-16_0001__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title and the three list items (Q1, Q2, Q3)"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title and the three list items (Q1, Q2, Q3)"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_retail_analytics_3_G6_MARGIN_VIOLATION_-16_0002__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the entire content block including the title 'DemandSense beat the baseline' and the three list items"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the entire content block including the title 'DemandSense beat the baseline' and the three list items"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_retail_analytics_4_G6_MARGIN_VIOLATION_-16_0003__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title 'Scaling DemandSense to the fleet' and the three list items below it"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title 'Scaling DemandSense to the fleet' and the three list items below it"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_retail_analytics_5_G6_MARGIN_VIOLATION_-16_0004__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the entire content block including the title 'Decisions for this quarter' and the three list items"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the entire content block including the title 'Decisions for this quarter' and the three list items"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_security_program_3_G6_MARGIN_VIOLATION_-16_0007__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title and the three list items"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title and the three list items"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_security_program_1_G6_MARGIN_VIOLATION_-16_0005__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title 'Our exposure is growing fast' and the three list items below it"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title 'Our exposure is growing fast' and the three list items below it"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_security_program_2_G6_MARGIN_VIOLATION_-16_0006__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the entire content block including the title 'A ZeroTrust strategy' and the three list items"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the entire content block including the title 'A ZeroTrust strategy' and the three list items"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_security_program_4_G6_MARGIN_VIOLATION_-16_0008__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title and the three content blocks"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title and the three content blocks"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_churn_prediction_2_G6_MARGIN_VIOLATION_0_0001__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title and the three content blocks"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title and the three content blocks"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_churn_prediction_1_G6_MARGIN_VIOLATION_0_0000__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title and the three bullet point text blocks"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title and the three bullet point text blocks"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_security_program_5_G6_MARGIN_VIOLATION_-16_0009__freeform,G6_MARGIN_VIOLATION,A,False,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title 'The investment we request' and the three content boxes below it"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title 'The investment we request' and the three content boxes below it"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_churn_prediction_3_G6_MARGIN_VIOLATION_0_0002__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the entire content block including the title and three text boxes"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the entire content block including the title and three text boxes"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_churn_prediction_4_G6_MARGIN_VIOLATION_0_0003__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title and the three bullet point boxes"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title and the three bullet point boxes"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_churn_prediction_5_G6_MARGIN_VIOLATION_0_0004__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the entire content block including the title 'What RetainML needs to ship' and the three list items"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the entire content block including the title 'What RetainML needs to ship' and the three list items"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_clinical_triage_1_G6_MARGIN_VIOLATION_0_0005__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the entire list of phase items and the title"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the entire list of phase items and the title"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_clinical_triage_3_G6_MARGIN_VIOLATION_0_0007__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the entire text block including the title and list items"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the entire text block including the title and list items"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_clinical_triage_5_G6_MARGIN_VIOLATION_0_0009__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title and the three bullet point boxes"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title and the three bullet point boxes"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_clinical_triage_2_G6_MARGIN_VIOLATION_0_0006__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title and the three timeline items (Q1, Q2, Q3)"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title and the three timeline items (Q1, Q2, Q3)"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_clinical_triage_4_G6_MARGIN_VIOLATION_0_0008__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the entire content block including the title 'TriageAI impact on wait times' and the three list items"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the entire content block including the title 'TriageAI impact on wait times' and the three list items"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_contract_review_1_G6_MARGIN_VIOLATION_16_0000__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the entire text block including the title and list items"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the entire text block including the title and list items"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_contract_review_4_G6_MARGIN_VIOLATION_16_0003__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title and the three bullet point text blocks"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title and the three bullet point text blocks"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_contract_review_3_G6_MARGIN_VIOLATION_16_0002__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title 'ClauseScan pilot accuracy' and the three bullet point boxes"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title 'ClauseScan pilot accuracy' and the three bullet point boxes"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_contract_review_2_G6_MARGIN_VIOLATION_16_0001__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the entire content block including the title 'ClauseScan flags risky clauses' and the three list items"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the entire content block including the title 'ClauseScan flags risky clauses' and the three list items"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_customer_support_ai_1_G6_MARGIN_VIOLATION_16_0005__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title and the three bullet point text blocks"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title and the three bullet point text blocks"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_contract_review_5_G6_MARGIN_VIOLATION_16_0004__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the entire content block including the title 'Next steps for ClauseScan' and the three bullet points"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the entire content block including the title 'Next steps for ClauseScan' and the three bullet points"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_customer_support_ai_2_G6_MARGIN_VIOLATION_16_0006__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the entire text block including the title and list items"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the entire text block including the title and list items"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_customer_support_ai_4_G6_MARGIN_VIOLATION_16_0008__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title 'Scaling HelpBot safely' and the three bullet points below it"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title 'Scaling HelpBot safely' and the three bullet points below it"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_customer_support_ai_3_G6_MARGIN_VIOLATION_16_0007__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the entire content block including the title 'HelpBot pilot results' and the three list items"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the entire content block including the title 'HelpBot pilot results' and the three list items"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_customer_support_ai_5_G6_MARGIN_VIOLATION_16_0009__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the entire content block including the title 'Next steps for HelpBot' and the three bullet points"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the entire content block including the title 'Next steps for HelpBot' and the three bullet points"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_doc_search_1_G6_MARGIN_VIOLATION_32_0000__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the entire text block including the title 'Teams cannot find documents' and the three list items"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the entire text block including the title 'Teams cannot find documents' and the three list items"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_doc_search_2_G6_MARGIN_VIOLATION_32_0001__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the entire text block including the title 'FindFast indexes everything' and the three bullet points"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the entire text block including the title 'FindFast indexes everything' and the three bullet points"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_doc_search_3_G6_MARGIN_VIOLATION_32_0002__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title and the three content blocks"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title and the three content blocks"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_doc_search_4_G6_MARGIN_VIOLATION_32_0003__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title and the three text boxes below it"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title and the three text boxes below it"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_doc_search_5_G6_MARGIN_VIOLATION_32_0004__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title 'The FindFast rollout plan' and the three bullet points below it"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title 'The FindFast rollout plan' and the three bullet points below it"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_energy_forecasting_1_G6_MARGIN_VIOLATION_32_0005__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title and the three list items (Q1, Q2, Q3)"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title and the three list items (Q1, Q2, Q3)"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_energy_forecasting_2_G6_MARGIN_VIOLATION_32_0006__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the entire text block including the title 'GridCast forecasts load early' and the three bullet points"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the entire text block including the title 'GridCast forecasts load early' and the three bullet points"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_energy_forecasting_3_G6_MARGIN_VIOLATION_32_0007__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the entire content block including the title 'How GridCast models weather' and the three list items"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the entire content block including the title 'How GridCast models weather' and the three list items"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_energy_forecasting_4_G6_MARGIN_VIOLATION_32_0008__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title and the three bullet point text blocks"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title and the three bullet point text blocks"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_energy_forecasting_5_G6_MARGIN_VIOLATION_32_0009__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title and the three content blocks"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title and the three content blocks"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_hr_analytics_2_G6_MARGIN_VIOLATION_48_0001__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the entire text block including the title and list items"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the entire text block including the title and list items"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_hr_analytics_1_G6_MARGIN_VIOLATION_48_0000__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the entire text block including the title 'Attrition is rising quietly' and the three bullet points"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the entire text block including the title 'Attrition is rising quietly' and the three bullet points"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_hr_analytics_4_G6_MARGIN_VIOLATION_48_0003__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the entire list of phases and the title"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the entire list of phases and the title"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_hr_analytics_3_G6_MARGIN_VIOLATION_48_0002__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the entire content block including the title 'Actions PeoplePulse recommends' and the three list items"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the entire content block including the title 'Actions PeoplePulse recommends' and the three list items"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_hr_analytics_5_G6_MARGIN_VIOLATION_48_0004__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the entire content block including the title 'PeoplePulse rollout plan' and the three list items"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the entire content block including the title 'PeoplePulse rollout plan' and the three list items"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_inventory_optimization_1_G6_MARGIN_VIOLATION_48_0005__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title and the three text blocks below it"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title and the three text blocks below it"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_inventory_optimization_2_G6_MARGIN_VIOLATION_48_0006__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the entire list of phases and the title"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the entire list of phases and the title"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_inventory_optimization_4_G6_MARGIN_VIOLATION_48_0008__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title and the three bullet point boxes"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title and the three bullet point boxes"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_inventory_optimization_3_G6_MARGIN_VIOLATION_48_0007__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title and the three timeline rows (Q1, Q2, Q3)"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title and the three timeline rows (Q1, Q2, Q3)"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_logistics_visibility_1_G6_MARGIN_VIOLATION_64_0000__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the entire list of phases and the title"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the entire list of phases and the title"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_inventory_optimization_5_G6_MARGIN_VIOLATION_48_0009__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title 'Funding the StockIQ rollout' and the three list items below it"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title 'Funding the StockIQ rollout' and the three list items below it"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_logistics_visibility_1_G6_MARGIN_VIOLATION_8_0000__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the entire list of phases and the title"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the entire list of phases and the title"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_logistics_visibility_2_G6_MARGIN_VIOLATION_64_0001__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title 'Why visibility breaks down' and the three list items below it"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title 'Why visibility breaks down' and the three list items below it"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_logistics_visibility_2_G6_MARGIN_VIOLATION_8_0001__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title 'Why visibility breaks down' and the three list items below it"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title 'Why visibility breaks down' and the three list items below it"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_logistics_visibility_3_G6_MARGIN_VIOLATION_64_0002__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the entire text block including the title 'ShipEye tracks every leg' and the three list items"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the entire text block including the title 'ShipEye tracks every leg' and the three list items"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_logistics_visibility_4_G6_MARGIN_VIOLATION_64_0003__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title and the three list items"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title and the three list items"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_logistics_visibility_3_G6_MARGIN_VIOLATION_8_0002__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the entire text block including the title 'ShipEye tracks every leg' and the three list items"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the entire text block including the title 'ShipEye tracks every leg' and the three list items"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_logistics_visibility_4_G6_MARGIN_VIOLATION_8_0003__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title and the three list items"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title and the three list items"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_logistics_visibility_5_G6_MARGIN_VIOLATION_64_0004__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title and the three bullet point blocks"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title and the three bullet point blocks"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_logistics_visibility_5_G6_MARGIN_VIOLATION_8_0004__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title and the three bullet point blocks"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title and the three bullet point blocks"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_marketing_attribution_1_G6_MARGIN_VIOLATION_64_0005__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the entire content block including the title 'Spend is hard to attribute' and the three list items"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the entire content block including the title 'Spend is hard to attribute' and the three list items"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_marketing_attribution_2_G6_MARGIN_VIOLATION_64_0006__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title and the three text blocks below it"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title and the three text blocks below it"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_marketing_attribution_1_G6_MARGIN_VIOLATION_8_0005__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the entire content block including the title 'Spend is hard to attribute' and the three list items"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the entire content block including the title 'Spend is hard to attribute' and the three list items"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_marketing_attribution_2_G6_MARGIN_VIOLATION_8_0006__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title and the three text blocks below it"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title and the three text blocks below it"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_marketing_attribution_3_G6_MARGIN_VIOLATION_64_0007__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title and the three text boxes below it"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title and the three text boxes below it"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_marketing_attribution_3_G6_MARGIN_VIOLATION_8_0007__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title and the three text boxes below it"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title and the three text boxes below it"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_marketing_attribution_4_G6_MARGIN_VIOLATION_64_0008__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title and the three bullet point text blocks"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title and the three bullet point text blocks"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_marketing_attribution_4_G6_MARGIN_VIOLATION_8_0008__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title and the three bullet point text blocks"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title and the three bullet point text blocks"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_marketing_attribution_5_G6_MARGIN_VIOLATION_64_0009__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the entire list of phases and the title"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the entire list of phases and the title"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_marketing_attribution_5_G6_MARGIN_VIOLATION_8_0009__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the entire list of phases and the title"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the entire list of phases and the title"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_payments_modernization_2_G6_MARGIN_VIOLATION_80_0001__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": ""empty"",
+  ""confidence"": 1.0
+}
+```",page
+part2_payments_modernization_1_G6_MARGIN_VIOLATION_80_0000__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title 'Legacy payments are fragile' and the three bullet point boxes"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title 'Legacy payments are fragile' and the three bullet point boxes"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_pricing_optimization_1_G6_MARGIN_VIOLATION_80_0005__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": ""empty"",
+  ""confidence"": 1.0
+}
+```",page
+part2_payments_modernization_5_G6_MARGIN_VIOLATION_80_0004__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title and the three content blocks"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title and the three content blocks"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_payments_modernization_3_G6_MARGIN_VIOLATION_80_0002__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title 'The PayCore design' and the three bullet point boxes"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title 'The PayCore design' and the three bullet point boxes"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_payments_modernization_4_G6_MARGIN_VIOLATION_80_0003__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the entire content block including the title 'PayCore risks and mitigations' and the three list items"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the entire content block including the title 'PayCore risks and mitigations' and the three list items"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_pricing_optimization_2_G6_MARGIN_VIOLATION_80_0006__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the entire content block including the title and list items"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the entire content block including the title and list items"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_pricing_optimization_3_G6_MARGIN_VIOLATION_80_0007__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the entire content block including the title 'PriceWise results from the test' and the three list items"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the entire content block including the title 'PriceWise results from the test' and the three list items"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_retail_analytics_1_G6_MARGIN_VIOLATION_-16_0000__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,False,False,[],,0.95,[],"{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": ""empty"",
+  ""confidence"": 0.95
+}",page
+part2_pricing_optimization_4_G6_MARGIN_VIOLATION_80_0008__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title and the three content blocks below it"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title and the three content blocks below it"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_pricing_optimization_5_G6_MARGIN_VIOLATION_80_0009__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title and the three bullet point text blocks"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title and the three bullet point text blocks"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_retail_analytics_2_G6_MARGIN_VIOLATION_-16_0001__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the entire content block including the title and the three list items"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the entire content block including the title and the three list items"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+part2_retail_analytics_3_G6_MARGIN_VIOLATION_-16_0002__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the entire text block including the title and list items"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the entire text block including the title and list items"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_retail_analytics_4_G6_MARGIN_VIOLATION_-16_0003__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title and the three list items"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title and the three list items"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_retail_analytics_5_G6_MARGIN_VIOLATION_-16_0004__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the entire content block including the title 'Decisions for this quarter' and the three list items"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the entire content block including the title 'Decisions for this quarter' and the three list items"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_security_program_1_G6_MARGIN_VIOLATION_-16_0005__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title and the three list items (Q1, Q2, Q3)"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title and the three list items (Q1, Q2, Q3)"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_security_program_2_G6_MARGIN_VIOLATION_-16_0006__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the entire content block including the title 'A ZeroTrust strategy' and the three list items"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the entire content block including the title 'A ZeroTrust strategy' and the three list items"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_security_program_3_G6_MARGIN_VIOLATION_-16_0007__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title and the three list items"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title and the three list items"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_security_program_4_G6_MARGIN_VIOLATION_-16_0008__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title and the three content blocks"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title and the three content blocks"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+part2_security_program_5_G6_MARGIN_VIOLATION_-16_0009__freeform__CLEAN,G6_MARGIN_VIOLATION,A,True,False,True,True,"[""G6_MARGIN_VIOLATION""]","{""element"":""the title and the three content blocks"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the title and the three content blocks"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page

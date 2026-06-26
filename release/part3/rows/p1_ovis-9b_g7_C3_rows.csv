@@ -1,0 +1,453 @@
+sample_id,defect,modality,is_clean,failure,has_defect,named_target,predicted_types,locator,confidence,other,raw,level
+g7_card_height_005,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,True,"[""G7_RENDER_CONTAINMENT_OVERFLOW""]","{""element"":""Enablement & training"",""region"":""bottom""}",0.9,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的列表项，“Enablement & training”、“SLA hardening”、“Quarterly business review”这些项目是否在卡片外？卡片是橙色边框的矩形区域，里面的列表项到“Production rollout”为止，下面的三个项目（Enablement & training等）是在卡片下方，所以属于溢出。那要确定元素和位置。
+
+首先，present是true，因为有内容在卡片外。证据元素是下面的列表项，比如“Enablement & training”所在的项目，位置是bottom（因为卡片底部之外）。然后confidence给个值，比如0.9。
+
+现在组织JSON：
+
+{""present"": true, ""evidence_element"": ""Enablement & training"", ",page
+g7_card_height_000,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,0.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，比如列表项是否在容器外。观察到“Cost attribution”、“Multi-tenant isolation”、“Zero-downtime upgrades”这些项目是否在卡片外？看卡片是那个浅蓝色的框，里面的列表项应该是包含在卡片内的？不对，再仔细看。哦，可能卡片是第一个大的浅蓝色框，里面的列表项（Unified data plane等）都在里面，而下面的三个项目（Cost attribution等）是否在卡片外？但问题问的是是否有元素内容溢出容器。看每个元素是否在自己的容器内。比如，假设卡片是那个浅蓝色的矩形框，里面的列表项都在里面，而下面的三个项目是否属于另一个容器？但如果没有溢出的话，那present是false？不对，再检查。或者有没有文字超出卡片边缘？看所有文字，比如“Solution Overview",page
+g7_card_height_011,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,True,"[""G7_RENDER_CONTAINMENT_OVERFLOW""]","{""element"":""Latency regressions"",""region"":""bottom""}",1.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的列表项，“Latency regressions”、“Cost overrun”、“Change-management gaps”这些项目是否在容器外？看容器是蓝色边框的矩形，里面的列表项应该是包含在容器内的？不对，再仔细看。哦，可能我错了，看每个项目的位置。比如“Latency regressions”等是否在容器外？不，容器是那个大的蓝色框，里面的列表项应该都在里面？不对，再看。哦，不对，用户的问题是是否有元素内容溢出容器。看图片中，比如“Latency regressions”这个项目是否在容器外？不，容器是蓝色边框的矩形，里面的列表项应该都在里面？不对，可能我看错了。再检查：容器是蓝色边框的矩形，里面的列表项（Data residency exposure等）都在里面吗？然后下面的Latency regressions等",page
+g7_card_height_004,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，比如列表项是否在容器外。观察到“Cost attribution”、“Multi-tenant isolation”、“Zero-downtime upgrades”这些项目是否在绿色框外？绿色框是Solution Overview的容器，里面的列表项都在框内吗？不对，看结构：绿色框内的列表项是Unified data plane等，而下面的Cost attribution等是在绿色框外吗？不，看布局：绿色框是一个大的矩形，里面的列表项（Unified data plane等）都在框内，而下面的Cost attribution等是在绿色框下方，属于另一个区域？不对，再仔细看。哦，可能我错了。再检查每个元素：绿色框内的内容是否溢出？比如文字有没有超出框的边缘。看绿色框的边界，里面的文字是否都在框内。然后看其他元素，比如下面的",page
+g7_card_height_008,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,0.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的列表项，比如“Pilot usage-based billing”等是否在卡片外？看结构：卡片是橙色边框的区域，里面的列表项都在卡片内吗？然后下面的列表项（Pilot...等）是否在卡片外？但问题问的是元素内容是否溢出容器。看每个元素，比如卡片内的列表项都在卡片里，而卡片外的列表项是否属于溢出？不，因为卡片外的列表项是另一个部分。但再仔细看，是否有内容溢出。比如，假设卡片是那个橙色边框的大矩形，里面的列表项都在里面，而下面的列表项（Pilot...等）是在卡片外，但这些是独立的列表项，不是溢出。那有没有内容溢出？比如某个文本跑到卡片边缘外？看图片中，所有文本是否都在各自的容器内。比如卡片内的列表项都在卡片里，卡片外的列表项也在各自的位置。所以没有内容溢出容器的情况？不对，再检查。哦，可能我错了。看卡片是橙色边框的区域，里面的列表",page
+g7_card_height_009,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,True,"[""G7_RENDER_CONTAINMENT_OVERFLOW""]","{""element"":""Latency regressions"",""region"":""bottom-left""}",1.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的列表项，“Latency regressions”、“Cost overrun”、“Change-management gaps”这些项目是否在容器外？看容器是蓝色边框的矩形，里面的列表项应该是包含在内？不对，再仔细看。哦，可能“Latency regressions”等是否在容器外？看容器的范围，假设容器是蓝色框内的区域，那么外面的列表项是否溢出？比如“Latency regressions”这个项目是否在容器外？看图片中，蓝色框内的列表项是前五个（Data residency...到Integration debt），然后下面的三个（Latency...）在蓝色框外？那这样的话，这些项目是否溢出？但问题问的是是否有元素内容溢出容器。所以需要确认。看每个项目的位置：蓝色框内的列表项应该是在框内，而下面的三个项目是否在框外？如果",page
+g7_card_height_010,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,0.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，比如列表项是否在框外。看“Cost attribution”等项目，它们是否在橙色框外？橙色框是Solution Overview的标题和里面的列表（Unified data plane等），而下面的Cost attribution、Multi-tenant isolation、Zero-downtime upgrades这些项目是在橙色框之外吗？不对，看结构：橙色框内的列表是Unified data plane到Audit & lineage，然后下面还有三个项目。但问题问的是是否溢出容器。那看每个元素是否在自己的容器内。比如，橙色框是一个容器，里面的列表项是否都在框内？然后下面的项目是否在框外？但用户的问题是“spill outside the box, card, or container”。看图片中，橙色框内的列表",page
+g7_card_height_003,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的列表项，比如“Pilot usage-based billing”等是否在卡片外？看结构：卡片是浅绿色的矩形框，里面的列表项都在框内吗？然后下面的列表项（Pilot...等）是否在卡片外？但问题问的是元素内容是否溢出其应该包含的盒子、卡片或容器。看每个元素：
+
+首先，卡片内的列表项都在卡片里吗？然后下面的列表项（Pilot usage-based billing等）是否属于卡片外的内容？但需要看是否有内容溢出。比如，假设卡片是那个浅绿色的大矩形，里面的列表项都在里面，而下面的列表项是在卡片外，但它们自己是否溢出？不，问题是元素的内容是否溢出其容器。比如，某个元素（如一个列表项）的内容是否超出它所在的容器（比如卡片）。看图片中，卡片内的列表项都在卡片内，而卡片外的列表项（Pilot...等）是否属于另一个容器？但可能没有溢出。或者",page
+g7_card_height_007,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,0.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，比如“Success Metrics”标题在大框外？不，看列表项。然后看“Inference cost -31%”等是否在框外？看右边的橙色框（card）里的内容，里面的列表项都在框内吗？然后下面的列表项是否在框外？哦，右边的橙色框是card，里面的列表项都在框内，而下面的“Inference cost -31%”等是在card外的列表项。但问题问的是是否spill outside the box（card或container）。看右边的card（橙色边框的浅橙色区域），里面的列表项都在框内，而下面的列表项是在card外的。但有没有内容溢出？比如某个元素的内容超出其容器。看每个元素：比如“Success Metrics”标题在大框外？不，大框是包含右边card的？不对，看结构：最上面的标题“Success Metrics”",page
+g7_card_height_015,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,0.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，比如“Success Metrics”标题下的列表项，还有下面的项目。检查每个元素是否在容器内。发现“Inference cost -31%”等项目是否在容器外？看容器是那个浅蓝色的框，里面的列表项都在框内吗？然后下面的项目是否在框外？哦，看结构：上面的浅蓝色框是一个容器，里面的列表项都在框内。而下面的“Inference cost -31%”等项目是在框外吗？不，看整个布局，可能我错了。再仔细看：用户问的是元素的内容是否溢出其应该持有的盒子、卡片或容器。看每个元素，比如“Success Metrics”标题下的列表项都在浅蓝色框内，没有溢出。那有没有其他元素？比如下面的项目是否在某个容器外？但问题中的容器应该是每个元素的所属容器。如果没有元素溢出，那present=false。所以判断是否存在溢出，这里没有，所以pres",page
+g7_card_height_017,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,0.0,[],"<think>
+用户现在需要检查是否有元素内容溢出容器。看图片里的列表项，比如“Offline eval harness”等是否在卡片外？但看结构，“Platform Architecture”卡片内的列表项（Ingestion service等）都在卡片内，而卡片外的列表项（Offline eval harness等）是否属于溢出？不，这些是卡片外的项目，但问题问的是“spill outside the box, card, or container that is supposed to hold it”。看卡片内的内容是否溢出：卡片内的列表项都在卡片内，没有溢出。那有没有其他情况？比如文字是否超出卡片边缘？看卡片内的文字，每个列表项都在卡片内，所以没有溢出。因此present为false。</think>
+
+{""present"": false, ""evidence_element"":",page
+g7_card_height_002,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,0.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的列表项，比如“Latency regressions”等是否在框外？看结构：Risk Register的绿色框内有部分列表项，而下面的“Latency regressions”等是否在框外？不对，看每个元素的位置。哦，看“Latency regressions”这个项目符号，是否在绿色框的下方？因为绿色框是包含前面的部分列表项，而下面的“Latency regressions”等是在绿色框外面吗？不，看布局：绿色框内的列表项是Data residency exposure、Vendor lock-in、Model drift、Key-person dependency、Integration debt，然后下面的Latency regressions等是在绿色框的下方，所以这些属于溢出吗？但问题是问是否有元素的内容溢出容器。那看",page
+g7_card_height_013,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的列表项，比如“Enablement & training”等是否在框外？看右边的框是蓝色边框的区域，里面的列表项都在框内吗？然后下面的列表项（Enablement & training等）是否在框外？哦，看右边的蓝色框是一个容器，里面的列表项到Security review为止，然后下面的Enablement & training等是在框外吗？不对，看结构：右边的蓝色框是一个大的矩形，里面的列表项是Discovery & scoping到Production rollout，然后下面的Enablement & training等是在框外吗？不，看图片中，右边的蓝色框是一个容器，里面的列表项都在框内吗？不对，再仔细看：右边的蓝色框是一个矩形，里面的列表项是Discovery & scoping、Data wiring、Pilot ",page
+g7_card_height_001,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,0.0,[],"<think>
+用户现在需要检查是否有元素内容溢出容器。看图片里的列表项，比如“Offline eval harness”、“Drift monitors”、“Cost governor”这些是否在卡片外？卡片是浅绿色的矩形区域，里面的内容应该是“Ingestion service”等五个项目，而下面的三个项目（Offline eval harness等）是在卡片外面吗？不对，看结构：卡片内的标题是“Platform Architecture”，然后下面的列表项是Ingestion service到Observability stack这五个，然后卡片外还有三个项目。但问题问的是是否溢出容器（box、card、container）。所以看是否有内容超出卡片。比如，卡片内的列表项是否都在卡片内？然后卡片外的项目是否属于另一个容器？但这里可能卡片是包含前五个的，而后面三个是另一个列表？不对，看",page
+g7_card_height_019,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,0.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，比如列表项是否在容器外。看“Cost attribution”等项目，它们是否在橙色框外？橙色框是Solution Overview的容器，里面的列表项都在框内吗？然后下面的列表项（Cost attribution等）是否在框外？但问题问的是spill outside the box等。看每个元素：橙色框内的列表项都在框里，而框外的列表项（Cost attribution、Multi-tenant isolation、Zero-downtime upgrades）是否属于溢出？不，这些是独立的列表项，不在同一个容器里？不对，看结构：橙色框是一个容器，里面的列表项都在框内，而框外的列表项是另一个部分。但有没有内容溢出？比如某个元素的内容超出其容器边缘。看所有可见元素，没有发现内容溢出容器的情况。所以present=false",page
+g7_card_height_006,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,0.0,[],"<think>
+用户现在需要检查是否有元素内容溢出容器。看图片里的列表项，比如“Offline eval harness”、“Drift monitors”、“Cost governor”这些是否在卡片外？卡片是橙色边框的区域，里面的内容应该是“Ingestion service”等五个项目，而下面的三个项目（Offline eval harness等）是在卡片外吗？不对，看结构：卡片内的标题是“Platform Architecture”，然后下面的列表项是Ingestion service到Observability stack这五个，然后卡片外还有三个项目。但问题问的是是否溢出容器（box、card、container）。所以看是否有内容跑到容器外面。比如，卡片内的内容是否都包含在卡片里？卡片内的列表项应该都在卡片内，而卡片外的三个项目是否属于另一个容器？但问题中的容器可能指的是卡片",page
+g7_card_height_012,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的列表项，比如“Enablement & training”等是否在框外？看右边的框是蓝色边框的区域，里面的列表项都在框内吗？然后下面的列表项（Enablement & training等）是否在框外？哦，看右边的蓝色框是一个容器，里面的列表项到Security review为止，然后下面的Enablement & training等是在框外吗？不对，看结构：右边的蓝色框是一个大的矩形，里面的列表项是Discovery & scoping到Production rollout，然后下面的Enablement & training等是在框外吗？不，看图片中，右边的蓝色框是一个容器，里面的列表项都在框内吗？不对，再仔细看：右边的蓝色框是一个矩形，里面的列表项是Discovery & scoping、Data wiring、Pilot ",page
+g7_card_height_024,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,True,"[""G7_RENDER_CONTAINMENT_OVERFLOW""]","{""element"":""Enablement & training"",""region"":""bottom-left""}",1.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的列表项，“Enablement & training”、“SLA hardening”、“Quarterly business review”这些项目是否在卡片外？卡片是橙色边框的区域，里面的列表项到“Production rollout”为止，下面的三个项目（Enablement & training等）是在卡片下方，所以属于溢出。那要确定元素。比如“Enablement & training”这个项目，它在卡片外，所以present为true。然后证据元素是“Enablement & training”，位置是bottom-left？不对，看布局：卡片内的列表到“Production rollout”，下面的三个项目在卡片下方，所以这些项目属于溢出。所以选其中一个，比如“Enablement & training”，位置是b",page
+g7_card_height_020,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的列表项，比如“Enablement & training”等是否在框外？看右边的框是蓝色边框的区域，里面的列表项都在框内吗？然后下面的列表项（Enablement & training等）是否在框外？哦，看右边的蓝色框是一个容器，里面的列表项到Security review为止，然后下面的Enablement & training等是在框外吗？不对，看结构：右边的蓝色框是一个大的矩形，里面的列表项是Discovery & scoping到Production rollout，然后下面的Enablement & training等是在框外吗？不，看图片中，右边的蓝色框是一个容器，里面的列表项都在框内吗？不对，再仔细看：右边的蓝色框是一个矩形，里面的列表项是Discovery & scoping、Data wiring、Pilot ",page
+g7_card_height_026,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,0.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，比如“Success Metrics”标题下的列表项，还有下面的项目。检查每个元素是否在容器内。发现“Inference cost -31%”等项目是否在容器外？看容器是那个浅绿色带边框的区域，里面的列表项都在里面吗？然后下面的项目是否在容器外？但问题问的是spill outside the box（容器）。看容器内的列表项，比如“Activation rate +18%”等都在容器内，而容器外的项目是否属于溢出？不，容器外的项目是另一个列表，但容器本身是否被溢出？不对，应该是容器内的内容是否溢出。再仔细看：容器是那个浅绿色的矩形，里面的列表项都在里面，没有溢出。那有没有其他情况？比如文字是否超出容器边缘？看所有文字都在容器内，所以present=false。</think>
+
+{""present"": false, ""ev",page
+g7_card_height_021,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,0.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，比如“Success Metrics”标题下的列表项，还有下面的项目。检查每个元素是否在框内。发现“Inference cost -31%”等项目是否在框外？看右边的大框（蓝色边框的区域）内的列表项，然后下面的项目是否在框外？不对，看结构：大框内的列表项是前五个？不，看图片里，大框内的列表项应该是前五个？然后下面的“Inference cost...”等是在大框外吗？不对，看用户提供的图，大框（蓝色边框）内的列表项，然后下面的项目是否在框外？哦，不对，看每个元素的位置。比如，大框内的列表项，然后下面的项目是否在框外？但问题是问是否有内容溢出容器。看所有元素，比如“Success Metrics”标题下的列表项，是否都在框内？然后下面的项目是否在框外？但根据图，可能没有溢出？不对，再仔细看。哦，不对，用户的问题是是否有元素的",page
+g7_card_height_014,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,True,"[""G7_RENDER_CONTAINMENT_OVERFLOW""]","{""element"":""Offline eval harness"",""region"":""bottom""}",1.0,[],"<think>
+用户现在需要检查是否有元素内容溢出容器。看图片里的列表项，比如“Offline eval harness”、“Drift monitors”、“Cost governor”这些是否在卡片外？卡片是那个浅蓝色的矩形框，里面的列表项到“Serving gateway”为止，外面的三个（Offline eval harness等）是在卡片下方，所以这些元素的内容是否溢出？看问题描述是spill outside the box等。那这些外部的列表项是否属于溢出？但看图片中，卡片内的列表项是到Serving gateway，然后下面的三个是单独的项目符号，所以这些元素是否在卡片外，所以它们的内容是否溢出？但需要确定是否有元素内容溢出。比如，假设卡片是那个浅蓝色的框，里面的列表项都在框内，而框外的列表项是否算？但问题问的是“any element's visible content s",page
+g7_card_height_018,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,0.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的列表项，比如“Pilot usage-based billing”等是否在卡片外？看结构：卡片是橙色边框的区域，里面的列表项都在卡片内吗？然后下面的列表项（Pilot...等）是否在卡片外？但问题问的是元素内容是否溢出容器。看每个元素，比如卡片内的列表项都在卡片里，而卡片外的列表项是否属于溢出？不，因为卡片外的列表项是另一个部分。但再仔细看，是否有内容溢出。比如，假设卡片是那个橙色边框的大矩形，里面的列表项都在里面，而下面的列表项（Pilot...等）是在卡片外，但这些是独立的列表项，不是溢出。那有没有某个元素的内容溢出？比如，看文字是否超出容器边缘。比如，卡片内的文字是否都包含在卡片里？是的。那有没有其他情况？比如，是否有元素的可见内容溢出。现在看，所有元素都在各自的容器内吗？比如，标题、卡片内的列表项，卡片外的列表项。那是否",page
+g7_card_height_023,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的列表项，比如“Enablement & training”等是否在框外？看右边的框是蓝色边框的区域，里面的列表项都在框内吗？然后下面的列表项（Enablement & training等）是否在框外？哦，看右边的蓝色框是一个容器，里面的列表项到Security review为止，然后下面的Enablement & training等是在框外吗？不对，看结构：右边的蓝色框是一个大的矩形，里面的列表项是Discovery & scoping到Production rollout，然后下面的Enablement & training等是在框外吗？不，看图片中，右边的蓝色框是一个容器，里面的列表项都在框内吗？不对，再仔细看：右边的蓝色框是一个矩形，里面的列表项是Discovery & scoping、Data wiring、Pilot ",page
+g7_unbreakable_text_001,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,0.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，比如文本是否超出框。这里“Endpoint: https://portal.enterprise-customer.example.com/onboarding/2”这个文本有没有溢出？看容器是蓝色边框的矩形，文本是否在框内。如果文本没有溢出，那present是false。所以判断后，present为false，因为没有看到内容溢出的情况。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confidence"": 0.0}",page
+g7_card_height_029,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，比如“Success Metrics”标题下的列表项，还有下面的项目。检查每个元素是否在框内。发现“Inference cost -31%”等项目是否在框外？看容器是那个蓝色边框的大框，里面的列表项都在框内吗？不对，再仔细看。哦，可能没有溢出？不对，再检查。或者有没有？比如，假设所有内容都在容器内，那present是false。因为没有看到文本跑出框外的情况。所以判断present为false。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confidence"": 1.0}",page
+g7_card_height_025,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的列表项，比如“Latency regressions”等是否在框外？看右边的框是橙色边框的卡片，里面的列表项都在框内吗？然后下面的列表项（Latency regressions等）是否在框外？哦，看结构：上面的橙色框是Risk Register的卡片，里面的列表项都在框内。而下面的列表项（Latency regressions、Cost overrun、Change-management gaps）是在卡片下方，属于溢出吗？不，这些是单独的列表项，不在卡片里。但问题问的是元素的内容是否溢出其应该持有的容器。比如，假设卡片是那个橙色边框的区域，里面的列表项都在框内。那有没有内容溢出？看每个元素：
+
+检查每个项目：
+
+- “Data residency exposure”等在橙色框内，没有溢出。
+
+- 下面的“Latency reg",page
+g7_unbreakable_text_000,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,0.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，Endpoint后面的URL是否溢出？看右边的框，URL部分有没有超出。从图中看，Endpoint的文本和URL是否在框内？不对，再仔细看。哦，可能URL是否溢出？不，再检查。或者看是否有元素溢出。比如，假设Endpoint的URL是否在框外？不对，再看。哦，可能没有？不对，再想。或者看是否有内容溢出。比如，假设某个元素的内容超出容器。现在看，图中的框是橙色边框的矩形，里面的文字是否都在里面？Endpoint的文字和URL是否都在框内？如果都在，那present=false。但再仔细看，可能URL是否被截断？不，用户问的是spill outside。所以如果没有，present=false。那结论是present=false。</think>
+
+{""present"": false, ""evidence_element"": ",page
+g7_unbreakable_text_003,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,0.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，Endpoint后面的URL部分是否溢出？看右边的文本，Endpoint: 后面的内容是否超出卡片（橙色边框的区域）。从图中看，Endpoint: registry.internal.acme-global.example/ml-platform/inference 这里，可能右边的文本是否溢出？不对，再仔细看。哦，卡片是橙色边框的矩形区域，里面的文字是否都在里面？看Endpoint后的URL，是否在卡片内。如果文字没有溢出，那present是false。但再检查：有没有元素内容溢出容器。比如，假设Endpoint后的URL是否在卡片内。如果卡片足够宽，文字没溢出，那present=false。所以判断present为false，因为没有看到内容溢出的情况。</think>
+
+{""present"": false, ""evi",page
+g7_card_height_028,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的列表项，比如“Pilot usage-based billing”等是否在卡片外？看结构：卡片是橙色边框的区域，里面的列表项都在卡片内吗？然后下面的列表项（Pilot...等）是否在卡片外？但问题问的是元素内容是否溢出容器。看每个元素，比如卡片内的列表项是否在卡片边缘外？或者有没有元素内容超出。现在看，卡片是橙色边框的矩形，里面的列表项都在卡片内吗？然后下面的列表项（Pilot usage-based billing等）是否属于卡片外？但问题中的容器是卡片（橙色边框的区域）。看卡片内的列表项，比如“Expand into 3 new verticals”等都在卡片内，而卡片外的列表项（Pilot...等）是否属于溢出？不，因为它们是另一个列表，可能不在卡片里。但问题是问“any element's visible content",page
+g7_card_height_016,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,True,"[""G7_RENDER_CONTAINMENT_OVERFLOW""]","{""element"":""Inference cost -31%"",""region"":""bottom""}",1.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，比如“Success Metrics”标题在大框外？不，看列表项。然后看“Inference cost -31%”等是否在框外？看右边的橙色框（card）里的内容，里面的列表项都在框内吗？然后下面的列表项（Inference cost等）是否在框外？哦，右边的橙色框是card，里面的列表项都在框内，而下面的列表项（Inference cost等）是在card之外？不对，看结构：右边的大橙色框是card，里面的列表项（Activation rate到p95 latency）都在框内。然后下面的Inference cost等是在card之外，所以这些内容是否溢出？但问题是问是否有元素的内容溢出容器。看每个元素：
+
+检查每个项目：
+
+- “Success Metrics”标题：在大框外？不，大框是橙色边框的矩形，标题在大框上方，",page
+g7_unbreakable_text_008,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,0.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的文本，比如“Endpoint: arn:aws:iam::920183746551:role/acme-global-manufacturing-pr”这部分，是否在框外？看容器是那个浅蓝色的框，里面的文本有没有超出。然后判断present是否为true。这里要确定是否有溢出。假设没有溢出？不对，再仔细看。哦，可能文本长度导致？不，看容器的边界。如果文本在框内，那present是false。所以最终判断present=false。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confidence"": 0.0}",page
+g7_unbreakable_text_002,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,True,"[""G7_RENDER_CONTAINMENT_OVERFLOW""]","{""element"":""Endpoint: C:\\Users\\enterprise\\Deployments\\2026\\Q3\\acme-global-manufac"",""region"":""right""}",0.9,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的绿色框，里面的文本“Endpoint: C:\Users\enterprise\Deployments\2026\Q3\acme-global-manufac”是否溢出？看右边的文本，应该是溢出了吗？不对，再仔细看。哦，绿色框是容器，里面的文本有没有超出？看右边的文本部分，比如“acme-global-manufac”后面可能还有，但显示的是溢出吗？看图片中绿色框内的文本，右边的文本是否超出框的边缘？是的，因为绿色框是容器，里面的文本在右侧溢出了。所以present是true，证据元素是“Endpoint: C:\Users\enterprise\Deployments\2026\Q3\acme-global-manufac”所在的文本区域，位置是right。然后confidence给0.9左右？
+
+现在要确认：容器是绿色的矩形",page
+g7_card_height_022,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,True,"[""G7_RENDER_CONTAINMENT_OVERFLOW""]","{""element"":""Cost attribution"",""region"":""bottom""}",1.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的列表项，比如“Cost attribution”等是否在框外？看右边的框（Solution Overview的蓝色边框框），里面的列表项都在框内吗？然后下面的列表项（Cost attribution等）是否在框外？哦，右边的框是包含前五个列表项的，而下面的三个列表项（Cost attribution、Multi-tenant isolation、Zero-downtime upgrades）是在框外的？不对，看结构：右边的大框里有Solution Overview标题和前五个项目，然后下面还有三个项目。所以这些下面的项目是否溢出？但问题问的是是否有元素内容溢出容器。那看每个元素是否在自己的容器内。比如右边的框是一个容器，里面的列表项都在框内吗？然后下面的列表项是否属于另一个容器？如果右边的框是主要容器，那么下面的列表项是否在框外",page
+g7_unbreakable_text_004,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的绿色框，里面的文本是否超出。观察到“Endpoint: arn:aws:iam::920183746551:role/acme-global-manufacturing-pr”这部分，可能有没有显示完？但看问题里的例子，比如文本跑出卡片边缘。这里绿色框是容器，里面的文本是否有溢出？看右边的文本，可能有部分被截断？不对，再仔细看。哦，用户提供的图片中，绿色框内的文本是否有溢出？比如“Endpoint:”后面的ARN，是否在绿色框内？如果绿色框足够宽，那没有。但再检查，可能我错了？不，再看。哦，不对，看元素：绿色框是容器，里面的文本是否溢出。假设绿色框内的文本没有溢出，那present=false？不对，再看。哦，可能我漏了。或者看是否有元素内容溢出。比如，假设绿色框内的文本没有溢出，所以present=false？
+
+现在要确定：",page
+g7_unbreakable_text_006,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,True,"[""G7_RENDER_CONTAINMENT_OVERFLOW""]","{""element"":""Endpoint: 后面的文本"",""region"":""right""}",0.9,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，比如“Endpoint:”后面的内容是否溢出？看右边的文本，C:\Users\enterprise\Deployments\2026\Q3\acme-global-manufac 这部分是否在框外？看框的边界，右边的文本是否超出橙色边框？是的，因为框的右边可能不够宽，导致文本溢出。所以present是true，证据元素是“Endpoint: 后面的文本”，位置是right。然后confidence给0.9左右？
+
+现在要确认：容器是那个橙色边框的矩形。看“Endpoint: C:\Users\enterprise\Deployments\2026\Q3\acme-global-manufac”这部分，右边的文本是否超出框。是的，所以存在溢出。因此：
+
+{""present"": true, ""evidence_element""",page
+g7_unbreakable_text_007,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,0.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，比如文本是否超出框。这里“Endpoint: C:\Users\enterprise\Deployments\2026\Q3\acme-global-manufact...” 这个文本是否溢出？看容器是蓝色边框的框，文本有没有超出右边？从图中看，可能文本没有溢出？不对，再仔细看。哦，用户的问题是是否有内容溢出。看元素，比如“Endpoint:”后面的路径，是否在框内。如果框足够大，那没有溢出。但再检查，是否有元素内容溢出。比如，假设文本没有溢出，那present=false？或者有没有其他情况？
+
+现在看，图中的蓝色框内的文本，“Endpoint: C:\Users\enterprise\Deployments\2026\Q3\acme-global-manufact...” 这个文本是否在框内？如果框的宽度足够，那没有溢",page
+g7_unbreakable_text_010,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的文本，比如“Endpoint: arn:aws:iam::920183746551:role/acme-global-manufacturing-pr”这部分，是否在框外？但仔细看，可能有没有？不对，再看。哦，可能没有？不对，再检查。或者有没有？比如，假设没有溢出，那present是false？
+
+现在要确定：是否有元素内容溢出容器。看提供的截图中，所有文本都在框内吗？比如那个大的框（浅蓝色的），里面的文字是否都包含在内？如果都包含，那么present=false。
+
+所以结论是present=false，因为没有可见的内容溢出容器。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confidence"": 1.0}",page
+g7_unbreakable_text_014,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，文本部分是否在框外？看“Endpoint:”后面的ARN，还有“Platform Architecture”这些文字，都在蓝色边框的框内吗？仔细看，所有可见内容都在容器里，没有溢出。所以present是false。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confidence"": 1.0}",page
+g7_card_height_027,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,0.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的列表项，比如“Pilot usage-based billing”等是否在卡片外？看结构：卡片是浅绿色的矩形框，里面的列表项都在框内吗？然后下面的列表项（Pilot...等）是否在卡片外？但问题问的是元素内容是否溢出容器。看每个元素：
+
+首先，卡片内的列表项都在卡片里吗？然后下面的列表项（Pilot usage-based billing、Stand up...、Ship...）是否在卡片外？但这些是否属于溢出？不，因为卡片是包含Q3 Go-to-Market Plan的列表，而下面的列表项可能不在卡片里，但问题是问“spill outside the box, card, or container”。所以看是否有内容溢出。比如，假设卡片是那个浅绿色的框，里面的列表项都在框内，而下面的列表项是否在框外？但这些是否算溢出？或者有没",page
+g7_unbreakable_text_012,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，比如文本是否超出框。这里“Endpoint: https://portal.enterprise-customer.example.com/onboarding/2”这个文本，右边的框（蓝色边框的区域）是否包含它？看右边的文本，应该是没有溢出，因为整个内容在框内？不对，再仔细看。哦，可能我错了？不，再检查。看元素：标题是Q3 Go-to-Market Plan，然后下面的框里有重复的标题和Endpoint及链接。这些内容都在蓝色边框的框内吗？是的，所以没有溢出。那present应该是false？因为没有内容溢出容器。所以结论是present=false。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confidenc",page
+g7_unbreakable_text_005,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,0.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，Endpoint后面的URL是否溢出？看右边的框，URL部分有没有超出。从图中看，Endpoint的文本和URL是否在框内？不对，再仔细看。哦，可能URL是否溢出？不，再检查。或者看是否有元素溢出。比如，Endpoint的文字和URL是否在橙色框内？不对，再看。哦，可能没有溢出？不对，再看。哦，不对，看Endpoint后面的URL，是否在框内？不，可能我错了。再仔细看：橙色框内的内容，Endpoint和URL是否都在框内？是的？那present是false？不对，再检查。哦，不对，看图片中的Endpoint部分，URL是否溢出？比如，https://portal.enterprise-customer.example.com/onboarding/2 这个URL是否在框内？看框的边界，右边的URL是否超出？如果框的宽度不够",page
+g7_unbreakable_text_015,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,0.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，比如“Endpoint: registry.internal.acme-global.example/ml-platform/inference”这部分文字是否溢出？看右边是否有截断，但根据提供的截图，可能文字是否超出？不对，再仔细看。哦，用户的问题是是否有内容溢出容器。看元素中的文本，比如“Endpoint: registry.internal.acme-global.example/ml-platform/inference”是否在框内？如果框是蓝色边框的矩形，那里面的文字是否都包含？或者有没有文字跑到框外？看图片里，假设框是那个蓝色边框的区域，里面的文字是否都在？如果没有溢出，那present是false。所以判断后，present为false，因为没有看到内容溢出容器的情况。</think>
+
+{""present""",page
+g7_unbreakable_text_011,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,True,"[""G7_RENDER_CONTAINMENT_OVERFLOW""]","{""element"":""Endpoint后的文本内容"",""region"":""right""}",0.9,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，Endpoint后面的路径是否溢出？看右边的路径部分，应该是溢出了容器的边缘。所以present是true，证据元素是Endpoint后的路径部分，位置在right。然后confidence给0.9左右？不对，看图片里Endpoint: 后面的路径，比如C:\Users\enterprise\Deployments\2026\Q3\acme-global-manufac... 这个路径是否溢出右边的框？看框的边界，路径可能溢出了右边。所以确定present为true，evidence_element是Endpoint后的文本（路径），evidence_region是right。然后confidence设为0.9？或者更准确的话，看渲染情况。
+
+现在要输出JSON。首先判断present：是否有内容溢出。看Endpoint后",page
+g7_unbreakable_text_016,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，比如“Endpoint:”后面的内容是否在框内？看橙色边框的框，里面的文字是否都包含。这里可能没有溢出？不对，再仔细看。哦，用户的问题是是否有内容溢出。看图片中的元素，“Endpoint: C:\Users\enterprise\Deployments\2026\Q3\acme-global-manufac” 这些文字是否在框内？假设框是那个浅橙色带边框的区域，里面的文字都在里面吗？如果没有溢出，那present是false。所以要判断。
+
+现在看，所有可见内容是否都在容器内。如果容器是那个大的浅橙色框，里面的文字都在，没有溢出。所以present=false。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confi",page
+g7_unbreakable_text_018,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,True,"[""G7_RENDER_CONTAINMENT_OVERFLOW""]","{""element"":""the text 'Endpoint: registry.internal.acme-global.example/ml-platform/inference'"",""region"":""right""}",0.9,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的文本，比如“Endpoint: registry.internal.acme-global.example/ml-platform/inference”这部分，是否超出卡片（浅蓝色框）的边缘？看右边的文字，应该是溢出了。所以present是true，证据元素是那个长文本，位置在right。然后confidence给0.9左右？
+
+现在要构造JSON。首先确定present为true，evidence_element是“the text 'Endpoint: registry.internal.acme-global.example/ml-platform/inference'”，evidence_region是right，confidence0.9。</think>
+
+{""present"": true, ""evidence_el",page
+g7_unbreakable_text_021,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,0.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，比如文本是否超出框。这里“Endpoint: https://portal.enterprise-customer.example.com/onboarding/2”这个文本有没有溢出？看蓝色边框的容器，文本是否在容器内。如果文本没有溢出，那present是false。所以判断后，present为false，因为没有看到内容溢出的情况。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confidence"": 0.0}",page
+g7_unbreakable_text_013,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,0.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，比如文本是否超出框。这里“Endpoint: arn:aws:iam::920183746551:role/acme-global-manufacturing-pr”这个文本，右边可能有没有显示完？但看容器是那个浅蓝色的框，文本是否溢出？不对，再仔细看。哦，可能没有溢出？不对，再检查。或者有没有其他元素？比如标题“Risk Register”在顶部，没有溢出。然后中间的框里的内容，是否有文本超出？看“Endpoint: ...pr”后面可能还有，但容器是那个框，所以如果文本没超出框的话，那present是false？不对，再看。哦，可能我错了。再仔细看：图片中，中间的浅蓝色框内的文本，“Endpoint: arn:aws:iam::920183746551:role/acme-global-manufacturing-pr",page
+g7_unbreakable_text_022,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,0.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，比如文本是否超出框。这里“Endpoint: https://portal.enterprise-customer.example.com/onboarding/2”这个文本有没有溢出？看蓝色边框的容器，文本是否在容器内。如果文本没有溢出，那present是false。所以判断后，present为false，因为没有看到内容溢出的情况。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confidence"": 0.0}",page
+g7_unbreakable_text_017,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，文本部分有没有超出框。这里“Endpoint: arn:aws:iam::920183746551:role/acme-global-manufacturing-pr”这些文字是否在框内？看框的边界，文字应该是在框内的？不对，再仔细看。哦，可能文字有没有溢出？比如右边的文字是否超出橙色框的边缘？看图片中，橙色框是容器，里面的文字是否有部分超出。假设这里没有溢出？不对，再检查。或者是否有其他情况。现在要确定是否存在溢出。如果存在的话，present为true，否则false。
+
+看提供的截图，橙色框内的文字是否都在框内。假设没有溢出，那present=false？不对，再仔细看。比如“Endpoint:”后面的文字是否在框内。可能我之前错了。再想，用户的问题是是否有内容溢出容器。如果所有内容都在容器内，那么present=f",page
+g7_unbreakable_text_019,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,0.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，Endpoint后面的路径是否溢出？看右边的文本，Endpoint: 后面的路径“C:\Users\enterprise\Deployments\2026\Q3\acme-global-manufac”后面可能还有，但看渲染中是否有溢出。这里Endpoint的文本部分，右边的路径是否超出蓝色框？看蓝色框是容器，里面的文字是否有溢出。比如，Endpoint: 后面的文字是否在框外？看图片里，Endpoint: 后面的文字应该是被截断还是溢出？假设这里Endpoint的文字没有溢出，那present是false？不对，再仔细看。哦，可能Endpoint的文字长度导致溢出？不，看容器是蓝色边框的矩形，里面的文字是否都在里面。如果所有文字都在容器内，那present=false。所以判断是否有溢出，这里没有，所以present=f",page
+g7_unbreakable_text_028,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,0.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，比如文本是否超出框。这里“Endpoint: https://portal.enterprise-customer.example.com/onboarding/2”这个文本有没有溢出？看容器是那个浅蓝色的框，文本是否在框内。如果文本没有溢出，那present是false。所以判断后，present为false，因为没有看到内容溢出的情况。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confidence"": 0.0}",page
+g7_unbreakable_text_027,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,0.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，Endpoint后面的URL部分是否溢出？看右边的文本，应该是Endpoint: 后面的内容有没有超出框。看框是橙色边框的矩形，里面的文字是否有溢出。比如Endpoint: registry.internal.acme-global.example/ml-platform/inference 这些文字是否在框内。如果文字没有溢出，那present是false。所以判断后，present为false，因为没有看到内容溢出的情况。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confidence"": 0.0}",page
+g7_card_height_000__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,0.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，标题“Solution Overview”在顶部，下面的卡片（浅蓝色区域）内的列表项都完整显示，没有文字或元素超出卡片边缘。所以判断present为false。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confidence"": 0.0}",page
+g7_unbreakable_text_020,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,0.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的文本，Endpoint后面的URL是否溢出？看右边的文本，应该是“registry.internal.acme-global.example/ml-platform/inference”后面可能还有，但这里看是否溢出。然后确定元素和区域。
+
+首先，检查容器内的文本。Endpoint后的URL部分，是否有溢出到容器外？看图片中，Endpoint后面的文本是否在容器内。如果容器是那个浅橙色的框，那么看文本是否超出。假设这里Endpoint后的URL没有溢出？不对，再仔细看。哦，可能我错了。或者看是否有元素溢出。比如，假设Endpoint后的文本是否在容器内。如果容器是那个大的浅橙色矩形，那么里面的文本是否都在里面。如果没有溢出，那present是false？
+
+不对，再看。用户的问题是是否有元素的内容溢出容器。看图片中的元素：标题“",page
+g7_card_height_001__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，标题“Platform Architecture”在顶部，下面的绿色框内的列表项都在框内。所有文本和元素都没有超出容器边缘。所以present是false。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confidence"": 1.0}",page
+g7_unbreakable_text_025,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的文本，比如“Endpoint: arn:aws:iam::920183746551:role/acme-global-manufacturing-pr”这部分，是否在框外？但仔细看，可能有没有？不对，再看。哦，可能没有？不对，再检查。或者有没有？比如，假设没有溢出，那present是false？
+
+现在要确定：是否有元素内容溢出容器。看提供的截图中，所有文本都在框内吗？比如那个大的框（浅蓝色的），里面的文字是否都包含在内？如果都包含，那么present=false。
+
+所以结论是present=false，因为没有可见的内容溢出容器。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confidence"": 1.0}",page
+g7_card_height_002__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的Risk Register卡片，里面的列表项（四个项目符号）都在卡片内，标题“Risk Register”也在卡片上方但卡片内的内容没有溢出。所以判断present为false。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confidence"": 1.0}",page
+g7_unbreakable_text_009,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,True,"[""G7_RENDER_CONTAINMENT_OVERFLOW""]","{""element"":""Endpoint text"",""region"":""right""}",1.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，Endpoint的文本是否溢出？看右边的文本，https://portal.enterprise-customer.example.com/onboarding/2 这部分是否超出卡片边缘？从图中看，文字可能在卡片右侧溢出吗？不对，再仔细看。哦，卡片是浅蓝色的矩形框，里面的文字是否都在框内？看Endpoint后面的URL，是否超出卡片的右边界？如果有的话，那present是true。但再检查：图中卡片内的文字，Endpoint和URL是否都在框内？不对，可能我错了。再看，用户的问题是是否有内容溢出容器。看图片里的元素，比如Endpoint的文本，是否在卡片外？假设卡片是那个浅蓝色的大矩形，里面的文字是否都在里面？如果URL的末尾（比如/2）是否超出卡片的右边缘？如果是的话，那present=true。现在确定：看图片中的E",page
+g7_card_height_004__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，标题“Solution Overview”在顶部，下面的绿色框内的列表项都在框内。所有文本和列表项都没有超出容器边缘。所以present是false。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confidence"": 1.0}",page
+g7_card_height_006__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,0.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，所有文本都在橙色边框的卡片内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confidence"": 0.0}",page
+g7_card_height_005__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,0.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，标题“Implementation Roadmap”在顶部，然后下面的框里的列表项都在框内。所以没有内容溢出的情况，present设为false。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confidence"": 0.0}",page
+g7_card_height_007__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,0.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，所有文本都在橙色边框的卡片内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confidence"": 0.0}",page
+g7_card_height_003__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，标题“Q3 Go-to-Market Plan”在顶部，下面的绿色框内的列表项都在框内。所有内容都在各自的容器（比如绿色框、标题区域）里，没有溢出。所以present是false。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confidence"": 1.0}",page
+g7_unbreakable_text_023,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,0.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，比如“Endpoint:”后面的内容是否超出框？看橙色边框的卡片，里面的文本有没有溢出。这里“Endpoint: C:\Users\enterprise\Deployments\2026\Q3\acme-global-manufac”这些文字是否在卡片内？仔细看，卡片是橙色边框的矩形区域，里面的文字应该都在里面？不对，再检查。哦，可能有没有？或者有没有其他元素？比如标题“Success Metrics”在卡片外，但问题问的是元素的内容溢出容器（比如text running past a card's edge）。看卡片内的内容，“Endpoint:”和后面的路径，是否在卡片内？假设卡片是那个大的橙色边框矩形，里面的文字是否都包含在内？如果没有溢出，那present是false？不对，再看。或者有没有其他情况？比如，假设卡片",page
+g7_card_height_009__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,0.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的Risk Register列表，所有项目都在蓝色边框的容器内，没有文字或元素超出。所以present是false。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confidence"": 0.0}",page
+g7_unbreakable_text_024,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,0.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，文本部分有没有超出框。这里“Endpoint: arn:aws:iam::920183746551:role/acme-global-manufacturing-pr”这些文字是否在框内？看框的边界，文字应该是在框内的？不对，再仔细看。哦，可能文字有没有超出？比如右边的文字是否被截断？但根据提供的截图，可能没有溢出？不对，再检查。或者是否有元素溢出。现在看，假设没有溢出的话，present是false？不对，再想。或者有没有？比如，假设所有内容都在框内，所以present=false？
+
+现在要确定：是否有内容溢出容器。看图片中的元素，比如文本是否在框内。如果都在，那么present=false。所以输出：
+
+{""present"": false, ""evidence_element"": """", ""evidence_regi",page
+g7_card_height_008__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，标题“Q3 Go-to-Market Plan”在顶部，然后下面的卡片（浅橙色框）里的列表项都在框内。所有文本和列表项都没有超出容器边缘。所以present是false。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confidence"": 1.0}",page
+g7_card_height_010__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，标题“Solution Overview”在顶部，然后下面的框里的列表项都在框内。所有文本和列表项都没有超出容器边缘。所以present是false。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confidence"": 1.0}",page
+g7_card_height_011__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,0.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的Risk Register列表，所有项目都在蓝色边框的容器内，没有文字或元素超出。所以present是false。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confidence"": 0.0}",page
+g7_card_height_015__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,0.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，所有文本都在浅蓝色的框内，没有超出。所以present是false。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confidence"": 0.0}",page
+g7_card_height_012__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，标题“Implementation Roadmap”在顶部，然后下面的框里的列表项都在框内。所有文本和列表项都没有超出容器边缘。所以present是false。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confidence"": 1.0}",page
+g7_card_height_016__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,0.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，所有文本都在橙色边框的卡片内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confidence"": 0.0}",page
+g7_card_height_013__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，标题“Implementation Roadmap”在顶部，然后下面的框里的列表项都在框内。所有文本和列表项都没有超出容器边缘。所以present是false。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confidence"": 1.0}",page
+g7_card_height_014__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,0.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，标题“Platform Architecture”在顶部，下面的卡片（浅蓝色区域）内的列表项都在里面，没有溢出。所以present是false。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confidence"": 0.0}",page
+g7_card_height_017__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，标题“Platform Architecture”在顶部，下面的绿色框内的列表项都在框内。所有文本和元素都没有超出容器边缘。所以present是false。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confidence"": 1.0}",page
+g7_card_height_019__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，标题“Solution Overview”在顶部，然后下面的框里的列表项都在框内。所有文本和列表项都没有超出容器边缘。所以present是false。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confidence"": 1.0}",page
+g7_card_height_018__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，标题“Q3 Go-to-Market Plan”在顶部，然后下面的卡片（浅橙色框）里的列表项都在框内。所有文本和列表项都没有超出容器边缘。所以present是false。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confidence"": 1.0}",page
+g7_card_height_021__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,0.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，所有文本都在蓝色边框的容器内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confidence"": 0.0}",page
+g7_card_height_020__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，标题“Implementation Roadmap”在顶部，然后下面的框里的列表项都在框内。所有文本和列表项都没有超出容器边缘。所以present是false。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confidence"": 1.0}",page
+g7_card_height_022__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,0.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，标题“Solution Overview”在上方，下面的框内列表项都在框内，没有文字或元素超出框外。所以present是false。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confidence"": 0.0}",page
+g7_card_height_026__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,0.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的绿色框（card），里面的列表项都在框内，没有文字或元素超出。所以present是false。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confidence"": 0.0}",page
+g7_card_height_023__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，标题“Implementation Roadmap”在顶部，然后下面的框里的列表项都在框内。所有文本和列表项都没有超出容器边缘。所以present是false。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confidence"": 1.0}",page
+g7_card_height_025__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,0.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的Risk Register卡片，里面的列表项（四个项目符号）都在卡片内，标题“Risk Register”也在卡片上方但卡片内的内容没有溢出。所以判断present为false。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confidence"": 0.0}",page
+g7_unbreakable_text_026,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,0.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，比如“Endpoint:”后面的内容是否溢出？看右边的文本，发现“Endpoint: C:\Users\enterprise\Deployments\2026\Q3\acme-global-manufac”这里，可能文本是否超出？不对，再仔细看。哦，看容器是那个浅橙色的框，里面的文字有没有溢出。看“Endpoint:”后面的路径，是否在框内？不对，再检查。哦，用户的问题是是否有内容溢出容器。看图片中，比如“Endpoint:”后的文本，是否在框外？不，再看。哦，可能我错了，再看。哦，看右边的文本，是否有溢出？比如“Endpoint: C:\Users\enterprise\Deployments\2026\Q3\acme-global-manufac”这个路径，是否在框内？不对，再看。哦，可能没有溢出？不对，再仔细看。哦，",page
+g7_card_height_024__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,0.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，标题“Implementation Roadmap”在顶部，然后下面的框内的列表项都在框内。所有文本和列表项都没有超出容器（比如卡片或框）的情况。所以present是false。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confidence"": 0.0}",page
+g7_card_height_029__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,0.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，所有文本都在蓝色边框的容器内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confidence"": 0.0}",page
+g7_card_height_027__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，标题“Q3 Go-to-Market Plan”在顶部，下面的绿色框内的列表项都在框内。所有文本和列表项都没有超出容器边缘。所以present是false。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confidence"": 1.0}",page
+g7_unbreakable_text_001__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,0.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，文本都在蓝色边框的框内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confidence"": 0.0}",page
+g7_card_height_028__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，标题“Q3 Go-to-Market Plan”在顶部，然后下面的卡片（浅橙色框）里的列表项都在框内。所有文本和列表项都没有超出容器边缘。所以present是false。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confidence"": 1.0}",page
+g7_unbreakable_text_000__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,0.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，比如文本是否超出框。这里看橙色边框的框内，所有内容都在里面吗？检查后发现没有内容溢出，所以present是false。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confidence"": 0.0}",page
+g7_unbreakable_text_029,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,True,"[""G7_RENDER_CONTAINMENT_OVERFLOW""]","{""element"":""Endpoint: C:\\Users\\enterprise\\Deployments\\2026\\Q3\\acme-global-manufact..."",""region"":""right""}",1.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的文本，Endpoint后面的路径是否溢出？看元素是那个浅蓝色的框，里面的文本有没有超出。观察到Endpoint后的路径可能溢出吗？看渲染情况，假设存在溢出的话，但再仔细看。哦，不对，看元素：浅蓝色的框（card）里的文本，Endpoint后的路径是否超出？比如，假设路径长度导致溢出。那证据元素是“Endpoint: C:\Users\enterprise\Deployments\2026\Q3\acme-global-manufact...” 这个文本是否溢出？看容器是浅蓝色的框，所以如果文本超出框的边缘，就是溢出。现在判断是否存在。然后输出JSON。
+
+首先，确定是否有溢出。看图片中，浅蓝色的框内的文本，Endpoint后的路径是否超出框的右侧？如果是的话，present为true。然后证据元素是那个文本所在的区域，比如“En",page
+g7_unbreakable_text_002__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的绿色框（card），里面的文字是否都在框内。观察后，所有可见内容都在绿色框内，没有溢出。所以present设为false。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confidence"": 1.0}",page
+g7_unbreakable_text_006__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,0.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，文本都在框内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confidence"": 0.0}",page
+g7_unbreakable_text_003__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,0.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，文本是否在框外？看提供的内容，所有文本应该都在橙色边框的框内。所以present是false。然后按照要求返回JSON。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confidence"": 0.0}",page
+g7_unbreakable_text_007__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,0.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，文本都在蓝色边框的框内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confidence"": 0.0}",page
+g7_unbreakable_text_004__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的绿色框，里面的文本是否在框内。观察后发现所有内容都在绿色框内，没有溢出。所以present设为false。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confidence"": 1.0}",page
+g7_unbreakable_text_005__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,0.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，比如文本是否超出框。这里看橙色边框的框内，所有内容都在里面吗？检查后发现没有内容溢出，所以present是false。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confidence"": 0.0}",page
+g7_unbreakable_text_009__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,0.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，文本都在框内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confidence"": 0.0}",page
+g7_unbreakable_text_010__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,0.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，文本都在框内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confidence"": 0.0}",page
+g7_unbreakable_text_008__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，文本是否在框内。这里所有内容都在浅蓝色的框里，没有溢出。所以present是false。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confidence"": 1.0}",page
+g7_unbreakable_text_011__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,0.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，文本都在蓝色边框的框内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confidence"": 0.0}",page
+g7_unbreakable_text_012__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,0.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，文本都在蓝色边框的框内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confidence"": 0.0}",page
+g7_unbreakable_text_013__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,0.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，文本都在框内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confidence"": 0.0}",page
+g7_unbreakable_text_016__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,0.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，文本都在框内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confidence"": 0.0}",page
+g7_unbreakable_text_019__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,0.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，文本都在蓝色边框的框内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confidence"": 0.0}",page
+g7_unbreakable_text_014__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的文本，比如“Endpoint”后面的ARN，还有“Platform Architecture”这些文字是否在框内。观察后发现所有可见内容都在蓝色边框的容器内，没有溢出。所以present设为false。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confidence"": 1.0}",page
+g7_unbreakable_text_018__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,0.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的文本，Endpoint后的长字符串是否在框内？看容器是那个浅灰色的矩形框，里面的文本有没有超出。观察后发现文本没有溢出，所以present为false。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confidence"": 0.0}",page
+g7_unbreakable_text_021__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,0.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，文本都在蓝色边框的框内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confidence"": 0.0}",page
+g7_unbreakable_text_022__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,0.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，文本都在蓝色边框的框内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confidence"": 0.0}",page
+g7_unbreakable_text_017__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,0.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，文本部分是否在框内。这里“Endpoint:”后面的ARN文本应该是在橙色边框的框内吗？看框的大小，文本有没有超出。假设所有内容都在框内，所以present是false。然后构造JSON。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confidence"": 0.0}",page
+g7_unbreakable_text_025__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,0.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，文本都在框内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confidence"": 0.0}",page
+g7_unbreakable_text_024__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，文本是否在框内。这里所有内容都在橙色边框的框内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confidence"": 1.0}",page
+g7_unbreakable_text_026__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,0.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，所有文本都在橙色边框的卡片内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confidence"": 0.0}",page
+g7_unbreakable_text_023__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,0.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，比如文本是否超出框。这里“Endpoint:”后面的路径文字是否在框内？看橙色边框的卡片，里面的文字应该都在里面。所以没有溢出的情况，present设为false。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confidence"": 0.0}",page
+g7_unbreakable_text_028__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,0.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，文本都在框内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confidence"": 0.0}",page
+g7_unbreakable_text_029__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,0.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的元素，文本都在框内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confidence"": 0.0}",page
+g7_unbreakable_text_015__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的文本，比如“containme nt”这里可能？不对，看整个文本区域。容器是蓝色边框的矩形，里面的文本是否溢出？看“Endpoint: registry.internal.acme-global.example/ml-platform/inference/qwen3-vl-30b-a3b-instruct-awq:2026.06-rc4-hotfix-containme nt”这里，“containme nt”可能是换行？但主要看是否溢出容器边缘。容器是蓝色框，里面的文本是否在框内？看整个文本区域，没有看到内容溢出到框外。所以present应该是false？因为所有可见内容都在容器内。那要确认。然后输出JSON。</think>
+
+{""present"": false, ""evidence_element"": """", ""evide",page
+g7_unbreakable_text_020__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的文本，Endpoint后面的长字符串是否在框内？看框的边界，文本有没有超出。这里看“containme nt”可能是截断？不对，再仔细看。哦，框是橙色边框的矩形，里面的文本是否都在框内？看整个文本区域，应该是没有溢出？不对，再检查。或者有没有元素溢出？比如文本是否超出框的边缘。看图片中，框内的文本是否都在框里。假设没有溢出，那present是false？不对，再看。哦，可能我错了。再仔细看：框是橙色边框的矩形，里面的文字是否都在框内。如果所有内容都在框内，那么present=false。所以判断后，present为false，因为没有可见的内容溢出容器。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confidence"":",page
+g7_unbreakable_text_027__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有内容溢出容器。看图片里的文本，比如“containme nt”这里，原句应该是“container”，但显示为“containme nt”，说明文本在框内没有溢出？不对，再仔细看。哦，看Endpoint后面的文本，有没有超出橙色边框的框？看整个橙色框内的内容，所有文字都在框内吗？比如“registry.internal.acme-global.example/ml-platform/inference/qwen3-vl-30b-a3b-instruct-awq:2026.06-rc4-hotfix-container”这些文字是否在框内。如果所有文字都在框内，那present是false。所以判断是否有溢出，这里没有，所以present=false。</think>
+
+{""present"": false, ""evidence_element"": """",",page

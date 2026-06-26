@@ -1,0 +1,85 @@
+{
+  "key": "qwen37-max-vlm-judge",
+  "display_name": "Qwen3.7-Max VLM judge",
+  "category": "frontier_vlm_judge",
+  "contract": "pointwise_prompted_score",
+  "backbone": "Qwen3.7-Max",
+  "trained_reward": false,
+  "model": "qwen3.7-max-2026-06-08",
+  "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+  "metric": "paired preference accuracy = P(score(clean) > score(defective)); 0.5 = blind, 1.0 = always prefers the clean slide",
+  "elicitation": {
+    "question": "Score this slide's overall rendered visual quality and layout integrity on a 0-100 scale. Penalize text overflow or clipping, element overlap, overly dense layout, broken containment, and unprofessional visual artifacts. Do not infer intent from hidden metadata; use only the pixels.\n\nReturn exactly: {\"score\": <number 0-100>, \"rationale\": \"<brief visible reason>\"}",
+    "answer": "0-100 scalar score"
+  },
+  "results": [
+    {
+      "defect": "G1_TEXT_OVERFLOW",
+      "render": "freeform",
+      "n": 24,
+      "n_clean_preferred": 3,
+      "n_ties": 20,
+      "preference_accuracy": 0.125,
+      "preference_ci": [
+        0.043,
+        0.31
+      ],
+      "mean_reward_gap_clean_minus_def": 1.25,
+      "median_gap": 0.0,
+      "mean_clean_score": 44.167,
+      "mean_defective_score": 42.917,
+      "n_failures": 0
+    },
+    {
+      "defect": "G2_ELEMENT_OVERLAP",
+      "render": "freeform",
+      "n": 24,
+      "n_clean_preferred": 22,
+      "n_ties": 1,
+      "preference_accuracy": 0.917,
+      "preference_ci": [
+        0.742,
+        0.977
+      ],
+      "mean_reward_gap_clean_minus_def": 17.5,
+      "median_gap": 15.0,
+      "mean_clean_score": 42.708,
+      "mean_defective_score": 25.208,
+      "n_failures": 0
+    },
+    {
+      "defect": "G7_RENDER_CONTAINMENT_OVERFLOW",
+      "render": "freeform",
+      "n": 24,
+      "n_clean_preferred": 24,
+      "n_ties": 0,
+      "preference_accuracy": 1.0,
+      "preference_ci": [
+        0.862,
+        1.0
+      ],
+      "mean_reward_gap_clean_minus_def": 25.0,
+      "median_gap": 30.0,
+      "mean_clean_score": 90.0,
+      "mean_defective_score": 65.0,
+      "n_failures": 0
+    },
+    {
+      "defect": "S4_DENSITY_RULE_VIOLATION",
+      "render": "freeform",
+      "n": 24,
+      "n_clean_preferred": 24,
+      "n_ties": 0,
+      "preference_accuracy": 1.0,
+      "preference_ci": [
+        0.862,
+        1.0
+      ],
+      "mean_reward_gap_clean_minus_def": 21.6667,
+      "median_gap": 20.0,
+      "mean_clean_score": 44.167,
+      "mean_defective_score": 22.5,
+      "n_failures": 0
+    }
+  ]
+}

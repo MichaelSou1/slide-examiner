@@ -1,0 +1,73 @@
+sample_id,defect,modality,is_clean,failure,has_defect,named_target,predicted_types,locator,confidence,other,raw,level
+imgslide_10_S6_IMAGE_TEXT_CONTRADICTION_1_0000__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the text 'Conversion rate halved after the redesign' vs the figure caption 'Conversion rate doubled after the redesign'"",""region"":""right""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the text 'Conversion rate halved after the redesign' vs the figure caption 'Conversion rate doubled after the redesign'"", ""evidence_region"": ""right"", ""confidence"": 1.0}
+```",page
+imgslide_3_S6_IMAGE_TEXT_CONTRADICTION_1_0005__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the text 'Market share contracted across all regions' vs the figure caption 'Market share expanded across all regions'"",""region"":""right""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the text 'Market share contracted across all regions' vs the figure caption 'Market share expanded across all regions'"", ""evidence_region"": ""right"", ""confidence"": 1.0}
+```",page
+imgslide_11_S6_IMAGE_TEXT_CONTRADICTION_1_0001__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the text 'Energy use per unit rose steadily' vs the figure caption 'Energy use per unit dropped steadily'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the text 'Energy use per unit rose steadily' vs the figure caption 'Energy use per unit dropped steadily'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+imgslide_1_S6_IMAGE_TEXT_CONTRADICTION_1_0003__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the text 'Customer churn climbed to a record high' vs the figure caption 'Customer churn dropped to a record low'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the text 'Customer churn climbed to a record high' vs the figure caption 'Customer churn dropped to a record low'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+imgslide_2_S6_IMAGE_TEXT_CONTRADICTION_1_0004__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the text 'Page load time got slower every release' vs the figure caption 'Page load time got faster every release'"",""region"":""right""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the text 'Page load time got slower every release' vs the figure caption 'Page load time got faster every release'"", ""evidence_region"": ""right"", ""confidence"": 1.0}
+```",page
+imgslide_0_S6_IMAGE_TEXT_CONTRADICTION_1_0002__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the text 'Quarterly revenue fell sharply in Q4' vs the figure showing an upward green triangle and text 'Quarterly revenue rose sharply in Q4'"",""region"":""right""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the text 'Quarterly revenue fell sharply in Q4' vs the figure showing an upward green triangle and text 'Quarterly revenue rose sharply in Q4'"", ""evidence_region"": ""right"", ""confidence"": 1.0}
+```",page
+imgslide_4_S6_IMAGE_TEXT_CONTRADICTION_1_0006__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the text 'The defect rate rose every sprint' vs the figure caption 'The defect rate declined every sprint'"",""region"":""right""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the text 'The defect rate rose every sprint' vs the figure caption 'The defect rate declined every sprint'"", ""evidence_region"": ""right"", ""confidence"": 1.0}
+```",page
+imgslide_5_S6_IMAGE_TEXT_CONTRADICTION_1_0007__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the text 'Signups stalled after the launch' vs the figure caption 'Signups accelerated after the launch'"",""region"":""right""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the text 'Signups stalled after the launch' vs the figure caption 'Signups accelerated after the launch'"", ""evidence_region"": ""right"", ""confidence"": 1.0}
+```",page
+imgslide_6_S6_IMAGE_TEXT_CONTRADICTION_1_0008__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the text 'Operating costs rose quarter over quarter' vs the figure caption 'Operating costs fell quarter over quarter'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the text 'Operating costs rose quarter over quarter' vs the figure caption 'Operating costs fell quarter over quarter'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+imgslide_7_S6_IMAGE_TEXT_CONTRADICTION_1_0009__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the text 'NPS sank into the thirties' vs the figure caption 'NPS climbed into the eighties'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the text 'NPS sank into the thirties' vs the figure caption 'NPS climbed into the eighties'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+imgslide_8_S6_IMAGE_TEXT_CONTRADICTION_1_0010__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the text 'Uptime degraded to two nines' vs the figure caption 'Uptime improved to four nines'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the text 'Uptime degraded to two nines' vs the figure caption 'Uptime improved to four nines'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+imgslide_9_S6_IMAGE_TEXT_CONTRADICTION_1_0011__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the red downward arrow and its caption 'Support backlog shrank week over week' vs the text 'Support backlog grew week over week'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the red downward arrow and its caption 'Support backlog shrank week over week' vs the text 'Support backlog grew week over week'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+imgslide_0_S6_IMAGE_TEXT_CONTRADICTION_1_0002__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the green triangle figure"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the green triangle figure"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+imgslide_10_S6_IMAGE_TEXT_CONTRADICTION_1_0000__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the green triangle figure"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the green triangle figure"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+imgslide_11_S6_IMAGE_TEXT_CONTRADICTION_1_0001__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the figure area"",""region"":""left""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the figure area"", ""evidence_region"": ""left"", ""confidence"": 1.0}
+```",page
+imgslide_2_S6_IMAGE_TEXT_CONTRADICTION_1_0004__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the empty chart area"",""region"":""left""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the empty chart area"", ""evidence_region"": ""left"", ""confidence"": 1.0}
+```",page
+imgslide_1_S6_IMAGE_TEXT_CONTRADICTION_1_0003__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the figure area containing only a red triangle and a caption"",""region"":""left""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the figure area containing only a red triangle and a caption"", ""evidence_region"": ""left"", ""confidence"": 1.0}
+```",page
+imgslide_3_S6_IMAGE_TEXT_CONTRADICTION_1_0005__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the green triangle figure"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the green triangle figure"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+imgslide_4_S6_IMAGE_TEXT_CONTRADICTION_1_0006__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the figure area"",""region"":""left""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the figure area"", ""evidence_region"": ""left"", ""confidence"": 1.0}
+```",page
+imgslide_6_S6_IMAGE_TEXT_CONTRADICTION_1_0008__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the figure placeholder"",""region"":""left""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the figure placeholder"", ""evidence_region"": ""left"", ""confidence"": 1.0}
+```",page
+imgslide_5_S6_IMAGE_TEXT_CONTRADICTION_1_0007__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the green triangle figure"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the green triangle figure"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+imgslide_7_S6_IMAGE_TEXT_CONTRADICTION_1_0009__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the green triangle figure"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the green triangle figure"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+imgslide_8_S6_IMAGE_TEXT_CONTRADICTION_1_0010__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the green triangle figure"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the green triangle figure"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+imgslide_9_S6_IMAGE_TEXT_CONTRADICTION_1_0011__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the empty chart area with a red triangle"",""region"":""left""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the empty chart area with a red triangle"", ""evidence_region"": ""left"", ""confidence"": 1.0}
+```",page

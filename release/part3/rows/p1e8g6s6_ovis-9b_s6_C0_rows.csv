@@ -1,0 +1,298 @@
+sample_id,defect,modality,is_clean,failure,has_defect,named_target,predicted_types,locator,confidence,other,raw,level
+imgslide_5_S6_IMAGE_TEXT_CONTRADICTION_1_0007__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]",,,[],"<think>
+用户现在需要检查各个缺陷类型。首先看S6_IMAGE_TEXT_CONTRADICTION：图中文字是“Signups accelerated after the launch”，而右侧文本框说“Signups stalled after the launch”，图像和文字内容矛盾，所以这个缺陷存在。然后其他类型：G1_TEXT_OVERFLOW？看文本是否溢出，这里没有；G2_ELEMENT_OVERLAP？元素是否重叠，没有；G3_ALIGNMENT_OFFSET？对齐是否错位，没有明显；G4_FONT_SIZE？字体大小是否不一致，没看到；G5_BRAND_COLOR？颜色是否违规，这里绿色三角形可能但不确定？不过主要看S6。所以确定有S6缺陷。然后输出JSON。</think>
+
+{""has_defect"": true, ""findings"": [{""type"": ",page
+imgslide_3_S6_IMAGE_TEXT_CONTRADICTION_1_0005__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]",,,[],"<think>
+用户现在需要检查各个缺陷类型。首先看S6_IMAGE_TEXT_CONTRADICTION：图中文字是“Market share expanded across all regions”，但右侧文本框说“Market share contracted across all regions”，内容矛盾。所以这个缺陷存在。然后其他类型，比如G1_TEXT_OVERFLOW？看文本是否溢出，这里没有。G2_ELEMENT_OVERLAP？元素是否重叠，没有。G3_ALIGNMENT_OFFSET？对齐是否错位，可能有但主要看S6。S1_TITLE_BODY_MISMATCH？标题是Performance update 4，内容是否匹配？可能不直接，但S6更明显。所以确定S6存在。
+
+现在构建JSON：
+
+{
+  ""has_defect"": true,
+  ""findings"": ",page
+imgslide_6_S6_IMAGE_TEXT_CONTRADICTION_1_0008__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]",,,[],"<think>
+用户现在需要检查幻灯片中的缺陷类型。首先看各个候选类型：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看右侧的文本框，比如“Operating costs rose quarter over quarter”和下面的文本，是否有溢出？这里可能没有明显溢出。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？页面中元素之间没有视觉重叠，所以没有。
+
+G3_ALIGNMENT_OFFSET：元素是否错位？比如左侧大矩形和右侧文本框的位置，是否有偏移？可能没有明显错位。
+
+G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题和其他文本的字体大小是否有差异？假设这里没有明显不一致。
+
+G5_BRAND_COLOR_VIOLATION：颜色是否违规？页面背景是浅灰，文字颜色等，没有明显品牌色错误。
+
+G6_MARGIN_VIOLATION：元素是否",page
+imgslide_2_S6_IMAGE_TEXT_CONTRADICTION_1_0004__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]",,,[],"<think>
+用户现在需要检查各个缺陷类型。首先看S6_IMAGE_TEXT_CONTRADICTION：图中文字是“Page load time got faster every release”，而右侧文本框说“Page load time got slower every release”，所以图像和文字内容矛盾。然后其他类型，比如G1_TEXT_OVERFLOW？看元素是否溢出，这里没有明显溢出。G2_ELEMENT_OVERLAP？元素是否重叠，也没有。G3_ALIGNMENT？对齐是否错位，可能但主要看S6。S1_TITLE_BODY_MISMATCH？标题是Performance update 3，内容是关于加载时间变慢，标题和内容是否匹配？可能不匹配，但更明显的是S6。所以确定S6存在。
+
+现在构建JSON：
+
+{
+  ""has_defect"": true,
+  ""fin",page
+imgslide_9_S6_IMAGE_TEXT_CONTRADICTION_1_0011__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]",,,[],"<think>
+用户现在需要检查幻灯片的缺陷。首先看各个候选类型：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看右侧的文本框，比如“Support backlog grew week over week”和下面的文本，是否有溢出？这里可能没有明显溢出。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？看布局，各元素之间是否有重叠？没有看到重叠。
+
+G3_ALIGNMENT_OFFSET：元素是否对齐错误？比如左侧大矩形和右侧文本框的对齐，是否有偏移？可能没有明显对齐问题。
+
+G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题和其他文本的字体大小是否有差异？假设这里没有明显不一致。
+
+G5_BRAND_COLOR_VIOLATION：颜色是否违规？幻灯片背景是浅灰，文字颜色等是否有品牌色问题？这里没有信息表明颜色违规。
+
+G6_MARGIN_VIOL",page
+imgslide_1_S6_IMAGE_TEXT_CONTRADICTION_1_0003__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]",,,[],"<think>
+用户现在需要检查幻灯片中的缺陷类型。首先看各个候选类型：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看右侧的文本框，比如“Customer churn climbed to a record high”和下面的文本，是否有溢出？这里可能没有明显溢出。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？页面中元素之间没有视觉重叠，所以没有。
+
+G3_ALIGNMENT_OFFSET：元素是否错位？比如左侧大矩形和右侧文本框的位置，是否有偏移？可能没有明显错位。
+
+G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题和其他文本的字体大小是否有差异？假设这里没有明显不一致。
+
+G5_BRAND_COLOR_VIOLATION：颜色是否违规？页面背景是浅灰，文字颜色正常，没有品牌色问题。
+
+G6_MARGIN_VIOLATION：元素是否超出页",page
+imgslide_4_S6_IMAGE_TEXT_CONTRADICTION_1_0006__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]",,,[],"<think>
+用户现在需要检查幻灯片中的缺陷类型。首先看各个候选类型：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看右侧的文本框，比如“The defect rate rose every sprint”和下面的文本，是否有溢出？假设没有明显溢出。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？看布局，各元素之间是否有重叠，比如左侧大矩形和右侧文本框，没有重叠。
+
+G3_ALIGNMENT_OFFSET：元素对齐是否错位？比如左侧大矩形和右侧文本框的位置，是否有偏移？可能需要看，但如果没有明显错位？
+
+G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题“Performance update 5”和其他文本的字体大小，是否有差异？假设没有。
+
+G5_BRAND_COLOR_VIOLATION：颜色是否违规？这里颜色是浅灰等，没有品牌色问题。
+
+G",page
+imgslide_11_S6_IMAGE_TEXT_CONTRADICTION_1_0001__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]",,,[],"<think>
+用户现在需要检查幻灯片的缺陷。首先看各个候选类型：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看右侧文本框，比如“Energy use per unit rose steadily”和下面的框，没有溢出。中间大框里的文字也没溢出。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？页面上元素之间没有视觉重叠，所以没有。
+
+G3_ALIGNMENT_OFFSET：元素是否错位？比如标题、文本框、大框的位置，看起来对齐正常，没有明显偏移。
+
+G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题和其他文本的字体大小是否有问题？这里可能需要看，但如果没有明显差异，可能没有。
+
+G5_BRAND_COLOR_VIOLATION：颜色是否违规？页面背景是浅灰，其他元素颜色也没有明显品牌色错误（假设品牌色没特别说明，这里可能没有）。
+
+G6_MARG",page
+imgslide_0_S6_IMAGE_TEXT_CONTRADICTION_1_0002__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]",,,[],"<think>
+用户现在需要检查幻灯片中的缺陷。首先看各个候选类型：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看右侧的文本框，比如“Quarterly revenue fell sharply in Q4”和下面的文本，是否有溢出？从图中看，这些文本应该在框内，没有溢出。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？图中各元素（标题、左侧大框、右侧两个文本框）没有重叠。
+
+G3_ALIGNMENT_OFFSET：元素是否对齐错位？比如左侧大框和右侧文本框的位置，是否有偏移？可能需要看布局，但如果没有明显错位，可能不考虑。
+
+G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题和其他文本的字体大小是否有差异？假设这里没有明显不一致。
+
+G5_BRAND_COLOR_VIOLATION：颜色是否违规？图中颜色是绿色三角形等，没有品牌色违规迹象。
+
+",page
+imgslide_8_S6_IMAGE_TEXT_CONTRADICTION_1_0010__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S1_TITLE_BODY_MISMATCH"",""S6_IMAGE_TEXT_CONTRADICTION""]",,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看各个候选：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看右侧的文本框，比如“Uptime degraded to two nines”和下面的框，没有溢出迹象。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？页面布局中各元素（标题、左侧大框、右侧两个框）没有重叠。
+
+G3_ALIGNMENT_OFFSET：元素对齐是否错位？比如左侧大框和右侧框的对齐，可能有偏移？但需要看。不过再仔细看，右侧的两个文本框是否对齐？或者左侧大框的位置？
+
+G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题是“Performance update 9”，右侧文本的字体大小是否有差异？假设这里没有明显不一致。
+
+G5_BRAND_COLOR_VIOLATION：颜色是否违规？比如绿色三角形是否是品牌色？但题目没",page
+imgslide_11_S6_IMAGE_TEXT_CONTRADICTION_1_0001__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看各个候选：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看右侧的文本框，比如“Energy use per unit dropped steadily”和下面的段落，是否有溢出？假设没有明显溢出。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？页面中各元素（标题、左侧大框、右侧两个文本框）没有重叠，所以不存在。
+
+G3_ALIGNMENT_OFFSET：元素是否错位？比如左侧大框和右侧文本框的位置，是否有偏移？假设对齐正常，没有。
+
+G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题和其他文本的字体大小是否有差异？如果标题是较大字体，其他是较小，但如果没有明显不一致，可能不存在。
+
+G5_BRAND_COLOR_VIOLATION：颜色是否违规？页面背景是浅灰，文字颜色默认，没有明显品牌色",page
+imgslide_2_S6_IMAGE_TEXT_CONTRADICTION_1_0004__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看各个候选：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看右侧的文本框，比如“Page load time got faster every release”和下面的框，没有溢出迹象。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？页面布局中各元素（标题、左侧大框、右侧两个框）没有视觉重叠。
+
+G3_ALIGNMENT_OFFSET：元素是否错位？比如左侧大框和右侧元素的对齐，是否有偏移？可能需要看，但如果没有明显错位？
+
+G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题和其他文本的字体大小是否有差异？假设这里没有明显不一致。
+
+G5_BRAND_COLOR_VIOLATION：颜色是否违规？页面背景是浅灰，文字颜色正常，没有品牌色错误。
+
+G6_MARGIN_VIOLATION：元素是",page
+imgslide_1_S6_IMAGE_TEXT_CONTRADICTION_1_0003__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,,[],"<think>
+用户现在需要检查幻灯片的缺陷。首先看各个候选类型：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看右侧两个文本框，文字都在里面，没有溢出。所以G1不存在。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？页面上元素之间没有视觉重叠，所以G2不存在。
+
+G3_ALIGNMENT_OFFSET：元素是否错位？比如左侧大矩形和右侧文本框的位置，是否有偏移？可能需要看对齐，但这里可能没有明显错位？或者再仔细看。不过先继续其他。
+
+G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题“Performance update 2”和其他文本的字体大小，假设标题是较大，其他文本较小，但如果没有明显不一致的话？或者看是否有应该匹配的文本字体不同。比如右侧两个文本框内的文字，字体是否一致？假设是，那G4可能不存在？
+
+G5_BRAND_COLOR_VIOL",page
+imgslide_10_S6_IMAGE_TEXT_CONTRADICTION_1_0000__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看各个候选：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看右侧的文本框，比如“Conversion rate doubled after the redesign”和下面的文本，是否有溢出？假设没有明显溢出。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？页面中各元素（标题、左侧大框、右侧两个文本框）没有重叠，所以不存在。
+
+G3_ALIGNMENT_OFFSET：元素是否错位？比如左侧大框和右侧文本框的位置，是否有偏移？假设没有明显错位。
+
+G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题和其他文本的字体大小是否有差异？如果标题和正文字体大小不同但合理，可能不算，但这里要看是否应该匹配。假设没有明显不一致。
+
+G5_BRAND_COLOR_VIOLATION：颜色是否违规？比如绿色三角",page
+imgslide_5_S6_IMAGE_TEXT_CONTRADICTION_1_0007__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看各个候选：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看右侧的文本框，比如“Signups accelerated after the launch”和下面的文本，是否有溢出？假设没有明显溢出。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？页面中各元素（标题、左侧大框、右侧两个文本框）没有重叠，所以不存在。
+
+G3_ALIGNMENT_OFFSET：元素是否错位？比如左侧大框和右侧文本框的位置，是否有偏移？假设对齐正常，没有。
+
+G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题和其他文本的字体大小是否有差异？如果标题是较大字体，其他是较小，但如果没有明显不一致，可能不存在。
+
+G5_BRAND_COLOR_VIOLATION：颜色是否违规？比如绿色三角形是否是品牌色？假设没有违规。
+",page
+imgslide_10_S6_IMAGE_TEXT_CONTRADICTION_1_0000__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S1_TITLE_BODY_MISMATCH"",""S6_IMAGE_TEXT_CONTRADICTION""]",,,[],"<think>
+用户现在需要检查幻灯片的缺陷。首先看各个候选类型：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看右侧两个文本框，文字没有溢出，所以没有。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？页面上元素没有重叠，所以没有。
+
+G3_ALIGNMENT_OFFSET：元素对齐是否错位？比如左侧大矩形和右侧文本框的位置，是否有偏移？可能需要看，但这里可能没有明显对齐问题？
+
+G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题和其他文本的字体大小是否有差异？假设没有的话，暂时不考虑。
+
+G5_BRAND_COLOR_VIOLATION：颜色是否违规？这里绿色三角形，假设品牌色没问题，所以没有。
+
+G6_MARGIN_VIOLATION：元素是否超出页边距？页面元素都在范围内，所以没有。
+
+S1_TITLE_BODY_MISMATCH：标题“Pe",page
+imgslide_0_S6_IMAGE_TEXT_CONTRADICTION_1_0002__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,,[],"<think>
+用户现在需要检查幻灯片的缺陷。首先看各个候选类型：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看右侧两个文本框，文字应该在框内，没有溢出。所以没有。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？页面上元素之间没有视觉重叠，比如标题、图、文本框等位置正确，没有重叠。
+
+G3_ALIGNMENT_OFFSET：元素是否错位？比如左侧大矩形（图区域）和右侧文本框的位置，是否有偏移？可能需要看对齐，但这里可能没有明显错位？
+
+G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题和其他文本的字体大小是否有差异？假设标题是较大字体，其他文本较小，但如果没有明显不一致的话？或者看是否有应该匹配的文本字体不同。但可能这里没有。
+
+G5_BRAND_COLOR_VIOLATION：颜色是否违规？比如绿色三角形是否是品牌色？假设没有信息，可能不考虑。",page
+imgslide_4_S6_IMAGE_TEXT_CONTRADICTION_1_0006__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看各个候选：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看右侧的文本框，比如“The defect rate declined every sprint”和下面的文本，是否有溢出？假设没有明显溢出。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？页面中各元素（标题、左侧大框、右侧两个文本框）没有重叠，所以不存在。
+
+G3_ALIGNMENT_OFFSET：元素是否错位？比如左侧大框和右侧文本框的位置，是否有偏移？假设没有明显错位。
+
+G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题和其他文本的字体大小是否有差异？假设没有。
+
+G5_BRAND_COLOR_VIOLATION：颜色是否违规？页面背景是浅灰，文字颜色等，没有明显品牌色错误。
+
+G6_MARGIN_VIOLATION：元素是否",page
+imgslide_3_S6_IMAGE_TEXT_CONTRADICTION_1_0005__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看各个候选：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看右侧的两个文本框，文字没有溢出，所以不存在。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？页面上元素之间没有视觉重叠，所以不存在。
+
+G3_ALIGNMENT_OFFSET：元素是否错位？比如左侧大矩形和右侧文本框的位置，是否有偏移？可能需要看对齐，但这里可能没有明显错位？或者再仔细看。不过先继续其他。
+
+G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题“Performance update 4”和其他文本的字体大小，假设标题是较大，其他较小，但如果没有明显不一致的话？或者看是否有应该匹配的文本字体不同。比如右侧两个文本框的字体是否一致？假设一致的话，这个可能不存在？
+
+G5_BRAND_COLOR_VIOLATION：颜色是否",page
+imgslide_6_S6_IMAGE_TEXT_CONTRADICTION_1_0008__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,,[],"<think>
+用户现在需要检查幻灯片的缺陷。首先看各个候选类型：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看右侧两个文本框，文字都在里面，没有溢出。所以G1不存在。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？页面上元素之间没有视觉重叠，比如左侧大矩形和右侧文本框，没有重叠。所以G2不存在。
+
+G3_ALIGNMENT_OFFSET：元素是否错位？比如标题、文本框等，看起来对齐正常，没有明显偏移。所以G3不存在？
+
+G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题和其他文本的字体大小是否有差异？假设这里没有明显不一致，所以G4不存在？
+
+G5_BRAND_COLOR_VIOLATION：颜色是否违规？页面背景是浅灰，其他元素颜色也没看到违规情况，所以G5不存在。
+
+G6_MARGIN_VIOLATION：元素是否超出页边距？所有元素都在页",page
+imgslide_9_S6_IMAGE_TEXT_CONTRADICTION_1_0011__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看各个候选：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看右侧的两个矩形框，里面的文字“Support backlog shrank week over week”和“The chart on the left summarizes the trend.”应该都在框内，没有溢出。所以G1不存在。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？页面上各元素（标题栏、左侧大矩形、右侧两个小矩形）没有视觉重叠，所以G2不存在。
+
+G3_ALIGNMENT_OFFSET：元素是否错位？比如左侧大矩形和右侧元素的位置，是否有偏移？看起来布局合理，没有明显错位，所以G3不存在？
+
+G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题“Performance update 10”和其他文本的字体大小，假设",page
+imgslide_7_S6_IMAGE_TEXT_CONTRADICTION_1_0009__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S1_TITLE_BODY_MISMATCH"",""S6_IMAGE_TEXT_CONTRADICTION""]",,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看各个候选：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看右侧的文本框，比如“NPS sank into the thirties”和下面的框，没有溢出。所以G1不存在。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？页面上元素之间没有视觉重叠，所以G2不存在。
+
+G3_ALIGNMENT_OFFSET：元素是否错位？比如左侧大矩形和右侧文本框的位置，是否有偏移？可能需要看对齐，但这里可能没有明显错位？或者再仔细看。不过先继续其他。
+
+G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题“Performance update 8”和其他文本的字体，是否有不一致？假设没有明显不一致，所以G4不存在？
+
+G5_BRAND_COLOR_VIOLATION：颜色是否离品牌色？比如绿色三角形，是否是品",page
+imgslide_8_S6_IMAGE_TEXT_CONTRADICTION_1_0010__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看各个候选：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看右侧的文本框，比如“Uptime improved to four nines”和下面的框，没有溢出迹象。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？页面布局中各元素（标题、左侧大框、右侧两个框）没有重叠。
+
+G3_ALIGNMENT_OFFSET：元素对齐是否错位？左侧大框和右侧框的对齐，可能需要看，但这里是否有明显偏移？假设没有的话可能不选。
+
+G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题和其他文本的字体，假设没有明显差异，所以不选。
+
+G5_BRAND_COLOR_VIOLATION：颜色是否违规？绿色三角形可能是品牌色？但如果没有其他颜色对比，可能不选。
+
+G6_MARGIN_VIOLATION：元素是否超出页边距",page
+imgslide_7_S6_IMAGE_TEXT_CONTRADICTION_1_0009__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看各个候选：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看右侧的文本框，比如“NPS climbed into the eighties”和下面的文本，是否有溢出？假设没有明显溢出。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？页面中各元素（标题、左侧大框、右侧两个文本框）没有重叠，所以不存在。
+
+G3_ALIGNMENT_OFFSET：元素是否错位？比如左侧大框和右侧文本框的位置，是否有偏移？假设对齐正常，没有。
+
+G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题和其他文本的字体大小是否有差异？如果标题是较大字体，其他是较小，但如果没有明显不一致，可能不存在。
+
+G5_BRAND_COLOR_VIOLATION：颜色是否违规？比如绿色三角形是否是品牌色？假设没有违规。
+
+G6_MAR",page

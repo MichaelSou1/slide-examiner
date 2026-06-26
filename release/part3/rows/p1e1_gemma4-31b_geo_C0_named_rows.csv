@@ -1,0 +1,433 @@
+sample_id,defect,modality,is_clean,failure,has_defect,named_target,predicted_types,locator,confidence,other,raw,level
+part2_logistics_visibility_4_G1_TEXT_OVERFLOW_32_0043__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_logistics_visibility_5_G1_TEXT_OVERFLOW_32_0044__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_logistics_visibility_3_G1_TEXT_OVERFLOW_32_0042__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_logistics_visibility_5_G1_TEXT_OVERFLOW_4_0044__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_logistics_visibility_4_G1_TEXT_OVERFLOW_4_0043__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_logistics_visibility_3_G1_TEXT_OVERFLOW_4_0042__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_marketing_attribution_1_G1_TEXT_OVERFLOW_32_0045__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_marketing_attribution_1_G1_TEXT_OVERFLOW_4_0045__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_marketing_attribution_2_G1_TEXT_OVERFLOW_32_0046__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_marketing_attribution_3_G1_TEXT_OVERFLOW_4_0047__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_marketing_attribution_3_G1_TEXT_OVERFLOW_32_0047__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_marketing_attribution_2_G1_TEXT_OVERFLOW_4_0046__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_marketing_attribution_4_G1_TEXT_OVERFLOW_32_0048__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_marketing_attribution_5_G1_TEXT_OVERFLOW_32_0049__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_marketing_attribution_5_G1_TEXT_OVERFLOW_4_0049__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_network_observability_1_G1_TEXT_OVERFLOW_32_0050__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_marketing_attribution_4_G1_TEXT_OVERFLOW_4_0048__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_network_observability_1_G1_TEXT_OVERFLOW_4_0050__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_network_observability_2_G1_TEXT_OVERFLOW_32_0051__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_network_observability_3_G1_TEXT_OVERFLOW_4_0052__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_network_observability_4_G1_TEXT_OVERFLOW_4_0053__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_network_observability_3_G1_TEXT_OVERFLOW_32_0052__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_network_observability_4_G1_TEXT_OVERFLOW_32_0053__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_network_observability_2_G1_TEXT_OVERFLOW_4_0051__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_network_observability_5_G1_TEXT_OVERFLOW_32_0054__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_ops_efficiency_1_G1_TEXT_OVERFLOW_4_0055__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_ops_efficiency_2_G1_TEXT_OVERFLOW_32_0056__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_ops_efficiency_1_G1_TEXT_OVERFLOW_32_0055__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_ops_efficiency_2_G1_TEXT_OVERFLOW_4_0056__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_network_observability_5_G1_TEXT_OVERFLOW_4_0054__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_ops_efficiency_3_G1_TEXT_OVERFLOW_32_0057__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_ops_efficiency_4_G1_TEXT_OVERFLOW_4_0058__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_ops_efficiency_5_G1_TEXT_OVERFLOW_4_0059__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_ops_efficiency_5_G1_TEXT_OVERFLOW_32_0059__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_ops_efficiency_4_G1_TEXT_OVERFLOW_32_0058__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_ops_efficiency_3_G1_TEXT_OVERFLOW_4_0057__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_retail_analytics_3_G1_TEXT_OVERFLOW_64_0042__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_retail_analytics_5_G1_TEXT_OVERFLOW_64_0044__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_retail_analytics_4_G1_TEXT_OVERFLOW_64_0043__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_security_program_2_G1_TEXT_OVERFLOW_64_0046__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_security_program_3_G1_TEXT_OVERFLOW_64_0047__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_security_program_1_G1_TEXT_OVERFLOW_64_0045__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_security_program_4_G1_TEXT_OVERFLOW_64_0048__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_supply_chain_1_G1_TEXT_OVERFLOW_64_0050__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_supply_chain_4_G1_TEXT_OVERFLOW_64_0053__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_security_program_5_G1_TEXT_OVERFLOW_64_0049__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_supply_chain_2_G1_TEXT_OVERFLOW_64_0051__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_supply_chain_3_G1_TEXT_OVERFLOW_64_0052__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_supply_chain_5_G1_TEXT_OVERFLOW_64_0054__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_warehouse_robotics_4_G1_TEXT_OVERFLOW_64_0058__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_warehouse_robotics_5_G1_TEXT_OVERFLOW_64_0059__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_warehouse_robotics_3_G1_TEXT_OVERFLOW_64_0057__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_warehouse_robotics_1_G1_TEXT_OVERFLOW_64_0055__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_warehouse_robotics_2_G1_TEXT_OVERFLOW_64_0056__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_logistics_visibility_3_G1_TEXT_OVERFLOW_32_0042__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_logistics_visibility_4_G1_TEXT_OVERFLOW_32_0043__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_logistics_visibility_4_G1_TEXT_OVERFLOW_4_0043__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_logistics_visibility_5_G1_TEXT_OVERFLOW_4_0044__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_logistics_visibility_5_G1_TEXT_OVERFLOW_32_0044__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_logistics_visibility_3_G1_TEXT_OVERFLOW_4_0042__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_marketing_attribution_1_G1_TEXT_OVERFLOW_32_0045__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_marketing_attribution_2_G1_TEXT_OVERFLOW_4_0046__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_marketing_attribution_1_G1_TEXT_OVERFLOW_4_0045__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_marketing_attribution_3_G1_TEXT_OVERFLOW_4_0047__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_marketing_attribution_2_G1_TEXT_OVERFLOW_32_0046__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_marketing_attribution_3_G1_TEXT_OVERFLOW_32_0047__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_marketing_attribution_4_G1_TEXT_OVERFLOW_32_0048__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_network_observability_1_G1_TEXT_OVERFLOW_32_0050__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_marketing_attribution_5_G1_TEXT_OVERFLOW_32_0049__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_marketing_attribution_4_G1_TEXT_OVERFLOW_4_0048__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_network_observability_1_G1_TEXT_OVERFLOW_4_0050__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_marketing_attribution_5_G1_TEXT_OVERFLOW_4_0049__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_network_observability_2_G1_TEXT_OVERFLOW_32_0051__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_network_observability_3_G1_TEXT_OVERFLOW_4_0052__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_network_observability_4_G1_TEXT_OVERFLOW_4_0053__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_network_observability_2_G1_TEXT_OVERFLOW_4_0051__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_network_observability_3_G1_TEXT_OVERFLOW_32_0052__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_network_observability_4_G1_TEXT_OVERFLOW_32_0053__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_network_observability_5_G1_TEXT_OVERFLOW_32_0054__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_ops_efficiency_1_G1_TEXT_OVERFLOW_4_0055__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_ops_efficiency_2_G1_TEXT_OVERFLOW_32_0056__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_ops_efficiency_2_G1_TEXT_OVERFLOW_4_0056__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_network_observability_5_G1_TEXT_OVERFLOW_4_0054__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_ops_efficiency_1_G1_TEXT_OVERFLOW_32_0055__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_ops_efficiency_3_G1_TEXT_OVERFLOW_32_0057__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_ops_efficiency_3_G1_TEXT_OVERFLOW_4_0057__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_ops_efficiency_5_G1_TEXT_OVERFLOW_32_0059__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_ops_efficiency_4_G1_TEXT_OVERFLOW_4_0058__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_ops_efficiency_5_G1_TEXT_OVERFLOW_4_0059__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_ops_efficiency_4_G1_TEXT_OVERFLOW_32_0058__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_retail_analytics_3_G1_TEXT_OVERFLOW_64_0042__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_security_program_1_G1_TEXT_OVERFLOW_64_0045__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_retail_analytics_4_G1_TEXT_OVERFLOW_64_0043__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_security_program_3_G1_TEXT_OVERFLOW_64_0047__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_retail_analytics_5_G1_TEXT_OVERFLOW_64_0044__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_security_program_2_G1_TEXT_OVERFLOW_64_0046__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_security_program_4_G1_TEXT_OVERFLOW_64_0048__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_supply_chain_3_G1_TEXT_OVERFLOW_64_0052__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_supply_chain_2_G1_TEXT_OVERFLOW_64_0051__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_supply_chain_4_G1_TEXT_OVERFLOW_64_0053__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_supply_chain_1_G1_TEXT_OVERFLOW_64_0050__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_security_program_5_G1_TEXT_OVERFLOW_64_0049__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_supply_chain_5_G1_TEXT_OVERFLOW_64_0054__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_warehouse_robotics_3_G1_TEXT_OVERFLOW_64_0057__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_warehouse_robotics_2_G1_TEXT_OVERFLOW_64_0056__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_warehouse_robotics_5_G1_TEXT_OVERFLOW_64_0059__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_warehouse_robotics_1_G1_TEXT_OVERFLOW_64_0055__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_warehouse_robotics_4_G1_TEXT_OVERFLOW_64_0058__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_field_service_3_S6_IMAGE_TEXT_CONTRADICTION_1_0042__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_fraud_detection_2_S6_IMAGE_TEXT_CONTRADICTION_1_0046__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_fraud_detection_3_S6_IMAGE_TEXT_CONTRADICTION_1_0047__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_fraud_detection_1_S6_IMAGE_TEXT_CONTRADICTION_1_0045__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_field_service_4_S6_IMAGE_TEXT_CONTRADICTION_1_0043__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_field_service_5_S6_IMAGE_TEXT_CONTRADICTION_1_0044__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_fraud_detection_4_S6_IMAGE_TEXT_CONTRADICTION_1_0048__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_hr_analytics_3_S6_IMAGE_TEXT_CONTRADICTION_1_0052__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_fraud_detection_5_S6_IMAGE_TEXT_CONTRADICTION_1_0049__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_hr_analytics_2_S6_IMAGE_TEXT_CONTRADICTION_1_0051__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_hr_analytics_4_S6_IMAGE_TEXT_CONTRADICTION_1_0053__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_hr_analytics_1_S6_IMAGE_TEXT_CONTRADICTION_1_0050__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_hr_analytics_5_S6_IMAGE_TEXT_CONTRADICTION_1_0054__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_inventory_optimization_4_S6_IMAGE_TEXT_CONTRADICTION_1_0058__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_inventory_optimization_1_S6_IMAGE_TEXT_CONTRADICTION_1_0055__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_inventory_optimization_3_S6_IMAGE_TEXT_CONTRADICTION_1_0057__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_inventory_optimization_2_S6_IMAGE_TEXT_CONTRADICTION_1_0056__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_inventory_optimization_5_S6_IMAGE_TEXT_CONTRADICTION_1_0059__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_field_service_3_S6_IMAGE_TEXT_CONTRADICTION_1_0042__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_field_service_4_S6_IMAGE_TEXT_CONTRADICTION_1_0043__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_fraud_detection_3_S6_IMAGE_TEXT_CONTRADICTION_1_0047__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_field_service_5_S6_IMAGE_TEXT_CONTRADICTION_1_0044__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_fraud_detection_1_S6_IMAGE_TEXT_CONTRADICTION_1_0045__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_fraud_detection_2_S6_IMAGE_TEXT_CONTRADICTION_1_0046__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_fraud_detection_4_S6_IMAGE_TEXT_CONTRADICTION_1_0048__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_hr_analytics_2_S6_IMAGE_TEXT_CONTRADICTION_1_0051__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_hr_analytics_1_S6_IMAGE_TEXT_CONTRADICTION_1_0050__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_hr_analytics_4_S6_IMAGE_TEXT_CONTRADICTION_1_0053__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_hr_analytics_3_S6_IMAGE_TEXT_CONTRADICTION_1_0052__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_fraud_detection_5_S6_IMAGE_TEXT_CONTRADICTION_1_0049__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_hr_analytics_5_S6_IMAGE_TEXT_CONTRADICTION_1_0054__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_inventory_optimization_4_S6_IMAGE_TEXT_CONTRADICTION_1_0058__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_inventory_optimization_1_S6_IMAGE_TEXT_CONTRADICTION_1_0055__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_inventory_optimization_2_S6_IMAGE_TEXT_CONTRADICTION_1_0056__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_inventory_optimization_3_S6_IMAGE_TEXT_CONTRADICTION_1_0057__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page
+part2_inventory_optimization_5_S6_IMAGE_TEXT_CONTRADICTION_1_0059__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""confidence"": 1.0}
+```",page

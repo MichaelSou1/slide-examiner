@@ -1,0 +1,31 @@
+[1/14] ap_001_art_photos_slide_19.pptx                  slides= 1 legal=  2 G7hits= 1  <<
+[2/14] ap_005_art_photos_slide_1.pptx                   slides= 1 legal=  0 G7hits= 0
+[3/14] ap_006_food_slide_18.pptx                        slides= 1 legal=  4 G7hits= 2  <<
+[4/14] ap_007_business_slide_6.pptx                     slides= 1 legal=  1 G7hits= 0
+[5/14] ap_008_social_media_slide_1.pptx                 slides= 1 legal=  0 G7hits= 0
+[6/14] ap_009_marketing_slide_14.pptx                   slides= 1 legal=  1 G7hits= 0
+[7/14] ap_010_career_slide_18.pptx                      slides= 1 legal=  3 G7hits= 1  <<
+[8/14] ap_012_art_photos_slide_18.pptx                  slides= 1 legal=  1 G7hits= 0
+[9/14] ap_013_food_slide_26.pptx                        slides= 1 legal=  7 G7hits= 7  <<
+[10/14] ap_014_entrepreneur_slide_3.pptx                 slides= 1 legal= 21 G7hits= 3  <<
+[11/14] ap_015_marketing_slide_41.pptx                   slides= 1 legal=  2 G7hits= 0
+[12/14] ap_016_food_slide_1.pptx                         slides= 1 legal=  2 G7hits= 2  <<
+[13/14] ap_017_career_slide_16.pptx                      slides= 1 legal=  3 G7hits= 3  <<
+[14/14] ap_018_art_photos_slide_21.pptx                  slides= 1 legal=  3 G7hits= 1  <<
+
+================ G7 render-containment prevalence ================
+decks scanned        : 14  (errors: 0)
+slides               : 14
+text boxes           : 59
+legal text boxes     : 50  (G7 denominator)
+G7 hits (boxes)      : 20  (of which HARD: 4)
+------------------------- ALL overflow (incl. soft autofit-grow) -
+box-level incidence  : 40.0%   (20/50 legal boxes)
+slide-level incidence: 57.1%   (8/14 slides)
+deck-level incidence : 57.1%   (8/14 decks)
+------------------------- HARD G7 (autofit-off | off-page | collision) -
+box-level incidence  : 8.0%   (4/50 legal boxes)
+slide-level incidence: 21.4%   (3/14 slides)
+deck-level incidence : 21.4%   (3/14 decks)
+=================================================================
+params: margin=18.0pt max_iou=0.05 tol=2.0pt min_over=3.0pt & 0.04 frac

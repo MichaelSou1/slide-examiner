@@ -1,0 +1,2247 @@
+sample_id,defect,modality,is_clean,failure,has_defect,named_target,predicted_types,locator,confidence,other,raw,level
+part2_logistics_visibility_3_G1_TEXT_OVERFLOW_32_0042__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_logistics_visibility_4_G1_TEXT_OVERFLOW_4_0043__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_logistics_visibility_5_G1_TEXT_OVERFLOW_4_0044__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_logistics_visibility_4_G1_TEXT_OVERFLOW_32_0043__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_logistics_visibility_3_G1_TEXT_OVERFLOW_4_0042__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_logistics_visibility_5_G1_TEXT_OVERFLOW_32_0044__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_marketing_attribution_1_G1_TEXT_OVERFLOW_32_0045__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_marketing_attribution_2_G1_TEXT_OVERFLOW_32_0046__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_marketing_attribution_2_G1_TEXT_OVERFLOW_4_0046__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_marketing_attribution_3_G1_TEXT_OVERFLOW_32_0047__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_marketing_attribution_1_G1_TEXT_OVERFLOW_4_0045__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_marketing_attribution_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Spend is hard to attribute XX' does not match the body content which discusses risks",page
+part2_marketing_attribution_3_G1_TEXT_OVERFLOW_4_0047__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_logistics_visibility_4_G1_TEXT_OVERFLOW_4_0043__template,G1_TEXT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_logistics_visibility_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'ShipEye impact on on-time delivery XX' overflows beyond the bounds of its box."",
+      ""fix_suggesti",page
+part2_logistics_visibility_5_G1_TEXT_OVERFLOW_32_0044__template,G1_TEXT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW"",""G6_MARGIN_VIOLATION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_logistics_visibility_5"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'A pragmatic ShipEye plan XXX' overflows beyond the slide boundary."",
+      ""fix_suggest",page
+part2_logistics_visibility_3_G1_TEXT_OVERFLOW_32_0042__template,G1_TEXT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW"",""G6_MARGIN_VIOLATION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_logistics_visibility_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'XXX ShipEye tracks every leg' overflows beyond the bounds of its box."",
+      ""fix_su",page
+part2_logistics_visibility_3_G1_TEXT_OVERFLOW_4_0042__template,G1_TEXT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW"",""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_logistics_visibility_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'ShipEye tracks every leg XX' overflows beyond the bounds of its box."",
+      ""fix_suggestion"": ""Ad",page
+part2_logistics_visibility_5_G1_TEXT_OVERFLOW_4_0044__template,G1_TEXT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW"",""G6_MARGIN_VIOLATION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_logistics_visibility_5"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'A pragmatic ShipEye plan XX' overflows beyond the slide boundary."",
+      ""fix_suggesti",page
+part2_logistics_visibility_4_G1_TEXT_OVERFLOW_32_0043__template,G1_TEXT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW"",""G6_MARGIN_VIOLATION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_logistics_visibility_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'ShipEye impact on on-time delivery XXX' overflows beyond the bounds of its box."",
+      ""fix_suggest",page
+part2_marketing_attribution_1_G1_TEXT_OVERFLOW_4_0045__template,G1_TEXT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW"",""G6_MARGIN_VIOLATION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_marketing_attribution_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'XX Spend is hard to attribute' overflows beyond the slide boundary."",
+      ""fix_suggestion"": ""Adju",page
+part2_marketing_attribution_4_G1_TEXT_OVERFLOW_32_0048__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_marketing_attribution_4_G1_TEXT_OVERFLOW_4_0048__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_marketing_attribution_5_G1_TEXT_OVERFLOW_32_0049__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_marketing_attribution_2_G1_TEXT_OVERFLOW_32_0046__template,G1_TEXT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_marketing_attribution_2"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'How Attrib models touchpoints XXX' overflows beyond the slide boundary."",
+      ""fix_s",page
+part2_marketing_attribution_1_G1_TEXT_OVERFLOW_32_0045__template,G1_TEXT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW"",""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_marketing_attribution_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'Spend is hard to attribute XXX' overflows beyond the slide boundary."",
+      ""fix_suggestion"": ""Adj",page
+part2_marketing_attribution_2_G1_TEXT_OVERFLOW_4_0046__template,G1_TEXT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_marketing_attribution_2"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'How Attrib models touchpoints XX' overflows beyond the slide boundary."",
+      ""fix_suggestion"": """,page
+part2_network_observability_1_G1_TEXT_OVERFLOW_32_0050__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_network_observability_1_G1_TEXT_OVERFLOW_4_0050__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_network_observability_2_G1_TEXT_OVERFLOW_32_0051__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_network_observability_2_G1_TEXT_OVERFLOW_4_0051__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_marketing_attribution_3_G1_TEXT_OVERFLOW_32_0047__template,G1_TEXT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW"",""G6_MARGIN_VIOLATION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_marketing_attribution_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'XXX Attrb evidence from the pilot' overflows beyond the bounds of its box."",
+      ""fi",page
+part2_network_observability_3_G1_TEXT_OVERFLOW_32_0052__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_network_observability_3_G1_TEXT_OVERFLOW_4_0052__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_marketing_attribution_3_G1_TEXT_OVERFLOW_4_0047__template,G1_TEXT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW"",""G6_MARGIN_VIOLATION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_marketing_attribution_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'Attrib evidence from the pilot XX' overflows beyond the slide bounds."",
+      ""fix_sug",page
+part2_network_observability_4_G1_TEXT_OVERFLOW_32_0053__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_marketing_attribution_4_G1_TEXT_OVERFLOW_32_0048__template,G1_TEXT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_marketing_attribution_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'XXX Rolling Attrib out by channel' overflows beyond the bounds of its box."",
+      """,page
+part2_marketing_attribution_4_G1_TEXT_OVERFLOW_4_0048__template,G1_TEXT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_marketing_attribution_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'Rolling Attrib out by channel XX' overflows beyond the slide bounds."",
+      ""fix_sugg",page
+part2_network_observability_4_G1_TEXT_OVERFLOW_4_0053__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_network_observability_1_G1_TEXT_OVERFLOW_32_0050__template,G1_TEXT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW"",""G6_MARGIN_VIOLATION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_network_observability_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'Outages are hard to diagnose XXX' overflows beyond the slide boundary."",
+      ""fix_suggestion"": ""A",page
+part2_network_observability_1_G1_TEXT_OVERFLOW_4_0050__template,G1_TEXT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW"",""G6_MARGIN_VIOLATION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_network_observability_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'Outages are hard to diagnose XX' overflows beyond the slide boundary."",
+      ""fix_suggestion"": ""Ad",page
+part2_marketing_attribution_5_G1_TEXT_OVERFLOW_4_0049__freeform,G1_TEXT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW"",""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_marketing_attribution_5"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'What Attrib needs next XX' overflows beyond the bounds of its box."",
+      ""fix_sugg",page
+part2_network_observability_5_G1_TEXT_OVERFLOW_32_0054__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_network_observability_5_G1_TEXT_OVERFLOW_4_0054__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_network_observability_2_G1_TEXT_OVERFLOW_32_0051__template,G1_TEXT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW"",""G6_MARGIN_VIOLATION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_network_observability_2"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'One pane with TraceGrid XXX' overflows beyond the bounds of its box."",
+      ""fix_su",page
+part2_network_observability_2_G1_TEXT_OVERFLOW_4_0051__template,G1_TEXT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW"",""G6_MARGIN_VIOLATION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_network_observability_2"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'XX One pane with TraceGrid' overflows beyond the bounds of its box."",
+      ""fix_sugge",page
+part2_ops_efficiency_1_G1_TEXT_OVERFLOW_32_0055__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_ops_efficiency_1_G1_TEXT_OVERFLOW_4_0055__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_ops_efficiency_2_G1_TEXT_OVERFLOW_32_0056__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_network_observability_3_G1_TEXT_OVERFLOW_32_0052__template,G1_TEXT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW"",""G6_MARGIN_VIOLATION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_network_observability_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'The TraceGrid architecture XXX' overflows beyond the bounds of its box."",
+      ""fix_s",page
+part2_ops_efficiency_2_G1_TEXT_OVERFLOW_4_0056__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_marketing_attribution_5_G1_TEXT_OVERFLOW_32_0049__template,G1_TEXT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_marketing_attribution_5"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'XXX What Attrib needs next' overflows beyond the bounds of its box."",
+      ""fix_sug",page
+part2_network_observability_3_G1_TEXT_OVERFLOW_4_0052__template,G1_TEXT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW"",""G6_MARGIN_VIOLATION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_network_observability_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'The TraceGrid architecture XX' overflows beyond the bounds of its box."",
+      ""fix_su",page
+part2_marketing_attribution_5_G1_TEXT_OVERFLOW_4_0049__template,G1_TEXT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_marketing_attribution_5"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'XX What Attrib needs next' overflows beyond the bounds of its box."",
+      ""fix_sugg",page
+part2_network_observability_4_G1_TEXT_OVERFLOW_32_0053__template,G1_TEXT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW"",""G6_MARGIN_VIOLATION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_network_observability_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'XXX TraceGrid data governance' overflows beyond the bounds of its box."",
+      ""fix_su",page
+part2_network_observability_4_G1_TEXT_OVERFLOW_4_0053__template,G1_TEXT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW"",""G6_MARGIN_VIOLATION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_network_observability_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'TraceGrid data governance XX' overflows beyond the bounds of its box."",
+      ""fix_suggestion"": ""Ad",page
+part2_network_observability_5_G1_TEXT_OVERFLOW_4_0054__template,G1_TEXT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_network_observability_5"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'XX The TraceGrid roadmap' overflows beyond the bounds of its box."",
+      ""fix_sugge",page
+part2_network_observability_5_G1_TEXT_OVERFLOW_32_0054__template,G1_TEXT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW"",""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_network_observability_5"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'The TraceGrid roadmap XXX' overflows beyond the slide boundary."",
+      ""fix_suggestio",page
+part2_ops_efficiency_1_G1_TEXT_OVERFLOW_32_0055__template,G1_TEXT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_ops_efficiency_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'Where operating cost sits today XXX' overflows beyond the bounds of its box."",
+      ""fix_suggestion"": ""Ad",page
+part2_ops_efficiency_1_G1_TEXT_OVERFLOW_4_0055__template,G1_TEXT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_ops_efficiency_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'XX Where operating cost sits today' overflows beyond the bounds of its box."",
+      ""fix_su",page
+part2_ops_efficiency_2_G1_TEXT_OVERFLOW_32_0056__template,G1_TEXT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_ops_efficiency_2"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'XXX Root causes behind the cost' overflows beyond the slide boundary."",
+      ""fix_suggesti",page
+part2_ops_efficiency_2_G1_TEXT_OVERFLOW_4_0056__template,G1_TEXT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_ops_efficiency_2"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'XX Root causes behind the cost' overflows beyond the slide boundary."",
+      ""fix_suggestio",page
+part2_logistics_visibility_3_G1_TEXT_OVERFLOW_32_0042__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,True,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_logistics_visibility_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'ShipEye tracks every leg' overflows beyond the bounds of its box."",
+      ""fix_suggestion"": ""Adjus",page
+part2_logistics_visibility_3_G1_TEXT_OVERFLOW_4_0042__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,True,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_logistics_visibility_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'ShipEye tracks every leg' overflows beyond the bounds of its box."",
+      ""fix_sugges",page
+part2_logistics_visibility_3_G1_TEXT_OVERFLOW_32_0042__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,True,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_logistics_visibility_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'ShipEye tracks every leg' overflows beyond the bounds of its box."",
+      ""fix_sugges",page
+part2_logistics_visibility_3_G1_TEXT_OVERFLOW_4_0042__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,True,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_logistics_visibility_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'ShipEye tracks every leg' overflows beyond the bounds of its box."",
+      ""fix_sugges",page
+part2_logistics_visibility_4_G1_TEXT_OVERFLOW_32_0043__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,True,"[""G1_TEXT_OVERFLOW"",""G6_MARGIN_VIOLATION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_logistics_visibility_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'ShipEye impact on on-time delivery' overflows beyond the bounds of its box."",
+      ""fix_suggestio",page
+part2_logistics_visibility_4_G1_TEXT_OVERFLOW_32_0043__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,True,"[""G1_TEXT_OVERFLOW"",""G6_MARGIN_VIOLATION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_logistics_visibility_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'ShipEye impact on on-time delivery' overflows beyond the bounds of its box."",
+      ""fix_suggestio",page
+part2_logistics_visibility_4_G1_TEXT_OVERFLOW_4_0043__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,True,"[""G1_TEXT_OVERFLOW"",""G6_MARGIN_VIOLATION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_logistics_visibility_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'ShipEye impact on on-time delivery' overflows beyond the bounds of its box."",
+      ""fix_suggestio",page
+part2_logistics_visibility_5_G1_TEXT_OVERFLOW_32_0044__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,True,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_logistics_visibility_5"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'A pragmatic ShipEye plan' overflows beyond the slide bounds."",
+      ""fix_suggestion""",page
+part2_logistics_visibility_5_G1_TEXT_OVERFLOW_32_0044__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,True,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_logistics_visibility_5"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'A pragmatic ShipEye plan' overflows beyond the slide bounds."",
+      ""fix_suggestion""",page
+part2_logistics_visibility_4_G1_TEXT_OVERFLOW_4_0043__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,True,"[""G1_TEXT_OVERFLOW"",""G6_MARGIN_VIOLATION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_logistics_visibility_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'ShipEye impact on on-time delivery' overflows beyond the bounds of its box."",
+      ""fix_suggestio",page
+part2_logistics_visibility_5_G1_TEXT_OVERFLOW_4_0044__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,True,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_logistics_visibility_5"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'A pragmatic ShipEye plan' overflows beyond the bounds of its box."",
+      ""fix_sugges",page
+part2_logistics_visibility_5_G1_TEXT_OVERFLOW_4_0044__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,True,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_logistics_visibility_5"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'A pragmatic ShipEye plan' overflows beyond the slide boundary."",
+      ""fix_suggestio",page
+part2_marketing_attribution_1_G1_TEXT_OVERFLOW_32_0045__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,True,"[""G1_TEXT_OVERFLOW"",""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_marketing_attribution_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'Spend is hard to attribute' overflows beyond the slide boundary."",
+      ""fix_suggestion"": ""Adjust ",page
+part2_marketing_attribution_1_G1_TEXT_OVERFLOW_32_0045__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,True,"[""G1_TEXT_OVERFLOW"",""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_marketing_attribution_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'Spend is hard to attribute' overflows beyond the slide bounds."",
+      ""fix_suggestion"": ""Adjust th",page
+part2_marketing_attribution_1_G1_TEXT_OVERFLOW_4_0045__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,True,"[""G1_TEXT_OVERFLOW"",""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_marketing_attribution_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'Spend is hard to attribute' overflows beyond the slide bounds."",
+      ""fix_suggestion"": ""Adjust th",page
+part2_marketing_attribution_1_G1_TEXT_OVERFLOW_4_0045__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,True,"[""G1_TEXT_OVERFLOW"",""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_marketing_attribution_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'Spend is hard to attribute' overflows beyond the slide boundary."",
+      ""fix_suggestion"": ""Adjust ",page
+part2_marketing_attribution_2_G1_TEXT_OVERFLOW_32_0046__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,True,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_marketing_attribution_2"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'How Attrib models touchpoints' overflows beyond the bounds of its box."",
+      ""fix_",page
+part2_marketing_attribution_4_G1_TEXT_OVERFLOW_4_0048__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,True,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_marketing_attribution_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'Rolling Attrib out by channel' overflows beyond the slide boundary."",
+      ""fix_suggestion"": ""Adju",page
+part2_marketing_attribution_4_G1_TEXT_OVERFLOW_32_0048__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,True,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_marketing_attribution_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'Rolling Attrib out by channel' overflows beyond the slide boundary."",
+      ""fix_suggestion"": ""Adju",page
+part2_marketing_attribution_2_G1_TEXT_OVERFLOW_32_0046__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,True,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_marketing_attribution_2"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'How Attrib models touchpoints' overflows beyond the bounds of its box."",
+      ""fix_",page
+part2_marketing_attribution_2_G1_TEXT_OVERFLOW_4_0046__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,True,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_marketing_attribution_2"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'How Attrib models touchpoints' overflows beyond the bounds of its box."",
+      ""fix_",page
+part2_marketing_attribution_5_G1_TEXT_OVERFLOW_32_0049__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_marketing_attribution_2_G1_TEXT_OVERFLOW_4_0046__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,True,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_marketing_attribution_2"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'How Attrib models touchpoints' overflows beyond the bounds of its box."",
+      ""fix_",page
+part2_marketing_attribution_3_G1_TEXT_OVERFLOW_32_0047__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,True,"[""G1_TEXT_OVERFLOW"",""G6_MARGIN_VIOLATION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_marketing_attribution_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'Attrib evidence from the pilot' overflows beyond the slide bounds."",
+      ""fix_sugges",page
+part2_network_observability_1_G1_TEXT_OVERFLOW_32_0050__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_marketing_attribution_3_G1_TEXT_OVERFLOW_32_0047__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,True,"[""G1_TEXT_OVERFLOW"",""G6_MARGIN_VIOLATION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_marketing_attribution_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'Attrib evidence from the pilot' overflows beyond the slide bounds."",
+      ""fix_sugges",page
+part2_network_observability_2_G1_TEXT_OVERFLOW_32_0051__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_network_observability_2_G1_TEXT_OVERFLOW_32_0051__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_marketing_attribution_3_G1_TEXT_OVERFLOW_4_0047__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,True,"[""G1_TEXT_OVERFLOW"",""G6_MARGIN_VIOLATION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_marketing_attribution_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'Attrib evidence from the pilot' overflows beyond the slide boundary."",
+      ""fix_sugg",page
+part2_marketing_attribution_3_G1_TEXT_OVERFLOW_4_0047__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,True,"[""G1_TEXT_OVERFLOW"",""G6_MARGIN_VIOLATION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_marketing_attribution_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'Attrib evidence from the pilot' overflows beyond the slide boundary."",
+      ""fix_sugg",page
+part2_network_observability_2_G1_TEXT_OVERFLOW_4_0051__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_network_observability_2_G1_TEXT_OVERFLOW_4_0051__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_marketing_attribution_4_G1_TEXT_OVERFLOW_32_0048__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,True,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_marketing_attribution_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'Rolling Attrib out by channel' overflows beyond the bounds of its box."",
+      ""fix_",page
+part2_marketing_attribution_4_G1_TEXT_OVERFLOW_4_0048__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,True,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_marketing_attribution_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'Rolling Attrib out by channel' overflows beyond the bounds of its box."",
+      ""fix_",page
+part2_network_observability_1_G1_TEXT_OVERFLOW_4_0050__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,True,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_network_observability_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'Outages are hard to diagnose' overflows beyond the slide boundary."",
+      ""fix_suggestion"": ""Adjus",page
+part2_marketing_attribution_5_G1_TEXT_OVERFLOW_32_0049__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,True,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_marketing_attribution_5"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'What Attrib needs next' overflows beyond the bounds of its box."",
+      ""fix_suggest",page
+part2_marketing_attribution_5_G1_TEXT_OVERFLOW_4_0049__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,True,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_marketing_attribution_5"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'What Attrib needs next' overflows beyond the bounds of its box."",
+      ""fix_suggest",page
+part2_marketing_attribution_5_G1_TEXT_OVERFLOW_4_0049__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,True,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_marketing_attribution_5"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'What Attrib needs next' overflows beyond the bounds of its box."",
+      ""fix_suggest",page
+part2_network_observability_1_G1_TEXT_OVERFLOW_32_0050__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,True,"[""G1_TEXT_OVERFLOW"",""G6_MARGIN_VIOLATION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_network_observability_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'Outages are hard to diagnose' overflows beyond the slide boundary."",
+      ""fix_suggestion"": ""Adjus",page
+part2_network_observability_1_G1_TEXT_OVERFLOW_4_0050__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,True,"[""G1_TEXT_OVERFLOW"",""G6_MARGIN_VIOLATION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_network_observability_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'Outages are hard to diagnose' overflows beyond the slide boundary."",
+      ""fix_suggestion"": ""Adjus",page
+part2_network_observability_3_G1_TEXT_OVERFLOW_32_0052__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,True,"[""G1_TEXT_OVERFLOW"",""G6_MARGIN_VIOLATION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_network_observability_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text bars extend beyond the slide boundaries."",
+      ""fix_suggestion"": ""Adjust the text box size to fi",page
+part2_network_observability_3_G1_TEXT_OVERFLOW_32_0052__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,True,"[""G1_TEXT_OVERFLOW"",""G6_MARGIN_VIOLATION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_network_observability_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text bars extend beyond the slide boundaries."",
+      ""fix_suggestion"": ""Adjust the text box size to fi",page
+part2_network_observability_3_G1_TEXT_OVERFLOW_4_0052__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,True,"[""G1_TEXT_OVERFLOW"",""G6_MARGIN_VIOLATION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_network_observability_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text bars extend beyond the slide boundaries."",
+      ""fix_suggestion"": ""Adjust the text box size to fi",page
+part2_network_observability_3_G1_TEXT_OVERFLOW_4_0052__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,True,"[""G1_TEXT_OVERFLOW"",""G6_MARGIN_VIOLATION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_network_observability_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text bars extend beyond the slide boundaries."",
+      ""fix_suggestion"": ""Adjust the text box size to fi",page
+part2_network_observability_4_G1_TEXT_OVERFLOW_32_0053__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,True,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_network_observability_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'TraceGrid data governance' overflows beyond the bounds of its box."",
+      ""fix_suggestion"": ""Adjus",page
+part2_network_observability_4_G1_TEXT_OVERFLOW_32_0053__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,True,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_network_observability_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'TraceGrid data governance' overflows beyond the bounds of its box."",
+      ""fix_suggestion"": ""Resiz",page
+part2_network_observability_4_G1_TEXT_OVERFLOW_4_0053__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,True,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_network_observability_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'TraceGrid data governance' overflows beyond the bounds of its box."",
+      ""fix_suggestion"": ""Resiz",page
+part2_network_observability_4_G1_TEXT_OVERFLOW_4_0053__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,True,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_network_observability_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'TraceGrid data governance' overflows beyond the bounds of its box."",
+      ""fix_sugg",page
+part2_network_observability_5_G1_TEXT_OVERFLOW_32_0054__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,True,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_network_observability_5"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'The TraceGrid roadmap' overflows beyond the bounds of its box."",
+      ""fix_suggesti",page
+part2_network_observability_5_G1_TEXT_OVERFLOW_32_0054__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,True,"[""G1_TEXT_OVERFLOW"",""G6_MARGIN_VIOLATION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_network_observability_5"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'The TraceGrid roadmap' overflows beyond the bounds of its box."",
+      ""fix_suggestion",page
+part2_network_observability_5_G1_TEXT_OVERFLOW_4_0054__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,True,"[""G1_TEXT_OVERFLOW"",""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_network_observability_5"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title and bullet points overflows beyond the slide boundaries."",
+      ""fix_suggestion"": ""A",page
+part2_network_observability_5_G1_TEXT_OVERFLOW_4_0054__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,True,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_network_observability_5"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'The TraceGrid roadmap' overflows beyond the bounds of its box."",
+      ""fix_suggesti",page
+part2_ops_efficiency_1_G1_TEXT_OVERFLOW_32_0055__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,True,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_ops_efficiency_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'Where operating cost sits today' overflows beyond the bounds of its box."",
+      ""fix_sugge",page
+part2_ops_efficiency_1_G1_TEXT_OVERFLOW_32_0055__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,True,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_ops_efficiency_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'Where operating cost sits today' overflows beyond the bounds of its box."",
+      ""fix_sugge",page
+part2_ops_efficiency_1_G1_TEXT_OVERFLOW_4_0055__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,True,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_ops_efficiency_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'Where operating cost sits today' overflows beyond the bounds of its box."",
+      ""fix_sugge",page
+part2_ops_efficiency_1_G1_TEXT_OVERFLOW_4_0055__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,True,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_ops_efficiency_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'Where operating cost sits today' overflows beyond the bounds of its box."",
+      ""fix_sugge",page
+part2_fraud_detection_1_S6_IMAGE_TEXT_CONTRADICTION_1_0045__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_fraud_detection_1_S6_IMAGE_TEXT_CONTRADICTION_1_0045__template,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_ops_efficiency_2_G1_TEXT_OVERFLOW_32_0056__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,True,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_ops_efficiency_2"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'RouteOpt reduces toil by a third' overflows beyond the bounds of its box."",
+      ""fix_suggestion"": ""Adj",page
+part2_ops_efficiency_2_G1_TEXT_OVERFLOW_32_0056__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,True,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_ops_efficiency_2"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'Root causes behind the cost' overflows beyond the bounds of its box."",
+      ""fix_suggestio",page
+part2_field_service_3_S6_IMAGE_TEXT_CONTRADICTION_1_0042__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_field_service_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'DispatchPro routes smarter' does not match the body content which describes a single-layer arc",page
+part2_ops_efficiency_2_G1_TEXT_OVERFLOW_4_0056__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,True,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_ops_efficiency_2"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'Root causes behind the cost' overflows beyond the slide bounds."",
+      ""fix_suggestion"": """,page
+part2_field_service_3_S6_IMAGE_TEXT_CONTRADICTION_1_0042__template,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_field_service_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'DispatchPro routes smarter' does not match the body content which describes a single-layer arc",page
+part2_field_service_4_S6_IMAGE_TEXT_CONTRADICTION_1_0043__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_field_service_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Impact DispatchPro can deliver' does not match the body content which describes a contradictor",page
+part2_field_service_4_S6_IMAGE_TEXT_CONTRADICTION_1_0043__template,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_field_service_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Impact DispatchPro can deliver' does not match the body content which describes a contradictor",page
+part2_ops_efficiency_2_G1_TEXT_OVERFLOW_4_0056__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,True,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_ops_efficiency_2"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'Root causes behind the cost' overflows beyond the bounds of its box."",
+      ""fix_suggestio",page
+part2_fraud_detection_2_S6_IMAGE_TEXT_CONTRADICTION_1_0046__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_fraud_detection_2"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title mentions 'GuardML scores every transaction', but the body text describes a 'contradictory s",page
+part2_fraud_detection_2_S6_IMAGE_TEXT_CONTRADICTION_1_0046__template,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_fraud_detection_2"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title mentions 'GuardML scores every transaction', but the body text describes a 'contradictory s",page
+part2_hr_analytics_2_S6_IMAGE_TEXT_CONTRADICTION_1_0051__template,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_hr_analytics_2_S6_IMAGE_TEXT_CONTRADICTION_1_0051__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_fraud_detection_4_S6_IMAGE_TEXT_CONTRADICTION_1_0048__template,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_fraud_detection_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'GuardML detection metrics' does not match the body content which describes a single-layer ",page
+part2_fraud_detection_4_S6_IMAGE_TEXT_CONTRADICTION_1_0048__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_fraud_detection_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'GuardML detection metrics' does not match the body content which describes a single-layer ar",page
+part2_hr_analytics_1_S6_IMAGE_TEXT_CONTRADICTION_1_0050__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_hr_analytics_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'Attrition is rising quietly' does not match the body content which discusses a single-layer archite",page
+part2_field_service_5_S6_IMAGE_TEXT_CONTRADICTION_1_0044__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""G1_TEXT_OVERFLOW"",""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_field_service_5"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title box appears to overflow the bounds of the box."",
+      ""fix_suggestion"": ""Adjust the font siz",page
+part2_field_service_5_S6_IMAGE_TEXT_CONTRADICTION_1_0044__template,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH"",""S4_DENSITY_RULE_VIOLATION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_field_service_5"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title mentions a 'ninety-day DispatchPro plan', but the body describes a 'contradictory single-layer arch",page
+part2_fraud_detection_3_S6_IMAGE_TEXT_CONTRADICTION_1_0047__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH"",""S4_DENSITY_RULE_VIOLATION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_fraud_detection_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'Inside the GuardML model' does not match the body content which describes phases of an architectur",page
+part2_hr_analytics_1_S6_IMAGE_TEXT_CONTRADICTION_1_0050__template,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_hr_analytics_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'Attrition is rising quietly' does not match the body content which discusses a single-layer archite",page
+part2_fraud_detection_3_S6_IMAGE_TEXT_CONTRADICTION_1_0047__template,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH"",""S4_DENSITY_RULE_VIOLATION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_fraud_detection_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'Inside the GuardML model' does not match the body content which describes phases of an architectur",page
+part2_inventory_optimization_2_S6_IMAGE_TEXT_CONTRADICTION_1_0056__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_inventory_optimization_2_S6_IMAGE_TEXT_CONTRADICTION_1_0056__template,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_hr_analytics_3_S6_IMAGE_TEXT_CONTRADICTION_1_0052__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_hr_analytics_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Actions PeoplePulse recommends' does not match the body content which discusses architectural",page
+part2_fraud_detection_5_S6_IMAGE_TEXT_CONTRADICTION_1_0049__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""G1_TEXT_OVERFLOW"",""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_fraud_detection_5"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'The GuardML investment ask' overflows beyond the bounds of its box."",
+      ""fix_suggestio",page
+part2_hr_analytics_3_S6_IMAGE_TEXT_CONTRADICTION_1_0052__template,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_hr_analytics_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Actions PeoplePulse recommends' does not match the body content which discusses a contradicto",page
+part2_fraud_detection_5_S6_IMAGE_TEXT_CONTRADICTION_1_0049__template,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""G1_TEXT_OVERFLOW"",""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_fraud_detection_5"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'The GuardML investment ask' overflows beyond the bounds of its box."",
+      ""fix_suggestio",page
+part2_hr_analytics_5_S6_IMAGE_TEXT_CONTRADICTION_1_0054__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_hr_analytics_5"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'PeoplePulse rollout plan' does not match the body content which describes a contradictory sin",page
+part2_hr_analytics_5_S6_IMAGE_TEXT_CONTRADICTION_1_0054__template,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_hr_analytics_5"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'PeoplePulse rollout plan' does not match the body content which describes a contradictory sin",page
+part2_inventory_optimization_1_S6_IMAGE_TEXT_CONTRADICTION_1_0055__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_inventory_optimization_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Stockouts erode loyalty' does not match the body content which discusses inventory ",page
+part2_inventory_optimization_1_S6_IMAGE_TEXT_CONTRADICTION_1_0055__template,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_inventory_optimization_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Stockouts erode loyalty' does not match the body content which discusses inventory ",page
+part2_inventory_optimization_3_S6_IMAGE_TEXT_CONTRADICTION_1_0057__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_inventory_optimization_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title mentions 'cut stockouts in the pilot', but the body text describes a single-layer ar",page
+part2_inventory_optimization_3_S6_IMAGE_TEXT_CONTRADICTION_1_0057__template,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_inventory_optimization_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title mentions 'cut stockouts in the pilot', but the body text describes a single-layer ar",page
+part2_hr_analytics_4_S6_IMAGE_TEXT_CONTRADICTION_1_0053__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH"",""S4_DENSITY_RULE_VIOLATION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_hr_analytics_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'Impact PeoplePulse can drive' does not match the body content which describes a single-layer architec",page
+part2_hr_analytics_4_S6_IMAGE_TEXT_CONTRADICTION_1_0053__template,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH"",""S4_DENSITY_RULE_VIOLATION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_hr_analytics_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'Impact PeoplePulse can drive' does not match the body content which describes a single-layer archit",page
+part2_inventory_optimization_5_S6_IMAGE_TEXT_CONTRADICTION_1_0059__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_inventory_optimization_5"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Funding the StockIQ rollout' does not match the body content which discusses archit",page
+part2_inventory_optimization_5_S6_IMAGE_TEXT_CONTRADICTION_1_0059__template,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_inventory_optimization_5"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Funding the StockIQ rollout' does not match the body content which discusses archit",page
+part2_inventory_optimization_4_S6_IMAGE_TEXT_CONTRADICTION_1_0058__template,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_inventory_optimization_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title mentions 'Expanding StockIQ to all regions', but the body text describes a contradic",page
+part2_inventory_optimization_4_S6_IMAGE_TEXT_CONTRADICTION_1_0058__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_inventory_optimization_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title mentions 'Expanding StockIQ to all regions', but the body text describes a contradic",page
+part2_field_service_3_S6_IMAGE_TEXT_CONTRADICTION_1_0042__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G6_MARGIN_VIOLATION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_field_service_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'DispatchPro routes smarter' overflows beyond the bounds of its box."",
+      ""fix_suggestion"": ",page
+part2_field_service_3_S6_IMAGE_TEXT_CONTRADICTION_1_0042__template__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G6_MARGIN_VIOLATION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_field_service_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'DispatchPro routes smarter' overflows beyond the bounds of its box."",
+      ""fix_suggestion"": ",page
+part2_field_service_4_S6_IMAGE_TEXT_CONTRADICTION_1_0043__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G6_MARGIN_VIOLATION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_field_service_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'Impact DispatchPro can deliver' overflows beyond the bounds of its box."",
+      ""fix_suggestio",page
+part2_field_service_4_S6_IMAGE_TEXT_CONTRADICTION_1_0043__template__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_field_service_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'Impact DispatchPro can deliver' overflows beyond the bounds of its box."",
+      ""fix_suggestio",page
+part2_field_service_5_S6_IMAGE_TEXT_CONTRADICTION_1_0044__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_field_service_5"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'A ninety-day DispatchPro plan' overflows beyond the slide boundary."",
+      ""fix_suggestion"": ""Adjust th",page
+part2_field_service_5_S6_IMAGE_TEXT_CONTRADICTION_1_0044__template__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G6_MARGIN_VIOLATION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_field_service_5"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'A ninety-day DispatchPro plan' overflows beyond the slide boundary."",
+      ""fix_suggestion"": ""Adjust th",page
+part2_fraud_detection_1_S6_IMAGE_TEXT_CONTRADICTION_1_0045__template__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G6_MARGIN_VIOLATION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_fraud_detection_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'Fraud losses are climbing' overflows beyond the bounds of its box."",
+      ""fix_suggestion"": ""Resize the ",page
+part2_fraud_detection_1_S6_IMAGE_TEXT_CONTRADICTION_1_0045__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G6_MARGIN_VIOLATION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_fraud_detection_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'Fraud losses are climbing' overflows beyond the bounds of its box."",
+      ""fix_suggestion"": ""Adjust the ",page
+part2_fraud_detection_2_S6_IMAGE_TEXT_CONTRADICTION_1_0046__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_fraud_detection_2"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'GuardML scores every transaction' overflows beyond the bounds of its box."",
+      ""fix_sug",page
+part2_fraud_detection_2_S6_IMAGE_TEXT_CONTRADICTION_1_0046__template__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_fraud_detection_2"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'GuardML scores every transaction' overflows beyond the bounds of its box."",
+      ""fix_sug",page
+part2_fraud_detection_3_S6_IMAGE_TEXT_CONTRADICTION_1_0047__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""S4_DENSITY_RULE_VIOLATION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_fraud_detection_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'Inside the GuardML model' overflows beyond the bounds of its box."",
+      ""fix_suggestion""",page
+part2_fraud_detection_3_S6_IMAGE_TEXT_CONTRADICTION_1_0047__template__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""S4_DENSITY_RULE_VIOLATION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_fraud_detection_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'Inside the GuardML model' overflows beyond the bounds of its box."",
+      ""fix_suggestion""",page
+part2_fraud_detection_4_S6_IMAGE_TEXT_CONTRADICTION_1_0048__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G6_MARGIN_VIOLATION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_fraud_detection_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'GuardML detection metrics' overflows beyond the slide bounds."",
+      ""fix_suggestion"": ""Adjust the fo",page
+part2_fraud_detection_5_S6_IMAGE_TEXT_CONTRADICTION_1_0049__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_fraud_detection_5"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'The GuardML investment ask' overflows beyond the bounds of its box."",
+      ""fix_suggestio",page
+part2_fraud_detection_4_S6_IMAGE_TEXT_CONTRADICTION_1_0048__template__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_fraud_detection_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'GuardML detection metrics' overflows beyond the slide boundary."",
+      ""fix_suggestion"": ""Adjust the ",page
+part2_fraud_detection_5_S6_IMAGE_TEXT_CONTRADICTION_1_0049__template__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_fraud_detection_5"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'The GuardML investment ask' overflows beyond the bounds of its box."",
+      ""fix_suggestio",page
+part2_hr_analytics_1_S6_IMAGE_TEXT_CONTRADICTION_1_0050__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_hr_analytics_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'Attrition is rising quietly' overflows beyond the bounds of its box."",
+      ""fix_suggestion"": ""Adjust the t",page
+part2_inventory_optimization_2_S6_IMAGE_TEXT_CONTRADICTION_1_0056__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_hr_analytics_1_S6_IMAGE_TEXT_CONTRADICTION_1_0050__template__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G6_MARGIN_VIOLATION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_hr_analytics_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'Attrition is rising quietly' overflows beyond the slide bounds."",
+      ""fix_suggestion"": ""Adjust the title",page
+part2_hr_analytics_2_S6_IMAGE_TEXT_CONTRADICTION_1_0051__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G6_MARGIN_VIOLATION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_hr_analytics_2"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'PeoplePulse surfaces early signals' overflows beyond the bounds of its box."",
+      ""fix_sugg",page
+part2_hr_analytics_2_S6_IMAGE_TEXT_CONTRADICTION_1_0051__template__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G6_MARGIN_VIOLATION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_hr_analytics_2"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'PeoplePulse surfaces early signals' overflows beyond the bounds of its box."",
+      ""fix_sugg",page
+part2_hr_analytics_3_S6_IMAGE_TEXT_CONTRADICTION_1_0052__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_hr_analytics_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'Actions PeoplePulse recommends' overflows beyond the bounds of its box."",
+      ""fix_suggesti",page
+part2_hr_analytics_3_S6_IMAGE_TEXT_CONTRADICTION_1_0052__template__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_hr_analytics_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'Actions PeoplePulse recommends' overflows beyond the bounds of its box."",
+      ""fix_suggesti",page
+part2_hr_analytics_5_S6_IMAGE_TEXT_CONTRADICTION_1_0054__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G6_MARGIN_VIOLATION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_hr_analytics_5"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'PeoplePulse rollout plan' overflows beyond the slide boundary."",
+      ""fix_suggestion"": ""Adj",page
+part2_hr_analytics_5_S6_IMAGE_TEXT_CONTRADICTION_1_0054__template__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G6_MARGIN_VIOLATION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_hr_analytics_5"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'PeoplePulse rollout plan' overflows beyond the slide boundary."",
+      ""fix_suggestion"": ""Adj",page
+part2_inventory_optimization_1_S6_IMAGE_TEXT_CONTRADICTION_1_0055__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_inventory_optimization_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'Stockouts erode loyalty' overflows beyond the bounds of its box."",
+      ""fix_sugge",page
+part2_inventory_optimization_1_S6_IMAGE_TEXT_CONTRADICTION_1_0055__template__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_inventory_optimization_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'Stockouts erode loyalty' overflows beyond the bounds of its box."",
+      ""fix_sugge",page
+part2_inventory_optimization_2_S6_IMAGE_TEXT_CONTRADICTION_1_0056__template__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_inventory_optimization_2"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'StockIQ rebalances inventory nightly' appears to overflow beyond the bounds of its ",page
+part2_inventory_optimization_3_S6_IMAGE_TEXT_CONTRADICTION_1_0057__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_inventory_optimization_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'StockIQ cut stockouts in the pilot' overflows beyond the slide boundary."",
+      ""fix_suggestio",page
+part2_inventory_optimization_4_S6_IMAGE_TEXT_CONTRADICTION_1_0058__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_inventory_optimization_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'Expanding StockIQ to all regions' overflows beyond the bounds of its box."",
+      """,page
+part2_hr_analytics_4_S6_IMAGE_TEXT_CONTRADICTION_1_0053__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_hr_analytics_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'Impact PeoplePulse can drive' overflows beyond the bounds of its box."",
+      ""fix_suggestion",page
+part2_hr_analytics_4_S6_IMAGE_TEXT_CONTRADICTION_1_0053__template__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_hr_analytics_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the title 'Impact PeoplePulse can drive' overflows beyond the bounds of its box."",
+      ""fix_suggestion",page
+part2_inventory_optimization_3_S6_IMAGE_TEXT_CONTRADICTION_1_0057__template__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_inventory_optimization_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'StockIQ cut stockouts in the pilot' overflows beyond the slide boundary."",
+      ""fix_suggestio",page
+part2_inventory_optimization_5_S6_IMAGE_TEXT_CONTRADICTION_1_0059__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_inventory_optimization_5"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'Funding the StockIQ rollout' overflows beyond the bounds of its box."",
+      ""fix_suggestion"": """,page
+part2_inventory_optimization_4_S6_IMAGE_TEXT_CONTRADICTION_1_0058__template__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_inventory_optimization_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'Expanding StockIQ to all regions' overflows beyond the bounds of its box."",
+      ""fix_suggestio",page
+part2_inventory_optimization_5_S6_IMAGE_TEXT_CONTRADICTION_1_0059__template__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_inventory_optimization_5"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'Funding the StockIQ rollout' overflows beyond the bounds of its box."",
+      ""fix_suggestion"": """,page

@@ -1,0 +1,979 @@
+sample_id,defect,modality,is_clean,failure,has_defect,named_target,predicted_types,locator,confidence,other,raw,level
+g7_card_height_004,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看G1_TEXT_OVERFLOW：文本是否溢出？看绿色框内的列表，每个项目都在框内，没有溢出。G2_ELEMENT_OVERLAP：元素是否重叠？绿色框和其他元素（比如标题）没有重叠。G3_ALIGNMENT_OFFSET：元素对齐是否错位？标题和绿色框的对齐看起来正常。G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题是大号粗体，列表项是常规字体，但可能属于设计，不过这里是否有不一致？比如标题和列表项字体大小差异是否算？但可能不是缺陷。G5_BRAND_COLOR_VIOLATION：颜色是否品牌色错误？绿色框的颜色如果是品牌色的话没问题，假设这里没有。G6_MARGIN_VIOLATION：元素是否超出页边距？绿色框在页面内，没有超出。S1_TITLE_BODY_MISMATCH：标题“Soluti",page
+g7_card_height_005,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"<think>
+用户现在需要检查幻灯片的缺陷。首先看各个候选类型：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看列表里的文字，比如“Implementation Roadmap”等，没有溢出。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？页面上元素排列正常，没有重叠。
+
+G3_ALIGNMENT_OFFSET：对齐是否偏移？列表项和标题的对齐看起来没问题。
+
+G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题和列表项的字体大小是否有差异？这里可能需要看，但如果没有明显不一致的话？
+
+G5_BRAND_COLOR_VIOLATION：颜色是否违规？橙色边框和背景，假设品牌色允许的话，这里可能没有。
+
+G6_MARGIN_VIOLATION：元素是否超出页边距？页面元素都在范围内。
+
+S1_TITLE_BODY_MISMATCH：标题和内容是否匹配",page
+g7_card_height_003,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看各个候选：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看列表里的文字，比如“Expand into 3 new verticals”等，没有溢出到框外，因为绿色框内的文字都在里面。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？页面上绿色框和其他元素（标题、下面的项目符号）没有重叠，所以没有。
+
+G3_ALIGNMENT_OFFSET：元素是否错位？标题和绿色框的位置，还有下面的项目符号，看起来对齐正常，没有偏移。
+
+G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题是大号粗体，绿色框内的标题是绿色，下面的项目符号字体大小一致，所以没有不一致。
+
+G5_BRAND_COLOR_VIOLATION：颜色是否品牌色错误？这里绿色可能是品牌色，没有明显错误。
+
+G6_MARGIN_VIOLAT",page
+g7_card_height_008,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"<think>
+用户现在需要检查幻灯片的缺陷类型。首先看各个候选类型：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看列表里的文字，比如“Expand into 3 new verticals”等，没有溢出到框外，因为橙色框内的文字都在里面。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？这里标题和内容框，还有下面的项目符号，没有重叠。
+
+G3_ALIGNMENT_OFFSET：元素对齐是否错位？标题在左上角，内容框也对齐，下面的项目符号也对齐，没有明显偏移。
+
+G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题是大号粗体，内容框内的标题（Q3 Go-to-Market Plan）是橙色，下面的项目符号字体大小一致，所以没有不一致。
+
+G5_BRAND_COLOR_VIOLATION：颜色是否品牌错误？这里橙色可能是品牌色，没有违规。
+
+G6_MA",page
+g7_card_height_010,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"<think>
+用户现在需要检查幻灯片的缺陷类型。首先看各个候选类型：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看列表里的文字，比如“Solution Overview”在橙色框里，其他项目符号文字，没有溢出迹象。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？橙色框和下面的项目符号，没有重叠。
+
+G3_ALIGNMENT_OFFSET：元素对齐是否错位？标题和内容的对齐，看起来正常。
+
+G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题是大号，列表项是小号，但可能属于设计，不过这里是否有问题？看是否有应该匹配的不一致。比如标题和列表项字体大小差异是否合理？但如果没有明显错误，可能不算。
+
+G5_BRAND_COLOR_VIOLATION：颜色是否品牌色错误？橙色框的颜色是否符合品牌？假设这里没有，所以不考虑。
+
+G6_MARGIN_VIOLA",page
+g7_card_height_000,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看各个候选：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看列表里的项目，比如“Human-in-the-loop review”等，是否有溢出？但页面里这些文本应该在框内？不对，看页面结构，可能没有溢出。再看其他。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？页面中元素排列，没有重叠情况。
+
+G3_ALIGNMENT_OFFSET：元素是否错位？比如标题和内容的对齐，或者列表项的对齐，看起来没有明显错位。
+
+G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题是大字体，列表项是小字体，这是正常的，所以没有不一致？
+
+G5_BRAND_COLOR_VIOLATION：颜色是否违规？页面颜色是浅灰背景，文字深色，没有明显品牌色错误。
+
+G6_MARGIN_VIOLATION：元素是否超出页边距",page
+g7_card_height_007,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看各个候选：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看内容，所有文本都在框内或页面内，没有溢出。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？页面上元素排列正常，没有重叠。
+
+G3_ALIGNMENT_OFFSET：元素对齐是否错位？标题和内容的对齐看起来没问题，列表项也整齐。
+
+G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题是大号，列表项是小号，但可能属于设计，不过这里是否有不一致？比如标题和其他文字的大小差异是否算？但如果没有明显不一致的话可能不算。不过再仔细看，标题“Success Metrics”是较大的字体，列表项是较小的，但可能这是正常的层级，所以G4是否存在？
+
+G5_BRAND_COLOR_VIOLATION：颜色是否违规？橙色边框等，假设品牌色包含这些，所以没有",page
+g7_card_height_001,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"<think>
+用户现在需要检查幻灯片的缺陷类型。首先看各个候选类型：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看列表里的文字，比如“Ingestion service”等，没有溢出到框外，因为绿色框内的文字都在里面。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？这里绿色框和下面的项目符号列表没有重叠，所以没有。
+
+G3_ALIGNMENT_OFFSET：元素是否对齐错位？标题“Platform Architecture”和下面的框、列表对齐正常，没有偏移。
+
+G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题是大号粗体，列表项是常规字体，但可能属于设计风格，不过如果没有明显不一致的话？不对，看是否有应该匹配的字体大小不一致。比如标题和列表项的字体大小差异是否合理？但可能这里没有严重不一致？
+
+G5_BRAND_COLOR_VIOLATION",page
+g7_card_height_002,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看G1_TEXT_OVERFLOW：文本是否溢出？看绿色框内的列表，每个项目都在框内，没有溢出。G2_ELEMENT_OVERLAP：元素是否重叠？绿色框和其他元素（标题等）没有重叠。G3_ALIGNMENT_OFFSET：对齐是否偏移？标题和绿色框的对齐看起来正常。G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题是大号粗体，列表项是常规字体，可能有差异，但不确定是否属于“应该匹配”的情况？不过再看其他。G5_BRAND_COLOR_VIOLATION：颜色是否违规？绿色框的颜色是否符合品牌？假设这里没有明显违规。G6_MARGIN_VIOLATION：元素是否超出页边距？绿色框在页面内，没有超出。S1_TITLE_BODY_MISMATCH：标题Risk Register和内容是否匹配？内容都是风险相",page
+g7_card_height_014,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"<think>
+用户现在需要检查幻灯片的缺陷类型。首先看各个候选类型：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看列表里的文字，比如“Platform Architecture”等，没有溢出到框外的情况。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？页面上的元素（标题、列表框、项目符号）没有重叠。
+
+G3_ALIGNMENT_OFFSET：元素是否对齐错位？标题和列表框的位置看起来正常，没有明显偏移。
+
+G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题是大号粗体，列表项是常规字体，但可能属于设计风格，不过这里是否有不一致？比如标题和其他文字的大小差异是否算？但如果没有其他问题，可能不考虑。
+
+G5_BRAND_COLOR_VIOLATION：颜色是否品牌色错误？页面背景白色，文字黑色，没有明显品牌色错误。
+
+G6_MARGIN_VIOLAT",page
+g7_card_height_013,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"<think>
+用户现在需要检查幻灯片的缺陷。首先看各个候选类型：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看列表里的文字，每个项目符号的文字都在框内吗？比如“Implementation Roadmap”在蓝色框里，下面的列表项也没有溢出。所以没有。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？页面上元素之间没有重叠，所以没有。
+
+G3_ALIGNMENT_OFFSET：元素是否对齐错位？标题和内容的对齐，列表项的对齐，看起来是对齐的，没有偏移。
+
+G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题是大号粗体，列表项是普通字体，但可能属于设计风格，不过这里是否有不一致？比如标题和其他文字的大小差异是否算？但如果没有其他问题，可能不算。不过再仔细看，标题和列表项的字体大小是否有明显不一致？假设没有的话，暂时不考虑。
+
+G5_BRAND_COL",page
+g7_card_height_016,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看G1_TEXT_OVERFLOW：文本是否溢出？看列表里的内容，比如“Activation rate +18%”等，都在框内吗？橙色框内的列表项应该都在框内，所以没有溢出。G2_ELEMENT_OVERLAP：元素是否重叠？这里标题和框、列表项之间没有重叠，所以没有。G3_ALIGNMENT_OFFSET：元素对齐是否错位？标题在左上角，框内的列表项对齐正常，所以没有。G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题是大号粗体，框内列表项字体大小一致，所以没有。G5_BRAND_COLOR_VIOLATION：颜色是否违规？橙色边框和标题颜色可能符合品牌，但如果没有明确品牌色规则，这里假设没有。G6_MARGIN_VIOLATION：元素是否超出页边距？页面的元素都在边距内，所以没有。S1_TITLE",page
+g7_card_height_012,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看各个候选：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看列表里的文字，比如“Implementation Roadmap”等，没有溢出到框外的情况，因为框是蓝色边框，里面的文字都在框内？不对，看页面结构，标题是大字体，然后下面的列表。再检查其他类型。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？这里元素之间没有重叠，所以不存在。
+
+G3_ALIGNMENT_OFFSET：元素是否错位？比如列表项的对齐，看起来是对齐的，没有偏移。
+
+G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题和列表项的字体大小是否有差异？标题是较大的粗体，列表项是较小的常规字体，但这是设计上的，不是错误？或者是否有不一致？比如同一层级的字体大小是否统一？这里列表项的字体大小应该一致，看起来是一致的，所以可能没有。",page
+g7_card_height_009,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G4_FONT_SIZE_INCONSISTENCY""]",,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看G1_TEXT_OVERFLOW：文本是否溢出？看列表里的项目，比如“Data residency exposure”等，都在框内吗？框是蓝色边框的矩形，里面的项目应该都在。然后G2_ELEMENT_OVERLAP：元素是否重叠？这里没有重叠。G3_ALIGNMENT_OFFSET：对齐是否偏移？标题和内容的对齐，可能没问题。G4_FONT_SIZE_INCONSISTENCY：字体大小是否一致？标题是大号粗体，内容是普通字体，但可能属于设计，不过要看是否“should match”。但这里可能不是。G5_BRAND_COLOR_VIOLATION：颜色是否品牌色？假设蓝色是品牌色，这里用了蓝色标题，可能没问题。G6_MARGIN_VIOLATION：元素是否超出页边距？页面的元素都在范围内。S1_TITLE_BODY_MISMA",page
+g7_card_height_017,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看各个候选：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看列表里的文字，比如“Ingestion service”等，都在框内，没有溢出。所以G1不存在。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？页面上元素排列正常，没有重叠。所以G2不存在。
+
+G3_ALIGNMENT_OFFSET：元素是否错位？标题和内容的对齐，列表项的对齐，看起来都正常，没有偏移。所以G3不存在。
+
+G4_FONT_SIZE_INCONSISTency：字体大小是否不一致？标题“Platform Architecture”是大号粗体，列表项是普通字体，但这里可能属于设计，不过如果没有明显不一致的话？不对，看是否有应该匹配的文本字体大小不同。比如标题和列表项，可能属于不同层级，但如果是同一层级应该一致。但这里可能没有，所以G4是否存在？再仔",page
+g7_card_height_011,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看G1_TEXT_OVERFLOW：文本是否溢出？看列表里的项目，比如“Data residency exposure”等，都在框内吗？框是蓝色边框的矩形，里面的项目是否溢出？可能没有。G2_ELEMENT_OVERLAP：元素重叠？这里标题和内容框，还有下面的列表，没有重叠。G3_ALIGNMENT_OFFSET：对齐偏移？标题在左上角，内容框也对齐，下面列表也对齐，没有偏移。G4_FONT_SIZE_INCONSISTENCY：字体大小不一致？标题是大号粗体，内容框内的项目是普通字体，下面列表也是普通字体，所以标题和其他文字大小不同，但是否属于应该匹配？比如标题和内容主题是否一致？不过先看其他。G5_BRAND_COLOR_VIOLATION：颜色是否品牌色？这里蓝色边框可能是品牌色，没有违规。G6_MARGIN_VIOLATI",page
+g7_card_height_018,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看各个候选：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看列表里的项目，比如“Expand into 3 new verticals”等，没有溢出到框外，因为框是浅橙色的，文本都在里面。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？标题和内容框，还有下面的列表，没有重叠。
+
+G3_ALIGNMENT_OFFSET：元素对齐是否错位？标题在左上角，内容框也对齐，下面的列表也对齐，没有明显偏移。
+
+G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题是大号粗体，内容框内的标题（Q3 Go-to-Market Plan）是橙色，下面的列表项字体大小一致，所以没有不一致。
+
+G5_BRAND_COLOR_VIOLATION：颜色是否品牌错误？这里用的是橙色边框和标题，假设品牌允许的话，可能没问题，",page
+g7_card_height_015,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"<think>
+用户现在需要检查幻灯片的缺陷。首先看各个候选类型：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看列表里的内容，比如“Activation rate +18%”等，都在框内吗？大框内的列表项应该都在。然后看其他元素。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？这里没有重叠情况。
+
+G3_ALIGNMENT_OFFSET：元素对齐是否错位？标题和内容的对齐，还有列表项的对齐，看起来是对齐的？
+
+G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题是大字体，列表项是小字体，但可能属于正常设计，不过要看是否有不一致。但这里可能没有明显不一致？
+
+G5_BRAND_COLOR_VIOLATION：颜色是否违规？背景是浅蓝色，文字是深色，没有品牌色问题？
+
+G6_MARGIN_VIOLATION：元素是否超出页边距？页面的元素都在范围内。
+",page
+g7_card_height_019,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"<think>
+用户现在需要检查幻灯片的缺陷类型。首先看各个候选类型：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看列表里的文字，比如“Solution Overview”在橙色框里，其他项目符号文字，没有溢出迹象。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？橙色框和下面的项目符号，没有重叠。
+
+G3_ALIGNMENT_OFFSET：元素对齐是否错位？标题和内容的对齐，看起来正常。
+
+G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题是大号，项目符号是小号，但可能属于设计，不过这里是否有不一致？比如标题和其他文字的大小差异是否合理？但如果没有明显不一致的话可能不算。
+
+G5_BRAND_COLOR_VIOLATION：颜色是否品牌色错误？橙色框的颜色是否符合品牌？假设这里没有，所以不考虑。
+
+G6_MARGIN_VIOLATION：元素是否",page
+g7_card_height_020,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"<think>
+用户现在需要检查幻灯片的缺陷。首先看各个候选类型：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看列表里的文字，每个项目符号的文字都在框内吗？比如“Implementation Roadmap”在蓝色框里，其他项目符号文字也没有溢出。所以没有。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？页面上元素之间没有重叠，所以没有。
+
+G3_ALIGNMENT_OFFSET：元素是否对齐错位？标题和内容的对齐，还有列表项的对齐，看起来是对齐的，没有偏移。
+
+G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题是大号粗体，列表项是普通字体，但这里可能属于设计，不过如果没有明显不一致的话？不对，看是否有应该匹配的字体大小不一致。比如标题和列表项的字体大小差异是否合理？但可能这里没有问题？
+
+G5_BRAND_COLOR_VIOLATION：颜色是",page
+g7_card_height_006,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G4_FONT_SIZE_INCONSISTENCY""]",,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看各个候选：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看列表里的文字，比如“Ingestion service”等，没有溢出到框外，所以不存在。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？页面上元素排列正常，没有重叠，所以不存在。
+
+G3_ALIGNMENT_OFFSET：元素是否错位？标题和内容的对齐，列表项的对齐，看起来都正常，没有偏移。
+
+G4_FONT_SIZE_INCONSISTency：字体大小是否不一致？标题是大号粗体，列表项是常规字体，这里可能有差异，但要看是否“should match”。不过可能不算严重？或者有没有其他情况？
+
+G5_BRAND_COLOR_VIOLATION：颜色是否离品牌色？橙色边框和标题橙色，可能符合，所以不存在。
+
+G6_MARGIN_VIOLATION：元素是否超出",page
+g7_card_height_024,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"<think>
+用户现在需要检查幻灯片的缺陷类型。首先看各个候选类型：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看列表里的文字，比如“Implementation Roadmap”等，没有溢出。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？页面上元素排列正常，没有重叠。
+
+G3_ALIGNMENT_OFFSET：元素对齐是否错位？列表项和标题的对齐看起来没问题。
+
+G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题和列表项的字体大小是否有差异？这里可能需要看，但如果没有明显不一致的话？
+
+G5_BRAND_COLOR_VIOLATION：颜色是否品牌色错误？橙色边框可能是品牌色，没有违规。
+
+G6_MARGIN_VIOLATION：元素是否超出页边距？页面元素都在范围内。
+
+S1_TITLE_BODY_MISMATCH：标题和内容是否匹配？标",page
+g7_card_height_022,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看各个候选：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看列表里的文字，比如“Solution Overview”在蓝色框内，其他项目符号文字也没有溢出，所以没有。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？页面上元素排列正常，没有重叠，所以没有。
+
+G3_ALIGNMENT_OFFSET：元素是否错位？所有项目符号和标题的对齐看起来正常，没有偏移，所以没有。
+
+G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题是大号粗体，列表项是常规字体，但这里可能属于设计，不过如果没有明显不一致的话？不对，看是否有应该匹配的字体大小不一致。比如标题和列表项的字体大小是否合理？但可能这里没有，因为标题是大标题，列表是正文，所以可能不算。或者有没有其他情况？
+
+G5_BRAND_COLOR_VIOLA",page
+g7_card_height_023,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"<think>
+用户现在需要检查幻灯片的缺陷。首先看各个候选类型：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看列表里的文字，比如“Implementation Roadmap”在框内，“Discovery & scoping”等也没有溢出，所以没有。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？页面上元素排列正常，没有重叠。
+
+G3_ALIGNMENT_OFFSET：元素对齐是否错位？标题和内容框的对齐看起来没问题，列表项也对齐。
+
+G4_FONT_SIZE_INCONSISTency：字体大小是否不一致？标题是大号粗体，列表项是常规字体，但可能属于设计，不过这里是否有不一致？比如标题和其他文字的大小差异是否算？但如果没有明显不一致的话可能不算。不过再仔细看，标题“Implementation Roadmap”是较大的字体，列表项是较小的，这可能是正常的层级，所以G4可",page
+g7_card_height_021,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"<think>
+用户现在需要检查幻灯片的缺陷类型。首先看各个候选类型：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看列表里的内容，比如“Success Metrics”标题下的列表项，每个项目符号后的文字是否有溢出？这里没有明显溢出，因为元素在框内。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？页面上元素排列正常，没有重叠。
+
+G3_ALIGNMENT_OFFSET：对齐是否偏移？列表项的对齐看起来一致，没有偏移。
+
+G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题和列表项的字体大小有差异，但可能属于设计，不过要看是否“应该匹配”。标题是大字体，列表项小字体，可能不算缺陷？或者看是否有不一致。但再仔细看，比如“Success Metrics”标题下的列表项，字体大小是否一致？假设这里没有不一致，或者如果有？不对，可能我错了。再看其他类型。
+
+",page
+g7_card_height_028,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看各个候选：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看列表里的项目，比如“Expand into 3 new verticals”等，没有溢出到框外，因为框是浅橙色的，文本都在里面。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？标题和内容框，还有下面的列表，没有重叠。
+
+G3_ALIGNMENT_OFFSET：元素对齐是否错位？标题在左上角，内容框也对齐，下面的列表也对齐，没有明显偏移。
+
+G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题是大号粗体，内容框内的标题（Q3 Go-to-Market Plan）是橙色，下面的列表项字体大小一致，所以没有不一致。
+
+G5_BRAND_COLOR_VIOLATION：颜色是否品牌错误？这里用的是橙色边框和标题，假设品牌允许的话，可能没问题，",page
+g7_unbreakable_text_000,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型。首先看G1_TEXT_OVERFLOW：文本是否溢出框。图中Endpoint的URL在浅橙色框内，没有溢出，所以G1不存在。G2_ELEMENT_OVERLAP：元素是否重叠，这里没有重叠。G3_ALIGNMENT_OFFSET：元素对齐是否错位，标题和框的位置看起来正常？不对，再看。然后G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致，标题是黑色大字体，框内的“Implementation Roadmap”是橙色，Endpoint是橙色，可能字体大小？但不确定。不过再看其他。G5_BRAND_COLOR_VIOLATION：颜色是否品牌色错误，这里颜色是橙色和浅橙色，假设没问题。G6_MARGIN_VIOLATION：元素是否超出页边距，框在页面内，没有。S1_TITLE_BODY_MISMATCH：标题和内容是否匹配",page
+g7_card_height_025,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看G1_TEXT_OVERFLOW：文本是否溢出？看列表里的项目，比如“Data residency exposure”等，都在框内吗？橙色框内的列表项应该都在框内，所以没有溢出。G2_ELEMENT_OVERLAP：元素是否重叠？这里各个元素（标题、框、列表）没有重叠。G3_ALIGNMENT_OFFSET：对齐是否偏移？标题和框的对齐看起来正常，列表也对齐。G4_FONT_SIZE_INCONSISTency：字体大小是否不一致？标题是大号粗体，列表项是常规字体，可能有差异，但要看是否“should match”。不过可能不算严重？或者看其他。G5_BRAND_COLOR_VIOLATION：颜色是否错？橙色框和标题颜色是否符合品牌？假设这里颜色没问题。G6_MARGIN_VIOLATION：元素是否超出页边距？页面的元素都在边",page
+g7_card_height_026,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看各个候选：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看列表里的内容，比如“Activation rate +18%”等，都在框内吗？绿色框内的列表项应该都在，所以可能没有。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？页面上绿色框和其他元素（标题、下面的项目）是否有重叠？看布局，绿色框是独立的，下面的项目在框外，所以没有重叠。
+
+G3_ALIGNMENT_OFFSET：元素对齐是否错位？比如绿色框的位置是否正确？假设对齐正常，没有偏移。
+
+G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题“Success Metrics”和绿色框内的“Success Metrics”以及列表项，假设字体大小有差异？但需要看是否“should match”。如果列表项和标题字体不同，可能有，但这里可能",page
+g7_unbreakable_text_005,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型。首先看G1_TEXT_OVERFLOW：文本是否溢出框。图中Endpoint的URL在浅橙色框内，没有溢出，所以G1不存在。G2_ELEMENT_OVERLAP：元素是否重叠，这里没有重叠。G3_ALIGNMENT_OFFSET：元素对齐是否错位，标题和框的位置看起来正常？不对，再看。然后G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致，标题是黑色大字体，框内的“Implementation Roadmap”是橙色，Endpoint是橙色，可能字体大小？但不确定。不过再看其他。G5_BRAND_COLOR_VIOLATION：颜色是否品牌色错误，这里颜色是橙色和浅橙色，假设没问题。G6_MARGIN_VIOLATION：元素是否超出页边距，框在页面内，没有。S1_TITLE_BODY_MISMATCH：标题和内容是否匹配",page
+g7_card_height_027,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看各个候选类型：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看列表里的文字，比如“Expand into 3 new verticals”等，没有溢出到框外，因为绿色框内的文字都在里面。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？页面上绿色框和其他元素（标题、下面的项目符号）没有重叠，所以没有。
+
+G3_ALIGNMENT_OFFSET：元素是否错位？标题和绿色框的位置，还有下面的项目符号，看起来对齐正常，没有偏移。
+
+G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题是较大的粗体，绿色框内的标题和下面的项目符号字体大小是否一致？看绿色框内的“Q3 Go-to-Market Plan”是绿色，下面的项目符号是黑色，字体大小可能有差异？但需要确认。不过可能这里是否有？或者看其他部分。
+
+",page
+g7_card_height_029,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"<think>
+用户现在需要检查幻灯片的缺陷类型。首先看各个候选类型：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看列表里的内容，比如“Success Metrics”标题下的列表项，没有溢出到框外的情况。然后看其他元素。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？页面上元素排列正常，没有重叠。
+
+G3_ALIGNMENT_OFFSET：元素对齐是否偏移？列表项的对齐看起来正常，没有明显偏移。
+
+G4_FONT_SIZE_INCONSISTency：字体大小是否不一致？标题和列表项的字体大小是否有差异？这里标题是大号粗体，列表项是常规字体，可能有差异，但不确定是否属于“should match”的情况？不过再仔细看，比如“Success Metrics”标题下的蓝色标题和列表项，可能字体大小有差异？
+
+G5_BRAND_COLOR_VIOLATION：颜色是否违规？蓝色",page
+g7_unbreakable_text_009,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型。首先看G1_TEXT_OVERFLOW：文本是否溢出框？图中Endpoint的文本在浅蓝色框内，没有溢出。G2_ELEMENT_OVERLAP：元素是否重叠？这里没有重叠。G3_ALIGNMENT_OFFSET：元素对齐是否错位？标题和内容框对齐正常。G4_FONT_SIZE_INCONSISTency：字体大小是否不一致？标题和内容框内的文字字体大小是否有问题？看标题“Platform Architecture”和内容框内的“Platform Architecture”等，可能字体大小是否一致？但如果没有明显不一致的话？不对，再仔细看。然后S1_TITLE_BODY_MISMATCH：标题和正文是否匹配？标题是Platform Architecture，内容框内也有Platform Architecture，所以匹配。S4_DENSITY_R",page
+g7_unbreakable_text_004,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"<think>
+用户现在需要检查每个缺陷类型。首先看G1_TEXT_OVERFLOW：文本是否溢出框。图中绿色框内的文本，Endpoint后面的ARN可能长度问题？但看框的大小，是否有溢出？然后其他类型。比如G6_MARGIN_VIOLATION：元素是否超出页面边缘？这里绿色框在页面内，没有。再看G1，文本是否溢出。假设Endpoint后的ARN可能让文本溢出？或者看是否有。然后判断是否有缺陷。
+
+现在分析：G1_TEXT_OVERFLOW是否存在？看绿色框内的文本，Endpoint后面的ARN是否超过框的宽度？如果有的话就是。然后其他类型。比如S4_DENSITY_RULE_VIOLATION：页面是否太密？这里只有标题和一个框，不算密。S1_TITLE_BODY_MISMATCH：标题是Platform Architecture，框内也是Platform Architecture，所",page
+g7_unbreakable_text_003,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"<think>
+用户现在需要检查每个缺陷类型。首先看G1_TEXT_OVERFLOW：文本是否溢出框。图中Endpoint后的URL可能溢出？看框的边界，文字是否超出。然后其他类型，比如G2元素重叠？这里没有重叠。G3对齐偏移？元素是否对齐。G4字体大小不一致？标题和内容字体是否一致。G5品牌色违规？颜色是否符合。G6边距违规？元素是否超出页边距。S1标题和主体不匹配？标题是Success Metrics，主体也是Success Metrics，所以匹配。S4密度规则违规？页面是否拥挤？这里内容不多。S6图像和文本矛盾？没有图像。
+
+现在看G1_TEXT_OVERFLOW：Endpoint后的URL是否溢出框。观察框的边界，文字是否超出。假设这里文字溢出了，所以G1存在。然后确定严重程度。然后输出JSON。
+
+现在分析：G1_TEXT_OVERFLOW是否存在？看Endpoint后的URL",page
+g7_unbreakable_text_001,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"<think>
+用户现在需要检查每个缺陷类型。首先看G1_TEXT_OVERFLOW：文本是否溢出框？这里框内的文本“Endpoint: https://portal.enterprise-customer.example.com/onboarding/2”有没有溢出？看框的边界，文本应该在框内，所以可能没有？不对，再仔细看。然后其他类型：G2元素重叠？页面上只有标题和框，没有重叠。G3对齐偏移？标题和框的位置是否正确？看起来对齐正常。G4字体大小不一致？标题和框内的文字字体大小是否有差异？标题是黑色粗体，框内“Solution Overview”是蓝色，字体大小可能不同？但不确定是否属于不一致。G5品牌色违规？颜色是否符合品牌？这里没给品牌色信息，所以无法判断。G6边距违规？元素是否超出页边距？页面背景白色，元素都在范围内。S1标题和正文不匹配？标题是Solution Overview，",page
+g7_unbreakable_text_006,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"<think>
+用户现在需要检查每个缺陷类型。首先看G1_TEXT_OVERFLOW：文本是否溢出框？这里框内的文本“Endpoint: C:\Users\enterprise\Deployments\2026\Q3\acme-global-manufac”（可能后面还有，但显示的框内是否有溢出？看框的边界，文本是否超出。然后其他类型：
+
+G2_ELEMENT_OVERLAP：元素是否重叠？这里没有其他元素重叠。
+
+G3_ALIGNMENT_OFFSET：元素是否错位？标题和框的位置是否对齐？
+
+G4_FONT_SIZE_INCONSISTency：字体大小是否不一致？标题和框内文字的字体大小是否有差异？
+
+G5_BRAND_COLOR_VIOLATION：颜色是否违规？比如橙色边框是否符合品牌？
+
+G6_MARGIN_VIOLATION：元素是否超出页边距？框在页面内，没有超出。
+
+S1",page
+g7_unbreakable_text_008,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型。首先看G1_TEXT_OVERFLOW：文本是否溢出框。图中框内的文本“Endpoint: arn:aws:iam::920183746551:role/acme-global-manufacturing-pr”后面可能被截断？但看框的大小，文本是否溢出？然后其他类型。比如G1，这里文本是否在框内？假设文本没有溢出？不对，再仔细看。或者有没有其他问题？
+
+现在逐一分析：
+
+G1_TEXT_OVERFLOW：检查文本是否超出其容器（浅蓝色框）。如果文本长度导致溢出，那算。但看提供的内容，可能文本是否完整？假设这里文本没有溢出？不对，可能我错了。或者有没有其他缺陷？
+
+再看其他类型，比如G2元素重叠：页面上元素是否重叠？图中只有标题和一个框，没有重叠。G3对齐偏移：元素是否对齐？标题和框的位置是否正确？看起来是对齐的。G4字体大小不一致：标题和框内",page
+g7_unbreakable_text_011,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"<think>
+用户现在需要检查每个缺陷类型。首先看G1_TEXT_OVERFLOW：文本是否溢出框？这里Endpoint后的路径可能没完全显示，但看框内是否有溢出。然后其他类型，比如G2元素重叠？没有。G3对齐偏移？标题和内容的对齐？G4字体大小不一致？标题是黑色粗体，内容里的Risk Register是蓝色，Endpoint也是蓝色，字体大小是否一致？可能一致。G5品牌色违规？颜色是否符合？这里蓝色可能是品牌色？不确定。G6边距违规？元素是否超出页边距？页面背景白色，元素在中间，没有。S1标题和正文不匹配？标题是Risk Register，正文里也有Risk Register，所以匹配？S4密度规则违规？页面比较简洁，没有拥挤。S6图像文本矛盾？没有图像。那再看G1_TEXT_OVERFLOW：Endpoint后的路径“C:\Users\enterprise\Deployments\2",page
+g7_unbreakable_text_002,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"<think>
+用户现在需要检查每个缺陷类型。首先看G1_TEXT_OVERFLOW：文本是否溢出框？看绿色框里的内容，Endpoint后的路径是否溢出？从图中看，绿色框内的文本应该是没有溢出，因为框是包含的？不对，再仔细看。然后G2_ELEMENT_OVERLAP：元素是否重叠？这里标题和绿色框没有重叠。G3_ALIGNMENT_OFFSET：元素对齐是否错位？标题在左上角，绿色框在其下方，对齐应该没问题？G4_FONT_SIZE_INCONSISTency：字体大小是否不一致？标题和绿色框内的文字，比如“Risk Register”标题和绿色框内的“Risk Register”，字体大小是否有差异？可能有，但不确定。G5_BRAND_COLOR_VIOLATION：颜色是否违规？绿色框的颜色是否符合品牌？假设这里没有。G6_MARGIN_VIOLATION：元素是否超出页边距？绿色框在",page
+g7_unbreakable_text_012,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看G1_TEXT_OVERFLOW：文本是否溢出框？看蓝色框里的内容，Endpoint后的URL是否溢出？这里框是矩形，URL可能没溢出？不对，再仔细看。然后G2_ELEMENT_OVERLAP：元素是否重叠？页面上标题和框没有重叠。G3_ALIGNMENT_OFFSET：元素对齐是否错位？标题和框的对齐看起来正常？G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题和框内的文字，比如“Q3 Go-to-Market Plan”标题和框内重复的文字，字体大小是否有差异？假设这里标题和框内文字字体大小一致？那G4可能不存在。G5_BRAND_COLOR_VIOLATION：颜色是否违规？蓝色框和文字颜色，假设品牌色没问题。G6_MARGIN_VIOLATION：元素是否超出页边距？页面元素都在范围内。S1_T",page
+g7_unbreakable_text_015,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型。首先看G1_TEXT_OVERFLOW：文本是否溢出框？这里框内的文本“Endpoint: registry.internal.acme-global.example/ml-platform/inference”有没有溢出？看框的边界，文本应该在框内，所以可能没有？不对，再仔细看。然后其他类型：G2元素重叠？这里只有一个框和标题，没有重叠。G3对齐偏移？标题和框的位置是否对齐？看起来标题在上方，框在下方，对齐正常？G4字体大小不一致？标题和框内的文字字体大小是否有差异？标题是黑色粗体，框内文字蓝色，但字体大小是否一致？可能没有。G5品牌色违规？颜色是否符合品牌？这里没信息，假设没问题。G6边距违规？元素是否超出页边距？框在页面内，标题也在。S1标题和正文不匹配？标题是Implementation Roadmap，框内也是Implementati",page
+g7_unbreakable_text_007,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型。首先看G1_TEXT_OVERFLOW：文本是否溢出框？看框里的“Endpoint: C:\Users\enterprise\Deployments\2026\Q3\acme-global-manufact...”这里，文本是否在框内？假设框足够大，但可能要看是否有溢出。不过再看其他类型。然后G2_ELEMENT_OVERLAP：元素是否重叠？这里标题和框没有重叠。G3_ALIGNMENT_OFFSET：元素对齐是否错位？标题和框的对齐看起来正常？G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题和框内的文字字体大小是否有差异？比如标题是黑色粗体，框内蓝色文字，字体大小是否一致？假设这里可能有差异？不对，再仔细看。或者看S1_TITLE_BODY_MISMATCH：标题是Implementation Roadmap，",page
+g7_unbreakable_text_014,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型。首先看G1_TEXT_OVERFLOW：文本是否溢出框？看蓝色框里的内容，Endpoint后的ARN可能长度问题？但看框的大小，是否有溢出？然后其他类型。比如G1，这里Endpoint后的ARN是否在框内？假设没有溢出？不对，再仔细看。或者有没有其他缺陷？
+
+现在逐一分析：
+
+G1_TEXT_OVERFLOW：检查文本是否超出其容器（蓝色框）。看Endpoint后的ARN，是否在框内？假设框足够大，没有溢出？那可能没有。但再看其他类型。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？页面上只有标题和一个框，没有重叠，所以无。
+
+G3_ALIGNMENT_OFFSET：元素是否对齐错误？标题和框的位置，看起来对齐正常，所以无。
+
+G4_FONT_SIZE_INCONSISTency：字体大小是否不一致？标题是黑色粗体，框内的“Platfo",page
+g7_unbreakable_text_013,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型。首先看G1_TEXT_OVERFLOW：文本是否溢出框？看框里的文字，Endpoint后的ARN可能长度，但框是浅蓝色的，看是否有溢出。然后其他类型，比如G2元素重叠？这里没有重叠。G3对齐偏移？标题和内容对齐？标题Risk Register在左上角，内容框也在下面，对齐应该没问题？G4字体大小不一致？标题和内容字体，标题是黑色粗体，内容里的Risk Register是灰色，Endpoint是深色，可能字体大小？但不确定。不过再仔细看，G1_TEXT_OVERFLOW：框内的文本是否溢出？看框的宽度，Endpoint后的ARN可能很长，但框是否能容纳？假设这里没有溢出？不对，可能我错了。或者看是否有其他缺陷。再检查所有类型：
+
+G1_TEXT_OVERFLOW：文本是否溢出其容器（浅蓝色框）。看框内的文字，Endpoint后面的ARN字符串，是",page
+g7_unbreakable_text_016,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型。首先看G1_TEXT_OVERFLOW：文本是否溢出框？看橙色框里的内容，Endpoint后的路径是否溢出？从图中看，橙色框内的文本没有溢出，因为框是包含的。然后G2_ELEMENT_OVERLAP：元素是否重叠？这里标题和框没有重叠。G3_ALIGNMENT_OFFSET：元素对齐是否错位？标题和框的位置看起来正常。G4_FONT_SIZE_INCONSISTency：字体大小是否不一致？标题和框内的文字字体大小是否有差异？比如“Solution Overview”标题和框内重复的文字，可能字体大小不同？但需要确认。不过再仔细看，G1的情况，文本是否溢出？假设框足够大，所以G1不存在。那有没有其他缺陷？比如S1_TITLE_BODY_MISMATCH：标题和正文是否匹配？标题是Solution Overview，框内也是Solution Ov",page
+g7_unbreakable_text_022,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型。首先看G1_TEXT_OVERFLOW：文本是否溢出框？这里框内的文本“Implementation Roadmap”和“Endpoint: https://...”都在框内，没有溢出。G2_ELEMENT_OVERLAP：元素是否重叠？页面上标题和框没有重叠。G3_ALIGNMENT_OFFSET：元素对齐是否错位？标题和框的对齐看起来正常。G4_FONT_SIZE_INCONSISTency：字体大小是否不一致？标题和框内的文字字体大小是否有问题？这里可能需要看，但假设没有明显不一致。G5_BRAND_COLOR_VIOLATION：颜色是否违规？颜色是蓝色和黑色，没看到品牌色问题。G6_MARGIN_VIOLATION：元素是否超出页边距？框在页面内，没有。S1_TITLE_BODY_MISMATCH：标题和内容是否匹配？标题是Imple",page
+g7_unbreakable_text_021,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型。首先看G1_TEXT_OVERFLOW：文本是否溢出框？这里框内的文本“Implementation Roadmap”和“Endpoint: https://...”都在框内，没有溢出。G2_ELEMENT_OVERLAP：元素是否重叠？页面上标题和框没有重叠。G3_ALIGNMENT_OFFSET：元素对齐是否错位？标题和框的对齐看起来正常。G4_FONT_SIZE_INCONSISTency：字体大小是否不一致？标题和框内的文字字体大小是否有问题？这里可能需要看，但假设没有明显不一致。G5_BRAND_COLOR_VIOLATION：颜色是否违规？颜色是蓝色和黑色，没看到品牌色问题。G6_MARGIN_VIOLATION：元素是否超出页边距？框在页面内，没有。S1_TITLE_BODY_MISMATCH：标题和内容是否匹配？标题是Imple",page
+g7_unbreakable_text_017,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型。首先看G1_TEXT_OVERFLOW：文本是否溢出框。图中框内的文本，Endpoint后面的ARN可能长度问题？但看框的大小，是否有溢出？然后其他类型。比如G1，检查文本是否超出容器。这里Endpoint后的ARN可能较长，但看框的边界，是否有溢出？假设没有的话？不对，再仔细看。或者有没有其他缺陷？
+
+现在逐一分析：
+
+G1_TEXT_OVERFLOW：文本是否溢出其容器（橙色框）。看Endpoint后的ARN，是否在框内？如果框足够大，可能没有。那其他类型？
+
+G2_ELEMENT_OVERLAP：元素是否重叠。图中只有标题和一个框，没有重叠。
+
+G3_ALIGNMENT_OFFSET：元素是否错位。标题和框的位置是否对齐？看起来是对齐的。
+
+G4_FONT_SIZE_INCONSISTency：字体大小是否不一致。标题和框内的文字，标题是",page
+g7_unbreakable_text_018,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"<think>
+用户现在需要检查每个缺陷类型。首先看G1_TEXT_OVERFLOW：文本是否溢出框。图中“Endpoint: registry.internal.acme-global.example/ml-platform/inference”这部分，因为框的宽度可能不够，导致文本溢出？看元素里的文本，假设框是浅蓝色的矩形，里面的文本是否有溢出。然后其他类型：G2元素重叠？这里没有其他元素重叠。G3对齐偏移？标题和内容的对齐是否正常？G4字体大小不一致？标题和内容字体是否一致？G5品牌色违规？颜色是否符合？G6边距违规？元素是否超出页面边距？S1标题和正文不匹配？标题是Success Metrics，内容也是Success Metrics，所以匹配。S4密度规则违规？页面是否太拥挤？S6图像文本矛盾？没有图像。
+
+现在看G1_TEXT_OVERFLOW：文本在框内是否溢出。假设框的宽度",page
+g7_unbreakable_text_019,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型。首先看G1_TEXT_OVERFLOW：文本是否溢出框。这里“Endpoint:”后的路径可能没完全显示？但看页面里的框，文本是否溢出？然后其他类型。比如G1，看文本是否超出蓝色框。假设这里的文本没有溢出？不对，再仔细看。或者有没有其他问题？
+
+现在逐一分析：
+
+G1_TEXT_OVERFLOW：检查文本是否溢出其容器（蓝色框）。看“Endpoint: C:\Users\enterprise\Deployments\2026\Q3\acme-global-manufac...” 这里可能路径没完全显示，但如果是溢出的话？或者是否有其他元素重叠？G2_ELEMENT_OVERLAP：两个元素是否重叠，这里标题和框没有重叠。G3_ALIGNMENT_OFFSET：元素是否错位，标题和框的对齐是否正确？看起来标题在左上角，框在其下方，对齐应该没问题。",page
+g7_unbreakable_text_025,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型。首先看G1_TEXT_OVERFLOW：文本是否溢出框。图中框内的文本“Endpoint: arn:aws:iam::920183746551:role/acme-global-manufacturing-pr”可能没完全显示？不对，看是否有溢出。然后其他类型：G2元素重叠？这里没有。G3对齐偏移？标题和内容的对齐？G4字体大小不一致？标题是大字体，内容里的文字字体是否一致？看内容里的“Implementation Roadmap”和下面的“Endpoint:...”，字体大小是否一致？假设内容里的文字字体和标题不同？但可能不是。再看G1：文本是否溢出。如果框内文本没有溢出，那G1不存在。再检查其他。比如S1标题和主体是否匹配？标题是Implementation Roadmap，主体也是Implementation Roadmap，所以S1没问",page
+g7_unbreakable_text_023,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"<think>
+用户现在需要检查每个缺陷类型。首先看G1_TEXT_OVERFLOW：文本是否溢出框。这里Endpoint后的路径可能太长，看框内是否有溢出？然后其他类型。先分析：
+
+G1_TEXT_OVERFLOW：检查文本是否超出其容器（橙色边框的框）。Endpoint后面的路径“C:\Users\enterprise\Deployments\2026\Q3\acme-global-manufac”可能长度导致溢出？看框内是否有溢出迹象。假设是溢出，那属于G1。
+
+然后其他类型：G2元素重叠？没有。G3对齐偏移？没有。G4字体大小不一致？标题和内容字体是否一致？标题是黑色粗体，内容橙色，可能字体大小？但如果没有明显不一致，可能不是。G5品牌颜色违规？颜色是否符合品牌？这里橙色边框和文字，假设没问题。G6页边距违规？元素是否超出页面边缘？没有。S1标题和主体不匹配？标题是Success ",page
+g7_unbreakable_text_020,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"<think>
+用户现在需要检查每个缺陷类型。首先看G1_TEXT_OVERFLOW：文本是否溢出框？图中Endpoint后的长文本是否超出浅橙色框？看描述里的Endpoint部分，文本可能溢出？然后其他类型：G2元素重叠？这里没有重叠。G3对齐偏移？元素是否对齐？G4字体大小不一致？标题和内容字体是否一致？G5品牌颜色违规？颜色是否符合？G6边距违规？元素是否超出页边距？S1标题和正文不匹配？标题是Platform Architecture，内容也是，所以匹配。S4密度规则违规？页面是否拥挤？S6图像文本矛盾？没有图像。
+
+现在看G1_TEXT_OVERFLOW：Endpoint后的URL是否溢出浅橙色框？从图中看，文本可能溢出，所以存在G1缺陷。然后确定严重程度，minor。然后定位page_id是g7_unbreakable_text_020，element_id是那个浅橙色框内的文",page
+g7_unbreakable_text_026,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型。首先看G1_TEXT_OVERFLOW：文本是否溢出框？看橙色框里的内容，Endpoint后的路径是否溢出？这里路径可能没溢出？不对，再仔细看。然后G2_ELEMENT_OVERLAP：元素是否重叠？页面上标题和框没有重叠。G3_ALIGNMENT_OFFSET：元素对齐是否错位？标题和框的对齐看起来正常？G4_FONT_SIZE_INCONSISTency：字体大小是否不一致？标题和框内的文字字体大小是否有差异？比如标题是黑色粗体，框内橙色和蓝色文字，字体大小是否一致？假设这里字体大小一致？G5_BRAND_COLOR_VIOLATION：颜色是否违规？橙色边框和文字是否符合品牌？假设没问题。G6_MARGIN_VIOLATION：元素是否超出页边距？页面元素都在范围内。S1_TITLE_BODY_MISMATCH：标题和正文是否匹配？标题是",page
+g7_unbreakable_text_027,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"<think>
+用户现在需要检查每个缺陷类型。首先看G1_TEXT_OVERFLOW：文本是否溢出框？图中Endpoint后的URL可能溢出，但看框的边界，可能有溢出？然后G2_ELEMENT_OVERLAP：元素是否重叠？这里没有。G3_ALIGNMENT_OFFSET：元素对齐是否错位？标题和内容框对齐应该没问题。G4_FONT_SIZE_INCONSISTency：字体大小是否不一致？标题和内容里的文字字体大小是否有差异？比如“Implementation Roadmap”是大标题，内容里的文字可能不同，但看是否有不一致。G5_BRAND_COLOR_VIOLATION：颜色是否违规？橙色边框和背景，假设品牌色没问题。G6_MARGIN_VIOLATION：元素是否超出页边距？页面边缘没有。S1_TITLE_BODY_MISMATCH：标题和内容是否匹配？标题是Implementat",page
+g7_unbreakable_text_024,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型。首先看G1_TEXT_OVERFLOW：文本是否溢出框。图中框内的文本，Endpoint后面的ARN可能长度问题？但看框的大小，是否有溢出？然后其他类型。比如G1，检查文本是否超出容器。这里Endpoint后的ARN可能较长，但看框的边界，是否有溢出？假设没有的话？不对，再仔细看。或者有没有其他缺陷？
+
+现在逐一分析：
+
+G1_TEXT_OVERFLOW：文本是否溢出其容器（橙色框）。看Endpoint后的ARN，是否在框内？如果框足够大，可能没有。那其他类型？
+
+G2_ELEMENT_OVERLAP：元素是否重叠。图中只有标题和一个框，没有重叠。
+
+G3_ALIGNMENT_OFFSET：元素是否错位。标题和框的位置是否对齐？看起来是对齐的。
+
+G4_FONT_SIZE_INCONSISTency：字体大小是否不一致。标题和框内的文字，标题是",page
+g7_card_height_000__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看各个候选：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看列表里的文字，都在框内，没有溢出。所以不存在。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？页面上标题和内容框没有重叠，所以不存在。
+
+G3_ALIGNMENT_OFFSET：元素是否错位？标题和内容框对齐正常，没有偏移。
+
+G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题和列表项的字体，假设标题是大号，列表项稍小，但如果没有明显不一致？不过可能要看是否有问题。但这里可能没有，因为通常标题和正文有区分，但如果没有的话？或者看是否有其他情况。不过可能这个不存在？
+
+G5_BRAND_COLOR_VIOLATION：颜色是否品牌色错误？页面颜色是浅灰背景，深色文字，没有明显品牌色错误（假设品牌色不是这些）。
+
+G6_MARGIN_V",page
+g7_card_height_001__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看各个候选：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看列表里的文字，比如“Ingestion service”等，都在框内，没有溢出。所以G1不存在。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？页面上标题和绿色框，框内的项目符号，没有重叠。所以G2不存在。
+
+G3_ALIGNMENT_OFFSET：元素是否错位？标题“Platform Architecture”和绿色框的位置，框内的文字对齐，没有明显偏移。所以G3不存在？
+
+G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题是大号粗体，框内的“Platform Architecture”是绿色，下面的项目符号文字大小是否一致？看项目符号的文字，应该是统一的，所以G4不存在？
+
+G5_BRAND_COLOR_VIOLATION：颜色",page
+g7_unbreakable_text_029,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"<think>
+用户现在需要检查每个缺陷类型。首先看G1_TEXT_OVERFLOW：文本是否溢出框。图中Endpoint后的路径可能溢出？看框内，Endpoint的文本后面是否有截断或溢出。然后其他类型，比如G2元素重叠？这里没有重叠。G3对齐偏移？标题和内容对齐是否正常？G4字体大小不一致？标题和内容字体是否一致？G5品牌色违规？颜色是否符合？G6边距违规？元素是否超出页边距？S1标题和正文不匹配？标题是Platform Architecture，内容也是Platform Architecture，匹配。S4密度规则违规？页面是否拥挤？S6图像文本矛盾？没有图像。
+
+现在看G1_TEXT_OVERFLOW：Endpoint后的路径“C:\Users\enterprise\Deployments\2026\Q3\acme-global-manufact...”是否溢出浅蓝色框？从图中看，",page
+g7_card_height_003__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看各个候选：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看列表里的文字，比如“Expand into 3 new verticals”等，都在框内，没有溢出。所以G1不存在。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？页面上标题和内容框，没有重叠。所以G2不存在。
+
+G3_ALIGNMENT_OFFSET：元素是否错位？标题和内容框的对齐，看起来是对齐的，没有偏移。所以G3不存在。
+
+G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题是大号粗体，内容框内的标题（绿色）和列表项字体，是否有不一致？假设这里可能有，但需要看。不过可能没有明显不一致？或者再仔细看。比如标题“Q3 Go-to-Market Plan”是黑色粗体，内容框内的“Q3 Go-to-Market Plan”是绿色，列表",page
+g7_card_height_002__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看各个候选：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看列表里的文字，都在框内，没有溢出。所以不存在。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？页面上标题和框没有重叠，框内的项目符号也没有重叠，所以不存在。
+
+G3_ALIGNMENT_OFFSET：元素是否错位？标题和框的对齐看起来正常，没有偏移。
+
+G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题和框内的文字，标题是大号，框内是小一点，但可能属于设计，不过这里是否有不一致？比如标题和框内标题（Risk Register）的字体大小？假设这里没有明显不一致，或者可能？不对，再仔细看。标题是“Risk Register”（黑色粗体），框内的“Risk Register”是绿色，字体大小是否一样？如果不一样的话算G4。但可能用户提供",page
+g7_unbreakable_text_010,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW"",""G4_FONT_SIZE_INCONSISTENCY""]",,,[],"<think>
+用户现在需要检查每个缺陷类型。首先看G1_TEXT_OVERFLOW：文本是否溢出框？看里面的Endpoint部分，文本长度可能溢出吗？然后其他类型。先逐个分析：
+
+G1_TEXT_OVERFLOW：检查文本是否超出其容器（浅蓝色框）。看Endpoint后的ARN字符串，是否有溢出。假设这里文本没有溢出？不对，再仔细看。或者有没有其他问题？
+
+G2_ELEMENT_OVERLAP：元素是否重叠？页面上标题和框的位置，没有重叠。
+
+G3_ALIGNMENT_OFFSET：元素对齐是否错位？标题和框的对齐，看起来是对齐的？
+
+G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题和框内的文字，标题是大字体，框内文字可能有不同，但不确定是否属于“应该匹配”的情况。比如标题和框内重复的Implementation Roadmap，字体是否一致？
+
+G5_BR",page
+g7_card_height_005__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看各个候选：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看列表里的文字，比如“Discovery & scoping”等，都在框内，没有溢出。所以G1不存在。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？页面上标题和内容框没有重叠，所以G2不存在。
+
+G3_ALIGNMENT_OFFSET：元素是否错位？标题和内容框的对齐看起来正常，没有偏移，所以G3不存在。
+
+G4_FONT_SIZE_INCONSISTency：字体大小是否不一致？标题是大号粗体，列表项是较小字体，但可能属于设计风格，不过这里是否有不一致？比如标题和列表项的字体大小差异是否算？但如果没有明显错误，可能不算。不过再仔细看，标题和列表项的字体大小是否有问题？假设这里没有，所以G4不存在？
+
+G5_BRAND_COLOR_VIOLATION：颜色是否",page
+g7_unbreakable_text_028,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型。首先看G1_TEXT_OVERFLOW：文本是否溢出框？这里框内的文本“Endpoint: https://portal.enterprise-customer.example.com/onboarding/2”应该是在框内，没有溢出？不对，再仔细看。然后G2_ELEMENT_OVERLAP：元素是否重叠？页面上标题和框的位置，没有重叠。G3_ALIGNMENT_OFFSET：元素对齐是否错位？标题和框的对齐，可能没问题？G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题是大字体，框内文字有不同字体大小吗？比如“Implementation Roadmap”在框内是灰色小字体，标题是黑色大字体，所以字体大小不一致？但要看是否属于应该匹配的情况。不过可能更明显的是G1？不对，再看。或者有没有其他问题？
+
+哦，可能我错了",page
+g7_card_height_004__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看各个候选：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看列表里的文字，比如“Unified data plane”等，都在框内，没有溢出。所以G1不存在。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？页面上标题和绿色框，框内的项目符号，没有重叠。所以G2不存在。
+
+G3_ALIGNMENT_OFFSET：元素是否错位？标题和绿色框的位置，框内的文字对齐，没有明显偏移。所以G3不存在？
+
+G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题是大号粗体，框内的标题（Solution Overview）是绿色，其他列表项是深色，字体大小是否有差异？看标题和列表项，可能标题字体更大，但这里是否属于不一致？不过再仔细看，可能没有明显的不一致？或者有没有？比如标题和列表项的字体大小是否匹配？假设没有",page
+g7_card_height_006__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看各个候选：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看列表里的文字，都在框内，没有溢出。所以不存在。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？页面上元素没有重叠，比如标题和内容框，内容框内的项目符号也没有重叠。所以不存在。
+
+G3_ALIGNMENT_OFFSET：元素是否对齐错位？标题“Platform Architecture”和下面的内容框，内容框内的文字对齐应该是正常的，没有明显偏移。所以不存在？
+
+G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题是较大的粗体，内容框内的标题（橙色的Platform Architecture）和列表项的字体，列表项的字体应该是一致的，标题的字体可能不同但这里看是否有不一致。假设列表项的字体大小一致，所以不存在？
+
+G5_BRAND_CO",page
+g7_card_height_007__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看各个候选：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看列表里的内容，比如“Activation rate +18%”等，都在框内，没有溢出。所以G1不存在。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？页面上标题和框，框内的项目符号，没有重叠。所以G2不存在。
+
+G3_ALIGNMENT_OFFSET：元素是否错位？标题和框的位置，框内的项目符号对齐，没有明显偏移。所以G3不存在？
+
+G4_FONT_SIZE_INCONSISTency：字体大小是否不一致？标题是大号粗体，框内的标题（橙色）和列表项的字体，可能列表项字体大小是否一致？看列表项的字体，应该是统一的，所以G4不存在？
+
+G5_BRAND_COLOR_VIOLATION：颜色是否离品牌色？假设品牌色相关，这里橙色可能是品牌色，没有违规。所以G5不存在",page
+g7_card_height_008__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看各个候选：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看列表里的文字，比如“Expand into 3 new verticals”等，都在框内，没有溢出。所以G1不存在。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？页面上标题和内容框没有重叠，所以G2不存在。
+
+G3_ALIGNMENT_OFFSET：元素是否错位？标题和内容框的对齐看起来正常，没有明显偏移，所以G3不存在。
+
+G4_FONT_SIZE_INCONSISTency：字体大小是否不一致？标题是大号粗体，内容框内的标题（橙色）和列表项字体，列表项之间可能有差异？但看是否有应该匹配的不一致。比如标题和列表项的字体大小，可能列表项字体较小，但不确定是否属于“should match”的情况。不过再仔细看，可能没有明显的不一致？或者有没有其他？
+
+G5_",page
+g7_card_height_009__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看各个候选：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看列表里的项目，每个项目都在框内，没有溢出。所以G1不存在。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？页面上标题和框，框内的列表项，没有重叠。所以G2不存在。
+
+G3_ALIGNMENT_OFFSET：元素是否错位？标题和框的对齐，框内的列表项对齐正常，没有偏移。所以G3不存在。
+
+G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题是大号粗体，框内的“Risk Register”是蓝色小一点，列表项是普通字体，这里可能要看是否应该匹配。但如果没有明确要求必须一致，可能不算？不过再仔细看，标题和框内的“Risk Register”字体大小是否有差异？假设这里没有明显不一致，或者可能？不对，再检查其他。
+
+G5_BRAND_COLO",page
+g7_card_height_010__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看各个候选：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看列表里的文字，比如“Unified data plane”等，都在框内，没有溢出。所以G1不存在。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？页面上标题和内容框没有重叠，所以G2不存在。
+
+G3_ALIGNMENT_OFFSET：元素是否错位？标题和内容框的对齐看起来正常，没有偏移，所以G3不存在。
+
+G4_FONT_SIZE_INCONSISTency：字体大小是否不一致？标题和列表项的字体，标题是较大的粗体，列表项是较小的常规字体，但这里是否属于应该匹配的情况？不过可能没有明显不一致到违规，或者看是否有问题。但再仔细看，可能没有，所以G4不存在？
+
+G5_BRAND_COLOR_VIOLATION：颜色是否离品牌色？橙色边框和标题橙色，背景浅橙色，假设",page
+g7_card_height_011__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看各个候选：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看列表里的项目，每个项目都在框内，没有溢出。所以G1不存在。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？页面上元素没有重叠，所以G2不存在。
+
+G3_ALIGNMENT_OFFSET：元素是否错位？标题和内容框的对齐看起来正常，没有明显偏移，所以G3不存在？
+
+G4_FONT_SIZE_INCONSISTency：字体大小是否不一致？标题是大号粗体，内容框内的标题（Risk Register）是蓝色，列表项是普通字体，可能大小一致？或者看是否有不一致。假设这里没有明显不一致，所以G4不存在？
+
+G5_BRAND_COLOR_VIOLATION：颜色是否违规？蓝色可能是品牌色，这里用蓝色，所以没有违规，G5不存在。
+
+G6_MARGIN_VIOLATION：元",page
+g7_card_height_014__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看各个候选：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看列表里的文字，都在框内，没有溢出。所以不存在。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？页面上标题和内容框没有重叠，所以不存在。
+
+G3_ALIGNMENT_OFFSET：元素是否错位？标题和内容框的对齐看起来正常，没有偏移。
+
+G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题和内容框内的文字，标题是大号粗体，内容框内的“Platform Architecture”是较小的，列表项也是统一的，所以没有不一致？
+
+G5_BRAND_COLOR_VIOLATION：颜色是否违规？这里颜色是常规的，没有明显品牌色错误。
+
+G6_MARGIN_VIOLATION：元素是否超出页边距？内容框在页面内，没有超出。
+
+S1_TITLE_B",page
+g7_card_height_012__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看各个候选：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看列表里的文字，都在框内，没有溢出。所以不存在。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？页面上标题和内容框没有重叠，所以不存在。
+
+G3_ALIGNMENT_OFFSET：元素是否错位？标题和内容框的对齐看起来正常，没有偏移。
+
+G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题是大号粗体，列表项是常规字体，但这里是否属于“应该匹配”的情况？比如标题和列表项是否需要一致？但可能不算，因为标题是标题，列表是正文。不过再仔细看，是否有其他不一致？比如列表项的字体大小是否一致？这里列表项都是相同的，所以G4不存在？
+
+G5_BRAND_COLOR_VIOLATION：颜色是否离品牌色？蓝色边框和标题蓝色，假设品牌色包含这些，所以没有",page
+g7_card_height_013__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看各个候选：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看列表里的文字，都在框内，没有溢出。所以不存在。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？页面上标题和内容框没有重叠，所以不存在。
+
+G3_ALIGNMENT_OFFSET：元素是否错位？标题和内容框的对齐看起来正常，没有偏移。
+
+G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题是大号粗体，列表项是常规字体，但这里是否属于“应该匹配”的情况？比如标题和列表项是否需要一致？但可能不算，因为标题是标题，列表是正文。不过再仔细看，是否有其他不一致？比如列表项的字体大小是否一致？这里列表项都是相同的，所以G4不存在？
+
+G5_BRAND_COLOR_VIOLATION：颜色是否离品牌色？蓝色边框和标题蓝色，假设品牌色包含这些，所以不存",page
+g7_card_height_016__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看各个候选：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看列表里的内容，比如“Activation rate +18%”等，都在框内，没有溢出。所以G1不存在。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？页面上标题和框，框内的项目符号，没有重叠。所以G2不存在。
+
+G3_ALIGNMENT_OFFSET：元素是否错位？标题和框的位置，框内的文字对齐，没有明显偏移。所以G3不存在？
+
+G4_FONT_SIZE_INCONSISTency：字体大小是否不一致？标题是大号粗体，框内的标题（橙色）和列表项的字体，可能列表项字体大小是否一致？看列表项的字体，应该是统一的，所以G4不存在？
+
+G5_BRAND_COLOR_VIOLATION：颜色是否离品牌色？假设品牌色相关，这里橙色可能是品牌色，没有违规。所以G5不存在。
+",page
+g7_card_height_015__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看各个候选：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看内容里的列表项，都在框内，没有溢出。所以不存在。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？页面上标题和框，框内的列表，没有重叠。不存在。
+
+G3_ALIGNMENT_OFFSET：元素对齐是否错位？标题和框的对齐，看起来正常，没有偏移。不存在。
+
+G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题和框内的文字，可能标题大，框内小，但如果是应该匹配的话？不过这里可能要看是否“should match”。但如果没有明确说明，可能默认？不过再仔细看，比如标题是“Success Metrics”，框内也是“Success Metrics”，字体大小是否有差异？假设存在的话？不对，可能用户提供的页面中，标题和框内的文字是否字体大小一致？",page
+g7_card_height_017__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看各个候选：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看列表里的文字，比如“Ingestion service”等，都在框内，没有溢出。所以G1不存在。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？页面上标题和绿色框，框内的项目符号，没有重叠。所以G2不存在。
+
+G3_ALIGNMENT_OFFSET：元素是否错位？标题“Platform Architecture”和绿色框的位置，框内的文字对齐，没有明显偏移。所以G3不存在？
+
+G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题是大号粗体，框内的“Platform Architecture”是绿色，下面的项目符号文字大小是否一致？看项目符号的文字，应该是统一的，所以G4不存在？
+
+G5_BRAND_COLOR_VIOLATION：颜色",page
+g7_card_height_019__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看各个候选：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看列表里的文字，比如“Unified data plane”等，都在框内，没有溢出。所以G1不存在。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？页面上标题和内容框没有重叠，所以G2不存在。
+
+G3_ALIGNMENT_OFFSET：元素是否错位？标题和内容框的对齐看起来正常，没有偏移，所以G3不存在。
+
+G4_FONT_SIZE_INCONSISTency：字体大小是否不一致？标题是大号粗体，列表项是较小字体，但这里是否属于应该匹配的情况？可能要看是否有不一致，但如果没有明显问题，可能G4不存在？
+
+G5_BRAND_COLOR_VIOLATION：颜色是否离品牌色？橙色边框和标题橙色，可能符合，所以G5不存在。
+
+G6_MARGIN_VIOLATION：元",page
+g7_card_height_018__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看各个候选：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看列表里的文字，比如“Expand into 3 new verticals”等，都在框内，没有溢出。所以G1不存在。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？页面上标题和内容框，没有重叠，所以G2不存在。
+
+G3_ALIGNMENT_OFFSET：元素是否错位？标题和内容框的对齐，看起来是对齐的，没有偏移，所以G3不存在。
+
+G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题是大号粗体，内容框内的标题（橙色）和列表项字体，是否有不一致？假设这里可能有，但需要看。不过可能没有明显不一致？或者再仔细看。比如标题“Q3 Go-to-Market Plan”是黑色粗体，内容框内的标题是橙色，列表项是黑色普通字体。如果这些字体大小是否一",page
+g7_card_height_020__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看各个候选：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看列表里的文字，都在框内，没有溢出。所以不存在。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？页面上标题和内容框没有重叠，所以不存在。
+
+G3_ALIGNMENT_OFFSET：元素是否错位？标题和内容框的对齐看起来正常，没有偏移。
+
+G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题是大号粗体，内容框内的标题（蓝色）和其他列表项字体，这里可能要看是否应该一致。但如果没有特别说明，假设这里是否有问题？不过可能没有明显不一致？
+
+G5_BRAND_COLOR_VIOLATION：颜色是否违规？蓝色边框和蓝色标题，假设品牌色包含这些，所以没有违规。
+
+G6_MARGIN_VIOLATION：元素是否超出页边距？内容框在页面内，没有超出。",page
+g7_card_height_022__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看各个候选：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看内容里的列表项，都在框内，没有溢出。所以不存在。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？页面上标题和框，框内的列表，没有重叠。不存在。
+
+G3_ALIGNMENT_OFFSET：元素是否错位？标题和框的位置，框内的列表对齐，没有明显偏移。不存在？
+
+G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题是大号粗体，框内的“Solution Overview”是蓝色，列表项是普通字体，可能大小一致？或者看是否有不一致。假设这里没有明显不一致，所以不存在？
+
+G5_BRAND_COLOR_VIOLATION：颜色是否违规？蓝色边框和文字，假设品牌色允许，所以不存在。
+
+G6_MARGIN_VIOLATION：元素是否超出页边距？页面",page
+g7_card_height_021__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看各个候选：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看内容里的项目符号，比如“Activation rate +18%”等，都在框内，没有溢出。所以G1不存在。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？页面上标题和框内的元素，没有重叠情况，所以G2不存在。
+
+G3_ALIGNMENT_OFFSET：元素是否错位？标题和框的位置，以及框内列表的对齐，看起来是对齐的，没有偏移，所以G3不存在。
+
+G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题是大号粗体，框内标题是蓝色小一点，列表项是普通字体，这里可能有差异？但需要看是否“should match”。不过可能不算严重？或者有没有其他更明显的？
+
+G5_BRAND_COLOR_VIOLATION：颜色是否离品牌色？假设品牌色是蓝色相",page
+g7_card_height_023__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看各个候选：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看列表里的文字，都在框内，没有溢出。所以不存在。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？页面上标题和内容框没有重叠，所以不存在。
+
+G3_ALIGNMENT_OFFSET：元素是否错位？标题和内容框的对齐看起来正常，没有偏移。
+
+G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题是大号粗体，列表项是常规字体，但这里是否属于“应该匹配”的情况？比如标题和列表项是否需要一致？但可能不算，因为标题是标题，列表是正文。不过再仔细看，是否有其他不一致？比如列表项的字体大小是否一致？这里列表项都是相同的，所以G4不存在？
+
+G5_BRAND_COLOR_VIOLATION：颜色是否离品牌色？蓝色边框和标题蓝色，假设品牌色包含这些，所以不存",page
+g7_card_height_024__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看各个候选：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看列表里的文字，比如“Discovery & scoping”等，都在框内，没有溢出。所以G1不存在。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？页面上标题和内容框没有重叠，所以G2不存在。
+
+G3_ALIGNMENT_OFFSET：元素是否错位？标题和内容框的对齐看起来正常，没有偏移，所以G3不存在。
+
+G4_FONT_SIZE_INCONSISTency：字体大小是否不一致？标题是大号粗体，列表项是较小字体，但可能属于设计，不过这里要看是否应该匹配。但如果没有特别说明，可能不算？或者看是否有明显不一致。不过再仔细看，标题和列表项的字体大小差异是否属于违规？可能不是，所以G4是否存在？
+
+G5_BRAND_COLOR_VIOLATION：颜色是否离品牌色？",page
+g7_card_height_027__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看各个候选：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看列表里的文字，都在框内，没有溢出。所以不存在。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？页面上标题和内容框没有重叠，所以不存在。
+
+G3_ALIGNMENT_OFFSET：元素是否错位？标题和内容框的对齐看起来正常，没有偏移。
+
+G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题和内容框内的文字，标题是大号粗体，内容框内的标题（绿色）和其他列表项字体，可能是否有不一致？但这里可能没有明显不一致，或者需要再看。不过先继续。
+
+G5_BRAND_COLOR_VIOLATION：颜色是否离品牌色？假设绿色是品牌色，这里用了绿色，所以可能没问题？
+
+G6_MARGIN_VIOLATION：元素是否超出页边距？内容框在页面内，没有超出。",page
+g7_card_height_026__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看各个候选：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看绿色框内的文字，每个项目符号的文本都在框内，没有溢出。所以G1不存在。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？页面上只有标题和绿色框，没有重叠情况，所以G2不存在。
+
+G3_ALIGNMENT_OFFSET：元素是否错位？标题和绿色框的位置看起来对齐，没有明显偏移，所以G3不存在。
+
+G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题是大号粗体，绿色框内的标题（Success Metrics）和列表项字体大小是否有差异？看列表项的字体，可能和绿色框内的标题字体大小是否一致？假设这里没有明显不一致，或者需要再看。但可能没有，所以G4不存在？
+
+G5_BRAND_COLOR_VIOLATION：颜色是否违规？绿色框的颜色和品牌色",page
+g7_card_height_025__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看各个候选：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看列表里的项目，每个项目都在框内，没有溢出。所以G1不存在。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？页面上标题和框，框内的项目，没有重叠。所以G2不存在。
+
+G3_ALIGNMENT_OFFSET：元素是否错位？标题和框的对齐，框内的项目对齐，看起来没有明显偏移。所以G3不存在？
+
+G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题是大号粗体，框内的标题（橙色）和列表项字体，可能列表项字体大小是否一致？看列表项，每个项目字体大小应该一致，这里可能没有不一致？或者有没有？比如标题和列表项的字体大小差异是否属于？但G4是“among text that should match”，如果列表项之间字体大小一致，那G4不存在。
+
+G5",page
+g7_unbreakable_text_000__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看G1_TEXT_OVERFLOW：文本是否溢出框？看橙色框里的文本，应该没有溢出。G2_ELEMENT_OVERLAP：元素是否重叠？这里标题和框没有重叠。G3_ALIGNMENT_OFFSET：元素对齐是否错位？标题和框的对齐看起来正常。G4_FONT_SIZE_INCONSISTency：字体大小是否不一致？标题和框内的文字字体大小是否有问题？比如“Endpoint:”是橙色，其他是深蓝色，但字体大小是否一致？可能需要看。不过再仔细看，是否有其他问题。然后S1_TITLE_BODY_MISMATCH：标题是Implementation Roadmap，框内也是Implementation Roadmap，所以匹配。S4_DENSITY_RULE_VIOLATION：是否太拥挤？这里内容不多，不算。S6_IMAGE_TEXT_C",page
+g7_card_height_029__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看各个候选：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看内容里的项目符号，比如“Activation rate +18%”等，都在框内，没有溢出。所以G1不存在。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？页面上标题和框内的元素，没有重叠情况，所以G2不存在。
+
+G3_ALIGNMENT_OFFSET：元素是否错位？标题和框的位置，以及框内列表的对齐，看起来是对齐的，没有偏移，所以G3不存在。
+
+G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题是大号粗体，框内标题是蓝色小一点，列表项是普通字体，这里可能有差异？但需要看是否“should match”。不过可能不算严重？或者有没有其他更明显的？
+
+G5_BRAND_COLOR_VIOLATION：颜色是否离品牌色？假设品牌色是蓝色相",page
+g7_unbreakable_text_002__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看G1_TEXT_OVERFLOW：文本是否溢出框？看绿色框里的内容，文本应该在框内，没有溢出。G2_ELEMENT_OVERLAP：元素是否重叠？这里只有标题和绿色框，没有重叠。G3_ALIGNMENT_OFFSET：元素对齐是否错位？标题和绿色框的对齐看起来正常。G4_FONT_SIZE_INCONSISTency：字体大小是否不一致？标题和框内的文字字体大小是否有差异？可能需要看，但如果没有明显不一致的话？不过再仔细看，比如“Endpoint:”和后面的路径，字体大小是否一致？假设这里没有。G5_BRAND_COLOR_VIOLATION：颜色是否违规？绿色框的颜色是否符合品牌？假设没问题。G6_MARGIN_VIOLATION：元素是否超出页边距？绿色框在页面内，没有超出。S1_TITLE_BODY_MISMATCH：标题和",page
+g7_card_height_028__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看各个候选：
+
+G1_TEXT_OVERFLOW：文本是否溢出？看列表里的文字，比如“Expand into 3 new verticals”等，都在框内，没有溢出。所以G1不存在。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？页面上标题和内容框，没有重叠。所以G2不存在。
+
+G3_ALIGNMENT_OFFSET：元素是否错位？标题和内容框的对齐，看起来是对齐的，没有偏移。所以G3不存在。
+
+G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题是大号粗体，内容框内的标题（橙色）和列表项字体，是否有不一致？假设这里可能有，但需要看。不过可能没有明显不一致？或者再仔细看。比如标题“Q3 Go-to-Market Plan”是黑色粗体，内容框内的标题是橙色，列表项是黑色普通字体。如果这些字体大小是否一",page
+g7_unbreakable_text_005__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看G1_TEXT_OVERFLOW：文本是否溢出框？看橙色框里的文本，应该没有溢出。G2_ELEMENT_OVERLAP：元素是否重叠？这里标题和框没有重叠。G3_ALIGNMENT_OFFSET：元素对齐是否错位？标题和框的对齐看起来正常。G4_FONT_SIZE_INCONSISTency：字体大小是否不一致？标题和框内的文字字体大小是否有问题？比如“Endpoint:”是橙色，其他是深蓝色，但字体大小是否一致？可能这里没有明显不一致。G5_BRAND_COLOR_VIOLATION：颜色是否品牌违规？假设品牌颜色没问题。G6_MARGIN_VIOLATION：元素是否超出页边距？框在页面内，没有。S1_TITLE_BODY_MISMATCH：标题和内容是否匹配？标题是Implementation Roadmap，框内也是，所以",page
+g7_unbreakable_text_003__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型。首先看G1_TEXT_OVERFLOW：文本是否溢出框？看橙色框里的文本，是否有超出。然后其他类型。先分析每个候选：
+
+G1_TEXT_OVERFLOW：检查文本是否溢出其容器（橙色框）。看文本部分，是否有溢出。假设这里文本没有溢出？不对，再仔细看。或者可能有？不对，再想。然后其他类型，比如G2元素重叠？页面上元素是否重叠？这里标题和框没有重叠。G3对齐偏移？元素是否对齐错？标题和框的对齐是否正常？G4字体大小不一致？标题和框内的文字字体是否一致？标题是黑色粗体，框内“Success Metrics”是橙色，其他是黑色，字体大小是否一致？可能一致？G5品牌颜色违规？颜色是否符合品牌？这里橙色可能是品牌色，所以没问题？G6边距违规？元素是否超出页边距？页面背景白色，元素在中间，没有超出。S1标题和正文不匹配？标题是Success Metrics，",page
+g7_unbreakable_text_006__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看G1_TEXT_OVERFLOW：文本是否溢出框？看橙色框里的内容，文本应该在框内，没有溢出。G2_ELEMENT_OVERLAP：元素是否重叠？这里标题和框没有重叠。G3_ALIGNMENT_OFFSET：元素对齐是否错位？标题和框的对齐看起来正常。G4_FONT_SIZE_INCONSISTency：字体大小是否不一致？标题和框内的文字字体大小是否有问题？比如“Risk Register”是大标题，框内“Risk Register”是橙色，下面的Endpoint等字体大小是否一致？可能这里没有明显不一致。G5_BRAND_COLOR_VIOLATION：颜色是否违规？橙色框和文字颜色是否符合品牌？假设没有。G6_MARGIN_VIOLATION：元素是否超出页边距？页面的元素都在边距内。S1_TITLE_BODY_MISMAT",page
+g7_unbreakable_text_007__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看G1_TEXT_OVERFLOW：文本是否溢出框？这里文本在蓝色框内，没有溢出。G2_ELEMENT_OVERLAP：元素是否重叠？没有。G3_ALIGNMENT_OFFSET：元素对齐是否错位？标题和内容框的对齐看起来正常。G4_FONT_SIZE_INCONSISTency：字体大小是否不一致？标题和内容里的文字字体大小是否有问题？比如“Endpoint:”和后面的路径，可能字体大小是否一致？但这里可能没有明显不一致。G5_BRAND_COLOR_VIOLATION：颜色是否违规？颜色是蓝色等，没看到品牌色问题。G6_MARGIN_VIOLATION：元素是否超出页边距？页面内的元素都在范围内。S1_TITLE_BODY_MISMATCH：标题和正文是否匹配？标题是Implementation Roadmap，内容框里也有Im",page
+g7_unbreakable_text_001__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看G1_TEXT_OVERFLOW：文本是否溢出框？看蓝色框里的文本，应该是没有溢出，因为框足够大。G2_ELEMENT_OVERLAP：元素是否重叠？这里标题和框没有重叠。G3_ALIGNMENT_OFFSET：元素对齐是否错位？标题和框的对齐看起来正常。G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题和框内的文字字体大小是否有差异？比如“Solution Overview”标题和框内“Solution Overview”可能字体大小不同？但需要确认。不过再看其他类型，比如S4_DENSITY_RULE_VIOLATION：页面是否太拥挤？这里只有标题和一个框，内容不多，所以密度没问题。S1_TITLE_BODY_MISMATCH：标题和正文是否匹配？标题是Solution Overview，框内也是",page
+g7_unbreakable_text_010__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看G1_TEXT_OVERFLOW：文本是否溢出框？看里面的文本，框是浅蓝色的矩形，文本应该在框内，这里可能没有溢出？不对，再仔细看。然后G2_ELEMENT_OVERLAP：元素是否重叠？页面上标题和下面的框，没有重叠。G3_ALIGNMENT_OFFSET：元素对齐是否错位？标题和框的位置，可能对齐正常？G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题和框内的文字，标题是大字体，框内“Implementation Roadmap”是小一点，然后Endpoint是另一个字体？但可能没有明显不一致？G5_BRAND_COLOR_VIOLATION：颜色是否违规？页面背景白色，框浅蓝色，没有品牌色问题？G6_MARGIN_VIOLATION：元素是否超出页边距？页面元素都在范围内。S1_TITLE_BOD",page
+g7_unbreakable_text_011__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看G1_TEXT_OVERFLOW：文本是否溢出框？这里框内的文本应该在框内，所以没有。G2_ELEMENT_OVERLAP：元素是否重叠？页面上元素没有重叠。G3_ALIGNMENT_OFFSET：元素对齐是否错位？标题和内容框的对齐看起来正常。G4_FONT_SIZE_INCONSISTency：字体大小是否不一致？标题和内容里的文字字体大小是否有问题？比如“Risk Register”是大标题，下面的内容框里的文字可能有不同，但这里可能没有明显不一致？或者看是否有应该匹配的字体大小不一致。不过再仔细看，可能没有。G5_BRAND_COLOR_VIOLATION：颜色是否违规？这里颜色是蓝色和黑色，假设品牌色没问题。G6_MARGIN_VIOLATION：元素是否超出页边距？页面元素都在边距内。S1_TITLE_BODY_MIS",page
+g7_unbreakable_text_008__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看G1_TEXT_OVERFLOW：文本是否溢出框？看里面的Endpoint部分，文本长度是否超过容器？然后其他类型。先逐个分析：
+
+G1_TEXT_OVERFLOW：检查文本是否溢出。看页面中的文本框，Endpoint的文本是否在框内？假设这里没有溢出？不对，可能要看。或者有没有其他问题？
+
+再看各个候选类型：
+
+G1_TEXT_OVERFLOW：如果文本在框内，没有溢出，那不存在。但需要确认。
+
+G2_ELEMENT_OVERLAP：元素是否重叠？页面中标题和文本框是否有重叠？看结构，标题“Platform Architecture”和下面的文本框，应该是分开的，没有重叠，所以G2不存在。
+
+G3_ALIGNMENT_OFFSET：元素是否对齐错误？比如标题和文本框的位置是否对齐？假设是对齐的，所以G3不存在。
+
+G4_FONT",page
+g7_unbreakable_text_016__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看G1_TEXT_OVERFLOW：文本是否溢出框？看橙色框里的内容，文本应该在框内，没有溢出。G2_ELEMENT_OVERLAP：元素是否重叠？这里标题和框没有重叠。G3_ALIGNMENT_OFFSET：元素对齐是否错位？标题和框的对齐看起来正常。G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题和框内的文字字体大小是否有问题？比如“Solution Overview”标题和框内的“Solution Overview”可能字体大小不同？但需要确认。不过再仔细看，可能没有明显不一致。G5_BRAND_COLOR_VIOLATION：颜色是否违规？橙色边框和背景是浅橙色，可能没问题。G6_MARGIN_VIOLATION：元素是否超出页边距？页面的元素都在范围内。S1_TITLE_BODY_MISMAT",page
+g7_unbreakable_text_014__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看G1_TEXT_OVERFLOW：文本是否溢出框？看蓝色框里的文本，Endpoint后的ARN是否溢出？看框的边界，文本应该在框内，所以可能没有？不对，再仔细看。然后G2_ELEMENT_OVERLAP：元素是否重叠？这里标题和框，框和内容，没有重叠。G3_ALIGNMENT_OFFSET：元素对齐是否错位？标题和框的位置，框内的文字对齐，可能没有。G4_FONT_SIZE_INCONSISTency：字体大小是否不一致？标题是黑色粗体，框内“Platform Architecture”是蓝色，Endpoint是蓝色加粗？可能字体大小是否有差异？比如标题和框内文字的大小。假设标题字体大，框内文字小，但如果没有明显不一致？或者看是否有。G5_BRAND_COLOR_VIOLATION：颜色是否违规？这里颜色是蓝色、黑色，没有品牌色问",page
+g7_unbreakable_text_012__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看G1_TEXT_OVERFLOW：文本是否溢出框？看蓝色框里的内容，文本应该在框内，没有溢出。G2_ELEMENT_OVERLAP：元素是否重叠？这里标题和框内的元素没有重叠。G3_ALIGNMENT_OFFSET：元素对齐是否错位？标题和框的位置看起来正常。G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题和框内文字的字体大小是否有问题？比如标题是黑色粗体，框内“Q3 Go-to-Market Plan”是蓝色，其他文字是黑色，可能字体大小是否一致？但如果没有明显不一致的话？或者看是否有其他问题。G5_BRAND_COLOR_VIOLATION：颜色是否品牌色错误？这里颜色是蓝色、黑色等，假设没有品牌色错误。G6_MARGIN_VIOLATION：元素是否超出页边距？页面的元素都在边距内。S1_TIT",page
+g7_unbreakable_text_004__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G4_FONT_SIZE_INCONSISTENCY""]",,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看G1_TEXT_OVERFLOW：文本是否溢出框？看绿色框里的文本，是否有超出。然后其他类型。
+
+先分析每个候选：
+
+G1_TEXT_OVERFLOW：检查文本是否溢出其容器（绿色框）。看绿色框内的文本，是否有部分超出。假设这里文本是否溢出？比如“Endpoint:”后的ARN是否在框内。如果框足够大，可能没有。但再仔细看，可能是否有溢出？
+
+然后G2_ELEMENT_OVERLAP：元素是否重叠。页面上只有标题和绿色框，没有重叠。
+
+G3_ALIGNMENT_OFFSET：元素是否错位。标题和绿色框的对齐，是否有偏移？比如标题在左上角，绿色框在其下方，对齐是否正确？
+
+G4_FONT_SIZE_INCONSISTency：字体大小是否不一致。标题是黑色粗体，绿色框内的文字，比如“Platform Architecture”是绿色",page
+g7_unbreakable_text_017__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看G1_TEXT_OVERFLOW：文本是否溢出框？看橙色框里的文本，是否有超出。然后其他类型。
+
+先分析每个候选：
+
+G1_TEXT_OVERFLOW：检查文本是否溢出其容器（橙色框）。看“Endpoint:”后的ARN文本，是否在框内。假设这里没有溢出？不对，可能要看。或者有没有？
+
+G2_ELEMENT_OVERLAP：元素是否重叠。页面上标题和框的位置，是否有重叠？标题是黑色大字体，框在下方，没有重叠。
+
+G3_ALIGNMENT_OFFSET：元素是否错位。标题和框的对齐，是否有偏移？比如标题和框的水平或垂直对齐是否正确。假设没有明显错位？
+
+G4_FONT_SIZE_INCONSISTency：字体大小是否不一致。标题是大字体，框内的文字，比如“Implementation Roadmap”和“Endpoint:”等，是",page
+g7_unbreakable_text_021__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看G1_TEXT_OVERFLOW：文本是否溢出框？看蓝色框里的文本，应该是没有溢出，因为框足够大。G2_ELEMENT_OVERLAP：元素是否重叠？这里标题和框内内容没有重叠。G3_ALIGNMENT_OFFSET：元素对齐是否错位？标题和框的位置看起来正常。G4_FONT_SIZE_INCONSISTency：字体大小是否不一致？标题和框内的文字字体大小是否有差异？比如“Implementation Roadmap”是大标题，框内的“Implementation Roadmap”是蓝色，可能字体大小不同？但需要确认。不过再看其他类型。S1_TITLE_BODY_MISMATCH：标题和主体是否匹配？标题是Implementation Roadmap，框内也是，所以匹配。S4_DENSITY_RULE_VIOLATION：是否太",page
+g7_unbreakable_text_018__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型。首先看G1_TEXT_OVERFLOW：文本是否溢出框。看框里的文本，是否有超出。然后其他类型。先分析：
+
+G1_TEXT_OVERFLOW：检查文本是否溢出容器。看页面中的文本框，里面的文本是否有溢出。假设这里文本没有溢出？不对，再仔细看。或者可能有？不对，再看。然后其他类型。
+
+现在逐一检查：
+
+G1_TEXT_OVERFLOW：文本是否在框内。看框内的文本，是否有溢出。假设这里文本没有溢出？那可能没有。但再看其他类型。
+
+G2_ELEMENT_OVERLAP：元素是否重叠。页面中标题和文本框是否重叠？没有，所以不。
+
+G3_ALIGNMENT_OFFSET：元素是否对齐错位。标题和文本框的对齐，是否有偏移？假设没有。
+
+G4_FONT_SIZE_INCONSISTency：字体大小是否一致。标题和文本框内的字体，是否有差异？比如标题是大号",page
+g7_unbreakable_text_013__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G4_FONT_SIZE_INCONSISTENCY""]",,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看G1_TEXT_OVERFLOW：文本是否溢出框？看框里的文字，Endpoint后的ARN是否在框内。然后其他类型，比如G2元素重叠？这里没有多个元素重叠。G3对齐偏移？标题和内容的对齐？G4字体大小不一致？标题和内容字体是否有差异？G5品牌色违规？颜色是否符合？G6边距违规？元素是否超出页边距？S1标题和正文不匹配？标题是Risk Register，内容也是Risk Register开头，可能匹配？S4密度规则违规？页面是否太密？S6图像文本矛盾？这里没有图像。
+
+现在看G1_TEXT_OVERFLOW：框内的文字，Endpoint后的ARN是否在框内。假设框足够大，没有溢出？不对，再仔细看。或者有没有其他问题？比如G4字体大小，标题和内容的字体是否一致？标题是黑色粗体，内容里的Risk Register是灰色，Endpoint",page
+g7_unbreakable_text_023__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看G1_TEXT_OVERFLOW：文本是否溢出框？看橙色框里的内容，文本应该在框内，没有溢出。G2_ELEMENT_OVERLAP：元素是否重叠？这里标题和框没有重叠。G3_ALIGNMENT_OFFSET：元素对齐是否错位？标题和框的对齐看起来正常。G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题和框内的文字字体大小是否有问题？比如“Success Metrics”是大标题，框内的“Success Metrics”是橙色，下面的Endpoint等字体可能有差异？但需要看是否属于应该匹配的。不过可能这里没有明显不一致。G5_BRAND_COLOR_VIOLATION：颜色是否违规？橙色边框和文字，假设品牌色没问题。G6_MARGIN_VIOLATION：元素是否超出页边距？页面背景白色，元素都在范围内",page
+g7_unbreakable_text_009__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G4_FONT_SIZE_INCONSISTENCY""]",,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看G1_TEXT_OVERFLOW：文本是否溢出框？看里面的文本，应该在框内，没有溢出。G2_ELEMENT_OVERLAP：元素是否重叠？页面上元素没有重叠。G3_ALIGNMENT_OFFSET：元素是否错位？标题和内容框的对齐，看起来正常。G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题和内容框内的文字，可能有不同，但这里要看是否“should match”，比如标题和内容框内的文字是否是同一类，可能没有明显不一致？或者看是否有问题。G5_BRAND_COLOR_VIOLATION：颜色是否违规？页面颜色是默认的，没有品牌色问题。G6_MARGIN_VIOLATION：元素是否超出页边距？内容框在页面内，没有。S1_TITLE_BODY_MISMATCH：标题和正文是否匹配？标题是Platform",page
+g7_unbreakable_text_015__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型。首先看G1_TEXT_OVERFLOW：文本是否溢出框。看蓝色框里的文本，是否有超出？然后其他类型。先分析每个候选：
+
+G1_TEXT_OVERFLOW：检查文本是否溢出其容器（蓝色框）。看文本部分，是否有溢出。假设这里文本没有溢出？不对，再仔细看。或者可能有？不对，再看。
+
+然后G2_ELEMENT_OVERLAP：元素是否重叠。页面上标题和框的位置，是否有重叠？标题在上方，框在下方，没有重叠。
+
+G3_ALIGNMENT_OFFSET：元素是否错位。标题和框的对齐，是否有偏移？比如标题和框的水平或垂直对齐是否正确。假设是对齐的？
+
+G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致。标题和框内的文字，字体大小是否一致？标题是黑色粗体，框内“Implementation Roadmap”是蓝色，其他是黑色，字体大小是否有",page
+g7_unbreakable_text_019__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看G1_TEXT_OVERFLOW：文本是否溢出框？看框里的文本，Endpoint后的路径是否在框内。然后其他类型，比如G2元素重叠？这里没有重叠。G3对齐偏移？元素是否对齐？G4字体大小不一致？标题和内容字体是否一致？G5品牌色违规？颜色是否符合？G6边距违规？元素是否超出页边距？S1标题和正文不匹配？标题是Success Metrics，正文也是Success Metrics，所以匹配。S4密度规则违规？页面是否拥挤？S6图像文本矛盾？这里没有图像。
+
+现在看G1_TEXT_OVERFLOW：框内的文本，Endpoint后的路径是否在框内。假设框足够大，文本没有溢出？不对，可能要看。或者有没有其他问题。再仔细看，所有元素是否正常。比如，是否有元素超出？比如，框的边界内文本是否都在。如果没有其他问题，那是否有缺陷？
+
+再检查每个类",page
+g7_unbreakable_text_022__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看G1_TEXT_OVERFLOW：文本是否溢出框？看蓝色框里的文本，应该是没有溢出，因为框足够大。G2_ELEMENT_OVERLAP：元素是否重叠？这里标题和框内内容没有重叠。G3_ALIGNMENT_OFFSET：元素对齐是否错位？标题和框的位置看起来正常。G4_FONT_SIZE_INCONSISTency：字体大小是否不一致？标题和框内的文字字体大小是否有差异？比如“Implementation Roadmap”是大标题，框内的“Implementation Roadmap”是蓝色，可能字体大小不同？但需要确认。不过再看其他类型。S1_TITLE_BODY_MISMATCH：标题和主体是否匹配？标题是Implementation Roadmap，框内也是，所以匹配。S4_DENSITY_RULE_VIOLATION：是否过",page
+g7_unbreakable_text_028__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看G1_TEXT_OVERFLOW：文本是否溢出框？看里面的文本，应该在框内，没有溢出。G2_ELEMENT_OVERLAP：元素是否重叠？这里标题和框没有重叠。G3_ALIGNMENT_OFFSET：元素对齐是否错位？标题和框的对齐看起来正常。G4_FONT_SIZE_INCONSISTency：字体大小是否不一致？标题和框内的文字字体大小是否有问题？比如标题是大号，框内文字可能有不同，但需要看是否“should match”。不过可能这里没有明显不一致？或者再仔细看。然后S1_TITLE_BODY_MISMATCH：标题是Implementation Roadmap，框内也是Implementation Roadmap，所以匹配。S4_DENSITY_RULE_VIOLATION：是否太拥挤？页面上只有标题和一个框，内容不多，所",page
+g7_unbreakable_text_024__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看G1_TEXT_OVERFLOW：文本是否溢出框？看橙色框里的文本，是否有超出。然后其他类型。
+
+先分析每个候选：
+
+G1_TEXT_OVERFLOW：检查文本是否溢出其容器（橙色框）。看文本部分，“Endpoint: ...”的文本是否在框内。假设这里没有溢出？不对，可能要看。或者看是否有溢出。比如，假设文本没有溢出，那G1不存在？
+
+G2_ELEMENT_OVERLAP：元素是否重叠。页面上标题和框的位置，是否有重叠？标题“Implementation Roadmap”和下面的框，是否有重叠？看图片，标题在上方，框在下方，没有重叠，所以G2不存在。
+
+G3_ALIGNMENT_OFFSET：元素是否错位。标题和框的对齐，是否有偏移？比如标题左对齐，框也左对齐，可能对齐正确，所以G3不存在？
+
+G4_FONT_SIZE_INCO",page
+g7_unbreakable_text_025__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看G1_TEXT_OVERFLOW：文本是否溢出框？看里面的文本，框是浅蓝色的矩形，文本应该在框内，这里可能没有溢出？不对，再仔细看。然后G2_ELEMENT_OVERLAP：元素是否重叠？页面上标题和下面的框，没有重叠。G3_ALIGNMENT_OFFSET：元素对齐是否错位？标题和框的位置，可能对齐正常？G4_FONT_SIZE_INCONSISTENCY：字体大小是否不一致？标题和框内的文字，比如“Implementation Roadmap”是大标题，框内的“Endpoint:”等字体大小是否有差异？可能有，但不确定。G5_BRAND_COLOR_VIOLATION：颜色是否违规？这里颜色是默认的，没有明显品牌色问题。G6_MARGIN_VIOLATION：元素是否超出页边距？页面的元素都在页内。S1_TITLE_BODY_",page
+g7_unbreakable_text_026__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看G1_TEXT_OVERFLOW：文本是否溢出框？看橙色框里的内容，文本应该在框内，没有溢出。G2_ELEMENT_OVERLAP：元素是否重叠？这里标题和框没有重叠。G3_ALIGNMENT_OFFSET：元素对齐是否错位？标题和框的对齐看起来正常。G4_FONT_SIZE_INCONSISTency：字体大小是否不一致？标题和框内的文字字体大小是否有问题？比如“Endpoint:”是橙色，其他文字颜色不同但字体大小可能一致？不对，再看。然后S1_TITLE_BODY_MISMATCH：标题和正文是否匹配？标题是Q3 Go-to-Market Plan，框内也是，所以匹配。S4_DENSITY_RULE_VIOLATION：是否太拥挤？这里内容不多，不算拥挤。S6_IMAGE_TEXT_CONTRADICTION：有没有图像和文",page
+g7_unbreakable_text_027__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型。首先看G1_TEXT_OVERFLOW：文本是否溢出框。看橙色框里的文本，是否有超出？然后其他类型。先分析每个候选：
+
+G1_TEXT_OVERFLOW：检查文本是否溢出其容器（橙色框）。看文本部分，是否有溢出？假设这里文本没有溢出？不对，再仔细看。或者可能有？不对，再看。然后其他类型：
+
+G2_ELEMENT_OVERLAP：元素是否重叠。这里标题和框之间没有重叠，框内元素也没重叠。
+
+G3_ALIGNMENT_OFFSET：元素是否错位。标题和框的对齐，看起来是对齐的？
+
+G4_FONT_SIZE_INCONSISTENCY：字体大小是否一致。标题和框内的文字，比如“Implementation Roadmap”是大标题，框内的“Endpoint:”等字体是否一致？假设一致？
+
+G5_BRAND_COLOR_VIOLATION：颜色是否违规",page
+g7_unbreakable_text_029__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"<think>
+用户现在需要检查每个缺陷类型是否存在。首先看G1_TEXT_OVERFLOW：文本是否溢出框？看里面的文本，Endpoint后面的路径是否在框内。然后其他类型，比如G2元素重叠？这里没有重叠。G3对齐偏移？元素是否对齐？G4字体大小不一致？标题和内容的字体？G5品牌色？颜色是否符合？G6边距？元素是否超出页边距？S1标题和正文是否匹配？标题是Platform Architecture，正文也是Platform Architecture开头，可能匹配？S4密度？页面是否拥挤？S6图像和文字矛盾？这里没有图像。
+
+现在看G1_TEXT_OVERFLOW：检查文本是否溢出。假设文本在框内，那没有。但再仔细看，可能有没有？或者是否有其他缺陷？
+
+再逐一分析：
+
+G1_TEXT_OVERFLOW：文本是否溢出其容器（浅蓝色框）。看Endpoint后的路径，是否在框内。如果框足够大，没",page
+g7_unbreakable_text_020__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,,[],"<think>
+用户现在需要检查各个缺陷类型。首先看G1_TEXT_OVERFLOW：文本是否溢出框。看橙色框里的文本，是否有超出？然后其他类型。先分析每个候选：
+
+G1_TEXT_OVERFLOW：检查文本是否溢出其容器（橙色框）。看文本部分，是否有溢出。假设这里文本没有溢出？不对，再仔细看。或者可能有？不对，再看。
+
+然后G2_ELEMENT_OVERLAP：元素是否重叠。页面上标题和框的位置，是否有重叠？标题“Platform Architecture”在上方，框在下方，没有重叠。
+
+G3_ALIGNMENT_OFFSET：元素是否错位。标题和框的对齐，是否有偏移？比如标题左对齐，框也左对齐，可能对齐正确？
+
+G4_FONT_SIZE_INCONSISTency：字体大小是否不一致。标题是大号粗体，框内的“Platform Architecture”是橙色，下面的Endpoint等是",page

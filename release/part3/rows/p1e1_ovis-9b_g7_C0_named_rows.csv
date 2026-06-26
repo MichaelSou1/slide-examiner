@@ -1,0 +1,657 @@
+sample_id,defect,modality,is_clean,failure,has_defect,named_target,predicted_types,locator,confidence,other,raw,level
+g7_card_height_003,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的列表项，比如“Pilot usage-based billing”等是否在卡片外？看结构：卡片是浅绿色的框，里面的列表项都在框内吗？然后下面的列表项（Pilot等）是否在卡片外？但问题问的是“spill outside the box, card, or container”。看每个元素：卡片内的列表项都在框内，卡片外的列表项是否属于溢出？但需要看是否有内容溢出。现在检查所有可见内容，是否有文本跑出容器边缘。比如，假设卡片是那个浅绿色的大框，里面的列表项都在框内，而下面的列表项（Pilot等）是否在卡片外？但这些是否算溢出？或者看是否有元素的内容超出其容器。现在仔细看，所有可见内容是否都在各自的容器内。比如，标题、卡片内的列表项都在卡片内，卡片外的列表项是否属于另一个容器？但问题中的“box, card, or contai",page
+g7_card_height_008,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的列表项，比如“Pilot usage-based billing”等是否在框外？看右边的框是橙色边框的卡片，里面的列表项都在卡片内吗？然后下面的列表项是否在卡片外？但问题问的是spill outside the box（比如text running past a card's edge）。看图片中，卡片内的列表项都在卡片里，而卡片外的列表项是否算？不，问题是问元素的内容是否溢出它应该持有的容器。比如卡片内的内容是否溢出卡片边缘？看卡片内的列表项，每个项目符号后的文字是否在卡片内。然后卡片外的列表项是否属于另一个容器？但这里可能要看是否有内容超出。现在检查：卡片内的列表项都在卡片内，卡片外的列表项是否是另一个容器？但问题中的“box, card, or container”应该是指每个元素的容器。比如卡片是一个容器，里面的列表",page
+g7_card_height_011,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,True,"[""G7_RENDER_CONTAINMENT_OVERFLOW""]",,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的列表项，比如“Latency regressions”等是否在框外？看结构：Risk Register的蓝色框内有前五个项目（Data residency...到Integration debt），然后下面还有三个项目（Latency...等）在框外？不对，看框的范围。哦，框是包含“Risk Register”标题和里面的列表吗？看图片中，框内的列表项应该是前五个？然后下面的三个在框外？那这些列表项是否溢出？比如，假设框是那个大的蓝色边框区域，里面的列表项如果超过框的高度或宽度？但看每个列表项的文本长度，比如“Latency regressions”等文本是否在框外？不，看每个项目是单独的列表项，可能框的高度不够，导致后面的项目在框外？但问题是问是否有内容溢出容器。比如，假设容器是那个蓝色框，里面的列表项是否有的超出？或者看",page
+g7_card_height_010,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的列表项，比如“Cost attribution”等是否在框外？看右边的框是橙色边框的卡片，里面的列表项都在卡片内吗？然后下面的列表项（Cost attribution等）是否在卡片外？但问题问的是“spill outside the box, card, or container”。看卡片内的列表项是否溢出？或者下面的列表项是否属于卡片外？不对，看结构：卡片内的列表项（Unified data plane等）都在卡片里，而下面的Cost attribution等是在卡片外的列表项？但问题是问是否有元素内容溢出容器。比如，假设卡片是一个容器，里面的列表项是否都包含在卡片内？看图片中，卡片内的列表项（五个点）都在卡片的边界内，而下面的三个点（Cost attribution等）是在卡片外的区域，但这些是否属于溢出？不，因为它们是",page
+g7_card_height_001,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的列表项，比如“Offline eval harness”等是否在卡片外？看卡片是浅绿色的矩形框，里面的列表项都在框内吗？检查每个项目：Ingestion service、Feature store等在框内，而框外的Offline eval harness等是否属于溢出？不，因为这些可能是在卡片外的列表，但问题问的是“spill outside the box, card, or container”。看卡片（浅绿色框）内的内容是否溢出，或者外部元素是否溢出。这里卡片内的列表项都在框内，外部的列表项是否算？不对，应该看每个元素是否在自己的容器内。比如卡片内的列表项是否超出卡片边缘？看卡片的边框，里面的列表项都在框内。那有没有元素溢出？再仔细看，所有可见内容都在各自的容器内吗？比如卡片内的列表项没有超出卡片，外部的列表项是否属于",page
+g7_card_height_012,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的列表项，比如“Enablement & training”等是否在框外？看提供的内容，所有项目是否都在容器内？检查后发现没有内容溢出，所以present是false。然后confidence设为1.0？不对，再仔细看。哦，看容器的边界，里面的列表项是否都在框内。假设所有内容都在框内，所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_card_height_015,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看提供的slide，所有列表项都在各自的区域（比如卡片或容器内），没有文字超出边缘、列表项在容器外等情况。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_card_height_004,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的列表项，比如“Cost attribution”等是否在卡片外？但看结构，“Solution Overview”卡片内的列表项应该都在卡片里吗？不对，再仔细看：卡片是浅绿色的矩形框，里面的列表项（Unified data plane等）都在卡片内。而卡片外的列表项（Cost attribution等）是另一个部分？不，问题问的是“spill outside the box, card, or container”。看每个元素是否溢出。比如，卡片内的列表项是否在卡片边缘？假设卡片是那个浅绿色的大框，里面的列表项都在框内。那有没有元素溢出？比如，是否有文本跑到框外？看图片中，所有列表项都在各自的容器内吗？再检查：比如“Cost attribution”这个项目符号是否在卡片外？但卡片是那个浅绿色的框，所以卡片外的列表项属于另一个",page
+g7_card_height_009,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,True,"[""G7_RENDER_CONTAINMENT_OVERFLOW""]",,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的列表项，比如“Latency regressions”等是否在框外？看结构：Risk Register的蓝色框内有前五个项目（Data residency...到Integration debt），然后下面还有三个项目（Latency...等）在框外？不对，看框的范围。哦，框是包含“Risk Register”标题和里面的列表吗？看图片中，框内的列表项应该是前五个？然后下面的三个在框外？那这些列表项是否溢出？比如，假设框是那个大的蓝色边框区域，里面的列表项如果超过框的高度或宽度？但看每个列表项的文本长度，比如“Latency regressions”等文本是否在框外？不，看每个项目是单独的列表项，可能框的高度不够，导致后面的项目在框外？但问题是问是否有内容溢出容器。比如，假设容器是那个蓝色框，里面的列表项如果超过框的容纳范围",page
+g7_card_height_016,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的列表项，比如“Inference cost -31%”等是否在框外？看结构：橙色边框的框内有部分列表项，而下面还有列表项（Inference cost等）是否在框外？不，看每个元素的位置。检查所有可见内容是否都在各自的容器内。这里看，所有文本是否都在对应的框或区域里。比如，橙色边框的框内的列表项，以及外面的列表项，是否有溢出？看图片中，所有文字都没有超出其应该包含的容器（比如卡片、框等）。所以没有溢出的情况，present为false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_card_height_000,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的列表项，比如“Cost attribution”等是否在容器外？但看结构，容器是那个浅蓝色的框，里面的列表项都在框内吗？不对，再仔细看：容器（浅蓝色框）内的列表项，然后下面还有三个项目（Cost attribution等），这些是否属于容器外？但问题问的是“spill outside the box, card, or container”。看每个元素，比如容器内的列表项是否溢出？或者容器外的元素是否属于溢出？不，问题是元素的内容溢出其应该包含的容器。看图片中，容器（浅蓝色框）内的列表项，比如“Unified data plane”等都在框内吗？然后下面的“Cost attribution”等是否在容器外？但这些是否是容器外的元素？不，问题是元素的内容溢出其容器。比如，假设某个列表项的文本长度导致溢出容器边缘。但看图片里的文",page
+g7_card_height_002,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的列表项，比如“Latency regressions”等是否在框外？看结构：Risk Register的绿色框内有部分列表项，而下面的“Latency regressions”等是否在框外？不对，看每个项目符号。哦，看绿色框内的列表项，比如“Data residency exposure”等在框内，而框外的“Latency regressions”等是否属于溢出？不，问题是问是否有内容溢出容器（比如文本跑出卡片边缘）。看绿色框是容器，里面的列表项是否都在框内？然后框外的列表项是否属于溢出？不对，应该看每个元素是否在自己的容器里。比如，假设绿色框是一个容器，里面的列表项是否都在框内？然后框外的列表项是否是溢出？不，可能我理解错了。再仔细看：图中绿色框内的列表项，比如“Data residency exposure”等在框内，而",page
+g7_card_height_014,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的列表项，比如“Offline eval harness”等是否在容器外？但看结构，容器是那个浅蓝色的框，里面的列表项都在框内吗？不对，再仔细看：容器（浅蓝色框）内的列表项是“Ingestion service”到“Observability stack”，而下面的“Offline eval harness”等是在容器外的项目符号。但问题问的是“spill outside the box, card, or container that is supposed to hold it”。这里的容器应该是浅蓝色的那个框。那框内的内容是否溢出？看框内的列表项，每个项目符号都在框内吗？然后框外的项目符号是另外的，不属于该容器的内容。所以检查是否有内容溢出容器：比如文本是否超出容器边缘。看框内的文字，没有溢出，框外的是其他项目，不是该容",page
+g7_card_height_021,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看提供的幻灯片，所有列表项都在蓝色框内，没有文字超出框边缘的情况。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_card_height_007,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的列表项，比如“Inference cost -31%”等是否在框外？但原问题中，检查每个元素是否溢出。看提供的slide里，所有列表项是否都在容器内？不对，再仔细看：容器是橙色边框的框，里面的列表项是否都包含在内？然后下面的项目（Inference cost等）是否在框外？但问题是问“any element's visible content spill outside”，所以要看是否有内容溢出。现在看，比如“Inference cost -31%”这个项目是否在框外？因为框是橙色边框的矩形，里面的列表项应该在框内，而下面的项目可能在框外？不对，再看结构：标题“Success Metrics”下面是橙色边框的框，框内的列表项是Activation rate等，然后框外还有Inference cost等。那这些框外的项目是否属",page
+g7_card_height_013,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,True,"[""G7_RENDER_CONTAINMENT_OVERFLOW""]",,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的列表项，比如“Enablement & training”等是否在框外？看提供的内容，所有列表项都在蓝色框内吗？不，看结构：蓝色框内的列表是Discovery & scoping到Production rollout，而下面的Enablement & training等是在框外？不对，看原始布局：蓝色框是一个大的矩形，里面的列表项是Discovery & scoping、Data wiring、Pilot deployment、Security review、Production rollout，这些在框内。然后下面的Enablement & training、SLA hardening、Quarterly business review是在框外？但问题是问是否有内容溢出容器（box, card, container）。所以",page
+g7_card_height_019,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的列表项，比如“Cost attribution”等是否在框外？看右边的框是橙色边框的卡片，里面的列表项都在卡片内吗？然后下面的列表项（Cost attribution等）是否在卡片外？但问题问的是“spill outside the box, card, or container”。看卡片内的列表项，比如卡片里的五个项目都在卡片内，而卡片外的三个项目（Cost attribution等）是否属于溢出？不，因为卡片外的项目可能不在卡片里，但问题是问元素的内容是否溢出其应该持有的容器。比如卡片内的列表项有没有超出卡片边缘？看卡片的边框，里面的文字是否在边框内。假设所有文字都在各自的容器内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_card_height_026,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看提供的幻灯片，所有列表项都在各自的区域（比如绿色框内和下方的项目），没有文字超出卡片边缘、列表项在卡片外等情况。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_card_height_006,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的列表项，比如“Offline eval harness”等是否在框外？看右边的框是橙色边框的区域，里面的列表项都在框内吗？然后下面的项目符号（Offline eval harness、Drift monitors、Cost governor）是否在框外？哦，右边的大框是橙色边框的矩形，里面的列表项是“Ingestion service”到“Observability stack”，而下面的三个项目符号（Offline eval harness等）是在大框之外的白色背景上。所以这些元素的内容是否溢出？比如，这些项目符号是否属于某个容器？但问题问的是是否有元素内容溢出其应该持有的框、卡片或容器。看右边的大框是一个容器，里面的列表项都在框内，而下面的三个项目符号是否属于另一个容器？但可能这些项目符号没有被包含在任何容器里，或者它们",page
+g7_card_height_018,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的列表项，比如“Pilot usage-based billing”等是否在框外？看右边的框是橙色边框的卡片，里面的列表项都在卡片内吗？然后下面的列表项是否在卡片外？但问题问的是spill outside the box（比如text running past a card's edge）。看图片中，卡片内的列表项都在卡片里，而卡片外的列表项是否算？不，问题是问元素的内容是否溢出它应该持有的容器。比如卡片内的内容是否溢出卡片边缘？看卡片内的列表项，每个项目符号后的文字是否在卡片内。然后卡片外的列表项是否属于另一个容器？但这里可能要看是否有内容超出。现在检查：卡片内的列表项都在卡片内，卡片外的列表项是否是另一个容器？但问题中的“box, card, or container”应该是指每个元素的容器。比如卡片是一个容器，里面的列表",page
+g7_card_height_029,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看提供的幻灯片，所有列表项都在蓝色框内，没有文字跑到框外或者列表项在框外的情况。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_card_height_005,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的列表项，比如“Enablement & training”等是否在框外？看右边的框是橙色边框的矩形，里面的列表项都在框内吗？然后下面的列表项（Enablement & training等）是否在框外？哦，看右边的大框是橙色边框的矩形，里面的列表项是Discovery & scoping到Production rollout，而下面的Enablement & training等是在大框外面吗？不对，看结构：大框内的列表项是前五个，然后下面还有三个列表项在大框外？但问题是问是否有内容溢出容器（比如文本跑出卡片边缘）。看每个元素是否在自己的容器里。比如大框内的列表项都在框内吗？然后下面的列表项是否属于另一个容器？但这里可能大框是一个容器，里面的列表项都在框内，而下面的列表项是否在框外？但问题中的“spill outside the",page
+g7_unbreakable_text_001,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的文本，比如“Endpoint: https://portal.enterprise-customer.example.com/onboarding/2”这部分，是否在框外？看蓝色边框的容器，里面的文本有没有超出。从图中看，文本应该是在容器内的，没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_unbreakable_text_003,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的橙色框，里面的文本“Endpoint: registry.internal.acme-global.example/ml-platform/inference”是否溢出？从图中看，文本在框内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_card_height_027,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的列表项，比如“Pilot usage-based billing”等是否在卡片外？看结构：卡片是浅绿色的框，里面的列表项都在框内吗？然后下面的列表项（Pilot等）是否在卡片外？但问题问的是“spill outside the box, card, or container”。看每个元素：卡片内的列表项都在框内，卡片外的列表项是否属于溢出？但需要看是否有内容溢出。现在检查所有可见内容，是否有文本跑出容器边缘。比如，假设卡片是那个浅绿色的大框，里面的列表项都在框内，而下面的列表项（Pilot等）是否在卡片外？但这些是否算溢出？或者看是否有元素的内容超出其容器。现在仔细看，所有可见内容是否都在各自的容器内。比如，标题、卡片内的列表项都在卡片内，卡片外的列表项是否属于另一个容器？但问题中的容器可能指卡片等。现在判断是否有溢出：没有",page
+g7_card_height_022,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的列表项，比如“Cost attribution”等是否在框外？看右边的框是Solution Overview的蓝色边框区域，里面的列表项都在框内吗？然后下面的列表项（Cost attribution等）是否在框外？不对，看结构：上面的框里有Solution Overview标题和几个项目，下面还有三个项目。但问题是问是否有内容溢出容器（box, card, container）。看每个元素是否在自己的容器内。比如，上面的蓝色框是一个容器，里面的列表项都在框内吗？然后下面的列表项是否属于另一个容器？但问题是一张幻灯片，看是否有内容溢出。比如，有没有文字跑到框外面？看图片中，所有文字都在各自的容器内吗？比如，上面的蓝色框内的列表项都在框内，下面的列表项是否在框外？但可能用户的问题是看是否有内容溢出。现在检查：是否有元素的内容（比",page
+g7_card_height_017,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的列表项，比如“Offline eval harness”等是否在卡片外？看卡片是浅绿色的矩形框，里面的列表项都在框内吗？检查每个项目：Ingestion service、Feature store等在框内，而框外的Offline eval harness等是否属于溢出？不，因为这些可能是在卡片外的列表，但问题问的是“spill outside the box, card, or container”。看卡片（浅绿色框）内的内容是否溢出，或者外部元素是否溢出。这里卡片内的列表项都在框内，外部的列表项是否算？不对，应该看每个元素是否在自己的容器里。比如卡片内的列表项是否超出卡片边缘？看卡片的边框，里面的列表项都在框内。那有没有元素溢出？再仔细看，所有可见内容都在各自的容器内吗？比如卡片内的列表项没有超出卡片，外部的列表项是否属于",page
+g7_unbreakable_text_000,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的橙色框，里面的文本“Endpoint: https://portal.enterprise-customer.example.com/onboarding/2”是否溢出？看右边的文本，应该是没有溢出，因为整个内容在框内？不对，再仔细看。哦，可能我错了？不，再检查。图片中的橙色矩形框，里面的文字是否都在框内？看右边的文本，假设框足够宽，那有没有溢出？比如，假设框的宽度足够容纳所有文字，那没有溢出。所以present是false？
+
+不对，再看。用户的问题是是否有内容spill outside。看图片里的橙色框，里面的文字是否都在框内。假设框的宽度足够，那没有溢出。所以答案是{""present"": false, ""confidence"": 1.0}？</think>
+
+{""present"": false, ""confidence",page
+g7_unbreakable_text_002,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的绿色框，里面的文本“Endpoint: C:\Users\enterprise\Deployments\2026\Q3\acme-global-manufac”是否溢出？看右边的文本，应该是没有溢出，因为整个内容在框内？不对，再仔细看。哦，可能我错了？不，看问题中的例子，比如text running past a card's edge。现在看这个绿色框（card）里的文本，是否有部分超出？看图片中，绿色框内的文本，右边的部分是否被截断？假设这里的内容没有溢出，所以present是false？
+
+等等，再检查。图片中的绿色矩形框，里面的文字“Endpoint: C:\Users\enterprise\Deployments\2026\Q3\acme-global-manufac”是否在框内？如果框足够宽，那没有溢出。所以判断",page
+g7_card_height_028,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的列表项，比如“Pilot usage-based billing”等是否在框外？看右边的框是橙色边框的卡片，里面的列表项都在卡片内吗？然后下面的列表项是否在卡片外？但问题问的是spill outside the box（比如text running past a card's edge）。看图片中，卡片内的列表项都在卡片里，而卡片外的列表项是否算？不，问题是问元素的内容是否溢出它应该持有的容器。比如卡片内的内容是否溢出卡片边缘？看卡片内的列表项，每个项目符号后的文字是否在卡片内。然后卡片外的列表项是否属于另一个容器？但这里可能要看是否有内容超出。现在检查：卡片内的列表项都在卡片内，卡片外的列表项是否是另一个容器？但问题中的“box, card, or container”应该是指每个元素的容器。比如卡片是一个容器，里面的列表",page
+g7_unbreakable_text_006,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的橙色框，里面的文字“Endpoint: C:\Users\enterprise\Deployments\2026\Q3\acme-global-manufac”是否溢出？检查后发现文字在框内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_unbreakable_text_005,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的橙色框，里面的文本“Endpoint: https://portal.enterprise-customer.example.com/onboarding/2”是否溢出？看右边的文本，应该是没有溢出，因为整个内容在框内？不对，再仔细看。哦，可能我错了？不，再检查。图片中的橙色矩形框，里面的文字是否都在框内？看右边的文本，假设框足够宽，那有没有溢出？如果没有的话，present是false。所以判断是否有溢出，这里没有，所以present为false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_unbreakable_text_009,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有内容溢出容器。看图片里的元素，文本“Endpoint: https://portal.enterprise-customer.example.com/onboarding/2”是否在框内？观察后发现文本没有溢出，所以present是false。然后confidence设为0.9之类的？不对，要严格看。这里所有内容都在容器内，所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_unbreakable_text_008,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有内容溢出容器。看图片里的文本，比如“Endpoint: arn:aws:iam::920183746551:role/acme-global-manufacturing-pr”后面可能被截断？不对，看容器是那个浅蓝色的框。检查每个元素：标题“Platform Architecture”在框外？不，标题在框上方，但框内的内容是否溢出？看框内的文本，“Endpoint: ...”后面有没有超出框？从图中看，框内的文本没有溢出，因为框是包含这些内容的。所以没有溢出的情况，present为false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_unbreakable_text_007,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的文本，比如“Endpoint: C:\Users\enterprise\Deployments\2026\Q3\acme-global-manufac”后面可能还有，但这里看是否溢出。不过仔细看，文本是否在框外？看蓝色边框的框，里面的文本有没有超出。假设这里的文本没有溢出，所以present是false？不对，再检查。哦，可能我错了？不，再看。用户的问题是是否有内容溢出容器。看图片中的元素，比如文本是否在框外。如果文本没有溢出，那present是false。所以最终判断：present为false，confidence设为1.0？因为确定没有溢出。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_unbreakable_text_012,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的蓝色框，里面的文本“Endpoint: https://portal.enterprise-customer.example.com/onboarding/2”是否在框内？检查后发现文本没有溢出，所以present是false。然后confidence设为0.9之类的？不对，要严格看。这里所有内容都在蓝色框内，所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_card_height_023,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,True,"[""G7_RENDER_CONTAINMENT_OVERFLOW""]",,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的列表项，比如“Enablement & training”等是否在框外？看提供的内容，所有列表项都在蓝色框内吗？不，看结构：蓝色框内的列表是Discovery & scoping到Production rollout，而下面的Enablement & training等是在框外？不对，看原始布局：蓝色框是一个大的矩形，里面的列表项是Discovery & scoping、Data wiring、Pilot deployment、Security review、Production rollout，这些在框内。然后下面的Enablement & training、SLA hardening、Quarterly business review是在框外？但问题是问是否有内容溢出容器（box, card, container）。所以",page
+g7_unbreakable_text_014,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的文本，比如“Endpoint:”后面的ARN，还有“Platform Architecture”这些文字是否在框内。观察后发现所有可见内容都在蓝色边框的容器内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_unbreakable_text_013,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有内容溢出容器。看图片里的元素，比如文本是否超出框。这里“Endpoint: arn:aws:iam::920183746551:role/acme-global-manufacturing-pr”这部分，检查是否溢出。从图中看，文本应该在容器内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_unbreakable_text_010,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的文本，比如“Endpoint: arn:aws:iam::920183746551:role/acme-global-manufacturing-pr”后面可能被截断？不对，看容器是那个浅蓝色的框。检查每个元素：标题“Implementation Roadmap”在框外？不，标题在框上方，但框内的内容是否溢出？看框内的文本，“Endpoint: arn:aws:iam::920183746551:role/acme-global-manufacturing-pr”后面有没有超出框？假设这里没有，因为可能文本没溢出。所以判断present为false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_card_height_020,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的列表，所有项目是否都在框内？检查每个项目：Discovery & scoping等在蓝色框内，下面的Enablement & training等是否在框外？看结构，蓝色框内的列表项和框外的列表项，是否有溢出。但问题问的是“spill outside the box, card, or container”。看图片中，蓝色框内的内容和框外的内容，是否有元素（比如文本）超出容器边缘。这里看，所有可见内容是否都在各自的容器里。比如，蓝色框内的列表项都在框内，框外的列表项是否属于另一个容器？但可能用户的问题是看是否有内容溢出。现在看，是否有文本跑到框外？比如，假设蓝色框是一个容器，里面的列表项都在，而框外的列表项是否属于另一个容器？但可能这里的容器是指蓝色框。那看蓝色框内的内容是否溢出？不，蓝色框内的列表项都在。那是否有其他情况？比",page
+g7_unbreakable_text_015,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的文本，比如“Endpoint: registry.internal.acme-global.example/ml-platform/inference”这部分，是否在框外？看渲染后，文本有没有超出蓝色边框的容器。从图中看，文本应该是在容器内的，没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_unbreakable_text_011,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的“Endpoint”后面的路径，是否超出蓝色框？看渲染后，路径部分是否在框外？从图中看，“Endpoint: C:\Users\enterprise\Deployments\2026\Q3\acme-global-manufac” 这里，路径可能因为长度导致是否溢出？但仔细看，蓝色框是包含这些内容的，所以是否有溢出？再检查：元素的内容是否spill outside。比如文本是否跑到框外。看图片中，蓝色框内的内容是否都包含。假设这里没有溢出，所以present为false？不对，再看。哦，可能路径太长，是否超出？比如“acme-global-manufac”后面还有吗？但图中显示的部分，是否在框内？如果框足够大，那没有溢出。所以判断是否有溢出。最终结论是没有，所以present是false。</think>
+
+{""presen",page
+g7_unbreakable_text_016,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的橙色框，里面的文本“Endpoint: C:\Users\enterprise\Deployments\2026\Q3\acme-global-manufac”是否在框内？检查后发现文本没有溢出，所以present是false。然后confidence设为0.9之类的？不对，要严格看。这里所有内容都在框内吗？看框的边界，文本应该在框内，所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_unbreakable_text_020,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的文本，比如“Endpoint: registry.internal.acme-global.example/ml-platform/inference”这部分，是否超出橙色框？看渲染后，文本是否在框内。如果文本没有溢出，那present是false。现在检查：橙色框内的文本是否都在里面。假设这里文本没有溢出，所以present为false。然后confidence设为1.0？不对，要严格看。再仔细看，可能文本有没有超出？比如右边的文本是否被截断？但根据问题，是否spill outside。如果文本在框内，那没有。所以判断present为false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_unbreakable_text_018,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,0.9,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的文本，比如“Endpoint: registry.internal.acme-global.example/ml-platform/inference”这部分，是否在框外？看渲染情况，假设这里没有溢出，那present是false。然后confidence给0.9之类的？不对，先看问题。问题是问是否有内容溢出容器（比如文本跑出卡片边缘等）。看提供的slide里，文本是否在框内。假设这里的文本都在框内，所以present是false。然后confidence设为0.9？不，要准确。再检查：图中的文本都在浅蓝色框内吗？看“Endpoint: registry.internal.acme-global.example/ml-platform/inference”这部分，是否在框的右边？如果框足够宽，那没有溢出。所以判断presen",page
+g7_card_height_025,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,True,"[""G7_RENDER_CONTAINMENT_OVERFLOW""]",,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的列表项，比如“Latency regressions”等是否在框外？看橙色边框的框，里面的列表项都在框内吗？然后下面的项目是否在框外？但问题问的是spill outside the box等。看每个元素：Risk Register标题在框外？不，标题是大标题，然后橙色框内的列表项都在框里，框外的列表项（Latency regressions等）是否属于溢出？但溢出是指内容超出容器边缘。比如，假设容器是橙色框，那么框外的列表项是否算？但看问题中的例子，比如text running past a card's edge。这里橙色框是一个容器，里面的列表项都在框内，框外的列表项是否属于溢出？但可能用户的问题是看是否有内容溢出容器。现在检查：所有列表项中，橙色框内的列表项都在框内，框外的列表项（Latency regressions",page
+g7_unbreakable_text_017,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的文本，比如“Endpoint:”后面的ARN部分，是否超出橙色框？看描述中，文本是否在框外。这里要检查是否有溢出。然后确定是否存在。现在看，假设文本是否溢出。然后输出JSON。
+
+首先，观察元素：橙色边框的框内，文本是否全部在框内。如果有的话，present是false。如果没有，是true。现在看问题中的情况，是否有内容溢出。比如，假设文本没有溢出，那present是false？
+
+不对，再仔细看。用户提供的slide中，橙色框内的文本是否都包含在框里。比如，“Endpoint: arn:aws:iam::920183746551:role/acme-global-manufacturing-pr” 这些文字是否在框内。如果框足够大，没有溢出，那么present是false。所以判断后，present为false，conf",page
+g7_unbreakable_text_026,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的橙色框，里面的文本是否都包含在内。检查后发现所有内容都在框内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_unbreakable_text_004,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的绿色框，里面的文本是否超出。观察到“Endpoint: arn:aws:iam::920183746551:role/acme-global-manufacturing-pr”这部分，可能有没有显示完？但看渲染情况，是否有溢出。然后确定是否存在。这里要检查是否有内容溢出容器边缘。看绿色框内的文本，是否有部分在框外。假设存在的话？不对，再仔细看。哦，用户提供的图片中，绿色框内的文本是否有溢出？比如，假设文本长度导致部分在框外？但根据问题，要判断是否visible content spill outside。现在看，假设存在的话？不，再想。哦，可能我错了。重新看：绿色框是容器，里面的文本是否都在里面。如果文本没有溢出，那present是false。但再仔细看，比如“Endpoint: arn:aws:iam::920183746",page
+g7_unbreakable_text_021,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的文本，比如“Endpoint: https://portal.enterprise-customer.example.com/onboarding/2”这部分，是否在蓝色框外？看渲染后，文本有没有超出蓝色边框。如果有的话就是present为true，否则false。现在检查：蓝色框内的文本，是否有部分在框外？假设这里没有溢出，那present是false？不对，再仔细看。哦，可能我错了？不，再看。用户提供的slide中，蓝色框内的文本是否都包含在内？比如“Endpoint: https://portal.enterprise-customer.example.com/onboarding/2”这个URL是否在框内？如果框足够大，没有溢出，那present是false。所以最终判断：present为false，confiden",page
+g7_unbreakable_text_022,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的文本，比如“Endpoint: https://portal.enterprise-customer.example.com/onboarding/2”这部分，是否在蓝色框外？看渲染后，文本有没有超出蓝色边框。从图中看，文本应该是在蓝色框内吗？不对，再仔细看。哦，可能文本有没有溢出？比如，假设蓝色框是容器，里面的文本是否都包含在内。如果文本没有溢出，那present是false。现在检查：图中的文本都在蓝色框内吗？看“Endpoint: https://portal.enterprise-customer.example.com/onboarding/2”这部分，是否在框内。如果是的话，就没有溢出。所以判断present为false。然后confidence设为1.0？因为确定没有溢出。</think>
+
+{""present",page
+g7_unbreakable_text_023,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的橙色框，里面的文本“Endpoint: C:\Users\enterprise\Deployments\2026\Q3\acme-global-manufac”是否溢出？看渲染后，文本是否在框内。这里应该是没有溢出，因为框足够大？不对，再仔细看。哦，可能我错了？不，看问题中的例子，比如text running past a card's edge。现在看这个橙色框内的文本，是否在框内。假设渲染后文本没有溢出，所以present是false？
+
+等等，再检查。图片中的橙色矩形框，里面的文字是否都在框内。如果文字没有超出框的边缘，那么present为false。所以最终判断是present: false，confidence: 1.0？</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_unbreakable_text_027,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的橙色框，里面的文本“Endpoint: registry.internal.acme-global.example/ml-platform/inference”是否溢出？从图中看，文本应该在框内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_card_height_024,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的列表项，比如“Enablement & training”等是否在框外？看右边的框是橙色边框的矩形，里面的列表项都在框内吗？然后下面的列表项（Enablement & training等）是否在框外？哦，看右边的大框是橙色边框的矩形，里面的列表项是Discovery & scoping到Production rollout，而下面的Enablement & training等是在大框外面吗？不对，看结构：大框内的列表项是前五个，然后下面还有三个列表项在大框外？但问题是问是否有内容溢出容器（比如文本跑出卡片边缘）。看每个元素是否在自己的容器里。比如大框内的列表项都在框内吗？然后下面的列表项是否属于另一个容器？但这里可能大框是一个容器，里面的列表项都在框内，而下面的列表项是否在框外？但问题中的“spill outside the",page
+g7_unbreakable_text_025,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有内容溢出容器。看图片里的文本，比如“Endpoint: arn:aws:iam::920183746551:role/acme-global-manufacturing-pr”后面可能被截断？不对，看容器是那个浅蓝色的框。检查每个元素：标题“Implementation Roadmap”在框外？不，标题在框上方，但框内的内容是否溢出？看框内的文本，“Endpoint: arn:aws:iam::920183746551:role/acme-global-manufacturing-pr”后面有没有超出框？假设这里没有，因为可能文本没溢出。所以判断present为false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_image_objectfit_000,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的元素，比如绿色条纹区域和文字部分。检查是否有内容超出框。这里看各个元素是否在容器内。然后确定是否存在溢出。最终判断是否有，然后给confidence。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_unbreakable_text_028,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有内容溢出容器。看图片里的元素，文本部分是否在框内。这里“Endpoint: https://portal.enterprise-customer.example.com/onboarding/2”这些文字应该是在浅蓝色框内的，没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_unbreakable_text_019,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的“Endpoint”后面的路径，是否超出蓝色框？看渲染后，路径部分是否在框外？从图中看，“Endpoint: C:\Users\enterprise\Deployments\2026\Q3\acme-global-manufac” 这里，路径可能因为长度导致是否溢出？但仔细看，蓝色框是包含这些内容的，所以是否有溢出？不对，再检查：元素的内容是否spill outside。比如文本是否跑到框外。看图片中，蓝色框内的内容，是否有部分在框外？假设这里没有，那present是false？不对，再看。哦，可能我错了。再看：蓝色框是一个容器，里面的文字是否都在里面？比如“Endpoint:”后面的文字，是否在框内？如果文字长度导致部分在框外，那就是溢出。但根据提供的图，可能没有？不对，再想。或者有没有其他情况？比如列表项、图像等，但这里",page
+g7_image_objectfit_002,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的元素，比如那个带斜线的区域和文字部分，有没有超出框。观察后发现没有内容溢出的情况，所以present是false。然后confidence设为0.5？不对，要准确。再检查：所有元素都在各自的框内吗？标题、卡片内的内容，包括文字和图形，都没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_unbreakable_text_024,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的文本，比如“Endpoint:”后面的ARN部分，是否超出橙色框？看描述中，文本是否在框外。这里要检查可见内容是否溢出。假设文本没有溢出，那present是false？不对，再仔细看。哦，可能文本长度导致溢出？但根据提供的截图，假设没有溢出？不对，再想。或者看是否有内容超出容器边缘。如果有的话present为true，否则false。现在看问题中的例子，比如text running past a card's edge。这张图里，橙色框内的文本是否都在框内？假设是的，所以present为false？
+
+不对，再检查。用户提供的slide中，橙色框内的文本是否全部在框内？比如“Endpoint: arn:aws:iam::920183746551:role/acme-global-manufacturing-pr” 这些文字是",page
+g7_image_objectfit_006,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的元素，比如文字、图形是否超出框。图中“Platform Architecture”标题下的框，里面的斜线图形和文字是否溢出？检查后发现没有元素内容溢出容器，所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_image_objectfit_001,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的元素，比如文字、图形是否超出框。图中“Figure 1: architecture”标签在条纹区域，条纹区域是容器吗？还有右侧的文字是否在容器内？检查后发现没有内容溢出的情况，所以present是false。然后confidence设为0.5左右？不对，要严格看。再仔细看：所有元素都在各自的容器（比如条纹块、文本框）内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_image_objectfit_003,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的绿色条纹区域，有没有内容超出？比如文字或者图形是否溢出。这里检查后，没有发现内容溢出的情况，所以present是false。然后confidence设为0.5左右？不对，要严格看。再仔细看：绿色条纹区域内的元素，比如“Figure 1: architecture”在黑色框里，没有溢出；右侧的文字也没有溢出卡片边缘。所以没有溢出情况，present为false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_image_objectfit_004,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的元素，比如文字、图形等是否超出框。图中“Figure 1: architecture”这个标签是否在框内？还有其他部分？检查后发现没有内容溢出的情况，所以present是false。然后confidence设为0.9之类的？不对，要严格看。再仔细看：所有元素都在各自的容器（比如蓝色条纹区域、文本区域）内吗？是的，没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_image_objectfit_005,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的元素，比如文字、图形等是否超出框。图中“Figure 1: architecture”这个标签是否在框内？还有其他部分？检查后发现没有内容溢出的情况，所以present是false。然后confidence设为0.9之类的？不对，要严格看。再仔细看：所有元素都在各自的容器（比如蓝色条纹区域、文本区域）内吗？是的，没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_image_objectfit_007,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的元素，比如那个带斜线的区域和文字部分，有没有超出框。观察后发现没有内容溢出的情况，所以present是false。然后confidence设为0.5？不对，要准确。再检查：所有元素都在各自的框内吗？标题、卡片内的内容，包括文字和图形，都没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_image_objectfit_010,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的元素，比如那个带斜线的区域和文字部分，有没有超出框。观察后发现没有内容溢出的情况，所以present是false。然后confidence设为0.5？不对，要准确。再检查：所有元素都在各自的框内吗？比如“Figure 1: architecture”在小框里，“Reference architecture...”在右边框内，左边斜线区域也在框内。所以没有溢出，present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_image_objectfit_013,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的绿色条纹区域，文字“Reference architecture...”是否在容器内？还有其他元素？检查后发现没有内容溢出的情况，所以present是false。然后confidence设为0.9之类的？不对，要严格看。再仔细看：容器是浅绿色的框，里面的元素是否都在里面。比如条纹图和文字都在框内吗？是的，没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_image_objectfit_015,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的元素，比如那个带斜线的区域和文字部分，有没有超出框。观察后发现没有内容溢出的情况，所以present是false。然后confidence设为0.5？不对，要准确。再检查：所有元素都在各自的框内吗？标题、卡片内的内容，包括文字和图形，都没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_image_objectfit_012,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的绿色条纹区域，有没有内容超出？比如文字或者图形是否溢出。这里检查后，没有发现内容溢出的情况，所以present是false。然后confidence设为0.5左右？不对，要严格看。再仔细看：绿色条纹区域内的元素，比如“Figure 1: architecture”在黑色框里，没有溢出；右侧的文字也没有溢出卡片边缘。所以没有溢出情况，present为false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_unbreakable_text_029,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有内容溢出容器。看图片里的文本，比如“Endpoint: C:\Users\enterprise\Deployments\2026\Q3\acme-global-manufac”后面可能还有，但这里显示的是没有溢出吗？不对，看容器是那个浅蓝色的框，里面的文本是否超出？看提供的内容，假设文本在框内，所以没有溢出。那present是false？不对，再仔细看。哦，用户的问题是是否有元素内容溢出容器。看图片中的文本，比如“Endpoint: C:\Users\enterprise\Deployments\2026\Q3\acme-global-manufac”后面可能被截断，但是否溢出？如果容器是那个框，里面的文本是否超出？假设这里的文本没有溢出，所以present是false？或者有没有？再检查。最终判断：没有内容溢出，所以present为false，con",page
+g7_image_objectfit_018,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的元素，比如绿色条纹区域和文字部分是否在框内。检查后发现没有内容溢出的情况，所以present是false。然后confidence设为1.0？不对，再仔细看。哦，有没有？比如文字是否在框内？看右边的文字“Reference architecture...”应该在框内，左边的条纹区域也没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_image_objectfit_014,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的元素，比如文本、图形等是否超出框。图中“Figure 1: architecture”这个标签是否在框内？还有其他部分？检查后发现没有内容溢出的情况，所以present是false。然后confidence设为0.9之类的？不对，要严格看。再仔细看：所有元素都在各自的容器（比如蓝色框、白色框）内吗？比如右侧的文本区域，左侧的斜线区域，标签都在框内。所以没有溢出，present为false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_image_objectfit_016,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的元素，比如文字、图形等是否超出框。图中“Platform Architecture”标题下的框内，是否有内容溢出？看右边的文字和图形部分，有没有超出容器边缘。检查后发现没有内容溢出的情况，所以present是false。然后confidence设为0.9之类的？不对，要严格看。再仔细看：所有元素都在各自的容器（比如大框、小框）内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_image_objectfit_017,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的绿色条纹区域，有没有内容超出？比如文字或者图形是否溢出。这里检查后，没有发现内容溢出的情况，所以present是false。然后confidence设为0.5左右？不对，要准确。再仔细看：图中的绿色条纹区域，是否有内容超出？比如“Figure 1: architecture”在黑色框里，没有溢出；右边的文字也没有溢出。所以没有溢出情况，present为false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_image_objectfit_011,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的元素，比如那个带斜条纹的区域，还有文字部分。检查是否有内容超出框。比如，图中的元素是否在各自的容器内。看“Figure 1: architecture”这个标签，还有右边的文字，是否都在容器里？再看斜条纹的区域，是否有内容溢出？然后确定是否存在溢出情况。现在看，是否有元素内容溢出。比如，假设某个元素的内容超出了它的框。现在分析：图中各个元素是否都在各自的容器内。如果没有的话，present是false。但再仔细看，比如右边的文字是否在框内？左边的斜条纹区域是否在框内？然后判断是否有溢出。最终确定是否存在。然后输出JSON。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_image_objectfit_009,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的元素，比如那个带斜条纹的区域，还有文字部分。检查是否有内容超出框外。这里看各个元素，比如右侧的文字是否在框内？或者图像是否溢出？看图片中，可能没有明显的溢出情况？不对，再仔细看。哦，不对，看那个带斜条纹的部分，是否在容器内？或者文字？再看，用户的问题是是否有内容spill outside。看图片里的元素，比如“Figure 1: architecture”这个标签是否在框内？还有右侧的文字是否在框内？再看整个布局，是否有元素超出。比如，假设所有元素都在各自的容器内，那present是false？不对，再检查。哦，可能我错了。再看，比如那个大的橙色边框内的区域，里面的元素是否都包含在内。比如斜条纹的图像是不是在框内？右侧的文字是否在框内？如果都没有溢出，那present是false。所以最终判断：present为false，c",page
+g7_image_objectfit_008,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的元素，比如那个斜条纹的区域，还有文字部分。检查是否有内容超出框。比如，图中的元素是否在各自的容器内。这里看，是否有内容溢出？比如，假设某个元素的文本或图形超出其应该包含的框。现在看，图中是否有这种情况。比如，那个斜条纹的块，或者文字部分。然后判断是否存在溢出。现在看，是否有元素的内容（比如文本、图形）超出其容器边缘。如果有，就present为true，否则false。现在分析：图中是否有内容溢出？比如，假设某个元素的边界外有内容。现在看，可能的情况是，比如那个斜条纹的块是否在容器内？或者文字是否溢出？然后确定。现在结论是没有溢出？不对，再仔细看。哦，可能我错了？不，再看。用户的问题是是否有元素的内容溢出容器。比如，图中的元素是否在各自的框里。现在看，图中的各个元素，比如标题、副标题、斜条纹块、文字等，是否都在各自的容器内。如",page
+g7_image_objectfit_019,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的元素，比如绿色条纹区域和文字部分是否在框内。检查后发现没有内容溢出的情况，所以present是false。然后confidence设为1.0？不对，再仔细看。哦，有没有？比如文字是否在框内？看右边的文字“Reference architecture...”应该在框内，左边的条纹图也在框内。所以没有溢出，present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_image_objectfit_023,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的元素，比如那个带斜线的区域和文字部分，有没有超出框。观察后发现没有内容溢出的情况，所以present是false。然后confidence设为0.5？不对，要准确。再检查：所有元素都在各自的框内吗？标题、卡片内的内容，包括文字和图形，都没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_image_objectfit_025,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的元素，比如那个带斜线的区域和文字部分，有没有超出框。观察后发现没有内容溢出的情况，所以present是false。然后confidence设为0.5？不对，要准确。再检查：所有元素都在各自的框内吗？标题、卡片内的内容，包括文字和图形，都没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_image_objectfit_020,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的元素，比如文字、图形等是否超出框。图中“Figure 1: architecture”这个标签是否在框内？还有其他部分？检查后发现没有内容溢出的情况，所以present是false。然后confidence设为0.9之类的？不对，要严格看。再仔细看：所有元素都在各自的容器（比如蓝色框、白色框）内吗？图中的蓝色斜线区域和文字都在对应的框里，没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_image_objectfit_026,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的元素，比如那个带斜线的区域和文字部分，有没有超出框。观察后发现没有内容溢出的情况，所以present是false。然后confidence设为0.5？不对，要准确。再检查：所有元素都在各自的框内吗？标题、卡片内的内容，包括文字和图形，都没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_image_objectfit_027,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的绿色条纹区域，文字“Reference architecture...”是否在容器内？还有其他元素？检查后发现没有内容溢出的情况，所以present是false。然后confidence设为0.5？不对，要准确。再看：容器是浅绿色的框，里面的元素是否都在里面。比如条纹图和文字都在框内吗？是的，所以没有溢出。因此present为false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_image_objectfit_024,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的元素，比如文字、图形等是否超出框。图中蓝色条纹区域和文字部分都在各自的容器内吗？检查后发现没有内容溢出的情况，所以present是false。然后confidence设为1.0？不对，再仔细看。哦，有没有可能？比如文字是否在框外？看右边的文字“Reference architecture...”是否在框内？框是蓝色边框的矩形，文字应该在框内。所以没有溢出，present为false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_card_height_001__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的绿色框，里面的文字都在框内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_card_height_000__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看提供的幻灯片，所有文本都在卡片（浅蓝色框）内，没有文字超出边缘、列表项在卡片外等情况。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_image_objectfit_022,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的元素，比如文字或者图形是否超出框。图中蓝色条纹区域和文字部分，检查是否有溢出。这里应该是没有？不对，再仔细看。哦，可能有没有？不对，看问题中的例子，比如text running past a card's edge等。现在看这个slide里的元素，是否有内容溢出。假设图中没有明显的溢出情况，所以present是false？或者有没有？再检查。比如，图中的文字“Reference architecture...”是否在框内？还有蓝色条纹区域是否在框内？如果都在，那present是false。所以最终判断：present为false，confidence设为1.0？因为确定没有溢出。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_image_objectfit_028,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的绿色条纹区域，有没有内容超出？比如文字或者图形是否溢出。这里检查后，没有发现内容溢出的情况，所以present是false。然后confidence设为0.5左右？不对，要准确。再仔细看：图中的绿色条纹区域，是否有内容超出？比如“Figure 1: architecture”在黑色框里，没有溢出；右边的文字也没有溢出。所以没有溢出情况，present为false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_card_height_002__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的Risk Register部分，所有列表项和标题都在绿色框内，没有文字或元素超出框外。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_card_height_004__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的绿色框，里面的文字和列表都在框内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_card_height_003__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看这个slide里的绿色框，里面的文字和列表项都在框内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_image_objectfit_021,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的元素，比如那个带斜条纹的区域，还有文字部分。检查是否有内容超出框。比如，图中的元素是否在各自的容器内。这里看，是否有内容溢出？比如，假设某个元素的内容（如文本、图像）是否超出其应该包含的框。现在看，图中是否有这种情况。比如，可能的溢出情况：比如文字跑到框外，或者图像超出。现在看，这个图里，是否有元素内容溢出？比如，那个带“Figure 1: architecture”的标签是否在框内？还有右边的文字是否在框内？再看左边的斜条纹区域是否在框内？如果所有元素都在各自的容器内，那么present是false。所以判断后，没有溢出的情况，所以present为false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_card_height_005__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看这个slide里的列表项，都在橙色边框的卡片内，没有文字跑到外面或者列表项在卡片外的情况。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_image_objectfit_029,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的绿色条纹区域，有没有内容超出？比如文字或者图形是否溢出。这里检查后，没有发现内容溢出的情况，所以present是false。然后confidence设为0.5左右？不对，要严格看。再仔细看：图中的绿色条纹区域，是否有内容超出？比如“Figure 1: architecture”在黑色框里，没有溢出；右边的文字也没有溢出。所以没有溢出情况，present为false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_card_height_008__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看这个slide里的内容，标题和列表都在框内，没有文字或项目超出边框。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_card_height_006__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看这个slide里的内容，标题“Platform Architecture”在顶部，下面的框里是列表项，所有文字都在框内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_card_height_007__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看这个slide里的“Success Metrics”卡片，里面的列表项（Activation rate等）都在卡片内，没有文字跑到卡片边缘外，也没有列表项在卡片外。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_card_height_012__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看这个slide里的内容，标题和列表都在蓝色框内，没有文字或元素超出框外。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_card_height_014__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的列表项，每个项目都在浅蓝色框内，没有文字或元素超出框外。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_card_height_015__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看提供的幻灯片，所有文本都在浅蓝色框内，没有超出的情况。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_card_height_010__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看这个slide里的内容，标题“Solution Overview”在顶部，然后下面的框里有列表项。检查每个元素：标题没有溢出，列表项都在框内。所以没有溢出的情况，present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_card_height_017__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的绿色框，里面的文字都在框内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_card_height_016__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看这个slide里的“Success Metrics”卡片，里面的列表项（四个项目符号）都在卡片内，没有文字或元素跑到卡片边缘外。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_card_height_009__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看这个Risk Register的卡片，里面的列表项都在蓝色边框内，没有文字跑到外面。所以present是false。然后confidence设为1.0？不对，因为确实没有溢出，所以present是false，confidence可以是1.0？或者看情况。这里所有内容都在容器内，所以present为false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_card_height_018__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看这个slide里的内容，标题和列表都在框内，没有文字或元素超出边框。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_card_height_011__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看这个Risk Register的卡片，里面的列表项都在蓝色边框内，没有文字跑到外面。所以present是false。然后confidence设为1.0？不对，因为确实没有溢出，所以present是false，confidence可以是1.0？或者看情况。这里所有内容都在容器内，所以present为false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_card_height_013__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看这个slide里的列表项，都在蓝色边框的框内，没有文字跑到框外，也没有列表项在框外。所以present是false。然后confidence设为1.0？不对，因为要严格看是否可见。这里所有内容都在容器内，所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_card_height_021__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看这个slide里的“Success Metrics”卡片，里面的列表项都在卡片内，没有文字跑到边缘外。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_card_height_022__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的列表项，每个项目都在蓝色框内，没有文字超出框边缘。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_card_height_019__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看这个slide里的内容，标题“Solution Overview”在顶部，然后下面的框里有列表项。检查每个元素：标题没有溢出，列表项都在框内。所以没有溢出的情况，present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_card_height_020__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看这个slide里的列表，每个项目都在蓝色框内，没有文字跑到框外。所以present是false。然后confidence设为1.0？不对，因为要严格看是否可见。这里所有内容都在容器内，所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_card_height_024__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看这个slide里的列表项，都在橙色边框的卡片内，没有文字跑到边缘外或者列表项在卡片外的情况。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_card_height_025__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的Risk Register部分，所有列表项和标题都在橙色边框的卡片内，没有文字或元素超出卡片边缘。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_card_height_026__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的绿色框（card），里面的文字都在框内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_card_height_027__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看这个slide里的绿色框，里面的文字和列表项都在框内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_card_height_028__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看这个slide里的内容，标题和列表都在框内，没有文字或项目超出边框。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_card_height_029__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看这个slide里的“Success Metrics”卡片，里面的列表项都在卡片内，没有文字跑到边缘外。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_card_height_023__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看这个slide里的列表项，都在蓝色边框的框内，没有文字跑到框外，也没有列表项在框外。所以present是false。然后confidence设为1.0？不对，因为要严格看是否可见。这里所有内容都在容器内，所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_unbreakable_text_000__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的橙色框，里面的文字是否都在框内。检查后发现所有内容都在框内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_unbreakable_text_001__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的文本，所有内容都在蓝色边框的框内，没有文字跑到框外。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_unbreakable_text_003__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的橙色框，里面的文本是否在框内。检查后发现所有内容都在框内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_unbreakable_text_002__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的绿色框，里面的文字是否都在框内。检查后发现所有内容都在绿色框内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_unbreakable_text_004__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的绿色框，里面的文字是否都在框内。检查后发现所有内容都在绿色框内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_unbreakable_text_005__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的橙色框，里面的文字是否都在框内。检查后发现所有内容都在框内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_unbreakable_text_006__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的Risk Register卡片，里面的文字都在卡片内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_unbreakable_text_009__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的内容，文本都在框内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_unbreakable_text_007__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的文本，所有内容都在蓝色边框的框内，没有文字跑到框外。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_unbreakable_text_011__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的Risk Register部分，文本都在蓝色边框的框内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_unbreakable_text_012__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的内容，所有文本都在蓝色边框的容器内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_unbreakable_text_008__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的文本，比如“Endpoint”后面的ARN，还有“Platform Architecture”这些文字是否在框内。观察后发现所有可见内容都在对应的框（浅蓝色的矩形框）内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_unbreakable_text_013__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的Risk Register卡片，里面的文本是否在框内。观察后，所有内容都在卡片（浅蓝色矩形框）内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_unbreakable_text_015__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的文本，检查是否超出蓝色框。观察后发现文本都在框内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_unbreakable_text_018__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的文本，所有内容都在灰色框内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_unbreakable_text_019__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的文本，所有内容都在蓝色边框的框内，没有文字跑到框外。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_unbreakable_text_014__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的文本，比如“Endpoint”后面的ARN，还有“Platform Architecture”这些文字是否在框内。检查后发现所有可见内容都在蓝色边框的容器内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_unbreakable_text_016__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的卡片（浅橙色带边框的区域），里面的文字是否都在里面。检查后，所有内容都在卡片内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_unbreakable_text_022__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的内容，文本都在蓝色边框的框内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_unbreakable_text_021__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的文本，所有内容都在蓝色边框的框内，没有文字跑到框外。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_unbreakable_text_020__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的文本，检查是否超出框。这里看Endpoint后的长文本，有没有溢出？看容器是那个浅橙色的框，里面的文本是否都在框内。如果文本没有溢出，那present是false。所以要确认。然后输出JSON。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_unbreakable_text_028__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的文本，所有内容都在灰色框内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_unbreakable_text_026__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的橙色框，里面的文字是否都在框内。检查后发现所有内容都在框内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_unbreakable_text_029__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的文本，所有内容都在浅蓝色框内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_unbreakable_text_023__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的橙色框，里面的文字是否都在框内。检查后发现所有内容都在框内，所以present是false。然后confidence设为1.0？不对，因为没有溢出，所以present是false。要确认每个部分：标题、框内的文字，都没有溢出。所以输出{""present"": false, ""confidence"": 1.0}？</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_image_objectfit_000__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的各个部分：标题、卡片内的文字和图像。检查每个元素是否在自己的框内。比如，卡片内的文字和图像都在各自的区域内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_image_objectfit_001__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的各个部分：标题、卡片内的内容（图和文字）。检查每个元素是否在自己的框内。图中的元素都在各自的容器里，没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_image_objectfit_002__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的各个元素：标题、卡片内的内容，比如图中的斜线框（Figure 1: architecture）是否在框内，文字是否超出。检查后发现所有元素都在各自的容器内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_image_objectfit_003__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的各个部分：标题、卡片内的内容（包括图和文字）。检查每个元素是否在自己的框内。比如，卡片内的图和文字都在容器里，没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_unbreakable_text_010__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的文本，比如“Endpoint”后面的ARN，还有“Implementation Roadmap”的重复？不对，看容器是那个浅蓝色的框。检查每个元素：标题“Implementation Roadmap”在框外？不，框内有重复的“Implementation Roadmap”？然后看文本是否溢出。比如“Endpoint: arn:aws:iam::920183746551:role/acme-global-manufacturi ng-prod-inference-gateway-cross-account-readonly-2026q3”这里，“manufacturi”后面可能换行？但看是否溢出容器。再看，所有文本是否都在容器内。如果容器是那个浅蓝色矩形，里面的文本有没有超出边缘。比如“Endpoint”和后面的ARN，还有上",page
+g7_image_objectfit_004__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的各个部分：标题、卡片内的内容，比如图中的蓝色条纹框（Figure 1: architecture）是否在容器内，文字是否超出。检查后发现所有元素都在各自的容器（卡片等）内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_image_objectfit_005__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的各个部分：标题、卡片内的内容，比如图中的蓝色条纹框（Figure 1: architecture）是否在框内，文字是否超出。检查后发现所有元素都在各自的容器内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_image_objectfit_006__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的各个部分：标题、卡片内的内容（图和文字）是否都在容器内。检查后，所有元素都在各自的框或容器里，没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_image_objectfit_008__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的各个元素：标题、卡片内的内容（图和文字）。检查每个部分是否在容器内。比如，卡片的边框内，所有内容（图、文字）都在里面，没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_unbreakable_text_017__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的橙色框，里面的文字是否都在框内。检查后发现所有内容都在框内，所以present是false。然后confidence设为1.0？不对，因为要严格看。再仔细看，框内的文字有没有超出。比如“Endpoint:”后面的内容，还有上面的标题？不，标题在框外？哦，标题“Implementation Roadmap”在橙色框外面，但问题是问的是“element's visible content spill outside the box, card, or container that is supposed to hold it”。这里的container应该是橙色的框。那标题是否属于这个container？不，标题在框外，但问题中的元素是否是指框内的元素？或者看框内的元素是否溢出。框内的内容：橙色框里的文字，有没有超出框的边缘。看",page
+g7_image_objectfit_007__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的各个元素：标题、卡片内的内容，比如图中的框（Figure 1的框）、文本区域等。检查每个元素是否在自己的容器内。这里所有元素都在各自的框或卡片内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_image_objectfit_009__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的各个元素：标题、卡片内的内容（图和文字）。检查每个部分是否在容器内。比如，卡片的边框内，所有内容（图、文字）都在里面，没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_image_objectfit_010__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的各个部分：标题、卡片内的内容（图和文字）。检查每个元素是否在自己的框内。比如，卡片内的图和文字都在容器里，没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_image_objectfit_011__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的各个部分：标题、卡片内的内容（图和文字）是否都在容器内。检查后，所有元素都在各自的框或容器里，没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_unbreakable_text_024__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的橙色框，里面的文字是否都在框内。检查后发现所有内容都在框内，所以present是false。然后confidence设为1.0？不对，因为要严格看。再仔细看，框内的文字有没有超出。比如“Endpoint:”后面的内容，还有上面的标题？不，标题在框外？哦，标题“Implementation Roadmap”在橙色框外面，但问题是问的是“element's visible content spill outside the box, card, or container that is supposed to hold it”。这里的container应该是橙色的框。那标题是否属于这个container？不，标题在框外，但问题中的元素是否是指框内的元素？或者看框内的元素是否溢出。看框内的内容：框内的文字“Implementati",page
+g7_image_objectfit_012__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的各个部分：标题、卡片内的内容（包括图和文字）。检查每个元素是否在自己的框内。比如，卡片内的图和文字都在容器里，没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_image_objectfit_014__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的各个部分：标题、卡片内的内容（图和文字）是否都在框内。检查后，所有元素都在各自的容器（比如卡片的边框内），没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_image_objectfit_013__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的各个部分：标题、卡片内的内容（包括图和文字）。检查每个元素是否在自己的框内。比如，图的框、文字区域等，有没有超出。这里所有元素都在各自的容器内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_image_objectfit_016__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的各个部分：标题、卡片内的内容（图和文字）是否都在框内。检查后，所有元素都在各自的容器（比如卡片的边框内），没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_image_objectfit_015__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的各个元素：标题、卡片内的内容，比如图中的斜线框（Figure 1: architecture）是否在框内，文字是否超出。检查后发现所有元素都在各自的容器内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_unbreakable_text_027__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的文本，检查是否超出框。图中橙色边框的框内，文本是否在框内？看“containme nt”这里，可能有没有？不对，再仔细看。哦，看文本部分，比如“containme nt”是否在框内？或者整个文本是否在框内。看框的边界，所有文本应该都在框内吗？不对，再检查。哦，可能没有溢出？不对，再看。哦，用户的问题是是否有内容溢出。看图片中的文本，比如“registry.internal.acme-global.example/ml-platform/inference/qwen3-vl-30b-a3b-instruct-awq:2026.06-rc4-hotfix-containme nt” 这里，“containme nt”是否在框内？假设框足够大，所有文本都在框内？那present是false？不对，再仔细看。哦，可能我错了。再看，整",page
+g7_image_objectfit_017__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的各个元素：标题、卡片内的内容（包括图和文字）。检查每个部分，比如图是否在框内，文字是否超出卡片边缘。这里所有元素都在各自的容器（卡片、框）内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_image_objectfit_018__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的各个元素：标题、卡片内的内容（包括图和文字）。检查每个部分，比如图是否在框内，文字是否在卡片边缘内。这里所有元素都在各自的容器（卡片、框）内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_image_objectfit_022__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的各个部分：标题、卡片内的元素（比如图和文字）。检查每个元素是否在自己的框内。图中的元素都在各自的容器里，没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_image_objectfit_019__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的各个元素：标题、卡片内的内容（包括图和文字）。检查每个部分，比如图是否在框内，文字是否在卡片边缘内。这里所有元素都在各自的容器（卡片、框）内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_image_objectfit_021__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的各个元素：标题、卡片内的内容（图和文字）。检查每个部分是否在容器内。图中的橙色框（卡片）内的元素，比如图和文字都在框内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_image_objectfit_020__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的各个元素：标题、卡片内的内容，比如图中的蓝色条纹框（Figure 1: architecture）是否在容器内，文字是否溢出。检查后发现所有元素都在各自的容器（卡片、框等）内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_image_objectfit_024__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的各个部分：标题、卡片内的内容（图和文字）是否都在容器内。检查后，所有元素都在各自的框或容器里，没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_image_objectfit_023__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的各个元素：标题、卡片内的内容，比如图中的框（Figure 1的框）、文本区域等。检查每个元素是否在自己的容器内。这里所有元素都在各自的框或卡片内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_unbreakable_text_025__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的文本，比如“Endpoint”后面的ARN，还有“Implementation Roadmap”的重复？不对，看容器是那个浅蓝色的框。检查每个元素：标题“Implementation Roadmap”在框外？不，框内有重复的“Implementation Roadmap”？然后看文本是否溢出。比如“Endpoint: arn:aws:iam::920183746551:role/acme-global-manufacturi ng-prod-inference-gateway-cross-account-readonly-2026q3”这里，“manufacturi”后面可能换行？但看是否溢出容器。再看，所有文本是否都在容器内。如果容器是那个浅蓝色矩形，里面的文本有没有超出边缘。比如“Endpoint”和后面的ARN，还有上",page
+g7_image_objectfit_025__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的各个元素：标题、卡片内的内容，比如图中的斜线框（Figure 1: architecture）是否在框内，文字是否超出。检查后发现所有元素都在各自的容器内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_image_objectfit_026__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的各个元素：标题、卡片内的内容，比如图中的斜线框（Figure 1: architecture）是否在框内，文字是否超出。检查后发现所有元素都在各自的容器内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_image_objectfit_028__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的各个元素：标题、卡片内的内容（图和文字）。检查每个部分是否在框内。图中的绿色条纹图应该在卡片内，文字也在卡片内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_image_objectfit_027__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的各个元素：标题、卡片内的内容（包括图和文字）。检查每个部分，比如图是否在框内，文字是否超出卡片边缘。这里所有元素都在各自的容器（卡片、框）内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+g7_image_objectfit_029__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有元素内容溢出容器。看图片里的各个部分：标题、卡片内的内容（包括图和文字）。检查每个元素是否在自己的框内。比如，图的框、文字区域等，有没有超出。这里所有元素都在各自的容器内，没有溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page

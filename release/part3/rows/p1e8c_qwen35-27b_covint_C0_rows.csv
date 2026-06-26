@@ -1,0 +1,896 @@
+sample_id,defect,modality,is_clean,failure,has_defect,named_target,predicted_types,locator,confidence,other,raw,level
+part2_contract_review_2_G3_ALIGNMENT_OFFSET_16_0001__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_contract_review_2"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'ClauseScan flags risky clauses' describes a feature or outcome, but the body content lists project management tasks ('Approve budget', 'Assign engineers', 'Confirm cutover')",page
+part2_contract_review_3_G3_ALIGNMENT_OFFSET_2_0002__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_contract_review_3"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide title is 'ClauseScan pilot accuracy', but the body content lists general benefits and adoption metrics ('reduces toil', 'teams adopt', 'payback') rather than specific data ",page
+part2_contract_review_2_G3_ALIGNMENT_OFFSET_2_0001__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_contract_review_2"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'ClauseScan flags risky clauses' describes a feature or outcome, but the body content lists administrative action items ('Approve budget', 'Assign engineers', 'Confirm window",page
+part2_contract_review_4_G3_ALIGNMENT_OFFSET_16_0003__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_contract_review_4_G3_ALIGNMENT_OFFSET_2_0003__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_contract_review_3_G3_ALIGNMENT_OFFSET_16_0002__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_contract_review_3"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'ClauseScan pilot accuracy', but the body content lists benefits and adoption metrics ('",page
+part2_contract_review_1_G3_ALIGNMENT_OFFSET_16_0000__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_contract_review_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Manual contract review is slow' describes a problem with legal processes, but the body conte",page
+part2_contract_review_1_G3_ALIGNMENT_OFFSET_2_0000__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_contract_review_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Manual contract review is slow' describes a problem with legal processes, but the body conte",page
+part2_customer_support_ai_1_G3_ALIGNMENT_OFFSET_2_0005__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_customer_support_ai_2_G3_ALIGNMENT_OFFSET_16_0006__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_customer_support_ai_2_G3_ALIGNMENT_OFFSET_2_0006__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_customer_support_ai_3_G3_ALIGNMENT_OFFSET_16_0007__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_customer_support_ai_3_G3_ALIGNMENT_OFFSET_2_0007__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_customer_support_ai_4_G3_ALIGNMENT_OFFSET_16_0008__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_customer_support_ai_4_G3_ALIGNMENT_OFFSET_2_0008__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_customer_support_ai_5_G3_ALIGNMENT_OFFSET_16_0009__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_customer_support_ai_5_G3_ALIGNMENT_OFFSET_2_0009__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_contract_review_5_G3_ALIGNMENT_OFFSET_16_0004__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_contract_review_5"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'Next steps for ClauseScan' implies a list of future actions or a roadmap. However, the body content ('The pilot covered three regions', 'ClauseScan beat the baseline...', ",page
+part2_contract_review_5_G3_ALIGNMENT_OFFSET_2_0004__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_contract_review_5"", ""element_id"": ""null"", ""related_page_ids"": []}, ""evidence"": ""The title 'Next steps for ClauseScan' implies a list of future actions or a roadmap. However, the body content consists of three past-tense statements summarizing pilot results ('c",page
+part2_customer_support_ai_1_G3_ALIGNMENT_OFFSET_16_0005__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_customer_support_ai_1"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'Support queues keep growing' describes a problem (increasing volume), but the body text describes a successful solution ('HelpBot beat the baseline', 'Results held acros",page
+part2_doc_search_2_G3_ALIGNMENT_OFFSET_4_0001__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_doc_search_3_G3_ALIGNMENT_OFFSET_4_0002__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_doc_search_1_G3_ALIGNMENT_OFFSET_32_0000__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_doc_search_1"", ""element_id"": ""null"", ""related_page_ids"": []}, ""evidence"": ""The three body text boxes are indented at different horizontal positions relative to the left margin and the title, creating a misaligned, 'stair-step' appearance."", ""fix_suggestion"": ""Ali",page
+part2_doc_search_1_G3_ALIGNMENT_OFFSET_4_0000__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_doc_search_1"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains only four short text lines with no supporting visuals, charts, or detailed context, leaving the majority of the canvas empty and failing to convey a complete message.""",page
+part2_doc_search_5_G3_ALIGNMENT_OFFSET_4_0004__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_doc_search_2_G3_ALIGNMENT_OFFSET_32_0001__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_doc_search_2"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains only a title and three short bullet points with no supporting data, charts, or visuals, le",page
+part2_doc_search_3_G3_ALIGNMENT_OFFSET_32_0002__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_doc_search_3"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canvas empty. This violates the rule against under-utilized space and low information density",page
+part2_doc_search_4_G3_ALIGNMENT_OFFSET_32_0003__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_doc_search_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Impact FindFast drives on time saved' suggests a focus on efficiency metrics or time-saving resul",page
+part2_doc_search_5_G3_ALIGNMENT_OFFSET_32_0004__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_doc_search_5"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canvas empty. This i",page
+part2_doc_search_4_G3_ALIGNMENT_OFFSET_4_0003__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_doc_search_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Impact FindFast drives on time saved' suggests a focus on efficiency metrics or time-saving resul",page
+part2_energy_forecasting_2_G3_ALIGNMENT_OFFSET_4_0006__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_energy_forecasting_1_G3_ALIGNMENT_OFFSET_4_0005__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_energy_forecasting_1"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'Demand spikes strain the grid' describes a problem or context, but the body content lists a project timeline (Q1 foundation, Q2 workloads, Q3 migration) with no connectio",page
+part2_energy_forecasting_1_G3_ALIGNMENT_OFFSET_32_0005__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_energy_forecasting_1"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Demand spikes strain the grid' describes a problem or context, but the body content lis",page
+part2_energy_forecasting_4_G3_ALIGNMENT_OFFSET_4_0008__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_energy_forecasting_2_G3_ALIGNMENT_OFFSET_32_0006__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_energy_forecasting_2"", ""element_id"": ""null"", ""related_page_ids"": []}, ""evidence"": ""The second and third text boxes ('Shadow traffic...' and 'Automated rollback...') are indented to the right relative to the first and fourth boxes, creating a misaligned list struc",page
+part2_energy_forecasting_5_G3_ALIGNMENT_OFFSET_4_0009__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_energy_forecasting_4_G3_ALIGNMENT_OFFSET_32_0008__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_energy_forecasting_4"", ""element_id"": ""body_text_box_2"", ""related_page_ids"": []}, ""evidence"": ""The second body text box ('Teams adopt GridCast daily') is indented further to the right than the first and third text boxes, breaking the vertical alignment of the list",page
+part2_energy_forecasting_3_G3_ALIGNMENT_OFFSET_4_0007__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_energy_forecasting_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'How GridCast models weather', but the body content lists administrative project manage",page
+part2_energy_forecasting_3_G3_ALIGNMENT_OFFSET_32_0007__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_energy_forecasting_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'How GridCast models weather', but the body content lists administrative project manage",page
+part2_energy_forecasting_5_G3_ALIGNMENT_OFFSET_32_0009__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_energy_forecasting_5"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canvas empty",page
+part2_hr_analytics_1_G3_ALIGNMENT_OFFSET_48_0000__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_hr_analytics_1"",
+        ""element_id"": ""title"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Attrition is rising quietly' suggests a negative trend regarding user loss, but the body poi",page
+part2_hr_analytics_2_G3_ALIGNMENT_OFFSET_48_0001__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_hr_analytics_2"",
+        ""element_id"": ""text_box_2"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The second text box ('PeoplePulse needs a small dedicated team') is indented to the right relative to the",page
+part2_hr_analytics_3_G3_ALIGNMENT_OFFSET_48_0002__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_hr_analytics_3"",
+        ""element_id"": ""body_text_block_2"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The second text block 'A refresh is due within two quarters' is indented to the right relative to ",page
+part2_hr_analytics_4_G3_ALIGNMENT_OFFSET_48_0003__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_hr_analytics_4"",
+        ""element_id"": ""phase_3_box"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text box for 'Phase 3 refactors the core' is indented to the right relative to the other phase boxes",page
+part2_hr_analytics_5_G3_ALIGNMENT_OFFSET_48_0004__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_hr_analytics_5"",
+        ""element_id"": ""timeline_row_q2"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The second timeline item 'Q2 first production workloads' is indented to the right relative to the fi",page
+part2_inventory_optimization_1_G3_ALIGNMENT_OFFSET_48_0005__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_inventory_optimization_1"",
+        ""element_id"": ""text_block_2"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The second text block 'A refresh is due within two quarters' is indented to the right relativ",page
+part2_logistics_visibility_1_G3_ALIGNMENT_OFFSET_8_0000__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_inventory_optimization_2_G3_ALIGNMENT_OFFSET_48_0006__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_inventory_optimization_2"",
+        ""element_id"": ""phase_3_box"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The box containing 'Phase 3 refactors the core' is indented to the right, breaking the left al",page
+part2_inventory_optimization_4_G3_ALIGNMENT_OFFSET_48_0008__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_inventory_optimization_4"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The second content box ('Automated rollback within five minutes') is indented to the right relative t",page
+part2_inventory_optimization_5_G3_ALIGNMENT_OFFSET_48_0009__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_inventory_optimization_5"", ""element_id"": ""text-box-2"", ""related_page_ids"": []}, ""evidence"": ""The text box containing 'Assign two platform engineers' is indented significantly to the right compared to the other text boxes, breaking the visual alignment of the list",page
+part2_logistics_visibility_3_G3_ALIGNMENT_OFFSET_8_0002__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_inventory_optimization_3_G3_ALIGNMENT_OFFSET_48_0007__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH"",""S4_DENSITY_RULE_VIOLATION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_inventory_optimization_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'StockIQ cut stockouts in the pilot' claims a specific result (reduced stockouts), but the b",page
+part2_logistics_visibility_1_G3_ALIGNMENT_OFFSET_64_0000__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_logistics_visibility_1"",
+        ""element_id"": ""phase_3_box"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text box for 'Phase 3 refactors the core' is indented to the right, breaking the vertical al",page
+part2_logistics_visibility_2_G3_ALIGNMENT_OFFSET_8_0001__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_logistics_visibility_2"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Why visibility breaks down' suggests an analysis of problems or failure points. However",page
+part2_logistics_visibility_3_G3_ALIGNMENT_OFFSET_64_0002__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_logistics_visibility_3"", ""element_id"": ""text-box-2"", ""related_page_ids"": []}, ""evidence"": ""The second text box 'Shadow traffic before switching ShipEye' is indented to the right relative to the first and last text boxes, breaking the left alignment of the list."",",page
+part2_logistics_visibility_5_G3_ALIGNMENT_OFFSET_8_0004__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_logistics_visibility_4_G3_ALIGNMENT_OFFSET_8_0003__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_logistics_visibility_4"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'ShipEye impact on on-time delivery' suggests a results or analysis slide, but the body content lists administrative action items (budget approval, assigning engineers, ",page
+part2_logistics_visibility_4_G3_ALIGNMENT_OFFSET_64_0003__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_logistics_visibility_4"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'ShipEye impact on on-time delivery' suggests a results or analysis slide, but the bod",page
+part2_logistics_visibility_5_G3_ALIGNMENT_OFFSET_64_0004__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_logistics_visibility_5"",
+        ""element_id"": ""text_block_2"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The second text block 'Teams adopt ShipEye daily' is indented to the right relative to the firs",page
+part2_logistics_visibility_2_G3_ALIGNMENT_OFFSET_64_0001__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET"",""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_logistics_visibility_2"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'Why visibility breaks down', but the body content lists a project timeline ('Q1 foun",page
+part2_marketing_attribution_3_G3_ALIGNMENT_OFFSET_8_0007__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_marketing_attribution_1_G3_ALIGNMENT_OFFSET_64_0005__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_marketing_attribution_1"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Spend is hard to attribute' suggests a discussion on financial attribution challenge",page
+part2_marketing_attribution_1_G3_ALIGNMENT_OFFSET_8_0005__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_marketing_attribution_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Spend is hard to attribute' suggests a discussion on financial attribution challenges,",page
+part2_marketing_attribution_4_G3_ALIGNMENT_OFFSET_8_0008__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_marketing_attribution_5_G3_ALIGNMENT_OFFSET_8_0009__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_marketing_attribution_3_G3_ALIGNMENT_OFFSET_64_0007__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_marketing_attribution_3"",
+        ""element_id"": ""text_box_2"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The second text box containing 'Attrib needs a small dedicated team' is indented to the right re",page
+part2_marketing_attribution_2_G3_ALIGNMENT_OFFSET_8_0006__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_marketing_attribution_2"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'How Attrib models touchpoints' suggests a technical explanation of a modeling process, but",page
+part2_marketing_attribution_4_G3_ALIGNMENT_OFFSET_64_0008__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_marketing_attribution_4"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'Rolling Attrib out by channel' implies a breakdown or comparison of data across different ",page
+part2_marketing_attribution_5_G3_ALIGNMENT_OFFSET_64_0009__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_marketing_attribution_5"",
+        ""element_id"": ""phase_3_box"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text box for 'Phase 3 refactors the core' is indented to the right, breaking the left align",page
+part2_marketing_attribution_2_G3_ALIGNMENT_OFFSET_64_0006__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH"",""S4_DENSITY_RULE_VIOLATION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_marketing_attribution_2"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'How Attrib models touchpoints' implies a technical explanation of a modeling process, but ",page
+part2_contract_review_1_G3_ALIGNMENT_OFFSET_16_0000__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_contract_review_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Manual contract review is slow' describes a problem with legal processes, but the body conte",page
+part2_contract_review_2_G3_ALIGNMENT_OFFSET_16_0001__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_contract_review_2"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'ClauseScan flags risky clauses' describes a feature or capability, but the body content lists administrative action items ('Approve budget', 'Assign engineers', 'Confirm win",page
+part2_contract_review_4_G3_ALIGNMENT_OFFSET_16_0003__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_contract_review_4_G3_ALIGNMENT_OFFSET_2_0003__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_contract_review_2_G3_ALIGNMENT_OFFSET_2_0001__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_contract_review_2"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'ClauseScan flags risky clauses' describes a feature or capability, but the body content lists administrative action items ('Approve budget', 'Assign engineers', 'Confirm win",page
+part2_contract_review_1_G3_ALIGNMENT_OFFSET_2_0000__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_contract_review_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Manual contract review is slow' describes a problem with legal processes, but the body conte",page
+part2_contract_review_3_G3_ALIGNMENT_OFFSET_16_0002__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_contract_review_3"", ""element_id"": ""null"", ""related_page_ids"": []}, ""evidence"": ""The slide title is 'ClauseScan pilot accuracy', but the body content lists general benefits and adoption metrics ('reduces toil', 'teams adopt', 'payback') rather than specific dat",page
+part2_customer_support_ai_2_G3_ALIGNMENT_OFFSET_16_0006__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_contract_review_3_G3_ALIGNMENT_OFFSET_2_0002__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_contract_review_3"", ""element_id"": ""null"", ""related_page_ids"": []}, ""evidence"": ""The slide title is 'ClauseScan pilot accuracy', but the body content lists general benefits and adoption metrics ('reduces toil', 'teams adopt', 'payback') rather than specific dat",page
+part2_customer_support_ai_2_G3_ALIGNMENT_OFFSET_2_0006__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_customer_support_ai_3_G3_ALIGNMENT_OFFSET_16_0007__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_customer_support_ai_3_G3_ALIGNMENT_OFFSET_2_0007__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_contract_review_5_G3_ALIGNMENT_OFFSET_16_0004__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_contract_review_5"", ""element_id"": ""null"", ""related_page_ids"": []}, ""evidence"": ""The slide title is 'Next steps for ClauseScan', but the body content lists past results and pilot outcomes (e.g., 'The pilot covered three regions', 'ClauseScan beat the baseline') r",page
+part2_customer_support_ai_4_G3_ALIGNMENT_OFFSET_16_0008__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_customer_support_ai_4_G3_ALIGNMENT_OFFSET_2_0008__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_contract_review_5_G3_ALIGNMENT_OFFSET_2_0004__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_contract_review_5"", ""element_id"": ""null"", ""related_page_ids"": []}, ""evidence"": ""The slide title is 'Next steps for ClauseScan', but the body content lists past results and pilot outcomes (e.g., 'The pilot covered three regions', 'ClauseScan beat the baseline') r",page
+part2_customer_support_ai_5_G3_ALIGNMENT_OFFSET_16_0009__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_customer_support_ai_5_G3_ALIGNMENT_OFFSET_2_0009__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_doc_search_1_G3_ALIGNMENT_OFFSET_32_0000__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_doc_search_1_G3_ALIGNMENT_OFFSET_4_0000__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_customer_support_ai_1_G3_ALIGNMENT_OFFSET_16_0005__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_customer_support_ai_1"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'Support queues keep growing' suggests a problem statement or negative trend, but the body text describes a successful pilot ('HelpBot beat the baseline', 'Results held",page
+part2_doc_search_2_G3_ALIGNMENT_OFFSET_32_0001__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_customer_support_ai_1_G3_ALIGNMENT_OFFSET_2_0005__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_customer_support_ai_1"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'Support queues keep growing' suggests a problem statement or negative trend, but the body text describes a successful pilot ('HelpBot beat the baseline', 'Results held",page
+part2_doc_search_2_G3_ALIGNMENT_OFFSET_4_0001__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_doc_search_3_G3_ALIGNMENT_OFFSET_32_0002__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_doc_search_3_G3_ALIGNMENT_OFFSET_4_0002__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_doc_search_5_G3_ALIGNMENT_OFFSET_32_0004__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_doc_search_5_G3_ALIGNMENT_OFFSET_4_0004__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_energy_forecasting_2_G3_ALIGNMENT_OFFSET_32_0006__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_energy_forecasting_2_G3_ALIGNMENT_OFFSET_4_0006__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_energy_forecasting_1_G3_ALIGNMENT_OFFSET_32_0005__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_energy_forecasting_1"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'Demand spikes strain the grid' describes a problem or context, but the body content lists a project timeline (Q1 foundation, Q2 workloads, Q3 migration) with no connectio",page
+part2_energy_forecasting_1_G3_ALIGNMENT_OFFSET_4_0005__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_energy_forecasting_1"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'Demand spikes strain the grid' describes a problem or context, but the body content lists a project timeline (Q1 foundation, Q2 workloads, Q3 migration) with no connectio",page
+part2_energy_forecasting_4_G3_ALIGNMENT_OFFSET_32_0008__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_energy_forecasting_4_G3_ALIGNMENT_OFFSET_4_0008__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_energy_forecasting_5_G3_ALIGNMENT_OFFSET_32_0009__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_energy_forecasting_5_G3_ALIGNMENT_OFFSET_4_0009__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_doc_search_4_G3_ALIGNMENT_OFFSET_32_0003__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_doc_search_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Impact FindFast drives on time saved' suggests a focus on metrics or efficiency gains, but the bo",page
+part2_doc_search_4_G3_ALIGNMENT_OFFSET_4_0003__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_doc_search_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Impact FindFast drives on time saved' suggests a focus on efficiency metrics or time-saving resul",page
+part2_hr_analytics_4_G3_ALIGNMENT_OFFSET_48_0003__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_energy_forecasting_3_G3_ALIGNMENT_OFFSET_32_0007__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_energy_forecasting_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'How GridCast models weather', but the body content lists administrative project tasks ",page
+part2_energy_forecasting_3_G3_ALIGNMENT_OFFSET_4_0007__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_energy_forecasting_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'How GridCast models weather', but the body content lists administrative project manage",page
+part2_hr_analytics_5_G3_ALIGNMENT_OFFSET_48_0004__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_inventory_optimization_1_G3_ALIGNMENT_OFFSET_48_0005__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_inventory_optimization_2_G3_ALIGNMENT_OFFSET_48_0006__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_inventory_optimization_4_G3_ALIGNMENT_OFFSET_48_0008__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_inventory_optimization_5_G3_ALIGNMENT_OFFSET_48_0009__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_logistics_visibility_1_G3_ALIGNMENT_OFFSET_64_0000__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_logistics_visibility_1_G3_ALIGNMENT_OFFSET_8_0000__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_hr_analytics_1_G3_ALIGNMENT_OFFSET_48_0000__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_hr_analytics_1"", ""element_id"": ""null"", ""related_page_ids"": []}, ""evidence"": ""The title 'Attrition is rising quietly' suggests a negative trend in user retention, but the body points ('Adoption grew', 'Support tickets fell') describe positive growth and efficienc",page
+part2_hr_analytics_2_G3_ALIGNMENT_OFFSET_48_0001__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_hr_analytics_2"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'PeoplePulse surfaces early signals' describes a product capability, but the body content lists resource requirements and a call to action ('We need executive sponsorship', 'A",page
+part2_logistics_visibility_3_G3_ALIGNMENT_OFFSET_64_0002__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_hr_analytics_3_G3_ALIGNMENT_OFFSET_48_0002__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_hr_analytics_3"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'Actions PeoplePulse recommends' implies a list of recommendations or steps to take. However, the body content lists three factual statements or observations ('saturated at pe",page
+part2_logistics_visibility_3_G3_ALIGNMENT_OFFSET_8_0002__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_inventory_optimization_3_G3_ALIGNMENT_OFFSET_48_0007__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_inventory_optimization_3"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canvas empty. This indicates the slide is under-populated and lacks sufficient cont",page
+part2_logistics_visibility_5_G3_ALIGNMENT_OFFSET_64_0004__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_logistics_visibility_5_G3_ALIGNMENT_OFFSET_8_0004__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_logistics_visibility_2_G3_ALIGNMENT_OFFSET_64_0001__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_logistics_visibility_2"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Why visibility breaks down' suggests an analysis of problems or failure points. However",page
+part2_logistics_visibility_2_G3_ALIGNMENT_OFFSET_8_0001__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_logistics_visibility_2"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Why visibility breaks down' suggests an analysis of problems or failure points. However",page
+part2_logistics_visibility_4_G3_ALIGNMENT_OFFSET_8_0003__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_logistics_visibility_4"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'ShipEye impact on on-time delivery' suggests a results or analysis slide, but the body content lists administrative action items (budget approval, assigning engineers, ",page
+part2_marketing_attribution_3_G3_ALIGNMENT_OFFSET_64_0007__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_marketing_attribution_3_G3_ALIGNMENT_OFFSET_8_0007__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_logistics_visibility_4_G3_ALIGNMENT_OFFSET_64_0003__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_logistics_visibility_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'ShipEye impact on on-time delivery' suggests a presentation of results or data analysis",page
+part2_marketing_attribution_4_G3_ALIGNMENT_OFFSET_64_0008__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_marketing_attribution_4_G3_ALIGNMENT_OFFSET_8_0008__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_marketing_attribution_5_G3_ALIGNMENT_OFFSET_64_0009__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_marketing_attribution_5_G3_ALIGNMENT_OFFSET_8_0009__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_marketing_attribution_1_G3_ALIGNMENT_OFFSET_64_0005__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_marketing_attribution_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Spend is hard to attribute' suggests a discussion on financial attribution challenges,",page
+part2_marketing_attribution_1_G3_ALIGNMENT_OFFSET_8_0005__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_marketing_attribution_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Spend is hard to attribute' suggests a discussion on financial attribution challenges,",page
+part2_hr_analytics_4_G5_BRAND_COLOR_VIOLATION_6_0003__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_marketing_attribution_2_G3_ALIGNMENT_OFFSET_64_0006__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_marketing_attribution_2"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'How Attrib models touchpoints' implies a technical explanation of a modeling process, but the body text lists business outcomes ('Adoption grew', 'handles most volume'",page
+part2_hr_analytics_5_G5_BRAND_COLOR_VIOLATION_6_0004__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_inventory_optimization_1_G5_BRAND_COLOR_VIOLATION_6_0005__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_marketing_attribution_2_G3_ALIGNMENT_OFFSET_8_0006__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_marketing_attribution_2"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'How Attrib models touchpoints' suggests a technical explanation of a modeling process, but",page
+part2_inventory_optimization_4_G5_BRAND_COLOR_VIOLATION_6_0008__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_hr_analytics_1_G5_BRAND_COLOR_VIOLATION_6_0000__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_hr_analytics_1"", ""element_id"": ""null"", ""related_page_ids"": []}, ""evidence"": ""The slide title 'Attrition is rising quietly' suggests a negative trend in user retention. However, the body points ('Adoption grew', 'Support tickets fell') describe positive growth an",page
+part2_payments_modernization_1_G5_BRAND_COLOR_VIOLATION_24_0000__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_hr_analytics_2_G5_BRAND_COLOR_VIOLATION_6_0001__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_hr_analytics_2"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'PeoplePulse surfaces early signals' describes a product capability, but the body content lists resource requirements and a call to action ('We need executive sponsorship', 'A",page
+part2_payments_modernization_3_G5_BRAND_COLOR_VIOLATION_24_0002__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_hr_analytics_3_G5_BRAND_COLOR_VIOLATION_6_0002__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_hr_analytics_3"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'Actions PeoplePulse recommends' implies a list of recommendations or steps to take. However, the body content lists three factual statements or observations ('saturated at pe",page
+part2_payments_modernization_4_G5_BRAND_COLOR_VIOLATION_24_0003__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_inventory_optimization_3_G5_BRAND_COLOR_VIOLATION_6_0007__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_inventory_optimization_3"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canvas empty. This indicates the slide is under-populated and lacks sufficient cont",page
+part2_pricing_optimization_1_G5_BRAND_COLOR_VIOLATION_24_0005__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_inventory_optimization_2_G5_BRAND_COLOR_VIOLATION_6_0006__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_inventory_optimization_2"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'StockIQ rebalances inventory nightly' describes a specific system function, while the body content lists a 5-phase project roadmap (stabilizing, replatforming, refact",page
+part2_pricing_optimization_2_G5_BRAND_COLOR_VIOLATION_24_0006__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_pricing_optimization_4_G5_BRAND_COLOR_VIOLATION_24_0008__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_pricing_optimization_3_G5_BRAND_COLOR_VIOLATION_24_0007__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_pricing_optimization_5_G5_BRAND_COLOR_VIOLATION_24_0009__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_retail_analytics_1_G5_BRAND_COLOR_VIOLATION_12_0000__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_retail_analytics_1_G5_BRAND_COLOR_VIOLATION_40_0000__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_retail_analytics_2_G5_BRAND_COLOR_VIOLATION_12_0001__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_inventory_optimization_5_G5_BRAND_COLOR_VIOLATION_6_0009__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_inventory_optimization_5"", ""element_id"": ""null"", ""related_page_ids"": []}, ""evidence"": ""The slide title is 'Funding the StockIQ rollout', but the body content lists operational tasks ('Assign two platform engineers', 'Confirm the cutover freeze window') rather ",page
+part2_retail_analytics_2_G5_BRAND_COLOR_VIOLATION_40_0001__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_retail_analytics_3_G5_BRAND_COLOR_VIOLATION_12_0002__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_retail_analytics_3_G5_BRAND_COLOR_VIOLATION_40_0002__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_retail_analytics_4_G5_BRAND_COLOR_VIOLATION_12_0003__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_retail_analytics_4_G5_BRAND_COLOR_VIOLATION_40_0003__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_retail_analytics_5_G5_BRAND_COLOR_VIOLATION_12_0004__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_retail_analytics_5_G5_BRAND_COLOR_VIOLATION_40_0004__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_security_program_2_G5_BRAND_COLOR_VIOLATION_12_0006__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_security_program_2_G5_BRAND_COLOR_VIOLATION_40_0006__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_payments_modernization_2_G5_BRAND_COLOR_VIOLATION_24_0001__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_payments_modernization_2"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'Gaps in the current stack', but the body content lists positive achievements and s",page
+part2_security_program_4_G5_BRAND_COLOR_VIOLATION_12_0008__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_security_program_4_G5_BRAND_COLOR_VIOLATION_40_0008__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_payments_modernization_5_G5_BRAND_COLOR_VIOLATION_24_0004__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_payments_modernization_5"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'What PayCore needs to launch' implies a list of requirements or future actions. However, th",page
+part2_security_program_1_G5_BRAND_COLOR_VIOLATION_40_0005__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_security_program_1"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'Our exposure is growing fast' implies a problem or risk statement, but the body content lists a positive project timeline (Q1 foundation, Q2 workloads, Q3 migration) with",page
+part2_security_program_1_G5_BRAND_COLOR_VIOLATION_12_0005__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_security_program_1"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'Our exposure is growing fast' implies a problem or risk, but the body content lists a positive implementation roadmap (Q1 foundation, Q2 workloads, Q3 migration) for ZeroTr",page
+part2_security_program_3_G5_BRAND_COLOR_VIOLATION_12_0007__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_security_program_3"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'The ZeroTrust controls we deploy', but the body content lists administrative project m",page
+part2_security_program_3_G5_BRAND_COLOR_VIOLATION_40_0007__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_security_program_3"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'The ZeroTrust controls we deploy', but the body content lists project management tasks",page
+part2_hr_analytics_4_G5_BRAND_COLOR_VIOLATION_6_0003__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_hr_analytics_5_G5_BRAND_COLOR_VIOLATION_6_0004__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_security_program_5_G5_BRAND_COLOR_VIOLATION_40_0009__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_security_program_5"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canvas empty. This indicates the slide is under-populated and lacks sufficient content de",page
+part2_inventory_optimization_1_G5_BRAND_COLOR_VIOLATION_6_0005__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_inventory_optimization_2_G5_BRAND_COLOR_VIOLATION_6_0006__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_inventory_optimization_4_G5_BRAND_COLOR_VIOLATION_6_0008__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_security_program_5_G5_BRAND_COLOR_VIOLATION_12_0009__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_security_program_5"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'The investment we request' implies a financial ask or budget details, but the body content li",page
+part2_inventory_optimization_5_G5_BRAND_COLOR_VIOLATION_6_0009__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_payments_modernization_1_G5_BRAND_COLOR_VIOLATION_24_0000__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_hr_analytics_1_G5_BRAND_COLOR_VIOLATION_6_0000__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_hr_analytics_1"", ""element_id"": ""null"", ""related_page_ids"": []}, ""evidence"": ""The title 'Attrition is rising quietly' suggests a negative trend in user retention, but the body points ('Adoption grew', 'Support tickets fell') describe positive growth and efficienc",page
+part2_payments_modernization_3_G5_BRAND_COLOR_VIOLATION_24_0002__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_payments_modernization_4_G5_BRAND_COLOR_VIOLATION_24_0003__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_hr_analytics_2_G5_BRAND_COLOR_VIOLATION_6_0001__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_hr_analytics_2"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'PeoplePulse surfaces early signals' describes a product capability, but the body content lists resour",page
+part2_pricing_optimization_1_G5_BRAND_COLOR_VIOLATION_24_0005__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_pricing_optimization_2_G5_BRAND_COLOR_VIOLATION_24_0006__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_pricing_optimization_3_G5_BRAND_COLOR_VIOLATION_24_0007__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_hr_analytics_3_G5_BRAND_COLOR_VIOLATION_6_0002__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_hr_analytics_3"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'Actions PeoplePulse recommends' implies a list of recommendations or steps to take. However, the body content lists three factual statements or observations ('saturated at pe",page
+part2_pricing_optimization_4_G5_BRAND_COLOR_VIOLATION_24_0008__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_retail_analytics_1_G5_BRAND_COLOR_VIOLATION_12_0000__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_pricing_optimization_5_G5_BRAND_COLOR_VIOLATION_24_0009__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_retail_analytics_1_G5_BRAND_COLOR_VIOLATION_40_0000__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_retail_analytics_2_G5_BRAND_COLOR_VIOLATION_12_0001__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_retail_analytics_2_G5_BRAND_COLOR_VIOLATION_40_0001__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_inventory_optimization_3_G5_BRAND_COLOR_VIOLATION_6_0007__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_inventory_optimization_3"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canvas empty. This indicates the slide is under-populated and lacks sufficient cont",page
+part2_retail_analytics_3_G5_BRAND_COLOR_VIOLATION_12_0002__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_retail_analytics_3_G5_BRAND_COLOR_VIOLATION_40_0002__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_retail_analytics_4_G5_BRAND_COLOR_VIOLATION_12_0003__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_retail_analytics_4_G5_BRAND_COLOR_VIOLATION_40_0003__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_retail_analytics_5_G5_BRAND_COLOR_VIOLATION_12_0004__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_retail_analytics_5_G5_BRAND_COLOR_VIOLATION_40_0004__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_security_program_2_G5_BRAND_COLOR_VIOLATION_12_0006__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_security_program_2_G5_BRAND_COLOR_VIOLATION_40_0006__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_payments_modernization_2_G5_BRAND_COLOR_VIOLATION_24_0001__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_payments_modernization_2"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'Gaps in the current stack', but the body text lists positive pilot results ('PayCo",page
+part2_security_program_4_G5_BRAND_COLOR_VIOLATION_12_0008__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_payments_modernization_5_G5_BRAND_COLOR_VIOLATION_24_0004__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_payments_modernization_5"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'What PayCore needs to launch' implies a list of requirements or future actions. However, th",page
+part2_security_program_4_G5_BRAND_COLOR_VIOLATION_40_0008__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_security_program_1_G5_BRAND_COLOR_VIOLATION_12_0005__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_security_program_1"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'Our exposure is growing fast' implies a problem or risk scenario, but the body content lists a positive implementation roadmap ('Q1 foundation', 'Q2 production', 'Q3 migrat",page
+part2_security_program_1_G5_BRAND_COLOR_VIOLATION_40_0005__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_security_program_1"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'Our exposure is growing fast' implies a problem or risk scenario, but the body content lists a positive implementation roadmap ('Q1 foundation', 'Q2 production', 'Q3 migrat",page
+part2_security_program_3_G5_BRAND_COLOR_VIOLATION_12_0007__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_security_program_3"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'The ZeroTrust controls we deploy', but the body content lists project management tasks",page
+part2_security_program_3_G5_BRAND_COLOR_VIOLATION_40_0007__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_security_program_3"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'The ZeroTrust controls we deploy', but the body content lists project management tasks",page
+part2_security_program_5_G5_BRAND_COLOR_VIOLATION_12_0009__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_security_program_5"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'The investment we request' implies a financial ask or budget details, but the body content li",page
+part2_security_program_5_G5_BRAND_COLOR_VIOLATION_40_0009__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_security_program_5"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'The investment we request' implies a financial ask or budget details, but the body content li",page

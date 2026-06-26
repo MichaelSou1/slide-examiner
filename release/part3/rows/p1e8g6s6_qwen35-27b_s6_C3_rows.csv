@@ -1,0 +1,167 @@
+sample_id,defect,modality,is_clean,failure,has_defect,named_target,predicted_types,locator,confidence,other,raw,level
+imgslide_2_S6_IMAGE_TEXT_CONTRADICTION_1_0004__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the figure caption stating 'Page load time got faster every release' versus the text box stating 'Page load time got slower every release'"",""region"":""left""}",1.0,[],"{
+  ""present"": true,
+  ""evidence_element"": ""the figure caption stating 'Page load time got faster every release' versus the text box stating 'Page load time got slower every release'"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}",page
+imgslide_3_S6_IMAGE_TEXT_CONTRADICTION_1_0005__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the text in the right-hand card stating 'Market share contracted' versus the figure caption stating 'Market share expanded'"",""region"":""center""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the text in the right-hand card stating 'Market share contracted' versus the figure caption stating 'Market share expanded'"",
+  ""evidence_region"": ""center"",
+  ""confidence"": 1.0
+}
+```",page
+imgslide_1_S6_IMAGE_TEXT_CONTRADICTION_1_0003__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the text in the right-hand card stating 'Customer churn climbed to a record high' versus the figure caption stating 'Customer churn dropped to a record low'"",""region"":""center""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the text in the right-hand card stating 'Customer churn climbed to a record high' versus the figure caption stating 'Customer churn dropped to a record low'"",
+  ""evidence_region"": ""center"",
+  ""confidence"": 1.0
+}
+```",page
+imgslide_10_S6_IMAGE_TEXT_CONTRADICTION_1_0000__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""The text in the right-hand card stating 'Conversion rate halved' contradicts the figure caption on the left stating 'Conversion rate doubled'."",""region"":""center""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""The text in the right-hand card stating 'Conversion rate halved' contradicts the figure caption on the left stating 'Conversion rate doubled'."",
+  ""evidence_region"": ""center"",
+  ""confidence"": 1.0
+}
+```",page
+imgslide_0_S6_IMAGE_TEXT_CONTRADICTION_1_0002__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the text stating 'Quarterly revenue fell sharply in Q4' versus the figure caption stating 'Quarterly revenue rose sharply in Q4' and the upward-pointing green triangle"",""region"":""center""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the text stating 'Quarterly revenue fell sharply in Q4' versus the figure caption stating 'Quarterly revenue rose sharply in Q4' and the upward-pointing green triangle"",
+  ""evidence_region"": ""center"",
+  ""confidence"": 1.0
+}
+```",page
+imgslide_11_S6_IMAGE_TEXT_CONTRADICTION_1_0001__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the text in the right-hand card stating 'Energy use per unit rose steadily' contradicts the figure on the left showing a downward red arrow and the caption 'Energy use per unit dropped steadily'"",""region"":""right""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the text in the right-hand card stating 'Energy use per unit rose steadily' contradicts the figure on the left showing a downward red arrow and the caption 'Energy use per unit dropped steadily'"",
+  ""evidence_region"": ""right"",
+  ""confidence"": 1.0
+}
+```",page
+imgslide_6_S6_IMAGE_TEXT_CONTRADICTION_1_0008__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the text box stating 'Operating costs rose quarter over quarter' versus the figure showing a downward red arrow and caption 'Operating costs fell quarter over quarter'"",""region"":""center""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the text box stating 'Operating costs rose quarter over quarter' versus the figure showing a downward red arrow and caption 'Operating costs fell quarter over quarter'"",
+  ""evidence_region"": ""center"",
+  ""confidence"": 1.0
+}
+```",page
+imgslide_5_S6_IMAGE_TEXT_CONTRADICTION_1_0007__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the text 'Signups stalled after the launch' in the right-hand card versus the figure caption 'Signups accelerated after the launch' and the green upward-pointing triangle"",""region"":""right""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the text 'Signups stalled after the launch' in the right-hand card versus the figure caption 'Signups accelerated after the launch' and the green upward-pointing triangle"",
+  ""evidence_region"": ""right"",
+  ""confidence"": 1.0
+}
+```",page
+imgslide_4_S6_IMAGE_TEXT_CONTRADICTION_1_0006__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the text in the right-hand card stating 'The defect rate rose every sprint' versus the figure on the left showing a downward red arrow and caption 'The defect rate declined every sprint'"",""region"":""center""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the text in the right-hand card stating 'The defect rate rose every sprint' versus the figure on the left showing a downward red arrow and caption 'The defect rate declined every sprint'"",
+  ""evidence_region"": ""center"",
+  ""confidence"": 1.0
+}
+```",page
+imgslide_7_S6_IMAGE_TEXT_CONTRADICTION_1_0009__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the text 'NPS sank into the thirties' in the right-hand card versus the figure caption 'NPS climbed into the eighties' and the green upward-pointing triangle"",""region"":""right""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the text 'NPS sank into the thirties' in the right-hand card versus the figure caption 'NPS climbed into the eighties' and the green upward-pointing triangle"",
+  ""evidence_region"": ""right"",
+  ""confidence"": 1.0
+}
+```",page
+imgslide_9_S6_IMAGE_TEXT_CONTRADICTION_1_0011__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the text in the right-hand card stating 'Support backlog grew week over week' versus the figure caption stating 'Support backlog shrank week over week'"",""region"":""center""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the text in the right-hand card stating 'Support backlog grew week over week' versus the figure caption stating 'Support backlog shrank week over week'"",
+  ""evidence_region"": ""center"",
+  ""confidence"": 1.0
+}
+```",page
+imgslide_8_S6_IMAGE_TEXT_CONTRADICTION_1_0010__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the text 'Uptime degraded to two nines' in the right-hand card versus the figure caption 'Uptime improved to four nines' and the green upward arrow"",""region"":""right""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the text 'Uptime degraded to two nines' in the right-hand card versus the figure caption 'Uptime improved to four nines' and the green upward arrow"",
+  ""evidence_region"": ""right"",
+  ""confidence"": 1.0
+}
+```",page
+imgslide_0_S6_IMAGE_TEXT_CONTRADICTION_1_0002__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the green upward-pointing triangle icon"",""region"":""left""}",0.9,[],"{
+  ""present"": true,
+  ""evidence_element"": ""the green upward-pointing triangle icon"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.9
+}",page
+imgslide_11_S6_IMAGE_TEXT_CONTRADICTION_1_0001__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the left panel showing only a red downward arrow with no data chart"",""region"":""left""}",0.95,[],"{
+""present"": true,
+""evidence_element"": ""the left panel showing only a red downward arrow with no data chart"",
+""evidence_region"": ""left"",
+""confidence"": 0.95
+}",page
+imgslide_3_S6_IMAGE_TEXT_CONTRADICTION_1_0005__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the green triangle icon in the left panel"",""region"":""left""}",0.95,[],"{
+  ""present"": true,
+  ""evidence_element"": ""the green triangle icon in the left panel"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}",page
+imgslide_10_S6_IMAGE_TEXT_CONTRADICTION_1_0000__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the text 'The chart on the left summarizes the trend' and the figure showing only a green triangle with no trend data"",""region"":""left""}",0.95,[],"{
+  ""present"": true,
+  ""evidence_element"": ""the text 'The chart on the left summarizes the trend' and the figure showing only a green triangle with no trend data"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}",page
+imgslide_1_S6_IMAGE_TEXT_CONTRADICTION_1_0003__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the text 'The chart on the left summarizes the trend' and the left panel showing only a red triangle with no chart"",""region"":""left""}",1.0,[],"{
+  ""present"": true,
+  ""evidence_element"": ""the text 'The chart on the left summarizes the trend' and the left panel showing only a red triangle with no chart"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}",page
+imgslide_2_S6_IMAGE_TEXT_CONTRADICTION_1_0004__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the text 'Page load time got faster every release' and 'The chart on the left summarizes the trend' next to a figure showing only a red downward arrow with no data or axes"",""region"":""left""}",0.95,[],"{
+  ""present"": true,
+  ""evidence_element"": ""the text 'Page load time got faster every release' and 'The chart on the left summarizes the trend' next to a figure showing only a red downward arrow with no data or axes"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}",page
+imgslide_5_S6_IMAGE_TEXT_CONTRADICTION_1_0007__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the text 'Signups accelerated after the launch' and the figure showing only a green triangle"",""region"":""left""}",0.95,[],"{
+""present"": true,
+""evidence_element"": ""the text 'Signups accelerated after the launch' and the figure showing only a green triangle"",
+""evidence_region"": ""left"",
+""confidence"": 0.95
+}",page
+imgslide_4_S6_IMAGE_TEXT_CONTRADICTION_1_0006__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the text 'The chart on the left summarizes the trend' and the left panel showing only a red triangle with no chart"",""region"":""left""}",1.0,[],"{
+  ""present"": true,
+  ""evidence_element"": ""the text 'The chart on the left summarizes the trend' and the left panel showing only a red triangle with no chart"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}",page
+imgslide_6_S6_IMAGE_TEXT_CONTRADICTION_1_0008__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the text 'The chart on the left summarizes the trend' and the placeholder figure on the left"",""region"":""left""}",0.95,[],"{
+  ""present"": true,
+  ""evidence_element"": ""the text 'The chart on the left summarizes the trend' and the placeholder figure on the left"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}",page
+imgslide_8_S6_IMAGE_TEXT_CONTRADICTION_1_0010__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the text 'The chart on the left summarizes the trend.'"",""region"":""right""}",0.95,[],"{
+  ""present"": true,
+  ""evidence_element"": ""the text 'The chart on the left summarizes the trend.'"",
+  ""evidence_region"": ""right"",
+  ""confidence"": 0.95
+}",page
+imgslide_7_S6_IMAGE_TEXT_CONTRADICTION_1_0009__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the text 'NPS climbed into the eighties' and 'The chart on the left summarizes the trend' versus the figure showing only a green triangle with no data or trend"",""region"":""left""}",0.95,[],"{
+  ""present"": true,
+  ""evidence_element"": ""the text 'NPS climbed into the eighties' and 'The chart on the left summarizes the trend' versus the figure showing only a green triangle with no data or trend"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}",page
+imgslide_9_S6_IMAGE_TEXT_CONTRADICTION_1_0011__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the text 'The chart on the left summarizes the trend' and the left panel showing only a red triangle with no chart"",""region"":""left""}",1.0,[],"{
+  ""present"": true,
+  ""evidence_element"": ""the text 'The chart on the left summarizes the trend' and the left panel showing only a red triangle with no chart"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}",page

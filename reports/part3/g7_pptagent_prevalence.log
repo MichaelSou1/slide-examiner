@@ -1,0 +1,18 @@
+[1/1] pptagent_000_p3_05_full_proposal_v1.pptx         slides= 4 legal=  3 G7hits= 1  <<
+
+================ G7 render-containment prevalence ================
+decks scanned        : 1  (errors: 0)
+slides               : 4
+text boxes           : 6
+legal text boxes     : 3  (G7 denominator)
+G7 hits (boxes)      : 1  (of which HARD: 1)
+------------------------- ALL overflow (incl. soft autofit-grow) -
+box-level incidence  : 33.3%   (1/3 legal boxes)
+slide-level incidence: 25.0%   (1/4 slides)
+deck-level incidence : 100.0%   (1/1 decks)
+------------------------- HARD G7 (autofit-off | off-page | collision) -
+box-level incidence  : 33.3%   (1/3 legal boxes)
+slide-level incidence: 25.0%   (1/4 slides)
+deck-level incidence : 100.0%   (1/1 decks)
+=================================================================
+params: margin=18.0pt max_iou=0.05 tol=2.0pt min_over=3.0pt & 0.04 frac

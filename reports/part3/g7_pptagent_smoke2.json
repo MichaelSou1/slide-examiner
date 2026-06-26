@@ -1,0 +1,17 @@
+{
+  "created_at": "2026-06-25T16:03:41.715343+00:00",
+  "source": "PPTAgent edit-based generator over mimo",
+  "template": "default",
+  "n_attempted": 1,
+  "n_success": 1,
+  "records": [
+    {
+      "task_id": "p3_05_full_proposal_v1",
+      "pptx": "/home/gpus/slide-examiner/data/part3/g7_pptagent/pptagent_000_p3_05_full_proposal_v1.pptx",
+      "status": "ok",
+      "slides": 4,
+      "model": "mimo-v2.5-pro",
+      "vision_model": "mimo-v2.5"
+    }
+  ]
+}

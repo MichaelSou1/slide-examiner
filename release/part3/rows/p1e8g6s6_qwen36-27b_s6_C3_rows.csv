@@ -1,0 +1,70 @@
+sample_id,defect,modality,is_clean,failure,has_defect,named_target,predicted_types,locator,confidence,other,raw,level
+imgslide_2_S6_IMAGE_TEXT_CONTRADICTION_1_0004__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the figure caption"",""region"":""left""}",1.0,[],"{{""present"": true, ""evidence_element"": ""the figure caption"", ""evidence_region"": ""left"", ""confidence"": 1.0}}",page
+imgslide_11_S6_IMAGE_TEXT_CONTRADICTION_1_0001__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the right-hand text card"",""region"":""right""}",1.0,[],"{{""present"": true, ""evidence_element"": ""the right-hand text card"", ""evidence_region"": ""right"", ""confidence"": 1.0}}",page
+imgslide_3_S6_IMAGE_TEXT_CONTRADICTION_1_0005__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the right-hand text card"",""region"":""right""}",1.0,[],"{
+  ""present"": true,
+  ""evidence_element"": ""the right-hand text card"",
+  ""evidence_region"": ""right"",
+  ""confidence"": 1.0
+}",page
+imgslide_10_S6_IMAGE_TEXT_CONTRADICTION_1_0000__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the right-hand text card"",""region"":""right""}",1.0,[],"{
+  ""present"": true,
+  ""evidence_element"": ""the right-hand text card"",
+  ""evidence_region"": ""right"",
+  ""confidence"": 1.0
+}",page
+imgslide_0_S6_IMAGE_TEXT_CONTRADICTION_1_0002__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the right-hand text card stating 'Quarterly revenue fell sharply in Q4'"",""region"":""right""}",1.0,[],"{
+  ""present"": true,
+  ""evidence_element"": ""the right-hand text card stating 'Quarterly revenue fell sharply in Q4'"",
+  ""evidence_region"": ""right"",
+  ""confidence"": 1.0
+}",page
+imgslide_1_S6_IMAGE_TEXT_CONTRADICTION_1_0003__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the right-hand text card stating 'Customer churn climbed to a record high'"",""region"":""right""}",1.0,[],"{
+  ""present"": true,
+  ""evidence_element"": ""the right-hand text card stating 'Customer churn climbed to a record high'"",
+  ""evidence_region"": ""right"",
+  ""confidence"": 1.0
+}",page
+imgslide_5_S6_IMAGE_TEXT_CONTRADICTION_1_0007__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the right-hand card"",""region"":""right""}",1.0,[],"{{""present"": true, ""evidence_element"": ""the right-hand card"", ""evidence_region"": ""right"", ""confidence"": 1.0}}",page
+imgslide_4_S6_IMAGE_TEXT_CONTRADICTION_1_0006__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the right-hand text card"",""region"":""right""}",1.0,[],"{{""present"": true, ""evidence_element"": ""the right-hand text card"", ""evidence_region"": ""right"", ""confidence"": 1.0}}",page
+imgslide_6_S6_IMAGE_TEXT_CONTRADICTION_1_0008__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the right-hand text card"",""region"":""right""}",1.0,[],"{{""present"": true, ""evidence_element"": ""the right-hand text card"", ""evidence_region"": ""right"", ""confidence"": 1.0}}",page
+imgslide_8_S6_IMAGE_TEXT_CONTRADICTION_1_0010__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the right-hand card stating 'Uptime degraded to two nines'"",""region"":""right""}",1.0,[],"{{""present"": true, ""evidence_element"": ""the right-hand card stating 'Uptime degraded to two nines'"", ""evidence_region"": ""right"", ""confidence"": 1.0}}",page
+imgslide_9_S6_IMAGE_TEXT_CONTRADICTION_1_0011__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the right-hand text card stating 'Support backlog grew week over week'"",""region"":""right""}",1.0,[],"{{""present"": true, ""evidence_element"": ""the right-hand text card stating 'Support backlog grew week over week'"", ""evidence_region"": ""right"", ""confidence"": 1.0}}",page
+imgslide_7_S6_IMAGE_TEXT_CONTRADICTION_1_0009__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the right-hand text card stating 'NPS sank into the thirties'"",""region"":""right""}",1.0,[],"{
+  ""present"": true,
+  ""evidence_element"": ""the right-hand text card stating 'NPS sank into the thirties'"",
+  ""evidence_region"": ""right"",
+  ""confidence"": 1.0
+}",page
+imgslide_11_S6_IMAGE_TEXT_CONTRADICTION_1_0001__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,1.0,[],"{{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}}",page
+imgslide_10_S6_IMAGE_TEXT_CONTRADICTION_1_0000__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the left figure box"",""region"":""left""}",1.0,[],"{
+  ""present"": true,
+  ""evidence_element"": ""the left figure box"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}",page
+imgslide_0_S6_IMAGE_TEXT_CONTRADICTION_1_0002__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the figure placeholder on the left"",""region"":""left""}",1.0,[],"{
+  ""present"": true,
+  ""evidence_element"": ""the figure placeholder on the left"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}",page
+imgslide_2_S6_IMAGE_TEXT_CONTRADICTION_1_0004__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,1.0,[],"{{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}}",page
+imgslide_3_S6_IMAGE_TEXT_CONTRADICTION_1_0005__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,1.0,[],"{{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}}",page
+imgslide_1_S6_IMAGE_TEXT_CONTRADICTION_1_0003__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the left figure panel"",""region"":""left""}",0.95,[],"{
+  ""present"": true,
+  ""evidence_element"": ""the left figure panel"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}",page
+imgslide_5_S6_IMAGE_TEXT_CONTRADICTION_1_0007__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,1.0,[],"{{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}}",page
+imgslide_4_S6_IMAGE_TEXT_CONTRADICTION_1_0006__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the figure caption"",""region"":""left""}",1.0,[],"{{""present"": true, ""evidence_element"": ""the figure caption"", ""evidence_region"": ""left"", ""confidence"": 1.0}}",page
+imgslide_6_S6_IMAGE_TEXT_CONTRADICTION_1_0008__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the left figure panel"",""region"":""left""}",0.95,[],"{{""present"": true, ""evidence_element"": ""the left figure panel"", ""evidence_region"": ""left"", ""confidence"": 0.95}}",page
+imgslide_8_S6_IMAGE_TEXT_CONTRADICTION_1_0010__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the figure on the left"",""region"":""left""}",0.95,[],"{{""present"": true, ""evidence_element"": ""the figure on the left"", ""evidence_region"": ""left"", ""confidence"": 0.95}}",page
+imgslide_7_S6_IMAGE_TEXT_CONTRADICTION_1_0009__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the left figure panel"",""region"":""left""}",1.0,[],"{
+  ""present"": true,
+  ""evidence_element"": ""the left figure panel"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}",page
+imgslide_9_S6_IMAGE_TEXT_CONTRADICTION_1_0011__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the left figure area"",""region"":""left""}",0.95,[],"{{""present"": true, ""evidence_element"": ""the left figure area"", ""evidence_region"": ""left"", ""confidence"": 0.95}}",page

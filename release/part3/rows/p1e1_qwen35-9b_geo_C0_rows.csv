@@ -1,0 +1,1095 @@
+sample_id,defect,modality,is_clean,failure,has_defect,named_target,predicted_types,locator,confidence,other,raw,level
+part2_logistics_visibility_4_G1_TEXT_OVERFLOW_32_0043__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_marketing_attribution_3_G1_TEXT_OVERFLOW_32_0047__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_marketing_attribution_1_G1_TEXT_OVERFLOW_32_0045__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_logistics_visibility_5_G1_TEXT_OVERFLOW_4_0044__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""severity"": ""minor"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_logistics_visibility_5"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'XX A pragmatic ShipEye plan' is misaligned to the left, with a visible offset from the left margin of the slide."", ""fix_suggestion"": ""Align the title text to the left margi",page
+part2_logistics_visibility_5_G1_TEXT_OVERFLOW_32_0044__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""severity"": ""minor"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_logistics_visibility_5"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'A pragmatic ShipEye plan XXX' is misaligned to the left, with a visible offset from the left edge of the slide canvas."", ""fix_suggestion"": ""Align the title text to the left",page
+part2_marketing_attribution_2_G1_TEXT_OVERFLOW_4_0046__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""severity"": ""minor"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_marketing_attribution_2"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'XX How Attrib models touchpoints' is misaligned to the left, with a visible offset from the left margin compared to the body content boxes below it."", ""fix_suggestion"": ""A",page
+part2_logistics_visibility_3_G1_TEXT_OVERFLOW_32_0042__freeform,G1_TEXT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_logistics_visibility_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title text 'ShipEye tracks every leg XXX' is cut off at the end, with 'XXX' appearing to overflow the visib",page
+part2_logistics_visibility_3_G1_TEXT_OVERFLOW_4_0042__freeform,G1_TEXT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_logistics_visibility_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'ShipEye tracks every leg XX' is contained within a box that is too narrow, causing the text to be cu",page
+part2_logistics_visibility_4_G1_TEXT_OVERFLOW_4_0043__freeform,G1_TEXT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_logistics_visibility_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'ShipEye impact on on-time delivery XX' is cut off at the right edge of the slide, with the 'XX' part",page
+part2_marketing_attribution_1_G1_TEXT_OVERFLOW_4_0045__freeform,G1_TEXT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_marketing_attribution_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'Spend is hard to attribute XX' is partially cut off at the left edge of the slide, indicating text ",page
+part2_marketing_attribution_3_G1_TEXT_OVERFLOW_4_0047__freeform,G1_TEXT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_marketing_attribution_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'XX Attrib evidence from the pilot' is partially cut off at the top edge of the slide, indicating te",page
+part2_marketing_attribution_2_G1_TEXT_OVERFLOW_32_0046__freeform,G1_TEXT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_marketing_attribution_2"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'XXX How Attrib models touchpoints' is cut off on the left side, with the 'XXX' and part of 'How' m",page
+part2_network_observability_2_G1_TEXT_OVERFLOW_32_0051__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_network_observability_2_G1_TEXT_OVERFLOW_4_0051__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_network_observability_4_G1_TEXT_OVERFLOW_4_0053__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_marketing_attribution_5_G1_TEXT_OVERFLOW_32_0049__freeform,G1_TEXT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_marketing_attribution_5"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'XXX What Attrib needs next' is partially cut off on the left side, with the 'XXX' appearing to be o",page
+part2_marketing_attribution_4_G1_TEXT_OVERFLOW_32_0048__freeform,G1_TEXT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_marketing_attribution_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'Rolling Attrib out by channel XXX' and the three body text items ('Attrib is saturated at peak d",page
+part2_marketing_attribution_4_G1_TEXT_OVERFLOW_4_0048__freeform,G1_TEXT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_marketing_attribution_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'Rolling Attrib out by channel XX' and all three body text items ('Attrib is saturated at peak dema",page
+part2_network_observability_1_G1_TEXT_OVERFLOW_32_0050__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_network_observability_1"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide title 'XXX Outages are hard to diagnose' does not match the body content, which lists features of TraceGrid (integration, data privacy, setup time)."", ""fix_suggestion"":",page
+part2_marketing_attribution_5_G1_TEXT_OVERFLOW_4_0049__freeform,G1_TEXT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_marketing_attribution_5"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title text 'What Attrib needs next XX' is cut off on the left side, with the first letter 'W' partially mi",page
+part2_network_observability_3_G1_TEXT_OVERFLOW_32_0052__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_network_observability_3"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide title is 'XXX The TraceGrid architecture', but the body content discusses adoption growth, volume handling, and support tickets, which are unrelated to architecture."", ",page
+part2_network_observability_1_G1_TEXT_OVERFLOW_4_0050__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_network_observability_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'XX Outages are hard to diagnose' does not match the body content, which lists features",page
+part2_network_observability_5_G1_TEXT_OVERFLOW_4_0054__freeform,G1_TEXT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""G1_TEXT_OVERFLOW"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_network_observability_5"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The text in the first three content boxes (e.g., 'TraceGrid is saturated at peak demand') visibly overflows to the right, extending beyond the right edge of their respective light bl",page
+part2_network_observability_5_G1_TEXT_OVERFLOW_32_0054__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_network_observability_5"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide title 'XXX The TraceGrid roadmap' suggests a timeline or future plan, but the body content lists current problems (saturation, refresh due, competitor speed) rather t",page
+part2_network_observability_4_G1_TEXT_OVERFLOW_32_0053__freeform,G1_TEXT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_network_observability_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'XXX TraceGrid data governance' is cut off on the left side, with the 'XXX' portion missing from th",page
+part2_network_observability_3_G1_TEXT_OVERFLOW_4_0052__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_network_observability_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'The TraceGrid architecture XX', but the body content discusses adoption growth, vol",page
+part2_ops_efficiency_5_G1_TEXT_OVERFLOW_32_0059__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_ops_efficiency_5_G1_TEXT_OVERFLOW_4_0059__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_retail_analytics_4_G1_TEXT_OVERFLOW_64_0043__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_ops_efficiency_1_G1_TEXT_OVERFLOW_4_0055__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_ops_efficiency_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'XX Where operating cost sits today' does not match the body content, which lists project task",page
+part2_ops_efficiency_2_G1_TEXT_OVERFLOW_32_0056__freeform,G1_TEXT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_ops_efficiency_2"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'XXX Root causes behind the cost' is contained within a light blue box that extends beyond the left margin ",page
+part2_ops_efficiency_1_G1_TEXT_OVERFLOW_32_0055__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_ops_efficiency_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'XXX Where operating cost sits today' does not match the body content, which lists action it",page
+part2_ops_efficiency_2_G1_TEXT_OVERFLOW_4_0056__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_ops_efficiency_2"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'XX Root causes behind the cost' does not match the body content, which lists benefits of Rout",page
+part2_ops_efficiency_3_G1_TEXT_OVERFLOW_32_0057__freeform,G1_TEXT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_ops_efficiency_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title text 'XXX RouteOpt is the first lever' is cut off at the end of the line, spilling beyond the visible bound",page
+part2_ops_efficiency_3_G1_TEXT_OVERFLOW_4_0057__freeform,G1_TEXT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_ops_efficiency_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title text 'RouteOpt is the first lever XX' is cut off at the end, with 'XX' appearing to be truncated or overflo",page
+part2_ops_efficiency_4_G1_TEXT_OVERFLOW_32_0058__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_ops_efficiency_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'Expected impact of RouteOpt XXX' is misaligned to the left, with its left edge not flush with the slide",page
+part2_ops_efficiency_4_G1_TEXT_OVERFLOW_4_0058__freeform,G1_TEXT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_ops_efficiency_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'XX Expected impact of RouteOpt' is cut off on the left side, with the 'X' characters missing, indicating t",page
+part2_security_program_1_G1_TEXT_OVERFLOW_64_0045__freeform,G1_TEXT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""G1_TEXT_OVERFLOW"", ""severity"": ""minor"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_security_program_1"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title text 'XXXXX Our exposure is growing fast' is partially cut off on the left side, with 'XXXXX' not fully visible within its container."", ""fix_suggestion"": ""Adjust the text container",page
+part2_retail_analytics_3_G1_TEXT_OVERFLOW_64_0042__freeform,G1_TEXT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_retail_analytics_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title text 'DemandSense beat the baseline XXXXX' is cut off on the left side, indicating it overflows the visib",page
+part2_retail_analytics_5_G1_TEXT_OVERFLOW_64_0044__freeform,G1_TEXT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_retail_analytics_5"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'Decisions for this quarter XXXXX' has text that extends beyond the left edge of its container box, caus",page
+part2_security_program_2_G1_TEXT_OVERFLOW_64_0046__freeform,G1_TEXT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_security_program_2"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title text 'A ZeroTrust strategy XXXXX' is cut off at the end, with 'XXXXX' being truncated and not fully visi",page
+part2_security_program_3_G1_TEXT_OVERFLOW_64_0047__freeform,G1_TEXT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_security_program_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title text 'XXXXX The ZeroTrust controls we deploy' is cut off on the left side, with the 'X's not fully visibl",page
+part2_security_program_5_G1_TEXT_OVERFLOW_64_0049__freeform,G1_TEXT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_security_program_5"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'XXXXX The investment we request' is partially cut off at the left edge of the slide, with the 'X's not f",page
+part2_security_program_4_G1_TEXT_OVERFLOW_64_0048__freeform,G1_TEXT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_security_program_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title text 'How we measure ZeroTrust health XXXXX' is cut off at the end, with 'XXXXX' being truncated or over",page
+part2_logistics_visibility_3_G1_TEXT_OVERFLOW_32_0042__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_supply_chain_2_G1_TEXT_OVERFLOW_64_0051__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_supply_chain_2"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide title 'XXXXX Why FlowNet visibility is missing' suggests a problem or missing information, but the body content lists positive points (risks tracked, clear rollback path, comp",page
+part2_logistics_visibility_3_G1_TEXT_OVERFLOW_4_0042__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_supply_chain_3_G1_TEXT_OVERFLOW_64_0052__freeform,G1_TEXT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""G1_TEXT_OVERFLOW"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_supply_chain_3"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title text 'XXXXX FlowNet connects the network' is cut off on the left side, with the 'X's missing, indicating text overflow beyond the visible area of its container."", ""fix_suggestion"": ",page
+part2_supply_chain_1_G1_TEXT_OVERFLOW_64_0050__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_supply_chain_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Supply shocks hit margins XXXXX' discusses supply chain economics, while the body content lists",page
+part2_logistics_visibility_5_G1_TEXT_OVERFLOW_32_0044__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_logistics_visibility_5_G1_TEXT_OVERFLOW_4_0044__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_supply_chain_5_G1_TEXT_OVERFLOW_64_0054__freeform,G1_TEXT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""G1_TEXT_OVERFLOW"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_supply_chain_5"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'FlowNet rollout plan XXXXX' is partially cut off on the left side, with the first letter 'F' missing from view."", ""fix_suggestion"": ""Increase the left margin or adjust the text conta",page
+part2_logistics_visibility_4_G1_TEXT_OVERFLOW_32_0043__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_logistics_visibility_4_G1_TEXT_OVERFLOW_4_0043__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_marketing_attribution_2_G1_TEXT_OVERFLOW_4_0046__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_marketing_attribution_3_G1_TEXT_OVERFLOW_32_0047__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_marketing_attribution_3_G1_TEXT_OVERFLOW_4_0047__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_supply_chain_4_G1_TEXT_OVERFLOW_64_0053__freeform,G1_TEXT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_supply_chain_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title text 'FlowNet impact on service levels XXXXX' is partially cut off on the left side, with the first letter '",page
+part2_marketing_attribution_4_G1_TEXT_OVERFLOW_4_0048__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_marketing_attribution_5_G1_TEXT_OVERFLOW_32_0049__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_marketing_attribution_5_G1_TEXT_OVERFLOW_4_0049__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_warehouse_robotics_1_G1_TEXT_OVERFLOW_64_0055__freeform,G1_TEXT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_warehouse_robotics_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title text 'Pick rates have plateaued XXXXX' is cut off at the right edge of the slide, with the 'XXXXX' por",page
+part2_warehouse_robotics_2_G1_TEXT_OVERFLOW_64_0056__freeform,G1_TEXT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_warehouse_robotics_2"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title text 'Where manual picking stalls XXXXX' is cut off at the end, with 'XXXXX' appearing to overflow t",page
+part2_network_observability_2_G1_TEXT_OVERFLOW_32_0051__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_network_observability_2_G1_TEXT_OVERFLOW_4_0051__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_warehouse_robotics_3_G1_TEXT_OVERFLOW_64_0057__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_warehouse_robotics_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'XXXXX PickBot automates the long aisles' is misaligned to the left and appears to be cut off or imp",page
+part2_network_observability_4_G1_TEXT_OVERFLOW_32_0053__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_network_observability_4_G1_TEXT_OVERFLOW_4_0053__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_warehouse_robotics_4_G1_TEXT_OVERFLOW_64_0058__freeform,G1_TEXT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_warehouse_robotics_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title text 'Expected PickBot throughput gains XXXXX' is cut off at the right edge of its container box, in",page
+part2_network_observability_5_G1_TEXT_OVERFLOW_32_0054__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_network_observability_5_G1_TEXT_OVERFLOW_4_0054__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_warehouse_robotics_5_G1_TEXT_OVERFLOW_64_0059__freeform,G1_TEXT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_warehouse_robotics_5"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'A staged PickBot deployment XXXXX' has 'XXXXX' which appears to be placeholder text that is not meani",page
+part2_marketing_attribution_2_G1_TEXT_OVERFLOW_32_0046__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,True,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_marketing_attribution_2"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'Adoption grew month over month' is cut off at the end of the first box, with the last word 'month' ",page
+part2_marketing_attribution_1_G1_TEXT_OVERFLOW_32_0045__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_marketing_attribution_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Spend is hard to attribute' does not match the body content, which lists unrelated ite",page
+part2_marketing_attribution_1_G1_TEXT_OVERFLOW_4_0045__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_marketing_attribution_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Spend is hard to attribute' does not match the body content, which lists unrelated ite",page
+part2_marketing_attribution_4_G1_TEXT_OVERFLOW_32_0048__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,True,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_marketing_attribution_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'Attrib is saturated at peak demand' in the first body box appears to be cut off or overflowing on th",page
+part2_network_observability_3_G1_TEXT_OVERFLOW_32_0052__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_network_observability_3"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide title is 'The TraceGrid architecture', but the body content discusses adoption growth, volume handling, and support tickets, which are unrelated to architecture."", ""fix",page
+part2_ops_efficiency_4_G1_TEXT_OVERFLOW_32_0058__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_network_observability_3_G1_TEXT_OVERFLOW_4_0052__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_network_observability_3"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide title is 'The TraceGrid architecture', but the body content discusses adoption growth, volume handling, and support tickets, which are unrelated to architecture."", ""fix",page
+part2_network_observability_1_G1_TEXT_OVERFLOW_32_0050__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_network_observability_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Outages are hard to diagnose' does not match the body content, which lists benefits of",page
+part2_network_observability_1_G1_TEXT_OVERFLOW_4_0050__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_network_observability_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Outages are hard to diagnose' does not match the body content, which lists benefits of",page
+part2_ops_efficiency_4_G1_TEXT_OVERFLOW_4_0058__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_ops_efficiency_5_G1_TEXT_OVERFLOW_32_0059__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_ops_efficiency_5_G1_TEXT_OVERFLOW_4_0059__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_retail_analytics_3_G1_TEXT_OVERFLOW_64_0042__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_security_program_1_G1_TEXT_OVERFLOW_64_0045__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_security_program_2_G1_TEXT_OVERFLOW_64_0046__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_retail_analytics_4_G1_TEXT_OVERFLOW_64_0043__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_retail_analytics_5_G1_TEXT_OVERFLOW_64_0044__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_security_program_4_G1_TEXT_OVERFLOW_64_0048__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_security_program_3_G1_TEXT_OVERFLOW_64_0047__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_supply_chain_2_G1_TEXT_OVERFLOW_64_0051__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_supply_chain_3_G1_TEXT_OVERFLOW_64_0052__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_supply_chain_5_G1_TEXT_OVERFLOW_64_0054__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_supply_chain_4_G1_TEXT_OVERFLOW_64_0053__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_ops_efficiency_1_G1_TEXT_OVERFLOW_32_0055__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_ops_efficiency_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Where operating cost sits today' does not match the body content, which lists action items ",page
+part2_warehouse_robotics_3_G1_TEXT_OVERFLOW_64_0057__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_ops_efficiency_2_G1_TEXT_OVERFLOW_32_0056__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,True,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_ops_efficiency_2"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'Payback under twelve months' in the third list item is cut off at the beginning, with the 'P' partially mis",page
+part2_ops_efficiency_2_G1_TEXT_OVERFLOW_4_0056__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_ops_efficiency_2"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'Payback under twelve months' is misaligned to the left, with the first letter 'P' visibly offset from th",page
+part2_warehouse_robotics_4_G1_TEXT_OVERFLOW_64_0058__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_ops_efficiency_1_G1_TEXT_OVERFLOW_4_0055__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_ops_efficiency_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Where operating cost sits today' does not match the body content, which lists action items:",page
+part2_warehouse_robotics_5_G1_TEXT_OVERFLOW_64_0059__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_ops_efficiency_3_G1_TEXT_OVERFLOW_32_0057__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_ops_efficiency_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'RouteOpt is the first lever' is misaligned to the left, not centered as expected for a slide title."",
+ ",page
+part2_ops_efficiency_3_G1_TEXT_OVERFLOW_4_0057__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_ops_efficiency_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'RouteOpt is the first lever' is misaligned to the left, not centered as expected for a slide title."",
+ ",page
+part2_security_program_5_G1_TEXT_OVERFLOW_64_0049__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,True,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_security_program_5"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'Error rates drop sharply' in the third box appears to be cut off or overflowing, as the word 'sharply' is",page
+part2_warehouse_robotics_1_G1_TEXT_OVERFLOW_64_0055__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,True,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_warehouse_robotics_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'Pick rates have plateaued' in the top box is cut off on the right side, indicating it overflows the co",page
+part2_supply_chain_1_G1_TEXT_OVERFLOW_64_0050__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_supply_chain_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Supply shocks hit margins' discusses economic supply chain issues, while the body content lists",page
+part2_warehouse_robotics_2_G1_TEXT_OVERFLOW_64_0056__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,True,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_warehouse_robotics_2"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'PickBot reduces toil by a third' in the first body box appears to be cut off or overflowing, as the wor",page
+part2_fraud_detection_1_S6_IMAGE_TEXT_CONTRADICTION_1_0045__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_fraud_detection_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Fraud losses are climbing' does not match the body content, which discusses a 'single-layer ",page
+part2_field_service_3_S6_IMAGE_TEXT_CONTRADICTION_1_0042__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_field_service_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'DispatchPro routes smarter' does not match the body content, which discusses a 'contradictory ",page
+part2_field_service_4_S6_IMAGE_TEXT_CONTRADICTION_1_0043__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_field_service_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Impact DispatchPro can deliver' does not match the body content, which describes a contradicto",page
+part2_fraud_detection_2_S6_IMAGE_TEXT_CONTRADICTION_1_0046__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_fraud_detection_2"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'GuardML scores every transaction' does not match the body content, which describes a 'contra",page
+part2_fraud_detection_4_S6_IMAGE_TEXT_CONTRADICTION_1_0048__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_fraud_detection_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'GuardML detection metrics', but the body content discusses a 'single-layer architecture' ",page
+part2_fraud_detection_3_S6_IMAGE_TEXT_CONTRADICTION_1_0047__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_fraud_detection_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'Inside the GuardML model', but the body text explicitly states 'This slide describes a co",page
+part2_field_service_5_S6_IMAGE_TEXT_CONTRADICTION_1_0044__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_field_service_5"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'A ninety-day DispatchPro plan', but the body content explicitly states 'This slide descri",page
+part2_fraud_detection_5_S6_IMAGE_TEXT_CONTRADICTION_1_0049__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_fraud_detection_5"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'The GuardML investment ask', but the body content describes a 'contradictory single-layer",page
+part2_field_service_3_S6_IMAGE_TEXT_CONTRADICTION_1_0042__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_field_service_4_S6_IMAGE_TEXT_CONTRADICTION_1_0043__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_field_service_5_S6_IMAGE_TEXT_CONTRADICTION_1_0044__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_fraud_detection_1_S6_IMAGE_TEXT_CONTRADICTION_1_0045__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_fraud_detection_2_S6_IMAGE_TEXT_CONTRADICTION_1_0046__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_fraud_detection_3_S6_IMAGE_TEXT_CONTRADICTION_1_0047__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_hr_analytics_3_S6_IMAGE_TEXT_CONTRADICTION_1_0052__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_hr_analytics_3"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide title 'Actions PeoplePulse recommends' does not match the body content, which describes a contradictory single-layer architecture, a refresh schedule, and competitor shipping fr",page
+part2_fraud_detection_5_S6_IMAGE_TEXT_CONTRADICTION_1_0049__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_hr_analytics_1_S6_IMAGE_TEXT_CONTRADICTION_1_0050__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_hr_analytics_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'Attrition is rising quietly', but the body text explicitly states 'This slide describes a co",page
+part2_hr_analytics_2_S6_IMAGE_TEXT_CONTRADICTION_1_0051__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_hr_analytics_2"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'PeoplePulse surfaces early signals' does not match the body content, which discusses a 'contrad",page
+part2_hr_analytics_2_S6_IMAGE_TEXT_CONTRADICTION_1_0051__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_hr_analytics_3_S6_IMAGE_TEXT_CONTRADICTION_1_0052__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_hr_analytics_4_S6_IMAGE_TEXT_CONTRADICTION_1_0053__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_hr_analytics_5_S6_IMAGE_TEXT_CONTRADICTION_1_0054__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_inventory_optimization_1_S6_IMAGE_TEXT_CONTRADICTION_1_0055__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_hr_analytics_4_S6_IMAGE_TEXT_CONTRADICTION_1_0053__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_hr_analytics_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Impact PeoplePulse can drive' does not match the body content, which describes a 'contradictory",page
+part2_inventory_optimization_3_S6_IMAGE_TEXT_CONTRADICTION_1_0057__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_inventory_optimization_4_S6_IMAGE_TEXT_CONTRADICTION_1_0058__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_inventory_optimization_5_S6_IMAGE_TEXT_CONTRADICTION_1_0059__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,,[],"{
+  ""has_defect"": false,
+  ""findings"": []
+}",page
+part2_hr_analytics_5_S6_IMAGE_TEXT_CONTRADICTION_1_0054__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_hr_analytics_5"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'PeoplePulse rollout plan', but the body content describes a 'contradictory single-layer arch",page
+part2_inventory_optimization_1_S6_IMAGE_TEXT_CONTRADICTION_1_0055__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_inventory_optimization_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'Stockouts erode loyalty', but the body content discusses 'single-layer architectur",page
+part2_inventory_optimization_4_S6_IMAGE_TEXT_CONTRADICTION_1_0058__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_inventory_optimization_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Expanding StockIQ to all regions' describes a geographic expansion, but the body cont",page
+part2_inventory_optimization_2_S6_IMAGE_TEXT_CONTRADICTION_1_0056__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_inventory_optimization_2"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'StockIQ rebalances inventory nightly' describes a specific operational task, while th",page
+part2_inventory_optimization_3_S6_IMAGE_TEXT_CONTRADICTION_1_0057__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_inventory_optimization_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'StockIQ cut stockouts in the pilot' describes a business result, while the body conte",page
+part2_inventory_optimization_5_S6_IMAGE_TEXT_CONTRADICTION_1_0059__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_inventory_optimization_5"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'Funding the StockIQ rollout', but the body content discusses assigning engineers a",page
+part2_hr_analytics_1_S6_IMAGE_TEXT_CONTRADICTION_1_0050__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_hr_analytics_1"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide title 'Attrition is rising quietly' contradicts the body content which discusses positive metrics like 'Adoption grew month over month', 'PeoplePulse now handles most volume', a",page
+part2_fraud_detection_4_S6_IMAGE_TEXT_CONTRADICTION_1_0048__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_fraud_detection_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'GuardML detection metrics', but the body content lists quarterly milestones (Q1 foundat",page
+part2_inventory_optimization_2_S6_IMAGE_TEXT_CONTRADICTION_1_0056__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G1_TEXT_OVERFLOW""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_inventory_optimization_2"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text in the first body box ('Phase 1 stabilizes StockIQ') is cut off on the left side, indicating it over",page

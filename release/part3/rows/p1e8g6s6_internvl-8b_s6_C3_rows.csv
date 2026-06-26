@@ -1,0 +1,193 @@
+sample_id,defect,modality,is_clean,failure,has_defect,named_target,predicted_types,locator,confidence,other,raw,level
+imgslide_10_S6_IMAGE_TEXT_CONTRADICTION_1_0000__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the figure with the green triangle"",""region"":""center""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the figure with the green triangle"",
+  ""evidence_region"": ""center"",
+  ""confidence"": 1.0
+}
+```",page
+imgslide_3_S6_IMAGE_TEXT_CONTRADICTION_1_0005__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the green triangle"",""region"":""center""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the green triangle"",
+  ""evidence_region"": ""center"",
+  ""confidence"": 1.0
+}
+```",page
+imgslide_2_S6_IMAGE_TEXT_CONTRADICTION_1_0004__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the text near the figure"",""region"":""center""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the text near the figure"",
+  ""evidence_region"": ""center"",
+  ""confidence"": 1.0
+}
+```",page
+imgslide_5_S6_IMAGE_TEXT_CONTRADICTION_1_0007__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the green triangle"",""region"":""center""}",0.9,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the green triangle"",
+  ""evidence_region"": ""center"",
+  ""confidence"": 0.9
+}
+```",page
+imgslide_11_S6_IMAGE_TEXT_CONTRADICTION_1_0001__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the text near the figure"",""region"":""center""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the text near the figure"",
+  ""evidence_region"": ""center"",
+  ""confidence"": 1.0
+}
+```",page
+imgslide_1_S6_IMAGE_TEXT_CONTRADICTION_1_0003__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the text near the figure"",""region"":""center""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the text near the figure"",
+  ""evidence_region"": ""center"",
+  ""confidence"": 1.0
+}
+```",page
+imgslide_6_S6_IMAGE_TEXT_CONTRADICTION_1_0008__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the text near the figure"",""region"":""center""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the text near the figure"",
+  ""evidence_region"": ""center"",
+  ""confidence"": 1.0
+}
+```",page
+imgslide_7_S6_IMAGE_TEXT_CONTRADICTION_1_0009__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the figure"",""region"":""center""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the figure"",
+  ""evidence_region"": ""center"",
+  ""confidence"": 1.0
+}
+```",page
+imgslide_8_S6_IMAGE_TEXT_CONTRADICTION_1_0010__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the green triangle"",""region"":""center""}",0.9,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the green triangle"",
+  ""evidence_region"": ""center"",
+  ""confidence"": 0.9
+}
+```",page
+imgslide_0_S6_IMAGE_TEXT_CONTRADICTION_1_0002__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the green triangle"",""region"":""center""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the green triangle"",
+  ""evidence_region"": ""center"",
+  ""confidence"": 1.0
+}
+```",page
+imgslide_9_S6_IMAGE_TEXT_CONTRADICTION_1_0011__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the text near the figure"",""region"":""center""}",0.9,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the text near the figure"",
+  ""evidence_region"": ""center"",
+  ""confidence"": 0.9
+}
+```",page
+imgslide_4_S6_IMAGE_TEXT_CONTRADICTION_1_0006__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the text near the figure"",""region"":""center""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the text near the figure"",
+  ""evidence_region"": ""center"",
+  ""confidence"": 1.0
+}
+```",page
+imgslide_0_S6_IMAGE_TEXT_CONTRADICTION_1_0002__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,0.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 0.0
+}
+```",page
+imgslide_11_S6_IMAGE_TEXT_CONTRADICTION_1_0001__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,0.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 0.0
+}
+```",page
+imgslide_1_S6_IMAGE_TEXT_CONTRADICTION_1_0003__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,0.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 0.0
+}
+```",page
+imgslide_10_S6_IMAGE_TEXT_CONTRADICTION_1_0000__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,0.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 0.0
+}
+```",page
+imgslide_3_S6_IMAGE_TEXT_CONTRADICTION_1_0005__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,0.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 0.0
+}
+```",page
+imgslide_2_S6_IMAGE_TEXT_CONTRADICTION_1_0004__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,0.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 0.0
+}
+```",page
+imgslide_5_S6_IMAGE_TEXT_CONTRADICTION_1_0007__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,0.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 0.0
+}
+```",page
+imgslide_4_S6_IMAGE_TEXT_CONTRADICTION_1_0006__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,0.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 0.0
+}
+```",page
+imgslide_7_S6_IMAGE_TEXT_CONTRADICTION_1_0009__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,0.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 0.0
+}
+```",page
+imgslide_6_S6_IMAGE_TEXT_CONTRADICTION_1_0008__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,0.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 0.0
+}
+```",page
+imgslide_9_S6_IMAGE_TEXT_CONTRADICTION_1_0011__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,0.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 0.0
+}
+```",page
+imgslide_8_S6_IMAGE_TEXT_CONTRADICTION_1_0010__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,0.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 0.0
+}
+```",page

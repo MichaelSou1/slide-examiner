@@ -51,10 +51,11 @@ routinely pass slides whose text visibly overflows its box. Is this a failure of
 cannot see the defect) or of \emph{calibration} (it sees but will not commit)? The answer decides whether the
 remedy is a larger model, a different prompt, or a different tool. Our primary contribution is an attribution
 protocol that settles this per defect, built on a \emph{lossless structured-geometry oracle}---element boxes,
-text, and style, not a model-written caption that re-injects perceptual error.
+text, and style, not a model-written caption that can re-inject perceptual error.
 
-The diagnosis is defect-dependent. For a constructed render-overflow class \g{G7} (declared box legal, rendered
-pixels overflow) the failure is pure \emph{format suppression}: the frozen model that abstains under the
+The diagnosis is defect-dependent. For a constructed render-overflow class \g{G7}---a slide instance of the
+broader declared-layout/rendered-pixel gap behind DOM/CSS, charts, and document layout---the failure is pure
+\emph{format suppression}: the frozen model that abstains under the
 conventional pointwise+rubric prompt detects the defect once it is merely \emph{named}, and an atomic elicitation
 recovers it across four of six VLMs and transfers to human-annotated real slides. For declared geometry (\g{G1})
 and image/text contradiction (\g{S6}) the gain instead needs a paired clean reference---a milder
@@ -65,9 +66,9 @@ The diagnosis prescribes the critic, not the reverse. Declared geometry routes t
 format-suppressed classes to one re-elicited VLM, lifting coverage from \textbf{2/9} classes (the conventional
 pointwise VLM) to \textbf{8/9} (balanced accuracy $0.89$) and matching a pre-registered routed hybrid---so the
 hybrid is a \emph{consequence} of the diagnosis, not an architecture we advocate. A reward-side audit of five
-published scorers shows the same split: a linter, a document reward, and an artistic-aesthetic head miss \g{G7},
-while both general-multimodal rewards and a zero-shot perceptual-quality probe catch it---so \g{G7} needs a
-perceptually-capable engine, not a specialised one. The diagnosis reproduces on \emph{real} CC-licensed layouts
+published scorers plus a closed frontier VLM judge shows the same split: a linter, this 3B document reward, and
+an artistic-aesthetic head miss \g{G7}, while two general-multimodal rewards, CLIP-IQA, and the VLM judge catch
+it---so \g{G7} needs a rendered-quality read-out, not merely a domain-labelled scorer. The diagnosis reproduces on \emph{real} CC-licensed layouts
 via a lossless tool-extracted oracle. The full hybrid targets IR-owning generation agents; for bare third-party
 pixels the deployable critic is the re-elicited VLM.
 \end{abstract}
@@ -92,10 +93,10 @@ slide-inspection failures are of two kinds---declared-geometry (exact and cheap 
 sub-threshold acuity tail nothing recovers) and merely format-suppressed (route to a VLM under a changed
 elicitation). Routing each defect to its bottleneck-appropriate
 engine yields a hybrid critic (Sec.~\ref{sec:hybrid}). The render-overflow class \g{G7} is the crux: a symbolic
-linter is blind to it by construction and a document reward and an artistic-aesthetic head are blind empirically,
-while \emph{both} general-multimodal rewards (two backbones), a perceptual-quality probe, and the VLM engine under
-atomic-binary elicitation catch it---so \g{G7}-detection tracks perceptual capability, not the domain label, and
-\g{G7} routes to a perceptually-capable engine.}
+linter is blind to it by construction, and this 3B document reward plus an artistic-aesthetic head miss it
+empirically, while \emph{both} general-multimodal rewards (two backbones), CLIP-IQA, a closed frontier VLM
+judge, and the VLM engine under atomic-binary elicitation catch it---so \g{G7}-detection tracks rendered-quality
+read-out capability, not the domain label alone, and \g{G7} routes to a perceptually-capable engine.}
 \label{fig:teaser}
 \end{figure}
 
@@ -127,16 +128,26 @@ false-positive rate; text and structural semantics go to a language model; and t
 perceivable classes go to a VLM, but only under the changed elicitation the diagnosis shows recovers them. To
 stress-test the design we construct an adversarial class, \g{G7} render-containment overflow, that is
 invisible to the linter by construction (the declared box is legal; only the rendered pixels overflow)
-and---we find---invisible to a document reward and an artistic-aesthetic head as well, while \emph{both}
-general-multimodal rewards (distinct backbones) and a zero-shot perceptual-quality probe see it; \g{G7}-detection
-tracks perceptual capability rather than the training-domain label, isolating exactly the slice of the problem that
-needs a perceptually-capable engine (prompted VLM or reward head).
+and---we find---missed by this 3B document reward and an artistic-aesthetic head as well, while \emph{both}
+general-multimodal rewards (distinct backbones), a zero-shot perceptual-quality probe, and a closed frontier
+VLM-as-judge see it; \g{G7}-detection tracks rendered-quality read-out capability rather than the training-domain label alone, isolating
+exactly the slice of the problem that needs a perceptually-capable engine (prompted VLM, VLM judge, or reward head).
+
+\paragraph{Why this is not slide-specific.}
+The same failure mode is a general declared-layout versus rendered-pixel gap. In a web page, the
+IR/linter/renderer triad is DOM, CSS-level checks, and the browser: a DOM node can satisfy declared layout
+constraints while CSS \texttt{overflow:hidden}, font fallback, or responsive reflow clips the rendered text, so
+the defect exists only after rendering. In charts, declared data and axis specifications can be valid while tick
+labels, legends, or annotations are clipped by the plotting backend; in document layout, this is the same
+structure-versus-rendered-page line studied by layout-error detection. \g{G7} is therefore a clean slide
+operationalization of a broader pattern: symbolic checks own what is declared, but perceptual engines are needed
+when the renderer creates the defect.
 
 \paragraph{Contributions.}
 \begin{itemize}
 \item \textbf{C1 -- A lossless-oracle attribution method (the paper's core contribution).} A
 perception/reasoning attribution protocol built on a \emph{lossless structured-geometry oracle}---element boxes,
-text, and style, not a model-written caption that re-injects perceptual error---that separates a VLM's
+text, and style, not a model-written caption that can re-inject perceptual error---that separates a VLM's
 quality-inspection failures into \emph{genuinely sub-perceptual} versus \emph{format-suppressed}
 (Sec.~\ref{sec:diag}) and reproduces on \emph{real} CC-licensed slide layouts via a tool-extracted lossless
 oracle, with no human or self-annotation (Sec.~\ref{sec:external}). This measurement---which bottleneck a VLM
@@ -147,7 +158,7 @@ pointwise+rubric format suppresses. The mechanism holds at \emph{full strength f
 \g{G7}} (and its atomic-binary C3 mirror), where \emph{naming the defect alone}---a single slide, no
 reference---recovers it; for declared geometry \g{G1} and image/text contradiction \g{S6} the gain instead needs
 the paired clean reference, a milder \emph{availability-of-reference} effect we label as such. The \g{G7}
-recovery replicates across the capable models (four of six VLMs, four families, three scales), transfers to
+recovery replicates across the pre-defined capable subset (four of six VLMs, three scales), transfers to
 human-annotated real slides, and survives a forced-evidence localization check that rules out a lucky ``yes''
 (Sec.~\ref{sec:hybrid}).
 \item \textbf{C3 -- A minimal hybrid critic that follows from the diagnosis, and a falsifiable linter-blind
@@ -156,10 +167,10 @@ VLM-recoverable, re-eliciting the \emph{same} frozen VLM (C0$\to$C3) and routing
 linter lifts coverage from \textbf{2/9} classes (the conventional pointwise VLM) to \textbf{8/9} (balanced
 accuracy 0.89)---matching a pre-registered routed hybrid (8/9, 0.88) while a control shows per-class prompt/LLM
 routing is \emph{not} load-bearing. The render class \g{G7} (declared box legal, rendered pixels overflow) makes
-the linter's blind spot falsifiable; auditing five published reward scorers over it shows the same
-perception-capability split---a symbolic linter (0.00), a document reward (0.48), and an artistic-aesthetic head
-(0.57) miss it, while \emph{both} general-multimodal rewards (0.79, 0.71, distinct backbones) and a
-perceptual-quality probe (0.83) catch it, so \g{G7} needs a perceptually-capable engine, prompted or
+the linter's blind spot falsifiable; auditing five published reward scorers plus a closed VLM judge over it shows the same
+perception-capability split---a symbolic linter (0.00), this 3B document reward (0.48), and an artistic-aesthetic head
+(0.57) miss it, while \emph{both} general-multimodal rewards (0.79, 0.71, distinct backbones), a
+perceptual-quality probe (0.83), and Qwen3.7-Max as a pointwise VLM judge (1.00) catch it, so \g{G7} needs a perceptually-capable engine, prompted, judged, or
 reward-headed (Sec.~\ref{sec:hybrid}).
 \item \textbf{C4 -- A specialist examiner and a perturbation-fidelity audit (supporting).} An 8B examiner
 finetuned on injected defects surpasses a zero-shot 30B on \emph{in-distribution} semantic inspection and learns
@@ -210,17 +221,18 @@ rescues \g{G1}/\g{S6} yet not \g{G3}/\g{S3}---which is what turns the elicitatio
 perception/format attribution signal.
 
 \paragraph{Slide generation, evaluation, and reward.}
-Slide and poster generation with design feedback is an active area; aesthetic-reward
+Slide and poster generation with design feedback is an active area; AutoPresent~\cite{autopresent} treats
+slide generation as tool-augmented program generation and studies iterative self-refinement, aesthetic-reward
 systems~\cite{aeslides,evopresent} report that iterative VLM refinement helps gross layout damage but fails on
 fine-grained aesthetics and is prone to reward hacking, and slide-evaluation studies~\cite{vlmslideeval} call
 for calibrated critic-in-the-loop selection. These motivate, rather than compete with, a routed critic: they
 observe the VLM's perceptual ceiling and route around it with rules, whereas we first \emph{diagnose} that
 ceiling and then show part of it is recoverable by elicitation. We use the human-annotated
-\textsc{SlideAudit} set~\cite{slideaudit} as our real-data probe and audit \emph{five} published reward scorers
-(two per audited category)---the document reward DocReward~\cite{docreward}; two general-multimodal rewards on
+\textsc{SlideAudit} set~\cite{slideaudit} as our real-data probe and audit \emph{five} published reward/perceptual scorers
+(two per audited category) plus one closed frontier VLM judge---the document reward DocReward~\cite{docreward}; two general-multimodal rewards on
 distinct backbones, the value-head Skywork-VL-Reward~\cite{skyworkvl} and the CLIP-contrastive
 PickScore~\cite{pickscore}; and two aesthetic/perceptual scorers, a LAION aesthetic CLIP predictor~\cite{laionaes}
-and the zero-shot CLIP-IQA quality probe~\cite{clipiqa}---as neural-critic baselines.
+and the zero-shot CLIP-IQA quality probe~\cite{clipiqa}; plus Qwen3.7-Max as a prompted VLM-as-judge baseline.
 
 \paragraph{Critic / reward-model training.}
 Training specialist critics from paired data is established for natural images and code; our examiner adapts
@@ -237,10 +249,13 @@ Every slide is an IR of typed elements with bounding boxes, text, and style; def
 programmatically into the IR and then rendered, giving exact labels and matched (defective, clean) pairs. The
 taxonomy (Table~\ref{tab:taxonomy}) has a \emph{geometry/perception} group \g{G1}--\g{G6}, a
 \emph{semantic/reasoning} group \g{S1}--\g{S6}, and one constructed render class \g{G7}; the taxonomy is aligned
-to the expert-derived \textsc{SlideAudit} taxonomy~\cite{slideaudit} via a bidirectional map (results are
-reported in its canonical classes), with \g{G7} refining its ``content overflow/cut-off'' category. We add \g{G7} because
+to the expert-derived \textsc{SlideAudit} taxonomy~\cite{slideaudit} via a bidirectional map
+(Appendix~\ref{app:slideaudit-crosswalk}; results are reported in its canonical classes), with \g{G7} refining
+its ``content overflow/cut-off'' category. We add \g{G7} because
 it is the sharpest test of the linter's blind spot: its declared box is legal (inside the safe margin, no box
-overlap) but the rendered content overflows its container, so the defect exists \emph{only} in pixels.
+overlap) but the rendered content overflows its container, so the defect exists \emph{only} in pixels. On real
+agent-generated slices, \g{G7} is not rare: a 93-deck Zenodo10K slice yields 81/93 affected decks
+(857/3167 legal boxes), and a 14-deck AutoPresent slice yields 8/14 affected decks (20/50 legal boxes).
 
 \begin{table}[t]
 \centering
@@ -281,6 +296,9 @@ $\wedge$ B-fail $\Rightarrow$ \emph{reasoning} bottleneck; A-succeed $\wedge$ re
 \emph{execution} bottleneck. Throughout, the headline metric is \emph{balanced accuracy on paired clean
 controls}, never recall alone---a consistency defect scored by recall reads a false ``100\% detection'' when
 the model simply always flags.
+B$'$ is included as a lossy-caption control, not as a second oracle: because it is produced by a VLM, any
+superiority of \textbf{B} for isolating declared structure is a design property of the channel, not a body-level
+empirical claim that captions are worse in every setting.
 
 \paragraph{Two linters.}
 A geometry linter detects \g{G1}--\g{G6} from coordinates and rules (brand color via CIELAB $\Delta E_{2000}$, not RGB
@@ -414,27 +432,34 @@ same model, taxonomy, and image, differing only in ``ask everything at once'' ve
 forced evidence.'' If C3 $\gg$ C0, the pointwise abstention was a format/cognitive-load artifact, not a
 capability gap.
 
-\paragraph{The recovery replicates across families and scales.}
-On the constructed render class \g{G7}, the atomic-binary C3 recovers detection that C0 suppresses, and it does
-so across four model families and three scales (Fig.~\ref{fig:c3}): Qwen3.5-9B $0.50\!\to\!0.93$,
+\paragraph{The recovery replicates across the capable subset.}
+Before reporting recovery, we fix the capability boundary: a model counts as in-scope for the format-suppression
+claim only if C3 both clears the paired-clean detection gate ($\ba\ge0.70$, precision $\ge0.70$) and localizes
+the overflowing element on \g{G7}. This excludes InternVL-8B and Ovis-9B as capability-boundary cases rather
+than treating their floor/non-localized behavior as evidence against elicitation. On the constructed render
+class \g{G7}, the atomic-binary C3 recovers detection that C0 suppresses across the remaining four model
+instances and three scales (Fig.~\ref{fig:c3}): Qwen3.5-9B $0.50\!\to\!0.93$,
 Qwen3.5-27B $0.93\!\to\!1.00$, Qwen3.6-27B $0.52\!\to\!1.00$, and Google Gemma4-31B $0.75\!\to\!1.00$, all at
 precision 0.88--1.00. As a \emph{cross-model} effect---the claim we actually make---the recovery is
 overwhelming: a stratified (Cochran) McNemar over the four models' matched pairs counts \textbf{149} \g{G7}
 items that C3 fixes against \textbf{zero} reversals ($\chi^2_1{=}149$, $p<10^{-30}$).\footnote{Per model the gain
-is individually significant for the three low-C0 models ($p\le 2\!\times\!10^{-9}$); on the already-strong
+is individually significant and Holm-surviving for the three low-C0 models ($p\le 2\!\times\!10^{-9}$); on the already-strong
 Qwen3.5-27B (C0~$0.93$) only $9$ items can move and all $9$ go to C3 ($0$ reversals, exact $p{=}0.004$, individually
 n.s.\ after Holm over the full 61-test family)---a ceiling effect, not a fragile one. Holm (FWER) over all 61
 reported tests keeps the pooled \g{G7} recovery, the three low-C0 \g{G7} cells, both examiner contrasts
 ($p_{\text{Holm}}{=}1.9\!\times\!10^{-5},\,4.7\!\times\!10^{-4}$) and \emph{both} general-multimodal rewards' \g{G7}
 detection (Skywork $p_{\text{Holm}}{=}2\!\times\!10^{-6}$, PickScore $2.6\!\times\!10^{-3}$); full corrected
-table + the stratified test in the released multiplicity report.} That the \emph{same} effect appears in models from different
+table + the stratified test in the released multiplicity report. The declared 61-test family is the complete set
+of reported Part-3 inferential tests: model$\times$defect elicitation McNemar contrasts, the two examiner
+contrasts, and reward \g{G7}-preference tests; purely descriptive cells are not in the family.} That the \emph{same} effect appears in models from different
 vendors with different pretraining is the core model-agnostic evidence: C0's fixed taxonomy cannot \emph{name}
 an off-taxonomy render class, so it abstains; the atomic per-type binary restores it.
 
 \begin{figure}[t]
 \centering
 \includegraphics[width=0.86\linewidth]{figs/fig5_c3_vs_c0_g7.png}
-\caption{\textbf{Atomic-binary elicitation (C3) recovers the linter-blind render class \g{G7} across families.}
+\caption{\textbf{Atomic-binary elicitation (C3) recovers the linter-blind render class \g{G7} across the capable
+subset.}
 Capable models reach the ceiling ($\ge$0.93, precision 0.88--1.0); the weaker InternVL/Ovis stay near their
 perceptual floor---a capability-dependent boundary, not a universal fix.}
 \label{fig:c3}
@@ -516,7 +541,8 @@ predicts, not a tuned routing architecture.
 \setlength{\tabcolsep}{2pt}
 \caption{Per-class named-attribution balanced accuracy with 95\% Wilson intervals. E3 adds C3-everywhere and
 linter+VLM-C3: the minimal hybrid matches routed coverage and slightly exceeds its mean. $n$ = paired positives
-with matched clean controls; precision for every cell is in the released reports.}
+with matched clean controls; precision for every cell is in the released reports. The two $n{=}18$ cells
+(\g{S1}, \g{S6}) are routing diagnostics, not stand-alone confirmatory tests.}
 \label{tab:coverage}
 \resizebox{\linewidth}{!}{%
 \begin{tabular}{@{}llcccccr@{}}
@@ -556,11 +582,14 @@ the \emph{rendered layout}, not just the text. We re-route \g{S1} to the VLM---a
 \g{S1} (both elicitations catch all 18 defectives), so the forced yes/no of C3 only adds false positives,
 dropping specificity $0.89\!\to\!0.67$. Atomic elicitation is therefore \emph{not} a free lunch---it recovers
 recall-limited classes (\g{G7}, \g{S4}) but inflates false positives on subjective ones---which is itself the
-reason the critic routes the \emph{elicitation} per class instead of forcing C3 everywhere. The one image-level
+reason the critic routes the \emph{elicitation} per class instead of forcing C3 everywhere; with only 18
+\g{S1} positives, this is a descriptive routing choice. The one image-level
 class the deployable hybrid fails to cover is \g{S6} image/text contradiction, which stays at $0.50$
 single-image for every engine---but the 2-AFC diagnosis (Fig.~\ref{fig:artifact}) shows the model \emph{does}
 perceive it (it over-asserts pointwise rather than missing it; recall $1.0$, specificity $\sim0$), so the gap is
 availability-of-reference, not blindness---in pointed contrast to the genuine \g{G6} page-offset blind spot.
+Because the named-attribution \g{S6} cell also has only 18 positives, we use it as boundary evidence, not as a
+confirmatory coverage claim.
 
 \subsection{\g{G7}: the linter-blind class that specialised rewards also miss}\label{sec:g7}
 
@@ -571,29 +600,35 @@ the overflow lives in the renderer, not the IR, so the linter and any structure-
 construction. A self-check confirms the geometry linter returns zero findings on 90/90 \g{G7} defectives.
 
 \paragraph{What kind of reward sees \g{G7}? Perceptual capability, not the training-domain label.}
-The natural rebuttal is ``just train a neural reward model.'' We test it directly by auditing \textbf{five}
-published reward scorers---now \emph{two per audited category}, so the answer is category- not instance-level---on
-the same paired slides: does each score the clean slide above its defective twin? The scorers are a \emph{document}
+The natural rebuttal is ``just train a neural reward model'' or ``use the frontier VLM as the judge.'' We test both
+directly by auditing \textbf{five} published reward/perceptual scorers---including two general-multimodal
+scorers and two CLIP-based aesthetic/perceptual scorers---plus one closed frontier VLM-as-judge on the same paired slides: does each
+score the clean slide above its defective twin? The scorers are a \emph{document}
 reward (\textbf{DocReward}~\cite{docreward}, Qwen2.5-VL-3B with a Bradley--Terry head over 117K paired documents);
 two \emph{general}-multimodal rewards on \emph{distinct} backbones (\textbf{Skywork-VL-Reward-7B}~\cite{skyworkvl},
 a Qwen2.5-VL-7B value head, and \textbf{PickScore}~\cite{pickscore}, a CLIP-H/14 contrastive reward fine-tuned on
 500K human choices); and two \emph{aesthetic}/perceptual scorers (\textbf{LAION-Aesthetic}~\cite{laionaes}, a
 linear artistic-appeal head on CLIP-L/14, and \textbf{CLIP-IQA}~\cite{clipiqa}, a zero-shot ``Good/Bad photo''
-quality probe on the same CLIP). Each cleanly penalizes several in-taxonomy defects it can see (Table~\ref{tab:reward},
+quality probe on the same CLIP); the judge is \textbf{Qwen3.7-Max} on DashScope, prompted to give a pointwise
+0--100 visual/layout-quality score. Each cleanly penalizes several in-taxonomy defects it can see (Table~\ref{tab:reward},
 Fig.~\ref{fig:reward}), so each is a working scorer, not a domain mismatch. On \g{G7} the picture splits---but
-\emph{not} along the domain label. \g{G7} is detected (95\% CI above chance, $n{=}90$) by \emph{both}
-general-multimodal rewards (Skywork-VL 0.79, $[0.69,0.86]$; PickScore 0.71, $[0.61,0.80]$)---a \emph{category-level}
-result across two unrelated backbones---and, tellingly, by the zero-shot perceptual-quality probe (CLIP-IQA 0.83,
-$[0.74,0.90]$); it is missed (CI spans 0.5) by the symbolic linter (0.00), the document reward (DocReward 0.48,
-$[0.38,0.58]$) and the artistic-aesthetic head (LAION 0.57, $[0.46,0.66]$). So the dividing line is not
-``general vs.\ narrow domain'' but \emph{perceptual capability}: a scorer that reads generic rendered quality---a
-capable general-multimodal reward, or even a plain CLIP quality read---catches the visible overflow, whereas a head
-tuned to a \emph{specialised} objective (document structure, artistic appeal) is blind to it even when, as for
-CLIP-IQA vs.\ LAION, the two share a backbone. This is the reward-side counterpart of the C0$\to$C3 recovery: the
-perception is present; a specialised read-out suppresses it. The hybrid thesis is unchanged and now category-level:
+\emph{not} along the domain label. The cleanest dissociation is within one backbone: CLIP-IQA detects \g{G7}
+(0.83, $[0.74,0.90]$, $n{=}90$), while the LAION aesthetic head on CLIP-L/14 is at chance (0.57,
+$[0.46,0.66]$). The same visible overflow is also detected by \emph{both} general-multimodal rewards
+(Skywork-VL 0.79, $[0.69,0.86]$; PickScore 0.71, $[0.61,0.80]$) on distinct backbones and by Qwen3.7-Max as a
+pointwise VLM judge (1.00, $[0.86,1.00]$, $n{=}24$); it is missed (CI spans 0.5) by the symbolic linter (0.00),
+the artistic-aesthetic head (LAION 0.57), and the document reward (DocReward 0.48, $[0.38,0.58]$). The DocReward
+miss should not be over-read as ``document rewards cannot see \g{G7}'': with one 3B document model, capacity and
+objective are confounded. The supported claim is narrower and stronger: \g{G7} is visible to general rendered-quality
+read-outs, including two distinct general-multimodal backbones and a CLIP quality probe, but can be suppressed by
+specialised read-outs even on the same backbone. This is the reward-side counterpart of the C0$\to$C3 recovery:
+the perception is present; a specialised read-out can suppress it. The hybrid thesis is unchanged:
 \g{G7} needs a perceptually-capable engine, and that engine works whether it is \emph{prompted} (the C3 recovery,
-0.93--1.00) or carries a \emph{reward head} (two general-mm rewards, 0.71--0.79)---a reviewer who tests either will
-find detection. The full split, including the aesthetic scorers that disagree, is in Table~\ref{tab:reward}. (Naming containment in
+0.93--1.00), used as a pointwise VLM judge (Qwen3.7-Max 1.00), or carries a \emph{reward head} (two general-mm
+rewards, 0.71--0.79)---a reviewer who tests any of these will find detection. On the same closed model, however,
+the whole-taxonomy examiner prompt still cannot \emph{name} the off-taxonomy class (C0 named bal-acc 0.50) whereas
+C3 names and localizes it perfectly (1.00), so elicitation remains load-bearing for structured diagnosis. The full
+split, including the aesthetic scorers that disagree, is in Table~\ref{tab:reward}. (Naming containment in
 Skywork's prompt lifts \g{G7} to 0.87, reinforcement rather than rescue. On \g{G5}---re-operationalised as an
 internal chromatic clash, one element hue-swapped against its aligned sibling column and so visible from the slide
 alone (Sec.~\ref{sec:diag})---\emph{most} scorers now react (0.65--0.78; only Skywork is marginal at 0.57), exactly
@@ -603,13 +638,14 @@ false positives, and knowledge of the \emph{declared} palette---not that the cla
 
 \begin{table}[t]
 \centering\small
-\caption{Multi-reward audit: paired preference accuracy $P(r_{\text{clean}}>r_{\text{def}})$ per class (chance
-$=0.5$; \g{G7} with 95\% CI, $n{=}90$). \textbf{Five} published scorers, now \emph{two per audited category}
-(general-multimodal: Skywork-VL + PickScore on \emph{distinct} backbones; aesthetic: LAION + CLIP-IQA), so the
-\g{G7} read is category- not instance-level. \g{G7} (boxed in Fig.~\ref{fig:reward}) is detected (CI above 0.5)
-by \emph{both} general-mm rewards and by the zero-shot perceptual-quality probe (CLIP-IQA), and missed (CI spans
-0.5) by the document reward and the artistic-aesthetic head---so detection tracks perceptual capability, not the
-training-domain label. \checkmark/$\times$ in the \g{G7} column marks reliable detection. \g{G5} is the
+\caption{Multi-reward / VLM-judge audit: paired preference accuracy $P(r_{\text{clean}}>r_{\text{def}})$ per class
+(chance $=0.5$; \g{G7} with 95\% CI). Five published scorers plus one closed frontier VLM judge; the trained/perceptual
+scorers retain two audited categories (general-multimodal: Skywork-VL + PickScore on distinct backbones; aesthetic:
+LAION + CLIP-IQA), so the \g{G7} read is not a single-scorer anecdote. \g{G7} is detected (CI above 0.5) by both
+general-mm rewards, by CLIP-IQA, and by the VLM judge, and missed (CI spans 0.5) by the document reward and the
+artistic-aesthetic head; the document miss is instance-level because capacity and objective are confounded.
+\checkmark/$\times$ in the \g{G7} column marks reliable detection. The VLM-judge row is a small closed-model R7
+probe ($n{=}24$ for its four measured classes); all other $n$ are in the bottom row. \g{G5} is the
 internal-chromatic re-operationalisation of Sec.~\ref{sec:diag} (one element hue-swapped vs.\ its sibling column,
 $n{=}80$), a \emph{visible} defect most scorers catch---not the linter-only blind spot \g{G7} is.}
 \label{tab:reward}
@@ -625,7 +661,10 @@ PickScore-v1   & general-mm & 0.74 & 0.59 & 0.70 & \checkmark\,\textbf{0.71}\,{\
 LAION-Aesth.   & aesthetic  & 0.37 & 0.91 & 0.78 & $\times$\,\textbf{0.57}\,{\scriptsize$[.46,.66]$} & 0.75 & 0.61 \\
 CLIP-IQA       & aesthetic  & 0.44 & 0.50 & 0.65 & \checkmark\,\textbf{0.83}\,{\scriptsize$[.74,.90]$} & 0.50 & 0.72 \\
 \midrule
-\multicolumn{2}{@{}l}{$n$ (paired)} & 54 & 54 & 80 & 90 & 36 & 18 \\
+Qwen3.7-Max judge & frontier VLM & 0.13 & 0.92 & -- & \checkmark\,\textbf{1.00}\,{\scriptsize$[.86,1]$} & 1.00 & -- \\
+\midrule
+\multicolumn{2}{@{}l}{$n$ (paired; non-VLM rows)} & 54 & 54 & 80 & 90 & 36 & 18 \\
+\multicolumn{2}{@{}l}{$n$ (Qwen3.7-Max judge row)} & 24 & 24 & -- & 24 & 24 & -- \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -634,13 +673,12 @@ CLIP-IQA       & aesthetic  & 0.44 & 0.50 & 0.65 & \checkmark\,\textbf{0.83}\,{\
 \centering
 \includegraphics[width=\linewidth]{figs/fig4_reward_blindspot_multi.png}
 \caption{\textbf{\g{G7}-detection tracks perceptual capability, not the training-domain label.} Preference accuracy
-per reward model $\times$ defect class (green $=$ sensitive, red $=$ mis-ranks; chance $=0.5$), five scorers, two per
-audited category. Every scorer is sensitive to several in-taxonomy classes, but for the boxed \g{G7} render class
+per reward model $\times$ defect class (green $=$ sensitive, red $=$ mis-ranks; chance $=0.5$), five published
+scorers. The table adds the R7 closed VLM-judge row: Qwen3.7-Max also catches \g{G7} as a pointwise quality judge
+(1.00, $n{=}24$). Every scorer is sensitive to several in-taxonomy classes, but for the boxed \g{G7} render class
 detection splits by \emph{capability}: both general-multimodal rewards (Skywork-VL 0.79, PickScore 0.71, distinct
-backbones) and the zero-shot perceptual-quality probe (CLIP-IQA 0.83) catch it, while the document reward
-(DocReward 0.48) and the artistic-aesthetic head (LAION 0.57) sit at chance---so the blind spot belongs to
-\emph{specialised} critics, and is caught by any perceptually-capable scorer (prompted VLM, VL reward, or CLIP
-quality read).}
+backbones), CLIP-IQA (0.83), and the frontier VLM judge catch it, while the artistic-aesthetic head (LAION 0.57)
+and this 3B document reward (DocReward 0.48) sit at chance.}
 \label{fig:reward}
 \end{figure}
 
@@ -680,7 +718,7 @@ each model's best format. On held-out \emph{severities} the semantic edge holds 
 \caption{Page-semantic inspection, balanced accuracy [95\% Wilson] on paired clean (best modality). The
 finetuned 8B examiner beats both zero-shot baselines, including the 30B, \emph{in-distribution}. Deck-scope
 \g{S2}/\g{S5} are a negative result (text). $n$ = paired positives (2-AFC rows = forced-choice pairs);
-the \g{S6} 2-AFC rests on only 12 pairs (wide interval).}
+the \g{S6} 2-AFC rests on only 12 pairs and is descriptive only.}
 \label{tab:examiner}
 \begin{tabular}{@{}lcccr@{}}
 \toprule
@@ -772,10 +810,11 @@ Fig.~\ref{fig:sat}) but unreliable enough on real layouts that it must route to 
 \paragraph{Open-world: structure recovered from pixels does not restore the linter.}
 The hybrid's symbolic engine needs the declared IR a \texttt{.pptx} carries; a third-party deck exported to
 PDF/PNG ships none, so the natural question is whether \emph{recovering} element structure from the rendered
-pixels can re-arm the linter. We test it directly: a transformers-native document-layout detector
-(PP-DocLayoutV2) returns region boxes on each render, class-agnostic NMS removes the detector's cross-class
-duplicate boxes (which would otherwise manufacture phantom overlaps), and the boxes---normalised into the IR
-coordinate frame---feed the \emph{same} geometry linter at its shipped operating point. On the real-layout set
+pixels can re-arm the linter. We test it directly: following the DocLayNet/PubLayNet line of document-layout
+detection datasets and benchmarks~\cite{doclaynet,publaynet}, a transformers-native detector (PP-DocLayoutV2)
+returns region boxes on each render, class-agnostic NMS removes the detector's cross-class duplicate boxes
+(which would otherwise manufacture phantom overlaps), and the boxes---normalised into the IR coordinate
+frame---feed the \emph{same} geometry linter at its shipped operating point. On the real-layout set
 (GT IR \emph{and} render available, so the full ladder and a recovery-fidelity IoU coexist) the answer is a
 clean, pre-registered negative (Fig.~\ref{fig:openworld}): recovered structure leaves the linter at chance on
 \g{G1}/\g{G3}/\g{G4} (overflow needs text capacity, alignment needs declared positions, font needs point
@@ -822,11 +861,12 @@ reproduces---fine alignment stays near chance in every channel on real cluttered
 slides above a magnitude threshold, but real clutter defeats it) while a margin bleed is structure-rescuable.
 Its scope is bounded: the defects are \emph{injected} (real geometry, real renderer, real oracle, but not
 naturally-occurring), so the third-party \textsc{SlideAudit} set (image-only, naturally-defective) remains our
-complementary real probe. We audit five published reward scorers, two per audited category (general-multimodal,
-aesthetic), with the document category at one (a second document/design reward, PosterReward, needs an ms-swift
-\texttt{seq\_cls} runtime we did not stand up, as does an InternLM-family reward whose PLoRA image path failed to
-load); the category-level reads are therefore solid for general-multimodal and aesthetic and instance-level for
-document. Our attribution protocol shares its core with concurrent perception/reasoning work, differentiated by
+complementary real probe. We audit five published reward/perceptual scorers and one closed VLM judge; the
+reward-side evidence is strongest where it does not rely on a category label alone---two general-multimodal
+backbones detect \g{G7}, and CLIP-IQA vs.\ LAION gives a same-backbone read-out dissociation---while the
+document-reward miss remains instance-level because a second document/design reward (PosterReward, requiring an
+ms-swift \texttt{seq\_cls} runtime) and an InternLM-family reward (PloRA image path failed to load) were not stood
+up. Our attribution protocol shares its core with concurrent perception/reasoning work, differentiated by
 domain, the lossless oracle, and the loop to a critic. The downstream effect is bounded on both sides: examiner
 quality correlates $+0.66$ with self-refine gain under a strong generator but at sub-1\% magnitude (it floors
 most briefs at the first draft), and re-running the identical gradient with an unfloored weak generator
@@ -863,14 +903,49 @@ floor versus format-suppressed perception---turns a vague ``VLMs are bad at layo
 routing rule: rules to the linter and perceivable-but-suppressed classes to a VLM under an elicitation that the
 diagnosis proves recovers them. The E3 control makes the rule simpler: linter plus one C3-prompted VLM covers
 8/9 classes, matching the pre-registered routed hybrid and beating either single engine. A constructed render
-class \g{G7}, audited over five published rewards (two per category), shows that the linter's blind spot is shared
-by a document reward and an artistic-aesthetic head but \emph{not} by either of two general-multimodal rewards or a
-perceptual-quality probe---so \g{G7}-detection tracks perceptual capability, not the training-domain label, and \g{G7}
-needs a perceptually-capable engine, prompted or reward-headed, not a specialised one. The recovery replicates across four of
-the six VLMs tested and four families and transfers to real slides, which makes the central claim a property of the
+class \g{G7}, audited over five published rewards (two per category) plus a closed frontier VLM judge, shows that the linter's blind spot is shared
+by this 3B document reward and an artistic-aesthetic head but \emph{not} by either of two general-multimodal rewards or a
+perceptual-quality probe or by Qwen3.7-Max used as a pointwise judge---so \g{G7}-detection tracks perceptual capability,
+not the training-domain label alone, and \g{G7}
+needs a perceptually-capable engine, prompted, judged, or reward-headed. The recovery replicates across four of
+the six VLMs tested (under the capability gate) and transfers to real slides, which makes the central claim a property of the
 \emph{elicitation $\times$ defect} interaction rather than of any one model. The unit of contribution is the
 lossless-oracle diagnosis---which bottleneck a defect hits, and therefore which engine it needs---and the
 falsifiable class that stress-tests it; the routed critic is the consequence, not the headline.
+
+% =====================================================================
+\appendix
+\section{SlideAudit crosswalk}\label{app:slideaudit-crosswalk}
+% =====================================================================
+
+\begin{table}[t]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\caption{Crosswalk between our G/S classes and the 19-dimensional \textsc{SlideAudit} taxonomy. Empty entries are
+intentional off-taxonomy semantic or deck-level defects; \g{G7} refines, rather than duplicates, SlideAudit's
+content-overflow/cut-off category by adding the declared-legal-box criterion that makes the defect linter-blind.}
+\label{tab:slideaudit-crosswalk}
+\begin{tabular}{@{}p{0.22\linewidth}p{0.40\linewidth}p{0.29\linewidth}@{}}
+\toprule
+Our class & \textsc{SlideAudit} class & Relation \\
+\midrule
+\g{G1} text overflow & Content Overflow/Cut-off & equivalent \\
+\g{G2} element overlap & Occluded Content & equivalent \\
+\g{G3} alignment offset & Content Alignment Issues & equivalent \\
+\g{G4} font-size inconsistency & Improper Font Sizing & equivalent \\
+\g{G5} brand-color violation & Excessive or Inconsistent Color Usage; Inappropriate or Mismatched Color Combinations & equivalent \\
+\g{G6} margin violation & Unbalanced Space Distribution & near-equivalent; safe-margin bleed is a special case \\
+\g{G7} render-containment overflow & Content Overflow/Cut-off; related to Improper Image Sizing & our extension; same visual symptom plus declared-legal-box criterion \\
+\g{S1} title/body mismatch & -- & off-taxonomy content semantics \\
+\g{S2} narrative-order break & -- & off-taxonomy deck-level ordering \\
+\g{S3} terminology inconsistency & -- & off-taxonomy cross-slide terminology \\
+\g{S4} density violation & Excessive Text Volume & equivalent \\
+\g{S5} missing logic section & -- & off-taxonomy deck-level completeness \\
+\g{S6} image/text contradiction & Irrelevant Visual Content (nearest) & nearest only; contradiction rather than relevance \\
+\bottomrule
+\end{tabular}
+\end{table}
 
 % =====================================================================
 \section*{Reproducibility}
@@ -878,12 +953,16 @@ falsifiable class that stress-tests it; the routed critic is the consequence, no
 \small
 All analysis scripts, the defect injector, the two linters, the elicitation harness, the hybrid router, the
 multi-reward audit adapters, the real-layout (\textsc{Zenodo10K}) IR/inject/render pipeline, and the per-Part
-reports are released. Experiments ran on 4$\times$RTX~3080 (20\,GB) with vLLM-served open VLMs
-(Qwen3.5/3.6, Gemma4, InternVL3.5, Ovis2.5), a QLoRA-finetuned Qwen3-VL-8B, and five published reward scorers
+reports are released. A reproducibility bundle with paired manifests and per-item rollout CSVs is available
+under \texttt{release/part3/} (generated by
+\texttt{scripts/part3\_reproducibility\_release.py}). Experiments ran on 4$\times$RTX~3080 (20\,GB) with vLLM-served open VLMs
+(Qwen3.5/3.6, Gemma4, InternVL3.5, Ovis2.5), a QLoRA-finetuned Qwen3-VL-8B, five published reward scorers,
+and one DashScope Qwen3.7-Max VLM-judge probe
 (DocReward-3B; Skywork-VL-Reward-7B and PickScore; a LAION aesthetic predictor and CLIP-IQA) behind a uniform
 adapter; serving recipes
 (tensor-parallel, AWQ, disabled thinking, fp8-KV caveats on Ampere) are in the repository. Weights, renders,
-and raw rollouts are not redistributed. Every balanced-accuracy cell in the tables and figures carries its 95\%
+raw rollouts, and upstream licensed items are not redistributed; these omissions are licensing-constrained,
+not convenience-constrained. Every balanced-accuracy cell in the tables and figures carries its 95\%
 Wilson interval and per-cell $n$; the full family of paired tests is reported with Holm (FWER) and
 Benjamini--Hochberg (FDR) multiplicity correction over all 61 reported significance tests (released multiplicity
 report), and headline claims are stated as surviving or downgraded under that correction.
@@ -907,6 +986,7 @@ report), and headline claims are stated as surviving or downgraded under that co
 \bibitem{pairpoint} Tripathi, Wadhwa, Durrett, Niekum. Pairwise or Pointwise? Evaluating Feedback Protocols for Bias in LLM-Based Evaluation. arXiv:2504.14716.
 \bibitem{aeslides} AeSlides: Incentivizing Aesthetic Layout in LLM-Based Slide Generation via Verifiable Rewards. arXiv:2604.22840.
 \bibitem{evopresent} Presenting a Paper is an Art: Self-Improvement Aesthetic Agents for Academic Presentations (EvoPresent/PresAesth). arXiv:2510.05571.
+\bibitem{autopresent} Ge et al. AutoPresent: Designing Structured Visuals from Scratch. CVPR 2025; arXiv:2501.00912.
 \bibitem{vlmslideeval} VLM-SlideEval: Evaluating VLMs on Structured Comprehension and Perturbation Sensitivity in PPT. arXiv:2510.22045.
 \bibitem{slideaudit} SlideAudit: A Dataset and Taxonomy for Automated Evaluation of Presentation Slides. arXiv:2508.03630.
 \bibitem{docreward} DocReward: A Document Reward Model for Structuring and Stylizing. arXiv:2510.11391.
@@ -915,6 +995,8 @@ report), and headline claims are stated as surviving or downgraded under that co
 \bibitem{pickscore} Kirstain et al. Pick-a-Pic: An Open Dataset of User Preferences for Text-to-Image Generation. NeurIPS 2023; arXiv:2305.01569; weights \texttt{yuvalkirstain/PickScore\_v1}.
 \bibitem{clipiqa} Wang, Chan, Loy. Exploring CLIP for Assessing the Look and Feel of Images. AAAI 2023; arXiv:2207.12396.
 \bibitem{zenodo10k} PPTAgent: Generating and Evaluating Presentations Beyond Text-to-Slides (introduces the Zenodo10K corpus of real \texttt{.pptx}). arXiv:2501.03936; dataset \texttt{Forceless/Zenodo10K}.
+\bibitem{doclaynet} Pfitzmann et al. DocLayNet: A Large Human-Annotated Dataset for Document-Layout Analysis. KDD 2022; arXiv:2206.01062.
+\bibitem{publaynet} Zhong, Tang, Jimeno Yepes. PubLayNet: largest dataset ever for document layout analysis. ICDAR 2019; arXiv:1908.07836.
 \end{thebibliography}
 
 \end{document}

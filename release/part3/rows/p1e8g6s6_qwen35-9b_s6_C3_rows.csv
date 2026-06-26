@@ -1,0 +1,138 @@
+sample_id,defect,modality,is_clean,failure,has_defect,named_target,predicted_types,locator,confidence,other,raw,level
+imgslide_4_S6_IMAGE_TEXT_CONTRADICTION_1_0006__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the figure caption"",""region"":""left""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the figure caption"", ""evidence_region"": ""left"", ""confidence"": 1.0}
+```",page
+imgslide_1_S6_IMAGE_TEXT_CONTRADICTION_1_0003__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the figure caption"",""region"":""left""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the figure caption"", ""evidence_region"": ""left"", ""confidence"": 1.0}
+```",page
+imgslide_2_S6_IMAGE_TEXT_CONTRADICTION_1_0004__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the figure caption"",""region"":""left""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the figure caption"", ""evidence_region"": ""left"", ""confidence"": 1.0}
+```",page
+imgslide_9_S6_IMAGE_TEXT_CONTRADICTION_1_0011__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the figure caption"",""region"":""left""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the figure caption"", ""evidence_region"": ""left"", ""confidence"": 1.0}
+```",page
+imgslide_11_S6_IMAGE_TEXT_CONTRADICTION_1_0001__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the figure caption"",""region"":""left""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the figure caption"", ""evidence_region"": ""left"", ""confidence"": 1.0}
+```",page
+imgslide_0_S6_IMAGE_TEXT_CONTRADICTION_1_0002__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the figure caption and the right-hand text box"",""region"":""left""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the figure caption and the right-hand text box"", ""evidence_region"": ""left"", ""confidence"": 1.0}
+```",page
+imgslide_5_S6_IMAGE_TEXT_CONTRADICTION_1_0007__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the figure caption"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the figure caption"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+imgslide_10_S6_IMAGE_TEXT_CONTRADICTION_1_0000__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the figure caption"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the figure caption"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+imgslide_3_S6_IMAGE_TEXT_CONTRADICTION_1_0005__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the figure caption"",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the figure caption"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+imgslide_6_S6_IMAGE_TEXT_CONTRADICTION_1_0008__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the text 'Operating costs rose quarter over quarter' and the figure caption 'Operating costs fell quarter over quarter'"",""region"":""right""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the text 'Operating costs rose quarter over quarter' and the figure caption 'Operating costs fell quarter over quarter'"", ""evidence_region"": ""right"", ""confidence"": 1.0}
+```",page
+imgslide_8_S6_IMAGE_TEXT_CONTRADICTION_1_0010__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""The left figure caption states 'Uptime improved to four nines' while the right text states 'Uptime degraded to two nines', which is a direct contradiction."",""region"":""left""}",0.9,[],"```json
+{""present"": true, ""evidence_element"": ""The left figure caption states 'Uptime improved to four nines' while the right text states 'Uptime degraded to two nines', which is a direct contradiction."", ""evidence_region"": ""left"", ""confidence"": 0.9}
+```",page
+imgslide_7_S6_IMAGE_TEXT_CONTRADICTION_1_0009__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""The figure caption 'NPS climbed into the eighties' contradicts the text 'NPS sank into the thirties'."",""region"":""left""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""The figure caption 'NPS climbed into the eighties' contradicts the text 'NPS sank into the thirties'."",
+  ""evidence_region"": ""left"",
+  ""confidence"": 1.0
+}
+```",page
+imgslide_0_S6_IMAGE_TEXT_CONTRADICTION_1_0002__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the chart on the left"",""region"":""left""}",0.9,[],"```json
+{""present"": true, ""evidence_element"": ""the chart on the left"", ""evidence_region"": ""left"", ""confidence"": 0.9}
+```",page
+imgslide_11_S6_IMAGE_TEXT_CONTRADICTION_1_0001__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the chart on the left"",""region"":""left""}",0.9,[],"```json
+{""present"": true, ""evidence_element"": ""the chart on the left"", ""evidence_region"": ""left"", ""confidence"": 0.9}
+```",page
+imgslide_1_S6_IMAGE_TEXT_CONTRADICTION_1_0003__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": ""empty"",
+  ""confidence"": 1.0
+}
+```",page
+imgslide_3_S6_IMAGE_TEXT_CONTRADICTION_1_0005__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": ""empty"",
+  ""confidence"": 1.0
+}
+```",page
+imgslide_10_S6_IMAGE_TEXT_CONTRADICTION_1_0000__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the chart on the left"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the chart on the left"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+imgslide_2_S6_IMAGE_TEXT_CONTRADICTION_1_0004__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the figure on the left"",""region"":""left""}",0.9,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the figure on the left"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.9
+}
+```",page
+imgslide_6_S6_IMAGE_TEXT_CONTRADICTION_1_0008__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": ""empty"",
+  ""confidence"": 1.0
+}
+```",page
+imgslide_5_S6_IMAGE_TEXT_CONTRADICTION_1_0007__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,0.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": ""empty"",
+  ""confidence"": 0.0
+}
+```",page
+imgslide_4_S6_IMAGE_TEXT_CONTRADICTION_1_0006__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the figure on the left"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the figure on the left"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+imgslide_7_S6_IMAGE_TEXT_CONTRADICTION_1_0009__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the chart on the left"",""region"":""left""}",0.95,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the chart on the left"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.95
+}
+```",page
+imgslide_9_S6_IMAGE_TEXT_CONTRADICTION_1_0011__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+imgslide_8_S6_IMAGE_TEXT_CONTRADICTION_1_0010__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the chart on the left"",""region"":""left""}",0.9,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the chart on the left"",
+  ""evidence_region"": ""left"",
+  ""confidence"": 0.9
+}
+```",page

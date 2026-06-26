@@ -1,0 +1,1027 @@
+sample_id,defect,modality,is_clean,failure,has_defect,named_target,predicted_types,locator,confidence,other,raw,stage2_raw,level
+part2_logistics_visibility_4_G1_TEXT_OVERFLOW_4_0043__template,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,,[],NO PROBLEMS,,page
+part2_logistics_visibility_4_G1_TEXT_OVERFLOW_32_0043__template,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,,[],NO PROBLEMS,,page
+part2_logistics_visibility_4_G1_TEXT_OVERFLOW_4_0043__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G2_ELEMENT_OVERLAP"",""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G6_MARGIN_VIOLATION""]",,,[],"The slide has several issues:
+
+- The title ""ShipEye impact on on-time delivery XX"" is misaligned and appears to be cut off on the left side, suggesting it's spilling outside its intended container or frame.
+- The three action items (""Approve the phase 1 budget for ShipEye"", ""Assign two platform engineers"", ""Confirm the cutover freeze window"") are presented in separate boxes that are not visually c","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title text is cut off and misaligned""}, {""type"": ""G2_ELEMENT_OVERLAP"", ""locator"": ""Action items are disconnected and ungrouped""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Excessive white space below action items""}, {""type"": ""G4_FONT_SIZE_IN",page
+part2_logistics_visibility_3_G1_TEXT_OVERFLOW_32_0042__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET""]",,,[],"The slide has several significant design and layout issues:
+
+1.  **Title Spacing:** The title ""ShipEye tracks every leg XXX"" is not vertically centered within its container. There is a large, uneven amount of white space above the text, making it look misaligned and unbalanced.
+2.  **List Item Spacing:** The three list items (""Shadow traffic before switching ShipEye"", ""Automated rollback within fi","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title not vertically centered in container""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""List items have inconsistent vertical spacing""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Text alignment inconsistent within list items""}, {""type"": ""G",page
+part2_marketing_attribution_1_G1_TEXT_OVERFLOW_4_0045__template,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,,[],NO PROBLEMS,,page
+part2_logistics_visibility_5_G1_TEXT_OVERFLOW_32_0044__template,G1_TEXT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]","{""element"":""Title text spills over container boundary"",""quote"":""""}",,"[{""text"":""Lack of visual hierarchy in slide design"",""raw_type"":""OTHER""}]","The slide has several significant design and layout issues that make it look low-quality and unprofessional:
+
+1.  **Title Spillover:** The title text ""A pragmatic ShipEye plan XXX"" is not contained within its box. The word ""XXX"" at the end of the title is visibly spilling over the right edge of the light gray title bar, breaking the container's boundary.
+2.  **Poor Spacing:** There is a large, emp","{""defects"": [{""type"": ""G1_TEXT_OVERFLOW"", ""locator"": ""Title text spills over container boundary""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Large empty space disrupts layout balance""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Inconsistent vertical spacing between bullet points""}, {""type"": ""G5_",page
+part2_logistics_visibility_5_G1_TEXT_OVERFLOW_32_0044__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G2_ELEMENT_OVERLAP"",""G4_FONT_SIZE_INCONSISTENCY"",""G6_MARGIN_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW""]",,,[],"The slide has several significant design and layout issues that make it look unprofessional and low-quality:
+
+1.  **Title Box Overflow:** The title ""A pragmatic ShipEye plan XXX"" is contained within a light gray box that extends beyond the left and top edges of the slide's visible content area. This causes the title box to appear ""spilled"" or cut off at the top and left, which is a major layout er","{
+  ""defects"": [
+    {""type"": ""G7_RENDER_CONTAINMENT_OVERFLOW"", ""locator"": ""Title box spills beyond slide edges""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Large empty space disrupts layout balance""},
+    {""type"": ""G2_ELEMENT_OVERLAP"", ""locator"": ""Repeated boxes create clunky visual clutter""}",page
+part2_logistics_visibility_5_G1_TEXT_OVERFLOW_4_0044__template,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G2_ELEMENT_OVERLAP"",""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]",,,[],"The slide has several significant design and layout issues that make it look low-quality and unprofessional:
+
+1.  **Title Spacing:** The title ""A pragmatic ShipEye plan XX"" is positioned too far down from the top edge of the slide, leaving a large, awkward amount of empty white space above it.
+2.  **Inconsistent Spacing Between Elements:** There is a massive, inconsistent gap between the title box","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title positioned too far from top edge""}, {""type"": ""G2_ELEMENT_OVERLAP"", ""locator"": ""Inconsistent gap between title and bullet boxes""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Content clustered at top leaving bottom empty""}, {""type"": ""G4_F",page
+part2_logistics_visibility_5_G1_TEXT_OVERFLOW_4_0044__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G7_RENDER_CONTAINMENT_OVERFLOW""]",,,"[{""text"":""Title contains unprofessional placeholder prefix"",""raw_type"":""OTHER""}]","The slide has several significant design and layout issues that make it look unprofessional and low-quality:
+
+1.  **Title Box Overflow:** The title ""XX A pragmatic ShipEye plan"" is contained within a light gray box that is visibly cut off at the top and left edges of the slide. This indicates the text or the box itself is spilling outside the intended boundaries.
+2.  **Inconsistent List Formatting","{
+  ""defects"": [
+    {""type"": ""G7_RENDER_CONTAINMENT_OVERFLOW"", ""locator"": ""Title box text spills outside container""},
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""List items have inconsistent vertical spacing""},
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""List items are not aligned with each",page
+part2_logistics_visibility_3_G1_TEXT_OVERFLOW_4_0042__freeform,G1_TEXT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]","{""element"":""Title text extends beyond container box"",""quote"":""""}",,[],"The slide has several significant design and layout issues:
+
+1.  **Title Spillover:** The title ""ShipEye tracks every leg XX"" is not contained within its box. The text ""XX"" extends beyond the right edge of the light gray rectangular background box, breaking the visual boundary.
+2.  **Inconsistent Spacing:** There is a large, empty white space between the title section and the list of bullet points","{""defects"": [{""type"": ""G1_TEXT_OVERFLOW"", ""locator"": ""Title text extends beyond container box""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Large empty space wastes vertical slide space""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Bullet points misaligned with title box edge""}, {""type"": ""G4_FONT_",page
+part2_logistics_visibility_3_G1_TEXT_OVERFLOW_4_0042__template,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G2_ELEMENT_OVERLAP"",""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G6_MARGIN_VIOLATION"",""S5_MISSING_LOGIC_SECTION""]",,,[],"Looking at this slide, here are the issues:
+
+1. **Title placement and alignment**: The title ""ShipEye tracks every leg XX"" is left-aligned but positioned too far from the left edge, creating an awkward gap. It should either be centered or aligned with consistent left margin.
+
+2. **Inconsistent spacing between elements**: There's significant vertical white space between the title box and the first ","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title displaced from alignment group""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Content bleeds into safe margin area""}, {""type"": ""G2_ELEMENT_OVERLAP"", ""locator"": ""Elements lack proper spacing causing overlap""}, {""type"": ""G4_FONT_SIZE_INCON",page
+part2_marketing_attribution_1_G1_TEXT_OVERFLOW_32_0045__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G2_ELEMENT_OVERLAP"",""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]",,,[],"The slide has several significant design and layout issues:
+
+1.  **Title Box:** The title ""XXX Spend is hard to attribute"" is contained within a box that has a visible, thick black border. This is visually jarring and looks like a default text box from a word processor rather than a polished presentation element.
+2.  **List Items:** The three bullet points (""Risks are tracked weekly"", ""Attrib has ","{
+  ""defects"": [
+    {""type"": ""G5_BRAND_COLOR_VIOLATION"", ""locator"": ""Title box has jarring thick black border""},
+    {""type"": ""G2_ELEMENT_OVERLAP"", ""locator"": ""List items fragmented in separate boxes""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Awkward white space between title and list""},
+  ",page
+part2_logistics_visibility_4_G1_TEXT_OVERFLOW_32_0043__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]",,,[],"The slide has several design and layout issues that make it look unprofessional and low-quality:
+
+1.  **Title Box:** The title ""XXX ShipEye impact on on-time delivery"" is contained within a light gray box that has a visible, thick black border. This is a major design flaw as it looks like a default text box from a word processor or spreadsheet, not a polished presentation slide. The border is too ","{""defects"": [{""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Thick black border breaks visual flow""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Large empty white space below list""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Title and list items lack hierarchy""}, {""type"": ""G5_BRAND_COLOR_VIOLA",page
+part2_logistics_visibility_3_G1_TEXT_OVERFLOW_32_0042__template,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G6_MARGIN_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,"[{""text"":""Slide lacks engaging design elements"",""raw_type"":""OTHER""}]","Looking at this slide, here are the issues:
+
+1. **Title placement and alignment**: The title ""XXX ShipEye tracks every leg"" is left-aligned but positioned too far from the left edge of the slide, creating an awkward gap. It should either be centered or aligned with consistent left margin.
+
+2. **Inconsistent spacing between elements**: There's significant vertical white space between the title box ","{
+  ""defects"": [
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title displaced from alignment group""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Content bleeds into safe margin area""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Bottom space creates unbalanced layout""},
+    {""type"": ""G4_",page
+part2_marketing_attribution_1_G1_TEXT_OVERFLOW_32_0045__template,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,[],"Based on a review of the visible elements in this slide, here are the problems:
+
+*   **Title Spacing:** The title ""Spend is hard to attribute XXX"" has excessive vertical space between it and the first bullet point, creating a disconnected and unbalanced layout.
+*   **Text Spacing:** There is inconsistent and excessive vertical spacing between the individual bullet points (""Risks are tracked weekly","{
+  ""defects"": [
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title disconnected from first bullet point""},
+    {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Inconsistent vertical spacing between bullet points""},
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Text boxes not aligned to slide",page
+part2_marketing_attribution_2_G1_TEXT_OVERFLOW_4_0046__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G6_MARGIN_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW""]",,,[],"The slide has several significant design and layout issues:
+
+1.  **Title Box Overflow:** The title ""XX How Attrib models touchpoints"" is contained within a light gray box that extends beyond the left and top edges of the slide frame. This is a clear layout error where content spills outside its intended container.
+2.  **Inconsistent List Formatting:** The three bullet points (""Adoption grew month ","{
+  ""defects"": [
+    {""type"": ""G7_RENDER_CONTAINMENT_OVERFLOW"", ""locator"": ""Title box content spills outside slide frame""},
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""List items are misaligned horizontally""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Excessive vertical white space between",page
+part2_marketing_attribution_1_G1_TEXT_OVERFLOW_4_0045__freeform,G1_TEXT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]","{""element"":""Title text spills over container edge"",""quote"":""""}",,"[{""text"":""Generic design lacks visual hierarchy"",""raw_type"":""OTHER""}]","Looking at this slide, there are several significant design and layout issues:
+
+1.  **Title Spillover:** The title ""Spend is hard to attribute XX"" is not fully contained within its text box. The ""XX"" at the end of the title is visibly spilling over the right edge of the light gray title box.
+2.  **Inconsistent Text Alignment:** The text inside the three main content boxes is left-aligned, but the ","{
+  ""defects"": [
+    {""type"": ""G1_TEXT_OVERFLOW"", ""locator"": ""Title text spills over container edge""},
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title alignment differs from body text""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Content boxes stacked with no spacing""},
+    {""type"": ""G5_B",page
+part2_marketing_attribution_5_G1_TEXT_OVERFLOW_32_0049__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,,[],NO PROBLEMS,,page
+part2_marketing_attribution_5_G1_TEXT_OVERFLOW_32_0049__template,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,,[],NO PROBLEMS,,page
+part2_marketing_attribution_5_G1_TEXT_OVERFLOW_4_0049__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,,[],NO PROBLEMS,,page
+part2_marketing_attribution_5_G1_TEXT_OVERFLOW_4_0049__template,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,,[],NO PROBLEMS,,page
+part2_marketing_attribution_2_G1_TEXT_OVERFLOW_4_0046__template,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G6_MARGIN_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW""]",,,"[{""text"":""Lack of visual hierarchy in slide structure"",""raw_type"":""OTHER""}]","The slide has several significant design and layout issues that make it look unprofessional and difficult to read:
+
+1.  **Title Spillover:** The title text ""How Attrib models touchpoints XX"" is not contained within its box. The letters ""XX"" at the end of the title are visibly spilling over the right edge of the light blue title bar, breaking the container's boundary.
+2.  **Poor Spacing:** There is","{
+  ""defects"": [
+    {""type"": ""G7_RENDER_CONTAINMENT_OVERFLOW"", ""locator"": ""Title text spills over container boundary""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Excessive vertical white space between elements""},
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Inconsistent text alignment betw",page
+part2_marketing_attribution_3_G1_TEXT_OVERFLOW_32_0047__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G4_FONT_SIZE_INCONSISTENCY"",""G6_MARGIN_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW""]",,,[],"This slide has several significant design and layout issues that make it look unprofessional and low-quality:
+
+1.  **Title Box Spillover:** The title ""XXX Attrib evidence from the pilot"" is contained within a light gray box. The right edge of this box is cut off by the right margin of the slide, causing the text to spill outside its intended container. This is a clear layout error.
+2.  **Inconsist","{""defects"": [{""type"": ""G7_RENDER_CONTAINMENT_OVERFLOW"", ""locator"": ""Title box text spills outside container""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Large empty space disrupts visual flow""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Bullet points lack visual hierarchy""}, {""type"": ""G4_",page
+part2_marketing_attribution_2_G1_TEXT_OVERFLOW_32_0046__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]",,,[],"The slide has several significant design and layout issues that make it look unprofessional and low-quality:
+
+1.  **Title Formatting:** The title ""XXX How Attrib models touchpoints"" is poorly formatted. The ""XXX"" appears to be a placeholder or an error, and the text is not aligned properly within its container, causing it to look like it's spilling out of a box.
+2.  **Inconsistent Spacing:** There","{
+  ""defects"": [
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title text spills out of container""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Large empty space below bullet points""},
+    {""type"": ""G5_BRAND_COLOR_VIOLATION"", ""locator"": ""Pale blue background lacks contrast""},
+    {""type"": ""G4",page
+part2_marketing_attribution_4_G1_TEXT_OVERFLOW_32_0048__template,G1_TEXT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]","{""element"":""Title text spills over container edge"",""quote"":""""}",,"[{""text"":""Layout lacks visual hierarchy and design interest"",""raw_type"":""OTHER""}]","This slide has several significant design and layout issues that make it look unprofessional and difficult to read:
+
+1.  **Title Spillover:** The title text ""XXX Rolling Attrib out by channel"" is not contained within its box. The text clearly spills over the right edge of the light blue title bar, breaking the container's boundary.
+2.  **Poor Spacing:** There is a massive, empty white space in the","{""defects"": [{""type"": ""G1_TEXT_OVERFLOW"", ""locator"": ""Title text spills over container edge""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Content boxes clustered leaving empty space""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Vertical spacing between boxes is inconsistent""}, {""type"": ""G5_BRAND_C",page
+part2_marketing_attribution_3_G1_TEXT_OVERFLOW_4_0047__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G6_MARGIN_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW""]",,,[],"This slide has several significant design and layout issues that make it look unprofessional and low-quality:
+
+1.  **Title Box Overflow:** The title ""XX Attrib evidence from the pilot"" is contained within a light gray box that extends beyond the left and top edges of the slide frame. This is a critical layout error where content spills outside its intended container.
+2.  **Inconsistent Spacing:** ","{""defects"": [{""type"": ""G7_RENDER_CONTAINMENT_OVERFLOW"", ""locator"": ""Title box content spills outside slide frame""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Title box bleeds beyond safe slide margins""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Bullet boxes displaced from left slide edge""}, {""t",page
+part2_marketing_attribution_3_G1_TEXT_OVERFLOW_4_0047__template,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION""]",,,[],"This slide has several significant design and layout issues that make it look unprofessional and difficult to read. Here is a breakdown of the problems:
+
+*   **Poor Hierarchy and Spacing:** The title, ""Attrib evidence from the pilot XX,"" is visually disconnected from the content below it. There is a massive, empty white space between the title box and the first bullet point, which breaks the visua","{
+  ""defects"": [
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title disconnected from content below""},
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Vertical spacing between bullet points inconsistent""},
+    {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Title and bullets use identical styl",page
+part2_marketing_attribution_2_G1_TEXT_OVERFLOW_32_0046__template,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]",,,[],"The slide has several significant design and layout issues that make it look unprofessional and difficult to read:
+
+1.  **Title Spacing:** The title ""How Attrib models touchpoints XXX"" is too close to the top edge of the slide. There is insufficient white space above it, which makes the slide feel cramped at the top.
+2.  **Text Alignment:** All text elements (the title and the three bullet points)","{""defects"": [{""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Title too close to top edge""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Text should be centered for balance""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Inconsistent vertical spacing between elements""}, {""type"": ""G5_BRAND_COLOR_VIOLATION""",page
+part2_marketing_attribution_4_G1_TEXT_OVERFLOW_32_0048__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G2_ELEMENT_OVERLAP"",""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]",,,[],"The slide has several issues that make it look low-quality and unprofessional:
+
+1.  **Title Spacing:** The title ""Rolling Attrib out by channel XXX"" has excessive vertical space between the words ""channel"" and ""XXX"". This breaks the visual flow of the title.
+2.  **Inconsistent List Formatting:** The three bullet points are not formatted as a proper list. They are presented as separate, unconnected","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title words have excessive vertical spacing.""}, {""type"": ""G2_ELEMENT_OVERLAP"", ""locator"": ""List items are unconnected text blocks.""}, {""type"": ""G5_BRAND_COLOR_VIOLATION"", ""locator"": ""Light blue background adds visual clutter.""}, {""type"": ""G3_A",page
+part2_marketing_attribution_3_G1_TEXT_OVERFLOW_32_0047__template,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW""]",,,[],"This slide has several significant design and layout issues that make it look unprofessional and difficult to read.
+
+Here is a breakdown of the problems:
+
+*   **Poor Use of White Space:** The slide is extremely sparse. There is a massive amount of empty white space below the content boxes, which makes the slide feel incomplete and poorly utilized. The content is clustered at the top, leaving the b","{""defects"": [{""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Content clustered at top, leaving dead space.""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Vertical spacing between boxes is inconsistent.""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Title and bullets use same font size.""}, {""type""",page
+part2_marketing_attribution_4_G1_TEXT_OVERFLOW_4_0048__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G2_ELEMENT_OVERLAP"",""G3_ALIGNMENT_OFFSET"",""G6_MARGIN_VIOLATION""]",,,[],"The slide has several significant design and layout issues that make it look unprofessional and hard to read:
+
+1.  **Title Spacing:** The title ""Rolling Attrib out by channel XX"" is too close to the top edge of the slide. There is insufficient white space above it.
+2.  **Title Box:** The title is enclosed in a light gray box that appears to be a screenshot of a text field or input box, not a stand","{
+  ""defects"": [
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Title too close to top edge""},
+    {""type"": ""G2_ELEMENT_OVERLAP"", ""locator"": ""Title box looks like screenshot""},
+    {""type"": ""G2_ELEMENT_OVERLAP"", ""locator"": ""List items in separate boxes""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locato",page
+part2_marketing_attribution_4_G1_TEXT_OVERFLOW_4_0048__template,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G6_MARGIN_VIOLATION""]",,,[],"Looking at this slide, here are the concrete problems:
+
+1.  **Title Spacing:** The title ""Rolling Attrib out by channel XX"" has excessive vertical space between it and the first content box. There is a large, empty white gap separating the title box from the ""Attrib is saturated at peak demand"" box.
+2.  **Content Box Spacing:** The three content boxes (""Attrib is saturated..."", ""A refresh is due..","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title displaced from alignment group""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Content boxes not aligned to left edge""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Title and content font sizes inconsistent""}, {""type"": ""G6_MARGIN_V",page
+part2_network_observability_2_G1_TEXT_OVERFLOW_32_0051__freeform,G1_TEXT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""G6_MARGIN_VIOLATION""]","{""element"":""Title text spills outside container"",""quote"":""""}",,"[{""text"":""Lack of visual hierarchy and cues"",""raw_type"":""OTHER""}]","Based on a review of the visible elements in this slide, here are the problems:
+
+*   **Title Box Spillover:** The title box containing ""XXX One pane with TraceGrid"" is too narrow. The text ""One pane"" is cut off by the right edge of the box, causing the text to spill outside its designated container.
+*   **Inconsistent Spacing:** There is a large, empty vertical gap between the title section and th","{
+  ""defects"": [
+    {""type"": ""G1_TEXT_OVERFLOW"", ""locator"": ""Title text spills outside container""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Large gap creates disjointed flow""},
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""List items not aligned to left""},
+    {""type"": ""OTHER"", ""locator"":",page
+part2_network_observability_1_G1_TEXT_OVERFLOW_32_0050__template,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]",,,[],"This slide has several significant design and layout issues that make it look unprofessional and difficult to read:
+
+1.  **Title Spacing:** The title ""Outages are hard to diagnose XXX"" is positioned too far down in the slide, leaving a large, wasted amount of white space above it. It should be closer to the top edge.
+2.  **Inconsistent Spacing Between Elements:** The vertical spacing between the t","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title positioned too far down""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Inconsistent spacing between title and bullets""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Bottom half empty wastes space""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"",",page
+part2_network_observability_2_G1_TEXT_OVERFLOW_32_0051__template,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]",,,[],"Based on a review of the visible elements in this slide, here are the problems:
+
+*   **Poor Spacing and Repetition:** The three content boxes (""Risks are tracked weekly"", ""TraceGrid has a clear rollback path"", ""Compliance reviewed the design"") are stacked directly on top of each other with almost no vertical space between them. This creates a cluttered, list-like appearance that is hard to scan.
+*","{
+  ""defects"": [
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Content boxes stacked with no vertical space.""},
+    {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Title box height inconsistent with content boxes.""},
+    {""type"": ""G5_BRAND_COLOR_VIOLATION"", ""locator"": ""Low contrast dark grey te",page
+part2_network_observability_1_G1_TEXT_OVERFLOW_32_0050__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G6_MARGIN_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW""]",,,[],"Looking at this slide, here are the issues:
+
+1. **Title placement and alignment**: The title ""XXX Outages are hard to diagnose"" is left-aligned but appears to be positioned too far left on the slide, creating an awkward margin on the left side.
+
+2. **Inconsistent spacing between elements**: There's significant white space between the title and the first bullet point, and also between the bullet po","{
+  ""defects"": [
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title positioned too far left""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Excessive arbitrary white space""},
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Bullet points not vertically aligned""},
+    {""type"": ""G4_FONT_SIZE_INCO",page
+part2_network_observability_3_G1_TEXT_OVERFLOW_32_0052__template,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,[],"Based on a review of the visible elements in this slide, here are the problems:
+
+*   **Title:** The title ""The TraceGrid architecture XXX"" is positioned too far to the left. It is not centered within its container, and the text itself is left-aligned, which creates an unbalanced appearance.
+*   **Text Content:** The title contains the placeholder text ""XXX"", which is a clear error indicating incom","{
+  ""defects"": [
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title is not centered in container""},
+    {""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title contains placeholder text XXX""},
+    {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Inconsistent spacing between bullet points""},
+    {""",page
+part2_network_observability_1_G1_TEXT_OVERFLOW_4_0050__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW""]",,,[],"The slide has several significant design and layout issues that make it look unprofessional and difficult to read:
+
+1.  **Title Spillover:** The title ""XX Outages are hard to diagnose"" is not contained within its box. The text spills over the right edge of the light gray rectangular background, breaking the visual boundary.
+2.  **Poor Spacing & Alignment:** There is inconsistent and excessive vert","{
+  ""defects"": [
+    {""type"": ""G7_RENDER_CONTAINMENT_OVERFLOW"", ""locator"": ""Title text spills over container edge""},
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Bullet points lack clear margin or indentation""},
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Bullet point boxes are not uniform in",page
+part2_network_observability_1_G1_TEXT_OVERFLOW_4_0050__template,G1_TEXT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW"",""G2_ELEMENT_OVERLAP"",""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G6_MARGIN_VIOLATION""]","{""element"":""Placeholder text in title"",""quote"":""""}",,"[{""text"":""Generic low-quality design lacks interest"",""raw_type"":""OTHER""}]","This slide has several significant design and layout issues that make it look unprofessional and hard to read:
+
+1.  **Title Placement & Spacing:** The title ""Outages are hard to diagnose XX"" is positioned too far down in the slide, leaving a large, wasted white space above it. It should be at the very top.
+2.  **Inconsistent Spacing Between Elements:** There is a massive, awkward gap between the t","{
+  ""defects"": [
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title positioned too far down""},
+    {""type"": ""G2_ELEMENT_OVERLAP"", ""locator"": ""Inconsistent spacing between elements""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Bottom half of slide is empty""},
+    {""type"": ""G4_FONT_SIZE_INCONS",page
+part2_network_observability_2_G1_TEXT_OVERFLOW_4_0051__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G6_MARGIN_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW""]",,,[],"Looking at this slide, there are several significant design and layout issues:
+
+1.  **Title Box Overflow:** The title ""XX One pane with TraceGrid"" is contained within a light gray box that extends beyond the left edge of the slide's content area. This creates a visual ""spill"" or misalignment with the slide's boundaries.
+2.  **Inconsistent List Formatting:** The three bullet points (""Risks are trac","{
+  ""defects"": [
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Title box spills beyond slide boundaries""},
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""List items lack consistent alignment and spacing""},
+    {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Title and list items have inconsiste",page
+part2_network_observability_2_G1_TEXT_OVERFLOW_4_0051__template,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S6_IMAGE_TEXT_CONTRADICTION""]",,,[],"Based on a review of the visible elements in this slide, here are the problems:
+
+*   **Poor Spacing and Alignment:** The three content boxes are vertically stacked with very large, inconsistent gaps between them. They are also left-aligned but not flush with the left margin of the slide, creating an awkward, unbalanced look.
+*   **Inconsistent Sizing:** The top box containing the title (""XX One pa","{
+  ""defects"": [
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Content boxes not flush with left margin""},
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title box width misaligned with content boxes""},
+    {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Inconsistent sizing between title and c",page
+part2_ops_efficiency_1_G1_TEXT_OVERFLOW_32_0055__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,,[],NO PROBLEMS,,page
+part2_ops_efficiency_1_G1_TEXT_OVERFLOW_32_0055__template,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,,[],NO PROBLEMS,,page
+part2_network_observability_3_G1_TEXT_OVERFLOW_4_0052__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION""]",,,"[{""text"":""Generic design lacks visual hierarchy"",""raw_type"":""OTHER""}]","Based on a review of the visible elements in this slide, here are the problems:
+
+*   **Title Spacing:** The title, ""The TraceGrid architecture XX,"" has excessive vertical space between it and the body content below. It appears disconnected from the rest of the slide.
+*   **Inconsistent Spacing:** The vertical spacing between the three body text boxes is inconsistent. The gap between the first and ","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title disconnected from body content""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Inconsistent vertical spacing between text boxes""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Text boxes staggered and misaligned""}, {""type"": ""G5_BRAND_COLOR",page
+part2_ops_efficiency_1_G1_TEXT_OVERFLOW_4_0055__template,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,,[],NO PROBLEMS,,page
+part2_network_observability_3_G1_TEXT_OVERFLOW_32_0052__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""S5_MISSING_LOGIC_SECTION""]",,,[],"The slide has several significant design and layout issues:
+
+1.  **Title Placement & Spacing:** The title ""XXX The TraceGrid architecture"" is positioned too far to the left and too high on the slide. It lacks adequate top and left margins, making it feel cramped against the edge.
+2.  **Inconsistent Spacing Between Content Blocks:** There is a large, empty vertical gap between the title and the fir","{
+  ""defects"": [
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title displaced from alignment group""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Title bleeds into left and top margins""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Large gap breaks visual flow""},
+    {""type"": ""G6_MARGIN_V",page
+part2_network_observability_3_G1_TEXT_OVERFLOW_4_0052__template,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G6_MARGIN_VIOLATION""]",,,[],"Based on a review of the visible elements in this slide, here are the problems:
+
+*   **Title Spacing:** The title, ""The TraceGrid architecture XX,"" has excessive vertical space between it and the first content box below it. This creates a large, awkward gap that breaks the visual flow of the slide.
+*   **Content Box Spacing:** There is inconsistent and excessive vertical spacing between the three ","{
+  ""defects"": [
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title spacing creates awkward gap.""},
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Inconsistent spacing between content boxes.""},
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Text alignment lacks visual balance.""},
+    {""type"": """,page
+part2_network_observability_4_G1_TEXT_OVERFLOW_32_0053__freeform,G1_TEXT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""G6_MARGIN_VIOLATION""]","{""element"":""Title text spills outside its container box."",""quote"":""""}",,"[{""text"":""Text appears blurry and pixelated due to low resolution."",""raw_type"":""OTHER""}]","Based on a review of the visible elements in this slide, here are the problems:
+
+*   **Title Spillover:** The title text ""XXX TraceGrid data governance"" is not fully contained within its background box. The right edge of the text spills outside the right border of the light gray rectangle.
+*   **Inconsistent Spacing:** There is a significant and inconsistent amount of vertical white space between ","{
+  ""defects"": [
+    {""type"": ""G1_TEXT_OVERFLOW"", ""locator"": ""Title text spills outside its container box.""},
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Bullet points are inconsistently aligned to the left.""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Excessive vertical spacing disrupts v",page
+part2_network_observability_4_G1_TEXT_OVERFLOW_4_0053__freeform,G1_TEXT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]","{""element"":""Title text exceeds container bounds"",""quote"":""""}",,[],"Based on a review of the visible elements in this slide, here are the problems:
+
+*   **Title Spillover:** The title text ""XX TraceGrid data governance"" is not fully contained within its background box. The word ""governance"" and the period following it are cut off by the right edge of the slide.
+*   **Poor Spacing:** There is excessive vertical white space between the title box and the first bullet","{
+  ""defects"": [
+    {""type"": ""G1_TEXT_OVERFLOW"", ""locator"": ""Title text exceeds container bounds""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Excessive vertical white space between elements""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Inconsistent spacing between bullet points""},
+    {""",page
+part2_network_observability_4_G1_TEXT_OVERFLOW_32_0053__template,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]",,,"[{""text"":""Generic design lacks engaging visuals."",""raw_type"":""OTHER""}]","Based on a review of the visible elements in this slide, here are the problems:
+
+*   **Poor Spacing and Layout:** The three content boxes are stacked vertically with very little space between them. This creates a cramped, list-like appearance that is visually unappealing and makes the slide feel cluttered.
+*   **Inconsistent Spacing:** The vertical gap between the title box and the first content b","{
+  ""defects"": [
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Cramped spacing creates cluttered layout.""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Inconsistent vertical gaps disrupt flow.""},
+    {""type"": ""G5_BRAND_COLOR_VIOLATION"", ""locator"": ""Washed-out background lacks contrast.""},
+    ",page
+part2_network_observability_4_G1_TEXT_OVERFLOW_4_0053__template,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]",,,"[{""text"":""Box borders appear as rendering artifacts"",""raw_type"":""OTHER""}]","Based on a review of the visible elements in this slide, here are the problems:
+
+*   **Title Spacing:** The title text, ""TraceGrid data governance XX,"" is too close to the top edge of the slide. There is insufficient white space above it.
+*   **Text Spacing:** The vertical spacing between the three bullet points is inconsistent and too tight. The gap between the first and second point is significa","{
+  ""defects"": [
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Title too close to top edge""},
+    {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Vertical spacing between bullets inconsistent""},
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Text not indented from container edge""},
+    {""type""",page
+part2_network_observability_5_G1_TEXT_OVERFLOW_32_0054__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G6_MARGIN_VIOLATION""]",,,[],"Looking at this slide, here are the issues:
+
+1. **Title placement and formatting**: The title ""XXX The TraceGrid roadmap"" is positioned too far to the left and appears to be cut off or misaligned. It should be centered or properly aligned within the slide's content area.
+
+2. **Inconsistent spacing**: There's excessive vertical white space between the title and the first content box, and also betwe","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title displaced from alignment group""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Excessive vertical white space between elements""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Content boxes waste valuable slide real estate""}, {""type"": ""G3_A",page
+part2_network_observability_5_G1_TEXT_OVERFLOW_4_0054__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]",,,[],"Looking at this slide, here are the issues:
+
+1. **Title placement and formatting**: The title ""XX The TraceGrid roadmap"" is positioned too far to the left and appears to be cut off or misaligned. The ""XX"" prefix suggests it's a placeholder or draft version, which looks unprofessional.
+
+2. **Inconsistent spacing**: There's excessive vertical white space between the title and the first content box, ","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title misaligned and cut off""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Excessive vertical white space""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Large gaps waste slide real estate""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Lack of",page
+part2_network_observability_5_G1_TEXT_OVERFLOW_32_0054__template,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]",,,[],"This slide has several significant design and layout issues that make it look unprofessional and hard to read:
+
+1.  **Title Placement & Spacing:** The title ""The TraceGrid roadmap XXX"" is positioned too far down in the slide, leaving a large, wasted white space above it. It should be at the very top.
+2.  **Inconsistent Spacing:** The vertical space between the title and the first content box is in","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title positioned too far down""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Large wasted white space above title""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Bottom half of slide is empty""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"":",page
+part2_logistics_visibility_4_G1_TEXT_OVERFLOW_32_0043__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],NO PROBLEMS,,page
+part2_logistics_visibility_4_G1_TEXT_OVERFLOW_32_0043__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],NO PROBLEMS,,page
+part2_logistics_visibility_4_G1_TEXT_OVERFLOW_4_0043__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],NO PROBLEMS,,page
+part2_network_observability_5_G1_TEXT_OVERFLOW_4_0054__template,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""S5_MISSING_LOGIC_SECTION""]",,,[],"Looking at this slide, here are the issues:
+
+1. **Title placement and formatting**: The title ""XX The TraceGrid roadmap"" is positioned too far to the left and appears to be cut off or improperly aligned within its container. It should be centered or properly justified within the header box.
+
+2. **Inconsistent spacing between content boxes**: There's significant white space between the three conten","{
+  ""defects"": [
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title displaced from header alignment group""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Content boxes bleed into safe margins""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Bottom section bleeds into safe margins""},
+    {""ty",page
+part2_logistics_visibility_4_G1_TEXT_OVERFLOW_4_0043__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],NO PROBLEMS,,page
+part2_ops_efficiency_2_G1_TEXT_OVERFLOW_32_0056__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G6_MARGIN_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW""]",,,[],"Looking at this slide, here are the issues:
+
+1. **Title placement and alignment**: The title ""XXX Root causes behind the cost"" is left-aligned but appears to be positioned too far left on the slide, creating an awkward visual imbalance. It should be centered or right-aligned for better balance.
+
+2. **Inconsistent spacing between content blocks**: There's significant white space between the three c","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title displaced from alignment group""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Content blocks not vertically aligned""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Blocks lack consistent alignment with each other""}, {""type"": ""G6_MARGIN_VI",page
+part2_ops_efficiency_1_G1_TEXT_OVERFLOW_4_0055__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G2_ELEMENT_OVERLAP"",""G3_ALIGNMENT_OFFSET"",""G6_MARGIN_VIOLATION""]",,,"[{""text"":""Title contains a spelling error."",""raw_type"":""OTHER""},{""text"":""Overall layout is disjointed and unprofessional."",""raw_type"":""OTHER""}]","The slide has several significant design and layout issues:
+
+1.  **Title Typo:** The title ""XX Where operating cost sits today"" contains a clear typo. The word ""sits"" is incorrect in this context; it should be ""is"" to make the phrase ""Where operating cost is today.""
+2.  **Title Formatting:** The title text is not centered horizontally on the slide. It is left-aligned, which is an unusual and unbal","{""defects"": [{""type"": ""OTHER"", ""locator"": ""Title contains a spelling error.""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title is not centered horizontally.""}, {""type"": ""G2_ELEMENT_OVERLAP"", ""locator"": ""Unnecessary title box adds visual clutter.""}, {""type"": ""G2_ELEMENT_OVERLAP"", ""locator"": ""List i",page
+part2_ops_efficiency_2_G1_TEXT_OVERFLOW_4_0056__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G6_MARGIN_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW"",""S1_TITLE_BODY_MISMATCH"",""S5_MISSING_LOGIC_SECTION""]",,,"[{""text"":""Design lacks visual hierarchy and emphasis"",""raw_type"":""OTHER""}]","The slide has several significant design and content issues:
+
+1.  **Title Content Mismatch:** The title ""XX Root causes behind the cost"" is misleading. The bullet points below describe benefits and outcomes of a solution (RouteOpt), not root causes of a problem. This creates a logical disconnect between the title and the body of the slide.
+2.  **Inconsistent Spacing:** There is a large, empty whit","{""defects"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title contradicts bullet point content""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title and bullets have inconsistent spacing""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Content clustered at top wastes space""}, {""type"": ""G7_RENDER_CO",page
+part2_ops_efficiency_2_G1_TEXT_OVERFLOW_32_0056__template,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G6_MARGIN_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,[],"Looking at this slide, here are the issues:
+
+1. **Title placement and alignment**: The title ""XXX Root causes behind the cost"" is left-aligned but positioned too far to the left edge of the slide. It should be centered or at least have more margin space on the left side for better visual balance.
+
+2. **Inconsistent spacing between elements**: There's significant white space between the title and t","{
+  ""defects"": [
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title displaced from center alignment""},
+    {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Bullet points lack visual hierarchy""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Excessive empty space at slide bottom""},
+    {""type""",page
+part2_logistics_visibility_3_G1_TEXT_OVERFLOW_32_0042__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G2_ELEMENT_OVERLAP"",""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G6_MARGIN_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW""]",,,[],"The slide has several significant design and layout issues that make it look unprofessional and low-quality:
+
+1.  **Poor Spacing & Alignment:** The three bullet points are not aligned to the left margin. They are indented inconsistently, with the first line of each point starting further to the right than the others, creating a jagged, unaligned left edge.
+2.  **Inconsistent Box Sizing:** The thre","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Bullet points not aligned to left margin""}, {""type"": ""G2_ELEMENT_OVERLAP"", ""locator"": ""Content boxes have inconsistent heights""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""No clear visual distinction between title and list""}, {""type"":",page
+part2_logistics_visibility_3_G1_TEXT_OVERFLOW_4_0042__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G2_ELEMENT_OVERLAP"",""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G6_MARGIN_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW""]",,,[],"The slide has several significant design and layout issues that make it look unprofessional and low-quality:
+
+1.  **Poor Spacing & Alignment:** The three bullet points are not aligned to the left margin. They are indented inconsistently, with the first line of each point starting further to the right than the others, creating a jagged, unaligned left edge.
+2.  **Inconsistent Box Sizing:** The thre","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Bullet points not aligned to left margin""}, {""type"": ""G2_ELEMENT_OVERLAP"", ""locator"": ""Content boxes have inconsistent heights""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""No clear visual distinction between title and list""}, {""type"":",page
+part2_ops_efficiency_2_G1_TEXT_OVERFLOW_4_0056__template,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,[],"The slide has several significant design and content issues:
+
+1.  **Title Mismatch:** The title ""XX Root causes behind the cost"" is completely unrelated to the bullet points below it. The bullets describe benefits of a product called ""RouteOpt"" (reducing toil, daily adoption, payback period), not root causes of cost. This creates a major logical disconnect.
+2.  **Poor Spacing:** There is excessive","{
+  ""defects"": [
+    {""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title does not match bullet point content""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Excessive vertical white space between elements""},
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""First line of text is misaligned""},
+    ",page
+part2_logistics_visibility_5_G1_TEXT_OVERFLOW_4_0044__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G6_MARGIN_VIOLATION""]",,,"[{""text"":""Lack of visual hierarchy and guiding cues."",""raw_type"":""OTHER""}]","Based on a review of the visible elements in this slide, here are the problems:
+
+*   **Poor Spacing and Layout:** The vertical spacing between the three content boxes is extremely tight and inconsistent. The gap between the title box and the first content box is significantly larger than the gaps between the three content boxes themselves, creating a disjointed and unbalanced visual rhythm.
+*   **","{
+  ""defects"": [
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Vertical spacing between boxes is inconsistent.""},
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Text alignment styles are inconsistent across boxes.""},
+    {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Low-quality serif font la",page
+part2_logistics_visibility_3_G1_TEXT_OVERFLOW_32_0042__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G2_ELEMENT_OVERLAP"",""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW""]",,,[],"The slide has several significant design and layout issues that make it look unprofessional and low-quality:
+
+1.  **Poor Spacing & Alignment:** The three bullet points are not aligned to the left margin. They are indented inconsistently, with the first point starting further left than the second and third, creating a jagged, unaligned left edge.
+2.  **Inconsistent Box Sizing:** The three content b","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Bullet points not aligned to left margin""}, {""type"": ""G2_ELEMENT_OVERLAP"", ""locator"": ""Content boxes have inconsistent widths""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Title and body text lack visual hierarchy""}, {""type"": ""G7_RENDE",page
+part2_logistics_visibility_5_G1_TEXT_OVERFLOW_32_0044__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]",,,"[{""text"":""Slide lacks figures or charts for interest."",""raw_type"":""OTHER""}]","Based on a review of the visible elements in this slide, here are the problems:
+
+*   **Poor Spacing and Layout:** The vertical spacing between the three content boxes is extremely tight and inconsistent. The gap between the title box and the first content box is significantly larger than the gaps between the three content boxes themselves, creating a disjointed and unbalanced visual rhythm.
+*   **","{
+  ""defects"": [
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Vertical spacing between boxes is inconsistent.""},
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Text line is indented relative to box edge.""},
+    {""type"": ""G5_BRAND_COLOR_VIOLATION"", ""locator"": ""Monochromatic scheme lacks visual hi",page
+part2_logistics_visibility_5_G1_TEXT_OVERFLOW_32_0044__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""S4_DENSITY_RULE_VIOLATION""]",,,[],"Based on a review of the visible elements in this slide, here are the problems:
+
+*   **Poor Spacing and Layout:** The vertical spacing between the three content boxes is extremely tight and inconsistent. The gap between the title box and the first content box is significantly larger than the gaps between the three content boxes themselves, creating a disjointed and unbalanced visual rhythm.
+*   **","{
+  ""defects"": [
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Vertical spacing between boxes is inconsistent.""},
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Text line is indented relative to box edge.""},
+    {""type"": ""G5_BRAND_COLOR_VIOLATION"", ""locator"": ""Monochromatic scheme lacks visual hi",page
+part2_logistics_visibility_5_G1_TEXT_OVERFLOW_4_0044__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G6_MARGIN_VIOLATION""]",,,"[{""text"":""Lack of visual hierarchy and guiding cues."",""raw_type"":""OTHER""}]","Based on a review of the visible elements in this slide, here are the problems:
+
+*   **Poor Spacing and Layout:** The vertical spacing between the three content boxes is extremely tight and inconsistent. The gap between the title box and the first content box is significantly larger than the gaps between the three content boxes themselves, creating a disjointed and unbalanced visual rhythm.
+*   **","{
+  ""defects"": [
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Vertical spacing between boxes is inconsistent.""},
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Text alignment styles are inconsistent across boxes.""},
+    {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Low-quality serif font la",page
+part2_logistics_visibility_3_G1_TEXT_OVERFLOW_4_0042__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW""]",,,[],"The slide has several significant design and layout issues that make it look unprofessional and hard to read:
+
+1.  **Poor Spacing & Alignment:** The three bullet points are not aligned with each other. The first point (""Shadow traffic..."") is left-aligned, but the second (""Automated rollback..."") is indented further to the right, and the third (""Cost and latency..."") is indented even more. This cr","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Bullet points are misaligned with each other""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Text blocks lack a common left margin""}, {""type"": ""G5_BRAND_COLOR_VIOLATION"", ""locator"": ""Background color lacks contrast and is washed out""}, {""type"":",page
+part2_marketing_attribution_1_G1_TEXT_OVERFLOW_32_0045__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G6_MARGIN_VIOLATION"",""S1_TITLE_BODY_MISMATCH"",""S5_MISSING_LOGIC_SECTION""]",,,[],"The slide has several significant design and layout issues:
+
+1.  **Contradictory Title:** The main title, ""Spend is hard to attribute,"" directly contradicts the content of the bullet points below it. The bullets describe positive controls (weekly tracking, clear rollback path, compliance review) that would make spend *easier* to attribute, not harder. This creates immediate confusion about the sli","{
+  ""defects"": [
+    {""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title contradicts bullet point content""},
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Bullet boxes misaligned with title and each other""},
+    {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Title and bullets lack visual hier",page
+part2_marketing_attribution_1_G1_TEXT_OVERFLOW_32_0045__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G6_MARGIN_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,[],"The slide has several significant design and layout issues:
+
+1.  **Contradictory Title:** The main title, ""Spend is hard to attribute,"" directly contradicts the content of the bullet points below it. The bullets describe positive controls (weekly tracking, clear rollback path, compliance review) that would make spend *easier* to attribute, not harder. This creates immediate confusion about the sli","{
+  ""defects"": [
+    {""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title contradicts bullet point content""},
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Bullet boxes misaligned with title and each other""},
+    {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Title and bullets have similar fon",page
+part2_marketing_attribution_2_G1_TEXT_OVERFLOW_32_0046__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G2_ELEMENT_OVERLAP"",""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]",,,[],"The slide has several significant design and layout issues that make it look unprofessional and difficult to read:
+
+1.  **Poor Spacing & Alignment:** The three bullet points are not aligned with each other. The left edge of the text for each point is inconsistent, creating a jagged, unstructured look on the left side of the content area.
+2.  **Inconsistent Sizing:** The three content boxes are of ","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Bullet points are not aligned.""}, {""type"": ""G2_ELEMENT_OVERLAP"", ""locator"": ""Content boxes have inconsistent heights.""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Title and body text sizes match.""}, {""type"": ""G5_BRAND_COLOR_VIOLATION""",page
+part2_marketing_attribution_1_G1_TEXT_OVERFLOW_4_0045__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,[],"The slide has several significant design and layout issues:
+
+1.  **Contradictory Title:** The main title, ""Spend is hard to attribute,"" directly contradicts the content of the three bullet points below it, which describe positive controls (weekly risk tracking, clear rollback path, compliance review). This creates immediate confusion about the slide's actual message.
+2.  **Poor Spacing and Alignme","{""defects"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title contradicts positive control content""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Bullet points are misaligned in boxes""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Box heights are inconsistent and unbalanced""}, {""type"": ""G4_FONT_",page
+part2_marketing_attribution_2_G1_TEXT_OVERFLOW_32_0046__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]",,,[],"The slide has several significant design and layout issues that make it look unprofessional and difficult to read:
+
+1.  **Poor Spacing & Alignment:** The three bullet points are not aligned with each other. The left edge of the text for each point is inconsistent, creating a jagged, unstructured look on the left side of the content area.
+2.  **Inconsistent Sizing:** The three content boxes are of ","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Bullet points not aligned left""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Content boxes have inconsistent heights""}, {""type"": ""G5_BRAND_COLOR_VIOLATION"", ""locator"": ""Flat color lacks visual hierarchy""}, {""type"": ""G6_MARGIN_VIOLATION",page
+part2_marketing_attribution_5_G1_TEXT_OVERFLOW_32_0049__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],NO PROBLEMS,,page
+part2_marketing_attribution_5_G1_TEXT_OVERFLOW_32_0049__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],NO PROBLEMS,,page
+part2_marketing_attribution_5_G1_TEXT_OVERFLOW_4_0049__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],NO PROBLEMS,,page
+part2_marketing_attribution_5_G1_TEXT_OVERFLOW_4_0049__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],NO PROBLEMS,,page
+part2_marketing_attribution_1_G1_TEXT_OVERFLOW_4_0045__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW"",""S1_TITLE_BODY_MISMATCH""]",,,[],"The slide has several significant design and layout issues that make it look unprofessional and difficult to read:
+
+1.  **Contradictory Title:** The main title, ""Spend is hard to attribute,"" directly contradicts the content of the bullet points below it, which describe positive controls (weekly tracking, rollback path, compliance review). This creates immediate confusion about the slide's actual m","{
+  ""defects"": [
+    {""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title contradicts bullet point content""},
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Bullet points are misaligned and ragged""},
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Box heights are inconsistent and non-uniform""},
+   ",page
+part2_marketing_attribution_2_G1_TEXT_OVERFLOW_4_0046__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]",,,[],"The slide has several significant design and layout issues that make it look unprofessional and difficult to read:
+
+1.  **Poor Spacing & Alignment:** The three bullet points are not aligned with each other. The left edge of the text for each point is inconsistent, creating a jagged, unstructured look on the left side of the content area.
+2.  **Inconsistent Sizing:** The three content boxes are of ","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Bullet points not aligned left""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Content boxes have inconsistent heights""}, {""type"": ""G5_BRAND_COLOR_VIOLATION"", ""locator"": ""Flat light blue-grey lacks hierarchy""}, {""type"": ""G6_MARGIN_VIOLAT",page
+part2_marketing_attribution_2_G1_TEXT_OVERFLOW_4_0046__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G6_MARGIN_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW""]",,,[],"The slide has several significant design and layout issues that make it look unprofessional and difficult to read:
+
+1.  **Poor Spacing & Alignment:** The three bullet points are not aligned with each other. The left edge of the text for ""Adoption grew month over month"" is indented further to the right than the other two lines, creating a jagged, uneven left margin.
+2.  **Inconsistent Line Lengths:","{
+  ""defects"": [
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Bullet points are not aligned properly.""},
+    {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Title and body text share same font size.""},
+    {""type"": ""G7_RENDER_CONTAINMENT_OVERFLOW"", ""locator"": ""Gray boxes add unnecessary visual",page
+part2_marketing_attribution_3_G1_TEXT_OVERFLOW_32_0047__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G6_MARGIN_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW""]",,,[],"This slide has several significant design and layout issues that make it look unprofessional and difficult to read.
+
+Here is a breakdown of the problems:
+
+*   **Poor Use of White Space:** The slide is extremely sparse. The three content boxes are clustered tightly in the top-left corner, leaving a massive, empty white area that dominates the rest of the slide. This makes the content feel insignifi","{""defects"": [{""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Content clustered in top-left corner""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Vertical spacing between title and content""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Title not visually distinguished from content""}, {""type"": ""G7_",page
+part2_marketing_attribution_3_G1_TEXT_OVERFLOW_32_0047__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G2_ELEMENT_OVERLAP"",""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]",,,[],"This slide has several significant design and layout issues that make it look unprofessional and difficult to read.
+
+Here is a breakdown of the problems:
+
+*   **Poor Use of White Space:** The most glaring issue is the massive amount of empty white space at the bottom of the slide. The content is clustered in the top-left corner, leaving the majority of the slide unused. This makes the slide feel i","{
+  ""defects"": [
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Content clustered top-left, unused bottom space.""},
+    {""type"": ""G2_ELEMENT_OVERLAP"", ""locator"": ""Title and bullets in separate identical boxes.""},
+    {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Title and points use same font ",page
+part2_marketing_attribution_3_G1_TEXT_OVERFLOW_4_0047__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G2_ELEMENT_OVERLAP"",""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]",,,[],"This slide has several significant design and layout issues that make it look unprofessional and difficult to read.
+
+Here is a breakdown of the problems:
+
+*   **Poor Use of White Space:** The most glaring issue is the massive amount of empty white space at the bottom of the slide. The content is clustered in the top-left corner, leaving the majority of the slide unused. This makes the slide feel i","{
+  ""defects"": [
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Content clustered top-left, leaving bottom empty.""},
+    {""type"": ""G2_ELEMENT_OVERLAP"", ""locator"": ""Title and bullets in separate identical boxes.""},
+    {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Title and points use same font",page
+part2_marketing_attribution_3_G1_TEXT_OVERFLOW_4_0047__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G6_MARGIN_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW""]",,,[],"This slide has several significant design and layout issues that make it look unprofessional and difficult to read.
+
+Here is a breakdown of the problems:
+
+*   **Poor Use of White Space:** The slide is extremely sparse. The three content boxes are clustered tightly in the top-left corner, leaving a massive, empty white area that dominates the rest of the slide. This makes the content feel insignifi","{
+  ""defects"": [
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Content clustered in top-left corner.""},
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Vertical spacing between title and content is large.""},
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Spacing between content boxes is inconsist",page
+part2_marketing_attribution_4_G1_TEXT_OVERFLOW_32_0048__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,True,"[""G1_TEXT_OVERFLOW"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW""]","{""element"":""Title text cut off at end"",""quote"":""""}",,[],"This slide has several significant design and layout issues that make it look unprofessional and hard to read:
+
+1.  **Poor Use of Space:** The slide is extremely sparse. The content (title and three bullet points) is clustered in the top-left quadrant, leaving a massive amount of empty white space below and to the right. This makes the slide feel incomplete and wastes valuable real estate.
+2.  **I","{""defects"": [{""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Content clustered in top-left quadrant""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Large gap between title and first bullet""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Large uniform gaps between bullet boxes""}, {""type"": ""G5_BRAND_COLOR_V",page
+part2_marketing_attribution_4_G1_TEXT_OVERFLOW_32_0048__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G6_MARGIN_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW""]",,,[],"This slide has several significant design and layout issues that make it look unprofessional and difficult to read:
+
+1.  **Poor Use of Space:** The slide is extremely sparse. The content (title and three bullet points) is clustered in the top-left corner, leaving a massive amount of empty white space below and to the right. This makes the slide feel incomplete and wastes valuable real estate.
+2.  ","{""defects"": [{""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Content clustered in top-left corner""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Inconsistent gap between title and bullets""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Inconsistent spacing between bullet point boxes""}, {""type"": ""G4_FONT_",page
+part2_network_observability_2_G1_TEXT_OVERFLOW_32_0051__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION""]",,,[],"Based on a review of the visible elements in this slide, here are the problems:
+
+*   **Poor Spacing and Layout:** The vertical spacing between the four text boxes is extremely inconsistent and awkward. The gap between the title box and the first content box is significantly larger than the gaps between the three content boxes, creating a disjointed visual flow.
+*   **Inconsistent Sizing:** The thr","{
+  ""defects"": [
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Vertical spacing between text boxes is inconsistent.""},
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Content boxes have non-uniform heights causing layout error.""},
+    {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Lack of visu",page
+part2_network_observability_2_G1_TEXT_OVERFLOW_32_0051__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]",,,[],"Based on a review of the visible elements in this slide, here are the problems:
+
+*   **Poor Spacing and Hierarchy:** The spacing between the title and the first bullet point is inconsistent with the spacing between the bullet points themselves. The title is separated by a large gap, while the three bullet points are clustered too closely together, creating a disjointed visual hierarchy.
+*   **Inco","{
+  ""defects"": [
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Inconsistent spacing between title and bullets""},
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title and bullet text have different alignments""},
+    {""type"": ""G5_BRAND_COLOR_VIOLATION"", ""locator"": ""Dull light blue-grey lacks contra",page
+part2_network_observability_1_G1_TEXT_OVERFLOW_32_0050__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G6_MARGIN_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW""]",,,[],"This slide has several significant design and layout issues that make it look unprofessional and difficult to read:
+
+1.  **Title Placement & Spacing:** The title ""Outages are hard to diagnose"" is positioned too far down on the slide, leaving a large, wasted white space above it. It should be at the top of the slide.
+2.  **Inconsistent Spacing Between Elements:** There is a massive, inconsistent ga","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title displaced from top alignment group""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Bullet points have inconsistent vertical spacing""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Content bleeds into bottom safe margin area""}, {""type"": ""G3",page
+part2_network_observability_2_G1_TEXT_OVERFLOW_4_0051__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW""]",,,[],"Based on a review of the visible elements in this slide, here are the problems:
+
+*   **Poor Spacing and Layout:** The vertical spacing between the four text boxes is extremely inconsistent and awkward. The gap between the title and the first bullet point is significantly larger than the gaps between the subsequent bullet points, creating a disjointed visual flow.
+*   **Inconsistent Sizing:** The t","{
+  ""defects"": [
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Vertical spacing between text boxes is inconsistent.""},
+    {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Title height differs from bullet point boxes.""},
+    {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""All text uses same f",page
+part2_marketing_attribution_4_G1_TEXT_OVERFLOW_4_0048__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""S5_MISSING_LOGIC_SECTION""]",,,[],"This slide has several significant design and layout issues that make it look unprofessional and hard to read:
+
+1.  **Poor Use of Space:** The slide is extremely sparse. The content (title and three bullet points) is clustered in the top-left corner, leaving a massive amount of empty white space below and to the right. This makes the slide feel incomplete and wastes valuable real estate.
+2.  **Inc","{""defects"": [{""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Content clustered in top-left corner.""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Vertical spacing between title and bullets is uneven.""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""No visual distinction between title and supporting",page
+part2_marketing_attribution_4_G1_TEXT_OVERFLOW_4_0048__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""S4_DENSITY_RULE_VIOLATION"",""S5_MISSING_LOGIC_SECTION""]",,,[],"This slide has several significant design and layout issues that make it look unprofessional and hard to read:
+
+1.  **Poor Use of Space:** The slide is extremely sparse. The content (title and three bullet points) is clustered in the top-left corner, leaving a massive amount of empty white space below and to the right. This makes the slide feel incomplete and wastes valuable real estate.
+2.  **Inc","{""defects"": [{""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Content clustered in top-left corner.""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Vertical spacing between title and bullets is uneven.""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""No visual distinction between title and supporting",page
+part2_network_observability_1_G1_TEXT_OVERFLOW_4_0050__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,[],"This slide has several significant design and layout issues that make it look unprofessional and difficult to read:
+
+1.  **Title Placement & Spacing:** The title ""Outages are hard to diagnose"" is positioned too far down on the slide, leaving a large, wasted white space above it. It should be at the top of the slide.
+2.  **Inconsistent Spacing Between Elements:** There is a massive, inconsistent ga","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title positioned too far down""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Large wasted white space above title""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Inconsistent gap between title and first bullet""}, {""type"": ""G6_MARGIN_VIOLATION"",",page
+part2_network_observability_1_G1_TEXT_OVERFLOW_4_0050__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""S2_NARRATIVE_ORDER_BREAK""]",,,[],"This slide has several significant design and layout issues that make it look unprofessional and difficult to read:
+
+1.  **Title Placement & Spacing:** The title ""Outages are hard to diagnose"" is positioned too far down on the slide, leaving a large, wasted white space above it. It should be at the top of the slide.
+2.  **Inconsistent Spacing Between Elements:** There is a massive, inconsistent ga","{
+  ""defects"": [
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title positioned too far down""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Large wasted white space above title""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Massive inconsistent gap between title and first bullet""},
+    {""t",page
+part2_network_observability_1_G1_TEXT_OVERFLOW_32_0050__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""S1_TITLE_BODY_MISMATCH"",""S2_NARRATIVE_ORDER_BREAK""]",,,[],"This slide has several significant design and layout issues that make it look unprofessional and difficult to read:
+
+1.  **Title Placement & Spacing:** The title ""Outages are hard to diagnose"" is positioned too far down on the slide, leaving a large, wasted white space above it. It should be at the top of the slide.
+2.  **Inconsistent Spacing Between Elements:** There is a massive, inconsistent ga","{
+  ""defects"": [
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title positioned too far down""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Large wasted white space above title""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Massive inconsistent gap between title and bullets""},
+    {""type"":",page
+part2_network_observability_2_G1_TEXT_OVERFLOW_4_0051__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]",,,"[{""text"":""Lack of visual interest and design elements"",""raw_type"":""OTHER""}]","Based on a review of the visible elements in this slide, here are the problems:
+
+*   **Poor Spacing and Hierarchy:** The spacing between the title and the first bullet point is inconsistent with the spacing between the bullet points themselves. The title is separated by a large gap, while the three bullet points are clustered too closely together, creating a disjointed visual hierarchy.
+*   **Inco","{""defects"": [{""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Inconsistent spacing between title and bullets""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title and bullet text have different alignments""}, {""type"": ""OTHER"", ""locator"": ""Lack of visual interest and design elements""}, {""type"": ""G5_BRAND_CO",page
+part2_network_observability_3_G1_TEXT_OVERFLOW_32_0052__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G6_MARGIN_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,"[{""text"":""Text appears blurry and pixelated"",""raw_type"":""OTHER""}]","Based on a review of the visible elements in this slide, here are the problems:
+
+*   **Title Mismatch:** The title, ""The TraceGrid architecture,"" is completely irrelevant to the content of the slide. The bullet points describe adoption metrics and performance improvements, not an architectural diagram or explanation.
+*   **Poor Use of Space:** The slide is extremely sparse. The three content boxes","{""defects"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title does not match slide content""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Content clustered at top wastes space""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Vertical spacing between boxes is inconsistent""}, {""type"": ""OTHER"", ""loca",page
+part2_ops_efficiency_1_G1_TEXT_OVERFLOW_32_0055__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],NO PROBLEMS,,page
+part2_ops_efficiency_1_G1_TEXT_OVERFLOW_32_0055__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],NO PROBLEMS,,page
+part2_ops_efficiency_1_G1_TEXT_OVERFLOW_4_0055__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],NO PROBLEMS,,page
+part2_ops_efficiency_1_G1_TEXT_OVERFLOW_4_0055__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],NO PROBLEMS,,page
+part2_network_observability_3_G1_TEXT_OVERFLOW_32_0052__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G6_MARGIN_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,"[{""text"":""Design is plain and unengaging"",""raw_type"":""OTHER""}]","Based on a review of the visible elements in this slide, here are the problems:
+
+*   **Title Mismatch:** The title, ""The TraceGrid architecture,"" is completely irrelevant to the content of the slide. The bullet points describe adoption metrics and performance improvements, not an architectural diagram or explanation.
+*   **Poor Use of Space:** The slide is extremely sparse. The three content boxes","{
+  ""defects"": [
+    {""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title does not match slide content""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Content clustered at top wastes space""},
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Vertical spacing between boxes is inconsistent""},
+    {""t",page
+part2_network_observability_3_G1_TEXT_OVERFLOW_4_0052__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G6_MARGIN_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,"[{""text"":""Design is plain and unengaging"",""raw_type"":""OTHER""}]","Based on a review of the visible elements in this slide, here are the problems:
+
+*   **Title Mismatch:** The title, ""The TraceGrid architecture,"" is completely irrelevant to the content of the slide. The bullet points describe adoption metrics and performance improvements, not an architectural diagram or explanation.
+*   **Poor Use of Space:** The slide is extremely sparse. The three content boxes","{""defects"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title does not match slide content""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Content clustered at top wastes space""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Vertical spacing between boxes inconsistent""}, {""type"": ""G3_ALIGNMENT_OFF",page
+part2_network_observability_4_G1_TEXT_OVERFLOW_32_0053__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]",,,[],"Based on a review of the visible elements in this slide, here are the problems:
+
+*   **Poor Spacing and Layout:** The three content boxes are stacked vertically with very little space between them. This creates a cramped, list-like appearance that is visually unappealing and makes the slide feel cluttered.
+*   **Inconsistent Sizing:** The top box containing the title (""TraceGrid data governance"") ","{
+  ""defects"": [
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Cramped spacing creates cluttered layout""},
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title box width misaligns with content boxes""},
+    {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Title and bullets share same font size""}",page
+part2_network_observability_4_G1_TEXT_OVERFLOW_32_0053__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]",,,[],"Based on a review of the visible elements in this slide, here are the problems:
+
+*   **Poor Spacing and Layout:** The three content boxes are stacked vertically with very little space between them. This creates a cramped, list-like appearance that is visually unappealing and makes the slide feel cluttered.
+*   **Inconsistent Sizing:** The top box containing the title (""TraceGrid data governance"") ","{
+  ""defects"": [
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Cramped spacing creates cluttered layout""},
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title box width misaligns with content boxes""},
+    {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Title and bullets share same font size""}",page
+part2_network_observability_3_G1_TEXT_OVERFLOW_4_0052__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G6_MARGIN_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,"[{""text"":""Text rendering is blurry and pixelated"",""raw_type"":""OTHER""},{""text"":""Design lacks visual hierarchy and engagement"",""raw_type"":""OTHER""}]","Based on a review of the visible elements in this slide, here are the problems:
+
+*   **Title Mismatch:** The title, ""The TraceGrid architecture,"" is completely irrelevant to the content of the slide. The bullet points describe adoption metrics and performance improvements (volume, support tickets), not an architectural diagram or explanation.
+*   **Poor Use of Space:** The slide is extremely spars","{
+  ""defects"": [
+    {""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title does not match slide content""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Content clustered at top wastes space""},
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Vertical spacing between boxes inconsistent""},
+    {""type",page
+part2_network_observability_4_G1_TEXT_OVERFLOW_4_0053__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]",,,[],"Based on a review of the visible elements in this slide, here are the problems:
+
+*   **Poor Spacing and Layout:** The three content boxes are stacked vertically with very little space between them. This creates a cramped, list-like appearance that is visually unappealing and makes the slide feel cluttered.
+*   **Inconsistent Sizing:** The top box containing the title (""TraceGrid data governance"") ","{
+  ""defects"": [
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Cramped spacing creates cluttered layout""},
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title box width misaligns with content boxes""},
+    {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Title and bullets share same font size""}",page
+part2_network_observability_4_G1_TEXT_OVERFLOW_4_0053__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]",,,[],"Based on a review of the visible elements in this slide, here are the problems:
+
+*   **Poor Spacing and Layout:** The three content boxes are stacked vertically with very little space between them. This creates a cramped, list-like appearance that is visually unappealing and makes the slide feel cluttered.
+*   **Inconsistent Sizing:** The top box containing the title (""TraceGrid data governance"") ","{
+  ""defects"": [
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Cramped spacing creates cluttered layout""},
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title box width misaligns with content boxes""},
+    {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Title and bullets share same font size""}",page
+part2_network_observability_5_G1_TEXT_OVERFLOW_32_0054__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]",,,[],"Looking at this slide, here are the issues:
+
+1. **Title placement and sizing**: The title ""The TraceGrid roadmap"" is too small relative to the slide size and appears cramped at the top left. It should be larger and more centered or prominently placed.
+
+2. **Inconsistent spacing between content blocks**: There's excessive vertical white space between the three content boxes, making the slide feel s","{
+  ""defects"": [
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title placement and sizing issues""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Excessive vertical white space between blocks""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Bottom section wastes valuable real estate""},
+    {""t",page
+part2_network_observability_5_G1_TEXT_OVERFLOW_32_0054__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G2_ELEMENT_OVERLAP"",""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]",,,[],"Looking at this slide, here are the issues:
+
+1. **Title placement and sizing**: The title ""The TraceGrid roadmap"" is too small relative to the slide size and appears cramped at the top left. It should be larger and more centered or prominently placed.
+
+2. **Inconsistent spacing between content blocks**: There's excessive vertical white space between the three content boxes, making the slide feel s","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title is cramped and not centered""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Excessive vertical white space between boxes""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Bottom section is completely empty""}, {""type"": ""G4_FONT_SIZE_INCONSIST",page
+part2_network_observability_5_G1_TEXT_OVERFLOW_4_0054__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G2_ELEMENT_OVERLAP"",""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]",,,[],"Looking at this slide, here are the issues:
+
+1. **Title placement and sizing**: The title ""The TraceGrid roadmap"" is too small relative to the slide size and appears cramped at the top left. It should be larger and more centered or prominently placed.
+
+2. **Inconsistent spacing between content blocks**: There's excessive vertical white space between the three content boxes, making the slide feel s","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title placement and sizing issues""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Excessive vertical white space between blocks""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Bottom area wasted with no content""}, {""type"": ""G4_FONT_SIZE_INCONSIS",page
+part2_network_observability_5_G1_TEXT_OVERFLOW_4_0054__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G2_ELEMENT_OVERLAP"",""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]",,,[],"Looking at this slide, here are the issues:
+
+1. **Title placement and sizing**: The title ""The TraceGrid roadmap"" is too small relative to the slide size and appears cramped at the top left. It should be larger and more centered or prominently placed.
+
+2. **Inconsistent spacing between content blocks**: There's excessive vertical white space between the three content boxes, making the slide feel s","{
+  ""defects"": [
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title placement and sizing issues""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Excessive vertical white space between blocks""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Bottom section wastes valuable presentation space""},
+",page
+part2_ops_efficiency_2_G1_TEXT_OVERFLOW_32_0056__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G6_MARGIN_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW""]",,,[],"Looking at this slide, there are several significant design and layout issues:
+
+1.  **Title Placement & Spacing:** The title ""Root causes behind the cost"" is positioned too far to the left and too high on the slide. It should be centered or aligned with the content below it, and there's excessive white space above it.
+2.  **Inconsistent Spacing Between Elements:** There is a large, inconsistent ga","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title displaced from alignment group""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Excessive white space above title""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Inconsistent gap between title and content""}, {""type"": ""G6_MARGIN_VIOLATION"", ",page
+part2_field_service_4_S6_IMAGE_TEXT_CONTRADICTION_1_0043__template,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G6_MARGIN_VIOLATION"",""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""Title contradicts body content"",""quote"":""""}",,[],"This slide has several significant design and content issues that make it look unprofessional and confusing:
+
+1.  **Contradictory Content:** The main title, ""Impact DispatchPro can deliver,"" promises a positive outcome or capability. However, the first bullet point directly contradicts this by stating, ""This slide describes a contradictory single-layer architecture, not three-layer architecture."" ","{""defects"": [{""type"": ""S6_IMAGE_TEXT_CONTRADICTION"", ""locator"": ""Title contradicts body content""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Text boxes not uniform in height""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Body text is too small""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": """,page
+part2_field_service_4_S6_IMAGE_TEXT_CONTRADICTION_1_0043__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""Title contradicts body content"",""quote"":""""}",,[],"This slide has several significant design and content issues that make it look unprofessional and confusing:
+
+1.  **Contradictory Content:** The main title, ""Impact DispatchPro can deliver,"" promises a positive outcome or capability. However, the first bullet point directly contradicts this by stating, ""This slide describes a contradictory single-layer architecture, not three-layer architecture."" ","{""defects"": [{""type"": ""S6_IMAGE_TEXT_CONTRADICTION"", ""locator"": ""Title contradicts body content""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Cramped layout with wasted space""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Inconsistent text box heights""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""loca",page
+part2_ops_efficiency_2_G1_TEXT_OVERFLOW_4_0056__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G6_MARGIN_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW""]",,,[],"Looking at this slide, there are several significant design and layout issues:
+
+1.  **Title Placement & Spacing:** The title ""Root causes behind the cost"" is positioned too far to the left and too high on the slide. It should be centered or aligned with the content below it, and there's excessive white space above it.
+2.  **Inconsistent Spacing Between Elements:** There is a large, inconsistent ga","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title displaced from alignment group""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Excessive white space above title""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Inconsistent gap between title and content""}, {""type"": ""G6_MARGIN_VIOLATION"", ",page
+part2_ops_efficiency_2_G1_TEXT_OVERFLOW_4_0056__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]",,,[],"Looking at this slide, there are several significant design and layout issues:
+
+1. **Title placement and alignment**: The title ""Root causes behind the cost"" is left-aligned but positioned too far to the left edge of the slide. It should be centered or right-aligned within its container for better visual balance.
+
+2. **Inconsistent spacing between elements**: There's excessive vertical white space","{
+  ""defects"": [
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title displaced from alignment group""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Excessive vertical spacing between elements""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Bottom section wastes valuable space""},
+    {""type"":",page
+part2_ops_efficiency_2_G1_TEXT_OVERFLOW_32_0056__template__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""S5_MISSING_LOGIC_SECTION""]",,,[],"Looking at this slide, there are several significant design and layout issues:
+
+1. **Title placement and alignment**: The title ""Root causes behind the cost"" is left-aligned but positioned too far to the left edge of the slide. It should be centered or right-aligned within its container for better visual balance.
+
+2. **Inconsistent spacing between elements**: There's excessive vertical white space","{
+  ""defects"": [
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title displaced from alignment group""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Excessive vertical spacing between elements""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Bottom section wastes valuable real estate""},
+    {""",page
+part2_field_service_3_S6_IMAGE_TEXT_CONTRADICTION_1_0042__template,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW"",""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""Text box contains contradictory self-referential statement"",""quote"":""""}",,"[{""text"":""Text box borders inconsistent in thickness"",""raw_type"":""G8_BORDER_INCONSISTENCY""}]","Looking at this slide, here are the issues:
+
+1. **Title placement and sizing**: The title ""DispatchPro routes smarter"" is positioned too far to the left and appears small relative to the slide width. It should be centered or at least more prominently placed with better sizing.
+
+2. **Inconsistent text alignment**: The four text boxes have inconsistent left alignment - the first three appear left-al","{
+  ""defects"": [
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title positioned too far left and small""},
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Text boxes have inconsistent left alignment""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Excessive white space between text boxes""},
+    {",page
+part2_field_service_3_S6_IMAGE_TEXT_CONTRADICTION_1_0042__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""G2_ELEMENT_OVERLAP"",""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,[],"Looking at this slide, here are the issues:
+
+1. **Title placement and sizing**: The title ""DispatchPro routes smarter"" is positioned too far to the left and appears small relative to the slide width. It should be centered or at least more prominently placed with better sizing.
+
+2. **Inconsistent text alignment**: The four text boxes have inconsistent left alignment - the first three appear left-al","{
+  ""defects"": [
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title positioned too far left and small""},
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Text boxes have inconsistent left alignment""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Excessive white space between text boxes""},
+    {",page
+part2_fraud_detection_1_S6_IMAGE_TEXT_CONTRADICTION_1_0045__template,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G6_MARGIN_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,"[{""text"":""Overall design lacks professional polish and interest"",""raw_type"":""OTHER""}]","This slide has several significant design and content issues:
+
+1.  **Contradictory/Confusing Text:** The first bullet point, ""This slide describes a contradictory single-layer architecture, not three-layer architecture,"" is confusing and likely an error. It contradicts the title (""Fraud losses are climbing"") and the other points, which seem to be about GuardML and a decision. It's unclear what thi","{""defects"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title contradicts confusing first bullet point""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Excessive vertical white space between boxes""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Title box size differs from content boxes""}, {""",page
+part2_fraud_detection_1_S6_IMAGE_TEXT_CONTRADICTION_1_0045__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S5_MISSING_LOGIC_SECTION"",""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""Text contradicts title and other points"",""quote"":""""}",,[],"This slide has several significant design and content issues:
+
+1.  **Contradictory/Confusing Text:** The first bullet point, ""This slide describes a contradictory single-layer architecture, not three-layer architecture,"" is confusing and likely an error. It contradicts the title (""Fraud losses are climbing"") and the other points, which seem to be about GuardML and a decision. This text appears to ","{""defects"": [{""type"": ""S6_IMAGE_TEXT_CONTRADICTION"", ""locator"": ""Text contradicts title and other points""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title and bullet spacing is inconsistent""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Font size difference feels jarring""}, {""type"": ""S5_MI",page
+part2_fraud_detection_2_S6_IMAGE_TEXT_CONTRADICTION_1_0046__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""S1_TITLE_BODY_MISMATCH"",""S5_MISSING_LOGIC_SECTION""]",,,[],"This slide has several significant design and content issues:
+
+1.  **Contradictory/Confusing Text:** The first body text box states, ""This slide describes a contradictory single-layer architecture, not three-layer architecture."" This is confusing because the title (""GuardML scores every transaction"") and the other points (""A refresh is due within two quarters"", ""Competitors already ship weekly"") d","{""defects"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title does not match body content""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Elements lack visual hierarchy and spacing""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Title size disconnected from body text""}, {""type"": ""S5_MISSING",page
+part2_field_service_5_S6_IMAGE_TEXT_CONTRADICTION_1_0044__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW""]",,,[],"This slide has several significant design and layout issues that make it look unprofessional and hard to read:
+
+1.  **Title Placement & Spacing:** The title ""A ninety-day DispatchPro plan"" is positioned too far down on the slide, leaving a large, empty white space above it. This wastes valuable top-of-slide real estate and makes the slide feel unbalanced.
+2.  **Inconsistent Text Alignment:** The m","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title positioned too low on slide""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Body text left alignment is inconsistent""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Excessive vertical white space between elements""}, {""type"": ""G4_FONT_SIZE_",page
+part2_field_service_5_S6_IMAGE_TEXT_CONTRADICTION_1_0044__template,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW""]",,,[],"This slide has several significant design and layout issues that make it look unprofessional and hard to read:
+
+1.  **Title Placement & Spacing:** The title ""A ninety-day DispatchPro plan"" is positioned too far down on the slide, leaving a large, empty white space above it. This wastes valuable top-of-slide real estate and makes the slide feel unbalanced.
+2.  **Inconsistent Text Alignment:** The m","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title positioned too far down""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Body text alignment is inconsistent""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Excessive vertical white space between elements""}, {""type"": ""G4_FONT_SIZE_INCONSIST",page
+part2_fraud_detection_2_S6_IMAGE_TEXT_CONTRADICTION_1_0046__template,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""S1_TITLE_BODY_MISMATCH"",""S5_MISSING_LOGIC_SECTION""]",,,[],"This slide has several significant design and content issues:
+
+1.  **Contradictory/Confusing Text:** The first body text box states, ""This slide describes a contradictory single-layer architecture, not three-layer architecture."" This is confusing because the title (""GuardML scores every transaction"") and the other points (""A refresh is due within two quarters"", ""Competitors already ship weekly"") d","{""defects"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title does not match body content""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Elements lack visual hierarchy and spacing""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Title size disconnected from body text""}, {""type"": ""S5_MISSING",page
+part2_fraud_detection_3_S6_IMAGE_TEXT_CONTRADICTION_1_0047__template,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G7_RENDER_CONTAINMENT_OVERFLOW"",""S1_TITLE_BODY_MISMATCH""]",,,[],"This slide has several significant design and content issues:
+
+1.  **Contradictory/Confusing Title & Content:** The title ""Inside the GuardML model"" suggests an explanation of the model's structure. However, the first bullet point explicitly states, ""This slide describes a contradictory single-layer architecture, not three-layer architecture."" This immediately creates confusion and undermines the ","{""defects"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title contradicts body content description""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Content boxes are not perfectly aligned""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Text density and hierarchy issues""}, {""type"": ""G7_RENDER",page
+part2_fraud_detection_4_S6_IMAGE_TEXT_CONTRADICTION_1_0048__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G7_RENDER_CONTAINMENT_OVERFLOW"",""S1_TITLE_BODY_MISMATCH""]",,,[],"This slide has several significant issues that make it look unprofessional, confusing, and poorly designed:
+
+1.  **Contradictory Title and Content:** The title ""GuardML detection metrics"" is completely unrelated to the body content. The body describes an architecture (single-layer vs. three-layer) and a timeline (Q2, Q3), which has nothing to do with ""detection metrics."" This creates immediate cog","{""defects"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title unrelated to body content""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""First body text block is larger""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Spacing between title and body inconsistent""}, {""type"": ""G7_RENDER_CONTAINM",page
+part2_hr_analytics_1_S6_IMAGE_TEXT_CONTRADICTION_1_0050__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""Text contradicts itself about architecture layers"",""quote"":""""}",,"[{""text"":""Slide lacks visual interest with no graphics or icons"",""raw_type"":""OTHER""}]","The slide has several significant design and content issues:
+
+1.  **Contradictory Content:** The first bullet point states, ""This slide describes a contradictory single-layer architecture, not three-layer architecture."" This is a direct contradiction within the slide's own text, which is confusing and undermines the message.
+2.  **Poor Spacing and Layout:** The text boxes are stacked vertically wi","{""defects"": [{""type"": ""S6_IMAGE_TEXT_CONTRADICTION"", ""locator"": ""Text contradicts itself about architecture layers""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Text boxes are too cramped with poor spacing""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Text boxes have inconsistent widths and alignm",page
+part2_fraud_detection_5_S6_IMAGE_TEXT_CONTRADICTION_1_0049__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G6_MARGIN_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW"",""S1_TITLE_BODY_MISMATCH"",""S4_DENSITY_RULE_VIOLATION"",""S5_MISSING_LOGIC_SECTION""]",,,[],"Looking at this slide, here are the issues:
+
+1. **Title placement and styling**: The title ""The GuardML investment ask"" is positioned too far to the left and appears to be cut off or misaligned with the right edge of its container box. It should be centered or properly aligned within its designated area.
+
+2. **Inconsistent text alignment**: The three content boxes below the title have text that is","{
+  ""defects"": [
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title misaligned with container edge""},
+    {""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Content box contains meta-comment about slide""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Excessive white space at slide bottom""},
+    {""",page
+part2_fraud_detection_4_S6_IMAGE_TEXT_CONTRADICTION_1_0048__template,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G6_MARGIN_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,[],"This slide has several significant issues that make it look unprofessional, confusing, and poorly designed:
+
+1.  **Contradictory Title and Content:** The title ""GuardML detection metrics"" is completely unrelated to the body content. The body describes an architecture (single-layer vs. three-layer) and a timeline (Q2, Q3), which has nothing to do with ""detection metrics."" This creates immediate con","{""defects"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title unrelated to body content""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""First body text box is larger""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Inconsistent spacing between elements""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY",page
+part2_hr_analytics_1_S6_IMAGE_TEXT_CONTRADICTION_1_0050__template,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""S5_MISSING_LOGIC_SECTION"",""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""Contradictory content within slide text"",""quote"":""""}",,[],"The slide has several significant design and content issues:
+
+1.  **Contradictory Content:** The first bullet point states, ""This slide describes a contradictory single-layer architecture, not three-layer architecture."" This is a direct contradiction within the slide's own text, which is confusing and undermines the message.
+2.  **Poor Spacing and Layout:** The text boxes are stacked vertically wi","{""defects"": [{""type"": ""S6_IMAGE_TEXT_CONTRADICTION"", ""locator"": ""Contradictory content within slide text""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Poor spacing and cramped layout""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Inconsistent text box sizing and alignment""}, {""type"": ""G5_BRAND_COLO",page
+part2_hr_analytics_2_S6_IMAGE_TEXT_CONTRADICTION_1_0051__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,[],"This slide has several significant design and content issues:
+
+1.  **Contradictory/Confusing Text:** The second text box contains the statement ""This slide describes a contradictory single-layer architecture, not three-layer architecture."" This is a meta-commentary that contradicts the slide's own title (""PeoplePulse surfaces early signals"") and creates immediate confusion about the slide's actual","{""defects"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title contradicts body meta-commentary""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Text boxes are not aligned""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Title and body use same font size""}, {""type"": ""G5_BRAND_COLOR_VIOLATION"",",page
+part2_fraud_detection_5_S6_IMAGE_TEXT_CONTRADICTION_1_0049__template,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""S4_DENSITY_RULE_VIOLATION"",""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""Missing visuals for architecture topic"",""quote"":""""}",,[],"Looking at this slide, here are the issues:
+
+1. **Title placement and styling**: The title ""The GuardML investment ask"" is positioned too far to the left and appears to be cut off or misaligned with the right edge of its container box. It should be centered or properly aligned within its designated area.
+
+2. **Inconsistent text alignment**: All text elements (title and bullet points) are left-alig","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title misaligned with container edge""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title box border mismatch with alignment""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Excessive vertical spacing between elements""}, {""type"": ""G4_FONT_SIZE_I",page
+part2_fraud_detection_3_S6_IMAGE_TEXT_CONTRADICTION_1_0047__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""S1_TITLE_BODY_MISMATCH"",""S2_NARRATIVE_ORDER_BREAK"",""S5_MISSING_LOGIC_SECTION""]",,,[],"This slide has several significant design and content issues:
+
+1.  **Contradictory/Confusing Title & Content:** The title ""Inside the GuardML model"" is immediately contradicted by the first bullet point, which states, ""This slide describes a contradictory single-layer architecture, not three-layer architecture."" This creates immediate confusion about what the slide is actually describing. It's unc","{""defects"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title contradicts first bullet point content""}, {""type"": ""S2_NARRATIVE_ORDER_BREAK"", ""locator"": ""Missing Phase 1 and Phase 6 in sequence""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Text boxes are not vertically or left-aligned""}, {""type""",page
+part2_hr_analytics_2_S6_IMAGE_TEXT_CONTRADICTION_1_0051__template,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""Text contradicts slide title and content"",""quote"":""""}",,[],"This slide has several significant design and content issues:
+
+1.  **Contradictory/Confusing Text:** The second text box contains a meta-comment (""This slide describes a contradictory single-layer architecture, not three-layer architecture."") that contradicts the slide's title (""PeoplePulse surfaces early signals"") and seems to be an internal note or error rather than intended content for the audi","{""defects"": [{""type"": ""S6_IMAGE_TEXT_CONTRADICTION"", ""locator"": ""Text contradicts slide title and content""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Excessive vertical white space between elements""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Text boxes are inconsistent in height""}, {""type"": ""G",page
+part2_hr_analytics_3_S6_IMAGE_TEXT_CONTRADICTION_1_0052__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""G2_ELEMENT_OVERLAP"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,[],"This slide has several significant design and content issues:
+
+1.  **Contradictory/Confusing Text**: The first bullet point states, ""This slide describes a contradictory single-layer architecture, not three-layer architecture."" This is confusing because the title is ""Actions PeoplePulse recommends,"" implying the slide should be describing recommended actions or a specific architecture. The text wi","{""defects"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Slide title contradicts body content""}, {""type"": ""G2_ELEMENT_OVERLAP"", ""locator"": ""Content boxes lack visual separation""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Title and body font sizes differ""}, {""type"": ""G5_BRAND_COLOR_VIOLA",page
+part2_hr_analytics_3_S6_IMAGE_TEXT_CONTRADICTION_1_0052__template,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""G2_ELEMENT_OVERLAP"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,[],"This slide has several significant design and content issues:
+
+1.  **Contradictory/Confusing Text**: The first bullet point states, ""This slide describes a contradictory single-layer architecture, not three-layer architecture."" This is confusing because the title is ""Actions PeoplePulse recommends,"" implying the slide should be describing recommended actions or a specific architecture. The text wi","{""defects"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Slide title contradicts body content""}, {""type"": ""G2_ELEMENT_OVERLAP"", ""locator"": ""Content boxes lack visual separation""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Title and body font sizes differ""}, {""type"": ""G5_BRAND_COLOR_VIOLA",page
+part2_hr_analytics_5_S6_IMAGE_TEXT_CONTRADICTION_1_0054__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""S1_TITLE_BODY_MISMATCH"",""S5_MISSING_LOGIC_SECTION""]",,,[],"This slide has several significant design and content issues:
+
+1.  **Contradictory/Confusing Text:** The first content box states, ""This slide describes a contradictory single-layer architecture, not three-layer architecture."" This is a major problem because it explicitly calls the described architecture ""contradictory,"" which undermines the credibility of the entire rollout plan. It also creates ","{""defects"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title contradicts body content""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Large empty space below content""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Boxes lack visual hierarchy""}, {""type"": ""G5_BRAND_COLOR_VIOLATION"", ""locator"": ""Bac",page
+part2_hr_analytics_5_S6_IMAGE_TEXT_CONTRADICTION_1_0054__template,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET"",""G6_MARGIN_VIOLATION"",""S4_DENSITY_RULE_VIOLATION"",""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""Text contradicts slide architecture description"",""quote"":""""}",,[],"This slide has several significant design and content issues:
+
+1.  **Contradictory/Confusing Text:** The first content box states, ""This slide describes a contradictory single-layer architecture, not three-layer architecture."" This is a major problem because it explicitly calls out a flaw in the slide's own description, making the slide self-contradictory and confusing for the audience. It suggest","{""defects"": [{""type"": ""S6_IMAGE_TEXT_CONTRADICTION"", ""locator"": ""Text contradicts slide architecture description""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Excessive vertical white space between elements""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Content boxes are not uniform in height""}, {""",page
+part2_hr_analytics_4_S6_IMAGE_TEXT_CONTRADICTION_1_0053__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""S1_TITLE_BODY_MISMATCH"",""S5_MISSING_LOGIC_SECTION""]",,,[],"This slide has several significant design and content issues:
+
+1.  **Contradictory/Confusing Title:** The title ""Impact PeoplePulse can drive"" is grammatically awkward and doesn't clearly describe the slide's content, which is a list of project phases. It should be something like ""PeoplePulse Implementation Phases"" or ""Phases for PeoplePulse Impact"".
+2.  **Inconsistent Content:** The first bullet ","{""defects"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title does not match body content""}, {""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""First bullet is meta-commentary, not a phase""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Boxes are not aligned with each other""}, {""type"": ""G4_FONT_SIZE_",page
+part2_inventory_optimization_1_S6_IMAGE_TEXT_CONTRADICTION_1_0055__template,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G6_MARGIN_VIOLATION"",""S1_TITLE_BODY_MISMATCH"",""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""Box text contradicts slide architecture"",""quote"":""""}",,[],"This slide has several significant design and content issues:
+
+1.  **Contradictory/Confusing Title vs. Body Text:** The title ""Stockouts erode loyalty"" is completely unrelated to the body text, which discusses architecture layers and competitor shipping schedules. This creates immediate cognitive dissonance for the viewer.
+2.  **Poor Use of Space:** The slide wastes a large amount of white space a","{""defects"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title contradicts body content""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Content clustered at top, empty bottom""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Inconsistent vertical spacing between boxes""}, {""type"": ""G4_FONT_SIZE_INCONS",page
+part2_inventory_optimization_3_S6_IMAGE_TEXT_CONTRADICTION_1_0057__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G6_MARGIN_VIOLATION"",""S1_TITLE_BODY_MISMATCH"",""S5_MISSING_LOGIC_SECTION""]",,,[],"This slide has several significant design and content issues:
+
+1.  **Contradictory/Confusing Title:** The title ""StockIQ cut stockouts in the pilot"" is a business outcome, but the body text immediately contradicts itself by describing an architectural flaw (""This slide describes a contradictory single-layer architecture...""). This creates immediate cognitive dissonance for the viewer.
+2.  **Poor S","{""defects"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title contradicts body content""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Excessive vertical white space""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Inconsistent box heights""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""No fo",page
+part2_inventory_optimization_1_S6_IMAGE_TEXT_CONTRADICTION_1_0055__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,[],"This slide has several significant design and content issues:
+
+1.  **Title Placement & Hierarchy:** The title ""Stockouts erode loyalty"" is positioned at the very top left, but it lacks a clear visual hierarchy or separation from the body content. It appears to be just another text block rather than a distinct heading.
+2.  **Inconsistent Text Alignment:** The title is left-aligned, while the three ","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title lacks visual hierarchy and separation""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Inconsistent text alignment creates unstructured layout""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Poor spacing makes slide feel cramped""}, {",page
+part2_inventory_optimization_4_S6_IMAGE_TEXT_CONTRADICTION_1_0058__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""S1_TITLE_BODY_MISMATCH""]",,,"[{""text"":""Lack of visual hierarchy and design quality"",""raw_type"":""OTHER""}]","This slide has several significant design and content issues:
+
+1.  **Contradictory Content:** The first bullet point states, ""This slide describes a contradictory single-layer architecture, not three-layer architecture."" This is a direct contradiction to the slide's title, ""Expanding StockIQ to all regions,"" which implies a complex, multi-region (and likely multi-layer) architecture. This makes th","{""defects"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title contradicts contradictory content""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Inconsistent spacing between title and bullets""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Inconsistent text alignment between title and bullets""}, {""",page
+part2_hr_analytics_4_S6_IMAGE_TEXT_CONTRADICTION_1_0053__template,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G6_MARGIN_VIOLATION"",""S1_TITLE_BODY_MISMATCH"",""S4_DENSITY_RULE_VIOLATION""]",,,[],"This slide has several significant design and content issues:
+
+1.  **Contradictory/Confusing Title:** The title ""Impact PeoplePulse can drive"" is grammatically awkward and doesn't clearly state what the slide is about. It should be something like ""Phases of PeoplePulse Implementation"" or ""Impact of PeoplePulse Phases"".
+2.  **Inconsistent Content with Title:** The first bullet point (""This slide de","{""defects"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title does not match body content""}, {""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title and content do not align""}, {""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Overall purpose is unclear from title""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""l",page
+part2_inventory_optimization_3_S6_IMAGE_TEXT_CONTRADICTION_1_0057__template,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G6_MARGIN_VIOLATION"",""S1_TITLE_BODY_MISMATCH"",""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""Meta-commentary contradicts main message"",""quote"":""""}",,[],"This slide has several significant design and content issues:
+
+1.  **Contradictory/Confusing Title:** The title ""StockIQ cut stockouts in the pilot"" is a business result, but the body text immediately contradicts itself by describing an architectural flaw (""This slide describes a contradictory single-layer architecture...""). This creates immediate cognitive dissonance for the viewer.
+2.  **Poor Sp","{""defects"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title contradicts body content""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Excessive vertical white space""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Inconsistent box heights""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""No fo",page
+part2_inventory_optimization_2_S6_IMAGE_TEXT_CONTRADICTION_1_0056__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""G4_FONT_SIZE_INCONSISTENCY"",""G6_MARGIN_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW"",""S1_TITLE_BODY_MISMATCH"",""S2_NARRATIVE_ORDER_BREAK""]",,,[],"This slide has several significant design and content issues:
+
+1.  **Contradictory/Confusing Title:** The title ""StockIQ rebalances inventory nightly"" describes a specific operational action. However, the body text immediately contradicts this by stating, ""This slide describes a contradictory single-layer architecture, not three-layer architecture."" This creates immediate confusion about the slide","{
+  ""defects"": [
+    {""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title contradicts body content""},
+    {""type"": ""S2_NARRATIVE_ORDER_BREAK"", ""locator"": ""Phasing is incomplete and illogical""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Content clustered at top wastes space""},
+    {""type"": ""G4_",page
+part2_inventory_optimization_4_S6_IMAGE_TEXT_CONTRADICTION_1_0058__template,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""S1_TITLE_BODY_MISMATCH""]",,,"[{""text"":""Visual design lacks hierarchy and emphasis"",""raw_type"":""OTHER""}]","This slide has several significant design and content issues:
+
+1.  **Contradictory Content:** The first bullet point states, ""This slide describes a contradictory single-layer architecture, not three-layer architecture."" This is a direct contradiction to the slide's title, ""Expanding StockIQ to all regions,"" which implies a complex, multi-regional (and likely multi-layered) architecture. This make","{""defects"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title contradicts contradictory content""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title spacing inconsistent with bullets""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Bullet text alignment differs from title""}, {""type"": ""OTHER"", ""loc",page
+part2_inventory_optimization_2_S6_IMAGE_TEXT_CONTRADICTION_1_0056__template,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""G4_FONT_SIZE_INCONSISTENCY"",""G6_MARGIN_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW"",""S1_TITLE_BODY_MISMATCH"",""S2_NARRATIVE_ORDER_BREAK""]",,,[],"This slide has several significant design and content issues:
+
+1.  **Contradictory/Confusing Title:** The title ""StockIQ rebalances inventory nightly"" describes a specific operational action. However, the body text immediately contradicts this by stating, ""This slide describes a contradictory single-layer architecture, not three-layer architecture."" This creates immediate confusion about the slide","{
+  ""defects"": [
+    {""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title contradicts body content""},
+    {""type"": ""S2_NARRATIVE_ORDER_BREAK"", ""locator"": ""Phasing is incomplete and illogical""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Content clustered at top, wasted space""},
+    {""type"": ""G4",page
+part2_field_service_3_S6_IMAGE_TEXT_CONTRADICTION_1_0042__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]",,,[],"Based on a review of the visible elements in this slide, here are the problems:
+
+*   **Poor Layout & Spacing:** The three content boxes are stacked vertically with very little space between them. This creates a cramped, list-like appearance that is visually unappealing and makes the slide feel cluttered.
+*   **Inconsistent Spacing:** The vertical gap between the main title box and the first conten","{""defects"": [{""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Cramped spacing creates cluttered layout""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Inconsistent vertical gaps disrupt flow""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Dated serif font lacks modern style""}, {""type"": ""G5_BRAND_COL",page
+part2_field_service_3_S6_IMAGE_TEXT_CONTRADICTION_1_0042__template__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]",,,[],"Based on a review of the visible elements in this slide, here are the problems:
+
+*   **Poor Layout & Spacing:** The three content boxes are stacked vertically with very little space between them. This creates a cramped, list-like appearance that is visually unappealing and makes the slide feel cluttered.
+*   **Inconsistent Spacing:** The vertical gap between the main title box and the first conten","{""defects"": [{""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Cramped layout with insufficient spacing""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Inconsistent vertical gaps disrupt flow""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Dated serif font lacks modern style""}, {""type"": ""G5_BRAND_COL",page
+part2_inventory_optimization_5_S6_IMAGE_TEXT_CONTRADICTION_1_0059__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G6_MARGIN_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW""]",,,"[{""text"":""Generic design lacks visual hierarchy and flair"",""raw_type"":""OTHER""}]","This slide has several significant design and layout issues:
+
+1.  **Title Placement & Spacing:** The title ""Funding the StockIQ rollout"" is positioned too far down in the slide, leaving a large, wasted white space above it. It should be at the very top to establish a clear hierarchy.
+2.  **Inconsistent Spacing Between Content Blocks:** There is a massive, unbalanced gap between the title and the f","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title displaced from top alignment group""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Large gap between title and first content block""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Bottom half wastes space, layout unbalanced""}, {""type"": ""G4_",page
+part2_fraud_detection_4_S6_IMAGE_TEXT_CONTRADICTION_1_0048__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,,[],NO PROBLEMS,,page
+part2_fraud_detection_4_S6_IMAGE_TEXT_CONTRADICTION_1_0048__template__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,,[],NO PROBLEMS,,page
+part2_inventory_optimization_5_S6_IMAGE_TEXT_CONTRADICTION_1_0059__template,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]",,,[],"This slide has several significant design and layout issues:
+
+1.  **Title Placement & Spacing:** The title ""Funding the StockIQ rollout"" is positioned too far down on the slide, leaving a large, empty white space above it. This creates an unbalanced, top-heavy feel.
+2.  **Inconsistent Text Box Alignment:** The three text boxes containing the main content are not aligned with each other. The first ","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title displaced from top alignment group""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Text boxes have inconsistent left margins""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Elements lack visual hierarchy differentiation""}, {""type"": ",page
+part2_field_service_5_S6_IMAGE_TEXT_CONTRADICTION_1_0044__template__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW""]",,,[],"Looking at this slide, here are the problems:
+
+1. **Title placement and styling**: The title ""A ninety-day DispatchPro plan"" is positioned too far to the left and appears to be cut off by the left edge of the content area. It should be centered or aligned with the other elements.
+
+2. **Inconsistent spacing between phases**: There's significant white space between each phase item, making the list a","{
+  ""defects"": [
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title displaced from alignment group""},
+    {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Text size inconsistent with readability rules""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Elements bleed into safe margin area""},
+   ",page
+part2_field_service_4_S6_IMAGE_TEXT_CONTRADICTION_1_0043__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G6_MARGIN_VIOLATION"",""S4_DENSITY_RULE_VIOLATION"",""S5_MISSING_LOGIC_SECTION""]",,,[],"This slide has several significant design and layout issues that make it look unprofessional and low-quality:
+
+1.  **Poor Use of Space (White Space):** The slide is extremely sparse. The content is clustered at the top, leaving a massive, empty white area in the bottom two-thirds of the slide. This makes the slide feel incomplete and poorly planned.
+2.  **Inconsistent Spacing:** The vertical spaci","{""defects"": [{""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Content clustered at top, leaving empty space.""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Vertical spacing between title and content is small.""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Spacing between content boxes is inconsistent.""},",page
+part2_fraud_detection_2_S6_IMAGE_TEXT_CONTRADICTION_1_0046__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""S4_DENSITY_RULE_VIOLATION""]",,,[],"This slide has several significant design and layout issues that make it look unprofessional and hard to read:
+
+1.  **Title Spillover:** The title ""GuardML scores every transaction"" is not contained within its box. The text clearly spills over the right edge of the light gray rectangular container, breaking the visual boundary.
+2.  **Inconsistent Spacing:** There is a large, awkward gap between th","{
+  ""defects"": [
+    {""type"": ""G1_TEXT_OVERFLOW"", ""locator"": ""Title text spills over container edge""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Large gap between title and first bullet""},
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Bullet boxes are not aligned left""},
+    {""type"": ""G5_BRA",page
+part2_field_service_4_S6_IMAGE_TEXT_CONTRADICTION_1_0043__template__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G2_ELEMENT_OVERLAP"",""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]",,,[],"This slide has several significant design and layout issues that make it look unprofessional and low-quality:
+
+1.  **Poor Use of Space (White Space):** The slide is extremely sparse. The content is clustered at the top, leaving a massive, empty white area in the bottom two-thirds of the slide. This makes the slide feel incomplete and poorly planned.
+2.  **Inconsistent Spacing:** The vertical spaci","{""defects"": [{""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Content clustered at top, leaving empty space.""}, {""type"": ""G2_ELEMENT_OVERLAP"", ""locator"": ""Vertical spacing between boxes is inconsistent.""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""No clear visual hierarchy guides the viewer.""}, {""type""",page
+part2_fraud_detection_5_S6_IMAGE_TEXT_CONTRADICTION_1_0049__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G6_MARGIN_VIOLATION""]",,,[],"The slide has several design and layout issues:
+
+1.  **Title Spacing:** The title ""The GuardML investment ask"" is positioned too far down in its container, leaving a large, empty white space above it.
+2.  **Inconsistent Spacing:** There is a significant and inconsistent gap between the title box and the first list item (""Shadow traffic before switching GuardML""). The spacing between the subsequent","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title positioned too low in container""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Large gap between title box and list""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Bottom half empty space unbalances layout""}, {""type"": ""G4_FONT_SIZE_INCONS",page
+part2_fraud_detection_2_S6_IMAGE_TEXT_CONTRADICTION_1_0046__template__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]",,,[],"This slide has several significant design and layout issues that make it look unprofessional and hard to read:
+
+1.  **Poor Spacing & Alignment:** The three bullet points are not aligned with each other. The first point (""GuardML is saturated at peak demand"") is indented further to the left than the second and third points. This creates a visually jarring, misaligned list.
+2.  **Inconsistent Text W","{
+  ""defects"": [
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Bullet points are misaligned.""},
+    {""type"": ""G1_TEXT_OVERFLOW"", ""locator"": ""Text is cut off in boxes.""},
+    {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Title lacks visual distinction.""},
+    {""type"": ""G5_BRAND_COLOR_VIOLATION",page
+part2_fraud_detection_1_S6_IMAGE_TEXT_CONTRADICTION_1_0045__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G6_MARGIN_VIOLATION""]",,,[],"This slide has several significant design and layout issues that make it look unprofessional and low-quality:
+
+1.  **Poor Use of Text Boxes:** The entire slide is composed of separate, disconnected text boxes. This is a major layout flaw. The main title (""Fraud losses are climbing"") is in its own box, and each of the three supporting points is in its own separate box. This creates a fragmented, ""c","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Text boxes are disconnected and fragmented.""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Vertical spacing is inconsistent and excessive.""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Points lack visual hierarchy and grouping.""}, {""type"": ""G",page
+part2_field_service_5_S6_IMAGE_TEXT_CONTRADICTION_1_0044__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G6_MARGIN_VIOLATION"",""S5_MISSING_LOGIC_SECTION""]",,,[],"Looking at this slide, here are the problems:
+
+1. **Title placement and styling**: The title ""A ninety-day DispatchPro plan"" is positioned too far to the left and appears to be cut off by the left edge of the content area. It should be centered or aligned with the other elements.
+
+2. **Inconsistent spacing between phases**: There's uneven vertical spacing between the phase items. Some gaps appear ","{
+  ""defects"": [
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title displaced from alignment group""},
+    {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Text uses inconsistent font sizes""},
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Phase items have inconsistent left margins""},
+    {""typ",page
+part2_fraud_detection_5_S6_IMAGE_TEXT_CONTRADICTION_1_0049__template__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]",,,[],"The slide has several design and layout issues:
+
+1.  **Title Spacing:** The title ""The GuardML investment ask"" is positioned too far down in its container, leaving a large, empty white space above it.
+2.  **Inconsistent Spacing:** There is a significant and inconsistent gap between the title box and the first bullet point box. The spacing between the subsequent bullet point boxes is much smaller a","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title positioned too low in container""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Inconsistent gap between title and first bullet""}, {""type"": ""G5_BRAND_COLOR_VIOLATION"", ""locator"": ""Title lacks visual distinction from bullets""}, {""type"": ""G",page
+part2_fraud_detection_1_S6_IMAGE_TEXT_CONTRADICTION_1_0045__template__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]",,,[],"This slide has several significant design and layout issues that make it look unprofessional and low-quality:
+
+1.  **Poor Use of Text Boxes:** The entire slide is composed of separate, disconnected text boxes. This is a major layout flaw. The main title ""Fraud losses are climbing"" is in its own box, and each of the three supporting points is in its own separate box. This creates a fragmented, list","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Disconnected text boxes create fragmented layout""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Inconsistent vertical spacing between text boxes""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Haphazard alignment of text boxes undermines hierar",page
+part2_fraud_detection_3_S6_IMAGE_TEXT_CONTRADICTION_1_0047__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]",,,[],"Looking at this slide, here are the issues:
+
+1. **Title alignment and positioning**: The title ""Inside the GuardML model"" is left-aligned but appears too far left on the slide. It should be centered or at least more centrally positioned within its container for better visual balance.
+
+2. **Inconsistent spacing between elements**: There's excessive vertical white space between each phase item. The ","{
+  ""defects"": [
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title displaced from center alignment.""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Excessive vertical spacing between elements.""},
+    {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Lack of visual hierarchy in phase items.""}",page
+part2_fraud_detection_3_S6_IMAGE_TEXT_CONTRADICTION_1_0047__template__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G2_ELEMENT_OVERLAP"",""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]",,,"[{""text"":""Border styling inconsistent across elements."",""raw_type"":""G9_BORDER_STYLE_INCONSISTENCY""}]","Looking at this slide, here are the issues:
+
+1. **Title alignment and positioning**: The title ""Inside the GuardML model"" is left-aligned but appears too far left on the slide. It should be centered or at least more centrally positioned for better visual balance.
+
+2. **Inconsistent spacing between elements**: There's excessive vertical white space between each phase box. The gaps between the five ","{
+  ""defects"": [
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title displaced from center alignment.""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Excessive vertical spacing between elements.""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Bottom half empty creates imbalance.""},
+    {""typ",page
+part2_hr_analytics_1_S6_IMAGE_TEXT_CONTRADICTION_1_0050__template__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]",,,[],"This slide has several significant design and layout issues that make it look unprofessional and difficult to read.
+
+Here is a breakdown of the problems:
+
+*   **Inconsistent and Illogical Hierarchy:** The main title, ""Attrition is rising quietly,"" is presented in a large font, but the three bullet points below it are in a much smaller font. This creates a confusing visual hierarchy where the most ","{
+  ""defects"": [
+    {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Title and bullet points have inconsistent font sizes.""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Content boxes clustered at top leave excessive empty space.""},
+    {""type"": ""G5_BRAND_COLOR_VIOLATION"", ""locator"": ""Pale bl",page
+part2_hr_analytics_2_S6_IMAGE_TEXT_CONTRADICTION_1_0051__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]",,,[],"This slide has several significant design and layout issues that make it look unprofessional and low-quality:
+
+1.  **Poor Spacing & Proximity:** The three content boxes are stacked directly on top of each other with no vertical space between them. This creates a cramped, cluttered appearance and makes the slide hard to read.
+2.  **Inconsistent Sizing:** The top box containing the main title (""Peop","{""defects"": [{""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Content boxes stacked with no vertical space.""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title box width inconsistent with content boxes.""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""No clear distinction in size or weight.""}, {""ty",page
+part2_hr_analytics_1_S6_IMAGE_TEXT_CONTRADICTION_1_0050__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]",,,[],"This slide has several significant design and layout issues that make it look unprofessional and difficult to read.
+
+Here is a breakdown of the problems:
+
+*   **Inconsistent and Illogical Hierarchy:** The main title, ""Attrition is rising quietly,"" is presented in a large font size, but the three bullet points below it are in a much smaller font. This creates a confusing visual hierarchy where the ","{
+  ""defects"": [
+    {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Title and bullets have inconsistent font sizes.""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Excessive white space below text boxes.""},
+    {""type"": ""G5_BRAND_COLOR_VIOLATION"", ""locator"": ""Muted light blue color is uninspi",page
+part2_hr_analytics_2_S6_IMAGE_TEXT_CONTRADICTION_1_0051__template__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]",,,[],"This slide has several significant design and layout issues that make it look unprofessional and low-quality:
+
+1.  **Poor Spacing & Proximity:** The three content boxes are stacked directly on top of each other with no vertical space between them. This creates a cramped, cluttered appearance and makes the slide hard to read.
+2.  **Inconsistent Sizing:** The top box containing the main title (""Peop","{""defects"": [{""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Content boxes stacked with no vertical space""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Title box significantly larger than sub-boxes""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""No visual hierarchy or clear element distinction""},",page
+part2_inventory_optimization_3_S6_IMAGE_TEXT_CONTRADICTION_1_0057__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,,[],NO PROBLEMS,,page
+part2_inventory_optimization_3_S6_IMAGE_TEXT_CONTRADICTION_1_0057__template__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,,[],NO PROBLEMS,,page
+part2_hr_analytics_3_S6_IMAGE_TEXT_CONTRADICTION_1_0052__template__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G2_ELEMENT_OVERLAP"",""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G6_MARGIN_VIOLATION""]",,,[],"The slide has several significant design and layout issues that make it look low-quality and unprofessional:
+
+1.  **Poor Spacing & Alignment:** The three content boxes are not aligned with each other. The top box (""PeoplePulse is saturated at peak demand"") is left-aligned but starts further left than the title. The middle and bottom boxes are indented relative to the title, creating a jagged, inco","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Content boxes misaligned with title""}, {""type"": ""G2_ELEMENT_OVERLAP"", ""locator"": ""Boxes cut off and overlap container""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Title and body share same font size""}, {""type"": ""G6_MARGIN_VIOLATION"", ",page
+part2_inventory_optimization_5_S6_IMAGE_TEXT_CONTRADICTION_1_0059__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,,[],NO PROBLEMS,,page
+part2_inventory_optimization_5_S6_IMAGE_TEXT_CONTRADICTION_1_0059__template__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,,[],NO PROBLEMS,,page
+part2_hr_analytics_4_S6_IMAGE_TEXT_CONTRADICTION_1_0053__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G6_MARGIN_VIOLATION""]",,,[],"Looking at this slide, here are the issues:
+
+1. **Title alignment and positioning**: The title ""Impact PeoplePulse can drive"" is left-aligned but appears too far left on the slide. It should be centered or at least more centrally positioned within its container box for better visual balance.
+
+2. **Inconsistent spacing between elements**: There's excessive vertical white space between each phase it","{
+  ""defects"": [
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title displaced from center alignment group""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Excessive vertical spacing between phase elements""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Bottom half empty creates unbalanced co",page
+part2_hr_analytics_4_S6_IMAGE_TEXT_CONTRADICTION_1_0053__template__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""S5_MISSING_LOGIC_SECTION""]",,,[],"Looking at this slide, here are the issues:
+
+1. **Title alignment and positioning**: The title ""Impact PeoplePulse can drive"" is left-aligned but appears too far left on the slide. It should be centered or at least more centrally positioned within its container for better visual balance.
+
+2. **Inconsistent spacing between elements**: There's excessive vertical white space between each phase item. ","{
+  ""defects"": [
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title displaced from center alignment group""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Excessive vertical spacing between phase elements""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Bottom half empty, unbalanced compositi",page
+part2_hr_analytics_3_S6_IMAGE_TEXT_CONTRADICTION_1_0052__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G2_ELEMENT_OVERLAP"",""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]",,,[],"The slide has several significant design and layout issues that make it look low-quality and unprofessional:
+
+1.  **Poor Spacing & Alignment:** The three content boxes are not aligned with each other. The top box (""PeoplePulse is saturated at peak demand"") is left-aligned but indented significantly from the left edge of the slide. The middle box (""A refresh is due within two quarters"") is also lef","{
+  ""defects"": [
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Content boxes are misaligned horizontally.""},
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Inconsistent left alignment across boxes.""},
+    {""type"": ""G2_ELEMENT_OVERLAP"", ""locator"": ""Boxes have inconsistent widths causing uneven lay",page
+part2_hr_analytics_5_S6_IMAGE_TEXT_CONTRADICTION_1_0054__template__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G2_ELEMENT_OVERLAP"",""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""S5_MISSING_LOGIC_SECTION""]",,,[],"Looking at this slide, here are the issues:
+
+1. **Title placement and alignment**: The title ""PeoplePulse rollout plan"" is left-aligned but positioned too far from the left edge of the slide, creating an awkward gap. It should either be centered or aligned with the content boxes below for visual consistency.
+
+2. **Inconsistent spacing between elements**: There's excessive vertical white space betw","{
+  ""defects"": [
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title alignment mismatch with content boxes""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Excessive vertical white space between elements""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Bottom section wastes valuable slide real",page
+part2_inventory_optimization_1_S6_IMAGE_TEXT_CONTRADICTION_1_0055__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G6_MARGIN_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW"",""S4_DENSITY_RULE_VIOLATION""]",,,[],"This slide has several significant design and layout issues that make it look unprofessional and hard to read:
+
+1.  **Title Spillover:** The title ""Stockouts erode loyalty"" is not contained within its box. The text clearly spills over the right edge of the light gray rectangular container, breaking the visual boundary.
+2.  **Inconsistent Spacing:** The vertical spacing between the three content bo","{
+  ""defects"": [
+    {""type"": ""G7_RENDER_CONTAINMENT_OVERFLOW"", ""locator"": ""Title text spills over container edge""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Large gap between first and second content boxes""},
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Content boxes are not aligned left ",page
+part2_hr_analytics_5_S6_IMAGE_TEXT_CONTRADICTION_1_0054__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""S5_MISSING_LOGIC_SECTION""]",,,[],"Looking at this slide, here are the issues:
+
+1. **Title placement and alignment**: The title ""PeoplePulse rollout plan"" is left-aligned but positioned too far from the left edge of the slide, creating an awkward gap. It should either be centered or aligned with the content boxes below for visual consistency.
+
+2. **Inconsistent spacing between elements**: There's excessive vertical white space betw","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title alignment and spacing issue""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Title and content font size mismatch""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Excessive vertical white space between elements""}, {""type"": ""G6_MARGIN_",page
+part2_inventory_optimization_4_S6_IMAGE_TEXT_CONTRADICTION_1_0058__template__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G6_MARGIN_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW""]",,,[],"The slide has several significant design and layout issues:
+
+1.  **Title Spillover:** The title ""Expanding StockIQ to all regions"" is not contained within its box. The text extends beyond the right edge of the light blue rectangular background, breaking the container.
+2.  **Inconsistent Spacing:** There is a large, empty white space between the title box and the first bullet point box. This create","{""defects"": [{""type"": ""G1_TEXT_OVERFLOW"", ""locator"": ""Title text extends beyond container edge""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Large empty space wastes vertical space""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Bullet boxes are staggered horizontally""}, {""type"": ""G4_FONT_SIZE_INCON",page
+part2_inventory_optimization_4_S6_IMAGE_TEXT_CONTRADICTION_1_0058__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION""]",,,[],"The slide has several significant design and layout issues:
+
+1.  **Title Spillover:** The title ""Expanding StockIQ to all regions"" is not contained within its box. The text extends beyond the right edge of the light blue rectangular background, breaking the container.
+2.  **Inconsistent Spacing:** There is a large, empty white space between the title box and the first bullet point box. This create","{""defects"": [{""type"": ""G1_TEXT_OVERFLOW"", ""locator"": ""Title text extends beyond container edge""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Bullet boxes are staggered and misaligned""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Title and bullets use identical font sizes""}, {""type"": ""G5_BRA",page
+part2_inventory_optimization_1_S6_IMAGE_TEXT_CONTRADICTION_1_0055__template__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G6_MARGIN_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW"",""S4_DENSITY_RULE_VIOLATION""]",,,[],"This slide has several significant design and layout issues that make it look unprofessional and hard to read:
+
+1.  **Title Spillover:** The title ""Stockouts erode loyalty"" is not contained within its box. The text clearly spills over the right edge of the light gray rectangular container, breaking the visual boundary.
+2.  **Inconsistent Spacing:** The vertical spacing between the three content bo","{
+  ""defects"": [
+    {""type"": ""G7_RENDER_CONTAINMENT_OVERFLOW"", ""locator"": ""Title text spills over container edge""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Large gap between first and second content boxes""},
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Content boxes are not aligned left ",page
+part2_inventory_optimization_2_S6_IMAGE_TEXT_CONTRADICTION_1_0056__template__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]",,,[],"Looking at this slide, here are the issues:
+
+1. **Title alignment and spacing**: The title ""StockIQ rebalances inventory nightly"" is left-aligned but appears too far from the left edge of the slide, creating an awkward visual gap. It should either be centered or aligned with consistent left margin.
+
+2. **Inconsistent vertical spacing between phases**: There's uneven spacing between the phase boxes","{
+  ""defects"": [
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title alignment and spacing issue""},
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Uneven vertical spacing between phases""},
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Phase boxes not vertically aligned""},
+    {""type"": ""G4_FONT_",page
+part2_inventory_optimization_2_S6_IMAGE_TEXT_CONTRADICTION_1_0056__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""S2_NARRATIVE_ORDER_BREAK"",""S5_MISSING_LOGIC_SECTION""]",,,[],"Looking at this slide, here are the issues:
+
+1. **Title alignment and spacing**: The title ""StockIQ rebalances inventory nightly"" is left-aligned but appears too far from the left edge of the slide, creating an awkward visual gap. It should either be centered or aligned with consistent left margin.
+
+2. **Inconsistent vertical spacing between phases**: There's uneven spacing between the phase boxes","{
+  ""defects"": [
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title displaced from alignment group""},
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Uneven vertical spacing between phase boxes""},
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Phase boxes not vertically aligned""},
+    {""type"": """,page

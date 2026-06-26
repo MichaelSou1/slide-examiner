@@ -1,0 +1,791 @@
+sample_id,defect,modality,is_clean,failure,has_defect,named_target,predicted_types,locator,confidence,other,raw,stage2_raw,level
+g7_card_height_003,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY""]",,,[],"The slide has several design and layout issues that make it look unprofessional and cluttered:
+
+1.  **Redundant Title:** The main title ""Q3 Go-to-Market Plan"" at the top of the slide is identical to the sub-header inside the green box. This is unnecessary and wastes valuable space.
+2.  **Poor List Organization:** The bulleted list is split into two distinct sections. The first five items are conta","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title and sub-header are redundant.""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""List items are split across containers.""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Large gap breaks content flow.""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ",page
+g7_card_height_010,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET""]",,,"[{""text"":""Cluttered layout with inefficient space"",""raw_type"":""G4_DENSITY_RULE_VIOLATION""}]","The slide has several design and layout issues that make it look unprofessional and confusing:
+
+1.  **Redundant Title:** The main title ""Solution Overview"" at the top of the slide is repeated inside the content box. This is unnecessary and creates visual clutter.
+2.  **Poor List Hierarchy:** The bulleted list is split into two distinct groups (one inside the box, one outside), but they are present","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title repeated inside content box""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""List split into disjointed groups""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Large gap disrupts reading order""}, {""type"": ""G4_DENSITY_RULE_VIOLATION"", ""locato",page
+g7_card_height_001,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET""]",,,[],"The slide has several design and layout issues that make it look unpolished and confusing:
+
+1.  **Redundant Title:** The main title ""Platform Architecture"" at the top is identical to the sub-header inside the green box. This is unnecessary and creates visual clutter.
+2.  **Inconsistent List Structure:** The list of items is split into two groups. The first five items (""Ingestion service"" through ""","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title and sub-header are redundant.""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""List items are split into two groups.""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Text is not aligned to the left margin.""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ",page
+g7_card_height_006,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G2_ELEMENT_OVERLAP"",""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION""]",,,[],"The slide has several design and layout issues that make it look unprofessional and hard to read:
+
+1.  **Redundant Title:** The main title ""Platform Architecture"" at the top is repeated inside the content box. This is unnecessary and creates visual clutter.
+2.  **Poor List Hierarchy:** The list items are split into two groups (inside and outside the box) without any visual distinction or logical g","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title repeated inside content box""}, {""type"": ""G2_ELEMENT_OVERLAP"", ""locator"": ""List items split without visual grouping""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Large gap breaks list flow""}, {""type"": ""G5_BRAND_COLOR_VIOLATION"", ""locator",page
+g7_card_height_008,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY""]",,,[],"The slide has several design and layout issues that make it look unprofessional and confusing:
+
+1.  **Redundant Title:** The main title ""Q3 Go-to-Market Plan"" at the top of the slide is identical to the heading inside the content box. This is unnecessary and wastes valuable space.
+2.  **Poor Visual Hierarchy & Grouping:** The list of bullet points is split into two distinct groups. The first five ","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title and heading are redundant.""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""List items are split into groups.""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Large gap disrupts list flow.""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"":",page
+g7_card_height_011,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""S4_DENSITY_RULE_VIOLATION"",""S5_MISSING_LOGIC_SECTION""]",,,[],"Looking at this slide, here are the issues:
+
+1. **Title duplication**: The main title ""Risk Register"" appears both as the slide header and again inside the content box. This is redundant and confusing.
+
+2. **Inconsistent grouping**: The first five items are contained within a blue-bordered box, while the last three items (""Latency regressions"", ""Cost overrun"", ""Change-management gaps"") are outside","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Items outside the box are displaced from the group.""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""No differentiation in size or formatting for items.""}, {""type"": ""S4_DENSITY_RULE_VIOLATION"", ""locator"": ""Large empty area inside the box ",page
+g7_card_height_002,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY""]",,,[],"Looking at this slide, here are the issues:
+
+1. **Title duplication**: The main title ""Risk Register"" appears both as the slide header and again inside the green box. This is redundant and confusing.
+
+2. **Inconsistent grouping**: The list items are split into two groups - those inside the green box and those outside. There's no visual or logical reason for this split, making the content appear fr","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title duplicated in header and box""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""List items split into inconsistent groups""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Text inside and outside box same size""}, {""type"": ""G4_FONT_SIZE_I",page
+g7_card_height_005,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G2_ELEMENT_OVERLAP"",""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY""]",,,[],"The slide has several design and layout issues that make it look unprofessional and confusing:
+
+1.  **Redundant Title:** The main title ""Implementation Roadmap"" at the top of the slide is repeated inside the content box. This is unnecessary and creates visual clutter.
+2.  **Poor List Hierarchy:** The list of roadmap items is broken into two groups. The first five items are inside a colored box, wh","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title repeated inside content box""}, {""type"": ""G2_ELEMENT_OVERLAP"", ""locator"": ""List items split into two groups""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Large gap breaks visual list flow""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locato",page
+g7_card_height_000,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G2_ELEMENT_OVERLAP"",""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION""]",,,[],"The slide has several design and layout issues that make it look unprofessional and confusing:
+
+1.  **Redundant Title:** The main title ""Solution Overview"" at the top of the slide is repeated inside the content box. This is unnecessary and creates visual clutter.
+2.  **Poor List Hierarchy:** The bulleted list is split into two distinct groups (one inside the box, one outside), but they are present","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title repeated inside content box""}, {""type"": ""G2_ELEMENT_OVERLAP"", ""locator"": ""List split into disjointed groups""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Large gap between list items""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ",page
+g7_card_height_009,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G2_ELEMENT_OVERLAP"",""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION""]",,,[],"Looking at this slide, here are the issues:
+
+1. **Title duplication**: The main title ""Risk Register"" appears both as the slide header and again inside the content box. This is redundant and confusing.
+
+2. **Inconsistent grouping**: The first five items are contained within a blue-bordered box, while the last three items (""Latency regressions"", ""Cost overrun"", ""Change-management gaps"") are outside","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title duplicated in header and content box""}, {""type"": ""G2_ELEMENT_OVERLAP"", ""locator"": ""Items split between boxed and unboxed groups""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Poor visual hierarchy between title and content""}, {""type"": ""G",page
+g7_card_height_007,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW"",""S1_TITLE_BODY_MISMATCH""]","{""element"":""Arbitrary border styling adds visual clutter."",""quote"":""""}",,[],"The slide has several design and layout issues that reduce its professionalism and clarity:
+
+1. **Title duplication**: The main title ""Success Metrics"" at the top is repeated inside the beige box as a subheading. This is redundant and visually confusing — the audience doesn’t need to see the same phrase twice in different contexts.
+
+2. **Inconsistent grouping**: The list items are split into two g","{""defects"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title repeated inside box is redundant.""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""List items split into unjustified groups.""}, {""type"": ""G5_BRAND_COLOR_VIOLATION"", ""locator"": ""Orange border highlights only half content.""}, {""type"": ""G4",page
+g7_card_height_004,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,[],"The slide has several design and layout issues that make it look unprofessional and cluttered:
+
+1. **Redundant Title** – The main title “Solution Overview” at the top is repeated inside the green box as a subheader. This is unnecessary and creates visual confusion. It should be removed from the box or replaced with a more specific label (e.g., “Core Features”).
+
+2. **Inconsistent Grouping** – The ","{
+  ""defects"": [
+    {""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Redundant title inside the box""},
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Split bullet list breaks flow""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Unnecessary box creates imbalance""},
+    {""type"": ""G4_FONT_SIZE_INCON",page
+g7_card_height_014,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G6_MARGIN_VIOLATION""]",,,[],"The slide has several design and layout issues that make it look unpolished and confusing:
+
+1.  **Redundant Title:** The main title ""Platform Architecture"" at the top is repeated inside the content box. This is unnecessary and creates visual clutter.
+2.  **Inconsistent List Structure:** The bulleted list is split into two distinct groups. The first five items are contained within a box, while the ","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""List items outside box misaligned with inside list""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Significant white space above main content box""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Layout feels unbalanced due to poor spacing and ali",page
+g7_card_height_013,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G2_ELEMENT_OVERLAP"",""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G6_MARGIN_VIOLATION""]",,,"[{""text"":""Overall design lacks professional interest"",""raw_type"":""OTHER""}]","The slide has several design and layout issues that make it look unprofessional and confusing:
+
+1.  **Redundant Title:** The main title ""Implementation Roadmap"" at the top of the slide is repeated inside the blue box as a sub-header. This is unnecessary and clutters the slide.
+2.  **Poor List Organization:** The list of roadmap items is split into two groups. The first five items are inside the bl","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title repeated inside sub-header box""}, {""type"": ""G2_ELEMENT_OVERLAP"", ""locator"": ""List items split between box and outside""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Large gap breaks list flow""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""lo",page
+g7_card_height_012,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G2_ELEMENT_OVERLAP"",""G3_ALIGNMENT_OFFSET"",""G6_MARGIN_VIOLATION"",""S1_TITLE_BODY_MISMATCH"",""S3_TERMINOLOGY_INCONSISTENCY""]",,,[],"The slide has several design and layout issues that make it look unprofessional and confusing:
+
+1.  **Redundant Title:** The main slide title ""Implementation Roadmap"" at the top is identical to the text inside the blue box. This is unnecessary and wastes valuable space.
+2.  **Poor Use of a Box:** The blue-bordered box is used to contain only the first five items of the list. This creates a visuall","{""defects"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Redundant title matches body content""}, {""type"": ""G2_ELEMENT_OVERLAP"", ""locator"": ""Box creates confusing visual separation""}, {""type"": ""S3_TERMINOLOGY_INCONSISTENCY"", ""locator"": ""List sections lack consistent headers""}, {""type"": ""G6_MARGIN_",page
+g7_card_height_015,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION""]",,,[],"The slide has several design and layout issues that make it look unprofessional and hard to read:
+
+1.  **Title Repetition:** The main title ""Success Metrics"" at the top of the slide is identical to the heading inside the box. This is redundant and wastes valuable space.
+2.  **Poor List Organization:** The list of metrics is split into two groups. The first five items are inside a box, while the la","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""List split into disconnected groups""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Large gap breaks visual flow""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Title and box heading same size""}, {""type"": ""G5_BRAND_COLOR_VIOLATION"", ""loca",page
+g7_card_height_018,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G6_MARGIN_VIOLATION""]",,,[],"The slide has several design and layout issues that make it look unprofessional and hard to read:
+
+1.  **Redundant Title:** The main title ""Q3 Go-to-Market Plan"" at the top of the slide is identical to the heading inside the content box. This is unnecessary and creates visual clutter.
+2.  **Poor List Organization:** The bulleted list is split into two distinct groups. The first five items are insi","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title and heading are redundant.""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""List items are split into groups.""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Large gap breaks visual flow.""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"":",page
+g7_card_height_020,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,True,"[""G2_ELEMENT_OVERLAP"",""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G6_MARGIN_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW""]","{""element"":""Redundant title clutters container"",""quote"":""""}",,[],"The slide has several design and layout issues that make it look unprofessional and confusing:
+
+1.  **Redundant Title:** The main title ""Implementation Roadmap"" at the top of the slide is repeated inside the content box. This is unnecessary and clutters the design.
+2.  **Poor List Structure:** The list of roadmap items is broken into two separate groups. The first five items are inside a blue-bord","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title displaced from alignment group""}, {""type"": ""G2_ELEMENT_OVERLAP"", ""locator"": ""List items split across containers""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Large gap disrupts content flow""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""loc",page
+g7_card_height_017,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]",,,[],"The slide has several design and layout issues that make it look unpolished and confusing:
+
+1.  **Redundant Title:** The main title ""Platform Architecture"" at the top is identical to the sub-header inside the green box. This is unnecessary and creates visual clutter.
+2.  **Inconsistent List Structure:** The list of items is split into two groups. The first five items (""Ingestion service"" through ""","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title and sub-header are redundant.""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""List items are split into two groups.""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Text alignment is disjointed and unbalanced.""}, {""type"": ""G5_BRAND_COLOR_VI",page
+g7_card_height_019,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,True,"[""G2_ELEMENT_OVERLAP"",""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW""]","{""element"":""Cluttered layout with inefficient space use"",""quote"":""""}",,[],"The slide has several design and layout issues that make it look unprofessional and confusing:
+
+1.  **Redundant Title:** The main title ""Solution Overview"" at the top of the slide is repeated inside the content box. This is unnecessary and creates visual clutter.
+2.  **Poor Visual Hierarchy:** The list of features is split into two groups. The first group (inside the box) is visually separated fro","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title repeated inside content box""}, {""type"": ""G2_ELEMENT_OVERLAP"", ""locator"": ""List split into two unconnected groups""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Large gap between box and list item""}, {""type"": ""G5_BRAND_COLOR_VIOLATION"", """,page
+g7_card_height_016,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW"",""S1_TITLE_BODY_MISMATCH""]","{""element"":""Border appears decorative rather than functional."",""quote"":""""}",,[],"The slide has several design and layout issues that reduce its professionalism and clarity:
+
+1. **Title duplication**: The main title ""Success Metrics"" at the top is repeated inside the beige box as a subheading. This is redundant and visually confusing — the audience doesn’t need to see the same phrase twice in different contexts.
+
+2. **Inconsistent grouping**: The list items are split into two g","{""defects"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title repeated inside box is redundant.""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""List items split into unjustified groups.""}, {""type"": ""G5_BRAND_COLOR_VIOLATION"", ""locator"": ""Orange border highlights only half content.""}, {""type"": ""G4",page
+g7_card_height_024,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET""]",,,[],"The slide has several design and layout issues that make it look unprofessional and confusing:
+
+1.  **Redundant Title:** The main title ""Implementation Roadmap"" at the top of the slide is repeated inside the content box. This is unnecessary and creates visual clutter.
+2.  **Poor List Hierarchy:** The list of roadmap items is broken into two groups. The first five items are inside a colored box, wh","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title repeated inside content box""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""List items split into two groups""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Large gap breaks visual flow""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Thick ",page
+g7_card_height_028,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G2_ELEMENT_OVERLAP"",""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G6_MARGIN_VIOLATION""]",,,[],"The slide has several design and layout issues that make it look unprofessional and confusing:
+
+1.  **Redundant Title:** The main title ""Q3 Go-to-Market Plan"" at the top of the slide is identical to the heading inside the content box. This is unnecessary and wastes valuable space.
+2.  **Poor Visual Hierarchy:** The list of items is split into two groups. The first five items are inside a colored b","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title and heading are redundant.""}, {""type"": ""G2_ELEMENT_OVERLAP"", ""locator"": ""List items are split into groups.""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Large gap breaks list flow.""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""L",page
+g7_card_height_023,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G2_ELEMENT_OVERLAP"",""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G6_MARGIN_VIOLATION""]",,,[],"The slide has several design and layout issues that make it look unprofessional and confusing:
+
+1.  **Redundant Title:** The main slide title ""Implementation Roadmap"" at the top is identical to the text inside the blue box. This is unnecessary and wastes valuable space.
+2.  **Poor Use of a Box:** The blue-bordered box is used to contain only the first five items of the list. This creates a visuall","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title redundant with box content""}, {""type"": ""G2_ELEMENT_OVERLAP"", ""locator"": ""Box creates jarring visual separation""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""List sections have inconsistent styling""}, {""type"": ""G6_MARGIN_VIOLATION",page
+g7_card_height_025,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S1_TITLE_BODY_MISMATCH"",""S4_DENSITY_RULE_VIOLATION""]",,,[],"Looking at this slide, here are the issues:
+
+1. **Title duplication**: The main title ""Risk Register"" appears both at the top of the slide and again inside the content box. This is redundant and confusing.
+
+2. **Inconsistent grouping**: The bullet points are split into two groups - five items inside the beige box and three items outside it below. There's no visual or logical reason for this split,","{
+  ""defects"": [
+    {""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title appears redundantly inside content box.""},
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Bullet points split into ungrouped sections.""},
+    {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Inner title size creates visual ",page
+g7_card_height_027,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G6_MARGIN_VIOLATION""]",,,[],"The slide has several design and layout issues that make it look unprofessional and cluttered:
+
+1.  **Redundant Title:** The main title ""Q3 Go-to-Market Plan"" at the top of the slide is identical to the sub-header inside the green box. This is unnecessary and wastes valuable space.
+2.  **Poor Visual Hierarchy:** The list of items is split into two groups. The first five items are contained within ","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title and sub-header are redundant.""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""List items are split into two groups.""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Grouping of items is illogical.""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", """,page
+g7_card_height_022,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET"",""G6_MARGIN_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW""]","{""element"":""Blue box serves no clear function"",""quote"":""""}",,[],"The slide has several design and layout issues that make it look unprofessional and poorly structured:
+
+1. **Redundant Title** – The main title “Solution Overview” at the top is repeated inside the box as a subheading. This is unnecessary and creates visual clutter.
+
+2. **Inconsistent List Grouping** – The bullet points are split into two groups: five inside the blue-bordered box and three outside","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title repeated inside box as subheading""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Bullet points split into two groups""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Box grouping lacks clear visual hierarchy""}, {""type"": ""G6_MARGIN_VIOLATIO",page
+g7_unbreakable_text_000,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,True,"[""G6_MARGIN_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW"",""S1_TITLE_BODY_MISMATCH"",""S4_DENSITY_RULE_VIOLATION"",""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""Text spills outside the content box frame"",""quote"":""""}",,[],"Looking at this slide, there are several issues that make it look low-quality and broken:
+
+1. **Text cutoff/spilling outside the frame**: The URL at the bottom of the content box is cut off. The text ""2"" at the end of the URL is partially visible but clearly incomplete, suggesting the content extends beyond the intended area or the box is too small.
+
+2. **Poor spacing/whitespace**: There's excessi","{""defects"": [{""type"": ""G7_RENDER_CONTAINMENT_OVERFLOW"", ""locator"": ""Text spills outside the content box frame""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Excessive empty space below the content box""}, {""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title inside box matches slide header redundantly",page
+g7_card_height_026,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]",,,[],"The slide has several design and layout issues that reduce its professionalism and clarity:
+
+1. **Title duplication**: The main title ""Success Metrics"" appears both at the top of the slide and again inside the green box. This is redundant and visually confusing.
+
+2. **Inconsistent grouping**: The first five metrics are contained within a green-bordered box, while the last three (Inference cost, Ti","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title appears twice in different locations""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Metrics split into arbitrary groups without logic""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Bullet points lack consistent spacing and alignment""}, {",page
+g7_card_height_029,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW""]","{""element"":""Elements scattered without logical flow"",""quote"":""""}",,[],"The slide has several design and layout issues that reduce its clarity and professionalism:
+
+1. **Redundant Title**: The main title ""Success Metrics"" at the top is repeated inside the box as a subheading. This is unnecessary and creates visual clutter.
+
+2. **Inconsistent Grouping**: The first five bullet points are contained within a blue-bordered box, while the last three are outside. This arbitr","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title repeated inside box as subheading""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Bullet points split between box and outside""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Inconsistent vertical spacing and alignment""}, {""type"": ""G4_FONT_",page
+g7_unbreakable_text_001,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW"",""G2_ELEMENT_OVERLAP"",""G4_FONT_SIZE_INCONSISTENCY"",""S1_TITLE_BODY_MISMATCH"",""S4_DENSITY_RULE_VIOLATION"",""S5_MISSING_LOGIC_SECTION""]",,,[],"Looking at this slide, there are several issues that make it look low-quality and broken:
+
+1. **Text spilling outside the frame**: The URL at the end of the ""Endpoint"" line is cut off. The text ""2"" at the very end of the URL is outside the blue box, which looks like a formatting error.
+
+2. **Redundant header inside the box**: There's a ""Solution Overview"" text inside the blue box that duplicates t","{
+  ""defects"": [
+    {""type"": ""G1_TEXT_OVERFLOW"", ""locator"": ""Text spills outside the container frame.""},
+    {""type"": ""G2_ELEMENT_OVERLAP"", ""locator"": ""Redundant header overlaps with slide title.""},
+    {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Title and content use inconsistent font sizes",page
+g7_unbreakable_text_002,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""S6_IMAGE_TEXT_CONTRADICTION""]",,,[],"Looking at this slide, here are the issues:
+
+1. **Title duplication**: The main title ""Risk Register"" appears both as the slide header (top left) and again inside the content box. This is redundant and confusing.
+
+2. **Text cutoff**: The endpoint path is cut off on the right side - ""manufac"" is incomplete, likely meant to be ""manufacturing"" or similar. This makes the information incomplete and unp","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title repeated inside content box""}, {""type"": ""G1_TEXT_OVERFLOW"", ""locator"": ""Text cut off on right side""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Inconsistent font sizes for title""}, {""type"": ""G5_BRAND_COLOR_VIOLATION"", ""locator"":",page
+g7_unbreakable_text_006,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,[],"Looking at this slide, here are the issues:
+
+1. **Title duplication**: The main title ""Risk Register"" appears both at the top of the slide AND inside the content box. This is redundant and confusing.
+
+2. **Text cutoff**: The endpoint path is cut off on the right side - it ends with ""manufac"" instead of showing the complete path. This makes the information incomplete and unprofessional.
+
+3. **Poor ","{
+  ""defects"": [
+    {""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title appears redundantly in body content""},
+    {""type"": ""G1_TEXT_OVERFLOW"", ""locator"": ""Text content is cut off on the right""},
+    {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Same text uses different styling and sizes""},
+ ",page
+g7_unbreakable_text_004,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,True,"[""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW"",""S1_TITLE_BODY_MISMATCH""]","{""element"":""Text spills outside the visible frame area"",""quote"":""""}",,[],"Looking at this slide, there are several issues that make it look low-quality and broken:
+
+1. **Text cutoff/spilling outside the frame**: The IAM role ARN at the bottom of the green box is cut off. The text ""acme-global-manufacturing-pr"" is incomplete and appears to be spilling outside the visible area of the slide.
+
+2. **Poor spacing/whitespace**: There's excessive empty space below the green box","{
+  ""defects"": [
+    {""type"": ""G7_RENDER_CONTAINMENT_OVERFLOW"", ""locator"": ""Text spills outside the visible frame area""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Excessive empty space below the green box""},
+    {""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title appears redundantly inside t",page
+g7_unbreakable_text_003,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW""]","{""element"":""Text is truncated and cut off"",""quote"":""""}",,[],"Looking at this slide, I can identify several issues:
+
+1. **Title duplication**: The main title ""Success Metrics"" appears both at the top of the slide AND inside the content box. This is redundant and creates visual confusion about what the actual heading is versus what's just a label within the container.
+
+2. **Poor hierarchy and emphasis**: The word ""Endpoint:"" is bolded and colored orange, maki","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title appears in wrong location""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Label emphasis contradicts content focus""}, {""type"": ""G5_BRAND_COLOR_VIOLATION"", ""locator"": ""Inconsistent color usage across elements""}, {""type"": ""G7_RENDER_",page
+g7_unbreakable_text_007,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW"",""G4_FONT_SIZE_INCONSISTENCY"",""G6_MARGIN_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,[],"Looking at this slide, there are several significant issues:
+
+1. **Title duplication**: The main title ""Implementation Roadmap"" appears both outside the box (as the slide title) and inside the box at the top left. This is redundant and confusing.
+
+2. **Text cutoff**: The endpoint path is cut off on the right side - it ends with ""manufac"" instead of showing the complete path. This makes the informa","{
+  ""defects"": [
+    {""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title duplicated inside content box""},
+    {""type"": ""G1_TEXT_OVERFLOW"", ""locator"": ""Text cut off on right side""},
+    {""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title text inside box creates confusion""},
+    {""type"": ""G4_FONT_SI",page
+g7_unbreakable_text_005,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW"",""S1_TITLE_BODY_MISMATCH"",""S4_DENSITY_RULE_VIOLATION""]","{""element"":""Text spills outside the content box frame."",""quote"":""""}",,[],"Looking at this slide, there are several issues that make it look low-quality and broken:
+
+1. **Text cutoff/spilling outside the frame**: The URL at the bottom of the content box is cut off. The text ""2"" at the end of the URL is partially visible but clearly incomplete, suggesting the content extends beyond the intended area or the box is too small.
+
+2. **Poor spacing/whitespace**: There's excessi","{
+  ""defects"": [
+    {""type"": ""G7_RENDER_CONTAINMENT_OVERFLOW"", ""locator"": ""Text spills outside the content box frame.""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Excessive empty space below the content box.""},
+    {""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title appears redundantly insid",page
+g7_unbreakable_text_008,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,True,"[""G2_ELEMENT_OVERLAP"",""G4_FONT_SIZE_INCONSISTENCY"",""G7_RENDER_CONTAINMENT_OVERFLOW""]","{""element"":""Text spills outside the right boundary of the content box."",""quote"":""""}",,[],"The slide has several significant issues that make it look unprofessional and broken:
+
+1.  **Text Spilling Outside the Frame:** The most critical error is that the text at the end of the ""Endpoint"" line is cut off and spills outside the right boundary of the content box. Specifically, the characters ""pr"" from the role name are visible outside the frame, indicating the content area is too narrow or","{
+  ""defects"": [
+    {""type"": ""G7_RENDER_CONTAINMENT_OVERFLOW"", ""locator"": ""Text spills outside the right boundary of the content box.""},
+    {""type"": ""G2_ELEMENT_OVERLAP"", ""locator"": ""Title appears redundantly inside the content box.""},
+    {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Interna",page
+g7_unbreakable_text_009,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,True,"[""G4_FONT_SIZE_INCONSISTENCY"",""G6_MARGIN_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW"",""S1_TITLE_BODY_MISMATCH""]","{""element"":""Text spills outside the content box."",""quote"":""""}",,[],"Looking at this slide, there are several issues that make it look low-quality and broken:
+
+1. **Text spilling outside the box**: The URL in the ""Endpoint"" line is cut off on the right side. The text ""2"" at the end of the URL is partially visible but clearly truncated, suggesting the content extends beyond the slide's intended boundaries.
+
+2. **Poor spacing and alignment**: There's excessive white ","{
+  ""defects"": [
+    {""type"": ""G7_RENDER_CONTAINMENT_OVERFLOW"", ""locator"": ""Text spills outside the content box.""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Excessive white space below content box.""},
+    {""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title appears redundantly inside content ",page
+g7_unbreakable_text_010,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G6_MARGIN_VIOLATION""]",,,[],"Looking at this slide, there are several issues:
+
+1. **Title duplication**: The main title ""Implementation Roadmap"" appears both outside the box (as the slide title) and inside the box as a subtitle. This is redundant and confusing.
+
+2. **Incomplete text**: The endpoint ARN is cut off on the right side - it ends with ""-pr"" instead of showing the complete role name. This suggests the content doesn'","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title appears both outside and inside the box""}, {""type"": ""G1_TEXT_OVERFLOW"", ""locator"": ""Endpoint ARN text is cut off on the right""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Subtitle and label share same font size and weight""}, {""t",page
+g7_unbreakable_text_011,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,True,"[""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW"",""S1_TITLE_BODY_MISMATCH"",""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""Text spills outside the designated frame area."",""quote"":""""}",,[],"Looking at this slide, here are the issues:
+
+1. **Text cutoff/spilling outside frame**: The ""Endpoint"" path text is cut off on the right side - it ends mid-word at ""manufac"" instead of showing the complete path. This is a clear layout/spacing problem where content doesn't fit within the designated area.
+
+2. **Redundant header**: The title ""Risk Register"" appears both as the main slide header AND a","{""defects"": [{""type"": ""G7_RENDER_CONTAINMENT_OVERFLOW"", ""locator"": ""Text spills outside the designated frame area.""}, {""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title repeated inside content box redundantly.""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Title and body text use different ",page
+g7_card_height_021,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""S1_TITLE_BODY_MISMATCH"",""S2_NARRATIVE_ORDER_BREAK"",""S3_TERMINOLOGY_INCONSISTENCY"",""S5_MISSING_LOGIC_SECTION""]",,,[],"The slide has several design and layout issues that reduce its clarity and professionalism:
+
+1. **Redundant Title**: The main title ""Success Metrics"" at the top is repeated inside the box as a subheading. This is unnecessary and creates visual clutter.
+
+2. **Inconsistent Grouping**: The first five bullet points are contained within a bordered box, while the last three are outside. This arbitrary d","{
+  ""defects"": [
+    {""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Redundant title repeated in body""},
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Inconsistent grouping of bullet points""},
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Poor spacing and alignment issues""},
+    {""type"": ""G4_FONT",page
+g7_unbreakable_text_013,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW"",""G2_ELEMENT_OVERLAP"",""G4_FONT_SIZE_INCONSISTENCY"",""G6_MARGIN_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,[],"Looking at this slide, here are the issues:
+
+1. **Title duplication**: The main title ""Risk Register"" appears both as the slide header and again inside the content box. This is redundant and confusing.
+
+2. **Text cutoff**: The IAM role ARN at the bottom is cut off - it ends with ""-pr"" instead of showing the complete role name. This makes the information incomplete and unprofessional.
+
+3. **Poor hi","{""defects"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title duplicated in header and content box""}, {""type"": ""G1_TEXT_OVERFLOW"", ""locator"": ""IAM role ARN text is cut off at bottom""}, {""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Sub-header matches main slide title redundantly""}, {""type"": ""G4_",page
+g7_unbreakable_text_012,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,True,"[""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW"",""S1_TITLE_BODY_MISMATCH"",""S4_DENSITY_RULE_VIOLATION"",""S5_MISSING_LOGIC_SECTION""]","{""element"":""Text spills outside the content box frame."",""quote"":""""}",,"[{""text"":""Slide lacks visual interest and graphics."",""raw_type"":""OTHER""}]","Looking at this slide, here are the issues:
+
+1. **Text spilling outside the frame**: The URL at the bottom right is cut off - ""2"" is visible but the rest of the URL is missing. This is in the bottom-right corner of the content box.
+
+2. **Poor visual hierarchy**: The title ""Q3 Go-to-Market Plan"" appears both as a large heading at the top AND as a smaller blue text inside the content box. This creat","{""defects"": [{""type"": ""G7_RENDER_CONTAINMENT_OVERFLOW"", ""locator"": ""Text spills outside the content box frame.""}, {""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title text repeats inside the content body.""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Main title and body text use different si",page
+g7_unbreakable_text_014,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G7_RENDER_CONTAINMENT_OVERFLOW""]","{""element"":""Text truncated and cut off on right"",""quote"":""""}",,[],"The slide has several significant issues that make it look unprofessional and poorly designed:
+
+1.  **Redundant Title:** The main title ""Platform Architecture"" at the top of the slide is repeated inside the content box. This is a major layout error, as the information inside the box should be distinct from the slide's main heading.
+2.  **Poor Spacing and Layout:** The text inside the box is crampe","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title repeated inside content box""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Label font weight inconsistent with title""}, {""type"": ""G7_RENDER_CONTAINMENT_OVERFLOW"", ""locator"": ""Text truncated and cut off on right""}]}",page
+g7_unbreakable_text_017,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""S4_DENSITY_RULE_VIOLATION""]",,,[],"Looking at this slide, there are several issues:
+
+1. **Title duplication**: The main title ""Implementation Roadmap"" appears both outside the box (in large dark text) and inside the box (in smaller orange text). This is redundant and confusing.
+
+2. **Incomplete text**: The endpoint ARN is cut off on the right side - it ends with ""-pr"" instead of showing the complete role name. This suggests the con","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title displaced from alignment group""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Text bleeds beyond slide width margin""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Same-level text uses inconsistent sizes""}, {""type"": ""G5_BRAND_COLOR",page
+g7_unbreakable_text_015,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]",,,[],"Looking at this slide, there are several significant issues:
+
+1. **Title duplication**: The main title ""Implementation Roadmap"" appears both outside the box (as the slide title) and inside the box at the top left. This is redundant and confusing.
+
+2. **Incomplete text**: The endpoint URL is cut off on the right side - it ends with ""inference"" but should continue with more characters (likely ""infer","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title appears displaced from its placeholder.""}, {""type"": ""G1_TEXT_OVERFLOW"", ""locator"": ""Text content exceeds the text container.""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Same-level text uses inconsistent font sizes.""}, {""type"": ",page
+g7_unbreakable_text_016,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,[],"Looking at this slide, here are the issues:
+
+1. **Title duplication** - The main title ""Solution Overview"" appears both as the slide header AND inside the content box, creating redundancy and poor hierarchy.
+
+2. **Text cutoff/overflow** - The endpoint path text is cut off on the right side of the slide. The text ""acme-global-manufac"" is incomplete and should either be truncated with an ellipsis or","{
+  ""defects"": [
+    {""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title repeated in body creates redundancy.""},
+    {""type"": ""G1_TEXT_OVERFLOW"", ""locator"": ""Text is cut off on the right side.""},
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Repeated header disrupts visual hierarchy.""},
+    {""typ",page
+g7_unbreakable_text_019,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G6_MARGIN_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,[],"Looking at this slide, here are the issues:
+
+1. **Title duplication** - The main title ""Success Metrics"" appears both as the slide header AND inside the content box, creating redundancy and poor hierarchy.
+
+2. **Text cutoff/overflow** - The file path at the end of the line is cut off mid-word (""manufac"" instead of ""manufacturing"" or similar), suggesting the text extends beyond the visible area or ","{
+  ""defects"": [
+    {""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title duplicated in header and body content.""},
+    {""type"": ""G1_TEXT_OVERFLOW"", ""locator"": ""Text cut off mid-word due to container width.""},
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Content box lacks clear visual hierarchy.""",page
+g7_unbreakable_text_020,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,True,"[""G4_FONT_SIZE_INCONSISTENCY"",""G7_RENDER_CONTAINMENT_OVERFLOW"",""S1_TITLE_BODY_MISMATCH"",""S4_DENSITY_RULE_VIOLATION""]","{""element"":""Text spills outside the content container"",""quote"":""""}",,[],"Looking at this slide, I can identify several issues:
+
+1. **Title duplication**: The main title ""Platform Architecture"" appears both at the top of the slide AND inside the content box. This is redundant and confusing - the same text should only appear once.
+
+2. **Text spilling outside the box**: The endpoint URL ""registry.internal.acme-global.example/ml-platform/inference"" extends beyond the right","{""defects"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title appears redundantly in body content""}, {""type"": ""G7_RENDER_CONTAINMENT_OVERFLOW"", ""locator"": ""Text spills outside the content container""}, {""type"": ""S4_DENSITY_RULE_VIOLATION"", ""locator"": ""Excessive whitespace makes slide feel incompl",page
+g7_unbreakable_text_018,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW"",""S1_TITLE_BODY_MISMATCH"",""S4_DENSITY_RULE_VIOLATION""]","{""element"":""Text extends beyond slide boundaries"",""quote"":""""}",,[],"Looking at this slide, I can identify several issues:
+
+1. **Title duplication**: The main title ""Success Metrics"" appears both as the slide header AND inside the content box. This is redundant and confusing - the same text appears twice in different locations.
+
+2. **Incomplete text**: The endpoint URL appears to be cut off on the right side of the slide. The text ""inference"" is partially visible b","{
+  ""defects"": [
+    {""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title appears in both header and body""},
+    {""type"": ""G7_RENDER_CONTAINMENT_OVERFLOW"", ""locator"": ""Text extends beyond slide boundaries""},
+    {""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Content box title duplicates slide title""",page
+g7_unbreakable_text_021,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,True,"[""G4_FONT_SIZE_INCONSISTENCY"",""G6_MARGIN_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW"",""S1_TITLE_BODY_MISMATCH"",""S5_MISSING_LOGIC_SECTION""]","{""element"":""Text spills outside the slide frame."",""quote"":""""}",,[],"Looking at this slide, there are several issues that make it look low-quality and broken:
+
+1. **Text spilling outside the frame**: The URL at the bottom right is cut off. The text ""2"" at the end of the URL is partially visible but clearly truncated, suggesting the content extends beyond the intended boundary of the slide or container.
+
+2. **Poor spacing and layout**: There's excessive white space ","{
+  ""defects"": [
+    {""type"": ""G7_RENDER_CONTAINMENT_OVERFLOW"", ""locator"": ""Text spills outside the slide frame.""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Excessive white space below content.""},
+    {""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title repeated inside the content box.""},
+   ",page
+g7_unbreakable_text_027,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY""]",,,[],"Looking at this slide, I can identify several issues:
+
+1. **Title duplication**: The main title ""Implementation Roadmap"" appears both at the top of the slide AND inside the content box. This is redundant and confusing - the same text should only appear once.
+
+2. **Incomplete text**: The endpoint URL appears to be cut off on the right side of the slide. The text ""inference"" is partially visible but","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title duplicated in header and content box""}, {""type"": ""G1_TEXT_OVERFLOW"", ""locator"": ""Endpoint URL text cut off on right side""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Header and content title create hierarchy confusion""}, {""type"": ""G4_F",page
+g7_unbreakable_text_024,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""S4_DENSITY_RULE_VIOLATION"",""S5_MISSING_LOGIC_SECTION""]",,,[],"Looking at this slide, there are several issues:
+
+1. **Title duplication**: The main title ""Implementation Roadmap"" appears both as the slide header and again inside the content box. This is redundant and confusing.
+
+2. **Incomplete text**: The endpoint ARN is cut off at the end - it shows ""acme-global-manufacturing-pr"" but is missing the rest of the role name. This makes the information incomplet","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title duplicated in header and content box""}, {""type"": ""G1_TEXT_OVERFLOW"", ""locator"": ""Text cut off at end of line""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Content box title duplicates slide title""}, {""type"": ""G5_BRAND_COLOR_VIOLATION"", ",page
+g7_unbreakable_text_023,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,[],"Looking at this slide, here are the issues:
+
+1. **Title duplication** - The main title ""Success Metrics"" appears both at the top of the slide AND inside the content box, creating redundancy and poor hierarchy.
+
+2. **Text cutoff/overflow** - The endpoint path text is cut off on the right side of the slide. The text ""acme-global-manufac"" is incomplete and should either be truncated with an ellipsis ","{
+  ""defects"": [
+    {""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title duplicated inside content box""},
+    {""type"": ""G1_TEXT_OVERFLOW"", ""locator"": ""Text cut off on right side""},
+    {""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Subheading duplicates main title""},
+    {""type"": ""G3_ALIGNMENT_OFFS",page
+g7_unbreakable_text_026,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G6_MARGIN_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,[],"Looking at this slide, there are several significant issues:
+
+1. **Text Spilling Outside the Box**: The text ""acme-global-manufac"" at the end of the file path is cut off and appears to be spilling outside the right edge of the content box. This is a clear layout error where content exceeds its container.
+
+2. **Inconsistent Title Placement**: The main title ""Q3 Go-to-Market Plan"" at the top left is","{
+  ""defects"": [
+    {""type"": ""G1_TEXT_OVERFLOW"", ""locator"": ""Text spills outside the right container edge""},
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Main title displaced outside the content box""},
+    {""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Duplicate title creates confusion between b",page
+g7_unbreakable_text_022,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,True,"[""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW"",""S1_TITLE_BODY_MISMATCH"",""S4_DENSITY_RULE_VIOLATION""]","{""element"":""Text spills outside the container frame"",""quote"":""""}",,"[{""text"":""Lack of clear visual hierarchy elements"",""raw_type"":""OTHER""},{""text"":""Generic design lacks engaging visual interest"",""raw_type"":""OTHER""}]","Looking at this slide, there are several issues that make it look low-quality and broken:
+
+1. **Text spilling outside the frame**: The URL at the bottom of the box is cut off. You can see ""2"" at the very end of the URL, which suggests the text extends beyond the right edge of the slide or the container. This is a clear layout error.
+
+2. **Redundant title**: The main title ""Implementation Roadmap"" ","{
+  ""defects"": [
+    {""type"": ""G7_RENDER_CONTAINMENT_OVERFLOW"", ""locator"": ""Text spills outside the container frame""},
+    {""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title repeated inside the content box""},
+    {""type"": ""S4_DENSITY_RULE_VIOLATION"", ""locator"": ""Excessive wasted white space on sli",page
+g7_unbreakable_text_025,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW"",""S1_TITLE_BODY_MISMATCH""]","{""element"":""Text is cut off on the right side of the slide."",""quote"":""""}",,[],"Looking at this slide, there are several issues that make it look low-quality and broken:
+
+1. **Title duplication**: The main title ""Implementation Roadmap"" appears both outside the box (as the slide title) and inside the box as a subtitle. This is redundant and confusing.
+
+2. **Text overflow/cropping**: The endpoint ARN text is cut off on the right side - it ends with ""-pr"" instead of showing the","{
+  ""defects"": [
+    {""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title appears both outside and inside the box.""},
+    {""type"": ""G7_RENDER_CONTAINMENT_OVERFLOW"", ""locator"": ""Text is cut off on the right side of the slide.""},
+    {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Content text has ",page
+g7_unbreakable_text_028,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW""]","{""element"":""Text spills outside the visible frame area."",""quote"":""""}",,[],"Looking at this slide, there are several issues that make it look low-quality and broken:
+
+1. **Text spilling outside the frame**: The URL at the bottom of the box is cut off on the right side. You can see ""2"" at the end of ""onboarding/2"" which suggests the text extends beyond the visible area of the slide or the box itself.
+
+2. **Poor spacing and alignment**: The text ""Implementation Roadmap"" ins","{
+  ""defects"": [
+    {""type"": ""G7_RENDER_CONTAINMENT_OVERFLOW"", ""locator"": ""Text spills outside the visible frame area.""},
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title and content are misaligned horizontally.""},
+    {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Main title and body text",page
+g7_unbreakable_text_029,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW"",""G4_FONT_SIZE_INCONSISTENCY"",""G7_RENDER_CONTAINMENT_OVERFLOW"",""S1_TITLE_BODY_MISMATCH"",""S3_TERMINOLOGY_INCONSISTENCY""]","{""element"":""Truncated text overflows container boundaries."",""quote"":""""}",,[],"Looking at this slide, there are several issues that make it look low-quality and broken:
+
+1. **Text Spilling Outside the Box**: The main content text ""Endpoint: C:\Users\enterprise\Deployments\2026\Q3\acme-global-manufac"" is clearly cut off and spilling outside the right edge of the content box. This is a major layout problem.
+
+2. **Inconsistent Typography**: The title ""Platform Architecture"" at ","{
+  ""defects"": [
+    {""type"": ""G1_TEXT_OVERFLOW"", ""locator"": ""Text spills outside the content box.""},
+    {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Title and body text use different sizes.""},
+    {""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title does not match the body content.""},
+    {""",page
+g7_card_height_003__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G6_MARGIN_VIOLATION""]",,,"[{""text"":""Design is generic and lacks creativity."",""raw_type"":""OTHER""}]","The slide has several design and layout issues that make it look low-quality and unprofessional:
+
+1.  **Redundant Title:** The main title ""Q3 Go-to-Market Plan"" at the top of the slide is identical to the text inside the green box. This is unnecessary and creates visual clutter.
+2.  **Poor Use of Space:** The large, light-green box containing the bullet points takes up a significant portion of the","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title and body text are redundant.""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Layout is unbalanced with excessive empty space.""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Title and body font sizes differ.""}, {""type"": ""G3_ALIGNMEN",page
+g7_card_height_006__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""S4_DENSITY_RULE_VIOLATION""]",,,[],"The slide has several design and layout issues that make it look unpolished and confusing:
+
+1.  **Redundant Title:** The main title ""Platform Architecture"" at the top of the slide is repeated inside the content box. This is unnecessary and creates visual clutter.
+2.  **Poor Use of Space:** The large, empty beige box takes up a significant portion of the slide's vertical space, making the content f","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title repeated inside content box""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Empty box creates unbalanced layout""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Title and list items lack hierarchy""}, {""type"": ""S4_DENSITY_RULE_VIOLATI",page
+g7_card_height_000__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,True,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G6_MARGIN_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW"",""S1_TITLE_BODY_MISMATCH""]","{""element"":""Unnecessary bordered box with no value"",""quote"":""""}",,"[{""text"":""Lack of visual elements or graphics"",""raw_type"":""OTHER""}]","The slide has several design and layout issues that make it look unprofessional and cluttered:
+
+1. **Redundant Title** – The main title “Solution Overview” at the top is repeated inside the content box as a subheading. This is unnecessary and creates visual confusion. It’s located at the top of the slide (main title) and again at the top-left of the content box.
+
+2. **Poor Use of Space** – The con","{""defects"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Redundant title inside content box""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Wasted space on right side of box""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Inconsistent typography between title and subheading""}, {""type"": ""G3_A",page
+g7_card_height_005__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]",,,[],"Looking at this slide, there are several design and layout issues that make it look unprofessional and cluttered:
+
+1. **Redundant Title** - The main title ""Implementation Roadmap"" at the top is repeated inside the content box as a subheading. This is unnecessary duplication that wastes space and creates visual confusion.
+
+2. **Poor Use of Space** - The content box takes up a significant portion of","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Redundant title inside content box""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Inconsistent typography between title and subheading""}, {""type"": ""G5_BRAND_COLOR_VIOLATION"", ""locator"": ""Weak color contrast on border and text""}, {""type""",page
+g7_card_height_002__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,"[{""text"":""Dark text on light background reduces readability"",""raw_type"":""G8_LOW_CONTRAST""}]","The slide has several design and layout issues that make it look low-quality and unprofessional:
+
+1. **Redundant Title** – The main title “Risk Register” at the top left is repeated inside the green box as a subheading. This is unnecessary and creates visual clutter.
+
+2. **Poor Use of Color** – The green box has a very light, almost white fill with a thin green border. This makes the content insid","{
+  ""defects"": [
+    {""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title repeated inside content box""},
+    {""type"": ""G5_BRAND_COLOR_VIOLATION"", ""locator"": ""Light fill makes content hard to distinguish""},
+    {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Inconsistent weight and color in typogr",page
+g7_card_height_009__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G6_MARGIN_VIOLATION"",""S4_DENSITY_RULE_VIOLATION""]",,,[],"Looking at this slide, here are the issues:
+
+1. **Redundant title** - The main slide title ""Risk Register"" at the top left is repeated inside the content box as a subheading. This creates unnecessary duplication and visual clutter.
+
+2. **Poor use of space** - The content box takes up a significant portion of the slide but contains only four bullet points with minimal content. This wastes valuable ","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title repeated as subheading causing hierarchy confusion""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Same text used as title and subheading inconsistently""}, {""type"": ""S4_DENSITY_RULE_VIOLATION"", ""locator"": ""Minimal content wastes va",page
+g7_card_height_008__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S4_DENSITY_RULE_VIOLATION""]",,,[],"The slide has several design and layout issues that make it look unpolished and low-quality:
+
+1.  **Redundant Title:** The main title ""Q3 Go-to-Market Plan"" at the top of the slide is identical to the heading inside the content box. This is unnecessary and creates visual clutter.
+2.  **Poor Use of Space:** The large, empty white space above the content box is wasted. The box should be positioned h","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Content box positioned too low""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Title and body text sizes differ""}, {""type"": ""G5_BRAND_COLOR_VIOLATION"", ""locator"": ""Border color lacks sufficient contrast""}, {""type"": ""S4_DENSITY_RULE_VIOLA",page
+g7_card_height_011__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G6_MARGIN_VIOLATION"",""S4_DENSITY_RULE_VIOLATION""]",,,[],"Looking at this slide, here are the issues:
+
+1. **Redundant title** - The main slide title ""Risk Register"" at the top left is repeated inside the content box as a subheading. This creates unnecessary duplication and visual clutter.
+
+2. **Poor use of space** - The content box takes up most of the slide width but the actual content (just 4 bullet points) is left-aligned and doesn't utilize the avail","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title repeated inside content box""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Same text used as title and subheading""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Content box wastes space on right side""}, {""type"": ""S4_DENSITY_RULE_V",page
+g7_card_height_007__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,"[{""text"":""Lack of graphics or visual interest"",""raw_type"":""OTHER""}]","The slide has several design and layout issues that reduce its professionalism and clarity:
+
+1. **Redundant Title**: The main title ""Success Metrics"" at the top is repeated inside the content box as a subheading. This is unnecessary and creates visual clutter.
+
+2. **Poor Use of Color**: The orange/brown border around the content box is arbitrary and doesn't align with any clear design system. It f","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title repeated inside content box""}, {""type"": ""G5_BRAND_COLOR_VIOLATION"", ""locator"": ""Arbitrary orange border color used""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Excessive white space above content box""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ",page
+g7_card_height_001__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G2_ELEMENT_OVERLAP"",""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""S1_TITLE_BODY_MISMATCH"",""S5_MISSING_LOGIC_SECTION""]",,,[],"The slide has several design and layout issues that make it look low-quality and unprofessional:
+
+1. **Redundant Title** – The main title “Platform Architecture” at the top is repeated inside the content box as a subheading. This is unnecessary and visually confusing. It should be removed from the box or replaced with a more specific label (e.g., “Components”).
+
+2. **Poor Use of Space** – The larg","{
+  ""defects"": [
+    {""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Redundant title inside the content box""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Excessive white space above and below box""},
+    {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Inconsistent typography between main title",page
+g7_card_height_010__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""S4_DENSITY_RULE_VIOLATION""]",,,[],"The slide has several design and layout issues that make it look low-quality and unprofessional:
+
+1.  **Redundant Title:** The main title ""Solution Overview"" at the top of the slide is repeated inside the content box. This is unnecessary and creates visual clutter.
+2.  **Poor Use of Space:** The large, empty beige box takes up a significant portion of the slide's vertical space, making the content","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title repeated inside content box""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Large empty box unbalances layout""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Title font size differs from main""}, {""type"": ""S4_DENSITY_RULE_VIOLATION"",",page
+g7_card_height_004__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,[],"The slide has several design and layout issues that make it look low-quality and unprofessional:
+
+1. **Redundant Title** – The main title “Solution Overview” at the top left is repeated inside the content box as a subheading. This is unnecessary and visually confusing. It should be removed from the box or replaced with a more specific label (e.g., “Key Features”).
+
+2. **Poor Use of Space** – The l","{""defects"": [{""type"": ""G1_TEXT_OVERFLOW"", ""locator"": ""Redundant title inside content box""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Excessive white space above and below""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Inconsistent font weights and colors""}, {""type"": ""S1_TITLE_BODY_MISMATCH",page
+g7_card_height_015__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]",,,[],"The slide has several design and layout issues that make it look low-quality and unprofessional:
+
+1.  **Redundant Title:** The main title ""Success Metrics"" at the top of the slide is identical to the smaller, repeated title inside the content box. This is unnecessary and creates visual clutter.
+2.  **Poor Use of Space:** The large, empty white space below the content box is wasted. The box itself ","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Redundant title creates visual clutter""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Poor space usage and unbalanced layout""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Inconsistent typography between title and body""}, {""type"": ""G4_F",page
+g7_card_height_013__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""S1_TITLE_BODY_MISMATCH"",""S4_DENSITY_RULE_VIOLATION""]",,,"[{""text"":""Slide lacks visual interest or graphics"",""raw_type"":""OTHER""}]","Looking at this slide, there are several issues that make it look low-quality and poorly designed:
+
+1. **Redundant Title** - The main title ""Implementation Roadmap"" at the top is repeated inside the content box as a subheading. This is unnecessary and creates visual clutter.
+
+2. **Poor Use of Space** - The content box takes up a significant portion of the slide but contains only four bullet points","{
+  ""defects"": [
+    {""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title repeated inside content box""},
+    {""type"": ""S4_DENSITY_RULE_VIOLATION"", ""locator"": ""Content box wastes valuable white space""},
+    {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Title and subheading use different sizes""},",page
+g7_card_height_018__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION""]",,,[],"The slide has several design and layout issues that make it look unpolished and low-quality:
+
+1.  **Redundant Title:** The main title ""Q3 Go-to-Market Plan"" at the top of the slide is identical to the heading inside the content box. This is unnecessary and creates visual clutter.
+2.  **Poor Use of Space:** The large, empty white space above the content box is wasted. The box should be positioned h","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Content box positioned too low""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Title and body text sizes differ""}, {""type"": ""G5_BRAND_COLOR_VIOLATION"", ""locator"": ""Border color lacks sufficient contrast""}, {""type"": ""G4_FONT_SIZE_INCONSIS",page
+g7_card_height_012__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]",,,[],"The slide has several design and layout issues that make it look unprofessional and cluttered:
+
+1. **Redundant Title** – The main title “Implementation Roadmap” at the top is repeated inside the content box as a subheading. This is unnecessary and wastes visual space.
+
+2. **Poor Use of Space** – The large white box containing the list takes up most of the slide, but the list itself is short (only ","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Redundant title inside content box""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Inconsistent typography hierarchy""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Bullet points lack visual hierarchy""}, {""type"": ""G5_BRAND_COLOR_VI",page
+g7_card_height_016__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,True,"[""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW"",""S1_TITLE_BODY_MISMATCH"",""S4_DENSITY_RULE_VIOLATION""]","{""element"":""Subtle rounded corners lack value"",""quote"":""""}",,[],"The slide has several design and layout issues that reduce its professionalism and clarity:
+
+1. **Redundant Title**: The main title ""Success Metrics"" at the top is repeated inside the content box as a subheading. This is unnecessary and creates visual clutter.
+
+2. **Poor Use of Color**: The orange/brown border around the content box is arbitrary and doesn't align with any clear design system. It f","{""defects"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title repeated inside content box""}, {""type"": ""G5_BRAND_COLOR_VIOLATION"", ""locator"": ""Arbitrary orange border color""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Excessive white space above box""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"":",page
+g7_card_height_022__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]",,,[],"The slide has several design and layout issues that make it look unpolished and confusing:
+
+1.  **Redundant Title:** The main title ""Solution Overview"" at the top of the slide is repeated inside the content box. This is unnecessary and creates visual clutter.
+2.  **Poor Use of Space:** The large white box containing the list takes up a significant portion of the slide, but the list itself is short","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title repeated inside content box""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Large white box wastes space""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Font size and weight differ""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""No v",page
+g7_card_height_021__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]",,,[],"The slide has several design and layout issues that make it look unpolished and low-quality:
+
+1.  **Redundant Title:** The main title ""Success Metrics"" at the top of the slide is repeated inside the content box. This is unnecessary and creates visual clutter.
+2.  **Poor Use of Space:** The content box is extremely wide and short, leaving a large amount of empty white space below it. This makes the","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title repeated inside content box""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Content box wastes space below""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Internal title font differs from main""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY",page
+g7_card_height_014__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,True,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G6_MARGIN_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW"",""S1_TITLE_BODY_MISMATCH""]","{""element"":""Lack of visual hierarchy and engagement"",""quote"":""""}",,[],"The slide has several design and layout issues that make it look low-quality and unprofessional:
+
+1. **Redundant Title** – The main title “Platform Architecture” at the top is repeated inside the content box as a subheading. This is unnecessary and visually confusing. It should be removed from the box or replaced with a more specific label (e.g., “Components” or “Key Services”).
+
+2. **Poor Use of ","{
+  ""defects"": [
+    {""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Redundant title inside content box""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Empty right side of content box""},
+    {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Inconsistent font weights and sizes""},
+    {""type"": ""G6_",page
+g7_card_height_020__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""S4_DENSITY_RULE_VIOLATION""]",,,[],"The slide has several design and layout issues that make it look unprofessional and cluttered:
+
+1. **Redundant Title** – The main title “Implementation Roadmap” at the top is repeated inside the content box as a subheading. This is unnecessary and wastes visual space.
+
+2. **Poor Use of Space** – The large white box containing the list takes up most of the slide, but the list itself is short (only ","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Redundant title repeats inside content box""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Main title and subheading sizes differ""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Large white box wastes negative space""}, {""type"": ""S4_DENSIT",page
+g7_card_height_023__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]",,,[],"The slide has several design and layout issues that make it look unprofessional and cluttered:
+
+1. **Redundant Title** – The main title “Implementation Roadmap” at the top is repeated inside the content box as a subheading. This is unnecessary and wastes visual space.
+
+2. **Poor Use of Space** – The large white box containing the bullet points is disproportionately wide and tall relative to its co","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title repeated inside content box""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Content box dominates slide space""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Title and subheading typography differ""}, {""type"": ""G5_BRAND_COLOR_VIOLATI",page
+g7_card_height_025__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,"[{""text"":""Redundant title creates visual clutter"",""raw_type"":""OTHER""},{""text"":""Poor hierarchy confuses title vs section"",""raw_type"":""OTHER""},{""text"":""Lack of visual interest due to text heaviness"",""raw_type"":""OTHER""},{""text"":""Generic styling fails to organize info"",""raw_type"":""OTHER""}]","Looking at this slide, here are the issues:
+
+1. **Redundant title** - The main title ""Risk Register"" at the top left is repeated inside the content box as a subheading. This creates unnecessary duplication and visual clutter.
+
+2. **Poor hierarchy** - Having the same text appear both as the slide title and as a heading within the content box creates confusion about what's the actual slide title ver","{""defects"": [{""type"": ""OTHER"", ""locator"": ""Redundant title creates visual clutter""}, {""type"": ""OTHER"", ""locator"": ""Poor hierarchy confuses title vs section""}, {""type"": ""S4_DENSITY_RULE_VIOLATION"", ""locator"": ""Text density exceeds scenario rule""}, {""type"": ""OTHER"", ""locator"": ""Lack of visual interest",page
+g7_card_height_026__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,True,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G6_MARGIN_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW""]","{""element"":""Content box not well utilized"",""quote"":""""}",,[],"The slide has several design and layout issues that make it look unpolished and confusing:
+
+1.  **Redundant Title:** The main title ""Success Metrics"" at the top of the slide is repeated inside the content box. This is unnecessary and creates visual clutter.
+2.  **Poor Hierarchy:** Because the title is repeated inside the box, the text ""Success Metrics"" inside the box appears to be a sub-header or ","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title repeated inside content box""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Repeated title styled like main title""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Large gaps between title, box, and bottom""}, {""type"": ""G7_RENDER_CONTA",page
+g7_card_height_019__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,[],"The slide has several design and layout issues that make it look unprofessional and cluttered:
+
+1. **Redundant Title** – The main title “Solution Overview” at the top left is repeated inside the content box as a subheading. This is unnecessary and creates visual confusion. It’s located at the top-left of the slide (main title) and again at the top-left of the beige box (subheading).
+
+2. **Poor Use","{
+  ""defects"": [
+    {""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title repeated inside content box""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Content box wastes space on right""},
+    {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Title and subheading font weights differ""},
+    {""type""",page
+g7_card_height_017__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G2_ELEMENT_OVERLAP"",""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""S1_TITLE_BODY_MISMATCH"",""S5_MISSING_LOGIC_SECTION""]",,,[],"The slide has several design and layout issues that make it look low-quality and unprofessional:
+
+1. **Redundant Title** – The main title “Platform Architecture” at the top is repeated inside the content box as a subheading. This is unnecessary and visually confusing. It should be removed from the box or replaced with a more specific label (e.g., “Components”).
+
+2. **Poor Use of Space** – The larg","{
+  ""defects"": [
+    {""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Redundant title inside content box""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Excessive white space above and below""},
+    {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Inconsistent typography between title and subheadi",page
+g7_card_height_027__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,True,"[""G4_FONT_SIZE_INCONSISTENCY"",""G6_MARGIN_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW"",""S1_TITLE_BODY_MISMATCH""]","{""element"":""Content buried inside plain box"",""quote"":""""}",,"[{""text"":""Overall design lacks visual interest"",""raw_type"":""OTHER""}]","The slide has several design and layout issues that make it look low-quality and unprofessional:
+
+1.  **Redundant Title:** The main title ""Q3 Go-to-Market Plan"" at the top of the slide is identical to the text inside the green box. This is unnecessary and creates visual clutter.
+2.  **Poor Use of Space:** The large, light-green box containing the bullet points takes up a significant portion of the","{""defects"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title text matches body content redundantly""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Large box creates unbalanced empty space""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Title and body font sizes differ""}, {""type"": ""G7_RENDE",page
+g7_card_height_029__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,True,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW""]","{""element"":""Data lacks visual emphasis or hierarchy"",""quote"":""""}",,[],"The slide has several design and layout issues that make it look unpolished and low-quality:
+
+1.  **Redundant Title:** The main title ""Success Metrics"" at the top of the slide is repeated inside the content box. This is unnecessary and creates visual clutter.
+2.  **Poor Use of Space:** The content box is extremely wide and short, leaving a large amount of empty white space below it. This makes the","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title repeated inside content box""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Content box wastes space below""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Title font size differs from main""}, {""type"": ""G7_RENDER_CONTAINMENT_OVERFLOW",page
+g7_card_height_028__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION""]",,,[],"The slide has several design and layout issues that make it look unpolished and low-quality:
+
+1.  **Redundant Title:** The main title ""Q3 Go-to-Market Plan"" at the top of the slide is identical to the heading inside the content box. This is unnecessary and creates visual clutter.
+2.  **Poor Use of Space:** The large, empty white space above the content box is wasted. The box should be positioned h","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Content box positioned too low""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Title and body text sizes differ""}, {""type"": ""G5_BRAND_COLOR_VIOLATION"", ""locator"": ""Border color lacks contrast""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""lo",page
+g7_card_height_024__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S1_TITLE_BODY_MISMATCH"",""S4_DENSITY_RULE_VIOLATION"",""S5_MISSING_LOGIC_SECTION""]",,,[],"Looking at this slide, there are several design and layout issues that make it look unprofessional and cluttered:
+
+1. **Redundant Title** - The main title ""Implementation Roadmap"" at the top of the slide is repeated inside the content box. This is unnecessary and creates visual confusion about what the slide is about.
+
+2. **Poor Use of Space** - The content box takes up a significant portion of th","{""defects"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title repeated inside content box""}, {""type"": ""S4_DENSITY_RULE_VIOLATION"", ""locator"": ""Content box wastes valuable white space""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Title and bullet points use different sizes""}, {""type"": ""G5",page
+g7_unbreakable_text_000__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,[],"Looking at this slide, here are the issues:
+
+1. **Title duplication**: The main title ""Implementation Roadmap"" appears both at the top of the slide and again inside the content box. This is redundant and confusing.
+
+2. **Poor text wrapping**: The URL in the content box is broken across multiple lines in an awkward way:
+   - ""onboard"" is split as ""onboard"" then ""ing"" on the next line
+   - ""self-ser","{
+  ""defects"": [
+    {""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title repeated inside content box""},
+    {""type"": ""G1_TEXT_OVERFLOW"", ""locator"": ""URL text wraps awkwardly across lines""},
+    {""type"": ""G5_BRAND_COLOR_VIOLATION"", ""locator"": ""Title and header use different colors""},
+    {""type"": ""G",page
+g7_unbreakable_text_001__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]",,,[],"Looking at this slide, here are the issues:
+
+1. **Redundant header**: The main title ""Solution Overview"" at the top is repeated inside the content box as a subtitle. This creates visual clutter and is unnecessary.
+
+2. **Poor line wrapping**: The long URL is broken awkwardly across lines. The word ""onboarding"" is split as ""onboard/ing"" which breaks readability and looks unprofessional.
+
+3. **Incons","{
+  ""defects"": [
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Subtitle misaligned from left edge of box""},
+    {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""URL line wrapping breaks readability""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Excessive vertical space between title and box""",page
+g7_unbreakable_text_003__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]",,,[],"The slide has several issues:
+
+1.  **Redundant Title:** The main title ""Success Metrics"" at the top is repeated inside the content box, which is unnecessary and creates visual clutter.
+2.  **Poor Text Wrapping:** The long ""Endpoint"" URL is broken across multiple lines in a way that disrupts readability. Specifically, the word ""inference"" is split as ""infe\nrence"", and ""containment"" is split as ""co","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title repeated inside content box""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""URL text wrapping breaks readability""}, {""type"": ""G5_BRAND_COLOR_VIOLATION"", ""locator"": ""Inconsistent label color and hierarchy""}, {""type"": ""G5_BRAND_COLOR",page
+g7_unbreakable_text_002__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]",,,[],"Looking at this slide, here are the issues:
+
+1. **Title duplication**: The main title ""Risk Register"" appears both at the top of the slide and again inside the green box. This is redundant and confusing.
+
+2. **Poor text wrapping**: The endpoint path text wraps awkwardly in the middle of words - ""ma"" and ""nufacturing"" are split across lines, making it hard to read and look unprofessional.
+
+3. **Inc","{
+  ""defects"": [
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title appears in wrong location""},
+    {""type"": ""G1_TEXT_OVERFLOW"", ""locator"": ""Text wraps awkwardly mid-word""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Excessive vertical space between title and content""},
+    {""type"": ""G5_BRA",page
+g7_unbreakable_text_005__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,True,"[""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW"",""S1_TITLE_BODY_MISMATCH""]","{""element"":""URL text wraps awkwardly across lines"",""quote"":""""}",,[],"Looking at this slide, here are the issues:
+
+1. **Title duplication**: The main title ""Implementation Roadmap"" appears both at the top of the slide and again inside the content box. This is redundant and confusing.
+
+2. **Poor text wrapping**: The URL in the content box is broken across multiple lines in an awkward way:
+   - ""onboard"" is split as ""onboard"" then ""ing"" on the next line
+   - ""self-ser","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title duplicated inside content box""}, {""type"": ""G7_RENDER_CONTAINMENT_OVERFLOW"", ""locator"": ""URL text wraps awkwardly across lines""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Excessive vertical space between title and box""}, {""type"": ""G5_B",page
+g7_unbreakable_text_004__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]",,,[],"Looking at this slide, here are the issues:
+
+1. **Redundant title** - The main title ""Platform Architecture"" at the top is repeated inside the content box as a subtitle. This creates unnecessary duplication and visual clutter.
+
+2. **Poor text wrapping** - The IAM role ARN is broken across two lines in an awkward way. The word ""manufacturing"" is split as ""manufacturi"" on the first line and ""ng"" on ","{
+  ""defects"": [
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title repeated inside content box""},
+    {""type"": ""G1_TEXT_OVERFLOW"", ""locator"": ""Word split awkwardly across lines""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Excessive vertical whitespace and padding""},
+    {""type"": ""G5_BRAND_",page
+g7_unbreakable_text_006__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S1_TITLE_BODY_MISMATCH"",""S5_MISSING_LOGIC_SECTION""]",,,"[{""text"":""Decorative box adds clutter without functional value."",""raw_type"":""OTHER""}]","Looking at this slide, here are the issues:
+
+1. **Title duplication**: The main title ""Risk Register"" appears both at the top of the slide and again inside the content box. This is redundant and confusing.
+
+2. **Poor text wrapping**: The endpoint path text is broken awkwardly across lines. Specifically, ""manufacturing"" is split as ""ma\nnufacturing"" which breaks the word unnaturally and makes it ha","{
+  ""defects"": [
+    {""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title appears redundantly in body content.""},
+    {""type"": ""G1_TEXT_OVERFLOW"", ""locator"": ""Text wraps awkwardly breaking words unnaturally.""},
+    {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Title font size differs between he",page
+g7_unbreakable_text_008__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]",,,[],"Looking at this slide, here are the issues:
+
+1. **Redundant title** - The main title ""Platform Architecture"" at the top is repeated inside the content box as a subtitle. This creates visual clutter and is unnecessary.
+
+2. **Poor text wrapping** - The long endpoint ARN is broken awkwardly across two lines with ""manufacturi"" on line 1 and ""ng-"" on line 2. This breaks the word unnaturally and makes i","{
+  ""defects"": [
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title repeated inside content box""},
+    {""type"": ""G1_TEXT_OVERFLOW"", ""locator"": ""Word broken awkwardly across lines""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Excessive white space below content""},
+    {""type"": ""G5_BRAND_COLOR",page
+g7_unbreakable_text_007__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,"[{""text"":""File path uses Windows-specific formatting"",""raw_type"":""OTHER""}]","Looking at this slide, there are several significant issues:
+
+1. **Title duplication**: The main title ""Implementation Roadmap"" appears both outside the box and inside the box as a subtitle. This is redundant and confusing.
+
+2. **Poor text wrapping**: The file path text is broken awkwardly across lines. Specifically, ""manufacturing"" is split as ""ma\nufacturing"" which breaks the word unnaturally an","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title appears twice in confusing locations""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Text wrapping breaks words awkwardly""}, {""type"": ""G5_BRAND_COLOR_VIOLATION"", ""locator"": ""Label color differs from body text color""}, {""type"": ""G6_",page
+g7_unbreakable_text_012__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""S1_TITLE_BODY_MISMATCH""]",,,[],"Looking at this slide, here are the issues:
+
+1. **Title duplication**: The main title ""Q3 Go-to-Market Plan"" appears both as the slide header and again inside the content box, which is redundant and confusing.
+
+2. **Poor text wrapping**: The URL in the content box is broken across multiple lines in an awkward way:
+   - ""onboard"" is split as ""onboard"" then ""ing/2026""
+   - ""self-serve"" is split as ""","{""defects"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title repeated in body content""}, {""type"": ""G1_TEXT_OVERFLOW"", ""locator"": ""URL text wraps awkwardly""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Text clustered at top with empty space""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": """,page
+g7_unbreakable_text_010__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]",,,[],"Looking at this slide, here are the issues:
+
+1. **Redundant title** - The main title ""Implementation Roadmap"" at the top is repeated inside the content box as a subtitle. This creates visual clutter and is unnecessary.
+
+2. **Poor text wrapping** - The long endpoint ARN is broken awkwardly across two lines with ""manufacturi"" on line 1 and ""ng-prod"" on line 2. This breaks the word ""manufacturing"" in","{
+  ""defects"": [
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Redundant title creates visual clutter""},
+    {""type"": ""G1_TEXT_OVERFLOW"", ""locator"": ""Poor text wrapping breaks words awkwardly""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Inconsistent spacing with excessive vertical space""},
+ ",page
+g7_unbreakable_text_009__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,[],"Looking at this slide, here are the issues:
+
+1. **Title duplication**: The main title ""Platform Architecture"" appears both as the slide header and again inside the content box. This is redundant and confusing.
+
+2. **Poor text wrapping**: The long URL in the endpoint is broken awkwardly across lines. The word ""onboarding"" is split as ""onboard/ing"" which breaks readability and looks unprofessional.
+","{
+  ""defects"": [
+    {""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title appears redundantly in body content.""},
+    {""type"": ""G1_TEXT_OVERFLOW"", ""locator"": ""Long URL breaks awkwardly across lines.""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Excessive vertical space between title and content",page
+g7_unbreakable_text_011__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,[],"Looking at this slide, here are the issues:
+
+1. **Title duplication**: The main title ""Risk Register"" appears both as the slide header and again inside the content box. This is redundant and confusing.
+
+2. **Poor text wrapping**: The endpoint path text wraps awkwardly in the middle of words - ""manufacturing"" is split across two lines as ""ma\nnufacturing"", which is typographically incorrect and har","{
+  ""defects"": [
+    {""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title duplicated in header and body content.""},
+    {""type"": ""G1_TEXT_OVERFLOW"", ""locator"": ""Text wraps awkwardly splitting words incorrectly.""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Excessive vertical whitespace and inte",page
+g7_unbreakable_text_014__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]",,,[],"Looking at this slide, here are the issues:
+
+1. **Title duplication**: The main title ""Platform Architecture"" appears both as the slide header and again inside the content box. This is redundant and confusing.
+
+2. **Poor text wrapping**: The endpoint ARN is broken across two lines in an awkward way - ""manufacturi"" on one line and ""ng-"" on the next. This breaks the word unnaturally and makes it har","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title repeated inside content box""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Awful word wrapping breaks text flow""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Excessive vertical whitespace in content""}, {""type"": ""G5_BRAND_COLOR_VI",page
+g7_unbreakable_text_015__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""G6_MARGIN_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,[],"Looking at this slide, here are the issues:
+
+1. **Title duplication**: The main title ""Implementation Roadmap"" appears both as the slide header AND inside the content box. This is redundant and confusing - the content box should either not have a title or the main title should be removed.
+
+2. **Poor text wrapping**: The endpoint URL is broken across multiple lines in an awkward way:
+   - ""infe"" on","{""defects"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title duplicated in header and body content""}, {""type"": ""G1_TEXT_OVERFLOW"", ""locator"": ""Word broken awkwardly across multiple lines""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Excessive vertical whitespace disrupts alignment""}, {""type"": ",page
+g7_unbreakable_text_013__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,True,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW""]","{""element"":""Important information lacks visual emphasis"",""quote"":""""}",,[],"Looking at this slide, here are the issues:
+
+1. **Title duplication**: The main title ""Risk Register"" appears both as the slide header and again inside the content box. This is redundant and confusing.
+
+2. **Poor text wrapping**: The IAM ARN (endpoint) is broken across two lines in an awkward way. The word ""manufacturing"" is split as ""manufacturi"" on one line and ""ng-"" on the next, which breaks re","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title duplicated in header and content box""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Text wrapping breaks readability awkwardly""}, {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Content box label duplicates slide title""}, {""type"": ""G3",page
+g7_unbreakable_text_018__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G2_ELEMENT_OVERLAP"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,[],"Looking at this slide, here are the issues:
+
+1. **Title duplication**: The main title ""Success Metrics"" appears both as the slide header and again inside the content box. This is redundant and confusing.
+
+2. **Poor text wrapping**: The endpoint URL is broken across multiple lines in an awkward way:
+   - ""infe"" on one line
+   - ""rence"" on the next line  
+   - ""nt"" at the end of the last line
+   Thi","{
+  ""defects"": [
+    {""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title repeated in body content""},
+    {""type"": ""G1_TEXT_OVERFLOW"", ""locator"": ""URL text wraps awkwardly""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Excessive vertical whitespace""},
+    {""type"": ""G5_BRAND_COLOR_VIOLATION"", ""lo",page
+g7_unbreakable_text_019__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,True,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW""]","{""element"":""Text wraps awkwardly splitting words"",""quote"":""""}",,[],"Looking at this slide, here are the issues:
+
+1. **Title duplication**: The main title ""Success Metrics"" appears both as the slide header and again inside the content box. This is redundant and confusing.
+
+2. **Poor text wrapping**: The endpoint path text wraps awkwardly in the middle of words (""manufacturing"" is split across lines as ""ma\nnufacturing""), making it hard to read and unprofessional.
+
+","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title appears redundantly in content box""}, {""type"": ""G7_RENDER_CONTAINMENT_OVERFLOW"", ""locator"": ""Text wraps awkwardly splitting words""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Label styling differs from body text""}, {""type"": ""G5_",page
+g7_unbreakable_text_016__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""S3_TERMINOLOGY_INCONSISTENCY""]",,,[],"Looking at this slide, here are the issues:
+
+1. **Redundant Title**: The main title ""Solution Overview"" at the top is repeated inside the content box as a subtitle. This is unnecessary and creates visual clutter.
+
+2. **Poor Text Wrapping**: The file path text is broken awkwardly across lines. Specifically, ""manufacturing"" is split as ""ma\nufacturing"" and ""yaml"" appears on a new line after ""v7."", w","{
+  ""defects"": [
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title repeated inside content box.""},
+    {""type"": ""G1_TEXT_OVERFLOW"", ""locator"": ""Text wrapped awkwardly across lines.""},
+    {""type"": ""S3_TERMINOLOGY_INCONSISTENCY"", ""locator"": ""Label mismatch between endpoint and path.""},
+    {""type",page
+g7_unbreakable_text_017__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,[],"Looking at this slide, here are the issues:
+
+1. **Title duplication**: The main title ""Implementation Roadmap"" appears both as the slide header and again inside the content box. This is redundant and confusing.
+
+2. **Poor visual hierarchy**: The content box has its own title ""Implementation Roadmap"" in orange, which duplicates the slide title and creates confusion about what's actually important.
+","{""defects"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title and content do not align well.""}, {""type"": ""G1_TEXT_OVERFLOW"", ""locator"": ""Long endpoint ARN lacks line breaks.""}, {""type"": ""G5_BRAND_COLOR_VIOLATION"", ""locator"": ""Orange color deviates from brand palette.""}, {""type"": ""G4_FONT_SIZE_IN",page
+g7_unbreakable_text_020__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,[],"Looking at this slide, here are the issues:
+
+1. **Title duplication**: The main title ""Platform Architecture"" appears both as the slide header and again inside the content box. This is redundant and confusing.
+
+2. **Poor text wrapping**: The endpoint URL is broken across multiple lines in an awkward way:
+   - ""infe"" on one line
+   - ""rence"" on the next line
+   - ""nt"" at the end of the last line
+  ","{
+  ""defects"": [
+    {""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title appears redundantly in body content""},
+    {""type"": ""G1_TEXT_OVERFLOW"", ""locator"": ""URL breaks awkwardly across multiple lines""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Excessive vertical space between title and box""}",page
+g7_unbreakable_text_021__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,True,"[""G2_ELEMENT_OVERLAP"",""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW"",""S5_MISSING_LOGIC_SECTION""]","{""element"":""URL breaks across lines improperly"",""quote"":""""}",,[],"Looking at this slide, here are the issues:
+
+1. **Title duplication**: The main title ""Implementation Roadmap"" appears both at the top of the slide AND inside the content box. This is redundant and confusing.
+
+2. **Poor text hierarchy**: The text inside the box has ""Implementation Roadmap"" in blue (appearing as a subheading) followed by ""Endpoint:"" in bold blue, but there's no clear visual hierarc","{""defects"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title appears in wrong location""}, {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Text hierarchy lacks visual distinction""}, {""type"": ""G7_RENDER_CONTAINMENT_OVERFLOW"", ""locator"": ""URL breaks across lines improperly""}, {""type"": ""G6_MARGIN_V",page
+g7_unbreakable_text_022__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,True,"[""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW"",""S1_TITLE_BODY_MISMATCH"",""S5_MISSING_LOGIC_SECTION""]","{""element"":""URL split across lines awkwardly"",""quote"":""""}",,[],"Looking at this slide, here are the issues:
+
+1. **Title duplication**: The main title ""Implementation Roadmap"" appears both at the top of the slide AND inside the content box. This is redundant and confusing.
+
+2. **Poor text hierarchy**: The text inside the box has ""Implementation Roadmap"" in blue (appearing as a subheading) followed by ""Endpoint:"" in bold blue, but there's no clear visual hierarc","{
+  ""defects"": [
+    {""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title repeated in body content""},
+    {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Poor visual hierarchy in text""},
+    {""type"": ""G7_RENDER_CONTAINMENT_OVERFLOW"", ""locator"": ""URL split across lines awkwardly""},
+    {""type"": ""G",page
+g7_unbreakable_text_023__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,True,"[""G1_TEXT_OVERFLOW"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW"",""S1_TITLE_BODY_MISMATCH""]","{""element"":""Cramped text fills available space poorly"",""quote"":""""}",,"[{""text"":""File path uses Windows-specific backslashes"",""raw_type"":""OTHER""}]","Looking at this slide, here are the issues:
+
+1. **Title duplication**: The main title ""Success Metrics"" appears both at the top of the slide and again inside the content box. This is redundant and confusing.
+
+2. **Poor text wrapping**: The file path text wraps awkwardly in the middle of the box, breaking ""manufacturing"" across two lines with a line break that doesn't align with the natural flow of","{
+  ""defects"": [
+    {""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title appears redundantly in body content""},
+    {""type"": ""G1_TEXT_OVERFLOW"", ""locator"": ""Text wraps awkwardly breaking word flow""},
+    {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Title and body text use different sizes""},
+ ",page
+g7_unbreakable_text_024__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,[],"Looking at this slide, here are the issues:
+
+1. **Title duplication**: The main title ""Implementation Roadmap"" appears both as the slide header and again inside the content box. This is redundant and confusing.
+
+2. **Poor visual hierarchy**: The content box has its own title ""Implementation Roadmap"" in orange, which is identical to the slide title but smaller and less prominent. This creates confu","{
+  ""defects"": [
+    {""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title appears redundantly in body content.""},
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Box title misaligned with slide hierarchy.""},
+    {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Title and box title use different siz",page
+g7_unbreakable_text_025__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G6_MARGIN_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,[],"Looking at this slide, here are the issues:
+
+1. **Title duplication**: The main title ""Implementation Roadmap"" appears both as the slide header AND inside the content box. This is redundant and confusing - the content box should either have no title or a different, more specific heading.
+
+2. **Poor text wrapping**: The long ARN (Amazon Resource Name) in the content box is broken awkwardly across t","{""defects"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title duplicated in header and content box""}, {""type"": ""G1_TEXT_OVERFLOW"", ""locator"": ""Word split awkwardly across lines""}, {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Excessive vertical space and internal padding""}, {""type"": ""S1_TITLE_BODY",page
+g7_unbreakable_text_026__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G5_BRAND_COLOR_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,"[{""text"":""Slide lacks substantive information or content"",""raw_type"":""OTHER""}]","Looking at this slide, there are several significant issues:
+
+1. **Title duplication**: The main title ""Q3 Go-to-Market Plan"" appears both as the slide header and again inside the content box. This is redundant and confusing.
+
+2. **Inappropriate content mismatch**: The slide is titled ""Q3 Go-to-Market Plan"" but contains only a file path to a YAML configuration file. This is completely off-topic - ","{""defects"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title does not match body content""}, {""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Content box repeats slide title text""}, {""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Slide contains irrelevant file path instead of plan""}, {""type"": ""G5_B",page
+g7_unbreakable_text_028__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]",,,[],"Looking at this slide, here are the issues:
+
+1. **Redundant title** - The main title ""Implementation Roadmap"" at the top is repeated inside the content box as a subtitle. This creates unnecessary duplication and visual clutter.
+
+2. **Poor text wrapping** - The long URL endpoint is broken awkwardly across lines with ""onboarding"" split as ""onboard/ing"" and ""self-serve"" split as ""self/erve"". This mak","{
+  ""defects"": [
+    {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""Title repeated inside content box.""},
+    {""type"": ""G1_TEXT_OVERFLOW"", ""locator"": ""URL text wrapped awkwardly.""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Excessive space between title and box.""},
+    {""type"": ""G5_BRAND_COLOR_VI",page
+g7_unbreakable_text_027__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,[],"Looking at this slide, here are the issues:
+
+1. **Title duplication**: The main title ""Implementation Roadmap"" appears both at the top of the slide AND inside the content box. This is redundant and confusing - the title should only appear once, typically at the top.
+
+2. **Poor text wrapping**: The endpoint URL is broken across multiple lines in an awkward way. The word ""inference"" is split as ""inf","{
+  ""defects"": [
+    {""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title appears redundantly in body content.""},
+    {""type"": ""G1_TEXT_OVERFLOW"", ""locator"": ""Text wraps awkwardly with broken words.""},
+    {""type"": ""G6_MARGIN_VIOLATION"", ""locator"": ""Excessive vertical space and internal padding.""},
+",page
+g7_unbreakable_text_029__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G2_ELEMENT_OVERLAP"",""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G6_MARGIN_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,[],"Looking at this slide, there are several issues that make it look low-quality and poorly designed:
+
+1. **Redundant Title**: The main title ""Platform Architecture"" at the top is repeated inside the content box as a subtitle. This is unnecessary and creates visual clutter.
+
+2. **Poor Text Wrapping**: The endpoint path text is broken awkwardly across two lines in the middle of words (""ma\nufacturing""","{
+  ""defects"": [
+    {""type"": ""S1_TITLE_BODY_MISMATCH"", ""locator"": ""Title repeated inside content box""},
+    {""type"": ""G1_TEXT_OVERFLOW"", ""locator"": ""Text wrapped awkwardly mid-word""},
+    {""type"": ""G4_FONT_SIZE_INCONSISTENCY"", ""locator"": ""Inconsistent font weights used""},
+    {""type"": ""G6_MARGIN_VI",page

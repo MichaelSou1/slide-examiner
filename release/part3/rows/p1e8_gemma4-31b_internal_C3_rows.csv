@@ -1,0 +1,1436 @@
+sample_id,defect,modality,is_clean,failure,has_defect,named_target,predicted_types,locator,confidence,other,raw,level
+g3i_8_000,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_16_001,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_8_006,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_32_002,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second body item 'Teams adopt RetainML daily'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second body item 'Teams adopt RetainML daily'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g3i_32_008,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second body item 'RetainML automates the repetitive work'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second body item 'RetainML automates the repetitive work'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g3i_16_007,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second body item 'RetainML automates the repetitive work'"",""region"":""center""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the second body item 'RetainML automates the repetitive work'"",
+  ""evidence_region"": ""center"",
+  ""confidence"": 1.0
+}
+```",page
+g3i_8_012,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_32_014,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second body item 'RetainML beat the baseline by double digits'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second body item 'RetainML beat the baseline by double digits'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g3i_16_013,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second and third body items"",""region"":""center""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the second and third body items"",
+  ""evidence_region"": ""center"",
+  ""confidence"": 1.0
+}
+```",page
+g3i_8_018,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the first body item 'RetainML integrates with existing tools'"",""region"":""top-left""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the first body item 'RetainML integrates with existing tools'"", ""evidence_region"": ""top-left"", ""confidence"": 1.0}
+```",page
+g3i_16_019,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the first body item 'RetainML integrates with existing tools'"",""region"":""top-left""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the first body item 'RetainML integrates with existing tools'"", ""evidence_region"": ""top-left"", ""confidence"": 1.0}
+```",page
+g3i_32_020,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second body item 'No data leaves the tenant'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second body item 'No data leaves the tenant'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g3i_8_024,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_8_030,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_16_025,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second list item 'RetainML has a clear rollback path'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'RetainML has a clear rollback path'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g3i_32_026,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second list item ('RetainML has a clear rollback path')"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item ('RetainML has a clear rollback path')"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g3i_16_031,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""Phase 3 refactors the core"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""Phase 3 refactors the core"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g3i_8_036,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_32_032,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""Phase 3 refactors the core"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""Phase 3 refactors the core"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g3i_16_037,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_8_042,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_32_038,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second list item (Q2 first production workloads)"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item (Q2 first production workloads)"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g3i_8_048,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_32_044,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second bullet item 'Automated rollback within five minutes'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second bullet item 'Automated rollback within five minutes'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g3i_16_043,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second bullet item 'Automated rollback within five minutes'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second bullet item 'Automated rollback within five minutes'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g3i_16_049,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_8_054,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_32_050,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second list item 'Assign two platform engineers'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'Assign two platform engineers'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g3i_16_055,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_32_056,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second list item 'Teams adopt TriageAI daily'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'Teams adopt TriageAI daily'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g3i_8_060,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second list item ('A refresh is due within two quarters')"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item ('A refresh is due within two quarters')"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g3i_16_061,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the first body item 'the Platform is saturated at peak demand'"",""region"":""left""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the first body item 'the Platform is saturated at peak demand'"", ""evidence_region"": ""left"", ""confidence"": 1.0}
+```",page
+g3i_8_066,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_16_067,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""Phase 3 refactors the core"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""Phase 3 refactors the core"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g3i_32_062,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second bullet item 'A refresh is due within two quarters'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second bullet item 'A refresh is due within two quarters'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g3i_8_072,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_32_068,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""Phase 3 refactors the core"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""Phase 3 refactors the core"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g3i_16_073,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_32_074,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second list item 'Q2 first production workloads'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'Q2 first production workloads'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g3i_8_078,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second and third list items"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second and third list items"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g3i_8_084,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_32_080,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second list item 'Automated rollback within five minutes'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'Automated rollback within five minutes'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g3i_16_079,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second list item 'Automated rollback within five minutes'"",""region"":""center""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the second list item 'Automated rollback within five minutes'"",
+  ""evidence_region"": ""center"",
+  ""confidence"": 1.0
+}
+```",page
+g3i_8_090,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_16_085,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the first list item 'Approve the phase 1 budget for the Platform'"",""region"":""top-left""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the first list item 'Approve the phase 1 budget for the Platform'"", ""evidence_region"": ""top-left"", ""confidence"": 1.0}
+```",page
+g3i_32_086,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second list item 'Assign two platform engineers'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'Assign two platform engineers'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g3i_16_091,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_8_096,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_32_092,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second list item (Q2 first production workloads)"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item (Q2 first production workloads)"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g3i_8_102,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_16_097,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the first list item 'Shadow traffic before switching SafeGuard'"",""region"":""left""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the first list item 'Shadow traffic before switching SafeGuard'"", ""evidence_region"": ""left"", ""confidence"": 1.0}
+```",page
+g3i_16_103,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_32_098,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second list item 'Automated rollback within five minutes'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'Automated rollback within five minutes'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g3i_32_104,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second list item 'Assign two platform engineers'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'Assign two platform engineers'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g3i_8_108,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_16_109,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_8_114,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_16_115,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_32_110,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second list item 'Teams adopt SafeGuard daily'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'Teams adopt SafeGuard daily'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g3i_8_120,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_32_116,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second body item 'SafeGuard automates the repetitive work'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second body item 'SafeGuard automates the repetitive work'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g3i_8_126,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_16_121,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second bullet item 'Automated rollback within five minutes'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second bullet item 'Automated rollback within five minutes'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g3i_32_122,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second bullet item 'Automated rollback within five minutes'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second bullet item 'Automated rollback within five minutes'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g3i_32_128,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second list item 'Assign two platform engineers'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'Assign two platform engineers'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g3i_16_127,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the first body item 'Approve the phase 1 budget for ClauseScan'"",""region"":""top-left""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the first body item 'Approve the phase 1 budget for ClauseScan'"", ""evidence_region"": ""top-left"", ""confidence"": 1.0}
+```",page
+g3i_8_132,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_16_133,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_8_138,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_32_134,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second body item 'Teams adopt ClauseScan daily'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second body item 'Teams adopt ClauseScan daily'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g3i_16_139,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_8_144,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_32_140,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second body item 'ClauseScan automates the repetitive work'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second body item 'ClauseScan automates the repetitive work'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g3i_8_150,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_16_145,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second body item 'ClauseScan beat the baseline by double digits'"",""region"":""center""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the second body item 'ClauseScan beat the baseline by double digits'"",
+  ""evidence_region"": ""center"",
+  ""confidence"": 1.0
+}
+```",page
+g3i_32_146,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second body item 'ClauseScan beat the baseline by double digits'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second body item 'ClauseScan beat the baseline by double digits'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g3i_16_151,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second body item 'HelpBot beat the baseline by double digits'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second body item 'HelpBot beat the baseline by double digits'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g3i_8_156,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_32_152,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second bullet item 'HelpBot beat the baseline by double digits'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second bullet item 'HelpBot beat the baseline by double digits'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g3i_8_162,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_16_157,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the first body item 'HelpBot integrates with existing tools'"",""region"":""top-left""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the first body item 'HelpBot integrates with existing tools'"", ""evidence_region"": ""top-left"", ""confidence"": 1.0}
+```",page
+g3i_32_158,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second body item 'No data leaves the tenant'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second body item 'No data leaves the tenant'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g3i_8_168,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_16_163,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second and third list items"",""region"":""left""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second and third list items"", ""evidence_region"": ""left"", ""confidence"": 1.0}
+```",page
+g3i_32_164,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second list item 'HelpBot has a clear rollback path'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'HelpBot has a clear rollback path'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g3i_8_174,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_16_169,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second body item 'HelpBot now handles most volume'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second body item 'HelpBot now handles most volume'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g3i_32_170,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second body item 'HelpBot now handles most volume'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second body item 'HelpBot now handles most volume'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g3i_8_180,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_16_175,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the first list item 'We need executive sponsorship'"",""region"":""top-left""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the first list item 'We need executive sponsorship'"", ""evidence_region"": ""top-left"", ""confidence"": 1.0}
+```",page
+g3i_32_176,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second list item 'HelpBot needs a small dedicated team'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'HelpBot needs a small dedicated team'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g3i_8_186,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_16_181,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second body item 'Teams adopt Lakehouse daily'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second body item 'Teams adopt Lakehouse daily'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g3i_32_182,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second body item 'Teams adopt Lakehouse daily'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second body item 'Teams adopt Lakehouse daily'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g3i_16_187,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_8_192,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_32_188,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second body item 'Lakehouse automates the repetitive work'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second body item 'Lakehouse automates the repetitive work'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g3i_16_193,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_8_198,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_16_199,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_32_194,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second bullet item 'Lakehouse beat the baseline by double digits'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second bullet item 'Lakehouse beat the baseline by double digits'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g3i_8_204,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_32_200,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second list item 'No data leaves the tenant'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'No data leaves the tenant'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g3i_8_210,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_16_205,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second list item 'Lakehouse has a clear rollback path'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'Lakehouse has a clear rollback path'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g3i_32_206,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second list item 'Lakehouse has a clear rollback path'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'Lakehouse has a clear rollback path'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g3i_8_216,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_32_212,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second bullet item 'Automated rollback within five minutes'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second bullet item 'Automated rollback within five minutes'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g3i_16_211,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second list item 'Automated rollback within five minutes'"",""region"":""center""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the second list item 'Automated rollback within five minutes'"",
+  ""evidence_region"": ""center"",
+  ""confidence"": 1.0
+}
+```",page
+g3i_16_217,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_8_222,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_32_218,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second list item 'Assign two platform engineers'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'Assign two platform engineers'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g3i_16_223,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_8_228,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_32_224,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second body item 'Teams adopt PlanSync daily'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second body item 'Teams adopt PlanSync daily'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g3i_8_234,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_16_229,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second body item 'PlanSync automates the repetitive work'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second body item 'PlanSync automates the repetitive work'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g3i_32_230,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second body item 'PlanSync automates the repetitive work'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second body item 'PlanSync automates the repetitive work'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g3i_16_235,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the first list item 'The pilot covered three regions'"",""region"":""left""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the first list item 'The pilot covered three regions'"", ""evidence_region"": ""left"", ""confidence"": 1.0}
+```",page
+g3i_8_000__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_32_236,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second list item 'PlanSync beat the baseline by double digits'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'PlanSync beat the baseline by double digits'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g3i_16_001__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_32_002__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_8_006__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_16_007__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_32_008__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_8_012__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_16_013__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_32_014__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_8_018__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_16_019__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_32_020__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_8_024__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_16_025__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_32_026__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_8_030__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_16_031__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_32_032__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_8_036__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_16_037__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_32_038__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_8_042__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_16_043__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_32_044__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_8_048__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_16_049__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_32_050__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_8_054__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_16_055__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_32_056__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_8_060__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_16_061__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_32_062__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_8_066__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_16_067__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_32_068__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_8_072__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_16_073__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_32_074__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_8_078__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_16_079__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_32_080__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_8_084__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_16_085__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_32_086__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_8_090__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_16_091__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_32_092__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_8_096__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_16_097__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_32_098__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_8_102__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_16_103__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_32_104__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_8_108__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_16_109__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_32_110__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_8_114__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_16_115__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_32_116__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_8_120__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_16_121__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_32_122__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_8_126__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_16_127__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_32_128__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_8_132__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_16_133__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_32_134__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_8_138__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_16_139__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_32_140__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_8_144__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_16_145__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_32_146__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_8_150__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_16_151__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_32_152__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_8_156__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_16_157__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_32_158__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_8_162__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_16_163__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_32_164__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_8_168__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_16_169__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_32_170__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_8_174__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_16_175__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_32_176__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_8_180__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_16_181__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_32_182__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_8_186__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_16_187__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_32_188__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_8_192__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_16_193__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_32_194__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_8_198__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_16_199__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_32_200__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_8_204__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_16_205__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_32_206__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_8_210__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_16_211__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_32_212__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_8_216__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_16_217__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_32_218__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_8_222__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_16_223__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_32_224__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_8_228__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_16_229__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_32_230__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_8_234__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_16_235__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g3i_32_236__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_12_003,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_24_004,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'Teams adopt RetainML daily'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'Teams adopt RetainML daily'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g5i_40_005,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'Teams adopt RetainML daily'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'Teams adopt RetainML daily'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g5i_12_009,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second body item 'RetainML automates the repetitive work'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second body item 'RetainML automates the repetitive work'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g5i_24_010,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'RetainML automates the repetitive work'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'RetainML automates the repetitive work'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g5i_40_011,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'RetainML automates the repetitive work'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'RetainML automates the repetitive work'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g5i_12_015,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second bullet item 'RetainML beat the baseline by double digits'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second bullet item 'RetainML beat the baseline by double digits'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g5i_12_021,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_24_016,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second bullet item 'RetainML beat the baseline by double digits'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second bullet item 'RetainML beat the baseline by double digits'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g5i_40_017,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'RetainML beat the baseline by double digits'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'RetainML beat the baseline by double digits'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g5i_24_022,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_12_027,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_40_023,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'No data leaves the tenant'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'No data leaves the tenant'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g5i_24_028,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_12_033,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_24_034,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_40_029,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'RetainML has a clear rollback path'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'RetainML has a clear rollback path'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g5i_12_039,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_40_035,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""Phase 3 refactors the core"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""Phase 3 refactors the core"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g5i_24_040,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_40_041,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'Q2 first production workloads'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'Q2 first production workloads'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g5i_12_045,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second bullet item 'Automated rollback within five minutes'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second bullet item 'Automated rollback within five minutes'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g5i_24_046,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'Automated rollback within five minutes'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'Automated rollback within five minutes'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g5i_12_051,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_24_052,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_40_047,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'Automated rollback within five minutes'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'Automated rollback within five minutes'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g5i_12_057,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_40_053,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'Assign two platform engineers'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'Assign two platform engineers'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g5i_24_058,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_12_063,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_24_064,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_40_059,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'Teams adopt TriageAI daily'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'Teams adopt TriageAI daily'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g5i_12_069,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_40_065,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'A refresh is due within two quarters'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'A refresh is due within two quarters'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g5i_24_070,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""Phase 3 refactors the core"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""Phase 3 refactors the core"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g5i_12_075,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_40_071,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the third list item 'Phase 3 refactors the core'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the third list item 'Phase 3 refactors the core'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g5i_24_076,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'Q2 first production workloads'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'Q2 first production workloads'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g5i_12_081,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_40_077,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'Q2 first production workloads'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'Q2 first production workloads'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g5i_24_082,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_12_087,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_40_083,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'Automated rollback within five minutes'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'Automated rollback within five minutes'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g5i_24_088,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_12_093,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_40_089,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'Assign two platform engineers'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'Assign two platform engineers'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g5i_24_094,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'Q2 first production workloads'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'Q2 first production workloads'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g5i_12_099,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_24_100,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_40_095,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'Q2 first production workloads'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'Q2 first production workloads'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g5i_12_105,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_40_101,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'Automated rollback within five minutes'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'Automated rollback within five minutes'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g5i_12_111,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_24_106,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'Assign two platform engineers'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'Assign two platform engineers'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g5i_40_107,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'Assign two platform engineers'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'Assign two platform engineers'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g5i_24_112,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'Teams adopt SafeGuard daily'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'Teams adopt SafeGuard daily'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g5i_12_117,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_40_113,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'Teams adopt SafeGuard daily'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'Teams adopt SafeGuard daily'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g5i_24_118,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_12_123,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_40_119,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'SafeGuard automates the repetitive work'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'SafeGuard automates the repetitive work'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g5i_24_124,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second bullet item 'Automated rollback within five minutes'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second bullet item 'Automated rollback within five minutes'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g5i_12_129,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_24_130,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_40_125,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'Automated rollback within five minutes'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'Automated rollback within five minutes'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g5i_40_131,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'Assign two platform engineers'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'Assign two platform engineers'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g5i_12_135,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'Teams adopt ClauseScan daily'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'Teams adopt ClauseScan daily'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g5i_12_141,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_24_136,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'Teams adopt ClauseScan daily'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'Teams adopt ClauseScan daily'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g5i_24_142,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_40_137,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'Teams adopt ClauseScan daily'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'Teams adopt ClauseScan daily'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g5i_12_147,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_40_143,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'ClauseScan automates the repetitive work'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'ClauseScan automates the repetitive work'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g5i_24_148,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_12_153,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_24_154,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_40_149,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'ClauseScan beat the baseline by double digits'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'ClauseScan beat the baseline by double digits'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g5i_12_159,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_40_155,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'HelpBot beat the baseline by double digits'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'HelpBot beat the baseline by double digits'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g5i_24_160,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'No data leaves the tenant'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'No data leaves the tenant'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g5i_40_161,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'No data leaves the tenant'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'No data leaves the tenant'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g5i_12_165,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'HelpBot has a clear rollback path'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'HelpBot has a clear rollback path'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g5i_24_166,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'HelpBot has a clear rollback path'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'HelpBot has a clear rollback path'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g5i_12_171,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_40_167,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'HelpBot has a clear rollback path'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'HelpBot has a clear rollback path'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g5i_24_172,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_12_177,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_40_173,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'HelpBot now handles most volume'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'HelpBot now handles most volume'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g5i_24_178,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'HelpBot needs a small dedicated team'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'HelpBot needs a small dedicated team'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g5i_40_179,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'HelpBot needs a small dedicated team'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'HelpBot needs a small dedicated team'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g5i_12_183,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second body item 'Teams adopt Lakehouse daily'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second body item 'Teams adopt Lakehouse daily'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g5i_24_184,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'Teams adopt Lakehouse daily'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'Teams adopt Lakehouse daily'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g5i_12_189,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_40_185,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'Teams adopt Lakehouse daily'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'Teams adopt Lakehouse daily'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g5i_24_190,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_12_195,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_40_191,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'Lakehouse automates the repetitive work'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'Lakehouse automates the repetitive work'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g5i_12_201,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_24_196,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second body item 'Lakehouse beat the baseline by double digits'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second body item 'Lakehouse beat the baseline by double digits'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g5i_40_197,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'Lakehouse beat the baseline by double digits'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'Lakehouse beat the baseline by double digits'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g5i_24_202,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_40_203,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'No data leaves the tenant'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'No data leaves the tenant'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g5i_12_207,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_24_208,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_12_213,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_40_209,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'Lakehouse has a clear rollback path'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'Lakehouse has a clear rollback path'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g5i_24_214,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'Automated rollback within five minutes'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'Automated rollback within five minutes'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g5i_12_219,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_24_220,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_40_215,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'Automated rollback within five minutes'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'Automated rollback within five minutes'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g5i_40_221,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'Assign two platform engineers'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'Assign two platform engineers'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g5i_12_225,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'Teams adopt PlanSync daily'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'Teams adopt PlanSync daily'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g5i_24_226,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'Teams adopt PlanSync daily'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'Teams adopt PlanSync daily'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g5i_12_231,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_40_227,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'Teams adopt PlanSync daily'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'Teams adopt PlanSync daily'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g5i_24_232,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_12_237,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_40_233,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'PlanSync automates the repetitive work'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'PlanSync automates the repetitive work'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g5i_24_238,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_12_003__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_24_004__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_40_239,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'PlanSync beat the baseline by double digits'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'PlanSync beat the baseline by double digits'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+g5i_40_005__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_12_009__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_24_010__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_40_011__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_12_015__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_24_016__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_40_017__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_12_021__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_24_022__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_40_023__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_12_027__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_24_028__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_40_029__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_12_033__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_24_034__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_40_035__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_12_039__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_24_040__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_40_041__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_12_045__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_24_046__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_40_047__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_12_051__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_24_052__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_40_053__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_12_057__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_24_058__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_40_059__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_12_063__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_24_064__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_40_065__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_12_069__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_24_070__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_40_071__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_12_075__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_24_076__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_40_077__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_12_081__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_24_082__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_40_083__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_12_087__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_24_088__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_40_089__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_12_093__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_24_094__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_40_095__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_12_099__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_24_100__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_40_101__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_12_105__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_24_106__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_40_107__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_12_111__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_24_112__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_40_113__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_12_117__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_24_118__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_40_119__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_12_123__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_24_124__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_40_125__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_12_129__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_24_130__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_40_131__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_12_135__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_24_136__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_40_137__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_12_141__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_24_142__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_40_143__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_12_147__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_24_148__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_40_149__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_12_153__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_24_154__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_40_155__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_12_159__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_24_160__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_40_161__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_12_165__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_24_166__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_40_167__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_12_171__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_24_172__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_40_173__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_12_177__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_24_178__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_40_179__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_12_183__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_24_184__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_40_185__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_12_189__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_24_190__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_40_191__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_12_195__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_24_196__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_40_197__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_12_201__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_24_202__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_40_203__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_12_207__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_24_208__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_40_209__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+g5i_40_215__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,True,False,False,[],,,[],ERR Connection error.,page
+g5i_40_221__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,True,False,False,[],,,[],ERR Connection error.,page
+g5i_12_219__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,True,False,False,[],,,[],ERR Connection error.,page
+g5i_12_213__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,True,False,False,[],,,[],ERR Connection error.,page
+g5i_24_214__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,True,False,False,[],,,[],ERR Connection error.,page
+g5i_24_220__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,True,False,False,[],,,[],ERR Connection error.,page
+g5i_24_232__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,True,False,False,[],,,[],ERR Connection error.,page
+g5i_40_227__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,True,False,False,[],,,[],ERR Connection error.,page
+g5i_12_225__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,True,False,False,[],,,[],ERR Connection error.,page
+g5i_24_226__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,True,False,False,[],,,[],ERR Connection error.,page
+g5i_12_231__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,True,False,False,[],,,[],ERR Connection error.,page
+g5i_40_233__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,True,False,False,[],,,[],ERR Connection error.,page
+g5i_12_237__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,True,False,False,[],,,[],ERR Connection error.,page
+g5i_24_238__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,True,False,False,[],,,[],ERR Connection error.,page
+g5i_40_239__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,True,False,False,[],,,[],ERR Connection error.,page

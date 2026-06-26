@@ -1,0 +1,2197 @@
+sample_id,defect,modality,is_clean,failure,has_defect,named_target,predicted_types,locator,confidence,other,raw,stage2_raw,level
+g7_card_height_000,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,"[{""text"":""repeated title 'Solution Overview'"",""raw_type"":""OTHER""},{""text"":""box serves no clear purpose"",""raw_type"":""OTHER""}]","- **Layout/Containment:** The bulleted list is broken. The first five items are inside the bordered box, while the last three items (""Cost attribution,"" ""Multi-tenant isolation,"" and ""Zero-downtime upgrades"") are spilling outside the bottom of the box.
+- **Redundancy:** The text ""Solution Overview"" is repeated twice—once as the main slide title and again as a header inside the box.
+- **Alignment/S","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""locator"": ""bulleted list spilling outside bordered box""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""repeated title 'Solution Overview'""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""inconsistent g",page
+g7_card_height_002,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G7_RENDER_CONTAINMENT_OVERFLOW""]","{""element"":""risk items spilling outside green border box"",""quote"":""""}",,"[{""text"":""repeated text 'Risk Register'"",""raw_type"":""OTHER""}]","- **Layout/Containment:** The list of risks is broken. Five items are inside the green border box, while three items (""Latency regressions"", ""Cost overrun"", and ""Change-management gaps"") are spilling outside the bottom of the box.
+- **Redundancy:** The text ""Risk Register"" is repeated three times: once as the main slide title, once as a header inside the green box, and once as the conceptual theme","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""G7_RENDER_CONTAINMENT_OVERFLOW"",
+      ""locator"": ""risk items spilling outside green border box""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""repeated text 'Risk Register'""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""inco",page
+g7_card_height_004,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW""]","{""element"":""green box clipping feature list"",""quote"":""""}",,"[{""text"":""redundant 'Solution Overview' text"",""raw_type"":""OTHER""},{""text"":""unbalanced negative space on right"",""raw_type"":""OTHER""}]","This slide has several significant design and layout issues:
+
+**1. Redundancy (Text)**
+*   **Header/Box Title:** The phrase ""Solution Overview"" is repeated twice—once as the main slide title and again as a header inside the green box. This is redundant and wastes space.
+
+**2. Layout and Containment (The Green Box)**
+*   **Arbitrary Clipping:** The green box cuts off the list of features mid-way. F","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""redundant 'Solution Overview' text""
+    },
+    {
+      ""type"": ""G7_RENDER_CONTAINMENT_OVERFLOW"",
+      ""locator"": ""green box clipping feature list""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""bullet point",page
+g7_card_height_005,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW""]","{""element"":""list items spilling outside bottom of orange box"",""quote"":""""}",,"[{""text"":""redundant repetition of Implementation Roadmap"",""raw_type"":""OTHER""},{""text"":""bulleted list used instead of timeline visualization"",""raw_type"":""OTHER""}]","This slide has several significant design and layout failures:
+
+**1. Redundancy (Text)**
+*   **Header/Title:** The phrase ""Implementation Roadmap"" is repeated three times: once as the main slide title, once as a header inside the orange box, and once as the conceptual theme of the list. This is redundant and wastes space.
+
+**2. Layout and Containment (The Orange Box)**
+*   **Incorrect Clipping:** ","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""G7_RENDER_CONTAINMENT_OVERFLOW"",
+      ""locator"": ""list items spilling outside bottom of orange box""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""bullet points indented differently inside and outside box""
+    },
+    {
+      ""type"":",page
+g7_card_height_001,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW""]","{""element"":""poor padding inside green box"",""quote"":""""}",,"[{""text"":""redundant header and box title"",""raw_type"":""OTHER""},{""text"":""unbalanced layout with excessive white space"",""raw_type"":""OTHER""},{""text"":""ineffective list for architecture communication"",""raw_type"":""OTHER""}]","This slide has several significant design and layout issues:
+
+**1. Redundancy (Text)**
+*   **Header vs. Box Title:** The phrase ""Platform Architecture"" is repeated twice—once as the main slide title and again as the title inside the green box. This is redundant and wastes space.
+
+**2. Layout and Containment (The Green Box)**
+*   **Broken List Logic:** The list of components is split arbitrarily. F","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""redundant header and box title""
+    },
+    {
+      ""type"": ""G7_RENDER_CONTAINMENT_OVERFLOW"",
+      ""locator"": ""poor padding inside green box""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""misaligned bullet ",page
+g7_card_height_003,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW""]","{""element"":""green border cuts off list mid-way"",""quote"":""""}",,"[{""text"":""redundant Q3 Go-to-Market Plan text"",""raw_type"":""OTHER""},{""text"":""unbalanced layout with excessive right white space"",""raw_type"":""OTHER""}]","This slide has several significant design and layout issues:
+
+**1. Redundancy (Text)**
+*   **Header/Box Title:** The phrase ""Q3 Go-to-Market Plan"" is repeated three times: once as the main slide title, once as the header inside the green box, and once as the implied subject of the list. This is redundant and wastes space.
+
+**2. Layout and Containment (The Green Box)**
+*   **Arbitrary Clipping:** T","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""redundant Q3 Go-to-Market Plan text""
+    },
+    {
+      ""type"": ""G7_RENDER_CONTAINMENT_OVERFLOW"",
+      ""locator"": ""green border cuts off list mid-way""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""bullet p",page
+g7_card_height_007,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET"",""G7_RENDER_CONTAINMENT_OVERFLOW""]","{""element"":""orange border box cutting off bullet points"",""quote"":""""}",,"[{""text"":""repeated text 'Success Metrics'"",""raw_type"":""OTHER""},{""text"":""non-functional orange box layout"",""raw_type"":""OTHER""}]","- **Layout/Containment:** The orange border box is incorrectly sized. It cuts off the last three bullet points (""Inference cost,"" ""Ticket deflection,"" and ""Logo retention""), leaving them floating outside the container.
+- **Redundancy:** The text ""Success Metrics"" is repeated twice—once as the main slide title and again as a header inside the orange box.
+- **Alignment/Spacing:** There is an inconsi","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""G7_RENDER_CONTAINMENT_OVERFLOW"",
+      ""locator"": ""orange border box cutting off bullet points""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""repeated text 'Success Metrics'""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""gap",page
+g7_card_height_006,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION""]",,,"[{""text"":""redundant 'Platform Architecture' title and header"",""raw_type"":""OTHER""}]","This slide is low-quality and contains several fundamental design and layout errors:
+
+**1. Content Overflow (Critical)**
+*   **Bottom-left region:** Three bullet points (""Offline eval harness"", ""Drift monitors"", and ""Cost governor"") are spilling outside the orange border of the main content box. This makes the slide look broken and unfinished.
+
+**2. Redundancy**
+*   **Top-left region:** The phrase","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""locator"": ""bottom-left bullet points spilling outside orange border""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""redundant 'Platform Architecture' title and header""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+   ",page
+g7_card_height_009,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET"",""G7_RENDER_CONTAINMENT_OVERFLOW""]","{""element"":""bulleted list spilling outside blue border"",""quote"":""""}",,"[{""text"":""repeated text 'Risk Register'"",""raw_type"":""OTHER""},{""text"":""blue box poorly sized"",""raw_type"":""OTHER""}]","- **Layout/Containment:** The bulleted list is broken. The last three items (""Latency regressions"", ""Cost overrun"", and ""Change-management gaps"") are spilling outside the blue border of the ""Risk Register"" box.
+- **Redundancy:** The text ""Risk Register"" is repeated twice—once as the main slide title and again as a header inside the blue box.
+- **Alignment/Spacing:** There is an inconsistent gap be","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""G7_RENDER_CONTAINMENT_OVERFLOW"",
+      ""locator"": ""bulleted list spilling outside blue border""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""repeated text 'Risk Register'""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""incons",page
+g7_card_height_011,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET"",""G7_RENDER_CONTAINMENT_OVERFLOW""]","{""element"":""bulleted list spilling outside blue border"",""quote"":""""}",,"[{""text"":""repeated text 'Risk Register'"",""raw_type"":""OTHER""},{""text"":""blue box poorly sized"",""raw_type"":""OTHER""}]","- **Layout/Containment:** The bulleted list is broken. The last three items (""Latency regressions"", ""Cost overrun"", and ""Change-management gaps"") are spilling outside the blue border of the ""Risk Register"" box.
+- **Redundancy:** The text ""Risk Register"" is repeated twice—once as the main slide title and again as a header inside the blue box.
+- **Alignment/Spacing:** There is an inconsistent gap be","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""G7_RENDER_CONTAINMENT_OVERFLOW"",
+      ""locator"": ""bulleted list spilling outside blue border""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""repeated text 'Risk Register'""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""incons",page
+g7_card_height_010,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW""]","{""element"":""orange box clipping feature list"",""quote"":""""}",,"[{""text"":""redundant 'Solution Overview' text"",""raw_type"":""OTHER""},{""text"":""unbalanced negative space on right"",""raw_type"":""OTHER""}]","This slide has several significant design and layout issues:
+
+**1. Redundancy (Text)**
+*   **Header/Title:** The phrase ""Solution Overview"" is repeated three times: once as the main slide title, once as a sub-header inside the orange box, and once as the conceptual theme of the list. This is redundant and wastes space.
+
+**2. Layout and Containment (The Orange Box)**
+*   **Arbitrary Clipping:** The","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""redundant 'Solution Overview' text""
+    },
+    {
+      ""type"": ""G7_RENDER_CONTAINMENT_OVERFLOW"",
+      ""locator"": ""orange box clipping feature list""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""inconsisten",page
+g7_card_height_012,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,"[{""text"":""redundant repetition of Implementation Roadmap"",""raw_type"":""OTHER""},{""text"":""roadmap visualized as list instead of timeline"",""raw_type"":""OTHER""},{""text"":""missing dates, milestones, or owners"",""raw_type"":""OTHER""}]","This slide has several significant design and layout failures:
+
+**1. Content Overflow (Critical)**
+*   **Bottom-left region:** Three bullet points (""Enablement & training,"" ""SLA hardening,"" and ""Quarterly business review"") are spilling outside the blue border of the content box. This is a major layout error.
+
+**2. Redundancy**
+*   **Top of slide / Top of box:** The phrase ""Implementation Roadmap"" ","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""locator"": ""bottom-left bullet points spilling outside blue border""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""redundant repetition of Implementation Roadmap""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""roadm",page
+g7_card_height_008,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW""]","{""element"":""bullets floating outside orange box"",""quote"":""""}",,"[{""text"":""redundant phrase 'Q3 Go-to-Market Plan'"",""raw_type"":""OTHER""},{""text"":""lack of visual hierarchy in list"",""raw_type"":""OTHER""}]","This slide has several significant design and layout failures:
+
+**1. Redundancy (Text)**
+*   **Header/Box Title:** The phrase ""Q3 Go-to-Market Plan"" is repeated three times: once as the main slide title, once as the header inside the orange box, and once as the implied subject of the list. This is redundant and wastes space.
+
+**2. Layout and Containment (The Orange Box)**
+*   **Broken Containment:","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""redundant phrase 'Q3 Go-to-Market Plan'""
+    },
+    {
+      ""type"": ""G7_RENDER_CONTAINMENT_OVERFLOW"",
+      ""locator"": ""bullets floating outside orange box""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""tex",page
+g7_card_height_013,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,"[{""text"":""redundant repetition of Implementation Roadmap"",""raw_type"":""OTHER""},{""text"":""roadmap visualized as list instead of timeline"",""raw_type"":""OTHER""},{""text"":""missing dates, milestones, or owners"",""raw_type"":""OTHER""}]","This slide has several significant design and layout failures:
+
+**1. Content Overflow (Critical)**
+*   **Bottom-left region:** Three bullet points (""Enablement & training,"" ""SLA hardening,"" and ""Quarterly business review"") are spilling outside the blue border of the content box. This is a major layout error.
+
+**2. Redundancy**
+*   **Top of slide / Top of box:** The phrase ""Implementation Roadmap"" ","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""locator"": ""bottom-left bullet points spilling outside blue border""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""redundant repetition of Implementation Roadmap""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""roadm",page
+g7_card_height_016,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET"",""G7_RENDER_CONTAINMENT_OVERFLOW""]","{""element"":""orange border box cutting off bullet points"",""quote"":""""}",,"[{""text"":""repeated text 'Success Metrics'"",""raw_type"":""OTHER""},{""text"":""non-functional orange box layout"",""raw_type"":""OTHER""}]","- **Layout/Containment:** The orange border box is incorrectly sized. It cuts off the last three bullet points (""Inference cost,"" ""Ticket deflection,"" and ""Logo retention""), leaving them floating outside the container.
+- **Redundancy:** The text ""Success Metrics"" is repeated twice—once as the main slide title and again as a header inside the orange box.
+- **Alignment/Spacing:** There is an inconsi","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""G7_RENDER_CONTAINMENT_OVERFLOW"",
+      ""locator"": ""orange border box cutting off bullet points""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""repeated text 'Success Metrics'""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""gap",page
+g7_card_height_015,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,"[{""text"":""redundant 'Success Metrics' title and header"",""raw_type"":""OTHER""},{""text"":""excessive white space at bottom of slide"",""raw_type"":""OTHER""},{""text"":""disjointed grey border excluding final metrics"",""raw_type"":""OTHER""},{""text"":""lack of visual emphasis on key numbers"",""raw_type"":""OTHER""}]","This slide has several significant design and layout failures:
+
+**1. Content Overflow (Critical)**
+*   **Bottom-left region:** Three bullet points (""Inference cost,"" ""Ticket deflection,"" and ""Logo retention"") are spilling outside the boundary of the containing box. This is a major layout error.
+
+**2. Redundancy**
+*   **Top-left region:** The phrase ""Success Metrics"" is repeated twice—once as the m","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""locator"": ""bottom-left bullet points spilling outside box""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""redundant 'Success Metrics' title and header""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""i",page
+g7_card_height_014,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET"",""G7_RENDER_CONTAINMENT_OVERFLOW""]","{""element"":""bullet points spilling outside bottom border"",""quote"":""""}",,"[{""text"":""redundant header and box title"",""raw_type"":""OTHER""},{""text"":""missing architectural diagrams or visuals"",""raw_type"":""OTHER""},{""text"":""lack of typographic emphasis or categorization"",""raw_type"":""OTHER""}]","This slide is low-quality and appears to be a rough draft. Here are the specific issues:
+
+**1. Redundancy (Text)**
+*   **Header vs. Box Title:** The phrase ""Platform Architecture"" is repeated twice—once as the main slide title and again as a header inside the box. This is redundant and wastes space.
+
+**2. Layout and Containment (Box/Border)**
+*   **Arbitrary Border:** There is a thin grey box surr","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""redundant header and box title""
+    },
+    {
+      ""type"": ""G7_RENDER_CONTAINMENT_OVERFLOW"",
+      ""locator"": ""bullet points spilling outside bottom border""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""missing architect",page
+g7_card_height_017,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW""]","{""element"":""poor padding inside green box"",""quote"":""""}",,"[{""text"":""redundant header and box title"",""raw_type"":""OTHER""},{""text"":""unbalanced layout with excessive white space"",""raw_type"":""OTHER""},{""text"":""ineffective list for architecture communication"",""raw_type"":""OTHER""}]","This slide has several significant design and layout issues:
+
+**1. Redundancy (Text)**
+*   **Header vs. Box Title:** The phrase ""Platform Architecture"" is repeated twice—once as the main slide title and again as the title inside the green box. This is redundant and wastes space.
+
+**2. Layout and Containment (The Green Box)**
+*   **Broken List Logic:** The list of components is split arbitrarily. F","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""redundant header and box title""
+    },
+    {
+      ""type"": ""G7_RENDER_CONTAINMENT_OVERFLOW"",
+      ""locator"": ""poor padding inside green box""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""misaligned bullet ",page
+g7_card_height_019,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW""]","{""element"":""orange box clipping feature list"",""quote"":""""}",,"[{""text"":""redundant 'Solution Overview' text"",""raw_type"":""OTHER""},{""text"":""unbalanced negative space on right"",""raw_type"":""OTHER""}]","This slide has several significant design and layout issues:
+
+**1. Redundancy (Text)**
+*   **Header/Title:** The phrase ""Solution Overview"" is repeated three times: once as the main slide title, once as a sub-header inside the orange box, and once as the conceptual theme of the list. This is redundant and wastes space.
+
+**2. Layout and Containment (The Orange Box)**
+*   **Arbitrary Clipping:** The","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""redundant 'Solution Overview' text""
+    },
+    {
+      ""type"": ""G7_RENDER_CONTAINMENT_OVERFLOW"",
+      ""locator"": ""orange box clipping feature list""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""inconsisten",page
+g7_card_height_018,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW""]","{""element"":""bullets floating outside orange box"",""quote"":""""}",,"[{""text"":""redundant phrase 'Q3 Go-to-Market Plan'"",""raw_type"":""OTHER""},{""text"":""lack of visual hierarchy in bullets"",""raw_type"":""OTHER""}]","This slide has several significant design and layout failures:
+
+**1. Redundancy (Text)**
+*   **Header/Box Title:** The phrase ""Q3 Go-to-Market Plan"" is repeated three times: once as the main slide title, once as the header inside the orange box, and once as the implied subject of the list. This is redundant and wastes space.
+
+**2. Layout and Containment (The Orange Box)**
+*   **Broken Containment:","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""redundant phrase 'Q3 Go-to-Market Plan'""
+    },
+    {
+      ""type"": ""G7_RENDER_CONTAINMENT_OVERFLOW"",
+      ""locator"": ""bullets floating outside orange box""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""inc",page
+g7_card_height_020,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,"[{""text"":""redundant repetition of Implementation Roadmap"",""raw_type"":""OTHER""},{""text"":""roadmap visualized as list instead of timeline"",""raw_type"":""OTHER""},{""text"":""missing dates, milestones, or owners"",""raw_type"":""OTHER""}]","This slide has several significant design and layout failures:
+
+**1. Content Overflow (Critical)**
+*   **Bottom-left region:** Three bullet points (""Enablement & training,"" ""SLA hardening,"" and ""Quarterly business review"") are spilling outside the blue border of the content box. This is a major layout error.
+
+**2. Redundancy**
+*   **Top of slide / Top of box:** The phrase ""Implementation Roadmap"" ","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""locator"": ""bottom-left bullet points spilling outside blue border""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""redundant repetition of Implementation Roadmap""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""roadm",page
+g7_card_height_022,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""S4_DENSITY_RULE_VIOLATION""]",,,"[{""text"":""redundant 'Solution Overview' title and header"",""raw_type"":""OTHER""},{""text"":""unbalanced white space in bottom-right blue box"",""raw_type"":""OTHER""},{""text"":""blue box lacks clear purpose or grouping"",""raw_type"":""OTHER""}]","This slide has several significant design and layout failures:
+
+**1. Content Overflow (Critical)**
+*   **Bottom-left region:** The last three bullet points (""Cost attribution,"" ""Multi-tenant isolation,"" and ""Zero-downtime upgrades"") are spilling outside the blue boundary box. This is a major layout error.
+
+**2. Redundancy**
+*   **Top-left region:** The phrase ""Solution Overview"" is repeated twice—","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""locator"": ""bottom-left bullet points spilling outside blue box""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""redundant 'Solution Overview' title and header""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locat",page
+g7_card_height_021,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,"[{""text"":""redundant 'Success Metrics' title and header"",""raw_type"":""OTHER""},{""text"":""non-functional blue outline container"",""raw_type"":""OTHER""},{""text"":""lack of visual emphasis on key numbers"",""raw_type"":""OTHER""}]","This slide has several significant design and layout failures:
+
+**1. Content Overflow (The most critical error):**
+*   **Bottom-left region:** Three bullet points (""Inference cost,"" ""Ticket deflection,"" and ""Logo retention"") are spilling outside the blue boundary box. This makes the slide look broken and unfinished.
+
+**2. Redundancy:**
+*   **Top-left region:** The phrase ""Success Metrics"" is repea","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""locator"": ""bottom-left bullet points spilling outside blue box""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""redundant 'Success Metrics' title and header""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator",page
+g7_card_height_025,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET"",""G7_RENDER_CONTAINMENT_OVERFLOW""]","{""element"":""risk list items spilling outside orange box"",""quote"":""""}",,"[{""text"":""repeated text 'Risk Register'"",""raw_type"":""OTHER""},{""text"":""non-functional orange box creating visual disconnect"",""raw_type"":""OTHER""}]","- **Layout/Containment:** The list of risks is broken across two different areas. Five items are inside the orange border box, while three items (""Latency regressions,"" ""Cost overrun,"" and ""Change-management gaps"") are spilling outside the bottom of the box.
+- **Redundancy:** The text ""Risk Register"" is repeated three times on a single slide: once as the main slide title, once as a header inside t","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""G7_RENDER_CONTAINMENT_OVERFLOW"",
+      ""locator"": ""risk list items spilling outside orange box""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""repeated text 'Risk Register'""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""incon",page
+g7_card_height_026,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET"",""G7_RENDER_CONTAINMENT_OVERFLOW""]","{""element"":""bottom three bullet points"",""quote"":""""}",,"[{""text"":""repeated Success Metrics phrase"",""raw_type"":""OTHER""},{""text"":""fragmented look of green box"",""raw_type"":""OTHER""}]","- **Layout/Containment:** The bottom three bullet points (""Inference cost"", ""Ticket deflection"", and ""Logo retention"") are spilling outside the green border of the content box.
+- **Redundancy:** The phrase ""Success Metrics"" is repeated twice—once as the main slide title and again as a header inside the green box.
+- **Alignment/Spacing:** The vertical spacing between the bullet points inside the bo","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""G7_RENDER_CONTAINMENT_OVERFLOW"",
+      ""locator"": ""bottom three bullet points""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""repeated Success Metrics phrase""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""vertical spacing bet",page
+g7_card_height_023,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,"[{""text"":""redundant repetition of Implementation Roadmap"",""raw_type"":""OTHER""},{""text"":""roadmap visualized as list instead of timeline"",""raw_type"":""OTHER""},{""text"":""missing dates, milestones, or owners"",""raw_type"":""OTHER""}]","This slide has several significant design and layout failures:
+
+**1. Content Overflow (Critical)**
+*   **Bottom-left region:** Three bullet points (""Enablement & training,"" ""SLA hardening,"" and ""Quarterly business review"") are spilling outside the blue border of the content box. This is a major layout error.
+
+**2. Redundancy**
+*   **Top of slide / Top of box:** The phrase ""Implementation Roadmap"" ","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""locator"": ""bottom-left bullet points spilling outside blue border""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""redundant repetition of Implementation Roadmap""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""roadm",page
+g7_card_height_024,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW""]","{""element"":""list items spilling outside bottom of orange box"",""quote"":""""}",,"[{""text"":""redundant repetition of Implementation Roadmap"",""raw_type"":""OTHER""},{""text"":""bulleted list used instead of timeline visualization"",""raw_type"":""OTHER""}]","This slide has several significant design and layout failures:
+
+**1. Redundancy (Text)**
+*   **Header/Title:** The phrase ""Implementation Roadmap"" is repeated three times: once as the main slide title, once as a header inside the orange box, and once as the conceptual theme of the list. This is redundant and wastes space.
+
+**2. Layout and Containment (The Orange Box)**
+*   **Incorrect Clipping:** ","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""G7_RENDER_CONTAINMENT_OVERFLOW"",
+      ""locator"": ""list items spilling outside bottom of orange box""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""bullet points indented differently inside and outside box""
+    },
+    {
+      ""type"":",page
+g7_unbreakable_text_000,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW"",""S1_TITLE_BODY_MISMATCH""]",,,"[{""text"":""redundant title and header"",""raw_type"":""OTHER""},{""text"":""disproportionate box size and empty space"",""raw_type"":""OTHER""}]","- **Redundancy:** The phrase ""Implementation Roadmap"" is repeated twice—once as the main slide title and again as a header inside the orange box.
+- **Content Mismatch:** The slide is titled ""Implementation Roadmap,"" but the content consists only of a single API endpoint URL. There is no actual roadmap, timeline, or sequence of steps.
+- **Text Clipping:** The URL in the orange box is cut off on the","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""title vs API endpoint content""
+    },
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""locator"": ""URL in orange box cut off""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""redundant title and header""
+    },",page
+g7_card_height_028,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW""]","{""element"":""bullets floating outside orange box"",""quote"":""""}",,"[{""text"":""redundant phrase 'Q3 Go-to-Market Plan'"",""raw_type"":""OTHER""},{""text"":""lack of visual hierarchy in bullets"",""raw_type"":""OTHER""}]","This slide has several significant design and layout failures:
+
+**1. Redundancy (Text)**
+*   **Header/Box Title:** The phrase ""Q3 Go-to-Market Plan"" is repeated three times: once as the main slide title, once as the header inside the orange box, and once as the implied subject of the list. This is redundant and wastes space.
+
+**2. Layout and Containment (The Orange Box)**
+*   **Broken Containment:","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""redundant phrase 'Q3 Go-to-Market Plan'""
+    },
+    {
+      ""type"": ""G7_RENDER_CONTAINMENT_OVERFLOW"",
+      ""locator"": ""bullets floating outside orange box""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""inc",page
+g7_card_height_027,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,True,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""G7_RENDER_CONTAINMENT_OVERFLOW""]","{""element"":""green border cuts off list mid-way"",""quote"":""""}",,"[{""text"":""redundant Q3 Go-to-Market Plan text"",""raw_type"":""OTHER""},{""text"":""unbalanced layout with excessive right white space"",""raw_type"":""OTHER""}]","This slide has several significant design and layout issues:
+
+**1. Redundancy (Text)**
+*   **Header/Box Title:** The phrase ""Q3 Go-to-Market Plan"" is repeated three times: once as the main slide title, once as the header inside the green box, and once as the implied subject of the list. This is redundant and wastes space.
+
+**2. Layout and Containment (The Green Box)**
+*   **Arbitrary Clipping:** T","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""redundant Q3 Go-to-Market Plan text""
+    },
+    {
+      ""type"": ""G7_RENDER_CONTAINMENT_OVERFLOW"",
+      ""locator"": ""green border cuts off list mid-way""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""bullet p",page
+g7_unbreakable_text_001,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY""]",,,"[{""text"":""repeated Solution Overview phrase"",""raw_type"":""OTHER""},{""text"":""excessive empty space in blue box"",""raw_type"":""OTHER""}]","- **Text Overflow:** In the main blue box, the URL following ""Endpoint:"" is cut off on the right side, spilling outside the boundary of the box.
+- **Redundancy:** The phrase ""Solution Overview"" is repeated twice—once as the main slide title and again as a header inside the blue box.
+- **Poor Space Utilization:** The blue box is excessively large relative to the amount of content it contains, leavi","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""locator"": ""URL in main blue box""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""repeated Solution Overview phrase""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""excessive empty space in blue box""
+    },
+    {
+    ",page
+g7_card_height_029,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,"[{""text"":""redundant 'Success Metrics' title and header"",""raw_type"":""OTHER""},{""text"":""non-functional blue outline container"",""raw_type"":""OTHER""},{""text"":""lack of visual emphasis on key numbers"",""raw_type"":""OTHER""}]","This slide has several significant design and layout failures:
+
+**1. Content Overflow (The most critical error):**
+*   **Bottom-left region:** Three bullet points (""Inference cost,"" ""Ticket deflection,"" and ""Logo retention"") are spilling outside the blue boundary box. This makes the slide look broken and unfinished.
+
+**2. Redundancy:**
+*   **Top-left region:** The phrase ""Success Metrics"" is repea","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""locator"": ""bottom-left bullet points spilling outside blue box""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""redundant 'Success Metrics' title and header""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator",page
+g7_unbreakable_text_002,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""S1_TITLE_BODY_MISMATCH""]",,,"[{""text"":""Excessive white space below green box"",""raw_type"":""OTHER""},{""text"":""Redundant Risk Register text"",""raw_type"":""OTHER""}]","- **Text Overflow:** In the green box, the ""Endpoint"" file path is cut off on the right side, spilling outside the boundary of the box.
+- **Content Mismatch:** The slide title is ""Risk Register,"" but the content inside the box is a technical file path (Endpoint), which does not constitute a ""register"" or a list of risks.
+- **Layout/Composition:** The slide is largely empty. There is a massive amou","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""locator"": ""Endpoint file path in green box""
+    },
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Slide title vs technical file path""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Excessive white space b",page
+g7_unbreakable_text_003,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""S1_TITLE_BODY_MISMATCH""]",,,"[{""text"":""Success Metrics phrase repeated twice"",""raw_type"":""OTHER""},{""text"":""orange box excessively large for content"",""raw_type"":""OTHER""}]","- **Text Overflow:** In the main content box, the text following ""Endpoint:"" spills off the right edge of the slide, cutting off the end of the URL.
+- **Content Mismatch:** The content inside the orange box does not match the slide title. The title is ""Success Metrics,"" but the content is a technical ""Endpoint"" URL. There are no actual metrics listed.
+- **Redundancy:** The phrase ""Success Metrics""","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""locator"": ""text following Endpoint spills off right edge""
+    },
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""orange box content does not match title""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Succ",page
+g7_unbreakable_text_005,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW"",""S1_TITLE_BODY_MISMATCH""]",,,"[{""text"":""redundant title and header"",""raw_type"":""OTHER""},{""text"":""disproportionate box size and empty space"",""raw_type"":""OTHER""}]","- **Redundancy:** The phrase ""Implementation Roadmap"" is repeated twice—once as the main slide title and again as a header inside the orange box.
+- **Content Mismatch:** The slide is titled ""Implementation Roadmap,"" but the content consists only of a single API endpoint URL. There is no actual roadmap, timeline, or sequence of steps.
+- **Text Clipping:** The URL in the orange box is cut off on the","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""title vs API endpoint content""
+    },
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""locator"": ""URL in orange box cut off""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""redundant title and header""
+    },",page
+g7_unbreakable_text_006,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""G6_MARGIN_VIOLATION""]",,,"[{""text"":""Redundant Risk Register title and header"",""raw_type"":""OTHER""},{""text"":""Raw local file path content"",""raw_type"":""OTHER""}]","- **Text Overflow:** In the main orange box, the ""Endpoint"" file path is cut off on the right side, spilling outside the boundary of the box.
+- **Redundancy:** The phrase ""Risk Register"" appears twice—once as the main slide title and again as a header inside the orange box.
+- **Layout/Composition:** The orange box is poorly positioned, leaving a massive amount of empty white space at the bottom of","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""locator"": ""Endpoint file path in orange box""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Redundant Risk Register title and header""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Orange box position",page
+g7_unbreakable_text_007,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW"",""S1_TITLE_BODY_MISMATCH""]",,,"[{""text"":""Title repeated as sub-header in blue box"",""raw_type"":""OTHER""},{""text"":""Excessive empty white space"",""raw_type"":""OTHER""},{""text"":""Unstyled thin-line border on center box"",""raw_type"":""OTHER""}]","This slide is in a very poor state and appears to be a placeholder or a technical error rather than a finished presentation slide.
+
+**Critical Issues:**
+
+*   **Content/Logic Error (Center Box):** The main content of the slide is a Windows file path (`C:\Users\enterprise\...`). A ""Roadmap"" should be a visual timeline or a list of milestones, not a directory path to a folder on a local hard drive.
+*","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Center box contains file path instead of roadmap""
+    },
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""locator"": ""File path text spills outside blue box""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Ti",page
+g7_unbreakable_text_004,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S6_IMAGE_TEXT_CONTRADICTION""]",,,"[{""text"":""Redundant 'Platform Architecture' phrasing"",""raw_type"":""OTHER""},{""text"":""Wasted white space in green box"",""raw_type"":""OTHER""},{""text"":""Missing architecture diagrams or visuals"",""raw_type"":""OTHER""}]","This slide is in a very poor state and requires a complete redesign. Here are the specific issues:
+
+**1. Content & Logic Errors**
+*   **Incorrect Data Type:** Inside the green box, the label says ""Endpoint,"" but the value provided is an AWS IAM Role ARN (`arn:aws:iam::...`). An ARN is an identifier for a resource, not a network endpoint (which should be a URL or IP address).
+*   **Text Overflow:**","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""S6_IMAGE_TEXT_CONTRADICTION"",
+      ""locator"": ""Endpoint label with IAM Role ARN value""
+    },
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""locator"": ""ARN string spilling past green box boundary""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Re",page
+g7_unbreakable_text_011,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,"[{""text"":""Redundant Risk Register title and header"",""raw_type"":""OTHER""},{""text"":""Wasted white space in blue box"",""raw_type"":""OTHER""}]","- **Text Overflow:** In the blue box, the ""Endpoint"" file path is cut off on the right side, spilling outside the boundary of the box.
+- **Redundancy:** The phrase ""Risk Register"" appears twice—once as the main slide title and again as a header inside the blue box.
+- **Layout/Composition:** The blue box is largely empty, creating a vast amount of wasted white space in the center and bottom of the ","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""locator"": ""Endpoint file path in blue box""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Redundant Risk Register title and header""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Wasted white space in blue box""
+   ",page
+g7_unbreakable_text_008,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S5_MISSING_LOGIC_SECTION""]",,,"[{""text"":""redundant title and header"",""raw_type"":""OTHER""},{""text"":""excessive empty white space"",""raw_type"":""OTHER""}]","This slide is poor in quality and lacks professional design. Here are the specific issues:
+
+**1. Content & Layout**
+*   **Lack of Visuals:** For a slide titled ""Platform Architecture,"" there is no actual architecture diagram. It contains only a single line of technical text, which is inappropriate for a presentation slide.
+*   **Redundancy:** The phrase ""Platform Architecture"" is repeated twice—on","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""S5_MISSING_LOGIC_SECTION"",
+      ""locator"": ""missing architecture diagram""
+    },
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""locator"": ""Endpoint string cut off on right""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""three",page
+g7_unbreakable_text_009,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION""]",,,"[{""text"":""redundant title and header"",""raw_type"":""OTHER""},{""text"":""excessive empty white space"",""raw_type"":""OTHER""},{""text"":""missing architecture diagram"",""raw_type"":""OTHER""}]","This slide is in a very early draft state and is not presentation-ready. Here are the specific issues:
+
+**1. Content & Layout**
+*   **Redundancy:** The phrase ""Platform Architecture"" is repeated twice—once as the main slide title and again as a header inside the box.
+*   **Empty Space:** The vast majority of the slide (the bottom 70% of the box and the bottom 30% of the slide) is empty white space","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""locator"": ""URL in Endpoint line""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""mix of sans-serif and monospaced fonts""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""text padding",page
+g7_unbreakable_text_012,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""S1_TITLE_BODY_MISMATCH""]",,,"[{""text"":""repeated title in header and blue box"",""raw_type"":""OTHER""},{""text"":""blue box excessively large for content"",""raw_type"":""OTHER""}]","- **Redundancy:** The title ""Q3 Go-to-Market Plan"" is repeated twice—once as the main slide header and again inside the blue box.
+- **Content Mismatch:** The slide title promises a ""Go-to-Market Plan,"" but the only content provided is a single technical API/URL endpoint. There is no actual plan, strategy, or supporting information.
+- **Text Overflow:** The URL in the blue box is cut off on the rig","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""repeated title in header and blue box""
+    },
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""title promises plan but body is endpoint""
+    },
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""locator"": ""URL cut off",page
+g7_unbreakable_text_010,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""S1_TITLE_BODY_MISMATCH""]",,,"[{""text"":""excessive dead white space"",""raw_type"":""OTHER""},{""text"":""missing roadmap graphic"",""raw_type"":""OTHER""}]","This slide is in a very poor state and appears to be a placeholder or a technical error rather than a finished presentation slide.
+
+**1. Content & Logic Errors**
+*   **Text Mismatch (Main Body):** The title of the slide is ""Implementation Roadmap,"" but the content inside the box is a technical AWS ARN (Amazon Resource Name) endpoint. An ARN is a technical identifier, not a ""roadmap"" (which should ","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""title vs AWS ARN content""
+    },
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""locator"": ""endpoint string spilling off right edge""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""text inside",page
+g7_unbreakable_text_013,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,"[{""text"":""Redundant Risk Register title"",""raw_type"":""OTHER""},{""text"":""Oversized content box and poor white space"",""raw_type"":""OTHER""},{""text"":""Lack of visual hierarchy and styling"",""raw_type"":""OTHER""}]","- **Text Overflow:** In the main content box, the ""Endpoint"" text string is too long and spills off the right edge of the box.
+- **Redundancy:** The title ""Risk Register"" is repeated twice (once as the slide header and once inside the content box), which is unnecessary.
+- **Layout/Composition:** The slide is largely empty. The content box is oversized for the small amount of text it contains, crea","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""locator"": ""Endpoint text string in main content box""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Redundant Risk Register title""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Oversized content box and poor white",page
+g7_unbreakable_text_016,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,"[{""text"":""Repeated Solution Overview title"",""raw_type"":""OTHER""},{""text"":""Excessive empty space in orange box"",""raw_type"":""OTHER""},{""text"":""Orange border stylistic weight"",""raw_type"":""OTHER""}]","- **Text Overflow:** In the main content box, the ""Endpoint"" file path is cut off on the right side, spilling outside the boundary of the orange box.
+- **Redundancy:** The phrase ""Solution Overview"" is repeated twice—once as the main slide title and again as a header inside the orange box.
+- **Layout/Spacing:** The orange box is excessively large for the small amount of text it contains, leaving a","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""locator"": ""Endpoint file path in orange box""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Repeated Solution Overview title""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Excessive empty space in orange box""
+    ",page
+g7_unbreakable_text_018,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,"[{""text"":""repeated Success Metrics phrase"",""raw_type"":""OTHER""},{""text"":""oversized content box"",""raw_type"":""OTHER""},{""text"":""lack of styling distinction for labels"",""raw_type"":""OTHER""}]","- **Text Overflow:** In the main content box, the text starting with ""Endpoint:"" spills outside the right boundary of the border.
+- **Redundancy:** The phrase ""Success Metrics"" is repeated twice—once as the slide title and once as a header inside the content box.
+- **Poor Use of Space:** The content box is oversized relative to the amount of text it contains, leaving a massive amount of empty whit","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""locator"": ""text starting with Endpoint""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""repeated Success Metrics phrase""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""oversized content box""
+    },
+    {
+      ""type",page
+g7_unbreakable_text_014,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""S5_MISSING_LOGIC_SECTION""]",,,"[{""text"":""Incorrect data in Endpoint ARN"",""raw_type"":""OTHER""},{""text"":""Redundant Platform Architecture text"",""raw_type"":""OTHER""},{""text"":""Empty space in blue bounding box"",""raw_type"":""OTHER""},{""text"":""Low quality generic styling"",""raw_type"":""OTHER""}]","This slide is in a very poor state and looks like an unfinished draft. Here are the specific issues:
+
+**1. Content & Logic Errors**
+*   **Incorrect Data (Center Box):** The ""Endpoint"" is listed as an AWS IAM Role ARN (`arn:aws:iam::...`). An IAM role is an identity/permission entity, not a network endpoint. This is a fundamental technical error.
+*   **Redundancy (Center Box):** The text ""Platform ","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Incorrect data in Endpoint ARN""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Redundant Platform Architecture text""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Empty space in blue bounding box""
+    },
+    {
+   ",page
+g7_unbreakable_text_015,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""S1_TITLE_BODY_MISMATCH""]",,,"[{""text"":""redundant title text inside blue box"",""raw_type"":""OTHER""},{""text"":""excessive dead white space"",""raw_type"":""OTHER""}]","This slide is poor in quality and lacks basic design standards. Here are the specific issues:
+
+**1. Content & Logic**
+*   **Misleading Title:** The slide is titled ""Implementation Roadmap,"" but there is no roadmap (timeline, phases, or milestones) present. It only contains a single technical endpoint.
+*   **Redundancy:** The phrase ""Implementation Roadmap"" is repeated twice—once as the slide heade","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""title 'Implementation Roadmap' vs body content""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""text pushed to top-left of blue box""
+    },
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""loca",page
+g7_unbreakable_text_019,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""S1_TITLE_BODY_MISMATCH""]",,,"[{""text"":""Redundant Success Metrics phrasing"",""raw_type"":""OTHER""},{""text"":""Excessive white space in blue box"",""raw_type"":""OTHER""}]","- **Text Overflow:** In the main blue box, the ""Endpoint"" file path is cut off on the right side, spilling outside the boundary of the box.
+- **Redundancy:** The phrase ""Success Metrics"" is repeated twice—once as the main slide title and again as a header inside the blue box.
+- **Content Mismatch:** The slide is titled ""Success Metrics,"" but the only content provided is a technical file path (Endp","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""locator"": ""Endpoint file path in main blue box""
+    },
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Title Success Metrics vs technical file path""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locato",page
+g7_unbreakable_text_017,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,"[{""text"":""Endpoint listed is actually an IAM Role ARN"",""raw_type"":""OTHER""}]","This slide is in a very poor state and appears to be a draft or a technical error. Here are the specific issues:
+
+**1. Content & Logic**
+*   **Misleading Title:** The slide is titled ""Implementation Roadmap,"" but there is no roadmap, timeline, or plan present. Instead, it contains a single technical string.
+*   **Incorrect Data:** The ""Endpoint"" listed is actually an AWS IAM Role ARN (Amazon Resou","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Title 'Implementation Roadmap' does not match content""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Endpoint listed is actually an IAM Role ARN""
+    },
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""loc",page
+g7_unbreakable_text_023,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW"",""G4_FONT_SIZE_INCONSISTENCY"",""S1_TITLE_BODY_MISMATCH""]",,,"[{""text"":""Redundant Success Metrics phrasing"",""raw_type"":""OTHER""},{""text"":""Excessive white space in content box"",""raw_type"":""OTHER""}]","- **Text Overflow:** In the main content box, the ""Endpoint"" file path is cut off on the right side, spilling outside the border of the box.
+- **Redundancy:** The phrase ""Success Metrics"" is repeated three times: once as the slide title, once as a header inside the box, and once as the implied subject of the content.
+- **Content Mismatch:** The slide is titled ""Success Metrics,"" but the only conte","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""locator"": ""Endpoint file path in main content box""
+    },
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Title Success Metrics vs technical file path""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+   ",page
+g7_unbreakable_text_020,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION""]",,,"[{""text"":""Redundant repetition of Platform Architecture"",""raw_type"":""OTHER""},{""text"":""Excessive empty space in orange-bordered box"",""raw_type"":""OTHER""},{""text"":""Missing architecture diagrams or flowcharts"",""raw_type"":""OTHER""}]","This slide is in a very early draft state and has several significant design and technical issues:
+
+**1. Content & Layout**
+*   **Redundancy:** The phrase ""Platform Architecture"" is repeated three times: once as the main slide title, once as a header inside the box, and once as the implied subject of the endpoint.
+*   **Empty Space:** The orange-bordered box is far too large for the single line of","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""locator"": ""Endpoint URL spilling outside box boundary""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Inconsistent margin between left border and text""
+    },
+    {
+      ""type"": ""G5_BRAND_COLOR_VIOLATION"",
+",page
+g7_unbreakable_text_021,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""S1_TITLE_BODY_MISMATCH""]",,,"[{""text"":""excessive empty white space"",""raw_type"":""OTHER""}]","This slide is poor in quality and lacks basic design standards. Here are the specific issues:
+
+**1. Content & Logic**
+*   **Misleading Title:** The slide is titled ""Implementation Roadmap,"" but there is no roadmap (timeline, phases, or milestones) present. It only contains a single URL.
+*   **Redundancy:** The phrase ""Implementation Roadmap"" is repeated twice—once as the main slide header and agai","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""title 'Implementation Roadmap' vs single URL""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""text not vertically centered in blue box""
+    },
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""l",page
+g7_unbreakable_text_022,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""S1_TITLE_BODY_MISMATCH""]",,,"[{""text"":""excessive empty white space"",""raw_type"":""OTHER""}]","This slide is poor in quality and lacks basic design standards. Here are the specific issues:
+
+**1. Content & Logic**
+*   **Misleading Title:** The slide is titled ""Implementation Roadmap,"" but there is no roadmap (timeline, phases, or milestones) present. It only contains a single URL.
+*   **Redundancy:** The phrase ""Implementation Roadmap"" is repeated twice—once as the main slide header and agai","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""title 'Implementation Roadmap' vs single URL""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""text not vertically centered in blue box""
+    },
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""l",page
+g7_unbreakable_text_024,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,"[{""text"":""Endpoint listed is actually an IAM Role ARN"",""raw_type"":""OTHER""}]","This slide is in a very poor state and appears to be a draft or a technical error. Here are the specific issues:
+
+**1. Content & Logic**
+*   **Misleading Title:** The slide is titled ""Implementation Roadmap,"" but there is no roadmap, timeline, or plan present. Instead, it contains a single technical string.
+*   **Incorrect Data:** The ""Endpoint"" listed is actually an AWS IAM Role ARN (Amazon Resou","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Title 'Implementation Roadmap' does not match content""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Endpoint listed is actually an IAM Role ARN""
+    },
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""loc",page
+g7_unbreakable_text_025,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""S1_TITLE_BODY_MISMATCH""]",,,"[{""text"":""excessive dead white space"",""raw_type"":""OTHER""},{""text"":""missing roadmap graphic"",""raw_type"":""OTHER""}]","This slide is in a very poor state and appears to be a placeholder or a technical error rather than a finished presentation slide.
+
+**1. Content & Logic Errors**
+*   **Text Mismatch (Main Body):** The title of the slide is ""Implementation Roadmap,"" but the content inside the box is a technical AWS ARN (Amazon Resource Name) endpoint. An ARN is a technical identifier, not a ""roadmap"" (which should ","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""title vs AWS ARN content""
+    },
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""locator"": ""endpoint string spilling off right edge""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""text inside",page
+g7_unbreakable_text_028,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW"",""G4_FONT_SIZE_INCONSISTENCY"",""S1_TITLE_BODY_MISMATCH""]",,,"[{""text"":""redundant title and header"",""raw_type"":""OTHER""},{""text"":""empty white space in outlined box"",""raw_type"":""OTHER""}]","- **Content Mismatch:** The slide title is ""Implementation Roadmap,"" but the content inside the box is a single API endpoint URL. There is no actual roadmap (timeline, phases, or milestones) present.
+- **Redundancy:** The text ""Implementation Roadmap"" is repeated twice—once as the main slide title and again as a header inside the box.
+- **Text Overflow:** The URL in the center of the box is cut of","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""title vs API endpoint content""
+    },
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""locator"": ""URL cut off on right side""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""redundant title and header""
+    },",page
+g7_unbreakable_text_029,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,"[{""text"":""Repeated Platform Architecture title and header"",""raw_type"":""OTHER""},{""text"":""Excessive white space below content"",""raw_type"":""OTHER""},{""text"":""Local file path used in content"",""raw_type"":""OTHER""}]","- **Text Overflow:** In the main content box, the ""Endpoint"" file path is cut off on the right side, spilling outside the boundary of the box.
+- **Redundancy:** The phrase ""Platform Architecture"" is repeated twice—once as the slide title and again as a header inside the content box.
+- **Layout/Composition:** The slide is largely empty. There is a massive amount of wasted white space below the sing","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""locator"": ""Endpoint file path in main content box""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Repeated Platform Architecture title and header""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Excessive white spac",page
+g7_unbreakable_text_026,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,"[{""text"":""local file path in main body"",""raw_type"":""OTHER""},{""text"":""repeated phrase Q3 Go-to-Market Plan"",""raw_type"":""OTHER""}]","This slide is in a very poor state and appears to be a technical error or a placeholder rather than a finished presentation. Here are the specific issues:
+
+**1. Content/Text Errors**
+*   **Main Body (Inside the orange box):** The text ""Endpoint: C:\Users\enterprise\Deployments\..."" is a local file path. This is a critical error; internal system directories should never be visible on a presentation","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""local file path in main body""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""repeated phrase Q3 Go-to-Market Plan""
+    },
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""locator"": ""file path text cut off""
+    },
+    {
+    ",page
+g7_card_height_001__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION""]",,,"[{""text"":""redundant title and header text"",""raw_type"":""OTHER""},{""text"":""missing architectural diagrams or visuals"",""raw_type"":""OTHER""}]","- **Redundancy:** The phrase ""Platform Architecture"" is repeated twice—once as the main slide title and again as a header inside the green box.
+- **Lack of Visuals:** For a slide titled ""Architecture,"" there are no diagrams, flowcharts, or icons. It is simply a bulleted list, which is a low-quality way to represent an architectural structure.
+- **Poor Use of Space:** The green box is excessively l","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""redundant title and header text""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""missing architectural diagrams or visuals""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""bulleted list crammed in top-l",page
+g7_card_height_000__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET""]",,,"[{""text"":""redundant header and box title"",""raw_type"":""OTHER""},{""text"":""excessive empty white space"",""raw_type"":""OTHER""},{""text"":""missing diagrams or icons"",""raw_type"":""OTHER""},{""text"":""generic styling and lack of hierarchy"",""raw_type"":""OTHER""}]","This slide is extremely low-quality and resembles a rough draft rather than a finished presentation. Here are the specific issues:
+
+**1. Redundancy (Text)**
+*   **Header vs. Box Title:** The phrase ""Solution Overview"" is repeated twice—once as the main slide title and again as a header inside the box. This is redundant and wastes space.
+
+**2. Layout and Composition (Center Region)**
+*   **Empty Sp","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""redundant header and box title""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""excessive empty white space""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""missing diagrams or icons""
+    },
+    {
+      ""type"": ""G3_A",page
+g7_unbreakable_text_027,G7_RENDER_CONTAINMENT_OVERFLOW,A,False,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,"[{""text"":""redundant title repetition"",""raw_type"":""OTHER""},{""text"":""massive empty space in orange box"",""raw_type"":""OTHER""}]","This slide is in a very poor state and looks like an unfinished draft. Here are the specific issues:
+
+**1. Content & Logic**
+*   **Redundancy:** The title ""Implementation Roadmap"" is repeated three times: once as the main slide header, once as a sub-header inside the box, and implied by the overall context.
+*   **Mislabeling:** The content inside the box is a single technical endpoint URL, not a ""","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""title 'Implementation Roadmap' vs endpoint URL content""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""text pushed to top-left of box""
+    },
+    {
+      ""type"": ""G6_MARGIN_VIOLATION"",
+     ",page
+g7_card_height_003__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION""]",,,"[{""text"":""repeated title text"",""raw_type"":""OTHER""},{""text"":""excessive empty white space"",""raw_type"":""OTHER""}]","- **Redundancy:** The text ""Q3 Go-to-Market Plan"" is repeated twice—once as the main slide title and again as a header inside the green box.
+- **Alignment/Spacing:** The bulleted list is pushed too far to the left within the green box, creating an unbalanced margin compared to the right side.
+- **Visual Hierarchy:** The green header inside the box is the same font size and style as the bullet poin","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""repeated title text""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""bulleted list pushed too far left""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""header same size as bullet po",page
+g7_card_height_002__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION""]",,,"[{""text"":""redundant 'Risk Register' title and header"",""raw_type"":""OTHER""}]","- **Redundancy:** The phrase ""Risk Register"" is repeated twice—once as the main slide title and again as a header inside the green box. This is redundant and wastes space.
+- **Layout/Composition:** The green box is poorly positioned. It is pushed to the top of the slide, leaving a massive amount of empty white space at the bottom, which makes the slide feel unbalanced.
+- **Alignment:** The text in","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""redundant 'Risk Register' title and header""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""green box pushed to top""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""text not vertically cen",page
+g7_card_height_004__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION""]",,,"[{""text"":""redundant 'Solution Overview' text"",""raw_type"":""OTHER""}]","- **Redundancy:** The phrase ""Solution Overview"" is repeated twice—once as the main slide title and again as a header inside the green box. This is redundant and wastes space.
+- **Layout/Composition:** The green box is poorly positioned. It is pushed to the top of the slide, leaving a massive amount of empty white space at the bottom, which makes the slide feel unbalanced and unfinished.
+- **Align","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""redundant 'Solution Overview' text""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""green box positioned too high""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""excessive left padding in",page
+g7_card_height_007__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G6_MARGIN_VIOLATION"",""S4_DENSITY_RULE_VIOLATION""]",,,"[{""text"":""redundant title and header text"",""raw_type"":""OTHER""}]","- **Redundancy:** The phrase ""Success Metrics"" is repeated twice—once as the main slide title and again as a header inside the orange box.
+- **Layout/Composition:** The orange box is poorly positioned; it is pushed to the top of the slide, leaving a massive amount of empty white space at the bottom, which makes the slide feel unbalanced.
+- **Alignment:** The text inside the orange box is left-alig","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""redundant title and header text""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""orange box pushed to top""
+    },
+    {
+      ""type"": ""G6_MARGIN_VIOLATION"",
+      ""locator"": ""text lacks padding inside orange ",page
+g7_card_height_005__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""S5_MISSING_LOGIC_SECTION""]",,,"[{""text"":""redundant header and box title"",""raw_type"":""OTHER""},{""text"":""missing roadmap visualization"",""raw_type"":""OTHER""}]","This slide is low-quality and lacks professional design. Here are the specific issues:
+
+**1. Redundancy (Text)**
+*   **Header vs. Box Title:** The phrase ""Implementation Roadmap"" is repeated twice—once as the main slide title and once as the title inside the orange box. This is redundant and wastes space.
+
+**2. Layout & Composition (Visuals)**
+*   **Lack of ""Roadmap"" Visualization:** For a slide t","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""redundant header and box title""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""missing roadmap visualization""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""insufficient padding inside orange box""
+   ",page
+g7_card_height_008__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION""]",,,"[{""text"":""repeated title text"",""raw_type"":""OTHER""},{""text"":""lack of structural elements in orange box"",""raw_type"":""OTHER""}]","- **Redundancy:** The text ""Q3 Go-to-Market Plan"" is repeated twice—once as the main slide title and again as a header inside the orange box.
+- **Alignment/Spacing:** The bulleted list inside the orange box is heavily left-aligned with too much empty white space to the right, making the layout feel unbalanced and unfinished.
+- **Visual Hierarchy:** The orange box serves as a container but contains","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""repeated title text""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""bulleted list alignment""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""lack of structural elements in orange box""
+    },
+    {
+    ",page
+g7_card_height_009__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET""]",,,"[{""text"":""redundant 'Risk Register' title and header"",""raw_type"":""OTHER""},{""text"":""blue box lacks functional purpose"",""raw_type"":""OTHER""},{""text"":""bullet points lack necessary register details"",""raw_type"":""OTHER""}]","- **Redundancy:** The phrase ""Risk Register"" is repeated twice—once as the main slide title and again as a header inside the blue box. This is redundant and wastes space.
+- **Layout/Composition:** The blue box is poorly positioned. It is pushed too far to the left and top, leaving a massive, unbalanced void of white space on the right and bottom of the slide.
+- **Alignment:** The text inside the b","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""redundant 'Risk Register' title and header""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""blue box pushed too far left/top""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""text hugged to",page
+g7_card_height_006__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION""]",,,"[{""text"":""redundant header and box title"",""raw_type"":""OTHER""},{""text"":""inefficient use of slide space"",""raw_type"":""OTHER""},{""text"":""missing architecture diagrams or visuals"",""raw_type"":""OTHER""}]","This slide is extremely low-quality and lacks professional design. Here are the specific issues:
+
+**1. Redundancy (Text)**
+*   **Header vs. Box Title:** The phrase ""Platform Architecture"" is repeated twice—once as the main slide title and again as the title inside the orange box. This is redundant and wastes space.
+
+**2. Layout and Composition (Center Region)**
+*   **Inefficient Use of Space:** Th","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""redundant header and box title""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""inefficient use of slide space""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""missing architecture diagrams or visuals""
+    },
+    {
+ ",page
+g7_card_height_010__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION""]",,,"[{""text"":""redundant header and box title"",""raw_type"":""OTHER""},{""text"":""insufficient leading between bullet points"",""raw_type"":""OTHER""}]","This slide is low-quality and lacks professional design. Here are the specific issues:
+
+**1. Redundancy (Text)**
+*   **Header vs. Box Title:** The phrase ""Solution Overview"" is repeated twice—once as the main slide title and again as a header inside the orange box. This is redundant and wastes space.
+
+**2. Layout and Composition (Spacing)**
+*   **Inefficient Use of Space:** The orange box is exces","```json
+{""defects"": [
+  {""type"": ""OTHER"", ""locator"": ""redundant header and box title""},
+  {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""text crammed into top-left of box""},
+  {""type"": ""G5_BRAND_COLOR_VIOLATION"", ""locator"": ""orange border and text lack contrast""},
+  {""type"": ""OTHER"", ""locator"": ""insuff",page
+g7_card_height_011__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET""]",,,"[{""text"":""redundant 'Risk Register' title and header"",""raw_type"":""OTHER""},{""text"":""blue box lacks functional purpose"",""raw_type"":""OTHER""},{""text"":""bullet points lack necessary register details"",""raw_type"":""OTHER""}]","- **Redundancy:** The phrase ""Risk Register"" is repeated twice—once as the main slide title and again as a header inside the blue box. This is redundant and wastes space.
+- **Layout/Composition:** The blue box is poorly positioned. It is pushed too far to the left and top, leaving a massive, unbalanced void of white space on the right and bottom of the slide.
+- **Alignment:** The text inside the b","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""redundant 'Risk Register' title and header""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""blue box pushed too far left/top""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""text hugged to",page
+g7_card_height_012__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]",,,"[{""text"":""redundant header and box title"",""raw_type"":""OTHER""},{""text"":""excessive empty white space"",""raw_type"":""OTHER""},{""text"":""roadmap presented as bulleted list"",""raw_type"":""OTHER""}]","This slide is extremely low-quality and lacks professional design. Here are the specific issues:
+
+**1. Redundancy (Text)**
+*   **Header and Box Title:** The phrase ""Implementation Roadmap"" is repeated twice—once as the main slide title and again as the header inside the blue box. This is redundant and wastes space.
+
+**2. Layout and Composition (Overall)**
+*   **Empty Space:** The slide is overwhel","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""redundant header and box title""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""excessive empty white space""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""roadmap presented as bulleted list""
+    },
+    {
+      ""typ",page
+g7_card_height_016__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G6_MARGIN_VIOLATION"",""S4_DENSITY_RULE_VIOLATION""]",,,"[{""text"":""redundant title and header text"",""raw_type"":""OTHER""}]","- **Redundancy:** The phrase ""Success Metrics"" is repeated twice—once as the main slide title and again as a header inside the orange box.
+- **Layout/Composition:** The orange box is poorly positioned; it is pushed to the top of the slide, leaving a massive amount of empty white space at the bottom, which makes the slide feel unbalanced.
+- **Alignment:** The text inside the orange box is left-alig","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""redundant title and header text""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""orange box pushed to top""
+    },
+    {
+      ""type"": ""G6_MARGIN_VIOLATION"",
+      ""locator"": ""text lacks padding inside orange ",page
+g7_card_height_013__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]",,,"[{""text"":""redundant header and box title"",""raw_type"":""OTHER""},{""text"":""excessive empty white space"",""raw_type"":""OTHER""},{""text"":""roadmap presented as bulleted list"",""raw_type"":""OTHER""}]","This slide is extremely low-quality and lacks professional design. Here are the specific issues:
+
+**1. Redundancy (Text)**
+*   **Header and Box Title:** The phrase ""Implementation Roadmap"" is repeated twice—once as the main slide title and again as the header inside the blue box. This is redundant and wastes space.
+
+**2. Layout and Composition (Overall)**
+*   **Empty Space:** The slide is overwhel","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""redundant header and box title""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""excessive empty white space""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""roadmap presented as bulleted list""
+    },
+    {
+      ""typ",page
+g7_card_height_014__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION""]",,,"[{""text"":""redundant title and box header"",""raw_type"":""OTHER""},{""text"":""excessive white space"",""raw_type"":""OTHER""},{""text"":""missing architectural diagram"",""raw_type"":""OTHER""}]","This slide is extremely low-quality and lacks professional design. Here are the specific issues:
+
+**1. Redundancy (Text)**
+*   **Header and Box:** The phrase ""Platform Architecture"" is repeated twice—once as the main slide title and again as a header inside the box. This is redundant and wastes space.
+
+**2. Layout and Composition (Center Region)**
+*   **Empty Space:** The vast majority of the slid","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""redundant title and box header""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""excessive white space""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""missing architectural diagram""
+    },
+    {
+      ""type"": ""G3_ALI",page
+g7_card_height_015__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION""]",,,"[{""text"":""redundant title and box header"",""raw_type"":""OTHER""},{""text"":""inefficient use of white space"",""raw_type"":""OTHER""},{""text"":""lack of visual hierarchy for KPIs"",""raw_type"":""OTHER""},{""text"":""generic styling of KPI list"",""raw_type"":""OTHER""}]","This slide is low-quality and lacks professional design. Here are the specific issues:
+
+**1. Redundancy (Text)**
+*   **Header and Box:** The phrase ""Success Metrics"" is repeated twice—once as the main slide title and again as a header inside the box. This is redundant and wastes space.
+
+**2. Layout and Composition (Center Region)**
+*   **Inefficient Use of Space:** The content is trapped in a smal","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""redundant title and box header""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""inefficient use of white space""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""lack of visual hierarchy for KPIs""
+    },
+    {
+      ""t",page
+g7_card_height_017__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION""]",,,"[{""text"":""redundant title and header text"",""raw_type"":""OTHER""},{""text"":""missing architectural diagrams or visuals"",""raw_type"":""OTHER""}]","- **Redundancy:** The phrase ""Platform Architecture"" is repeated twice—once as the main slide title and again as a header inside the green box.
+- **Lack of Visuals:** For a slide titled ""Architecture,"" there are no diagrams, flowcharts, or icons. It is simply a bulleted list, which is a low-quality way to represent an architectural structure.
+- **Poor Use of Space:** The green box is excessively l","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""redundant title and header text""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""missing architectural diagrams or visuals""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""bulleted list crammed in top-l",page
+g7_card_height_018__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION""]",,,"[{""text"":""repeated title text"",""raw_type"":""OTHER""},{""text"":""lack of structural elements in orange box"",""raw_type"":""OTHER""}]","- **Redundancy:** The text ""Q3 Go-to-Market Plan"" is repeated twice—once as the main slide title and again as a header inside the orange box.
+- **Alignment/Spacing:** The bulleted list inside the orange box is heavily left-aligned with too much empty white space to the right, making the layout feel unbalanced and unfinished.
+- **Visual Hierarchy:** The orange box serves as a container but contains","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""repeated title text""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""bulleted list alignment""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""lack of structural elements in orange box""
+    },
+    {
+    ",page
+g7_card_height_019__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION""]",,,"[{""text"":""redundant header and box title"",""raw_type"":""OTHER""},{""text"":""insufficient leading between bullet points"",""raw_type"":""OTHER""}]","This slide is low-quality and lacks professional design. Here are the specific issues:
+
+**1. Redundancy (Text)**
+*   **Header vs. Box Title:** The phrase ""Solution Overview"" is repeated twice—once as the main slide title and again as a header inside the orange box. This is redundant and wastes space.
+
+**2. Layout and Composition (Spacing)**
+*   **Inefficient Use of Space:** The orange box is exces","```json
+{""defects"": [
+  {""type"": ""OTHER"", ""locator"": ""redundant header and box title""},
+  {""type"": ""G3_ALIGNMENT_OFFSET"", ""locator"": ""text crammed into top-left of box""},
+  {""type"": ""G5_BRAND_COLOR_VIOLATION"", ""locator"": ""orange border and text lack contrast""},
+  {""type"": ""OTHER"", ""locator"": ""insuff",page
+g7_card_height_020__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]",,,"[{""text"":""redundant header and box title"",""raw_type"":""OTHER""},{""text"":""excessive empty white space"",""raw_type"":""OTHER""},{""text"":""roadmap presented as bulleted list"",""raw_type"":""OTHER""}]","This slide is extremely low-quality and lacks professional design. Here are the specific issues:
+
+**1. Redundancy (Text)**
+*   **Header and Box Title:** The phrase ""Implementation Roadmap"" is repeated twice—once as the main slide title and again as the header inside the blue box. This is redundant and wastes space.
+
+**2. Layout and Composition (Overall)**
+*   **Empty Space:** The slide is overwhel","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""redundant header and box title""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""excessive empty white space""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""roadmap presented as bulleted list""
+    },
+    {
+      ""typ",page
+g7_card_height_022__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY""]",,,"[{""text"":""redundant header and box title"",""raw_type"":""OTHER""},{""text"":""lack of visual hierarchy and icons"",""raw_type"":""OTHER""}]","This slide is in a ""draft"" state and lacks professional polish. Here are the specific issues:
+
+**1. Redundancy (Text)**
+*   **Header vs. Box Title:** The phrase ""Solution Overview"" is repeated twice—once as the main slide title and again as a header inside the blue box. This is redundant and wastes space.
+
+**2. Layout and Composition (Spacing)**
+*   **Inefficient Use of Space:** The blue box occup","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""redundant header and box title""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""insufficient padding inside blue box""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""lack of visual hierarchy and icons""
+",page
+g7_card_height_021__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET""]",,,"[{""text"":""redundant header and box title"",""raw_type"":""OTHER""},{""text"":""poor use of space"",""raw_type"":""OTHER""},{""text"":""lack of visual hierarchy in list"",""raw_type"":""OTHER""},{""text"":""lack of visual aids"",""raw_type"":""OTHER""}]","This slide is low-quality and lacks professional design. Here are the specific issues:
+
+**1. Redundancy (Text)**
+*   **Header and Box Title:** The phrase ""Success Metrics"" is repeated twice—once as the main slide title and again as a header inside the blue box. This is redundant and wastes space.
+
+**2. Layout and Composition (Overall)**
+*   **Poor Use of Space:** The content is clustered in the to","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""redundant header and box title""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""poor use of space""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""bullet points pushed far left of box""
+    },
+    {
+    ",page
+g7_card_height_023__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]",,,"[{""text"":""redundant header and box title"",""raw_type"":""OTHER""},{""text"":""excessive empty white space"",""raw_type"":""OTHER""},{""text"":""roadmap presented as bulleted list"",""raw_type"":""OTHER""}]","This slide is extremely low-quality and lacks professional design. Here are the specific issues:
+
+**1. Redundancy (Text)**
+*   **Header and Box Title:** The phrase ""Implementation Roadmap"" is repeated twice—once as the main slide title and again as the header inside the blue box. This is redundant and wastes space.
+
+**2. Layout and Composition (Overall)**
+*   **Empty Space:** The slide is overwhel","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""redundant header and box title""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""excessive empty white space""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""roadmap presented as bulleted list""
+    },
+    {
+      ""typ",page
+g7_card_height_025__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,True,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G7_RENDER_CONTAINMENT_OVERFLOW""]","{""element"":""insufficient padding between text and left border"",""quote"":""""}",,"[{""text"":""redundant 'Risk Register' title and header"",""raw_type"":""OTHER""}]","- **Redundancy:** The phrase ""Risk Register"" is repeated twice—once as the main slide title and again as a header inside the orange box. This is redundant and wastes space.
+- **Layout/Composition:** The orange box is poorly positioned. It is pushed too far to the left and top, leaving a massive, unbalanced void of white space on the right and bottom of the slide.
+- **Alignment:** The bulleted list","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""redundant 'Risk Register' title and header""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""orange box positioned too far left/top""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""bulleted",page
+g7_card_height_024__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""S5_MISSING_LOGIC_SECTION""]",,,"[{""text"":""redundant header and box title"",""raw_type"":""OTHER""},{""text"":""missing roadmap visualization"",""raw_type"":""OTHER""}]","This slide is low-quality and lacks professional design. Here are the specific issues:
+
+**1. Redundancy (Text)**
+*   **Header vs. Box Title:** The phrase ""Implementation Roadmap"" is repeated twice—once as the main slide title and once as the title inside the orange box. This is redundant and wastes space.
+
+**2. Layout & Composition (Visuals)**
+*   **Lack of ""Roadmap"" Visualization:** For a slide t","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""redundant header and box title""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""missing roadmap visualization""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""insufficient padding inside orange box""
+   ",page
+g7_card_height_027__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION""]",,,"[{""text"":""repeated title text"",""raw_type"":""OTHER""},{""text"":""excessive empty white space"",""raw_type"":""OTHER""}]","- **Redundancy:** The text ""Q3 Go-to-Market Plan"" is repeated twice—once as the main slide title and again as a header inside the green box.
+- **Alignment/Spacing:** The bulleted list is pushed too far to the left within the green box, creating an unbalanced margin compared to the right side.
+- **Visual Hierarchy:** The green header inside the box is the same font size and style as the bullet poin","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""repeated title text""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""bulleted list pushed too far left""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""header same size as bullet po",page
+g7_card_height_026__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION""]",,,"[{""text"":""repeated phrase Success Metrics"",""raw_type"":""OTHER""}]","- **Redundancy:** The phrase ""Success Metrics"" is repeated twice—once as the main slide title and again as a header inside the green box.
+- **Layout/Spacing:** The green box is excessively large for the amount of content it contains, leaving a vast amount of empty white space on the right side and bottom.
+- **Alignment:** The bulleted list is pushed to the far left of the box, creating an unbalanc","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""repeated phrase Success Metrics""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""bulleted list pushed far left""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""small text inside the",page
+g7_card_height_028__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION""]",,,"[{""text"":""repeated title text"",""raw_type"":""OTHER""},{""text"":""lack of structural elements in orange box"",""raw_type"":""OTHER""}]","- **Redundancy:** The text ""Q3 Go-to-Market Plan"" is repeated twice—once as the main slide title and again as a header inside the orange box.
+- **Alignment/Spacing:** The bulleted list inside the orange box is heavily left-aligned with too much empty white space to the right, making the layout feel unbalanced and unfinished.
+- **Visual Hierarchy:** The orange box serves as a container but contains","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""repeated title text""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""bulleted list alignment""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""lack of structural elements in orange box""
+    },
+    {
+    ",page
+g7_card_height_029__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET""]",,,"[{""text"":""redundant header and box title"",""raw_type"":""OTHER""},{""text"":""poor use of space"",""raw_type"":""OTHER""},{""text"":""lack of visual hierarchy in list"",""raw_type"":""OTHER""},{""text"":""lack of visual aids"",""raw_type"":""OTHER""}]","This slide is low-quality and lacks professional design. Here are the specific issues:
+
+**1. Redundancy (Text)**
+*   **Header and Box Title:** The phrase ""Success Metrics"" is repeated twice—once as the main slide title and again as a header inside the blue box. This is redundant and wastes space.
+
+**2. Layout and Composition (Overall)**
+*   **Poor Use of Space:** The content is clustered in the to","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""redundant header and box title""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""poor use of space""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""bullet points pushed far left of box""
+    },
+    {
+    ",page
+g7_unbreakable_text_003__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,"[{""text"":""redundant title and header text"",""raw_type"":""OTHER""},{""text"":""unbalanced layout in orange box"",""raw_type"":""OTHER""},{""text"":""missing background shade for monospaced font"",""raw_type"":""OTHER""}]","- **Redundant Text:** The phrase ""Success Metrics"" appears twice—once as the main slide title and again as a header inside the orange box.
+- **Text Overflow/Wrapping:** In the ""Endpoint"" section, the long URL is poorly wrapped. The word ""inference"" is split across two lines (""infe"" and ""rence""), and ""containment"" is split across two lines (""containme"" and ""nt""), making it difficult to read.
+- **Al","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""redundant title and header text""
+    },
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""locator"": ""poorly wrapped URL in Endpoint section""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""insufficient padding i",page
+g7_unbreakable_text_000__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,"[{""text"":""URL wrapping disrupts readability"",""raw_type"":""OTHER""},{""text"":""excessive empty white space"",""raw_type"":""OTHER""},{""text"":""content heavily weighted toward top-left"",""raw_type"":""OTHER""}]","This slide is poorly designed and contains several critical errors:
+
+**1. Content Mismatch (Logic/Text)**
+*   **Slide Title & Box Header:** Both are labeled ""Implementation Roadmap,"" but the content is a single technical URL. A ""roadmap"" should be a timeline or a series of steps, not a single endpoint.
+
+**2. Text & Typography Issues**
+*   **URL Wrapping:** In the main text body, the URL is broken ","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Slide Title & Box Header""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""three different fonts/styles""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""text inside ",page
+g7_unbreakable_text_001__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY""]",,,"[{""text"":""redundant title in header and blue box"",""raw_type"":""OTHER""},{""text"":""lack of diagrams or icons"",""raw_type"":""OTHER""}]","This slide is poorly designed and looks like a draft rather than a finished presentation. Here are the specific issues:
+
+**1. Redundancy (Text)**
+*   **Header vs. Box:** The title ""Solution Overview"" is repeated twice—once as the main slide header and again as a sub-header inside the blue box. This is redundant and wastes space.
+
+**2. Typography and Readability (Text/Layout)**
+*   **URL Wrapping:*","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""redundant title in header and blue box""
+    },
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""locator"": ""endpoint URL broken across three lines""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""disjoint",page
+g7_unbreakable_text_002__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,"[{""text"":""File path not in monospaced font"",""raw_type"":""OTHER""},{""text"":""Excessive white space in green box"",""raw_type"":""OTHER""}]","This slide is poor in quality and contains several critical design and content errors:
+
+**1. Content & Logic Errors**
+*   **Misleading Title/Content:** The slide is titled ""Risk Register,"" but the content inside the box is a file path to a YAML configuration file. A ""Risk Register"" should be a table or list of risks, not a technical endpoint path.
+*   **Redundancy:** The phrase ""Risk Register"" app","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Title 'Risk Register' vs YAML file path""
+    },
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""locator"": ""Word 'manufacturing' broken across two lines""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""lo",page
+g7_unbreakable_text_004__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION"",""S6_IMAGE_TEXT_CONTRADICTION""]",,,"[{""text"":""Missing architecture diagram for architecture slide"",""raw_type"":""OTHER""},{""text"":""Repeated title and sub-header"",""raw_type"":""OTHER""}]","This slide is of very low quality and appears to be a placeholder or a technical dump rather than a presentation slide. Here are the specific issues:
+
+**1. Content & Logic**
+*   **Mislabeling:** The text inside the green box is labeled ""Endpoint,"" but the value provided is an AWS IAM Role ARN (`arn:aws:iam::...`). An ARN for a role is an identity/permission identifier, not a network endpoint.
+*   ","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""S6_IMAGE_TEXT_CONTRADICTION"",
+      ""locator"": ""Endpoint label for IAM Role ARN""
+    },
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""locator"": ""ARN string broken across two lines""
+    },
+    {
+      ""type"": ""G6_MARGIN_VIOLATION"",
+      ""locator"": ""Text",page
+g7_unbreakable_text_005__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,"[{""text"":""URL wrapping disrupts readability"",""raw_type"":""OTHER""},{""text"":""excessive empty white space"",""raw_type"":""OTHER""},{""text"":""content heavily weighted toward top-left"",""raw_type"":""OTHER""}]","This slide is poorly designed and contains several critical errors:
+
+**1. Content Mismatch (Logic/Text)**
+*   **Slide Title & Box Header:** Both are labeled ""Implementation Roadmap,"" but the content is a single technical URL. A ""roadmap"" should be a timeline or a series of steps, not a single endpoint.
+
+**2. Text & Typography Issues**
+*   **URL Wrapping:** In the main text body, the URL is broken ","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Slide Title & Box Header""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""three different fonts/styles""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""text inside ",page
+g7_unbreakable_text_006__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""S1_TITLE_BODY_MISMATCH""]",,,"[{""text"":""orange-bordered box excessive white space"",""raw_type"":""OTHER""},{""text"":""redundant Risk Register titles"",""raw_type"":""OTHER""},{""text"":""year 2026 in file path"",""raw_type"":""OTHER""}]","- **Text Overflow/Wrapping:** In the main text box, the file path is broken across two lines in a way that splits the word ""manufacturing"" (it reads ""ma-nufacturing""). This is poor formatting for a technical path.
+- **Content Mismatch:** The slide title is ""Risk Register,"" and the header inside the box is ""Risk Register,"" but the actual content is a local file path to a YAML configuration file. Th","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""locator"": ""main text box file path""
+    },
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""slide title vs file path content""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""orange-bordered box excessive whi",page
+g7_unbreakable_text_007__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""S1_TITLE_BODY_MISMATCH"",""S5_MISSING_LOGIC_SECTION""]",,,"[{""text"":""Local file path used as network endpoint"",""raw_type"":""OTHER""},{""text"":""Security risk: local directory path displayed"",""raw_type"":""OTHER""}]","This slide is poor in quality and contains several critical design and content errors:
+
+**1. Content/Logic Errors**
+*   **Misleading Title:** The slide is titled ""Implementation Roadmap,"" but there is no roadmap (timeline, phases, or milestones) present. It only contains a file path.
+*   **Incorrect Data Type:** The label ""Endpoint:"" is followed by a local Windows file path (`C:\Users\...`). An en","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Title 'Implementation Roadmap' vs file path content""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Local file path used as network endpoint""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Security",page
+g7_unbreakable_text_010__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,[],"This slide is poorly executed and lacks professional design. Here are the specific issues:
+
+**1. Content Mismatch (The most critical error)**
+*   **Entire Slide:** The title is ""Implementation Roadmap,"" but the content is a single AWS ARN (Amazon Resource Name) endpoint. An endpoint is a technical configuration detail, not a ""roadmap"" (which should be a timeline or a series of milestones).
+
+**2. R","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Slide title vs AWS ARN content""
+    },
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""locator"": ""Endpoint text splitting 'manufacturing'""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Text ",page
+g7_unbreakable_text_009__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""S1_TITLE_BODY_MISMATCH""]",,,"[{""text"":""Excessive empty white space"",""raw_type"":""OTHER""},{""text"":""Absence of architecture diagram"",""raw_type"":""OTHER""}]","This slide is poor in quality and lacks professional design. Here are the specific issues:
+
+**1. Content & Logic**
+*   **Misleading Title/Content:** The slide is titled ""Platform Architecture,"" but there is no architecture diagram, schema, or description of a system. It contains only a single URL. A URL is an endpoint, not an architecture.
+*   **Redundancy:** The phrase ""Platform Architecture"" is ","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Title 'Platform Architecture' vs single URL""
+    },
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""locator"": ""URL broken across three lines""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Te",page
+g7_unbreakable_text_008__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S1_TITLE_BODY_MISMATCH"",""S6_IMAGE_TEXT_CONTRADICTION""]",,,"[{""text"":""Redundant 'Platform Architecture' text"",""raw_type"":""OTHER""},{""text"":""Excessive white space/poor use of space"",""raw_type"":""OTHER""}]","This slide is of very low quality and appears to be a placeholder or a draft. Here are the specific issues:
+
+**1. Content & Logic**
+*   **Incorrect Data Type:** In the main text box, the label says ""Endpoint,"" but the value provided is an AWS IAM Role ARN (`arn:aws:iam::...`). An endpoint should be a URL or IP address, not an identity role.
+*   **Redundancy:** The phrase ""Platform Architecture"" is","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""S6_IMAGE_TEXT_CONTRADICTION"",
+      ""locator"": ""Endpoint label with IAM Role ARN value""
+    },
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Title 'Platform Architecture' with no architecture diagram""
+    },
+    {
+      ""type"": ""G3_ALIG",page
+g7_unbreakable_text_011__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""S1_TITLE_BODY_MISMATCH""]",,,"[{""text"":""Redundant Risk Register header"",""raw_type"":""OTHER""}]","Based on a senior design review, this slide is poor quality and contains several critical errors:
+
+**1. Content Mismatch (Logical Error)**
+*   **Entire Slide:** The title and header say ""Risk Register,"" but the content is a file path to a YAML configuration file. A ""Risk Register"" should be a table or list of risks, not a technical endpoint path.
+
+**2. Text and Typography Issues**
+*   **Main Body ","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Slide title vs body content""
+    },
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""locator"": ""Main body endpoint path""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""Main body endpoin",page
+g7_unbreakable_text_012__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY""]",,,"[{""text"":""redundant title in header and blue box"",""raw_type"":""OTHER""},{""text"":""lack of visual hierarchy and icons"",""raw_type"":""OTHER""}]","This slide is poor in quality and lacks professional design. Here are the specific issues:
+
+**1. Redundancy (Text)**
+*   **Header vs. Box:** The title ""Q3 Go-to-Market Plan"" is repeated twice—once as the main slide header and again as a sub-header inside the blue box. This is redundant and wastes space.
+
+**2. Typography and Formatting (Inside the Blue Box)**
+*   **Font Inconsistency:** The text ""E","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""redundant title in header and blue box""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""sans-serif and monospaced font mix""
+    },
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""locator"": ""URL broken a",page
+g7_unbreakable_text_015__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY""]",,,"[{""text"":""Redundant Implementation Roadmap title and header"",""raw_type"":""OTHER""},{""text"":""Excessive white space in blue box"",""raw_type"":""OTHER""}]","- **Text Overflow/Wrapping:** In the main blue box, the ""Endpoint"" URL is broken across three lines. Because it is a technical string (a registry path), the wrapping is awkward and makes the endpoint difficult to read or copy.
+- **Redundancy:** The phrase ""Implementation Roadmap"" appears twice—once as the main slide title and again as a header inside the blue box. This is repetitive and wastes spa","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""locator"": ""Endpoint URL in main blue box""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Redundant Implementation Roadmap title and header""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Excessive white space in bl",page
+g7_unbreakable_text_013__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""S1_TITLE_BODY_MISMATCH""]",,,"[{""text"":""Excessive empty white space"",""raw_type"":""OTHER""},{""text"":""Redundant 'Risk Register' text"",""raw_type"":""OTHER""}]","This slide is of very low quality and appears to be a placeholder or a draft. Here are the specific issues:
+
+**1. Content Errors & Logic**
+*   **Incorrect Content:** The slide is titled ""Risk Register,"" but the content inside the box is a technical AWS IAM Role ARN (Amazon Resource Name). An ARN is a technical identifier, not a ""Risk Register"" (which should be a list of risks, impacts, and mitigat","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Title 'Risk Register' vs AWS IAM ARN content""
+    },
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""locator"": ""Word 'manufacturing' broken across two lines""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": """,page
+g7_unbreakable_text_014__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""S1_TITLE_BODY_MISMATCH"",""S6_IMAGE_TEXT_CONTRADICTION""]",,,"[{""text"":""Excessive white space/empty slide"",""raw_type"":""OTHER""}]","This slide is of very low quality and appears to be a placeholder or a draft. Here are the specific issues:
+
+**1. Content & Logic**
+*   **Incorrect Labeling (Center Box):** The text labeled ""Endpoint:"" is actually an AWS IAM Role ARN (Amazon Resource Name), not a network endpoint. This is a technical error.
+*   **Redundancy (Center Box):** The phrase ""Platform Architecture"" is repeated twice—once ","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""S6_IMAGE_TEXT_CONTRADICTION"",
+      ""locator"": ""Center box label 'Endpoint' for IAM ARN""
+    },
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Title 'Platform Architecture' lacks architecture diagram""
+    },
+    {
+      ""type"": ""G3_ALIGN",page
+g7_unbreakable_text_018__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G5_BRAND_COLOR_VIOLATION"",""G6_MARGIN_VIOLATION""]",,,"[{""text"":""Redundant Success Metrics title and header"",""raw_type"":""OTHER""},{""text"":""Unbalanced layout with excessive bottom white space"",""raw_type"":""OTHER""}]","- **Text Overflow/Wrapping:** In the main text box, the ""Endpoint"" URL is broken across three lines in a way that disrupts readability. Specifically, ""inference"" is split as ""infe-rence"" and ""containment"" is split as ""containme-nt"".
+- **Redundancy:** The phrase ""Success Metrics"" appears twice—once as the main slide title and again as a header inside the box. This is repetitive and wastes space.
+- ","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""locator"": ""Endpoint URL broken across three lines""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Redundant Success Metrics title and header""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Unbalanced layout with ex",page
+g7_unbreakable_text_016__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S1_TITLE_BODY_MISMATCH"",""S3_TERMINOLOGY_INCONSISTENCY""]",,,"[{""text"":""Center Box: excessive wasted white space"",""raw_type"":""OTHER""},{""text"":""Lack of diagrams/icons for Solution Overview"",""raw_type"":""OTHER""}]","This slide is poor in quality and contains several critical design and content errors:
+
+**1. Content/Logic Errors**
+*   **Incorrect Terminology (Center Box):** The text labels a local file path (`C:\Users\...`) as an ""Endpoint."" An endpoint is a network URL or IP address; a file path is a local directory. This is a fundamental technical error.
+*   **Redundancy (Center Box):** The phrase ""Solution ","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""S3_TERMINOLOGY_INCONSISTENCY"",
+      ""locator"": ""Center Box: local file path labeled Endpoint""
+    },
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Solution Overview repeated in title and box""
+    },
+    {
+      ""type"": ""G1_TEXT_OVERFLO",page
+g7_unbreakable_text_017__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,"[{""text"":""Inefficient use of space/top-heavy composition"",""raw_type"":""OTHER""}]","This slide is poorly designed and contains several critical errors:
+
+**1. Content Mismatch (Major Issue)**
+*   **Title vs. Content:** The slide title is ""Implementation Roadmap,"" but the content is a single AWS ARN (Amazon Resource Name) endpoint. There is no roadmap, timeline, or implementation plan present.
+
+**2. Text and Typography**
+*   **Redundancy:** The phrase ""Implementation Roadmap"" is re","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Title vs. Content""
+    },
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""locator"": ""ARN string wrapping to second line""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""Main title vs. b",page
+g7_unbreakable_text_020__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,"[{""text"":""redundant Platform Architecture title and header"",""raw_type"":""OTHER""},{""text"":""endpoint font lacks background highlight"",""raw_type"":""OTHER""},{""text"":""orange border visual hierarchy"",""raw_type"":""OTHER""}]","- **Text Overflow/Wrapping:** In the main text box, the ""Endpoint"" URL is broken across three lines in a way that disrupts readability. Specifically, the word ""inference"" is split (""infe-rence"") and ""containment"" is split (""containme-nt"").
+- **Redundancy:** The phrase ""Platform Architecture"" appears twice—once as the main slide title and again as a header inside the orange box.
+- **Alignment/Spaci","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""locator"": ""main text box endpoint URL""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""redundant Platform Architecture title and header""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""text inside orang",page
+g7_unbreakable_text_019__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,"[{""text"":""proportional font used for file path"",""raw_type"":""OTHER""}]","This slide is poorly executed and contains several critical design and content errors:
+
+**1. Content Mismatch (Major Issue)**
+*   **The entire slide:** The title is ""Success Metrics,"" but the content is a local file path to a YAML configuration file. A file path is not a ""metric."" This is a fundamental failure of content alignment.
+
+**2. Text and Formatting Issues**
+*   **The main text block:** Th","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""title vs file path content""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""proportional font used for file path""
+    },
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""locator"": ""file path wrapped mid-word",page
+g7_unbreakable_text_021__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY""]",,,"[{""text"":""repeated title and header"",""raw_type"":""OTHER""},{""text"":""blue box disproportionately large"",""raw_type"":""OTHER""}]","- **Redundancy:** The phrase ""Implementation Roadmap"" is repeated twice—once as the main slide title and again as a header inside the blue box.
+- **Text Wrapping/Formatting:** In the ""Endpoint"" section, the URL is broken across two lines in a way that disrupts readability. Specifically, ""onboard"" is split into ""onboard"" and ""ing,"" and the second line starts with a hanging indent that looks like a ","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""repeated title and header""
+    },
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""locator"": ""URL broken across two lines""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""blue box disproportionately large""
+    },
+    {
+     ",page
+g7_unbreakable_text_022__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY""]",,,"[{""text"":""repeated title and header"",""raw_type"":""OTHER""},{""text"":""blue box disproportionately large"",""raw_type"":""OTHER""}]","- **Redundancy:** The phrase ""Implementation Roadmap"" is repeated twice—once as the main slide title and again as a header inside the blue box.
+- **Text Wrapping/Formatting:** In the ""Endpoint"" section, the URL is broken across two lines in a way that disrupts readability. Specifically, ""onboard"" is split into ""onboard"" and ""ing,"" and the second line starts with a hanging indent that looks like a ","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""repeated title and header""
+    },
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""locator"": ""URL broken across two lines""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""blue box disproportionately large""
+    },
+    {
+     ",page
+g7_unbreakable_text_023__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,"[{""text"":""unprofessional use of local Windows file path"",""raw_type"":""OTHER""}]","This slide is poorly executed and contains several critical design and content errors:
+
+**1. Content Mismatch (Critical)**
+*   **Entire Slide:** The title and the header inside the box both say ""Success Metrics,"" but the actual content is a local file path to a YAML configuration file. A file path is not a ""metric."" This is a fundamental failure of content alignment.
+
+**2. Text and Formatting Issu","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""title and header vs file path content""
+    },
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""locator"": ""file path in main content area""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""unprofessional use of",page
+g7_unbreakable_text_024__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,"[{""text"":""Inefficient use of space/top-heavy composition"",""raw_type"":""OTHER""}]","This slide is poorly designed and contains several critical errors:
+
+**1. Content Mismatch (Major Issue)**
+*   **Title vs. Content:** The slide title is ""Implementation Roadmap,"" but the content is a single AWS ARN (Amazon Resource Name) endpoint. There is no roadmap, timeline, or implementation plan present.
+
+**2. Text and Typography**
+*   **Redundancy:** The phrase ""Implementation Roadmap"" is re","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Title vs. Content""
+    },
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""locator"": ""ARN string wrapping to second line""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""Main title vs. b",page
+g7_unbreakable_text_025__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""G5_BRAND_COLOR_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,[],"This slide is poorly executed and lacks professional design. Here are the specific issues:
+
+**1. Content Mismatch (The most critical error)**
+*   **Entire Slide:** The title is ""Implementation Roadmap,"" but the content is a single AWS ARN (Amazon Resource Name) endpoint. An endpoint is a technical configuration detail, not a ""roadmap"" (which should be a timeline or a series of milestones).
+
+**2. R","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""Slide title vs AWS ARN content""
+    },
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""locator"": ""Endpoint text splitting 'manufacturing'""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""Text ",page
+g7_unbreakable_text_027__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET""]",,,"[{""text"":""redundant Implementation Roadmap title"",""raw_type"":""OTHER""},{""text"":""endpoint font lacks code block style"",""raw_type"":""OTHER""},{""text"":""orange border box visual hierarchy"",""raw_type"":""OTHER""}]","- **Text Overflow/Wrapping:** In the main text box, the ""Endpoint"" URL is broken across three lines in a way that disrupts readability. Specifically, the word ""inference"" is split (""infe-rence"") and ""containment"" is split (""containme-nt"").
+- **Redundancy:** The phrase ""Implementation Roadmap"" appears twice—once as the main slide title and again as a header inside the orange box.
+- **Alignment/Spac","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""locator"": ""main text box endpoint URL""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""redundant Implementation Roadmap title""
+    },
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""locator"": ""text inside orange box""
+   ",page
+g7_unbreakable_text_026__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""G4_FONT_SIZE_INCONSISTENCY"",""G5_BRAND_COLOR_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,"[{""text"":""use of local C-drive file path"",""raw_type"":""OTHER""}]","This slide is highly unprofessional and contains several critical design and content errors:
+
+**1. Content Mismatch (Critical)**
+*   **The entire slide:** The title ""Q3 Go-to-Market Plan"" suggests a strategic business presentation, but the content inside the box is a technical local file path (`C:\Users\...`). This is a massive disconnect between the intended topic and the actual data shown.
+
+**2.","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""locator"": ""title vs technical file path content""
+    },
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""locator"": ""endpoint text in container""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""use of local C-drive file ",page
+g7_unbreakable_text_028__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G4_FONT_SIZE_INCONSISTENCY"",""G6_MARGIN_VIOLATION"",""S1_TITLE_BODY_MISMATCH""]",,,"[{""text"":""repeated phrase Implementation Roadmap"",""raw_type"":""OTHER""},{""text"":""excessive white space in boxed area"",""raw_type"":""OTHER""}]","- **Redundancy:** The phrase ""Implementation Roadmap"" is repeated twice—once as the main slide title and again as a header inside the boxed area.
+- **Text Wrapping/Formatting:** In the ""Endpoint"" section, the URL is broken across two lines in a way that disrupts readability. Specifically, ""onboard"" is split into ""onboard"" and ""ing,"" which is non-standard for technical documentation.
+- **Typography","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""repeated phrase Implementation Roadmap""
+    },
+    {
+      ""type"": ""G1_TEXT_OVERFLOW"",
+      ""locator"": ""URL broken across two lines""
+    },
+    {
+      ""type"": ""G4_FONT_SIZE_INCONSISTENCY"",
+      ""locator"": ""shift between sans-",page
+g7_unbreakable_text_029__CLEAN,G7_RENDER_CONTAINMENT_OVERFLOW,A,True,False,True,False,"[""G1_TEXT_OVERFLOW"",""G3_ALIGNMENT_OFFSET"",""S5_MISSING_LOGIC_SECTION""]",,,"[{""text"":""Endpoint listed as local file path"",""raw_type"":""OTHER""},{""text"":""Local directory path security risk"",""raw_type"":""OTHER""},{""text"":""Redundant Platform Architecture text"",""raw_type"":""OTHER""},{""text"":""Excessive empty white space"",""raw_type"":""OTHER""},{""text"":""Generic unstyled look"",""raw_type"":""OTHER""},{""text"":""Lack of visual hierarchy in box"",""raw_type"":""OTHER""}]","This slide is of very low quality and appears to be a placeholder or a draft. Here are the specific issues:
+
+**1. Content & Logic (Center Box)**
+*   **Incorrect Data Type:** The ""Endpoint"" is listed as a local Windows file path (`C:\Users\...`). An endpoint should be a URL or IP address. Listing a local configuration file path as an ""Endpoint"" is technically incorrect.
+*   **Security Risk:** Displ","```json
+{
+  ""defects"": [
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Endpoint listed as local file path""
+    },
+    {
+      ""type"": ""OTHER"",
+      ""locator"": ""Local directory path security risk""
+    },
+    {
+      ""type"": ""S5_MISSING_LOGIC_SECTION"",
+      ""locator"": ""Missing architecture diagram ",page

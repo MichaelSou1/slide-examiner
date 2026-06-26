@@ -1,0 +1,577 @@
+sample_id,defect,modality,is_clean,failure,has_defect,named_target,predicted_types,locator,confidence,other,raw,level
+part2_marketing_attribution_2_G1_TEXT_OVERFLOW_32_0046__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的文字，比如标题“XXX How Attrib models touchpoints”和下面的三个项目，每个文字都在各自的浅蓝色框内，没有字母被截断或者超出边界的情况。所以判断present为false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_marketing_attribution_3_G1_TEXT_OVERFLOW_32_0047__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的文字，第一个标题“XXX Attrib evidence from the pilot”在浅灰色框里，没有溢出；下面三个浅蓝色框里的文字也没有被截断，都在框内。所以没有这种情况，present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_marketing_attribution_3_G1_TEXT_OVERFLOW_4_0047__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的文字，第一个是“We need executive sponsorship”，第二个“Attrib needs a small dedicated team”，第三个“A decision is needed this quarter”。这些文字都在各自的浅蓝色文本框内，没有被截断或溢出的情况。所以present应该是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_logistics_visibility_4_G1_TEXT_OVERFLOW_32_0043__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的文字：第一个是“Approve the phase 1 budget for ShipEye”，第二个“Assign two platform engineers”，第三个“Confirm the cutover freeze window”。这些文字都在各自的浅蓝色框内，没有被截断（比如字母被切掉，或者行超出边界）。所以判断present为false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_logistics_visibility_3_G1_TEXT_OVERFLOW_4_0042__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的文字，标题“ShipEye tracks every leg XX”在第一个框，下面三个框的文字分别是“Shadow traffic before switching ShipEye”、“Automated rollback within five minutes”、“Cost and latency dashboards per service”。这些文字都在各自的文本框内，没有被截断或溢出的情况。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_logistics_visibility_3_G1_TEXT_OVERFLOW_32_0042__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的文字：标题“ShipEye tracks every leg XXX”在第一个框，下面三个框的文字分别是“Shadow traffic before switching ShipEye”、“Automated rollback within five minutes”、“Cost and latency dashboards per service”。这些文字都在各自的文本框内，没有被截断或溢出的情况。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_marketing_attribution_1_G1_TEXT_OVERFLOW_32_0045__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有文本溢出或被截断。看每个文本框里的内容，第一个“XXX Spend is hard to attribute”在浅灰色框里，没有溢出；下面的三个条目“Risks are tracked weekly”、“Attrib has a clear rollback path”、“Compliance reviewed the design”都在各自的浅灰色框内，没有字母被截断或超出边界。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_marketing_attribution_1_G1_TEXT_OVERFLOW_4_0045__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的内容：第一个标题“Spend is hard to attribute XX”在浅蓝色框里，没有溢出；下面三个列表项“Risks are tracked weekly”、“Attrib has a clear rollback path”、“Compliance reviewed the design”都在各自的浅蓝色框内，没有字母被截断或超出边界。所以判断present为false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_logistics_visibility_5_G1_TEXT_OVERFLOW_32_0044__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的文字，标题“A pragmatic ShipEye plan XXX”在第一个浅蓝色框里，没有溢出；下面三个框里的文字“ShipEye reduces toil by a third”、“Teams adopt ShipEye daily”、“Payback under twelve months”也没有被截断，都在框内。所以没有溢出或截断的情况，present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_logistics_visibility_5_G1_TEXT_OVERFLOW_4_0044__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的内容：标题“XX A pragmatic ShipEye plan”在第一个浅灰色框里，没有溢出；下面三个浅蓝色框里的文字分别是“ShipEye reduces toil by a third”、“Teams adopt ShipEye daily”、“Payback under twelve months”，这些文字都在各自的框内，没有被截断或溢出。所以判断present为false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_marketing_attribution_2_G1_TEXT_OVERFLOW_4_0046__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的文字，标题“XX How Attrib models touchpoints”在第一个浅灰色框里，文字没有被截断；下面三个浅蓝色框里的文字“Adoption grew month over month”、“Attrib now handles most volume”、“Support tickets fell steadily”也没有被截断，都在各自的框内。所以没有溢出或截断的情况，present设为false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_logistics_visibility_4_G1_TEXT_OVERFLOW_4_0043__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的内容：标题“ShipEye impact on on-time delivery XX”在第一个浅灰色框，里面的文字没有被截断；下面三个框里的文字分别是“Approve the phase 1 budget for ShipEye”、“Assign two platform engineers”、“Confirm the cutover freeze window”，这些文字都在各自的框内，没有被截断或溢出。所以判断present为false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_marketing_attribution_5_G1_TEXT_OVERFLOW_32_0049__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的内容，所有文字都在框内，没有被截断的情况。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_marketing_attribution_5_G1_TEXT_OVERFLOW_4_0049__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的文字，所有文字都在框内，没有被截断的情况。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_marketing_attribution_4_G1_TEXT_OVERFLOW_4_0048__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的文字，标题“Rolling Attrib out by channel XX”在第一个浅灰色框里，文字没有被截断；下面三个框里的文字也没有超出边界，字母没有被切掉，行也没超过框。所以判断present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_network_observability_1_G1_TEXT_OVERFLOW_32_0050__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的内容：标题“XXX Outages are hard to diagnose”在第一个浅灰色框，没有溢出；下面三个长条形框里的文字也没有超出边界，字母没有被截断。所以判断present为false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_marketing_attribution_4_G1_TEXT_OVERFLOW_32_0048__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的文字，标题“Rolling Attrib out by channel XXX”里的XXX是否在框内？然后下面的三个文本框：“Attrib is saturated at peak demand”、“A refresh is due within two quarters”、“Competitors already ship weekly”这些文字都在各自的浅蓝色框内，没有被截断或溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_network_observability_2_G1_TEXT_OVERFLOW_32_0051__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的内容，标题“XXX One pane with TraceGrid”在第一个浅灰色框里，没有溢出；下面三个长条形框里的文字也没有被截断，都在框内。所以没有这种情况，present设为false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_network_observability_1_G1_TEXT_OVERFLOW_4_0050__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有文本溢出或被截断。看每个文本框里的文字，标题“XX Outages are hard to diagnose”在第一个浅灰色框里，没有溢出；下面三个框里的文字也没有被截断，比如“No data leaves the tenant”等都在框内。所以没有溢出或截断的情况，present设为false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_network_observability_2_G1_TEXT_OVERFLOW_4_0051__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的文字，第一个标题“XX One pane with TraceGrid”在浅灰色框里，没有溢出；下面的三个长条形框里的文字也没有被截断，比如“Risks are tracked weekly”等都在框内。所以没有溢出或截断的情况，present设为false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_network_observability_4_G1_TEXT_OVERFLOW_4_0053__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的文字，第一个标题“XX TraceGrid data governance”在浅蓝色框里，没有溢出；下面三个长条形框里的文字也没有被截断，比如“We need executive sponsorship”等都在框内。所以没有溢出或截断的情况，present设为false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_network_observability_3_G1_TEXT_OVERFLOW_32_0052__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有文本溢出或被截断。看每个文本框里的文字，标题“XXX The TraceGrid architecture”在第一个浅灰色框里，文字没有被截断；下面三个浅蓝色框里的文字分别是“Adoption grew month over month”、“TraceGrid now handles most volume”、“Support tickets fell steadily”，这些文字都在各自的框内，没有被截断或溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_network_observability_3_G1_TEXT_OVERFLOW_4_0052__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的文字：标题“The TraceGrid architecture XX”在第一个浅灰色框里，没有溢出；下面三个浅蓝色框里的文字“Adoption grew month over month”、“TraceGrid now handles most volume”、“Support tickets fell steadily”也没有被截断，都在框内。所以没有溢出或截断的情况，present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_network_observability_4_G1_TEXT_OVERFLOW_32_0053__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的文字，标题“XXX TraceGrid data governance”在第一个浅灰色框里，文字没有被截断；下面三个框里的文字分别是“We need executive sponsorship”、“TraceGrid needs a small dedicated team”、“A decision is needed this quarter”，这些文字都在各自的框内，没有被截断或溢出。所以判断present为false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_network_observability_5_G1_TEXT_OVERFLOW_32_0054__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的内容，标题“XXX The TraceGrid roadmap”在第一个浅灰色框里，文字没有被截断；下面三个浅蓝色框里的文字也没有超出边界，字母没有被切掉，行也没超过框。所以判断present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_ops_efficiency_1_G1_TEXT_OVERFLOW_32_0055__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的文字，标题“XXX Where operating cost sits today”在第一个框，下面三个列表项的文字也没有超出框的边界。所以没有溢出或截断的情况，present设为false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_ops_efficiency_1_G1_TEXT_OVERFLOW_4_0055__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的文字，标题“XX Where operating cost sits today”在第一个框，下面三个列表项的文字也没有超出框的边界。所以没有溢出或截断的情况，present设为false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_ops_efficiency_4_G1_TEXT_OVERFLOW_32_0058__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有文本溢出或被截断。看每个文本框里的内容，所有文字都在框内，没有被截断的情况。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_network_observability_5_G1_TEXT_OVERFLOW_4_0054__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的文字，标题“XX The TraceGrid roadmap”在第一个浅灰色框里，文字没有被截断；下面三个浅蓝色框里的文字分别是“TraceGrid is saturated at peak demand”、“A refresh is due within two quarters”、“Competitors already ship weekly”，这些文字都在各自的框内，没有被截断或溢出。所以判断present为false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_ops_efficiency_2_G1_TEXT_OVERFLOW_32_0056__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的内容，比如“RouteOpt reduces toil by a third”这些文字是否在框内。所有可见文本都在各自的浅蓝色框内，没有被截断或溢出的情况。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_ops_efficiency_2_G1_TEXT_OVERFLOW_4_0056__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的内容，比如“RouteOpt reduces toil by a third”这些文字是否在框内。所有可见文本都在各自的浅蓝色框内，没有被截断或溢出的情况。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_ops_efficiency_4_G1_TEXT_OVERFLOW_4_0058__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有文本溢出或被截断。看每个文本框里的内容，所有文字都在框内，没有被截断的情况。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_ops_efficiency_5_G1_TEXT_OVERFLOW_4_0059__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的内容，标题和三个列表项的文本都在各自的框内，没有字母被截断或超出边界。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_ops_efficiency_3_G1_TEXT_OVERFLOW_4_0057__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的内容，标题“RouteOpt is the first lever XX”在第一个浅灰色框里，没有溢出；下面三个长文本框里的文字也没有超出边界，字母没有被截断。所以判断present为false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_ops_efficiency_3_G1_TEXT_OVERFLOW_32_0057__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有文本溢出或被截断。看每个文本框里的内容，检查是否字母被截断或行超出边界。观察后发现没有这种情况，所以present是false。然后confidence设为1.0？不对，要准确。再仔细看：所有文本都在各自的框内，没有溢出。所以present是false，confidence可以是1.0？因为确定没有。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_retail_analytics_3_G1_TEXT_OVERFLOW_64_0042__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的内容：第一个标题“DemandSense beat the baseline XXXXX”在浅蓝色框里，没有溢出；下面三个列表项的文本也没有超出各自的浅蓝色框。所以没有可见的溢出或截断情况，present设为false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_ops_efficiency_5_G1_TEXT_OVERFLOW_32_0059__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的内容：标题“XXX A pragmatic ninety-day plan”在第一个浅灰色框，没有溢出；下面三个浅蓝色框里的文字分别是“RouteOpt integrates with existing tools”、“No data leaves the tenant”、“Setup takes under a week”，这些文字都在各自的框内，没有被截断或溢出。所以判断present为false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_retail_analytics_4_G1_TEXT_OVERFLOW_64_0043__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的内容：标题“XXXXX Scaling DemandSense to the fleet”在第一个框，下面三个列表项的文本都在各自的框内，没有字母被截断或超出边界。所以判断present为false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_retail_analytics_5_G1_TEXT_OVERFLOW_64_0044__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有文本溢出或被截断。看每个文本框里的内容，比如“DemandSense reduces toil by a third”这些文字是否在框内。检查后发现所有文本都在各自的浅蓝色框内，没有被截断或溢出的情况。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_security_program_2_G1_TEXT_OVERFLOW_64_0046__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有文本溢出或被截断。看每个文本框里的内容：标题“A ZeroTrust strategy XXXXX”在第一个框，下面三个框的内容也没有溢出。所有文本都在各自的框内，没有字母被截断或超出边界。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_security_program_3_G1_TEXT_OVERFLOW_64_0047__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的内容：第一个标题“XXXXX The ZeroTrust controls we deploy”在文本框内，没有溢出；下面三个列表项也都在各自的文本框内，没有字母被截断或超出边界。所以判断present为false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_security_program_5_G1_TEXT_OVERFLOW_64_0049__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有文本溢出或被截断。看每个文本框里的内容：第一个标题“XXXXX The investment we request”在浅灰色框里，没有溢出；下面三个浅蓝色框里的文字也没有超出边界，字母没有被截断，行也没超过框。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_supply_chain_2_G1_TEXT_OVERFLOW_64_0051__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有文本溢出或被截断。看每个文本框里的内容，标题“XXXXX Why FlowNet visibility is missing”在第一个浅灰色框里，其他三个框里的文字也没有超出边界的情况。所以没有溢出或截断，present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_supply_chain_1_G1_TEXT_OVERFLOW_64_0050__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有文本溢出或被截断。看每个文本框里的内容：第一个标题“Supply shocks hit margins XXXXX”在浅蓝色框里，没有溢出；下面的三个长条形框里的文字也没有超出边界。所以没有可见的溢出或截断情况，present设为false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_security_program_1_G1_TEXT_OVERFLOW_64_0045__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被裁剪。看每个文本框里的内容：第一个标题“XXXXX Our exposure is growing fast”在浅灰色框里，没有溢出；下面三个列表项“Q1 foundation for ZeroTrust”、“Q2 first production workloads”、“Q3 migration and cutover”都在各自的浅灰色框内，没有文字被截断或超出边界。所以判断present为false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_security_program_4_G1_TEXT_OVERFLOW_64_0048__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的内容：第一个标题下的浅灰色框，里面的文字是否被截断？然后下面的三个浅蓝色框里的文字，比如“ZeroTrust reduces toil by a third”、“Teams adopt ZeroTrust daily”、“Payback under twelve months”这些文字是否在框内。观察后发现所有文本都在各自的文本框内，没有被截断或溢出的情况。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_supply_chain_5_G1_TEXT_OVERFLOW_64_0054__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有文本溢出或被截断。看每个文本框里的内容，标题“FlowNet rollout plan XXXXX”在第一个浅蓝色框里，其他三个框里的文字也没有超出边界。所以没有溢出或截断的情况，present设为false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_warehouse_robotics_1_G1_TEXT_OVERFLOW_64_0055__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有文本溢出或被截断。看每个文本框里的内容：标题“Pick rates have plateaued XXXXX”在第一个框，下面三个框的内容也没有溢出。所有文本都在各自的框内，没有被截断或溢出的情况。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_supply_chain_3_G1_TEXT_OVERFLOW_64_0052__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有文本溢出或被截断。看每个文本框里的内容：第一个标题“XXXXX FlowNet connects the network”在浅灰色框里，没有溢出；下面三个浅蓝色框里的文字“Adoption grew month over month”、“FlowNet now handles most volume”、“Support tickets fell steadily”也没有溢出，都在框内。所以没有溢出或截断的情况，present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_warehouse_robotics_5_G1_TEXT_OVERFLOW_64_0059__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有文本溢出或被截断。看每个文本框里的文字，标题和三个列表项的文字都没有超出边框，没有字母被截断或行超出边界的情况。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_supply_chain_4_G1_TEXT_OVERFLOW_64_0053__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有文本溢出或被截断。看每个文本框里的内容，标题“FlowNet impact on service levels XXXXX”里的XXXXX是否在框内？然后下面的三个文本框：“We need executive sponsorship”、“FlowNet needs a small dedicated team”、“A decision is needed this quarter”这些文字都在各自的浅蓝色框内，没有被截断或溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_warehouse_robotics_4_G1_TEXT_OVERFLOW_64_0058__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有文本溢出或被截断。看每个文本框里的内容，标题“Expected PickBot throughput gains XXXXX”在第一个浅蓝色框里，其他三个框里的文字也没有超出边界的情况。所以没有溢出或截断，present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_warehouse_robotics_2_G1_TEXT_OVERFLOW_64_0056__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有文本溢出或被截断。看每个文本框里的内容，第一个文本框“PickBot reduces toil by a third”在浅蓝色框内，没有溢出；第二个“Teams adopt PickBot daily”也没有；第三个“Payback under twelve months”也没有。所以没有溢出或截断的情况，present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_warehouse_robotics_3_G1_TEXT_OVERFLOW_64_0057__freeform,G1_TEXT_OVERFLOW,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有文本溢出或被截断。看每个文本框里的内容，标题“XXXXX PickBot automates the long aisles”里的“XXXXX”是占位符，但其他文本框里的文字是否被截断？看每个文本框的边界，比如第一个文本框（浅灰色）里的文字是否超出？不，所有可见文本都在各自的文本框内，没有被截断或溢出的情况。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_logistics_visibility_5_G1_TEXT_OVERFLOW_32_0044__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的文字，标题和下面的三个条目都没有被截断，文字都在框内。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_logistics_visibility_5_G1_TEXT_OVERFLOW_4_0044__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的文字，标题和下面的三个条目都没有被截断，文字都在框内。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_logistics_visibility_3_G1_TEXT_OVERFLOW_32_0042__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的文字，比如“ShipEye tracks every leg”在最上面的框里，文字是否超出？看其他三个框里的文字：“Shadow traffic before switching ShipEye”、“Automated rollback within five minutes”、“Cost and latency dashboards per service”，这些文字都在各自的框内，没有被截断或溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_logistics_visibility_3_G1_TEXT_OVERFLOW_4_0042__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的文字，比如“ShipEye tracks every leg”在最上面的框里，文字是否超出？看其他三个框里的文字：“Shadow traffic before switching ShipEye”、“Automated rollback within five minutes”、“Cost and latency dashboards per service”，这些文字都在各自的文本框内，没有被截断或溢出。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_logistics_visibility_4_G1_TEXT_OVERFLOW_32_0043__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的文字，标题“ShipEye impact on on-time delivery”在最上面的框里，下面三个框的文字分别是“Approve the phase 1 budget for ShipEye”、“Assign two platform engineers”、“Confirm the cutover freeze window”。这些文字都没有被截断，都在各自的文本框内显示完整。所以判断present为false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_marketing_attribution_3_G1_TEXT_OVERFLOW_32_0047__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的文字，标题和下面的三个项目都没有被截断，所有文字都在框内。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_logistics_visibility_4_G1_TEXT_OVERFLOW_4_0043__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的文字，标题“ShipEye impact on on-time delivery”在最上面的框里，下面三个框的文字分别是“Approve the phase 1 budget for ShipEye”、“Assign two platform engineers”、“Confirm the cutover freeze window”。这些文字都没有被截断，都在各自的文本框内显示完整。所以判断present为false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_marketing_attribution_2_G1_TEXT_OVERFLOW_32_0046__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的文字，三个项目分别是“Adoption grew month over month”、“Attrib now handles most volume”、“Support tickets fell steadily”，这些文字都在各自的浅灰色框内，没有被截断或溢出的情况。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_marketing_attribution_2_G1_TEXT_OVERFLOW_4_0046__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的文字，三个项目分别是“Adoption grew month over month”、“Attrib now handles most volume”、“Support tickets fell steadily”，这些文字都在各自的浅灰色框内，没有被截断或溢出的情况。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_marketing_attribution_3_G1_TEXT_OVERFLOW_4_0047__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的文字，标题和下面的三个条目都没有被截断，文字都在框内。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_marketing_attribution_1_G1_TEXT_OVERFLOW_32_0045__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有文本溢出或被截断。看每个文本框里的文字，比如“Risks are tracked weekly”这些，检查是否边缘有字母被截断或者行超出边界。观察后发现没有这种情况，所以present是false。然后confidence设为1.0？不对，要准确。再仔细看，所有文本都在各自的框内，没有溢出。所以present是false，confidence可以是1.0？因为确定没有。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_marketing_attribution_5_G1_TEXT_OVERFLOW_32_0049__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的文字，所有文字都在框内，没有被截断的情况。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_marketing_attribution_5_G1_TEXT_OVERFLOW_4_0049__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的文字，所有文字都在框内，没有被截断的情况。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_marketing_attribution_1_G1_TEXT_OVERFLOW_4_0045__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有文本溢出或被截断。看每个文本框里的文字，比如“Risks are tracked weekly”这些，检查是否边缘有字母被截断或者行超出边界。观察后发现没有这种情况，所以present是false。然后confidence设为1.0？不对，要准确。再仔细看，所有文本都在各自的框内，没有溢出。所以present是false，confidence可以是1.0？因为确定没有。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_marketing_attribution_4_G1_TEXT_OVERFLOW_32_0048__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的文字，标题“Rolling Attrib out by channel”在浅灰色条里，下面三个列表项的文字也没有超出各自的文本框。所以没有溢出或截断的情况，present设为false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_marketing_attribution_4_G1_TEXT_OVERFLOW_4_0048__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的文字，标题“Rolling Attrib out by channel”在浅灰色条里，下面三个列表项的文字也没有超出各自的文本框。所以没有溢出或截断的情况，present设为false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_network_observability_1_G1_TEXT_OVERFLOW_32_0050__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有文本溢出或被截断。看每个文本框里的文字，比如标题“Outages are hard to diagnose”在第一个浅灰色框里，没有溢出；下面的三个框里的文字也没有被截断，字母没被切掉，行也没超出边界。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_network_observability_1_G1_TEXT_OVERFLOW_4_0050__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有文本溢出或被截断。看每个文本框里的文字，比如标题“Outages are hard to diagnose”在第一个浅灰色框里，没有溢出；下面的三个框里的文字也没有被截断，字母没被切掉，行也没超出边界。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_network_observability_2_G1_TEXT_OVERFLOW_32_0051__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有文本溢出或被截断。看每个文本框里的文字，比如“Risks are tracked weekly”这些，检查是否边缘有字母被截断或者行超出框。观察后发现没有这种情况，所以present是false。然后confidence设为1.0？不对，要准确。再仔细看，所有文本都在框内，没有溢出。所以present是false，confidence可以是1.0？因为确定没有。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_network_observability_2_G1_TEXT_OVERFLOW_4_0051__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有文本溢出或被截断。看每个文本框里的文字，比如“Risks are tracked weekly”这些，检查是否边缘有字母被截断或者行超出框。观察后发现没有这种情况，所以present是false。然后confidence设为1.0？不对，要准确。再仔细看，所有文本都在框内，没有溢出。所以present是false，confidence可以是1.0？因为确定没有。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_network_observability_3_G1_TEXT_OVERFLOW_32_0052__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的文字，比如标题“The TraceGrid architecture”在最上面的浅灰色框里，文字没有被截断；下面三个框里的文字“Adoption grew month over month”、“TraceGrid now handles most volume”、“Support tickets fell steadily”也没有被截断，都在各自的框内。所以没有溢出或截断的情况，present设为false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_network_observability_4_G1_TEXT_OVERFLOW_32_0053__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的文字，第一个标题“TraceGrid data governance”在最上面的浅灰色框里，没有溢出；下面三个条目分别是“We need executive sponsorship”、“TraceGrid needs a small dedicated team”、“A decision is needed this quarter”，这些文字都在各自的文本框内，没有被截断或溢出。所以判断present为false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_network_observability_3_G1_TEXT_OVERFLOW_4_0052__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的文字，比如标题“The TraceGrid architecture”在最上面的浅灰色框里，文字没有被截断；下面三个框里的文字“Adoption grew month over month”、“TraceGrid now handles most volume”、“Support tickets fell steadily”也没有被截断，都在各自的框内。所以没有溢出或截断的情况，present设为false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_network_observability_4_G1_TEXT_OVERFLOW_4_0053__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的文字，第一个标题“TraceGrid data governance”在最上面的浅灰色框里，没有溢出；下面三个条目分别是“We need executive sponsorship”、“TraceGrid needs a small dedicated team”、“A decision is needed this quarter”，这些文字都在各自的文本框内，没有被截断或溢出。所以判断present为false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_network_observability_5_G1_TEXT_OVERFLOW_4_0054__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的文字，标题“The TraceGrid roadmap”在第一个浅灰色框里，文字完整；下面三个框里的文字“TraceGrid is saturated at peak demand”、“A refresh is due within two quarters”、“Competitors already ship weekly”也都完整显示，没有被截断或溢出的情况。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_network_observability_5_G1_TEXT_OVERFLOW_32_0054__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的文字，标题“The TraceGrid roadmap”在第一个浅灰色框里，文字完整；下面三个框里的文字“TraceGrid is saturated at peak demand”、“A refresh is due within two quarters”、“Competitors already ship weekly”也都完整显示，没有被截断或溢出的情况。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_ops_efficiency_1_G1_TEXT_OVERFLOW_32_0055__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的文字，比如标题“Where operating cost sits today”在浅灰色条里，下面三个项目：“Approve the phase 1 budget for RouteOpt”、“Assign two platform engineers”、“Confirm the cutover freeze window”。检查每个文字是否在框内，没有看到字母被截断或超出边界的情况。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_ops_efficiency_2_G1_TEXT_OVERFLOW_32_0056__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的文字，比如“RouteOpt reduces toil by a third”这些，有没有字母被截断或者超出边框。观察后发现所有文字都在文本框内，没有溢出或被截断的情况。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_ops_efficiency_1_G1_TEXT_OVERFLOW_4_0055__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的文字，比如标题“Where operating cost sits today”在浅蓝色条里，下面三个项目：“Approve the phase 1 budget for RouteOpt”、“Assign two platform engineers”、“Confirm the cutover freeze window”。检查每个文字是否在框内，没有看到字母被截断或超出边界的情况。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_ops_efficiency_2_G1_TEXT_OVERFLOW_4_0056__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的文字，比如“RouteOpt reduces toil by a third”这些，有没有字母被截断或者超出边框。观察后发现所有文字都在文本框内，没有溢出或被截断的情况。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_ops_efficiency_3_G1_TEXT_OVERFLOW_32_0057__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有文本溢出或被截断。看每个文本框里的文字，检查是否边缘有字母被切掉或者行超出边界。观察所有文本，比如“RouteOpt is the first lever”等，没有看到文字被截断的情况。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_ops_efficiency_3_G1_TEXT_OVERFLOW_4_0057__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的文字，比如标题“RouteOpt is the first lever”在最上面的浅灰色框里，文字没有被截断；下面的三个框里的文字也没有超出边界，字母没有被切掉，行也没超过框。所以判断present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_retail_analytics_3_G1_TEXT_OVERFLOW_64_0042__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有文本溢出或被截断。看每个文本框里的文字，比如“DemandSense beat the baseline”、“Shadow traffic before switching DemandSense”等，这些文字都在各自的文本框内，没有被截断或溢出的情况。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_ops_efficiency_5_G1_TEXT_OVERFLOW_32_0059__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的文字，比如“RouteOpt integrates with existing tools”这些，有没有字母被截断或者超出边框。观察后发现所有文本都在各自的文本框内，没有溢出或被截断的情况。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_ops_efficiency_5_G1_TEXT_OVERFLOW_4_0059__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的文字，比如“RouteOpt integrates with existing tools”这些，有没有字母被截断或者超出边框。观察后发现所有文字都在文本框内，没有溢出或被截断的情况。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_retail_analytics_4_G1_TEXT_OVERFLOW_64_0043__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的文字，标题“Scaling DemandSense to the fleet”在最上面的框里，下面三个任务项的文字也没有超出各自的框。所以没有溢出或截断的情况，present设为false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_security_program_3_G1_TEXT_OVERFLOW_64_0047__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的文字，标题和三个列表项的文字都没有超出边框，没有字母被截断或行超出边界的情况。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_security_program_2_G1_TEXT_OVERFLOW_64_0046__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的文字，比如标题“A ZeroTrust strategy”在第一个大框里，其他三个小框里的文字也没有被截断，所有文字都在框内。所以没有溢出或截断的情况，present设为false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_retail_analytics_5_G1_TEXT_OVERFLOW_64_0044__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有文本溢出或被截断。看每个文本框里的文字，检查是否边缘有字母被切掉或者行超出边界。观察三个项目：“DemandSense reduces toil by a third”、“Teams adopt DemandSense daily”、“Payback under twelve months”，这些文字都在各自的浅灰色框内，没有溢出或被截断的情况。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_ops_efficiency_4_G1_TEXT_OVERFLOW_32_0058__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有文本溢出或被截断。看每个文本框里的内容，检查是否有字母被截断或行超出边界。观察后发现没有这种情况，所以present是false。然后confidence设为1.0？不对，要准确。再仔细看：每个文本框内的文字是否完整。比如第一个“the pilot covered three regions”在框内，第二个“RouteOpt beat the baseline by double digits”也在，第三个“Results held across segments”也在。所以没有溢出或截断，present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_security_program_1_G1_TEXT_OVERFLOW_64_0045__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的文字，标题“Our exposure is growing fast”在最上面的浅灰色框里，文字没有被截断；下面三个项目分别是“Q1 foundation for ZeroTrust”、“Q2 first production workloads”、“Q3 migration and cutover”，这些文字都在各自的浅灰色框内，没有字母被截断或超出边界。所以判断present为false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_ops_efficiency_4_G1_TEXT_OVERFLOW_4_0058__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有文本溢出或被截断。看每个文本框里的内容，检查是否有字母被截断或行超出边界。观察后发现没有这种情况，所以present是false。然后confidence设为1.0？不对，要准确。再仔细看：每个文本框内的文字是否完整。比如第一个“the pilot covered three regions”在框内，第二个“RouteOpt beat the baseline by double digits”也在，第三个“Results held across segments”也在。所以没有溢出或截断，present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_security_program_4_G1_TEXT_OVERFLOW_64_0048__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的文字，比如“ZeroTrust reduces toil by a third”、“Teams adopt ZeroTrust daily”、“Payback under twelve months”这些文字是否在框内。所有文字都在各自的浅灰色框内，没有被截断或溢出的情况。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_security_program_5_G1_TEXT_OVERFLOW_64_0049__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有文本溢出或被截断。看每个文本框里的文字，检查是否边缘有字母被切掉或者行超出边界。观察后发现所有文本都在各自的文本框内，没有溢出或被截断的情况。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_supply_chain_4_G1_TEXT_OVERFLOW_64_0053__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有文本溢出或被截断。看每个文本框里的文字，检查是否边缘有字母被切掉或者行超出边界。观察后发现所有文字都在各自的文本框内，没有溢出或被截断的情况。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_supply_chain_3_G1_TEXT_OVERFLOW_64_0052__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有文本溢出或被截断。看每个文本框里的文字，比如“FlowNet now handles most volume”这些文字是否在框内。检查后发现所有文字都在各自的文本框内，没有被截断或溢出的情况。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_supply_chain_1_G1_TEXT_OVERFLOW_64_0050__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的文字，比如“FlowNet integrates with existing tools”这些，有没有字母被截断或者行超出边界。观察后发现所有文本都在各自的框内，没有溢出或被截断的情况。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_supply_chain_5_G1_TEXT_OVERFLOW_64_0054__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的文字，比如第一个“FlowNet is saturated at peak demand”是否在框内，其他行也一样。所有文字都在各自的浅灰色框内，没有被截断或溢出的情况。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_supply_chain_2_G1_TEXT_OVERFLOW_64_0051__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有文本溢出或被截断。看每个文本框里的文字，比如“Risks are tracked weekly”、“FlowNet has a clear rollback path”、“Compliance reviewed the design”这些文字是否在框内。检查后发现所有文字都在各自的文本框内，没有被截断或溢出的情况。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_warehouse_robotics_1_G1_TEXT_OVERFLOW_64_0055__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的文字，比如“Approve the phase 1 budget for PickBot”这些，有没有字母被截断或者行超出边界。观察后发现所有文字都在文本框内，没有溢出或截断的情况。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_warehouse_robotics_3_G1_TEXT_OVERFLOW_64_0057__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的文字，标题“PickBot automates the long aisles”在最上面的框里，其他三个框里的文字也没有被截断的情况。所以判断present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_warehouse_robotics_5_G1_TEXT_OVERFLOW_64_0059__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的文字，标题和三个列表项的文字都没有超出边框，没有字母被截断或行超出边界的情况。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_warehouse_robotics_2_G1_TEXT_OVERFLOW_64_0056__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要检查是否有文本溢出或被截断。看每个文本框里的文字，比如“PickBot reduces toil by a third”这些，有没有字母被截断或者行超出边界。观察后发现所有文本都在各自的框内，没有溢出或被截断的情况。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_field_service_3_S6_IMAGE_TEXT_CONTRADICTION_1_0042__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有图表、图示或图像与附近文字矛盾。看提供的内容，只有文本框，没有图表、图示或图像。所以“contradict”的情况不存在，因为没有图像相关元素。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_field_service_4_S6_IMAGE_TEXT_CONTRADICTION_1_0043__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有图表、图示或图像与附近文字矛盾。看提供的内容，只有文字，没有图表、图示或图像。所以问题中的“chart, diagram, or image”不存在，因此没有可见的矛盾情况。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_fraud_detection_2_S6_IMAGE_TEXT_CONTRADICTION_1_0046__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有图表、图示或图像与附近文字矛盾。看提供的内容，只有文字，没有图表、图示或图像。所以“contradict”的情况不存在，因为没有图像相关元素。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_field_service_5_S6_IMAGE_TEXT_CONTRADICTION_1_0044__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有图表、图示或图像与附近文字矛盾。看提供的内容，所有元素都是文本框，没有图表、图示或图像。所以问题中的“chart, diagram, or image”不存在，因此没有可见的矛盾情况。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_fraud_detection_1_S6_IMAGE_TEXT_CONTRADICTION_1_0045__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有图表、图示或图像与附近文字矛盾。看提供的内容，所有元素都是文本框，没有图表、图示或图像。所以问题中的“chart, diagram, or image”不存在，因此没有可见的矛盾情况。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_fraud_detection_3_S6_IMAGE_TEXT_CONTRADICTION_1_0047__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有图表、图示或图像与附近文字矛盾。看提供的内容，只有文字和矩形框，没有图表、图示或图像。所以“contradict”的情况不存在，因为没有图像类元素。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_warehouse_robotics_4_G1_TEXT_OVERFLOW_64_0058__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有文本溢出或被截断。看每个文本框里的内容，检查是否有字母被截断或行超出边界。观察后发现没有这种情况，所以present是false。然后confidence设为1.0？不对，要准确。再仔细看：每个文本框内的文字是否完整。比如第一个“Expected PickBot throughput gains”在标题栏，没有溢出；下面三个文本框里的文字也没有被截断，都在框内。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_fraud_detection_5_S6_IMAGE_TEXT_CONTRADICTION_1_0049__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有图表、图示或图像与附近文字矛盾。看提供的内容，只有文字，没有图表、图示或图像。所以“contradict”的情况不存在，因为没有图像相关元素。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_fraud_detection_4_S6_IMAGE_TEXT_CONTRADICTION_1_0048__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有图表、图示或图像与附近文字矛盾。看提供的内容，只有文本框，没有图表、图示或图像。所以“contradict”的情况不存在，因为没有对应的视觉元素（比如图表）来和文字对比。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_hr_analytics_2_S6_IMAGE_TEXT_CONTRADICTION_1_0051__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有图表、图示或图像与附近文字矛盾。看提供的内容，只有文字，没有图表、图示或图像。所以“contradict”的情况不存在，因为没有对应的视觉元素（比如图表）来和文字对比。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_hr_analytics_3_S6_IMAGE_TEXT_CONTRADICTION_1_0052__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有图表、图示或图像与附近文字矛盾。看提供的内容，只有文字，没有图表、图示或图像。所以“contradict”的情况不存在，因为没有对应的视觉元素（比如图表）来和文字对比。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_inventory_optimization_2_S6_IMAGE_TEXT_CONTRADICTION_1_0056__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有图表、图示或图像与附近文字矛盾。看提供的内容，没有图表、图示或图像，所以不存在这种矛盾情况。因此present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_hr_analytics_5_S6_IMAGE_TEXT_CONTRADICTION_1_0054__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有图表、图示或图像与附近文字矛盾。看提供的内容，只有文本框，没有图表、图示或图像。所以“contradict”的情况不存在，因为没有对应的视觉元素（比如图表）来和文字对比。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_inventory_optimization_1_S6_IMAGE_TEXT_CONTRADICTION_1_0055__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有图表、图示或图像与附近文字矛盾。看提供的内容，只有文字，没有图表、图示或图像。所以问题中的“chart, diagram, or image”不存在，因此没有可见的矛盾。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_inventory_optimization_4_S6_IMAGE_TEXT_CONTRADICTION_1_0058__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有图表、图示或图像与附近文字矛盾。看提供的内容，只有文字，没有图表等视觉元素。所以“contradict”的情况不存在，因为没有图像来对比。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_inventory_optimization_3_S6_IMAGE_TEXT_CONTRADICTION_1_0057__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有图表、图示或图像与附近文字矛盾。看提供的内容，只有文本框，没有图表、图示或图像。所以问题中的“chart, diagram, or image”不存在，因此没有可见的矛盾情况。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_inventory_optimization_5_S6_IMAGE_TEXT_CONTRADICTION_1_0059__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有图表、图示或图像与附近文字矛盾。看提供的内容，只有文字，没有图表、图示或图像。所以“contradict”的情况不存在，因为没有图像相关元素。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_field_service_3_S6_IMAGE_TEXT_CONTRADICTION_1_0042__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有图表、图示或图像与附近文字矛盾。看提供的内容，只有文本和矩形框，没有图表、图示或图像。所以“contradict”的情况不存在，因为没有这些元素。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_hr_analytics_1_S6_IMAGE_TEXT_CONTRADICTION_1_0050__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有图表、图示或图像与附近文字矛盾。但看提供的内容，所有元素都是文本框，没有图表、图示或图像。所以问题中的“chart, diagram, or image”不存在，那是否矛盾？因为没有这些元素，所以不存在矛盾情况？不对，再仔细看。题目问的是是否有这些元素（chart等）和文字矛盾。但这里没有chart等，所以“present”应该是false？因为没有这些元素，所以不存在矛盾。所以输出{""present"": false, ""confidence"": 1.0}？</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_field_service_4_S6_IMAGE_TEXT_CONTRADICTION_1_0043__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有图表、图示或图像与附近文字矛盾。看提供的内容，只有文字和矩形框，没有图表、图示或图像。所以问题中的“chart, diagram, or image”不存在，因此没有矛盾情况。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_field_service_5_S6_IMAGE_TEXT_CONTRADICTION_1_0044__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有图表、图示或图像与附近文字矛盾。看提供的内容，只有文本和矩形框（可能是列表项），没有图表、图示或图像。所以问题中的“contradict”情况不存在，因为没有这些元素。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_fraud_detection_1_S6_IMAGE_TEXT_CONTRADICTION_1_0045__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有图表、图示或图像与附近文字矛盾。看提供的内容，只有文本和矩形框，没有图表、图示或图像。所以问题中的“chart, diagram, or image”不存在，因此没有矛盾情况。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_fraud_detection_2_S6_IMAGE_TEXT_CONTRADICTION_1_0046__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有图表、图示或图像与附近文字矛盾。看提供的内容，只有文本和矩形框，没有图表、图示或图像。所以问题中的“contradict”情况不存在，因为没有这些元素。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_fraud_detection_3_S6_IMAGE_TEXT_CONTRADICTION_1_0047__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有图表、图示或图像与附近文字矛盾。看提供的内容，只有文本和矩形框，没有图表、图示或图像。所以问题中的“chart, diagram, or image”不存在，因此没有矛盾情况。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_hr_analytics_1_S6_IMAGE_TEXT_CONTRADICTION_1_0050__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有图表、图示或图像与附近文字矛盾。看提供的内容，只有文本和矩形块（可能是占位符？但没有实际图表）。所以这里没有可见的图表等元素与文字矛盾，所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_fraud_detection_5_S6_IMAGE_TEXT_CONTRADICTION_1_0049__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有图表、图示或图像与附近文字矛盾。看提供的内容，只有文本和矩形框，没有图表、图示或图像。所以问题中的“contradict”情况不存在，因为没有这些元素。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_hr_analytics_2_S6_IMAGE_TEXT_CONTRADICTION_1_0051__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有图表、图示或图像与附近文字矛盾。看提供的内容，只有文本和矩形框，没有图表、图示或图像。所以问题中的“contradict”情况不存在，因为没有这些元素。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_fraud_detection_4_S6_IMAGE_TEXT_CONTRADICTION_1_0048__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,0.0,[],"<think>
+用户现在需要判断是否有图表、图示或图像与附近文字矛盾。看提供的内容，只有文本和矩形框（可能是列表项），没有图表、图示或图像。所以不存在这样的矛盾情况，present为false。然后confidence设为0.0？不对，因为问题问的是是否有visible contradiction。这里没有图表等，所以present是false。</think>
+
+{""present"": false, ""confidence"": 0.0}",page
+part2_hr_analytics_3_S6_IMAGE_TEXT_CONTRADICTION_1_0052__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有图表、图示或图像与附近文字矛盾。看提供的内容，只有文本和矩形框，没有图表、图示或图像。所以问题中的“contradict”情况不存在，因为没有这些元素。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_hr_analytics_4_S6_IMAGE_TEXT_CONTRADICTION_1_0053__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有图表、图示或图像与附近文字矛盾。看提供的内容，只有文字和矩形框，没有图表、图示或图像。所以“contradict”的情况不存在，因为没有这些元素。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_hr_analytics_5_S6_IMAGE_TEXT_CONTRADICTION_1_0054__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有图表、图示或图像与附近文字矛盾。看提供的内容，只有文本和矩形框，没有图表、图示或图像。所以问题中的“contradict”情况不存在，因为没有这些元素。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_hr_analytics_4_S6_IMAGE_TEXT_CONTRADICTION_1_0053__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有图表、图示或图像与附近文字矛盾。看提供的内容，没有图表、图示或图像，只有文字。所以问题中的“chart, diagram, or image”不存在，那是否矛盾？因为没有这些元素，所以不存在矛盾情况？不对，再仔细看。题目问的是是否有visible contradiction between text and nearby chart/diagram/image。但这里没有chart/diagram/image，所以是否算？但根据问题，要判断是否存在。因为没有这些视觉元素，所以无法形成contradiction，所以present是false？
+
+哦，不对，看第一个文本框里的内容：“This slide describes a contradictory single-layer architecture, not three-layer archite",page
+part2_inventory_optimization_1_S6_IMAGE_TEXT_CONTRADICTION_1_0055__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有图表、图示或图像与附近文字矛盾。看提供的内容，只有文本和矩形框，没有图表、图示或图像。所以问题中的“contradict”情况不存在，因为没有这些元素。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_inventory_optimization_2_S6_IMAGE_TEXT_CONTRADICTION_1_0056__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有图表、图示或图像与附近文字矛盾。看提供的内容，只有文本和矩形框，没有图表、图示或图像。所以问题中的“contradict”情况不存在，因为没有这些元素。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_inventory_optimization_3_S6_IMAGE_TEXT_CONTRADICTION_1_0057__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有图表、图示或图像与附近文字矛盾。看提供的内容，只有文本和矩形框（可能是列表项），没有图表、图示或图像。所以问题中的“contradict”情况不存在，因为没有对应的视觉元素。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_inventory_optimization_5_S6_IMAGE_TEXT_CONTRADICTION_1_0059__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有图表、图示或图像与附近文字矛盾。看提供的内容，只有文本和矩形框，没有图表、图示或图像。所以“contradict”的情况不存在，因为没有这些元素。所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page
+part2_inventory_optimization_4_S6_IMAGE_TEXT_CONTRADICTION_1_0058__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,1.0,[],"<think>
+用户现在需要判断是否有图表、图示或图像与附近文字矛盾。看提供的内容，只有文本和矩形框，没有图表、图示或图像。所以不存在这样的缺陷，present设为false。然后confidence可以给0.9之类的？不过这里因为没有图像，所以present是false。</think>
+
+{""present"": false, ""confidence"": 1.0}",page

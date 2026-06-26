@@ -1,0 +1,152 @@
+{
+  "created_at": "2026-06-25T15:57:06.194689+00:00",
+  "source": "AutoPresent SlidesBench instruction_no_image",
+  "model": "mimo-v2.5-pro",
+  "category": null,
+  "offset": 0,
+  "n_requested": 20,
+  "n_attempted": 20,
+  "n_success": 14,
+  "records": [
+    {
+      "index": 0,
+      "tag": "marketing_slide_22",
+      "instruction": "/home/gpus/external_agents/AutoPresent/slidesbench/examples/marketing/slide_22/instruction_no_image.txt",
+      "pptx": "data/part3/g7_autopresent/ap_000_marketing_slide_22.pptx",
+      "status": "failed"
+    },
+    {
+      "index": 1,
+      "tag": "art_photos_slide_19",
+      "instruction": "/home/gpus/external_agents/AutoPresent/slidesbench/examples/art_photos/slide_19/instruction_no_image.txt",
+      "pptx": "data/part3/g7_autopresent/ap_001_art_photos_slide_19.pptx",
+      "status": "ok"
+    },
+    {
+      "index": 2,
+      "tag": "social_media_slide_20",
+      "instruction": "/home/gpus/external_agents/AutoPresent/slidesbench/examples/social_media/slide_20/instruction_no_image.txt",
+      "pptx": "data/part3/g7_autopresent/ap_002_social_media_slide_20.pptx",
+      "status": "failed"
+    },
+    {
+      "index": 3,
+      "tag": "career_slide_2",
+      "instruction": "/home/gpus/external_agents/AutoPresent/slidesbench/examples/career/slide_2/instruction_no_image.txt",
+      "pptx": "data/part3/g7_autopresent/ap_003_career_slide_2.pptx",
+      "status": "failed"
+    },
+    {
+      "index": 4,
+      "tag": "social_media_slide_10",
+      "instruction": "/home/gpus/external_agents/AutoPresent/slidesbench/examples/social_media/slide_10/instruction_no_image.txt",
+      "pptx": "data/part3/g7_autopresent/ap_004_social_media_slide_10.pptx",
+      "status": "failed"
+    },
+    {
+      "index": 5,
+      "tag": "art_photos_slide_1",
+      "instruction": "/home/gpus/external_agents/AutoPresent/slidesbench/examples/art_photos/slide_1/instruction_no_image.txt",
+      "pptx": "data/part3/g7_autopresent/ap_005_art_photos_slide_1.pptx",
+      "status": "ok"
+    },
+    {
+      "index": 6,
+      "tag": "food_slide_18",
+      "instruction": "/home/gpus/external_agents/AutoPresent/slidesbench/examples/food/slide_18/instruction_no_image.txt",
+      "pptx": "data/part3/g7_autopresent/ap_006_food_slide_18.pptx",
+      "status": "ok"
+    },
+    {
+      "index": 7,
+      "tag": "business_slide_6",
+      "instruction": "/home/gpus/external_agents/AutoPresent/slidesbench/examples/business/slide_6/instruction_no_image.txt",
+      "pptx": "data/part3/g7_autopresent/ap_007_business_slide_6.pptx",
+      "status": "ok"
+    },
+    {
+      "index": 8,
+      "tag": "social_media_slide_1",
+      "instruction": "/home/gpus/external_agents/AutoPresent/slidesbench/examples/social_media/slide_1/instruction_no_image.txt",
+      "pptx": "data/part3/g7_autopresent/ap_008_social_media_slide_1.pptx",
+      "status": "ok"
+    },
+    {
+      "index": 9,
+      "tag": "marketing_slide_14",
+      "instruction": "/home/gpus/external_agents/AutoPresent/slidesbench/examples/marketing/slide_14/instruction_no_image.txt",
+      "pptx": "data/part3/g7_autopresent/ap_009_marketing_slide_14.pptx",
+      "status": "ok"
+    },
+    {
+      "index": 10,
+      "tag": "career_slide_18",
+      "instruction": "/home/gpus/external_agents/AutoPresent/slidesbench/examples/career/slide_18/instruction_no_image.txt",
+      "pptx": "data/part3/g7_autopresent/ap_010_career_slide_18.pptx",
+      "status": "ok"
+    },
+    {
+      "index": 11,
+      "tag": "social_media_slide_3",
+      "instruction": "/home/gpus/external_agents/AutoPresent/slidesbench/examples/social_media/slide_3/instruction_no_image.txt",
+      "pptx": "data/part3/g7_autopresent/ap_011_social_media_slide_3.pptx",
+      "status": "failed"
+    },
+    {
+      "index": 12,
+      "tag": "art_photos_slide_18",
+      "instruction": "/home/gpus/external_agents/AutoPresent/slidesbench/examples/art_photos/slide_18/instruction_no_image.txt",
+      "pptx": "data/part3/g7_autopresent/ap_012_art_photos_slide_18.pptx",
+      "status": "ok"
+    },
+    {
+      "index": 13,
+      "tag": "food_slide_26",
+      "instruction": "/home/gpus/external_agents/AutoPresent/slidesbench/examples/food/slide_26/instruction_no_image.txt",
+      "pptx": "data/part3/g7_autopresent/ap_013_food_slide_26.pptx",
+      "status": "ok"
+    },
+    {
+      "index": 14,
+      "tag": "entrepreneur_slide_3",
+      "instruction": "/home/gpus/external_agents/AutoPresent/slidesbench/examples/entrepreneur/slide_3/instruction_no_image.txt",
+      "pptx": "data/part3/g7_autopresent/ap_014_entrepreneur_slide_3.pptx",
+      "status": "ok"
+    },
+    {
+      "index": 15,
+      "tag": "marketing_slide_41",
+      "instruction": "/home/gpus/external_agents/AutoPresent/slidesbench/examples/marketing/slide_41/instruction_no_image.txt",
+      "pptx": "data/part3/g7_autopresent/ap_015_marketing_slide_41.pptx",
+      "status": "ok"
+    },
+    {
+      "index": 16,
+      "tag": "food_slide_1",
+      "instruction": "/home/gpus/external_agents/AutoPresent/slidesbench/examples/food/slide_1/instruction_no_image.txt",
+      "pptx": "data/part3/g7_autopresent/ap_016_food_slide_1.pptx",
+      "status": "ok"
+    },
+    {
+      "index": 17,
+      "tag": "career_slide_16",
+      "instruction": "/home/gpus/external_agents/AutoPresent/slidesbench/examples/career/slide_16/instruction_no_image.txt",
+      "pptx": "data/part3/g7_autopresent/ap_017_career_slide_16.pptx",
+      "status": "ok"
+    },
+    {
+      "index": 18,
+      "tag": "art_photos_slide_21",
+      "instruction": "/home/gpus/external_agents/AutoPresent/slidesbench/examples/art_photos/slide_21/instruction_no_image.txt",
+      "pptx": "data/part3/g7_autopresent/ap_018_art_photos_slide_21.pptx",
+      "status": "ok"
+    },
+    {
+      "index": 19,
+      "tag": "business_slide_9",
+      "instruction": "/home/gpus/external_agents/AutoPresent/slidesbench/examples/business/slide_9/instruction_no_image.txt",
+      "pptx": "data/part3/g7_autopresent/ap_019_business_slide_9.pptx",
+      "status": "failed"
+    }
+  ]
+}

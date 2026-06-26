@@ -1,0 +1,1629 @@
+sample_id,defect,modality,is_clean,failure,present,localized,repair_ok,evidence_element,raw
+f84df5643d99a205e6b6508baea351a5-GONNET_Research__s23__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,True,False,False,False,False,,"{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""fix"": """", ""confidence"": 0.95}"
+f84df5643d99a205e6b6508baea351a5-GONNET_Research__s23__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,False,False,False,False,False,,"{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""fix"": """", ""confidence"": 0.95}"
+5aed46f009ac84854c5c1cebd08f867d-DASH_Presentati__s7__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,True,False,False,False,False,,"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": ""empty"",
+  ""fix"": """",
+  ""confidence"": 0.95
+}
+```"
+f84df5643d99a205e6b6508baea351a5-GONNET_Research__s23__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,True,False,False,False,False,,"```json
+{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}
+```"
+f84df5643d99a205e6b6508baea351a5-GONNET_Research__s23__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,False,False,False,False,False,,"```json
+{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}
+```"
+5aed46f009ac84854c5c1cebd08f867d-DASH_Presentati__s7__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,False,False,False,False,False,,"{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""fix"": """", ""confidence"": 0.95}"
+f84df5643d99a205e6b6508baea351a5-GONNET_Research__s23__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,False,False,True,False,True,The 'Community standards' tile in the bottom-right corner of the grid,"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""The 'Community standards' tile in the bottom-right corner of the grid"",
+  ""evidence_region"": ""bottom-right"",
+  ""fix"": ""Move the 'Community standards' tile to the left so it aligns with the 'Provenance' tile and completes the 4x5 grid structure."",
+ "
+f84df5643d99a205e6b6508baea351a5-GONNET_Research__s23__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,True,False,True,False,True,The 'Community standards' tile in the bottom-right corner of the grid,"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""The 'Community standards' tile in the bottom-right corner of the grid"",
+  ""evidence_region"": ""bottom-right"",
+  ""fix"": ""Move the 'Community standards' tile to the left so it aligns with the start of the 'Provenance' tile and the other tiles in the f"
+5aed46f009ac84854c5c1cebd08f867d-DASH_Presentati__s7__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,True,False,False,False,False,,"{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""fix"": """", ""confidence"": 0.95}"
+5aed46f009ac84854c5c1cebd08f867d-DASH_Presentati__s7__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,False,False,True,False,True,The 'Purpose' text block inside the third column's top box (under 'CCORBase') is vertically misaligned compared to the 'Purpose' headers in the adjacent boxes.,"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""The 'Purpose' text block inside the third column's top box (under 'CCORBase') is vertically misaligned compared to the 'Purpose' headers in the adjacent boxes."",
+  ""evidence_region"": ""center"",
+  ""fix"": ""Vertically center the 'Purpose' text within t"
+5aed46f009ac84854c5c1cebd08f867d-DASH_Presentati__s7__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,False,False,False,False,False,,"{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}"
+5aed46f009ac84854c5c1cebd08f867d-DASH_Presentati__s7__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,True,False,False,False,False,,"{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}"
+5aa2630262e54a49db5680970f332b05-2024-05-Etapes___s24__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,False,False,False,False,False,,"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": ""empty"",
+  ""fix"": """",
+  ""confidence"": 1.0
+}
+```"
+5aa2630262e54a49db5680970f332b05-2024-05-Etapes___s24__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,True,False,False,False,False,,"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": ""empty"",
+  ""fix"": """",
+  ""confidence"": 1.0
+}
+```"
+5aa2630262e54a49db5680970f332b05-2024-05-Etapes___s24__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,False,False,False,False,False,,"```json
+{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}
+```"
+5aa2630262e54a49db5680970f332b05-2024-05-Etapes___s24__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,True,False,False,False,False,,"```json
+{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}
+```"
+59adad4e9b977fc95ddcafed6d843707-UK_ORCID_commun__s3__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,False,False,False,False,False,,"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": ""empty"",
+  ""fix"": """",
+  ""confidence"": 0.95
+}
+```"
+59adad4e9b977fc95ddcafed6d843707-UK_ORCID_commun__s3__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,True,False,False,False,False,,"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": ""empty"",
+  ""fix"": """",
+  ""confidence"": 0.95
+}
+```"
+5aa2630262e54a49db5680970f332b05-2024-05-Etapes___s24__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,False,False,True,False,True,shp3 (text: 'Les bonnes pratiques de publication et d’ouverture'),"{
+""present"": true,
+""evidence_element"": ""shp3 (text: 'Les bonnes pratiques de publication et d’ouverture')"",
+""evidence_region"": ""bottom-right"",
+""fix"": ""Align the x-coordinate of shp3 to match the left edge of shp5 (x=161.39) to create a consistent left-aligned footer."",
+""confidence"": 0.95
+}"
+5aa2630262e54a49db5680970f332b05-2024-05-Etapes___s24__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,True,False,True,False,True,shp3 (text: 'Les bonnes pratiques de publication et d’ouverture'),"{
+""present"": true,
+""evidence_element"": ""shp3 (text: 'Les bonnes pratiques de publication et d’ouverture')"",
+""evidence_region"": ""bottom"",
+""fix"": ""Align the x-coordinate of shp3 to match the left edge of shp5 (x=161.39) to create a consistent left-aligned footer."",
+""confidence"": 0.95
+}"
+59adad4e9b977fc95ddcafed6d843707-UK_ORCID_commun__s3__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,False,False,False,False,False,,"```json
+{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}
+```"
+59adad4e9b977fc95ddcafed6d843707-UK_ORCID_commun__s3__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,True,False,False,False,False,,"```json
+{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}
+```"
+59adad4e9b977fc95ddcafed6d843707-UK_ORCID_commun__s3__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,True,False,True,False,True,shp6 (text: 'We ran a survey through July and August 2020...'),"{
+  ""present"": true,
+  ""evidence_element"": ""shp6 (text: 'We ran a survey through July and August 2020...')"",
+  ""evidence_region"": ""top-right"",
+  ""fix"": ""Move the element to align its left edge with the x=37.67 baseline used by the title and other body text elements."",
+  ""confidence"": 0.95
+}"
+59adad4e9b977fc95ddcafed6d843707-UK_ORCID_commun__s3__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,False,False,True,False,True,shp6 (text: 'We ran a survey through July and August 2020...'),"{
+  ""present"": true,
+  ""evidence_element"": ""shp6 (text: 'We ran a survey through July and August 2020...')"",
+  ""evidence_region"": ""top-right"",
+  ""fix"": ""Align the left edge of shp6 to x=37.67 to match the left alignment of the title (shp2) and body text (shp3, shp4)."",
+  ""confidence"": 0.95
+}"
+59d23b0427a84f92a25b140c8836f70d-Indrya__s2__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,False,False,False,False,False,,"{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}"
+59d23b0427a84f92a25b140c8836f70d-Indrya__s2__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,False,False,True,False,True,The large blue decorative shape in the top-right corner,"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""The large blue decorative shape in the top-right corner"",
+  ""evidence_region"": ""top-right"",
+  ""fix"": ""Align the left edge of the blue shape with the left edge of the subtitle text 'Pengajaran, Penelitian, dan Pengabdian' to match the alignment of t"
+59d23b0427a84f92a25b140c8836f70d-Indrya__s2__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,True,False,True,False,True,"The blue subtitle text 'Pengajaran, Penelitian, dan Pengabdian (serta Penunjang)' is horizontally offset to the right compared to the main title and the list items below it.","```json
+{
+  ""present"": true,
+  ""evidence_element"": ""The blue subtitle text 'Pengajaran, Penelitian, dan Pengabdian (serta Penunjang)' is horizontally offset to the right compared to the main title and the list items below it."",
+  ""evidence_region"": ""top"",
+  ""fix"": ""Align the subtitle text to the lef"
+59d23b0427a84f92a25b140c8836f70d-Indrya__s2__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,False,False,False,False,False,,"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": ""empty"",
+  ""fix"": """",
+  ""confidence"": 0.95
+}
+```"
+59d23b0427a84f92a25b140c8836f70d-Indrya__s2__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,True,False,False,False,False,,"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": ""empty"",
+  ""fix"": """",
+  ""confidence"": 0.95
+}
+```"
+59d23b0427a84f92a25b140c8836f70d-Indrya__s2__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,True,False,True,False,True,shp10 (body text box with empty text),"{
+  ""present"": true,
+  ""evidence_element"": ""shp10 (body text box with empty text)"",
+  ""evidence_region"": ""right"",
+  ""fix"": ""Remove the empty text box (shp10) or align its left edge to x=82.1 to match the other body elements."",
+  ""confidence"": 0.95
+}"
+82fc6f07bed52bb8c371cc82eca7cb67-Marnix_van_Looc__s13__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,False,False,False,False,False,,"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": ""empty"",
+  ""fix"": """",
+  ""confidence"": 0.95
+}
+```"
+82fc6f07bed52bb8c371cc82eca7cb67-Marnix_van_Looc__s13__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,False,False,False,False,False,,"{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""fix"": """", ""confidence"": 0.95}"
+82fc6f07bed52bb8c371cc82eca7cb67-Marnix_van_Looc__s13__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,True,False,False,False,False,,"{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""fix"": """", ""confidence"": 0.95}"
+82fc6f07bed52bb8c371cc82eca7cb67-Marnix_van_Looc__s13__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,True,False,False,False,False,,"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": ""empty"",
+  ""fix"": """",
+  ""confidence"": 0.95
+}
+```"
+82fc6f07bed52bb8c371cc82eca7cb67-Marnix_van_Looc__s13__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,False,False,False,False,False,,"```json
+{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}
+```"
+82fc6f07bed52bb8c371cc82eca7cb67-Marnix_van_Looc__s13__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,True,False,False,False,False,,"```json
+{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}
+```"
+f84df5643d99a205e6b6508baea351a5-GONNET_Research__s14__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,False,False,False,False,False,,"{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""fix"": """", ""confidence"": 0.95}"
+f84df5643d99a205e6b6508baea351a5-GONNET_Research__s14__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,True,False,False,False,False,,"{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""fix"": """", ""confidence"": 0.95}"
+f84df5643d99a205e6b6508baea351a5-GONNET_Research__s14__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,False,False,False,False,False,,"```json
+{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}
+```"
+f84df5643d99a205e6b6508baea351a5-GONNET_Research__s14__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,True,False,False,False,False,,"```json
+{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}
+```"
+f84df5643d99a205e6b6508baea351a5-GONNET_Research__s14__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,True,False,True,False,True,"The 'OpenEdition' logo and the '1' page number at the bottom left are not vertically aligned with the left edge of the text blocks above them (e.g., 'Support by universities...').","```json
+{
+  ""present"": true,
+  ""evidence_element"": ""The 'OpenEdition' logo and the '1' page number at the bottom left are not vertically aligned with the left edge of the text blocks above them (e.g., 'Support by universities...')."",
+  ""evidence_region"": ""bottom-left"",
+  ""fix"": ""Align the 'OpenEditi"
+f84df5643d99a205e6b6508baea351a5-GONNET_Research__s14__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,False,False,True,False,True,"The text 'Free publication' and the adjacent stick figure icon are horizontally misaligned with the text block 'Support by universities, foundations, etc.' above it. The text 'Free publication' is shifted significantly to the right compared to the start of the text block above it.","```json
+{
+  ""present"": true,
+  ""evidence_element"": ""The text 'Free publication' and the adjacent stick figure icon are horizontally misaligned with the text block 'Support by universities, foundations, etc.' above it. The text 'Free publication' is shifted significantly to the right compared to the "
+59d23b0427a84f92a25b140c8836f70d-Indrya__s0__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,True,False,True,False,True,"The main title text block (specifically the last line 'ASOSIASI JURN...') is misaligned with the left edge of the slide, whereas the subtitle and metadata text below it are aligned to a consistent left margin.","```json
+{
+  ""present"": true,
+  ""evidence_element"": ""The main title text block (specifically the last line 'ASOSIASI JURN...') is misaligned with the left edge of the slide, whereas the subtitle and metadata text below it are aligned to a consistent left margin."",
+  ""evidence_region"": ""left"",
+  ""fix"""
+59d23b0427a84f92a25b140c8836f70d-Indrya__s0__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,False,False,True,False,True,"The main title text block (specifically the last line 'ASOSIASI JURN...') is misaligned with the left edge of the slide, whereas the subtitle and metadata text blocks below it are aligned to a consistent left margin.","```json
+{
+  ""present"": true,
+  ""evidence_element"": ""The main title text block (specifically the last line 'ASOSIASI JURN...') is misaligned with the left edge of the slide, whereas the subtitle and metadata text blocks below it are aligned to a consistent left margin."",
+  ""evidence_region"": ""left"",
+"
+59d23b0427a84f92a25b140c8836f70d-Indrya__s0__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,False,False,False,False,False,,"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": ""empty"",
+  ""fix"": """",
+  ""confidence"": 0.95
+}
+```"
+59d23b0427a84f92a25b140c8836f70d-Indrya__s0__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,False,False,True,False,True,shp2 (title 'RISET KOLABORASI & TANTANGAN ASOSIASI JURNAL'),"{""present"": true, ""evidence_element"": ""shp2 (title 'RISET KOLABORASI & TANTANGAN ASOSIASI JURNAL')"", ""evidence_region"": ""left"", ""fix"": ""Adjust the x-coordinate of shp2 to align with the left edge of shp3 (x=0) instead of x=-0.34, or ensure consistent left alignment across all text elements."", ""confi"
+59d23b0427a84f92a25b140c8836f70d-Indrya__s0__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,True,False,False,False,False,,"```json
+{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}
+```"
+59d23b0427a84f92a25b140c8836f70d-Indrya__s0__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,True,False,True,False,True,shp2 (title 'RISET KOLABORASI & TANTANGAN ASOSIASI JURNAL'),"{""present"": true, ""evidence_element"": ""shp2 (title 'RISET KOLABORASI & TANTANGAN ASOSIASI JURNAL')"", ""evidence_region"": ""left"", ""fix"": ""Adjust the x-coordinate of shp2 to align with the left edge of shp3 and shp6 (approximately x=2.77 or x=0) instead of x=-0.34."", ""confidence"": 0.95}"
+82fc6f07bed52bb8c371cc82eca7cb67-Marnix_van_Looc__s17__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,True,False,False,False,False,,"{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""fix"": """", ""confidence"": 0.95}"
+82fc6f07bed52bb8c371cc82eca7cb67-Marnix_van_Looc__s17__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,False,False,False,False,False,,"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": ""empty"",
+  ""fix"": """",
+  ""confidence"": 1.0
+}
+```"
+82fc6f07bed52bb8c371cc82eca7cb67-Marnix_van_Looc__s17__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,True,False,False,False,False,,"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": ""empty"",
+  ""fix"": """",
+  ""confidence"": 1.0
+}
+```"
+82fc6f07bed52bb8c371cc82eca7cb67-Marnix_van_Looc__s17__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,False,False,False,False,False,,"{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}"
+82fc6f07bed52bb8c371cc82eca7cb67-Marnix_van_Looc__s17__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,False,False,False,False,False,,"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": ""empty"",
+  ""fix"": """",
+  ""confidence"": 0.95
+}
+```"
+82fc6f07bed52bb8c371cc82eca7cb67-Marnix_van_Looc__s17__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,True,False,False,False,False,,"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": ""empty"",
+  ""fix"": """",
+  ""confidence"": 0.95
+}
+```"
+5aa2630262e54a49db5680970f332b05-2024-05-Etapes___s11__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,True,False,False,False,False,,"```json
+{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 1.0
+}
+```"
+5aa2630262e54a49db5680970f332b05-2024-05-Etapes___s11__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,False,False,False,False,False,,"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": ""empty"",
+  ""fix"": """",
+  ""confidence"": 1.0
+}
+```"
+5aa2630262e54a49db5680970f332b05-2024-05-Etapes___s11__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,True,False,False,False,False,,"```json
+{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}
+```"
+5aa2630262e54a49db5680970f332b05-2024-05-Etapes___s11__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,False,False,False,False,False,,"{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": ""empty"",
+  ""fix"": """",
+  ""confidence"": 0.95
+}"
+5aa2630262e54a49db5680970f332b05-2024-05-Etapes___s11__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,True,False,True,False,True,shp5,"{""present"": true, ""evidence_element"": ""shp5"", ""evidence_region"": ""bottom-right"", ""fix"": ""Align the 'Liens utiles' text block (shp5) to the left margin (x=161.11) to match the alignment of the title (shp2) and body text (shp3)."", ""confidence"": 0.95}"
+5aa2630262e54a49db5680970f332b05-2024-05-Etapes___s11__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,False,False,True,False,True,shp5 (Liens utiles text box),"{
+  ""present"": true,
+  ""evidence_element"": ""shp5 (Liens utiles text box)"",
+  ""evidence_region"": ""bottom-right"",
+  ""fix"": ""Align the left edge of shp5 with the left edge of shp3 (x=179.11) to match the main body column."",
+  ""confidence"": 0.95
+}"
+fa4cffb65fe50e0f7177efdcb72b7ffb-2022-11-16_USR___s9__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,False,False,False,False,False,,"{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""fix"": """", ""confidence"": 0.95}"
+fa4cffb65fe50e0f7177efdcb72b7ffb-2022-11-16_USR___s9__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,True,False,False,False,False,,"{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""fix"": """", ""confidence"": 0.95}"
+fa4cffb65fe50e0f7177efdcb72b7ffb-2022-11-16_USR___s9__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,False,False,False,False,False,,"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": ""empty"",
+  ""fix"": """",
+  ""confidence"": 0.95
+}
+```"
+5aed46f009ac84854c5c1cebd08f867d-DASH_Presentati__s6__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,False,False,False,False,False,,"```json
+{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}
+```"
+fa4cffb65fe50e0f7177efdcb72b7ffb-2022-11-16_USR___s9__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,True,False,False,False,False,,"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": ""empty"",
+  ""fix"": """",
+  ""confidence"": 0.95
+}
+```"
+5aed46f009ac84854c5c1cebd08f867d-DASH_Presentati__s6__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,True,False,False,False,False,,"```json
+{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 1.0
+}
+```"
+5aed46f009ac84854c5c1cebd08f867d-DASH_Presentati__s6__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,False,False,False,False,False,,"{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": ""empty"",
+  ""fix"": """",
+  ""confidence"": 0.95
+}"
+5aed46f009ac84854c5c1cebd08f867d-DASH_Presentati__s6__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,True,False,False,False,False,,"{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": ""empty"",
+  ""fix"": """",
+  ""confidence"": 0.95
+}"
+5aed46f009ac84854c5c1cebd08f867d-DASH_Presentati__s6__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,False,False,False,False,False,,"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": ""empty"",
+  ""fix"": """",
+  ""confidence"": 0.95
+}
+```"
+fa4cffb65fe50e0f7177efdcb72b7ffb-2022-11-16_USR___s9__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,False,False,True,False,True,"The '30.000 Staff' dark green box is vertically misaligned with the '260.000 Students' box above it and the '673.922 Alumni' box below it, creating a jagged left edge in the statistics column.","```json
+{
+  ""present"": true,
+  ""evidence_element"": ""The '30.000 Staff' dark green box is vertically misaligned with the '260.000 Students' box above it and the '673.922 Alumni' box below it, creating a jagged left edge in the statistics column."",
+  ""evidence_region"": ""right"",
+  ""fix"": ""Align the lef"
+5aed46f009ac84854c5c1cebd08f867d-DASH_Presentati__s6__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,True,False,False,False,False,,"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": ""empty"",
+  ""fix"": """",
+  ""confidence"": 0.95
+}
+```"
+fa4cffb65fe50e0f7177efdcb72b7ffb-2022-11-16_USR___s9__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,True,False,True,False,True,"The '30.000 Staff' dark green box is vertically misaligned with the '260.000 Students' box above it and the '673.922 Alumni' box below it, creating a jagged left edge in the statistics column.","```json
+{
+  ""present"": true,
+  ""evidence_element"": ""The '30.000 Staff' dark green box is vertically misaligned with the '260.000 Students' box above it and the '673.922 Alumni' box below it, creating a jagged left edge in the statistics column."",
+  ""evidence_region"": ""right"",
+  ""fix"": ""Align the lef"
+5aa2630262e54a49db5680970f332b05-2024-05-Etapes___s6__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,True,False,False,False,False,,"{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""fix"": """", ""confidence"": 0.95}"
+5aa2630262e54a49db5680970f332b05-2024-05-Etapes___s6__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,False,False,False,False,False,,"{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}"
+5aa2630262e54a49db5680970f332b05-2024-05-Etapes___s6__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,True,False,False,False,False,,"```json
+{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}
+```"
+5aa2630262e54a49db5680970f332b05-2024-05-Etapes___s6__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,False,False,True,False,True,shp4 (footer text),"{
+  ""present"": true,
+  ""evidence_element"": ""shp4 (footer text)"",
+  ""evidence_region"": ""left"",
+  ""fix"": ""Align the left edge of shp4 (x=161.39) with the left edge of the title shp2 (x=161.11) to ensure consistent left alignment."",
+  ""confidence"": 0.95
+}"
+5aa2630262e54a49db5680970f332b05-2024-05-Etapes___s6__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,True,False,True,False,True,"The title text 'Qui détient le droit d' auteur ?' has a visible horizontal gap between 'd'' and 'auteur', breaking the alignment of the title line.","```json
+{
+  ""present"": true,
+  ""evidence_element"": ""The title text 'Qui détient le droit d' auteur ?' has a visible horizontal gap between 'd'' and 'auteur', breaking the alignment of the title line."",
+  ""evidence_region"": ""top"",
+  ""fix"": ""Remove the extra space between 'd'' and 'auteur' to align th"
+5aa2630262e54a49db5680970f332b05-2024-05-Etapes___s6__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,False,False,True,True,True,"The title text 'Qui détient le droit d' auteur ?' is broken into two misaligned lines. The first part 'Qui détient le droit d'' is left-aligned, while the second part 'auteur ?' is shifted significantly to the right, breaking the visual flow of the title.","```json
+{
+  ""present"": true,
+  ""evidence_element"": ""The title text 'Qui détient le droit d' auteur ?' is broken into two misaligned lines. The first part 'Qui détient le droit d'' is left-aligned, while the second part 'auteur ?' is shifted significantly to the right, breaking the visual flow of the"
+e2a0cf43198139db4030e2c99d1cc023-training_materi__s9__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,False,False,True,True,True,shp196 (collectingMunicipality),"{
+""present"": true,
+""evidence_element"": ""shp196 (collectingMunicipality)"",
+""evidence_region"": ""center"",
+""fix"": ""Align the vertical position (y=425.71) of shp196 to match the baseline of its peer elements in the same row (y=434.95)."",
+""confidence"": 0.95
+}"
+e2a0cf43198139db4030e2c99d1cc023-training_materi__s9__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,False,False,True,False,True,The 'specimenCount' button (blue) is vertically misaligned with the 'specimenCode' button (light blue) and the 'collectingCountry' button (orange) in the top row of the legend.,"```json
+{
+""present"": true,
+""evidence_element"": ""The 'specimenCount' button (blue) is vertically misaligned with the 'specimenCode' button (light blue) and the 'collectingCountry' button (orange) in the top row of the legend."",
+""evidence_region"": ""bottom-left"",
+""fix"": ""Vertically align the 'specimenC"
+e2a0cf43198139db4030e2c99d1cc023-training_materi__s9__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,True,False,True,False,True,"The 'specimenCode' button (light blue) is horizontally offset to the right relative to the 'specimenCount' button (dark blue) in the same row, breaking the left alignment of the button grid.","```json
+{
+""present"": true,
+""evidence_element"": ""The 'specimenCode' button (light blue) is horizontally offset to the right relative to the 'specimenCount' button (dark blue) in the same row, breaking the left alignment of the button grid."",
+""evidence_region"": ""bottom-left"",
+""fix"": ""Align the left ed"
+e2a0cf43198139db4030e2c99d1cc023-training_materi__s9__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,True,False,False,False,False,,"```json
+{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}
+```"
+e2a0cf43198139db4030e2c99d1cc023-training_materi__s9__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,True,False,True,False,True,shp196 (collectingMunicipality),"{
+""present"": true,
+""evidence_element"": ""shp196 (collectingMunicipality)"",
+""evidence_region"": ""center"",
+""fix"": ""Align the vertical position (y=425.71) of shp196 to match the baseline of its peer elements in the same row (y=434.95)."",
+""confidence"": 0.95
+}"
+82fc6f07bed52bb8c371cc82eca7cb67-Marnix_van_Looc__s16__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,False,False,False,False,False,,"{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}"
+e2a0cf43198139db4030e2c99d1cc023-training_materi__s9__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,False,False,True,True,True,"The 'collectingMunicipality' button (shp196) is vertically misaligned relative to the 'specimenCount', 'specimenCode', 'collectingCountry', and 'collectingRegion' buttons in the row above it.","{
+""present"": true,
+""evidence_element"": ""The 'collectingMunicipality' button (shp196) is vertically misaligned relative to the 'specimenCount', 'specimenCode', 'collectingCountry', and 'collectingRegion' buttons in the row above it."",
+""evidence_region"": ""center"",
+""fix"": ""Vertically align the 'collect"
+82fc6f07bed52bb8c371cc82eca7cb67-Marnix_van_Looc__s16__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,True,False,False,False,False,,"{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}"
+82fc6f07bed52bb8c371cc82eca7cb67-Marnix_van_Looc__s16__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,False,False,False,False,False,,"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": ""empty"",
+  ""fix"": """",
+  ""confidence"": 0.95
+}
+```"
+82fc6f07bed52bb8c371cc82eca7cb67-Marnix_van_Looc__s16__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,False,False,True,False,True,The text block describing the 'Primary efficacy endpoint' (starting with 'Tobit regression results...'),"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""The text block describing the 'Primary efficacy endpoint' (starting with 'Tobit regression results...')"",
+  ""evidence_region"": ""top"",
+  ""fix"": ""Align the left edge of the 'Primary efficacy endpoint' text block with the left edge of the main title a"
+82fc6f07bed52bb8c371cc82eca7cb67-Marnix_van_Looc__s16__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,True,False,True,False,True,The text block describing the 'Primary efficacy endpoint' (starting with 'Tobit regression results...'),"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""The text block describing the 'Primary efficacy endpoint' (starting with 'Tobit regression results...')"",
+  ""evidence_region"": ""top"",
+  ""fix"": ""Align the left edge of the 'Primary efficacy endpoint' text block with the left edge of the main title a"
+82fc6f07bed52bb8c371cc82eca7cb67-Marnix_van_Looc__s16__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,True,False,False,False,False,,"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": ""empty"",
+  ""fix"": """",
+  ""confidence"": 0.95
+}
+```"
+f84df5643d99a205e6b6508baea351a5-GONNET_Research__s20__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,True,False,False,False,False,,"{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""fix"": """", ""confidence"": 0.95}"
+f84df5643d99a205e6b6508baea351a5-GONNET_Research__s20__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,False,False,False,False,False,,"{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""fix"": """", ""confidence"": 0.95}"
+f84df5643d99a205e6b6508baea351a5-GONNET_Research__s20__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,False,False,False,False,False,,"```json
+{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}
+```"
+f84df5643d99a205e6b6508baea351a5-GONNET_Research__s20__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,True,False,False,False,False,,"```json
+{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}
+```"
+377829fc53e13493464f3580b855dd76-Laatua_ja_vaiku__s1__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,False,False,False,False,False,,"{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""fix"": """", ""confidence"": 0.95}"
+377829fc53e13493464f3580b855dd76-Laatua_ja_vaiku__s1__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,True,False,False,False,False,,"{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""fix"": """", ""confidence"": 0.95}"
+f84df5643d99a205e6b6508baea351a5-GONNET_Research__s20__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,True,False,True,False,True,The text block 'forms)' which is the continuation of the definition for 'DATA' is misaligned. It is indented significantly to the left compared to the line above it ('...e.g. consent and copyright') and the subsequent list items.,"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""The text block 'forms)' which is the continuation of the definition for 'DATA' is misaligned. It is indented significantly to the left compared to the line above it ('...e.g. consent and copyright') and the subsequent list items."",
+  ""evidence_regi"
+f84df5643d99a205e6b6508baea351a5-GONNET_Research__s20__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,False,False,True,False,True,"The text block 'Data, selective/misleading reporting/interpretation' and its description, which is circled in blue, is indented significantly further to the right than the other list items in the 'DATA' section (e.g., 'Data fabrication', 'Data falsification').","```json
+{
+  ""present"": true,
+  ""evidence_element"": ""The text block 'Data, selective/misleading reporting/interpretation' and its description, which is circled in blue, is indented significantly further to the right than the other list items in the 'DATA' section (e.g., 'Data fabrication', 'Data fals"
+377829fc53e13493464f3580b855dd76-Laatua_ja_vaiku__s1__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,False,False,False,False,False,,"{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": ""empty"",
+  ""fix"": """",
+  ""confidence"": 0.95
+}"
+377829fc53e13493464f3580b855dd76-Laatua_ja_vaiku__s1__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,False,False,True,False,True,"The text 'Inledning' is vertically misaligned relative to the other list items, appearing significantly higher than the baseline of the subsequent items.","```json
+{
+  ""present"": true,
+  ""evidence_element"": ""The text 'Inledning' is vertically misaligned relative to the other list items, appearing significantly higher than the baseline of the subsequent items."",
+  ""evidence_region"": ""left"",
+  ""fix"": ""Move the text 'Inledning' down to align its baseline "
+377829fc53e13493464f3580b855dd76-Laatua_ja_vaiku__s1__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,True,False,True,False,True,"The text 'Inledning' is vertically misaligned relative to the other list items, appearing significantly higher than the baseline of the subsequent items.","```json
+{
+  ""present"": true,
+  ""evidence_element"": ""The text 'Inledning' is vertically misaligned relative to the other list items, appearing significantly higher than the baseline of the subsequent items."",
+  ""evidence_region"": ""left"",
+  ""fix"": ""Move the text 'Inledning' down to align its baseline "
+377829fc53e13493464f3580b855dd76-Laatua_ja_vaiku__s1__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,True,False,False,False,False,,"{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": ""empty"",
+  ""fix"": """",
+  ""confidence"": 0.95
+}"
+d605f14c1b4fad94d3f148b06071b2c2-ChipScope_nanoF__s13__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,False,False,False,False,False,,"```json
+{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}
+```"
+d605f14c1b4fad94d3f148b06071b2c2-ChipScope_nanoF__s13__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,True,False,False,False,False,,"```json
+{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}
+```"
+d605f14c1b4fad94d3f148b06071b2c2-ChipScope_nanoF__s13__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,True,False,False,False,False,,"{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}"
+d605f14c1b4fad94d3f148b06071b2c2-ChipScope_nanoF__s13__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,False,False,False,False,False,,"{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}"
+d605f14c1b4fad94d3f148b06071b2c2-ChipScope_nanoF__s13__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,True,False,False,False,False,,"{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}"
+d605f14c1b4fad94d3f148b06071b2c2-ChipScope_nanoF__s13__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,False,False,False,False,False,,"```json
+{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}
+```"
+65b9f618e026be90484c974a204ae812-04_Ivanovic_Mla__s27__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,False,False,False,False,False,,"```json
+{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}
+```"
+65b9f618e026be90484c974a204ae812-04_Ivanovic_Mla__s27__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,True,False,False,False,False,,"```json
+{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 1.0
+}
+```"
+65b9f618e026be90484c974a204ae812-04_Ivanovic_Mla__s27__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,True,False,False,False,False,,"```json
+{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}
+```"
+fa4cffb65fe50e0f7177efdcb72b7ffb-2022-11-16_USR___s1__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,False,False,False,False,False,,"{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""fix"": """", ""confidence"": 0.95}"
+65b9f618e026be90484c974a204ae812-04_Ivanovic_Mla__s27__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,True,False,True,False,True,shp8,"{
+""present"": true,
+""evidence_element"": ""shp8"",
+""evidence_region"": ""right"",
+""fix"": ""Reduce the width of shp8 from 813.96 to 778.14 to align its right edge with the other body text elements (shp5, shp6, shp7, shp9)."",
+""confidence"": 0.95
+}"
+65b9f618e026be90484c974a204ae812-04_Ivanovic_Mla__s27__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,False,False,True,True,True,shp7 (text: 'Syngenta certified operators'),"{
+""present"": true,
+""evidence_element"": ""shp7 (text: 'Syngenta certified operators')"",
+""evidence_region"": ""left"",
+""fix"": ""Adjust the left x-coordinate of shp7 from 148.1 to 166.1 to align with the other body text elements (shp5, shp6, shp8, shp9)."",
+""confidence"": 0.95
+}"
+65b9f618e026be90484c974a204ae812-04_Ivanovic_Mla__s27__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,False,False,True,True,True,The text block 'Syngenta certified operators' (shp7) is visibly shifted to the left compared to the other text blocks.,"```json
+{
+""present"": true,
+""evidence_element"": ""The text block 'Syngenta certified operators' (shp7) is visibly shifted to the left compared to the other text blocks."",
+""evidence_region"": ""left"",
+""fix"": ""Align the 'Syngenta certified operators' text block to the right to match the starting x-coordin"
+fa4cffb65fe50e0f7177efdcb72b7ffb-2022-11-16_USR___s1__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,True,False,False,False,False,,"{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""fix"": """", ""confidence"": 0.95}"
+fa4cffb65fe50e0f7177efdcb72b7ffb-2022-11-16_USR___s1__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,True,False,True,False,True,The text line for item 10 ('10.Université Paris Est Créteil val de Marine (FR)'),"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""The text line for item 10 ('10.Université Paris Est Créteil val de Marine (FR)')"",
+  ""evidence_region"": ""bottom-left"",
+  ""fix"": ""Add a space after the number '10' to align the text start with the other list items."",
+  ""confidence"": 1.0
+}
+```"
+fa4cffb65fe50e0f7177efdcb72b7ffb-2022-11-16_USR___s1__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,False,False,False,False,False,,"```json
+{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}
+```"
+fa4cffb65fe50e0f7177efdcb72b7ffb-2022-11-16_USR___s1__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,True,False,False,False,False,,"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": ""empty"",
+  ""fix"": """",
+  ""confidence"": 0.95
+}
+```"
+fa4cffb65fe50e0f7177efdcb72b7ffb-2022-11-16_USR___s1__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,False,False,True,False,True,"The text line for item 10 ('10.Université Paris Est Créteil val de Marine (FR)') is misaligned because it is missing the space after the period, causing it to be offset to the left compared to the other list items.","```json
+{
+  ""present"": true,
+  ""evidence_element"": ""The text line for item 10 ('10.Université Paris Est Créteil val de Marine (FR)') is misaligned because it is missing the space after the period, causing it to be offset to the left compared to the other list items."",
+  ""evidence_region"": ""bottom-le"
+82fc6f07bed52bb8c371cc82eca7cb67-Marnix_van_Looc__s2__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,False,False,False,False,False,,"{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}"
+82fc6f07bed52bb8c371cc82eca7cb67-Marnix_van_Looc__s2__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,True,False,False,False,False,,"{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}"
+82fc6f07bed52bb8c371cc82eca7cb67-Marnix_van_Looc__s2__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,False,False,False,False,False,,"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": ""empty"",
+  ""fix"": """",
+  ""confidence"": 0.95
+}
+```"
+82fc6f07bed52bb8c371cc82eca7cb67-Marnix_van_Looc__s2__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,False,False,True,False,False,The text block 'Through a dedicated Global Public Health (GPH)...' on the left blue panel,"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""The text block 'Through a dedicated Global Public Health (GPH)...' on the left blue panel"",
+  ""evidence_region"": ""left"",
+  ""fix"": ""Reposition the text block to the right to prevent it from overlapping with the 'Global Public Health (GPH)' title tex"
+82fc6f07bed52bb8c371cc82eca7cb67-Marnix_van_Looc__s2__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,True,False,True,False,False,The text block 'Through a dedicated Global Public Health (GPH)...' on the left blue panel,"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""The text block 'Through a dedicated Global Public Health (GPH)...' on the left blue panel"",
+  ""evidence_region"": ""left"",
+  ""fix"": ""Reposition the text block to the right to prevent it from overlapping with the 'Global Public Health' title text."",
+ "
+82fc6f07bed52bb8c371cc82eca7cb67-Marnix_van_Looc__s2__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,True,False,False,False,False,,"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": ""empty"",
+  ""fix"": """",
+  ""confidence"": 0.95
+}
+```"
+59adad4e9b977fc95ddcafed6d843707-UK_ORCID_commun__s2__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,False,False,False,False,False,,"{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}"
+59adad4e9b977fc95ddcafed6d843707-UK_ORCID_commun__s2__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,True,False,False,False,False,,"{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}"
+59adad4e9b977fc95ddcafed6d843707-UK_ORCID_commun__s2__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,False,False,False,False,False,,"```json
+{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}
+```"
+59adad4e9b977fc95ddcafed6d843707-UK_ORCID_commun__s2__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,True,False,False,False,False,,"```json
+{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}
+```"
+82fc6f07bed52bb8c371cc82eca7cb67-Marnix_van_Looc__s1__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,False,False,False,False,False,,"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": ""empty"",
+  ""fix"": """",
+  ""confidence"": 0.95
+}
+```"
+82fc6f07bed52bb8c371cc82eca7cb67-Marnix_van_Looc__s1__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,True,False,False,False,False,,"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": ""empty"",
+  ""fix"": """",
+  ""confidence"": 0.95
+}
+```"
+82fc6f07bed52bb8c371cc82eca7cb67-Marnix_van_Looc__s1__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,False,False,False,False,False,,"{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": ""empty"",
+  ""fix"": """",
+  ""confidence"": 0.95
+}"
+82fc6f07bed52bb8c371cc82eca7cb67-Marnix_van_Looc__s1__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,True,False,False,False,False,,"{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": ""empty"",
+  ""fix"": """",
+  ""confidence"": 0.95
+}"
+59adad4e9b977fc95ddcafed6d843707-UK_ORCID_commun__s2__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,False,False,True,False,True,"The 'Outputs' section (containing the 'doi' logo and icons) is vertically misaligned relative to the 'Organizations' section (containing the 'ROR' logo) and the 'Projects' section above it. While the 'Organizations' and 'Projects' sections align to a consistent vertical baseline, the 'Outputs' section is shifted significantly lower.","```json
+{
+  ""present"": true,
+  ""evidence_element"": ""The 'Outputs' section (containing the 'doi' logo and icons) is vertically misaligned relative to the 'Organizations' section (containing the 'ROR' logo) and the 'Projects' section above it. While the 'Organizations' and 'Projects' sections align to"
+59adad4e9b977fc95ddcafed6d843707-UK_ORCID_commun__s2__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,True,False,True,False,True,"The 'Outputs' section (containing the 'doi' logo and icons) is vertically misaligned relative to the 'Organizations' section (containing the 'ROR' logo) and the 'Projects' section above it. While the 'Organizations' and 'Projects' sections align to a consistent vertical baseline, the 'Outputs' section is shifted significantly higher.","```json
+{
+""present"": true,
+""evidence_element"": ""The 'Outputs' section (containing the 'doi' logo and icons) is vertically misaligned relative to the 'Organizations' section (containing the 'ROR' logo) and the 'Projects' section above it. While the 'Organizations' and 'Projects' sections align to a c"
+82fc6f07bed52bb8c371cc82eca7cb67-Marnix_van_Looc__s1__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,True,False,False,False,False,,"```json
+{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}
+```"
+82fc6f07bed52bb8c371cc82eca7cb67-Marnix_van_Looc__s1__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,False,False,False,False,False,,"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": ""empty"",
+  ""fix"": """",
+  ""confidence"": 0.95
+}
+```"
+82fc6f07bed52bb8c371cc82eca7cb67-Marnix_van_Looc__s8__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,False,False,False,False,False,,"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": ""empty"",
+  ""fix"": """",
+  ""confidence"": 1.0
+}
+```"
+82fc6f07bed52bb8c371cc82eca7cb67-Marnix_van_Looc__s8__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,True,False,False,False,False,,"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": ""empty"",
+  ""fix"": """",
+  ""confidence"": 1.0
+}
+```"
+82fc6f07bed52bb8c371cc82eca7cb67-Marnix_van_Looc__s8__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,False,False,False,False,False,,"{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}"
+82fc6f07bed52bb8c371cc82eca7cb67-Marnix_van_Looc__s8__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,True,False,False,False,False,,"{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}"
+82fc6f07bed52bb8c371cc82eca7cb67-Marnix_van_Looc__s12__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,False,False,False,False,False,,"{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""fix"": """", ""confidence"": 0.95}"
+82fc6f07bed52bb8c371cc82eca7cb67-Marnix_van_Looc__s8__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,False,False,False,False,False,,"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": ""empty"",
+  ""fix"": """",
+  ""confidence"": 0.95
+}
+```"
+82fc6f07bed52bb8c371cc82eca7cb67-Marnix_van_Looc__s8__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,True,False,False,False,False,,"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": ""empty"",
+  ""fix"": """",
+  ""confidence"": 0.95
+}
+```"
+82fc6f07bed52bb8c371cc82eca7cb67-Marnix_van_Looc__s12__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,False,False,False,False,False,,"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": ""empty"",
+  ""fix"": """",
+  ""confidence"": 1.0
+}
+```"
+82fc6f07bed52bb8c371cc82eca7cb67-Marnix_van_Looc__s12__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,True,False,False,False,False,,"{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""fix"": """", ""confidence"": 0.95}"
+82fc6f07bed52bb8c371cc82eca7cb67-Marnix_van_Looc__s12__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,True,False,False,False,False,,"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": ""empty"",
+  ""fix"": """",
+  ""confidence"": 1.0
+}
+```"
+82fc6f07bed52bb8c371cc82eca7cb67-Marnix_van_Looc__s12__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,False,False,False,False,False,,"```json
+{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}
+```"
+82fc6f07bed52bb8c371cc82eca7cb67-Marnix_van_Looc__s12__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,True,False,False,False,False,,"```json
+{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}
+```"
+5aed46f009ac84854c5c1cebd08f867d-DASH_Presentati__s1__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,False,False,False,False,False,,"{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": ""empty"",
+  ""fix"": """",
+  ""confidence"": 0.95
+}"
+5aed46f009ac84854c5c1cebd08f867d-DASH_Presentati__s1__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,True,False,False,False,False,,"{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": ""empty"",
+  ""fix"": """",
+  ""confidence"": 0.95
+}"
+5aed46f009ac84854c5c1cebd08f867d-DASH_Presentati__s1__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,False,False,False,False,False,,"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": ""empty"",
+  ""fix"": """",
+  ""confidence"": 0.95
+}
+```"
+5aed46f009ac84854c5c1cebd08f867d-DASH_Presentati__s1__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,True,False,False,False,False,,"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": ""empty"",
+  ""fix"": """",
+  ""confidence"": 0.95
+}
+```"
+eaecf2fcda285772d0c4e86d9af3fd83-Peer_review_sur__s1__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,False,False,False,False,False,,"{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""fix"": """", ""confidence"": 0.95}"
+5aed46f009ac84854c5c1cebd08f867d-DASH_Presentati__s1__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,False,False,True,True,True,"The 'National Weather Service' box is horizontally misaligned with the 'National Environmental, Satellite, Data, and Information Service (NESDIS)' box above it; the 'National Weather Service' box is shifted significantly to the left.","```json
+{
+  ""present"": true,
+  ""evidence_element"": ""The 'National Weather Service' box is horizontally misaligned with the 'National Environmental, Satellite, Data, and Information Service (NESDIS)' box above it; the 'National Weather Service' box is shifted significantly to the left."",
+  ""evidence_"
+5aed46f009ac84854c5c1cebd08f867d-DASH_Presentati__s1__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,True,False,True,False,True,"The 'National Weather Service' and 'Space Weather Prediction Center (SWPC)' boxes in the left column are vertically misaligned relative to the top row of boxes (Cires, NESDIS, etc.).","```json
+{
+  ""present"": true,
+  ""evidence_element"": ""The 'National Weather Service' and 'Space Weather Prediction Center (SWPC)' boxes in the left column are vertically misaligned relative to the top row of boxes (Cires, NESDIS, etc.)."",
+  ""evidence_region"": ""left"",
+  ""fix"": ""Vertically align the 'Na"
+eaecf2fcda285772d0c4e86d9af3fd83-Peer_review_sur__s1__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,True,False,False,False,False,,"{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""fix"": """", ""confidence"": 0.95}"
+5aed46f009ac84854c5c1cebd08f867d-DASH_Presentati__s3__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,False,False,False,False,False,,"{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}"
+eaecf2fcda285772d0c4e86d9af3fd83-Peer_review_sur__s1__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,False,False,False,False,False,,"```json
+{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}
+```"
+eaecf2fcda285772d0c4e86d9af3fd83-Peer_review_sur__s1__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,True,False,False,False,False,,"```json
+{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}
+```"
+eaecf2fcda285772d0c4e86d9af3fd83-Peer_review_sur__s1__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,False,False,True,False,True,The 'South America' label in the 'Where do you work?' pie chart is split across two lines ('South A' and 'merica') and is vertically misaligned relative to the other single-line labels like 'Europe' or 'North America'.,"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""The 'South America' label in the 'Where do you work?' pie chart is split across two lines ('South A' and 'merica') and is vertically misaligned relative to the other single-line labels like 'Europe' or 'North America'."",
+  ""evidence_region"": ""top-r"
+eaecf2fcda285772d0c4e86d9af3fd83-Peer_review_sur__s1__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,True,False,True,False,True,The 'South America' label in the 'Where do you work?' pie chart is split across two lines ('South A' and 'merica') and is vertically misaligned relative to the other single-line labels like 'Europe' or 'North America'.,"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""The 'South America' label in the 'Where do you work?' pie chart is split across two lines ('South A' and 'merica') and is vertically misaligned relative to the other single-line labels like 'Europe' or 'North America'."",
+  ""evidence_region"": ""top-r"
+5aed46f009ac84854c5c1cebd08f867d-DASH_Presentati__s3__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,True,False,False,False,False,,"{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}"
+5aed46f009ac84854c5c1cebd08f867d-DASH_Presentati__s3__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,True,False,False,False,False,,"```json
+{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}
+```"
+5aed46f009ac84854c5c1cebd08f867d-DASH_Presentati__s3__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,False,False,False,False,False,,"```json
+{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}
+```"
+5aed46f009ac84854c5c1cebd08f867d-DASH_Presentati__s3__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,False,False,True,True,True,The 'Science Team' box in the bottom-left flowchart section,"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""The 'Science Team' box in the bottom-left flowchart section"",
+  ""evidence_region"": ""bottom-left"",
+  ""fix"": ""Align the 'Science Team' box vertically with the 'DevTeam' box so their top edges match, or center it relative to the 'Prototype New Code/Re"
+59adad4e9b977fc95ddcafed6d843707-UK_ORCID_commun__s6__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,False,False,False,False,False,,"```json
+{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 1.0
+}
+```"
+5aed46f009ac84854c5c1cebd08f867d-DASH_Presentati__s3__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,True,False,False,False,False,,"```json
+{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}
+```"
+59adad4e9b977fc95ddcafed6d843707-UK_ORCID_commun__s6__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,True,False,False,False,False,,"{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""fix"": """", ""confidence"": 0.95}"
+59adad4e9b977fc95ddcafed6d843707-UK_ORCID_commun__s6__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,False,False,False,False,False,,"{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}"
+59adad4e9b977fc95ddcafed6d843707-UK_ORCID_commun__s6__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,True,False,False,False,False,,"```json
+{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 1.0
+}
+```"
+59adad4e9b977fc95ddcafed6d843707-UK_ORCID_commun__s6__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,False,False,False,False,False,,"```json
+{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}
+```"
+59adad4e9b977fc95ddcafed6d843707-UK_ORCID_commun__s6__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,True,False,False,False,False,,"```json
+{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}
+```"
+20d95200c4abf876205b85c17f55b2d3-FAIR_and_Open_D__s3__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,False,False,False,False,False,,"```json
+{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}
+```"
+20d95200c4abf876205b85c17f55b2d3-FAIR_and_Open_D__s3__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,False,False,False,False,False,,"{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": ""empty"",
+  ""fix"": """",
+  ""confidence"": 0.95
+}"
+20d95200c4abf876205b85c17f55b2d3-FAIR_and_Open_D__s3__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,True,False,False,False,False,,"{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": ""empty"",
+  ""fix"": """",
+  ""confidence"": 0.95
+}"
+20d95200c4abf876205b85c17f55b2d3-FAIR_and_Open_D__s3__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,True,False,False,False,False,,"```json
+{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}
+```"
+20d95200c4abf876205b85c17f55b2d3-FAIR_and_Open_D__s3__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,False,False,False,False,False,,"```json
+{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}
+```"
+20d95200c4abf876205b85c17f55b2d3-FAIR_and_Open_D__s3__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,True,False,False,False,False,,"```json
+{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}
+```"
+82fc6f07bed52bb8c371cc82eca7cb67-Marnix_van_Looc__s22__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,False,False,False,False,False,,"{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""fix"": """", ""confidence"": 0.95}"
+82fc6f07bed52bb8c371cc82eca7cb67-Marnix_van_Looc__s22__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,True,False,False,False,False,,"{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""fix"": """", ""confidence"": 0.95}"
+82fc6f07bed52bb8c371cc82eca7cb67-Marnix_van_Looc__s22__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,False,False,False,False,False,,"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": ""empty"",
+  ""fix"": """",
+  ""confidence"": 0.95
+}
+```"
+82fc6f07bed52bb8c371cc82eca7cb67-Marnix_van_Looc__s22__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,True,False,False,False,False,,"```json
+{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}
+```"
+82fc6f07bed52bb8c371cc82eca7cb67-Marnix_van_Looc__s22__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,True,False,True,False,True,The 'Johnson & Johnson' logo in the bottom-left corner under the 'Funding' section,"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""The 'Johnson & Johnson' logo in the bottom-left corner under the 'Funding' section"",
+  ""evidence_region"": ""bottom-left"",
+  ""fix"": ""Align the 'Johnson & Johnson' logo to the left margin, matching the alignment of the text lines above it (e.g., 'Well"
+a8dc2d0260a44588030f8fc0aed227f7-Alter-FAIR_Voca__s21__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,False,False,False,False,False,,"{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""fix"": """", ""confidence"": 0.95}"
+82fc6f07bed52bb8c371cc82eca7cb67-Marnix_van_Looc__s22__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,False,False,True,False,True,The 'WRAIR' logo and its corresponding text label 'Walter Reed Army Institute of Research (WRAIR)' are vertically misaligned relative to the other institution logos and text entries in the list.,"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""The 'WRAIR' logo and its corresponding text label 'Walter Reed Army Institute of Research (WRAIR)' are vertically misaligned relative to the other institution logos and text entries in the list."",
+  ""evidence_region"": ""right"",
+  ""fix"": ""Vertically "
+a8dc2d0260a44588030f8fc0aed227f7-Alter-FAIR_Voca__s21__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,True,False,True,False,True,"The line 'Alliance, CODATA)' in the first column, which is the second line of the entry for 'Steven McEachern'.","```json
+{
+  ""present"": true,
+  ""evidence_element"": ""The line 'Alliance, CODATA)' in the first column, which is the second line of the entry for 'Steven McEachern'."",
+  ""evidence_region"": ""left"",
+  ""fix"": ""Remove the leading indentation from the line 'Alliance, CODATA)' so it aligns with the start of"
+a8dc2d0260a44588030f8fc0aed227f7-Alter-FAIR_Voca__s21__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,False,False,False,False,False,,"```json
+{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}
+```"
+a8dc2d0260a44588030f8fc0aed227f7-Alter-FAIR_Voca__s21__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,True,False,False,False,False,,"{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": ""empty"",
+  ""fix"": """",
+  ""confidence"": 0.95
+}"
+a8dc2d0260a44588030f8fc0aed227f7-Alter-FAIR_Voca__s21__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,True,False,True,False,True,shp4 (table),"{""present"": true, ""evidence_element"": ""shp4 (table)"", ""evidence_region"": ""left"", ""fix"": ""Adjust the left x-coordinate of the table (shp4) from 80.67 to align with the left edge of the title (shp2) and body text (shp3) at x=88.0."", ""confidence"": 0.95}"
+ad0aaf0547329b0a1dcf9a138241d6ea-GenOAWeek2021_2__s0__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,False,False,False,False,False,,"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": ""empty"",
+  ""fix"": """",
+  ""confidence"": 0.95
+}
+```"
+a8dc2d0260a44588030f8fc0aed227f7-Alter-FAIR_Voca__s21__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,False,False,True,False,True,The text line 'Taina Jääskeläinen (Finnish Social Science Data Archive and CESSDA Vocabulary Service)' in the right column is misaligned. The second line of this entry ('CESSDA Vocabulary Service)') is indented significantly to the right compared to the first line and the other entries in the column.,"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""The text line 'Taina Jääskeläinen (Finnish Social Science Data Archive and CESSDA Vocabulary Service)' in the right column is misaligned. The second line of this entry ('CESSDA Vocabulary Service)') is indented significantly to the right compared t"
+ad0aaf0547329b0a1dcf9a138241d6ea-GenOAWeek2021_2__s0__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,False,False,False,False,False,,"{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}"
+ad0aaf0547329b0a1dcf9a138241d6ea-GenOAWeek2021_2__s0__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,True,False,False,False,False,,"{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}"
+ad0aaf0547329b0a1dcf9a138241d6ea-GenOAWeek2021_2__s0__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,True,False,False,False,False,,"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": ""empty"",
+  ""fix"": """",
+  ""confidence"": 0.95
+}
+```"
+ad0aaf0547329b0a1dcf9a138241d6ea-GenOAWeek2021_2__s0__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,False,False,False,False,False,,"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": ""empty"",
+  ""fix"": """",
+  ""confidence"": 0.95
+}
+```"
+ad0aaf0547329b0a1dcf9a138241d6ea-GenOAWeek2021_2__s0__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,True,False,False,False,False,,"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": ""empty"",
+  ""fix"": """",
+  ""confidence"": 0.95
+}
+```"
+800d590999c12cc29efec87123d9234a-uc-cesjune9fina__s0__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,False,False,False,False,False,,"{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""fix"": """", ""confidence"": 0.95}"
+800d590999c12cc29efec87123d9234a-uc-cesjune9fina__s0__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,True,False,False,False,False,,"{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""fix"": """", ""confidence"": 0.95}"
+800d590999c12cc29efec87123d9234a-uc-cesjune9fina__s0__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,True,False,False,False,False,,"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": ""empty"",
+  ""fix"": """",
+  ""confidence"": 0.95
+}
+```"
+800d590999c12cc29efec87123d9234a-uc-cesjune9fina__s0__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,False,False,False,False,False,,"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": ""empty"",
+  ""fix"": """",
+  ""confidence"": 0.95
+}
+```"
+800d590999c12cc29efec87123d9234a-uc-cesjune9fina__s0__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,False,False,False,False,False,,"```json
+{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}
+```"
+800d590999c12cc29efec87123d9234a-uc-cesjune9fina__s0__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,True,False,False,False,False,,"```json
+{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}
+```"
+c2e4482c41b065a9c4342a5488e695b6-novita_GIUGNO_6__s0__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,False,False,False,False,False,,"{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""fix"": """", ""confidence"": 0.95}"
+c2e4482c41b065a9c4342a5488e695b6-novita_GIUGNO_6__s0__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,True,False,False,False,False,,"{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}"
+a8dc2d0260a44588030f8fc0aed227f7-Alter-FAIR_Voca__s7__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,False,False,False,False,False,,"```json
+{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 1.0
+}
+```"
+a8dc2d0260a44588030f8fc0aed227f7-Alter-FAIR_Voca__s7__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,True,False,False,False,False,,"```json
+{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 1.0
+}
+```"
+c2e4482c41b065a9c4342a5488e695b6-novita_GIUGNO_6__s0__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,False,False,True,False,True,"The email address 'elena.giglia@unito.it' and the handle '@egiglia' in the bottom-left contact block are vertically misaligned with the name 'Elena Giglia' above them, appearing shifted to the right.","```json
+{
+""present"": true,
+""evidence_element"": ""The email address 'elena.giglia@unito.it' and the handle '@egiglia' in the bottom-left contact block are vertically misaligned with the name 'Elena Giglia' above them, appearing shifted to the right."",
+""evidence_region"": ""bottom-left"",
+""fix"": ""Align th"
+a8dc2d0260a44588030f8fc0aed227f7-Alter-FAIR_Voca__s7__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,True,False,False,False,False,,"{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""fix"": """", ""confidence"": 0.95}"
+c2e4482c41b065a9c4342a5488e695b6-novita_GIUGNO_6__s0__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,False,False,True,False,True,The email address text 'elena.giglia@unito.it' in the bottom-left contact block,"```json
+{
+""present"": true,
+""evidence_element"": ""The email address text 'elena.giglia@unito.it' in the bottom-left contact block"",
+""evidence_region"": ""bottom-left"",
+""fix"": ""Align the email address text to the left edge of the 'Elena Giglia' name above it, or adjust the text box position to remove the"
+c2e4482c41b065a9c4342a5488e695b6-novita_GIUGNO_6__s0__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,True,False,True,False,False,"The contact information block in the bottom-left corner (specifically the email address 'elena.giglia@unito.it' and the social media handles) is misaligned. The text lines are not left-aligned with each other or with the name 'Elena Giglia' above them, creating a jagged, inconsistent left edge.","```json
+{
+  ""present"": true,
+  ""evidence_element"": ""The contact information block in the bottom-left corner (specifically the email address 'elena.giglia@unito.it' and the social media handles) is misaligned. The text lines are not left-aligned with each other or with the name 'Elena Giglia' above t"
+a8dc2d0260a44588030f8fc0aed227f7-Alter-FAIR_Voca__s7__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,False,False,False,False,False,,"{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}"
+a8dc2d0260a44588030f8fc0aed227f7-Alter-FAIR_Voca__s7__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,True,False,False,False,False,,"```json
+{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}
+```"
+800d590999c12cc29efec87123d9234a-uc-cesjune9fina__s1__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,False,False,False,False,False,,"{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}"
+c2e4482c41b065a9c4342a5488e695b6-novita_GIUGNO_6__s0__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,True,False,True,False,True,"The contact information block in the bottom-left corner (containing 'Elena Giglia', email, and social icons) is vertically misaligned with the main title block above it. Specifically, the text 'Elena Giglia' in the contact block (shp22) is positioned significantly lower than the 'Elena Giglia' line in the main title (shp2), breaking the left-edge alignment of the name.","```json
+{
+""present"": true,
+""evidence_element"": ""The contact information block in the bottom-left corner (containing 'Elena Giglia', email, and social icons) is vertically misaligned with the main title block above it. Specifically, the text 'Elena Giglia' in the contact block (shp22) is positioned s"
+a8dc2d0260a44588030f8fc0aed227f7-Alter-FAIR_Voca__s7__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,False,False,True,False,True,shp109 (footer text),"{
+  ""present"": true,
+  ""evidence_element"": ""shp109 (footer text)"",
+  ""evidence_region"": ""left"",
+  ""fix"": ""Align the left edge of shp109 (x=88.0) with the left edge of shp107 (x=88.0) and ensure consistent alignment with shp108 (x=132.0) by adjusting the x-coordinate to 132.0 to match the body text c"
+800d590999c12cc29efec87123d9234a-uc-cesjune9fina__s1__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,True,False,False,False,False,,"{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}"
+800d590999c12cc29efec87123d9234a-uc-cesjune9fina__s1__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,False,False,False,False,False,,"```json
+{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}
+```"
+800d590999c12cc29efec87123d9234a-uc-cesjune9fina__s1__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,True,False,False,False,False,,"```json
+{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}
+```"
+59d23b0427a84f92a25b140c8836f70d-Indrya__s18__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,False,False,False,False,False,,"```json
+{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}
+```"
+59d23b0427a84f92a25b140c8836f70d-Indrya__s18__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,True,False,False,False,False,,"```json
+{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}
+```"
+800d590999c12cc29efec87123d9234a-uc-cesjune9fina__s1__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,False,False,True,True,True,"The 'Total' row in the 'Respondents by academic rank (*)' table is misaligned. Specifically, the 'Total' label is shifted to the right compared to the 'Rank A' through 'Rank D' labels above it, and the numerical values (281, 100,0, 54,4) are not vertically aligned with the columns above them.","```json
+{
+  ""present"": true,
+  ""evidence_element"": ""The 'Total' row in the 'Respondents by academic rank (*)' table is misaligned. Specifically, the 'Total' label is shifted to the right compared to the 'Rank A' through 'Rank D' labels above it, and the numerical values (281, 100,0, 54,4) are not ve"
+800d590999c12cc29efec87123d9234a-uc-cesjune9fina__s1__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,True,False,True,False,True,"The 'Total' row in the 'Respondents by academic rank (*)' table is misaligned. Specifically, the 'Total' label is shifted to the right compared to the 'Rank A' through 'Rank D' labels above it, and the numerical values (281, 100,0, 54,4) are not vertically aligned with the columns above them.","```json
+{
+  ""present"": true,
+  ""evidence_element"": ""The 'Total' row in the 'Respondents by academic rank (*)' table is misaligned. Specifically, the 'Total' label is shifted to the right compared to the 'Rank A' through 'Rank D' labels above it, and the numerical values (281, 100,0, 54,4) are not ve"
+59d23b0427a84f92a25b140c8836f70d-Indrya__s18__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,False,False,False,False,False,,"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": ""empty"",
+  ""fix"": """",
+  ""confidence"": 0.95
+}
+```"
+59d23b0427a84f92a25b140c8836f70d-Indrya__s18__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,True,False,False,False,False,,"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": ""empty"",
+  ""fix"": """",
+  ""confidence"": 0.95
+}
+```"
+59d23b0427a84f92a25b140c8836f70d-Indrya__s18__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,True,False,True,False,True,shp16,"{""present"": true, ""evidence_element"": ""shp16"", ""evidence_region"": ""right"", ""fix"": ""Align the right edge of shp16 with the right edge of the title (shp2) or remove the element if it is empty."", ""confidence"": 0.95}"
+59d23b0427a84f92a25b140c8836f70d-Indrya__s18__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,False,False,True,True,True,shp5 (text '0896-6789-0219'),"{""present"": true, ""evidence_element"": ""shp5 (text '0896-6789-0219')"", ""evidence_region"": ""left"", ""fix"": ""Align the left edge of shp5 to x=86.55 to match the left alignment of shp4, shp6, and shp7."", ""confidence"": 0.95}"
+8fd5703baaf32e0cc0b27e4898c17a43-2022_10_21_Targ__s2__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,False,False,False,False,False,,"{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": ""empty"",
+  ""fix"": """",
+  ""confidence"": 0.95
+}"
+8fd5703baaf32e0cc0b27e4898c17a43-2022_10_21_Targ__s2__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,True,False,False,False,False,,"{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": ""empty"",
+  ""fix"": """",
+  ""confidence"": 0.95
+}"
+8fd5703baaf32e0cc0b27e4898c17a43-2022_10_21_Targ__s2__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,False,False,False,False,False,,"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": ""empty"",
+  ""fix"": """",
+  ""confidence"": 0.95
+}
+```"
+8fd5703baaf32e0cc0b27e4898c17a43-2022_10_21_Targ__s2__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,True,False,False,False,False,,"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": ""empty"",
+  ""fix"": """",
+  ""confidence"": 0.95
+}
+```"
+8fd5703baaf32e0cc0b27e4898c17a43-2022_10_21_Targ__s2__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,False,False,True,False,True,The 'Funded by' text and the DFG logo block in the bottom-right corner,"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""The 'Funded by' text and the DFG logo block in the bottom-right corner"",
+  ""evidence_region"": ""bottom-right"",
+  ""fix"": ""Align the 'Funded by' text and the DFG logo block to the right edge of the slide, matching the alignment of the partner logos ab"
+59adad4e9b977fc95ddcafed6d843707-UK_ORCID_commun__s1__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,True,False,False,False,False,,"```json
+{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}
+```"
+8fd5703baaf32e0cc0b27e4898c17a43-2022_10_21_Targ__s2__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,True,False,True,False,True,The 'Funded by' text and the DFG logo block in the bottom-right corner,"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""The 'Funded by' text and the DFG logo block in the bottom-right corner"",
+  ""evidence_region"": ""bottom-right"",
+  ""fix"": ""Align the 'Funded by' text and the DFG logo block to the right edge of the slide, matching the alignment of the partner logos ab"
+59adad4e9b977fc95ddcafed6d843707-UK_ORCID_commun__s1__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,True,False,False,False,False,,"{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""fix"": """", ""confidence"": 0.95}"
+59adad4e9b977fc95ddcafed6d843707-UK_ORCID_commun__s1__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,False,False,False,False,False,,"```json
+{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}
+```"
+59adad4e9b977fc95ddcafed6d843707-UK_ORCID_commun__s1__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,False,False,True,False,True,The bullet point text starting with 'Jisc to lead on selecting and promoting a range of unique identifiers...',"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""The bullet point text starting with 'Jisc to lead on selecting and promoting a range of unique identifiers...'"",
+  ""evidence_region"": ""center"",
+  ""fix"": ""Wrap the text to fit within the main content column width so it does not overlap the diagram o"
+59adad4e9b977fc95ddcafed6d843707-UK_ORCID_commun__s1__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,True,False,False,False,False,,"```json
+{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}
+```"
+59adad4e9b977fc95ddcafed6d843707-UK_ORCID_commun__s1__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,False,False,True,True,True,shp4,"{""present"": true, ""evidence_element"": ""shp4"", ""evidence_region"": ""left"", ""fix"": ""Align the left edge of shp4 (x=81.67) with the left edge of shp3 (x=37.67) to match the column alignment of the other body text."", ""confidence"": 0.95}"
+59adad4e9b977fc95ddcafed6d843707-UK_ORCID_commun__s5__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,False,False,False,False,False,,"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": ""empty"",
+  ""fix"": """",
+  ""confidence"": 1.0
+}
+```"
+59adad4e9b977fc95ddcafed6d843707-UK_ORCID_commun__s5__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,A,True,False,False,False,False,,"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": ""empty"",
+  ""fix"": """",
+  ""confidence"": 1.0
+}
+```"
+59adad4e9b977fc95ddcafed6d843707-UK_ORCID_commun__s5__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,False,False,False,False,False,,"{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""fix"": """", ""confidence"": 0.95}"
+59adad4e9b977fc95ddcafed6d843707-UK_ORCID_commun__s5__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,B,True,False,False,False,False,,"{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""fix"": """", ""confidence"": 0.95}"
+59adad4e9b977fc95ddcafed6d843707-UK_ORCID_commun__s5__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,False,False,False,False,False,,"```json
+{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}
+```"
+59adad4e9b977fc95ddcafed6d843707-UK_ORCID_commun__s5__G3_ALIGNMENT_OFFSET,G3_ALIGNMENT_OFFSET,C,True,False,False,False,False,,"```json
+{
+""present"": false,
+""evidence_element"": """",
+""evidence_region"": ""empty"",
+""fix"": """",
+""confidence"": 0.95
+}
+```"

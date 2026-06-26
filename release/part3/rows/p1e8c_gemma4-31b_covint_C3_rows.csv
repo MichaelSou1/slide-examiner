@@ -1,0 +1,666 @@
+sample_id,defect,modality,is_clean,failure,has_defect,named_target,predicted_types,locator,confidence,other,raw,level
+part2_contract_review_3_G3_ALIGNMENT_OFFSET_2_0002__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_contract_review_3_G3_ALIGNMENT_OFFSET_16_0002__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_contract_review_2_G3_ALIGNMENT_OFFSET_2_0001__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_contract_review_1_G3_ALIGNMENT_OFFSET_2_0000__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_contract_review_1_G3_ALIGNMENT_OFFSET_16_0000__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the first bullet item 'Shadow traffic before switching ClauseScan'"",""region"":""left""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the first bullet item 'Shadow traffic before switching ClauseScan'"", ""evidence_region"": ""left"", ""confidence"": 1.0}
+```",page
+part2_contract_review_2_G3_ALIGNMENT_OFFSET_16_0001__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the first list item 'Approve the phase 1 budget for ClauseScan'"",""region"":""top-left""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the first list item 'Approve the phase 1 budget for ClauseScan'"", ""evidence_region"": ""top-left"", ""confidence"": 1.0}
+```",page
+part2_contract_review_5_G3_ALIGNMENT_OFFSET_2_0004__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_contract_review_4_G3_ALIGNMENT_OFFSET_2_0003__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_contract_review_4_G3_ALIGNMENT_OFFSET_16_0003__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_customer_support_ai_1_G3_ALIGNMENT_OFFSET_2_0005__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_customer_support_ai_1_G3_ALIGNMENT_OFFSET_16_0005__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second bullet item 'HelpBot beat the baseline by double digits'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second bullet item 'HelpBot beat the baseline by double digits'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+part2_contract_review_5_G3_ALIGNMENT_OFFSET_16_0004__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second list item ('ClauseScan beat the baseline by double digits')"",""region"":""center""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the second list item ('ClauseScan beat the baseline by double digits')"",
+  ""evidence_region"": ""center"",
+  ""confidence"": 1.0
+}
+```",page
+part2_customer_support_ai_2_G3_ALIGNMENT_OFFSET_16_0006__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_customer_support_ai_2_G3_ALIGNMENT_OFFSET_2_0006__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_customer_support_ai_3_G3_ALIGNMENT_OFFSET_16_0007__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second list item 'HelpBot has a clear rollback path'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'HelpBot has a clear rollback path'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+part2_customer_support_ai_3_G3_ALIGNMENT_OFFSET_2_0007__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_customer_support_ai_4_G3_ALIGNMENT_OFFSET_2_0008__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_customer_support_ai_4_G3_ALIGNMENT_OFFSET_16_0008__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second list item 'HelpBot now handles most volume'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'HelpBot now handles most volume'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+part2_customer_support_ai_5_G3_ALIGNMENT_OFFSET_2_0009__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_customer_support_ai_5_G3_ALIGNMENT_OFFSET_16_0009__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second list item 'HelpBot needs a small dedicated team'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'HelpBot needs a small dedicated team'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+part2_doc_search_1_G3_ALIGNMENT_OFFSET_4_0000__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_doc_search_1_G3_ALIGNMENT_OFFSET_32_0000__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second body item 'FindFast automates the repetitive work'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second body item 'FindFast automates the repetitive work'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+part2_doc_search_2_G3_ALIGNMENT_OFFSET_4_0001__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_doc_search_2_G3_ALIGNMENT_OFFSET_32_0001__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second bullet item 'FindFast beat the baseline by double digits'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second bullet item 'FindFast beat the baseline by double digits'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+part2_doc_search_3_G3_ALIGNMENT_OFFSET_32_0002__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second list item 'No data leaves the tenant'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'No data leaves the tenant'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+part2_doc_search_3_G3_ALIGNMENT_OFFSET_4_0002__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_doc_search_4_G3_ALIGNMENT_OFFSET_4_0003__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_doc_search_4_G3_ALIGNMENT_OFFSET_32_0003__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second list item 'FindFast has a clear rollback path'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'FindFast has a clear rollback path'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+part2_doc_search_5_G3_ALIGNMENT_OFFSET_4_0004__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_doc_search_5_G3_ALIGNMENT_OFFSET_32_0004__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second body item 'FindFast now handles most volume'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second body item 'FindFast now handles most volume'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+part2_energy_forecasting_1_G3_ALIGNMENT_OFFSET_4_0005__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_energy_forecasting_1_G3_ALIGNMENT_OFFSET_32_0005__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second list item (Q2 first production workloads)"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item (Q2 first production workloads)"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+part2_energy_forecasting_2_G3_ALIGNMENT_OFFSET_4_0006__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_energy_forecasting_2_G3_ALIGNMENT_OFFSET_32_0006__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second bullet item 'Automated rollback within five minutes'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second bullet item 'Automated rollback within five minutes'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+part2_energy_forecasting_3_G3_ALIGNMENT_OFFSET_4_0007__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_energy_forecasting_3_G3_ALIGNMENT_OFFSET_32_0007__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second list item 'Assign two platform engineers'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'Assign two platform engineers'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+part2_energy_forecasting_4_G3_ALIGNMENT_OFFSET_4_0008__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_energy_forecasting_4_G3_ALIGNMENT_OFFSET_32_0008__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second list item 'Teams adopt GridCast daily'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'Teams adopt GridCast daily'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+part2_energy_forecasting_5_G3_ALIGNMENT_OFFSET_4_0009__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_energy_forecasting_5_G3_ALIGNMENT_OFFSET_32_0009__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second list item 'GridCast automates the repetitive work'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'GridCast automates the repetitive work'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+part2_hr_analytics_1_G3_ALIGNMENT_OFFSET_48_0000__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second bullet item 'PeoplePulse now handles most volume'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second bullet item 'PeoplePulse now handles most volume'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+part2_hr_analytics_2_G3_ALIGNMENT_OFFSET_48_0001__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second body item 'PeoplePulse needs a small dedicated team'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second body item 'PeoplePulse needs a small dedicated team'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+part2_hr_analytics_4_G3_ALIGNMENT_OFFSET_48_0003__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""Phase 3 refactors the core"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""Phase 3 refactors the core"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+part2_hr_analytics_3_G3_ALIGNMENT_OFFSET_48_0002__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second list item 'A refresh is due within two quarters'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'A refresh is due within two quarters'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+part2_hr_analytics_5_G3_ALIGNMENT_OFFSET_48_0004__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second list item (Q2 first production workloads)"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item (Q2 first production workloads)"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+part2_inventory_optimization_1_G3_ALIGNMENT_OFFSET_48_0005__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second bullet item 'A refresh is due within two quarters'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second bullet item 'A refresh is due within two quarters'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+part2_inventory_optimization_2_G3_ALIGNMENT_OFFSET_48_0006__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""Phase 3 refactors the core"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""Phase 3 refactors the core"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+part2_inventory_optimization_3_G3_ALIGNMENT_OFFSET_48_0007__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second list item (Q2 first production workloads)"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item (Q2 first production workloads)"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+part2_inventory_optimization_4_G3_ALIGNMENT_OFFSET_48_0008__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second bullet item 'Automated rollback within five minutes'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second bullet item 'Automated rollback within five minutes'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+part2_inventory_optimization_5_G3_ALIGNMENT_OFFSET_48_0009__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second list item 'Assign two platform engineers'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'Assign two platform engineers'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+part2_logistics_visibility_1_G3_ALIGNMENT_OFFSET_8_0000__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_logistics_visibility_1_G3_ALIGNMENT_OFFSET_64_0000__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""Phase 3 refactors the core"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""Phase 3 refactors the core"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+part2_logistics_visibility_2_G3_ALIGNMENT_OFFSET_8_0001__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_logistics_visibility_2_G3_ALIGNMENT_OFFSET_64_0001__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second list item (Q2 first production workloads)"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item (Q2 first production workloads)"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+part2_logistics_visibility_3_G3_ALIGNMENT_OFFSET_64_0002__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second bullet item 'Automated rollback within five minutes'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second bullet item 'Automated rollback within five minutes'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+part2_logistics_visibility_4_G3_ALIGNMENT_OFFSET_8_0003__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_logistics_visibility_3_G3_ALIGNMENT_OFFSET_8_0002__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the first body item 'Shadow traffic before switching ShipEye'"",""region"":""top-left""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the first body item 'Shadow traffic before switching ShipEye'"", ""evidence_region"": ""top-left"", ""confidence"": 1.0}
+```",page
+part2_logistics_visibility_4_G3_ALIGNMENT_OFFSET_64_0003__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second list item 'Assign two platform engineers'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'Assign two platform engineers'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+part2_logistics_visibility_5_G3_ALIGNMENT_OFFSET_8_0004__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_logistics_visibility_5_G3_ALIGNMENT_OFFSET_64_0004__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second list item 'Teams adopt ShipEye daily'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'Teams adopt ShipEye daily'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+part2_marketing_attribution_1_G3_ALIGNMENT_OFFSET_8_0005__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_marketing_attribution_2_G3_ALIGNMENT_OFFSET_8_0006__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_marketing_attribution_1_G3_ALIGNMENT_OFFSET_64_0005__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second bullet item 'Attrib has a clear rollback path'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second bullet item 'Attrib has a clear rollback path'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+part2_marketing_attribution_2_G3_ALIGNMENT_OFFSET_64_0006__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the middle body item 'Attrib now handles most volume'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the middle body item 'Attrib now handles most volume'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+part2_marketing_attribution_3_G3_ALIGNMENT_OFFSET_8_0007__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_marketing_attribution_3_G3_ALIGNMENT_OFFSET_64_0007__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second body item 'Attrib needs a small dedicated team'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second body item 'Attrib needs a small dedicated team'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+part2_marketing_attribution_4_G3_ALIGNMENT_OFFSET_8_0008__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_marketing_attribution_4_G3_ALIGNMENT_OFFSET_64_0008__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""the second bullet item 'A refresh is due within two quarters'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second bullet item 'A refresh is due within two quarters'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+part2_marketing_attribution_5_G3_ALIGNMENT_OFFSET_8_0009__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_marketing_attribution_5_G3_ALIGNMENT_OFFSET_64_0009__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]","{""element"":""Phase 3 refactors the core"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""Phase 3 refactors the core"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+part2_contract_review_1_G3_ALIGNMENT_OFFSET_16_0000__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_contract_review_1_G3_ALIGNMENT_OFFSET_2_0000__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_contract_review_2_G3_ALIGNMENT_OFFSET_16_0001__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_contract_review_2_G3_ALIGNMENT_OFFSET_2_0001__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_contract_review_3_G3_ALIGNMENT_OFFSET_16_0002__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_contract_review_3_G3_ALIGNMENT_OFFSET_2_0002__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_contract_review_4_G3_ALIGNMENT_OFFSET_16_0003__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_contract_review_4_G3_ALIGNMENT_OFFSET_2_0003__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_contract_review_5_G3_ALIGNMENT_OFFSET_16_0004__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_contract_review_5_G3_ALIGNMENT_OFFSET_2_0004__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_customer_support_ai_1_G3_ALIGNMENT_OFFSET_16_0005__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_customer_support_ai_1_G3_ALIGNMENT_OFFSET_2_0005__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_customer_support_ai_2_G3_ALIGNMENT_OFFSET_16_0006__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_customer_support_ai_2_G3_ALIGNMENT_OFFSET_2_0006__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_customer_support_ai_3_G3_ALIGNMENT_OFFSET_16_0007__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_customer_support_ai_3_G3_ALIGNMENT_OFFSET_2_0007__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_customer_support_ai_4_G3_ALIGNMENT_OFFSET_16_0008__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_customer_support_ai_4_G3_ALIGNMENT_OFFSET_2_0008__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_customer_support_ai_5_G3_ALIGNMENT_OFFSET_16_0009__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_customer_support_ai_5_G3_ALIGNMENT_OFFSET_2_0009__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_doc_search_1_G3_ALIGNMENT_OFFSET_32_0000__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_doc_search_1_G3_ALIGNMENT_OFFSET_4_0000__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_doc_search_2_G3_ALIGNMENT_OFFSET_32_0001__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_doc_search_2_G3_ALIGNMENT_OFFSET_4_0001__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_doc_search_3_G3_ALIGNMENT_OFFSET_32_0002__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_doc_search_3_G3_ALIGNMENT_OFFSET_4_0002__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_doc_search_4_G3_ALIGNMENT_OFFSET_32_0003__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_doc_search_4_G3_ALIGNMENT_OFFSET_4_0003__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_doc_search_5_G3_ALIGNMENT_OFFSET_32_0004__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_doc_search_5_G3_ALIGNMENT_OFFSET_4_0004__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_energy_forecasting_1_G3_ALIGNMENT_OFFSET_32_0005__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_energy_forecasting_1_G3_ALIGNMENT_OFFSET_4_0005__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_energy_forecasting_2_G3_ALIGNMENT_OFFSET_32_0006__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_energy_forecasting_2_G3_ALIGNMENT_OFFSET_4_0006__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_energy_forecasting_3_G3_ALIGNMENT_OFFSET_32_0007__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_energy_forecasting_3_G3_ALIGNMENT_OFFSET_4_0007__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_energy_forecasting_4_G3_ALIGNMENT_OFFSET_32_0008__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_energy_forecasting_4_G3_ALIGNMENT_OFFSET_4_0008__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_energy_forecasting_5_G3_ALIGNMENT_OFFSET_32_0009__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_energy_forecasting_5_G3_ALIGNMENT_OFFSET_4_0009__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_hr_analytics_1_G3_ALIGNMENT_OFFSET_48_0000__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_hr_analytics_2_G3_ALIGNMENT_OFFSET_48_0001__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_hr_analytics_3_G3_ALIGNMENT_OFFSET_48_0002__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_hr_analytics_4_G3_ALIGNMENT_OFFSET_48_0003__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_hr_analytics_5_G3_ALIGNMENT_OFFSET_48_0004__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_inventory_optimization_1_G3_ALIGNMENT_OFFSET_48_0005__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_inventory_optimization_2_G3_ALIGNMENT_OFFSET_48_0006__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_inventory_optimization_3_G3_ALIGNMENT_OFFSET_48_0007__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_inventory_optimization_4_G3_ALIGNMENT_OFFSET_48_0008__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_inventory_optimization_5_G3_ALIGNMENT_OFFSET_48_0009__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_logistics_visibility_1_G3_ALIGNMENT_OFFSET_64_0000__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_logistics_visibility_1_G3_ALIGNMENT_OFFSET_8_0000__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_logistics_visibility_2_G3_ALIGNMENT_OFFSET_64_0001__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_logistics_visibility_2_G3_ALIGNMENT_OFFSET_8_0001__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_logistics_visibility_3_G3_ALIGNMENT_OFFSET_64_0002__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_logistics_visibility_3_G3_ALIGNMENT_OFFSET_8_0002__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_logistics_visibility_4_G3_ALIGNMENT_OFFSET_64_0003__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_logistics_visibility_4_G3_ALIGNMENT_OFFSET_8_0003__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_logistics_visibility_5_G3_ALIGNMENT_OFFSET_64_0004__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_logistics_visibility_5_G3_ALIGNMENT_OFFSET_8_0004__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_marketing_attribution_1_G3_ALIGNMENT_OFFSET_64_0005__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_marketing_attribution_1_G3_ALIGNMENT_OFFSET_8_0005__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_marketing_attribution_2_G3_ALIGNMENT_OFFSET_64_0006__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_marketing_attribution_2_G3_ALIGNMENT_OFFSET_8_0006__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_marketing_attribution_3_G3_ALIGNMENT_OFFSET_64_0007__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_marketing_attribution_3_G3_ALIGNMENT_OFFSET_8_0007__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_marketing_attribution_4_G3_ALIGNMENT_OFFSET_64_0008__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_marketing_attribution_4_G3_ALIGNMENT_OFFSET_8_0008__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_marketing_attribution_5_G3_ALIGNMENT_OFFSET_64_0009__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_marketing_attribution_5_G3_ALIGNMENT_OFFSET_8_0009__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_hr_analytics_1_G5_BRAND_COLOR_VIOLATION_6_0000__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_hr_analytics_2_G5_BRAND_COLOR_VIOLATION_6_0001__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_hr_analytics_3_G5_BRAND_COLOR_VIOLATION_6_0002__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_hr_analytics_4_G5_BRAND_COLOR_VIOLATION_6_0003__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_hr_analytics_5_G5_BRAND_COLOR_VIOLATION_6_0004__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_inventory_optimization_1_G5_BRAND_COLOR_VIOLATION_6_0005__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_inventory_optimization_2_G5_BRAND_COLOR_VIOLATION_6_0006__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_inventory_optimization_3_G5_BRAND_COLOR_VIOLATION_6_0007__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_inventory_optimization_4_G5_BRAND_COLOR_VIOLATION_6_0008__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_inventory_optimization_5_G5_BRAND_COLOR_VIOLATION_6_0009__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_payments_modernization_2_G5_BRAND_COLOR_VIOLATION_24_0001__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_payments_modernization_1_G5_BRAND_COLOR_VIOLATION_24_0000__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'PayCore automates the repetitive work'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'PayCore automates the repetitive work'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+part2_payments_modernization_3_G5_BRAND_COLOR_VIOLATION_24_0002__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'No data leaves the tenant'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'No data leaves the tenant'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+part2_payments_modernization_5_G5_BRAND_COLOR_VIOLATION_24_0004__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_payments_modernization_4_G5_BRAND_COLOR_VIOLATION_24_0003__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'PayCore has a clear rollback path'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'PayCore has a clear rollback path'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+part2_pricing_optimization_1_G5_BRAND_COLOR_VIOLATION_24_0005__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second bullet item 'PriceWise beat the baseline by double digits'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second bullet item 'PriceWise beat the baseline by double digits'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+part2_pricing_optimization_2_G5_BRAND_COLOR_VIOLATION_24_0006__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'No data leaves the tenant'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'No data leaves the tenant'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+part2_retail_analytics_1_G5_BRAND_COLOR_VIOLATION_12_0000__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_pricing_optimization_3_G5_BRAND_COLOR_VIOLATION_24_0007__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'PriceWise has a clear rollback path'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'PriceWise has a clear rollback path'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+part2_pricing_optimization_4_G5_BRAND_COLOR_VIOLATION_24_0008__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'PriceWise now handles most volume'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'PriceWise now handles most volume'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+part2_pricing_optimization_5_G5_BRAND_COLOR_VIOLATION_24_0009__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'PriceWise needs a small dedicated team'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'PriceWise needs a small dedicated team'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+part2_retail_analytics_1_G5_BRAND_COLOR_VIOLATION_40_0000__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""Phase 3 refactors the core"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""Phase 3 refactors the core"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+part2_retail_analytics_2_G5_BRAND_COLOR_VIOLATION_12_0001__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_retail_analytics_3_G5_BRAND_COLOR_VIOLATION_12_0002__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_retail_analytics_4_G5_BRAND_COLOR_VIOLATION_12_0003__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_retail_analytics_2_G5_BRAND_COLOR_VIOLATION_40_0001__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'Q2 first production workloads'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'Q2 first production workloads'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+part2_retail_analytics_3_G5_BRAND_COLOR_VIOLATION_40_0002__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'Automated rollback within five minutes'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'Automated rollback within five minutes'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+part2_retail_analytics_5_G5_BRAND_COLOR_VIOLATION_12_0004__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_retail_analytics_4_G5_BRAND_COLOR_VIOLATION_40_0003__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'Assign two platform engineers'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'Assign two platform engineers'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+part2_security_program_1_G5_BRAND_COLOR_VIOLATION_12_0005__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_retail_analytics_5_G5_BRAND_COLOR_VIOLATION_40_0004__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'Teams adopt DemandSense daily'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'Teams adopt DemandSense daily'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+part2_security_program_2_G5_BRAND_COLOR_VIOLATION_12_0006__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_security_program_1_G5_BRAND_COLOR_VIOLATION_40_0005__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'Q2 first production workloads'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'Q2 first production workloads'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+part2_security_program_3_G5_BRAND_COLOR_VIOLATION_12_0007__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_security_program_2_G5_BRAND_COLOR_VIOLATION_40_0006__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'Automated rollback within five minutes'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'Automated rollback within five minutes'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+part2_security_program_4_G5_BRAND_COLOR_VIOLATION_12_0008__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_security_program_3_G5_BRAND_COLOR_VIOLATION_40_0007__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'Assign two platform engineers'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'Assign two platform engineers'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+part2_security_program_5_G5_BRAND_COLOR_VIOLATION_12_0009__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_security_program_4_G5_BRAND_COLOR_VIOLATION_40_0008__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'Teams adopt ZeroTrust daily'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'Teams adopt ZeroTrust daily'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+part2_hr_analytics_1_G5_BRAND_COLOR_VIOLATION_6_0000__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_security_program_5_G5_BRAND_COLOR_VIOLATION_40_0009__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item 'ZeroTrust automates the repetitive work'"",""region"":""center""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the second list item 'ZeroTrust automates the repetitive work'"", ""evidence_region"": ""center"", ""confidence"": 1.0}
+```",page
+part2_hr_analytics_2_G5_BRAND_COLOR_VIOLATION_6_0001__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_hr_analytics_3_G5_BRAND_COLOR_VIOLATION_6_0002__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_hr_analytics_4_G5_BRAND_COLOR_VIOLATION_6_0003__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_hr_analytics_5_G5_BRAND_COLOR_VIOLATION_6_0004__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_inventory_optimization_2_G5_BRAND_COLOR_VIOLATION_6_0006__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_inventory_optimization_3_G5_BRAND_COLOR_VIOLATION_6_0007__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_inventory_optimization_4_G5_BRAND_COLOR_VIOLATION_6_0008__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_inventory_optimization_1_G5_BRAND_COLOR_VIOLATION_6_0005__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the first body item 'StockIQ is saturated at peak demand'"",""region"":""top-left""}",1.0,[],"```json
+{""present"": true, ""evidence_element"": ""the first body item 'StockIQ is saturated at peak demand'"", ""evidence_region"": ""top-left"", ""confidence"": 1.0}
+```",page
+part2_inventory_optimization_5_G5_BRAND_COLOR_VIOLATION_6_0009__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_payments_modernization_1_G5_BRAND_COLOR_VIOLATION_24_0000__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_payments_modernization_2_G5_BRAND_COLOR_VIOLATION_24_0001__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_payments_modernization_3_G5_BRAND_COLOR_VIOLATION_24_0002__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_payments_modernization_4_G5_BRAND_COLOR_VIOLATION_24_0003__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_payments_modernization_5_G5_BRAND_COLOR_VIOLATION_24_0004__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_pricing_optimization_1_G5_BRAND_COLOR_VIOLATION_24_0005__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_pricing_optimization_2_G5_BRAND_COLOR_VIOLATION_24_0006__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_pricing_optimization_3_G5_BRAND_COLOR_VIOLATION_24_0007__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_pricing_optimization_4_G5_BRAND_COLOR_VIOLATION_24_0008__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_pricing_optimization_5_G5_BRAND_COLOR_VIOLATION_24_0009__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_retail_analytics_1_G5_BRAND_COLOR_VIOLATION_12_0000__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_retail_analytics_1_G5_BRAND_COLOR_VIOLATION_40_0000__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_retail_analytics_2_G5_BRAND_COLOR_VIOLATION_12_0001__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_retail_analytics_2_G5_BRAND_COLOR_VIOLATION_40_0001__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_retail_analytics_3_G5_BRAND_COLOR_VIOLATION_12_0002__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_retail_analytics_3_G5_BRAND_COLOR_VIOLATION_40_0002__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_retail_analytics_4_G5_BRAND_COLOR_VIOLATION_12_0003__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_retail_analytics_4_G5_BRAND_COLOR_VIOLATION_40_0003__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_retail_analytics_5_G5_BRAND_COLOR_VIOLATION_12_0004__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_retail_analytics_5_G5_BRAND_COLOR_VIOLATION_40_0004__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_security_program_1_G5_BRAND_COLOR_VIOLATION_12_0005__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_security_program_1_G5_BRAND_COLOR_VIOLATION_40_0005__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_security_program_2_G5_BRAND_COLOR_VIOLATION_12_0006__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_security_program_2_G5_BRAND_COLOR_VIOLATION_40_0006__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_security_program_3_G5_BRAND_COLOR_VIOLATION_12_0007__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_security_program_3_G5_BRAND_COLOR_VIOLATION_40_0007__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_security_program_4_G5_BRAND_COLOR_VIOLATION_12_0008__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_security_program_4_G5_BRAND_COLOR_VIOLATION_40_0008__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_security_program_5_G5_BRAND_COLOR_VIOLATION_12_0009__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page
+part2_security_program_5_G5_BRAND_COLOR_VIOLATION_40_0009__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": ""empty"", ""confidence"": 1.0}
+```",page

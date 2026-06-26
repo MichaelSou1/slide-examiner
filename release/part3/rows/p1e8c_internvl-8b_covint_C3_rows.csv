@@ -1,0 +1,1071 @@
+sample_id,defect,modality,is_clean,failure,has_defect,named_target,predicted_types,locator,confidence,other,raw,level
+part2_contract_review_1_G3_ALIGNMENT_OFFSET_2_0000__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_contract_review_2_G3_ALIGNMENT_OFFSET_16_0001__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_contract_review_2_G3_ALIGNMENT_OFFSET_2_0001__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_contract_review_1_G3_ALIGNMENT_OFFSET_16_0000__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_contract_review_5_G3_ALIGNMENT_OFFSET_2_0004__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_contract_review_4_G3_ALIGNMENT_OFFSET_16_0003__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_contract_review_3_G3_ALIGNMENT_OFFSET_16_0002__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_customer_support_ai_1_G3_ALIGNMENT_OFFSET_2_0005__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_contract_review_4_G3_ALIGNMENT_OFFSET_2_0003__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_customer_support_ai_1_G3_ALIGNMENT_OFFSET_16_0005__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_contract_review_3_G3_ALIGNMENT_OFFSET_2_0002__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_contract_review_5_G3_ALIGNMENT_OFFSET_16_0004__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_customer_support_ai_2_G3_ALIGNMENT_OFFSET_16_0006__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_customer_support_ai_2_G3_ALIGNMENT_OFFSET_2_0006__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_customer_support_ai_3_G3_ALIGNMENT_OFFSET_16_0007__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_customer_support_ai_3_G3_ALIGNMENT_OFFSET_2_0007__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_customer_support_ai_4_G3_ALIGNMENT_OFFSET_16_0008__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_customer_support_ai_4_G3_ALIGNMENT_OFFSET_2_0008__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_customer_support_ai_5_G3_ALIGNMENT_OFFSET_16_0009__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_customer_support_ai_5_G3_ALIGNMENT_OFFSET_2_0009__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_doc_search_1_G3_ALIGNMENT_OFFSET_32_0000__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_doc_search_1_G3_ALIGNMENT_OFFSET_4_0000__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_doc_search_2_G3_ALIGNMENT_OFFSET_32_0001__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_doc_search_2_G3_ALIGNMENT_OFFSET_4_0001__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_doc_search_3_G3_ALIGNMENT_OFFSET_32_0002__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_doc_search_3_G3_ALIGNMENT_OFFSET_4_0002__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_doc_search_4_G3_ALIGNMENT_OFFSET_32_0003__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_doc_search_4_G3_ALIGNMENT_OFFSET_4_0003__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_doc_search_5_G3_ALIGNMENT_OFFSET_32_0004__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_doc_search_5_G3_ALIGNMENT_OFFSET_4_0004__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_energy_forecasting_1_G3_ALIGNMENT_OFFSET_32_0005__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_energy_forecasting_1_G3_ALIGNMENT_OFFSET_4_0005__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_energy_forecasting_2_G3_ALIGNMENT_OFFSET_32_0006__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_energy_forecasting_2_G3_ALIGNMENT_OFFSET_4_0006__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_energy_forecasting_3_G3_ALIGNMENT_OFFSET_32_0007__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_energy_forecasting_3_G3_ALIGNMENT_OFFSET_4_0007__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_energy_forecasting_4_G3_ALIGNMENT_OFFSET_32_0008__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_energy_forecasting_4_G3_ALIGNMENT_OFFSET_4_0008__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_energy_forecasting_5_G3_ALIGNMENT_OFFSET_32_0009__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_energy_forecasting_5_G3_ALIGNMENT_OFFSET_4_0009__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_hr_analytics_1_G3_ALIGNMENT_OFFSET_48_0000__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_hr_analytics_2_G3_ALIGNMENT_OFFSET_48_0001__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_hr_analytics_3_G3_ALIGNMENT_OFFSET_48_0002__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_hr_analytics_4_G3_ALIGNMENT_OFFSET_48_0003__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_hr_analytics_5_G3_ALIGNMENT_OFFSET_48_0004__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_inventory_optimization_1_G3_ALIGNMENT_OFFSET_48_0005__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_inventory_optimization_2_G3_ALIGNMENT_OFFSET_48_0006__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_inventory_optimization_3_G3_ALIGNMENT_OFFSET_48_0007__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_inventory_optimization_4_G3_ALIGNMENT_OFFSET_48_0008__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_logistics_visibility_1_G3_ALIGNMENT_OFFSET_64_0000__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_logistics_visibility_1_G3_ALIGNMENT_OFFSET_8_0000__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_logistics_visibility_2_G3_ALIGNMENT_OFFSET_64_0001__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_logistics_visibility_2_G3_ALIGNMENT_OFFSET_8_0001__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_logistics_visibility_3_G3_ALIGNMENT_OFFSET_64_0002__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_logistics_visibility_3_G3_ALIGNMENT_OFFSET_8_0002__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_logistics_visibility_4_G3_ALIGNMENT_OFFSET_64_0003__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_logistics_visibility_4_G3_ALIGNMENT_OFFSET_8_0003__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_logistics_visibility_5_G3_ALIGNMENT_OFFSET_64_0004__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_logistics_visibility_5_G3_ALIGNMENT_OFFSET_8_0004__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_inventory_optimization_5_G3_ALIGNMENT_OFFSET_48_0009__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,0.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 0.0
+}
+```",page
+part2_marketing_attribution_1_G3_ALIGNMENT_OFFSET_64_0005__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_marketing_attribution_1_G3_ALIGNMENT_OFFSET_8_0005__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_marketing_attribution_2_G3_ALIGNMENT_OFFSET_64_0006__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_marketing_attribution_2_G3_ALIGNMENT_OFFSET_8_0006__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_marketing_attribution_3_G3_ALIGNMENT_OFFSET_64_0007__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_marketing_attribution_3_G3_ALIGNMENT_OFFSET_8_0007__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_marketing_attribution_4_G3_ALIGNMENT_OFFSET_64_0008__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_marketing_attribution_4_G3_ALIGNMENT_OFFSET_8_0008__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_marketing_attribution_5_G3_ALIGNMENT_OFFSET_64_0009__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_marketing_attribution_5_G3_ALIGNMENT_OFFSET_8_0009__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_contract_review_1_G3_ALIGNMENT_OFFSET_16_0000__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_contract_review_1_G3_ALIGNMENT_OFFSET_2_0000__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_contract_review_2_G3_ALIGNMENT_OFFSET_16_0001__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_contract_review_2_G3_ALIGNMENT_OFFSET_2_0001__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_contract_review_3_G3_ALIGNMENT_OFFSET_16_0002__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_contract_review_3_G3_ALIGNMENT_OFFSET_2_0002__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_contract_review_4_G3_ALIGNMENT_OFFSET_16_0003__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_contract_review_4_G3_ALIGNMENT_OFFSET_2_0003__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_contract_review_5_G3_ALIGNMENT_OFFSET_16_0004__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_contract_review_5_G3_ALIGNMENT_OFFSET_2_0004__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_customer_support_ai_1_G3_ALIGNMENT_OFFSET_16_0005__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_customer_support_ai_1_G3_ALIGNMENT_OFFSET_2_0005__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_customer_support_ai_2_G3_ALIGNMENT_OFFSET_16_0006__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_customer_support_ai_2_G3_ALIGNMENT_OFFSET_2_0006__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_customer_support_ai_3_G3_ALIGNMENT_OFFSET_2_0007__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_customer_support_ai_3_G3_ALIGNMENT_OFFSET_16_0007__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_customer_support_ai_4_G3_ALIGNMENT_OFFSET_2_0008__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_customer_support_ai_4_G3_ALIGNMENT_OFFSET_16_0008__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_customer_support_ai_5_G3_ALIGNMENT_OFFSET_16_0009__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_customer_support_ai_5_G3_ALIGNMENT_OFFSET_2_0009__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_doc_search_1_G3_ALIGNMENT_OFFSET_4_0000__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_doc_search_1_G3_ALIGNMENT_OFFSET_32_0000__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_doc_search_2_G3_ALIGNMENT_OFFSET_32_0001__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_doc_search_2_G3_ALIGNMENT_OFFSET_4_0001__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_doc_search_3_G3_ALIGNMENT_OFFSET_32_0002__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_doc_search_3_G3_ALIGNMENT_OFFSET_4_0002__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_doc_search_4_G3_ALIGNMENT_OFFSET_4_0003__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_doc_search_4_G3_ALIGNMENT_OFFSET_32_0003__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_doc_search_5_G3_ALIGNMENT_OFFSET_32_0004__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_doc_search_5_G3_ALIGNMENT_OFFSET_4_0004__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_energy_forecasting_1_G3_ALIGNMENT_OFFSET_4_0005__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_energy_forecasting_1_G3_ALIGNMENT_OFFSET_32_0005__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_energy_forecasting_2_G3_ALIGNMENT_OFFSET_4_0006__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_energy_forecasting_2_G3_ALIGNMENT_OFFSET_32_0006__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_energy_forecasting_3_G3_ALIGNMENT_OFFSET_32_0007__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_energy_forecasting_3_G3_ALIGNMENT_OFFSET_4_0007__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_energy_forecasting_4_G3_ALIGNMENT_OFFSET_4_0008__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_energy_forecasting_4_G3_ALIGNMENT_OFFSET_32_0008__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_energy_forecasting_5_G3_ALIGNMENT_OFFSET_4_0009__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_energy_forecasting_5_G3_ALIGNMENT_OFFSET_32_0009__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_hr_analytics_1_G3_ALIGNMENT_OFFSET_48_0000__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_hr_analytics_2_G3_ALIGNMENT_OFFSET_48_0001__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_hr_analytics_4_G3_ALIGNMENT_OFFSET_48_0003__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_hr_analytics_3_G3_ALIGNMENT_OFFSET_48_0002__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_hr_analytics_5_G3_ALIGNMENT_OFFSET_48_0004__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_inventory_optimization_1_G3_ALIGNMENT_OFFSET_48_0005__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_inventory_optimization_2_G3_ALIGNMENT_OFFSET_48_0006__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_inventory_optimization_3_G3_ALIGNMENT_OFFSET_48_0007__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_inventory_optimization_4_G3_ALIGNMENT_OFFSET_48_0008__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_inventory_optimization_5_G3_ALIGNMENT_OFFSET_48_0009__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,0.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 0.0
+}
+```",page
+part2_logistics_visibility_1_G3_ALIGNMENT_OFFSET_64_0000__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_logistics_visibility_1_G3_ALIGNMENT_OFFSET_8_0000__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_logistics_visibility_2_G3_ALIGNMENT_OFFSET_8_0001__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_logistics_visibility_2_G3_ALIGNMENT_OFFSET_64_0001__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_logistics_visibility_3_G3_ALIGNMENT_OFFSET_8_0002__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_logistics_visibility_3_G3_ALIGNMENT_OFFSET_64_0002__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_logistics_visibility_4_G3_ALIGNMENT_OFFSET_8_0003__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_logistics_visibility_4_G3_ALIGNMENT_OFFSET_64_0003__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_logistics_visibility_5_G3_ALIGNMENT_OFFSET_64_0004__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_logistics_visibility_5_G3_ALIGNMENT_OFFSET_8_0004__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_marketing_attribution_1_G3_ALIGNMENT_OFFSET_64_0005__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_marketing_attribution_1_G3_ALIGNMENT_OFFSET_8_0005__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_marketing_attribution_2_G3_ALIGNMENT_OFFSET_64_0006__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_marketing_attribution_2_G3_ALIGNMENT_OFFSET_8_0006__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_marketing_attribution_3_G3_ALIGNMENT_OFFSET_8_0007__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_marketing_attribution_3_G3_ALIGNMENT_OFFSET_64_0007__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_marketing_attribution_4_G3_ALIGNMENT_OFFSET_8_0008__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_marketing_attribution_4_G3_ALIGNMENT_OFFSET_64_0008__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_marketing_attribution_5_G3_ALIGNMENT_OFFSET_64_0009__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_marketing_attribution_5_G3_ALIGNMENT_OFFSET_8_0009__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,False,False,[],,,[],"```json
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """"}
+```",page
+part2_hr_analytics_2_G5_BRAND_COLOR_VIOLATION_6_0001__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page
+part2_hr_analytics_1_G5_BRAND_COLOR_VIOLATION_6_0000__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page
+part2_hr_analytics_3_G5_BRAND_COLOR_VIOLATION_6_0002__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page
+part2_hr_analytics_4_G5_BRAND_COLOR_VIOLATION_6_0003__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page
+part2_hr_analytics_5_G5_BRAND_COLOR_VIOLATION_6_0004__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page
+part2_inventory_optimization_1_G5_BRAND_COLOR_VIOLATION_6_0005__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page
+part2_inventory_optimization_2_G5_BRAND_COLOR_VIOLATION_6_0006__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page
+part2_inventory_optimization_3_G5_BRAND_COLOR_VIOLATION_6_0007__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page
+part2_inventory_optimization_5_G5_BRAND_COLOR_VIOLATION_6_0009__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page
+part2_inventory_optimization_4_G5_BRAND_COLOR_VIOLATION_6_0008__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page
+part2_payments_modernization_1_G5_BRAND_COLOR_VIOLATION_24_0000__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page
+part2_payments_modernization_2_G5_BRAND_COLOR_VIOLATION_24_0001__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page
+part2_payments_modernization_3_G5_BRAND_COLOR_VIOLATION_24_0002__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page
+part2_payments_modernization_4_G5_BRAND_COLOR_VIOLATION_24_0003__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page
+part2_payments_modernization_5_G5_BRAND_COLOR_VIOLATION_24_0004__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page
+part2_pricing_optimization_1_G5_BRAND_COLOR_VIOLATION_24_0005__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page
+part2_pricing_optimization_2_G5_BRAND_COLOR_VIOLATION_24_0006__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page
+part2_pricing_optimization_3_G5_BRAND_COLOR_VIOLATION_24_0007__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page
+part2_pricing_optimization_4_G5_BRAND_COLOR_VIOLATION_24_0008__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page
+part2_pricing_optimization_5_G5_BRAND_COLOR_VIOLATION_24_0009__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page
+part2_retail_analytics_1_G5_BRAND_COLOR_VIOLATION_12_0000__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page
+part2_retail_analytics_1_G5_BRAND_COLOR_VIOLATION_40_0000__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page
+part2_retail_analytics_2_G5_BRAND_COLOR_VIOLATION_12_0001__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page
+part2_retail_analytics_2_G5_BRAND_COLOR_VIOLATION_40_0001__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second bullet item"",""region"":""center""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the second bullet item"",
+  ""evidence_region"": ""center"",
+  ""confidence"": 1.0
+}
+```",page
+part2_retail_analytics_3_G5_BRAND_COLOR_VIOLATION_12_0002__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page
+part2_retail_analytics_4_G5_BRAND_COLOR_VIOLATION_12_0003__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page
+part2_retail_analytics_3_G5_BRAND_COLOR_VIOLATION_40_0002__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second bullet item"",""region"":""center""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the second bullet item"",
+  ""evidence_region"": ""center"",
+  ""confidence"": 1.0
+}
+```",page
+part2_retail_analytics_5_G5_BRAND_COLOR_VIOLATION_12_0004__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page
+part2_security_program_1_G5_BRAND_COLOR_VIOLATION_12_0005__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page
+part2_security_program_2_G5_BRAND_COLOR_VIOLATION_12_0006__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page
+part2_retail_analytics_4_G5_BRAND_COLOR_VIOLATION_40_0003__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item"",""region"":""center""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the second list item"",
+  ""evidence_region"": ""center"",
+  ""confidence"": 1.0
+}
+```",page
+part2_security_program_3_G5_BRAND_COLOR_VIOLATION_12_0007__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page
+part2_retail_analytics_5_G5_BRAND_COLOR_VIOLATION_40_0004__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second bullet item"",""region"":""center""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the second bullet item"",
+  ""evidence_region"": ""center"",
+  ""confidence"": 1.0
+}
+```",page
+part2_security_program_1_G5_BRAND_COLOR_VIOLATION_40_0005__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item"",""region"":""center""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the second list item"",
+  ""evidence_region"": ""center"",
+  ""confidence"": 1.0
+}
+```",page
+part2_security_program_2_G5_BRAND_COLOR_VIOLATION_40_0006__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second bullet item"",""region"":""center""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the second bullet item"",
+  ""evidence_region"": ""center"",
+  ""confidence"": 1.0
+}
+```",page
+part2_security_program_4_G5_BRAND_COLOR_VIOLATION_12_0008__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page
+part2_security_program_3_G5_BRAND_COLOR_VIOLATION_40_0007__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second list item"",""region"":""center""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the second list item"",
+  ""evidence_region"": ""center"",
+  ""confidence"": 1.0
+}
+```",page
+part2_security_program_5_G5_BRAND_COLOR_VIOLATION_12_0009__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page
+part2_security_program_4_G5_BRAND_COLOR_VIOLATION_40_0008__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second bullet item"",""region"":""center""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the second bullet item"",
+  ""evidence_region"": ""center"",
+  ""confidence"": 1.0
+}
+```",page
+part2_hr_analytics_1_G5_BRAND_COLOR_VIOLATION_6_0000__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page
+part2_hr_analytics_2_G5_BRAND_COLOR_VIOLATION_6_0001__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page
+part2_hr_analytics_3_G5_BRAND_COLOR_VIOLATION_6_0002__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page
+part2_hr_analytics_4_G5_BRAND_COLOR_VIOLATION_6_0003__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page
+part2_hr_analytics_5_G5_BRAND_COLOR_VIOLATION_6_0004__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page
+part2_security_program_5_G5_BRAND_COLOR_VIOLATION_40_0009__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,True,"[""G5_BRAND_COLOR_VIOLATION""]","{""element"":""the second bullet point"",""region"":""center""}",1.0,[],"```json
+{
+  ""present"": true,
+  ""evidence_element"": ""the second bullet point"",
+  ""evidence_region"": ""center"",
+  ""confidence"": 1.0
+}
+```",page
+part2_inventory_optimization_1_G5_BRAND_COLOR_VIOLATION_6_0005__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page
+part2_inventory_optimization_2_G5_BRAND_COLOR_VIOLATION_6_0006__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page
+part2_inventory_optimization_3_G5_BRAND_COLOR_VIOLATION_6_0007__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page
+part2_inventory_optimization_4_G5_BRAND_COLOR_VIOLATION_6_0008__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page
+part2_inventory_optimization_5_G5_BRAND_COLOR_VIOLATION_6_0009__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page
+part2_payments_modernization_1_G5_BRAND_COLOR_VIOLATION_24_0000__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page
+part2_payments_modernization_2_G5_BRAND_COLOR_VIOLATION_24_0001__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page
+part2_payments_modernization_3_G5_BRAND_COLOR_VIOLATION_24_0002__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page
+part2_payments_modernization_4_G5_BRAND_COLOR_VIOLATION_24_0003__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page
+part2_payments_modernization_5_G5_BRAND_COLOR_VIOLATION_24_0004__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page
+part2_pricing_optimization_1_G5_BRAND_COLOR_VIOLATION_24_0005__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page
+part2_pricing_optimization_2_G5_BRAND_COLOR_VIOLATION_24_0006__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page
+part2_pricing_optimization_3_G5_BRAND_COLOR_VIOLATION_24_0007__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page
+part2_pricing_optimization_4_G5_BRAND_COLOR_VIOLATION_24_0008__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page
+part2_pricing_optimization_5_G5_BRAND_COLOR_VIOLATION_24_0009__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page
+part2_retail_analytics_1_G5_BRAND_COLOR_VIOLATION_12_0000__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page
+part2_retail_analytics_1_G5_BRAND_COLOR_VIOLATION_40_0000__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page
+part2_retail_analytics_2_G5_BRAND_COLOR_VIOLATION_12_0001__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page
+part2_retail_analytics_2_G5_BRAND_COLOR_VIOLATION_40_0001__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page
+part2_retail_analytics_3_G5_BRAND_COLOR_VIOLATION_40_0002__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page
+part2_retail_analytics_3_G5_BRAND_COLOR_VIOLATION_12_0002__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page
+part2_retail_analytics_4_G5_BRAND_COLOR_VIOLATION_40_0003__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page
+part2_retail_analytics_4_G5_BRAND_COLOR_VIOLATION_12_0003__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page
+part2_retail_analytics_5_G5_BRAND_COLOR_VIOLATION_12_0004__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page
+part2_retail_analytics_5_G5_BRAND_COLOR_VIOLATION_40_0004__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page
+part2_security_program_1_G5_BRAND_COLOR_VIOLATION_12_0005__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page
+part2_security_program_1_G5_BRAND_COLOR_VIOLATION_40_0005__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page
+part2_security_program_2_G5_BRAND_COLOR_VIOLATION_12_0006__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page
+part2_security_program_2_G5_BRAND_COLOR_VIOLATION_40_0006__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page
+part2_security_program_3_G5_BRAND_COLOR_VIOLATION_12_0007__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page
+part2_security_program_3_G5_BRAND_COLOR_VIOLATION_40_0007__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page
+part2_security_program_4_G5_BRAND_COLOR_VIOLATION_12_0008__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page
+part2_security_program_4_G5_BRAND_COLOR_VIOLATION_40_0008__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page
+part2_security_program_5_G5_BRAND_COLOR_VIOLATION_12_0009__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page
+part2_security_program_5_G5_BRAND_COLOR_VIOLATION_40_0009__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,False,False,[],,1.0,[],"```json
+{
+  ""present"": false,
+  ""evidence_element"": """",
+  ""evidence_region"": """",
+  ""confidence"": 1.0
+}
+```",page

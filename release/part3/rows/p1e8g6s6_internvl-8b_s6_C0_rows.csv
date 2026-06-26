@@ -1,0 +1,331 @@
+sample_id,defect,modality,is_clean,failure,has_defect,named_target,predicted_types,locator,confidence,other,raw,level
+imgslide_8_S6_IMAGE_TEXT_CONTRADICTION_1_0010__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""imgslide_8"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'Performance update 9' does not match the body content which discusses uptime degradation."",
+      ""fix_suggesti",page
+imgslide_1_S6_IMAGE_TEXT_CONTRADICTION_1_0003__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""imgslide_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'Performance update 2' does not match the body content which discusses 'Customer churn climbed to a record high'",page
+imgslide_4_S6_IMAGE_TEXT_CONTRADICTION_1_0006__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""imgslide_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'Performance update 5' suggests an improvement, but the text states that 'The defect rate rose every sprint'."",
+",page
+imgslide_2_S6_IMAGE_TEXT_CONTRADICTION_1_0004__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""imgslide_2"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'Performance update 3' suggests an improvement, but the text states that 'Page load time got slower every releas",page
+imgslide_3_S6_IMAGE_TEXT_CONTRADICTION_1_0005__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""imgslide_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'Performance update 4' does not match the body content which states 'Market share contracted across all regions'",page
+imgslide_6_S6_IMAGE_TEXT_CONTRADICTION_1_0008__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""imgslide_6"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'Performance update 7' does not match the body content which states 'Operating costs rose quarter over quarter'.",page
+imgslide_11_S6_IMAGE_TEXT_CONTRADICTION_1_0001__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""imgslide_11"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'Performance update 12' contradicts the text 'Energy use per unit rose steadily' and the figure caption 'Energy",page
+imgslide_10_S6_IMAGE_TEXT_CONTRADICTION_1_0000__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""imgslide_10"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'Performance update 11' contradicts the text stating 'Conversion rate halved after the redesign'."",
+      ""fix_",page
+imgslide_7_S6_IMAGE_TEXT_CONTRADICTION_1_0009__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""imgslide_7"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'Performance update 8' does not match the body content which discusses 'NPS sank into the thirties'."",
+      ""fi",page
+imgslide_0_S6_IMAGE_TEXT_CONTRADICTION_1_0002__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""imgslide_0"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'Performance update 1' suggests an improvement, but the text states that 'Quarterly revenue fell sharply in Q4',",page
+imgslide_5_S6_IMAGE_TEXT_CONTRADICTION_1_0007__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""imgslide_5"",
+        ""element_id"": ""chart"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The chart is misaligned and does not align properly with the text box."",
+      ""fix_suggestion"": ""Reposition the chart t",page
+imgslide_9_S6_IMAGE_TEXT_CONTRADICTION_1_0011__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""imgslide_9"",
+        ""element_id"": ""arrow"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The red arrow is misaligned and not centered with the text."",
+      ""fix_suggestion"": ""Reposition the arrow to be centered ",page
+imgslide_0_S6_IMAGE_TEXT_CONTRADICTION_1_0002__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""imgslide_0"",
+        ""element_id"": ""figure"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The figure is misaligned and not centered with the text."",
+      ""fix_suggestion"": ""Reposition the figure to be centered w",page
+imgslide_10_S6_IMAGE_TEXT_CONTRADICTION_1_0000__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""imgslide_10"",
+        ""element_id"": ""triangle"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The green triangle is misaligned and offset from the center of the figure box."",
+      ""fix_suggestion"": ""Reposition th",page
+imgslide_2_S6_IMAGE_TEXT_CONTRADICTION_1_0004__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""imgslide_2"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The red arrow is misaligned and not centered with the text."",
+      ""fix_suggestion"": ""Reposition the arrow to be centered wit",page
+imgslide_1_S6_IMAGE_TEXT_CONTRADICTION_1_0003__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""imgslide_1"",
+        ""element_id"": ""arrow"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The red arrow is misaligned and not centered with the text."",
+      ""fix_suggestion"": ""Reposition the arrow to be centered ",page
+imgslide_4_S6_IMAGE_TEXT_CONTRADICTION_1_0006__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""imgslide_4"",
+        ""element_id"": ""arrow"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The red arrow is misaligned and not centered with the text."",
+      ""fix_suggestion"": ""Reposition the arrow to be centered ",page
+imgslide_11_S6_IMAGE_TEXT_CONTRADICTION_1_0001__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""imgslide_11"",
+        ""element_id"": ""arrow"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The red arrow is misaligned and not centered with the text."",
+      ""fix_suggestion"": ""Reposition the arrow to be centered",page
+imgslide_6_S6_IMAGE_TEXT_CONTRADICTION_1_0008__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""imgslide_6"",
+        ""element_id"": ""arrow"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The red arrow is misaligned and not centered with the text."",
+      ""fix_suggestion"": ""Reposition the arrow to be centered ",page
+imgslide_3_S6_IMAGE_TEXT_CONTRADICTION_1_0005__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""imgslide_3"",
+        ""element_id"": ""market_share_figure"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The figure is misaligned and not centered with the text."",
+      ""fix_suggestion"": ""Reposition the figure to ",page
+imgslide_5_S6_IMAGE_TEXT_CONTRADICTION_1_0007__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""imgslide_5"",
+        ""element_id"": ""chart"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The chart is misaligned and offset from the center of the slide."",
+      ""fix_suggestion"": ""Reposition the chart to the cen",page
+imgslide_7_S6_IMAGE_TEXT_CONTRADICTION_1_0009__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""imgslide_7"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text box with 'NPS climbed into the eighties' is misaligned with the slide title."",
+      ""fix_suggestion"": ""Reposition th",page
+imgslide_9_S6_IMAGE_TEXT_CONTRADICTION_1_0011__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""imgslide_9"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The red arrow is misaligned and not centered with the text."",
+      ""fix_suggestion"": ""Reposition the arrow to be centered wit",page
+imgslide_8_S6_IMAGE_TEXT_CONTRADICTION_1_0010__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""severity"": ""minor"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""imgslide_8"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The text 'FIGURE: Uptime improved to four nines' is misaligned with the green triangle icon."",
+      ""fix_suggestion"": ""Reposi",page

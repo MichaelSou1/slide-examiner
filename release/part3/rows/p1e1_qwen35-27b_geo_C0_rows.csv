@@ -1,0 +1,589 @@
+sample_id,defect,modality,is_clean,failure,has_defect,named_target,predicted_types,locator,confidence,other,raw,level
+part2_logistics_visibility_5_G1_TEXT_OVERFLOW_4_0044__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""severity"": ""minor"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_logistics_visibility_5"", ""element_id"": ""title"", ""related_page_ids"": []}, ""evidence"": ""The title 'XX A pragmatic ShipEye plan' is misaligned; the 'XX' prefix is indented relative to the rest of the title text, creating a visual offset."", ""fix_suggestion"": ""Align the ",page
+part2_logistics_visibility_5_G1_TEXT_OVERFLOW_32_0044__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_logistics_visibility_5"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canvas empty. This violates the rule against under-dense slides."", ""fix_suggestion"": ",page
+part2_logistics_visibility_3_G1_TEXT_OVERFLOW_32_0042__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_logistics_visibility_3"", ""element_id"": ""null"", ""related_page_ids"": []}, ""evidence"": ""The title 'ShipEye tracks every leg XXX' contains the placeholder 'XXX' and does not clearly summarize the body content, which lists specific technical features like 'Shadow t",page
+part2_logistics_visibility_3_G1_TEXT_OVERFLOW_4_0042__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_logistics_visibility_3"", ""element_id"": ""null"", ""related_page_ids"": []}, ""evidence"": ""The title 'ShipEye tracks every leg XX' suggests a focus on tracking or logistics visibility, but the body content lists technical deployment features like 'Shadow traffic', '",page
+part2_logistics_visibility_4_G1_TEXT_OVERFLOW_4_0043__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_logistics_visibility_4"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'ShipEye impact on on-time delivery XX' suggests a results or analysis slide, but the ",page
+part2_logistics_visibility_4_G1_TEXT_OVERFLOW_32_0043__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_logistics_visibility_4"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'XXX ShipEye impact on on-time delivery' suggests a results or analysis slide, but the body ",page
+part2_marketing_attribution_1_G1_TEXT_OVERFLOW_32_0045__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_marketing_attribution_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'XXX Spend is hard to attribute' suggests a discussion on financial attribution challen",page
+part2_marketing_attribution_1_G1_TEXT_OVERFLOW_4_0045__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_marketing_attribution_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Spend is hard to attribute XX' suggests a discussion on marketing attribution challeng",page
+part2_marketing_attribution_3_G1_TEXT_OVERFLOW_32_0047__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_marketing_attribution_3"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'XXX Attrib evidence from the pilot' suggests the slide should contain data or results from a pilot program. However, the body content lists three action items/requir",page
+part2_marketing_attribution_2_G1_TEXT_OVERFLOW_4_0046__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_marketing_attribution_2"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'How Attrib models touchpoints' suggests a technical explanation of the modeling process, b",page
+part2_marketing_attribution_3_G1_TEXT_OVERFLOW_4_0047__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_marketing_attribution_3"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'XX Attrib evidence from the pilot' suggests the slide should contain data or results from a pilot program. However, the body content lists three generic requirements",page
+part2_marketing_attribution_4_G1_TEXT_OVERFLOW_32_0048__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_marketing_attribution_4"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'Rolling Attrib out by channel' suggests a breakdown of attribution data across different channels, but the body text lists general status updates (saturation, refres",page
+part2_marketing_attribution_4_G1_TEXT_OVERFLOW_4_0048__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_marketing_attribution_4"", ""element_id"": ""null"", ""related_page_ids"": []}, ""evidence"": ""The title 'Rolling Attrib out by channel XX' suggests a breakdown of attribution data by specific channels, but the body text lists general status updates (saturation, refres",page
+part2_marketing_attribution_2_G1_TEXT_OVERFLOW_32_0046__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH"",""S4_DENSITY_RULE_VIOLATION""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_marketing_attribution_2"",
+        ""element_id"": ""title"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'XXX How Attrib models touchpoints' suggests a conceptual or methodological explanation, b",page
+part2_marketing_attribution_5_G1_TEXT_OVERFLOW_32_0049__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_marketing_attribution_5"", ""element_id"": ""title"", ""related_page_ids"": []}, ""evidence"": ""The title 'XXX What Attrib needs next' contains 'XXX' which is a placeholder or error code, and the body lists technical phases (stabilize, replatform, refactor) which sugge",page
+part2_network_observability_1_G1_TEXT_OVERFLOW_32_0050__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_network_observability_1"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'XXX Outages are hard to diagnose' describes a problem, but the body content lists product features/benefits (integration, data security, setup time) rather than discus",page
+part2_marketing_attribution_5_G1_TEXT_OVERFLOW_4_0049__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_marketing_attribution_5"", ""element_id"": ""title"", ""related_page_ids"": []}, ""evidence"": ""The title 'What Attrib needs next XX' contains a placeholder 'XX' and is vague, while the body lists specific technical phases (stabilize, replatform, refactor, harden, hand",page
+part2_network_observability_1_G1_TEXT_OVERFLOW_4_0050__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_network_observability_1"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'XX Outages are hard to diagnose' states a problem, but the body content lists product features ('integrates with existing tools', 'No data leaves the tenant', 'Setup t",page
+part2_network_observability_2_G1_TEXT_OVERFLOW_32_0051__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_network_observability_2"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'XXX One pane with TraceGrid' suggests a technical architecture or UI layout discussion, but the body content lists general project status items (risk tracking, rollb",page
+part2_network_observability_2_G1_TEXT_OVERFLOW_4_0051__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_network_observability_2"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'XX One pane with TraceGrid' suggests a visual layout or UI component description, but the body content lists three unrelated status statements about risk tracking, r",page
+part2_network_observability_3_G1_TEXT_OVERFLOW_32_0052__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_network_observability_3"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'XXX The TraceGrid architecture', implying a technical explanation of the system's",page
+part2_network_observability_4_G1_TEXT_OVERFLOW_32_0053__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_network_observability_4"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains only a title and three short bullet points, leaving a large amount of empty white space. This indicates the slide is underutilized and lacks sufficient co",page
+part2_network_observability_4_G1_TEXT_OVERFLOW_4_0053__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_network_observability_4"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canvas empty. This violates the rule against under-utilized space and low informat",page
+part2_network_observability_3_G1_TEXT_OVERFLOW_4_0052__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_network_observability_3"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'The TraceGrid architecture XX' suggests a technical architectural overview, but the body",page
+part2_network_observability_5_G1_TEXT_OVERFLOW_32_0054__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_network_observability_5"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'XXX The TraceGrid roadmap' implies a strategic plan or timeline, but the body content lists three isolated status statements ('saturated at peak demand', 'refresh due'",page
+part2_network_observability_5_G1_TEXT_OVERFLOW_4_0054__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_network_observability_5"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'The TraceGrid roadmap' implies a timeline of future features or milestones, but the body content lists current status updates and competitive observations ('saturated ",page
+part2_ops_efficiency_1_G1_TEXT_OVERFLOW_32_0055__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_ops_efficiency_1"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Where operating cost sits today' implies a financial or cost analysis, but the body content",page
+part2_ops_efficiency_2_G1_TEXT_OVERFLOW_4_0056__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_ops_efficiency_2"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'Root causes behind the cost' implies an analysis of why costs are high, but the body content lists benefits and adoption metrics ('reduces toil', 'adopt daily', 'payback'), w",page
+part2_ops_efficiency_1_G1_TEXT_OVERFLOW_4_0055__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_ops_efficiency_1"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Where operating cost sits today' suggests a financial or cost analysis, but the body conten",page
+part2_ops_efficiency_3_G1_TEXT_OVERFLOW_32_0057__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_ops_efficiency_3"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canvas empty. This violates the rule against under-utilized space and low information densi",page
+part2_ops_efficiency_2_G1_TEXT_OVERFLOW_32_0056__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_ops_efficiency_2"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'Root causes behind the cost' implies an analysis of why costs are high, but the body text lists b",page
+part2_ops_efficiency_4_G1_TEXT_OVERFLOW_32_0058__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_ops_efficiency_4"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canvas empty. This indicates the slide is underutilized and lacks sufficient content densit",page
+part2_ops_efficiency_4_G1_TEXT_OVERFLOW_4_0058__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_ops_efficiency_4"", ""element_id"": ""title_box"", ""related_page_ids"": []}, ""evidence"": ""The title 'XX Expected impact of RouteOpt' is positioned significantly higher and more to the left than the body text blocks, creating a misaligned layout."", ""fix_suggestion"": ""Re",page
+part2_ops_efficiency_5_G1_TEXT_OVERFLOW_4_0059__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_ops_efficiency_5"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'A pragmatic ninety-day plan XX' suggests a timeline or roadmap, but the body content lists three static feature benefits (integration, data security, setup time) with no me",page
+part2_ops_efficiency_3_G1_TEXT_OVERFLOW_4_0057__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_ops_efficiency_3"",
+        ""element_id"": ""title_box"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title text box is visually misaligned and shifted to the left relative to the body content boxes bel",page
+part2_ops_efficiency_5_G1_TEXT_OVERFLOW_32_0059__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_ops_efficiency_5"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'XXX A pragmatic ninety-day plan' suggests a timeline or schedule, but the body content lists three static feature benefits (integration, data security, setup time) with no ",page
+part2_retail_analytics_3_G1_TEXT_OVERFLOW_64_0042__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_retail_analytics_3"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'DemandSense beat the baseline XXXXX' suggests a performance comparison or results slide, but the body content lists implementation features ('Shadow traffic', 'Automated ",page
+part2_retail_analytics_4_G1_TEXT_OVERFLOW_64_0043__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_retail_analytics_4"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'XXXXX Scaling DemandSense to the fleet' suggests a strategic or technical overview of scaling, but the body content lists specific administrative action items (budget app",page
+part2_security_program_1_G1_TEXT_OVERFLOW_64_0045__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G2_ELEMENT_OVERLAP""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""G2_ELEMENT_OVERLAP"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_security_program_1"", ""element_id"": ""title_container"", ""related_page_ids"": []}, ""evidence"": ""The light gray background box behind the title text 'XXXXX Our exposure is growing fast' visually overlaps and obscures the beginning of the title text."", ""fix_suggestion"":",page
+part2_retail_analytics_5_G1_TEXT_OVERFLOW_64_0044__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_retail_analytics_5"", ""element_id"": ""title"", ""related_page_ids"": []}, ""evidence"": ""The slide title contains the placeholder text 'XXXXX' instead of a specific quarter or date, making it generic and mismatched with the specific body content regarding 'DemandSens",page
+part2_security_program_2_G1_TEXT_OVERFLOW_64_0046__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_security_program_2"", ""element_id"": ""null"", ""related_page_ids"": []}, ""evidence"": ""The title contains the placeholder text 'XXXXX', indicating the slide title is incomplete or a draft, which mismatches the specific body content regarding ZeroTrust strategy."", ""f",page
+part2_security_program_4_G1_TEXT_OVERFLOW_64_0048__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_security_program_4"", ""element_id"": ""title"", ""related_page_ids"": []}, ""evidence"": ""The slide title contains the placeholder text 'XXXXX' at the end, indicating it is incomplete and does not fully match the specific body content provided."", ""fix_suggestion"": ""Re",page
+part2_security_program_5_G1_TEXT_OVERFLOW_64_0049__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_security_program_5"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title contains 'XXXXX' as a placeholder, indicating a missing or incomplete title, which fails t",page
+part2_supply_chain_2_G1_TEXT_OVERFLOW_64_0051__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_supply_chain_2"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title asks 'Why FlowNet visibility is missing', but the body content lists positive attributes like 'Risks are tracked weekly' and 'FlowNet has a clear rollback path', which do not an",page
+part2_supply_chain_1_G1_TEXT_OVERFLOW_64_0050__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_supply_chain_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Supply shocks hit margins XXXXX' discusses economic supply chain issues, while the body text li",page
+part2_security_program_3_G1_TEXT_OVERFLOW_64_0047__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_security_program_3"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'The ZeroTrust controls we deploy' implies a list of technical security controls (e.g., MF",page
+part2_supply_chain_5_G1_TEXT_OVERFLOW_64_0054__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_supply_chain_5"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'FlowNet rollout plan' implies a schedule or strategy, but the body text lists status updates and competitor facts without any rollout details."", ""fix_suggestion"": ""Update the",page
+part2_warehouse_robotics_1_G1_TEXT_OVERFLOW_64_0055__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_warehouse_robotics_1"", ""element_id"": ""null"", ""related_page_ids"": []}, ""evidence"": ""The slide title 'Pick rates have plateaued XXXXX' suggests a status update or data analysis regarding performance metrics. However, the body content lists three distinct action it",page
+part2_warehouse_robotics_2_G1_TEXT_OVERFLOW_64_0056__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_warehouse_robotics_2"", ""element_id"": ""null"", ""related_page_ids"": []}, ""evidence"": ""The title contains the placeholder text 'XXXXX' and is incomplete, failing to clearly summarize the body content which lists specific benefits of 'PickBot'."", ""fix_suggestion"": ""R",page
+part2_supply_chain_3_G1_TEXT_OVERFLOW_64_0052__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G2_ELEMENT_OVERLAP"",""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G2_ELEMENT_OVERLAP"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_supply_chain_3"",
+        ""element_id"": ""title"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title text 'XXXXX FlowNet connects the network' is visually overlapped by a light gray rectangular box, obs",page
+part2_supply_chain_4_G1_TEXT_OVERFLOW_64_0053__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET"",""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_supply_chain_4"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'FlowNet impact on service levels' suggests a discussion of results or metrics, but the body text ",page
+part2_logistics_visibility_3_G1_TEXT_OVERFLOW_32_0042__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_logistics_visibility_3_G1_TEXT_OVERFLOW_4_0042__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_logistics_visibility_5_G1_TEXT_OVERFLOW_32_0044__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_warehouse_robotics_3_G1_TEXT_OVERFLOW_64_0057__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""G3_ALIGNMENT_OFFSET""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_warehouse_robotics_3"", ""element_id"": ""title_box"", ""related_page_ids"": []}, ""evidence"": ""The light blue background box behind the title 'XXXXX PickBot automates the long aisles' is misaligned; it is shifted to the left and does not cover the full width of the titl",page
+part2_warehouse_robotics_4_G1_TEXT_OVERFLOW_64_0058__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_warehouse_robotics_4"", ""element_id"": ""title"", ""related_page_ids"": []}, ""evidence"": ""The slide title contains 'XXXXX' as a placeholder, indicating missing data, while the body text discusses specific pilot results. The title fails to accurately summarize the cont",page
+part2_warehouse_robotics_5_G1_TEXT_OVERFLOW_64_0059__freeform,G1_TEXT_OVERFLOW,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_warehouse_robotics_5"", ""element_id"": ""title"", ""related_page_ids"": []}, ""evidence"": ""The title contains the placeholder text 'XXXXX' and does not clearly describe the specific content of the bullet points (integration, data security, setup time)."", ""fix_suggest",page
+part2_marketing_attribution_2_G1_TEXT_OVERFLOW_32_0046__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_logistics_visibility_4_G1_TEXT_OVERFLOW_32_0043__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_logistics_visibility_4"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide title 'ShipEye impact on on-time delivery' suggests a results or analysis slide, but the body content lists administrative action items (budget approval, assigning engin",page
+part2_marketing_attribution_2_G1_TEXT_OVERFLOW_4_0046__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_logistics_visibility_4_G1_TEXT_OVERFLOW_4_0043__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_logistics_visibility_4"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide title 'ShipEye impact on on-time delivery' suggests a results or analysis slide, but the body content lists administrative action items (budget approval, assigning engin",page
+part2_logistics_visibility_5_G1_TEXT_OVERFLOW_4_0044__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""G3_ALIGNMENT_OFFSET""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_logistics_visibility_5"", ""element_id"": ""body_text_boxes"", ""related_page_ids"": []}, ""evidence"": ""The three body text boxes are indented significantly to the right compared to the title, creating a misaligned visual hierarchy."", ""fix_suggestion"": ""Align the left ed",page
+part2_marketing_attribution_4_G1_TEXT_OVERFLOW_32_0048__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_marketing_attribution_4_G1_TEXT_OVERFLOW_4_0048__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_marketing_attribution_5_G1_TEXT_OVERFLOW_32_0049__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_marketing_attribution_5_G1_TEXT_OVERFLOW_4_0049__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_marketing_attribution_1_G1_TEXT_OVERFLOW_32_0045__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_marketing_attribution_1"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Spend is hard to attribute' suggests a discussion on marketing attribution challenge",page
+part2_network_observability_2_G1_TEXT_OVERFLOW_32_0051__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_marketing_attribution_1_G1_TEXT_OVERFLOW_4_0045__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_marketing_attribution_1"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Spend is hard to attribute' suggests a discussion on marketing attribution challenge",page
+part2_network_observability_2_G1_TEXT_OVERFLOW_4_0051__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_marketing_attribution_3_G1_TEXT_OVERFLOW_32_0047__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_marketing_attribution_3"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canvas empty. This indicates the slide is under-populated and lacks sufficient conte",page
+part2_marketing_attribution_3_G1_TEXT_OVERFLOW_4_0047__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_marketing_attribution_3"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canvas empty. This indicates the slide is underutilized and lacks sufficient content",page
+part2_network_observability_4_G1_TEXT_OVERFLOW_32_0053__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_network_observability_4_G1_TEXT_OVERFLOW_4_0053__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_network_observability_1_G1_TEXT_OVERFLOW_32_0050__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_network_observability_1"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide title 'Outages are hard to diagnose' presents a problem statement, but the body content lists product features ('integrates with existing tools', 'No data leaves the te",page
+part2_network_observability_1_G1_TEXT_OVERFLOW_4_0050__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_network_observability_1"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide title 'Outages are hard to diagnose' presents a problem statement, but the body content lists product features ('integrates with existing tools', 'No data leaves the te",page
+part2_network_observability_3_G1_TEXT_OVERFLOW_32_0052__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_network_observability_3"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'The TraceGrid architecture', but the body content lists three bullet points about",page
+part2_network_observability_3_G1_TEXT_OVERFLOW_4_0052__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_network_observability_3"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'The TraceGrid architecture', but the body content lists three bullet points about",page
+part2_network_observability_5_G1_TEXT_OVERFLOW_32_0054__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_network_observability_5"", ""element_id"": ""null"", ""related_page_ids"": []}, ""evidence"": ""The slide title is 'The TraceGrid roadmap', but the body content lists three status/problem statements ('saturated at peak demand', 'refresh is due', 'competitors ship weekly')",page
+part2_network_observability_5_G1_TEXT_OVERFLOW_4_0054__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_network_observability_5"", ""element_id"": ""null"", ""related_page_ids"": []}, ""evidence"": ""The slide title is 'The TraceGrid roadmap', but the body content lists three status/problem statements ('saturated at peak demand', 'refresh is due', 'competitors ship weekly')",page
+part2_ops_efficiency_3_G1_TEXT_OVERFLOW_32_0057__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_ops_efficiency_3_G1_TEXT_OVERFLOW_4_0057__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_ops_efficiency_4_G1_TEXT_OVERFLOW_32_0058__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_ops_efficiency_4_G1_TEXT_OVERFLOW_4_0058__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_ops_efficiency_5_G1_TEXT_OVERFLOW_32_0059__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_ops_efficiency_5_G1_TEXT_OVERFLOW_4_0059__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_retail_analytics_3_G1_TEXT_OVERFLOW_64_0042__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_retail_analytics_4_G1_TEXT_OVERFLOW_64_0043__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_retail_analytics_5_G1_TEXT_OVERFLOW_64_0044__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_security_program_1_G1_TEXT_OVERFLOW_64_0045__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_ops_efficiency_1_G1_TEXT_OVERFLOW_32_0055__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_ops_efficiency_1"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Where operating cost sits today' implies a financial or cost analysis, but the body content",page
+part2_security_program_2_G1_TEXT_OVERFLOW_64_0046__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_ops_efficiency_1_G1_TEXT_OVERFLOW_4_0055__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_ops_efficiency_1"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Where operating cost sits today' implies a financial status report or cost analysis. Howeve",page
+part2_security_program_4_G1_TEXT_OVERFLOW_64_0048__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_ops_efficiency_2_G1_TEXT_OVERFLOW_32_0056__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_ops_efficiency_2"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'Root causes behind the cost' implies an analysis of why costs are high. However, the body content lists benefits and positive outcomes ('reduces toil', 'adopt daily', 'paybac",page
+part2_ops_efficiency_2_G1_TEXT_OVERFLOW_4_0056__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_ops_efficiency_2"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'Root causes behind the cost' implies an analysis of why costs are high. However, the body content lists benefits and positive outcomes ('reduces toil', 'adopt daily', 'paybac",page
+part2_supply_chain_3_G1_TEXT_OVERFLOW_64_0052__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_security_program_3_G1_TEXT_OVERFLOW_64_0047__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_security_program_3"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'The ZeroTrust controls we deploy' implies a list of technical security measures (e.g., MFA, encryption), but the body content lists project management tasks (budget appro",page
+part2_supply_chain_2_G1_TEXT_OVERFLOW_64_0051__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_supply_chain_2"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title asks 'Why FlowNet visibility is missing', but the body content lists positive attributes (e.g., 'Risks are tracked weekly', 'Compliance reviewed the design') that do not explain",page
+part2_warehouse_robotics_1_G1_TEXT_OVERFLOW_64_0055__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_security_program_5_G1_TEXT_OVERFLOW_64_0049__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_security_program_5"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'The investment we request' implies a financial ask or budget slide, but the body content lists process improvements ('Current process is mostly manual', 'ZeroTrust automa",page
+part2_warehouse_robotics_2_G1_TEXT_OVERFLOW_64_0056__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_warehouse_robotics_3_G1_TEXT_OVERFLOW_64_0057__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_warehouse_robotics_5_G1_TEXT_OVERFLOW_64_0059__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_supply_chain_1_G1_TEXT_OVERFLOW_64_0050__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_supply_chain_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Supply shocks hit margins' discusses economic supply chain issues, while the body text lists so",page
+part2_supply_chain_4_G1_TEXT_OVERFLOW_64_0053__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_supply_chain_4"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'FlowNet impact on service levels' suggests the slide should contain data or analysis regarding service level changes. However, the body content lists project requirements (sp",page
+part2_supply_chain_5_G1_TEXT_OVERFLOW_64_0054__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_supply_chain_5"", ""element_id"": ""null"", ""related_page_ids"": []}, ""evidence"": ""The title 'FlowNet rollout plan' implies a schedule or strategy, but the body text lists status updates and competitor facts ('saturated', 'refresh due', 'competitors ship weekly') rath",page
+part2_warehouse_robotics_4_G1_TEXT_OVERFLOW_64_0058__freeform__CLEAN,G1_TEXT_OVERFLOW,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_warehouse_robotics_4"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canvas empty. This indicates a severe lack of content density."", ""fix_suggestion"": ""Add",page
+part2_field_service_5_S6_IMAGE_TEXT_CONTRADICTION_1_0044__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_field_service_5"", ""element_id"": ""null"", ""related_page_ids"": []}, ""evidence"": ""The title 'A ninety-day DispatchPro plan' implies a timeline or schedule, but the body content lists specific technical phases (replatforming, refactoring, hardening) without any tim",page
+part2_field_service_4_S6_IMAGE_TEXT_CONTRADICTION_1_0043__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_field_service_4"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'Impact DispatchPro can deliver' suggests a list of capabilities or benefits, but the body text con",page
+part2_fraud_detection_1_S6_IMAGE_TEXT_CONTRADICTION_1_0045__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_fraud_detection_1"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Fraud losses are climbing' suggests a discussion on fraud trends, but the body text discus",page
+part2_field_service_3_S6_IMAGE_TEXT_CONTRADICTION_1_0042__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_field_service_3"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'DispatchPro routes smarter' suggests a feature or benefit overview, but the body text contai",page
+part2_fraud_detection_2_S6_IMAGE_TEXT_CONTRADICTION_1_0046__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_fraud_detection_2"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'GuardML scores every transaction' suggests a feature description, but the body text contai",page
+part2_fraud_detection_3_S6_IMAGE_TEXT_CONTRADICTION_1_0047__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_fraud_detection_3"", ""element_id"": ""null"", ""related_page_ids"": []}, ""evidence"": ""The slide title is 'Inside the GuardML model', implying a technical explanation of the model's architecture. However, the body content lists a project roadmap with phases (Phase 2, 3",page
+part2_fraud_detection_4_S6_IMAGE_TEXT_CONTRADICTION_1_0048__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_fraud_detection_4"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'GuardML detection metrics', but the body content discusses architecture layers ('single",page
+part2_hr_analytics_2_S6_IMAGE_TEXT_CONTRADICTION_1_0051__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_hr_analytics_2"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'PeoplePulse surfaces early signals' suggests a functional description of a tool, but the body text discusses architectural contradictions, team staffing needs, and a decision",page
+part2_fraud_detection_5_S6_IMAGE_TEXT_CONTRADICTION_1_0049__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_fraud_detection_5"", ""element_id"": ""null"", ""related_page_ids"": []}, ""evidence"": ""The title 'The GuardML investment ask' implies a request for funding or resources, but the body content consists of a meta-commentary about architecture ('contradictory single-layer.",page
+part2_hr_analytics_1_S6_IMAGE_TEXT_CONTRADICTION_1_0050__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_hr_analytics_1"",
+        ""element_id"": ""title"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Attrition is rising quietly' discusses employee turnover, but the body text discusses 'singl",page
+part2_hr_analytics_3_S6_IMAGE_TEXT_CONTRADICTION_1_0052__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_hr_analytics_3"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'Actions PeoplePulse recommends' implies a list of actionable steps or suggestions. However, the body content consists of three unrelated status statements: a technical contradi",page
+part2_hr_analytics_4_S6_IMAGE_TEXT_CONTRADICTION_1_0053__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_hr_analytics_4"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Impact PeoplePulse can drive' suggests a list of benefits or outcomes, but the body content l",page
+part2_hr_analytics_5_S6_IMAGE_TEXT_CONTRADICTION_1_0054__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_hr_analytics_5"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'PeoplePulse rollout plan', but the body text explicitly states 'This slide describes a con",page
+part2_inventory_optimization_1_S6_IMAGE_TEXT_CONTRADICTION_1_0055__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_inventory_optimization_1"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Stockouts erode loyalty' suggests a topic about inventory management and customer r",page
+part2_inventory_optimization_2_S6_IMAGE_TEXT_CONTRADICTION_1_0056__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_inventory_optimization_2"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'StockIQ rebalances inventory nightly' describes a specific operational function, whil",page
+part2_field_service_4_S6_IMAGE_TEXT_CONTRADICTION_1_0043__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_field_service_5_S6_IMAGE_TEXT_CONTRADICTION_1_0044__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_fraud_detection_1_S6_IMAGE_TEXT_CONTRADICTION_1_0045__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_fraud_detection_2_S6_IMAGE_TEXT_CONTRADICTION_1_0046__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_fraud_detection_3_S6_IMAGE_TEXT_CONTRADICTION_1_0047__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_fraud_detection_4_S6_IMAGE_TEXT_CONTRADICTION_1_0048__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_inventory_optimization_4_S6_IMAGE_TEXT_CONTRADICTION_1_0058__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_inventory_optimization_4"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Expanding StockIQ to all regions' suggests a topic about geographic expansion, but ",page
+part2_inventory_optimization_3_S6_IMAGE_TEXT_CONTRADICTION_1_0057__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_inventory_optimization_3"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'StockIQ cut stockouts in the pilot' suggests a results or success story slide, but ",page
+part2_fraud_detection_5_S6_IMAGE_TEXT_CONTRADICTION_1_0049__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_hr_analytics_2_S6_IMAGE_TEXT_CONTRADICTION_1_0051__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_hr_analytics_3_S6_IMAGE_TEXT_CONTRADICTION_1_0052__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_hr_analytics_4_S6_IMAGE_TEXT_CONTRADICTION_1_0053__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_hr_analytics_5_S6_IMAGE_TEXT_CONTRADICTION_1_0054__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_inventory_optimization_1_S6_IMAGE_TEXT_CONTRADICTION_1_0055__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_inventory_optimization_2_S6_IMAGE_TEXT_CONTRADICTION_1_0056__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_inventory_optimization_4_S6_IMAGE_TEXT_CONTRADICTION_1_0058__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_inventory_optimization_5_S6_IMAGE_TEXT_CONTRADICTION_1_0059__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,,[],"{""has_defect"": false, ""findings"": []}",page
+part2_field_service_3_S6_IMAGE_TEXT_CONTRADICTION_1_0042__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_field_service_3"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canvas empty. This violates the rule against under-utilized space and low information densit",page
+part2_inventory_optimization_5_S6_IMAGE_TEXT_CONTRADICTION_1_0059__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_inventory_optimization_5"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'Funding the StockIQ rollout', but the body content discusses 'single-layer archi",page
+part2_hr_analytics_1_S6_IMAGE_TEXT_CONTRADICTION_1_0050__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_hr_analytics_1"", ""element_id"": ""null"", ""related_page_ids"": []}, ""evidence"": ""The slide title 'Attrition is rising quietly' contradicts the body content which lists positive trends: 'Adoption grew', 'PeoplePulse handles most volume', and 'Support tickets fell'."",",page
+part2_inventory_optimization_3_S6_IMAGE_TEXT_CONTRADICTION_1_0057__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH"",""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_inventory_optimization_3"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'StockIQ cut stockouts in the pilot' claims a specific result, but the body content only lists a timeline of phases (Q1 foundation, Q2 workloads, Q3 migration) without",page

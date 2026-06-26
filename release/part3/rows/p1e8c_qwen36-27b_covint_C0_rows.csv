@@ -1,0 +1,1565 @@
+sample_id,defect,modality,is_clean,failure,has_defect,named_target,predicted_types,locator,confidence,other,raw,level
+part2_contract_review_3_G3_ALIGNMENT_OFFSET_16_0002__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_contract_review_3"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title is 'ClauseScan pilot accuracy', but the body text discusses efficiency ('reduces toil'), adoption ('Teams adopt...'), and ROI ('Payback...'). None of the body points address ",page
+part2_contract_review_3_G3_ALIGNMENT_OFFSET_2_0002__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_contract_review_3"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title is 'ClauseScan pilot accuracy', but the body text lists benefits regarding workload reduction ('reduces toil'), adoption ('Teams adopt...'), and ROI ('Payback...'). None of t",page
+part2_contract_review_2_G3_ALIGNMENT_OFFSET_2_0001__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_contract_review_2"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'ClauseScan flags risky clauses' describes a product feature or capability, but the body content lists project management tasks ('Approve the phase 1 budget', 'Assign two pla",page
+part2_contract_review_2_G3_ALIGNMENT_OFFSET_16_0001__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_contract_review_2"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'ClauseScan flags risky clauses' describes a product feature or capability, but the body content lists project management tasks ('Approve the phase 1 budget', 'Assign two pla",page
+part2_contract_review_1_G3_ALIGNMENT_OFFSET_16_0000__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_contract_review_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'Manual contract review is slow' describes a problem with legal document processing, but th",page
+part2_contract_review_1_G3_ALIGNMENT_OFFSET_2_0000__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_contract_review_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'Manual contract review is slow' describes a problem, but the body text ('Shadow traffic be",page
+part2_contract_review_4_G3_ALIGNMENT_OFFSET_16_0003__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_contract_review_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canvas ",page
+part2_contract_review_5_G3_ALIGNMENT_OFFSET_16_0004__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_contract_review_5"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title is 'Next steps for ClauseScan', but the body text lists past results ('The pilot covered...', 'ClauseScan beat the baseline...', 'Results held...'). The content describes a r",page
+part2_contract_review_4_G3_ALIGNMENT_OFFSET_2_0003__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_contract_review_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canvas ",page
+part2_customer_support_ai_1_G3_ALIGNMENT_OFFSET_16_0005__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_customer_support_ai_1"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains only four lines of text and leaves the majority of the canvas (approx. 70%) completely empty, violating standard density and layout expectations for a present",page
+part2_customer_support_ai_1_G3_ALIGNMENT_OFFSET_2_0005__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_customer_support_ai_1"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains only four lines of text and leaves the majority of the canvas (approx. 70%) completely empty, violating standard density and layout expectations for a present",page
+part2_contract_review_5_G3_ALIGNMENT_OFFSET_2_0004__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_contract_review_5"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'Next steps for ClauseScan', but the body text lists past results and pilot findin",page
+part2_customer_support_ai_2_G3_ALIGNMENT_OFFSET_2_0006__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+""has_defect"": true,
+""findings"": [
+{
+""type"": ""S4_DENSITY_RULE_VIOLATION"",
+""severity"": ""severe"",
+""locator"": {
+""level"": ""page"",
+""page_id"": ""part2_customer_support_ai_2"",
+""element_id"": null,
+""related_page_ids"": []
+},
+""evidence"": ""The slide contains only four short text lines and leaves the majority of the canvas (approx. 70%) completely empty white space, failing to utilize the available are",page
+part2_customer_support_ai_2_G3_ALIGNMENT_OFFSET_16_0006__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_customer_support_ai_2"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains only four short text lines and leaves the majority of the canvas (approx. 7",page
+part2_customer_support_ai_3_G3_ALIGNMENT_OFFSET_16_0007__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_customer_support_ai_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the can",page
+part2_customer_support_ai_3_G3_ALIGNMENT_OFFSET_2_0007__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_customer_support_ai_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the can",page
+part2_customer_support_ai_4_G3_ALIGNMENT_OFFSET_16_0008__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_customer_support_ai_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the can",page
+part2_customer_support_ai_4_G3_ALIGNMENT_OFFSET_2_0008__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_customer_support_ai_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the can",page
+part2_customer_support_ai_5_G3_ALIGNMENT_OFFSET_16_0009__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_customer_support_ai_5"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canvas empty. This violates the density rule by being significantly under-utilized."", ",page
+part2_doc_search_1_G3_ALIGNMENT_OFFSET_32_0000__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_doc_search_1"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains only four short text lines and leaves the majority of the canvas (approx. 70%) completely empty, violating standard density and layout balance rules."", ""fix_suggestion",page
+part2_customer_support_ai_5_G3_ALIGNMENT_OFFSET_2_0009__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_customer_support_ai_5"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains very little content (only a title and three short bullet points) and leaves the majority of the canvas empty, violating the rule against under-utilization of ",page
+part2_doc_search_2_G3_ALIGNMENT_OFFSET_32_0001__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_doc_search_2"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains only four lines of text and is otherwise completely empty, leaving the vast majority of the canvas blank. This violates the rule against low density/under-utilization ",page
+part2_doc_search_1_G3_ALIGNMENT_OFFSET_4_0000__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+""has_defect"": true,
+""findings"": [
+{
+""type"": ""S4_DENSITY_RULE_VIOLATION"",
+""severity"": ""severe"",
+""locator"": {
+""level"": ""page"",
+""page_id"": ""part2_doc_search_1"",
+""element_id"": null,
+""related_page_ids"": []
+},
+""evidence"": ""The slide contains only four short lines of text and is otherwise completely empty, leaving the vast majority of the canvas unused. This violates the rule against low densit",page
+part2_doc_search_2_G3_ALIGNMENT_OFFSET_4_0001__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_doc_search_2"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains only four lines of text and leaves the majority of the canvas (approx. 70%) completely empty, violating standard density and content utilization rules for presentation",page
+part2_doc_search_3_G3_ALIGNMENT_OFFSET_32_0002__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+""has_defect"": true,
+""findings"": [
+{
+""type"": ""S4_DENSITY_RULE_VIOLATION"",
+""severity"": ""severe"",
+""locator"": {
+""level"": ""page"",
+""page_id"": ""part2_doc_search_3"",
+""element_id"": null,
+""related_page_ids"": []
+},
+""evidence"": ""The slide contains very little content (one title and three short bullet points) and leaves the majority of the canvas (approx. 70%) completely empty white space, violating ",page
+part2_doc_search_5_G3_ALIGNMENT_OFFSET_32_0004__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_doc_search_5"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title is 'The FindFast rollout plan', but the body text describes past results ('Adoption grew', 'handles most volume', 'tickets fell') rather than a future plan."", ""fix_suggestion"": ",page
+part2_doc_search_5_G3_ALIGNMENT_OFFSET_4_0004__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_doc_search_5"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title is 'The FindFast rollout plan', but the body text describes past results ('Adoption grew', 'handles most volume', 'tickets fell') rather than a future plan."", ""fix_suggestion"": ""C",page
+part2_doc_search_3_G3_ALIGNMENT_OFFSET_4_0002__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_doc_search_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canvas (appr",page
+part2_doc_search_4_G3_ALIGNMENT_OFFSET_32_0003__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_doc_search_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'Impact FindFast drives on time saved' suggests a focus on efficiency metrics or time-saving res",page
+part2_doc_search_4_G3_ALIGNMENT_OFFSET_4_0003__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_doc_search_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'Impact FindFast drives on time saved' suggests a focus on efficiency metrics or time-saving res",page
+part2_energy_forecasting_1_G3_ALIGNMENT_OFFSET_4_0005__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_energy_forecasting_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canv",page
+part2_energy_forecasting_1_G3_ALIGNMENT_OFFSET_32_0005__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_energy_forecasting_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Demand spikes strain the grid' describes a problem or context, but the body conte",page
+part2_energy_forecasting_2_G3_ALIGNMENT_OFFSET_4_0006__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_energy_forecasting_2"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains only four lines of text and leaves the majority of the canvas (approx. 70%) ",page
+part2_energy_forecasting_2_G3_ALIGNMENT_OFFSET_32_0006__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_energy_forecasting_2"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canv",page
+part2_energy_forecasting_3_G3_ALIGNMENT_OFFSET_32_0007__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_energy_forecasting_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'How GridCast models weather', but the body content lists project management ta",page
+part2_energy_forecasting_3_G3_ALIGNMENT_OFFSET_4_0007__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_energy_forecasting_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'How GridCast models weather', but the body content lists project management ta",page
+part2_energy_forecasting_4_G3_ALIGNMENT_OFFSET_4_0008__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_energy_forecasting_4"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canvas empty. This violates the density rule which requires slides to be sufficiently p",page
+part2_energy_forecasting_4_G3_ALIGNMENT_OFFSET_32_0008__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_energy_forecasting_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canv",page
+part2_energy_forecasting_5_G3_ALIGNMENT_OFFSET_32_0009__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_energy_forecasting_5"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canv",page
+part2_hr_analytics_1_G3_ALIGNMENT_OFFSET_48_0000__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_hr_analytics_1"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title states 'Attrition is rising quietly', but the body text lists positive metrics ('Adoption grew', 'Support tickets fell') that do not support or explain the title's claim."", ""fix",page
+part2_energy_forecasting_5_G3_ALIGNMENT_OFFSET_4_0009__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_energy_forecasting_5"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains only a title and three short bullet points, leaving the vast majority of the",page
+part2_hr_analytics_2_G3_ALIGNMENT_OFFSET_48_0001__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_hr_analytics_2"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'PeoplePulse surfaces early signals' describes a product capability, but the body text lists resource requirements and deadlines ('We need executive sponsorship', 'A decision is",page
+part2_hr_analytics_3_G3_ALIGNMENT_OFFSET_48_0002__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_hr_analytics_3"", ""element_id"": ""null"", ""related_page_ids"": []}, ""evidence"": ""The second list item ('A refresh is due within two quarters') is indented significantly to the right compared to the first and third items, breaking the vertical alignment of the list."",",page
+part2_hr_analytics_4_G3_ALIGNMENT_OFFSET_48_0003__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]",,,[],"```json
+{
+""has_defect"": true,
+""findings"": [
+{
+""type"": ""G3_ALIGNMENT_OFFSET"",
+""severity"": ""moderate"",
+""locator"": {
+""level"": ""page"",
+""page_id"": ""part2_hr_analytics_4"",
+""element_id"": ""phase_3_box"",
+""related_page_ids"": []
+},
+""evidence"": ""The text box for 'Phase 3 refactors the core' is indented to the right compared to the other phase boxes (Phase 1, 2, 4, 5), breaking the vertical alignment of the li",page
+part2_hr_analytics_5_G3_ALIGNMENT_OFFSET_48_0004__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_hr_analytics_5"", ""element_id"": ""null"", ""related_page_ids"": []}, ""evidence"": ""The second item 'Q2 first production workloads' is indented significantly to the right compared to the first item 'Q1 foundation for PeoplePulse' and the third item 'Q3 migration and cut",page
+part2_inventory_optimization_3_G3_ALIGNMENT_OFFSET_48_0007__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_inventory_optimization_3"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title claims 'StockIQ cut stockouts in the pilot' (a result/outcome), but the body content lists a future roadmap ('Q1 foundation', 'Q2 first production', 'Q3 migration'). T",page
+part2_inventory_optimization_1_G3_ALIGNMENT_OFFSET_48_0005__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_inventory_optimization_1"",
+        ""element_id"": ""text-box-3"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The third text box ('A refresh is due within two quarters') is indented significantly t",page
+part2_inventory_optimization_2_G3_ALIGNMENT_OFFSET_48_0006__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]",,,[],"```json
+{
+""has_defect"": true,
+""findings"": [
+{
+""type"": ""G3_ALIGNMENT_OFFSET"",
+""severity"": ""moderate"",
+""locator"": {
+""level"": ""page"",
+""page_id"": ""part2_inventory_optimization_2"",
+""element_id"": ""phase_3_box"",
+""related_page_ids"": []
+},
+""evidence"": ""The text box for 'Phase 3 refactors the core' is indented to the right compared to the other phase boxes (Phase 1, 2, 4, 5), breaking the vertical alignment",page
+part2_inventory_optimization_4_G3_ALIGNMENT_OFFSET_48_0008__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_inventory_optimization_4"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains only four short text lines and leaves the majority of the canvas (approx. 70%) completely empty, violating standard density and layout expectations for a p",page
+part2_inventory_optimization_5_G3_ALIGNMENT_OFFSET_48_0009__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_inventory_optimization_5"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title is 'Funding the StockIQ rollout', but the body content lists operational tasks ('Assign two platform engineers', 'Confirm the cutover freeze window') rather than fin",page
+part2_logistics_visibility_1_G3_ALIGNMENT_OFFSET_64_0000__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_logistics_visibility_1"", ""element_id"": ""phase_3_box"", ""related_page_ids"": []}, ""evidence"": ""The 'Phase 3 refactors the core' box is indented to the right compared to the other phase boxes, breaking the vertical alignment of the list."", ""fix_suggestion"": ""Align th",page
+part2_logistics_visibility_2_G3_ALIGNMENT_OFFSET_8_0001__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_logistics_visibility_2"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canvas empty. This violates the density rule by being significantly under-utilized."",",page
+part2_logistics_visibility_2_G3_ALIGNMENT_OFFSET_64_0001__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_logistics_visibility_2"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'Why visibility breaks down' suggests a problem statement or analysis of issues, but the body content lists a project roadmap/timeline ('Q1 foundation...', 'Q2 first pro",page
+part2_logistics_visibility_3_G3_ALIGNMENT_OFFSET_64_0002__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_logistics_visibility_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains only four lines of text and is otherwise completely empty, failing to util",page
+part2_logistics_visibility_1_G3_ALIGNMENT_OFFSET_8_0000__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_logistics_visibility_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'Shipments go dark in transit' describes a specific problem or scenario, while the bod",page
+part2_logistics_visibility_4_G3_ALIGNMENT_OFFSET_64_0003__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_logistics_visibility_4"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'ShipEye impact on on-time delivery' suggests a results or analysis slide, but the body content lists project management action items ('Approve the phase 1 budget', 'Ass",page
+part2_logistics_visibility_4_G3_ALIGNMENT_OFFSET_8_0003__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_logistics_visibility_4"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'ShipEye impact on on-time delivery' suggests a results or analysis slide, but the body content lists project management action items ('Approve budget', 'Assign engineer",page
+part2_logistics_visibility_3_G3_ALIGNMENT_OFFSET_8_0002__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_logistics_visibility_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the ca",page
+part2_logistics_visibility_5_G3_ALIGNMENT_OFFSET_64_0004__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""G3_ALIGNMENT_OFFSET"",
+      ""severity"": ""moderate"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_logistics_visibility_5"",
+        ""element_id"": ""null"",
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The second content block ('Teams adopt ShipEye daily') is indented significantly to the right c",page
+part2_logistics_visibility_5_G3_ALIGNMENT_OFFSET_8_0004__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+""has_defect"": true,
+""findings"": [
+{
+""type"": ""S4_DENSITY_RULE_VIOLATION"",
+""severity"": ""severe"",
+""locator"": {
+""level"": ""page"",
+""page_id"": ""part2_logistics_visibility_5"",
+""element_id"": null,
+""related_page_ids"": []
+},
+""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canvas empty. This violates the density rule which requires slides to be",page
+part2_marketing_attribution_1_G3_ALIGNMENT_OFFSET_64_0005__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_marketing_attribution_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'Spend is hard to attribute' suggests a problem or challenge, but the body text lists",page
+part2_marketing_attribution_2_G3_ALIGNMENT_OFFSET_64_0006__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_marketing_attribution_2"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'How Attrib models touchpoints' suggests a technical explanation of a methodology, but the body text ('Adoption grew...', 'Support tickets fell...') lists business outc",page
+part2_marketing_attribution_2_G3_ALIGNMENT_OFFSET_8_0006__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_marketing_attribution_2"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'How Attrib models touchpoints' suggests a technical explanation of a methodology, but the body text ('Adoption grew...', 'Support tickets fell...') lists business outc",page
+part2_marketing_attribution_3_G3_ALIGNMENT_OFFSET_64_0007__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_marketing_attribution_3"", ""element_id"": ""null"", ""related_page_ids"": []}, ""evidence"": ""The second bullet point ('Attrib needs a small dedicated team') is indented significantly more than the first and third bullet points, breaking the vertical alignment of the lis",page
+part2_marketing_attribution_1_G3_ALIGNMENT_OFFSET_8_0005__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_marketing_attribution_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'Spend is hard to attribute' suggests a problem or challenge regarding attribution. H",page
+part2_marketing_attribution_3_G3_ALIGNMENT_OFFSET_8_0007__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_marketing_attribution_3"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canvas empty. This violates the density rule by being significantly under-utilized.""",page
+part2_marketing_attribution_5_G3_ALIGNMENT_OFFSET_8_0009__freeform,G3_ALIGNMENT_OFFSET,A,False,False,False,False,[],,,[],"```json
+{
+""has_defect"": false,
+""findings"": []
+}
+```",page
+part2_marketing_attribution_4_G3_ALIGNMENT_OFFSET_64_0008__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""G3_ALIGNMENT_OFFSET"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_marketing_attribution_4"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The second bullet point ('A refresh is due within two quarters') is indented significantly more than the first and third bullet points, breaking the vertical alignment of the list",page
+part2_marketing_attribution_4_G3_ALIGNMENT_OFFSET_8_0008__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_marketing_attribution_4"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canvas empty. This violates the density rule by being significantly under-utilized.""",page
+part2_marketing_attribution_5_G3_ALIGNMENT_OFFSET_64_0009__freeform,G3_ALIGNMENT_OFFSET,A,False,False,True,True,"[""G3_ALIGNMENT_OFFSET""]",,,[],"```json
+{
+""has_defect"": true,
+""findings"": [
+{
+""type"": ""G3_ALIGNMENT_OFFSET"",
+""severity"": ""moderate"",
+""locator"": {
+""level"": ""page"",
+""page_id"": ""part2_marketing_attribution_5"",
+""element_id"": ""phase_3_box"",
+""related_page_ids"": []
+},
+""evidence"": ""The text box for 'Phase 3 refactors the core' is indented significantly to the right compared to the other phase boxes (Phase 1, 2, 4, 5), breaking the verti",page
+part2_contract_review_2_G3_ALIGNMENT_OFFSET_16_0001__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_contract_review_2"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'ClauseScan flags risky clauses' describes a product feature, but the body content lists project management tasks ('Approve the phase 1 budget', 'Assign two platform engineer",page
+part2_contract_review_1_G3_ALIGNMENT_OFFSET_2_0000__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_contract_review_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'Manual contract review is slow' describes a problem regarding legal document processing, b",page
+part2_contract_review_1_G3_ALIGNMENT_OFFSET_16_0000__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_contract_review_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'Manual contract review is slow' describes a problem regarding legal document processing. H",page
+part2_contract_review_2_G3_ALIGNMENT_OFFSET_2_0001__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_contract_review_2"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'ClauseScan flags risky clauses' describes a product feature, but the body content lists project management tasks ('Approve the phase 1 budget', 'Assign two platform engineer",page
+part2_contract_review_3_G3_ALIGNMENT_OFFSET_16_0002__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_contract_review_3"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title is 'ClauseScan pilot accuracy', but the body text lists benefits regarding workload reduction ('reduces toil'), adoption ('Teams adopt...'), and ROI ('Payback...'). None of t",page
+part2_contract_review_3_G3_ALIGNMENT_OFFSET_2_0002__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_contract_review_3"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title is 'ClauseScan pilot accuracy', but the body text lists benefits regarding workload reduction ('reduces toil'), adoption ('Teams adopt...'), and ROI ('Payback...'). None of t",page
+part2_contract_review_4_G3_ALIGNMENT_OFFSET_16_0003__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_contract_review_4"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canvas empty. This violates the density rule by being too sparse and underutilizing the av",page
+part2_contract_review_4_G3_ALIGNMENT_OFFSET_2_0003__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_contract_review_4"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canvas empty. This violates the density rule by being too sparse and underutilizing the av",page
+part2_contract_review_5_G3_ALIGNMENT_OFFSET_16_0004__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_contract_review_5"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title is 'Next steps for ClauseScan', but the body text lists past results ('The pilot covered...', 'ClauseScan beat the baseline...', 'Results held...'). The content describes a s",page
+part2_contract_review_5_G3_ALIGNMENT_OFFSET_2_0004__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_contract_review_5"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title is 'Next steps for ClauseScan', but the body text lists past results ('The pilot covered...', 'ClauseScan beat the baseline...', 'Results held...'). The content describes a s",page
+part2_customer_support_ai_1_G3_ALIGNMENT_OFFSET_16_0005__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_customer_support_ai_1"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains only four lines of text and leaves the majority of the canvas (approx. 70%) completely empty, violating standard density and layout expectations for a present",page
+part2_customer_support_ai_1_G3_ALIGNMENT_OFFSET_2_0005__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_customer_support_ai_1"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains only four lines of text and leaves the majority of the canvas (approx. 70%) completely empty, violating standard density and layout expectations for a present",page
+part2_customer_support_ai_2_G3_ALIGNMENT_OFFSET_16_0006__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+""has_defect"": true,
+""findings"": [
+{
+""type"": ""S4_DENSITY_RULE_VIOLATION"",
+""severity"": ""severe"",
+""locator"": {
+""level"": ""page"",
+""page_id"": ""part2_customer_support_ai_2"",
+""element_id"": null,
+""related_page_ids"": []
+},
+""evidence"": ""The slide contains only four short text lines and leaves the majority of the canvas (approx. 70%) completely empty white space, failing to utilize the available are",page
+part2_customer_support_ai_2_G3_ALIGNMENT_OFFSET_2_0006__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+""has_defect"": true,
+""findings"": [
+{
+""type"": ""S4_DENSITY_RULE_VIOLATION"",
+""severity"": ""severe"",
+""locator"": {
+""level"": ""page"",
+""page_id"": ""part2_customer_support_ai_2"",
+""element_id"": null,
+""related_page_ids"": []
+},
+""evidence"": ""The slide contains only four short text lines and leaves the majority of the canvas (approx. 70%) completely empty white space, failing to utilize the available are",page
+part2_customer_support_ai_3_G3_ALIGNMENT_OFFSET_16_0007__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_customer_support_ai_3"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canvas empty. This violates the density rule by being significantly under-utilized."", ",page
+part2_customer_support_ai_3_G3_ALIGNMENT_OFFSET_2_0007__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_customer_support_ai_3"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canvas empty. This violates the density rule by being significantly under-utilized."", ",page
+part2_customer_support_ai_4_G3_ALIGNMENT_OFFSET_16_0008__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_customer_support_ai_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the can",page
+part2_customer_support_ai_4_G3_ALIGNMENT_OFFSET_2_0008__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_customer_support_ai_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the can",page
+part2_customer_support_ai_5_G3_ALIGNMENT_OFFSET_16_0009__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_customer_support_ai_5"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canvas empty. This violates the density rule by being significantly under-utilized."", ",page
+part2_customer_support_ai_5_G3_ALIGNMENT_OFFSET_2_0009__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_customer_support_ai_5"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canvas empty. This violates the density rule by being significantly under-utilized."", ",page
+part2_doc_search_1_G3_ALIGNMENT_OFFSET_32_0000__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_doc_search_1"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains only four short lines of text and leaves the majority of the canvas (approx. 70%) completely empty, violating standard density and layout expectations for a presentati",page
+part2_doc_search_1_G3_ALIGNMENT_OFFSET_4_0000__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_doc_search_1"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains only four short lines of text and leaves the majority of the canvas (approx. 70%) completely empty, violating standard density and layout expectations for a presentati",page
+part2_doc_search_2_G3_ALIGNMENT_OFFSET_32_0001__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_doc_search_2"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canvas empty. This violates the density rule which requires slides to be sufficiently populated",page
+part2_doc_search_2_G3_ALIGNMENT_OFFSET_4_0001__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_doc_search_2"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canvas empty. This violates the density rule which requires slides to be sufficiently populated",page
+part2_doc_search_3_G3_ALIGNMENT_OFFSET_32_0002__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_doc_search_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canvas empty",page
+part2_doc_search_4_G3_ALIGNMENT_OFFSET_32_0003__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_doc_search_4"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'Impact FindFast drives on time saved' suggests a focus on efficiency metrics or time-saving results. However, the body content lists operational details ('Risks are tracked weekl",page
+part2_doc_search_4_G3_ALIGNMENT_OFFSET_4_0003__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_doc_search_4"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'Impact FindFast drives on time saved' suggests a focus on efficiency metrics or time-saving results. However, the body content lists operational details ('Risks are tracked weekl",page
+part2_doc_search_3_G3_ALIGNMENT_OFFSET_4_0002__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_doc_search_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canvas empty",page
+part2_doc_search_5_G3_ALIGNMENT_OFFSET_32_0004__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_doc_search_5"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title is 'The FindFast rollout plan', but the body text describes past results ('Adoption grew', 'handles most volume', 'tickets fell') rather than a future plan."", ""fix_suggestion"": ""C",page
+part2_doc_search_5_G3_ALIGNMENT_OFFSET_4_0004__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_doc_search_5"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title is 'The FindFast rollout plan', but the body text describes past results ('Adoption grew', 'handles most volume', 'tickets fell') rather than a future plan."", ""fix_suggestion"": ""C",page
+part2_energy_forecasting_2_G3_ALIGNMENT_OFFSET_32_0006__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_energy_forecasting_2"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canv",page
+part2_energy_forecasting_2_G3_ALIGNMENT_OFFSET_4_0006__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_energy_forecasting_2"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canv",page
+part2_energy_forecasting_1_G3_ALIGNMENT_OFFSET_32_0005__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_energy_forecasting_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Demand spikes strain the grid' describes a problem or context, but the body conte",page
+part2_energy_forecasting_1_G3_ALIGNMENT_OFFSET_4_0005__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_energy_forecasting_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Demand spikes strain the grid' describes a problem or context, but the body conte",page
+part2_energy_forecasting_3_G3_ALIGNMENT_OFFSET_32_0007__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"```json
+{
+""has_defect"": true,
+""findings"": [
+{
+""type"": ""S1_TITLE_BODY_MISMATCH"",
+""severity"": ""severe"",
+""locator"": {
+""level"": ""page"",
+""page_id"": ""part2_energy_forecasting_3"",
+""element_id"": null,
+""related_page_ids"": []
+},
+""evidence"": ""The slide title is 'How GridCast models weather', but the body content lists project management tasks ('Approve the phase 1 budget', 'Assign two platform engineers', 'C",page
+part2_energy_forecasting_3_G3_ALIGNMENT_OFFSET_4_0007__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"```json
+{
+""has_defect"": true,
+""findings"": [
+{
+""type"": ""S1_TITLE_BODY_MISMATCH"",
+""severity"": ""severe"",
+""locator"": {
+""level"": ""page"",
+""page_id"": ""part2_energy_forecasting_3"",
+""element_id"": null,
+""related_page_ids"": []
+},
+""evidence"": ""The slide title is 'How GridCast models weather', but the body content lists project management tasks ('Approve the phase 1 budget', 'Assign two platform engineers', 'C",page
+part2_energy_forecasting_4_G3_ALIGNMENT_OFFSET_32_0008__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_energy_forecasting_4"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canvas empty. This violates the density rule which requires slides to be sufficiently p",page
+part2_energy_forecasting_4_G3_ALIGNMENT_OFFSET_4_0008__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_energy_forecasting_4"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canvas empty. This violates the density rule which requires slides to be sufficiently p",page
+part2_energy_forecasting_5_G3_ALIGNMENT_OFFSET_32_0009__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_energy_forecasting_5"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canvas empty. This violates the density rule which requires slides to be sufficiently p",page
+part2_energy_forecasting_5_G3_ALIGNMENT_OFFSET_4_0009__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_energy_forecasting_5"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canvas empty. This violates the density rule which requires slides to be sufficiently p",page
+part2_hr_analytics_1_G3_ALIGNMENT_OFFSET_48_0000__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_hr_analytics_1"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title states 'Attrition is rising quietly', but the body text lists positive metrics: 'Adoption grew', 'PeoplePulse now handles most volume', and 'Support tickets fell steadily'. Ther",page
+part2_hr_analytics_2_G3_ALIGNMENT_OFFSET_48_0001__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_hr_analytics_2"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'PeoplePulse surfaces early signals' suggests a data or insight slide, but the body content lists resource requirements and a call to action ('We need executive sponsorship', 'A",page
+part2_hr_analytics_3_G3_ALIGNMENT_OFFSET_48_0002__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_hr_analytics_3"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains very little content (only a title and three short lines of text) and leaves the majority of the canvas empty, violating the rule against low density/under-utilizatio",page
+part2_hr_analytics_4_G3_ALIGNMENT_OFFSET_48_0003__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_hr_analytics_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'Impact PeoplePulse can drive', but the body content lists technical implementation p",page
+part2_hr_analytics_5_G3_ALIGNMENT_OFFSET_48_0004__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_hr_analytics_5"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canvas emp",page
+part2_inventory_optimization_1_G3_ALIGNMENT_OFFSET_48_0005__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_inventory_optimization_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains only four short lines of text and occupies less than 20% of the availabl",page
+part2_inventory_optimization_3_G3_ALIGNMENT_OFFSET_48_0007__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_inventory_optimization_3"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains only a title and three short text lines, leaving the majority of the canvas empty. This violates the density rule by being significantly under-utilized."", ",page
+part2_inventory_optimization_2_G3_ALIGNMENT_OFFSET_48_0006__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+""has_defect"": true,
+""findings"": [
+{
+""type"": ""S4_DENSITY_RULE_VIOLATION"",
+""severity"": ""severe"",
+""locator"": {
+""level"": ""page"",
+""page_id"": ""part2_inventory_optimization_2"",
+""element_id"": null,
+""related_page_ids"": []
+},
+""evidence"": ""The slide contains very little content (a title and 5 short lines) but occupies the top 40% of the canvas, leaving the bottom 60% completely empty. This violates",page
+part2_inventory_optimization_4_G3_ALIGNMENT_OFFSET_48_0008__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_inventory_optimization_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the ",page
+part2_inventory_optimization_5_G3_ALIGNMENT_OFFSET_48_0009__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_inventory_optimization_5"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canvas empty. This violates the density rule which requires slides to be sufficient",page
+part2_logistics_visibility_1_G3_ALIGNMENT_OFFSET_64_0000__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_logistics_visibility_1"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'Shipments go dark in transit' describes a problem or scenario, while the body content lists a technical roadmap (Phase 1-5) for stabilizing and refactoring 'ShipEye'. T",page
+part2_logistics_visibility_1_G3_ALIGNMENT_OFFSET_8_0000__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_logistics_visibility_1"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'Shipments go dark in transit' describes a problem or scenario, while the body content lists a technical roadmap (Phase 1-5) for stabilizing and refactoring 'ShipEye'. T",page
+part2_logistics_visibility_2_G3_ALIGNMENT_OFFSET_64_0001__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_logistics_visibility_2"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'Why visibility breaks down' suggests a problem analysis or diagnostic slide, but the body content lists a project timeline ('Q1 foundation...', 'Q2 first production...'",page
+part2_logistics_visibility_2_G3_ALIGNMENT_OFFSET_8_0001__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_logistics_visibility_2"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'Why visibility breaks down' suggests a problem analysis or diagnostic slide, but the body content lists a project timeline ('Q1 foundation...', 'Q2 first production...'",page
+part2_logistics_visibility_4_G3_ALIGNMENT_OFFSET_64_0003__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_logistics_visibility_4"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'ShipEye impact on on-time delivery' suggests a results or analysis slide, but the body content lists administrative action items ('Approve budget', 'Assign engineers', ",page
+part2_logistics_visibility_3_G3_ALIGNMENT_OFFSET_8_0002__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_logistics_visibility_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the ca",page
+part2_logistics_visibility_3_G3_ALIGNMENT_OFFSET_64_0002__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_logistics_visibility_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the ca",page
+part2_logistics_visibility_4_G3_ALIGNMENT_OFFSET_8_0003__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_logistics_visibility_4"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'ShipEye impact on on-time delivery' suggests a results or analysis slide, but the body content lists administrative action items ('Approve budget', 'Assign engineers', ",page
+part2_logistics_visibility_5_G3_ALIGNMENT_OFFSET_64_0004__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_logistics_visibility_5"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the ca",page
+part2_logistics_visibility_5_G3_ALIGNMENT_OFFSET_8_0004__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_logistics_visibility_5"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the ca",page
+part2_marketing_attribution_2_G3_ALIGNMENT_OFFSET_64_0006__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_marketing_attribution_2"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'How Attrib models touchpoints' suggests a technical explanation of a methodology, but the body text ('Adoption grew...', 'Support tickets fell...') lists business outc",page
+part2_marketing_attribution_2_G3_ALIGNMENT_OFFSET_8_0006__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_marketing_attribution_2"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'How Attrib models touchpoints' suggests a technical explanation of a methodology, but the body text ('Adoption grew...', 'Support tickets fell...') lists business outc",page
+part2_marketing_attribution_3_G3_ALIGNMENT_OFFSET_64_0007__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_marketing_attribution_3"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canvas empty. This violates the density rule by being significantly under-utilized.""",page
+part2_marketing_attribution_3_G3_ALIGNMENT_OFFSET_8_0007__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_marketing_attribution_3"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canvas empty. This violates the density rule by being significantly under-utilized.""",page
+part2_marketing_attribution_1_G3_ALIGNMENT_OFFSET_64_0005__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_marketing_attribution_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'Spend is hard to attribute' suggests a problem or challenge regarding attribution. H",page
+part2_marketing_attribution_1_G3_ALIGNMENT_OFFSET_8_0005__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_marketing_attribution_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'Spend is hard to attribute' suggests a problem or challenge regarding attribution. H",page
+part2_marketing_attribution_4_G3_ALIGNMENT_OFFSET_64_0008__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_marketing_attribution_4"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canvas empty. This violates the density rule by being significantly under-utilized.""",page
+part2_marketing_attribution_4_G3_ALIGNMENT_OFFSET_8_0008__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_marketing_attribution_4"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canvas empty. This violates the density rule by being significantly under-utilized.""",page
+part2_marketing_attribution_5_G3_ALIGNMENT_OFFSET_64_0009__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+""has_defect"": true,
+""findings"": [
+{
+""type"": ""S4_DENSITY_RULE_VIOLATION"",
+""severity"": ""severe"",
+""locator"": {
+""level"": ""page"",
+""page_id"": ""part2_marketing_attribution_5"",
+""element_id"": null,
+""related_page_ids"": []
+},
+""evidence"": ""The slide contains very little content (a title and 5 short lines) but occupies the top 40% of the canvas, leaving the bottom 60% completely empty. This violates ",page
+part2_hr_analytics_2_G5_BRAND_COLOR_VIOLATION_6_0001__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_hr_analytics_2"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'PeoplePulse surfaces early signals' suggests a data or insight slide, but the body content lists resource requirements and a call to action ('We need executive sponsorship', 'A",page
+part2_marketing_attribution_5_G3_ALIGNMENT_OFFSET_8_0009__freeform__CLEAN,G3_ALIGNMENT_OFFSET,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+""has_defect"": true,
+""findings"": [
+{
+""type"": ""S4_DENSITY_RULE_VIOLATION"",
+""severity"": ""severe"",
+""locator"": {
+""level"": ""page"",
+""page_id"": ""part2_marketing_attribution_5"",
+""element_id"": null,
+""related_page_ids"": []
+},
+""evidence"": ""The slide contains very little content (a title and 5 short lines) but occupies the top 40% of the canvas, leaving the bottom 60% completely empty. This violates ",page
+part2_hr_analytics_1_G5_BRAND_COLOR_VIOLATION_6_0000__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_hr_analytics_1"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title states 'Attrition is rising quietly', but the body text lists positive metrics: 'Adoption grew', 'PeoplePulse now handles most volume', and 'Support tickets fell steadily'. Ther",page
+part2_hr_analytics_3_G5_BRAND_COLOR_VIOLATION_6_0002__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_hr_analytics_3"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains very little content (only a title and three short lines of text) and leaves the majority of the canvas empty, violating the rule against low density/under-utilizatio",page
+part2_hr_analytics_4_G5_BRAND_COLOR_VIOLATION_6_0003__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_hr_analytics_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'Impact PeoplePulse can drive', but the body content lists technical implementation p",page
+part2_hr_analytics_5_G5_BRAND_COLOR_VIOLATION_6_0004__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_hr_analytics_5"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canvas empty. This violates the density rule by being significantly under-utilized."", ""fix_su",page
+part2_inventory_optimization_3_G5_BRAND_COLOR_VIOLATION_6_0007__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_inventory_optimization_3"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains only a title and three short text lines, leaving the majority of the canvas empty. This violates the density rule by being significantly under-utilized."", ",page
+part2_inventory_optimization_1_G5_BRAND_COLOR_VIOLATION_6_0005__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_inventory_optimization_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains only four short lines of text and is otherwise completely empty, failing",page
+part2_inventory_optimization_2_G5_BRAND_COLOR_VIOLATION_6_0006__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+""has_defect"": true,
+""findings"": [
+{
+""type"": ""S4_DENSITY_RULE_VIOLATION"",
+""severity"": ""severe"",
+""locator"": {
+""level"": ""page"",
+""page_id"": ""part2_inventory_optimization_2"",
+""element_id"": null,
+""related_page_ids"": []
+},
+""evidence"": ""The slide contains very little content (a title and 5 short lines) but occupies the top 40% of the canvas, leaving the bottom 60% completely empty. This violates",page
+part2_inventory_optimization_4_G5_BRAND_COLOR_VIOLATION_6_0008__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_inventory_optimization_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the ",page
+part2_inventory_optimization_5_G5_BRAND_COLOR_VIOLATION_6_0009__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""moderate"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_inventory_optimization_5"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title is 'Funding the StockIQ rollout', but the body content lists operational tasks ('Assign two platform engineers', 'Confirm the cutover freeze window') rather than fin",page
+part2_payments_modernization_1_G5_BRAND_COLOR_VIOLATION_24_0000__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_payments_modernization_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the ",page
+part2_payments_modernization_2_G5_BRAND_COLOR_VIOLATION_24_0001__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_payments_modernization_2"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'Gaps in the current stack' implies a discussion of deficiencies or missing elements. However, the body text lists positive outcomes ('beat the baseline', 'Results hel",page
+part2_payments_modernization_3_G5_BRAND_COLOR_VIOLATION_24_0002__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_payments_modernization_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the ",page
+part2_payments_modernization_4_G5_BRAND_COLOR_VIOLATION_24_0003__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_payments_modernization_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the ",page
+part2_pricing_optimization_1_G5_BRAND_COLOR_VIOLATION_24_0005__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_pricing_optimization_1"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canvas empty. This violates standard density rules which require slides to be suffici",page
+part2_payments_modernization_5_G5_BRAND_COLOR_VIOLATION_24_0004__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_payments_modernization_5"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'What PayCore needs to launch' implies a list of requirements or prerequisites. However, the body text ('Adoption grew month over month', 'PayCore now handles most vol",page
+part2_pricing_optimization_2_G5_BRAND_COLOR_VIOLATION_24_0006__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_pricing_optimization_2"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains only four short text lines and leaves the majority of the canvas (approx. ",page
+part2_pricing_optimization_3_G5_BRAND_COLOR_VIOLATION_24_0007__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_pricing_optimization_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the ca",page
+part2_pricing_optimization_5_G5_BRAND_COLOR_VIOLATION_24_0009__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_pricing_optimization_5"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains very little content (only a title and three short lines) and leaves the majority of the canvas empty, violating the rule against low density/under-utilizatio",page
+part2_pricing_optimization_4_G5_BRAND_COLOR_VIOLATION_24_0008__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_pricing_optimization_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the ca",page
+part2_retail_analytics_1_G5_BRAND_COLOR_VIOLATION_12_0000__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_retail_analytics_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Stores fly blind on stock' describes a business problem or context, but the body co",page
+part2_retail_analytics_1_G5_BRAND_COLOR_VIOLATION_40_0000__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_retail_analytics_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'Stores fly blind on stock' describes a business problem or context, but the body co",page
+part2_retail_analytics_2_G5_BRAND_COLOR_VIOLATION_12_0001__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_retail_analytics_2"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'DemandSense senses demand hourly' describes a specific technical capability (hourly sensing), while the body content lists a project timeline (Q1 foundation, Q2 production,",page
+part2_retail_analytics_2_G5_BRAND_COLOR_VIOLATION_40_0001__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_retail_analytics_2"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title 'DemandSense senses demand hourly' describes a specific technical capability (freque",page
+part2_retail_analytics_3_G5_BRAND_COLOR_VIOLATION_40_0002__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_retail_analytics_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains only a title and three short text lines, leaving the majority of the canvas em",page
+part2_retail_analytics_3_G5_BRAND_COLOR_VIOLATION_12_0002__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_retail_analytics_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canvas",page
+part2_retail_analytics_4_G5_BRAND_COLOR_VIOLATION_12_0003__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_retail_analytics_4"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canvas empty. This violates the density rule by being significantly under-utilized."", ""fi",page
+part2_retail_analytics_4_G5_BRAND_COLOR_VIOLATION_40_0003__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_retail_analytics_4"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canvas empty. This violates the density rule by being significantly under-utilized."", ""fi",page
+part2_retail_analytics_5_G5_BRAND_COLOR_VIOLATION_12_0004__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_retail_analytics_5"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains only a title and three short text lines, leaving the majority of the canvas empty. This violates the density rule by being significantly under-utilized."", ""fix_s",page
+part2_retail_analytics_5_G5_BRAND_COLOR_VIOLATION_40_0004__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_retail_analytics_5"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains only a title and three short text lines, leaving the majority of the canvas empty. This violates the density rule by being significantly under-utilized."", ""fix_s",page
+part2_security_program_1_G5_BRAND_COLOR_VIOLATION_12_0005__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_security_program_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'Our exposure is growing fast' implies a problem or risk analysis, but the body content li",page
+part2_security_program_2_G5_BRAND_COLOR_VIOLATION_12_0006__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_security_program_2"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canvas",page
+part2_security_program_1_G5_BRAND_COLOR_VIOLATION_40_0005__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_security_program_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'Our exposure is growing fast' implies a discussion about security risks or threat metrics",page
+part2_security_program_2_G5_BRAND_COLOR_VIOLATION_40_0006__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_security_program_2"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canvas",page
+part2_security_program_3_G5_BRAND_COLOR_VIOLATION_40_0007__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_security_program_3"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'The ZeroTrust controls we deploy' implies a list of security controls (e.g., MFA, encryption), but the body content lists project management tasks ('Approve budget', 'Assig",page
+part2_security_program_3_G5_BRAND_COLOR_VIOLATION_12_0007__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_security_program_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'The ZeroTrust controls we deploy' implies a list of security controls (e.g., MFA, encrypt",page
+part2_security_program_4_G5_BRAND_COLOR_VIOLATION_12_0008__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_security_program_4"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canvas empty. This violates the density rule by being significantly under-utilized."", ""fi",page
+part2_security_program_4_G5_BRAND_COLOR_VIOLATION_40_0008__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_security_program_4"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canvas empty. This violates the density rule by being significantly under-utilized."", ""fi",page
+part2_security_program_5_G5_BRAND_COLOR_VIOLATION_12_0009__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_security_program_5"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'The investment we request' implies a financial ask or budget summary, but the body text describes technical benefits (automation, error rates) without mentioning any invest",page
+part2_security_program_5_G5_BRAND_COLOR_VIOLATION_40_0009__freeform,G5_BRAND_COLOR_VIOLATION,A,False,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"```json
+{
+""has_defect"": true,
+""findings"": [
+{
+""type"": ""S1_TITLE_BODY_MISMATCH"",
+""severity"": ""severe"",
+""locator"": {
+""level"": ""page"",
+""page_id"": ""part2_security_program_5"",
+""element_id"": null,
+""related_page_ids"": []
+},
+""evidence"": ""The title 'The investment we request' implies a financial ask or budget summary, but the body text describes the technical benefits of a solution (automation, error reduc",page
+part2_hr_analytics_2_G5_BRAND_COLOR_VIOLATION_6_0001__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_hr_analytics_2"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'PeoplePulse surfaces early signals' suggests a data or insight slide, but the body content lists resource requirements and a call to action ('We need executive sponsorship', 'A",page
+part2_hr_analytics_1_G5_BRAND_COLOR_VIOLATION_6_0000__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_hr_analytics_1"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title states 'Attrition is rising quietly', but the body text lists positive metrics: 'Adoption grew', 'PeoplePulse now handles most volume', and 'Support tickets fell steadily'. Ther",page
+part2_hr_analytics_3_G5_BRAND_COLOR_VIOLATION_6_0002__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_hr_analytics_3"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains very little content (only a title and three short lines of text) and leaves the majority of the canvas empty, violating the rule against low density/under-utilizatio",page
+part2_hr_analytics_4_G5_BRAND_COLOR_VIOLATION_6_0003__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_hr_analytics_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide title is 'Impact PeoplePulse can drive', but the body content lists technical implementation p",page
+part2_hr_analytics_5_G5_BRAND_COLOR_VIOLATION_6_0004__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_hr_analytics_5"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canvas emp",page
+part2_inventory_optimization_3_G5_BRAND_COLOR_VIOLATION_6_0007__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_inventory_optimization_3"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains only a title and three short text lines, leaving the majority of the canvas empty. This violates the density rule by being significantly under-utilized."", ",page
+part2_inventory_optimization_1_G5_BRAND_COLOR_VIOLATION_6_0005__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_inventory_optimization_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains only four short lines of text and occupies less than 20% of the availabl",page
+part2_inventory_optimization_2_G5_BRAND_COLOR_VIOLATION_6_0006__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+""has_defect"": true,
+""findings"": [
+{
+""type"": ""S4_DENSITY_RULE_VIOLATION"",
+""severity"": ""severe"",
+""locator"": {
+""level"": ""page"",
+""page_id"": ""part2_inventory_optimization_2"",
+""element_id"": null,
+""related_page_ids"": []
+},
+""evidence"": ""The slide contains very little content (a title and 5 short lines) but occupies the top 40% of the canvas, leaving the bottom 60% completely empty. This violates",page
+part2_inventory_optimization_4_G5_BRAND_COLOR_VIOLATION_6_0008__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_inventory_optimization_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the ",page
+part2_inventory_optimization_5_G5_BRAND_COLOR_VIOLATION_6_0009__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_inventory_optimization_5"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canvas empty. This violates the density rule which requires slides to be sufficient",page
+part2_payments_modernization_1_G5_BRAND_COLOR_VIOLATION_24_0000__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_payments_modernization_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the ",page
+part2_payments_modernization_2_G5_BRAND_COLOR_VIOLATION_24_0001__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_payments_modernization_2"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'Gaps in the current stack' implies a discussion of deficiencies or missing elements. However, the body text lists positive outcomes ('beat the baseline', 'Results hel",page
+part2_payments_modernization_3_G5_BRAND_COLOR_VIOLATION_24_0002__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_payments_modernization_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the ",page
+part2_pricing_optimization_1_G5_BRAND_COLOR_VIOLATION_24_0005__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_pricing_optimization_1"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canvas empty. This violates standard density rules which require slides to be suffici",page
+part2_payments_modernization_4_G5_BRAND_COLOR_VIOLATION_24_0003__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_payments_modernization_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the ",page
+part2_payments_modernization_5_G5_BRAND_COLOR_VIOLATION_24_0004__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_payments_modernization_5"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'What PayCore needs to launch' implies a list of requirements or prerequisites. However, the body text ('Adoption grew month over month', 'PayCore now handles most vol",page
+part2_pricing_optimization_2_G5_BRAND_COLOR_VIOLATION_24_0006__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_pricing_optimization_2"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains only four short text lines and leaves the majority of the canvas (approx. ",page
+part2_pricing_optimization_3_G5_BRAND_COLOR_VIOLATION_24_0007__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_pricing_optimization_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the ca",page
+part2_pricing_optimization_5_G5_BRAND_COLOR_VIOLATION_24_0009__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_pricing_optimization_5"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canvas empty. This violates the density rule by being significantly under-utilized."",",page
+part2_pricing_optimization_4_G5_BRAND_COLOR_VIOLATION_24_0008__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_pricing_optimization_4"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains only a title and three short text lines, leaving the majority of the canva",page
+part2_retail_analytics_1_G5_BRAND_COLOR_VIOLATION_12_0000__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_retail_analytics_1"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'Stores fly blind on stock' describes a problem or pain point, but the body content lists a technical implementation roadmap (Phase 1-5) for a system called DemandSense. The",page
+part2_retail_analytics_1_G5_BRAND_COLOR_VIOLATION_40_0000__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_retail_analytics_1"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'Stores fly blind on stock' describes a problem or pain point, but the body content lists a technical implementation roadmap (Phase 1-5) for a system called DemandSense. The",page
+part2_retail_analytics_2_G5_BRAND_COLOR_VIOLATION_12_0001__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_retail_analytics_2"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'DemandSense senses demand hourly' describes a specific technical capability (hourly sensing), while the body content lists a project timeline (Q1 foundation, Q2 production,",page
+part2_retail_analytics_2_G5_BRAND_COLOR_VIOLATION_40_0001__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_retail_analytics_2"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'DemandSense senses demand hourly' describes a specific technical capability (hourly sensing), while the body content lists a project timeline (Q1 foundation, Q2 production,",page
+part2_retail_analytics_4_G5_BRAND_COLOR_VIOLATION_12_0003__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_retail_analytics_4"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canvas empty. This violates the density rule by being significantly under-utilized."", ""fi",page
+part2_retail_analytics_4_G5_BRAND_COLOR_VIOLATION_40_0003__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_retail_analytics_4"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canvas empty. This violates the density rule by being significantly under-utilized."", ""fi",page
+part2_retail_analytics_3_G5_BRAND_COLOR_VIOLATION_12_0002__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_retail_analytics_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canvas",page
+part2_retail_analytics_3_G5_BRAND_COLOR_VIOLATION_40_0002__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_retail_analytics_3"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canvas",page
+part2_retail_analytics_5_G5_BRAND_COLOR_VIOLATION_12_0004__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_retail_analytics_5"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canvas empty. This violates the density rule by being significantly under-utilized."", ""fi",page
+part2_retail_analytics_5_G5_BRAND_COLOR_VIOLATION_40_0004__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_retail_analytics_5"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canvas empty. This violates the density rule by being significantly under-utilized."", ""fi",page
+part2_security_program_1_G5_BRAND_COLOR_VIOLATION_12_0005__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_security_program_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'Our exposure is growing fast' implies a problem or risk analysis, but the body content li",page
+part2_security_program_2_G5_BRAND_COLOR_VIOLATION_12_0006__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_security_program_2"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canvas",page
+part2_security_program_1_G5_BRAND_COLOR_VIOLATION_40_0005__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S1_TITLE_BODY_MISMATCH"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_security_program_1"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The title 'Our exposure is growing fast' implies a problem or risk analysis, but the body content li",page
+part2_security_program_2_G5_BRAND_COLOR_VIOLATION_40_0006__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"```json
+{
+  ""has_defect"": true,
+  ""findings"": [
+    {
+      ""type"": ""S4_DENSITY_RULE_VIOLATION"",
+      ""severity"": ""severe"",
+      ""locator"": {
+        ""level"": ""page"",
+        ""page_id"": ""part2_security_program_2"",
+        ""element_id"": null,
+        ""related_page_ids"": []
+      },
+      ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canvas",page
+part2_security_program_3_G5_BRAND_COLOR_VIOLATION_12_0007__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_security_program_3"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'The ZeroTrust controls we deploy' implies a list of security controls (e.g., MFA, encryption), but the body content lists project management tasks ('Approve budget', 'Assig",page
+part2_security_program_3_G5_BRAND_COLOR_VIOLATION_40_0007__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S1_TITLE_BODY_MISMATCH"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_security_program_3"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The title 'The ZeroTrust controls we deploy' implies a list of security controls (e.g., MFA, encryption), but the body content lists project management tasks ('Approve budget', 'Assig",page
+part2_security_program_4_G5_BRAND_COLOR_VIOLATION_12_0008__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_security_program_4"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canvas empty. This violates the density rule by being significantly under-utilized."", ""fi",page
+part2_security_program_4_G5_BRAND_COLOR_VIOLATION_40_0008__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,True,False,"[""S4_DENSITY_RULE_VIOLATION""]",,,[],"{""has_defect"": true, ""findings"": [{""type"": ""S4_DENSITY_RULE_VIOLATION"", ""severity"": ""severe"", ""locator"": {""level"": ""page"", ""page_id"": ""part2_security_program_4"", ""element_id"": null, ""related_page_ids"": []}, ""evidence"": ""The slide contains only a title and three short bullet points, leaving the majority of the canvas empty. This violates the density rule by being significantly under-utilized."", ""fi",page
+part2_security_program_5_G5_BRAND_COLOR_VIOLATION_12_0009__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"```json
+{
+""has_defect"": true,
+""findings"": [
+{
+""type"": ""S1_TITLE_BODY_MISMATCH"",
+""severity"": ""severe"",
+""locator"": {
+""level"": ""page"",
+""page_id"": ""part2_security_program_5"",
+""element_id"": null,
+""related_page_ids"": []
+},
+""evidence"": ""The title 'The investment we request' implies a financial ask or budget summary, but the body text describes technical benefits (automation, error reduction) without ment",page
+part2_security_program_5_G5_BRAND_COLOR_VIOLATION_40_0009__freeform__CLEAN,G5_BRAND_COLOR_VIOLATION,A,True,False,True,False,"[""S1_TITLE_BODY_MISMATCH""]",,,[],"```json
+{
+""has_defect"": true,
+""findings"": [
+{
+""type"": ""S1_TITLE_BODY_MISMATCH"",
+""severity"": ""severe"",
+""locator"": {
+""level"": ""page"",
+""page_id"": ""part2_security_program_5"",
+""element_id"": null,
+""related_page_ids"": []
+},
+""evidence"": ""The title 'The investment we request' implies a financial ask or budget summary, but the body text describes technical benefits ('Current process is mostly manual', 'Zero",page

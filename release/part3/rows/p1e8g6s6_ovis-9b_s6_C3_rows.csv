@@ -1,0 +1,95 @@
+sample_id,defect,modality,is_clean,failure,has_defect,named_target,predicted_types,locator,confidence,other,raw,level
+imgslide_2_S6_IMAGE_TEXT_CONTRADICTION_1_0004__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the left - hand light blue box with the red triangle and text"",""region"":""left""}",1.0,[],"<think>
+用户现在需要检查图表和文字是否矛盾。看左边的图，文字说明是“Page load time got faster every release”，但右边的文字说“Page load time got slower every release”。所以图的文字和旁边文字矛盾。证据元素是左边的图区域，位置是left。所以present为true。</think>
+
+{""present"": true, ""evidence_element"": ""the left - hand light blue box with the red triangle and text"", ""evidence_region"": ""left"", ""confidence"": 1.0}",page
+imgslide_3_S6_IMAGE_TEXT_CONTRADICTION_1_0005__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the left - hand figure with the title 'FIGURE: Market share expanded across all regions'"",""region"":""left""}",1.0,[],"<think>
+用户现在需要检查图表和文字是否矛盾。看左边的图，标题是“FIGURE: Market share expanded across all regions”，但右边的文字说“Market share contracted across all regions”。所以图的文字和旁边文字矛盾。证据元素是左边的图（包含标题），位置是left。所以present为true。</think>
+
+{""present"": true, ""evidence_element"": ""the left - hand figure with the title 'FIGURE: Market share expanded across all regions'"", ""evidence_region"": ""left"", ""confidence"": 1.0}",page
+imgslide_1_S6_IMAGE_TEXT_CONTRADICTION_1_0003__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the left - hand image area"",""region"":""left""}",1.0,[],"<think>
+用户现在需要判断图表（这里图像是占位符，文字说明是“Customer churn dropped to a record low”）和旁边文字是否矛盾。右边的文字是“Customer churn climbed to a record high”，而左边图像文字是下降，所以存在矛盾。要确定元素：左边的图像区域（因为文字在左边图像下方），位置是left。然后confidence设为1.0。</think>
+
+{""present"": true, ""evidence_element"": ""the left - hand image area"", ""evidence_region"": ""left"", ""confidence"": 1.0}",page
+imgslide_11_S6_IMAGE_TEXT_CONTRADICTION_1_0001__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the left - hand figure's caption"",""region"":""left""}",1.0,[],"<think>
+用户现在需要检查图表和文字是否矛盾。看左边的图，文字说明是“FIGURE: Energy use per unit dropped steadily”，但右边的文字块里有“Energy use per unit rose steadily”。所以图的文字说下降，而旁边文字说上升，存在矛盾。所以present是true，证据元素是左边的图（因为图的文字描述和旁边文字块内容相反）。然后确定位置等。</think>
+
+{""present"": true, ""evidence_element"": ""the left - hand figure's caption"", ""evidence_region"": ""left"", ""confidence"": 1.0}",page
+imgslide_4_S6_IMAGE_TEXT_CONTRADICTION_1_0006__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the large light - blue rectangle on the left containing 'FIGURE: The defect rate declined every sprint'"",""region"":""left""}",1.0,[],"<think>
+用户现在需要分析图表和文字是否矛盾。看左边的图（FIGURE）文字是“The defect rate declined every sprint”，而右边的文字有“The defect rate rose every sprint”。所以图的文字和旁边文字矛盾。要确定元素：左边的大矩形区域是图，文字内容冲突。所以present为true，证据元素是左边的大矩形（包含FIGURE的文字），位置是left。然后confidence设为1.0。</think>
+
+{""present"": true, ""evidence_element"": ""the large light - blue rectangle on the left containing 'FIGURE: The defect rate declined every sprint'"", ""evidence_region",page
+imgslide_9_S6_IMAGE_TEXT_CONTRADICTION_1_0011__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the left - hand light - blue box containing the figure description"",""region"":""left""}",0.9,[],"<think>
+用户现在需要检查图表、图示或图像是否与附近文字矛盾。看左边的图，文字是“FIGURE: Support backlog shrank week over week”，而右边的文字有“Support backlog grew week over week”。所以图的文字和右边文字内容相反，存在矛盾。要确定元素：左边的图区域（因为图的文字描述和右边文字冲突）。然后判断present为true，证据元素是左边的图区域，位置是left。信心度比如0.9。</think>
+
+{""present"": true, ""evidence_element"": ""the left - hand light - blue box containing the figure description"", ""evidence_region"": ""left"", ""confidence"": 0.9}",page
+imgslide_7_S6_IMAGE_TEXT_CONTRADICTION_1_0009__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the left - hand figure with the green triangle and the caption 'FIGURE: NPS climbed into the eighties'"",""region"":""left""}",1.0,[],"<think>
+用户现在需要判断图表和文字是否矛盾。看左边的图，标题是“FIGURE: NPS climbed into the eighties”，但右边文字说“NPS sank into the thirties”。所以图的文字和右边文字趋势相反，存在矛盾。要确定元素：左边的图（包含三角形和标题），位置是left区域。所以present为true，证据元素是左边的图（包含标题和图形），区域是left。然后confidence设为1.0。</think>
+
+{""present"": true, ""evidence_element"": ""the left - hand figure with the green triangle and the caption 'FIGURE: NPS climbed into the eighties'"", ""evidence_region"": ""left",page
+imgslide_6_S6_IMAGE_TEXT_CONTRADICTION_1_0008__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the right - hand text box with 'Operating costs rose quarter over quarter'"",""region"":""right""}",1.0,[],"<think>
+用户现在需要检查图表和文字是否矛盾。看左边的图，文字说明是“Operating costs fell quarter over quarter”，但右边的文字块里有“Operating costs rose quarter over quarter”。所以图的文字和右侧文字块的内容矛盾。要确定元素：右侧的文字块（比如第一个矩形框里的文字）。然后判断present为true。
+
+首先，分析：右侧的文字块中写的是“Operating costs rose quarter over quarter”，而图下方文字是“fell”，所以存在矛盾。证据元素是右侧的那个文本框（比如第一个矩形区域里的文字）。然后定位区域，比如right区域？或者看具体元素。然后confidence设为1.0，因为明显矛盾。</think>
+
+{""present"": true, ""evidence_elem",page
+imgslide_8_S6_IMAGE_TEXT_CONTRADICTION_1_0010__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the left-hand figure area"",""region"":""left""}",1.0,[],"<think>
+用户现在需要分析图表和文字是否矛盾。看左边的图，文字是“FIGURE: Uptime improved to four nines”，但右边的文字有“Uptime degraded to two nines”。图中是一个绿色三角形，可能代表趋势，但文字里的“degraded”（下降）和“improved”（提升）是否矛盾？不对，再仔细看：右边第一个框是“Uptime degraded to two nines”，而图的说明是“Uptime improved to four nines”。所以图的文字说改善到四九，但右边文字说降级到二九，这明显矛盾。所以present是true，证据元素是左边的图区域，因为图的文字和右边文字内容相反。然后确定元素位置，图在左侧，所以evidence_element是“the left-hand figure area”，evidence_re",page
+imgslide_1_S6_IMAGE_TEXT_CONTRADICTION_1_0003__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,0.0,[],"<think>
+用户现在需要判断是否有图表、图示或图像与附近文字矛盾。看左边的区域，文字是“FIGURE: Customer churn dropped to a record low”，但实际显示的是一个红色倒三角和空白背景，没有图表、图示或图像。所以没有矛盾的情况，present设为false。然后其他字段按要求处理。</think>
+
+{""present"": false, ""evidence_element"": """", ""evidence_region"": """", ""confidence"": 0.0}",page
+imgslide_0_S6_IMAGE_TEXT_CONTRADICTION_1_0002__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the text below the left figure"",""region"":""left""}",0.9,[],"<think>
+用户现在需要检查图表和文字是否矛盾。看左边的图，文字说明是“Quarterly revenue rose sharply in Q4”，但右边的文字说“Quarterly revenue fell sharply in Q4”。所以图的文字和右边文字矛盾？不对，先看元素：左边的图（绿色三角形）下面的文字是FIGURE: Quarterly revenue rose sharply in Q4，而右边的文本框里有“Quarterly revenue fell sharply in Q4”。所以图的文字和右边文字内容相反，属于矛盾。那present是true，证据元素是左边的图的文字说明（FIGURE: ...），位置是left区域。然后confidence给0.9左右？
+
+现在要确定：图的文字是“rose”，右边文字是“fell”，所以矛盾。所以present=true，ev",page
+imgslide_10_S6_IMAGE_TEXT_CONTRADICTION_1_0000__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the left figure's caption"",""region"":""left""}",1.0,[],"<think>
+用户现在需要检查图表和文字是否矛盾。看左边的图，文字是“FIGURE: Conversion rate doubled after the redesign”，而右边的文字有“Conversion rate halved after the redesign”。所以图的文字说加倍，右边文字说减半，存在矛盾。证据元素是左边的图（包含文字说明）和右边的文字区域。需要确定具体元素。左边的图区域里的文字说明和右边的文字内容冲突。所以present为true，evidence_element可以是“the left figure's caption”或者更明确的，比如“the text in the left figure area”？不对，要具体。看结构：左边大矩形是图，里面的文字是“FIGURE: Conversion rate doubled...”，右边两个卡片，第一个是“C",page
+imgslide_3_S6_IMAGE_TEXT_CONTRADICTION_1_0005__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the left-hand figure area"",""region"":""left""}",0.9,[],"<think>
+用户现在需要判断图表是否和文字矛盾。看左边的图，是一个绿色三角形，而文字说“Market share expanded across all regions”和“The chart on the left summarizes the trend.”但图里只有三角形，没有展示趋势（比如折线、柱状等能体现趋势的元素）。所以存在矛盾吗？因为图没有显示趋势，而文字说图表总结趋势。所以present是true，证据元素是左边的图区域，位置是left。然后confidence给0.9左右？
+
+现在要构造JSON。首先确定present为true，evidence_element是“the left-hand figure area”，evidence_region是left，confidence比如0.9。</think>
+
+{""present"": true, ""evidence_e",page
+imgslide_5_S6_IMAGE_TEXT_CONTRADICTION_1_0007__freeform,S6_IMAGE_TEXT_CONTRADICTION,A,False,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the left-hand figure's title"",""region"":""left""}",0.9,[],"<think>
+用户现在需要检查图表和文字是否矛盾。看左边的图，标题是“FIGURE: Signups accelerated after the launch”，但右边的文字说“Signups stalled after the launch”。所以文字描述的是停滞，而图标题说的是加速，这明显矛盾。所以present是true，证据元素是左边的图区域（因为图标题和右边文字冲突），位置是left。然后confidence给0.9左右？不对，要严格看。首先确定：图的标题说accelerated，右边文字说stalled，所以矛盾。所以present=true，evidence_element是“the left-hand figure area”（或者更准确的话，图的标题部分？但用户给的例子比如“the title”等。这里图的标题是“FIGURE: Signups accelerated ",page
+imgslide_2_S6_IMAGE_TEXT_CONTRADICTION_1_0004__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the large light - blue rectangle on the left"",""region"":""left""}",0.9,[],"<think>
+用户现在需要判断是否有图表、图示或图像与附近文字矛盾。看左边的区域，文字是“FIGURE: Page load time got faster every release”，但实际显示的是一个空白区域（没有图表），而右边文字说“The chart on the left summarizes the trend.” 但左边没有图表，所以存在矛盾吗？因为文字提到有图表，但实际没有。所以present为true，证据元素是左边的大矩形区域（因为文字说有图表但实际没有）。然后确定位置是left。信心度比如0.9？
+
+现在检查：左边的区域是大矩形，里面没有图表，而右边文字说“The chart on the left summarizes the trend.” 所以文字声称有图表，但实际没有，属于矛盾。所以present=true，evidence_element是左边的大矩形（",page
+imgslide_6_S6_IMAGE_TEXT_CONTRADICTION_1_0008__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the large light - blue rectangle on the left"",""region"":""left""}",1.0,[],"<think>
+用户现在需要判断是否有图表、图示或图像与附近文字矛盾。看左边的区域，文字是“FIGURE: Operating costs fell quarter over quarter”，但实际显示的是一个红色倒三角（可能是占位符），没有实际图表。所以这里存在矛盾吗？因为文字说有图表总结趋势，但实际显示的是空的（只有倒三角和文字说明）。所以present应该是true，证据元素是左边的大矩形区域（因为里面没有实际图表，只有说明文字和倒三角，而文字说图表总结趋势，但实际没有图表）。然后确定元素位置是left。</think>
+
+{""present"": true, ""evidence_element"": ""the large light - blue rectangle on the left"", ""evidence_region"": ""left"", ""confidence"": 1.0}",page
+imgslide_11_S6_IMAGE_TEXT_CONTRADICTION_1_0001__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,False,False,[],,0.0,[],"<think>
+用户现在需要检查是否有图表、图示或图像与附近文字矛盾。看左边的区域，文字是“FIGURE: Energy use per unit dropped steadily”，但实际显示的是一个红色倒三角（可能是占位符），没有实际的图表、图示或图像。所以是否存在矛盾？因为没有实际的图，文字说的是“the chart on the left summarizes the trend”，但左边没有图，所以是否算contradict？但问题问的是是否有visibly contradict的情况。这里左边没有图，所以可能present=false？因为没有实际的图来和文字对比，或者是否有其他情况？
+
+再仔细看：文字说“The chart on the left summarizes the trend.”，但左边的区域是一个空白的浅蓝色块，里面只有红色倒三角和文字说明，没有实际的chart",page
+imgslide_5_S6_IMAGE_TEXT_CONTRADICTION_1_0007__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the green triangle in the left large rectangle"",""region"":""left""}",1.0,[],"<think>
+用户现在需要检查图表、图示或图像是否与附近文字矛盾。看左边的图，是一个绿色三角形，而文字说明是“Signups accelerated after the launch”（注册加速）。但图中只有三角形，没有显示趋势数据（比如折线、柱状等），所以图和文字之间是否存在矛盾？因为文字说图表总结趋势，但图里没有实际的趋势展示（比如数值、曲线等），只是三角形。所以这里是否有矛盾？需要判断。但问题是问是否visibly contradict。图中没有显示任何趋势相关的元素（比如时间轴、数值变化），而文字说图表总结趋势，所以图和文字之间存在不一致，因为图没有呈现趋势信息，而文字说图表总结趋势。所以present应该是true？然后看证据元素：左边的大矩形区域里的图（绿色三角形）和文字说明。证据区域是left（因为图在左侧大矩形）。然后confidence设为1.0？
+
+现在整理：pres",page
+imgslide_4_S6_IMAGE_TEXT_CONTRADICTION_1_0006__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the large light - blue rectangle on the left"",""region"":""left""}",1.0,[],"<think>
+用户现在需要检查是否有图表、图示或图像与附近文字矛盾。看左边的区域，文字是“FIGURE: The defect rate declined every sprint”，但实际显示的是一个红色倒三角（可能是占位符），没有实际的图表、图示或图像。所以是否存在矛盾？因为没有实际的图，文字说有图表总结趋势，但实际没有图，所以是否算contradict？这里要判断：文字说“the chart on the left summarizes the trend”，但左边没有chart，只有占位符。所以是否属于contradiction？
+
+现在看问题，问是否有visibly contradict的情况。左边的文字说明有chart，但实际显示的是一个空白区域加倒三角，没有chart。所以存在矛盾吗？是的，因为文字说有chart，但实际没有。所以present=true，证据元素是左边的大",page
+imgslide_8_S6_IMAGE_TEXT_CONTRADICTION_1_0010__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the large light - blue rectangle containing the green triangle and the text 'FIGURE: Uptime improved to four nines'"",""region"":""left""}",0.9,[],"<think>
+用户现在需要判断图表是否和文字矛盾。看左边的图，是一个绿色三角形，而文字说“Uptime improved to four nines”（可用性提升到四个九），但图里没有显示任何数据、趋势或数字，只是个三角形。所以文字提到的趋势、标签或数字在图中没有体现，存在矛盾吗？因为图里没有对应的内容，所以是contradict。那present设为true，证据元素是左边的大矩形区域（包含三角形和文字），位置是left。然后confidence给0.9左右？
+
+检查：文字说“the chart on the left summarizes the trend”，但图里只有三角形，没有总结趋势的内容，所以文字和图矛盾。因此present=true，evidence_element是“the large light - blue rectangle containing the gree",page
+imgslide_7_S6_IMAGE_TEXT_CONTRADICTION_1_0009__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the large light - blue rectangle containing the green triangle and the text 'FIGURE: NPS climbed into the eighties'"",""region"":""left""}",1.0,[],"<think>
+用户现在需要检查图表、图示或图像是否与附近文字矛盾。看左边的图，是一个绿色三角形，文字是“FIGURE: NPS climbed into the eighties”，但图里没有显示任何关于NPS趋势的图表（比如折线、柱状等），只有三角形。所以文字说图表总结趋势，但图里没有实际的图表元素，属于矛盾？不对，再仔细看：文字“the chart on the left summarizes the trend”但图里只是一个三角形，没有图表。所以存在矛盾吗？是的，因为图里没有图表，而文字说有图表总结趋势。所以present为true，证据元素是左边的大矩形区域（包含三角形和文字），位置是left。然后confidence设为1.0？
+
+现在整理：present=true，evidence_element是“the large light - blue rectangle cont",page
+imgslide_0_S6_IMAGE_TEXT_CONTRADICTION_1_0002__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the large light - blue rectangle containing the green triangle and the text 'FIGURE: Quarterly revenue rose sharply in Q4'"",""region"":""left""}",1.0,[],"<think>
+用户现在需要判断图表是否和文字矛盾。看左边的图，是一个绿色三角形，而文字说“Quarterly revenue rose sharply in Q4”（季度收入在Q4急剧上升）。但图里只有三角形，没有展示趋势（比如折线、柱状等显示增长的元素），所以图和文字描述的趋势不匹配？不对，再仔细看：文字里的“the chart on the left summarizes the trend”，但图里只是一个三角形，没有图表元素（比如折线图、柱状图等展示趋势的）。所以存在矛盾吗？
+
+首先，确定是否有可见的图表、 diagram或image与附近文字矛盾。左边的图是一个绿色三角形，而文字说“summarizes the trend”（总结趋势），但三角形无法展示趋势（比如增长、下降等）。所以这里存在矛盾吗？
+
+那present应该是true吗？因为图是三角形，文字说总结趋势，但图没有展",page
+imgslide_9_S6_IMAGE_TEXT_CONTRADICTION_1_0011__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the large light - blue rectangle on the left"",""region"":""left""}",0.9,[],"<think>
+用户现在需要检查是否有图表、图示或图像与附近文字矛盾。看左边的区域，文字是“FIGURE: Support backlog shrank week over week”，但实际显示的是一个红色倒三角（可能是占位符），没有实际图表。所以这里存在矛盾吗？因为文字说有图表总结趋势，但实际显示的是占位符，没有图表。所以present为true，证据元素是左边的大矩形区域（因为里面没有实际图表，只有文字和占位符）。然后确定位置是left。信心度比如0.9？
+
+现在要输出JSON。首先判断present是否true。因为文字说“The chart on the left summarizes the trend.”，但左边区域没有实际图表，只有文字和占位符，所以存在矛盾。所以present=true，evidence_element是“the large light - blue re",page
+imgslide_10_S6_IMAGE_TEXT_CONTRADICTION_1_0000__freeform__CLEAN,S6_IMAGE_TEXT_CONTRADICTION,A,True,False,True,True,"[""S6_IMAGE_TEXT_CONTRADICTION""]","{""element"":""the large light - blue rectangle containing the green triangle and the text 'FIGURE: Conversion rate doubled after the redesign'"",""region"":""left""}",1.0,[],"<think>
+用户现在需要检查图表、图示或图像是否与附近文字矛盾。看左边的图，是一个绿色三角形，而文字说“Conversion rate doubled after the redesign”（转化率翻倍），但图里只有三角形，没有显示数据趋势或数值，所以图和文字之间是否有矛盾？这里图没有展示任何能说明转化率翻倍的内容，比如折线、柱状图等，所以是否存在矛盾？因为图只是三角形，文字说的是趋势，图没显示趋势相关元素，所以是否算contradict？但问题是问是否visibly contradict。那图里没有图表、 diagram或image来展示趋势，所以文字说“the chart on the left summarizes the trend”，但图里没有chart（比如折线图、柱状图等），只有三角形，所以文字提到的chart不存在，或者图没有展示趋势。所以判断是否有contradict",page
