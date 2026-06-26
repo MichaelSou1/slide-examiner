@@ -61,11 +61,42 @@ def one_prop_z(k: int, n: int, p0: float = 0.5) -> float:
     return 2 * (1 - NormalDist().cdf(abs(z)))
 
 
+def _p1e1_g7_c3() -> dict:
+    """Single-source the G7 C3-vs-C0 recovery on the E1 decomposition run
+    (``p1e1_*``, full 90-pair manifest) rather than the capped-60 original p1 run,
+    so the released multiplicity report matches the paper body and Fig. 5. Returns
+    ``{model: (b, c, exact_mcnemar_p)}`` using the identical paired-clean per-image
+    correctness map and exact McNemar test that ``part3_p1_summary`` applies to p1."""
+    from part3_p1_summary import mcnemar_p  # exact two-sided binomial, same definition
+    out: dict = {}
+    for model in CAPABLE_G7_C3:
+        hits: dict = {}
+        for cond in ("C0", "C3"):
+            f = REPO / f"data/part3/p1e1_{model}_g7_{cond}_rows.jsonl"
+            if not f.exists():
+                hits = {}
+                break
+            cm = {}
+            for line in f.open():
+                if not line.strip():
+                    continue
+                r = json.loads(line)
+                if r.get("failure"):
+                    continue
+                cm[r["sample_id"]] = bool(r["has_defect"]) == (not r.get("is_clean"))
+            hits[cond] = cm
+        if hits.get("C0") and hits.get("C3"):
+            p, b, c = mcnemar_p(hits["C0"], hits["C3"])
+            out[model] = (b, c, p)
+    return out
+
+
 def collect_elicitation() -> list[dict]:
     p = REPO / "data/part3/p1_summary.json"
     if not p.exists():
         return []
     s = json.loads(p.read_text())
+    g7 = _p1e1_g7_c3()  # single-source G7 C3 on the full-manifest E1 run
     out = []
     for model, defects in s.get("judgments", {}).items():
         for defect, j in defects.items():
@@ -73,6 +104,8 @@ def collect_elicitation() -> list[dict]:
                 pv = detail.get("mcnemar_p")
                 if pv is None:
                     continue
+                if defect == G7 and cond == "C3" and model in g7:
+                    pv = g7[model][2]
                 out.append({"source": "elicitation",
                             "contrast": f"{model}/{SHORT.get(defect, defect)}/{cond}-vs-C0 McNemar",
                             "p": float(pv), "headline": _is_headline_elicit(model, defect, cond)})
@@ -89,12 +122,16 @@ def pooled_headline() -> list[dict]:
     if not p.exists():
         return []
     s = json.loads(p.read_text())
+    g7 = _p1e1_g7_c3()  # single-source G7 C3 on the full-manifest E1 run
     out = []
     plans = [("G7 C3-vs-C0 (capable models)", G7, "C3", CAPABLE_G7_C3),
              ("G1 C2-vs-C0 (strong Qwens)", G1, "C2", STRONG_G1_C2)]
     for label, defect, cond, models in plans:
         strata = []
         for m in models:
+            if defect == G7 and cond == "C3" and m in g7:
+                strata.append((g7[m][0], g7[m][1]))
+                continue
             gl = (s.get("judgments", {}).get(m, {}).get(defect, {})
                   .get("detail", {}).get(cond, {}).get("mcnemar_gain_loss"))
             if gl:

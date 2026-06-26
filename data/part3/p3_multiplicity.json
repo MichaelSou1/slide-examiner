@@ -2,19 +2,19 @@
   "summary": {
     "n_tests": 61,
     "alpha": 0.05,
-    "n_reject_holm": 22,
+    "n_reject_holm": 23,
     "n_reject_bh": 33
   },
   "pooled_cross_model": [
     {
       "label": "G7 C3-vs-C0 (capable models)",
-      "b": 149,
-      "c": 0,
-      "chi2": 149.0,
+      "b": 233,
+      "c": 2,
+      "chi2": 227.1,
       "p": 0.0,
       "n_strata": 4,
-      "max_c_in_stratum": 0,
-      "consistent": true
+      "max_c_in_stratum": 2,
+      "consistent": false
     },
     {
       "label": "G1 C2-vs-C0 (strong Qwens)",
@@ -51,7 +51,7 @@
     {
       "source": "elicitation",
       "contrast": "gemma4-31b/G7/C3-vs-C0 McNemar",
-      "p": 0.0,
+      "p": 1.1879386363489175e-14,
       "headline": true,
       "holm_p": 0.0,
       "holm_reject": true,
@@ -63,9 +63,9 @@
       "contrast": "gemma4-31b/G1/C1-vs-C0 McNemar",
       "p": 0.0033,
       "headline": false,
-      "holm_p": 0.1188,
+      "holm_p": 0.1155,
       "holm_reject": false,
-      "bh_p": 0.007742,
+      "bh_p": 0.007456,
       "bh_reject": true
     },
     {
@@ -103,9 +103,9 @@
       "contrast": "gemma4-31b/S6/C2-vs-C0 McNemar",
       "p": 0.0026,
       "headline": false,
-      "holm_p": 0.0988,
+      "holm_p": 0.0962,
       "holm_reject": false,
-      "bh_p": 0.006344,
+      "bh_p": 0.0061,
       "bh_reject": true
     },
     {
@@ -113,9 +113,9 @@
       "contrast": "gemma4-31b/S6/C3-vs-C0 McNemar",
       "p": 0.0026,
       "headline": false,
-      "holm_p": 0.0988,
+      "holm_p": 0.0962,
       "holm_reject": false,
-      "bh_p": 0.006344,
+      "bh_p": 0.0061,
       "bh_reject": true
     },
     {
@@ -173,9 +173,9 @@
       "contrast": "internvl-8b/G1/C3-vs-C0 McNemar",
       "p": 0.0001,
       "headline": false,
-      "holm_p": 0.0041,
+      "holm_p": 0.004,
       "holm_reject": true,
-      "bh_p": 0.000277,
+      "bh_p": 0.000265,
       "bh_reject": true
     },
     {
@@ -273,9 +273,9 @@
       "contrast": "ovis-9b/S6/C1-vs-C0 McNemar",
       "p": 0.0001,
       "headline": false,
-      "holm_p": 0.0041,
+      "holm_p": 0.004,
       "holm_reject": true,
-      "bh_p": 0.000277,
+      "bh_p": 0.000265,
       "bh_reject": true
     },
     {
@@ -321,11 +321,11 @@
     {
       "source": "elicitation",
       "contrast": "qwen35-27b/G7/C3-vs-C0 McNemar",
-      "p": 0.0039,
+      "p": 1.4551915228366852e-11,
       "headline": true,
-      "holm_p": 0.1365,
-      "holm_reject": false,
-      "bh_p": 0.008811,
+      "holm_p": 0.0,
+      "holm_reject": true,
+      "bh_p": 0.0,
       "bh_reject": true
     },
     {
@@ -411,7 +411,7 @@
     {
       "source": "elicitation",
       "contrast": "qwen35-9b/G7/C3-vs-C0 McNemar",
-      "p": 0.0,
+      "p": 4.440892098500626e-16,
       "headline": true,
       "holm_p": 0.0,
       "holm_reject": true,
@@ -501,7 +501,7 @@
     {
       "source": "elicitation",
       "contrast": "qwen36-27b/G7/C3-vs-C0 McNemar",
-      "p": 0.0,
+      "p": 6.462348535570529e-27,
       "headline": true,
       "holm_p": 0.0,
       "holm_reject": true,
@@ -523,9 +523,9 @@
       "contrast": "qwen36-27b/G1/C2-vs-C0 McNemar",
       "p": 0.0019,
       "headline": true,
-      "holm_p": 0.0741,
+      "holm_p": 0.0722,
       "holm_reject": false,
-      "bh_p": 0.005039,
+      "bh_p": 0.004829,
       "bh_reject": true
     },
     {
@@ -573,9 +573,9 @@
       "contrast": "examiner:S4-density-synth(ft8b>zs30b)",
       "p": 4.5292925276996243e-07,
       "headline": true,
-      "holm_p": 2e-05,
+      "holm_p": 1.9e-05,
       "holm_reject": true,
-      "bh_p": 2e-06,
+      "bh_p": 1e-06,
       "bh_reject": true
     },
     {
@@ -583,9 +583,9 @@
       "contrast": "examiner:S4-density-real(zs30b>ft8b)",
       "p": 1.1254527653825619e-05,
       "headline": true,
-      "holm_p": 0.000484,
+      "holm_p": 0.000473,
       "holm_reject": true,
-      "bh_p": 3.6e-05,
+      "bh_p": 3.4e-05,
       "bh_reject": true
     },
     {
@@ -623,9 +623,9 @@
       "contrast": "reward:PickScore-v1/G7-pref-vs-chance",
       "p": 6.187289775860805e-05,
       "headline": true,
-      "holm_p": 0.002599,
+      "holm_p": 0.002537,
       "holm_reject": true,
-      "bh_p": 0.000189,
+      "bh_p": 0.00018,
       "bh_reject": true
     },
     {

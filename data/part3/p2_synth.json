@@ -1,4 +1,15 @@
 {
+  "_STALE_WARNING": {
+    "_warning": "STALE FOR E8-RE-OPERATIONALISED CLASSES — do NOT use G3/G5/G6/S6 cells from this file.",
+    "detail": "This is the pre-E8 all-class coverage run. After the E8 re-operationalisation the authoritative Table-2 cells for G3/G5/G6/S6 differ and live elsewhere; G1/G2/G7/S1/S4 here are current.",
+    "authoritative_sources": {
+      "G3_ALIGNMENT_OFFSET": "data/part3/e8_linter_coverage.json + p1e8c_qwen35-27b_covint_*",
+      "G5_BRAND_COLOR_VIOLATION": "data/part3/e8_linter_coverage.json + p1e8c_qwen35-27b_covint_* (internal-chromatic)",
+      "G6_MARGIN_VIOLATION": "data/part3/e8_g6_linter_coverage.json + p1e8g6s6_*_g6 (page-offset)",
+      "S6_IMAGE_TEXT_CONTRADICTION": "p1e8g6s6_qwen35-27b_s6_{C0,C3}.json (valid-figure corpus manifest_s6_rendered.jsonl, n=12; bal-acc 0.50)"
+    },
+    "paper_table2_uses": "the E8 sources above, not this file"
+  },
   "model": "qwen35-27b",
   "manifest": "data/part2/manifest_eval_test_rendered.jsonl",
   "modality": "A",

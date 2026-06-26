@@ -1,0 +1,67 @@
+{
+  "manifest": "/home/gpus/slide-examiner/data/part3/manifest_g6_internal.jsonl",
+  "per_class": {
+    "G6_MARGIN_VIOLATION": {
+      "recall": 0.5,
+      "specificity": 1.0,
+      "bal_acc": 0.75,
+      "bal_acc_ci": [
+        0.674,
+        0.804
+      ],
+      "precision": 1.0,
+      "precision_ci": [
+        0.912,
+        1.0
+      ],
+      "fpr": 0.0,
+      "f1": 0.667,
+      "recall_ci": [
+        0.393,
+        0.607
+      ],
+      "tp": 40,
+      "fn": 40,
+      "fp": 0,
+      "tn": 80,
+      "n_pos": 80,
+      "n_neg": 80
+    }
+  },
+  "per_stratum": {
+    "G6_MARGIN_VIOLATION": {
+      "px16": {
+        "recall": 0.0,
+        "n": 10
+      },
+      "px32": {
+        "recall": 0.0,
+        "n": 10
+      },
+      "px48": {
+        "recall": 0.0,
+        "n": 10
+      },
+      "px64": {
+        "recall": 0.0,
+        "n": 10
+      },
+      "px80": {
+        "recall": 1.0,
+        "n": 10
+      },
+      "px88": {
+        "recall": 1.0,
+        "n": 10
+      },
+      "px96": {
+        "recall": 1.0,
+        "n": 10
+      },
+      "px112": {
+        "recall": 1.0,
+        "n": 10
+      }
+    }
+  }
+}

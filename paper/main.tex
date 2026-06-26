@@ -64,7 +64,7 @@ acuity tail, OCR-bound terminology, and \g{G6} global content position.
 
 The diagnosis prescribes the critic, not the reverse. Declared geometry routes to a symbolic linter and the
 format-suppressed classes to one re-elicited VLM, lifting coverage from \textbf{2/9} classes (the conventional
-pointwise VLM) to \textbf{8/9} (balanced accuracy $0.89$) and matching a pre-registered routed hybrid---so the
+pointwise VLM) to \textbf{8/9} (balanced accuracy $0.86$) and matching a pre-registered routed hybrid---so the
 hybrid is a \emph{consequence} of the diagnosis, not an architecture we advocate. A reward-side audit of five
 published scorers plus a closed frontier VLM judge shows the same split: a linter, this 3B document reward, and
 an artistic-aesthetic head miss \g{G7}, while two general-multimodal rewards, CLIP-IQA, and the VLM judge catch
@@ -165,7 +165,7 @@ human-annotated real slides, and survives a forced-evidence localization check t
 class.} Because the diagnosis says declared geometry is linter-owned and the format-suppressed classes are
 VLM-recoverable, re-eliciting the \emph{same} frozen VLM (C0$\to$C3) and routing declared geometry to a symbolic
 linter lifts coverage from \textbf{2/9} classes (the conventional pointwise VLM) to \textbf{8/9} (balanced
-accuracy 0.89)---matching a pre-registered routed hybrid (8/9, 0.88) while a control shows per-class prompt/LLM
+accuracy 0.86)---matching a pre-registered routed hybrid (8/9, 0.85) while a control shows per-class prompt/LLM
 routing is \emph{not} load-bearing. The render class \g{G7} (declared box legal, rendered pixels overflow) makes
 the linter's blind spot falsifiable; auditing five published reward scorers plus a closed VLM judge over it shows the same
 perception-capability split---a symbolic linter (0.00), this 3B document reward (0.48), and an artistic-aesthetic head
@@ -439,16 +439,15 @@ the overflowing element on \g{G7}. This excludes InternVL-8B and Ovis-9B as capa
 than treating their floor/non-localized behavior as evidence against elicitation. On the constructed render
 class \g{G7}, the atomic-binary C3 recovers detection that C0 suppresses across the remaining four model
 instances and three scales (Fig.~\ref{fig:c3}): Qwen3.5-9B $0.50\!\to\!0.93$,
-Qwen3.5-27B $0.93\!\to\!1.00$, Qwen3.6-27B $0.52\!\to\!1.00$, and Google Gemma4-31B $0.75\!\to\!1.00$, all at
+Qwen3.5-27B $0.79\!\to\!1.00$, Qwen3.6-27B $0.51\!\to\!1.00$, and Google Gemma4-31B $0.69\!\to\!0.99$, all at
 precision 0.88--1.00. As a \emph{cross-model} effect---the claim we actually make---the recovery is
-overwhelming: a stratified (Cochran) McNemar over the four models' matched pairs counts \textbf{149} \g{G7}
-items that C3 fixes against \textbf{zero} reversals ($\chi^2_1{=}149$, $p<10^{-30}$).\footnote{Per model the gain
-is individually significant and Holm-surviving for the three low-C0 models ($p\le 2\!\times\!10^{-9}$); on the already-strong
-Qwen3.5-27B (C0~$0.93$) only $9$ items can move and all $9$ go to C3 ($0$ reversals, exact $p{=}0.004$, individually
-n.s.\ after Holm over the full 61-test family)---a ceiling effect, not a fragile one. Holm (FWER) over all 61
-reported tests keeps the pooled \g{G7} recovery, the three low-C0 \g{G7} cells, both examiner contrasts
+overwhelming: a stratified (Cochran) McNemar over the four models' matched pairs counts \textbf{233} \g{G7}
+items that C3 fixes against \textbf{2} reversals ($\chi^2_1{=}227$, $p<10^{-50}$).\footnote{Per model the gain
+is individually significant and Holm-surviving for all four capable models (exact McNemar $p\le 1.5\!\times\!10^{-11}$);
+the only two reversals are on Gemma4-31B (C3 detection recall $88/90$). Holm (FWER) over all 61
+reported tests keeps the pooled \g{G7} recovery, all four per-model \g{G7} cells, both examiner contrasts
 ($p_{\text{Holm}}{=}1.9\!\times\!10^{-5},\,4.7\!\times\!10^{-4}$) and \emph{both} general-multimodal rewards' \g{G7}
-detection (Skywork $p_{\text{Holm}}{=}2\!\times\!10^{-6}$, PickScore $2.6\!\times\!10^{-3}$); full corrected
+detection (Skywork $p_{\text{Holm}}{=}2\!\times\!10^{-6}$, PickScore $2.5\!\times\!10^{-3}$); full corrected
 table + the stratified test in the released multiplicity report. The declared 61-test family is the complete set
 of reported Part-3 inferential tests: model$\times$defect elicitation McNemar contrasts, the two examiner
 contrasts, and reward \g{G7}-preference tests; purely descriptive cells are not in the family.} That the \emph{same} effect appears in models from different
@@ -528,8 +527,8 @@ We evaluate five critics by \emph{named attribution}: the correct defect must be
 and not on its clean twin. The coverage is exactly what the diagnosis prescribes---declared geometry to the
 linter, the format-suppressed classes to a C3-elicited VLM. Re-eliciting the \emph{same} VLM from C0 to C3 and
 adding the linter for declared geometry takes coverage from the conventional VLM-C0's \textbf{2/9} (0.59) to
-\textbf{8/9} at \textbf{0.89}, matching the pre-registered routed hybrid (\textbf{8/9}, \textbf{0.88}) and
-beating either single engine (linter: \textbf{5/9} at 0.69; VLM-C3: \textbf{4/9} at 0.72;
+\textbf{8/9} at \textbf{0.86}, matching the pre-registered routed hybrid (\textbf{8/9}, \textbf{0.85}) and
+beating either single engine (linter: \textbf{5/9} at 0.66; VLM-C3: \textbf{4/9} at 0.72;
 Fig.~\ref{fig:coverage}, Table~\ref{tab:coverage}). The nine classes are the image-level paired-clean classes;
 \g{G4}/\g{S3} are linter-owned and \g{S2}/\g{S5} are deck-scope (Sec.~\ref{sec:examiner}). The E3 control settles
 \emph{why} this is the headline: per-class routed prompt/LLM tuning is \emph{not} load-bearing
@@ -541,8 +540,8 @@ predicts, not a tuned routing architecture.
 \setlength{\tabcolsep}{2pt}
 \caption{Per-class named-attribution balanced accuracy with 95\% Wilson intervals. E3 adds C3-everywhere and
 linter+VLM-C3: the minimal hybrid matches routed coverage and slightly exceeds its mean. $n$ = paired positives
-with matched clean controls; precision for every cell is in the released reports. The two $n{=}18$ cells
-(\g{S1}, \g{S6}) are routing diagnostics, not stand-alone confirmatory tests.}
+with matched clean controls; precision for every cell is in the released reports. The small \g{S1} ($n{=}18$) and
+\g{S6} ($n{=}12$) cells are routing diagnostics, not stand-alone confirmatory tests.}
 \label{tab:coverage}
 \resizebox{\linewidth}{!}{%
 \begin{tabular}{@{}llcccccr@{}}
@@ -553,13 +552,13 @@ Class & routed to & linter & VLM-C0 & VLM-C3 & linter+C3 & routed & $n$ \\
 \g{G2} overlap       & linter & 0.80\ci{.68,.87} & 0.71\ci{.60,.79} & \best{0.86\ci{.74,.92}} & 0.80\ci{.68,.87} & 0.80\ci{.68,.87} & 40 \\
 \g{G3} alignment     & linter & 0.93\ci{.85,.96} & 0.62\ci{.55,.68} & 0.71\ci{.63,.77} & \best{0.93\ci{.85,.96}} & \best{0.93\ci{.85,.96}} & 70 \\
 \g{G5} color         & linter & 1.00\ci{.91,1} & 0.50\ci{.46,.54} & 0.68\ci{.57,.75} & \best{1.00\ci{.91,1}} & \best{1.00\ci{.91,1}} & 40 \\
-\g{G6} margin        & linter & 1.00\ci{.90,1} & 0.50\ci{.45,.55} & 0.50\ci{.45,.55} & \best{1.00\ci{.90,1}} & \best{1.00\ci{.90,1}} & 36 \\
+\g{G6} margin        & linter & 0.75\ci{.67,.80} & 0.51\ci{.40,.61} & 0.51\ci{.47,.55} & \best{0.75\ci{.67,.80}} & \best{0.75\ci{.67,.80}} & 80 \\
 \g{G7} render-overflow & VLM (C3) & 0.00\ci{0,.54} & 0.50\ci{.46,.54} & \best{1.00\ci{.91,1}} & \best{1.00\ci{.91,1}} & \best{1.00\ci{.91,1}} & 40 \\
 \g{S1} title/body    & VLM (C0) & 0.50\ci{.41,.59} & \best{0.94\ci{.75,.98}} & 0.83\ci{.63,.92} & 0.83\ci{.63,.92} & \best{0.94\ci{.75,.98}} & 18 \\
 \g{S4} density       & LLM & 0.50\ci{.45,.55} & 0.51\ci{.44,.59} & \best{0.93\ci{.81,.97}} & \best{0.93\ci{.81,.97}} & 0.72\ci{.60,.80} & 36 \\
-\g{S6} image/text    & VLM & 0.50\ci{.41,.59} & 0.50\ci{.41,.59} & 0.50\ci{.41,.59} & 0.50\ci{.41,.59} & 0.50\ci{.41,.59} & 18 \\
+\g{S6} image/text    & VLM & 0.50\ci{.38,.62} & 0.50\ci{.38,.62} & 0.50\ci{.38,.62} & 0.50\ci{.38,.62} & 0.50\ci{.38,.62} & 12 \\
 \midrule
-\multicolumn{2}{@{}l}{mean / classes covered} & 0.69 \,/\, 5/9 & 0.59 \,/\, 2/9 & 0.72 \,/\, 4/9 & \best{0.89 \,/\, 8/9} & 0.88 \,/\, 8/9 & \\
+\multicolumn{2}{@{}l}{mean / classes covered} & 0.66 \,/\, 5/9 & 0.59 \,/\, 2/9 & 0.72 \,/\, 4/9 & \best{0.86 \,/\, 8/9} & 0.85 \,/\, 8/9 & \\
 \bottomrule
 \end{tabular}
 }
@@ -588,7 +587,7 @@ class the deployable hybrid fails to cover is \g{S6} image/text contradiction, w
 single-image for every engine---but the 2-AFC diagnosis (Fig.~\ref{fig:artifact}) shows the model \emph{does}
 perceive it (it over-asserts pointwise rather than missing it; recall $1.0$, specificity $\sim0$), so the gap is
 availability-of-reference, not blindness---in pointed contrast to the genuine \g{G6} page-offset blind spot.
-Because the named-attribution \g{S6} cell also has only 18 positives, we use it as boundary evidence, not as a
+Because the named-attribution \g{S6} cell also has only 12 positives, we use it as boundary evidence, not as a
 confirmatory coverage claim.
 
 \subsection{\g{G7}: the linter-blind class that specialised rewards also miss}\label{sec:g7}
@@ -886,7 +885,7 @@ recovers detection (format suppression), while for declared \g{G1}/\g{S6} the re
 paired reference (availability-of-reference). We therefore make the strong mechanism claim only for \g{G7} and
 its C3 mirror, and label the \g{G1}/\g{S6} forced-choice effect as reference-availability; the guess-floor
 control (capable models answer ``tie'' on 92--100\% of clean pairs) rules out a forced-pick artifact for both.
-Second, the 8/9 coverage (0.89 for linter+VLM-C3; 0.88 for the pre-registered routed hybrid) is a
+Second, the 8/9 coverage (0.86 for linter+VLM-C3; 0.85 for the pre-registered routed hybrid) is a
 \emph{native-structure} number; on image-only real decks (no IR for the linter) the hybrid degrades to its
 VLM-only mode, so that figure is an upper bound for IR-owning generation agents, not an open-world guarantee.
 Recovering element structure from the pixels with a layout detector and
