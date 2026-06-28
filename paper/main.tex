@@ -165,8 +165,9 @@ cannot reliably score~\cite{rankscore}; that result concerns a judge's \emph{out
 More broadly, comparative/relative elicitation is known to recover discriminative signal that pointwise scoring
 suppresses in LLM/VLM judges~\cite{comparative}, even though the protocol choice is not bias-free and can itself
 distort preferences~\cite{pairpoint}; our contribution is not that effect but its \emph{defect-class boundary}---it
-rescues \g{G1}/\g{S6} yet not \g{G3}/\g{S3}---which is what turns the elicitation effect into a
-perception/format attribution signal.
+rescues text overflow (\g{G1}) and image/text contradiction (\g{S6}) yet not fine alignment (\g{G3}) or
+terminology drift (\g{S3})---which is what turns the elicitation effect into a perception/format attribution
+signal.
 
 \paragraph{Slide generation, evaluation, and reward.}
 Slide and poster generation with design feedback is an active area: AutoPresent~\cite{autopresent} treats
