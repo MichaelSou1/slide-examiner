@@ -151,14 +151,10 @@ approximated by captions, and where the answer feeds a critic architecture rathe
 
 \paragraph{Perception/reasoning attribution.}
 Concurrent work separates perception from reasoning in abstract visual-reasoning benchmarks via
-natural-language perception oracles~\cite{reasoningbench}. We differ in three ways: (i)~our domain is
-inspection of generated documents, which admits a controllable defect taxonomy with \emph{exact injected
-labels}; (ii)~our perception oracle is a \emph{lossless structured representation}, not a lossy caption,
-yielding a cleaner attribution boundary---a property we demonstrate empirically rather than merely assert:
-the B$'$ (VLM-caption) modality we include as a control is precisely what a natural-language oracle provides,
-and our own data show it fails to recover fine geometry that the lossless-IR channel recovers and cannot
-re-arm the symbolic linter (Sec.~\ref{sec:external}), making the attribution-boundary advantage an
-in-experiment measurement; and (iii)~we close the loop from diagnosis to a deployed critic.
+natural-language perception oracles~\cite{reasoningbench}. We share the goal but differ in kind: our oracle is a
+\emph{lossless} structured representation rather than a lossy caption---a cleaner attribution boundary, since a
+caption re-injects the very perceptual error it is meant to factor out---our domain of generated documents
+admits exact injected labels, and we close the loop from diagnosis to a deployed critic.
 Layout-error-detection work~\cite{led} pioneers distribution-grounded structural-error injection but for
 \emph{document-layout-analysis predictions}, and explicitly notes that existing metrics cannot isolate whether
 failures stem from recognition or reasoning---precisely the gap our attribution protocol fills.
@@ -174,24 +170,18 @@ rescues \g{G1}/\g{S6} yet not \g{G3}/\g{S3}---which is what turns the elicitatio
 perception/format attribution signal.
 
 \paragraph{Slide generation, evaluation, and reward.}
-Slide and poster generation with design feedback is an active area; AutoPresent~\cite{autopresent} treats
-slide generation as tool-augmented program generation and studies iterative self-refinement, aesthetic-reward
+Slide and poster generation with design feedback is an active area: AutoPresent~\cite{autopresent} treats
+slide generation as tool-augmented program generation with iterative self-refinement, aesthetic-reward
 systems~\cite{aeslides,evopresent} report that iterative VLM refinement helps gross layout damage but fails on
 fine-grained aesthetics and is prone to reward hacking, and slide-evaluation studies~\cite{vlmslideeval} call
-for calibrated critic-in-the-loop selection. These motivate, rather than compete with, a routed critic: they
-observe the VLM's perceptual ceiling and route around it with rules, whereas we first \emph{diagnose} that
-ceiling and then show part of it is recoverable by elicitation. We use the human-annotated
-\textsc{SlideAudit} set~\cite{slideaudit} as our real-data probe and audit \emph{five} published reward/perceptual scorers
-(two per audited category) plus one closed frontier VLM judge---the document reward DocReward~\cite{docreward}; two general-multimodal rewards on
-distinct backbones, the value-head Skywork-VL-Reward~\cite{skyworkvl} and the CLIP-contrastive
-PickScore~\cite{pickscore}; and two aesthetic/perceptual scorers, a LAION aesthetic CLIP predictor~\cite{laionaes}
-and the zero-shot CLIP-IQA quality probe~\cite{clipiqa}; plus Qwen3.7-Max as a prompted VLM-as-judge baseline.
-
-\paragraph{Critic / reward-model training.}
-Training specialist critics from paired data is established for natural images and code; our examiner adapts
-the recipe to the rendered-document domain, where defect injection yields exact labels at zero annotation
-cost. We are careful \emph{not} to claim injection itself as novel---it is a known recipe---only its use as the
-semantic engine of a routed critic and the perception/reasoning attribution it enables.
+for calibrated critic-in-the-loop selection. These \emph{motivate} a routed critic rather than compete with it:
+they observe the VLM's perceptual ceiling and route around it with rules, whereas we first \emph{diagnose} that
+ceiling and show part of it is elicitation-recoverable. We probe real data with the human-annotated
+\textsc{SlideAudit} set~\cite{slideaudit} and audit five published reward/perceptual scorers spanning document,
+general-multimodal, and aesthetic categories plus a closed frontier VLM-as-judge (Sec.~\ref{sec:g7}). Training
+specialist critics from paired data is an established recipe in natural images and code; defect injection adapts
+it to rendered documents at zero annotation cost, and we use it as the semantic engine of the routed critic and
+the perception/reasoning attribution it enables.
 
 % =====================================================================
 \section{Problem setup and defect taxonomy}\label{sec:setup}
