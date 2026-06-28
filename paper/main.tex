@@ -385,8 +385,7 @@ there it is overwhelming: a stratified (Cochran) McNemar over the four models' m
 \g{G7} items C3 fixes against \textbf{2} reversals ($\chi^2_1{=}227$, $p<10^{-50}$).\footnote{Per-model exact
 McNemar $p\le1.5\!\times\!10^{-11}$, all Holm-surviving; the two reversals are on Gemma4-31B (C3 recall
 $88/90$). Holm (FWER) over the pre-registered 61-test family also keeps both examiner contrasts
-($p_{\text{Holm}}{=}1.9\!\times\!10^{-5},\,4.7\!\times\!10^{-4}$) and both general-multimodal rewards' \g{G7}
-detection (Skywork $2\!\times\!10^{-6}$, PickScore $2.5\!\times\!10^{-3}$); full corrected table in the released
+($p_{\text{Holm}}{=}1.9\!\times\!10^{-5},\,4.7\!\times\!10^{-4}$); full corrected table in the released
 multiplicity report.} The gate is defined by C3, but this cross-vendor test is gate-independent, so the recovery
 is not a definitional artifact. The mechanism is simple: C0's fixed whole-taxonomy rubric cannot \emph{name} an
 off-taxonomy render class, so the model abstains; the atomic per-type binary restores it.
@@ -535,47 +534,42 @@ over 117K paired documents). \emph{General-multimodal rewards on distinct backbo
 \emph{Aesthetic/perceptual scorers}: \textbf{LAION-Aesthetic}~\cite{laionaes} (linear artistic-appeal head on
 CLIP-L/14) and \textbf{CLIP-IQA}~\cite{clipiqa} (zero-shot ``Good/Bad photo'' quality probe on the same CLIP).
 The judge is \textbf{Qwen3.7-Max} on DashScope (pointwise 0--100 visual/layout-quality score). Each cleanly
-penalizes several in-taxonomy defects it can see (Table~\ref{tab:reward}, Fig.~\ref{fig:reward}), confirming
+penalizes several in-taxonomy defects it can see (Table~\ref{tab:reward}), confirming
 each is a functioning scorer, not a domain mismatch.
 
 \paragraph{The \g{G7} split: perceptual capability, not the domain label.}
 On \g{G7} the picture splits---but \emph{not} along the domain label. The cleanest dissociation is within one
 backbone: CLIP-IQA detects \g{G7} (0.83, $[0.74,0.90]$, $n{=}90$), while the LAION aesthetic head on the same
 CLIP-L/14 is at chance (0.57, $[0.46,0.66]$). The same visible overflow is detected by \emph{both}
-general-multimodal rewards on distinct backbones (Skywork-VL 0.79, $[0.69,0.86]$; PickScore 0.71,
-$[0.61,0.80]$) and by Qwen3.7-Max as a pointwise VLM judge (1.00, $[0.86,1.00]$, $n{=}24$); it is missed (CI
-spans 0.5) by the symbolic linter (0.00), the artistic-aesthetic LAION head (0.57), and the document reward
-(DocReward 0.48, $[0.38,0.58]$). The full split is in Table~\ref{tab:reward}. (Naming containment in
+general-multimodal rewards on distinct backbones (Skywork-VL 0.79, $[0.69,0.86]$, Holm $p{=}2\!\times\!10^{-6}$;
+PickScore 0.71, $[0.61,0.80]$, $p{=}2.5\!\times\!10^{-3}$) and by Qwen3.7-Max as a pointwise VLM judge (1.00,
+$[0.86,1.00]$, $n{=}24$); it is missed (CI spans 0.5) by the symbolic linter (0.00), the artistic-aesthetic
+LAION head (0.57), and the document reward (DocReward 0.48, $[0.38,0.58]$). The full split is in
+Table~\ref{tab:reward}. (Naming containment in
 Skywork's prompt lifts \g{G7} to 0.87, reinforcement rather than rescue. On \g{G5}---re-operationalised as an
 internal chromatic clash, visible from the slide alone---\emph{most} scorers react (0.65--0.78), as the
 perceptual-capability reading predicts; the linter still owns \g{G5} at 1.00 by exactness and palette
 knowledge, not because the clash is imperceptible.)
 
 \paragraph{What the split implies.}
-The DocReward miss does not establish that \emph{document} rewards cannot detect \g{G7}: with a single 3B
-model, capacity and training objective are confounded, and a larger or differently-trained document reward may
-well detect it. The supported claim is narrower and stronger: \g{G7} is visible to general rendered-quality
-read-outs---two distinct general-multimodal backbones and a CLIP quality probe---but can be suppressed by
-specialised read-outs on the same backbone. This is the reward-side counterpart of the C0$\to$C3 recovery:
-the perception is present; a specialised read-out can suppress it. The hybrid thesis is unchanged: \g{G7} needs
-a perceptually-capable engine, whether \emph{prompted} (C3, 0.93--1.00), used as a VLM judge (Qwen3.7-Max
-1.00), or carrying a \emph{reward head} (two general-mm rewards, 0.71--0.79). On the same closed model,
-however, the whole-taxonomy examiner prompt still cannot \emph{name} the off-taxonomy class (C0 bal-acc 0.50)
-whereas C3 names and localizes it perfectly (1.00), so elicitation remains load-bearing for structured
-diagnosis.
+The DocReward miss is \emph{instance-level}, not categorical: with a single 3B model capacity and training
+objective are confounded, and a larger or differently-trained document reward may well detect \g{G7}. The
+supported claim is narrower and stronger---\g{G7} is visible to general rendered-quality read-outs but can be
+\emph{suppressed} by a specialised read-out on the \emph{same} backbone---and it is the reward-side counterpart
+of the C0$\to$C3 recovery: the perception is present; the read-out, like the prompt format, can bury it. The
+hybrid thesis is unchanged: \g{G7} needs a perceptually-capable engine, whether prompted, judged, or
+reward-headed. Elicitation stays load-bearing even for the frontier judge---its whole-taxonomy prompt cannot
+\emph{name} the off-taxonomy class (C0 $0.50$) while C3 names and localizes it perfectly (1.00).
 
 \begin{table}[t]
 \centering\small
 \caption{Multi-reward / VLM-judge audit: paired preference accuracy $P(r_{\text{clean}}>r_{\text{def}})$ per class
-(chance $=0.5$; \g{G7} with 95\% CI). Five published scorers plus one closed frontier VLM judge; the trained/perceptual
-scorers retain two audited categories (general-multimodal: Skywork-VL + PickScore on distinct backbones; aesthetic:
-LAION + CLIP-IQA), so the \g{G7} read is not a single-scorer anecdote. \g{G7} is detected (CI above 0.5) by both
-general-mm rewards, by CLIP-IQA, and by the VLM judge, and missed (CI spans 0.5) by the document reward and the
-artistic-aesthetic head; the document miss is instance-level because capacity and objective are confounded.
-\checkmark/$\times$ in the \g{G7} column marks reliable detection. The VLM-judge row is a small closed-model R7
-probe ($n{=}24$ for its four measured classes); all other $n$ are in the bottom row. \g{G5} is the
-internal-chromatic re-operationalisation of Sec.~\ref{sec:diag} (one element hue-swapped vs.\ its sibling column,
-$n{=}80$), a \emph{visible} defect most scorers catch---not the linter-only blind spot \g{G7} is.}
+(chance $=0.5$; \g{G7} with 95\% CI). Five published scorers in two audited categories each (general-multimodal:
+Skywork-VL + PickScore on distinct backbones; aesthetic: LAION + CLIP-IQA) plus one closed frontier VLM judge,
+so the \g{G7} read is not a single-scorer anecdote. \checkmark/$\times$ marks reliable \g{G7} detection (CI above
+/ spanning 0.5). The VLM-judge row is a small closed-model probe ($n{=}24$); other $n$ in the bottom row.
+\g{G5} is the internal-chromatic re-operationalisation of Sec.~\ref{sec:diag} (one element hue-swapped vs.\ its
+sibling column), a \emph{visible} defect most scorers catch---not the linter-only blind spot \g{G7} is.}
 \label{tab:reward}
 \begin{tabular}{@{}llccc>{\columncolor[gray]{0.92}}c cc@{}}
 \toprule
@@ -596,21 +590,6 @@ Qwen3.7-Max judge & frontier VLM & 0.13 & 0.92 & -- & \checkmark\,\textbf{1.00}\
 \bottomrule
 \end{tabular}
 \end{table}
-
-\begin{figure}[t]
-\centering
-\includegraphics[width=\linewidth]{figs/fig4_reward_blindspot_multi.png}
-\caption{\textbf{\g{G7}-detection requires rendered-quality read-out capability; the training-domain label alone is
-insufficient.} Preference accuracy per reward model $\times$ defect class (green $=$ sensitive, red $=$ mis-ranks;
-chance $=0.5$), five published scorers. The table adds the R7 closed VLM-judge row: Qwen3.7-Max catches \g{G7}
-as a pointwise quality judge (1.00, $n{=}24$). Every scorer is sensitive to several in-taxonomy classes; the
-\g{G7} column (boxed) splits by perceptual capability: both general-multimodal rewards (Skywork-VL 0.79,
-PickScore 0.71, distinct backbones), CLIP-IQA (0.83), and the VLM judge detect it, while the artistic-aesthetic
-head (LAION 0.57) and this 3B document reward (DocReward 0.48) sit at chance. The DocReward result is
-instance-level (capacity and training objective confounded in a single 3B model); the category-level conclusion
-rests on the two general-multimodal backbones and the same-backbone CLIP-IQA/LAION dissociation.}
-\label{fig:reward}
-\end{figure}
 
 \paragraph{Perturbation fidelity: 45\% of injected geometry never renders.}
 The reward audit ties to the template result of Sec.~\ref{sec:diag}. Rendering every injected defective two
