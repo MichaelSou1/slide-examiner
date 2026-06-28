@@ -187,18 +187,20 @@ the perception/reasoning attribution it enables.
 \section{Problem setup and defect taxonomy}\label{sec:setup}
 % =====================================================================
 
-\paragraph{Representation and taxonomy.}
-Every slide is an IR of typed elements with bounding boxes, text, and style; defects are injected
-programmatically into the IR and then rendered, giving exact labels and matched (defective, clean) pairs. The
-taxonomy (Table~\ref{tab:taxonomy}) has a \emph{geometry/perception} group \g{G1}--\g{G6}, a
-\emph{semantic/reasoning} group \g{S1}--\g{S6}, and one constructed render class \g{G7}; the taxonomy is aligned
-to the expert-derived \textsc{SlideAudit} taxonomy~\cite{slideaudit} via a bidirectional map
-(Appendix~\ref{app:slideaudit-crosswalk}; results are reported in its canonical classes), with \g{G7} refining
-its ``content overflow/cut-off'' category. We add \g{G7} because
-it is the sharpest test of the linter's blind spot: its declared box is legal (inside the safe margin, no box
-overlap) but the rendered content overflows its container, so the defect exists \emph{only} in pixels. On real
-agent-generated slices, \g{G7} is not rare: a 93-deck Zenodo10K slice yields 81/93 affected decks
-(857/3167 legal boxes), and a 14-deck AutoPresent slice yields 8/14 affected decks (20/50 legal boxes).
+\paragraph{Task and representation.}
+The critic inspects a single rendered slide---optionally with its declared structure---and must \emph{flag and
+localize} defects of a fixed set of types; a detection counts only when it fires on a defective slide and stays
+silent on its matched clean twin. Every slide is an intermediate representation (IR) of typed elements with
+bounding boxes, text, and style; we inject defects programmatically into the IR and render, yielding exact
+labels and matched (defective, clean) pairs. The taxonomy (Table~\ref{tab:taxonomy}) has a \emph{geometry}
+group \g{G1}--\g{G6}, a \emph{semantic} group \g{S1}--\g{S6}, and one constructed render class \g{G7}; it is
+aligned to the expert-derived \textsc{SlideAudit} taxonomy~\cite{slideaudit} via a bidirectional map, and
+results are reported in its canonical classes (Appendix~\ref{app:slideaudit-crosswalk}). We add \g{G7} because
+it is the sharpest test of the linter's blind spot: the declared box is legal---inside the safe margin, no
+overlap---but the rendered content overflows its container, so the defect exists \emph{only} in pixels. On real
+agent-generated decks \g{G7} is common, affecting most slides of a Zenodo10K slice and over half of an
+AutoPresent slice.\footnote{93-deck Zenodo10K slice: 81/93 decks affected (857/3167 legal boxes); 14-deck
+AutoPresent slice: 8/14 decks (20/50 legal boxes).}
 
 \begin{table}[t]
 \centering
@@ -231,17 +233,15 @@ Render & \g{G7} containment overflow & legal box, rendered overflow & VLM (atomi
 \end{table}
 
 \paragraph{Attribution modalities and metric.}
-We present each paired sample under four modalities: \textbf{A} image-only; \textbf{B} the lossless structured
-oracle (with ground-truth markers stripped by a single de-leaking view, regression-tested); \textbf{B$'$} a
-VLM-written caption held fixed across models; and \textbf{C} image+oracle---crossed with detect/localize/repair.
-The attribution logic is: A-fail $\wedge$ B-succeed $\Rightarrow$ \emph{perception} bottleneck; A-fail
-$\wedge$ B-fail $\Rightarrow$ \emph{reasoning} bottleneck; A-succeed $\wedge$ repair-fail $\Rightarrow$
-\emph{execution} bottleneck. Throughout, the headline metric is \emph{balanced accuracy on paired clean
-controls}, never recall alone---a consistency defect scored by recall reads a false ``100\% detection'' when
-the model simply always flags.
-B$'$ is included as a lossy-caption control, not as a second oracle: because it is produced by a VLM, any
-superiority of \textbf{B} for isolating declared structure is a design property of the channel, not a body-level
-empirical claim that captions are worse in every setting.
+We present each paired sample under four modalities---\textbf{A} image-only; \textbf{B} the lossless structured
+oracle; \textbf{B$'$} a fixed VLM-written caption; and \textbf{C} image+oracle---crossed with
+detect/localize/repair.\footnote{The oracle's ground-truth markers are stripped by a single regression-tested
+de-leaking view. B$'$ is a lossy-caption control, not a second oracle: because it is VLM-produced, B's advantage
+for isolating declared structure is a property of the channel by design, not an empirical claim that captions
+are always worse.} The attribution logic is: A-fail $\wedge$ B-succeed $\Rightarrow$ \emph{perception}
+bottleneck; A-fail $\wedge$ B-fail $\Rightarrow$ \emph{reasoning} bottleneck; A-succeed $\wedge$ repair-fail
+$\Rightarrow$ \emph{execution} bottleneck. The headline metric throughout is \emph{balanced accuracy on paired
+clean controls}, never recall alone---which a model can saturate by always flagging.
 
 \paragraph{Two linters.}
 A geometry linter detects \g{G1}--\g{G6} from coordinates and rules (brand color via CIELAB $\Delta E_{2000}$, not RGB
