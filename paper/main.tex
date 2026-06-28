@@ -451,32 +451,27 @@ structure, not missing method.
 
 \paragraph{Complementary coverage the diagnosis predicts.}
 We evaluate five critics by \emph{named attribution}: the correct defect must be emitted on the defective slide
-and not on its clean twin; a class counts as ``covered'' when named-attribution balanced accuracy exceeds $0.75$
-(Wilson lower bound $>0.65$). The coverage is exactly what the diagnosis prescribes---declared geometry to the
-linter, the format-suppressed classes to a C3-elicited VLM. The operative finding is the \emph{combination}:
-the linter alone covers \textbf{5/9} classes (mean bal-acc 0.66); VLM-C3 alone covers \textbf{4/9} (0.72);
+and not on its clean twin, and a class is ``covered'' when named-attribution balanced accuracy exceeds $0.75$
+(Wilson lower bound $>0.65$). Coverage follows exactly what the diagnosis prescribes---declared geometry to the
+linter, the format-suppressed classes to a C3-elicited VLM---and the headline is their \emph{combination}: the
+linter alone covers \textbf{5/9} classes (mean bal-acc 0.66) and VLM-C3 alone \textbf{4/9} (0.72), but
 \emph{linter $\oplus$ C3-VLM} covers \textbf{8/9} at \textbf{0.86}, matching the pre-registered routed hybrid
-(\textbf{8/9}, \textbf{0.85}). The conventional VLM-C0 covers only \textbf{2/9} (0.59)---the comparison that
-motivates elicitation-change as the primary lever---but the complementary-coverage claim is about the
-combination, not merely about C0 being a weak baseline
-(Fig.~\ref{fig:coverage}, Table~\ref{tab:coverage}). The nine classes are the image-level paired-clean classes;
-\g{G4}/\g{S3} are linter-owned and \g{S2}/\g{S5} are deck-scope (Sec.~\ref{sec:examiner}). The E3 control
-settles \emph{why} this is the headline: per-class routed prompt/LLM tuning is \emph{not} load-bearing
-here---the routing rule follows from the diagnosis, not from optimizing over class outcomes---so the result is
-the complementary coverage the diagnosis predicts, not a tuned routing architecture.
+(\textbf{8/9}, 0.85), against the conventional VLM-C0's \textbf{2/9} (0.59) (Fig.~\ref{fig:coverage},
+Table~\ref{tab:coverage}). The nine classes are the image-level paired-clean classes; \g{G4}/\g{S3} are
+linter-owned and \g{S2}/\g{S5} are deck-scope (Sec.~\ref{sec:examiner}). The E3 control settles why this is the
+headline: per-class routed prompt/LLM tuning is \emph{not} load-bearing---the routing rule follows from the
+diagnosis, not from optimizing over class outcomes---so the coverage is what the diagnosis predicts, not a tuned
+architecture.
 
 \begin{table}[t]
 \centering\scriptsize
 \setlength{\tabcolsep}{2pt}
-\caption{Per-class named-attribution balanced accuracy with 95\% Wilson intervals. E3 adds C3-everywhere and
-linter+VLM-C3: the minimal hybrid matches routed coverage and slightly exceeds its mean. $n$ = paired positives
-with matched clean controls; precision for every cell is in the released reports. The small \g{S1} ($n{=}18$)
-and \g{S6} ($n{=}12$) cells are routing diagnostics; they are \emph{not} confirmatory tests and cannot
-individually support the mechanism claims (availability-of-reference for \g{S6}; image-routing for \g{S1})
-made in the text---those claims rest on the elicitation decomposition (Fig.~\ref{fig:decomp}) and the 2-AFC
-forced-choice discrimination respectively. ``Best modality'' in Table~\ref{tab:examiner} denotes the
-diagnostic-prescribed modality---oracle channel B for geometry, image-only for semantics---pre-determined by
-the attribution logic, not selected post-hoc to maximize scores.}
+\caption{Per-class named-attribution balanced accuracy with 95\% Wilson intervals; $n$ = paired positives with
+matched clean controls (precision per cell in the released reports). The minimal linter+VLM-C3 hybrid matches
+the routed coverage and slightly exceeds its mean. The small \g{S1} ($n{=}18$) and \g{S6} ($n{=}12$) cells are
+routing diagnostics, not confirmatory tests: the \g{S6} availability-of-reference and \g{S1} image-routing
+claims rest on the elicitation decomposition (Fig.~\ref{fig:decomp}) and the 2-AFC discrimination, not on these
+cells.}
 \label{tab:coverage}
 \resizebox{\linewidth}{!}{%
 \begin{tabular}{@{}llcccccr@{}}
@@ -511,22 +506,15 @@ linter-blind cell rescued by C3.}
 \paragraph{A data-driven routing correction.}
 We initially routed \g{S1} title/body mismatch to the text LLM, but the text-only probe over-flags (0.25,
 precision 0.09) while the image-bearing VLM names it reliably (0.94, precision 0.90): title/body mismatch needs
-the \emph{rendered layout}, not just the text. We re-route \g{S1} to the VLM---and specifically to its
-\emph{open} pointwise prompt (C0, $0.94$) rather than the atomic C3 ($0.83$): recall is already saturated on
-\g{S1} (both elicitations catch all 18 defectives), so the forced yes/no of C3 only adds false positives,
-dropping specificity $0.89\!\to\!0.67$. Atomic elicitation is therefore \emph{not} a free lunch---it recovers
-recall-limited classes (\g{G7}, \g{S4}) but inflates false positives on subjective ones---which is itself the
-reason the critic routes the \emph{elicitation} per class instead of forcing C3 everywhere; with only 18
-\g{S1} positives, this is a descriptive routing choice. The one image-level
-class the deployable hybrid fails to cover is \g{S6} image/text contradiction, which stays at $0.50$
-single-image for every engine. The 2-AFC forced-choice (Fig.~\ref{fig:artifact}) shows the model \emph{does}
-perceive it (recall $1.0$, specificity $\sim0$, so it over-asserts rather than misses), and the elicitation
-decomposition (Fig.~\ref{fig:decomp}) shows that the paired reference---not naming alone---is what would be
-needed to elicit the correct judgment. That is the \emph{availability-of-reference} reading, not blindness.
-Note that this mechanism claim rests on the decomposition figure and the 2-AFC result, \emph{not} on the
-named-attribution \g{S6} cell ($n{=}12$), which is too small to be confirmatory; the named-attribution cell is
-included as boundary evidence showing the class is currently out of hybrid reach, in pointed contrast to the
-genuine \g{G6} page-offset blind spot.
+the \emph{rendered layout}, not just the text. We re-route \g{S1} to the VLM under its \emph{open} pointwise
+prompt (C0, 0.94) rather than the atomic C3 (0.83): recall is already saturated (both catch all 18 defectives),
+so C3's forced yes/no only adds false positives, dropping specificity $0.89\!\to\!0.67$---a concrete case of the
+per-class elicitation routing of Sec.~\ref{sec:elicit}. The one image-level class the deployable hybrid does not
+cover is \g{S6} image/text contradiction, at $0.50$ single-image for every engine; the 2-AFC forced choice
+(Fig.~\ref{fig:artifact}) shows the model \emph{does} perceive it (recall $1.0$, specificity $\sim0$,
+over-asserting rather than missing), so this is the \emph{availability-of-reference} reading---it needs the
+paired clean twin (Fig.~\ref{fig:decomp})---not a blind spot, in pointed contrast to the genuine \g{G6} page
+offset.
 
 \subsection{\g{G7}: the linter-blind class that specialised rewards also miss}\label{sec:g7}
 
@@ -660,7 +648,9 @@ each model's best format. On held-out \emph{severities} the semantic edge holds 
 \caption{Page-semantic inspection, balanced accuracy [95\% Wilson] on paired clean (best modality). The
 finetuned 8B examiner beats both zero-shot baselines, including the 30B, \emph{in-distribution}. Deck-scope
 \g{S2}/\g{S5} are a negative result (text). $n$ = paired positives (2-AFC rows = forced-choice pairs);
-the \g{S6} 2-AFC rests on only 12 pairs and is descriptive only.}
+the \g{S6} 2-AFC rests on only 12 pairs and is descriptive only. ``Best modality'' denotes the
+diagnostic-prescribed modality (oracle channel B for geometry, image-only for semantics), pre-determined by the
+attribution logic, not selected post-hoc.}
 \label{tab:examiner}
 \begin{tabular}{@{}lcccr@{}}
 \toprule
