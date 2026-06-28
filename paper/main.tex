@@ -662,8 +662,8 @@ given the pairwise head the diagnosis prescribes for this failure mode, and fixi
 not run. Second, there is a \emph{sim2real gap}: on image-only \textsc{SlideAudit}, the finetuned model's
 synthetic \g{S4} strength (0.97) does not transfer (0.50); only the zero-shot 30B shows any real image-only
 density signal (recall 0.53 vs.\ the finetuned 0.075, $p=1.1\times10^{-5}$). Scale, not finetuning, carries
-bare-pixel transfer---and the finetuned model learned a defect \emph{distribution}, not a universal notion of
-slide quality. We make this concrete next.
+bare-pixel transfer---the examiner's edge is tied to its training \emph{distribution}, which we probe directly
+next.
 
 % =====================================================================
 \section{External validity}\label{sec:external}
