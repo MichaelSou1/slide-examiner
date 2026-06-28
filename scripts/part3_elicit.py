@@ -171,6 +171,76 @@ def engine_c0(client, model, rec, modality, target_defect, style, max_tokens):
 
 
 # --------------------------------------------------------------------------- #
+# C0plus — C0 whole-taxonomy single pointwise call, but with G7 ADDED to the
+# candidate catalog. (RC-01 / DA-1 control.) C0 cannot *name* G7 because G7 is
+# off-taxonomy: the scoped suffix says "Consider ONLY these candidate defect
+# types: <12 frozen, no G7>." C0plus holds the overloaded whole-taxonomy FORMAT
+# fixed and changes ONE thing — it lists G7 (with a one-line def) among the
+# candidates, so the model is both told about it and permitted to emit the
+# string. This separates the two readings of the C0->C3 G7 recovery:
+#   * prompt-coverage artifact: C0 simply never asked about G7 -> if C0plus
+#     recovers G7, the effect is coverage, not format.
+#   * format suppression: the whole-taxonomy-at-once format buries an
+#     off-taxonomy render class even when it IS named -> if C0plus still floors
+#     G7 (and only the atomic C3 recovers it), the format claim is earned.
+# Scored paired-clean exactly like C0 (detection = any finding; named = G7 named).
+# --------------------------------------------------------------------------- #
+_G7_CATALOG_DEF = (
+    "an element whose declared box is legal (in-margin, non-overlapping) but whose "
+    "rendered content visibly spills outside its container, card, or frame"
+)
+
+
+def engine_c0plus(client, model, rec, modality, target_defect, style, max_tokens):
+    out = _blank_result(rec)
+    try:
+        messages = build_messages(rec, modality, style)
+        # Inject G7 into the scoped candidate catalog, holding everything else fixed.
+        # The scoped suffix lists candidates as "...<last type>: <def>.\nReport a
+        # finding only when you are confident the defect is actually present." We
+        # append G7 as one more "; <ID>: <def>" entry just before that catalog
+        # terminator. Fail closed: if the anchor is absent (style!=scoped), raise.
+        # (1) the binding "Consider ONLY these candidate defect types: ..." catalog
+        #     (part 1 of the user turn) — this is the operative constraint.
+        anchor = ".\nReport a finding only when you are confident the defect is actually present."
+        g7_entry = f"; {G7_RENDER_CONTAINMENT_OVERFLOW}: {_G7_CATALOG_DEF}"
+        # (2) the CHECK_SCOPE list emitted by build_page_messages (part 0) — keep the
+        #     two views consistent so G7 is named everywhere the frozen taxonomy is.
+        scope_anchor = "'S6_IMAGE_TEXT_CONTRADICTION']"
+        scope_repl = "'S6_IMAGE_TEXT_CONTRADICTION', 'G7_RENDER_CONTAINMENT_OVERFLOW']"
+        user = messages[-1]
+        catalog_patched = False
+        if isinstance(user.get("content"), list):
+            for part in user["content"]:
+                if part.get("type") != "text":
+                    continue
+                if anchor in part["text"]:
+                    part["text"] = part["text"].replace(anchor, g7_entry + anchor, 1)
+                    catalog_patched = True
+                if scope_anchor in part["text"]:
+                    part["text"] = part["text"].replace(scope_anchor, scope_repl, 1)
+        if not catalog_patched:
+            raise RuntimeError("C0plus requires --style scoped (catalog anchor not found)")
+        raw = chat_complete(client, model, messages, max_tokens)
+    except Exception as exc:  # noqa: BLE001
+        out["failure"] = True
+        out["raw"] = f"ERR {exc}"[:300]
+        return out
+    out["raw"] = raw[:400]
+    try:
+        parsed = parse_examiner_json(raw)
+    except Exception:  # noqa: BLE001
+        out["failure"] = True
+        return out
+    findings = parsed.get("findings", []) or []
+    types = sorted({f.get("type") for f in findings if f.get("type")})
+    out["predicted_types"] = types
+    out["has_defect"] = bool(parsed.get("has_defect")) or bool(findings)
+    out["named_target"] = target_defect in types
+    return out
+
+
+# --------------------------------------------------------------------------- #
 # C0_named — single-slide ABSOLUTE, NAMED target, atomic yes/no, NO evidence gate
 # (E1 decomposition: isolates "naming the target" from "pairing" (vs 2-AFC) and
 #  from "forced evidence/localization" (vs C3). Scored paired-clean exactly like
@@ -280,7 +350,7 @@ def engine_c2(client, model, rec, modality, target_defect, style, max_tokens):
     )
 
 
-ENGINES = {"C0": engine_c0, "C0_named": engine_c0_named,
+ENGINES = {"C0": engine_c0, "C0plus": engine_c0plus, "C0_named": engine_c0_named,
            "C1": engine_c1, "C2": engine_c2, "C3": engine_c3}
 
 

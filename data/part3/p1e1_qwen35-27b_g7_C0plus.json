@@ -1,0 +1,75 @@
+{
+  "condition": "C0plus",
+  "model": "qwen35-27b",
+  "style": "scoped",
+  "manifest": "/home/gpus/slide-examiner/data/part3/manifest_g7_rendered.jsonl",
+  "modalities": [
+    "A"
+  ],
+  "defects": [
+    "G7_RENDER_CONTAINMENT_OVERFLOW"
+  ],
+  "n_jobs": 180,
+  "failures": 2,
+  "metrics": {
+    "A": {
+      "per_defect": {
+        "G7_RENDER_CONTAINMENT_OVERFLOW": {
+          "detection": {
+            "recall": 1.0,
+            "specificity": 0.644,
+            "bal_acc": 0.822,
+            "bal_acc_ci": [
+              0.75,
+              0.868
+            ],
+            "precision": 0.733,
+            "precision_ci": [
+              0.648,
+              0.804
+            ],
+            "fpr": 0.356,
+            "f1": 0.846,
+            "recall_ci": [
+              0.958,
+              1.0
+            ],
+            "tp": 88,
+            "fn": 0,
+            "fp": 32,
+            "tn": 58,
+            "n_pos": 88,
+            "n_neg": 90
+          },
+          "named": {
+            "recall": 0.636,
+            "specificity": 1.0,
+            "bal_acc": 0.818,
+            "bal_acc_ci": [
+              0.746,
+              0.865
+            ],
+            "precision": 1.0,
+            "precision_ci": [
+              0.936,
+              1.0
+            ],
+            "fpr": 0.0,
+            "f1": 0.778,
+            "recall_ci": [
+              0.532,
+              0.729
+            ],
+            "tp": 56,
+            "fn": 32,
+            "fp": 0,
+            "tn": 90,
+            "n_pos": 88,
+            "n_neg": 90
+          },
+          "headline_level": "detection"
+        }
+      }
+    }
+  }
+}
