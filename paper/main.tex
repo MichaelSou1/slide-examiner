@@ -769,50 +769,28 @@ No human-inspector or inter-annotator reference point is provided for the deploy
 contribution is the \emph{diagnosis} (which bottleneck a defect hits) and the routing that follows from it;
 matching or exceeding human inspectors is a different claim we do not make.
 
-We \emph{do} run the structured (image+oracle) evaluation on real slides that separates ``missing structure''
-from ``missing capability'' on real geometry (\S\ref{sec:external}): a lossless \texttt{python-pptx} oracle over
-real CC-licensed decks sidesteps both the annotation labour and the self-annotation bias, and the split
-reproduces---fine alignment stays near chance in every channel on real cluttered decks (it recovers on clean
-slides above a magnitude threshold, but real clutter defeats it) while a margin bleed is structure-rescuable.
-Its scope is bounded: the defects are \emph{injected} (real geometry, real renderer, real oracle, but not
-naturally-occurring), so the third-party \textsc{SlideAudit} set (image-only, naturally-defective) remains our
-complementary real probe. We audit five published reward/perceptual scorers and one closed VLM judge; the
-reward-side evidence is strongest where it does not rely on a category label alone---two general-multimodal
-backbones detect \g{G7}, and CLIP-IQA vs.\ LAION gives a same-backbone read-out dissociation---while the
-document-reward miss remains instance-level because a second document/design reward (PosterReward, requiring an
-ms-swift \texttt{seq\_cls} runtime) and an InternLM-family reward (PloRA image path failed to load) were not stood
-up. Our attribution protocol shares its core with concurrent perception/reasoning work, differentiated by
-domain, the lossless oracle, and the loop to a critic. The downstream effect is bounded on both sides: examiner
-quality correlates $+0.66$ with self-refine gain under a strong generator but at sub-1\% magnitude (it floors
-most briefs at the first draft), and re-running the identical gradient with an unfloored weak generator
-($1.43\times$ the headroom) collapses that correlation to $0.00$. A controlled actionability A/B (generator,
-task, and seed fixed) locates this null as an axis mismatch, not a revision incapacity---the weak generator's
-headroom is \emph{coverage} (deck completeness), which a perception/layout critic does not address (the geometry
-critique moves quality by $\Delta q{=}{+}0.00$ against an explicit coverage critique's $\Delta q{=}{+}0.32$)---so
-the examiner's verifiable evidence is its intrinsic and case-study performance, not this loop.
+Three scope bounds qualify the evidence. The real-layout attribution (\S\ref{sec:external}) uses \emph{injected}
+defects---real geometry, renderer, and oracle, but not naturally-occurring---so the image-only,
+naturally-defective \textsc{SlideAudit} set remains our complementary real probe. The reward audit covers five
+published scorers and one closed judge; its document-reward miss is instance-level, and a second document/design
+reward (PosterReward) and an InternLM-family reward (PloRA) were not stood up, so the categorical read rests on
+the two general-multimodal backbones and the same-backbone CLIP-IQA/LAION dissociation. Finally, the
+examiner$\to$generation \emph{downstream} effect is near-null: examiner quality correlates $+0.66$ with
+self-refine gain under a strong generator but at sub-1\% magnitude, and collapses to $0.00$ under an unfloored
+weak generator ($1.43\times$ the headroom); a controlled A/B locates this as an axis mismatch---the weak
+generator's headroom is deck \emph{coverage}, which a layout critic does not move ($\Delta q{=}{+}0.00$ vs.\ a
+coverage critique's ${+}0.32$)---so the examiner's evidence is its intrinsic and case-study performance, not
+this loop.
 
-Two further caveats temper the central claim. First, the forced-choice and
-atomic-binary elicitations supply a contrastive reference and a named target that the pointwise format withholds,
-so one must ask whether the $0.50\!\to\!1.00$ recovery is \emph{elicitation} or \emph{reduced task difficulty}.
-The C0+ control (\g{G7} added to the pointwise rubric while keeping the whole-taxonomy format;
-Sec.~\ref{sec:elicit}) decomposes this for \g{G7}: naming the class recovers detection-\emph{recall} (a coverage
-component, $234/0$ McNemar $p{=}7\!\times\!10^{-71}$), but the overloaded format over-flags clean twins ($55\%$
-vs.\ C3's $2.4\%$), so the atomic elicitation is load-bearing for \emph{specificity}, not perception---we
-therefore scope the \g{G7} mechanism claim to format-suppression-of-precision, not ``naming alone.''
-A clean ablation settles it (the single-slide, defect-type-named
-\emph{absolute} condition C0\_named, plus a clean-vs-clean guess-floor control; Sec.~\ref{sec:elicit},
-Fig.~\ref{fig:decomp}): the answer is defect-dependent---for the constructed render class \g{G7} naming alone
-recovers detection (format suppression), while for declared \g{G1}/\g{S6} the recovery genuinely requires the
-paired reference (availability-of-reference). We therefore make the strong mechanism claim only for \g{G7} and
-its C3 mirror, and label the \g{G1}/\g{S6} forced-choice effect as reference-availability; the guess-floor
-control (capable models answer ``tie'' on 92--100\% of clean pairs) rules out a forced-pick artifact for both.
-Second, the 8/9 coverage (0.86 for linter+VLM-C3; 0.85 for the pre-registered routed hybrid) is a
-\emph{native-structure} number; on image-only real decks (no IR for the linter) the hybrid degrades to its
-VLM-only mode, so that figure is an upper bound for IR-owning generation agents, not an open-world guarantee.
-Recovering element structure from the pixels with a layout detector and
-re-running the linter does \emph{not} close the gap (\S\ref{sec:external}, Fig.~\ref{fig:openworld})---it rescues
-only overlap, partially, and the VLM-only engine dominates every coarse class on real decks, so the open-world
-critic is VLM-bound.
+Two caveats temper the central claims, both controlled in the body. First, the forced-choice and atomic-binary
+elicitations supply a contrastive reference and a named target the pointwise format withholds, so the
+$0.50\!\to\!1.00$ recovery could in principle be reduced task difficulty rather than elicitation; the C0+ and
+guess-floor controls (\S\ref{sec:elicit}, Fig.~\ref{fig:decomp}) settle this, scoping the strong
+format-suppression claim to \g{G7} and labelling the \g{G1}/\g{S6} effect as availability-of-reference. Second,
+the 8/9 coverage (0.86; routed 0.85) is a \emph{native-structure} number: on image-only real decks the hybrid
+degrades to VLM-only, and recovering structure from pixels does not close the gap (\S\ref{sec:external},
+Fig.~\ref{fig:openworld})---so the figure is an upper bound for IR-owning generation agents, and for bare
+third-party pixels the deployable critic is the C3-elicited VLM.
 
 % =====================================================================
 \section{Conclusion}
