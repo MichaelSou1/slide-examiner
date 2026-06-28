@@ -383,10 +383,8 @@ scales and three vendors, atomic-binary C3 recovers detection that C0 suppresses
 $0.50$--$0.79\!\to\!0.93$--$1.00$, precision $0.88$--$1.00$). The effect we claim is \emph{cross-model}, and
 there it is overwhelming: a stratified (Cochran) McNemar over the four models' matched pairs counts \textbf{233}
 \g{G7} items C3 fixes against \textbf{2} reversals ($\chi^2_1{=}227$, $p<10^{-50}$).\footnote{Per-model exact
-McNemar $p\le1.5\!\times\!10^{-11}$, all Holm-surviving; the two reversals are on Gemma4-31B (C3 recall
-$88/90$). Holm (FWER) over the pre-registered 61-test family also keeps both examiner contrasts
-($p_{\text{Holm}}{=}1.9\!\times\!10^{-5},\,4.7\!\times\!10^{-4}$); full corrected table in the released
-multiplicity report.} The gate is defined by C3, but this cross-vendor test is gate-independent, so the recovery
+McNemar $p\le1.5\!\times\!10^{-11}$, all Holm-surviving over the pre-registered 61-test family; the two
+reversals are on Gemma4-31B (C3 recall $88/90$). Full corrected table in the released multiplicity report.} The gate is defined by C3, but this cross-vendor test is gate-independent, so the recovery
 is not a definitional artifact. The mechanism is simple: C0's fixed whole-taxonomy rubric cannot \emph{name} an
 off-taxonomy render class, so the model abstains; the atomic per-type binary restores it.
 
@@ -617,10 +615,12 @@ On in-domain held-out page-semantic inspection, the finetuned 8B reaches balance
 \g{S1} title/body and \g{S4} density, beating zero-shot 8B (0.78 / 0.53) and zero-shot 30B (0.93 / 0.77)
 (Table~\ref{tab:examiner}). The largest gain is \g{S4} density recall, $0.0\!\to\!0.97$, where the
 finetuned 8B (1.00) beats the zero-shot 30B (0.65) at two-proportion $z$, $p=4.5\times10^{-7}$: an 8B
-examiner surpasses a 4$\times$ larger zero-shot model on the examiner's core job. The advantage is not a
-prompt-format artifact---re-running the zero-shot baselines at the finetuned model's own trained prompt format
-collapses them to 0.50, so the format asymmetry favors the baselines, and the finetuned model still wins at
-each model's best format. On held-out \emph{severities} the semantic edge holds (0.89 vs.\ 0.50--0.59).
+examiner surpasses a 4$\times$ larger zero-shot model on the examiner's core job; both in-distribution examiner
+contrasts survive Holm correction over the 61-test family ($p_{\text{Holm}}{=}1.9\!\times\!10^{-5},\,4.7\!\times\!10^{-4}$).
+The advantage is not a prompt-format artifact---re-running the zero-shot baselines at the finetuned model's own
+trained prompt format collapses them to 0.50 (the format asymmetry favors the baselines), and the finetuned
+model still wins at each model's best format. On held-out \emph{severities} the semantic edge holds
+(0.89 vs.\ 0.50--0.59).
 
 \begin{table}[t]
 \centering\small
