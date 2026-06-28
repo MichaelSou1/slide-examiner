@@ -23,6 +23,14 @@
 \definecolor{Accent}{RGB}{31,111,139}
 \usepackage[font=small,labelfont=bf,skip=4pt]{caption}
 \usepackage{subcaption}
+\usepackage[percent]{overpic}    % text overlays on vector base art (concept figures)
+\definecolor{figink}{HTML}{2B3440}
+\definecolor{figslate}{HTML}{5A6675}
+\definecolor{figblue}{HTML}{3F6FB5}
+\definecolor{figorange}{HTML}{E07F2C}
+\definecolor{figred}{HTML}{D24A43}
+\definecolor{figgreen}{HTML}{4E9A6B}
+\definecolor{figgrey}{HTML}{9AA4B0}
 \usepackage{enumitem}
 \usepackage[colorlinks=true,linkcolor=NavyBlue,citecolor=NavyBlue,urlcolor=NavyBlue]{hyperref}
 
@@ -71,7 +79,18 @@ or a different tool entirely. We treat that question as the design problem and a
 
 \begin{figure}[t]
 \centering
-\includegraphics[width=\linewidth]{figs/fig1_routing.png}
+\begin{overpic}[width=\linewidth,percent]{figs/fig_teaser_notext.pdf}%
+  \put(14.17,24.33){\makebox(0,0)[b]{\footnotesize\color{figslate} input slide}}
+  \put(35.83,33.25){\makebox(0,0)[b]{\scriptsize\color{figink} perception /}}
+  \put(35.83,31.58){\makebox(0,0)[b]{\scriptsize\color{figink} reasoning}}
+  \put(35.83,30.08){\makebox(0,0)[b]{\scriptsize\bfseries\color{figink} diagnosis}}
+  \put(57.08,43.25){\makebox(0,0)[b]{\footnotesize\bfseries\color{figblue} symbolic linter}}
+  \put(57.08,41.42){\makebox(0,0)[b]{\scriptsize\color{figslate} declared geometry}}
+  \put(57.08,9.08){\makebox(0,0)[b]{\footnotesize\bfseries\color{figorange} re-elicited VLM}}
+  \put(57.08,7.25){\makebox(0,0)[b]{\scriptsize\color{figslate} format-suppressed}}
+  \put(88.96,24.08){\makebox(0,0)[b]{\footnotesize\bfseries\color{figink} hybrid critic}}
+  \put(50.0,1.83){\makebox(0,0)[b]{\scriptsize\itshape\color{figslate} G7 render-overflow (legal box, overflowing pixels) is linter-blind by construction; only a rendered-quality read-out catches it}}
+\end{overpic}
 \caption{\textbf{The paper in one picture.} A perception/reasoning diagnosis (Sec.~\ref{sec:diag}) shows
 slide-inspection failures are of two kinds. Declared-geometry defects are exact and cheap for a symbolic linter,
 with a sub-threshold acuity tail nothing recovers; merely format-suppressed defects are recovered by a
@@ -237,13 +256,31 @@ Render & \g{G7} containment overflow & legal box, rendered overflow & VLM (atomi
 \paragraph{Attribution modalities and metric.}
 We present each paired sample under four modalities: \textbf{A} image-only; \textbf{B} the lossless structured
 oracle; \textbf{B$'$} a fixed VLM-written caption; and \textbf{C} image+oracle, each crossed with
-detect/localize/repair.\footnote{The oracle's ground-truth markers are stripped by a single regression-tested
+detect/localize/repair (Fig.~\ref{fig:modtask}).\footnote{The oracle's ground-truth markers are stripped by a single regression-tested
 de-leaking view. B$'$ is a lossy-caption control, not a second oracle: because it is VLM-produced, B's advantage
 for isolating declared structure is a property of the channel by design, not an empirical claim that captions
 are always worse.} The attribution logic is: A-fail $\wedge$ B-succeed $\Rightarrow$ \emph{perception}
 bottleneck; A-fail $\wedge$ B-fail $\Rightarrow$ \emph{reasoning} bottleneck; A-succeed $\wedge$ repair-fail
 $\Rightarrow$ \emph{execution} bottleneck. The headline metric throughout is \emph{balanced accuracy on paired
 clean controls}, never recall alone, which a model can saturate by always flagging.
+
+\begin{figure}[t]
+\centering
+\begin{overpic}[width=\linewidth,percent]{figs/fig_modality_task_notext.pdf}%
+  \put(32.92,54.83){\makebox(0,0)[b]{\footnotesize\bfseries\color{figink} Detect}}
+  \put(57.08,54.83){\makebox(0,0)[b]{\footnotesize\bfseries\color{figink} Localize}}
+  \put(81.25,54.83){\makebox(0,0)[b]{\footnotesize\bfseries\color{figink} Repair}}
+  \put(10.0,42.25){\makebox(0,0)[b]{\scriptsize\bfseries\color{figink} image-only}}
+  \put(10.0,29.75){\makebox(0,0)[b]{\scriptsize\bfseries\color{figink} structured oracle}}
+  \put(10.0,17.25){\makebox(0,0)[b]{\scriptsize\bfseries\color{figink} VLM-caption}}
+  \put(10.0,4.75){\makebox(0,0)[b]{\scriptsize\bfseries\color{figink} image + oracle}}
+\end{overpic}
+\caption{\textbf{Attribution protocol.} Each paired (defective, clean) slide is presented under four input
+modalities (image-only, the lossless structured oracle, a fixed VLM-caption control, and image+oracle) crossed
+with detect/localize/repair. Comparing image-only against the structured oracle is what isolates a clean
+perception/reasoning split (Sec.~\ref{sec:diag}).}
+\label{fig:modtask}
+\end{figure}
 
 \paragraph{Two linters.}
 A geometry linter detects \g{G1}--\g{G6} from coordinates and rules (brand color via CIELAB $\Delta E_{2000}$, not RGB
@@ -281,6 +318,21 @@ a genuinely sub-perceptual residue only in the small-offset tail. (\emph{How} th
 class, a named target versus a paired clean reference, which we decompose in Sec.~\ref{sec:elicit}.) The
 connecting thread is a \emph{magnitude-gated} recoverable-versus-sub-perceptual boundary rather than a
 clean geometric/semantic split, and \g{S3} terminology (below) remains the one defect no elicitation rescues.
+
+\begin{figure}[t]
+\centering
+\begin{overpic}[width=0.9\linewidth,percent]{figs/fig_rel_vs_abs_notext.pdf}%
+  \put(25.42,43.33){\makebox(0,0)[b]{\small\bfseries\color{figink} absolute (pointwise)}}
+  \put(25.42,36.67){\makebox(0,0){\large\bfseries\color{figslate} ?}}
+  \put(25.42,7.67){\makebox(0,0)[b]{\scriptsize\itshape\color{figslate} score one slide alone $\rightarrow$ at chance for \g{G1}/\g{S6}}}
+  \put(74.58,43.33){\makebox(0,0)[b]{\small\bfseries\color{figink} relative (forced choice)}}
+  \put(74.58,7.67){\makebox(0,0)[b]{\scriptsize\itshape\color{figslate} compare a pair $\rightarrow$ recovers perfect detection}}
+\end{overpic}
+\caption{\textbf{Two elicitations, same model and images.} Pointwise (absolute) scoring inspects one slide in
+isolation; the forced choice compares a pair. For \g{G1} and \g{S6}, changing absolute to relative is what
+recovers detection; quantified in Fig.~\ref{fig:rel}.}
+\label{fig:relconcept}
+\end{figure}
 
 \begin{figure}[t]
 \centering
@@ -517,7 +569,21 @@ offset.
 \g{G7} is defined to make the linter's blind spot falsifiable: a declared box that is legal (in-margin,
 non-overlapping) but whose rendered content overflows its container. The IR carries only legal short text;
 the overflow lives in the renderer, not the IR, so the linter and any structure-only model are blind by
-construction. A self-check confirms the geometry linter returns zero findings on 90/90 \g{G7} defectives.
+construction (Fig.~\ref{fig:g7fig}). A self-check confirms the geometry linter returns zero findings on 90/90 \g{G7} defectives.
+
+\begin{figure}[t]
+\centering
+\begin{overpic}[width=\linewidth,percent]{figs/fig_g7_overflow_notext.pdf}%
+  \put(25.42,4.17){\makebox(0,0)[b]{\footnotesize\color{figink} rendered text fits the box}}
+  \put(74.58,4.17){\makebox(0,0)[b]{\footnotesize\color{figink} rendered pixels overflow the box}}
+  \put(50.0,2.5){\makebox(0,0)[b]{\scriptsize\itshape\color{figslate} the linter sees two identical, legal declared boxes; it is blind to the difference by construction}}
+\end{overpic}
+\caption{\textbf{\g{G7} render-overflow.} The declared box (dashed) is legal and \emph{identical} in both
+slides; only the rendered pixels overflow on the right. The geometry linter and any structure-only model read
+the same legal box in both, so they are blind to \g{G7} by construction; only an engine with a rendered-quality
+read-out catches it.}
+\label{fig:g7fig}
+\end{figure}
 
 \paragraph{What kind of reward sees \g{G7}?}
 The natural rebuttal is ``just train a neural reward model'' or ``use the frontier VLM as the judge.'' We test
@@ -740,6 +806,23 @@ VLM-only engine \emph{dominates every coarse class} on real decks. The linter's 
 clean-native-IR phenomenon; open-world, recovered or not, the deployable critic is VLM-bound. This bounds the
 contribution without touching the diagnostic thesis: the full symbolic--neural critic is for IR-owning generation
 agents, and for bare third-party pixels the critic is the C3-elicited VLM.
+
+\begin{figure}[t]
+\centering
+\begin{overpic}[width=\linewidth,percent]{figs/fig_openworld_notext.pdf}%
+  \put(14.06,14.69){\makebox(0,0)[b]{\footnotesize\color{figslate} raw pixels (no IR)}}
+  \put(34.77,17.34){\makebox(0,0)[b]{\footnotesize\color{figslate} layout parser}}
+  \put(55.31,15.0){\makebox(0,0)[b]{\footnotesize\color{figslate} recovered structure}}
+  \put(55.31,13.28){\makebox(0,0)[b]{\scriptsize\itshape\color{figgrey} (approximate, not native IR)}}
+  \put(81.25,29.84){\makebox(0,0)[b]{\footnotesize\bfseries\color{figred} symbolic linter}}
+  \put(81.25,28.12){\makebox(0,0)[b]{\scriptsize\itshape\color{figred} not restored}}
+  \put(80.47,3.52){\makebox(0,0)[b]{\footnotesize\bfseries\color{figblue} re-elicited VLM}}
+\end{overpic}
+\caption{\textbf{Open world: recovered structure does not restore the linter.} For bare third-party pixels with
+no IR, a layout parser recovers approximate structure, but it is not the native IR the symbolic linter needs;
+only the re-elicited VLM remains a deployable critic (quantified in Fig.~\ref{fig:openworld}).}
+\label{fig:openconcept}
+\end{figure}
 
 \begin{figure}[t]
 \centering

@@ -1,0 +1,12 @@
+% ---- fig_openworld: text overlay (font follows the paper, edit here) ----
+% tip: add  grid,tics=10  to the options below to align, then remove.
+\begin{overpic}[width=\linewidth,percent]{figs/fig_openworld_notext.pdf}%
+%  \put(50.0,45.16){\makebox(0,0)[b]{\small\bfseries\color{figink} Open world: structure recovered from pixels does not restore the symbolic linter}}   % title -- drop if you use \caption
+  \put(14.06,14.69){\makebox(0,0)[b]{\footnotesize\color{figslate} raw pixels (no IR)}}
+  \put(34.77,17.34){\makebox(0,0)[b]{\footnotesize\color{figslate} layout parser}}
+  \put(55.31,15.0){\makebox(0,0)[b]{\footnotesize\color{figslate} recovered structure}}
+  \put(55.31,13.28){\makebox(0,0)[b]{\scriptsize\itshape\color{figgrey} (approximate, not native IR)}}
+  \put(81.25,29.84){\makebox(0,0)[b]{\footnotesize\bfseries\color{figred} symbolic linter}}
+  \put(81.25,28.12){\makebox(0,0)[b]{\scriptsize\itshape\color{figred} not restored}}
+  \put(80.47,3.52){\makebox(0,0)[b]{\footnotesize\bfseries\color{figblue} re-elicited VLM}}
+\end{overpic}

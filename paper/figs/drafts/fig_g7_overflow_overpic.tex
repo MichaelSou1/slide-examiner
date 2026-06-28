@@ -1,0 +1,8 @@
+% ---- fig_g7_overflow: text overlay (font follows the paper, edit here) ----
+% tip: add  grid,tics=10  to the options below to align, then remove.
+\begin{overpic}[width=\linewidth,percent]{figs/fig_g7_overflow_notext.pdf}%
+%  \put(50.0,56.17){\makebox(0,0)[b]{\small\bfseries\color{figink} G7 render-overflow: the declared box is legal; only the rendered pixels overflow}}   % title -- drop if you use \caption
+  \put(25.42,4.17){\makebox(0,0)[b]{\footnotesize\color{figink} rendered text fits the box}}
+  \put(74.58,4.17){\makebox(0,0)[b]{\footnotesize\color{figink} rendered pixels overflow the box}}
+  \put(50.0,2.5){\makebox(0,0)[b]{\scriptsize\itshape\color{figslate} The linter sees two identical, legal declared boxes -- it is blind to the difference by construction}}
+\end{overpic}
