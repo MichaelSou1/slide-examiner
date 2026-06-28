@@ -797,11 +797,9 @@ floor versus format-suppressed perception---turns a vague ``VLMs are bad at layo
 routing rule: rules to the linter and perceivable-but-suppressed classes to a VLM under an elicitation that the
 diagnosis proves recovers them. The E3 control makes the rule simpler: linter plus one C3-prompted VLM covers
 8/9 classes, matching the pre-registered routed hybrid and beating either single engine. A constructed render
-class \g{G7}, audited over five published rewards (two per category) plus a closed frontier VLM judge, shows that the linter's blind spot is shared
-by this 3B document reward and an artistic-aesthetic head but \emph{not} by either of two general-multimodal rewards or a
-perceptual-quality probe or by Qwen3.7-Max used as a pointwise judge---so \g{G7}-detection tracks perceptual capability,
-not the training-domain label alone, and \g{G7}
-needs a perceptually-capable engine, prompted, judged, or reward-headed. The recovery replicates across four of
+class \g{G7} makes the linter's blind spot falsifiable: audited over five published rewards and a frontier VLM
+judge, it splits them by perceptual capability rather than training domain---so \g{G7} needs a
+perceptually-capable engine, whether prompted, judged, or reward-headed. The recovery replicates across four of
 the six VLMs tested (under the capability gate) and transfers to real slides, which makes the central claim a property of the
 \emph{elicitation $\times$ defect} interaction rather than of any one model. The unit of contribution is the
 lossless-oracle diagnosis---which bottleneck a defect hits, and therefore which engine it needs---and the
