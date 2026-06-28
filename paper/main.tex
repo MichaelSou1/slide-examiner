@@ -375,31 +375,21 @@ same model, taxonomy, and image, differing only in ``ask everything at once'' ve
 forced evidence.'' If C3 $\gg$ C0, the pointwise abstention was a format/cognitive-load artifact, not a
 capability gap.
 
-\paragraph{The recovery replicates across the capable subset.}
-Before reporting recovery, we fix the capability boundary: a model counts as in-scope for the format-suppression
-claim only if C3 both clears the paired-clean detection gate ($\ba\ge0.70$, precision $\ge0.70$) and localizes
-the overflowing element on \g{G7}. This excludes InternVL-8B and Ovis-9B as capability-boundary cases rather
-than treating their floor/non-localized behavior as evidence against elicitation. \emph{Caveat on circularity:}
-the gate uses C3-\g{G7} performance itself; an independent acuity probe (e.g., a forced-choice
-coarse-vs-fine rendered-text set) would be cleaner. The within-set stratified McNemar (233 fixes vs.\ 2
-reversals across four cross-vendor models; Sec.~\ref{sec:elicit}) is independent of the gate and argues
-against a purely definitional artifact. On the constructed render
-class \g{G7}, the atomic-binary C3 recovers detection that C0 suppresses across the remaining four model
-instances and three scales (Fig.~\ref{fig:c3}): Qwen3.5-9B $0.50\!\to\!0.93$,
-Qwen3.5-27B $0.79\!\to\!1.00$, Qwen3.6-27B $0.51\!\to\!1.00$, and Google Gemma4-31B $0.69\!\to\!0.99$, all at
-precision 0.88--1.00. As a \emph{cross-model} effect---the claim we actually make---the recovery is
-overwhelming: a stratified (Cochran) McNemar over the four models' matched pairs counts \textbf{233} \g{G7}
-items that C3 fixes against \textbf{2} reversals ($\chi^2_1{=}227$, $p<10^{-50}$).\footnote{Per model the gain
-is individually significant and Holm-surviving for all four capable models (exact McNemar $p\le 1.5\!\times\!10^{-11}$);
-the only two reversals are on Gemma4-31B (C3 detection recall $88/90$). Holm (FWER) over all 61
-reported tests keeps the pooled \g{G7} recovery, all four per-model \g{G7} cells, both examiner contrasts
-($p_{\text{Holm}}{=}1.9\!\times\!10^{-5},\,4.7\!\times\!10^{-4}$) and \emph{both} general-multimodal rewards' \g{G7}
-detection (Skywork $p_{\text{Holm}}{=}2\!\times\!10^{-6}$, PickScore $2.5\!\times\!10^{-3}$); full corrected
-table + the stratified test in the released multiplicity report. The declared 61-test family is the complete set
-of reported Part-3 inferential tests: model$\times$defect elicitation McNemar contrasts, the two examiner
-contrasts, and reward \g{G7}-preference tests; purely descriptive cells are not in the family.} That the \emph{same} effect appears in models from different
-vendors with different pretraining is the core model-agnostic evidence: C0's fixed taxonomy cannot \emph{name}
-an off-taxonomy render class, so it abstains; the atomic per-type binary restores it.
+\paragraph{C3 recovers the linter-blind class across the capable subset.}
+We scope the claim to models that can actually see \g{G7}: a model is in-scope only if C3 clears the
+paired-clean detection gate ($\ba\ge0.70$, precision $\ge0.70$) and localizes the overflowing element, which
+excludes InternVL-8B and Ovis-9B as capability-boundary cases. On the remaining four instances across three
+scales and three vendors, atomic-binary C3 recovers detection that C0 suppresses (Fig.~\ref{fig:c3}:
+$0.50$--$0.79\!\to\!0.93$--$1.00$, precision $0.88$--$1.00$). The effect we claim is \emph{cross-model}, and
+there it is overwhelming: a stratified (Cochran) McNemar over the four models' matched pairs counts \textbf{233}
+\g{G7} items C3 fixes against \textbf{2} reversals ($\chi^2_1{=}227$, $p<10^{-50}$).\footnote{Per-model exact
+McNemar $p\le1.5\!\times\!10^{-11}$, all Holm-surviving; the two reversals are on Gemma4-31B (C3 recall
+$88/90$). Holm (FWER) over the pre-registered 61-test family also keeps both examiner contrasts
+($p_{\text{Holm}}{=}1.9\!\times\!10^{-5},\,4.7\!\times\!10^{-4}$) and both general-multimodal rewards' \g{G7}
+detection (Skywork $2\!\times\!10^{-6}$, PickScore $2.5\!\times\!10^{-3}$); full corrected table in the released
+multiplicity report.} The gate is defined by C3, but this cross-vendor test is gate-independent, so the recovery
+is not a definitional artifact. The mechanism is simple: C0's fixed whole-taxonomy rubric cannot \emph{name} an
+off-taxonomy render class, so the model abstains; the atomic per-type binary restores it.
 
 \begin{figure}[t]
 \centering
@@ -411,41 +401,26 @@ perceptual floor---a capability-dependent boundary, not a universal fix.}
 \label{fig:c3}
 \end{figure}
 
-\paragraph{Coverage vs.\ format: a C0+ control separates them.}
-A skeptic objects that C0 never \emph{listed} \g{G7} in its rubric, so the C0$\to$C3 gain could be a mere
-prompt-coverage artifact (``C0 was not asked'') rather than format suppression. We settle it with a \textbf{C0+}
-control: the C0 whole-taxonomy single pointwise call with \g{G7} \emph{added} to the candidate catalog
-(otherwise byte-identical overloaded format). The recovery factors cleanly into two components. \emph{Coverage}:
-naming \g{G7} in the rubric recovers the model's ability to \emph{emit} it on defectives---pooled across the four
-capable models, C0$\to$C0+ flips \textbf{234} \g{G7} defectives from un-named to named against \textbf{0}
-reversals (exact McNemar $p{=}7.2\!\times\!10^{-71}$; named-recall $0.00\to0.64$--$0.97$). So part of the gain is
-genuinely coverage, and we no longer claim ``naming alone'' recovers \g{G7} in the strong sense. \emph{Format}:
-but naming inside the overloaded format \emph{wrecks specificity}---C0+ over-flags clean twins on \textbf{55\%}
-of pairs (183/330), versus \textbf{2.4\%} (8/330) for C3, so C0+ balanced accuracy stalls at $0.58$--$0.82$ while
-C3 reaches $0.93$--$1.00$. The atomic per-type binary with a forced-evidence gate is what converts naming into
-\emph{high-specificity} detection; the whole-taxonomy format suppresses precision, not perception. The sharpened
-claim is therefore: \g{G7}'s off-taxonomy status is a coverage gap, but the format-suppression effect is real and
-its locus is \emph{specificity}---naming the class is necessary, the atomic elicitation is what makes the
-detection usable (full table in the released \texttt{part3\_c0plus\_rc01} report; the C0+ contrasts are
-revision-added decomposition controls reported outside the pre-registered 61-test family, and at
-$p{=}7\!\times\!10^{-71}$ survive any multiplicity correction trivially).
-
-\paragraph{It is real perception, not a lucky ``yes.''}
-Paired-clean precision near 1.00 already rules out an always-flag model, but to confirm a correct ``yes'' points
-to the right place we check C3's forced evidence against the synthetic \g{G7} ground truth. On the four capable
-models' \g{G7} true positives, the named region and the named overflowing \emph{element} are correct
-$\ge$98\%; models read back the specific spilling content (``the list items starting from `Cost
-attribution'\,''), which a bluffing model cannot do. The recovery is perception, not a calibration trick on the
-label.
-
-\paragraph{No free lunch: elicitation is conditional.}
-The optimal elicitation is jointly determined by model capability and defect class. C2 synthetic-twin
-pairwise---not C3---is what rescues \emph{declared} geometry \g{G1} on capable models (Qwen3.5-27B
-$0.69\!\to\!0.93$, Qwen3.6-27B $0.53\!\to\!0.78$, precision 1.00), because snapping absorbs the declared
-overflow and the pairwise contrast exposes it. And C1 free-form, which rescues weak abstaining models,
-\emph{collapses} on strong models: the capable, verbose models free-associate nits and flag a defect on nearly
-every clean slide (precision $\approx$0.50). There is no universal elicitation---which is precisely why the
-critic routes per defect and per model rather than adopting one prompt.
+\paragraph{It is the format, not the eyes.}
+Does naming \g{G7} suffice, or does the \emph{atomic format} do the work? We separate them with a \textbf{C0+}
+control---the C0 whole-taxonomy call with \g{G7} \emph{added} to the catalog, otherwise byte-identical---and a
+single-slide \emph{C0\_named} condition that names the class on an isolated atomic prompt. The recovery factors
+into coverage and format. \emph{Coverage}: naming recovers \emph{recall}---C0$\to$C0+ flips \textbf{234}
+defectives from un-named to named against \textbf{0} reversals ($p{=}7\!\times\!10^{-71}$; named-recall
+$0.00\!\to\!0.64$--$0.97$). \emph{Format}: but naming \emph{inside the overloaded rubric} wrecks
+specificity---C0+ over-flags clean twins on \textbf{55\%} of pairs ($183/330$) versus \textbf{2.4\%} ($8/330$)
+for C3, so C0+ balanced accuracy stalls at $0.58$--$0.82$ while C3 reaches $0.93$--$1.00$. Naming the same class
+on the \emph{atomic} prompt (C0\_named) instead recovers full balanced accuracy and a paired clean reference
+adds nothing on top (paired-clean Holm $p\le0.002$)---so for \g{G7} the suppressor is the whole-taxonomy
+\emph{format}, not perception: the model saw it all along. Forced evidence confirms real perception, not a lucky
+``yes'': on the capable models' \g{G7} true positives the named region and overflowing element are correct
+$\ge$98\%, and the models read back the specific spilling content (``the list items starting from `Cost
+attribution'\,''), which a bluffing model cannot do. The same decomposition draws the boundary: for declared
+geometry \g{G1} and image/text contradiction \g{S6}, naming alone does \emph{not} help (C0\_named
+$\approx0.50$) and the recovery needs the paired reference (2-AFC $\to0.97$--$1.00$)---a milder
+\emph{availability-of-reference} effect, not format suppression. A clean-vs-clean guess-floor rules out a
+forced-pick artifact for both: capable models answer ``tie'' on $92$--$100\%$ of clean pairs
+(Fig.~\ref{fig:decomp}).
 
 \begin{figure}[t]
 \centering
@@ -453,38 +428,24 @@ critic routes per defect and per model rather than adopting one prompt.
 \caption{\textbf{What drives the recovery: naming vs.\ a paired reference.} Holding model and image fixed on the
 freeform set, the chance$\to$ceiling jump factors into a \emph{naming} component (C0\_named$-$C0: one slide, the
 defect named, \emph{no} reference) and a \emph{pairing} component (AFC$-$C0\_named: a clean twin supplied). For
-the constructed render class \g{G7} naming alone carries it (green); for declared geometry \g{G1} and semantic
+the constructed render class \g{G7} the naming term carries it (green); for declared geometry \g{G1} and semantic
 \g{S6} the paired reference does (blue). The AFC\_clean guess-floor (dotted) is near chance, so neither is a
 forced-pick artifact. Mean over the models that recover ($\text{AFC}\ge0.7$).}
 \label{fig:decomp}
 \end{figure}
 
-\paragraph{Naming vs.\ a paired reference: a defect-dependent answer.}
-A skeptic asks whether the chance$\to$1.00 recovery is genuine \emph{elicitation} (the model perceives the defect
-and the format suppressed it) or merely an \emph{easier task} (the forced choice hands over a clean reference and
-a named target the pointwise call withholds). We factor it, holding model and image fixed, into a \emph{naming}
-term (C0\_named: a single slide, the candidate defect named, no reference, no forced-evidence gate) and a
-\emph{pairing} term (the true 2-AFC against the clean twin), with a clean-vs-clean \emph{guess-floor} control
-(Fig.~\ref{fig:decomp}). The answer is \emph{defect-dependent} and consistent across all four capable models. For
-\g{G7}---the off-taxonomy render class C0 cannot \emph{name}---\textbf{naming alone} recovers it
-(Qwen3.5-9B $0.50\!\to\!0.93$, Qwen3.6-27B $0.51\!\to\!1.00$, Qwen3.5-27B $0.79\!\to\!1.00$, Gemma4-31B
-$0.69\!\to\!0.88$; paired-clean McNemar Holm-corrected $p\!\le\!0.002$), and the paired reference adds nothing on
-top: this is \emph{format suppression}, the model saw \g{G7} all along. For \g{G1}/\g{S6} the opposite holds:
-naming alone does \emph{not} help (C0\_named $\approx$0.50) and the recovery needs the paired clean reference
-(2-AFC $\to$0.97--1.00)---an \emph{availability-of-reference} effect, properly scoped as such. Crucially, the
-guess-floor control rules out a forced-pick artifact for both: on two \emph{clean} slides the capable models
-correctly answer ``tie'' 92--100\% of the time and fabricate a consistent winner on $\le$2\% of pairs, so the
-2-AFC ceiling is real signal, not always-pick-one. The paper's mechanism claim---\emph{format suppression, not
-the eyes}---is thus established for the constructed \g{G7} (and the C3 atomic recovery it mirrors); the declared
-\g{G1}/\g{S6} forced-choice recovery is the milder availability-of-reference effect.
-
-\paragraph{It transfers to real slides.}
-On the human-annotated \textsc{SlideAudit} set, even with no structure available (so no linter), C3 beats C0
-pointwise for every class---brand color $0.52\!\to\!0.81$, alignment $0.56\!\to\!0.72$---confirming the format
-effect is not a synthetic artifact. Absolute geometry on bare real pixels stays modest (0.55--0.74 outside
-blatant overlap): real fine geometry still needs the linter, which needs the element structure bare images
-lack. The hybrid's full power requires native structure; on image-only real data it runs in a degraded
-VLM-only mode---a ceiling set by missing structure, not missing method.
+\paragraph{No universal elicitation---so the critic routes.}
+The best elicitation is jointly set by model capability and defect class. C2 synthetic-twin pairwise---not
+C3---rescues \emph{declared} geometry \g{G1} on capable models (Qwen3.5-27B $0.69\!\to\!0.93$, Qwen3.6-27B
+$0.53\!\to\!0.78$, precision $1.00$), because snapping absorbs the declared overflow and the contrast exposes
+it; and C1 free-form, which rescues weak abstaining models, \emph{collapses} on strong ones, which
+free-associate nits and flag nearly every clean slide (precision $\approx0.50$). There is no one prompt---which
+is exactly why the critic routes per defect and per model. The format effect is not a synthetic artifact: on the
+human-annotated \textsc{SlideAudit} set, with no structure available, C3 still beats C0 for every class (brand
+color $0.52\!\to\!0.81$, alignment $0.56\!\to\!0.72$). Absolute geometry on bare real pixels stays modest
+($0.55$--$0.74$ outside blatant overlap)---real fine geometry needs the linter, hence the element structure bare
+images lack---so on image-only real data the hybrid runs in a degraded VLM-only mode, a ceiling set by missing
+structure, not missing method.
 
 \subsection{The minimal hybrid critic covers the most}\label{sec:coverage}
 
