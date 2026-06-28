@@ -270,19 +270,15 @@ The same pointwise image-only setting hides a second, opposite phenomenon. For \
 image/text contradiction, pointwise balanced accuracy is 0.50---indistinguishable from the genuinely
 sub-perceptual classes---yet a two-alternative forced choice between the defective and clean slide jumps to
 \textbf{1.00} (Fig.~\ref{fig:rel}): the defect is perceivable, and the absolute pointwise call simply fails to
-elicit it. The same is true of \g{G3} alignment, but only \emph{above a magnitude threshold}: when we sweep the
-injected offset as an internal contrast (one element shifted out of its aligned sibling column, decidable from
-the slide alone) across $2$--$64$\,px ($0.1$--$3.3\%$ of slide width), the forced choice saturates to
-\textbf{1.00 by 16\,px} ($0.83\%$) and single-slide atomic elicitation climbs to a $\approx0.90$ plateau by
-$48$--$64$\,px, while the \emph{sub-threshold tail} ($\le8$\,px) stays at chance even side by side
-(Fig.~\ref{fig:sat}). So fine alignment is not a class-level capability floor: it is format-suppressed and
-recoverable wherever the offset clears acuity, with a genuinely sub-perceptual residue only in the small-offset
-tail. (\emph{How} the elicitation helps differs by class---a named target on a single slide vs.\ a paired clean
-reference---and we decompose it in Sec.~\ref{sec:elicit} (Fig.~\ref{fig:decomp}), finding pure format
-suppression for the constructed render class \g{G7} and a milder availability-of-reference effect for
-\g{G1}/\g{S6}.) The connective thread is therefore a \emph{magnitude-gated} recoverable-versus-sub-perceptual
-boundary rather than a clean geometric/semantic split---and \g{S3} terminology (below) remains the one defect no
-elicitation rescues.
+elicit it. \g{G3} alignment behaves the same way, but only \emph{above a magnitude threshold}: sweeping the
+injected offset as an internal contrast (one element shifted from its aligned sibling column, decidable from the
+slide alone), the forced choice saturates to $1.00$ by $16$\,px ($0.83\%$ of slide width) while the
+sub-threshold tail ($\le8$\,px) stays at chance even side by side (Fig.~\ref{fig:sat}). So fine alignment is not
+a class-level capability floor: it is format-suppressed and recoverable wherever the offset clears acuity, with
+a genuinely sub-perceptual residue only in the small-offset tail. (\emph{How} the elicitation helps differs by
+class---a named target vs.\ a paired clean reference---which we decompose in Sec.~\ref{sec:elicit}.) The
+connective thread is therefore a \emph{magnitude-gated} recoverable-versus-sub-perceptual boundary rather than a
+clean geometric/semantic split---and \g{S3} terminology (below) remains the one defect no elicitation rescues.
 
 \begin{figure}[t]
 \centering
@@ -348,13 +344,13 @@ not an elicitation or data artifact.}
 \end{figure}
 
 \paragraph{A methodological aside that becomes load-bearing.}
-Enterprise ``snap-to-master'' templates re-fit element boxes to a grid before rendering. Measuring this, we
-find a template silently \emph{absorbs} 45\% of injected geometry defects: overlap, alignment, and margin
-violations become pixel-identical to their clean twins after snapping (Sec.~\ref{sec:hybrid}). This collapses
-the inspectable spectrum toward two poles---pure-perception defects that templates cannot constrain (overflow,
-driven by content-determined text length) and pure-semantic defects that templates do not touch---and it is a
-trap for any dataset that derives labels from the IR but evaluates on the rendered image. We use it below to
-explain a reward-model failure and to justify rendering defectives faithfully.
+Enterprise ``snap-to-master'' templates re-fit element boxes to a grid before rendering, and we find a template
+silently \emph{absorbs} 45\% of injected geometry defects: overlap, alignment, and margin violations become
+pixel-identical to their clean twins after snapping, while overflow---driven by content-determined text
+length---survives. This collapses the inspectable spectrum toward two poles, pure-perception defects templates
+cannot constrain and pure-semantic defects they do not touch, and is a trap for any dataset that derives labels
+from the IR but evaluates on the rendered image---a hazard we quantify and tie to a reward-model failure in
+Sec.~\ref{sec:g7}.
 
 % =====================================================================
 \section{From diagnosis to a symbolic--neural critic}\label{sec:hybrid}
