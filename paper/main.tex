@@ -73,14 +73,13 @@ or a different tool entirely. We treat that question as the design problem and a
 \centering
 \includegraphics[width=\linewidth]{figs/fig1_routing.png}
 \caption{\textbf{The paper in one picture.} A perception/reasoning diagnosis (Sec.~\ref{sec:diag}) shows
-slide-inspection failures are of two kinds---declared-geometry (exact and cheap for a symbolic linter, plus a
-sub-threshold acuity tail nothing recovers) and merely format-suppressed (route to a VLM under a changed
-elicitation). Routing each defect to its bottleneck-appropriate
-engine yields a hybrid critic (Sec.~\ref{sec:hybrid}). The render-overflow class \g{G7} is the crux: a symbolic
-linter is blind to it by construction, and this 3B document reward plus an artistic-aesthetic head miss it
-empirically, while \emph{both} general-multimodal rewards (two backbones), CLIP-IQA, a closed frontier VLM
-judge, and the VLM engine under atomic-binary elicitation catch it---so \g{G7}-detection tracks rendered-quality
-read-out capability, not the domain label alone, and \g{G7} routes to a perceptually-capable engine.}
+slide-inspection failures are of two kinds: declared-geometry---exact and cheap for a symbolic linter, with a
+sub-threshold acuity tail nothing recovers---and merely format-suppressed---recovered by a vision--language
+model under a changed elicitation. Routing each defect to its bottleneck-appropriate engine yields a hybrid
+critic (Sec.~\ref{sec:hybrid}). A constructed render-overflow class (legal declared box, overflowing pixels) is
+the crux: invisible to the linter by construction, it is caught only by engines with a rendered-quality
+read-out---a re-elicited VLM, a frontier VLM judge, or general perceptual reward models---not by domain-labelled
+scorers, so its detection tracks perceptual capability rather than training domain (Sec.~\ref{sec:g7}).}
 \label{fig:teaser}
 \end{figure}
 
@@ -107,10 +106,10 @@ The diagnosis---not an architectural preference---then prescribes the critic (Fi
 each defect to the engine that owns its bottleneck. Sub-perceptual geometry goes to a symbolic linter that
 reads coordinates and rules; text and structural semantics go to a language model; and the format-suppressed,
 perceivable classes go to a VLM, but only under the changed elicitation the diagnosis shows recovers them. To
-stress-test the design we construct an adversarial class, \g{G7} render-containment overflow, that is invisible
+stress-test the design we construct an adversarial render-containment overflow class that is invisible
 to the linter by construction (the declared box is legal; only the rendered pixels overflow) and---we
-find---missed by this 3B document reward and an artistic-aesthetic head as well, while two general-multimodal
-rewards, a perceptual-quality probe, and a closed frontier VLM-as-judge see it; \g{G7}-detection tracks
+find---missed by a 3B document reward and an artistic-aesthetic head as well, while two general-multimodal
+rewards, a perceptual-quality probe, and a closed frontier VLM-as-judge see it; its detection tracks
 rendered-quality read-out capability rather than the training-domain label alone. We conjecture the same
 declared-layout/rendered-pixel gap recurs in DOM/CSS, charts, and document layout, but do not test it here. The
 full symbolic--neural critic is built for \emph{IR-owning generation agents}---where the declared structure the
@@ -793,17 +792,18 @@ third-party pixels the deployable critic is the C3-elicited VLM.
 % =====================================================================
 
 A slide-defect critic should not be one model. Telling apart the two blindnesses---a magnitude-gated acuity
-floor versus format-suppressed perception---turns a vague ``VLMs are bad at layout'' into an actionable
-routing rule: rules to the linter and perceivable-but-suppressed classes to a VLM under an elicitation that the
-diagnosis proves recovers them. The E3 control makes the rule simpler: linter plus one C3-prompted VLM covers
-8/9 classes, matching the pre-registered routed hybrid and beating either single engine. A constructed render
-class \g{G7} makes the linter's blind spot falsifiable: audited over five published rewards and a frontier VLM
-judge, it splits them by perceptual capability rather than training domain---so \g{G7} needs a
-perceptually-capable engine, whether prompted, judged, or reward-headed. The recovery replicates across four of
-the six VLMs tested (under the capability gate) and transfers to real slides, which makes the central claim a property of the
-\emph{elicitation $\times$ defect} interaction rather than of any one model. The unit of contribution is the
-lossless-oracle diagnosis---which bottleneck a defect hits, and therefore which engine it needs---and the
-falsifiable class that stress-tests it; the routed critic is the consequence, not the headline.
+floor versus format-suppressed perception---turns a vague ``VLMs are bad at layout'' into an actionable routing
+rule: declared geometry to a symbolic linter, and the perceivable-but-suppressed classes to a vision--language
+model under an elicitation the diagnosis proves recovers them. A control shows the rule needs no per-class
+tuning: a linter plus one re-elicited VLM covers eight of nine classes, matching a pre-registered routed hybrid
+and beating either engine alone. A constructed render-overflow class---a legal declared box whose rendered
+content spills out---makes the linter's blind spot falsifiable, and audited over five published reward models
+and a frontier VLM judge it splits them by perceptual capability rather than training domain, so it needs a
+perceptually-capable engine whether prompted, judged, or reward-scored. The recovery holds across the capable
+models and transfers to real human-annotated slides, making the central claim a property of the
+elicitation-by-defect interaction rather than of any one model. The unit of contribution is the lossless-oracle
+diagnosis---which bottleneck a defect hits, and therefore which engine it needs---and the falsifiable class that
+stress-tests it; the routed critic is the consequence, not the headline.
 
 % =====================================================================
 \appendix
