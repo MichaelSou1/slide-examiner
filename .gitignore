@@ -76,3 +76,24 @@ docs/*.pdf
 # part3 real-deck render intermediates: keep only the lossless ir/*.json oracle
 data/part3/**/*.pdf
 data/part3/**/lo_prof/
+
+# AAAI-27 submission (AuthorKit27/)
+# Keep only our submission/ sources + deliverables; ignore the official template
+# assets shipped in the kit and all LaTeX build intermediates.
+AuthorKit27/AnonymousSubmission2027.*
+AuthorKit27/CameraReady2027.*
+AuthorKit27/Figures/
+AuthorKit27/Word/
+AuthorKit27/Instructions.txt
+AuthorKit27/Code and Data Supplement.txt
+AuthorKit27/Technical Supplement.txt
+AuthorKit27/aaai2027.bib
+AuthorKit27/ReproducibilityChecklist.pdf
+AuthorKit27/ReproducibilityChecklist.tex
+# LaTeX build intermediates under submission/
+AuthorKit27/submission/*.aux
+AuthorKit27/submission/*.bbl
+AuthorKit27/submission/*.blg
+AuthorKit27/submission/*.out
+# code_data_supplement/ is the unzipped source of code_data_supplement.zip; keep zip only
+AuthorKit27/submission/code_data_supplement/
