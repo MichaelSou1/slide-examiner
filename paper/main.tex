@@ -365,8 +365,10 @@ not share.}
 Not every consistency defect is format-suppressed. \g{S3} terminology inconsistency is \emph{not} rescued by
 forced choice (0.625, heavy position bias): reading the same term across deck pages and spotting a subtle
 variant is below threshold even side by side. The structured-oracle channel, which feeds the model
-the full deck text with both variants present, also fails (0.56), so the bottleneck is OCR-from-pixels plus
-the yes/no framing, not reasoning. \g{S3} leaves the VLM entirely for a symbolic terminology linter,
+the full deck text with both variants present, also fails (0.56): with both variants already explicit in the
+input, this failure cannot be OCR, and instead reflects cross-page term-matching that does not survive the
+yes/no framing. The image channel is consistent with fine-grained glyph discrimination and the oracle channel
+fails even with the text in hand, so neither route is reliable. \g{S3} leaves the VLM entirely for a symbolic terminology linter,
 which reaches balanced accuracy 1.000 against the VLM's 0.69, a negative result that \emph{re-routes} the class.
 
 \paragraph{A genuine geometric blind spot: \g{G6} page offset.}
@@ -955,25 +957,25 @@ report), and headline claims are stated as surviving or downgraded under that co
 % reasoningbench 2512.21329 (arXiv html v2) -- all real concurrent work, not forward-fabricated. Added comparative 2307.07889
 % (Liusie et al., EACL 2024 = 2024.eacl-long.8) and pairpoint 2504.14716 (Tripathi et al., OpenReview uyX5Vnow3U) for the
 % relative-vs-absolute elicitation claim in Sec. Related Work.
-\bibitem{chartbottleneck} On the Perception Bottleneck of VLMs for Chart Understanding. arXiv:2503.18435.
-\bibitem{hiddeninplainsight} Hidden in Plain Sight: VLMs Overlook Their Visual Representations. arXiv:2506.08008.
+\bibitem{chartbottleneck} Liu et al. On the Perception Bottleneck of VLMs for Chart Understanding. arXiv:2503.18435.
+\bibitem{hiddeninplainsight} Fu, Bonnen, Guillory, Darrell. Hidden in Plain Sight: VLMs Overlook Their Visual Representations. arXiv:2506.08008.
 \bibitem{mmvp} Tong et al. Eyes Wide Shut? Exploring the Visual Shortcomings of Multimodal LLMs. CVPR 2024; arXiv:2401.06209.
-\bibitem{reasoningbench} Your Reasoning Benchmark May Not Test Reasoning: Revealing Perception Bottleneck in Abstract Reasoning Benchmarks. arXiv:2512.21329.
-\bibitem{led} LED Benchmark: Diagnosing Structural Layout Errors for Document Layout Analysis. arXiv:2507.23295.
-\bibitem{rankscore} VLM Judges Can Rank but Cannot Score: Task-Dependent Uncertainty in Multimodal Evaluation. arXiv:2604.25235.
+\bibitem{reasoningbench} Wang et al. Your Reasoning Benchmark May Not Test Reasoning: Revealing Perception Bottleneck in Abstract Reasoning Benchmarks. arXiv:2512.21329.
+\bibitem{led} Heo, Hwang, Jung, Jung. LED Benchmark: Diagnosing Structural Layout Errors for Document Layout Analysis. arXiv:2507.23295.
+\bibitem{rankscore} Kumar et al. VLM Judges Can Rank but Cannot Score: Task-Dependent Uncertainty in Multimodal Evaluation. arXiv:2604.25235.
 \bibitem{comparative} Liusie, Manakul, Gales. LLM Comparative Assessment: Zero-shot NLG Evaluation through Pairwise Comparisons using Large Language Models. EACL 2024; arXiv:2307.07889.
 \bibitem{pairpoint} Tripathi, Wadhwa, Durrett, Niekum. Pairwise or Pointwise? Evaluating Feedback Protocols for Bias in LLM-Based Evaluation. arXiv:2504.14716.
-\bibitem{aeslides} AeSlides: Incentivizing Aesthetic Layout in LLM-Based Slide Generation via Verifiable Rewards. arXiv:2604.22840.
-\bibitem{evopresent} Presenting a Paper is an Art: Self-Improvement Aesthetic Agents for Academic Presentations (EvoPresent/PresAesth). arXiv:2510.05571.
+\bibitem{aeslides} Pan et al. AeSlides: Incentivizing Aesthetic Layout in LLM-Based Slide Generation via Verifiable Rewards. arXiv:2604.22840.
+\bibitem{evopresent} Liu et al. Presenting a Paper is an Art: Self-Improvement Aesthetic Agents for Academic Presentations (EvoPresent/PresAesth). arXiv:2510.05571.
 \bibitem{autopresent} Ge et al. AutoPresent: Designing Structured Visuals from Scratch. CVPR 2025; arXiv:2501.00912.
-\bibitem{vlmslideeval} VLM-SlideEval: Evaluating VLMs on Structured Comprehension and Perturbation Sensitivity in PPT. arXiv:2510.22045.
-\bibitem{slideaudit} SlideAudit: A Dataset and Taxonomy for Automated Evaluation of Presentation Slides. arXiv:2508.03630.
-\bibitem{docreward} DocReward: A Document Reward Model for Structuring and Stylizing. arXiv:2510.11391.
-\bibitem{skyworkvl} Skywork-VL Reward: An Effective Reward Model for Multimodal Understanding and Reasoning. arXiv:2505.07263; weights \texttt{Skywork/Skywork-VL-Reward-7B}.
+\bibitem{vlmslideeval} Kang, Bao, Goswami. VLM-SlideEval: Evaluating VLMs on Structured Comprehension and Perturbation Sensitivity in PPT. arXiv:2510.22045.
+\bibitem{slideaudit} Zhang, Chen, Zhong, Wobbrock. SlideAudit: A Dataset and Taxonomy for Automated Evaluation of Presentation Slides. arXiv:2508.03630.
+\bibitem{docreward} Liu et al. DocReward: A Document Reward Model for Structuring and Stylizing. arXiv:2510.11391.
+\bibitem{skyworkvl} Wang et al. Skywork-VL Reward: An Effective Reward Model for Multimodal Understanding and Reasoning. arXiv:2505.07263; weights \texttt{Skywork/Skywork-VL-Reward-7B}.
 \bibitem{laionaes} LAION-AI. Aesthetic Predictor: a linear estimator on CLIP for image aesthetic quality (LAION-Aesthetics). Software, 2022. \url{https://github.com/LAION-AI/aesthetic-predictor}.
 \bibitem{pickscore} Kirstain et al. Pick-a-Pic: An Open Dataset of User Preferences for Text-to-Image Generation. NeurIPS 2023; arXiv:2305.01569; weights \texttt{yuvalkirstain/PickScore\_v1}.
 \bibitem{clipiqa} Wang, Chan, Loy. Exploring CLIP for Assessing the Look and Feel of Images. AAAI 2023; arXiv:2207.12396.
-\bibitem{zenodo10k} PPTAgent: Generating and Evaluating Presentations Beyond Text-to-Slides (introduces the Zenodo10K corpus of real \texttt{.pptx}). arXiv:2501.03936; dataset \texttt{Forceless/Zenodo10K}.
+\bibitem{zenodo10k} Zheng et al. PPTAgent: Generating and Evaluating Presentations Beyond Text-to-Slides (introduces the Zenodo10K corpus of real \texttt{.pptx}). arXiv:2501.03936; dataset \texttt{Forceless/Zenodo10K}.
 \bibitem{doclaynet} Pfitzmann et al. DocLayNet: A Large Human-Annotated Dataset for Document-Layout Analysis. KDD 2022; arXiv:2206.01062.
 \bibitem{publaynet} Zhong, Tang, Jimeno Yepes. PubLayNet: largest dataset ever for document layout analysis. ICDAR 2019; arXiv:1908.07836.
 \end{thebibliography}

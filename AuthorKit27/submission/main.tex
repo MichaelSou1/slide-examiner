@@ -13,6 +13,7 @@
 \usepackage{natbib}                              % DO NOT CHANGE / no options
 \usepackage{caption}                             % DO NOT CHANGE / no options
 \frenchspacing
+\setcounter{secnumdepth}{2}   % AAAI-27 permits section numbers (Instructions L525); depth 2 so subsection \ref{sec:g7,elicit,coverage} resolve
 
 \usepackage{amsmath}
 \usepackage{amssymb}
@@ -290,8 +291,10 @@ and \g{S3} terminology (below) remains the one defect no elicitation rescues.
 Not every consistency defect is format-suppressed. \g{S3} terminology inconsistency is \emph{not} rescued by
 forced choice (0.625, heavy position bias): reading the same term across deck pages and spotting a subtle
 variant is below threshold even side by side. The structured-oracle channel, which feeds the model
-the full deck text with both variants present, also fails (0.56), so the bottleneck is OCR-from-pixels plus
-the yes/no framing, not reasoning. \g{S3} leaves the VLM entirely for a symbolic terminology linter,
+the full deck text with both variants present, also fails (0.56): with both variants already explicit in the
+input, this failure cannot be OCR, and instead reflects cross-page term-matching that does not survive the
+yes/no framing. The image channel is consistent with fine-grained glyph discrimination and the oracle channel
+fails even with the text in hand, so neither route is reliable. \g{S3} leaves the VLM entirely for a symbolic terminology linter,
 which reaches balanced accuracy 1.000 against the VLM's 0.69, a negative result that \emph{re-routes} the class.
 
 \paragraph{A genuine geometric blind spot: \g{G6} page offset.}
