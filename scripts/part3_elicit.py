@@ -539,6 +539,12 @@ def _level_of(defect: str) -> str:
     return "deck" if defect in DECK_DEFECTS else "page"
 
 
+def _row_key(sample_id, modality, defect, is_clean) -> str:
+    """Stable identity of one probe (sample x modality x defect x pos/clean).
+    Used by --resume to skip probes already present in the durable row sidecar."""
+    return f"{sample_id}\t{modality}\t{defect}\t{int(bool(is_clean))}"
+
+
 def build_jobs(recs, defects, modalities, max_per_defect):
     bydef = collections.defaultdict(list)
     for r in recs:
@@ -603,6 +609,30 @@ def run(args):
     print(f"[{args.model}/{args.condition}/{args.style}] {len(jobs)} probes "
           f"over defects={args.defects} modalities={args.modalities}")
 
+    # --- resume: skip probes already committed to the durable row sidecar -----
+    # Sidecar path is derived from --out (independent of --dump-rows) so the final
+    # aggregate/dump-rows semantics stay byte-for-byte identical when --resume is off.
+    rows_sidecar = Path(str(args.out) + ".rows.jsonl")
+    preloaded: list[dict] = []
+    if args.resume and rows_sidecar.exists():
+        done_keys = set()
+        for line in rows_sidecar.open(encoding="utf-8"):
+            line = line.strip()
+            if not line:
+                continue
+            try:
+                r = json.loads(line)
+            except json.JSONDecodeError:
+                continue  # tolerate a torn final line from a hard kill
+            preloaded.append(r)
+            done_keys.add(_row_key(r.get("sample_id"), r.get("modality"),
+                                   r.get("defect"), r.get("is_clean")))
+        kept = [j for j in jobs
+                if _row_key(j[0].get("sample_id"), j[1], j[2], j[3]) not in done_keys]
+        print(f"[resume] {len(preloaded)} rows in sidecar; "
+              f"{len(jobs) - len(kept)} probes done, {len(kept)} to run")
+        jobs = kept
+
     def work(rec, modality, target_defect, is_clean):
         res = engine(client, args.model, rec, modality, target_defect, args.style, args.max_tokens)
         res["modality"] = modality
@@ -611,22 +641,38 @@ def run(args):
         res["level"] = "deck" if is_deck(rec) else "page"
         return res
 
-    rows = []
+    rows = list(preloaded)
     t0 = time.time()
-    with ThreadPoolExecutor(max_workers=args.workers) as pool:
-        futs = [pool.submit(work, *job) for job in jobs]
-        done = 0
-        for fut in as_completed(futs):
-            rows.append(fut.result())
-            done += 1
-            if done % 50 == 0 or done == len(jobs):
-                print(f"  {done}/{len(jobs)} {time.time()-t0:.0f}s")
+    # Under --resume, append each completed probe to the sidecar immediately (and
+    # flush) so a daily-quota abort mid-sweep loses nothing: re-running the same
+    # command skips everything already on disk. as_completed is drained in the main
+    # thread, so a single unlocked handle is safe.
+    sink = None
+    if args.resume:
+        rows_sidecar.parent.mkdir(parents=True, exist_ok=True)
+        sink = rows_sidecar.open("a", encoding="utf-8")
+    try:
+        with ThreadPoolExecutor(max_workers=args.workers) as pool:
+            futs = [pool.submit(work, *job) for job in jobs]
+            done = 0
+            for fut in as_completed(futs):
+                row = fut.result()
+                rows.append(row)
+                if sink is not None:
+                    sink.write(json.dumps(row, ensure_ascii=False) + "\n")
+                    sink.flush()
+                done += 1
+                if done % 50 == 0 or done == len(jobs):
+                    print(f"  {done}/{len(jobs)} {time.time()-t0:.0f}s")
+    finally:
+        if sink is not None:
+            sink.close()
 
     metrics = score(rows, args.modalities, args.defects)
     result = {
         "condition": args.condition, "model": args.model, "style": args.style,
         "manifest": args.manifest, "modalities": args.modalities,
-        "defects": args.defects, "n_jobs": len(jobs),
+        "defects": args.defects, "n_jobs": len(rows),
         "failures": sum(1 for r in rows if r.get("failure")),
         "metrics": metrics,
     }
@@ -708,6 +754,9 @@ def main():
     ap.add_argument("--workers", type=int, default=12)
     ap.add_argument("--out", required=True)
     ap.add_argument("--dump-rows", default=None)
+    ap.add_argument("--resume", action="store_true",
+                    help="incrementally append each probe to <out>.rows.jsonl and, on "
+                         "restart, skip probes already committed there (daily-quota safe).")
     ap.add_argument("--question", default=None,
                     help="override the C3/C0_named atomic question (E8 internal-contrast 口径).")
     ap.add_argument("--afc-phrase", default=None,
