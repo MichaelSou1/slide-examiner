@@ -65,52 +65,37 @@
 
 #### (a) 本地环境（Mac，纯 CPU，半小时）
 
-- [ ] ```bash
-      cd ~/Desktop/27Fall/slide-examiner
-      conda env create -f environment.yml && conda activate slide-examiner
-      pytest                    # 验收：~221 passed, 2 skipped
-      pip install -e ".[all]"
-      playwright install chromium
-      ```
-      字体：macOS 自带 Arial/Helvetica/Menlo（G7 HTML 的字体栈），**无需装任何字体**，保真度优于 Linux 方案。
-- [ ] 配 `.env`（从 `.env.example` 复制，照 `docs/ENVIRONMENT.md` §5）：填 API 平台的 `OPENAI_BASE_URL` + `OPENAI_API_KEY`；thinking 控制先设 `PART3_DISABLE_THINKING=1`（Ernie-5.0 若不支持关闭，见 (c) 的 budget 处理）。
+- [x] env `slide-examiner` 就绪；`pytest` = **221 passed, 2 skipped**（命中验收）；`.[all]` + `playwright install chromium` 完成。字体用 macOS 自带栈，无需装。
+      **坑（07-15）**：本机 PyPI 直连仅 ~29KB/s，`conda env create` 的 pip 步骤卡死 20+ 分钟 → 改用国内镜像：`pip install -e ".[all]" -i https://mirrors.aliyun.com/pypi/simple`，chromium 走 `PLAYWRIGHT_DOWNLOAD_HOST=https://cdn.npmmirror.com/binaries/playwright`。
+- [x] `.env` 已配齐：美团 AIGC 端点 `https://aigc.sankuai.com/v1/openai/native` + key + `PART3_DISABLE_THINKING=1`。**重要更正**：`part3_elicit` 走的 thinking 关闭是 `PART3_CHAT_KWARGS`（extra_body），`PART3_DISABLE_THINKING` 只作用于 api_config 工厂、不影响 elicit 路径——冒烟/sweep 需 `export PART3_CHAT_KWARGS='{"enable_thinking":false}'`（云端 Qwen 顶层形式，端点已实测接受）。
 
 #### (b) G7 语料重建 + fidelity 门槛（**过不了这道门不许跑实验**）
 
-- [ ] 重跑生成器（seed 20260620 是脚本默认值，直接跑即复现同一 IR/HTML）：
-      ```bash
-      python scripts/part3_build_g7.py --per-variant 30 --out data/part3/manifest_g7_rendered.jsonl
-      ```
-      产物：180 张 PNG 落 `data/part3/g7_images/`，manifest 的 image_path 指向本机。
-- [ ] **fidelity 验收（三查）**：
-  1. IR 一致性：新 manifest 与 `release/part3/manifests/manifest_g7_rendered.jsonl` 逐条 diff `slide`/`labels` 字段（剥离 image_path 后应完全一致）；
-  2. 渲染有效性：每 variant 抽 ≥4 对 PNG 目检——def 溢出肉眼可见、clean 无溢出、1280×720、无字体异常；
-  3. 溢出量化抽查：≥5 对 def-vs-clean 像素 diff，差异应集中在 manifest `overflow_region` 标注区域。
-  **任一查不过：停，报告差异，不带病跑实验。**
-- [ ] （若跑 G1/geo）part2 语料重建：deck JSON 在 git（`data/part2/decks/`），`part2_build_dataset.py` → faithful 渲染 → `data/part2/manifest_eval_test_rendered.jsonl`；同样目检 ≥10 对。
+- [x] 生成器重跑完成：`data/part3/manifest_g7_rendered.jsonl`（90 对）+ **180 PNG** 落 `data/part3/g7_images/`，linter-blind 自检 **90/90=1.000**，per-variant 30/30/30。
+- [x] **fidelity 三查 PASSED**——新写机器门 `scripts/part3_g7_fidelity_check.py`：① IR/labels 与 release 参考逐条 diff **90/90 完全一致**；② 渲染有效性（1280×720、def≠clean、非空）；③ 溢出定位 def_strip ink ≫ clean(=0)。另**人眼目检**三变体确认缺陷可见（bullet 溢卡底 / URL 冲出右边 / 图片越框）、clean 无溢出。
+- [x] part2/G1 语料重建：`data/part2/manifest_eval_test_rendered.jsonl`（807 条）+ `runs/part2/rendered/`。**坑**：release 冻结 manifest 只内嵌缺陷 IR，clean 的 `clean_slide_path` 指死主机 `/home/gpus/...`；解法＝本地跑 `part2_build_dataset.py` 重生成 `runs/part2/build_freeform/<sid>/clean_slide.json`（sample_id 确定性匹配 735/735），改路径前缀后 `slide-examiner render-manifest`。产物：clean 双子 **735/735**、G1 **54/54** def+clean 齐，非 template 306 对全 def≠clean（≥10 对目检达标）。
 
 #### (c) API 通道打通 + capable 冒烟门（每模型一道门）
 
-- [ ] 通道验证：`part3_elicit.py` 走 `--base-url` + `.env`（先例：`part3_r7_vlm_judge.py` 就是这么打云端的）。先各发一次带图请求确认多模态入参格式兼容（base64 data-URL）。**接入方式写死：OpenAI Python SDK + 非流式**（现有 harness 即此路径，勿改成裸 HTTP 或流式——流式默认不回 usage 字段且难做断点续跑）；SDK `max_retries` 设 3–5 做限流退避，`timeout` 放大到 120–180s（thinking 模型非流式等待长，参考 `part3_r7_vlm_judge.py` 的 `--timeout` 透传）。
-- [ ] **capable 冒烟（论文原判据）**：每模型先跑 C3 × G7 × ~20 对：
+- [x] 通道验证完成：`part3_elicit.py --base-url` + `.env`，带图请求确认 **base64 data-URL** 多模态入参兼容；OpenAI Python SDK 非流式路径不变。`part3_elicit.py` 客户端改为 `--timeout`（默认 120s）+ `--max-retries`（默认 5，SDK 指数退避）。
+- [x] **capable 冒烟三家全 PASS**（判据 bal-acc≥0.70 且 precision≥0.70 且能指认溢出元素）。命令（以 qwen3-vl-plus 为例，其余同）：
       ```bash
+      export PART3_CHAT_KWARGS='{"enable_thinking":false}'
       python scripts/part3_elicit.py --condition C3 --manifest data/part3/manifest_g7_rendered.jsonl \
-        --base-url <API> --model qwen3.5-397b-a17b-baidu --style scoped \
+        --base-url https://aigc.sankuai.com/v1/openai/native --model qwen3-vl-plus --style scoped \
         --defects G7_RENDER_CONTAINMENT_OVERFLOW --modalities A --max-per-defect 20 \
-        --out data/part3/smoke_qwen397b_g7_C3.json
+        --out data/part3/smoke_qwen3vlplus_g7_C3.json --resume --workers 3
       ```
-      判据：bal-acc ≥0.70 且 precision ≥0.70 且能指认溢出元素 → capable，进正式 sweep。
-      **若 Ernie-5.0 不过门**：单 Qwen3.5-397B 跑完整 ablation + 正文注明单模型；不要硬凑。
-      **若两个都不过门**：停，报告——此时说明 API 模型上 C3 本身不成立，ablation 换模型或改写作方案（TODO 2.4 预案三）。
-- [ ] thinking 处理：gpt-5.1-nothinking / gpt-4.1 系天然无此问题；qwen3-vl-plus 是思考/非思考融合模型，**必须显式关**（`enable_thinking: false`），冒烟时检查 usage 无 reasoning tokens；Gemini-2.5-flash 若默认开 thinking，用 API 参数关闭或计入 usage 单独报告；可选的 Ernie-5.0 无法关 thinking → 放大 max_tokens 并在 report 里把 reasoning tokens 单独列出（thinking 模型的 C0 自带额外算力，若 C3 仍胜出反而强化论证，明确写出这一点）。
-- [ ] **断点续跑（每日限额的硬要求）**：检查 `part3_elicit.py` 的写盘方式——若为跑完一次性写 JSON，改为增量写（每 sample 追加）+ 启动时跳过输出中已有的 sample_id；限额中断后重跑同命令即续。改动加 `--resume` 开关保持向后兼容。
-- [ ] **限额下的执行顺序（按信息价值排，任何一天断掉手里都有可用结果）**：
-  1. 三模型 capable 冒烟（C3×G7×20 对，约 120 调用，很便宜）；
-  2. E1（C0_rep）× Qwen397B × G7 全量 —— 摘要方向就靠它；
-  3. C0/C3/C0_full × Qwen397B × G7+G1 补齐主表；
-  4. Gemini、GPT 逐模型复制 2–3；
-  5. （可选）Ernie G7 单类。
-- [ ] 并发与限流：qwen3-vl-plus RPM=20 → workers 设 **3**（其余 vendor 冒烟时实测 RPM 后同法定）；elicit_common 加指数退避重试（429 必现，SDK max_retries 3–5）；每日限额耗尽时脚本应报错退出而非空转（检查错误码处理）。
+      | 模型 | bal-acc | precision | recall | 产物 |
+      |---|---|---|---|---|
+      | qwen3-vl-plus | **0.950** | 1.000 | 0.900 | `data/part3/smoke_qwen3vlplus_g7_C3.json` |
+      | gpt-5.1-nothinking | **0.900** | 1.000 | 0.800 | `data/part3/smoke_gpt51nothinking_g7_C3.json` |
+      | gemini-2.5-flash | **0.933** | 1.000 | 0.867 | `data/part3/smoke_gemini25flash_g7_C3.json` |
+      三家均过门 → Ernie/单模型/换方案的预案都不触发。C3 证据指认已核（示例点名溢出 bullet + region）。
+- [x] thinking 处理已核：qwen3-vl-plus 该端点 **默认 reasoning_tokens=0**（三种关法都接受、都 0）；gpt-5.1-nothinking 天然干净；gemini-2.5-flash 需 `{"enable_thinking":false}` + 放大 `--max-tokens 768`，且**仍会花 ~59 reasoning tokens 并在约 5/20 探针返回 None content**（门不受影响，全量 sweep 时按预案单独报 reasoning tokens）。
+- [x] **断点续跑 `--resume` 已实现**：增量写 `<out>.rows.jsonl`（每 sample flush）+ 启动**只跳成功行、重试失败行**（失败多为 429/限额，正是要续的）+ 结束聚合全量；非 resume 路径行为不变。实测：resume 精确「27 跳/13 重试」，配合退避 failures=0。
+- [ ] **限额下执行顺序**：① 三模型 capable 冒烟 **已完成**（见上）；②–⑤（E1 C0_rep 全量 → C0/C3/C0_full G7+G1 → Gemini/GPT 复制 → 可选 Ernie）属 2.1/2.2 sweep，未开始。
+- [x] 并发与限流：`--max-retries=5` 指数退避（429「每分钟请求次数超过限制」按模型计、必现）；qwen3-vl-plus workers=3、gemini/gpt 冒烟用 workers=2；限额耗尽由 SDK 抛错、`--resume` 续跑。
 
 #### (d) 成本预算（公司付费，约束是每日限额而非总价）
 
@@ -237,8 +222,8 @@
 
 | 日期 | 应完成 |
 |---|---|
-| 07-15 | W1 全部（机器检查通过）；2.-1(a)(b)：Mac 本地环境 + G7 语料重建过 fidelity 门槛 |
-| 07-16 | 2.-1(c)：API 通道通、两模型 capable 冒烟出结果；2.0/2.1 代码完成 |
+| 07-15 | ✅ W1 全部（机器检查通过）；✅ 2.-1(a)(b)：Mac 本地环境 + G7 语料重建过 fidelity 门槛（另 part2/G1 也重建完） |
+| 07-16 | ✅ 2.-1(c)：API 通道通、**三**模型 capable 冒烟全过（提前于计划，见 2.-1(c) 表）；⬜ 2.0/2.1 代码（未开始） |
 | 07-17 | E1（C0_rep）初步数字出炉 → 决定摘要方向 |
 | 07-19 | W2 四条件齐 + report；W3.1–3.3 台账拍板完毕 |
 | 07-21 | **摘要提交 OpenReview**；W3.4 表格审计定稿 |

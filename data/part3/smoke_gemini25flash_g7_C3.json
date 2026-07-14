@@ -1,0 +1,75 @@
+{
+  "condition": "C3",
+  "model": "gemini-2.5-flash",
+  "style": "scoped",
+  "manifest": "data/part3/manifest_g7_rendered.jsonl",
+  "modalities": [
+    "A"
+  ],
+  "defects": [
+    "G7_RENDER_CONTAINMENT_OVERFLOW"
+  ],
+  "n_jobs": 40,
+  "failures": 5,
+  "metrics": {
+    "A": {
+      "per_defect": {
+        "G7_RENDER_CONTAINMENT_OVERFLOW": {
+          "detection": {
+            "recall": 0.867,
+            "specificity": 1.0,
+            "bal_acc": 0.933,
+            "bal_acc_ci": [
+              0.73,
+              0.981
+            ],
+            "precision": 1.0,
+            "precision_ci": [
+              0.772,
+              1.0
+            ],
+            "fpr": 0.0,
+            "f1": 0.929,
+            "recall_ci": [
+              0.621,
+              0.963
+            ],
+            "tp": 13,
+            "fn": 2,
+            "fp": 0,
+            "tn": 20,
+            "n_pos": 15,
+            "n_neg": 20
+          },
+          "named": {
+            "recall": 0.867,
+            "specificity": 1.0,
+            "bal_acc": 0.933,
+            "bal_acc_ci": [
+              0.73,
+              0.981
+            ],
+            "precision": 1.0,
+            "precision_ci": [
+              0.772,
+              1.0
+            ],
+            "fpr": 0.0,
+            "f1": 0.929,
+            "recall_ci": [
+              0.621,
+              0.963
+            ],
+            "tp": 13,
+            "fn": 2,
+            "fp": 0,
+            "tn": 20,
+            "n_pos": 15,
+            "n_neg": 20
+          },
+          "headline_level": "detection"
+        }
+      }
+    }
+  }
+}

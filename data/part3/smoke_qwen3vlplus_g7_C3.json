@@ -1,0 +1,75 @@
+{
+  "condition": "C3",
+  "model": "qwen3-vl-plus",
+  "style": "scoped",
+  "manifest": "data/part3/manifest_g7_rendered.jsonl",
+  "modalities": [
+    "A"
+  ],
+  "defects": [
+    "G7_RENDER_CONTAINMENT_OVERFLOW"
+  ],
+  "n_jobs": 40,
+  "failures": 0,
+  "metrics": {
+    "A": {
+      "per_defect": {
+        "G7_RENDER_CONTAINMENT_OVERFLOW": {
+          "detection": {
+            "recall": 0.9,
+            "specificity": 1.0,
+            "bal_acc": 0.95,
+            "bal_acc_ci": [
+              0.769,
+              0.986
+            ],
+            "precision": 1.0,
+            "precision_ci": [
+              0.824,
+              1.0
+            ],
+            "fpr": 0.0,
+            "f1": 0.947,
+            "recall_ci": [
+              0.699,
+              0.972
+            ],
+            "tp": 18,
+            "fn": 2,
+            "fp": 0,
+            "tn": 20,
+            "n_pos": 20,
+            "n_neg": 20
+          },
+          "named": {
+            "recall": 0.9,
+            "specificity": 1.0,
+            "bal_acc": 0.95,
+            "bal_acc_ci": [
+              0.769,
+              0.986
+            ],
+            "precision": 1.0,
+            "precision_ci": [
+              0.824,
+              1.0
+            ],
+            "fpr": 0.0,
+            "f1": 0.947,
+            "recall_ci": [
+              0.699,
+              0.972
+            ],
+            "tp": 18,
+            "fn": 2,
+            "fp": 0,
+            "tn": 20,
+            "n_pos": 20,
+            "n_neg": 20
+          },
+          "headline_level": "detection"
+        }
+      }
+    }
+  }
+}

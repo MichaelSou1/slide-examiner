@@ -566,10 +566,13 @@ def build_jobs(recs, defects, modalities, max_per_defect):
 def run(args):
     from openai import OpenAI
 
-    # timeout/max_retries so a crashed server makes calls FAIL FAST (caught ->
-    # marked failure) instead of hanging the whole sweep indefinitely.
+    # Hosted OpenAI-compatible endpoints enforce a tight per-minute quota (429 is
+    # routine under any real concurrency), and thinking models can take >90s per
+    # non-streaming call. Give the SDK room to ride out 429s with its built-in
+    # exponential backoff (max_retries) and a longer ceiling for slow responses.
+    # Both are CLI-overridable for tighter/looser endpoints.
     client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY", "EMPTY"), base_url=args.base_url,
-                    timeout=90.0, max_retries=1)
+                    timeout=args.timeout, max_retries=args.max_retries)
     recs = [json.loads(l) for l in Path(args.manifest).open() if l.strip()]
     if args.freeform_only:
         # Drop template renders: the snap-to-master template absorbs ~45% of
@@ -615,7 +618,11 @@ def run(args):
     rows_sidecar = Path(str(args.out) + ".rows.jsonl")
     preloaded: list[dict] = []
     if args.resume and rows_sidecar.exists():
-        done_keys = set()
+        # Only a SUCCESSFUL probe counts as done: rows that recorded failure=True
+        # (usually a 429/quota death — exactly what a resume is meant to recover)
+        # are dropped here so they get re-attempted. Keyed dict also collapses any
+        # duplicate success lines from earlier non-resumed runs (keep the latest).
+        good_by_key: dict[str, dict] = {}
         for line in rows_sidecar.open(encoding="utf-8"):
             line = line.strip()
             if not line:
@@ -624,13 +631,16 @@ def run(args):
                 r = json.loads(line)
             except json.JSONDecodeError:
                 continue  # tolerate a torn final line from a hard kill
-            preloaded.append(r)
-            done_keys.add(_row_key(r.get("sample_id"), r.get("modality"),
-                                   r.get("defect"), r.get("is_clean")))
+            if r.get("failure"):
+                continue
+            good_by_key[_row_key(r.get("sample_id"), r.get("modality"),
+                                 r.get("defect"), r.get("is_clean"))] = r
+        preloaded = list(good_by_key.values())
+        done_keys = set(good_by_key)
         kept = [j for j in jobs
                 if _row_key(j[0].get("sample_id"), j[1], j[2], j[3]) not in done_keys]
-        print(f"[resume] {len(preloaded)} rows in sidecar; "
-              f"{len(jobs) - len(kept)} probes done, {len(kept)} to run")
+        print(f"[resume] {len(preloaded)} good rows in sidecar; "
+              f"{len(jobs) - len(kept)} probes done, {len(kept)} to (re)run")
         jobs = kept
 
     def work(rec, modality, target_defect, is_clean):
@@ -749,9 +759,13 @@ def main():
     ap.add_argument("--modalities", nargs="+", default=["A"])
     ap.add_argument("--max-per-defect", type=int, default=60)
     ap.add_argument("--freeform-only", action="store_true",
-                    help="drop __template renders (snap absorbs ~45% of geometry; E1 freeform set).")
+                    help="drop __template renders (snap absorbs ~45%% of geometry; E1 freeform set).")
     ap.add_argument("--max-tokens", type=int, default=512)
     ap.add_argument("--workers", type=int, default=12)
+    ap.add_argument("--timeout", type=float, default=120.0,
+                    help="per-request timeout (s); raise to 180 for slow thinking models.")
+    ap.add_argument("--max-retries", type=int, default=5,
+                    help="SDK retries with exponential backoff; hosted quotas make 429 routine.")
     ap.add_argument("--out", required=True)
     ap.add_argument("--dump-rows", default=None)
     ap.add_argument("--resume", action="store_true",
