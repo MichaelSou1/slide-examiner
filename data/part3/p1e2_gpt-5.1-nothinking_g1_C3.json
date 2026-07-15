@@ -1,0 +1,81 @@
+{
+  "condition": "C3",
+  "model": "gpt-5.1-nothinking",
+  "style": "scoped",
+  "manifest": "data/part2/manifest_eval_test_rendered.jsonl",
+  "modalities": [
+    "A"
+  ],
+  "defects": [
+    "G1_TEXT_OVERFLOW"
+  ],
+  "n_jobs": 80,
+  "failures": 4,
+  "usage": {
+    "n_records": 76,
+    "total_calls": 76,
+    "prompt_tokens": 83828,
+    "completion_tokens": 2804,
+    "reasoning_tokens": 0,
+    "total_tokens": 86632,
+    "calls_per_record": 1.0,
+    "prompt_tokens_per_record": 1103.0,
+    "completion_tokens_per_record": 36.9,
+    "reasoning_tokens_per_record": 0.0
+  },
+  "metrics": {
+    "A": {
+      "per_defect": {
+        "G1_TEXT_OVERFLOW": {
+          "detection": {
+            "recall": 0.0,
+            "specificity": 1.0,
+            "bal_acc": 0.5,
+            "bal_acc_ci": [
+              0.454,
+              0.546
+            ],
+            "precision": 0.0,
+            "precision_ci": null,
+            "fpr": 0.0,
+            "f1": 0.0,
+            "recall_ci": [
+              0.0,
+              0.092
+            ],
+            "tp": 0,
+            "fn": 38,
+            "fp": 0,
+            "tn": 38,
+            "n_pos": 38,
+            "n_neg": 38
+          },
+          "named": {
+            "recall": 0.0,
+            "specificity": 1.0,
+            "bal_acc": 0.5,
+            "bal_acc_ci": [
+              0.454,
+              0.546
+            ],
+            "precision": 0.0,
+            "precision_ci": null,
+            "fpr": 0.0,
+            "f1": 0.0,
+            "recall_ci": [
+              0.0,
+              0.092
+            ],
+            "tp": 0,
+            "fn": 38,
+            "fp": 0,
+            "tn": 38,
+            "n_pos": 38,
+            "n_neg": 38
+          },
+          "headline_level": "detection"
+        }
+      }
+    }
+  }
+}

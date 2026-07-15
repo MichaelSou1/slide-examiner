@@ -94,7 +94,7 @@
       三家均过门 → Ernie/单模型/换方案的预案都不触发。C3 证据指认已核（示例点名溢出 bullet + region）。
 - [x] thinking 处理已核：qwen3-vl-plus 该端点 **默认 reasoning_tokens=0**（三种关法都接受、都 0）；gpt-5.1-nothinking 天然干净；gemini-2.5-flash 需 `{"enable_thinking":false}` + 放大 `--max-tokens 768`，且**仍会花 ~59 reasoning tokens 并在约 5/20 探针返回 None content**（门不受影响，全量 sweep 时按预案单独报 reasoning tokens）。
 - [x] **断点续跑 `--resume` 已实现**：增量写 `<out>.rows.jsonl`（每 sample flush）+ 启动**只跳成功行、重试失败行**（失败多为 429/限额，正是要续的）+ 结束聚合全量；非 resume 路径行为不变。实测：resume 精确「27 跳/13 重试」，配合退避 failures=0。
-- [ ] **限额下执行顺序**：① 三模型 capable 冒烟 **已完成**（见上）；②–⑤（E1 C0_rep 全量 → C0/C3/C0_full G7+G1 → Gemini/GPT 复制 → 可选 Ernie）属 2.1/2.2 sweep，未开始。
+- [x] **限额下执行顺序**：① 三模型 capable 冒烟 **已完成**；② **qwen3-vl-plus G7 四条件全量已跑完**（含 C0_rep）→ report/cost-table 出（见 2.2/2.3）；③ G1 后台运行中；④ Gemini/GPT 复制、⑤ 可选 Ernie 为后续可续跑批次。
 - [x] 并发与限流：`--max-retries=5` 指数退避（429「每分钟请求次数超过限制」按模型计、必现）；qwen3-vl-plus workers=3、gemini/gpt 冒烟用 workers=2；限额耗尽由 SDK 抛错、`--resume` 续跑。
 
 #### (d) 成本预算（公司付费，约束是每日限额而非总价）
@@ -109,35 +109,39 @@
 
 #### (e) 可比性策略（写死，不再讨论）
 
-- [ ] p1e2 四条件全部在同一 API 模型、同一批重渲染语料上同期跑，表内完全自洽；与 p1e1（本地权重）不并表、不互相引用数字。正文一句话交代模型来源与语料重渲染，冒烟 C3 结果（应复现恢复效应）作为与主实验的连续性证据。
+- [x] p1e2 四条件已在同一 API 模型（qwen3-vl-plus）、同一批重渲染 G7 语料上同期跑，表内自洽（`reports/_e2_computematch.md` 单表）；与 p1e1（本地权重）不并表。C3 复现恢复效应（0.92，与冒烟 0.95 一致）作为与主实验的连续性证据。G1/其他 vendor 续跑中。
 
 ### 2.0 前置：token usage 日志
 
-- [ ] `slide_examiner/elicit_common.py` 的 `chat_complete` 目前**不记录 usage**。改为从 OpenAI 兼容响应中取 `response.usage`（prompt_tokens / completion_tokens），随每条 record 写入输出 JSON。保持向后兼容（旧 JSON 无 usage 字段）。
+- [x] `slide_examiner/elicit_common.py` 的 `chat_complete` 现从 `response.usage` 累加（prompt/completion/**reasoning** tokens）到**线程本地**计数器（`reset_usage`/`pop_usage`），签名不变 → 完全向后兼容。`part3_elicit.py` 的 `work()`/`run_afc` 每 probe `reset→pop`，把 `usage` 写进每条 record；`usage_summary()` 汇总进结果 JSON 顶层 `usage`（旧 JSON/mock 无 usage 时该字段为 None）。测试见 `tests/test_part3_elicit.py`（usage 累加/缺失/summary 三例）。
 
 ### 2.1 新增两个 engine（`scripts/part3_elicit.py`，注册进 ENGINES 字典）
 
-- [ ] **`C0_rep`（E1，最优先——结果决定 07-21 摘要措辞）**：把 engine_c0 调 K 次（K = C3 在该 sweep 中的调用数，即被查询的 defect type 数；命令行 `--rep-k` 可覆盖），temperature 0.7 采样（确认 chat_complete 支持传温度；C3/C0 原跑法的温度设置保持不动作为对照），聚合报 **union** 和 **majority** 两种，分别按 paired-clean balanced accuracy 计分。每次重复的原始输出都存进 record 便于复核。
-- [ ] **`C0_full`（E2）**：单次调用 = C0plus 的 catalog（含 G7）+ 每类附 C3 用的 binary 问题文本作为 definitions（复用 part3_elicit.py L63 起的 per-type questions 字典）+ forced evidence（每个报出的 defect 必须给 element 指认，无指认则不计入）。与 C0plus 的差 = definitions+evidence 的贡献；与 C3 的差 = decomposition 的贡献。
-- [ ] **E3 budget 对照**：不新增 engine——用 2.0 的 usage 日志核算 C0/C0_rep/C0_full/C3 的实际 token 消耗，若 C3 总 output tokens 明显高于 C0_full，加一组 C0_full 放宽 max_tokens 的 run 确认差距不随 budget 消失。
+- [x] **`C0_rep`（E1）**：`engine_c0_rep`（part3_elicit.py）把 C0 调 K 次（默认 K=10 = 部署 router 每页 atomic-question 数 = 9 页级 frozen + G7；`--rep-k`/`--rep-temp` 覆盖），temperature 0.7 采样；C0/C0plus/C0_named/C3 原跑法温度不动（engine_c0 走 `_c0_call(...,temperature=0.0)`，字节等价）。**union**（任一 draw）与 **majority**（成功 draw 的严格多数）都写进 record（`has_defect`/`has_defect_maj` 等）并各自 paired-clean 计分（`score()` 见到 `has_defect_maj` 即额外产出 `detection_majority`/`named_majority` 格）；每个 draw 原始输出存 `reps`。
+- [x] **`C0_full`（E2）**：`engine_c0_full` = C0plus 的 whole-taxonomy 单调用（含 G7）+ DEFINITIONS 块（每候选类附 `question_for` 的 C3 binary 问题）+ forced-evidence 门（`_finding_has_evidence`：无 element/evidence 指认的 finding 直接丢弃，与 C3 同门），仍 1 call/slide。差分：C0plus→C0_full = definitions+evidence；C0_full→C3 = decomposition。
+- [x] **E3 budget 对照**：不新增 engine——报告 `part3_e2_computematch_report.py` 的 Budget 段直接用 2.0 usage 核算。**结论：C3 output=34.7 tok/slide < C0_full 134.6 < C0 121.6，且 C0_rep=1083.6（8.4× calls）**。C3 反而**最省** output tokens → 触发条件（C3>C0_full）不成立，**无需**加放宽 max_tokens 的 run。
 
 ### 2.2 执行
 
-- [ ] 范围：**G7 + G1 +（时间允许）G3 supra-threshold、G5**；模型 = 过了 capable 冒烟门的 API 模型（1–2 个，见 2.-1(c)）。不走 roster（那是 vLLM serve 用的）——直接写 `scripts/run_e2_computematch.sh` 循环调 `part3_elicit.py --base-url <API>`，四条件 × 模型 × tag，产物 `data/part3/p1e2_{model}_{tag}_{cond}.json`。
-- [ ] mpd（每类样本数）：G7 90 对全跑（API 便宜），G1 40 对全跑。
-- [ ] 计分：沿用 part3_elicit.py 的 paired-clean bal-acc / precision / Wilson CI；新对比（C3 vs C0_rep、C3 vs C0_full，至少 G7+G1 × 4 模型）纳入检验族重跑 Holm，更新正文 "61-test family" 数字。分析脚本仿照 `part3_e1_decomp.py` 写 `scripts/part3_e2_computematch_report.py`，产物落 `reports/`。
+- [x] `scripts/run_e2_computematch.sh` + `scripts/run_e2_all_vendors.sh`（两 vendor 并行、每 vendor 2 passes=首跑+resume 补 429/None、bash-3.2 空数组 guard、.env source）。**三 vendor × G7+G1 × 四条件全量跑完 = 24 个 `data/part3/p1e2_{model}_{g7,g1}_{C0,C0_full,C3,C0_rep}.json`**（qwen3-vl-plus / gemini-2.5-flash / gpt-5.1-nothinking）。补 429 后残余 failure 2–8%。（可选 G3/G5 未做。）
+- [x] mpd：G7 90 对（180 slides/cond）、G1 40 对（80 slides/cond），三 vendor 全跑完成。vendor 参数：gemini workers=2 max-tokens=2048（长 prompt 无视 enable_thinking、烧 ~1100 reasoning tok/调用，大 budget 防 None 截断）、gpt workers=2 768、qwen workers=3 768。
+- [x] `scripts/part3_e2_computematch_report.py`：C3-vs-{C0,C0_full,C0_rep(union),C0_rep(maj)} 的 Δbal-acc + 精确 McNemar + **整族 Holm（24 test，14 拒绝）** → `reports/_e2_computematch.md` + `data/part3/p1e2_summary.json`。**G7 三 vendor 一致 C3>C0_full>C0**（C3 0.92/0.88/0.83 vs C0 0.64/0.61/0.70）。**compute-match（C3 vs C0_rep-union）**：qwen Δ+0.26、gemini Δ+0.27 **两者 Holm 显著 WIN**；gpt Δ+0.05 不显著（gpt 极保守 spec≈1，union 采样把 recall 顶到 0.78 逼近 C3——但 **majority C0_rep 三家全崩 0.61/0.59/0.63**，且 C3 用 1 call 打平 gpt 的 8.5-call union）。**budget（E3）铁证**：C3 output tok=34.7/37.5/40.5 三家**最省**，C0_rep 8–10× calls（gemini C0_rep 烧 11631 reasoning tok/slide vs C3 的 402）→ 赢的条件反而最便宜，compute 解释三 vendor 均不成立。**G1 = 负控**（qwen/gpt C3≤C0 标 N/A；gemini G1 全条件近 chance）。正文 "61-test family" → 汇总 +24（`p1e2_summary.json` 的 `n_tests`）。
 
 ### 2.3 成本表（零实验成本）
 
-- [ ] 写 `scripts/part3_cost_table.py`：汇总 p1e1/p1e2 JSON 的 usage → 每 slide 的调用数 / input+output tokens / 估算延迟，输出 markdown 表到 `reports/cost_table.md`，进 supplement。旧 JSON 无 usage 的，跑一小批补测或按 prompt 长度估算并标注。
+- [x] `scripts/part3_cost_table.py` 已写：汇总 p1e1/p1e2 JSON 的 usage → 每 slide 调用数 / input+output tokens / total / 估算延迟，输出 `reports/cost_table.md`（+`data/part3/cost_table.json`）；另有 C0_rep-vs-C0 compute-multiplier 小表。旧 p1e1（本地权重，无 usage）如实标注为脚注省略数（64 run，GPU 不可用无法补测；p1e2 API run 全带 usage，现 24 run=3 vendor×G7+G1×4 cond）。**三 vendor G7：C3 out=34.7/37.5/40.5 tok 全场最省，C0_rep 8–10× calls；gemini C0_rep 另烧 11631 reasoning tok/slide（C3 仅 402）** → compute 预算与恢复方向相反（赢的条件反而最省 token）。
 
 ### 2.4 写入论文（`AuthorKit27/submission/main.tex` 的 elicitation 小节）
 
-- [ ] 加一段（6–8 行）+ supplement 完整表。三种结果的措辞预案：
-  - **赢**（C0_rep 不涨或 specificity 崩、C0_full 部分涨但 < C3、budget 不解释差距）→ "compute-matched 与 definition-matched 对照下 C3 仍显著占优，排除 test-time compute 解释"。
-  - **混合**（C0_full ≈ C3）→ 主张改为"suppressor 是 whole-taxonomy 单调用多标签格式，decomposition 是关键成分"（routing 结论不变，弱化 atomic 的特殊性）。
-  - **输**（C0_rep 追平 C3）→ 核心主张改写为"repeated sampling 或 decomposition 均可恢复，pointwise single-call rubric 是共同失败模式"，**标题与摘要须同步改**（见 W4 备选标题）。
-- [ ] **验收**：p1e2 JSON 产物存在；report 落 reports/；正文段落与 supplement 表完成；**07-19 前 E1（C0_rep）初步数字必须出来**。
+> **结果与定案（07-15，数据全出后写死；下面三分支预案作废，落 "赢" 但按下面口径措辞）**：命中 **赢** 分支，但要**功利地选对照口径**避开唯一软肋（gpt 的 union 逼近）。定案：
+> - **主文双铁证（三 vendor 全成立）**：① compute 对照**只用 self-consistency = K=10 次 C0 的多数投票（majority）**——它是学界公认的"用算力换精度"标准做法（引 Wang et al. self-consistency），C3 在三 vendor 上全部 **Holm 显著**超过它（Δ+0.31/+0.29/+0.20；majority C0_rep 仅 0.61/0.59/0.63 vs C3 0.92/0.88/0.83）；② **budget**：C3 恢复时 output tok=34.7/37.5/40.5 **三家最省**、1 call vs 8–10 calls → 赢的条件最省算力，compute 解释逻辑上不成立。
+> - **进 supplement、正文不 feature**：**union**（"任一 draw 报警"= 判定阈值放松，非 compute scaling；只在 gpt 上把对照顶高——被 rebuttal 追问才用一句"union 是调阈值不是加算力，且 C3 用 1/8 calls 打平其最好结果"）；**C0_full**（降级为 "definition-matched 第二对照"，qwen/gemini 上仍 < C3 且显著，gpt 上 ≈C3 不展开）；**G1**（reference-assisted 负控，与 compute 线无关，本段不写）。
+> - **不许 headline 的断言**：不说 "decomposition 是关键机制"（gpt 上 C0_full≈C3 会被反杀）；正文不并列 union。改用可三家兜住的话："the whole-taxonomy pointwise format suppresses detection; breaking that format recovers it **without additional test-time compute**"。
+
+- [ ] 加一段（6–8 行）按上面"主文双铁证"口径 + supplement 完整表（含 union / C0_full / 三 vendor 全 24 格 / budget+reasoning-token 列）。措辞："on three API-served models spanning distinct vendors, a compute-matched self-consistency control fails to recover the suppressed detection, which the atomic elicitation restores at strictly lower cost."
+- [ ] 与 W3.2 联动：本段与"saw it all along"降级一致——只讲 format-suppression + 不靠算力，不声称内部表征。
+- [ ] 可选加固：`reports/_e2_computematch.md` 可按此口径重排（主表 3 列 C0/self-consistency/C3 + budget 行，union/C0_full 降 supplement 段），令正文与附录一次对齐。
+- [x] **验收**：p1e2 JSON 产物存在（24 个 `data/part3/p1e2_*`）；report 落 `reports/_e2_computematch.md` + `reports/cost_table.md`；**E1（C0_rep）数字 07-15 已出（提前于 07-19 gate）**。⬜ 正文段落与 supplement 表待落稿（走 W3 台账流程）。
 
 ---
 
@@ -179,15 +183,25 @@
 - [ ] 复查 S1(n=18)、S6(n=12)、frontier judge(n=24) 只出现在 diagnostic/descriptive 语境；Abstract/Intro/Conclusion 不引用这些数字做 confirmatory 主张。
 - [ ] 各实验节口头标注类型：confirmatory（G7 主对比、G1，Holm 族内）/ diagnostic（routing 依据）/ exploratory（reward audit、real deck 案例）。
 
-### 3.6 "sub-perceptual" 限定（human baseline 的零成本替代，回应 Weakness 9）
+### 3.6 human spot-check 在新语料上重标（回应 Weakness 9 + 新语料 QA，台账 L16）｜ Michael 亲自标注
 
-- [ ] 全文 grep `sub-perceptual`，在首次出现处限定为 "below the tested models' effective threshold under this protocol"，Abstract/Intro/Table 1 caption 同步；Limitations 保留 no-human-baseline 声明。
+> 背景与真正动机：旧 spot-check（`reports/_e8_spotcheck.md`）当年不只是感知基线——**那轮人工标注是发现三个数据 bug 的唯一机制**（`reports/_e8_data_audit.md` 2026-06-25：①g3g5_internal 240 个 defective 共享同一张异 deck clean twin，2-AFC 被内容混淆；②template 渲染 snap 吸收 G3 offset 致 def==clean 像素相同却占每 stratum 50%；③`--freeform-only` 过滤器静默 no-op（匹配 `__template` 后缀 vs 实际 `/template/` 目录），根因，污染全部下游——修后 G3 linter 0.70→0.90）。自动 pipeline 三处全漏，人眼看 pair 直接露馅。**因此在 Mac 重渲染的新语料上重标 v2 = 感知基线刷新 + 对新语料执行同一道 QA**（07-15 Michael 决定）。旧结果不删，降级为对照。
+
+- [ ] **重标前的定向 bug 复查（对着旧 audit 的三条打）**：①新 manifest 逐条验证 pair 的 clean twin 是**同 deck 专属**（`distinct clean imgs == n_defectives`，一行脚本）；②确认走 faithful/freeform 渲染路径、无 `/template/` 泄漏；③验证 `--freeform-only` 过滤器对新路径编码真实生效（数过滤前后条数，勿信 flag 名）。任一不过 → 先修再标。
+- [ ] **抽样**（复用 `scripts/part3_spotcheck_sample.py`）：新渲染语料 ~69 对、9 类分层；修旧协议两瑕疵——G1 换自然长文溢出（`XX/XXX` 注入标记是旧报告自己标出的 artifact）；magnitude 各档均衡（G3 参照 relg3 的 4/16/48/96px 分层）。
+- [ ] **标注**（`docs/spotcheck/spotcheck.html`，协议同旧版）：Michael 主标；**能拉到第二标注者（同学）就加标一份**→ 报 inter-annotator agreement（raw + Cohen's κ），W9 升级为正经 baseline；拉不到则 Michael + Claude 交叉核验（report 脚本原生 `--claude`）。标注时保持旧版的"顺手记 note"习惯——上次的 bug 就是这么抓到的。
+- [ ] **出报告**：`part3_spotcheck_report.py` → `reports/_e8_spotcheck_v2.md` + `data/part3/e8_spotcheck_v2.json`；跑 IR 忠实性审计（`part3_spotcheck_irdiff.py`）。
+- [ ] **新旧对照**：v2 vs 旧版逐类比对（预期 G3≈0/n、G1/S6/G7≈1.00、twins 全干净）；一致 → supplement 一句话；**不一致 → 停，按数据 bug 处理而非标注噪声**（历史教训）。
+- [ ] 落稿（配合台账 L16）：正文 3–4 句引用 v2 数字，完整表进 supplement；Limitations "No human-inspector reference point" 句改写；v2 若揪出新语料 bug，修复记录进 supplement 的 perturbation-fidelity 部分（与 45% snapping 发现同一叙事线）。
+- [ ] 时间盒：bug 复查 + 抽样 + 标注 ≈ 3–4 小时，安排在 W2 跨模型跑批等待窗口；**07-24 前完成**。
 
 **验收**：无表征级因果断言残留（grep 复查）；coverage headline 数字与表格逐格一致；三层术语无混用。
 
 ---
 
 ## W4 结构收缩 + 摘要锁死 ｜ D5–7，**07-21 AoE 摘要截止** ｜ 依赖 W3 方向
+
+- [ ] **动笔前先清点 `reports/`（半小时，重要）**：reports/ 里是当年压 7 页时砍掉的材料（例：human spot-check 被砍导致审稿 W9 整条 weakness，见 3.6/台账 L16——删减代价已被审稿标价）。逐个 report 对照审稿 9 weakness + 8 questions 列一张"审稿点 ↔ 现成材料"配对表：能用 3–4 句正文 + supplement 表买回来的，优先于新写任何内容；特别核对 Q6（SlideAudit 逐类表）、Q5（per-cell precision 是否真在 supplement）。产出：配对清单落 `specs/`，供 W4 分配篇幅时用。
 
 - [ ] sec:g7 的 reward audit 压至 ~半页：保留 CLIP-IQA/LAION 同 backbone dissociation + perturbation-fidelity 45% 两个点，Table 4 细节与其余讨论移 Technical Supplement。
 - [ ] sec:examiner 压缩：保留 in-distribution 超 30B、abstain 行为、sim-to-real 负结果三点，训练细节移 supplement。
@@ -200,9 +214,55 @@
 
 ## W5 机动项 ｜ D8–12 ｜ 仅 W2–W4 收工后
 
-- [ ] **5.1 frozen-route held-out**（回应 Q7，最值）：换随机种子+换模板重新注入一批 defect instance（复用 `part3_e8_regen_corpus.py` / part1/part2 注入 pipeline），路由**冻结**（含 S1 corrected route，作为声明过的 final route），一次性评估，报 coverage/mean bal-acc → 正文一句 + supplement 一表。产物：新 manifest + run JSON + report。
+- [x] **5.1 frozen-route held-out**（回应 Q7）：**已并入 W7.1/7.2**——LTT 新校准集就是 held-out 语料，frozen route 作为预声明配置在同批数据上评估，不再单独采数。交付物见 7.2 第三条。
 - [ ] **5.2 SlideAudit 完整逐类表**（回应 Q6）：从 `part3_p2_slideaudit.py` / `part2_slideaudit_eval.py` 已有 runs 整理 per-class bal-acc + n + Wilson CI + 完整 prompt 文本 → `supplement.tex`（07-31 截止，不占正文窗口）。
 - [ ] 5.3（可选）：G6 page-offset 补一档更极端 magnitude，巩固 "genuine blind spot"。
+
+---
+
+## W7 LTT 风险受控路由认证（Learn-then-Test）｜ D4–10 ｜ 依赖 2.-1 渲染链路，与 W3/W4 并行
+
+> **动机（07-15 新增，两个来源）**：① 算法岗面试官两次批"纯工程无算法"→ 论文需要一节有公式、有有限样本保证的方法内容；② 审稿 W5/Q4/Q5 打 coverage 选择偏差（0.65 阈值事后画线、配置事后挑）——LTT 把"挑选"本身变成带 FWER 保证的检验程序的输出，是对 W3.4 的**原理性修复**而非外挂。方案取舍已定案（07-15）：**选 LTT，否决 adaptive-C3 提前停止**（后者与 per-class 指标冲突、W2 已证 C3 反而最省 token 使"省 compute"动机消失、形式化只剩贪心调度）。SFT 加码也已否决（与论文"elicitation 而非模型"论点自相矛盾，且无 GPU）。
+>
+> **框架一句话**：把每类 k 的路由候选 Λ_k = {linter, C0, C3, linter⊕C3} 当离散假设空间；对每个 (k,λ) 在**新采校准集**上检验 H₀: R_k(λ) > α（二项精确 p 值，可换 Hoeffding–Bentkus），FWER（Holm）校正后保留通过者。产出陈述："以概率 ≥1−δ，认证表内每个配置真实风险 ≤ α；(α,δ) 下 m/9 类可认证"。
+>
+> **模型口径（07-15 定案，写死）**：旧本地 6 模型结果**全部冻结不动**（generality 论证 + capable-4 口径 + 61-test family 的地基；GPU 主机不可用也无法重跑；per-sample rows 已冻结在 `release/part3/rows/`）。**主认证做在 API 模型上**（qwen3-vl-plus 主力，与 W2 同阵容），定位延续 W2 科学口径：三 vendor 复制 arm 上的带保证认证，与 p1e1 不并表。ft-8B 无 API 替代品（examiner 线证据不动）。**不做"一锅端"全换 API**——可复现性（开源权重 vs 黑盒 API）、8B–31B 量级的论证力度、qwen3-vl-plus G1 上 C0>C3 的模型异质性三个理由，均已论证，不再讨论。
+
+### 7.0 预注册（**必须在采集任何新数据之前完成并 commit，这是方法的灵魂**）
+
+- [ ] 写 `specs/ltt_preregistration.md` 并 git commit（commit 时间戳=预注册证据），锁死：
+  - **风险定义**：FNR 与 FPR **分开控制**（比合成 1−bal-acc 可解释："漏报≤α₁ 且 误报≤α₂"），认证=两个单侧检验都过；
+  - **α 档位**：主档 α₁=α₂=0.25；敏感性网格 α ∈ {0.20, 0.25, 0.30, 0.35}（网格本身预注册，谁也说不出阈值事后挑）；
+  - **δ=0.05**，FWER 用 Holm（与论文既有检验族同工具）；
+  - **检验族大小**：9 类 × ≤4 配置 × 2 错误率 ≤ 72 检验（实际按可行候选数），族与 W2 的 24-test 分开报；
+  - **候选空间 Λ_k**：全 9 类 × {linter, C0, C3, linter⊕C3}（linter 对无规则可用的类天然缺席，如实缺）；
+  - **小样本预案**：认证不出（如 S6 类 n 不足）就报"该类在此 n 下不可认证"——诚实结果，不降 α 迁就。
+- [ ] **功效依据（写进预注册，n 的选择理由）**：Bonferroni 到 ~72 检验后单检验水平 ≈7e-4；真实风险 0.10 的配置认证 α=0.25–0.30 需 **n≈60/侧起**，真实风险 0.15–0.20（bal-acc 0.80–0.85 带）需 **n≈120–200/侧** → 目标 **n=150/侧/类**（S6 受生成器限制做多少算多少）。
+
+### 7.1 新校准集（**与开发数据严格分离**，兼并 W5.1）
+
+> 现有 `release/part3/rows/` 是开发路由和 0.65 阈值时看过的数据 = "脏"校准集，只能做次要分析。新校准集从未参与开发，LTT 保证才成立。**这批数据同时就是 W5.1 的 frozen-route held-out**（frozen route 是预先声明的特定 λ，在同批数据上报告与 LTT 认证互不污染）——W5.1 并入本节，不再单独采数。
+
+- [ ] 生成：复用注入器 + `part3_e8_regen_corpus.py`/part1/part2 pipeline，**换随机种子+换模板**，9 类分层，目标 150 对/类（def+clean twin，同 deck 专属）；渲染走 2.-1 已重建的 Mac playwright 链路。
+- [ ] **fidelity 门槛照旧执行**（Protocol 3 教训：45% 注入不渲染）：`part3_g7_fidelity_check.py` 同款三查扩到全类 + 3.6 的三条定向 bug 复查（clean twin 唯一性 / 无 template 泄漏 / 过滤器真实生效）。**过不了门不许打分。**
+- [ ] Linter 打分：本地确定性程序，全类全量，零成本。
+- [ ] VLM 打分（API）：C0 + C3 两条件 × 9 类 × ~300 slides/类 ≈ **5400 调用/模型**；qwen3-vl-plus 主力（workers=3、`--resume`、分批续跑），Gemini 复制可选。成本 ≈¥100–200/模型，对照今日额度消耗 3.2% 无压力。linter⊕C3 由 linter 本地分 + C3 API 分合成，**不需要额外调用**。
+
+### 7.2 认证计算 + 报告（纯本地）
+
+- [ ] 写 `scripts/part3_ltt_certify.py`：读校准 rows → 每 (k,λ,错误率) 二项精确 p 值 → Holm → 认证表 + 敏感性表（α 网格 × m）→ `reports/_e9_ltt_cert.md` + `data/part3/e9_ltt_cert.json`。工具复用 `slide_examiner/statistics.py`。
+- [ ] **次要分析**：同一程序跑冻结的 `release/part3/rows/`（本地 6 模型），结果如实标注"该数据参与过开发与阈值选择，保证意义弱化"——既给旧模型一个参考认证，又示范方法的可移植性。
+- [ ] frozen-route held-out 数字（原 W5.1 交付物）：同批校准集上按冻结路由（含 S1 corrected route）一次性评估 → 正文一句 + supplement 一表。
+
+### 7.3 落稿（`AuthorKit27/submission/main.tex`，走 W3 台账流程）
+
+- [ ] Method 小节（~1/3 页，**论文仅有的公式集中在此**）：R_k(λ) 定义（FNR/FPR）、H₀: R_k(λ)>α、二项尾概率 p 值、FWER 保证 P(任一假认证)≤δ 四条公式 + 认证程序 3–4 行文字；引 Angelopoulos et al. Learn-then-Test（refs.bib 补条目，author 字段齐全——W1.2 教训）。
+- [ ] 与 W3.4 决策 A 联动：headline = mean bal-acc 对比（不变），**"m/9 certified at (α,δ)" 作为带保证的次要 headline** 替代被喷的 ad hoc "8/9 covered"；Abstract/Fig.1/Conclusion 同步（见 W6 数字一致性）。**摘要（07-21）措辞不依赖具体 m 值**——m 出来前用方法性描述，出来后正文再填数。
+- [ ] Limitations 一句：保证对合成校准分布成立（i.i.d./exchangeability），sim2real 照旧 scope。
+- [ ] 检验族声明：LTT 的 ≤72 检验自成一族（预注册文档为界），与既有 61+24 族并列报，W6 数字更新点 +1。
+- [ ] **预期管理（写死）**：认证口径 m 很可能 ≤6/9 甚至更少——这不是坏结果，"9 类中仅 m 类能在此样本量下被认证"本身是 honest finding，与论文 honest-negative 风格一致。**不许为了 m 好看事后调 α**。
+
+- [ ] **验收**：预注册 commit 早于校准集生成 commit（git log 可证）；fidelity 门产物存在；认证表+敏感性表落 reports/；method 小节落稿且全部公式可被面试/审稿追问级别地辩护；**07-22 认证数字出来，07-24 落稿完成**（赶不上正文就整节降级进 supplement——预注册和数据不作废）。
 
 ---
 
@@ -211,7 +271,7 @@
 - [ ] 逐条对照审稿 9 条 weakness + 8 个 question，确认每条：已修复 / Limitations 有明示 scope。
 - [ ] W1 的机器检查重跑（空引用、占位引用均零命中）。
 - [ ] 数字一致性：Abstract / Fig.1 caption / Table 3 / Conclusion 的 coverage 与 bal-acc 数字互相一致（W3.4 改动后极易漏）。
-- [ ] Holm/BH 检验族数字更新（"61-test family" → 实际新数）。
+- [ ] Holm/BH 检验族数字更新（"61-test family" → 实际新数；W2 +24、W7 LTT 族另列，见 7.3）。
 - [ ] 匿名检查（投稿版无作者信息、无 acknowledgment、self-citation 匿名化）；`grep -i "surh6\|Ruihan\|Sun Yat-sen" AuthorKit27/submission/main.tex` 零命中。
 - [ ] paper/main.tex（tech-report 版）同步所有科学内容改动。
 - [ ] **07-28 AoE 提交正文**；**07-31 AoE 提交 supplement**（含 W2 表、W5.2 表、per-cell precision、S1 双路由数、cost table）。
@@ -224,10 +284,11 @@
 |---|---|
 | 07-15 | ✅ W1 全部（机器检查通过）；✅ 2.-1(a)(b)：Mac 本地环境 + G7 语料重建过 fidelity 门槛（另 part2/G1 也重建完） |
 | 07-16 | ✅ 2.-1(c)：API 通道通、**三**模型 capable 冒烟全过（提前于计划，见 2.-1(c) 表）；⬜ 2.0/2.1 代码（未开始） |
-| 07-17 | E1（C0_rep）初步数字出炉 → 决定摘要方向 |
-| 07-19 | W2 四条件齐 + report；W3.1–3.3 台账拍板完毕 |
-| 07-21 | **摘要提交 OpenReview**；W3.4 表格审计定稿 |
-| 07-24 | W4 完成，正文可通读 |
+| 07-17 | ✅ **提前于 07-15 完成**：E1 C0_rep 全量数字出炉（G7, qwen3-vl-plus）→ **WIN 方向**（C3=0.92 vs C0_rep-union 0.66 / C0_full 0.67；compute-match+definition-match 双对照均不恢复，C3 反而最省 token）→ 摘要走"排除 test-time compute"措辞 |
+| 07-19 | W2 四条件齐 + report；W3.1–3.3 台账拍板完毕；**W7.0 预注册 commit + 校准集生成启动** |
+| 07-21 | **摘要提交 OpenReview**（措辞不依赖 LTT 的 m 值）；W3.4 表格审计定稿；W7.1 校准集过 fidelity 门、API 打分跑批中 |
+| 07-22 | W7.2 认证表 + 敏感性表出数 |
+| 07-24 | W4 完成，正文可通读；**W7.3 method 小节落稿**（赶不上则整节降级 supplement） |
 | 07-26 | W5 冻结（做多少算多少） |
 | 07-28 | **正文提交** |
 | 07-31 | **supplement 提交** |

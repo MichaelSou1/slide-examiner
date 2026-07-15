@@ -1,0 +1,759 @@
+{
+  "rows": [
+    {
+      "model": "gemini-2.5-flash",
+      "tag": "G1",
+      "cond": "C0",
+      "prefix": "p1e2",
+      "usage": {
+        "n_records": 80,
+        "total_calls": 80,
+        "prompt_tokens": 189632,
+        "completion_tokens": 4751,
+        "reasoning_tokens": 70763,
+        "total_tokens": 194383,
+        "calls_per_record": 1.0,
+        "prompt_tokens_per_record": 2370.4,
+        "completion_tokens_per_record": 59.4,
+        "reasoning_tokens_per_record": 884.5
+      }
+    },
+    {
+      "model": "gemini-2.5-flash",
+      "tag": "G1",
+      "cond": "C0_full",
+      "prefix": "p1e2",
+      "usage": {
+        "n_records": 80,
+        "total_calls": 80,
+        "prompt_tokens": 232592,
+        "completion_tokens": 6064,
+        "reasoning_tokens": 72441,
+        "total_tokens": 238656,
+        "calls_per_record": 1.0,
+        "prompt_tokens_per_record": 2907.4,
+        "completion_tokens_per_record": 75.8,
+        "reasoning_tokens_per_record": 905.5
+      }
+    },
+    {
+      "model": "gemini-2.5-flash",
+      "tag": "G1",
+      "cond": "C0_rep",
+      "prefix": "p1e2",
+      "usage": {
+        "n_records": 80,
+        "total_calls": 800,
+        "prompt_tokens": 1896320,
+        "completion_tokens": 55838,
+        "reasoning_tokens": 769020,
+        "total_tokens": 1952158,
+        "calls_per_record": 10.0,
+        "prompt_tokens_per_record": 23704.0,
+        "completion_tokens_per_record": 698.0,
+        "reasoning_tokens_per_record": 9612.8
+      }
+    },
+    {
+      "model": "gemini-2.5-flash",
+      "tag": "G1",
+      "cond": "C3",
+      "prefix": "p1e2",
+      "usage": {
+        "n_records": 80,
+        "total_calls": 80,
+        "prompt_tokens": 160080,
+        "completion_tokens": 2335,
+        "reasoning_tokens": 15696,
+        "total_tokens": 162415,
+        "calls_per_record": 1.0,
+        "prompt_tokens_per_record": 2001.0,
+        "completion_tokens_per_record": 29.2,
+        "reasoning_tokens_per_record": 196.2
+      }
+    },
+    {
+      "model": "gemini-2.5-flash",
+      "tag": "G7",
+      "cond": "C0",
+      "prefix": "p1e2",
+      "usage": {
+        "n_records": 180,
+        "total_calls": 180,
+        "prompt_tokens": 426900,
+        "completion_tokens": 28238,
+        "reasoning_tokens": 197057,
+        "total_tokens": 455138,
+        "calls_per_record": 1.0,
+        "prompt_tokens_per_record": 2371.7,
+        "completion_tokens_per_record": 156.9,
+        "reasoning_tokens_per_record": 1094.8
+      }
+    },
+    {
+      "model": "gemini-2.5-flash",
+      "tag": "G7",
+      "cond": "C0_full",
+      "prefix": "p1e2",
+      "usage": {
+        "n_records": 180,
+        "total_calls": 180,
+        "prompt_tokens": 523560,
+        "completion_tokens": 23487,
+        "reasoning_tokens": 222682,
+        "total_tokens": 547047,
+        "calls_per_record": 1.0,
+        "prompt_tokens_per_record": 2908.7,
+        "completion_tokens_per_record": 130.5,
+        "reasoning_tokens_per_record": 1237.1
+      }
+    },
+    {
+      "model": "gemini-2.5-flash",
+      "tag": "G7",
+      "cond": "C0_rep",
+      "prefix": "p1e2",
+      "usage": {
+        "n_records": 180,
+        "total_calls": 1800,
+        "prompt_tokens": 4269000,
+        "completion_tokens": 275595,
+        "reasoning_tokens": 2093648,
+        "total_tokens": 4544595,
+        "calls_per_record": 10.0,
+        "prompt_tokens_per_record": 23716.7,
+        "completion_tokens_per_record": 1531.1,
+        "reasoning_tokens_per_record": 11631.4
+      }
+    },
+    {
+      "model": "gemini-2.5-flash",
+      "tag": "G7",
+      "cond": "C3",
+      "prefix": "p1e2",
+      "usage": {
+        "n_records": 180,
+        "total_calls": 180,
+        "prompt_tokens": 364320,
+        "completion_tokens": 6745,
+        "reasoning_tokens": 72330,
+        "total_tokens": 371065,
+        "calls_per_record": 1.0,
+        "prompt_tokens_per_record": 2024.0,
+        "completion_tokens_per_record": 37.5,
+        "reasoning_tokens_per_record": 401.8
+      }
+    },
+    {
+      "model": "gpt-5.1-nothinking",
+      "tag": "G1",
+      "cond": "C0",
+      "prefix": "p1e2",
+      "usage": {
+        "n_records": 76,
+        "total_calls": 76,
+        "prompt_tokens": 109180,
+        "completion_tokens": 1867,
+        "reasoning_tokens": 0,
+        "total_tokens": 111047,
+        "calls_per_record": 1.0,
+        "prompt_tokens_per_record": 1436.6,
+        "completion_tokens_per_record": 24.6,
+        "reasoning_tokens_per_record": 0.0
+      }
+    },
+    {
+      "model": "gpt-5.1-nothinking",
+      "tag": "G1",
+      "cond": "C0_full",
+      "prefix": "p1e2",
+      "usage": {
+        "n_records": 74,
+        "total_calls": 74,
+        "prompt_tokens": 143006,
+        "completion_tokens": 1702,
+        "reasoning_tokens": 0,
+        "total_tokens": 144708,
+        "calls_per_record": 1.0,
+        "prompt_tokens_per_record": 1932.5,
+        "completion_tokens_per_record": 23.0,
+        "reasoning_tokens_per_record": 0.0
+      }
+    },
+    {
+      "model": "gpt-5.1-nothinking",
+      "tag": "G1",
+      "cond": "C0_rep",
+      "prefix": "p1e2",
+      "usage": {
+        "n_records": 80,
+        "total_calls": 596,
+        "prompt_tokens": 856186,
+        "completion_tokens": 15068,
+        "reasoning_tokens": 0,
+        "total_tokens": 871254,
+        "calls_per_record": 7.45,
+        "prompt_tokens_per_record": 10702.3,
+        "completion_tokens_per_record": 188.3,
+        "reasoning_tokens_per_record": 0.0
+      }
+    },
+    {
+      "model": "gpt-5.1-nothinking",
+      "tag": "G1",
+      "cond": "C3",
+      "prefix": "p1e2",
+      "usage": {
+        "n_records": 76,
+        "total_calls": 76,
+        "prompt_tokens": 83828,
+        "completion_tokens": 2804,
+        "reasoning_tokens": 0,
+        "total_tokens": 86632,
+        "calls_per_record": 1.0,
+        "prompt_tokens_per_record": 1103.0,
+        "completion_tokens_per_record": 36.9,
+        "reasoning_tokens_per_record": 0.0
+      }
+    },
+    {
+      "model": "gpt-5.1-nothinking",
+      "tag": "G7",
+      "cond": "C0",
+      "prefix": "p1e2",
+      "usage": {
+        "n_records": 173,
+        "total_calls": 173,
+        "prompt_tokens": 248258,
+        "completion_tokens": 7937,
+        "reasoning_tokens": 0,
+        "total_tokens": 256195,
+        "calls_per_record": 1.0,
+        "prompt_tokens_per_record": 1435.0,
+        "completion_tokens_per_record": 45.9,
+        "reasoning_tokens_per_record": 0.0
+      }
+    },
+    {
+      "model": "gpt-5.1-nothinking",
+      "tag": "G7",
+      "cond": "C0_full",
+      "prefix": "p1e2",
+      "usage": {
+        "n_records": 173,
+        "total_calls": 173,
+        "prompt_tokens": 334065,
+        "completion_tokens": 10643,
+        "reasoning_tokens": 0,
+        "total_tokens": 344708,
+        "calls_per_record": 1.0,
+        "prompt_tokens_per_record": 1931.0,
+        "completion_tokens_per_record": 61.5,
+        "reasoning_tokens_per_record": 0.0
+      }
+    },
+    {
+      "model": "gpt-5.1-nothinking",
+      "tag": "G7",
+      "cond": "C0_rep",
+      "prefix": "p1e2",
+      "usage": {
+        "n_records": 180,
+        "total_calls": 1538,
+        "prompt_tokens": 2207072,
+        "completion_tokens": 62710,
+        "reasoning_tokens": 0,
+        "total_tokens": 2269782,
+        "calls_per_record": 8.544,
+        "prompt_tokens_per_record": 12261.5,
+        "completion_tokens_per_record": 348.4,
+        "reasoning_tokens_per_record": 0.0
+      }
+    },
+    {
+      "model": "gpt-5.1-nothinking",
+      "tag": "G7",
+      "cond": "C3",
+      "prefix": "p1e2",
+      "usage": {
+        "n_records": 172,
+        "total_calls": 172,
+        "prompt_tokens": 193156,
+        "completion_tokens": 6967,
+        "reasoning_tokens": 0,
+        "total_tokens": 200123,
+        "calls_per_record": 1.0,
+        "prompt_tokens_per_record": 1123.0,
+        "completion_tokens_per_record": 40.5,
+        "reasoning_tokens_per_record": 0.0
+      }
+    },
+    {
+      "model": "qwen3-vl-plus",
+      "tag": "G1",
+      "cond": "C0",
+      "prefix": "p1e2",
+      "usage": {
+        "n_records": 80,
+        "total_calls": 80,
+        "prompt_tokens": 205644,
+        "completion_tokens": 5050,
+        "reasoning_tokens": 0,
+        "total_tokens": 210694,
+        "calls_per_record": 1.0,
+        "prompt_tokens_per_record": 2570.6,
+        "completion_tokens_per_record": 63.1,
+        "reasoning_tokens_per_record": 0.0
+      }
+    },
+    {
+      "model": "qwen3-vl-plus",
+      "tag": "G1",
+      "cond": "C0_full",
+      "prefix": "p1e2",
+      "usage": {
+        "n_records": 74,
+        "total_calls": 74,
+        "prompt_tokens": 226554,
+        "completion_tokens": 3707,
+        "reasoning_tokens": 0,
+        "total_tokens": 230261,
+        "calls_per_record": 1.0,
+        "prompt_tokens_per_record": 3061.5,
+        "completion_tokens_per_record": 50.1,
+        "reasoning_tokens_per_record": 0.0
+      }
+    },
+    {
+      "model": "qwen3-vl-plus",
+      "tag": "G1",
+      "cond": "C0_rep",
+      "prefix": "p1e2",
+      "usage": {
+        "n_records": 80,
+        "total_calls": 597,
+        "prompt_tokens": 1534624,
+        "completion_tokens": 29897,
+        "reasoning_tokens": 0,
+        "total_tokens": 1564521,
+        "calls_per_record": 7.463,
+        "prompt_tokens_per_record": 19182.8,
+        "completion_tokens_per_record": 373.7,
+        "reasoning_tokens_per_record": 0.0
+      }
+    },
+    {
+      "model": "qwen3-vl-plus",
+      "tag": "G1",
+      "cond": "C3",
+      "prefix": "p1e2",
+      "usage": {
+        "n_records": 74,
+        "total_calls": 74,
+        "prompt_tokens": 165612,
+        "completion_tokens": 2072,
+        "reasoning_tokens": 0,
+        "total_tokens": 167684,
+        "calls_per_record": 1.0,
+        "prompt_tokens_per_record": 2238.0,
+        "completion_tokens_per_record": 28.0,
+        "reasoning_tokens_per_record": 0.0
+      }
+    },
+    {
+      "model": "qwen3-vl-plus",
+      "tag": "G7",
+      "cond": "C0",
+      "prefix": "p1e2",
+      "usage": {
+        "n_records": 177,
+        "total_calls": 177,
+        "prompt_tokens": 249747,
+        "completion_tokens": 21527,
+        "reasoning_tokens": 0,
+        "total_tokens": 271274,
+        "calls_per_record": 1.0,
+        "prompt_tokens_per_record": 1411.0,
+        "completion_tokens_per_record": 121.6,
+        "reasoning_tokens_per_record": 0.0
+      }
+    },
+    {
+      "model": "qwen3-vl-plus",
+      "tag": "G7",
+      "cond": "C0_full",
+      "prefix": "p1e2",
+      "usage": {
+        "n_records": 177,
+        "total_calls": 177,
+        "prompt_tokens": 336651,
+        "completion_tokens": 23821,
+        "reasoning_tokens": 0,
+        "total_tokens": 360472,
+        "calls_per_record": 1.0,
+        "prompt_tokens_per_record": 1902.0,
+        "completion_tokens_per_record": 134.6,
+        "reasoning_tokens_per_record": 0.0
+      }
+    },
+    {
+      "model": "qwen3-vl-plus",
+      "tag": "G7",
+      "cond": "C0_rep",
+      "prefix": "p1e2",
+      "usage": {
+        "n_records": 180,
+        "total_calls": 1507,
+        "prompt_tokens": 2126441,
+        "completion_tokens": 195049,
+        "reasoning_tokens": 0,
+        "total_tokens": 2321490,
+        "calls_per_record": 8.372,
+        "prompt_tokens_per_record": 11813.6,
+        "completion_tokens_per_record": 1083.6,
+        "reasoning_tokens_per_record": 0.0
+      }
+    },
+    {
+      "model": "qwen3-vl-plus",
+      "tag": "G7",
+      "cond": "C3",
+      "prefix": "p1e2",
+      "usage": {
+        "n_records": 168,
+        "total_calls": 168,
+        "prompt_tokens": 184464,
+        "completion_tokens": 5828,
+        "reasoning_tokens": 0,
+        "total_tokens": 190292,
+        "calls_per_record": 1.0,
+        "prompt_tokens_per_record": 1098.0,
+        "completion_tokens_per_record": 34.7,
+        "reasoning_tokens_per_record": 0.0
+      }
+    }
+  ],
+  "missing_usage": [
+    [
+      "gemma4-31b",
+      "G7",
+      "AFC"
+    ],
+    [
+      "gemma4-31b",
+      "G7",
+      "AFC_clean"
+    ],
+    [
+      "gemma4-31b",
+      "G7",
+      "C0"
+    ],
+    [
+      "gemma4-31b",
+      "G7",
+      "C0_named"
+    ],
+    [
+      "gemma4-31b",
+      "G7",
+      "C0plus"
+    ],
+    [
+      "gemma4-31b",
+      "G7",
+      "C3"
+    ],
+    [
+      "gemma4-31b",
+      "G1",
+      "AFC"
+    ],
+    [
+      "gemma4-31b",
+      "G1",
+      "AFC_clean"
+    ],
+    [
+      "gemma4-31b",
+      "G1",
+      "C0"
+    ],
+    [
+      "gemma4-31b",
+      "G1",
+      "C0_named"
+    ],
+    [
+      "gemma4-31b",
+      "G1",
+      "C3"
+    ],
+    [
+      "internvl-8b",
+      "G7",
+      "AFC"
+    ],
+    [
+      "internvl-8b",
+      "G7",
+      "AFC_clean"
+    ],
+    [
+      "internvl-8b",
+      "G7",
+      "C0"
+    ],
+    [
+      "internvl-8b",
+      "G7",
+      "C0_named"
+    ],
+    [
+      "internvl-8b",
+      "G7",
+      "C3"
+    ],
+    [
+      "internvl-8b",
+      "G1",
+      "AFC"
+    ],
+    [
+      "internvl-8b",
+      "G1",
+      "AFC_clean"
+    ],
+    [
+      "internvl-8b",
+      "G1",
+      "C0"
+    ],
+    [
+      "internvl-8b",
+      "G1",
+      "C0_named"
+    ],
+    [
+      "internvl-8b",
+      "G1",
+      "C3"
+    ],
+    [
+      "ovis-9b",
+      "G7",
+      "AFC"
+    ],
+    [
+      "ovis-9b",
+      "G7",
+      "AFC_clean"
+    ],
+    [
+      "ovis-9b",
+      "G7",
+      "C0"
+    ],
+    [
+      "ovis-9b",
+      "G7",
+      "C0_named"
+    ],
+    [
+      "ovis-9b",
+      "G7",
+      "C3"
+    ],
+    [
+      "ovis-9b",
+      "G1",
+      "AFC"
+    ],
+    [
+      "ovis-9b",
+      "G1",
+      "AFC_clean"
+    ],
+    [
+      "ovis-9b",
+      "G1",
+      "C0"
+    ],
+    [
+      "ovis-9b",
+      "G1",
+      "C0_named"
+    ],
+    [
+      "ovis-9b",
+      "G1",
+      "C3"
+    ],
+    [
+      "qwen35-27b",
+      "G7",
+      "AFC"
+    ],
+    [
+      "qwen35-27b",
+      "G7",
+      "AFC_clean"
+    ],
+    [
+      "qwen35-27b",
+      "G7",
+      "C0"
+    ],
+    [
+      "qwen35-27b",
+      "G7",
+      "C0_named"
+    ],
+    [
+      "qwen35-27b",
+      "G7",
+      "C0plus"
+    ],
+    [
+      "qwen35-27b",
+      "G7",
+      "C3"
+    ],
+    [
+      "qwen35-27b",
+      "G1",
+      "AFC"
+    ],
+    [
+      "qwen35-27b",
+      "G1",
+      "AFC_clean"
+    ],
+    [
+      "qwen35-27b",
+      "G1",
+      "C0"
+    ],
+    [
+      "qwen35-27b",
+      "G1",
+      "C0_named"
+    ],
+    [
+      "qwen35-27b",
+      "G1",
+      "C3"
+    ],
+    [
+      "qwen35-9b",
+      "G7",
+      "AFC"
+    ],
+    [
+      "qwen35-9b",
+      "G7",
+      "AFC_clean"
+    ],
+    [
+      "qwen35-9b",
+      "G7",
+      "C0"
+    ],
+    [
+      "qwen35-9b",
+      "G7",
+      "C0_named"
+    ],
+    [
+      "qwen35-9b",
+      "G7",
+      "C0plus"
+    ],
+    [
+      "qwen35-9b",
+      "G7",
+      "C3"
+    ],
+    [
+      "qwen35-9b",
+      "G1",
+      "AFC"
+    ],
+    [
+      "qwen35-9b",
+      "G1",
+      "AFC_clean"
+    ],
+    [
+      "qwen35-9b",
+      "G1",
+      "C0"
+    ],
+    [
+      "qwen35-9b",
+      "G1",
+      "C0_named"
+    ],
+    [
+      "qwen35-9b",
+      "G1",
+      "C3"
+    ],
+    [
+      "qwen36-27b",
+      "G7",
+      "AFC"
+    ],
+    [
+      "qwen36-27b",
+      "G7",
+      "AFC_clean"
+    ],
+    [
+      "qwen36-27b",
+      "G7",
+      "C0"
+    ],
+    [
+      "qwen36-27b",
+      "G7",
+      "C0_named"
+    ],
+    [
+      "qwen36-27b",
+      "G7",
+      "C0plus"
+    ],
+    [
+      "qwen36-27b",
+      "G7",
+      "C3"
+    ],
+    [
+      "qwen36-27b",
+      "G1",
+      "AFC"
+    ],
+    [
+      "qwen36-27b",
+      "G1",
+      "AFC_clean"
+    ],
+    [
+      "qwen36-27b",
+      "G1",
+      "C0"
+    ],
+    [
+      "qwen36-27b",
+      "G1",
+      "C0_named"
+    ],
+    [
+      "qwen36-27b",
+      "G1",
+      "C3"
+    ]
+  ],
+  "tok_per_s": 40.0
+}

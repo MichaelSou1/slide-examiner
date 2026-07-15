@@ -43,7 +43,7 @@ sys.path.insert(0, str(REPO))
 sys.path.insert(0, str(REPO / "scripts"))
 
 from slide_examiner.adapters import parse_examiner_json  # noqa: E402
-from slide_examiner.elicit_common import chat_complete  # noqa: E402
+from slide_examiner.elicit_common import chat_complete, pop_usage, reset_usage  # noqa: E402
 from slide_examiner.defect_types import (  # noqa: E402
     G7_RENDER_CONTAINMENT_OVERFLOW,
     G7_SPEC,
@@ -55,6 +55,7 @@ from slide_examiner.taxonomy import DEFECTS  # noqa: E402
 
 # part2_eval gives us build_messages (trained|scoped), call, clean_variant, defect_of.
 from part2_eval import build_messages, call, clean_variant, defect_of, is_deck  # noqa: E402
+from run_pilot import DECK_SCOPE  # noqa: E402  (deck candidate types for C0_full defs)
 
 DECK_DEFECTS = {"S2_NARRATIVE_ORDER_BREAK", "S3_TERMINOLOGY_INCONSISTENCY", "S5_MISSING_LOGIC_SECTION"}
 
@@ -147,11 +148,14 @@ def _blank_result(rec: dict, sample_id: str | None = None) -> dict:
 # --------------------------------------------------------------------------- #
 # C0 — whole-taxonomy single pointwise call (reuse part2_eval prompt path)
 # --------------------------------------------------------------------------- #
-def engine_c0(client, model, rec, modality, target_defect, style, max_tokens):
+def _c0_call(client, model, rec, modality, target_defect, style, max_tokens, temperature=0.0):
+    """One C0 whole-taxonomy pointwise completion, scored paired-clean. Factored out
+    so C0_rep can draw K samples at temperature>0 without duplicating the prompt/parse
+    path. temperature=0.0 reproduces engine_c0 exactly."""
     out = _blank_result(rec)
     try:
         messages = build_messages(rec, modality, style)
-        raw = chat_complete(client, model, messages, max_tokens)
+        raw = chat_complete(client, model, messages, max_tokens, temperature=temperature)
     except Exception as exc:  # noqa: BLE001 - bad record / API error must not abort the run
         out["failure"] = True
         out["raw"] = f"ERR {exc}"[:300]
@@ -167,6 +171,69 @@ def engine_c0(client, model, rec, modality, target_defect, style, max_tokens):
     out["predicted_types"] = types
     out["has_defect"] = bool(parsed.get("has_defect")) or bool(findings)
     out["named_target"] = target_defect in types
+    return out
+
+
+def engine_c0(client, model, rec, modality, target_defect, style, max_tokens):
+    return _c0_call(client, model, rec, modality, target_defect, style, max_tokens, temperature=0.0)
+
+
+# --------------------------------------------------------------------------- #
+# C0_rep (E1, W2 2.1) — COMPUTE-MATCHED C0: draw K temperature-sampled C0 calls on
+# the same slide (K = the number of atomic questions C3 asks per slide in
+# deployment, i.e. the routed hybrid's page taxonomy = 9 frozen page types + G7),
+# then aggregate. This isolates "does C3 win only because it spends K× the
+# test-time compute?" — give C0 the SAME K-call budget and check whether a union /
+# majority vote of K independent C0 draws matches C3's single-question recovery.
+#   * union    (has_defect / named_target): ANY of the K draws asserts it -> the
+#              most generous reading of "more samples = more coverage".
+#   * majority (has_defect_maj / named_target_maj): strict majority of the
+#              SUCCESSFUL draws -> the self-consistency reading.
+# Both are scored paired-clean (the clean twin gets its own K draws) so specificity
+# is defined for each aggregation. Every raw draw is kept in `reps` for audit.
+# --------------------------------------------------------------------------- #
+# Deployment K for a page-level defect: the routed hybrid runs one atomic binary
+# per page-taxonomy type (9) plus the G7 extension. Overridable via --rep-k.
+C0_REP_DEFAULT_K = 10
+C0_REP_DEFAULT_TEMP = 0.7
+
+
+def engine_c0_rep(client, model, rec, modality, target_defect, style, max_tokens,
+                  rep_k=None, rep_temp=C0_REP_DEFAULT_TEMP):
+    k = rep_k if (rep_k and rep_k > 0) else C0_REP_DEFAULT_K
+    out = _blank_result(rec)
+    reps = []
+    det_votes = named_votes = n_ok = 0
+    types_union: set = set()
+    for _ in range(k):
+        r = _c0_call(client, model, rec, modality, target_defect, style, max_tokens,
+                     temperature=rep_temp)
+        reps.append({"has_defect": r["has_defect"], "named_target": r["named_target"],
+                     "predicted_types": r["predicted_types"], "failure": r["failure"],
+                     "raw": r["raw"][:200]})
+        if r["failure"]:
+            continue
+        n_ok += 1
+        det_votes += int(bool(r["has_defect"]))
+        named_votes += int(bool(r["named_target"]))
+        types_union |= set(r["predicted_types"])
+    out["reps"] = reps
+    out["rep_k"] = k
+    out["rep_temp"] = rep_temp
+    out["rep_n_ok"] = n_ok
+    out["rep_det_votes"] = det_votes
+    out["rep_named_votes"] = named_votes
+    if n_ok == 0:  # every draw failed (quota death) -> resume will retry this probe
+        out["failure"] = True
+        return out
+    # union = primary scored signal (has_defect/named_target); majority stored
+    # alongside for the second aggregation the scorer picks up automatically.
+    out["has_defect"] = det_votes >= 1
+    out["named_target"] = named_votes >= 1
+    out["has_defect_maj"] = det_votes * 2 > n_ok
+    out["named_target_maj"] = named_votes * 2 > n_ok
+    out["predicted_types"] = sorted(types_union)
+    out["raw"] = reps[0]["raw"]
     return out
 
 
@@ -191,36 +258,43 @@ _G7_CATALOG_DEF = (
 )
 
 
+_CATALOG_ANCHOR = ".\nReport a finding only when you are confident the defect is actually present."
+_SCOPE_ANCHOR = "'S6_IMAGE_TEXT_CONTRADICTION']"
+_SCOPE_REPL = "'S6_IMAGE_TEXT_CONTRADICTION', 'G7_RENDER_CONTAINMENT_OVERFLOW']"
+
+
+def _build_c0plus_messages(rec, modality, style):
+    """Build the scoped whole-taxonomy messages with G7 injected into the candidate
+    catalog (and the CHECK_SCOPE list), holding the overloaded FORMAT fixed. Shared
+    by C0plus and C0_full. Fail closed: raises if the scoped anchor is absent."""
+    messages = build_messages(rec, modality, style)
+    g7_entry = f"; {G7_RENDER_CONTAINMENT_OVERFLOW}: {_G7_CATALOG_DEF}"
+    user = messages[-1]
+    catalog_patched = False
+    if isinstance(user.get("content"), list):
+        for part in user["content"]:
+            if part.get("type") != "text":
+                continue
+            if _CATALOG_ANCHOR in part["text"]:
+                part["text"] = part["text"].replace(_CATALOG_ANCHOR, g7_entry + _CATALOG_ANCHOR, 1)
+                catalog_patched = True
+            if _SCOPE_ANCHOR in part["text"]:
+                part["text"] = part["text"].replace(_SCOPE_ANCHOR, _SCOPE_REPL, 1)
+    if not catalog_patched:
+        raise RuntimeError("C0plus/C0_full requires --style scoped (catalog anchor not found)")
+    return messages
+
+
 def engine_c0plus(client, model, rec, modality, target_defect, style, max_tokens):
     out = _blank_result(rec)
     try:
-        messages = build_messages(rec, modality, style)
         # Inject G7 into the scoped candidate catalog, holding everything else fixed.
         # The scoped suffix lists candidates as "...<last type>: <def>.\nReport a
         # finding only when you are confident the defect is actually present." We
         # append G7 as one more "; <ID>: <def>" entry just before that catalog
-        # terminator. Fail closed: if the anchor is absent (style!=scoped), raise.
-        # (1) the binding "Consider ONLY these candidate defect types: ..." catalog
-        #     (part 1 of the user turn) — this is the operative constraint.
-        anchor = ".\nReport a finding only when you are confident the defect is actually present."
-        g7_entry = f"; {G7_RENDER_CONTAINMENT_OVERFLOW}: {_G7_CATALOG_DEF}"
-        # (2) the CHECK_SCOPE list emitted by build_page_messages (part 0) — keep the
-        #     two views consistent so G7 is named everywhere the frozen taxonomy is.
-        scope_anchor = "'S6_IMAGE_TEXT_CONTRADICTION']"
-        scope_repl = "'S6_IMAGE_TEXT_CONTRADICTION', 'G7_RENDER_CONTAINMENT_OVERFLOW']"
-        user = messages[-1]
-        catalog_patched = False
-        if isinstance(user.get("content"), list):
-            for part in user["content"]:
-                if part.get("type") != "text":
-                    continue
-                if anchor in part["text"]:
-                    part["text"] = part["text"].replace(anchor, g7_entry + anchor, 1)
-                    catalog_patched = True
-                if scope_anchor in part["text"]:
-                    part["text"] = part["text"].replace(scope_anchor, scope_repl, 1)
-        if not catalog_patched:
-            raise RuntimeError("C0plus requires --style scoped (catalog anchor not found)")
+        # terminator, and mirror it into the CHECK_SCOPE list, so G7 is both named
+        # and permitted everywhere the frozen taxonomy is. Fail closed if not scoped.
+        messages = _build_c0plus_messages(rec, modality, style)
         raw = chat_complete(client, model, messages, max_tokens)
     except Exception as exc:  # noqa: BLE001
         out["failure"] = True
@@ -237,6 +311,89 @@ def engine_c0plus(client, model, rec, modality, target_defect, style, max_tokens
     out["predicted_types"] = types
     out["has_defect"] = bool(parsed.get("has_defect")) or bool(findings)
     out["named_target"] = target_defect in types
+    return out
+
+
+# --------------------------------------------------------------------------- #
+# C0_full (E2, W2 2.1) — the DEFINITION+EVIDENCE-matched single call. Holds the
+# C0plus whole-taxonomy single-call FORMAT fixed and adds the two ingredients that
+# otherwise only C3 has:
+#   * definitions — each candidate type is spelled out with the exact binary
+#     decision question C3 uses (question_for), appended as a DEFINITIONS block.
+#   * forced evidence — every reported finding MUST name a concrete visible element;
+#     findings with no element/evidence pointer are DROPPED (not counted), the same
+#     gate C3 applies. This lets the decomposition read:
+#       C0plus -> C0_full  = the contribution of definitions + forced evidence
+#       C0_full -> C3      = the contribution of DECOMPOSITION (atomic per-type call)
+# Still ONE model call per slide -> compute-matched to C0/C0plus (unlike C0_rep).
+# Scored paired-clean exactly like C0/C0plus (detection = any surviving finding).
+# --------------------------------------------------------------------------- #
+def _c0_full_definitions(rec) -> str:
+    """DEFINITIONS block: each in-scope candidate type + the C3 binary question that
+    operationalises it, plus G7. Mirrors the scoped catalog so every named type has a
+    decision rule."""
+    scope = list(DECK_SCOPE) if is_deck(rec) else [
+        "G1_TEXT_OVERFLOW", "G2_ELEMENT_OVERLAP", "G3_ALIGNMENT_OFFSET",
+        "G4_FONT_SIZE_INCONSISTENCY", "G5_BRAND_COLOR_VIOLATION", "G6_MARGIN_VIOLATION",
+        "S1_TITLE_BODY_MISMATCH", "S4_DENSITY_RULE_VIOLATION", "S6_IMAGE_TEXT_CONTRADICTION"]
+    if G7_RENDER_CONTAINMENT_OVERFLOW not in scope:
+        scope.append(G7_RENDER_CONTAINMENT_OVERFLOW)
+    lines = [f"- {d}: {question_for(d)}" for d in scope]
+    return ("DEFINITIONS — a candidate is PRESENT only if the answer to its question "
+            "is yes:\n" + "\n".join(lines))
+
+
+_C0_FULL_EVIDENCE_RULE = (
+    "\nFor EVERY finding you report you MUST fill `evidence` with the concrete "
+    "visible element or region it points to (e.g. \"the bottom-right card\", \"the "
+    "title line\"). If you cannot point to a concrete visible element, DO NOT report "
+    "that finding."
+)
+
+
+def _finding_has_evidence(f: dict) -> bool:
+    """Forced-evidence gate (matches C3): a finding counts only if it names a
+    concrete element — a non-placeholder `evidence` string or a locator element_id."""
+    placeholder = {"", "none", "n/a", "null", "empty", "-"}
+    ev = str(f.get("evidence") or "").strip()
+    loc = f.get("locator") if isinstance(f.get("locator"), dict) else {}
+    el = str((loc or {}).get("element_id") or "").strip()
+    return (ev.lower() not in placeholder) or (el.lower() not in placeholder)
+
+
+def engine_c0_full(client, model, rec, modality, target_defect, style, max_tokens):
+    out = _blank_result(rec)
+    try:
+        messages = _build_c0plus_messages(rec, modality, style)
+        # Append DEFINITIONS + forced-evidence rule to the last text part (after the
+        # scoped schema), holding the whole-taxonomy single-call format fixed.
+        addendum = "\n\n" + _c0_full_definitions(rec) + _C0_FULL_EVIDENCE_RULE
+        user = messages[-1]
+        if isinstance(user.get("content"), list):
+            for part in reversed(user["content"]):
+                if part.get("type") == "text":
+                    part["text"] = part["text"] + addendum
+                    break
+        else:
+            user["content"] = f"{user.get('content', '')}{addendum}"
+        raw = chat_complete(client, model, messages, max_tokens)
+    except Exception as exc:  # noqa: BLE001
+        out["failure"] = True
+        out["raw"] = f"ERR {exc}"[:300]
+        return out
+    out["raw"] = raw[:400]
+    try:
+        parsed = parse_examiner_json(raw)
+    except Exception:  # noqa: BLE001
+        out["failure"] = True
+        return out
+    findings = parsed.get("findings", []) or []
+    kept = [f for f in findings if f.get("type") and _finding_has_evidence(f)]
+    types = sorted({f.get("type") for f in kept})
+    out["predicted_types"] = types
+    out["has_defect"] = bool(kept)
+    out["named_target"] = target_defect in types
+    out["dropped_no_evidence"] = len(findings) - len(kept)
     return out
 
 
@@ -350,7 +507,8 @@ def engine_c2(client, model, rec, modality, target_defect, style, max_tokens):
     )
 
 
-ENGINES = {"C0": engine_c0, "C0plus": engine_c0plus, "C0_named": engine_c0_named,
+ENGINES = {"C0": engine_c0, "C0_rep": engine_c0_rep, "C0plus": engine_c0plus,
+           "C0_full": engine_c0_full, "C0_named": engine_c0_named,
            "C1": engine_c1, "C2": engine_c2, "C3": engine_c3}
 
 
@@ -504,10 +662,13 @@ def run_afc(args, client, recs, mode):
     def work(defect, probe, partner):
         phrase = afc_phrase(defect)
         ip, iq = _img_of(probe), _img_of(partner)
-        return {"defect": defect, "modality": "A", "mode": mode,
-                "probe_id": probe.get("sample_id"), "partner_id": partner.get("sample_id"),
-                "pick_order0": ask_afc(client, args.model, ip, iq, phrase, args.max_tokens),
-                "pick_order1": ask_afc(client, args.model, iq, ip, phrase, args.max_tokens)}
+        reset_usage()  # both orders = 2 calls in this thread; captured together
+        row = {"defect": defect, "modality": "A", "mode": mode,
+               "probe_id": probe.get("sample_id"), "partner_id": partner.get("sample_id"),
+               "pick_order0": ask_afc(client, args.model, ip, iq, phrase, args.max_tokens),
+               "pick_order1": ask_afc(client, args.model, iq, ip, phrase, args.max_tokens)}
+        row["usage"] = pop_usage()
+        return row
 
     rows, t0 = [], time.time()
     with ThreadPoolExecutor(max_workers=args.workers) as pool:
@@ -523,7 +684,8 @@ def run_afc(args, client, recs, mode):
     failures = sum(1 for r in rows if not r["pick_order0"] and not r["pick_order1"])
     result = {"condition": label, "mode": mode, "model": args.model, "style": args.style,
               "manifest": args.manifest, "modalities": ["A"], "defects": args.defects,
-              "n_pairs": len(pairs), "failures": failures, "afc": afc}
+              "n_pairs": len(pairs), "failures": failures,
+              "usage": usage_summary(rows), "afc": afc}
     Path(args.out).parent.mkdir(parents=True, exist_ok=True)
     Path(args.out).write_text(json.dumps(result, indent=2, ensure_ascii=False), encoding="utf-8")
     if args.dump_rows:
@@ -595,6 +757,9 @@ def run(args):
         # forced-choice paths: distinct scoring (pick-rate/bias), own run path.
         return run_afc(args, client, recs, mode="paired" if args.condition == "AFC" else "clean")
     engine = ENGINES[args.condition]
+    if args.condition == "C0_rep":
+        from functools import partial
+        engine = partial(engine, rep_k=args.rep_k, rep_temp=args.rep_temp)
     jobs = build_jobs(recs, args.defects, args.modalities, args.max_per_defect)
     if args.condition == "C2":
         # Playwright sync API is not thread-safe -> batch-render the snap-twins for
@@ -644,7 +809,9 @@ def run(args):
         jobs = kept
 
     def work(rec, modality, target_defect, is_clean):
+        reset_usage()  # per-probe token window (thread-local); read back below
         res = engine(client, args.model, rec, modality, target_defect, args.style, args.max_tokens)
+        res["usage"] = pop_usage()
         res["modality"] = modality
         res["defect"] = target_defect
         res["is_clean"] = is_clean
@@ -684,6 +851,7 @@ def run(args):
         "manifest": args.manifest, "modalities": args.modalities,
         "defects": args.defects, "n_jobs": len(rows),
         "failures": sum(1 for r in rows if r.get("failure")),
+        "usage": usage_summary(rows),
         "metrics": metrics,
     }
     Path(args.out).parent.mkdir(parents=True, exist_ok=True)
@@ -695,12 +863,38 @@ def run(args):
 
 
 # --------------------------------------------------------------------------- #
+# Token-usage aggregation (W2 2.0) — per-condition totals for the cost table
+# --------------------------------------------------------------------------- #
+def usage_summary(rows) -> dict | None:
+    """Aggregate per-record ``usage`` into condition-level totals and per-record
+    means. Returns None if no row carries usage (old runs / mock clients) so the
+    field is simply absent — backward compatible with usage-less JSON."""
+    urows = [r["usage"] for r in rows if r.get("usage") and r["usage"].get("calls")]
+    if not urows:
+        return None
+    n = len(urows)
+    calls = sum(u.get("calls", 0) for u in urows)
+    pt = sum(u.get("prompt_tokens", 0) for u in urows)
+    ct = sum(u.get("completion_tokens", 0) for u in urows)
+    rt = sum(u.get("reasoning_tokens", 0) for u in urows)
+    return {
+        "n_records": n, "total_calls": calls,
+        "prompt_tokens": pt, "completion_tokens": ct, "reasoning_tokens": rt,
+        "total_tokens": pt + ct,
+        "calls_per_record": round(calls / n, 3),
+        "prompt_tokens_per_record": round(pt / n, 1),
+        "completion_tokens_per_record": round(ct / n, 1),
+        "reasoning_tokens_per_record": round(rt / n, 1),
+    }
+
+
+# --------------------------------------------------------------------------- #
 # Scoring — paired-clean, two levels (detection / named), with Wilson CIs
 # --------------------------------------------------------------------------- #
 def _cell(pos_rows, neg_rows, key):
-    tp = sum(bool(r[key]) for r in pos_rows)
+    tp = sum(bool(r.get(key)) for r in pos_rows)
     fn = len(pos_rows) - tp
-    fp = sum(bool(r[key]) for r in neg_rows)
+    fp = sum(bool(r.get(key)) for r in neg_rows)
     tn = len(neg_rows) - fp
     n_pos, n_neg = len(pos_rows), len(neg_rows)
     recall = tp / n_pos if n_pos else 0.0
@@ -742,6 +936,12 @@ def score(rows, modalities, defects):
                 # *detected* it). `named` is kept as a stricter secondary metric.
                 "headline_level": "detection",
             }
+            # C0_rep carries a second aggregation (strict majority of K draws) next
+            # to the primary union in has_defect/named_target. Emit its cells too so
+            # both union and majority are scored paired-clean in one run.
+            if any("has_defect_maj" in r for r in pos + neg):
+                per_defect[d]["detection_majority"] = _cell(pos, neg, "has_defect_maj")
+                per_defect[d]["named_majority"] = _cell(pos, neg, "named_target_maj")
         metrics[mod] = {"per_defect": per_defect}
     return metrics
 
@@ -758,6 +958,12 @@ def main():
                          "S6_IMAGE_TEXT_CONTRADICTION G7_RENDER_CONTAINMENT_OVERFLOW).")
     ap.add_argument("--modalities", nargs="+", default=["A"])
     ap.add_argument("--max-per-defect", type=int, default=60)
+    ap.add_argument("--rep-k", type=int, default=None,
+                    help=f"C0_rep: number of temperature-sampled C0 draws per slide "
+                         f"(default {C0_REP_DEFAULT_K} = deployed router's page-taxonomy "
+                         f"atomic-question count = 9 frozen page types + G7).")
+    ap.add_argument("--rep-temp", type=float, default=C0_REP_DEFAULT_TEMP,
+                    help="C0_rep: sampling temperature for the repeated C0 draws.")
     ap.add_argument("--freeform-only", action="store_true",
                     help="drop __template renders (snap absorbs ~45%% of geometry; E1 freeform set).")
     ap.add_argument("--max-tokens", type=int, default=512)

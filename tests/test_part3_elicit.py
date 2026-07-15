@@ -28,21 +28,29 @@ from slide_examiner.schemas import Slide  # noqa: E402
 # scripted fake OpenAI-compatible client
 # --------------------------------------------------------------------------- #
 class _FakeClient:
-    def __init__(self, responder):
+    def __init__(self, responder, usage=None):
         self._responder = responder
         self.calls = 0
         self.chat = self  # client.chat.completions.create
+        self._usage = usage  # (prompt, completion[, reasoning]) or None to omit usage
 
     @property
     def completions(self):
         return self
 
-    def create(self, *, model, messages, max_tokens, temperature=0.0):
+    def create(self, *, model, messages, max_tokens, temperature=0.0, **kwargs):
         self.calls += 1
         content = self._responder(messages, self.calls)
         msg = type("M", (), {"content": content})
         choice = type("C", (), {"message": msg})
-        return type("R", (), {"choices": [choice]})
+        usage = None
+        if self._usage is not None:
+            p, c = self._usage[0], self._usage[1]
+            r = self._usage[2] if len(self._usage) > 2 else 0
+            det = type("D", (), {"reasoning_tokens": r})
+            usage = type("U", (), {"prompt_tokens": p, "completion_tokens": c,
+                                   "completion_tokens_details": det})
+        return type("R", (), {"choices": [choice], "usage": usage})
 
 
 def _rec(image="x.png", slide_id=None, slide=None):
@@ -76,6 +84,135 @@ def test_c3_forced_evidence_gate_rejects_unlocated_yes():
     client = _FakeClient(lambda m, n: json.dumps({"present": True, "evidence_element": "empty"}))
     out = pe.engine_c3(client, "m", _rec(), "A", "G1_TEXT_OVERFLOW", "trained", 256)
     assert not out["has_defect"]
+
+
+# --------------------------------------------------------------------------- #
+# C0_rep — compute-matched repeated C0 (union + majority) (W2 2.1)
+# --------------------------------------------------------------------------- #
+def _c0_reply(types):
+    findings = [{"type": t} for t in types]
+    return json.dumps({"has_defect": bool(findings), "findings": findings})
+
+
+def _stub_build_messages(monkeypatch, anchor=False):
+    """Stub pe.build_messages so the C0 tests exercise aggregation/usage without the
+    full slide contract. anchor=True embeds the scoped catalog terminator that
+    C0plus/C0_full patch, so those engines see a valid scoped prompt."""
+    text = "prompt" + (pe._CATALOG_ANCHOR if anchor else "")
+    monkeypatch.setattr(pe, "build_messages",
+                        lambda rec, modality, style: [
+                            {"role": "user", "content": [{"type": "text", "text": text}]}])
+
+
+def test_c0_rep_union_and_majority_split(monkeypatch):
+    # K=4 draws: G7 asserted in 1/4 -> union YES, majority NO.
+    _stub_build_messages(monkeypatch)
+    G7 = G7_RENDER_CONTAINMENT_OVERFLOW
+    replies = {1: _c0_reply([G7]), 2: _c0_reply([]), 3: _c0_reply([]), 4: _c0_reply([])}
+    client = _FakeClient(lambda m, n: replies[n])
+    out = pe.engine_c0_rep(client, "m", _rec(), "A", G7, "trained", 256, rep_k=4)
+    assert client.calls == 4 and out["rep_k"] == 4 and out["rep_n_ok"] == 4
+    assert out["has_defect"] and out["named_target"]           # union: any draw
+    assert not out["has_defect_maj"] and not out["named_target_maj"]  # 1/4 < majority
+    assert out["rep_named_votes"] == 1 and len(out["reps"]) == 4
+
+
+def test_c0_rep_majority_when_most_draws_agree(monkeypatch):
+    _stub_build_messages(monkeypatch)
+    G7 = G7_RENDER_CONTAINMENT_OVERFLOW
+    replies = {1: _c0_reply([G7]), 2: _c0_reply([G7]), 3: _c0_reply([G7]), 4: _c0_reply([])}
+    client = _FakeClient(lambda m, n: replies[n])
+    out = pe.engine_c0_rep(client, "m", _rec(), "A", G7, "trained", 256, rep_k=4)
+    assert out["has_defect_maj"] and out["named_target_maj"]   # 3/4 > half
+    assert out["rep_det_votes"] == 3
+
+
+def test_c0_rep_all_fail_is_failure(monkeypatch):
+    _stub_build_messages(monkeypatch)
+    client = _FakeClient(lambda m, n: "not json at all")
+    out = pe.engine_c0_rep(client, "m", _rec(), "A", "G1_TEXT_OVERFLOW", "trained", 256, rep_k=3)
+    assert out["failure"] and out["rep_n_ok"] == 0
+
+
+def test_score_reports_majority_cells_when_present():
+    G7 = G7_RENDER_CONTAINMENT_OVERFLOW
+    rows = []
+    # 6 positives: union catches all, majority catches 4/6; 6 clean: no false alarms.
+    for i in range(6):
+        rows.append({"defect": G7, "modality": "A", "is_clean": False, "level": "page",
+                     "has_defect": True, "named_target": True,
+                     "has_defect_maj": i < 4, "named_target_maj": i < 4, "failure": False})
+    for _ in range(6):
+        rows.append({"defect": G7, "modality": "A", "is_clean": True, "level": "page",
+                     "has_defect": False, "named_target": False,
+                     "has_defect_maj": False, "named_target_maj": False, "failure": False})
+    cell = pe.score(rows, ["A"], [G7])["A"]["per_defect"][G7]
+    assert "detection_majority" in cell and "named_majority" in cell
+    assert cell["detection"]["recall"] == 1.0            # union catches all 6
+    assert cell["detection_majority"]["recall"] == round(4 / 6, 3)  # majority 4/6
+
+
+# --------------------------------------------------------------------------- #
+# C0_full — definitions + forced-evidence single call (W2 2.1)
+# --------------------------------------------------------------------------- #
+def test_c0_full_drops_findings_without_evidence(monkeypatch):
+    _stub_build_messages(monkeypatch, anchor=True)  # scoped catalog present
+    G7 = G7_RENDER_CONTAINMENT_OVERFLOW
+    # one finding WITH evidence (kept), one WITHOUT (dropped by the forced-evidence gate)
+    reply = json.dumps({"has_defect": True, "findings": [
+        {"type": G7, "evidence": "the bottom-right card"},
+        {"type": "G3_ALIGNMENT_OFFSET", "evidence": ""},
+    ]})
+    client = _FakeClient(lambda m, n: reply)
+    out = pe.engine_c0_full(client, "m", _rec(), "A", G7, "scoped", 512)
+    assert out["has_defect"] and out["named_target"]
+    assert out["predicted_types"] == [G7]
+    assert out["dropped_no_evidence"] == 1
+
+
+def test_c0_full_requires_scoped_style(monkeypatch):
+    _stub_build_messages(monkeypatch, anchor=False)  # no scoped catalog anchor
+    G7 = G7_RENDER_CONTAINMENT_OVERFLOW
+    client = _FakeClient(lambda m, n: _c0_reply([G7]))
+    # no scoped catalog anchor -> engine must fail closed, not crash
+    out = pe.engine_c0_full(client, "m", _rec(), "A", G7, "trained", 512)
+    assert out["failure"]
+
+
+# --------------------------------------------------------------------------- #
+# token-usage logging (W2 2.0)
+# --------------------------------------------------------------------------- #
+def test_usage_accumulates_across_reps(monkeypatch):
+    _stub_build_messages(monkeypatch)
+    from slide_examiner.elicit_common import reset_usage, pop_usage
+    G7 = G7_RENDER_CONTAINMENT_OVERFLOW
+    client = _FakeClient(lambda m, n: _c0_reply([G7]), usage=(100, 20, 5))
+    reset_usage()
+    pe.engine_c0_rep(client, "m", _rec(), "A", G7, "trained", 256, rep_k=3)
+    u = pop_usage()
+    assert u["calls"] == 3
+    assert u["prompt_tokens"] == 300 and u["completion_tokens"] == 60
+    assert u["reasoning_tokens"] == 15
+
+
+def test_usage_absent_is_backward_compatible(monkeypatch):
+    _stub_build_messages(monkeypatch)
+    # a client that omits `usage` (older stub) still counts calls, tokens stay 0.
+    from slide_examiner.elicit_common import reset_usage, pop_usage
+    client = _FakeClient(lambda m, n: _c0_reply([]), usage=None)
+    reset_usage()
+    pe.engine_c0(client, "m", _rec(), "A", "G1_TEXT_OVERFLOW", "trained", 256)
+    u = pop_usage()
+    assert u["calls"] == 1 and u["prompt_tokens"] == 0
+
+
+def test_usage_summary_none_when_no_usage():
+    rows = [{"has_defect": True}, {"has_defect": False}]  # no 'usage' key
+    assert pe.usage_summary(rows) is None
+    rows2 = [{"usage": {"calls": 2, "prompt_tokens": 10, "completion_tokens": 4,
+                        "reasoning_tokens": 0}}]
+    s = pe.usage_summary(rows2)
+    assert s["total_calls"] == 2 and s["total_tokens"] == 14
 
 
 # --------------------------------------------------------------------------- #

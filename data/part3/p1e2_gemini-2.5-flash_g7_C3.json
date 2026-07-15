@@ -1,0 +1,87 @@
+{
+  "condition": "C3",
+  "model": "gemini-2.5-flash",
+  "style": "scoped",
+  "manifest": "data/part3/manifest_g7_rendered.jsonl",
+  "modalities": [
+    "A"
+  ],
+  "defects": [
+    "G7_RENDER_CONTAINMENT_OVERFLOW"
+  ],
+  "n_jobs": 180,
+  "failures": 0,
+  "usage": {
+    "n_records": 180,
+    "total_calls": 180,
+    "prompt_tokens": 364320,
+    "completion_tokens": 6745,
+    "reasoning_tokens": 72330,
+    "total_tokens": 371065,
+    "calls_per_record": 1.0,
+    "prompt_tokens_per_record": 2024.0,
+    "completion_tokens_per_record": 37.5,
+    "reasoning_tokens_per_record": 401.8
+  },
+  "metrics": {
+    "A": {
+      "per_defect": {
+        "G7_RENDER_CONTAINMENT_OVERFLOW": {
+          "detection": {
+            "recall": 0.856,
+            "specificity": 0.9,
+            "bal_acc": 0.878,
+            "bal_acc_ci": [
+              0.795,
+              0.93
+            ],
+            "precision": 0.895,
+            "precision_ci": [
+              0.813,
+              0.944
+            ],
+            "fpr": 0.1,
+            "f1": 0.875,
+            "recall_ci": [
+              0.768,
+              0.914
+            ],
+            "tp": 77,
+            "fn": 13,
+            "fp": 9,
+            "tn": 81,
+            "n_pos": 90,
+            "n_neg": 90
+          },
+          "named": {
+            "recall": 0.856,
+            "specificity": 0.9,
+            "bal_acc": 0.878,
+            "bal_acc_ci": [
+              0.795,
+              0.93
+            ],
+            "precision": 0.895,
+            "precision_ci": [
+              0.813,
+              0.944
+            ],
+            "fpr": 0.1,
+            "f1": 0.875,
+            "recall_ci": [
+              0.768,
+              0.914
+            ],
+            "tp": 77,
+            "fn": 13,
+            "fp": 9,
+            "tn": 81,
+            "n_pos": 90,
+            "n_neg": 90
+          },
+          "headline_level": "detection"
+        }
+      }
+    }
+  }
+}

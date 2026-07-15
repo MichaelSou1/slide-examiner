@@ -1,0 +1,133 @@
+{
+  "condition": "C0_rep",
+  "model": "gemini-2.5-flash",
+  "style": "scoped",
+  "manifest": "data/part3/manifest_g7_rendered.jsonl",
+  "modalities": [
+    "A"
+  ],
+  "defects": [
+    "G7_RENDER_CONTAINMENT_OVERFLOW"
+  ],
+  "n_jobs": 180,
+  "failures": 0,
+  "usage": {
+    "n_records": 180,
+    "total_calls": 1800,
+    "prompt_tokens": 4269000,
+    "completion_tokens": 275595,
+    "reasoning_tokens": 2093648,
+    "total_tokens": 4544595,
+    "calls_per_record": 10.0,
+    "prompt_tokens_per_record": 23716.7,
+    "completion_tokens_per_record": 1531.1,
+    "reasoning_tokens_per_record": 11631.4
+  },
+  "metrics": {
+    "A": {
+      "per_defect": {
+        "G7_RENDER_CONTAINMENT_OVERFLOW": {
+          "detection": {
+            "recall": 0.989,
+            "specificity": 0.233,
+            "bal_acc": 0.611,
+            "bal_acc_ci": [
+              0.549,
+              0.664
+            ],
+            "precision": 0.563,
+            "precision_ci": [
+              0.485,
+              0.638
+            ],
+            "fpr": 0.767,
+            "f1": 0.718,
+            "recall_ci": [
+              0.94,
+              0.998
+            ],
+            "tp": 89,
+            "fn": 1,
+            "fp": 69,
+            "tn": 21,
+            "n_pos": 90,
+            "n_neg": 90
+          },
+          "named": {
+            "recall": 0.0,
+            "specificity": 1.0,
+            "bal_acc": 0.5,
+            "bal_acc_ci": [
+              0.48,
+              0.52
+            ],
+            "precision": 0.0,
+            "precision_ci": null,
+            "fpr": 0.0,
+            "f1": 0.0,
+            "recall_ci": [
+              0.0,
+              0.041
+            ],
+            "tp": 0,
+            "fn": 90,
+            "fp": 0,
+            "tn": 90,
+            "n_pos": 90,
+            "n_neg": 90
+          },
+          "headline_level": "detection",
+          "detection_majority": {
+            "recall": 0.722,
+            "specificity": 0.456,
+            "bal_acc": 0.589,
+            "bal_acc_ci": [
+              0.489,
+              0.681
+            ],
+            "precision": 0.57,
+            "precision_ci": [
+              0.478,
+              0.657
+            ],
+            "fpr": 0.544,
+            "f1": 0.637,
+            "recall_ci": [
+              0.622,
+              0.804
+            ],
+            "tp": 65,
+            "fn": 25,
+            "fp": 49,
+            "tn": 41,
+            "n_pos": 90,
+            "n_neg": 90
+          },
+          "named_majority": {
+            "recall": 0.0,
+            "specificity": 1.0,
+            "bal_acc": 0.5,
+            "bal_acc_ci": [
+              0.48,
+              0.52
+            ],
+            "precision": 0.0,
+            "precision_ci": null,
+            "fpr": 0.0,
+            "f1": 0.0,
+            "recall_ci": [
+              0.0,
+              0.041
+            ],
+            "tp": 0,
+            "fn": 90,
+            "fp": 0,
+            "tn": 90,
+            "n_pos": 90,
+            "n_neg": 90
+          }
+        }
+      }
+    }
+  }
+}

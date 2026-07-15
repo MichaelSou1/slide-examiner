@@ -1,0 +1,133 @@
+{
+  "condition": "C0_rep",
+  "model": "gpt-5.1-nothinking",
+  "style": "scoped",
+  "manifest": "data/part2/manifest_eval_test_rendered.jsonl",
+  "modalities": [
+    "A"
+  ],
+  "defects": [
+    "G1_TEXT_OVERFLOW"
+  ],
+  "n_jobs": 80,
+  "failures": 0,
+  "usage": {
+    "n_records": 80,
+    "total_calls": 596,
+    "prompt_tokens": 856186,
+    "completion_tokens": 15068,
+    "reasoning_tokens": 0,
+    "total_tokens": 871254,
+    "calls_per_record": 7.45,
+    "prompt_tokens_per_record": 10702.3,
+    "completion_tokens_per_record": 188.3,
+    "reasoning_tokens_per_record": 0.0
+  },
+  "metrics": {
+    "A": {
+      "per_defect": {
+        "G1_TEXT_OVERFLOW": {
+          "detection": {
+            "recall": 0.125,
+            "specificity": 1.0,
+            "bal_acc": 0.562,
+            "bal_acc_ci": [
+              0.483,
+              0.631
+            ],
+            "precision": 1.0,
+            "precision_ci": [
+              0.566,
+              1.0
+            ],
+            "fpr": 0.0,
+            "f1": 0.222,
+            "recall_ci": [
+              0.055,
+              0.261
+            ],
+            "tp": 5,
+            "fn": 35,
+            "fp": 0,
+            "tn": 40,
+            "n_pos": 40,
+            "n_neg": 40
+          },
+          "named": {
+            "recall": 0.0,
+            "specificity": 1.0,
+            "bal_acc": 0.5,
+            "bal_acc_ci": [
+              0.456,
+              0.544
+            ],
+            "precision": 0.0,
+            "precision_ci": null,
+            "fpr": 0.0,
+            "f1": 0.0,
+            "recall_ci": [
+              0.0,
+              0.088
+            ],
+            "tp": 0,
+            "fn": 40,
+            "fp": 0,
+            "tn": 40,
+            "n_pos": 40,
+            "n_neg": 40
+          },
+          "headline_level": "detection",
+          "detection_majority": {
+            "recall": 0.025,
+            "specificity": 1.0,
+            "bal_acc": 0.512,
+            "bal_acc_ci": [
+              0.458,
+              0.564
+            ],
+            "precision": 1.0,
+            "precision_ci": [
+              0.207,
+              1.0
+            ],
+            "fpr": 0.0,
+            "f1": 0.049,
+            "recall_ci": [
+              0.004,
+              0.129
+            ],
+            "tp": 1,
+            "fn": 39,
+            "fp": 0,
+            "tn": 40,
+            "n_pos": 40,
+            "n_neg": 40
+          },
+          "named_majority": {
+            "recall": 0.0,
+            "specificity": 1.0,
+            "bal_acc": 0.5,
+            "bal_acc_ci": [
+              0.456,
+              0.544
+            ],
+            "precision": 0.0,
+            "precision_ci": null,
+            "fpr": 0.0,
+            "f1": 0.0,
+            "recall_ci": [
+              0.0,
+              0.088
+            ],
+            "tp": 0,
+            "fn": 40,
+            "fp": 0,
+            "tn": 40,
+            "n_pos": 40,
+            "n_neg": 40
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "condition": "C0_full",
+  "model": "gpt-5.1-nothinking",
+  "style": "scoped",
+  "manifest": "data/part3/manifest_g7_rendered.jsonl",
+  "modalities": [
+    "A"
+  ],
+  "defects": [
+    "G7_RENDER_CONTAINMENT_OVERFLOW"
+  ],
+  "n_jobs": 180,
+  "failures": 7,
+  "usage": {
+    "n_records": 173,
+    "total_calls": 173,
+    "prompt_tokens": 334065,
+    "completion_tokens": 10643,
+    "reasoning_tokens": 0,
+    "total_tokens": 344708,
+    "calls_per_record": 1.0,
+    "prompt_tokens_per_record": 1931.0,
+    "completion_tokens_per_record": 61.5,
+    "reasoning_tokens_per_record": 0.0
+  },
+  "metrics": {
+    "A": {
+      "per_defect": {
+        "G7_RENDER_CONTAINMENT_OVERFLOW": {
+          "detection": {
+            "recall": 0.58,
+            "specificity": 1.0,
+            "bal_acc": 0.79,
+            "bal_acc_ci": [
+              0.716,
+              0.839
+            ],
+            "precision": 1.0,
+            "precision_ci": [
+              0.93,
+              1.0
+            ],
+            "fpr": 0.0,
+            "f1": 0.734,
+            "recall_ci": [
+              0.475,
+              0.677
+            ],
+            "tp": 51,
+            "fn": 37,
+            "fp": 0,
+            "tn": 85,
+            "n_pos": 88,
+            "n_neg": 85
+          },
+          "named": {
+            "recall": 0.295,
+            "specificity": 1.0,
+            "bal_acc": 0.648,
+            "bal_acc_ci": [
+              0.584,
+              0.699
+            ],
+            "precision": 1.0,
+            "precision_ci": [
+              0.871,
+              1.0
+            ],
+            "fpr": 0.0,
+            "f1": 0.456,
+            "recall_ci": [
+              0.21,
+              0.398
+            ],
+            "tp": 26,
+            "fn": 62,
+            "fp": 0,
+            "tn": 85,
+            "n_pos": 88,
+            "n_neg": 85
+          },
+          "headline_level": "detection"
+        }
+      }
+    }
+  }
+}

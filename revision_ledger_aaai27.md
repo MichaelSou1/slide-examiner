@@ -26,7 +26,8 @@
 | L12 | sec:g7 reward audit 结论句 | "its detection tracks perceptual capability rather than training domain" | "its detection tracks a rendered-quality read-out rather than the training-domain label, on the scorers tested"（限定在被测 scorer 集合内） | 替换 | W8 审稿点：scorer 数量少、DocReward 容量混淆（正文 Limitations 已认，主文措辞对齐） | 拟定 |
 | L13 | W4 结构：sec:g7 reward audit | 全节约 1 页 | 压至半页：保留同 backbone dissociation（CLIP-IQA vs LAION）+ perturbation fidelity 45%；Table 4 与其余移 Technical Supplement | 结构 | W7：主线过密 | 拟定 |
 | L14 | W4 结构：sec:examiner | 全节约 1 页 | 压缩：保留 in-dist 超 30B、abstain 行为、sim-to-real 负结果三点；训练细节移 supplement | 结构 | W7 | 拟定 |
-| L15 | W2 新增段 | — | 待 E1/E2/E3 结果，按 TODO 2.4 三预案之一入账 | 新增 | W3 审稿点 | 待实验 |
+| L15 | W2 新增段（sec:elicit） | — | **E1/E2/E3 首批结果已出（qwen3-vl-plus，`reports/_e2_computematch.md` + `cost_table.md`），走预案一（赢）+ 反向加强**：G7 上 C0=0.64 / C0_rep(8.4×调用)=0.66 / C0_full(同 definitions+evidence)=0.67 / **C3=0.92**，8 项 McNemar 全过 Holm；且 C3 输出 token 仅为 C0 的 0.29×——不是 compute-matched 下仍胜，是**用更少 compute 胜**。段落要点：①三控制条件定义一句 ②G7 数字 ③token 反向对比一句 ④G1 作为负对照主动呈现（C0=0.86>C3=0.50，正是 reference-assisted 类 + "no universal elicitation, route per defect and model" 的实例）⑤模型来源声明（API-served，与 p1e1 不并表）。待 Gemini/GPT 复制补齐后终稿 | 新增一段+supplement 表 | W3 审稿点 Q1/Q2：test-time-compute 备择解释被排除且反向 | 拟定（数字已实，待跨模型复制） |
+| L16 | Limitations 首句 + sec:diag 相关处 | "No human-inspector reference point is provided" | **在新渲染语料上重标 spot-check（v2）后引用 v2 数字**（Michael 决定 07-15：亲自重标 ~69 对，与新 ablation 同一批像素；旧版降级为一致性证据进 supplement；修掉 G1 `XX/XXX` 注入 artifact + magnitude 偏小两个旧协议瑕疵；能拉到第二标注者则报 inter-annotator κ）。正文 3–4 句：G3 人工不可见（sub-perceptual 独立人证）、G1/S6/G7 人工全可见（format-suppressed 人工背书）、标注者配置声明；完整表进 supplement；Limitations 句改写。工具链复用 docs/spotcheck/ + part3_spotcheck_*。详见 TODO 3.6 | 替换+新增 3-4 句 | W9 审稿点：v2 若有双标注者则完整消解；单标注者亦优于现状 | 拟定（待 v2 标注完成） |
 
 ## 整合 pass 检查单（落稿时用）
 

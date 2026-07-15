@@ -1,0 +1,139 @@
+{
+  "condition": "C0_rep",
+  "model": "qwen3-vl-plus",
+  "style": "scoped",
+  "manifest": "data/part2/manifest_eval_test_rendered.jsonl",
+  "modalities": [
+    "A"
+  ],
+  "defects": [
+    "G1_TEXT_OVERFLOW"
+  ],
+  "n_jobs": 80,
+  "failures": 0,
+  "usage": {
+    "n_records": 80,
+    "total_calls": 597,
+    "prompt_tokens": 1534624,
+    "completion_tokens": 29897,
+    "reasoning_tokens": 0,
+    "total_tokens": 1564521,
+    "calls_per_record": 7.463,
+    "prompt_tokens_per_record": 19182.8,
+    "completion_tokens_per_record": 373.7,
+    "reasoning_tokens_per_record": 0.0
+  },
+  "metrics": {
+    "A": {
+      "per_defect": {
+        "G1_TEXT_OVERFLOW": {
+          "detection": {
+            "recall": 0.725,
+            "specificity": 0.95,
+            "bal_acc": 0.837,
+            "bal_acc_ci": [
+              0.703,
+              0.913
+            ],
+            "precision": 0.935,
+            "precision_ci": [
+              0.793,
+              0.982
+            ],
+            "fpr": 0.05,
+            "f1": 0.817,
+            "recall_ci": [
+              0.572,
+              0.839
+            ],
+            "tp": 29,
+            "fn": 11,
+            "fp": 2,
+            "tn": 38,
+            "n_pos": 40,
+            "n_neg": 40
+          },
+          "named": {
+            "recall": 0.625,
+            "specificity": 1.0,
+            "bal_acc": 0.812,
+            "bal_acc_ci": [
+              0.691,
+              0.879
+            ],
+            "precision": 1.0,
+            "precision_ci": [
+              0.867,
+              1.0
+            ],
+            "fpr": 0.0,
+            "f1": 0.769,
+            "recall_ci": [
+              0.47,
+              0.758
+            ],
+            "tp": 25,
+            "fn": 15,
+            "fp": 0,
+            "tn": 40,
+            "n_pos": 40,
+            "n_neg": 40
+          },
+          "headline_level": "detection",
+          "detection_majority": {
+            "recall": 0.525,
+            "specificity": 0.975,
+            "bal_acc": 0.75,
+            "bal_acc_ci": [
+              0.623,
+              0.833
+            ],
+            "precision": 0.955,
+            "precision_ci": [
+              0.782,
+              0.992
+            ],
+            "fpr": 0.025,
+            "f1": 0.677,
+            "recall_ci": [
+              0.375,
+              0.671
+            ],
+            "tp": 21,
+            "fn": 19,
+            "fp": 1,
+            "tn": 39,
+            "n_pos": 40,
+            "n_neg": 40
+          },
+          "named_majority": {
+            "recall": 0.425,
+            "specificity": 1.0,
+            "bal_acc": 0.713,
+            "bal_acc_ci": [
+              0.599,
+              0.789
+            ],
+            "precision": 1.0,
+            "precision_ci": [
+              0.816,
+              1.0
+            ],
+            "fpr": 0.0,
+            "f1": 0.596,
+            "recall_ci": [
+              0.285,
+              0.578
+            ],
+            "tp": 17,
+            "fn": 23,
+            "fp": 0,
+            "tn": 40,
+            "n_pos": 40,
+            "n_neg": 40
+          }
+        }
+      }
+    }
+  }
+}
