@@ -17,7 +17,7 @@
             "mcnemar_p": 0.0639,
             "c3_gain": 17,
             "c3_loss": 7,
-            "holm_p": 0.625,
+            "holm_p": 0.4474,
             "reject_holm": false
           },
           "C3_vs_C0_full": {
@@ -30,16 +30,6 @@
             "holm_p": 1.0,
             "reject_holm": false
           },
-          "C3_vs_C0_rep": {
-            "c3_bal": 0.637,
-            "base_bal": 0.55,
-            "delta": 0.087,
-            "mcnemar_p": 0.427,
-            "c3_gain": 32,
-            "c3_loss": 25,
-            "holm_p": 1.0,
-            "reject_holm": false
-          },
           "C3_vs_C0_rep_maj": {
             "c3_bal": 0.637,
             "base_bal": 0.537,
@@ -47,7 +37,7 @@
             "mcnemar_p": 0.1338,
             "c3_gain": 15,
             "c3_loss": 7,
-            "holm_p": 1.0,
+            "holm_p": 0.8028,
             "reject_holm": false
           }
         }
@@ -78,17 +68,7 @@
             "mcnemar_p": 0.0015,
             "c3_gain": 42,
             "c3_loss": 17,
-            "holm_p": 0.0186,
-            "reject_holm": true
-          },
-          "C3_vs_C0_rep": {
-            "c3_bal": 0.878,
-            "base_bal": 0.611,
-            "delta": 0.267,
-            "mcnemar_p": 0.0,
-            "c3_gain": 61,
-            "c3_loss": 13,
-            "holm_p": 0.0,
+            "holm_p": 0.0139,
             "reject_holm": true
           },
           "C3_vs_C0_rep_maj": {
@@ -134,16 +114,6 @@
             "holm_p": 1.0,
             "reject_holm": false
           },
-          "C3_vs_C0_rep": {
-            "c3_bal": 0.5,
-            "base_bal": 0.562,
-            "delta": -0.062,
-            "mcnemar_p": 0.0625,
-            "c3_gain": 0,
-            "c3_loss": 5,
-            "holm_p": 0.625,
-            "reject_holm": false
-          },
           "C3_vs_C0_rep_maj": {
             "c3_bal": 0.5,
             "base_bal": 0.512,
@@ -172,7 +142,7 @@
             "mcnemar_p": 0.0021,
             "c3_gain": 35,
             "c3_loss": 13,
-            "holm_p": 0.023,
+            "holm_p": 0.0167,
             "reject_holm": true
           },
           "C3_vs_C0_full": {
@@ -181,16 +151,6 @@
             "delta": 0.041,
             "mcnemar_p": 0.6358,
             "c3_gain": 22,
-            "c3_loss": 18,
-            "holm_p": 1.0,
-            "reject_holm": false
-          },
-          "C3_vs_C0_rep": {
-            "c3_bal": 0.831,
-            "base_bal": 0.778,
-            "delta": 0.053,
-            "mcnemar_p": 0.2912,
-            "c3_gain": 26,
             "c3_loss": 18,
             "holm_p": 1.0,
             "reject_holm": false
@@ -235,17 +195,7 @@
             "mcnemar_p": 0.0,
             "c3_gain": 1,
             "c3_loss": 21,
-            "holm_p": 0.0002,
-            "reject_holm": true
-          },
-          "C3_vs_C0_rep": {
-            "c3_bal": 0.5,
-            "base_bal": 0.837,
-            "delta": -0.337,
-            "mcnemar_p": 0.0,
-            "c3_gain": 2,
-            "c3_loss": 29,
-            "holm_p": 0.0,
+            "holm_p": 0.0001,
             "reject_holm": true
           },
           "C3_vs_C0_rep_maj": {
@@ -255,7 +205,7 @@
             "mcnemar_p": 0.0,
             "c3_gain": 1,
             "c3_loss": 21,
-            "holm_p": 0.0002,
+            "holm_p": 0.0001,
             "reject_holm": true
           }
         }
@@ -286,16 +236,6 @@
             "mcnemar_p": 0.0,
             "c3_gain": 42,
             "c3_loss": 4,
-            "holm_p": 0.0,
-            "reject_holm": true
-          },
-          "C3_vs_C0_rep": {
-            "c3_bal": 0.917,
-            "base_bal": 0.656,
-            "delta": 0.261,
-            "mcnemar_p": 0.0,
-            "c3_gain": 45,
-            "c3_loss": 3,
             "holm_p": 0.0,
             "reject_holm": true
           },
@@ -471,9 +411,9 @@
     }
   },
   "mcnemar_family": {
-    "n_tests": 24,
+    "n_tests": 18,
     "method": "holm",
     "alpha": 0.05,
-    "n_reject": 14
+    "n_reject": 11
   }
 }

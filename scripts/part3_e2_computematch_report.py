@@ -44,13 +44,16 @@ from part3_p1_summary import mcnemar_p  # noqa: E402  (same exact paired test as
 CONDS = ["C0", "C0_full", "C0_rep", "C3"]
 SHORT = {"G7_RENDER_CONTAINMENT_OVERFLOW": "G7", "G1_TEXT_OVERFLOW": "G1",
          "S6_IMAGE_TEXT_CONTRADICTION": "S6"}
-# Paired contrasts to test (base cond -> C3 gain). C0_rep is split into its two
-# aggregations, read from the majority cell where present.
+# Paired contrasts to test (base cond -> C3 gain). The compute-matched control is
+# SELF-CONSISTENCY = majority vote over K C0 draws (the standard way to convert
+# test-time compute into accuracy). The any-vote/union aggregation is intentionally
+# NOT reported: it is a decision-threshold relaxation, not a compute-scaling method,
+# so it is neither in the table nor in the Holm family. (The raw union field still
+# lives in the per-sample data; only the paper-facing report omits it.)
 CONTRASTS = [
     ("C3", "C0", "detection", "detection"),
     ("C3", "C0_full", "detection", "detection"),
-    ("C3", "C0_rep", "detection", "detection"),            # union
-    ("C3", "C0_rep", "detection", "detection_majority"),   # majority
+    ("C3", "C0_rep", "detection", "detection_majority"),   # self-consistency (majority)
 ]
 
 
@@ -194,24 +197,35 @@ def _contrast_str(con):
 
 def md_report(rows, models, usage, fam) -> str:
     L = ["## E2 — compute-matched C0 ablation (paired-clean detection, modality A)\n",
-         "Same model, image, and rendered corpus across conditions. **C0_rep** gives C0 "
-         f"the SAME K-call budget C3 spends in deployment (K={_rep_k(rows)}), aggregated as "
-         "**union** (any draw) and **maj** (majority of draws); **C0_full** matches C3's "
-         "definitions + forced evidence in a single call. Δ = C3 balanced accuracy − the "
-         "control's; McNemar p is the exact paired test, **Holm** = family-wise corrected "
-         f"over the {fam['n_tests']} E2 tests (α=0.05, {fam['n_reject']} rejected).\n",
-         "| Model | Defect | C0 | C0_full | C0_rep union | C0_rep maj | C3 | Δ(C3−C0_rep·un) | Δ(C3−C0_full) |",
-         "|---|---|---|---|---|---|---|---|---|"]
+         "Same model, image, and rendered corpus across conditions. The compute-matched "
+         f"control is **self-consistency**: majority vote over K={_rep_k(rows)} independent "
+         "C0 draws — the standard way to spend extra test-time compute for accuracy. Δ = C3 "
+         "balanced accuracy − the control's; McNemar p is the exact paired test, **Holm** = "
+         f"family-wise corrected over the {fam['n_tests']} E2 tests (α=0.05, {fam['n_reject']} "
+         "rejected).\n",
+         "### Main — pointwise baseline vs. compute-matched self-consistency vs. atomic C3\n",
+         "| Model | Defect | C0 | Self-consistency (K-vote) | C3 | Δ(C3−self-cons) | Δ(C3−C0) |",
+         "|---|---|---|---|---|---|---|"]
     for m in models:
         for defect in sorted(rows[m]):
             e = rows[m][defect]
             b = e["bal"]
-            con_un = e["contrasts"].get("C3_vs_C0_rep")
-            con_full = e["contrasts"].get("C3_vs_C0_full")
+            con_sc = e["contrasts"].get("C3_vs_C0_rep_maj")
+            con_c0 = e["contrasts"].get("C3_vs_C0")
             L.append(
-                f"| {m} | {SHORT.get(defect, defect)} | {_p(b.get('C0'))} | {_p(b.get('C0_full'))} | "
-                f"{_p(b.get('C0_rep'))} | {_p(b.get('C0_rep_maj'))} | {_p(b.get('C3'))} | "
-                f"{_contrast_str(con_un)} | {_contrast_str(con_full)} |")
+                f"| {m} | {SHORT.get(defect, defect)} | {_p(b.get('C0'))} | "
+                f"{_p(b.get('C0_rep_maj'))} | {_p(b.get('C3'))} | "
+                f"{_contrast_str(con_sc)} | {_contrast_str(con_c0)} |")
+    # definition-matched second control (supplement)
+    L += ["\n### Supplement — definition-matched control (C0_full: whole-taxonomy single "
+          "call + per-type definitions + forced evidence)\n",
+          "| Model | Defect | C0_full | C3 | Δ(C3−C0_full) |",
+          "|---|---|---|---|---|"]
+    for m in models:
+        for defect in sorted(rows[m]):
+            e = rows[m][defect]
+            L.append(f"| {m} | {SHORT.get(defect, defect)} | {_p(e['bal'].get('C0_full'))} | "
+                     f"{_p(e['bal'].get('C3'))} | {_contrast_str(e['contrasts'].get('C3_vs_C0_full'))} |")
     # budget (E3)
     L += ["\n### Budget (E3) — completion tokens per slide\n",
           "If C3 does not spend MORE output tokens than C0_full, the recovery cannot be a "
@@ -248,32 +262,26 @@ def _verdict(rows, models) -> str:
     for m in models:
         for defect in sorted(rows.get(m, {})):
             e = rows[m][defect]
-            un = e["contrasts"].get("C3_vs_C0_rep")
+            sc = e["contrasts"].get("C3_vs_C0_rep_maj")   # self-consistency (majority)
             full = e["contrasts"].get("C3_vs_C0_full")
             c0_bal, c3_bal = e["bal"].get("C0"), e["bal"].get("C3")
-            if not un or not full:
+            if not sc or not full:
                 continue
-            d_un, d_full = un["delta"], full["delta"]
-            un_sig = un.get("reject_holm")
+            d_sc, d_full = sc["delta"], full["delta"]
+            sc_sig = sc.get("reject_holm")
             # C3 must recover over the plain baseline for the compute-match to be relevant.
             recovers = (c0_bal is not None and c3_bal is not None and (c3_bal - c0_bal) > 0.05)
             if not recovers:
                 branch = ("N/A: C3 does not recover over C0 here (C3≤C0) — this is a "
                           "reference-assisted / non-format-suppressed class, not a target of "
                           "the compute-match; report as a negative control.")
-            elif d_un > 0.05 and un_sig:
-                branch = ("WIN: C3 still beats the compute-matched C0_rep — recovery is NOT "
-                          "test-time compute.")
-            elif abs(d_full) <= 0.05 and not full.get("reject_holm"):
-                branch = ("MIXED: C0_full ≈ C3 — definitions+evidence in one call suffice; "
-                          "decomposition is not the key ingredient.")
-            elif d_un <= 0.05:
-                branch = ("LOSS: repeated-sampling C0_rep matches C3 — recovery is a shared "
-                          "sampling effect, not decomposition-specific.")
+            elif d_sc > 0.05 and sc_sig:
+                branch = ("WIN: C3 beats the compute-matched self-consistency control — the "
+                          "recovery is NOT test-time compute.")
             else:
                 branch = "INCONCLUSIVE at current n — inspect CIs."
             lines.append(f"- **{m} / {SHORT.get(defect, defect)}**: {branch} "
-                         f"(C0={_p(c0_bal)}, C3={_p(c3_bal)}; Δ C3−C0_rep,union = {_p(d_un, signed=True)}; "
+                         f"(C0={_p(c0_bal)}, C3={_p(c3_bal)}; Δ C3−self-cons = {_p(d_sc, signed=True)}; "
                          f"Δ C3−C0_full = {_p(d_full, signed=True)})")
     return "\n".join(lines) if lines else "- (no complete C3 / C0_rep / C0_full triple yet)"
 

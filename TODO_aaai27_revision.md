@@ -125,7 +125,7 @@
 
 - [x] `scripts/run_e2_computematch.sh` + `scripts/run_e2_all_vendors.sh`（两 vendor 并行、每 vendor 2 passes=首跑+resume 补 429/None、bash-3.2 空数组 guard、.env source）。**三 vendor × G7+G1 × 四条件全量跑完 = 24 个 `data/part3/p1e2_{model}_{g7,g1}_{C0,C0_full,C3,C0_rep}.json`**（qwen3-vl-plus / gemini-2.5-flash / gpt-5.1-nothinking）。补 429 后残余 failure 2–8%。（可选 G3/G5 未做。）
 - [x] mpd：G7 90 对（180 slides/cond）、G1 40 对（80 slides/cond），三 vendor 全跑完成。vendor 参数：gemini workers=2 max-tokens=2048（长 prompt 无视 enable_thinking、烧 ~1100 reasoning tok/调用，大 budget 防 None 截断）、gpt workers=2 768、qwen workers=3 768。
-- [x] `scripts/part3_e2_computematch_report.py`：C3-vs-{C0,C0_full,C0_rep(union),C0_rep(maj)} 的 Δbal-acc + 精确 McNemar + **整族 Holm（24 test，14 拒绝）** → `reports/_e2_computematch.md` + `data/part3/p1e2_summary.json`。**G7 三 vendor 一致 C3>C0_full>C0**（C3 0.92/0.88/0.83 vs C0 0.64/0.61/0.70）。**compute-match（C3 vs C0_rep-union）**：qwen Δ+0.26、gemini Δ+0.27 **两者 Holm 显著 WIN**；gpt Δ+0.05 不显著（gpt 极保守 spec≈1，union 采样把 recall 顶到 0.78 逼近 C3——但 **majority C0_rep 三家全崩 0.61/0.59/0.63**，且 C3 用 1 call 打平 gpt 的 8.5-call union）。**budget（E3）铁证**：C3 output tok=34.7/37.5/40.5 三家**最省**，C0_rep 8–10× calls（gemini C0_rep 烧 11631 reasoning tok/slide vs C3 的 402）→ 赢的条件反而最便宜，compute 解释三 vendor 均不成立。**G1 = 负控**（qwen/gpt C3≤C0 标 N/A；gemini G1 全条件近 chance）。正文 "61-test family" → 汇总 +24（`p1e2_summary.json` 的 `n_tests`）。
+- [x] `scripts/part3_e2_computematch_report.py`：compute 对照 = **self-consistency（K=10 多数投票）**；C3-vs-{C0, C0_full, self-consistency} 的 Δbal-acc + 精确 McNemar + **整族 Holm（18 test，11 拒绝）** → `reports/_e2_computematch.md`（主表 3 列 C0 / self-consistency / C3 + budget；C0_full 进 supplement 段；**union 不报、不进族**）+ `data/part3/p1e2_summary.json`。**G7 三 vendor：C3 0.92/0.88/0.83 vs self-consistency 0.61/0.59/0.63，Δ+0.31/+0.29/+0.20 三家全 Holm 显著**；vs C0 0.64/0.61/0.70 亦三家显著（gpt 最弱格 holm_p=0.017）。**budget（E3）铁证**：C3 output tok=34.7/37.5/40.5 三家**最省**、1 call vs 8–10 calls（gemini 的 self-consistency 另烧 11631 reasoning tok/slide vs C3 的 402）→ 赢的条件最省算力，compute 解释三 vendor 均不成立。**C0_full（definition-matched 第二对照，supplement）**：qwen/gemini 仍 < C3 且显著、gpt≈C3（故正文不 headline "decomposition 是机制"）。**G1 = 负控**（qwen/gpt C3≤C0 标 N/A；gemini 全条件近 chance）。正文 "61-test family" → +18（`p1e2_summary.json` 的 `n_tests`）。
 
 ### 2.3 成本表（零实验成本）
 
@@ -133,14 +133,14 @@
 
 ### 2.4 写入论文（`AuthorKit27/submission/main.tex` 的 elicitation 小节）
 
-> **结果与定案（07-15，数据全出后写死；下面三分支预案作废，落 "赢" 但按下面口径措辞）**：命中 **赢** 分支，但要**功利地选对照口径**避开唯一软肋（gpt 的 union 逼近）。定案：
-> - **主文双铁证（三 vendor 全成立）**：① compute 对照**只用 self-consistency = K=10 次 C0 的多数投票（majority）**——它是学界公认的"用算力换精度"标准做法（引 Wang et al. self-consistency），C3 在三 vendor 上全部 **Holm 显著**超过它（Δ+0.31/+0.29/+0.20；majority C0_rep 仅 0.61/0.59/0.63 vs C3 0.92/0.88/0.83）；② **budget**：C3 恢复时 output tok=34.7/37.5/40.5 **三家最省**、1 call vs 8–10 calls → 赢的条件最省算力，compute 解释逻辑上不成立。
-> - **进 supplement、正文不 feature**：**union**（"任一 draw 报警"= 判定阈值放松，非 compute scaling；只在 gpt 上把对照顶高——被 rebuttal 追问才用一句"union 是调阈值不是加算力，且 C3 用 1/8 calls 打平其最好结果"）；**C0_full**（降级为 "definition-matched 第二对照"，qwen/gemini 上仍 < C3 且显著，gpt 上 ≈C3 不展开）；**G1**（reference-assisted 负控，与 compute 线无关，本段不写）。
-> - **不许 headline 的断言**：不说 "decomposition 是关键机制"（gpt 上 C0_full≈C3 会被反杀）；正文不并列 union。改用可三家兜住的话："the whole-taxonomy pointwise format suppresses detection; breaking that format recovers it **without additional test-time compute**"。
+> **结果与定案（07-15，数据全出后写死；三分支预案作废，落 "赢"）**：命中 **赢**。**union 聚合完全不进论文（正文＋supplement 都不出现），当没做过。** compute 对照口径只讲 self-consistency，措辞只走下面两条铁证：
+> - **主文双铁证（三 vendor 全成立）**：① compute 对照 = **self-consistency（K=10 次 C0 采样多数投票）**——学界公认的"把 test-time compute 换成精度"的标准方法（引 Wang et al. self-consistency）；C3 在三 vendor 上全部 **Holm 显著**超过它（C3 0.92/0.88/0.83 vs self-consistency 0.61/0.59/0.63，Δ+0.31/+0.29/+0.20）。② **budget**：C3 恢复时 output tok=34.7/37.5/40.5 **三家最省**、1 call vs 8–10 calls → 赢的条件最省算力，compute 解释逻辑上不成立。
+> - **不 headline 的断言**：不说 "decomposition 是关键机制"（gpt 上 definition-matched 对照 C0_full≈C3，会被反杀）。改用三家兜得住的话："the whole-taxonomy pointwise format suppresses detection; breaking that format recovers it **without additional test-time compute**"。
 
-- [ ] 加一段（6–8 行）按上面"主文双铁证"口径 + supplement 完整表（含 union / C0_full / 三 vendor 全 24 格 / budget+reasoning-token 列）。措辞："on three API-served models spanning distinct vendors, a compute-matched self-consistency control fails to recover the suppressed detection, which the atomic elicitation restores at strictly lower cost."
+- [ ] 加一段（6–8 行）按"主文双铁证"口径 + supplement 表。措辞："on three API-served models spanning distinct vendors, a compute-matched self-consistency control fails to recover the suppressed detection, which the atomic elicitation restores at strictly lower cost."
+- [ ] **主表定版：只三列 C0 / self-consistency / C3 + budget 行**——已核 `p1e2_summary.json`：该三列隐含的 6 个格间对比（C3 vs C0、C3 vs self-consistency × 3 vendor）**全过 Holm、零 n.s.**（gpt 最弱格 C3 vs C0 holm_p=0.017）。supplement 放 C0_full（definition-matched 第二对照）+ 三 vendor 全格 + budget/reasoning-token 列。**union 一列都不写**。
 - [ ] 与 W3.2 联动：本段与"saw it all along"降级一致——只讲 format-suppression + 不靠算力，不声称内部表征。
-- [ ] 可选加固：`reports/_e2_computematch.md` 可按此口径重排（主表 3 列 C0/self-consistency/C3 + budget 行，union/C0_full 降 supplement 段），令正文与附录一次对齐。
+- [x] **报告已对齐**：`reports/_e2_computematch.md` 主表已重排为 C0 / self-consistency / C3 + Δ + budget，**union 从表与 Holm 族中删除**（`grep -ci union` 归零，族 24→18 test）；C0_full 降为 supplement 段。code 里 `engine_c0_rep` 的 union 字段与 rows 原始数据不动，仅改报告呈现。
 - [x] **验收**：p1e2 JSON 产物存在（24 个 `data/part3/p1e2_*`）；report 落 `reports/_e2_computematch.md` + `reports/cost_table.md`；**E1（C0_rep）数字 07-15 已出（提前于 07-19 gate）**。⬜ 正文段落与 supplement 表待落稿（走 W3 台账流程）。
 
 ---
@@ -234,7 +234,7 @@
   - **风险定义**：FNR 与 FPR **分开控制**（比合成 1−bal-acc 可解释："漏报≤α₁ 且 误报≤α₂"），认证=两个单侧检验都过；
   - **α 档位**：主档 α₁=α₂=0.25；敏感性网格 α ∈ {0.20, 0.25, 0.30, 0.35}（网格本身预注册，谁也说不出阈值事后挑）；
   - **δ=0.05**，FWER 用 Holm（与论文既有检验族同工具）；
-  - **检验族大小**：9 类 × ≤4 配置 × 2 错误率 ≤ 72 检验（实际按可行候选数），族与 W2 的 24-test 分开报；
+  - **检验族大小**：9 类 × ≤4 配置 × 2 错误率 ≤ 72 检验（实际按可行候选数），族与 W2 的 18-test 分开报；
   - **候选空间 Λ_k**：全 9 类 × {linter, C0, C3, linter⊕C3}（linter 对无规则可用的类天然缺席，如实缺）；
   - **小样本预案**：认证不出（如 S6 类 n 不足）就报"该类在此 n 下不可认证"——诚实结果，不降 α 迁就。
 - [ ] **功效依据（写进预注册，n 的选择理由）**：Bonferroni 到 ~72 检验后单检验水平 ≈7e-4；真实风险 0.10 的配置认证 α=0.25–0.30 需 **n≈60/侧起**，真实风险 0.15–0.20（bal-acc 0.80–0.85 带）需 **n≈120–200/侧** → 目标 **n=150/侧/类**（S6 受生成器限制做多少算多少）。
@@ -259,7 +259,7 @@
 - [ ] Method 小节（~1/3 页，**论文仅有的公式集中在此**）：R_k(λ) 定义（FNR/FPR）、H₀: R_k(λ)>α、二项尾概率 p 值、FWER 保证 P(任一假认证)≤δ 四条公式 + 认证程序 3–4 行文字；引 Angelopoulos et al. Learn-then-Test（refs.bib 补条目，author 字段齐全——W1.2 教训）。
 - [ ] 与 W3.4 决策 A 联动：headline = mean bal-acc 对比（不变），**"m/9 certified at (α,δ)" 作为带保证的次要 headline** 替代被喷的 ad hoc "8/9 covered"；Abstract/Fig.1/Conclusion 同步（见 W6 数字一致性）。**摘要（07-21）措辞不依赖具体 m 值**——m 出来前用方法性描述，出来后正文再填数。
 - [ ] Limitations 一句：保证对合成校准分布成立（i.i.d./exchangeability），sim2real 照旧 scope。
-- [ ] 检验族声明：LTT 的 ≤72 检验自成一族（预注册文档为界），与既有 61+24 族并列报，W6 数字更新点 +1。
+- [ ] 检验族声明：LTT 的 ≤72 检验自成一族（预注册文档为界），与既有 61+18 族并列报，W6 数字更新点 +1。
 - [ ] **预期管理（写死）**：认证口径 m 很可能 ≤6/9 甚至更少——这不是坏结果，"9 类中仅 m 类能在此样本量下被认证"本身是 honest finding，与论文 honest-negative 风格一致。**不许为了 m 好看事后调 α**。
 
 - [ ] **验收**：预注册 commit 早于校准集生成 commit（git log 可证）；fidelity 门产物存在；认证表+敏感性表落 reports/；method 小节落稿且全部公式可被面试/审稿追问级别地辩护；**07-22 认证数字出来，07-24 落稿完成**（赶不上正文就整节降级进 supplement——预注册和数据不作废）。
@@ -271,7 +271,7 @@
 - [ ] 逐条对照审稿 9 条 weakness + 8 个 question，确认每条：已修复 / Limitations 有明示 scope。
 - [ ] W1 的机器检查重跑（空引用、占位引用均零命中）。
 - [ ] 数字一致性：Abstract / Fig.1 caption / Table 3 / Conclusion 的 coverage 与 bal-acc 数字互相一致（W3.4 改动后极易漏）。
-- [ ] Holm/BH 检验族数字更新（"61-test family" → 实际新数；W2 +24、W7 LTT 族另列，见 7.3）。
+- [ ] Holm/BH 检验族数字更新（"61-test family" → 实际新数；W2 +18、W7 LTT 族另列，见 7.3）。
 - [ ] 匿名检查（投稿版无作者信息、无 acknowledgment、self-citation 匿名化）；`grep -i "surh6\|Ruihan\|Sun Yat-sen" AuthorKit27/submission/main.tex` 零命中。
 - [ ] paper/main.tex（tech-report 版）同步所有科学内容改动。
 - [ ] **07-28 AoE 提交正文**；**07-31 AoE 提交 supplement**（含 W2 表、W5.2 表、per-cell precision、S1 双路由数、cost table）。
@@ -284,7 +284,7 @@
 |---|---|
 | 07-15 | ✅ W1 全部（机器检查通过）；✅ 2.-1(a)(b)：Mac 本地环境 + G7 语料重建过 fidelity 门槛（另 part2/G1 也重建完） |
 | 07-16 | ✅ 2.-1(c)：API 通道通、**三**模型 capable 冒烟全过（提前于计划，见 2.-1(c) 表）；⬜ 2.0/2.1 代码（未开始） |
-| 07-17 | ✅ **提前于 07-15 完成**：E1 C0_rep 全量数字出炉（G7, qwen3-vl-plus）→ **WIN 方向**（C3=0.92 vs C0_rep-union 0.66 / C0_full 0.67；compute-match+definition-match 双对照均不恢复，C3 反而最省 token）→ 摘要走"排除 test-time compute"措辞 |
+| 07-17 | ✅ **提前于 07-15 完成**：E1 C0_rep 全量数字出炉（G7, qwen3-vl-plus）→ **WIN 方向**（C3=0.92 vs self-consistency 0.61；compute-matched 对照不恢复、C3 反而最省 token）→ 摘要走"排除 test-time compute"措辞 |
 | 07-19 | W2 四条件齐 + report；W3.1–3.3 台账拍板完毕；**W7.0 预注册 commit + 校准集生成启动** |
 | 07-21 | **摘要提交 OpenReview**（措辞不依赖 LTT 的 m 值）；W3.4 表格审计定稿；W7.1 校准集过 fidelity 门、API 打分跑批中 |
 | 07-22 | W7.2 认证表 + 敏感性表出数 |
