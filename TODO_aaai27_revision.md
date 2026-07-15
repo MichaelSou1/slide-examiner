@@ -133,14 +133,15 @@
 
 ### 2.4 写入论文（`AuthorKit27/submission/main.tex` 的 elicitation 小节）
 
-> **结果与定案（07-15，数据全出后写死；三分支预案作废，落 "赢"）**：命中 **赢**。**union 聚合完全不进论文（正文＋supplement 都不出现），当没做过。** compute 对照口径只讲 self-consistency，措辞只走下面两条铁证：
+> **结果与定案（07-15 数据全出，07-16 口径定稿；三分支预案作废，落 "赢"）**：命中 **赢**。compute 对照正文只讲 self-consistency；**union 进 supplement 并配解释**（Michael 07-16 拍板——不隐瞒，防 selective-reporting 指控：union 是预设双聚合之一、rows/Holm 族里都有，删了反而授人以柄）。措辞走下面两条铁证：
 > - **主文双铁证（三 vendor 全成立）**：① compute 对照 = **self-consistency（K=10 次 C0 采样多数投票）**——学界公认的"把 test-time compute 换成精度"的标准方法（引 Wang et al. self-consistency）；C3 在三 vendor 上全部 **Holm 显著**超过它（C3 0.92/0.88/0.83 vs self-consistency 0.61/0.59/0.63，Δ+0.31/+0.29/+0.20）。② **budget**：C3 恢复时 output tok=34.7/37.5/40.5 **三家最省**、1 call vs 8–10 calls → 赢的条件最省算力，compute 解释逻辑上不成立。
-> - **不 headline 的断言**：不说 "decomposition 是关键机制"（gpt 上 definition-matched 对照 C0_full≈C3，会被反杀）。改用三家兜得住的话："the whole-taxonomy pointwise format suppresses detection; breaking that format recovers it **without additional test-time compute**"。
+> - **Supplement 完整报**：union 全部数字（含 gpt Δ+0.05 n.s.）+ 一段解释：union（任一 draw 报警）是 OR 聚合＝等效放松判定阈值，对高保守模型（gpt spec≈1）白捡 recall，**本质是调门槛不是加算力**；majority 才是标准 self-consistency 口径，故为正文对照；且 C3 以 1 call 打平 union 8.5-call 的最好成绩。C0_full、G1 负控同进 supplement。**Holm 族按全部 24 test 报，不缩族**（缩族=事后重定义检验族，正撞审稿 Q4/Q5）。
+> - **不 headline 的断言**：不说 "decomposition 是关键机制"（gpt 上 definition-matched 对照 C0_full≈C3，会被反杀）；正文不并列 union。改用三家兜得住的话："the whole-taxonomy pointwise format suppresses detection; breaking that format recovers it **without additional test-time compute**"。
 
 - [ ] 加一段（6–8 行）按"主文双铁证"口径 + supplement 表。措辞："on three API-served models spanning distinct vendors, a compute-matched self-consistency control fails to recover the suppressed detection, which the atomic elicitation restores at strictly lower cost."
-- [ ] **主表定版：只三列 C0 / self-consistency / C3 + budget 行**——已核 `p1e2_summary.json`：该三列隐含的 6 个格间对比（C3 vs C0、C3 vs self-consistency × 3 vendor）**全过 Holm、零 n.s.**（gpt 最弱格 C3 vs C0 holm_p=0.017）。supplement 放 C0_full（definition-matched 第二对照）+ 三 vendor 全格 + budget/reasoning-token 列。**union 一列都不写**。
+- [ ] **主表定版：只三列 C0 / self-consistency / C3 + budget 行**——已核 `p1e2_summary.json`（24-test 全族 Holm）：该三列隐含的 6 个格间对比（C3 vs C0、C3 vs self-consistency × 3 vendor）**全过 Holm、零 n.s.**（gpt 最弱格 C3 vs C0 holm_p=0.023）。supplement 放 union（any-vote，含解释段）+ C0_full（definition-matched 第二对照）+ 三 vendor 全格 + budget/reasoning-token 列。
 - [ ] 与 W3.2 联动：本段与"saw it all along"降级一致——只讲 format-suppression + 不靠算力，不声称内部表征。
-- [x] **报告已对齐**：`reports/_e2_computematch.md` 主表已重排为 C0 / self-consistency / C3 + Δ + budget，**union 从表与 Holm 族中删除**（`grep -ci union` 归零，族 24→18 test）；C0_full 降为 supplement 段。code 里 `engine_c0_rep` 的 union 字段与 rows 原始数据不动，仅改报告呈现。
+- [x] **报告已对齐（07-16 定稿版）**：`reports/_e2_computematch.md` 主表 = C0 / self-consistency / C3 + Δ；**union 以独立 supplement 段回归**（含解释：OR 聚合=阈值放松非 compute scaling、majority 才是标准 self-consistency、C3 以 1 call 打平 union 8–10 calls 最好成绩）；C0_full 为 definition-matched supplement 段；**Holm 族恢复全部 24 test（14 拒绝），不缩族**——主表 6 格在 24-族下仍全显著。`p1e2_summary.json` 同步含全部四类 contrast。
 - [x] **验收**：p1e2 JSON 产物存在（24 个 `data/part3/p1e2_*`）；report 落 `reports/_e2_computematch.md` + `reports/cost_table.md`；**E1（C0_rep）数字 07-15 已出（提前于 07-19 gate）**。⬜ 正文段落与 supplement 表待落稿（走 W3 台账流程）。
 
 ---

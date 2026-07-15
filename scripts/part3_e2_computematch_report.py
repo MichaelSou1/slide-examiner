@@ -44,16 +44,19 @@ from part3_p1_summary import mcnemar_p  # noqa: E402  (same exact paired test as
 CONDS = ["C0", "C0_full", "C0_rep", "C3"]
 SHORT = {"G7_RENDER_CONTAINMENT_OVERFLOW": "G7", "G1_TEXT_OVERFLOW": "G1",
          "S6_IMAGE_TEXT_CONTRADICTION": "S6"}
-# Paired contrasts to test (base cond -> C3 gain). The compute-matched control is
-# SELF-CONSISTENCY = majority vote over K C0 draws (the standard way to convert
-# test-time compute into accuracy). The any-vote/union aggregation is intentionally
-# NOT reported: it is a decision-threshold relaxation, not a compute-scaling method,
-# so it is neither in the table nor in the Holm family. (The raw union field still
-# lives in the per-sample data; only the paper-facing report omits it.)
+# Paired contrasts to test (base cond -> C3 gain). The compute-matched control
+# featured in the MAIN table is SELF-CONSISTENCY = majority vote over K C0 draws
+# (the standard way to convert test-time compute into accuracy). The any-vote/union
+# aggregation of the same draws IS reported, in the supplement section, with an
+# explanation: it is a decision-threshold relaxation (OR over draws), not a
+# compute-scaling method. Both aggregations stay in the Holm family (they were both
+# pre-specified in the E1 design; shrinking the family post hoc would be exactly the
+# selective-analysis pattern reviewers Q4/Q5 flag).
 CONTRASTS = [
     ("C3", "C0", "detection", "detection"),
     ("C3", "C0_full", "detection", "detection"),
-    ("C3", "C0_rep", "detection", "detection_majority"),   # self-consistency (majority)
+    ("C3", "C0_rep", "detection", "detection"),             # union (any-vote) — supplement
+    ("C3", "C0_rep", "detection", "detection_majority"),   # self-consistency (majority) — main
 ]
 
 
@@ -226,6 +229,22 @@ def md_report(rows, models, usage, fam) -> str:
             e = rows[m][defect]
             L.append(f"| {m} | {SHORT.get(defect, defect)} | {_p(e['bal'].get('C0_full'))} | "
                      f"{_p(e['bal'].get('C3'))} | {_contrast_str(e['contrasts'].get('C3_vs_C0_full'))} |")
+    # union aggregation of the same K draws (supplement)
+    L += ["\n### Supplement — union (any-vote) aggregation of the same K draws\n",
+          "Union flags a slide if ANY of the K draws flags it. This is a decision-threshold "
+          "relaxation (an OR over draws), not a compute-scaling method: as K grows it converges "
+          "to always-flag, and on a highly conservative model (specificity ≈ 1) it harvests "
+          "recall without spending compute any differently than majority does. We therefore use "
+          "majority (self-consistency) as the headline compute-matched control and report union "
+          "here in full. Note C3 matches or beats union's best score with 1 call vs. its "
+          "~8–10 calls per slide.\n",
+          "| Model | Defect | Union (any-vote) | C3 | Δ(C3−union) |",
+          "|---|---|---|---|---|"]
+    for m in models:
+        for defect in sorted(rows[m]):
+            e = rows[m][defect]
+            L.append(f"| {m} | {SHORT.get(defect, defect)} | {_p(e['bal'].get('C0_rep'))} | "
+                     f"{_p(e['bal'].get('C3'))} | {_contrast_str(e['contrasts'].get('C3_vs_C0_rep'))} |")
     # budget (E3)
     L += ["\n### Budget (E3) — completion tokens per slide\n",
           "If C3 does not spend MORE output tokens than C0_full, the recovery cannot be a "
