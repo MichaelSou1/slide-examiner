@@ -360,10 +360,23 @@ the split: adding the name to the one-call rubric (C0+) recovers \emph{recall} (
 $p{=}7\!\times\!10^{-71}$) but wrecks \emph{specificity}---it then over-flags clean slides on 55\% of pairs
 versus 2.4\% for C3, so balanced accuracy stalls. Asking about \g{G7} on its own call (C0\_named) recovers
 both, and supplying a clean reference slide adds nothing on top. So for \g{G7} the suppressor is the
-\emph{one-call format}, not perception: the model saw the overflow all along. The boundary: for \g{G1} and
+\emph{one-call format}, not a lack of visual signal. The boundary: for \g{G1} and
 \g{S6}, naming alone does \emph{not} help---those need the clean reference slide (pairwise choice
 $\to0.97$--$1.00$), a milder \emph{availability-of-reference} effect. A clean-vs-clean control rules out a
 forced-pick artifact (capable models answer ``tie'' on $92$--$100\%$ of clean pairs).
+
+\paragraph{Compute-matched control: recovery without additional test-time compute.}
+The remaining alternative is that C3 wins only because it spends more test-time compute than the one-call rubric.
+We test that directly on three API-served models spanning distinct vendors, holding the image and rendered corpus
+fixed and matching C3's budget with repeated C0 draws. The headline control is \emph{self-consistency}: majority
+vote over $K{=}10$ independent C0 samples. On \g{G7}, C3 still beats that compute-matched control on all three
+vendors ($0.92/0.88/0.83$ vs. $0.61/0.59/0.63$; $\Delta{=}+0.31/+0.29/+0.20$), and all three contrasts survive
+Holm correction within the full 24-test family (reported in the supplement). The budget points the same way:
+C3 is the cheapest condition in completion tokens ($34.7/37.5/40.5$ output tok per slide, one call) while the
+matched self-consistency baseline spends 8--10 calls per slide and still loses. The result is therefore not that a
+heavier budget rescues the rubric; it is that the whole-taxonomy pointwise format suppresses detection, and breaking
+that format recovers it without additional test-time compute. We report the union aggregation of the same draws, the
+definition-matched one-call control, and the \g{G1} negative control in the supplement.
 
 \begin{table}[tb]
 \centering\small

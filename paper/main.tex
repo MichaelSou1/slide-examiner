@@ -461,7 +461,7 @@ specificity, since C0+ over-flags clean twins on 55\% of pairs ($183/330$) versu
 for C3, so C0+ balanced accuracy stalls at $0.58$--$0.82$ while C3 reaches $0.93$--$1.00$. Naming the same class
 on the \emph{atomic} prompt (C0\_named) instead recovers full balanced accuracy, and a paired clean reference
 adds nothing on top (paired-clean Holm $p\le0.002$): so for \g{G7} the suppressor is the whole-taxonomy
-\emph{format}, not perception, and the model saw it all along. Forced evidence confirms real perception rather
+\emph{format}, not a lack of visual signal. Forced evidence confirms real perception rather
 than a lucky ``yes'': on the capable models' \g{G7} true positives the named region and overflowing element are
 correct $\ge$98\%, and the models read back the specific spilling content (``the list items starting from `Cost
 attribution'\,''), which a bluffing model cannot do. The same decomposition draws the boundary: for declared
@@ -470,6 +470,19 @@ $\approx0.50$) and the recovery needs the paired reference (2-AFC $\to0.97$--$1.
 \emph{availability-of-reference} effect, not format suppression. A clean-vs-clean guess-floor rules out a
 forced-pick artifact for both: capable models answer ``tie'' on $92$--$100\%$ of clean pairs
 (Fig.~\ref{fig:decomp}).
+
+\paragraph{Compute-matched control: recovery without additional test-time compute.}
+The remaining alternative is that C3 wins only because it spends more test-time compute than the one-call rubric.
+We test that directly on three API-served models spanning distinct vendors, holding the image and rendered corpus
+fixed and matching C3's budget with repeated C0 draws. The headline control is \emph{self-consistency}: majority
+vote over $K{=}10$ independent C0 samples. On \g{G7}, C3 still beats that compute-matched control on all three
+vendors ($0.92/0.88/0.83$ vs. $0.61/0.59/0.63$; $\Delta{=}+0.31/+0.29/+0.20$), and all three contrasts survive
+Holm correction within the full 24-test family (reported in the supplement). The budget points the same way:
+C3 is the cheapest condition in completion tokens ($34.7/37.5/40.5$ output tok per slide, one call) while the
+matched self-consistency baseline spends 8--10 calls per slide and still loses. The result is therefore not that a
+heavier budget rescues the rubric; it is that the whole-taxonomy pointwise format suppresses detection, and breaking
+that format recovers it without additional test-time compute. We report the union aggregation of the same draws, the
+definition-matched one-call control, and the \g{G1} negative control in the supplement.
 
 \begin{figure}[t]
 \centering

@@ -125,7 +125,7 @@
 
 - [x] `scripts/run_e2_computematch.sh` + `scripts/run_e2_all_vendors.sh`（两 vendor 并行、每 vendor 2 passes=首跑+resume 补 429/None、bash-3.2 空数组 guard、.env source）。**三 vendor × G7+G1 × 四条件全量跑完 = 24 个 `data/part3/p1e2_{model}_{g7,g1}_{C0,C0_full,C3,C0_rep}.json`**（qwen3-vl-plus / gemini-2.5-flash / gpt-5.1-nothinking）。补 429 后残余 failure 2–8%。（可选 G3/G5 未做。）
 - [x] mpd：G7 90 对（180 slides/cond）、G1 40 对（80 slides/cond），三 vendor 全跑完成。vendor 参数：gemini workers=2 max-tokens=2048（长 prompt 无视 enable_thinking、烧 ~1100 reasoning tok/调用，大 budget 防 None 截断）、gpt workers=2 768、qwen workers=3 768。
-- [x] `scripts/part3_e2_computematch_report.py`：compute 对照 = **self-consistency（K=10 多数投票）**；C3-vs-{C0, C0_full, self-consistency} 的 Δbal-acc + 精确 McNemar + **整族 Holm（18 test，11 拒绝）** → `reports/_e2_computematch.md`（主表 3 列 C0 / self-consistency / C3 + budget；C0_full 进 supplement 段；**union 不报、不进族**）+ `data/part3/p1e2_summary.json`。**G7 三 vendor：C3 0.92/0.88/0.83 vs self-consistency 0.61/0.59/0.63，Δ+0.31/+0.29/+0.20 三家全 Holm 显著**；vs C0 0.64/0.61/0.70 亦三家显著（gpt 最弱格 holm_p=0.017）。**budget（E3）铁证**：C3 output tok=34.7/37.5/40.5 三家**最省**、1 call vs 8–10 calls（gemini 的 self-consistency 另烧 11631 reasoning tok/slide vs C3 的 402）→ 赢的条件最省算力，compute 解释三 vendor 均不成立。**C0_full（definition-matched 第二对照，supplement）**：qwen/gemini 仍 < C3 且显著、gpt≈C3（故正文不 headline "decomposition 是机制"）。**G1 = 负控**（qwen/gpt C3≤C0 标 N/A；gemini 全条件近 chance）。正文 "61-test family" → +18（`p1e2_summary.json` 的 `n_tests`）。
+- [x] `scripts/part3_e2_computematch_report.py`：compute 对照 = **self-consistency（K=10 多数投票）**；主表 3 列只报 C0 / self-consistency / C3，**union 独立进 supplement 并保留在整族 Holm 里**；`reports/_e2_computematch.md` 与 `data/part3/p1e2_summary.json` 现按 **24 test / 14 拒绝** 对齐。**G7 三 vendor：C3 0.92/0.88/0.83 vs self-consistency 0.61/0.59/0.63，Δ+0.31/+0.29/+0.20 三家全 Holm 显著**；vs C0 0.64/0.61/0.70 亦三家显著（gpt 最弱格 holm_p=0.023）。**budget（E3）铁证**：C3 output tok=34.7/37.5/40.5 三家**最省**、1 call vs 8–10 calls（gemini 的 self-consistency 另烧 11631 reasoning tok/slide vs C3 的 402）→ 赢的条件最省算力，compute 解释三 vendor 均不成立。**C0_full（definition-matched 第二对照，supplement）**：qwen/gemini 仍 < C3 且显著、gpt≈C3（故正文不 headline "decomposition 是机制"）。**G1 = 负控**（qwen/gpt C3≤C0 标 N/A；gemini 全条件近 chance）。正文 "61-test family" → +24（`p1e2_summary.json` 的 `n_tests`）。
 
 ### 2.3 成本表（零实验成本）
 
@@ -138,11 +138,11 @@
 > - **Supplement 完整报**：union 全部数字（含 gpt Δ+0.05 n.s.）+ 一段解释：union（任一 draw 报警）是 OR 聚合＝等效放松判定阈值，对高保守模型（gpt spec≈1）白捡 recall，**本质是调门槛不是加算力**；majority 才是标准 self-consistency 口径，故为正文对照；且 C3 以 1 call 打平 union 8.5-call 的最好成绩。C0_full、G1 负控同进 supplement。**Holm 族按全部 24 test 报，不缩族**（缩族=事后重定义检验族，正撞审稿 Q4/Q5）。
 > - **不 headline 的断言**：不说 "decomposition 是关键机制"（gpt 上 definition-matched 对照 C0_full≈C3，会被反杀）；正文不并列 union。改用三家兜得住的话："the whole-taxonomy pointwise format suppresses detection; breaking that format recovers it **without additional test-time compute**"。
 
-- [ ] 加一段（6–8 行）按"主文双铁证"口径 + supplement 表。措辞："on three API-served models spanning distinct vendors, a compute-matched self-consistency control fails to recover the suppressed detection, which the atomic elicitation restores at strictly lower cost."
-- [ ] **主表定版：只三列 C0 / self-consistency / C3 + budget 行**——已核 `p1e2_summary.json`（24-test 全族 Holm）：该三列隐含的 6 个格间对比（C3 vs C0、C3 vs self-consistency × 3 vendor）**全过 Holm、零 n.s.**（gpt 最弱格 C3 vs C0 holm_p=0.023）。supplement 放 union（any-vote，含解释段）+ C0_full（definition-matched 第二对照）+ 三 vendor 全格 + budget/reasoning-token 列。
-- [ ] 与 W3.2 联动：本段与"saw it all along"降级一致——只讲 format-suppression + 不靠算力，不声称内部表征。
+- [x] 加一段（6–8 行）按"主文双铁证"口径 + supplement 表。措辞："on three API-served models spanning distinct vendors, a compute-matched self-consistency control fails to recover the suppressed detection, which the atomic elicitation restores at strictly lower cost."
+- [x] **主表定版：只三列 C0 / self-consistency / C3 + budget 行**——已核 `p1e2_summary.json`（24-test 全族 Holm）：该三列隐含的 6 个格间对比（C3 vs C0、C3 vs self-consistency × 3 vendor）**全过 Holm、零 n.s.**（gpt 最弱格 C3 vs C0 holm_p=0.023）。supplement 放 union（any-vote，含解释段）+ C0_full（definition-matched 第二对照）+ 三 vendor 全格 + budget/reasoning-token 列。
+- [x] 与 W3.2 联动：本段与"saw it all along"降级一致——只讲 format-suppression + 不靠算力，不声称内部表征。
 - [x] **报告已对齐（07-16 定稿版）**：`reports/_e2_computematch.md` 主表 = C0 / self-consistency / C3 + Δ；**union 以独立 supplement 段回归**（含解释：OR 聚合=阈值放松非 compute scaling、majority 才是标准 self-consistency、C3 以 1 call 打平 union 8–10 calls 最好成绩）；C0_full 为 definition-matched supplement 段；**Holm 族恢复全部 24 test（14 拒绝），不缩族**——主表 6 格在 24-族下仍全显著。`p1e2_summary.json` 同步含全部四类 contrast。
-- [x] **验收**：p1e2 JSON 产物存在（24 个 `data/part3/p1e2_*`）；report 落 `reports/_e2_computematch.md` + `reports/cost_table.md`；**E1（C0_rep）数字 07-15 已出（提前于 07-19 gate）**。⬜ 正文段落与 supplement 表待落稿（走 W3 台账流程）。
+- [x] **验收**：p1e2 JSON 产物存在（24 个 `data/part3/p1e2_*`）；report 落 `reports/_e2_computematch.md` + `reports/cost_table.md`；**E1（C0_rep）数字 07-15 已出（提前于 07-19 gate）**。✅ 正文段落与 supplement 表已落稿（走 W3 台账流程）。
 
 ---
 
