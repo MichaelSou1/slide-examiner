@@ -204,12 +204,13 @@ def compute_joint_loss(lm_per_record: torch.Tensor, action_logits: torch.Tensor,
     return total, losses
 
 
-def save_checkpoint(model: nn.Module, heads: D3Heads, processor: Any, output: Path,
+def save_checkpoint(model: nn.Module, heads: D3Heads | None, processor: Any, output: Path,
                     config: dict[str, Any], metrics: dict[str, Any]) -> None:
     output.mkdir(parents=True, exist_ok=True)
     model.save_pretrained(output / "adapter")
     processor.save_pretrained(output / "adapter")
-    torch.save(heads.state_dict(), output / "d3_heads.pt")
+    if heads is not None:
+        torch.save(heads.state_dict(), output / "d3_heads.pt")
     (output / "run_config.json").write_text(json.dumps(config, indent=2, ensure_ascii=False))
     (output / "metrics.json").write_text(json.dumps(metrics, indent=2, ensure_ascii=False))
 
@@ -221,6 +222,8 @@ def main() -> None:
     parser.add_argument("--dev", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--init-adapter", type=Path)
+    parser.add_argument("--objective", choices=("d3", "vanilla"), default="d3",
+                        help="d3 trains all auxiliary heads; vanilla trains only assistant-token SFT")
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--parent-commit")
     parser.add_argument("--max-steps", type=int, default=4)
@@ -274,22 +277,30 @@ def main() -> None:
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     if args.quantization == "bf16":
         model.to(device)
-    hidden_size = model.get_base_model().config.text_config.hidden_size
-    heads = D3Heads(hidden_size).to(device=device, dtype=torch.float32)
-    parameters = [p for p in model.parameters() if p.requires_grad] + list(heads.parameters())
+    heads = None
+    if args.objective == "d3":
+        hidden_size = model.get_base_model().config.text_config.hidden_size
+        heads = D3Heads(hidden_size).to(device=device, dtype=torch.float32)
+    parameters = [p for p in model.parameters() if p.requires_grad]
+    if heads is not None:
+        parameters += list(heads.parameters())
     optimizer = torch.optim.AdamW(parameters, lr=args.learning_rate)
     weights = LossWeights(**{name: getattr(args, f"loss_{name}") for name in LOSS_NAMES})
     train = JsonlDataset(args.train, args.train_limit)
     dev = JsonlDataset(args.dev, args.dev_limit)
-    route_weight_values = action_class_weights(train.rows, args.action_class_weighting)
-    route_class_weights = torch.tensor(route_weight_values, dtype=torch.float32, device=device)
+    if args.objective == "d3":
+        route_weight_values = action_class_weights(train.rows, args.action_class_weighting)
+        route_class_weights = torch.tensor(route_weight_values, dtype=torch.float32, device=device)
+    else:
+        route_weight_values = [1.0] * len(ACTIONS)
+        route_class_weights = None
     sampler = None
     batch_sampler = None
     if args.severity_chain_sampling:
         if args.batch_size != 2:
             raise ValueError("--severity-chain-sampling requires --batch-size 2")
         batch_sampler = MixedObjectiveBatchSampler(train.rows, args.seed, args.max_steps)
-    elif args.action_balanced_sampling:
+    elif args.action_balanced_sampling and args.objective == "d3":
         generator = torch.Generator().manual_seed(args.seed)
         sampler = WeightedRandomSampler(action_sample_weights(train.rows), len(train),
                                         replacement=True, generator=generator)
@@ -300,7 +311,9 @@ def main() -> None:
                             collate_fn=make_collator(processor))
     history: list[dict[str, Any]] = []
     optimizer.zero_grad(set_to_none=True)
-    model.train(); heads.train()
+    model.train()
+    if heads is not None:
+        heads.train()
     step = 0
     epoch = 0
     while step < args.max_steps:
@@ -310,13 +323,17 @@ def main() -> None:
             rows = batch.pop("meta")
             prompt_lengths = batch.pop("prompt_lengths").to(device)
             batch = {key: value.to(device) for key, value in batch.items()}
-            outputs = model(**batch, output_hidden_states=True, return_dict=True)
-            pooled = pooled_at_prompt(outputs.hidden_states[-1], prompt_lengths).float()
-            action_logits, select_logits, severity_logits, pair_logits = heads(pooled)
+            outputs = model(**batch, output_hidden_states=heads is not None, return_dict=True)
             lm_per_record = per_record_lm_loss(outputs.logits, batch["labels"])
-            total, losses = compute_joint_loss(lm_per_record, action_logits, select_logits,
-                                               severity_logits, pair_logits, rows, weights,
-                                               route_class_weights)
+            if heads is None:
+                total = lm_per_record.mean()
+                losses = {name: total.detach() * 0 for name in LOSS_NAMES}
+            else:
+                pooled = pooled_at_prompt(outputs.hidden_states[-1], prompt_lengths).float()
+                action_logits, select_logits, severity_logits, pair_logits = heads(pooled)
+                total, losses = compute_joint_loss(lm_per_record, action_logits, select_logits,
+                                                   severity_logits, pair_logits, rows, weights,
+                                                   route_class_weights)
             (total / args.gradient_accumulation).backward()
             if step % args.gradient_accumulation == 0 or step == args.max_steps:
                 optimizer.step(); optimizer.zero_grad(set_to_none=True)
@@ -328,7 +345,9 @@ def main() -> None:
             if step >= args.max_steps:
                 break
 
-    model.eval(); heads.eval()
+    model.eval()
+    if heads is not None:
+        heads.eval()
     confusion = [[0 for _ in ACTIONS] for _ in ACTIONS]
     dev_loss_sums = Counter()
     dev_route_rows: list[dict[str, Any]] = []
@@ -338,18 +357,22 @@ def main() -> None:
             rows = batch.pop("meta")
             prompt_lengths = batch.pop("prompt_lengths").to(device)
             batch = {key: value.to(device) for key, value in batch.items()}
-            outputs = model(**batch, output_hidden_states=True, return_dict=True)
-            pooled = pooled_at_prompt(outputs.hidden_states[-1], prompt_lengths).float()
-            action_logits, select_logits, severity_logits, pair_logits = heads(pooled)
+            outputs = model(**batch, output_hidden_states=heads is not None, return_dict=True)
             lm_per_record = per_record_lm_loss(outputs.logits, batch["labels"])
-            total, losses = compute_joint_loss(lm_per_record, action_logits, select_logits,
-                                               severity_logits, pair_logits, rows, weights,
-                                               route_class_weights)
-            truth, pred = rows[0]["action_id"], int(action_logits.argmax(-1).item())
-            confusion[truth][pred] += 1
-            dev_route_rows.append({"defect": rows[0]["defect"],
-                                   "availability": rows[0]["availability"],
-                                   "truth": truth, "pred": pred})
+            if heads is None:
+                total = lm_per_record.mean()
+                losses = {name: total.detach() * 0 for name in LOSS_NAMES}
+            else:
+                pooled = pooled_at_prompt(outputs.hidden_states[-1], prompt_lengths).float()
+                action_logits, select_logits, severity_logits, pair_logits = heads(pooled)
+                total, losses = compute_joint_loss(lm_per_record, action_logits, select_logits,
+                                                   severity_logits, pair_logits, rows, weights,
+                                                   route_class_weights)
+                truth, pred = rows[0]["action_id"], int(action_logits.argmax(-1).item())
+                confusion[truth][pred] += 1
+                dev_route_rows.append({"defect": rows[0]["defect"],
+                                       "availability": rows[0]["availability"],
+                                       "truth": truth, "pred": pred})
             for name, loss in losses.items():
                 dev_loss_sums[name] += float(loss)
             dev_loss += float(total); dev_seen += 1
@@ -364,6 +387,7 @@ def main() -> None:
                      and row["availability"] == "image_only"]
     metrics = {
         "history": history,
+        "objective": args.objective,
         "dev_joint_loss": dev_loss / max(dev_seen, 1),
         "dev_sub_losses": {name: value / max(dev_seen, 1)
                            for name, value in sorted(dev_loss_sums.items())},
@@ -377,7 +401,9 @@ def main() -> None:
         "g2_g6_image_only_unsafe_answer_rate": (
             sum(row["pred"] == ACTIONS.index("ANSWER") for row in geometry_rows) / len(geometry_rows)
             if geometry_rows else None),
-        "dev_selection_basis": "minimum dev_joint_loss; no validation or final_test read",
+        "dev_selection_basis": ("minimum dev_joint_loss; no validation or final_test read"
+                                if heads is not None else
+                                "minimum assistant-token dev SFT loss; no validation or final_test read"),
     }
     if args.parent_commit:
         parent = args.parent_commit
@@ -388,6 +414,7 @@ def main() -> None:
         except Exception:
             parent = "unavailable"
     config = {"parent_commit": parent, "base_model": args.model, "seed": args.seed,
+              "objective": args.objective,
               "max_steps": args.max_steps, "train_sha256": sha256_file(args.train),
               "dev_sha256": sha256_file(args.dev), "loss_weights": asdict(weights),
               "action_class_weighting": args.action_class_weighting,
