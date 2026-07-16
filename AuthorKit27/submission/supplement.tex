@@ -43,13 +43,16 @@ Quality Inspection and Routing a Symbolic--Neural Critic''}
 \maketitle
 
 This supplement extends the main paper with material referenced from the body
-but omitted there for space: the SlideAudit crosswalk (\S\ref{app:crosswalk}),
+but omitted there for space: the SlideAudit crosswalk and full transfer table
+(\S\ref{app:crosswalk}), the coverage precision companion
+(\S\ref{app:coverage-precision}),
 the full multi-reward / VLM-judge audit grid with per-class preference accuracies
 (\S\ref{app:reward}), the full page-semantic examiner table including the
 deck-scope negative result (\S\ref{app:examiner}), and the extended figures
 (\S\ref{app:figs}). All numbers are transcribed verbatim from the frozen
-analysis reports and rollout CSVs that accompany this submission as the Code
-and Data Supplement; no new claim is made here.
+analysis reports and rollout records that accompany this submission as the Code
+and Data Supplement; the held-out and stress-test addenda are identified
+explicitly below.
 
 % =====================================================================
 \section{SlideAudit crosswalk}\label{app:crosswalk}
@@ -89,6 +92,150 @@ Our class & \textsc{SlideAudit} class & Relation \\
 \end{tabular}
 \end{table}
 
+\subsection{Per-class image-only transfer results}\label{app:slideaudit-transfer}
+
+Table~\ref{tab:slideaudit-transfer} reports every mapped class evaluated on
+\textsc{SlideAudit}. This is a third-party, image-only dataset: no element IR
+is available, so the symbolic linter cannot run and the hybrid reduces to its
+VLM branch. We pair labelled-present examples with confidently absent controls
+and report named-attribution balanced accuracy and precision, both with 95\%
+Wilson intervals. The slight \g{S4} C0 count difference (39 rather than 40
+positives) is the valid-record count after parsing.
+
+\begin{table}[h]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{3.5pt}
+\caption{Complete \textsc{SlideAudit} transfer results for Qwen3.5-27B,
+image-only modality. Each result is balanced accuracy [95\% Wilson]; precision
+[95\% Wilson]. $n_+/n_-$ gives the effective scored counts.}
+\label{tab:slideaudit-transfer}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+class & C0 whole-taxonomy & C3 atomic & $n_+/n_-$ \\
+\midrule
+\g{G1} overflow & .550 [.476,.615]; 1.000 [.510,1] & .625 [.501,.727]; .812 [.570,.934] & 40/40 \\
+\g{G2} overlap  & .963 [.857,.987]; .930 [.814,.976] & .938 [.818,.980]; .949 [.831,.986] & 40/40 \\
+\g{G3} alignment & .558 [.439,.687]; .571 [.250,.842] & .723 [.552,.850]; .706 [.469,.867] & 21/40 \\
+\g{G4} font size & .588 [.479,.681]; .818 [.523,.949] & .637 [.506,.745]; .789 [.567,.915] & 40/40 \\
+\g{G5} colour & .516 [.459,.581]; 1.000 [.207,1] & .814 [.668,.900]; .913 [.732,.976] & 31/40 \\
+\g{G6} margin & .512 [.458,.564]; 1.000 [.207,1] & .550 [.431,.660]; .643 [.388,.837] & 40/40 \\
+\g{S4} density & .680 [.553,.776]; .889 [.672,.969] & .738 [.600,.834]; .880 [.700,.958] & 39/40; 40/40 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Exact evaluated prompt templates}\label{app:slideaudit-prompts}
+
+The following are the complete textual templates used by the two conditions;
+the image occupies the indicated image part. Bracketed fields are populated
+from each manifest record. C0 receives all nine page candidates in one call.
+
+{\footnotesize\ttfamily\raggedright
+\noindent\textbf{C0 system}\par
+You are a slide quality examiner. Inspect the given single slide page for the
+requested page-scoped defect types. Output ONLY one valid JSON object matching
+PageExamResult. No prose, no code fences.\par
+\medskip
+\noindent\textbf{C0 user}\par
+[IMAGE]\par
+PAGE\_ID: [page\_id]\par
+render=[image\_width\_px]x[image\_height\_px]
+scale=([scale\_x],[scale\_y]) dpi=[dpi] renderer=[renderer]\par
+SCENE: [scene]\par
+TEMPLATE\_ID: [template\_id]\par
+PAGE\_INDEX: [page\_index]\par
+TASK\_BRIEF: [task\_brief]\par
+CHECK\_SCOPE: ['G1\_TEXT\_OVERFLOW', 'G2\_ELEMENT\_OVERLAP',
+'G3\_ALIGNMENT\_OFFSET', 'G4\_FONT\_SIZE\_INCONSISTENCY',
+'G5\_BRAND\_COLOR\_VIOLATION', 'G6\_MARGIN\_VIOLATION',
+'S1\_TITLE\_BODY\_MISMATCH', 'S4\_DENSITY\_RULE\_VIOLATION',
+'S6\_IMAGE\_TEXT\_CONTRADICTION']\par
+TASK: Decide for each candidate type whether the defect is PRESENT.\par
+Consider ONLY these candidate defect types:\par
+G1\_TEXT\_OVERFLOW: text overflows or spills beyond the bounds of its box/placeholder;\par
+G2\_ELEMENT\_OVERLAP: two elements visually overlap or collide when they should not;\par
+G3\_ALIGNMENT\_OFFSET: an element is misaligned / offset from where it should sit;\par
+G4\_FONT\_SIZE\_INCONSISTENCY: inconsistent font sizes among text that should match;\par
+G5\_BRAND\_COLOR\_VIOLATION: a color is off-brand / wrong for an element;\par
+G6\_MARGIN\_VIOLATION: an element bleeds past the page margin or off the canvas edge;\par
+S1\_TITLE\_BODY\_MISMATCH: the slide title does not match the body content / topic;\par
+S4\_DENSITY\_RULE\_VIOLATION: the slide is overcrowded / too dense with text;\par
+S6\_IMAGE\_TEXT\_CONTRADICTION: the image content contradicts the slide text.\par
+Report a finding only when you are confident the defect is actually present.\par
+Output ONLY one JSON object (no prose, no code fences) matching:\par
+\{``has\_defect'': <bool>, ``findings'': [\{``type'': ``<one candidate ID>'',
+``severity'': ``minor|moderate|severe'', ``locator'': \{``level'': ``page'',
+``page\_id'': ``<id>'', ``element\_id'': ``<id-or-null>'',
+``related\_page\_ids'': []\}, ``evidence'': ``<short grounded reason>'',
+``fix\_suggestion'': ``<one executable action>''\}]\}\par
+If the slide/deck is clean, output
+\{``has\_defect'': false, ``findings'': []\}.\par
+\medskip
+\noindent\textbf{C3 system}\par
+You are a meticulous slide-quality inspector. You will be asked about ONE
+specific possible defect. Look only at what is visibly rendered. Answer with a
+single JSON object and nothing else.\par
+\medskip
+\noindent\textbf{C3 user}\par
+[IMAGE]\par
+Question: [one question from the list below]\par
+Answer strictly as JSON:\par
+\{``present'': true|false, ``evidence\_element'': ``<concrete element/region you
+point to, or empty>'', ``evidence\_region'': ``<top-left|top|top-right|left|
+center|right|bottom-left|bottom|bottom-right|empty>'', ``confidence'': 0.0--1.0\}\par
+If present=true you MUST name a concrete evidence\_element (e.g. ``the title'',
+``the right-hand card'', ``the bottom list item''). If you cannot point to
+concrete visible evidence, answer present=false.\par
+}
+
+The instantiated C3 question for each evaluated class was:
+\begin{itemize}\footnotesize
+\item \g{G1}: Does any text visibly overflow or get clipped by its text box---letters cut off at an edge, or a line running past the box boundary?
+\item \g{G2}: Does this slide visibly exhibit the following defect---Two non-background elements overlap.?
+\item \g{G3}: Among a list of bullet/body items that should line up, is ONE of them misaligned---indented or shifted so it does not line up with the rest?
+\item \g{G4}: Does this slide visibly exhibit the following defect---Same-level text uses inconsistent font sizes.?
+\item \g{G5}: Among a list of bullet/body items that share one text colour, does ONE of them have a text colour that clearly differs from the others?
+\item \g{G6}: Is the slide's whole block of content shifted toward one side, leaving clearly unequal left/right margins---one side crowded against (or running off) the edge while the opposite side is noticeably empty?
+\item \g{S4}: Does this slide visibly exhibit the following defect---Text density exceeds a scenario-specific rule.?
+\end{itemize}
+
+% =====================================================================
+\section{Coverage precision companion}\label{app:coverage-precision}
+% =====================================================================
+
+Table~\ref{tab:coverage-precision} is the precision companion to the main
+paper's balanced-accuracy coverage table, using the same E8-corrected corpora,
+model, named-attribution rule, and routing. ``Linter+C3'' is the configured
+per-class composition (linter on linter-owned classes, C3 otherwise), not an
+unscored OR assembled from marginal rates. A displayed zero includes cells in
+which the scorer made no positive predictions, for which the analysis code's
+declared point-estimate convention is precision zero.
+
+\begin{table}[h]
+\centering
+\small
+\setlength{\tabcolsep}{5pt}
+\caption{Per-cell precision corresponding exactly to the main paper's coverage
+table. Values in brackets are 95\% Wilson intervals when defined.}
+\label{tab:coverage-precision}
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+class & linter & VLM-C0 & VLM-C3 & linter+C3 & routed \\
+\midrule
+\g{G1} & 1.00 [.91,1] & 0 & 0 & 1.00 [.91,1] & 1.00 [.91,1] \\
+\g{G2} & 1.00 [.86,1] & 1.00 [.82,1] & 1.00 [.88,1] & 1.00 [.86,1] & 1.00 [.86,1] \\
+\g{G3} & 1.00 [.94,1] & 1.00 [.82,1] & 1.00 [.88,1] & 1.00 [.94,1] & 1.00 [.94,1] \\
+\g{G5} & 1.00 [.91,1] & 0 & 1.00 [.79,1] & 1.00 [.91,1] & 1.00 [.91,1] \\
+\g{G6} & 1.00 [.91,1] & 0 & .506 [.429,.584] & 1.00 [.91,1] & 1.00 [.91,1] \\
+\g{G7} & 0 & 0 & 1.00 [.91,1] & 1.00 [.91,1] & 1.00 [.91,1] \\
+\g{S1} & 0 & .900 [.699,.972] & .750 [.551,.880] & .750 [.551,.880] & .900 [.699,.972] \\
+\g{S4} & 0 & .667 [.208,.939] & 1.00 [.89,1] & 1.00 [.89,1] & 1.00 [.806,1] \\
+\g{S6} & 0 & .500 [.314,.686] & .500 [.314,.686] & .500 [.314,.686] & .500 [.314,.686] \\
+\bottomrule
+\end{tabular}
+\end{table}
+
 % =====================================================================
 \section{Full multi-reward / VLM-judge audit grid}\label{app:reward}
 % =====================================================================
@@ -100,8 +247,7 @@ $P(r_{\text{clean}}>r_{\text{def}})$ for all audited classes, with 95\% CIs on
 confirming each is a functioning scorer rather than a domain mismatch; the
 \g{G7} column is the linter-blind render class whose detection splits the
 scorers by perceptual capability, not training domain
-(\S5.3 of the main paper). Per-cell precision and the full multiplicity
-report (61 paired tests with Holm/Benjamini--Hochberg correction) are in the
+(\S5.3 of the main paper). The full multiplicity report is included in the
 Code and Data Supplement (\texttt{reports/}).
 
 \begin{table}[h]
@@ -249,13 +395,75 @@ C3-elicited VLM is far stronger.}
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.75\linewidth]{figs/fig11_artifact_vs_genuine.png}
-\caption{\textbf{A genuine blind spot the forced choice exposes} (referenced
+\caption{\textbf{A magnitude-bounded blind spot the forced choice exposes} (referenced
 in \S4). Per-model 2-AFC discrimination. Pointwise puts both classes at
 chance, but the forced choice \emph{separates} them: the data artifact \g{S6}
 recovers on every model, while \g{G6} page offset stays at the floor on every
-model---a genuine blind spot, not an elicitation or data artifact.}
+model at the tested moderate, unclipped magnitudes. A separate extreme-offset
+stress test below locates the clipping boundary where this conclusion ceases to hold.}
 \label{figA:artifact}
 \end{figure}
+
+\section{Frozen-route held-out and extreme-offset addenda}
+\label{app:w5-heldout}
+
+\paragraph{Independent held-out protocol.}
+We generated a seed-controlled calibration corpus from templates not used by
+the development experiments: a coloured header, accent rail, footer, and
+visible diagram are varied across eight layouts and six topics. Each of nine
+classes has 150 defective slides and 150 same-base clean controls. Every
+labelled sample has a unique clean twin; all 1,350 pairs differ in rendered
+pixels. The fidelity gate found all 750 declared-geometry positives and zero
+target or incidental linter findings on their clean controls. For \g{G7}, all
+150 declared IRs are linter-blind and all 150 rendered overflow pairs pass the
+localization check. We then evaluated the corrected frozen route exactly once:
+\g{G1}/\g{G2}/\g{G3}/\g{G5}/\g{G6}$\to$linter,
+\g{G7}$\to$VLM-C3, \g{S1}/\g{S6}$\to$VLM-C0, and
+\g{S4}$\to$text LLM. Table~\ref{tab:w5-heldout} reports named attribution;
+all cells use $n_+=n_-=150$.
+
+\begin{table}[h]
+\centering
+\small
+\caption{One-shot corrected frozen-route evaluation on the independent
+held-out corpus. Intervals are 95\% Wilson intervals. The predeclared covered
+criterion is balanced accuracy and precision both $\ge .70$.}
+\label{tab:w5-heldout}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Class (route) & Balanced accuracy & Precision & Covered \\
+\midrule
+\g{G1} (linter) & 1.000 [.975,1] & 1.000 [.975,1] & yes \\
+\g{G2} (linter) & 1.000 [.975,1] & 1.000 [.975,1] & yes \\
+\g{G3} (linter) & 1.000 [.975,1] & 1.000 [.975,1] & yes \\
+\g{G5} (linter) & 1.000 [.975,1] & 1.000 [.975,1] & yes \\
+\g{G6} (linter) & 1.000 [.975,1] & 1.000 [.975,1] & yes \\
+\g{G7} (VLM-C3) & .937 [.886,.965] & .917 [.863,.951] & yes \\
+\g{S1} (VLM-C0) & 1.000 [.975,1] & 1.000 [.975,1] & yes \\
+\g{S4} (text LLM) & 1.000 [.975,1] & 1.000 [.975,1] & yes \\
+\g{S6} (VLM-C0) & .677 [.628,.716] & .607 [.545,.666] & no \\
+\midrule
+Macro mean & .957 & --- & 8/9 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The held-out result preserves the routing conclusion but also exposes a
+specific limitation rather than hiding it in a mean: \g{S6} has perfect recall
+but 97/150 clean false positives, so its C0 route fails the strict precision
+criterion on the novel diagram family. The corrected \g{S1} visual route, by
+contrast, transfers without an error.
+
+\paragraph{Extreme \g{G6} magnitude boundary.}
+To stress the moderate-offset result without changing its operationalization,
+we rigidly translated the whole content group left by 144 px, preserving all
+internal alignments and placing its left edge exactly 48 px beyond the canvas.
+On 12 positive and 12 paired-clean slides, both pointwise C0 and atomic C3 reach
+.958 [.702,.993] detection balanced accuracy (11/12 positives, 12/12 clean;
+precision 1.000 [.741,1]). Their attribution differs: C0 detects generic damage
+but names \g{G6} on 0/12, whereas C3 names it on 11/12. Therefore the earlier
+failure is a moderate-magnitude global-position blind spot, not a claim that a
+VLM remains blind after the page visibly clips content.
 
 \begin{figure}[h]
 \centering

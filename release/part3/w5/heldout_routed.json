@@ -1,0 +1,911 @@
+{
+  "model": "qwen3-vl-plus",
+  "manifest": "data/part3/w5_heldout.jsonl",
+  "modality": "A",
+  "max_per_defect": 150,
+  "metric": "paired-clean named-attribution balanced accuracy + precision",
+  "router": {
+    "G1_TEXT_OVERFLOW": "linter",
+    "G2_ELEMENT_OVERLAP": "linter",
+    "G3_ALIGNMENT_OFFSET": "linter",
+    "G5_BRAND_COLOR_VIOLATION": "linter",
+    "G6_MARGIN_VIOLATION": "linter",
+    "G7_RENDER_CONTAINMENT_OVERFLOW": "vlm",
+    "S1_TITLE_BODY_MISMATCH": "vlm",
+    "S4_DENSITY_RULE_VIOLATION": "llm",
+    "S6_IMAGE_TEXT_CONTRADICTION": "vlm"
+  },
+  "vlm_elicit": {
+    "G1_TEXT_OVERFLOW": "C2",
+    "S6_IMAGE_TEXT_CONTRADICTION": "C0",
+    "G7_RENDER_CONTAINMENT_OVERFLOW": "C3"
+  },
+  "per_class": {
+    "G1_TEXT_OVERFLOW": {
+      "linter": {
+        "recall": 1.0,
+        "specificity": 1.0,
+        "bal_acc": 1.0,
+        "bal_acc_ci": [
+          0.975,
+          1.0
+        ],
+        "precision": 1.0,
+        "precision_ci": [
+          0.975,
+          1.0
+        ],
+        "fpr": 0.0,
+        "f1": 1.0,
+        "recall_ci": [
+          0.975,
+          1.0
+        ],
+        "tp": 150,
+        "fn": 0,
+        "fp": 0,
+        "tn": 150,
+        "n_pos": 150,
+        "n_neg": 150
+      }
+    },
+    "G2_ELEMENT_OVERLAP": {
+      "linter": {
+        "recall": 1.0,
+        "specificity": 1.0,
+        "bal_acc": 1.0,
+        "bal_acc_ci": [
+          0.975,
+          1.0
+        ],
+        "precision": 1.0,
+        "precision_ci": [
+          0.975,
+          1.0
+        ],
+        "fpr": 0.0,
+        "f1": 1.0,
+        "recall_ci": [
+          0.975,
+          1.0
+        ],
+        "tp": 150,
+        "fn": 0,
+        "fp": 0,
+        "tn": 150,
+        "n_pos": 150,
+        "n_neg": 150
+      }
+    },
+    "G3_ALIGNMENT_OFFSET": {
+      "linter": {
+        "recall": 1.0,
+        "specificity": 1.0,
+        "bal_acc": 1.0,
+        "bal_acc_ci": [
+          0.975,
+          1.0
+        ],
+        "precision": 1.0,
+        "precision_ci": [
+          0.975,
+          1.0
+        ],
+        "fpr": 0.0,
+        "f1": 1.0,
+        "recall_ci": [
+          0.975,
+          1.0
+        ],
+        "tp": 150,
+        "fn": 0,
+        "fp": 0,
+        "tn": 150,
+        "n_pos": 150,
+        "n_neg": 150
+      }
+    },
+    "G5_BRAND_COLOR_VIOLATION": {
+      "linter": {
+        "recall": 1.0,
+        "specificity": 1.0,
+        "bal_acc": 1.0,
+        "bal_acc_ci": [
+          0.975,
+          1.0
+        ],
+        "precision": 1.0,
+        "precision_ci": [
+          0.975,
+          1.0
+        ],
+        "fpr": 0.0,
+        "f1": 1.0,
+        "recall_ci": [
+          0.975,
+          1.0
+        ],
+        "tp": 150,
+        "fn": 0,
+        "fp": 0,
+        "tn": 150,
+        "n_pos": 150,
+        "n_neg": 150
+      }
+    },
+    "G6_MARGIN_VIOLATION": {
+      "linter": {
+        "recall": 1.0,
+        "specificity": 1.0,
+        "bal_acc": 1.0,
+        "bal_acc_ci": [
+          0.975,
+          1.0
+        ],
+        "precision": 1.0,
+        "precision_ci": [
+          0.975,
+          1.0
+        ],
+        "fpr": 0.0,
+        "f1": 1.0,
+        "recall_ci": [
+          0.975,
+          1.0
+        ],
+        "tp": 150,
+        "fn": 0,
+        "fp": 0,
+        "tn": 150,
+        "n_pos": 150,
+        "n_neg": 150
+      }
+    },
+    "G7_RENDER_CONTAINMENT_OVERFLOW": {
+      "linter": {
+        "recall": 0.0,
+        "specificity": 0.0,
+        "bal_acc": 0.0,
+        "bal_acc_ci": [
+          0.0,
+          0.512
+        ],
+        "precision": 0.0,
+        "precision_ci": null,
+        "fpr": 1.0,
+        "f1": 0.0,
+        "recall_ci": [
+          0.0,
+          0.025
+        ],
+        "tp": 0,
+        "fn": 150,
+        "fp": 0,
+        "tn": 0,
+        "n_pos": 150,
+        "n_neg": 0
+      },
+      "vlm_best": {
+        "recall": 0.96,
+        "specificity": 0.913,
+        "bal_acc": 0.937,
+        "bal_acc_ci": [
+          0.886,
+          0.965
+        ],
+        "precision": 0.917,
+        "precision_ci": [
+          0.863,
+          0.951
+        ],
+        "fpr": 0.087,
+        "f1": 0.938,
+        "recall_ci": [
+          0.915,
+          0.982
+        ],
+        "tp": 144,
+        "fn": 6,
+        "fp": 13,
+        "tn": 137,
+        "n_pos": 150,
+        "n_neg": 150
+      }
+    },
+    "S1_TITLE_BODY_MISMATCH": {
+      "linter": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "bal_acc_ci": [
+          0.488,
+          0.512
+        ],
+        "precision": 0.0,
+        "precision_ci": null,
+        "fpr": 0.0,
+        "f1": 0.0,
+        "recall_ci": [
+          0.0,
+          0.025
+        ],
+        "tp": 0,
+        "fn": 150,
+        "fp": 0,
+        "tn": 150,
+        "n_pos": 150,
+        "n_neg": 150
+      },
+      "vlm_best": {
+        "recall": 1.0,
+        "specificity": 1.0,
+        "bal_acc": 1.0,
+        "bal_acc_ci": [
+          0.975,
+          1.0
+        ],
+        "precision": 1.0,
+        "precision_ci": [
+          0.975,
+          1.0
+        ],
+        "fpr": 0.0,
+        "f1": 1.0,
+        "recall_ci": [
+          0.975,
+          1.0
+        ],
+        "tp": 150,
+        "fn": 0,
+        "fp": 0,
+        "tn": 150,
+        "n_pos": 150,
+        "n_neg": 150
+      }
+    },
+    "S4_DENSITY_RULE_VIOLATION": {
+      "linter": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "bal_acc_ci": [
+          0.488,
+          0.512
+        ],
+        "precision": 0.0,
+        "precision_ci": null,
+        "fpr": 0.0,
+        "f1": 0.0,
+        "recall_ci": [
+          0.0,
+          0.025
+        ],
+        "tp": 0,
+        "fn": 150,
+        "fp": 0,
+        "tn": 150,
+        "n_pos": 150,
+        "n_neg": 150
+      },
+      "llm": {
+        "recall": 1.0,
+        "specificity": 1.0,
+        "bal_acc": 1.0,
+        "bal_acc_ci": [
+          0.975,
+          1.0
+        ],
+        "precision": 1.0,
+        "precision_ci": [
+          0.975,
+          1.0
+        ],
+        "fpr": 0.0,
+        "f1": 1.0,
+        "recall_ci": [
+          0.975,
+          1.0
+        ],
+        "tp": 150,
+        "fn": 0,
+        "fp": 0,
+        "tn": 150,
+        "n_pos": 150,
+        "n_neg": 150
+      }
+    },
+    "S6_IMAGE_TEXT_CONTRADICTION": {
+      "linter": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "bal_acc_ci": [
+          0.488,
+          0.512
+        ],
+        "precision": 0.0,
+        "precision_ci": null,
+        "fpr": 0.0,
+        "f1": 0.0,
+        "recall_ci": [
+          0.0,
+          0.025
+        ],
+        "tp": 0,
+        "fn": 150,
+        "fp": 0,
+        "tn": 150,
+        "n_pos": 150,
+        "n_neg": 150
+      },
+      "vlm_best": {
+        "recall": 1.0,
+        "specificity": 0.353,
+        "bal_acc": 0.677,
+        "bal_acc_ci": [
+          0.628,
+          0.716
+        ],
+        "precision": 0.607,
+        "precision_ci": [
+          0.545,
+          0.666
+        ],
+        "fpr": 0.647,
+        "f1": 0.756,
+        "recall_ci": [
+          0.975,
+          1.0
+        ],
+        "tp": 150,
+        "fn": 0,
+        "fp": 97,
+        "tn": 53,
+        "n_pos": 150,
+        "n_neg": 150
+      }
+    }
+  },
+  "config_per_class": {
+    "linter_only": {
+      "G1_TEXT_OVERFLOW": {
+        "recall": 1.0,
+        "specificity": 1.0,
+        "bal_acc": 1.0,
+        "bal_acc_ci": [
+          0.975,
+          1.0
+        ],
+        "precision": 1.0,
+        "precision_ci": [
+          0.975,
+          1.0
+        ],
+        "fpr": 0.0,
+        "f1": 1.0,
+        "recall_ci": [
+          0.975,
+          1.0
+        ],
+        "tp": 150,
+        "fn": 0,
+        "fp": 0,
+        "tn": 150,
+        "n_pos": 150,
+        "n_neg": 150
+      },
+      "G2_ELEMENT_OVERLAP": {
+        "recall": 1.0,
+        "specificity": 1.0,
+        "bal_acc": 1.0,
+        "bal_acc_ci": [
+          0.975,
+          1.0
+        ],
+        "precision": 1.0,
+        "precision_ci": [
+          0.975,
+          1.0
+        ],
+        "fpr": 0.0,
+        "f1": 1.0,
+        "recall_ci": [
+          0.975,
+          1.0
+        ],
+        "tp": 150,
+        "fn": 0,
+        "fp": 0,
+        "tn": 150,
+        "n_pos": 150,
+        "n_neg": 150
+      },
+      "G3_ALIGNMENT_OFFSET": {
+        "recall": 1.0,
+        "specificity": 1.0,
+        "bal_acc": 1.0,
+        "bal_acc_ci": [
+          0.975,
+          1.0
+        ],
+        "precision": 1.0,
+        "precision_ci": [
+          0.975,
+          1.0
+        ],
+        "fpr": 0.0,
+        "f1": 1.0,
+        "recall_ci": [
+          0.975,
+          1.0
+        ],
+        "tp": 150,
+        "fn": 0,
+        "fp": 0,
+        "tn": 150,
+        "n_pos": 150,
+        "n_neg": 150
+      },
+      "G5_BRAND_COLOR_VIOLATION": {
+        "recall": 1.0,
+        "specificity": 1.0,
+        "bal_acc": 1.0,
+        "bal_acc_ci": [
+          0.975,
+          1.0
+        ],
+        "precision": 1.0,
+        "precision_ci": [
+          0.975,
+          1.0
+        ],
+        "fpr": 0.0,
+        "f1": 1.0,
+        "recall_ci": [
+          0.975,
+          1.0
+        ],
+        "tp": 150,
+        "fn": 0,
+        "fp": 0,
+        "tn": 150,
+        "n_pos": 150,
+        "n_neg": 150
+      },
+      "G6_MARGIN_VIOLATION": {
+        "recall": 1.0,
+        "specificity": 1.0,
+        "bal_acc": 1.0,
+        "bal_acc_ci": [
+          0.975,
+          1.0
+        ],
+        "precision": 1.0,
+        "precision_ci": [
+          0.975,
+          1.0
+        ],
+        "fpr": 0.0,
+        "f1": 1.0,
+        "recall_ci": [
+          0.975,
+          1.0
+        ],
+        "tp": 150,
+        "fn": 0,
+        "fp": 0,
+        "tn": 150,
+        "n_pos": 150,
+        "n_neg": 150
+      },
+      "G7_RENDER_CONTAINMENT_OVERFLOW": {
+        "recall": 0.0,
+        "specificity": 0.0,
+        "bal_acc": 0.0,
+        "bal_acc_ci": [
+          0.0,
+          0.512
+        ],
+        "precision": 0.0,
+        "precision_ci": null,
+        "fpr": 1.0,
+        "f1": 0.0,
+        "recall_ci": [
+          0.0,
+          0.025
+        ],
+        "tp": 0,
+        "fn": 150,
+        "fp": 0,
+        "tn": 0,
+        "n_pos": 150,
+        "n_neg": 0
+      },
+      "S1_TITLE_BODY_MISMATCH": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "bal_acc_ci": [
+          0.488,
+          0.512
+        ],
+        "precision": 0.0,
+        "precision_ci": null,
+        "fpr": 0.0,
+        "f1": 0.0,
+        "recall_ci": [
+          0.0,
+          0.025
+        ],
+        "tp": 0,
+        "fn": 150,
+        "fp": 0,
+        "tn": 150,
+        "n_pos": 150,
+        "n_neg": 150
+      },
+      "S4_DENSITY_RULE_VIOLATION": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "bal_acc_ci": [
+          0.488,
+          0.512
+        ],
+        "precision": 0.0,
+        "precision_ci": null,
+        "fpr": 0.0,
+        "f1": 0.0,
+        "recall_ci": [
+          0.0,
+          0.025
+        ],
+        "tp": 0,
+        "fn": 150,
+        "fp": 0,
+        "tn": 150,
+        "n_pos": 150,
+        "n_neg": 150
+      },
+      "S6_IMAGE_TEXT_CONTRADICTION": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "bal_acc_ci": [
+          0.488,
+          0.512
+        ],
+        "precision": 0.0,
+        "precision_ci": null,
+        "fpr": 0.0,
+        "f1": 0.0,
+        "recall_ci": [
+          0.0,
+          0.025
+        ],
+        "tp": 0,
+        "fn": 150,
+        "fp": 0,
+        "tn": 150,
+        "n_pos": 150,
+        "n_neg": 150
+      }
+    },
+    "vlm_only": {
+      "G1_TEXT_OVERFLOW": null,
+      "G2_ELEMENT_OVERLAP": null,
+      "G3_ALIGNMENT_OFFSET": null,
+      "G5_BRAND_COLOR_VIOLATION": null,
+      "G6_MARGIN_VIOLATION": null,
+      "G7_RENDER_CONTAINMENT_OVERFLOW": null,
+      "S1_TITLE_BODY_MISMATCH": null,
+      "S4_DENSITY_RULE_VIOLATION": null,
+      "S6_IMAGE_TEXT_CONTRADICTION": null
+    },
+    "vlm_c3_everywhere": {
+      "G1_TEXT_OVERFLOW": null,
+      "G2_ELEMENT_OVERLAP": null,
+      "G3_ALIGNMENT_OFFSET": null,
+      "G5_BRAND_COLOR_VIOLATION": null,
+      "G6_MARGIN_VIOLATION": null,
+      "G7_RENDER_CONTAINMENT_OVERFLOW": null,
+      "S1_TITLE_BODY_MISMATCH": null,
+      "S4_DENSITY_RULE_VIOLATION": null,
+      "S6_IMAGE_TEXT_CONTRADICTION": null
+    },
+    "linter_plus_vlmc3": {
+      "G1_TEXT_OVERFLOW": null,
+      "G2_ELEMENT_OVERLAP": null,
+      "G3_ALIGNMENT_OFFSET": null,
+      "G5_BRAND_COLOR_VIOLATION": null,
+      "G6_MARGIN_VIOLATION": null,
+      "G7_RENDER_CONTAINMENT_OVERFLOW": null,
+      "S1_TITLE_BODY_MISMATCH": null,
+      "S4_DENSITY_RULE_VIOLATION": null,
+      "S6_IMAGE_TEXT_CONTRADICTION": null
+    },
+    "hybrid": {
+      "G1_TEXT_OVERFLOW": {
+        "recall": 1.0,
+        "specificity": 1.0,
+        "bal_acc": 1.0,
+        "bal_acc_ci": [
+          0.975,
+          1.0
+        ],
+        "precision": 1.0,
+        "precision_ci": [
+          0.975,
+          1.0
+        ],
+        "fpr": 0.0,
+        "f1": 1.0,
+        "recall_ci": [
+          0.975,
+          1.0
+        ],
+        "tp": 150,
+        "fn": 0,
+        "fp": 0,
+        "tn": 150,
+        "n_pos": 150,
+        "n_neg": 150
+      },
+      "G2_ELEMENT_OVERLAP": {
+        "recall": 1.0,
+        "specificity": 1.0,
+        "bal_acc": 1.0,
+        "bal_acc_ci": [
+          0.975,
+          1.0
+        ],
+        "precision": 1.0,
+        "precision_ci": [
+          0.975,
+          1.0
+        ],
+        "fpr": 0.0,
+        "f1": 1.0,
+        "recall_ci": [
+          0.975,
+          1.0
+        ],
+        "tp": 150,
+        "fn": 0,
+        "fp": 0,
+        "tn": 150,
+        "n_pos": 150,
+        "n_neg": 150
+      },
+      "G3_ALIGNMENT_OFFSET": {
+        "recall": 1.0,
+        "specificity": 1.0,
+        "bal_acc": 1.0,
+        "bal_acc_ci": [
+          0.975,
+          1.0
+        ],
+        "precision": 1.0,
+        "precision_ci": [
+          0.975,
+          1.0
+        ],
+        "fpr": 0.0,
+        "f1": 1.0,
+        "recall_ci": [
+          0.975,
+          1.0
+        ],
+        "tp": 150,
+        "fn": 0,
+        "fp": 0,
+        "tn": 150,
+        "n_pos": 150,
+        "n_neg": 150
+      },
+      "G5_BRAND_COLOR_VIOLATION": {
+        "recall": 1.0,
+        "specificity": 1.0,
+        "bal_acc": 1.0,
+        "bal_acc_ci": [
+          0.975,
+          1.0
+        ],
+        "precision": 1.0,
+        "precision_ci": [
+          0.975,
+          1.0
+        ],
+        "fpr": 0.0,
+        "f1": 1.0,
+        "recall_ci": [
+          0.975,
+          1.0
+        ],
+        "tp": 150,
+        "fn": 0,
+        "fp": 0,
+        "tn": 150,
+        "n_pos": 150,
+        "n_neg": 150
+      },
+      "G6_MARGIN_VIOLATION": {
+        "recall": 1.0,
+        "specificity": 1.0,
+        "bal_acc": 1.0,
+        "bal_acc_ci": [
+          0.975,
+          1.0
+        ],
+        "precision": 1.0,
+        "precision_ci": [
+          0.975,
+          1.0
+        ],
+        "fpr": 0.0,
+        "f1": 1.0,
+        "recall_ci": [
+          0.975,
+          1.0
+        ],
+        "tp": 150,
+        "fn": 0,
+        "fp": 0,
+        "tn": 150,
+        "n_pos": 150,
+        "n_neg": 150
+      },
+      "G7_RENDER_CONTAINMENT_OVERFLOW": {
+        "recall": 0.96,
+        "specificity": 0.913,
+        "bal_acc": 0.937,
+        "bal_acc_ci": [
+          0.886,
+          0.965
+        ],
+        "precision": 0.917,
+        "precision_ci": [
+          0.863,
+          0.951
+        ],
+        "fpr": 0.087,
+        "f1": 0.938,
+        "recall_ci": [
+          0.915,
+          0.982
+        ],
+        "tp": 144,
+        "fn": 6,
+        "fp": 13,
+        "tn": 137,
+        "n_pos": 150,
+        "n_neg": 150
+      },
+      "S1_TITLE_BODY_MISMATCH": {
+        "recall": 1.0,
+        "specificity": 1.0,
+        "bal_acc": 1.0,
+        "bal_acc_ci": [
+          0.975,
+          1.0
+        ],
+        "precision": 1.0,
+        "precision_ci": [
+          0.975,
+          1.0
+        ],
+        "fpr": 0.0,
+        "f1": 1.0,
+        "recall_ci": [
+          0.975,
+          1.0
+        ],
+        "tp": 150,
+        "fn": 0,
+        "fp": 0,
+        "tn": 150,
+        "n_pos": 150,
+        "n_neg": 150
+      },
+      "S4_DENSITY_RULE_VIOLATION": {
+        "recall": 1.0,
+        "specificity": 1.0,
+        "bal_acc": 1.0,
+        "bal_acc_ci": [
+          0.975,
+          1.0
+        ],
+        "precision": 1.0,
+        "precision_ci": [
+          0.975,
+          1.0
+        ],
+        "fpr": 0.0,
+        "f1": 1.0,
+        "recall_ci": [
+          0.975,
+          1.0
+        ],
+        "tp": 150,
+        "fn": 0,
+        "fp": 0,
+        "tn": 150,
+        "n_pos": 150,
+        "n_neg": 150
+      },
+      "S6_IMAGE_TEXT_CONTRADICTION": {
+        "recall": 1.0,
+        "specificity": 0.353,
+        "bal_acc": 0.677,
+        "bal_acc_ci": [
+          0.628,
+          0.716
+        ],
+        "precision": 0.607,
+        "precision_ci": [
+          0.545,
+          0.666
+        ],
+        "fpr": 0.647,
+        "f1": 0.756,
+        "recall_ci": [
+          0.975,
+          1.0
+        ],
+        "tp": 150,
+        "fn": 0,
+        "fp": 97,
+        "tn": 53,
+        "n_pos": 150,
+        "n_neg": 150
+      }
+    }
+  },
+  "coverage": {
+    "linter_only": {
+      "n_classes": 9,
+      "mean_bal_acc": 0.722,
+      "n_covered_0.70": 5,
+      "covered_classes": [
+        "G1_TEXT_OVERFLOW",
+        "G2_ELEMENT_OVERLAP",
+        "G3_ALIGNMENT_OFFSET",
+        "G5_BRAND_COLOR_VIOLATION",
+        "G6_MARGIN_VIOLATION"
+      ]
+    },
+    "vlm_only": {
+      "n_classes": 0,
+      "mean_bal_acc": null,
+      "n_covered_0.70": 0,
+      "covered_classes": []
+    },
+    "vlm_c3_everywhere": {
+      "n_classes": 0,
+      "mean_bal_acc": null,
+      "n_covered_0.70": 0,
+      "covered_classes": []
+    },
+    "linter_plus_vlmc3": {
+      "n_classes": 0,
+      "mean_bal_acc": null,
+      "n_covered_0.70": 0,
+      "covered_classes": []
+    },
+    "hybrid": {
+      "n_classes": 9,
+      "mean_bal_acc": 0.957,
+      "n_covered_0.70": 8,
+      "covered_classes": [
+        "G1_TEXT_OVERFLOW",
+        "G2_ELEMENT_OVERLAP",
+        "G3_ALIGNMENT_OFFSET",
+        "G5_BRAND_COLOR_VIOLATION",
+        "G6_MARGIN_VIOLATION",
+        "G7_RENDER_CONTAINMENT_OVERFLOW",
+        "S1_TITLE_BODY_MISMATCH",
+        "S4_DENSITY_RULE_VIOLATION"
+      ]
+    }
+  }
+}

@@ -12,6 +12,7 @@ Usage: python scripts/part3_e8_verify_regen.py
 from __future__ import annotations
 
 import collections
+import hashlib
 import json
 import sys
 from pathlib import Path
@@ -19,6 +20,7 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO))
 from slide_examiner.geometry import detect_alignment_offsets, detect_color_inconsistency  # noqa: E402
+from slide_examiner.geometry import lint_slide  # noqa: E402
 from slide_examiner.schemas import Slide  # noqa: E402
 
 SYNTH = {
@@ -26,6 +28,64 @@ SYNTH = {
     "Part-3 coverage (Table 2)": "data/part3/manifest_coverage_internal.jsonl",
 }
 REAL = "data/part3/manifest_real_internal_g3.jsonl"
+
+
+def verify_w5_heldout(manifest: str, expected_per_class: int = 150) -> tuple[bool, dict]:
+    """Full fidelity gate for the W5.1 novel-template paired calibration set."""
+    path = Path(manifest)
+    recs = [json.loads(line) for line in path.open() if line.strip()]
+    by_defect = collections.Counter(
+        r["labels"][0]["type"] if r.get("labels") else "NO_DEFECT" for r in recs)
+    expected = {
+        "G1_TEXT_OVERFLOW", "G2_ELEMENT_OVERLAP", "G3_ALIGNMENT_OFFSET",
+        "G5_BRAND_COLOR_VIOLATION", "G6_MARGIN_VIOLATION",
+        "S1_TITLE_BODY_MISMATCH", "S4_DENSITY_RULE_VIOLATION",
+        "S6_IMAGE_TEXT_CONTRADICTION",
+    }
+    errors: list[str] = []
+    clean_images: set[str] = set()
+    clean_slide_ids: set[str] = set()
+    target_detected = target_clean_fp = clean_any_lint = same_pixels = 0
+    for rec in recs:
+        defect = rec["labels"][0]["type"]
+        pair = rec.get("pair") or {}
+        d_img = Path(rec.get("image_path") or "")
+        c_img = Path(pair.get("clean_image_path") or "")
+        c_ir = Path(pair.get("clean_slide_path") or "")
+        if not all(p.exists() for p in (d_img, c_img, c_ir)):
+            errors.append(f"missing paired artifact: {rec.get('sample_id')}")
+            continue
+        clean_images.add(str(c_img.resolve()))
+        clean = Slide.from_mapping(json.loads(c_ir.read_text()))
+        clean_slide_ids.add(clean.slide_id)
+        clean_types = {x.type for x in lint_slide(clean)}
+        defect_types = {x.type for x in lint_slide(Slide.from_mapping(rec["slide"]))}
+        if defect.startswith("G") and defect in defect_types:
+            target_detected += 1
+        if defect.startswith("G") and defect in clean_types:
+            target_clean_fp += 1
+        if clean_types:
+            clean_any_lint += 1
+        if hashlib.sha256(d_img.read_bytes()).digest() == hashlib.sha256(c_img.read_bytes()).digest():
+            same_pixels += 1
+    if set(by_defect) != expected or any(by_defect[d] != expected_per_class for d in expected):
+        errors.append(f"class counts mismatch: {dict(by_defect)}")
+    if len(clean_images) != len(recs) or len(clean_slide_ids) != len(recs):
+        errors.append("clean twins are not unique per labeled sample")
+    if target_detected != expected_per_class * 5:
+        errors.append(f"geometry target detection {target_detected}/{expected_per_class * 5}")
+    if target_clean_fp or clean_any_lint or same_pixels:
+        errors.append(f"target_clean_fp={target_clean_fp}, clean_any_lint={clean_any_lint}, same_pixels={same_pixels}")
+    report = {
+        "manifest": str(path), "pairs": len(recs), "per_class": dict(by_defect),
+        "unique_clean_images": len(clean_images), "unique_clean_slide_ids": len(clean_slide_ids),
+        "geometry_target_detected": target_detected, "geometry_target_clean_fp": target_clean_fp,
+        "clean_any_linter_finding": clean_any_lint, "pixel_identical_pairs": same_pixels,
+        "errors": errors, "passed": not errors,
+    }
+    print(f"\n### W5 held-out fidelity ({manifest})")
+    print(json.dumps(report, indent=2, ensure_ascii=False))
+    return not errors, report
 
 
 def _img_ok(p: str | None) -> bool:
@@ -91,6 +151,18 @@ def verify_real(f: str) -> bool:
 
 
 def main():
+    import argparse
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--w5-heldout", default=None)
+    ap.add_argument("--expected-per-class", type=int, default=150)
+    ap.add_argument("--report", default=None)
+    args = ap.parse_args()
+    if args.w5_heldout:
+        ok, report = verify_w5_heldout(args.w5_heldout, args.expected_per_class)
+        if args.report:
+            Path(args.report).parent.mkdir(parents=True, exist_ok=True)
+            Path(args.report).write_text(json.dumps(report, indent=2, ensure_ascii=False), encoding="utf-8")
+        raise SystemExit(0 if ok else 1)
     results = [verify_synth(n, f) for n, f in SYNTH.items()]
     results.append(verify_real(REAL))
     print("\n=== SUMMARY ===")

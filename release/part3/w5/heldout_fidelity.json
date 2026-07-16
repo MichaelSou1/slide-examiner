@@ -1,0 +1,22 @@
+{
+  "manifest": "data/part3/w5_heldout.jsonl",
+  "pairs": 1200,
+  "per_class": {
+    "G1_TEXT_OVERFLOW": 150,
+    "G2_ELEMENT_OVERLAP": 150,
+    "G3_ALIGNMENT_OFFSET": 150,
+    "G5_BRAND_COLOR_VIOLATION": 150,
+    "G6_MARGIN_VIOLATION": 150,
+    "S1_TITLE_BODY_MISMATCH": 150,
+    "S4_DENSITY_RULE_VIOLATION": 150,
+    "S6_IMAGE_TEXT_CONTRADICTION": 150
+  },
+  "unique_clean_images": 1200,
+  "unique_clean_slide_ids": 1200,
+  "geometry_target_detected": 750,
+  "geometry_target_clean_fp": 0,
+  "clean_any_linter_finding": 0,
+  "pixel_identical_pairs": 0,
+  "errors": [],
+  "passed": true
+}

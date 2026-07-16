@@ -225,8 +225,8 @@
 - [x] sec:g7 的 reward audit 压至 ~半页：主文现只保留 CLIP-IQA/LAION 同 backbone dissociation + perturbation-fidelity 45% 两点；per-scorer 表与其余讨论已移交 Technical Supplement/补充材料承接。
 - [x] sec:examiner 压缩：主文现只保留 in-distribution 超 30B、abstain 行为、sim-to-real 负结果三点；训练细节与细表改由 supplement 承接。
 - [x] 释放篇幅给 W2 ablation 段与 W3 scope 声明；主线现为 Intro → setup → diag → elicit（含 ablation）→ coverage → g7 → examiner(压缩) → external → limits。
-- [x] **07-21 前**：Abstract 已定稿并锁死；措辞范围已与 W2 E1 结果方向对齐，且不依赖 LTT 的具体 $m$ 值。
-- [ ] **07-21 前**：将已锁死的标题与 Abstract 提交 OpenReview。待完成（2026-07-16）：投稿人将在截止日前自行填写并保存；提交成功后再勾选，不以本地改稿代替。
+- [ ] **07-21 前重新锁定 Abstract**：2026-07-16 主线由 LTT 切换为 Diagnose→Distill→Defer（D3），原 W4 摘要不再视为锁定。只有完成 **W7.0–W7.4 的“摘要锁定门”** 后，才可锁定方法性摘要；此时只写已经实现并通过 smoke test 的方法，不提前写 D3 优于 baseline 的结果数字。最终结果性措辞须等 W7.7 untouched test 后再更新。
+- [ ] **07-21 前**：将通过 W7 摘要锁定门后的标题与 Abstract 提交 OpenReview。待完成（2026-07-16）：投稿人将在截止日前自行填写并保存；提交成功后再勾选，不以本地改稿代替。
 - [x] 备选标题已拟好（仅 E1 结果不利时启用）："Diagnose Before You Route: Sub-Perceptual, Format-Suppressed, and Reference-Assisted Failures in VLM Slide Inspection"。
 - [x] 页数检查：`AuthorKit27/submission/main.pdf` 当前总计 8 页，但第 8 页为 references 延续；`pdftotext -f 7 -l 7 main.pdf -` 可见 References 已在物理第 7 页底部开始，满足 AAAI-27 正文 7 页页限。
 
@@ -234,55 +234,129 @@
 
 ## W5 机动项 ｜ D8–12 ｜ 仅 W2–W4 收工后
 
-- [x] **5.1 frozen-route held-out**（回应 Q7）：**已并入 W7.1/7.2**——LTT 新校准集就是 held-out 语料，frozen route 作为预声明配置在同批数据上评估，不再单独采数。交付物见 7.2 第三条。
-- [ ] **5.2 SlideAudit 完整逐类表**（回应 Q6）：从 `part3_p2_slideaudit.py` / `part2_slideaudit_eval.py` 已有 runs 整理 per-class bal-acc + n + Wilson CI + 完整 prompt 文本 → `supplement.tex`（07-31 截止，不占正文窗口）。
-- [ ] 5.3（可选）：G6 page-offset 补一档更极端 magnitude，巩固 "genuine blind spot"。
+- [x] **5.1 frozen-route held-out**（回应 Q7）：已用新 seed/新模板生成 9 类各 150 positive + 150 unique clean twin，并通过全类 fidelity gate；corrected frozen route 一次性评估 macro bal-acc .957、严格覆盖 8/9，\g{S6} 因 clean FP 为唯一未覆盖类。产物：`release/part3/w5/heldout_fidelity.json`、`heldout_routed.json`、`heldout_routed_rows.jsonl`，正文一句 + supplement 表（2026-07-16）。这批数据及结果已经看过，后续仅作为 D3 的 frozen-route baseline / validation，不得充当 untouched final test。
+- [x] **5.2 SlideAudit 完整逐类表**（回应 Q6）：已从冻结的 `data/part3/p2_slideaudit.json` 整理全部 7 个映射类的 C0/C3 per-class bal-acc、precision、有效 n 与 95% Wilson CI，并加入完整 C0/C3 prompt template 及逐类 C3 问句；同时补齐正文 coverage 表逐格 precision companion。产物：`AuthorKit27/submission/supplement.tex` / `AuthorKit27/submission/supplement.pdf`（2026-07-16）。
+- [x] 5.3：G6 page-offset 极端 magnitude（整体左移 144px、越界 48px）补测完成；C0/C3 detection 均为 .958（11/12 positive，12/12 clean，precision 1.0），C0 named 仍为 0、C3 named 为 11/12。结论据此改为 **moderate-magnitude blind spot / clipping boundary**，不再声称跨 magnitude 的普遍 blind spot。产物：`release/part3/w5/g6_extreme_C0.json`、`g6_extreme_C3.json`（2026-07-16）。
 
 ---
 
-## W7 LTT 风险受控路由认证（Learn-then-Test）｜ D4–10 ｜ 依赖 2.-1 渲染链路，与 W3/W4 并行
+## W7 新主线：Diagnose → Distill → Defer（D3 Critic）｜ 取代 LTT ｜ 依赖 Part 1/2 与 W5
 
-> **动机（07-15 新增，两个来源）**：① 算法岗面试官两次批"纯工程无算法"→ 论文需要一节有公式、有有限样本保证的方法内容；② 审稿 W5/Q4/Q5 打 coverage 选择偏差（0.65 阈值事后画线、配置事后挑）——LTT 把"挑选"本身变成带 FWER 保证的检验程序的输出，是对 W3.4 的**原理性修复**而非外挂。方案取舍已定案（07-15）：**选 LTT，否决 adaptive-C3 提前停止**（后者与 per-class 指标冲突、W2 已证 C3 反而最省 token 使"省 compute"动机消失、形式化只剩贪心调度）。SFT 加码也已否决（与论文"elicitation 而非模型"论点自相矛盾，且无 GPU）。
+> **决策（2026-07-16）**：撤销 LTT 作为正文方法主线。LTT 原本是在不能重训、需要快速补足算法内容时，对人工 frozen route 加有限样本认证的权衡；它认证既有配置，但不让模型从诊断中学习。现在改为完整 D3：把 Part 1 的 recoverability 诊断转成 teacher/action supervision，蒸馏 targeted elicitation 与 pairwise 能力，并训练模型在证据不足时请求结构、参考或拒答。**不创建 LTT 预注册、不跑原计划 5,400 次/模型认证调用、不实现 `part3_ltt_certify.py`，正文不再声称 `m/9 certified`。**
 >
-> **框架一句话**：把每类 k 的路由候选 Λ_k = {linter, C0, C3, linter⊕C3} 当离散假设空间；对每个 (k,λ) 在**新采校准集**上检验 H₀: R_k(λ) > α（二项精确 p 值，可换 Hoeffding–Bentkus），FWER（Holm）校正后保留通过者。产出陈述："以概率 ≥1−δ，认证表内每个配置真实风险 ≤ α；(α,δ) 下 m/9 类可认证"。
+> **主张边界**：“模型自身学会质检”不是让裸像素 VLM 强行解决全部缺陷，而是学会三件事：① 对可恢复缺陷直接检测并给出 evidence；② 对 reference-/structure-dependent 缺陷选择正确工具或上下文；③ 对 sub-perceptual / 证据不足样本校准地 defer。G2–G6 的 detector of record 仍是 linter，不能把复述 linter 标签写成视觉能力。
 >
-> **模型口径（07-15 定案，写死）**：旧本地 6 模型结果**全部冻结不动**（generality 论证 + capable-4 口径 + 61-test family 的地基；GPU 主机不可用也无法重跑；per-sample rows 已冻结在 `release/part3/rows/`）。**主认证做在 API 模型上**（qwen3-vl-plus 主力，与 W2 同阵容），定位延续 W2 科学口径：三 vendor 复制 arm 上的带保证认证，与 p1e1 不并表。ft-8B 无 API 替代品（examiner 线证据不动）。**不做"一锅端"全换 API**——可复现性（开源权重 vs 黑盒 API）、8B–31B 量级的论证力度、qwen3-vl-plus G1 上 C0>C3 的模型异质性三个理由，均已论证，不再讨论。
+> **新方法一句话**：对样本 $x_i$ 与缺陷 $k$，在训练/开发数据上比较 $e\in\{\mathrm{C0},\mathrm{C3},\mathrm{pairwise},\mathrm{linter},\mathrm{defer}\}$ 的正确性、paired-clean FPR、evidence 与成本，得到 teacher action $e^*_{ik}$；再训练统一 student 同时预测 finding 与动作 $a\in\{\texttt{ANSWER},\texttt{CALL\_LINTER},\texttt{REQUEST\_REFERENCE},\texttt{REQUEST\_DECK},\texttt{DEFER}\}$。测试时 student 只接 generic inspection instruction，不再靠逐类 prompt 才成立。
 
-### 7.0 预注册（**必须在采集任何新数据之前完成并 commit，这是方法的灵魂**）
+### 7.0 冻结科学问题、成功标准与旧资产角色
 
-- [ ] 写 `specs/ltt_preregistration.md` 并 git commit（commit 时间戳=预注册证据），锁死：
-  - **风险定义**：FNR 与 FPR **分开控制**（比合成 1−bal-acc 可解释："漏报≤α₁ 且 误报≤α₂"），认证=两个单侧检验都过；
-  - **α 档位**：主档 α₁=α₂=0.25；敏感性网格 α ∈ {0.20, 0.25, 0.30, 0.35}（网格本身预注册，谁也说不出阈值事后挑）；
-  - **δ=0.05**，FWER 用 Holm（与论文既有检验族同工具）；
-  - **检验族大小**：9 类 × ≤4 配置 × 2 错误率 ≤ 72 检验（实际按可行候选数），族与 W2 的 18-test 分开报；
-  - **候选空间 Λ_k**：全 9 类 × {linter, C0, C3, linter⊕C3}（linter 对无规则可用的类天然缺席，如实缺）；
-  - **小样本预案**：认证不出（如 S6 类 n 不足）就报"该类在此 n 下不可认证"——诚实结果，不降 α 迁就。
-- [ ] **功效依据（写进预注册，n 的选择理由）**：Bonferroni 到 ~72 检验后单检验水平 ≈7e-4；真实风险 0.10 的配置认证 α=0.25–0.30 需 **n≈60/侧起**，真实风险 0.15–0.20（bal-acc 0.80–0.85 带）需 **n≈120–200/侧** → 目标 **n=150/侧/类**（S6 受生成器限制做多少算多少）。
+- [ ] 锁死三个 RQ，后续不得看 final test 后改口径：
+  - **RQ-D（Distill）**：C3 teacher 的 G7 recovery 能否在 student 的 generic single-call inference 下保留，同时不抬高 clean FPR？
+  - **RQ-R（Route）**：learned action 是否优于人工 frozen route / 单一 C3，在相同或更低平均调用成本下提高 macro bal-acc？
+  - **RQ-F（Defer）**：student 能否把 G2–G6 image-only 等不可可靠判断样本送往 linter/defer，而不是制造 false positive？
+- [ ] 冻结 primary metrics：macro balanced accuracy、paired-clean FPR、named localization/evidence validity、correct-action accuracy、average model calls、token/latency cost、selective risk–coverage；`covered m/9` 仅作 descriptive companion，阈值不得再当算法 headline。
+- [ ] 冻结关键成功门槛：D3 generic-prompt G7 优于当前 vanilla Part 2 FT 的 generic prompt；G2–G6 image-only FPR 不高于当前 FT；相对 learned baseline 在 accuracy–cost Pareto 上非劣；所有结论同时给 per-class 数字与 CI，不用 micro average 掩盖 S6/S2。
+- [x] 旧本地 6 模型、W2 compute-matched 结果、Part 2 v2 权重与 `release/part3/rows/` 全部冻结，只做 baseline，不重写历史结果。
+- [x] W5 novel-template 2,700 图及已看过的 .957 / 8-of-9 结果降格为 **validation + frozen handcrafted-route baseline**；不得作为 D3 untouched final test。
+- [ ] 为当前 checkout 打 D3 起点 commit/tag，记录代码、数据 manifest、Part 2 adapter 与现有结果哈希；后续每个训练 run 都记录 parent commit、config、seed、数据 hash 与模型 hash。
 
-### 7.1 新校准集（**与开发数据严格分离**，兼并 W5.1）
+### 7.1 数据切分与防泄漏协议（先冻结，再生成 final test）
 
-> 现有 `release/part3/rows/` 是开发路由和 0.65 阈值时看过的数据 = "脏"校准集，只能做次要分析。新校准集从未参与开发，LTT 保证才成立。**这批数据同时就是 W5.1 的 frozen-route held-out**（frozen route 是预先声明的特定 λ，在同批数据上报告与 LTT 认证互不污染）——W5.1 并入本节，不再单独采数。
+- [ ] 建立四层数据角色并在 manifest metadata 中显式写 `split`、`source_deck`、`template_id`、`content_cluster`：
+  - `train`：生成 teacher traces、SFT/ranking/action records；
+  - `dev`：选择 utility 权重、loss 权重、route/defer threshold 与 checkpoint；
+  - `validation`：使用已看过的 W5 novel-template 集，只做消融与 frozen-route 对照；
+  - `final_test`：新 seed + 新模板 + source/content 去重，方法冻结后只运行一次。
+- [ ] 按 **source deck / template / near-duplicate content cluster** 分组切分，禁止同源 clean/defective twin 跨 split；clean twin、severity chain、pairwise 两顺序必须整体留在同一 split。
+- [ ] 在生成 `final_test` 前锁死生成 seed、每类 n、severity 比例、模板池、fidelity gate、primary comparisons、统计检验族与失败处理；生成后先只跑 fidelity，不调用 student、不查看类别结果。
+- [ ] `final_test` 至少覆盖当前 9 个 image-level 类，每类正/负 paired clean 数量预先等额；额外保留 deck-scope S2/S5 独立 split，不能和 page-level macro 混报。
+- [ ] 修复 Part 2 已知数据缺口：补 clean-deck negatives；S2/S5 加 paired/reference arm；所有 pairwise 样本继续随机 A/B 且要求双顺序一致；NO_DEFECT page/deck 分开统计。
+- [ ] 增加同底图 severity chain，供 monotonic loss；增加 image-only / image+structure / reference-available / deck-context-available 四种 availability condition，供 action supervision。
+- [ ] 每次导出后跑 parser round-trip、重复/泄漏检查、modality/action/class composition、paired-clean 完整性和 A/B 平衡检查，产物写入现有 `runs/` / `data/` 路径，不以“脚本能跑”代替 artifact。
 
-- [ ] 生成：复用注入器 + `part3_e8_regen_corpus.py`/part1/part2 pipeline，**换随机种子+换模板**，9 类分层，目标 150 对/类（def+clean twin，同 deck 专属）；渲染走 2.-1 已重建的 Mac playwright 链路。
-- [ ] **fidelity 门槛照旧执行**（Protocol 3 教训：45% 注入不渲染）：`part3_g7_fidelity_check.py` 同款三查扩到全类 + 3.6 的三条定向 bug 复查（clean twin 唯一性 / 无 template 泄漏 / 过滤器真实生效）。**过不了门不许打分。**
-- [ ] Linter 打分：本地确定性程序，全类全量，零成本。
-- [ ] VLM 打分（API）：C0 + C3 两条件 × 9 类 × ~300 slides/类 ≈ **5400 调用/模型**；qwen3-vl-plus 主力（workers=3、`--resume`、分批续跑），Gemini 复制可选。成本 ≈¥100–200/模型，对照今日额度消耗 3.2% 无压力。linter⊕C3 由 linter 本地分 + C3 API 分合成，**不需要额外调用**。
+### 7.2 归因结果 → teacher/action supervision
 
-### 7.2 认证计算 + 报告（纯本地）
+- [ ] 定义 expert/action 空间与可用性约束：
+  - `C0_GENERIC`：普通全局质检；
+  - `C3_ATOMIC`：逐类 targeted + forced evidence teacher；
+  - `PAIRWISE_REFERENCE`：clean/reference twin 双顺序一致判断；
+  - `LINTER`：有 IR 时的确定性结构检测；
+  - `DEFER`：无可靠证据或所需输入不可用。
+- [ ] 为 train/dev 样本汇总每个 expert 的 correctness、paired-clean FP、named localization/evidence validity、calls、tokens、latency 与 availability，形成 sample × expert reward matrix；不得用 validation/final_test 选择 teacher。
+- [ ] 冻结 utility 形式并在 dev 上选择系数：$U_i(e)=R_i(e)-\lambda_c C_i(e)-\lambda_{fp}FP_i(e)+\lambda_v V_i(e)$；保存每个 $e^*_i=\arg\max_e U_i(e)$、次优 margin、teacher disagreement 与不可用原因。
+- [ ] 对 teacher tie / disagreement 设确定规则：优先低成本、低 FPR、可验证 evidence；margin 低于阈值则标 `DEFER` 或降低蒸馏权重，不用人工逐条挑“好看输出”。
+- [ ] 构建五类训练目标：
+  - G7：C3 teacher → **generic single-call student** 的 detection + location + evidence distillation；
+  - G1/S6：clean-defective twin ranking + `REQUEST_REFERENCE`；
+  - G2–G6：有 IR 时 `CALL_LINTER`/解释 linter evidence，image-only 时 `DEFER`，禁止伪视觉正例；
+  - S1/S4：direct answer；S2/S5：补 clean-deck 后 direct/deck-context 或 pairwise；
+  - clean / clean-clean：`NO_DEFECT` / tie，专门约束 false positive 与 forced-pick bias。
+- [ ] 对 API teacher trace 做缓存、hash、重试和 parser validation；teacher 失败不能默认为 negative，必须标 failure 并排除或降权。
 
-- [ ] 写 `scripts/part3_ltt_certify.py`：读校准 rows → 每 (k,λ,错误率) 二项精确 p 值 → Holm → 认证表 + 敏感性表（α 网格 × m）→ `reports/_e9_ltt_cert.md` + `data/part3/e9_ltt_cert.json`。工具复用 `slide_examiner/statistics.py`。
-- [ ] **次要分析**：同一程序跑冻结的 `release/part3/rows/`（本地 6 模型），结果如实标注"该数据参与过开发与阈值选择，保证意义弱化"——既给旧模型一个参考认证，又示范方法的可移植性。
-- [ ] frozen-route held-out 数字（原 W5.1 交付物）：同批校准集上按冻结路由（含 S1 corrected route）一次性评估 → 正文一句 + supplement 一表。
+### 7.3 D3 模型、输出契约与联合损失
 
-### 7.3 落稿（`AuthorKit27/submission/main.tex`，走 W3 台账流程）
+- [ ] 扩展现有 examiner 输出而不破坏旧 parser：加入 `action`、`confidence`、`requested_context`、`evidence_source`；定义动作与 finding 的一致性校验，例如 `CALL_LINTER/DEFER` 不得伪造像素定位。
+- [ ] student 推理入口只接受一个 frozen generic inspection instruction；C3/pairwise/linter 只作为 teacher 或升级动作，不能在主结果中偷偷给 student defect-name oracle。
+- [ ] 实现联合目标并逐项可开关消融：
+  - $\mathcal L_{detect}$：结构化 finding / NO_DEFECT；
+  - $\mathcal L_{distill}$：teacher label、evidence、location 与可选 soft confidence；
+  - $\mathcal L_{pair}$：Bradley–Terry 或 margin ranking，含 clean-clean tie；
+  - $\mathcal L_{severity}$：同源 severity 单调性；
+  - $\mathcal L_{route}$：teacher action 分类；
+  - $\mathcal L_{select}$：confidence/defer 的 selective-risk 目标。
+- [ ] 先以 Qwen3-VL-8B + QLoRA 延续 Part 2 v2 配置，建立 `vanilla-v2 continue-train` 与 `from-base D3` 两条可比 run，防止收益仅来自更多训练 step；固定总 records/steps 的 compute-matched baseline。
+- [ ] 明确 router 形态并至少实现两级：class-level learned route 与 sample-level action prediction；禁止仅把人工 G7→C3、G2→linter 字典改名为 learned router。
+- [ ] 所有训练保存 train/eval loss、各子 loss、action confusion、G7 generic recall/FPR、G2–G6 image-only FP、checkpoint 选择依据；只用 dev 选 checkpoint。
 
-- [ ] Method 小节（~1/3 页，**论文仅有的公式集中在此**）：R_k(λ) 定义（FNR/FPR）、H₀: R_k(λ)>α、二项尾概率 p 值、FWER 保证 P(任一假认证)≤δ 四条公式 + 认证程序 3–4 行文字；引 Angelopoulos et al. Learn-then-Test（refs.bib 补条目，author 字段齐全——W1.2 教训）。
-- [ ] 与 W3.4 决策 A 联动：headline = mean bal-acc 对比（不变），**"m/9 certified at (α,δ)" 作为带保证的次要 headline** 替代被喷的 ad hoc "8/9 covered"；Abstract/Fig.1/Conclusion 同步（见 W6 数字一致性）。**摘要（07-21）措辞不依赖具体 m 值**——m 出来前用方法性描述，出来后正文再填数。
-- [ ] Limitations 一句：保证对合成校准分布成立（i.i.d./exchangeability），sim2real 照旧 scope。
-- [ ] 检验族声明：LTT 的 ≤72 检验自成一族（预注册文档为界），与既有 61+18 族并列报，W6 数字更新点 +1。
-- [ ] **预期管理（写死）**：认证口径 m 很可能 ≤6/9 甚至更少——这不是坏结果，"9 类中仅 m 类能在此样本量下被认证"本身是 honest finding，与论文 honest-negative 风格一致。**不许为了 m 好看事后调 α**。
+### 7.4 端到端 smoke test 与“摘要锁定门”
 
-- [ ] **验收**：预注册 commit 早于校准集生成 commit（git log 可证）；fidelity 门产物存在；认证表+敏感性表落 reports/；method 小节落稿且全部公式可被面试/审稿追问级别地辩护；**07-22 认证数字出来，07-24 落稿完成**（赶不上正文就整节降级进 supplement——预注册和数据不作废）。
+- [ ] 用每类小样本跑通完整链路：manifest → teacher reward matrix → D3 records → QLoRA → merge/serve → generic inference → action escalation → scoring；产出可复现 run artifact。
+- [ ] smoke test 必须证明实现语义正确，而非追求最终数字：
+  - generic prompt 下 G7 student 能输出合法 finding/evidence；
+  - G2–G6 image-only 能输出 `CALL_LINTER` 或 `DEFER`，且不伪造 finding；
+  - G1/S6 能请求 reference 并在获得 reference 后完成双顺序一致判断；
+  - S2 clean deck 不再因缺负样本而恒报；
+  - parser failure、teacher failure、action loop 均有显式计数。
+- [ ] **摘要锁定门（做到这里即可锁定并提交方法性 Abstract）**：W7.0 的 RQ/metrics/成功标准已冻结；W7.1 split 与防泄漏脚本通过；W7.2 teacher/action 数据有真实 artifact；W7.3 联合损失与统一 generic inference 已实现；W7.4 端到端 smoke test 全通过。此时摘要可写“we introduce attribution-guided distillation and selective tool/defer learning”，但**不得写性能提升、成本下降、覆盖数或‘模型已学会’等结果性结论**。
+- [ ] 摘要锁定后，除非方法失败导致 claim 不成立，只允许在 W7.7 后填入预先声明的 final-test 数字；禁止根据 validation 调换 primary endpoint。
+
+### 7.5 正式训练与 dev-only 模型选择
+
+- [ ] 运行至少 3 个固定 seed；每个 seed 保存 base model、adapter、merged model、config、数据 hash、训练日志和推理版本。
+- [ ] 只在 dev 上调：loss 权重、utility cost、teacher margin、confidence/defer threshold、最大 escalation 次数；W5 validation 用于对照和消融，不用于继续追 final-test 类别。
+- [ ] 冻结最终 D3 checkpoint 与 inference policy：generic first-pass → action → 最多一次工具/reference escalation → final finding/defer；记录最坏调用上限，防止成本无限增长。
+- [ ] 在碰 `final_test` 前生成 model card 式 run summary（放现有 report/run artifact，不新建无关文档）：选择原因、失败类别、threshold、预期主表列、代码/data/model hash。
+
+### 7.6 必做 baseline 与消融
+
+- [ ] Baselines：zero-shot 8B、zero-shot 30B、当前 vanilla Part 2 FT、fixed C0、uniform C3、人工 frozen route、compute-matched vanilla FT（相同数据量/step）。
+- [ ] Router 对照：人工 fixed route、learned class-level route、learned sample-level route、sample-level + escalation/defer。
+- [ ] Loss 消融：去 `distill`、去 `pair`、去 `severity`、去 `route`、去 `select/defer`；如果篇幅不足，正文保留前三个最能回答 RQ 的，其余进 supplement。
+- [ ] Teacher 消融：C3 labels 直接 SFT vs attribution-selected teacher；证明收益不是“多收一批 C3 输出再微调”。
+- [ ] Prompt 内化对照：teacher-C3、vanilla-FT+generic、D3+generic、D3+C3；主结果必须是 D3+generic，D3+C3 只用于测残余 elicitation gap。
+- [ ] Availability/OOD：去掉 IR、去掉 reference、novel template、held-out severity；检查动作是否随可用证据改变，而不是只背 defect type。
+- [ ] Deck 负例专项：S2/S5 在补 clean-deck 前后对照，分别报告 recall 与 specificity，禁止用 balanced aggregate 掩盖恒报。
+
+### 7.7 冻结评测、统计与最终摘要数字
+
+- [ ] 方法、checkpoint、threshold、primary comparisons 和表格模板全部冻结并 commit 后，才解锁 `final_test`；只运行一次，失败重跑仅限有日志可证的系统/解析错误，不能因结果差换 checkpoint。
+- [ ] 主表逐类报告 balanced accuracy、precision/recall/specificity、paired-clean FPR、Wilson CI、named localization；另表报告 action accuracy、defer/coverage、calls、tokens、latency。
+- [ ] 画 risk–coverage 与 accuracy–cost Pareto；固定 coverage 点比较 selective risk，并报告工具不可用时的 graceful degradation。
+- [ ] 预先定义并执行最小检验族：D3-generic vs vanilla-FT-generic（G7 与 macro）、learned route vs frozen route（macro/cost）、D3 defer vs no-defer（G2–G6 FPR/risk）；Holm 校正，探索性 per-class 检验单列，不把所有表格数字塞进一个族。
+- [ ] 外部真实迁移继续使用 SlideAudit，并明确其无 IR/reference 的输入边界；若 D3 仍 sim-to-real 失败，作为核心 negative 如实保留，不用合成 final test 覆盖。
+- [ ] **只有完成本节后，才可在 Abstract/Conclusion 填最终结果性数字**：优先写 generic-prompt G7 recovery、macro bal-acc、paired-clean FPR 与平均调用成本；`m/9 covered` 不再作为 headline，更不得写 `certified`。
+- [ ] 若 full D3 未达到预设成功门槛：保留诊断与 honest negative；按消融定位是 teacher 不可蒸馏、router 不泛化还是 defer 过度，不回退到事后 LTT 包装负结果。
+
+### 7.8 论文重构与验收
+
+- [ ] 重写贡献顺序为：① recoverability diagnosis；② attribution-guided elicitation/pairwise distillation；③ selective tool/defer critic；C0/C2/C3 降为 teacher/action conditions，不再作为方法标题中心。
+- [ ] Method 给出 reward matrix、teacher selection、联合损失与 inference policy 伪代码；公式必须对应真实实现，不能只为“显得算法”增加符号。
+- [ ] Results 按 RQ-D/RQ-R/RQ-F 组织：能力内化、学习路由、能力边界；旧 reward audit 与 external validity 继续压缩/放 supplement，避免主线再次分叉。
+- [ ] 更新 Fig.1：diagnosis → teacher selection → student distillation → answer/tool/reference/defer；删除任何 LTT/certification 图示或文字。
+- [ ] 更新 Limitations：teacher/API 依赖、合成到真实迁移、IR/reference availability、selective coverage 代价；明确 linter-owned geometry 不是 student pixel perception。
+- [ ] 全文清理 `LTT`、`Learn-then-Test`、`certified m/9`、旧“摘要已锁死”与人工 route 被称作算法的残留；保留统计上必要的 CI/Holm，不删除严谨评估。
+- [ ] 同步 `AuthorKit27/submission/main.tex`、`supplement.tex`、tech-report 版及 refs；跑构建、页限、空引用、匿名、数字一致性检查。
+- [ ] **W7 验收**：真实 teacher/action artifact、至少一个完整 D3 checkpoint、untouched final-test manifest/fidelity/result、baseline+ablation、risk–coverage/accuracy–cost、论文方法与结果均存在；未产生对应 artifact 的实验不得勾选。
 
 ---
 
@@ -291,24 +365,9 @@
 - [ ] 逐条对照审稿 9 条 weakness + 8 个 question，确认每条：已修复 / Limitations 有明示 scope。
 - [ ] W1 的机器检查重跑（空引用、占位引用均零命中）。
 - [ ] 数字一致性：Abstract / Fig.1 caption / Table 3 / Conclusion 的 coverage 与 bal-acc 数字互相一致（W3.4 改动后极易漏）。
-- [ ] Holm/BH 检验族数字更新（"61-test family" → 实际新数；W2 +18、W7 LTT 族另列，见 7.3）。
+- [ ] Holm/BH 检验族数字更新（"61-test family" → 实际新数；W2 与 D3 的预先定义检验族分开列，见 7.7），清除旧 W7 LTT 家族口径。
 - [ ] 匿名检查（投稿版无作者信息、无 acknowledgment、self-citation 匿名化）；`grep -i "surh6\|Ruihan\|Sun Yat-sen" AuthorKit27/submission/main.tex` 零命中。
 - [ ] paper/main.tex（tech-report 版）同步所有科学内容改动。
 - [ ] **07-28 AoE 提交正文**；**07-31 AoE 提交 supplement**（含 W2 表、W5.2 表、per-cell precision、S1 双路由数、cost table）。
 
 ---
-
-## 每日检查点
-
-| 日期 | 应完成 |
-|---|---|
-| 07-15 | ✅ W1 全部（机器检查通过）；✅ 2.-1(a)(b)：Mac 本地环境 + G7 语料重建过 fidelity 门槛（另 part2/G1 也重建完） |
-| 07-16 | ✅ 2.-1(c)：API 通道通、**三**模型 capable 冒烟全过（提前于计划，见 2.-1(c) 表）；⬜ 2.0/2.1 代码（未开始） |
-| 07-17 | ✅ **提前于 07-15 完成**：E1 C0_rep 全量数字出炉（G7, qwen3-vl-plus）→ **WIN 方向**（C3=0.92 vs self-consistency 0.61；compute-matched 对照不恢复、C3 反而最省 token）→ 摘要走"排除 test-time compute"措辞 |
-| 07-19 | W2 四条件齐 + report；W3.1–3.3 台账拍板完毕；**W7.0 预注册 commit + 校准集生成启动** |
-| 07-21 | **摘要提交 OpenReview**（措辞不依赖 LTT 的 m 值）；W3.4 表格审计定稿；W7.1 校准集过 fidelity 门、API 打分跑批中 |
-| 07-22 | W7.2 认证表 + 敏感性表出数 |
-| 07-24 | W4 完成，正文可通读；**W7.3 method 小节落稿**（赶不上则整节降级 supplement） |
-| 07-26 | W5 冻结（做多少算多少） |
-| 07-28 | **正文提交** |
-| 07-31 | **supplement 提交** |

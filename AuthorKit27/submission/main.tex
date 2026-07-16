@@ -311,7 +311,7 @@ yes/no framing. The image channel is consistent with fine-grained glyph discrimi
 fails even with the text in hand, so neither route is reliable. \g{S3} leaves the VLM entirely for a symbolic terminology linter,
 which reaches balanced accuracy 1.000 against the VLM's 0.69, a negative result that \emph{re-routes} the class.
 
-\paragraph{A genuine geometric blind spot: \g{G6} page offset.}
+\paragraph{A magnitude-bounded geometric blind spot: \g{G6} page offset.}
 Re-posing a defect as a within-slide contrast does not rescue every class; on one it fails outright. We
 redefine \g{G6} margin as a \emph{page offset}: the whole content block is shifted toward one edge (every
 element together, so internal alignment is preserved and the defect cannot be misalignment), leaving one
@@ -321,11 +321,11 @@ the valid-figure corpus the \g{S6} 2-AFC reproduces at $0.75$--$1.00$ across all
 render artifact, not blindness.} Across all six VLMs and both pointwise framings the page offset stays at
 chance (roster-mean C3 $0.50$), and the pairwise test that separates \emph{data artifacts} (\g{S6}, which
 recovers to perfect once the figure is rendered) from genuine blindness leaves \g{G6} on the floor for
-\emph{every} model: none can tell a page-offset slide from a balanced one until content is clipped by the page
-boundary. So unlike supra-threshold \g{G3}/\g{G5} (format-suppressed) and \g{G1}/\g{S6}
-(reference-assisted), page offset is a
-\emph{genuine} perceptual blind spot (VLMs do not represent global content positioning), which is why declared
-geometry routes to the linter.
+\emph{every} model. A stress-test addendum identifies the boundary: when the same rigid offset moves
+content 48 px beyond the page edge, both C0 and C3 detect the defect at 0.958 balanced accuracy (11/12 positives,
+12/12 clean controls), although C0 never names \g{G6} while C3 does. Thus the blind spot is genuine over the
+tested moderate, unclipped range but not magnitude-invariant; overt clipping restores visibility. Declared
+geometry still routes to the linter because it detects both regimes without relying on this visual threshold.
 
 \paragraph{A template pitfall that matters later.}
 Enterprise ``snap-to-master'' templates re-fit element boxes to a grid before rendering, and we find a
@@ -428,6 +428,11 @@ VLM-only, a ceiling set by missing structure, not method.
 \subsection{The minimal hybrid critic covers the most}\label{sec:coverage}
 
 \paragraph{Complementary coverage the diagnosis predicts.}
+On a separate novel-template held-out set ($150$ defective/clean pairs per
+class), the corrected frozen route reaches macro balanced accuracy .957 and
+covers 8/9 classes; the sole miss is \g{S6} (.677 balanced accuracy, .607
+precision), whose perfect recall is offset by clean false positives (full table
+and fidelity audit in the Technical Supplement).
 We score each critic by \emph{named attribution}: a detection is correct only if it names the right defect
 type on the defective slide and stays silent on the matched clean slide. We call a class ``covered'' when this
 balanced accuracy exceeds 0.75 (with the 95\% Wilson lower bound above 0.65, so the cell is not just lucky).
@@ -446,7 +451,7 @@ than a tuned architecture.
 \centering\scriptsize
 \setlength{\tabcolsep}{2.5pt}
 \caption{Per-class named-attribution balanced accuracy [95\% Wilson]; $n$ = paired positives (G1 40, G2 40, G3
-70, G5 40, G6 80, G7 40, S1 18, S4 36, S6 12; precision per cell in the supplement (Code and Data Supplement)). The minimal
+70, G5 40, G6 80, G7 40, S1 18, S4 36, S6 12; precision per cell in the Technical Supplement). The minimal
 linter+VLM-C3 hybrid has the highest mean balanced accuracy. ``covered'' means bal-acc $>0.75$ and Wilson
 lower bound $>0.65$; under that rule, linter+VLM-C3 and the corrected routed hybrid each clear 6/9 classes.
 The routed column reports the corrected \g{S1} route; the frozen text-only \g{S1} route (0.25, precision 0.09)
@@ -485,7 +490,7 @@ saturated and C3 only adds false positives---a concrete case of per-class elicit
 image-level class the hybrid does not cover is \g{S6} image/text contradiction, at 0.50 single-image for every
 engine; the pairwise test shows the model \emph{does} perceive it (recall 1.0, specificity $\sim$0,
 over-asserting rather than missing), so this is a reference-assisted effect, not a blind spot, in contrast to
-the genuine \g{G6} page offset.
+the moderate, unclipped \g{G6} page-offset regime.
 
 \subsection{\g{G7}: the linter-blind class that specialised rewards also miss}\label{sec:g7}
 

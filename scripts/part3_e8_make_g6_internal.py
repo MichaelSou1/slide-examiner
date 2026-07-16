@@ -22,6 +22,7 @@ Usage (slide-examiner env, has playwright):
 """
 from __future__ import annotations
 
+import argparse
 import collections
 import json
 import sys
@@ -47,15 +48,16 @@ OUT = REPO / "data/part3/manifest_g6_internal.jsonl"
 EPC = 10  # 8 strata x 10 = 80 defective + matched clean twins + NO_DEFECT negatives
 
 
-def build_one(condition: str) -> Path:
+def build_one(condition: str, *, severities: tuple[int, ...], epc: int,
+              runs: Path, out: Path) -> Path:
     decks = [load_deck_json(p) for p in sorted(DECKS.glob("*.json"))]
     slides = [s for d in decks for s in d.slides]
-    synth.DEFECTS = {G6: replace(DEFECTS[G6], severities=SEVERITIES)}
+    synth.DEFECTS = {G6: replace(DEFECTS[G6], severities=severities)}
     try:
-        cfg = SyntheticBuildConfig(examples_per_cell=EPC, template_condition=condition,
+        cfg = SyntheticBuildConfig(examples_per_cell=epc, template_condition=condition,
                                    heldout_severities=(), heldout_defect_types=(), negative_ratio=0.3)
-        out_dir = RUNS / condition
-        manifest = OUT.with_suffix(f".{condition}.jsonl")
+        out_dir = runs / condition
+        manifest = out.with_suffix(f".{condition}.jsonl")
         build_synthetic_manifest(slides, decks, output_dir=out_dir, manifest_path=manifest, config=cfg)
         print(f"[{condition}] rendering clean+defective via Playwright ...")
         render_manifest(manifest, out_dir, output_manifest=manifest)
@@ -65,9 +67,24 @@ def build_one(condition: str) -> Path:
 
 
 def main() -> None:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--severities", nargs="+", type=int, default=list(SEVERITIES))
+    ap.add_argument("--examples-per-cell", type=int, default=EPC)
+    ap.add_argument("--conditions", nargs="+", choices=("freeform", "template"),
+                    default=["freeform", "template"])
+    ap.add_argument("--runs", type=Path, default=RUNS)
+    ap.add_argument("--out", type=Path, default=OUT)
+    args = ap.parse_args()
+    severities = tuple(args.severities)
+    if not severities or args.examples_per_cell < 1:
+        ap.error("--severities must be non-empty and --examples-per-cell >= 1")
+    args.out.parent.mkdir(parents=True, exist_ok=True)
+
     per_cond = []
-    for cond in ("freeform", "template"):
-        per_cond.append(build_one(cond))
+    for cond in args.conditions:
+        per_cond.append(build_one(cond, severities=severities,
+                                  epc=args.examples_per_cell,
+                                  runs=args.runs, out=args.out))
     records: list[dict] = []
     for manifest in per_cond:
         for line in manifest.open():
@@ -79,7 +96,7 @@ def main() -> None:
             records.append(r)
         manifest.unlink(missing_ok=True)
     records.sort(key=lambda r: str(r.get("sample_id")))
-    with OUT.open("w", encoding="utf-8") as fh:
+    with args.out.open("w", encoding="utf-8") as fh:
         for r in records:
             fh.write(json.dumps(r, ensure_ascii=False) + "\n")
     by_def = collections.Counter((r["labels"][0]["type"] if r.get("labels") else "NO_DEFECT") for r in records)
@@ -87,7 +104,7 @@ def main() -> None:
                                 for r in records if r.get("labels") and r["labels"][0]["type"] == G6)
     conds = collections.Counter(r.get("metadata", {}).get("template_condition") for r in records)
     rendered = sum(1 for r in records if r.get("image_path") and Path(r["image_path"]).exists())
-    print(f"\n[g6_internal] wrote {OUT} ({len(records)} records)")
+    print(f"\n[g6_internal] wrote {args.out} ({len(records)} records)")
     print(f"  by_defect : {dict(by_def)}")
     print(f"  G6 mode   : {dict(modes)} (want all 'internal')")
     print(f"  condition : {dict(conds)}")

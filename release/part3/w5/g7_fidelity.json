@@ -1,0 +1,14 @@
+{
+  "manifest": "data/part3/w5_heldout_g7.jsonl",
+  "seed": 20260717,
+  "pairs": 150,
+  "per_variant": {
+    "card_height": 50,
+    "unbreakable_text": 50,
+    "image_objectfit": 50
+  },
+  "linter_blind": 150,
+  "render_pairs_checked": 150,
+  "render_and_overflow_passed": 150,
+  "passed": true
+}

@@ -108,7 +108,9 @@ def linter_cell(pos):
     return _cell(prows, nrows, "x")
 
 
-def vlm_llm_cell(client, model, pos, defect, engine, condition, modality, style, max_tokens, workers):
+def vlm_llm_cell(client, model, pos, defect, engine, condition, modality, style, max_tokens, workers,
+                 *, rows_sidecar: Path | None = None, request_delay: float = 0.0,
+                 max_attempts: int = 1):
     """Run an engine over defective + clean controls; score NAMED attribution."""
     jobs = []  # (rec, is_clean)
     for r in pos:
@@ -124,19 +126,48 @@ def vlm_llm_cell(client, model, pos, defect, engine, condition, modality, style,
         prepare_twins([r for (r, _c) in jobs if r.get("slide")])
 
     def work(rec, is_clean):
-        if engine == LLM:
-            res = llm_engine(client, model, rec, target_defect=defect,
-                             max_tokens=max_tokens, blank=_blank_result)
-        else:
-            res = ENGINES[condition](client, model, rec, modality, defect, style, max_tokens)
+        res = None
+        for attempt in range(max_attempts):
+            if request_delay:
+                time.sleep(request_delay)
+            if engine == LLM:
+                res = llm_engine(client, model, rec, target_defect=defect,
+                                 max_tokens=max_tokens, blank=_blank_result)
+            else:
+                res = ENGINES[condition](client, model, rec, modality, defect, style, max_tokens)
+            if not res.get("failure"):
+                break
+            raw = str(res.get("raw") or "")
+            if attempt + 1 < max_attempts and ("429" in raw or "connection" in raw.lower()):
+                time.sleep(min(60.0, 5.0 * (attempt + 1)))
         res["is_clean"] = is_clean
         return res
 
-    rows = []
+    run_tag = f"{defect}|{engine}|{condition or 'none'}|{modality}|{model}"
+    preloaded = {}
+    if rows_sidecar and rows_sidecar.exists():
+        for line in rows_sidecar.open(encoding="utf-8"):
+            try:
+                row = json.loads(line)
+            except (ValueError, TypeError):
+                continue
+            if row.get("_run_tag") == run_tag and not row.get("failure"):
+                preloaded[row.get("sample_id")] = row
+    pending = [(r, c) for (r, c) in jobs if r.get("sample_id") not in preloaded]
+    if preloaded:
+        print(f"    [resume] {len(preloaded)}/{len(jobs)} successful probes already durable", flush=True)
+
+    rows = list(preloaded.values())
     with ThreadPoolExecutor(max_workers=workers) as pool:
-        futs = [pool.submit(work, r, c) for (r, c) in jobs]
+        futs = [pool.submit(work, r, c) for (r, c) in pending]
         for f in as_completed(futs):
-            rows.append(f.result())
+            row = f.result()
+            row["_run_tag"] = run_tag
+            rows.append(row)
+            if rows_sidecar:
+                rows_sidecar.parent.mkdir(parents=True, exist_ok=True)
+                with rows_sidecar.open("a", encoding="utf-8") as fh:
+                    fh.write(json.dumps(row, ensure_ascii=False) + "\n")
     rows = [r for r in rows if not r.get("failure")]
     pos_rows = [r for r in rows if not r["is_clean"]]
     neg_rows = [r for r in rows if r["is_clean"]]
@@ -163,9 +194,18 @@ def main():
                          "missing vlm_c3 cells are still computed")
     ap.add_argument("--force-c3", action="store_true",
                     help="recompute vlm_c3 even when it already exists or can be reused from vlm_best")
+    ap.add_argument("--routed-only", action="store_true",
+                    help="evaluate only the frozen routed engine per class")
+    ap.add_argument("--rows-sidecar", default=None,
+                    help="durable JSONL probe sidecar for per-call resume")
+    ap.add_argument("--request-delay", type=float, default=0.0,
+                    help="seconds to wait before each remote request (RPM pacing)")
+    ap.add_argument("--max-attempts", type=int, default=1,
+                    help="attempts per probe for 429/connection failures")
     ap.add_argument("--out", default="data/part3/p2_synth.json")
     args = ap.parse_args()
     classes = args.classes or PAGE_CLASSES
+    rows_sidecar = Path(args.rows_sidecar) if args.rows_sidecar else None
 
     from openai import OpenAI
     client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY", "EMPTY"),
@@ -192,10 +232,29 @@ def main():
         # linter engine (offline)
         if not cell.get("linter"):
             cell["linter"] = linter_cell(pos)
+        if args.routed_only:
+            eng = ROUTER.get(d)
+            if eng == VLM and not cell.get("vlm_best"):
+                best = VLM_ELICIT.get(d, "C0")
+                cell["vlm_best"] = vlm_llm_cell(
+                    client, args.model, pos, d, VLM, best, args.modality,
+                    args.style, args.max_tokens, args.workers, rows_sidecar=rows_sidecar,
+                    request_delay=args.request_delay, max_attempts=args.max_attempts)
+            elif eng == LLM and not cell.get("llm"):
+                cell["llm"] = vlm_llm_cell(
+                    client, args.model, pos, d, LLM, None, args.modality,
+                    args.style, args.max_tokens, args.workers, rows_sidecar=rows_sidecar,
+                    request_delay=args.request_delay, max_attempts=args.max_attempts)
+            per_class[d] = cell
+            routed = cell["linter"] if eng == LINTER else cell.get("llm" if eng == LLM else "vlm_best")
+            score = routed["bal_acc"] if routed else "NA"
+            print(f"  {d:32s} route={eng} bal_acc={score} ({time.time()-t0:.0f}s)", flush=True)
+            continue
         # VLM-C0 (whole-taxonomy pointwise) — the VLM-only critic
         if not cell.get("vlm_c0"):
             cell["vlm_c0"] = vlm_llm_cell(client, args.model, pos, d, VLM, "C0",
-                                          args.modality, args.style, args.max_tokens, args.workers)
+                                          args.modality, args.style, args.max_tokens, args.workers,
+                                          rows_sidecar=rows_sidecar)
         # VLM-best elicitation only for VLM-routed classes (G7->C3, S6->C0); other
         # classes are linter/LLM-routed so the special elicitation is not needed.
         if cell.get("vlm_best"):
@@ -204,7 +263,8 @@ def main():
             best = VLM_ELICIT.get(d, "C0")
             cell["vlm_best"] = cell["vlm_c0"] if best == "C0" else vlm_llm_cell(
                 client, args.model, pos, d, VLM, best,
-                args.modality, args.style, args.max_tokens, args.workers)
+                args.modality, args.style, args.max_tokens, args.workers,
+                rows_sidecar=rows_sidecar)
         else:
             cell["vlm_best"] = cell["vlm_c0"]
         # VLM-C3 everywhere baseline: one atomic visual question for every
@@ -217,11 +277,12 @@ def main():
         else:
             cell["vlm_c3"] = vlm_llm_cell(client, args.model, pos, d, VLM, "C3",
                                           args.modality, args.style, args.max_tokens,
-                                          args.workers)
+                                          args.workers, rows_sidecar=rows_sidecar)
         # LLM engine for the LLM-routed semantic classes
         if ROUTER.get(d) == LLM and not cell.get("llm"):
             cell["llm"] = vlm_llm_cell(client, args.model, pos, d, LLM, None,
-                                       args.modality, args.style, args.max_tokens, args.workers)
+                                       args.modality, args.style, args.max_tokens, args.workers,
+                                       rows_sidecar=rows_sidecar)
         per_class[d] = cell
         eng = ROUTER.get(d)
         print(f"  {d:32s} linter={cell['linter']['bal_acc']:.2f} "
@@ -252,9 +313,9 @@ def main():
     }
     for d, cell in per_class.items():
         configs["linter_only"][d] = cell["linter"]
-        configs["vlm_only"][d] = cell["vlm_c0"]
+        configs["vlm_only"][d] = cell.get("vlm_c0")
         configs["vlm_c3_everywhere"][d] = cell.get("vlm_c3")
-        configs["linter_plus_vlmc3"][d] = linter_plus_vlmc3_cell(d)
+        configs["linter_plus_vlmc3"][d] = (None if args.routed_only else linter_plus_vlmc3_cell(d))
         configs["hybrid"][d] = routed_cell(d)
 
     def agg(cfg):
