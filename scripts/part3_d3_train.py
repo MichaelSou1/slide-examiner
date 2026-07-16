@@ -100,7 +100,13 @@ def compute_joint_loss(lm_loss: torch.Tensor, action_logits: torch.Tensor,
     action = torch.tensor([row["action_id"] for row in rows], device=device)
     confidence = torch.tensor([row["target_confidence"] for row in rows], dtype=torch.float32, device=device)
     severity = torch.tensor([row["severity"] for row in rows], dtype=torch.float32, device=device)
-    route = F.cross_entropy(action_logits, action, weight=route_class_weights)
+    # PyTorch's weighted mean divides by the observed class weight, which makes
+    # weighting a no-op at batch_size=1. Apply the per-record multiplier after
+    # unreduced CE so rare actions remain upweighted under the v2 configuration.
+    route_per_record = F.cross_entropy(action_logits, action, reduction="none")
+    if route_class_weights is not None:
+        route_per_record = route_per_record * route_class_weights[action]
+    route = route_per_record.mean()
     select = F.binary_cross_entropy_with_logits(select_logits, confidence.clamp(0, 1))
     severity_loss = F.smooth_l1_loss(torch.sigmoid(severity_logits), severity.clamp(0, 1))
     # Explicit same-source monotonic ranking when a batch contains a severity chain.

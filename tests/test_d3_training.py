@@ -1,6 +1,8 @@
 import json
 from pathlib import Path
 
+import pytest
+
 from slide_examiner.d3_training import ACTION_TO_ID, _answer_for, action_class_weights, relocate_path
 
 
@@ -51,3 +53,8 @@ def test_action_class_weights_upweight_rare_routes():
     weights = action_class_weights(rows)
     assert weights[ACTION_TO_ID["CALL_LINTER"]] > weights[ACTION_TO_ID["ANSWER"]]
     assert abs(sum(weights) / len(weights) - 1.0) < 1e-8
+
+
+def test_action_class_weights_require_every_route():
+    with pytest.raises(ValueError, match="missing route actions"):
+        action_class_weights([{"action_id": ACTION_TO_ID["ANSWER"]}])
