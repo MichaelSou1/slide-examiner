@@ -11,6 +11,7 @@ class DefectType(str, Enum):
     G4_FONT_SIZE_INCONSISTENCY = "G4_FONT_SIZE_INCONSISTENCY"
     G5_BRAND_COLOR_VIOLATION = "G5_BRAND_COLOR_VIOLATION"
     G6_MARGIN_VIOLATION = "G6_MARGIN_VIOLATION"
+    G7_RENDER_CONTAINMENT_OVERFLOW = "G7_RENDER_CONTAINMENT_OVERFLOW"
     S1_TITLE_BODY_MISMATCH = "S1_TITLE_BODY_MISMATCH"
     S2_NARRATIVE_ORDER_BREAK = "S2_NARRATIVE_ORDER_BREAK"
     S3_TERMINOLOGY_INCONSISTENCY = "S3_TERMINOLOGY_INCONSISTENCY"
@@ -77,6 +78,14 @@ DEFECTS: dict[str, DefectSpec] = {
         (4, 8, 16, 32),
         "strong",
         "An element bleeds into or beyond the safe margin.",
+    ),
+    DefectType.G7_RENDER_CONTAINMENT_OVERFLOW.value: DefectSpec(
+        DefectType.G7_RENDER_CONTAINMENT_OVERFLOW.value,
+        "render containment overflow",
+        "render",
+        (1,),
+        "none",
+        "Rendered content escapes or is clipped by an otherwise legal declared container.",
     ),
     DefectType.S1_TITLE_BODY_MISMATCH.value: DefectSpec(
         DefectType.S1_TITLE_BODY_MISMATCH.value,

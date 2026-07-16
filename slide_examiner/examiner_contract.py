@@ -85,6 +85,25 @@ class PairwiseChoice(str, Enum):
     TIE = "tie"
 
 
+class ExaminerAction(str, Enum):
+    """D3 selective-examiner action emitted before an optional escalation."""
+
+    ANSWER = "ANSWER"
+    CALL_LINTER = "CALL_LINTER"
+    REQUEST_REFERENCE = "REQUEST_REFERENCE"
+    REQUEST_DECK = "REQUEST_DECK"
+    DEFER = "DEFER"
+
+
+class EvidenceSource(str, Enum):
+    PIXELS = "pixels"
+    STRUCTURE = "structure"
+    REFERENCE = "reference"
+    DECK_CONTEXT = "deck_context"
+    LINTER = "linter"
+    NONE = "none"
+
+
 PAGE_SCOPED_DEFECTS = frozenset(
     {
         DefectType.G1_TEXT_OVERFLOW,
@@ -93,6 +112,7 @@ PAGE_SCOPED_DEFECTS = frozenset(
         DefectType.G4_FONT_SIZE_INCONSISTENCY,
         DefectType.G5_BRAND_COLOR_VIOLATION,
         DefectType.G6_MARGIN_VIOLATION,
+        DefectType.G7_RENDER_CONTAINMENT_OVERFLOW,
         DefectType.S1_TITLE_BODY_MISMATCH,
         DefectType.S4_DENSITY_RULE_VIOLATION,
         DefectType.S6_IMAGE_TEXT_CONTRADICTION,
@@ -113,6 +133,7 @@ DEFECT_DIMENSIONS = {
     DefectType.G4_FONT_SIZE_INCONSISTENCY: Dimension.TYPOGRAPHY,
     DefectType.G5_BRAND_COLOR_VIOLATION: Dimension.BRAND_COLOR,
     DefectType.G6_MARGIN_VIOLATION: Dimension.MARGINS,
+    DefectType.G7_RENDER_CONTAINMENT_OVERFLOW: Dimension.TEXT_FIT,
     DefectType.S1_TITLE_BODY_MISMATCH: Dimension.TITLE_BODY,
     DefectType.S2_NARRATIVE_ORDER_BREAK: Dimension.NARRATIVE_ORDER,
     DefectType.S3_TERMINOLOGY_INCONSISTENCY: Dimension.TERMINOLOGY,
@@ -316,10 +337,17 @@ class PageExamResult(ContractModel):
     has_defect: bool
     findings: list[Finding] = Field(default_factory=list)
     clean_dimensions: list[Dimension] = Field(default_factory=list)
+    action: ExaminerAction = ExaminerAction.ANSWER
+    confidence: float = Field(default=1.0, ge=0.0, le=1.0)
+    requested_context: list[EvidenceSource] = Field(default_factory=list)
+    evidence_source: EvidenceSource = EvidenceSource.PIXELS
 
     @model_validator(mode="after")
     def _check_page_result(self) -> "PageExamResult":
         _validate_has_defect(self.has_defect, self.findings)
+        _validate_action_result(
+            self.action, self.has_defect, self.findings, self.requested_context, self.evidence_source
+        )
         for finding in self.findings:
             if finding.type not in PAGE_SCOPED_DEFECTS:
                 raise ValueError(f"page result contains deck-scoped defect {finding.type.value}")
@@ -333,10 +361,17 @@ class DeckExamResult(ContractModel):
     has_defect: bool
     findings: list[Finding] = Field(default_factory=list)
     clean_dimensions: list[Dimension] = Field(default_factory=list)
+    action: ExaminerAction = ExaminerAction.ANSWER
+    confidence: float = Field(default=1.0, ge=0.0, le=1.0)
+    requested_context: list[EvidenceSource] = Field(default_factory=list)
+    evidence_source: EvidenceSource = EvidenceSource.DECK_CONTEXT
 
     @model_validator(mode="after")
     def _check_deck_result(self) -> "DeckExamResult":
         _validate_has_defect(self.has_defect, self.findings)
+        _validate_action_result(
+            self.action, self.has_defect, self.findings, self.requested_context, self.evidence_source
+        )
         for finding in self.findings:
             if finding.type not in DECK_SCOPED_DEFECTS:
                 raise ValueError(f"deck result contains page-scoped defect {finding.type.value}")
@@ -356,12 +391,16 @@ class PairwiseResult(ContractModel):
 SYSTEM_PROMPT_PAGE = (
     "You are a slide quality examiner. Inspect the given single slide page for "
     "the requested page-scoped defect types. Output ONLY one valid JSON object "
-    "matching PageExamResult. No prose, no code fences."
+    "matching PageExamResult. First choose one action from ANSWER, CALL_LINTER, "
+    "REQUEST_REFERENCE, REQUEST_DECK, or DEFER. Never invent a finding when choosing "
+    "a non-ANSWER action. Output no prose and no code fences."
 )
 SYSTEM_PROMPT_DECK = (
     "You are a slide deck quality examiner. Inspect the whole deck for the "
     "requested deck-scoped defect types. Output ONLY one valid JSON object "
-    "matching DeckExamResult. No prose, no code fences."
+    "matching DeckExamResult. First choose one action from ANSWER, CALL_LINTER, "
+    "REQUEST_REFERENCE, REQUEST_DECK, or DEFER. Never invent a finding when choosing "
+    "a non-ANSWER action. Output no prose and no code fences."
 )
 
 
@@ -1073,6 +1112,33 @@ def _validate_modality_payload(modality: Modality, image: str | None, elements: 
 def _validate_has_defect(has_defect: bool, findings: list[Finding]) -> None:
     if has_defect != bool(findings):
         raise ValueError("has_defect must equal bool(findings)")
+
+
+def _validate_action_result(
+    action: ExaminerAction,
+    has_defect: bool,
+    findings: list[Finding],
+    requested_context: list[EvidenceSource],
+    evidence_source: EvidenceSource,
+) -> None:
+    action = ExaminerAction(action)
+    requested = {EvidenceSource(item) for item in requested_context}
+    source = EvidenceSource(evidence_source)
+    if action != ExaminerAction.ANSWER:
+        if has_defect or findings:
+            raise ValueError(f"{action.value} cannot include findings")
+        if source != EvidenceSource.NONE:
+            raise ValueError(f"{action.value} must use evidence_source='none'")
+    if action == ExaminerAction.CALL_LINTER and EvidenceSource.STRUCTURE not in requested:
+        raise ValueError("CALL_LINTER must request structure")
+    if action == ExaminerAction.REQUEST_REFERENCE and EvidenceSource.REFERENCE not in requested:
+        raise ValueError("REQUEST_REFERENCE must request reference")
+    if action == ExaminerAction.REQUEST_DECK and EvidenceSource.DECK_CONTEXT not in requested:
+        raise ValueError("REQUEST_DECK must request deck_context")
+    if action in {ExaminerAction.ANSWER, ExaminerAction.DEFER} and requested:
+        raise ValueError(f"{action.value} cannot request additional context")
+    if action == ExaminerAction.ANSWER and source == EvidenceSource.NONE:
+        raise ValueError("ANSWER requires a concrete evidence_source")
 
 
 def _coerce_defects(

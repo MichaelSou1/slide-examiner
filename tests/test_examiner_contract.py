@@ -5,6 +5,8 @@ import pytest
 from slide_examiner.examiner_contract import (
     DeckExamRequest,
     DefectType,
+    EvidenceSource,
+    ExaminerAction,
     ExamLevel,
     Finding,
     Locator,
@@ -165,6 +167,41 @@ def test_page_result_rejects_bad_has_defect_invariant() -> None:
     result["has_defect"] = False
     with pytest.raises(ValueError):
         parse_page_result(result)
+
+
+def test_legacy_result_defaults_to_answer_without_breaking_parser() -> None:
+    legacy = page_result_from_labels(slide_sample()).model_dump(mode="json")
+    for key in ("action", "confidence", "requested_context", "evidence_source"):
+        legacy.pop(key, None)
+    parsed = parse_page_result(legacy)
+    assert parsed.action == ExaminerAction.ANSWER
+    assert parsed.confidence == 1.0
+
+
+def test_d3_non_answer_action_cannot_fabricate_findings() -> None:
+    result = page_result_from_labels(slide_sample()).model_dump(mode="json")
+    result.update(
+        action="CALL_LINTER",
+        confidence=0.4,
+        requested_context=["structure"],
+        evidence_source="none",
+    )
+    with pytest.raises(ValueError, match="cannot include findings"):
+        parse_page_result(result)
+
+    valid = {
+        "page_id": "p1",
+        "has_defect": False,
+        "findings": [],
+        "clean_dimensions": [],
+        "action": "CALL_LINTER",
+        "confidence": 0.4,
+        "requested_context": ["structure"],
+        "evidence_source": "none",
+    }
+    parsed = parse_page_result(valid)
+    assert parsed.action == ExaminerAction.CALL_LINTER
+    assert parsed.requested_context == [EvidenceSource.STRUCTURE]
 
 
 def test_severity_level_grid_matches_contract() -> None:
