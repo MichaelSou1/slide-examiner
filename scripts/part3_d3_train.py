@@ -43,8 +43,8 @@ class JsonlDataset(Dataset):
         return self.rows[index]
 
 
-class SeverityChainBatchSampler(Sampler[list[int]]):
-    """Form deterministic batches that contain a non-tied same-source severity pair."""
+class MixedObjectiveBatchSampler(Sampler[list[int]]):
+    """Mix task/action-balanced batches with regular monotonic severity pairs."""
 
     def __init__(self, rows: list[dict[str, Any]], seed: int, batches: int):
         self.rows, self.seed, self.batches = rows, seed, batches
@@ -60,11 +60,21 @@ class SeverityChainBatchSampler(Sampler[list[int]]):
                 self.pairs.append((ordered[0], ordered[-1]))
         if not self.pairs:
             raise ValueError("no non-tied severity chains available for monotonic batches")
+        task_counts = Counter(row["task"] for row in rows)
+        action_counts = Counter(int(row["action_id"]) for row in rows)
+        self.sample_weights = [
+            0.5 / task_counts[row["task"]] + 0.5 / action_counts[int(row["action_id"])]
+            for row in rows
+        ]
 
     def __iter__(self):
         generator = random.Random(self.seed)
-        for _ in range(self.batches):
-            yield list(generator.choice(self.pairs))
+        population = list(range(len(self.rows)))
+        for batch_index in range(self.batches):
+            if batch_index % 4 == 0:
+                yield list(generator.choice(self.pairs))
+            else:
+                yield generator.choices(population, weights=self.sample_weights, k=2)
 
     def __len__(self) -> int:
         return self.batches
@@ -276,7 +286,7 @@ def main() -> None:
     if args.severity_chain_sampling:
         if args.batch_size != 2:
             raise ValueError("--severity-chain-sampling requires --batch-size 2")
-        batch_sampler = SeverityChainBatchSampler(train.rows, args.seed, args.max_steps)
+        batch_sampler = MixedObjectiveBatchSampler(train.rows, args.seed, args.max_steps)
     elif args.action_balanced_sampling:
         generator = torch.Generator().manual_seed(args.seed)
         sampler = WeightedRandomSampler(action_sample_weights(train.rows), len(train),
