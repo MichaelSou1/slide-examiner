@@ -248,7 +248,7 @@
 >
 > **新方法一句话**：对样本 $x_i$ 与缺陷 $k$，在训练/开发数据上比较 $e\in\{\mathrm{C0},\mathrm{C3},\mathrm{pairwise},\mathrm{linter},\mathrm{defer}\}$ 的正确性、paired-clean FPR、evidence 与成本，得到 teacher action $e^*_{ik}$；再训练统一 student 同时预测 finding 与动作 $a\in\{\texttt{ANSWER},\texttt{CALL\_LINTER},\texttt{REQUEST\_REFERENCE},\texttt{REQUEST\_DECK},\texttt{DEFER}\}$。测试时 student 只接 generic inspection instruction，不再靠逐类 prompt 才成立。
 
-### 7.0 冻结科学问题、成功标准与旧资产角色
+### [x] 7.0 冻结科学问题、成功标准与旧资产角色
 
 - [x] 锁死三个 RQ，后续不得看 final test 后改口径（冻结于 `release/part3/d3/freeze.json`，2026-07-16）：
   - **RQ-D（Distill）**：C3 teacher 的 G7 recovery 能否在 student 的 generic single-call inference 下保留，同时不抬高 clean FPR？
@@ -260,7 +260,7 @@
 - [x] W5 novel-template 2,700 图及已看过的 .957 / 8-of-9 结果降格为 **validation + frozen handcrafted-route baseline**；不得作为 D3 untouched final test。
 - [x] 为当前 checkout 打 D3 起点 commit/tag，记录代码、数据 manifest、Part 2 adapter 与现有结果哈希；后续每个训练 run 都记录 parent commit、config、seed、数据 hash 与模型 hash。已建 annotated tag `d3-start-20260716`（commit `10c121f`），冻结哈希与“本机无 adapter checkpoint”事实见 `release/part3/d3/freeze.json`（2026-07-16；未 push）。
 
-### 7.1 数据切分与防泄漏协议（先冻结，再生成 final test）
+### [x] 7.1 数据切分与防泄漏协议（先冻结，再生成 final test）
 
 - [x] 建立四层数据角色并在 manifest metadata 中显式写 `split`、`source_deck`、`template_id`、`content_cluster`（`data/part3/d3/split_manifest.jsonl`、`final_test_{image,deck}.jsonl`）：
   - `train`：生成 teacher traces、SFT/ranking/action records；
@@ -274,7 +274,7 @@
 - [x] 增加同底图 severity chain，供 monotonic loss；增加 image-only / image+structure / reference-available / deck-context-available 四种 availability condition，供 action supervision。产物：`data/part3/d3/{split_manifest,availability_records}.jsonl`。
 - [x] 每次导出后跑 parser round-trip、重复/泄漏检查、modality/action/class composition、paired-clean 完整性和 A/B 平衡检查，产物写入现有 `runs/` / `data/` 路径，不以“脚本能跑”代替 artifact。`release/part3/d3/split_audit.json` 与两份 fidelity 均 `passed=true`（2026-07-16）。
 
-### 7.2 归因结果 → teacher/action supervision
+### [x] 7.2 归因结果 → teacher/action supervision
 
 - [x] 定义 expert/action 空间与可用性约束（`slide_examiner/d3_data.py`、`release/part3/d3/freeze.json`）：
   - `C0_GENERIC`：普通全局质检；
