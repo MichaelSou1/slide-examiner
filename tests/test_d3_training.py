@@ -142,8 +142,13 @@ def test_balanced_rows_reserves_smoke_semantic_cells():
                  "availability": "deck_context_available", "target_action": "ANSWER",
                  "task": "detect", "is_clean_deck": False, "sample_id": "8",
                  "severity_chain": "8"})
+    rows.append({"record_id": "unexecutable", "defect": "G1_TEXT_OVERFLOW",
+                 "availability": "image_only", "target_action": "REQUEST_REFERENCE",
+                 "task": "route", "is_clean_deck": False, "sample_id": "missing",
+                 "severity_chain": "missing"})
     selected = balanced_smoke_rows(rows, len(rows))
-    assert {row["record_id"] for row in selected} == {row["record_id"] for row in rows}
+    assert {row["record_id"] for row in selected} == {
+        row["record_id"] for row in rows if row["record_id"] != "unexecutable"}
 
 
 def test_semantic_gate_requires_eligible_cells_and_zero_runtime_failures():

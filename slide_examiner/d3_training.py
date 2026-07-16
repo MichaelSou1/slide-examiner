@@ -72,6 +72,14 @@ def balanced_smoke_rows(rows: list[dict[str, Any]], limit: int) -> list[dict[str
         if candidate is not None:
             selected.append(candidate)
             remaining.remove(candidate)
+    # Do not turn an intentionally incomplete availability arm into a runtime
+    # escalation failure. Such rows remain valid route-training examples, but
+    # they are not executable end-to-end smoke cases.
+    required_availability = {"REQUEST_REFERENCE": "reference_available",
+                             "REQUEST_DECK": "deck_context_available"}
+    remaining = [row for row in remaining
+                 if row["target_action"] not in required_availability
+                 or has_counterpart(row, required_availability[row["target_action"]])]
     seen = {key: Counter() for key in ("target_action", "task", "defect", "availability")}
     for row in selected:
         for key in seen:
