@@ -84,6 +84,15 @@ def infer_once(processor: Any, model: Any, heads: D3Heads, row: dict[str, Any],
         action_logits, select_logits, _, _ = heads(pooled)
         action = ACTIONS[int(action_logits.argmax(-1).item())]
         confidence = float(torch.sigmoid(select_logits).item())
+        # Routing is authoritative. Tool/reference/defer actions have a
+        # deterministic legal envelope and must not depend on the LM emitting
+        # a finding-shaped JSON object that will be discarded anyway.
+        if action != ExaminerAction.ANSWER.value:
+            authoritative, mismatch, consistency_error = authoritative_result(None, action)
+            return {"predicted_action": action, "route_confidence": confidence,
+                    "raw": "", "generated_parsed": None, "generated_action": None,
+                    "parsed": authoritative, "parse_error": None,
+                    "action_mismatch": mismatch, "consistency_error": consistency_error}
         generated = model.generate(**inputs, max_new_tokens=max_new_tokens, do_sample=False)
     continuation = generated[0, inputs["input_ids"].shape[1]:]
     text = processor.decode(continuation, skip_special_tokens=True)
@@ -112,6 +121,10 @@ def main() -> None:
     all_rows = JsonlDataset(args.input).rows
     rows = balanced_rows(all_rows, args.limit) if args.balanced else all_rows[:args.limit]
     by_sample_availability = {(row["sample_id"], row["availability"]): row for row in all_rows}
+    by_chain_availability: dict[tuple[str, str], dict[str, Any]] = {}
+    for candidate in all_rows:
+        by_chain_availability.setdefault(
+            (candidate["severity_chain"], candidate["availability"]), candidate)
     results, counts = [], {"parser_failure": 0, "action_loop": 0, "teacher_failure": 0,
                            "action_mismatch": 0, "consistency_failure": 0,
                            "escalation_failure": 0}
@@ -126,7 +139,8 @@ def main() -> None:
         availability = {"CALL_LINTER": "image_structure", "REQUEST_REFERENCE": "reference_available",
                         "REQUEST_DECK": "deck_context_available"}.get(requested)
         if availability:
-            followup_row = by_sample_availability.get((row["sample_id"], availability))
+            followup_row = (by_sample_availability.get((row["sample_id"], availability))
+                            or by_chain_availability.get((row["severity_chain"], availability)))
             if followup_row:
                 if requested == "CALL_LINTER":
                     try:
@@ -151,6 +165,8 @@ def main() -> None:
                         counts["escalation_failure"] += 1
                     escalation = {"requested_action": requested, "performed": True,
                                   "provided_availability": availability, "executor": "student_followup",
+                                  "counterpart_match": ("sample_id" if followup_row["sample_id"] == row["sample_id"]
+                                                        else "severity_chain"),
                                   "final_action": final_action, "final_parsed": second["parsed"],
                                   "result": second}
             else:
