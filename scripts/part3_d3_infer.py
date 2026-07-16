@@ -23,16 +23,26 @@ from slide_examiner.examiner_contract import (
 from scripts.part3_d3_train import D3Heads, JsonlDataset, _images, pooled_at_prompt
 
 
-def load(run: Path, base: str, device: torch.device):
-    processor = AutoProcessor.from_pretrained(run / "adapter", trust_remote_code=True)
-    quant = BitsAndBytesConfig(load_in_4bit=True, bnb_4bit_quant_type="nf4",
-                              bnb_4bit_compute_dtype=torch.bfloat16, bnb_4bit_use_double_quant=True)
-    model = Qwen3VLForConditionalGeneration.from_pretrained(
-        base, torch_dtype=torch.bfloat16, quantization_config=quant, device_map={"": 0},
-        trust_remote_code=True, attn_implementation="sdpa",
-    )
-    model = PeftModel.from_pretrained(model, run / "adapter").eval()
-    hidden = model.get_base_model().config.text_config.hidden_size
+def load(run: Path, base: str, device: torch.device, merged_model: Path | None = None):
+    """Load either the QLoRA training bundle or its merged serving equivalent."""
+    processor_source = merged_model or (run / "adapter")
+    processor = AutoProcessor.from_pretrained(processor_source, trust_remote_code=True)
+    if merged_model is not None:
+        model = Qwen3VLForConditionalGeneration.from_pretrained(
+            merged_model, torch_dtype=torch.bfloat16, device_map={"": 0},
+            trust_remote_code=True, attn_implementation="sdpa",
+        ).eval()
+    else:
+        quant = BitsAndBytesConfig(load_in_4bit=True, bnb_4bit_quant_type="nf4",
+                                  bnb_4bit_compute_dtype=torch.bfloat16,
+                                  bnb_4bit_use_double_quant=True)
+        model = Qwen3VLForConditionalGeneration.from_pretrained(
+            base, torch_dtype=torch.bfloat16, quantization_config=quant, device_map={"": 0},
+            trust_remote_code=True, attn_implementation="sdpa",
+        )
+        model = PeftModel.from_pretrained(model, run / "adapter").eval()
+    config = model.get_base_model().config if hasattr(model, "get_base_model") else model.config
+    hidden = config.text_config.hidden_size
     heads = D3Heads(hidden).to(device).eval()
     heads.load_state_dict(torch.load(run / "d3_heads.pt", map_location=device, weights_only=True))
     return processor, model, heads
@@ -89,6 +99,8 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--run", type=Path, required=True)
     parser.add_argument("--base", default="/home/nvme04/models/Qwen3-VL-8B-Instruct")
+    parser.add_argument("--merged-model", type=Path,
+                        help="Merged LM directory; D3 heads and policy still come from --run")
     parser.add_argument("--input", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--limit", type=int, default=32)
@@ -96,7 +108,7 @@ def main() -> None:
     parser.add_argument("--max-new-tokens", type=int, default=384)
     args = parser.parse_args()
     device = torch.device("cuda")
-    processor, model, heads = load(args.run, args.base, device)
+    processor, model, heads = load(args.run, args.base, device, args.merged_model)
     all_rows = JsonlDataset(args.input).rows
     rows = balanced_rows(all_rows, args.limit) if args.balanced else all_rows[:args.limit]
     by_sample_availability = {(row["sample_id"], row["availability"]): row for row in all_rows}
@@ -168,6 +180,10 @@ def main() -> None:
                                     for x in results),
     }
     summary = {**counts, "records": len(results), "balanced": args.balanced,
+               "deployment": {"lm": "merged" if args.merged_model else "base_plus_adapter",
+                              "model_path": str(args.merged_model or args.base),
+                              "heads_path": str(args.run / "d3_heads.pt"),
+                              "policy_path": str(args.run / "run_config.json")},
                "semantic_counts": semantic,
                "semantic_gate": evaluate_semantic_gate(results, counts),
                "action_distribution": dict(Counter(x["predicted_action"] for x in results)),
