@@ -90,7 +90,7 @@ HELDOUT_CLASSES = (
 )
 
 
-def _heldout_slides(seed: int, n: int) -> list[Slide]:
+def _heldout_slides(seed: int, n: int, template_family: str = "w5_novel_seeded") -> list[Slide]:
     """Create seed-controlled, visually new calibration templates.
 
     These are not resampled Part-1/2 decks: every slide has a coloured header,
@@ -114,16 +114,17 @@ def _heldout_slides(seed: int, n: int) -> list[Slide]:
     for i in range(n):
         title, product, metric, up, down = topics[i % len(topics)]
         dark, accent, pale = palettes[(i // len(topics)) % len(palettes)]
-        rail_left = (i % 2 == 0)
-        x0 = 180 if rail_left else 120
-        body_w = 1080 if rail_left else 1140
+        d3_layout = template_family == "d3_split_panel_v1"
+        rail_left = (i % 2 == 0) if not d3_layout else (i % 3 == 0)
+        x0 = (900 if d3_layout else (180 if rail_left else 120))
+        body_w = 820 if d3_layout else (1080 if rail_left else 1140)
         els = [
             # Treat the header as page chrome rather than a foreground shape so
             # the overlap linter does not count the intentional title-on-header
             # composition as a clean G2 defect.
             Element(f"h{i}", "background", BBox(48, 36, 1824, 114), "",
                     {"fill_color": dark}, z=0, metadata={"role": "decoration"}),
-            Element(f"rail{i}", "shape", BBox(54 if rail_left else 1818, 180, 48, 820), "",
+            Element(f"rail{i}", "shape", BBox((840 if d3_layout else (54 if rail_left else 1818)), 180, 48, 820), "",
                     {"fill_color": accent}, z=0, metadata={"role": "decoration"}),
             Element(f"title{i}", "title", BBox(120, 58, 1600, 64),
                     f"{title}: cohort {i + 1}", {"font_size_pt": 30, "color": "#ffffff"},
@@ -142,7 +143,8 @@ def _heldout_slides(seed: int, n: int) -> list[Slide]:
                                metadata={"role": "body", "text_level": "body"}))
         claim = f"Verified {metric} {up} in every measured quarter"
         false_claim = f"Verified {metric} {down} in every measured quarter"
-        els.append(Element(f"fig{i}", "diagram", BBox(1390, 240, 390, 410), "",
+        els.append(Element(f"fig{i}", "diagram", BBox((190 if d3_layout else 1390), 240,
+                                                       (560 if d3_layout else 390), 410), "",
                            {"fill_color": pale, "color": accent}, z=1,
                            metadata={"role": "diagram", "diagram_claim": claim,
                                      "diagram_false_claim": false_claim, "diagram_trend": "up"}))
@@ -154,20 +156,22 @@ def _heldout_slides(seed: int, n: int) -> list[Slide]:
                            {"font_size_pt": 13, "color": "#59636a"}, z=2,
                            metadata={"role": "footer", "text_level": "footer"}))
         slides.append(Slide(f"w5cal_{seed}_{i:04d}", tuple(els),
-                            metadata={"source": "w5_heldout", "seed": seed,
-                                      "template_variant": f"novel_{i % 8}"}))
+                            metadata={"source": template_family, "seed": seed,
+                                      "template_family": template_family,
+                                      "template_variant": f"{template_family}_{i % 8}"}))
     rng.shuffle(slides)
     return slides
 
 
-def build_heldout(seed: int, pairs_per_class: int, runs: Path, out: Path) -> None:
+def build_heldout(seed: int, pairs_per_class: int, runs: Path, out: Path,
+                  template_family: str = "w5_novel_seeded") -> None:
     # Allocate a disjoint clean base slide to every class/pair.  This prevents a
     # clean render from being reused across labels and keeps paired controls
     # independent of the development corpora and of one another.
-    slides = _heldout_slides(seed, pairs_per_class * len(HELDOUT_CLASSES))
+    slides = _heldout_slides(seed, pairs_per_class * len(HELDOUT_CLASSES), template_family)
     injectors = {
         "G1_TEXT_OVERFLOW": lambda s: inject_text_overflow(s, element_id=next(e.element_id for e in s.elements if e.metadata.get("role") == "body"), overflow_px=64),
-        "G2_ELEMENT_OVERLAP": lambda s: inject_overlap(s, source_element_id=next(e.element_id for e in s.elements if e.metadata.get("role") == "diagram"), target_element_id=next(e.element_id for e in s.elements if e.metadata.get("role") == "body"), dx=-400, dy=0, severity_iou=.35),
+        "G2_ELEMENT_OVERLAP": lambda s: inject_overlap(s, source_element_id=next(e.element_id for e in s.elements if e.metadata.get("role") == "diagram"), target_element_id=next(e.element_id for e in s.elements if e.metadata.get("role") == "body"), dx=(760 if template_family == "d3_split_panel_v1" else -400), dy=0, severity_iou=.35),
         "G3_ALIGNMENT_OFFSET": lambda s: inject_alignment_offset(s, offset_px=32),
         "G5_BRAND_COLOR_VIOLATION": lambda s: inject_brand_color_violation(s, delta_e=40),
         "G6_MARGIN_VIOLATION": lambda s: inject_margin_violation(s, page_margin_px=-32),
@@ -185,7 +189,7 @@ def build_heldout(seed: int, pairs_per_class: int, runs: Path, out: Path) -> Non
                 output_dir=runs / "freeform", template_condition="freeform")
             sample = replace(sample, metadata={**sample.metadata, "split": "w5_heldout",
                                                "generation_seed": seed,
-                                               "template_family": "w5_novel_seeded"})
+                                               "template_family": template_family})
             samples.append(sample)
     from slide_examiner.dataset import write_manifest
     out.parent.mkdir(parents=True, exist_ok=True)

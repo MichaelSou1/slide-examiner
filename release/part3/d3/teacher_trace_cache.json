@@ -1,0 +1,70 @@
+{
+  "cache_kind": "immutable_existing_csv",
+  "retry_policy": {
+    "max_retries": 2,
+    "status": "future_calls_only; immutable cache was not re-called",
+    "implementation": "scripts/part3_elicit.py --resume --max-retries",
+    "retry_on": [
+      "transport_error",
+      "rate_limit",
+      "parse_error"
+    ]
+  },
+  "failure_policy": "exclude_or_downweight; never map failure to negative",
+  "sources": [
+    {
+      "path": "/Users/rhsu/Desktop/27Fall/slide-examiner/release/part3/rows/p1e1_qwen35-27b_geo_C0_rows.csv",
+      "sha256": "475f876cc9fe11536f9cab354d091249510efdb76fdc0aabcad5a52f2fd11c65",
+      "rows": 144,
+      "parser_valid": 144,
+      "parse_errors": 0,
+      "failures": 0
+    },
+    {
+      "path": "/Users/rhsu/Desktop/27Fall/slide-examiner/release/part3/rows/p1e1_qwen35-27b_geo_C3_rows.csv",
+      "sha256": "6a5c3998426f1997d04569f417182136428687a150f297879cd8eb1180f5c38f",
+      "rows": 144,
+      "parser_valid": 144,
+      "parse_errors": 0,
+      "failures": 0
+    },
+    {
+      "path": "/Users/rhsu/Desktop/27Fall/slide-examiner/release/part3/rows/p1e1_qwen35-27b_g7_C0_rows.csv",
+      "sha256": "ece1e5011518351df041a132c77423ba7aab5acb7512d7e8fc9df14f3932d16f",
+      "rows": 180,
+      "parser_valid": 180,
+      "parse_errors": 0,
+      "failures": 1
+    },
+    {
+      "path": "/Users/rhsu/Desktop/27Fall/slide-examiner/release/part3/rows/p1e1_qwen35-27b_g7_C3_rows.csv",
+      "sha256": "cf3e27d56caec4ac64e96fcc5ba37fb5575f62ce7424d9378c6265e9431840ec",
+      "rows": 180,
+      "parser_valid": 180,
+      "parse_errors": 0,
+      "failures": 0
+    },
+    {
+      "path": "/Users/rhsu/Desktop/27Fall/slide-examiner/release/part3/rows/p1e1_qwen35-27b_geo_AFC_rows.csv",
+      "sha256": "de7fb6b6c43b641624df31b28e639ae33b5debb4888aef3f6f6bbd9d3539f7b4",
+      "rows": 72,
+      "parser_valid": 72,
+      "parse_errors": 0,
+      "failures": 0
+    },
+    {
+      "path": "/Users/rhsu/Desktop/27Fall/slide-examiner/release/part3/rows/p1e1_qwen35-27b_g7_AFC_rows.csv",
+      "sha256": "48b843c8388d48d730765b9184edfd5d8c1a4f173e1f7bd975778be2b971aeb2",
+      "rows": 90,
+      "parser_valid": 90,
+      "parse_errors": 0,
+      "failures": 0
+    }
+  ],
+  "totals": {
+    "rows": 810,
+    "parser_valid": 810,
+    "parse_errors": 0,
+    "failures": 1
+  }
+}

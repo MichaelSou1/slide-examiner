@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "student_invoked": false,
+  "protocol_sha256": "7271ff8168fc9cde6acf0ea5e756a86cd496a727247951c638b563a675255c36",
+  "manifest": "data/part3/d3/final_test_deck.jsonl",
+  "manifest_sha256": "7090ade2cd42fe0f82369945fad71ddd29e26953cb5024d4b48266c490f54165",
+  "records": 80,
+  "composition": {
+    "S2_NARRATIVE_ORDER_BREAK": 20,
+    "NO_DEFECT": 40,
+    "S5_MISSING_LOGIC_SECTION": 20
+  },
+  "page_macro_included": false,
+  "metadata_missing": [],
+  "source_overlap": [],
+  "content_overlap": [],
+  "errors": []
+}

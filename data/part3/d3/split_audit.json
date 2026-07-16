@@ -1,0 +1,66 @@
+{
+  "passed": true,
+  "errors": [],
+  "records": 6650,
+  "split_counts": {
+    "train": 4530,
+    "dev": 920,
+    "validation": 1200
+  },
+  "class_counts": {
+    "G2_ELEMENT_OVERLAP": 630,
+    "G5_BRAND_COLOR_VIOLATION": 630,
+    "NO_DEFECT": 1280,
+    "S2_NARRATIVE_ORDER_BREAK": 120,
+    "S3_TERMINOLOGY_INCONSISTENCY": 120,
+    "S5_MISSING_LOGIC_SECTION": 120,
+    "G4_FONT_SIZE_INCONSISTENCY": 480,
+    "S1_TITLE_BODY_MISMATCH": 270,
+    "S6_IMAGE_TEXT_CONTRADICTION": 270,
+    "G1_TEXT_OVERFLOW": 750,
+    "G3_ALIGNMENT_OFFSET": 750,
+    "G6_MARGIN_VIOLATION": 630,
+    "S4_DENSITY_RULE_VIOLATION": 510,
+    "G7_RENDER_CONTAINMENT_OVERFLOW": 90
+  },
+  "scope_counts": {
+    "page": 6234,
+    "deck": 416
+  },
+  "no_defect_scope": {
+    "page": 1224,
+    "deck": 56
+  },
+  "duplicate_sample_ids": [],
+  "source_deck_leakage": {},
+  "content_cluster_leakage": {},
+  "template_group_leakage": {},
+  "pairwise_records": 2032,
+  "pairwise_incomplete": [],
+  "availability_records": 21800,
+  "pairwise_answer_mismatch": [],
+  "first_order_balance": {
+    "clean_defective": 469,
+    "defective_clean": 491
+  },
+  "availability_incomplete": [],
+  "availability_action_mismatch": [],
+  "invalid_clean_decks": [],
+  "severity_chain_leakage": {},
+  "paired_clean_incomplete": [],
+  "parser_roundtrip_failures": [],
+  "action_composition": {
+    "DEFER": 7560,
+    "CALL_LINTER": 2520,
+    "ANSWER": 8840,
+    "REQUEST_DECK": 720,
+    "REQUEST_REFERENCE": 2160
+  },
+  "availability_composition": {
+    "image_only": 5450,
+    "image_structure": 5450,
+    "reference_available": 5450,
+    "deck_context_available": 5450
+  },
+  "final_test_classes": {}
+}

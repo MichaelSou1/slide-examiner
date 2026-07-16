@@ -432,6 +432,8 @@ S6 二选一(2-AFC)强制选择复评 2026-06-16(`scripts/s6_forced_choice.py`,1
 
 ## 9. 第八优先级: Part 3 下游效用(**轻量佐证,非重心**) — Examiner 质量 → 下游 slide 生成改进
 
+> **D3 Critic 数据阶段（2026-07-16）**：AAAI 修订主线 W7.0–W7.2 已完成并有真实 artifact。科学问题/metrics/成功门槛及 untouched final-test protocol 冻结于 `release/part3/d3/freeze.json`；grouped train/dev + W5 validation 审计见 `release/part3/d3/split_audit.json`；5,394×5 teacher matrix、dev-only utility grid、action/训练目标、trace cache 分别见 `teacher_reward_matrix.jsonl`、`utility_selection.json`、`d3_records.jsonl`、`training_targets.jsonl`、`teacher_trace_cache.json`。另生成未调用 student 的 9 类 image final-test（各 30 pair）与 S2/S5 deck final-test（各 20 pair + clean deck），两份 fidelity 均通过，见 `final_test_fidelity.json`、`final_test_deck_fidelity.json`。**W7.3 模型/联合损失与 W7.4 smoke test 尚未完成，不在此处提前勾选。**
+
 > **降级 2026-06-19(本节以此 banner 为准,见 SPEC §5 降级 banner)**:本工作**重心是 VLM(N1 诊断 + N2 模板 + 注入缺陷训练的专用 examiner)**,**不是 skill 优化论文**。Part 3 仅为"examiner 越准→下游 deck 改得越好"的**轻量外在效用佐证**。
 > - **载体降级为"self-refine 主佐证 + GEPA 旁证"**:① self-refine(examiner 作 agent 反思信号,generate→critique→revise;零外部依赖、最直接;按 EvoPresent 已占范式,标 baseline-style、不当 headline)= **主佐证(待建,见 P10)**;② GEPA skill-space(旁证,已真实跑通)。
 > - **SkillOpt 移出主线、deferred**:上游 PyPI 包缺 prompt 资产、analyst 不真正调 optimizer(轨迹文件契约不符,0 calls;后端隔离测试本身可调通)、GitHub 不可达 → 忠实复现不可达。代码留 `slide_examiner/skillopt_adapter.py`,不进主线。"optimizer-agnostic" 降为"self-refine vs GEPA 两载体结论一致"的鲁棒性佐证。

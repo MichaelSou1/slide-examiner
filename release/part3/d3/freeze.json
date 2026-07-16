@@ -1,0 +1,108 @@
+{
+  "frozen_at": "2026-07-16T00:00:00+08:00",
+  "tag": "d3-start-20260716",
+  "baseline_commit": "10c121f9d6d3fde19918f743164196ed5ab9893a",
+  "baseline_parent_commit": "00bfd132f206e0bfc917ace542551211da40ecb1",
+  "tag_object": "489b70e214d735125c8895912fc81dcc24f84178",
+  "baseline_tree": "7e8a5eede8539d08308305b558d1b84927b07b2d",
+  "research_questions": {
+    "RQ-D": "Retain C3 G7 recovery under generic single-call student inference without raising clean FPR.",
+    "RQ-R": "Learned action improves macro balanced accuracy at equal or lower average call cost than fixed route/C3.",
+    "RQ-F": "Route unreliable G2-G6 image-only inputs to linter/defer rather than false positives."
+  },
+  "primary_metrics": [
+    "macro_balanced_accuracy",
+    "paired_clean_fpr",
+    "named_evidence_validity",
+    "correct_action_accuracy",
+    "average_model_calls",
+    "token_latency_cost",
+    "selective_risk_coverage"
+  ],
+  "success_gates": [
+    "generic_student_G7_gt_vanilla_v2",
+    "G2_G6_image_only_FPR_le_vanilla_v2",
+    "accuracy_cost_pareto_noninferior",
+    "per_class_CI_required"
+  ],
+  "utility": "U=R-lambda_c*C-lambda_fp*FP+lambda_v*V",
+  "utility_defaults": {
+    "lambda_c": 0.05,
+    "lambda_fp": 1.0,
+    "lambda_v": 0.1,
+    "margin_threshold": 0.05
+  },
+  "tie_policy": [
+    "lower_cost",
+    "lower_fpr",
+    "verifiable_evidence",
+    "low_margin_defer_or_downweight"
+  ],
+  "cost_measurement_policy": "calls measured; cached CSV lacks tokens/latency, store null and exclude them from utility",
+  "final_test_protocol": {
+    "generation_seed": 2026071607,
+    "pairs_per_image_class": 30,
+    "classes": [
+      "G1",
+      "G2",
+      "G3",
+      "G5",
+      "G6",
+      "G7",
+      "S1",
+      "S4",
+      "S6"
+    ],
+    "positive_negative_ratio": "1:1 paired",
+    "severity": "one frozen severe/recoverable level per class",
+    "template_pool": "d3_split_panel_v1; disjoint generated ids/content",
+    "deck_classes": [
+      "S2",
+      "S5"
+    ],
+    "deck_pairs_per_class": 20,
+    "fidelity_gate": [
+      "unique twins",
+      "nonidentical pixels",
+      "target injection valid",
+      "clean linter no target",
+      "parser round-trip",
+      "source/content disjoint"
+    ],
+    "primary_comparisons": [
+      "D3_vs_vanilla_v2",
+      "D3_vs_fixed_route",
+      "D3_vs_single_C3"
+    ],
+    "statistical_family": "9 class paired comparisons + macro; Holm correction",
+    "failure_policy": "API/parser failures excluded, never mapped to negative; report rate",
+    "student_access_before_freeze": false
+  },
+  "protocol_sha256": "7271ff8168fc9cde6acf0ea5e756a86cd496a727247951c638b563a675255c36",
+  "run_provenance_required": [
+    "parent_commit",
+    "config_hash",
+    "seed",
+    "data_hash",
+    "model_hash"
+  ],
+  "hashes": {
+    "data/part2/manifest.jsonl": "56e59c3b47f2a975b02d6594fd47cf650f9a96d7511af28c2341165ab5d9aaf5",
+    "configs/part2_qlora_v2.yaml": "e2f09491a486d5cf393b2cdc3cc30145cafe6acb43b38860dd36279286d6d572",
+    "data/part2/sft/composition.json": "cd3ace716c0d0fb6db4a092737661db591210bc35e6e5310188b34af2c7b5e14",
+    "release/part3/manifests/manifest_g7_rendered.jsonl": "c157b079855ee422ff27c6f5904c0b171ab5c6e184c06bb2a564c30090eeed2c",
+    "release/part3/w5/heldout_fidelity.json": "1600e793a1287ea0f82f957a25c1b0d451be7016eeb8e625df467da29f1fb916",
+    "release/part3/w5/heldout_routed.json": "a87f337725a8713f014ad33afd8c29c01310efc0f8951fd627e675ce5af6c225",
+    "release/part3/rows/p1e1_qwen35-27b_geo_C0_rows.csv": "475f876cc9fe11536f9cab354d091249510efdb76fdc0aabcad5a52f2fd11c65",
+    "release/part3/rows/p1e1_qwen35-27b_geo_C3_rows.csv": "6a5c3998426f1997d04569f417182136428687a150f297879cd8eb1180f5c38f",
+    "release/part3/rows/p1e1_qwen35-27b_geo_AFC_rows.csv": "de7fb6b6c43b641624df31b28e639ae33b5debb4888aef3f6f6bbd9d3539f7b4",
+    "release/part3/rows/p1e1_qwen35-27b_g7_C0_rows.csv": "ece1e5011518351df041a132c77423ba7aab5acb7512d7e8fc9df14f3932d16f",
+    "release/part3/rows/p1e1_qwen35-27b_g7_C3_rows.csv": "cf3e27d56caec4ac64e96fcc5ba37fb5575f62ce7424d9378c6265e9431840ec",
+    "release/part3/rows/p1e1_qwen35-27b_g7_AFC_rows.csv": "48b843c8388d48d730765b9184edfd5d8c1a4f173e1f7bd975778be2b971aeb2"
+  },
+  "adapter": {
+    "expected": "Part 2 v2 QLoRA adapter",
+    "local_checkpoint_present": false,
+    "frozen_config": "configs/part2_qlora_v2.yaml"
+  }
+}

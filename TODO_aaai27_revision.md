@@ -250,48 +250,48 @@
 
 ### 7.0 冻结科学问题、成功标准与旧资产角色
 
-- [ ] 锁死三个 RQ，后续不得看 final test 后改口径：
+- [x] 锁死三个 RQ，后续不得看 final test 后改口径（冻结于 `release/part3/d3/freeze.json`，2026-07-16）：
   - **RQ-D（Distill）**：C3 teacher 的 G7 recovery 能否在 student 的 generic single-call inference 下保留，同时不抬高 clean FPR？
   - **RQ-R（Route）**：learned action 是否优于人工 frozen route / 单一 C3，在相同或更低平均调用成本下提高 macro bal-acc？
   - **RQ-F（Defer）**：student 能否把 G2–G6 image-only 等不可可靠判断样本送往 linter/defer，而不是制造 false positive？
-- [ ] 冻结 primary metrics：macro balanced accuracy、paired-clean FPR、named localization/evidence validity、correct-action accuracy、average model calls、token/latency cost、selective risk–coverage；`covered m/9` 仅作 descriptive companion，阈值不得再当算法 headline。
-- [ ] 冻结关键成功门槛：D3 generic-prompt G7 优于当前 vanilla Part 2 FT 的 generic prompt；G2–G6 image-only FPR 不高于当前 FT；相对 learned baseline 在 accuracy–cost Pareto 上非劣；所有结论同时给 per-class 数字与 CI，不用 micro average 掩盖 S6/S2。
+- [x] 冻结 primary metrics：macro balanced accuracy、paired-clean FPR、named localization/evidence validity、correct-action accuracy、average model calls、token/latency cost、selective risk–coverage；`covered m/9` 仅作 descriptive companion，阈值不得再当算法 headline（`release/part3/d3/freeze.json`）。
+- [x] 冻结关键成功门槛：D3 generic-prompt G7 优于当前 vanilla Part 2 FT 的 generic prompt；G2–G6 image-only FPR 不高于当前 FT；相对 learned baseline 在 accuracy–cost Pareto 上非劣；所有结论同时给 per-class 数字与 CI，不用 micro average 掩盖 S6/S2（`release/part3/d3/freeze.json`）。
 - [x] 旧本地 6 模型、W2 compute-matched 结果、Part 2 v2 权重与 `release/part3/rows/` 全部冻结，只做 baseline，不重写历史结果。
 - [x] W5 novel-template 2,700 图及已看过的 .957 / 8-of-9 结果降格为 **validation + frozen handcrafted-route baseline**；不得作为 D3 untouched final test。
-- [ ] 为当前 checkout 打 D3 起点 commit/tag，记录代码、数据 manifest、Part 2 adapter 与现有结果哈希；后续每个训练 run 都记录 parent commit、config、seed、数据 hash 与模型 hash。
+- [x] 为当前 checkout 打 D3 起点 commit/tag，记录代码、数据 manifest、Part 2 adapter 与现有结果哈希；后续每个训练 run 都记录 parent commit、config、seed、数据 hash 与模型 hash。已建 annotated tag `d3-start-20260716`（commit `10c121f`），冻结哈希与“本机无 adapter checkpoint”事实见 `release/part3/d3/freeze.json`（2026-07-16；未 push）。
 
 ### 7.1 数据切分与防泄漏协议（先冻结，再生成 final test）
 
-- [ ] 建立四层数据角色并在 manifest metadata 中显式写 `split`、`source_deck`、`template_id`、`content_cluster`：
+- [x] 建立四层数据角色并在 manifest metadata 中显式写 `split`、`source_deck`、`template_id`、`content_cluster`（`data/part3/d3/split_manifest.jsonl`、`final_test_{image,deck}.jsonl`）：
   - `train`：生成 teacher traces、SFT/ranking/action records；
   - `dev`：选择 utility 权重、loss 权重、route/defer threshold 与 checkpoint；
   - `validation`：使用已看过的 W5 novel-template 集，只做消融与 frozen-route 对照；
   - `final_test`：新 seed + 新模板 + source/content 去重，方法冻结后只运行一次。
-- [ ] 按 **source deck / template / near-duplicate content cluster** 分组切分，禁止同源 clean/defective twin 跨 split；clean twin、severity chain、pairwise 两顺序必须整体留在同一 split。
-- [ ] 在生成 `final_test` 前锁死生成 seed、每类 n、severity 比例、模板池、fidelity gate、primary comparisons、统计检验族与失败处理；生成后先只跑 fidelity，不调用 student、不查看类别结果。
-- [ ] `final_test` 至少覆盖当前 9 个 image-level 类，每类正/负 paired clean 数量预先等额；额外保留 deck-scope S2/S5 独立 split，不能和 page-level macro 混报。
-- [ ] 修复 Part 2 已知数据缺口：补 clean-deck negatives；S2/S5 加 paired/reference arm；所有 pairwise 样本继续随机 A/B 且要求双顺序一致；NO_DEFECT page/deck 分开统计。
-- [ ] 增加同底图 severity chain，供 monotonic loss；增加 image-only / image+structure / reference-available / deck-context-available 四种 availability condition，供 action supervision。
-- [ ] 每次导出后跑 parser round-trip、重复/泄漏检查、modality/action/class composition、paired-clean 完整性和 A/B 平衡检查，产物写入现有 `runs/` / `data/` 路径，不以“脚本能跑”代替 artifact。
+- [x] 按 **source deck / template / near-duplicate content cluster** 分组切分，禁止同源 clean/defective twin 跨 split；clean twin、severity chain、pairwise 两顺序必须整体留在同一 split。实现与测试：`slide_examiner/d3_data.py`、`tests/test_d3_data.py`；审计：`release/part3/d3/split_audit.json`。
+- [x] 在生成 `final_test` 前锁死生成 seed、每类 n、severity 比例、模板池、fidelity gate、primary comparisons、统计检验族与失败处理；生成后先只跑 fidelity，不调用 student、不查看类别结果。冻结顺序与 `student_invoked=false` 见 `release/part3/d3/{freeze,final_test_fidelity,final_test_deck_fidelity}.json`。
+- [x] `final_test` 至少覆盖当前 9 个 image-level 类，每类正/负 paired clean 数量预先等额；额外保留 deck-scope S2/S5 独立 split，不能和 page-level macro 混报。已生成 image 9 类各 30 pair（270 pair）及 S2/S5 各 20 pair + 40 clean deck；manifest 在 `data/part3/d3/`，可提交 fidelity 在 `release/part3/d3/`。
+- [x] 修复 Part 2 已知数据缺口：补 clean-deck negatives；S2/S5 加 paired/reference arm；所有 pairwise 样本继续随机 A/B 且要求双顺序一致；NO_DEFECT page/deck 分开统计。产物：`split_manifest.jsonl`、`pairwise_orders.jsonl`、`final_test_deck.jsonl`、`split_audit.json`。
+- [x] 增加同底图 severity chain，供 monotonic loss；增加 image-only / image+structure / reference-available / deck-context-available 四种 availability condition，供 action supervision。产物：`data/part3/d3/{split_manifest,availability_records}.jsonl`。
+- [x] 每次导出后跑 parser round-trip、重复/泄漏检查、modality/action/class composition、paired-clean 完整性和 A/B 平衡检查，产物写入现有 `runs/` / `data/` 路径，不以“脚本能跑”代替 artifact。`release/part3/d3/split_audit.json` 与两份 fidelity 均 `passed=true`（2026-07-16）。
 
 ### 7.2 归因结果 → teacher/action supervision
 
-- [ ] 定义 expert/action 空间与可用性约束：
+- [x] 定义 expert/action 空间与可用性约束（`slide_examiner/d3_data.py`、`release/part3/d3/freeze.json`）：
   - `C0_GENERIC`：普通全局质检；
   - `C3_ATOMIC`：逐类 targeted + forced evidence teacher；
   - `PAIRWISE_REFERENCE`：clean/reference twin 双顺序一致判断；
   - `LINTER`：有 IR 时的确定性结构检测；
   - `DEFER`：无可靠证据或所需输入不可用。
-- [ ] 为 train/dev 样本汇总每个 expert 的 correctness、paired-clean FP、named localization/evidence validity、calls、tokens、latency 与 availability，形成 sample × expert reward matrix；不得用 validation/final_test 选择 teacher。
-- [ ] 冻结 utility 形式并在 dev 上选择系数：$U_i(e)=R_i(e)-\lambda_c C_i(e)-\lambda_{fp}FP_i(e)+\lambda_v V_i(e)$；保存每个 $e^*_i=\arg\max_e U_i(e)$、次优 margin、teacher disagreement 与不可用原因。
-- [ ] 对 teacher tie / disagreement 设确定规则：优先低成本、低 FPR、可验证 evidence；margin 低于阈值则标 `DEFER` 或降低蒸馏权重，不用人工逐条挑“好看输出”。
-- [ ] 构建五类训练目标：
+- [x] 为 train/dev 样本汇总每个 expert 的 correctness、paired-clean FP、named localization/evidence validity、calls、tokens、latency 与 availability，形成 sample × expert reward matrix；不得用 validation/final_test 选择 teacher。`release/part3/d3/teacher_reward_matrix.jsonl` 为 5,394 samples × 5 experts = 26,970 rows。
+- [x] 冻结 utility 形式并在 dev 上选择系数：$U_i(e)=R_i(e)-\lambda_c C_i(e)-\lambda_{fp}FP_i(e)+\lambda_v V_i(e)$；保存每个 $e^*_i=\arg\max_e U_i(e)$、次优 margin、teacher disagreement 与不可用原因。dev-only 81 点 grid 与所选系数见 `utility_selection.json`；逐样本结果见 `d3_records.jsonl`、`teacher_summary.json`。
+- [x] 对 teacher tie / disagreement 设确定规则：优先低成本、低 FPR、可验证 evidence；margin 低于阈值则标 `DEFER` 或降低蒸馏权重，不用人工逐条挑“好看输出”。见 `teacher_summary.json` 与逐样本 `d3_records.jsonl`。
+- [x] 构建五类训练目标（`release/part3/d3/training_targets.jsonl`）：
   - G7：C3 teacher → **generic single-call student** 的 detection + location + evidence distillation；
   - G1/S6：clean-defective twin ranking + `REQUEST_REFERENCE`；
   - G2–G6：有 IR 时 `CALL_LINTER`/解释 linter evidence，image-only 时 `DEFER`，禁止伪视觉正例；
   - S1/S4：direct answer；S2/S5：补 clean-deck 后 direct/deck-context 或 pairwise；
   - clean / clean-clean：`NO_DEFECT` / tie，专门约束 false positive 与 forced-pick bias。
-- [ ] 对 API teacher trace 做缓存、hash、重试和 parser validation；teacher 失败不能默认为 negative，必须标 failure 并排除或降权。
+- [x] 对 API teacher trace 做缓存、hash、重试和 parser validation；teacher 失败不能默认为 negative，必须标 failure 并排除或降权。现有 CSV 作为 immutable cache，索引/哈希/parser/retry policy 在 `release/part3/d3/teacher_trace_cache.json`；1 条 failure 在 matrix 中 `available=false`，未转成 negative。
 
 ### 7.3 D3 模型、输出契约与联合损失
 

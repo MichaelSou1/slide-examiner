@@ -1,0 +1,33 @@
+{
+  "samples": 5394,
+  "matrix_rows": 26970,
+  "split": {
+    "train": 4482,
+    "dev": 912
+  },
+  "best_expert": {
+    "C3_ATOMIC": 90,
+    "DEFER": 3675,
+    "LINTER": 1560,
+    "PAIRWISE_REFERENCE": 69
+  },
+  "failures_excluded": 1,
+  "cost_measurements": {
+    "calls_present": 26970,
+    "tokens_present": 5394,
+    "latency_present": 5394,
+    "policy": "missing cached token/latency measurements remain null"
+  },
+  "utility": {
+    "lambda_c": 0.025,
+    "lambda_fp": 2.0,
+    "lambda_v": 0.2,
+    "margin_threshold": 0.025
+  },
+  "tie_policy": [
+    "lower_cost",
+    "lower_fpr",
+    "verifiable_evidence",
+    "deterministic_expert_order"
+  ]
+}

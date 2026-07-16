@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "student_invoked": false,
+  "protocol_frozen_before_generation": true,
+  "protocol_sha256": "7271ff8168fc9cde6acf0ea5e756a86cd496a727247951c638b563a675255c36",
+  "manifest": "data/part3/d3/final_test_image.jsonl",
+  "manifest_sha256": "e243131cbae8143b9407f43d2f494217f06d1826388e6f234d5623cce6661c29",
+  "pairs": 270,
+  "class_counts": {
+    "G1": 30,
+    "G2": 30,
+    "G3": 30,
+    "G5": 30,
+    "G6": 30,
+    "S1": 30,
+    "S4": 30,
+    "S6": 30,
+    "G7": 30
+  },
+  "nonidentical_pixel_pairs": 270,
+  "clean_target_linter_hits": 0,
+  "metadata_missing": [],
+  "source_overlap": [],
+  "content_overlap": [],
+  "errors": []
+}

@@ -91,6 +91,9 @@ def _title_html(text, x, y, w):
 def build_slide_and_html(variant: str, idx: int, rng: random.Random):
     """Return (slide_ir, defective_html, clean_html, target_id, region)."""
     title, bullets = rng.choice(TOPICS)
+    # Keep seeded final-test pairs pixel-distinct even when the topic sampler
+    # revisits the same content.
+    title = f"{title} · Case {idx + 1:02d}"
     fill, accent = rng.choice(CARD_TINTS)
     card_x, card_y = MARGIN, 150
     card_w, card_h = W - 2 * MARGIN, 360
