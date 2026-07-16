@@ -1,0 +1,90 @@
+[
+  {
+    "class": "G3_ALIGNMENT_OFFSET",
+    "src_id": "g3rel_96_04",
+    "stratum": "rel·96px",
+    "defective_path": "../../runs/part3/g3_rel/g3rel_96_04/defective.png",
+    "clean_path": "../../runs/part3/g3_rel/g3rel_96_04/clean.png",
+    "pair_id": "r00",
+    "short": "G3",
+    "phrase": "同一组 bullets 里，有一项没有和其他项对齐（缩进/位置明显不同）",
+    "composite": "pairs_g3g5_replacement/pair_r00_G3.png"
+  },
+  {
+    "class": "G3_ALIGNMENT_OFFSET",
+    "src_id": "g3rel_96_06",
+    "stratum": "rel·96px",
+    "defective_path": "../../runs/part3/g3_rel/g3rel_96_06/defective.png",
+    "clean_path": "../../runs/part3/g3_rel/g3rel_96_06/clean.png",
+    "pair_id": "r01",
+    "short": "G3",
+    "phrase": "同一组 bullets 里，有一项没有和其他项对齐（缩进/位置明显不同）",
+    "composite": "pairs_g3g5_replacement/pair_r01_G3.png"
+  },
+  {
+    "class": "G3_ALIGNMENT_OFFSET",
+    "src_id": "g3rel_48_01",
+    "stratum": "rel·48px",
+    "defective_path": "../../runs/part3/g3_rel/g3rel_48_01/defective.png",
+    "clean_path": "../../runs/part3/g3_rel/g3rel_48_01/clean.png",
+    "pair_id": "r04",
+    "short": "G3",
+    "phrase": "同一组 bullets 里，有一项没有和其他项对齐（缩进/位置明显不同）",
+    "composite": "pairs_g3g5_replacement/pair_r04_G3.png"
+  },
+  {
+    "class": "G3_ALIGNMENT_OFFSET",
+    "src_id": "g3rel_48_00",
+    "stratum": "rel·48px",
+    "defective_path": "../../runs/part3/g3_rel/g3rel_48_00/defective.png",
+    "clean_path": "../../runs/part3/g3_rel/g3rel_48_00/clean.png",
+    "pair_id": "r06",
+    "short": "G3",
+    "phrase": "同一组 bullets 里，有一项没有和其他项对齐（缩进/位置明显不同）",
+    "composite": "pairs_g3g5_replacement/pair_r06_G3.png"
+  },
+  {
+    "class": "G3_ALIGNMENT_OFFSET",
+    "src_id": "g3rel_96_05",
+    "stratum": "rel·96px",
+    "defective_path": "../../runs/part3/g3_rel/g3rel_96_05/defective.png",
+    "clean_path": "../../runs/part3/g3_rel/g3rel_96_05/clean.png",
+    "pair_id": "r09",
+    "short": "G3",
+    "phrase": "同一组 bullets 里，有一项没有和其他项对齐（缩进/位置明显不同）",
+    "composite": "pairs_g3g5_replacement/pair_r09_G3.png"
+  },
+  {
+    "class": "G3_ALIGNMENT_OFFSET",
+    "src_id": "g3rel_48_02",
+    "stratum": "rel·48px",
+    "defective_path": "../../runs/part3/g3_rel/g3rel_48_02/defective.png",
+    "clean_path": "../../runs/part3/g3_rel/g3rel_48_02/clean.png",
+    "pair_id": "r15",
+    "short": "G3",
+    "phrase": "同一组 bullets 里，有一项没有和其他项对齐（缩进/位置明显不同）",
+    "composite": "pairs_g3g5_replacement/pair_r15_G3.png"
+  },
+  {
+    "class": "G3_ALIGNMENT_OFFSET",
+    "src_id": "g3rel_96_07",
+    "stratum": "rel·96px",
+    "defective_path": "../../runs/part3/g3_rel/g3rel_96_07/defective.png",
+    "clean_path": "../../runs/part3/g3_rel/g3rel_96_07/clean.png",
+    "pair_id": "r16",
+    "short": "G3",
+    "phrase": "同一组 bullets 里，有一项没有和其他项对齐（缩进/位置明显不同）",
+    "composite": "pairs_g3g5_replacement/pair_r16_G3.png"
+  },
+  {
+    "class": "G3_ALIGNMENT_OFFSET",
+    "src_id": "g3rel_48_03",
+    "stratum": "rel·48px",
+    "defective_path": "../../runs/part3/g3_rel/g3rel_48_03/defective.png",
+    "clean_path": "../../runs/part3/g3_rel/g3rel_48_03/clean.png",
+    "pair_id": "r17",
+    "short": "G3",
+    "phrase": "同一组 bullets 里，有一项没有和其他项对齐（缩进/位置明显不同）",
+    "composite": "pairs_g3g5_replacement/pair_r17_G3.png"
+  }
+]

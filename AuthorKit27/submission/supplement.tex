@@ -170,6 +170,48 @@ clean-\emph{deck} negatives. See \S6 of the main paper.}
 \end{table}
 
 % =====================================================================
+\section{Human spot-check v2}\label{app:spotcheckv2}
+% =====================================================================
+
+The rebuilt-corpus human spot-check used in the revised limitations text is
+summarised in Table~\ref{tab:spotcheck-v2}. To avoid rewriting the full 69-pair
+sample for a definition bug confined to legacy \g{G3}/\g{G5}, we kept the other
+55 pairs fixed and replaced only those stale samples with corrected internal-
+contrast variants (within-list misalignment for \g{G3}, within-list chromatic
+clash for \g{G5}). The resulting v2 sample has 73 pairs. The paired clean
+controls remain clean throughout, and the source-structure faithfulness audit on
+the auditable classes is 55/55 (see \texttt{data/part3/e8\_ir\_faithfulness\_v2.json}
+in the Code and Data Supplement). A short delta summary is provided in
+\texttt{reports/\_e8\_spotcheck\_v2\_delta.md}.
+
+\begin{table}[h]
+\centering
+\small
+\caption{Human spot-check v2 on the rebuilt corpus. Rates are human
+perceptual-verification rates on the defective render and clean-twin
+verification rates on the paired clean render.}
+\label{tab:spotcheck-v2}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+class & defect visible & twin clean & $n$ \\
+\midrule
+\g{G1} & 1.00\ci{.70,1} & 1.00\ci{.70,1} & 9 \\
+\g{G2} & 1.00\ci{.65,1} & 1.00\ci{.65,1} & 7 \\
+\g{G3} & 1.00\ci{.68,1} & 1.00\ci{.68,1} & 8 \\
+\g{G5} & 1.00\ci{.72,1} & 1.00\ci{.72,1} & 10 \\
+\g{G6} & 1.00\ci{.65,1} & 1.00\ci{.65,1} & 7 \\
+\g{G7} & 1.00\ci{.70,1} & 1.00\ci{.70,1} & 9 \\
+\g{S1} & 1.00\ci{.65,1} & 1.00\ci{.65,1} & 7 \\
+\g{S4} & 1.00\ci{.65,1} & 1.00\ci{.65,1} & 7 \\
+\g{S6} & 1.00\ci{.70,1} & 1.00\ci{.70,1} & 9 \\
+\midrule
+\textbf{overall} & \textbf{1.00\ci{.95,1}} & \textbf{1.00\ci{.95,1}} & \textbf{73} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% =====================================================================
 \section{Extended figures}\label{app:figs}
 % =====================================================================
 
@@ -256,7 +298,7 @@ in every channel on real cluttered decks.}
 \includegraphics[width=0.7\linewidth]{figs/fig3_coverage_heatmap.png}
 \caption{\textbf{Coverage by engine} (companion to Table~2 of the main paper).
 Per-defect balanced accuracy for the linter, VLM-C0, VLM-C3, linter+VLM-C3,
-and the routed hybrid. Minimal linter$\oplus$C3 matches routed coverage;
+and the routed hybrid. Minimal linter$\oplus$C3 has the highest mean balanced accuracy;
 \g{G7} (boxed) is the linter-blind cell rescued by C3.}
 \label{figA:coverage}
 \end{figure}

@@ -1,0 +1,58 @@
+{
+  "r00": {
+    "cls": "G3_ALIGNMENT_OFFSET",
+    "stratum": "rel·96px",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "r01": {
+    "cls": "G3_ALIGNMENT_OFFSET",
+    "stratum": "rel·96px",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "r04": {
+    "cls": "G3_ALIGNMENT_OFFSET",
+    "stratum": "rel·48px",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "r06": {
+    "cls": "G3_ALIGNMENT_OFFSET",
+    "stratum": "rel·48px",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "r09": {
+    "cls": "G3_ALIGNMENT_OFFSET",
+    "stratum": "rel·96px",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "r15": {
+    "cls": "G3_ALIGNMENT_OFFSET",
+    "stratum": "rel·48px",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "r16": {
+    "cls": "G3_ALIGNMENT_OFFSET",
+    "stratum": "rel·96px",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "r17": {
+    "cls": "G3_ALIGNMENT_OFFSET",
+    "stratum": "rel·48px",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  }
+}

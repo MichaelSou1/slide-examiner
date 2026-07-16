@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>G5 replacement 标注页</title>
+  <style>
+    :root { --bg:#111318; --panel:#1a1f29; --panel2:#232937; --text:#eef2ff; --muted:#a9b4cc; --border:#364055; --good:#3fb950; --bad:#f85149; --warn:#f2cc60; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; background:var(--bg); color:var(--text); line-height:1.45; }
+    header { position:sticky; top:0; z-index:20; padding:14px 18px; background:rgba(17,19,24,.94); border-bottom:1px solid var(--border); backdrop-filter:blur(10px); }
+    .container { max-width:1600px; margin:0 auto; padding:18px; }
+    .grid { display:grid; grid-template-columns:380px minmax(0,1fr); gap:18px; align-items:start; }
+    .card { background:var(--panel); border:1px solid var(--border); border-radius:14px; padding:16px; box-shadow:0 10px 30px rgba(0,0,0,.18); }
+    .help { padding-left:18px; color:var(--muted); }
+    .row { display:flex; flex-wrap:wrap; gap:10px; align-items:center; }
+    label.file { display:inline-flex; align-items:center; gap:10px; padding:10px 12px; border:1px dashed var(--border); border-radius:10px; background:var(--panel2); cursor:pointer; }
+    input[type=file] { display:none; }
+    .statusline { display:flex; flex-wrap:wrap; gap:10px; margin-top:10px; font-size:14px; }
+    .pill { display:inline-flex; align-items:center; gap:6px; padding:6px 10px; border-radius:999px; border:1px solid var(--border); background:var(--panel2); }
+    .pill.good { color:#c8f7cf; border-color:rgba(63,185,80,.45); }
+    .pill.warn { color:#ffe8a3; border-color:rgba(242,204,96,.45); }
+    button,textarea,input[type=number] { font:inherit; }
+    button { border:1px solid var(--border); border-radius:10px; background:var(--panel2); color:var(--text); padding:9px 14px; cursor:pointer; }
+    button.primary { background:#1d4ed8; border-color:#3b82f6; }
+    button.success.on { background:rgba(63,185,80,.18); border-color:rgba(63,185,80,.55); color:#c8f7cf; }
+    button.danger.on { background:rgba(248,81,73,.18); border-color:rgba(248,81,73,.55); color:#ffd0cd; }
+    .nav { display:flex; flex-wrap:wrap; gap:10px; align-items:center; }
+    .nav input[type=number] { width:90px; padding:8px 10px; border-radius:10px; border:1px solid var(--border); background:var(--panel2); color:var(--text); }
+    .pair-title { margin:0 0 8px; font-size:20px; }
+    .pair-meta { margin-bottom:14px; color:var(--muted); font-size:14px; }
+    .lookfor { color:#ffd479; font-weight:700; }
+    .imgs { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:14px; }
+    .img-wrap { background:#0d1117; border:1px solid var(--border); border-radius:14px; overflow:hidden; }
+    .img-cap { padding:10px 12px; font-weight:700; border-bottom:1px solid var(--border); background:rgba(255,255,255,.03); }
+    .img-cap.def { color:#ff9b9b; }
+    .img-cap.clean { color:#a8f0b2; }
+    .img-wrap img { display:block; width:100%; height:auto; background:#fff; }
+    .q { margin-bottom:14px; padding:14px; border:1px solid var(--border); border-radius:12px; background:rgba(255,255,255,.02); }
+    .q-title { font-weight:700; margin-bottom:10px; }
+    .q-help { font-size:13px; color:var(--muted); margin-top:8px; }
+    textarea { width:100%; min-height:90px; padding:10px 12px; border-radius:12px; border:1px solid var(--border); background:var(--panel2); color:var(--text); resize:vertical; }
+    .empty { padding:40px 20px; text-align:center; color:var(--muted); border:1px dashed var(--border); border-radius:14px; background:rgba(255,255,255,.02); }
+    code { background:rgba(255,255,255,.06); padding:2px 6px; border-radius:6px; }
+    @media (max-width:1100px) { .grid { grid-template-columns:1fr; } .imgs { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 style="margin:0 0 6px;font-size:22px;">W3.6 G5 replacement 标注页</h1>
+    <div style="color:var(--muted);">这页只用来补重标 G5 replacement（10 条，正确口径：同组 bullets 中一项异色）。标完导出 <code>labels_g5_only_replacement_v2.json</code>。</div>
+  </header>
+  <div class="container">
+    <div class="grid">
+      <aside class="card">
+        <h2 style="margin-top:0;">你要标什么</h2>
+        <ul class="help">
+          <li>这页现在只需要你重标 G5；之前那批 G3 仍然有效，无需再标。</li>
+          <li>G5 口径：只看同一组正文 bullets 内部，是否有一项颜色和其他 bullet 明显不同。</li>
+          <li>不要把 title 和 bullet 的颜色差异算进来；title 跟正文颜色不同本身不算这个缺陷。</li>
+          <li>如果你能直接看出 defective 图里有一条 bullet 明显异色，就选 yes；如果只是 title 跟 bullet 不同，或左右两图都只是正常配色差异，就选 no。</li>
+        </ul>
+        <div class="statusline">
+          <span id="donePill" class="pill warn">未开始</span>
+          <span id="posPill" class="pill">当前第 1 条</span>
+        </div>
+        <div class="row" style="margin-top:14px;">
+          <label class="file">手动加载 manifest_g5_only_replacement.json<input id="manifestFile" type="file" accept="application/json"></label>
+        </div>
+        <div id="manifestHint" style="margin-top:8px;color:var(--muted);font-size:13px;">如果浏览器从本地打开时拦截 fetch，就点这里手动选择同目录下的 G5-only manifest 文件。</div>
+        <div class="row" style="margin-top:16px;margin-bottom:10px;"><button id="prevBtn">上一条 ←</button><button id="nextBtn">下一条 →</button></div>
+        <div class="nav" style="margin-bottom:10px;"><span>跳到第</span><input id="gotoInput" type="number" min="1" step="1" value="1"><span>条</span><button id="gotoBtn">跳转</button></div>
+        <div class="row"><button id="exportBtn" class="primary">导出 labels_g5_only_replacement_v2.json</button><button id="resetBtn">清空本地缓存</button></div>
+        <div style="margin-top:10px;color:var(--muted);font-size:13px;">快捷键：<code>1</code>/<code>2</code> = 问题1 yes/no，<code>3</code>/<code>4</code> = 问题2 yes/no，方向键切换。</div>
+      </aside>
+      <main class="card">
+        <div id="empty" class="empty">先在同目录生成并放置 <code>manifest_g5_only_replacement.json</code>。</div>
+        <div id="annotator" style="display:none;">
+          <div class="pair-title" id="pairTitle"></div>
+          <div class="pair-meta" id="pairMeta"></div>
+          <div class="imgs">
+            <div class="img-wrap"><div class="img-cap def">DEFECTIVE</div><img id="defImg" alt="defective"></div>
+            <div class="img-wrap"><div class="img-cap clean">CLEAN twin</div><img id="cleanImg" alt="clean twin"></div>
+          </div>
+          <div class="q">
+            <div class="q-title">1) 这个目标缺陷在 defective 图里是否真的可见？</div>
+            <div class="row"><button class="success" data-q="defect_visible" data-v="yes">Yes / 可见</button><button class="danger" data-q="defect_visible" data-v="no">No / 不可见</button></div>
+            <div class="q-help">只比较正文 bullet 和 sibling bullets；如果只是 title 颜色不同，或 bullet 内部没有明显异色，就选 No。</div>
+          </div>
+          <div class="q">
+            <div class="q-title">2) clean twin 是否真的干净？</div>
+            <div class="row"><button class="success" data-q="twin_clean" data-v="yes">Yes / 干净</button><button class="danger" data-q="twin_clean" data-v="no">No / 不干净</button></div>
+            <div class="q-help">如果右图自身也有明显对应问题，或 pair 构造可疑，就选 No。</div>
+          </div>
+          <div class="q">
+            <div class="q-title">3) 备注（可选）</div>
+            <textarea id="noteBox" placeholder="比如：这一项确实偏右；颜色差异很明显/不明显；clean 也怪；需要停下来复查……"></textarea>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+  <script>
+    const STORAGE_KEY = 'spotcheck_labels_g5_only_replacement_v2';
+    const EMBEDDED_MANIFEST = [
+  {
+    "class": "G5_BRAND_COLOR_VIOLATION",
+    "src_id": "g5bullet_12_red_00",
+    "stratum": "ΔE≈12·hue",
+    "defective_path": "../../runs/part3/g5_chroma/g5bullet_12_red_00/defective.png",
+    "clean_path": "../../runs/part3/g5_chroma/g5bullet_12_red_00/clean.png",
+    "pair_id": "r02",
+    "short": "G5",
+    "phrase": "同一组 bullets 里，有一项的文字颜色与其他项明显不同",
+    "composite": "pairs_g3g5_replacement/pair_r02_G5.png"
+  },
+  {
+    "class": "G5_BRAND_COLOR_VIOLATION",
+    "src_id": "g5bullet_12_orange_03",
+    "stratum": "ΔE≈12·hue",
+    "defective_path": "../../runs/part3/g5_chroma/g5bullet_12_orange_03/defective.png",
+    "clean_path": "../../runs/part3/g5_chroma/g5bullet_12_orange_03/clean.png",
+    "pair_id": "r03",
+    "short": "G5",
+    "phrase": "同一组 bullets 里，有一项的文字颜色与其他项明显不同",
+    "composite": "pairs_g3g5_replacement/pair_r03_G5.png"
+  },
+  {
+    "class": "G5_BRAND_COLOR_VIOLATION",
+    "src_id": "g5bullet_24_red_05",
+    "stratum": "ΔE≈24·hue",
+    "defective_path": "../../runs/part3/g5_chroma/g5bullet_24_red_05/defective.png",
+    "clean_path": "../../runs/part3/g5_chroma/g5bullet_24_red_05/clean.png",
+    "pair_id": "r05",
+    "short": "G5",
+    "phrase": "同一组 bullets 里，有一项的文字颜色与其他项明显不同",
+    "composite": "pairs_g3g5_replacement/pair_r05_G5.png"
+  },
+  {
+    "class": "G5_BRAND_COLOR_VIOLATION",
+    "src_id": "g5bullet_24_orange_08",
+    "stratum": "ΔE≈24·hue",
+    "defective_path": "../../runs/part3/g5_chroma/g5bullet_24_orange_08/defective.png",
+    "clean_path": "../../runs/part3/g5_chroma/g5bullet_24_orange_08/clean.png",
+    "pair_id": "r07",
+    "short": "G5",
+    "phrase": "同一组 bullets 里，有一项的文字颜色与其他项明显不同",
+    "composite": "pairs_g3g5_replacement/pair_r07_G5.png"
+  },
+  {
+    "class": "G5_BRAND_COLOR_VIOLATION",
+    "src_id": "g5bullet_12_green_02",
+    "stratum": "ΔE≈12·hue",
+    "defective_path": "../../runs/part3/g5_chroma/g5bullet_12_green_02/defective.png",
+    "clean_path": "../../runs/part3/g5_chroma/g5bullet_12_green_02/clean.png",
+    "pair_id": "r08",
+    "short": "G5",
+    "phrase": "同一组 bullets 里，有一项的文字颜色与其他项明显不同",
+    "composite": "pairs_g3g5_replacement/pair_r08_G5.png"
+  },
+  {
+    "class": "G5_BRAND_COLOR_VIOLATION",
+    "src_id": "g5bullet_12_purple_04",
+    "stratum": "ΔE≈12·hue",
+    "defective_path": "../../runs/part3/g5_chroma/g5bullet_12_purple_04/defective.png",
+    "clean_path": "../../runs/part3/g5_chroma/g5bullet_12_purple_04/clean.png",
+    "pair_id": "r10",
+    "short": "G5",
+    "phrase": "同一组 bullets 里，有一项的文字颜色与其他项明显不同",
+    "composite": "pairs_g3g5_replacement/pair_r10_G5.png"
+  },
+  {
+    "class": "G5_BRAND_COLOR_VIOLATION",
+    "src_id": "g5bullet_24_green_07",
+    "stratum": "ΔE≈24·hue",
+    "defective_path": "../../runs/part3/g5_chroma/g5bullet_24_green_07/defective.png",
+    "clean_path": "../../runs/part3/g5_chroma/g5bullet_24_green_07/clean.png",
+    "pair_id": "r11",
+    "short": "G5",
+    "phrase": "同一组 bullets 里，有一项的文字颜色与其他项明显不同",
+    "composite": "pairs_g3g5_replacement/pair_r11_G5.png"
+  },
+  {
+    "class": "G5_BRAND_COLOR_VIOLATION",
+    "src_id": "g5bullet_24_purple_09",
+    "stratum": "ΔE≈24·hue",
+    "defective_path": "../../runs/part3/g5_chroma/g5bullet_24_purple_09/defective.png",
+    "clean_path": "../../runs/part3/g5_chroma/g5bullet_24_purple_09/clean.png",
+    "pair_id": "r12",
+    "short": "G5",
+    "phrase": "同一组 bullets 里，有一项的文字颜色与其他项明显不同",
+    "composite": "pairs_g3g5_replacement/pair_r12_G5.png"
+  },
+  {
+    "class": "G5_BRAND_COLOR_VIOLATION",
+    "src_id": "g5bullet_12_blue_01",
+    "stratum": "ΔE≈12·hue",
+    "defective_path": "../../runs/part3/g5_chroma/g5bullet_12_blue_01/defective.png",
+    "clean_path": "../../runs/part3/g5_chroma/g5bullet_12_blue_01/clean.png",
+    "pair_id": "r13",
+    "short": "G5",
+    "phrase": "同一组 bullets 里，有一项的文字颜色与其他项明显不同",
+    "composite": "pairs_g3g5_replacement/pair_r13_G5.png"
+  },
+  {
+    "class": "G5_BRAND_COLOR_VIOLATION",
+    "src_id": "g5bullet_24_blue_06",
+    "stratum": "ΔE≈24·hue",
+    "defective_path": "../../runs/part3/g5_chroma/g5bullet_24_blue_06/defective.png",
+    "clean_path": "../../runs/part3/g5_chroma/g5bullet_24_blue_06/clean.png",
+    "pair_id": "r14",
+    "short": "G5",
+    "phrase": "同一组 bullets 里，有一项的文字颜色与其他项明显不同",
+    "composite": "pairs_g3g5_replacement/pair_r14_G5.png"
+  }
+];
+    let manifest = EMBEDDED_MANIFEST;
+    let labels = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+    let idx = 0;
+    const $ = (id) => document.getElementById(id);
+    function current(){ return manifest[idx]; }
+    function completionCount(){ return manifest.filter(item => { const rec = labels[item.pair_id]; return rec && rec.defect_visible && rec.twin_clean; }).length; }
+    function save(){ localStorage.setItem(STORAGE_KEY, JSON.stringify(labels)); }
+    function refreshHeader(){
+      if (!manifest.length) return;
+      const done = completionCount();
+      $('donePill').textContent = '已完成 ' + done + ' / ' + manifest.length;
+      $('donePill').className = done === manifest.length ? 'pill good' : 'pill warn';
+      $('posPill').textContent = '当前第 ' + (idx + 1) + ' / ' + manifest.length + ' 条';
+    }
+    function highlightButtons(){
+      const item = current(); const rec = labels[item.pair_id] || {};
+      document.querySelectorAll('button[data-q]').forEach(btn => btn.classList.toggle('on', rec[btn.dataset.q] === btn.dataset.v));
+    }
+    function render(){
+      if (!manifest.length) return;
+      $('empty').style.display = 'none'; $('annotator').style.display = '';
+      refreshHeader();
+      const item = current(); const rec = labels[item.pair_id] || {};
+      $('pairTitle').innerHTML = 'Pair <b>' + (idx + 1) + ' / ' + manifest.length + '</b>　类别 <b>' + item.class + '</b>';
+      $('pairMeta').innerHTML = '请找的目标缺陷：<span class="lookfor">' + (item.phrase || item.class) + '</span>' + (item.stratum ? '　｜　stratum: <code>' + item.stratum + '</code>' : '') + '　｜　pair_id: <code>' + item.pair_id + '</code>';
+      $('defImg').src = item.defective_path;
+      $('cleanImg').src = item.clean_path;
+      $('gotoInput').value = idx + 1;
+      $('noteBox').value = rec.note || '';
+      highlightButtons();
+    }
+    function setAnswer(q, v){ const item = current(); labels[item.pair_id] = labels[item.pair_id] || { cls: item.class, stratum: item.stratum }; labels[item.pair_id][q] = v; labels[item.pair_id].note = $('noteBox').value; save(); render(); }
+    function go(delta){ if (!manifest.length) return; idx = (idx + delta + manifest.length) % manifest.length; render(); }
+    function exportLabels(){
+      if (!manifest.length) return;
+      const out = {}; manifest.forEach(item => { out[item.pair_id] = labels[item.pair_id] || { cls: item.class, stratum: item.stratum }; });
+      const blob = new Blob([JSON.stringify(out, null, 2)], { type: 'application/json' });
+      const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'labels_g5_only_replacement_v2.json'; a.click(); URL.revokeObjectURL(a.href);
+    }
+    function loadManifestObject(obj){
+      manifest = obj;
+      idx = 0;
+      render();
+    }
+    function boot(){
+      if (!Array.isArray(EMBEDDED_MANIFEST) || !EMBEDDED_MANIFEST.length) {
+        $('empty').textContent = '内嵌 manifest 为空；请用左侧按钮手动加载 manifest_g5_only_replacement.json。';
+        return;
+      }
+      loadManifestObject(EMBEDDED_MANIFEST);
+      $('manifestHint').textContent = '已载入页面内嵌的 G5 replacement manifest。';
+    }
+    $('manifestFile').addEventListener('change', async (e) => {
+      const file = e.target.files[0];
+      if (!file) return;
+      try {
+        const raw = await file.text();
+        loadManifestObject(JSON.parse(raw));
+        $('manifestHint').textContent = '已手动加载：' + file.name;
+      } catch (err) {
+        $('empty').textContent = '手动加载失败：' + err.message;
+      }
+    });
+    document.querySelectorAll('button[data-q]').forEach(btn => btn.addEventListener('click', () => setAnswer(btn.dataset.q, btn.dataset.v)));
+    $('noteBox').addEventListener('input', () => { if (!manifest.length) return; const item = current(); labels[item.pair_id] = labels[item.pair_id] || { cls: item.class, stratum: item.stratum }; labels[item.pair_id].note = $('noteBox').value; save(); });
+    $('prevBtn').addEventListener('click', () => go(-1));
+    $('nextBtn').addEventListener('click', () => go(1));
+    $('gotoBtn').addEventListener('click', () => { if (!manifest.length) return; let n = parseInt($('gotoInput').value, 10); if (!Number.isFinite(n)) return; n = Math.max(1, Math.min(manifest.length, n)); idx = n - 1; render(); });
+    $('exportBtn').addEventListener('click', exportLabels);
+    $('resetBtn').addEventListener('click', () => { if (!confirm('确定清空这页的本地缓存吗？')) return; localStorage.removeItem(STORAGE_KEY); labels = {}; render(); });
+    document.addEventListener('keydown', (e) => {
+      if (!manifest.length) return;
+      if (e.target && e.target.tagName === 'TEXTAREA') return;
+      if (e.key === '1') setAnswer('defect_visible', 'yes');
+      else if (e.key === '2') setAnswer('defect_visible', 'no');
+      else if (e.key === '3') setAnswer('twin_clean', 'yes');
+      else if (e.key === '4') setAnswer('twin_clean', 'no');
+      else if (e.key === 'ArrowLeft') go(-1);
+      else if (e.key === 'ArrowRight') go(1);
+    });
+    boot();
+  </script>
+</body>
+</html>

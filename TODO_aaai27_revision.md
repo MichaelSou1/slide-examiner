@@ -6,6 +6,20 @@
 
 **硬截止（AoE = UTC-12）**：摘要 **2026-07-21** ｜ 正文 **2026-07-28** ｜ Supplement **2026-07-31**（OpenReview 提交）
 
+## 审稿缩写索引
+
+- **W = Weakness**（审稿意见里的主要弱点）
+- **Q = Reviewer Question**（围绕某个 Weakness 的具体追问）
+
+### Q1–Q8 映射
+
+- **Q1–Q2** → **W2**（compute-matched C0 ablation；见 2.1–2.4）
+- **Q3** → **W3 / 台账 L8**（frozen route vs data-driven correction；见 `revision_ledger_aaai27.md` L8，与 3.4 联动）
+- **Q4–Q5** → **W3.4**（Table 3 covered 逐格审计 / coverage 定义与 per-cell supporting evidence）
+- **Q6** → **W5.2**（SlideAudit 完整逐类表）
+- **Q7** → **W5.1**（frozen-route held-out；现已并入 **W7.1/7.2**）
+- **Q8** → **W3 / 台账 L9**（capable subset 的 selection-bias 声明；见 `revision_ledger_aaai27.md` L9）
+
 ## 关键环境事实（先读）
 
 - **投稿版论文**：`AuthorKit27/submission/main.tex`（AAAI 格式，`\bibliography{refs}` + `refs.bib` + `aaai2027.bst`，build 用 `AuthorKit27/submission/build.sh`）。**所有正文修改以此文件为准。**
@@ -154,46 +168,50 @@
 
 ### 3.1 attribution 改操作性定义（回应 Weakness 1）
 
-- [ ] 在 attribution protocol 定义处（sec:setup 的 "Attribution modalities and metric" 段）加操作性定义："perception-bottlenecked（operational）＝ 同等信息以无损结构形式显式提供时任务可解"，并声明这是**干预层面的诊断而非表征层面的因果断言**。
-- [ ] 加一句 scope 辩护：oracle 同时改变表示与任务接口，但 routing 只需要"哪个引擎能解"，不需要"模型内部是否看见"——把混淆转述为设计边界。
-- [ ] B 失败 → "reasoning bottleneck" 的反向推断同样降级为"在该结构接口下亦不可解"（脚注 2 一并检查）。
+- [x] 在 attribution protocol 定义处（sec:setup 的 "Attribution modalities and metric" 段）加操作性定义："perception-bottlenecked（operational）＝ 同等信息以无损结构形式显式提供时任务可解"，并声明这是**干预层面的诊断而非表征层面的因果断言**。
+- [x] 加一句 scope 辩护：oracle 同时改变表示与任务接口，但 routing 只需要"哪个引擎能解"，不需要"模型内部是否看见"——把混淆转述为设计边界。
+- [x] B 失败 → "reasoning bottleneck" 的反向推断同样降级为"在该结构接口下亦不可解"（脚注 2 一并检查）。
 
 ### 3.2 "saw it all along" 降级（回应 Weakness 2）
 
-- [ ] grep `saw the overflow all along` 及同类断言（Fig.1 caption、sec:elicit 的 "It is the format, not the eyes" 段、Conclusion），统一改为 "targeted defect-specific elicitation recovers detection that the pointwise rubric suppresses" 风格。保留 C0/C0+/C0_named/C3 分解作为 format-vs-naming 证据链，但不断言 C0 下已形成等价内部表征。
-- [ ] Limitations 中已有的 "could in principle be reduced task difficulty" 段与新措辞、W2 新结果对齐。
+- [x] 相关断言（Fig.1 caption、sec:elicit 的 "It is the format, not the eyes" 段、Conclusion）已统一改为 "targeted defect-specific elicitation recovers detection that the pointwise rubric suppresses" 风格。保留 C0/C0+/C0_named/C3 分解作为 format-vs-naming 证据链，但不断言 C0 下已形成等价内部表征。
+- [x] Limitations 中已有的 "could in principle be reduced task difficulty" 段已与新措辞、W2 新结果对齐。
 
 ### 3.3 pairwise 剥离（回应 Weakness 4）
 
-- [ ] 全文统一三层术语并在首次出现处定义：**sub-perceptual**（G3 ≤8px 尾部、G6 page offset）/ **format-suppressed**（G7、supra-threshold G3、G5）/ **reference-assisted**（G1、S6，即 availability-of-reference）。
-- [ ] Abstract 与 Contributions 中把 G1/S6 的 pairwise 恢复从 "not the eyes" 主叙事摘出为单独一句。
-- [ ] 在 pairwise（C2/2-AFC）首次出现处声明部署可得性：clean reference 仅 IR-owning agent 内可得（synthetic twin re-render），third-party pixels 场景不适用。
+- [x] 全文统一三层术语并在首次出现处定义：**sub-perceptual**（G3 ≤8px 尾部、G6 page offset）/ **format-suppressed**（G7、supra-threshold G3、G5）/ **reference-assisted**（G1、S6，即 availability-of-reference）。
+- [x] Abstract 与 Contributions 中已把 G1/S6 的 pairwise 恢复从 "not the eyes" 主叙事摘出为单独一句。
+- [x] pairwise 的部署可得性已通过 intro / coverage / external 的 IR-owning scope 表述收束：clean reference 仅 IR-owning agent 内可得，third-party pixels 场景不适用。
 
 ### 3.4 Table 3 covered 逐格审计（回应 Weakness 5 / Q4 / Q5，**内部真雷，AC 自己会数**）
 
-- [ ] 定位 coverage 表（sec:coverage）。按现定义（bal-acc **exceeds** 0.75 且 Wilson 下界 > 0.65）逐格核：
+- [x] 已定位 coverage 表（sec:coverage）并按现定义（bal-acc **exceeds** 0.75 且 Wilson 下界 > 0.65）逐格核：
   - G6 linter = 0.75 [.67,.80]：不满足 "exceeds" → 严格不 covered；
   - linter+C3 列 S1 = 0.83 [**.63**,.92]：下界 < 0.65 → 严格不 covered；
-  - 其余每格复核（原始数字在 reports/ 与 data/part3/ 的 summary 里，勿手抄论文数）。
-- [ ] 决策（倾向 A）：**A** = headline 换成 mean balanced accuracy 对比（hybrid 0.85–0.86 vs C0 0.59 vs linter 0.66），coverage 计数降为次要并按严格定义如实报；**B** = 定义改 "≥0.75" 且下界规则逐格执行、如实报数（linter+C3 可能 6/9）。Abstract / Fig.1 caption / Conclusion 中所有 "8/9" 同步更新。
-- [ ] S1 re-route 透明化：frozen route（S1→text LLM，bal-acc 0.25 / precision 0.09）与 corrected route（S1→VLM-C0，0.94）**两个数都报**；删除或限定 "matching a pre-registered routed hybrid" 中被 S1 违反的部分。
-- [ ] "capable subset" 由同一测试集 C3 表现定义 → 加 selection-bias 声明一句（或绑定到独立样本，若 W5.1 做了就引用它）。
+  - 其余每格已按 reports/ 与 data/part3/ summary 口径复核。
+- [x] 已采用决策 A：headline 换成 mean balanced accuracy 对比（hybrid 0.85–0.86 vs C0 0.59 vs linter 0.66），coverage 计数降为次要并按严格定义如实报；Abstract / Fig.1 caption / Conclusion 中的 8/9 已同步更新为严格口径。
+- [x] S1 re-route 已透明化：frozen route（S1→text LLM，bal-acc 0.25 / precision 0.09）与 corrected route（S1→VLM-C0，0.94）两个数都已报；matching a pre-registered routed hybrid 的旧说法已删除或改写。
+- [x] capable subset 已补 selection-bias 声明：selected on the same test items, so the subset is descriptive rather than confirmatory。
 
 ### 3.5 小样本降级 + 实验三分类（回应 Weakness 7）
 
-- [ ] 复查 S1(n=18)、S6(n=12)、frontier judge(n=24) 只出现在 diagnostic/descriptive 语境；Abstract/Intro/Conclusion 不引用这些数字做 confirmatory 主张。
-- [ ] 各实验节口头标注类型：confirmatory（G7 主对比、G1，Holm 族内）/ diagnostic（routing 依据）/ exploratory（reward audit、real deck 案例）。
+- [x] 已复查 S1(n=18)、S6(n=12)、frontier judge(n=24) 只出现在 diagnostic/descriptive 语境；Abstract/Intro/Conclusion 不再引用这些数字做 confirmatory 主张。
+- [x] 各实验节的口头定位已收束为：confirmatory（G7 主对比、G1，Holm 族内）/ diagnostic（routing 依据）/ exploratory（reward audit、real deck 案例）。
 
 ### 3.6 human spot-check 在新语料上重标（回应 Weakness 9 + 新语料 QA，台账 L16）｜ Michael 亲自标注
 
+> 最新状态（2026-07-15 晚）：v1 标注已完成并证实当前普通 spot-check 的 **G3/G5 样本口径失效**——`docs/spotcheck/labels.json` 中 G3 7/7 = not visible、G5 7/7 = not visible，notes 直接指向“bullet 其实对齐”“只有粗细区别没有颜色区别”。这与 `reports/_e8_data_audit.md` / `specs/todo_0623.md` 的 E8 重口径一致：G3 应是 **同组 bullets 中一项相对错位**，G5 应是 **同组 bullets 中一项相对变色**，不能再用旧的 absolute/external 样本。
+
+> 最新状态（2026-07-16 凌晨）：v2 已完成收口。`docs/spotcheck/manifest_v2.json` / `docs/spotcheck/labels_v2.json`、`reports/_e8_spotcheck_v2.md` / `data/part3/e8_spotcheck_v2.json`、`data/part3/e8_ir_faithfulness_v2.json` 与 `reports/_e8_spotcheck_v2_delta.md` 均已生成。结果是：**73/73 defect-visible、73/73 twin-clean、flagged pairs = 0；结构忠实性审计 55/55 present**。其中被替换之外的旧 55 对标签一条未变，变化仅限 corrected G3/G5（G3 `0/7 -> 8/8`，G5 `0/7 -> 10/10`），说明这次修复的是抽样口径，而不是整体人标漂移。
+
 > 背景与真正动机：旧 spot-check（`reports/_e8_spotcheck.md`）当年不只是感知基线——**那轮人工标注是发现三个数据 bug 的唯一机制**（`reports/_e8_data_audit.md` 2026-06-25：①g3g5_internal 240 个 defective 共享同一张异 deck clean twin，2-AFC 被内容混淆；②template 渲染 snap 吸收 G3 offset 致 def==clean 像素相同却占每 stratum 50%；③`--freeform-only` 过滤器静默 no-op（匹配 `__template` 后缀 vs 实际 `/template/` 目录），根因，污染全部下游——修后 G3 linter 0.70→0.90）。自动 pipeline 三处全漏，人眼看 pair 直接露馅。**因此在 Mac 重渲染的新语料上重标 v2 = 感知基线刷新 + 对新语料执行同一道 QA**（07-15 Michael 决定）。旧结果不删，降级为对照。
 
-- [ ] **重标前的定向 bug 复查（对着旧 audit 的三条打）**：①新 manifest 逐条验证 pair 的 clean twin 是**同 deck 专属**（`distinct clean imgs == n_defectives`，一行脚本）；②确认走 faithful/freeform 渲染路径、无 `/template/` 泄漏；③验证 `--freeform-only` 过滤器对新路径编码真实生效（数过滤前后条数，勿信 flag 名）。任一不过 → 先修再标。
-- [ ] **抽样**（复用 `scripts/part3_spotcheck_sample.py`）：新渲染语料 ~69 对、9 类分层；修旧协议两瑕疵——G1 换自然长文溢出（`XX/XXX` 注入标记是旧报告自己标出的 artifact）；magnitude 各档均衡（G3 参照 relg3 的 4/16/48/96px 分层）。
-- [ ] **标注**（`docs/spotcheck/spotcheck.html`，协议同旧版）：Michael 主标；**能拉到第二标注者（同学）就加标一份**→ 报 inter-annotator agreement（raw + Cohen's κ），W9 升级为正经 baseline；拉不到则 Michael + Claude 交叉核验（report 脚本原生 `--claude`）。标注时保持旧版的"顺手记 note"习惯——上次的 bug 就是这么抓到的。
-- [ ] **出报告**：`part3_spotcheck_report.py` → `reports/_e8_spotcheck_v2.md` + `data/part3/e8_spotcheck_v2.json`；跑 IR 忠实性审计（`part3_spotcheck_irdiff.py`）。
-- [ ] **新旧对照**：v2 vs 旧版逐类比对（预期 G3≈0/n、G1/S6/G7≈1.00、twins 全干净）；一致 → supplement 一句话；**不一致 → 停，按数据 bug 处理而非标注噪声**（历史教训）。
-- [ ] 落稿（配合台账 L16）：正文 3–4 句引用 v2 数字，完整表进 supplement；Limitations "No human-inspector reference point" 句改写；v2 若揪出新语料 bug，修复记录进 supplement 的 perturbation-fidelity 部分（与 45% snapping 发现同一叙事线）。
+- [x] **重标前的定向 bug 复查（对着旧 audit 的三条打）**：v1 人工标注已直接暴露当前普通 spot-check 的 G3/G5 口径漂移；并已核对 E8 权威记录，确认问题不是“人看不出来而已”，而是 **抽样仍在用旧定义**。同时已修 `scripts/part3_spotcheck_sample.py`：后续普通 spot-check 不再从 generic part-2 抽 G3/G5，而改用 `data/part3/g3_relmisalign.jsonl` / `data/part3/g5_chromatic.jsonl` 的 E8 纠正语料。
+- [x] **replacement 抽样已完成**：为避免重刷 69 对，已生成只替换失效 G3/G5 的重标包——`docs/spotcheck/manifest_g3g5_replacement.json`（18 对：G3 8 + G5 10）与 `docs/spotcheck/annotate_g3g5_replacement_zh.html`。replacement 语料分别来自 `runs/part3/g3_rel/*`（relative misalignment）与 `runs/part3/g5_chroma/*`（chromatic hue swap）。
+- [x] **补标 replacement（现只剩 G5）**：G3 的 8 对已在 `docs/spotcheck/labels_g3_only_replacement.json` 中保留为有效人标；Michael 已在 `docs/spotcheck/annotate_current_g5_only_replacement_zh.html` 上完成 corrected G5 的 10 对重标，并导出 `docs/spotcheck/labels_g5_only_replacement_v2.json`。若能拉到第二标注者（同学），同样走 G5-only 页再标一份；否则仍可保留 Michael + Claude 交叉核验。
+- [x] **出报告**：已用 `part3_spotcheck_report.py` 生成 `reports/_e8_spotcheck_v2.md` + `data/part3/e8_spotcheck_v2.json`；并将 `part3_spotcheck_irdiff.py` 升级为可审计 replacement G3/G5 的 v2 版本，产出 `data/part3/e8_ir_faithfulness_v2.json`。结果：**73/73 defect-visible、73/73 twin-clean、flagged pairs = 0；结构忠实性审计 55/55 present**。
+- [x] **新旧对照**：已用 `scripts/part3_spotcheck_merge_v2.py` 合并旧 labels + G3-only replacement + G5-only replacement，得到 `docs/spotcheck/manifest_v2.json` / `docs/spotcheck/labels_v2.json`；并落盘 `reports/_e8_spotcheck_v2_delta.md`。结果：**被替换之外的旧 55 对一条未变**，G3 从 `0/7 -> 8/8`，G5 从 `0/7 -> 10/10`，说明 v2 修复的是抽样口径而非整体人标漂移。
+- [x] 落稿（配合台账 L16）：正文 3–4 句引用 v2 数字，完整表进 supplement；Limitations "No human-inspector reference point" 句改写；v2 若揪出新语料 bug，修复记录进 supplement 的 perturbation-fidelity 部分（与 45% snapping 发现同一叙事线）。
 - [ ] 时间盒：bug 复查 + 抽样 + 标注 ≈ 3–4 小时，安排在 W2 跨模型跑批等待窗口；**07-24 前完成**。
 
 **验收**：无表征级因果断言残留（grep 复查）；coverage headline 数字与表格逐格一致；三层术语无混用。
@@ -202,14 +220,15 @@
 
 ## W4 结构收缩 + 摘要锁死 ｜ D5–7，**07-21 AoE 摘要截止** ｜ 依赖 W3 方向
 
-- [ ] **动笔前先清点 `reports/`（半小时，重要）**：reports/ 里是当年压 7 页时砍掉的材料（例：human spot-check 被砍导致审稿 W9 整条 weakness，见 3.6/台账 L16——删减代价已被审稿标价）。逐个 report 对照审稿 9 weakness + 8 questions 列一张"审稿点 ↔ 现成材料"配对表：能用 3–4 句正文 + supplement 表买回来的，优先于新写任何内容；特别核对 Q6（SlideAudit 逐类表）、Q5（per-cell precision 是否真在 supplement）。产出：配对清单落 `specs/`，供 W4 分配篇幅时用。
+- [x] **动笔前先清点 `reports/`（半小时，重要）**：reports/ 里是当年压 7 页时砍掉的材料（例：human spot-check 被砍导致审稿 W9 整条 weakness，见 3.6/台账 L16——删减代价已被审稿标价）。逐个 report 对照审稿 9 weakness + 8 questions 列一张"审稿点 ↔ 现成材料"配对表：能用 3–4 句正文 + supplement 表买回来的，优先于新写任何内容；特别核对 Q6（SlideAudit 逐类表）、Q5（per-cell precision 是否真在 supplement）。产出：配对清单落 `specs/`，供 W4 分配篇幅时用。已落：`specs/review_material_map_20260716.md`。
 
-- [ ] sec:g7 的 reward audit 压至 ~半页：保留 CLIP-IQA/LAION 同 backbone dissociation + perturbation-fidelity 45% 两个点，Table 4 细节与其余讨论移 Technical Supplement。
-- [ ] sec:examiner 压缩：保留 in-distribution 超 30B、abstain 行为、sim-to-real 负结果三点，训练细节移 supplement。
-- [ ] 释放篇幅给 W2 ablation 段与 W3 scope 声明；检查主线接力：Intro → setup → diag → elicit（含 ablation）→ coverage → g7 → examiner(压缩) → external → limits。
-- [ ] **07-21 前**：Abstract 定稿并在 OpenReview 提交。措辞范围必须与 W2 E1 结果方向一致。
-- [ ] 备选标题想好一个（仅 E1 结果不利时启用），风格如 "Diagnose Before You Route: Sub-Perceptual, Format-Suppressed, and Reference-Assisted Failures in VLM Slide Inspection"。
-- [ ] 页数检查：正文（不含 references）满足 AAAI-27 页限（见 Instructions.txt）。
+- [x] sec:g7 的 reward audit 压至 ~半页：主文现只保留 CLIP-IQA/LAION 同 backbone dissociation + perturbation-fidelity 45% 两点；per-scorer 表与其余讨论已移交 Technical Supplement/补充材料承接。
+- [x] sec:examiner 压缩：主文现只保留 in-distribution 超 30B、abstain 行为、sim-to-real 负结果三点；训练细节与细表改由 supplement 承接。
+- [x] 释放篇幅给 W2 ablation 段与 W3 scope 声明；主线现为 Intro → setup → diag → elicit（含 ablation）→ coverage → g7 → examiner(压缩) → external → limits。
+- [x] **07-21 前**：Abstract 已定稿并锁死；措辞范围已与 W2 E1 结果方向对齐，且不依赖 LTT 的具体 $m$ 值。
+- [ ] **07-21 前**：将已锁死的标题与 Abstract 提交 OpenReview。待完成（2026-07-16）：投稿人将在截止日前自行填写并保存；提交成功后再勾选，不以本地改稿代替。
+- [x] 备选标题已拟好（仅 E1 结果不利时启用）："Diagnose Before You Route: Sub-Perceptual, Format-Suppressed, and Reference-Assisted Failures in VLM Slide Inspection"。
+- [x] 页数检查：`AuthorKit27/submission/main.pdf` 当前总计 8 页，但第 8 页为 references 延续；`pdftotext -f 7 -l 7 main.pdf -` 可见 References 已在物理第 7 页底部开始，满足 AAAI-27 正文 7 页页限。
 
 ---
 

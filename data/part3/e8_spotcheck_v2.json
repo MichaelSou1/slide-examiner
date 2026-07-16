@@ -1,0 +1,388 @@
+{
+  "n_pairs": 73,
+  "human": {
+    "defect_visible": {
+      "G1_TEXT_OVERFLOW": {
+        "k": 9,
+        "n": 9,
+        "ci": {
+          "estimate": 1.0,
+          "low": 0.700854951580456,
+          "high": 0.9999999999999999,
+          "n": 9
+        }
+      },
+      "G2_ELEMENT_OVERLAP": {
+        "k": 7,
+        "n": 7,
+        "ci": {
+          "estimate": 1.0,
+          "low": 0.6456695649333127,
+          "high": 1.0,
+          "n": 7
+        }
+      },
+      "G3_ALIGNMENT_OFFSET": {
+        "k": 8,
+        "n": 8,
+        "ci": {
+          "estimate": 1.0,
+          "low": 0.67559243511612,
+          "high": 1.0,
+          "n": 8
+        }
+      },
+      "G6_MARGIN_VIOLATION": {
+        "k": 7,
+        "n": 7,
+        "ci": {
+          "estimate": 1.0,
+          "low": 0.6456695649333127,
+          "high": 1.0,
+          "n": 7
+        }
+      },
+      "G7_RENDER_CONTAINMENT_OVERFLOW": {
+        "k": 9,
+        "n": 9,
+        "ci": {
+          "estimate": 1.0,
+          "low": 0.700854951580456,
+          "high": 0.9999999999999999,
+          "n": 9
+        }
+      },
+      "G5_BRAND_COLOR_VIOLATION": {
+        "k": 10,
+        "n": 10,
+        "ci": {
+          "estimate": 1.0,
+          "low": 0.7224672001371109,
+          "high": 1.0,
+          "n": 10
+        }
+      },
+      "S1_TITLE_BODY_MISMATCH": {
+        "k": 7,
+        "n": 7,
+        "ci": {
+          "estimate": 1.0,
+          "low": 0.6456695649333127,
+          "high": 1.0,
+          "n": 7
+        }
+      },
+      "S4_DENSITY_RULE_VIOLATION": {
+        "k": 7,
+        "n": 7,
+        "ci": {
+          "estimate": 1.0,
+          "low": 0.6456695649333127,
+          "high": 1.0,
+          "n": 7
+        }
+      },
+      "S6_IMAGE_TEXT_CONTRADICTION": {
+        "k": 9,
+        "n": 9,
+        "ci": {
+          "estimate": 1.0,
+          "low": 0.700854951580456,
+          "high": 0.9999999999999999,
+          "n": 9
+        }
+      },
+      "overall": {
+        "k": 73,
+        "n": 73,
+        "ci": {
+          "estimate": 1.0,
+          "low": 0.950007992044269,
+          "high": 1.0,
+          "n": 73
+        }
+      }
+    },
+    "twin_clean": {
+      "G1_TEXT_OVERFLOW": {
+        "k": 9,
+        "n": 9,
+        "ci": {
+          "estimate": 1.0,
+          "low": 0.700854951580456,
+          "high": 0.9999999999999999,
+          "n": 9
+        }
+      },
+      "G2_ELEMENT_OVERLAP": {
+        "k": 7,
+        "n": 7,
+        "ci": {
+          "estimate": 1.0,
+          "low": 0.6456695649333127,
+          "high": 1.0,
+          "n": 7
+        }
+      },
+      "G3_ALIGNMENT_OFFSET": {
+        "k": 8,
+        "n": 8,
+        "ci": {
+          "estimate": 1.0,
+          "low": 0.67559243511612,
+          "high": 1.0,
+          "n": 8
+        }
+      },
+      "G6_MARGIN_VIOLATION": {
+        "k": 7,
+        "n": 7,
+        "ci": {
+          "estimate": 1.0,
+          "low": 0.6456695649333127,
+          "high": 1.0,
+          "n": 7
+        }
+      },
+      "G7_RENDER_CONTAINMENT_OVERFLOW": {
+        "k": 9,
+        "n": 9,
+        "ci": {
+          "estimate": 1.0,
+          "low": 0.700854951580456,
+          "high": 0.9999999999999999,
+          "n": 9
+        }
+      },
+      "G5_BRAND_COLOR_VIOLATION": {
+        "k": 10,
+        "n": 10,
+        "ci": {
+          "estimate": 1.0,
+          "low": 0.7224672001371109,
+          "high": 1.0,
+          "n": 10
+        }
+      },
+      "S1_TITLE_BODY_MISMATCH": {
+        "k": 7,
+        "n": 7,
+        "ci": {
+          "estimate": 1.0,
+          "low": 0.6456695649333127,
+          "high": 1.0,
+          "n": 7
+        }
+      },
+      "S4_DENSITY_RULE_VIOLATION": {
+        "k": 7,
+        "n": 7,
+        "ci": {
+          "estimate": 1.0,
+          "low": 0.6456695649333127,
+          "high": 1.0,
+          "n": 7
+        }
+      },
+      "S6_IMAGE_TEXT_CONTRADICTION": {
+        "k": 9,
+        "n": 9,
+        "ci": {
+          "estimate": 1.0,
+          "low": 0.700854951580456,
+          "high": 0.9999999999999999,
+          "n": 9
+        }
+      },
+      "overall": {
+        "k": 73,
+        "n": 73,
+        "ci": {
+          "estimate": 1.0,
+          "low": 0.950007992044269,
+          "high": 1.0,
+          "n": 73
+        }
+      }
+    }
+  },
+  "flagged": [],
+  "claude": {
+    "defect_visible": {
+      "G1_TEXT_OVERFLOW": {
+        "k": 3,
+        "n": 9,
+        "ci": {
+          "estimate": 0.3333333333333333,
+          "low": 0.1205838183869109,
+          "high": 0.6457978644196036,
+          "n": 9
+        }
+      },
+      "G2_ELEMENT_OVERLAP": {
+        "k": 7,
+        "n": 7,
+        "ci": {
+          "estimate": 1.0,
+          "low": 0.6456695649333127,
+          "high": 1.0,
+          "n": 7
+        }
+      },
+      "G6_MARGIN_VIOLATION": {
+        "k": 3,
+        "n": 7,
+        "ci": {
+          "estimate": 0.42857142857142855,
+          "low": 0.15821985525146975,
+          "high": 0.7495416354723428,
+          "n": 7
+        }
+      },
+      "G7_RENDER_CONTAINMENT_OVERFLOW": {
+        "k": 9,
+        "n": 9,
+        "ci": {
+          "estimate": 1.0,
+          "low": 0.700854951580456,
+          "high": 0.9999999999999999,
+          "n": 9
+        }
+      },
+      "S1_TITLE_BODY_MISMATCH": {
+        "k": 7,
+        "n": 7,
+        "ci": {
+          "estimate": 1.0,
+          "low": 0.6456695649333127,
+          "high": 1.0,
+          "n": 7
+        }
+      },
+      "S4_DENSITY_RULE_VIOLATION": {
+        "k": 7,
+        "n": 7,
+        "ci": {
+          "estimate": 1.0,
+          "low": 0.6456695649333127,
+          "high": 1.0,
+          "n": 7
+        }
+      },
+      "S6_IMAGE_TEXT_CONTRADICTION": {
+        "k": 9,
+        "n": 9,
+        "ci": {
+          "estimate": 1.0,
+          "low": 0.700854951580456,
+          "high": 0.9999999999999999,
+          "n": 9
+        }
+      },
+      "overall": {
+        "k": 45,
+        "n": 55,
+        "ci": {
+          "estimate": 0.8181818181818182,
+          "low": 0.6966954036336237,
+          "high": 0.8981232956555032,
+          "n": 55
+        }
+      }
+    },
+    "twin_clean": {
+      "G1_TEXT_OVERFLOW": {
+        "k": 9,
+        "n": 9,
+        "ci": {
+          "estimate": 1.0,
+          "low": 0.700854951580456,
+          "high": 0.9999999999999999,
+          "n": 9
+        }
+      },
+      "G2_ELEMENT_OVERLAP": {
+        "k": 7,
+        "n": 7,
+        "ci": {
+          "estimate": 1.0,
+          "low": 0.6456695649333127,
+          "high": 1.0,
+          "n": 7
+        }
+      },
+      "G6_MARGIN_VIOLATION": {
+        "k": 7,
+        "n": 7,
+        "ci": {
+          "estimate": 1.0,
+          "low": 0.6456695649333127,
+          "high": 1.0,
+          "n": 7
+        }
+      },
+      "G7_RENDER_CONTAINMENT_OVERFLOW": {
+        "k": 9,
+        "n": 9,
+        "ci": {
+          "estimate": 1.0,
+          "low": 0.700854951580456,
+          "high": 0.9999999999999999,
+          "n": 9
+        }
+      },
+      "S1_TITLE_BODY_MISMATCH": {
+        "k": 7,
+        "n": 7,
+        "ci": {
+          "estimate": 1.0,
+          "low": 0.6456695649333127,
+          "high": 1.0,
+          "n": 7
+        }
+      },
+      "S4_DENSITY_RULE_VIOLATION": {
+        "k": 7,
+        "n": 7,
+        "ci": {
+          "estimate": 1.0,
+          "low": 0.6456695649333127,
+          "high": 1.0,
+          "n": 7
+        }
+      },
+      "S6_IMAGE_TEXT_CONTRADICTION": {
+        "k": 9,
+        "n": 9,
+        "ci": {
+          "estimate": 1.0,
+          "low": 0.700854951580456,
+          "high": 0.9999999999999999,
+          "n": 9
+        }
+      },
+      "overall": {
+        "k": 55,
+        "n": 55,
+        "ci": {
+          "estimate": 1.0,
+          "low": 0.9347150988829135,
+          "high": 0.9999999999999999,
+          "n": 55
+        }
+      }
+    },
+    "agreement": {
+      "defect_visible": {
+        "n": 55,
+        "raw_agreement": 0.8181818181818182,
+        "kappa": 0.0
+      },
+      "twin_clean": {
+        "n": 55,
+        "raw_agreement": 1.0,
+        "kappa": 1.0
+      }
+    }
+  }
+}

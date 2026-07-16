@@ -42,6 +42,8 @@ sys.path.insert(0, str(REPO / "scripts"))
 
 PART2_MANIFEST = REPO / "data/part2/manifest_eval_test_rendered.jsonl"
 G7_MANIFEST = REPO / "data/part3/manifest_g7_rendered.jsonl"
+G3_REL_MANIFEST = REPO / "data/part3/g3_relmisalign.jsonl"
+G5_CHROMA_MANIFEST = REPO / "data/part3/g5_chromatic.jsonl"
 # S6 in the generic part-2 manifest is DEGENERATE in the freeform modality: the IR
 # carries no figure/diagram element (types = [title,text,text,text]), so the injected
 # "image-text contradiction" is a self-referential text sentence with nothing visual to
@@ -73,10 +75,14 @@ HEADLINE = {"G1_TEXT_OVERFLOW", "S6_IMAGE_TEXT_CONTRADICTION", "G7_RENDER_CONTAI
 PHRASE = {
     "G1_TEXT_OVERFLOW": "text overflows or is clipped by its text box",
     "G2_ELEMENT_OVERLAP": "two elements overlap / collide",
-    "G3_ALIGNMENT_OFFSET": "an element is visibly misaligned (off its expected edge/position)",
+    # E8 re-operationalisation: G3 should be a within-list contrast that is decidable
+    # from the slide itself, not an absolute translation against an invisible reference.
+    "G3_ALIGNMENT_OFFSET": "one bullet in a list is visibly misaligned relative to the others",
     "G6_MARGIN_VIOLATION": "an element breaks the slide margin (touches / runs past the edge)",
     "G7_RENDER_CONTAINMENT_OVERFLOW": "content spills outside the box / card / frame meant to contain it",
-    "G5_BRAND_COLOR_VIOLATION": "an off-brand / wrong colour is used",
+    # Same for G5: the visible contrast is one sibling recoloured against the others,
+    # not a judgement against an invisible brand palette.
+    "G5_BRAND_COLOR_VIOLATION": "one bullet uses a clearly different text colour from its sibling bullets",
     "S1_TITLE_BODY_MISMATCH": "the title does not match the body content",
     "S2_NARRATIVE_ORDER_BREAK": "the bullets / sections are in an illogical order",
     "S3_TERMINOLOGY_INCONSISTENCY": "the same concept is named inconsistently",
@@ -146,8 +152,14 @@ def load_pool() -> dict[str, list[dict]]:
                         "defective_image_path") or str(dp),
                 })
 
-    _ingest(PART2_MANIFEST, freeform_only=True, skip={"S6_IMAGE_TEXT_CONTRADICTION"})
+    # The v1 human spot-check showed that the generic part-2 G3/G5 samples still follow
+    # the stale absolute/external operationalisation. Future spot-checks should source
+    # them from the corrected E8 corpora instead.
+    _ingest(PART2_MANIFEST, freeform_only=True,
+            skip={"S6_IMAGE_TEXT_CONTRADICTION", "G3_ALIGNMENT_OFFSET", "G5_BRAND_COLOR_VIOLATION"})
     _ingest(S6_MANIFEST, freeform_only=True, only={"S6_IMAGE_TEXT_CONTRADICTION"})  # valid figure-text S6
+    _ingest(G3_REL_MANIFEST, freeform_only=False, only={"G3_ALIGNMENT_OFFSET"})
+    _ingest(G5_CHROMA_MANIFEST, freeform_only=False, only={"G5_BRAND_COLOR_VIOLATION"})
     _ingest(G7_MANIFEST, freeform_only=False)  # g7 renders are all freeform
     return pool
 

@@ -29,27 +29,9 @@
     "note": "",
     "twin_clean": "yes"
   },
-  "005": {
-    "cls": "G5_BRAND_COLOR_VIOLATION",
-    "defect_visible": "no",
-    "note": "看不出颜色区别，都是黑的，只有粗细区别",
-    "twin_clean": "yes"
-  },
   "006": {
     "cls": "S6_IMAGE_TEXT_CONTRADICTION",
     "defect_visible": "yes",
-    "note": "",
-    "twin_clean": "yes"
-  },
-  "007": {
-    "cls": "G3_ALIGNMENT_OFFSET",
-    "defect_visible": "no",
-    "note": "",
-    "twin_clean": "yes"
-  },
-  "008": {
-    "cls": "G3_ALIGNMENT_OFFSET",
-    "defect_visible": "no",
     "note": "",
     "twin_clean": "yes"
   },
@@ -71,12 +53,6 @@
     "note": "",
     "twin_clean": "yes"
   },
-  "012": {
-    "cls": "G3_ALIGNMENT_OFFSET",
-    "defect_visible": "no",
-    "note": "defective的bullet间也是对齐的，没看出有什么缺陷",
-    "twin_clean": "yes"
-  },
   "013": {
     "cls": "S1_TITLE_BODY_MISMATCH",
     "defect_visible": "yes",
@@ -87,18 +63,6 @@
     "cls": "S1_TITLE_BODY_MISMATCH",
     "defect_visible": "yes",
     "note": "同14",
-    "twin_clean": "yes"
-  },
-  "015": {
-    "cls": "G5_BRAND_COLOR_VIOLATION",
-    "defect_visible": "no",
-    "note": "只有粗细区别，都是黑的。没有品牌色参照",
-    "twin_clean": "yes"
-  },
-  "016": {
-    "cls": "G5_BRAND_COLOR_VIOLATION",
-    "defect_visible": "no",
-    "note": "same as 16",
     "twin_clean": "yes"
   },
   "017": {
@@ -113,12 +77,6 @@
     "note": "",
     "twin_clean": "yes"
   },
-  "019": {
-    "cls": "G3_ALIGNMENT_OFFSET",
-    "defect_visible": "no",
-    "note": "bullet间对齐了",
-    "twin_clean": "yes"
-  },
   "020": {
     "cls": "S4_DENSITY_RULE_VIOLATION",
     "defect_visible": "yes",
@@ -129,12 +87,6 @@
     "cls": "S1_TITLE_BODY_MISMATCH",
     "defect_visible": "yes",
     "note": "低质",
-    "twin_clean": "yes"
-  },
-  "022": {
-    "cls": "G5_BRAND_COLOR_VIOLATION",
-    "defect_visible": "no",
-    "note": "",
     "twin_clean": "yes"
   },
   "023": {
@@ -179,12 +131,6 @@
     "note": "",
     "twin_clean": "yes"
   },
-  "030": {
-    "cls": "G5_BRAND_COLOR_VIOLATION",
-    "note": "",
-    "defect_visible": "no",
-    "twin_clean": "yes"
-  },
   "031": {
     "cls": "S6_IMAGE_TEXT_CONTRADICTION",
     "defect_visible": "yes",
@@ -203,21 +149,9 @@
     "note": "",
     "twin_clean": "yes"
   },
-  "034": {
-    "cls": "G5_BRAND_COLOR_VIOLATION",
-    "defect_visible": "no",
-    "note": "",
-    "twin_clean": "yes"
-  },
   "035": {
     "cls": "S6_IMAGE_TEXT_CONTRADICTION",
     "defect_visible": "yes",
-    "note": "",
-    "twin_clean": "yes"
-  },
-  "036": {
-    "cls": "G3_ALIGNMENT_OFFSET",
-    "defect_visible": "no",
     "note": "",
     "twin_clean": "yes"
   },
@@ -260,12 +194,6 @@
   "043": {
     "cls": "G2_ELEMENT_OVERLAP",
     "defect_visible": "yes",
-    "note": "",
-    "twin_clean": "yes"
-  },
-  "044": {
-    "cls": "G3_ALIGNMENT_OFFSET",
-    "defect_visible": "no",
     "note": "",
     "twin_clean": "yes"
   },
@@ -347,21 +275,9 @@
     "note": "",
     "twin_clean": "yes"
   },
-  "058": {
-    "cls": "G3_ALIGNMENT_OFFSET",
-    "defect_visible": "no",
-    "note": "",
-    "twin_clean": "yes"
-  },
   "059": {
     "cls": "G6_MARGIN_VIOLATION",
     "defect_visible": "yes",
-    "note": "",
-    "twin_clean": "yes"
-  },
-  "060": {
-    "cls": "G5_BRAND_COLOR_VIOLATION",
-    "defect_visible": "no",
     "note": "",
     "twin_clean": "yes"
   },
@@ -409,6 +325,132 @@
   },
   "068": {
     "cls": "G7_RENDER_CONTAINMENT_OVERFLOW",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "r00": {
+    "cls": "G3_ALIGNMENT_OFFSET",
+    "stratum": "rel·96px",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "r01": {
+    "cls": "G3_ALIGNMENT_OFFSET",
+    "stratum": "rel·96px",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "r04": {
+    "cls": "G3_ALIGNMENT_OFFSET",
+    "stratum": "rel·48px",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "r06": {
+    "cls": "G3_ALIGNMENT_OFFSET",
+    "stratum": "rel·48px",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "r09": {
+    "cls": "G3_ALIGNMENT_OFFSET",
+    "stratum": "rel·96px",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "r15": {
+    "cls": "G3_ALIGNMENT_OFFSET",
+    "stratum": "rel·48px",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "r16": {
+    "cls": "G3_ALIGNMENT_OFFSET",
+    "stratum": "rel·96px",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "r17": {
+    "cls": "G3_ALIGNMENT_OFFSET",
+    "stratum": "rel·48px",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "r02": {
+    "cls": "G5_BRAND_COLOR_VIOLATION",
+    "stratum": "ΔE≈12·hue",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "r03": {
+    "cls": "G5_BRAND_COLOR_VIOLATION",
+    "stratum": "ΔE≈12·hue",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "r05": {
+    "cls": "G5_BRAND_COLOR_VIOLATION",
+    "stratum": "ΔE≈24·hue",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "r07": {
+    "cls": "G5_BRAND_COLOR_VIOLATION",
+    "stratum": "ΔE≈24·hue",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "r08": {
+    "cls": "G5_BRAND_COLOR_VIOLATION",
+    "stratum": "ΔE≈12·hue",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "r10": {
+    "cls": "G5_BRAND_COLOR_VIOLATION",
+    "stratum": "ΔE≈12·hue",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "r11": {
+    "cls": "G5_BRAND_COLOR_VIOLATION",
+    "stratum": "ΔE≈24·hue",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "r12": {
+    "cls": "G5_BRAND_COLOR_VIOLATION",
+    "stratum": "ΔE≈24·hue",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "r13": {
+    "cls": "G5_BRAND_COLOR_VIOLATION",
+    "stratum": "ΔE≈12·hue",
+    "defect_visible": "yes",
+    "note": "",
+    "twin_clean": "yes"
+  },
+  "r14": {
+    "cls": "G5_BRAND_COLOR_VIOLATION",
+    "stratum": "ΔE≈24·hue",
     "defect_visible": "yes",
     "note": "",
     "twin_clean": "yes"

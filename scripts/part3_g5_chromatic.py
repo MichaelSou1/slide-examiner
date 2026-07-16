@@ -1,14 +1,16 @@
 #!/usr/bin/env python3
 """E8 — chromatic (hue) G5 brand-colour variant.
 
-The shipped G5 injector (`_color_at_delta_e`) walks a fixed gray-axis direction, so
-for a near-black title (#111111) it only *lightens* — an **achromatic** change that
-reads as "thinner", not "wrong colour" (the spot-check caught this). A realistic
-brand-colour violation is a **hue** swap. This generator builds the same defect as a
-chromatic change: the brand near-black title is recoloured toward a saturated
-off-brand hue, calibrated to a target ΔE2000 with the *same* `color_delta_e` used by
-the achromatic injector — so the perceptual test can contrast achromatic-vs-chromatic
-**at matched ΔE2000**. Renders go through the real Playwright pipeline (faithful).
+The prior replacement pass fixed the channel problem (achromatic -> chromatic) but
+still recoloured the title, which the user correctly flagged as the wrong
+operationalisation: title-vs-body colour differences are often benign. Under the E8
+internal-contrast definition, G5 should be judged within a sibling set — e.g. one
+bullet in an aligned list is a clearly different colour from the other bullets.
+
+This generator therefore builds G5 on an aligned bullet column, parallel to the
+relative-G3 generator: pick a clean slide with >=3 body bullets sharing the same x and
+the same base colour, then hue-swap the middle bullet toward a saturated off-brand
+hue, calibrated to a target ΔE2000. Renders go through the real Playwright pipeline.
 
 Emits renders under runs/part3/g5_chroma/<id>/{clean,defective}.png and a manifest
 data/part3/g5_chromatic.jsonl (strict-sampler-compatible records, with an explicit
@@ -65,22 +67,28 @@ def chromatic_color_at_delta_e(expected_rgb, target_delta_e, endpoint):
 
 
 def clean_g5_slides(limit):
-    """(sample_id, target_element_id, expected_color, clean_slide) for distinct clean G5 bases."""
+    """(sample_id, target_element_id, expected_color, clean_slide) for distinct clean
+    slides that contain an aligned sibling bullet column with a uniform text colour."""
     out = []
+    seen = set()
     with PART2.open() as fh:
         for line in fh:
             r = json.loads(line)
-            lab = (r.get("labels") or [{}])[0]
-            if lab.get("type") != "G5_BRAND_COLOR_VIOLATION":
-                continue
             if "__template" in (r.get("image_path") or ""):
                 continue
             csp = r["metadata"].get("clean_slide_path")
-            if not csp or not Path(csp).exists():
+            if not csp or not Path(csp).exists() or csp in seen:
                 continue
-            tgt = (lab.get("target_element_ids") or [None])[0]
-            exp = lab.get("metadata", {}).get("expected_color", "#111111")
-            out.append((r.get("sample_id"), tgt, exp, load_slide_json(csp)))
+            slide = load_slide_json(csp)
+            bodies = [e for e in slide.elements if e.type in ("text", "body")]
+            xs = {round(e.bbox.x) for e in bodies}
+            colors = {(e.style or {}).get("color") for e in bodies}
+            if len(bodies) < 3 or len(xs) != 1 or len(colors) != 1:
+                continue
+            tgt_el = bodies[len(bodies) // 2]
+            exp = (tgt_el.style or {}).get("color") or "#222222"
+            out.append((r.get("sample_id"), tgt_el.element_id, exp, slide))
+            seen.add(csp)
             if len(out) >= limit:
                 break
     return out
@@ -114,7 +122,7 @@ def main():
             new_style = dict(el.style); new_style["color"] = _hex(new_rgb)
             defslide = slide.replace_element(replace(el, style=new_style))
             h = max(1, round(args.width * slide.height / slide.width))
-            pid = f"g5chroma_{int(de)}_{hue}_{k:02d}"
+            pid = f"g5bullet_{int(de)}_{hue}_{k:02d}"
             ddir = RUNS / pid; ddir.mkdir(exist_ok=True)
             cpng, dpng = ddir / "clean.png", ddir / "defective.png"
             jobs.append(_RasterJob(html=slide_to_html(slide, scale=args.width / slide.width),
@@ -125,9 +133,11 @@ def main():
                 "sample_id": pid, "image_path": str(dpng),
                 "labels": [{"type": "G5_BRAND_COLOR_VIOLATION", "target_element_ids": [tgt],
                             "metadata": {"expected_color": exp_hex, "actual_color": _hex(new_rgb),
-                                         "delta_e": realized, "hue": hue, "mode": "chromatic"}}],
+                                         "delta_e": realized, "hue": hue, "mode": "chromatic",
+                                         "target_scope": "bullet_vs_sibling_bullets"}}],
                 "metadata": {"clean_image_path": str(cpng), "defective_image_path": str(dpng),
-                             "stratum": f"ΔE≈{int(de)}·hue", "mode": "chromatic"},
+                             "stratum": f"ΔE≈{int(de)}·hue", "mode": "chromatic",
+                             "target_scope": "bullet_vs_sibling_bullets"},
             })
             k += 1
 
