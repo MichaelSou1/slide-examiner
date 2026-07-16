@@ -4,7 +4,8 @@ from pathlib import Path
 import pytest
 
 from slide_examiner.d3_training import (
-    ACTION_TO_ID, _answer_for, action_class_weights, action_sample_weights, relocate_path,
+    ACTION_TO_ID, _answer_for, action_class_weights, action_sample_weights,
+    authoritative_result, relocate_path, run_linter,
 )
 
 
@@ -70,3 +71,43 @@ def test_action_sample_weights_equalise_class_mass():
     mass = {action_id: sum(weight for row, weight in zip(rows, weights, strict=True)
                            if row["action_id"] == action_id) for action_id in ACTION_TO_ID.values()}
     assert set(mass.values()) == {1.0}
+
+
+def test_route_head_is_authoritative_and_strips_generated_finding():
+    generated = {
+        "page_id": "p1", "has_defect": True,
+        "findings": [{"type": "G2_ELEMENT_OVERLAP", "severity": "moderate",
+                      "locator": {"level": "page", "page_id": "p1", "element_id": "a",
+                                  "bbox": None, "related_page_ids": []},
+                      "evidence": "Elements a and b visibly overlap on page p1.",
+                      "fix_suggestion": "Move element b away from element a."}],
+        "clean_dimensions": [], "action": "ANSWER", "confidence": 0.9,
+        "requested_context": [], "evidence_source": "pixels",
+    }
+    result, mismatch, error = authoritative_result(generated, "CALL_LINTER")
+    assert mismatch is True
+    assert error is None
+    assert result["action"] == "CALL_LINTER"
+    assert result["findings"] == []
+    assert result["requested_context"] == ["structure"]
+
+
+def test_call_linter_executes_structure_and_returns_final_answer():
+    context = {
+        "availability": "image_structure",
+        "structure": {
+            "slide_id": "p1", "width": 100, "height": 100,
+            "elements": [
+                {"element_id": "a", "type": "shape",
+                 "bbox": {"x": 0, "y": 0, "width": 50, "height": 50}},
+                {"element_id": "b", "type": "shape",
+                 "bbox": {"x": 10, "y": 10, "width": 50, "height": 50}},
+            ],
+        },
+    }
+    row = {"sample_id": "s1", "messages": [{"content": [
+        {"type": "text", "text": "generic\nINPUT_CONTEXT=" + json.dumps(context)}]}]}
+    result = run_linter(row)
+    assert result["action"] == "ANSWER"
+    assert result["evidence_source"] == "linter"
+    assert any(finding["type"] == "G2_ELEMENT_OVERLAP" for finding in result["findings"])

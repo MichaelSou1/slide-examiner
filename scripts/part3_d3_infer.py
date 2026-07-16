@@ -12,8 +12,12 @@ import torch
 from peft import PeftModel
 from transformers import AutoProcessor, BitsAndBytesConfig, Qwen3VLForConditionalGeneration
 
-from slide_examiner.d3_training import ACTIONS
-from slide_examiner.examiner_contract import parse_deck_result, parse_page_result
+from slide_examiner.d3_training import ACTIONS, authoritative_result, run_linter
+from slide_examiner.examiner_contract import (
+    ExaminerAction,
+    parse_deck_result,
+    parse_page_result,
+)
 from scripts.part3_d3_train import D3Heads, JsonlDataset, _images, pooled_at_prompt
 
 
@@ -87,8 +91,11 @@ def infer_once(processor: Any, model: Any, heads: D3Heads, row: dict[str, Any],
     continuation = generated[0, inputs["input_ids"].shape[1]:]
     text = processor.decode(continuation, skip_special_tokens=True)
     parsed, error = parse_contract(text)
+    authoritative, mismatch, consistency_error = authoritative_result(parsed, action)
     return {"predicted_action": action, "route_confidence": confidence,
-            "raw": text, "parsed": parsed, "parse_error": error}
+            "raw": text, "generated_parsed": parsed, "generated_action": (parsed or {}).get("action"),
+            "parsed": authoritative, "parse_error": error,
+            "action_mismatch": mismatch, "consistency_error": consistency_error}
 
 
 def main() -> None:
@@ -106,11 +113,15 @@ def main() -> None:
     all_rows = JsonlDataset(args.input).rows
     rows = balanced_rows(all_rows, args.limit) if args.balanced else all_rows[:args.limit]
     by_sample_availability = {(row["sample_id"], row["availability"]): row for row in all_rows}
-    results, counts = [], {"parser_failure": 0, "action_loop": 0, "teacher_failure": 0}
+    results, counts = [], {"parser_failure": 0, "action_loop": 0, "teacher_failure": 0,
+                           "action_mismatch": 0, "consistency_failure": 0,
+                           "escalation_failure": 0}
     for row in rows:
         first = infer_once(processor, model, heads, row, device, args.max_new_tokens)
         if first["parse_error"]:
             counts["parser_failure"] += 1
+        counts["action_mismatch"] += int(first["action_mismatch"])
+        counts["consistency_failure"] += int(bool(first["consistency_error"]))
         escalation = None
         requested = first["predicted_action"]
         availability = {"CALL_LINTER": "image_structure", "REQUEST_REFERENCE": "reference_available",
@@ -118,13 +129,33 @@ def main() -> None:
         if availability:
             followup_row = by_sample_availability.get((row["sample_id"], availability))
             if followup_row:
-                counts["action_loop"] += 1
-                second = infer_once(processor, model, heads, followup_row, device, args.max_new_tokens)
-                if second["parse_error"]:
-                    counts["parser_failure"] += 1
-                escalation = {"requested_action": requested, "performed": True,
-                              "provided_availability": availability, "result": second}
+                if requested == "CALL_LINTER":
+                    try:
+                        final = run_linter(followup_row)
+                        escalation = {"requested_action": requested, "performed": True,
+                                      "provided_availability": availability, "executor": "geometry_linter",
+                                      "final_action": "ANSWER", "final_parsed": final}
+                    except Exception as exc:  # noqa: BLE001 - explicit runtime failure artifact
+                        counts["escalation_failure"] += 1
+                        escalation = {"requested_action": requested, "performed": False,
+                                      "provided_availability": availability,
+                                      "reason": f"{type(exc).__name__}: {exc}"}
+                else:
+                    second = infer_once(processor, model, heads, followup_row, device, args.max_new_tokens)
+                    if second["parse_error"]:
+                        counts["parser_failure"] += 1
+                    counts["action_mismatch"] += int(second["action_mismatch"])
+                    counts["consistency_failure"] += int(bool(second["consistency_error"]))
+                    final_action = second["predicted_action"]
+                    if final_action not in {"ANSWER", "DEFER"}:
+                        counts["action_loop"] += 1
+                        counts["escalation_failure"] += 1
+                    escalation = {"requested_action": requested, "performed": True,
+                                  "provided_availability": availability, "executor": "student_followup",
+                                  "final_action": final_action, "final_parsed": second["parsed"],
+                                  "result": second}
             else:
+                counts["escalation_failure"] += 1
                 escalation = {"requested_action": requested, "performed": False,
                               "reason": f"no {availability} counterpart for sample"}
         results.append({"record_id": row["record_id"], "sample_id": row["sample_id"],
@@ -154,7 +185,11 @@ def main() -> None:
                "parser_success": sum(x["parsed"] is not None for x in results),
                "post_escalation_parser_success": sum(
                    bool(x["escalation"] and x["escalation"]["performed"]
-                        and x["escalation"]["result"]["parsed"] is not None) for x in results),
+                        and x["escalation"].get("final_parsed") is not None) for x in results),
+               "completed_escalation": sum(
+                   bool(x["escalation"] and x["escalation"]["performed"]
+                        and x["escalation"].get("final_action") in {"ANSWER", "DEFER"}
+                        and x["escalation"].get("final_parsed") is not None) for x in results),
                "action_correct": sum(x["predicted_action"] == x["target_action"] for x in results),
                "output": str(args.output)}
     args.output.with_suffix(".summary.json").write_text(json.dumps(summary, indent=2))

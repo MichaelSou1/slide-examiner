@@ -19,7 +19,11 @@ from .examiner_contract import (
     DeckExamResult,
     page_result_from_labels,
     deck_result_from_labels,
+    parse_deck_result,
+    parse_page_result,
 )
+from .geometry import lint_slide
+from .schemas import Slide
 
 GENERIC_INSPECTION_INSTRUCTION = (
     "Inspect the supplied slide artifact for presentation-quality defects. First decide whether "
@@ -32,6 +36,58 @@ GENERIC_INSPECTION_INSTRUCTION = (
 ACTIONS = tuple(action.value for action in ExaminerAction)
 ACTION_TO_ID = {name: index for index, name in enumerate(ACTIONS)}
 LOSS_NAMES = ("detect", "distill", "pair", "severity", "route", "select")
+
+
+def input_context(row: dict[str, Any]) -> dict[str, Any]:
+    """Recover the non-oracle runtime payload embedded by the frozen serializer."""
+    for item in row["messages"][0]["content"]:
+        text = item.get("text", "")
+        marker = "INPUT_CONTEXT="
+        if marker in text:
+            return json.loads(text.split(marker, 1)[1])
+    return {}
+
+
+def authoritative_result(parsed: dict[str, Any] | None, predicted_action: str
+                         ) -> tuple[dict[str, Any] | None, bool, str | None]:
+    """Project the authoritative route-head action onto a legal public result."""
+    generated_action = str((parsed or {}).get("action")) if parsed else None
+    mismatch = generated_action is not None and generated_action != predicted_action
+    if predicted_action == ExaminerAction.ANSWER.value:
+        if parsed is None:
+            return None, mismatch, "ANSWER route has no parseable generated result"
+        if generated_action != ExaminerAction.ANSWER.value:
+            return None, True, f"ANSWER route conflicts with generated {generated_action}"
+        return parsed, mismatch, None
+    deck_id = (parsed or {}).get("deck_id")
+    payload = {
+        ("deck_id" if deck_id else "page_id"): str(deck_id or (parsed or {}).get("page_id") or "unknown"),
+        "has_defect": False, "findings": [], "clean_dimensions": [],
+        "action": predicted_action, "confidence": float((parsed or {}).get("confidence", 0.0)),
+        "requested_context": {
+            "CALL_LINTER": [EvidenceSource.STRUCTURE.value],
+            "REQUEST_REFERENCE": [EvidenceSource.REFERENCE.value],
+            "REQUEST_DECK": [EvidenceSource.DECK_CONTEXT.value],
+        }.get(predicted_action, []),
+        "evidence_source": EvidenceSource.NONE.value,
+    }
+    parser = parse_deck_result if deck_id else parse_page_result
+    return parser(json.dumps(payload)).model_dump(mode="json"), mismatch, None
+
+
+def run_linter(row: dict[str, Any]) -> dict[str, Any]:
+    """Execute the deterministic geometry linter after a CALL_LINTER action."""
+    structure = input_context(row).get("structure")
+    if not structure:
+        raise ValueError("CALL_LINTER counterpart has no structure")
+    slide = Slide.from_mapping(structure)
+    labels = lint_slide(slide)
+    sample = {"sample_id": row["sample_id"], "slide": slide.to_dict(),
+              "labels": [label.to_dict() for label in labels], "metadata": {}}
+    result = page_result_from_labels(sample).model_dump(mode="json")
+    result.update({"action": ExaminerAction.ANSWER.value, "confidence": 1.0,
+                   "requested_context": [], "evidence_source": EvidenceSource.LINTER.value})
+    return PageExamResult.model_validate(result).model_dump(mode="json")
 
 
 def relocate_path(value: str | None, repo: Path) -> Path | None:
