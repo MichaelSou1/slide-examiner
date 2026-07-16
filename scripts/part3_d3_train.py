@@ -49,9 +49,11 @@ class D3Heads(nn.Module):
         self.action = nn.Linear(hidden_size, len(ACTIONS))
         self.select = nn.Linear(hidden_size, 1)
         self.severity = nn.Linear(hidden_size, 1)
+        self.pair = nn.Linear(hidden_size, 1)
 
-    def forward(self, hidden: torch.Tensor) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor]:
-        return self.action(hidden), self.select(hidden).squeeze(-1), self.severity(hidden).squeeze(-1)
+    def forward(self, hidden: torch.Tensor) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor]:
+        return (self.action(hidden), self.select(hidden).squeeze(-1),
+                self.severity(hidden).squeeze(-1), self.pair(hidden).squeeze(-1))
 
 
 def _images(row: dict[str, Any]) -> list[Image.Image]:
@@ -93,15 +95,31 @@ def pooled_at_prompt(hidden: torch.Tensor, prompt_lengths: torch.Tensor) -> torc
     return hidden[torch.arange(hidden.shape[0], device=hidden.device), index]
 
 
-def compute_joint_loss(lm_loss: torch.Tensor, action_logits: torch.Tensor,
+def per_record_lm_loss(logits: torch.Tensor, labels: torch.Tensor) -> torch.Tensor:
+    """Assistant-token CE for each record, retaining task-specific supervision."""
+    shifted_logits = logits[:, :-1].contiguous()
+    shifted_labels = labels[:, 1:].contiguous()
+    token_loss = F.cross_entropy(shifted_logits.transpose(1, 2), shifted_labels,
+                                 ignore_index=-100, reduction="none")
+    valid = shifted_labels.ne(-100)
+    return (token_loss * valid).sum(1) / valid.sum(1).clamp_min(1)
+
+
+def _masked_mean(values: torch.Tensor, mask: torch.Tensor) -> torch.Tensor:
+    return values[mask].mean() if bool(mask.any()) else values.sum() * 0
+
+
+def compute_joint_loss(lm_per_record: torch.Tensor, action_logits: torch.Tensor,
                        select_logits: torch.Tensor, severity_logits: torch.Tensor,
+                       pair_logits: torch.Tensor,
                        rows: list[dict[str, Any]], weights: LossWeights,
                        route_class_weights: torch.Tensor | None = None,
                        ) -> tuple[torch.Tensor, dict[str, torch.Tensor]]:
     device = action_logits.device
     action = torch.tensor([row["action_id"] for row in rows], device=device)
     confidence = torch.tensor([row["target_confidence"] for row in rows], dtype=torch.float32, device=device)
-    severity = torch.tensor([row["severity"] for row in rows], dtype=torch.float32, device=device)
+    severity = torch.tensor([row.get("severity_target", row["severity"]) for row in rows],
+                            dtype=torch.float32, device=device)
     # PyTorch's weighted mean divides by the observed class weight, which makes
     # weighting a no-op at batch_size=1. Apply the per-record multiplier after
     # unreduced CE so rare actions remain upweighted under the v2 configuration.
@@ -123,13 +141,17 @@ def compute_joint_loss(lm_loss: torch.Tensor, action_logits: torch.Tensor,
                 rank_terms.append(F.relu(0.1 - sign * (severity_logits[left] - severity_logits[right])))
     if rank_terms:
         severity_loss = severity_loss + torch.stack(rank_terms).mean()
-    task_losses = {}
-    for task in ("detect", "distill", "pair"):
-        task_losses[task] = lm_loss if any(row["task"] == task for row in rows) else lm_loss * 0
-    # Every record learns a legal structured finding/action response. Distill and pair
-    # records additionally activate their specialised objective.
-    task_losses["detect"] = lm_loss
-    losses = {**task_losses, "severity": severity_loss, "route": route, "select": select}
+    tasks = [row["task"] for row in rows]
+    detect = _masked_mean(lm_per_record, torch.tensor([task == "detect" for task in tasks], device=device))
+    distill = _masked_mean(lm_per_record, torch.tensor([task == "distill" for task in tasks], device=device))
+    pair_mask = torch.tensor([row.get("pair_target") is not None for row in rows], device=device)
+    if bool(pair_mask.any()):
+        pair_target = torch.tensor([float(row.get("pair_target") or 0.0) for row in rows], device=device)
+        pair = F.binary_cross_entropy_with_logits(pair_logits[pair_mask], pair_target[pair_mask])
+    else:
+        pair = pair_logits.sum() * 0
+    losses = {"detect": detect, "distill": distill, "pair": pair,
+              "severity": severity_loss, "route": route, "select": select}
     total = sum(float(getattr(weights, name)) * losses[name] for name in LOSS_NAMES)
     return total, losses
 
@@ -232,14 +254,16 @@ def main() -> None:
             batch = {key: value.to(device) for key, value in batch.items()}
             outputs = model(**batch, output_hidden_states=True, return_dict=True)
             pooled = pooled_at_prompt(outputs.hidden_states[-1], prompt_lengths).float()
-            action_logits, select_logits, severity_logits = heads(pooled)
-            total, losses = compute_joint_loss(outputs.loss, action_logits, select_logits,
-                                               severity_logits, rows, weights, route_class_weights)
+            action_logits, select_logits, severity_logits, pair_logits = heads(pooled)
+            lm_per_record = per_record_lm_loss(outputs.logits, batch["labels"])
+            total, losses = compute_joint_loss(lm_per_record, action_logits, select_logits,
+                                               severity_logits, pair_logits, rows, weights,
+                                               route_class_weights)
             (total / args.gradient_accumulation).backward()
             if step % args.gradient_accumulation == 0 or step == args.max_steps:
                 optimizer.step(); optimizer.zero_grad(set_to_none=True)
             item = {"step": step, "epoch": epoch, "total": float(total.detach()),
-                    "lm": float(outputs.loss.detach()),
+                    "lm": float(lm_per_record.mean().detach()),
                     **{name: float(loss.detach()) for name, loss in losses.items()}}
             history.append(item)
             print(json.dumps(item), flush=True)
@@ -256,9 +280,11 @@ def main() -> None:
             batch = {key: value.to(device) for key, value in batch.items()}
             outputs = model(**batch, output_hidden_states=True, return_dict=True)
             pooled = pooled_at_prompt(outputs.hidden_states[-1], prompt_lengths).float()
-            action_logits, select_logits, severity_logits = heads(pooled)
-            total, _ = compute_joint_loss(outputs.loss, action_logits, select_logits,
-                                          severity_logits, rows, weights, route_class_weights)
+            action_logits, select_logits, severity_logits, pair_logits = heads(pooled)
+            lm_per_record = per_record_lm_loss(outputs.logits, batch["labels"])
+            total, _ = compute_joint_loss(lm_per_record, action_logits, select_logits,
+                                          severity_logits, pair_logits, rows, weights,
+                                          route_class_weights)
             truth, pred = rows[0]["action_id"], int(action_logits.argmax(-1).item())
             confusion[truth][pred] += 1
             dev_loss += float(total); dev_seen += 1

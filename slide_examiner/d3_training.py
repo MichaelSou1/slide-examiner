@@ -19,6 +19,7 @@ from .examiner_contract import (
     DeckExamResult,
     page_result_from_labels,
     deck_result_from_labels,
+    severity_level_for_label,
     parse_deck_result,
     parse_page_result,
 )
@@ -254,6 +255,12 @@ def build_d3_training_records(repo: Path, *, include_splits: set[str] | None = N
             continue
         output = _answer_for(sample, target)
         task = _task_for(target)
+        raw_severity = float(next(iter(sample.get("labels") or [{}]), {}).get("severity", 0.0))
+        if target["defect"] == "NO_DEFECT":
+            severity_target = 0.0
+        else:
+            severity_target = {"none": 0.0, "minor": 1 / 3, "moderate": 2 / 3, "severe": 1.0}[
+                severity_level_for_label(target["defect"], raw_severity).value]
         content: list[dict[str, str]] = [{"type": "image", "image": path} for path in images]
         content.append({"type": "text", "text": GENERIC_INSPECTION_INSTRUCTION + "\nINPUT_CONTEXT="
                         + _structure_text(sample, target["availability"])})
@@ -262,10 +269,14 @@ def build_d3_training_records(repo: Path, *, include_splits: set[str] | None = N
                 f"{target['sample_id']}|{target['availability']}|{task}".encode()).hexdigest()[:20],
             "sample_id": target["sample_id"], "split": target["split"], "defect": target["defect"],
             "availability": target["availability"], "task": task,
+            "target_kind": target["target_kind"],
             "target_action": target["target_action"], "action_id": ACTION_TO_ID[target["target_action"]],
             "target_confidence": float(target.get("distillation_weight", 1.0)),
-            "severity": float(next(iter(sample.get("labels") or [{}]), {}).get("severity", 0.0)),
+            "severity": raw_severity, "severity_target": severity_target,
             "severity_chain": f"{(sample.get('slide') or {}).get('slide_id', target['sample_id'])}|{target['defect']}",
+            "pair_target": (0.5 if target["target_kind"] == "clean_clean_pairwise" else
+                            1.0 if target["target_kind"] == "pairwise"
+                            and target["availability"] == "reference_available" else None),
             "weight": float(target.get("distillation_weight", 1.0)),
             "messages": [{"role": "user", "content": content},
                          {"role": "assistant", "content": [{"type": "text", "text": json.dumps(output, ensure_ascii=False)}]}],

@@ -84,7 +84,7 @@ def infer_once(processor: Any, model: Any, heads: D3Heads, row: dict[str, Any],
     with torch.no_grad():
         output = model(**inputs, output_hidden_states=True, return_dict=True)
         pooled = pooled_at_prompt(output.hidden_states[-1], prompt_lengths).float()
-        action_logits, select_logits, _ = heads(pooled)
+        action_logits, select_logits, _, _ = heads(pooled)
         action = ACTIONS[int(action_logits.argmax(-1).item())]
         confidence = float(torch.sigmoid(select_logits).item())
         generated = model.generate(**inputs, max_new_tokens=max_new_tokens, do_sample=False)
