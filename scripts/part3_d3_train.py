@@ -18,7 +18,7 @@ import torch.nn.functional as F
 from PIL import Image
 from peft import LoraConfig, PeftModel, get_peft_model
 from torch import nn
-from torch.utils.data import DataLoader, Dataset, WeightedRandomSampler
+from torch.utils.data import DataLoader, Dataset, Sampler, WeightedRandomSampler
 from transformers import AutoProcessor, Qwen3VLForConditionalGeneration
 from transformers import BitsAndBytesConfig
 
@@ -41,6 +41,33 @@ class JsonlDataset(Dataset):
 
     def __getitem__(self, index: int) -> dict[str, Any]:
         return self.rows[index]
+
+
+class SeverityChainBatchSampler(Sampler[list[int]]):
+    """Form deterministic batches that contain a non-tied same-source severity pair."""
+
+    def __init__(self, rows: list[dict[str, Any]], seed: int, batches: int):
+        self.rows, self.seed, self.batches = rows, seed, batches
+        chains: dict[str, list[int]] = {}
+        for index, row in enumerate(rows):
+            chains.setdefault(row["severity_chain"], []).append(index)
+        self.pairs = []
+        for indices in chains.values():
+            ordered = sorted(indices, key=lambda i: float(rows[i].get("severity_target", rows[i]["severity"])))
+            if (len(ordered) > 1 and
+                    rows[ordered[0]].get("severity_target", rows[ordered[0]]["severity"])
+                    != rows[ordered[-1]].get("severity_target", rows[ordered[-1]]["severity"])):
+                self.pairs.append((ordered[0], ordered[-1]))
+        if not self.pairs:
+            raise ValueError("no non-tied severity chains available for monotonic batches")
+
+    def __iter__(self):
+        generator = random.Random(self.seed)
+        for _ in range(self.batches):
+            yield list(generator.choice(self.pairs))
+
+    def __len__(self) -> int:
+        return self.batches
 
 
 class D3Heads(nn.Module):
@@ -190,6 +217,8 @@ def main() -> None:
     parser.add_argument("--learning-rate", type=float, default=1e-4)
     parser.add_argument("--gradient-accumulation", type=int, default=1)
     parser.add_argument("--batch-size", type=int, default=1)
+    parser.add_argument("--severity-chain-sampling", action=argparse.BooleanOptionalAction,
+                        default=False)
     parser.add_argument("--lora-rank", type=int, default=16)
     parser.add_argument("--lora-alpha", type=int, default=32)
     parser.add_argument("--image-max-pixels", type=int, default=589824)
@@ -243,12 +272,20 @@ def main() -> None:
     route_weight_values = action_class_weights(train.rows, args.action_class_weighting)
     route_class_weights = torch.tensor(route_weight_values, dtype=torch.float32, device=device)
     sampler = None
-    if args.action_balanced_sampling:
+    batch_sampler = None
+    if args.severity_chain_sampling:
+        if args.batch_size != 2:
+            raise ValueError("--severity-chain-sampling requires --batch-size 2")
+        batch_sampler = SeverityChainBatchSampler(train.rows, args.seed, args.max_steps)
+    elif args.action_balanced_sampling:
         generator = torch.Generator().manual_seed(args.seed)
         sampler = WeightedRandomSampler(action_sample_weights(train.rows), len(train),
                                         replacement=True, generator=generator)
-    loader = DataLoader(train, batch_size=args.batch_size, shuffle=sampler is None, sampler=sampler,
-                        collate_fn=make_collator(processor))
+    if batch_sampler is not None:
+        loader = DataLoader(train, batch_sampler=batch_sampler, collate_fn=make_collator(processor))
+    else:
+        loader = DataLoader(train, batch_size=args.batch_size, shuffle=sampler is None, sampler=sampler,
+                            collate_fn=make_collator(processor))
     history: list[dict[str, Any]] = []
     optimizer.zero_grad(set_to_none=True)
     model.train(); heads.train()
@@ -313,6 +350,7 @@ def main() -> None:
               "action_class_weighting": args.action_class_weighting,
               "action_class_weights": dict(zip(ACTIONS, route_weight_values, strict=True)),
               "action_balanced_sampling": args.action_balanced_sampling,
+              "severity_chain_sampling": args.severity_chain_sampling,
               "quantization": args.quantization, "init_adapter": str(args.init_adapter) if args.init_adapter else None}
     save_checkpoint(model, heads, processor, args.output, config, metrics)
     print(json.dumps({"saved": str(args.output), **metrics}, ensure_ascii=False), flush=True)
