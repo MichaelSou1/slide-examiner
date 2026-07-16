@@ -109,12 +109,31 @@ def _images(row: dict[str, Any]) -> list[Image.Image]:
 def make_collator(processor: Any):
     pad_id = processor.tokenizer.pad_token_id
 
+    def normalize_messages(messages: list[dict[str, Any]]) -> list[dict[str, Any]]:
+        """Accept both OpenAI multimodal parts and legacy LF ``<image>`` strings."""
+        normalized = []
+        for message in messages:
+            content = message.get("content", "")
+            if not isinstance(content, str) or "<image>" not in content:
+                normalized.append(message)
+                continue
+            parts: list[dict[str, str]] = []
+            chunks = content.split("<image>")
+            for index, chunk in enumerate(chunks):
+                if index:
+                    parts.append({"type": "image"})
+                if chunk:
+                    parts.append({"type": "text", "text": chunk})
+            normalized.append({**message, "content": parts})
+        return normalized
+
     def collate(rows: list[dict[str, Any]]) -> dict[str, Any]:
         texts, images, prompt_lengths = [], [], []
         for row in rows:
-            prompt = processor.apply_chat_template(row["messages"][:1], tokenize=False,
+            messages = normalize_messages(row["messages"])
+            prompt = processor.apply_chat_template(messages[:1], tokenize=False,
                                                      add_generation_prompt=True)
-            full = processor.apply_chat_template(row["messages"], tokenize=False,
+            full = processor.apply_chat_template(messages, tokenize=False,
                                                    add_generation_prompt=False)
             image_list = _images(row)
             prompt_inputs = processor(text=[prompt], images=image_list if image_list else None,
