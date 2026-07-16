@@ -1,0 +1,16 @@
+{
+  "model": "zs-30b",
+  "prompt_style": "scoped",
+  "mode": "pairwise_2afc",
+  "manifest": "/home/gpus/slide-examiner/data/part2/manifest_s6_eval_rendered.jsonl",
+  "metrics": {
+    "S6_IMAGE_TEXT_CONTRADICTION": {
+      "acc_2afc": 0.5,
+      "n": 12,
+      "pick_dist": {
+        "b": 12
+      },
+      "no_parse": 0
+    }
+  }
+}

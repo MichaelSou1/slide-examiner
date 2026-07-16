@@ -1,0 +1,48 @@
+  annotations: 200/2400 (200 ok)
+  annotations: 400/2400 (400 ok)
+  annotations: 600/2400 (600 ok)
+  annotations: 800/2400 (800 ok)
+  annotations: 1000/2400 (1000 ok)
+  annotations: 1200/2400 (1200 ok)
+  annotations: 1400/2400 (1400 ok)
+  annotations: 1600/2400 (1600 ok)
+  annotations: 1800/2400 (1800 ok)
+  annotations: 2000/2400 (2000 ok)
+  annotations: 2200/2400 (2200 ok)
+  annotations: 2400/2400 (2400 ok)
+annotations: 2400/2400 downloaded
+  images: 200/2400 (200 ok)
+  images: 400/2400 (400 ok)
+  images: 600/2400 (600 ok)
+  images: 800/2400 (800 ok)
+  images: 1000/2400 (1000 ok)
+  images: 1200/2400 (1200 ok)
+  images: 1400/2400 (1400 ok)
+  images: 1600/2400 (1600 ok)
+  images: 1800/2400 (1800 ok)
+  images: 2000/2400 (2000 ok)
+  images: 2200/2400 (2200 ok)
+  images: 2400/2400 (2400 ok)
+images: 2400/2400 downloaded
+{
+  "n_records": 2400,
+  "present_per_defect": {
+    "G6_MARGIN_VIOLATION": 55,
+    "G4_FONT_SIZE_INCONSISTENCY": 72,
+    "G3_ALIGNMENT_OFFSET": 21,
+    "G5_BRAND_COLOR_VIOLATION": 33,
+    "G2_ELEMENT_OVERLAP": 105,
+    "G1_TEXT_OVERFLOW": 82,
+    "S4_DENSITY_RULE_VIOLATION": 40
+  },
+  "confident_absent_per_defect": {
+    "G3_ALIGNMENT_OFFSET": 1534,
+    "G1_TEXT_OVERFLOW": 1728,
+    "G2_ELEMENT_OVERLAP": 1707,
+    "G4_FONT_SIZE_INCONSISTENCY": 1412,
+    "S4_DENSITY_RULE_VIOLATION": 1741,
+    "G5_BRAND_COLOR_VIOLATION": 3932,
+    "G6_MARGIN_VIOLATION": 1500
+  },
+  "manifest": "/home/gpus/slide-examiner/data/part2/manifest_slideaudit.jsonl"
+}

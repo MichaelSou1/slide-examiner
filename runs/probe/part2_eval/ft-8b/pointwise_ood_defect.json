@@ -1,0 +1,50 @@
+{
+  "model": "ft-8b",
+  "prompt_style": "trained",
+  "manifest": "/home/gpus/slide-examiner/data/part2/manifest_eval_ood_defect_rendered.jsonl",
+  "modalities": [
+    "A",
+    "C"
+  ],
+  "n_pos": 80,
+  "n_clean": 40,
+  "failures": 0,
+  "metrics": {
+    "A": {
+      "per_defect": {
+        "G4_FONT_SIZE_INCONSISTENCY": {
+          "recall": 0.0,
+          "specificity": 1.0,
+          "bal_acc": 0.5,
+          "precision": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "n_pos": 40,
+          "n_neg": 40
+        }
+      },
+      "group_bal_acc": {
+        "semantic": null,
+        "geometry": 0.5
+      }
+    },
+    "C": {
+      "per_defect": {
+        "G4_FONT_SIZE_INCONSISTENCY": {
+          "recall": 0.0,
+          "specificity": 1.0,
+          "bal_acc": 0.5,
+          "precision": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "n_pos": 40,
+          "n_neg": 40
+        }
+      },
+      "group_bal_acc": {
+        "semantic": null,
+        "geometry": 0.5
+      }
+    }
+  }
+}

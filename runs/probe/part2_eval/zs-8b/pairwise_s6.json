@@ -1,0 +1,17 @@
+{
+  "model": "zs-8b",
+  "prompt_style": "scoped",
+  "mode": "pairwise_2afc",
+  "manifest": "/home/gpus/slide-examiner/data/part2/manifest_s6_eval_rendered.jsonl",
+  "metrics": {
+    "S6_IMAGE_TEXT_CONTRADICTION": {
+      "acc_2afc": 1.0,
+      "n": 12,
+      "pick_dist": {
+        "b": 6,
+        "a": 6
+      },
+      "no_parse": 0
+    }
+  }
+}

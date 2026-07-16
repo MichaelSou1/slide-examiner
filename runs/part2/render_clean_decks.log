@@ -1,0 +1,7 @@
+=== test (S2) ===
+[manifest_eval_test_rendered.jsonl] 72 deck positives -> 72 clean controls
+  wrote 72 controls to data/part2/deck_clean_test.jsonl; with page_image_paths: 72
+=== ood_defect (S5) ===
+[manifest_eval_ood_defect_rendered.jsonl] 120 deck positives -> 120 clean controls
+  wrote 120 controls to data/part2/deck_clean_ood_defect.jsonl; with page_image_paths: 120
+=== DONE clean-deck render ===

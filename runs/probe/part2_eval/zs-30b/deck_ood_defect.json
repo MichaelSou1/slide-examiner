@@ -1,0 +1,69 @@
+{
+  "model": "zs-30b",
+  "prompt_style": "scoped",
+  "manifest": "/home/gpus/slide-examiner/data/part2/manifest_eval_ood_defect_rendered.jsonl",
+  "modalities": [
+    "A",
+    "B",
+    "C"
+  ],
+  "n_pos": 60,
+  "n_clean": 60,
+  "failures": 0,
+  "metrics": {
+    "A": {
+      "per_defect": {
+        "S5_MISSING_LOGIC_SECTION": {
+          "recall": 0.5,
+          "specificity": 0.45,
+          "bal_acc": 0.475,
+          "precision": 0.476,
+          "f1": 0.488,
+          "fpr": 0.55,
+          "n_pos": 60,
+          "n_neg": 60
+        }
+      },
+      "group_bal_acc": {
+        "semantic": 0.475,
+        "geometry": null
+      }
+    },
+    "B": {
+      "per_defect": {
+        "S5_MISSING_LOGIC_SECTION": {
+          "recall": 0.35,
+          "specificity": 0.717,
+          "bal_acc": 0.533,
+          "precision": 0.553,
+          "f1": 0.429,
+          "fpr": 0.283,
+          "n_pos": 60,
+          "n_neg": 60
+        }
+      },
+      "group_bal_acc": {
+        "semantic": 0.533,
+        "geometry": null
+      }
+    },
+    "C": {
+      "per_defect": {
+        "S5_MISSING_LOGIC_SECTION": {
+          "recall": 0.383,
+          "specificity": 0.75,
+          "bal_acc": 0.567,
+          "precision": 0.605,
+          "f1": 0.469,
+          "fpr": 0.25,
+          "n_pos": 60,
+          "n_neg": 60
+        }
+      },
+      "group_bal_acc": {
+        "semantic": 0.567,
+        "geometry": null
+      }
+    }
+  }
+}

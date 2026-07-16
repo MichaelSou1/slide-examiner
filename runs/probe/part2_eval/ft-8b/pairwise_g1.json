@@ -1,0 +1,26 @@
+{
+  "model": "ft-8b",
+  "prompt_style": "trained",
+  "mode": "pairwise_2afc",
+  "manifest": "/home/gpus/slide-examiner/data/part2/manifest_eval_test_rendered.jsonl",
+  "metrics": {
+    "S6_IMAGE_TEXT_CONTRADICTION": {
+      "acc_2afc": 0.583,
+      "n": 72,
+      "pick_dist": {
+        "a": 6,
+        "b": 66
+      },
+      "no_parse": 0
+    },
+    "G1_TEXT_OVERFLOW": {
+      "acc_2afc": 1.0,
+      "n": 120,
+      "pick_dist": {
+        "a": 60,
+        "b": 60
+      },
+      "no_parse": 0
+    }
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "model": "ft-8b",
+  "prompt_style": "trained",
+  "manifest": "/home/gpus/slide-examiner/data/part2/manifest_eval_test_rendered.jsonl",
+  "modalities": [
+    "A",
+    "B",
+    "C"
+  ],
+  "n_pos": 72,
+  "n_clean": 72,
+  "failures": 0,
+  "metrics": {
+    "A": {
+      "per_defect": {
+        "S2_NARRATIVE_ORDER_BREAK": {
+          "recall": 1.0,
+          "specificity": 0.0,
+          "bal_acc": 0.5,
+          "precision": 0.333,
+          "f1": 0.5,
+          "fpr": 1.0,
+          "n_pos": 36,
+          "n_neg": 72
+        },
+        "S3_TERMINOLOGY_INCONSISTENCY": {
+          "recall": 0.0,
+          "specificity": 1.0,
+          "bal_acc": 0.5,
+          "precision": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "n_pos": 36,
+          "n_neg": 72
+        }
+      },
+      "group_bal_acc": {
+        "semantic": 0.5,
+        "geometry": null
+      }
+    },
+    "B": {
+      "per_defect": {
+        "S2_NARRATIVE_ORDER_BREAK": {
+          "recall": 1.0,
+          "specificity": 0.0,
+          "bal_acc": 0.5,
+          "precision": 0.333,
+          "f1": 0.5,
+          "fpr": 1.0,
+          "n_pos": 36,
+          "n_neg": 72
+        },
+        "S3_TERMINOLOGY_INCONSISTENCY": {
+          "recall": 0.0,
+          "specificity": 1.0,
+          "bal_acc": 0.5,
+          "precision": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "n_pos": 36,
+          "n_neg": 72
+        }
+      },
+      "group_bal_acc": {
+        "semantic": 0.5,
+        "geometry": null
+      }
+    },
+    "C": {
+      "per_defect": {
+        "S2_NARRATIVE_ORDER_BREAK": {
+          "recall": 1.0,
+          "specificity": 0.0,
+          "bal_acc": 0.5,
+          "precision": 0.333,
+          "f1": 0.5,
+          "fpr": 1.0,
+          "n_pos": 36,
+          "n_neg": 72
+        },
+        "S3_TERMINOLOGY_INCONSISTENCY": {
+          "recall": 0.0,
+          "specificity": 1.0,
+          "bal_acc": 0.5,
+          "precision": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "n_pos": 36,
+          "n_neg": 72
+        }
+      },
+      "group_bal_acc": {
+        "semantic": 0.5,
+        "geometry": null
+      }
+    }
+  }
+}

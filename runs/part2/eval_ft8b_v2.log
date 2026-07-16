@@ -1,0 +1,609 @@
+[serve] ft-8b on GPUS=1,2 TP=2 port=8104 style=trained
+[serve] ft-8b READY
+  -> pointwise
+[ft-8b/trained] 504 pos + 432 clean x 3 mod = 2808 probes
+  100/2808 39s
+  200/2808 75s
+  300/2808 126s
+  400/2808 161s
+  500/2808 187s
+  600/2808 216s
+  700/2808 251s
+  800/2808 282s
+  900/2808 308s
+  1000/2808 331s
+  1100/2808 355s
+  1200/2808 409s
+  1300/2808 471s
+  1400/2808 559s
+  1500/2808 653s
+  1600/2808 681s
+  1700/2808 708s
+  1800/2808 749s
+  1900/2808 771s
+  2000/2808 795s
+  2100/2808 814s
+  2200/2808 839s
+  2300/2808 861s
+  2400/2808 880s
+  2500/2808 897s
+  2600/2808 915s
+  2700/2808 949s
+  2800/2808 994s
+  2808/2808 999s
+{
+  "A": {
+    "per_defect": {
+      "G1_TEXT_OVERFLOW": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "precision": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "n_pos": 60,
+        "n_neg": 432
+      },
+      "G2_ELEMENT_OVERLAP": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "precision": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "n_pos": 60,
+        "n_neg": 432
+      },
+      "G3_ALIGNMENT_OFFSET": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "precision": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "n_pos": 60,
+        "n_neg": 432
+      },
+      "G5_BRAND_COLOR_VIOLATION": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "precision": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "n_pos": 60,
+        "n_neg": 432
+      },
+      "G6_MARGIN_VIOLATION": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "precision": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "n_pos": 60,
+        "n_neg": 432
+      },
+      "S1_TITLE_BODY_MISMATCH": {
+        "recall": 1.0,
+        "specificity": 1.0,
+        "bal_acc": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "fpr": 0.0,
+        "n_pos": 36,
+        "n_neg": 432
+      },
+      "S4_DENSITY_RULE_VIOLATION": {
+        "recall": 1.0,
+        "specificity": 1.0,
+        "bal_acc": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "fpr": 0.0,
+        "n_pos": 60,
+        "n_neg": 432
+      },
+      "S6_IMAGE_TEXT_CONTRADICTION": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "precision": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "n_pos": 36,
+        "n_neg": 432
+      }
+    },
+    "group_bal_acc": {
+      "semantic": 1.0,
+      "geometry": 0.5
+    }
+  },
+  "B": {
+    "per_defect": {
+      "G1_TEXT_OVERFLOW": {
+        "recall": 0.0,
+        "specificity": 0.981,
+        "bal_acc": 0.491,
+        "precision": 0.0,
+        "f1": 0.0,
+        "fpr": 0.019,
+        "n_pos": 60,
+        "n_neg": 432
+      },
+      "G2_ELEMENT_OVERLAP": {
+        "recall": 0.217,
+        "specificity": 0.968,
+        "bal_acc": 0.592,
+        "precision": 0.481,
+        "f1": 0.299,
+        "fpr": 0.032,
+        "n_pos": 60,
+        "n_neg": 432
+      },
+      "G3_ALIGNMENT_OFFSET": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "precision": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "n_pos": 60,
+        "n_neg": 432
+      },
+      "G5_BRAND_COLOR_VIOLATION": {
+        "recall": 0.0,
+        "specificity": 0.998,
+        "bal_acc": 0.499,
+        "precision": 0.0,
+        "f1": 0.0,
+        "fpr": 0.002,
+        "n_pos": 60,
+        "n_neg": 432
+      },
+      "G6_MARGIN_VIOLATION": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "precision": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "n_pos": 60,
+        "n_neg": 432
+      },
+      "S1_TITLE_BODY_MISMATCH": {
+        "recall": 1.0,
+        "specificity": 0.912,
+        "bal_acc": 0.956,
+        "precision": 0.486,
+        "f1": 0.655,
+        "fpr": 0.088,
+        "n_pos": 36,
+        "n_neg": 432
+      },
+      "S4_DENSITY_RULE_VIOLATION": {
+        "recall": 1.0,
+        "specificity": 0.799,
+        "bal_acc": 0.899,
+        "precision": 0.408,
+        "f1": 0.58,
+        "fpr": 0.201,
+        "n_pos": 60,
+        "n_neg": 432
+      },
+      "S6_IMAGE_TEXT_CONTRADICTION": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "precision": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "n_pos": 36,
+        "n_neg": 432
+      }
+    },
+    "group_bal_acc": {
+      "semantic": 0.927,
+      "geometry": 0.523
+    }
+  },
+  "C": {
+    "per_defect": {
+      "G1_TEXT_OVERFLOW": {
+        "recall": 0.0,
+        "specificity": 0.991,
+        "bal_acc": 0.495,
+        "precision": 0.0,
+        "f1": 0.0,
+        "fpr": 0.009,
+        "n_pos": 60,
+        "n_neg": 432
+      },
+      "G2_ELEMENT_OVERLAP": {
+        "recall": 0.017,
+        "specificity": 0.981,
+        "bal_acc": 0.499,
+        "precision": 0.111,
+        "f1": 0.029,
+        "fpr": 0.019,
+        "n_pos": 60,
+        "n_neg": 432
+      },
+      "G3_ALIGNMENT_OFFSET": {
+        "recall": 0.0,
+        "specificity": 0.998,
+        "bal_acc": 0.499,
+        "precision": 0.0,
+        "f1": 0.0,
+        "fpr": 0.002,
+        "n_pos": 60,
+        "n_neg": 432
+      },
+      "G5_BRAND_COLOR_VIOLATION": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "precision": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "n_pos": 60,
+        "n_neg": 432
+      },
+      "G6_MARGIN_VIOLATION": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "precision": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "n_pos": 60,
+        "n_neg": 432
+      },
+      "S1_TITLE_BODY_MISMATCH": {
+        "recall": 1.0,
+        "specificity": 0.921,
+        "bal_acc": 0.961,
+        "precision": 0.514,
+        "f1": 0.679,
+        "fpr": 0.079,
+        "n_pos": 36,
+        "n_neg": 432
+      },
+      "S4_DENSITY_RULE_VIOLATION": {
+        "recall": 1.0,
+        "specificity": 0.831,
+        "bal_acc": 0.916,
+        "precision": 0.451,
+        "f1": 0.622,
+        "fpr": 0.169,
+        "n_pos": 60,
+        "n_neg": 432
+      },
+      "S6_IMAGE_TEXT_CONTRADICTION": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "precision": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "n_pos": 36,
+        "n_neg": 432
+      }
+    },
+    "group_bal_acc": {
+      "semantic": 0.939,
+      "geometry": 0.499
+    }
+  }
+}
+  -> pointwise
+[ft-8b/trained] 240 pos + 240 clean x 2 mod = 960 probes
+  100/960 48s
+  200/960 86s
+  300/960 118s
+  400/960 146s
+  500/960 202s
+  600/960 233s
+  700/960 256s
+  800/960 276s
+  900/960 302s
+  960/960 324s
+{
+  "A": {
+    "per_defect": {
+      "G1_TEXT_OVERFLOW": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "precision": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "n_pos": 40,
+        "n_neg": 240
+      },
+      "G2_ELEMENT_OVERLAP": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "precision": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "n_pos": 40,
+        "n_neg": 240
+      },
+      "G3_ALIGNMENT_OFFSET": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "precision": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "n_pos": 40,
+        "n_neg": 240
+      },
+      "G5_BRAND_COLOR_VIOLATION": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "precision": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "n_pos": 40,
+        "n_neg": 240
+      },
+      "G6_MARGIN_VIOLATION": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "precision": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "n_pos": 40,
+        "n_neg": 240
+      },
+      "S4_DENSITY_RULE_VIOLATION": {
+        "recall": 1.0,
+        "specificity": 1.0,
+        "bal_acc": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "fpr": 0.0,
+        "n_pos": 40,
+        "n_neg": 240
+      }
+    },
+    "group_bal_acc": {
+      "semantic": 1.0,
+      "geometry": 0.5
+    }
+  },
+  "C": {
+    "per_defect": {
+      "G1_TEXT_OVERFLOW": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "precision": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "n_pos": 40,
+        "n_neg": 240
+      },
+      "G2_ELEMENT_OVERLAP": {
+        "recall": 0.0,
+        "specificity": 0.983,
+        "bal_acc": 0.492,
+        "precision": 0.0,
+        "f1": 0.0,
+        "fpr": 0.017,
+        "n_pos": 40,
+        "n_neg": 240
+      },
+      "G3_ALIGNMENT_OFFSET": {
+        "recall": 0.0,
+        "specificity": 0.996,
+        "bal_acc": 0.498,
+        "precision": 0.0,
+        "f1": 0.0,
+        "fpr": 0.004,
+        "n_pos": 40,
+        "n_neg": 240
+      },
+      "G5_BRAND_COLOR_VIOLATION": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "precision": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "n_pos": 40,
+        "n_neg": 240
+      },
+      "G6_MARGIN_VIOLATION": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "precision": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "n_pos": 40,
+        "n_neg": 240
+      },
+      "S4_DENSITY_RULE_VIOLATION": {
+        "recall": 1.0,
+        "specificity": 0.783,
+        "bal_acc": 0.892,
+        "precision": 0.435,
+        "f1": 0.606,
+        "fpr": 0.217,
+        "n_pos": 40,
+        "n_neg": 240
+      }
+    },
+    "group_bal_acc": {
+      "semantic": 0.892,
+      "geometry": 0.497
+    }
+  }
+}
+  -> pointwise
+[ft-8b/trained] 80 pos + 40 clean x 2 mod = 240 probes
+  100/240 74s
+  200/240 99s
+  240/240 107s
+{
+  "A": {
+    "per_defect": {
+      "G4_FONT_SIZE_INCONSISTENCY": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "precision": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "n_pos": 40,
+        "n_neg": 40
+      }
+    },
+    "group_bal_acc": {
+      "semantic": null,
+      "geometry": 0.5
+    }
+  },
+  "C": {
+    "per_defect": {
+      "G4_FONT_SIZE_INCONSISTENCY": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "precision": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "n_pos": 40,
+        "n_neg": 40
+      }
+    },
+    "group_bal_acc": {
+      "semantic": null,
+      "geometry": 0.5
+    }
+  }
+}
+  -> pairwise
+[ft-8b/trained] pairwise 96 pairs x2 orders
+{
+  "S6_IMAGE_TEXT_CONTRADICTION": {
+    "acc_2afc": 0.583,
+    "n": 72,
+    "pick_dist": {
+      "a": 6,
+      "b": 66
+    },
+    "no_parse": 0
+  },
+  "G1_TEXT_OVERFLOW": {
+    "acc_2afc": 1.0,
+    "n": 120,
+    "pick_dist": {
+      "a": 60,
+      "b": 60
+    },
+    "no_parse": 0
+  }
+}
+  -> pairwise
+[ft-8b/trained] pairwise 6 pairs x2 orders
+{
+  "S6_IMAGE_TEXT_CONTRADICTION": {
+    "acc_2afc": 1.0,
+    "n": 12,
+    "pick_dist": {
+      "a": 6,
+      "b": 6
+    },
+    "no_parse": 0
+  }
+}
+  -> slideaudit (real transfer)
+[ft-8b/trained] probing 500 real SlideAudit slides
+  100/500 108s
+  200/500 203s
+  300/500 296s
+  400/500 391s
+  500/500 482s
+{
+  "G1_TEXT_OVERFLOW": {
+    "recall": 0.0,
+    "specificity": 1.0,
+    "bal_acc": 0.5,
+    "precision": 0.0,
+    "f1": 0.0,
+    "fpr": 0.0,
+    "n_pos": 61,
+    "n_neg": 322
+  },
+  "G2_ELEMENT_OVERLAP": {
+    "recall": 0.0,
+    "specificity": 0.988,
+    "bal_acc": 0.494,
+    "precision": 0.0,
+    "f1": 0.0,
+    "fpr": 0.012,
+    "n_pos": 64,
+    "n_neg": 320
+  },
+  "G3_ALIGNMENT_OFFSET": {
+    "recall": 0.0,
+    "specificity": 1.0,
+    "bal_acc": 0.5,
+    "precision": 0.0,
+    "f1": 0.0,
+    "fpr": 0.0,
+    "n_pos": 21,
+    "n_neg": 285
+  },
+  "G4_FONT_SIZE_INCONSISTENCY": {
+    "recall": 0.0,
+    "specificity": 1.0,
+    "bal_acc": 0.5,
+    "precision": 0.0,
+    "f1": 0.0,
+    "fpr": 0.0,
+    "n_pos": 62,
+    "n_neg": 250
+  },
+  "G5_BRAND_COLOR_VIOLATION": {
+    "recall": 0.065,
+    "specificity": 1.0,
+    "bal_acc": 0.532,
+    "precision": 1.0,
+    "f1": 0.121,
+    "fpr": 0.0,
+    "n_pos": 31,
+    "n_neg": 430
+  },
+  "G6_MARGIN_VIOLATION": {
+    "recall": 0.0,
+    "specificity": 0.996,
+    "bal_acc": 0.498,
+    "precision": 0.0,
+    "f1": 0.0,
+    "fpr": 0.004,
+    "n_pos": 55,
+    "n_neg": 266
+  },
+  "S4_DENSITY_RULE_VIOLATION": {
+    "recall": 0.075,
+    "specificity": 0.927,
+    "bal_acc": 0.501,
+    "precision": 0.103,
+    "f1": 0.087,
+    "fpr": 0.073,
+    "n_pos": 40,
+    "n_neg": 355
+  }
+}
+[teardown] killing ft-8b
+scripts/part2_serve_and_eval.sh: 第 65 行： 3035817 已杀死               CUDA_VISIBLE_DEVICES="$GPUS" HF_HUB_OFFLINE=1 nohup "$VLLM" serve "$MODEL" --served-model-name "$NAME" --port "$PORT" --tensor-parallel-size "$TP" --gpu-memory-utilization 0.92 --max-model-len 8192 --limit-mm-per-prompt '{"image":6}' --enforce-eager --trust-remote-code $EXTRA > "$LOG" 2>&1  （工作目录：/tmp）
+[done] ft-8b

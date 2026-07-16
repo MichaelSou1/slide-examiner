@@ -1,0 +1,99 @@
+{
+  "model": "zs-30b",
+  "prompt_style": "scoped",
+  "manifest": "/home/gpus/slide-examiner/data/part2/manifest_eval_test_rendered.jsonl",
+  "modalities": [
+    "A",
+    "B",
+    "C"
+  ],
+  "n_pos": 72,
+  "n_clean": 72,
+  "failures": 0,
+  "metrics": {
+    "A": {
+      "per_defect": {
+        "S2_NARRATIVE_ORDER_BREAK": {
+          "recall": 0.75,
+          "specificity": 0.347,
+          "bal_acc": 0.549,
+          "precision": 0.365,
+          "f1": 0.491,
+          "fpr": 0.653,
+          "n_pos": 36,
+          "n_neg": 72
+        },
+        "S3_TERMINOLOGY_INCONSISTENCY": {
+          "recall": 0.083,
+          "specificity": 0.903,
+          "bal_acc": 0.493,
+          "precision": 0.3,
+          "f1": 0.13,
+          "fpr": 0.097,
+          "n_pos": 36,
+          "n_neg": 72
+        }
+      },
+      "group_bal_acc": {
+        "semantic": 0.549,
+        "geometry": null
+      }
+    },
+    "B": {
+      "per_defect": {
+        "S2_NARRATIVE_ORDER_BREAK": {
+          "recall": 0.861,
+          "specificity": 0.014,
+          "bal_acc": 0.438,
+          "precision": 0.304,
+          "f1": 0.449,
+          "fpr": 0.986,
+          "n_pos": 36,
+          "n_neg": 72
+        },
+        "S3_TERMINOLOGY_INCONSISTENCY": {
+          "recall": 0.0,
+          "specificity": 0.986,
+          "bal_acc": 0.493,
+          "precision": 0.0,
+          "f1": 0.0,
+          "fpr": 0.014,
+          "n_pos": 36,
+          "n_neg": 72
+        }
+      },
+      "group_bal_acc": {
+        "semantic": 0.438,
+        "geometry": null
+      }
+    },
+    "C": {
+      "per_defect": {
+        "S2_NARRATIVE_ORDER_BREAK": {
+          "recall": 0.639,
+          "specificity": 0.389,
+          "bal_acc": 0.514,
+          "precision": 0.343,
+          "f1": 0.447,
+          "fpr": 0.611,
+          "n_pos": 36,
+          "n_neg": 72
+        },
+        "S3_TERMINOLOGY_INCONSISTENCY": {
+          "recall": 0.028,
+          "specificity": 1.0,
+          "bal_acc": 0.514,
+          "precision": 1.0,
+          "f1": 0.054,
+          "fpr": 0.0,
+          "n_pos": 36,
+          "n_neg": 72
+        }
+      },
+      "group_bal_acc": {
+        "semantic": 0.514,
+        "geometry": null
+      }
+    }
+  }
+}

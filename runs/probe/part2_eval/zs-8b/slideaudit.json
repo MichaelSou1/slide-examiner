@@ -1,0 +1,80 @@
+{
+  "model": "zs-8b",
+  "prompt_style": "scoped",
+  "dataset": "SlideAudit (real)",
+  "modality": "A",
+  "n_probed": 500,
+  "failures": 0,
+  "metrics": {
+    "G1_TEXT_OVERFLOW": {
+      "recall": 0.049,
+      "specificity": 0.984,
+      "bal_acc": 0.517,
+      "precision": 0.375,
+      "f1": 0.087,
+      "fpr": 0.016,
+      "n_pos": 61,
+      "n_neg": 322
+    },
+    "G2_ELEMENT_OVERLAP": {
+      "recall": 0.0,
+      "specificity": 1.0,
+      "bal_acc": 0.5,
+      "precision": 0.0,
+      "f1": 0.0,
+      "fpr": 0.0,
+      "n_pos": 64,
+      "n_neg": 320
+    },
+    "G3_ALIGNMENT_OFFSET": {
+      "recall": 0.0,
+      "specificity": 1.0,
+      "bal_acc": 0.5,
+      "precision": 0.0,
+      "f1": 0.0,
+      "fpr": 0.0,
+      "n_pos": 21,
+      "n_neg": 285
+    },
+    "G4_FONT_SIZE_INCONSISTENCY": {
+      "recall": 0.0,
+      "specificity": 1.0,
+      "bal_acc": 0.5,
+      "precision": 0.0,
+      "f1": 0.0,
+      "fpr": 0.0,
+      "n_pos": 62,
+      "n_neg": 250
+    },
+    "G5_BRAND_COLOR_VIOLATION": {
+      "recall": 0.0,
+      "specificity": 0.998,
+      "bal_acc": 0.499,
+      "precision": 0.0,
+      "f1": 0.0,
+      "fpr": 0.002,
+      "n_pos": 31,
+      "n_neg": 430
+    },
+    "G6_MARGIN_VIOLATION": {
+      "recall": 0.0,
+      "specificity": 1.0,
+      "bal_acc": 0.5,
+      "precision": 0.0,
+      "f1": 0.0,
+      "fpr": 0.0,
+      "n_pos": 55,
+      "n_neg": 266
+    },
+    "S4_DENSITY_RULE_VIOLATION": {
+      "recall": 0.0,
+      "specificity": 1.0,
+      "bal_acc": 0.5,
+      "precision": 0.0,
+      "f1": 0.0,
+      "fpr": 0.0,
+      "n_pos": 40,
+      "n_neg": 355
+    }
+  }
+}

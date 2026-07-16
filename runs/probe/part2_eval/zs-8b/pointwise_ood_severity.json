@@ -1,0 +1,150 @@
+{
+  "model": "zs-8b",
+  "prompt_style": "scoped",
+  "manifest": "/home/gpus/slide-examiner/data/part2/manifest_eval_ood_severity_rendered.jsonl",
+  "modalities": [
+    "A",
+    "C"
+  ],
+  "n_pos": 240,
+  "n_clean": 240,
+  "failures": 0,
+  "metrics": {
+    "A": {
+      "per_defect": {
+        "G1_TEXT_OVERFLOW": {
+          "recall": 0.0,
+          "specificity": 1.0,
+          "bal_acc": 0.5,
+          "precision": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "n_pos": 40,
+          "n_neg": 240
+        },
+        "G2_ELEMENT_OVERLAP": {
+          "recall": 0.0,
+          "specificity": 1.0,
+          "bal_acc": 0.5,
+          "precision": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "n_pos": 40,
+          "n_neg": 240
+        },
+        "G3_ALIGNMENT_OFFSET": {
+          "recall": 0.0,
+          "specificity": 1.0,
+          "bal_acc": 0.5,
+          "precision": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "n_pos": 40,
+          "n_neg": 240
+        },
+        "G5_BRAND_COLOR_VIOLATION": {
+          "recall": 0.0,
+          "specificity": 1.0,
+          "bal_acc": 0.5,
+          "precision": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "n_pos": 40,
+          "n_neg": 240
+        },
+        "G6_MARGIN_VIOLATION": {
+          "recall": 0.0,
+          "specificity": 1.0,
+          "bal_acc": 0.5,
+          "precision": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "n_pos": 40,
+          "n_neg": 240
+        },
+        "S4_DENSITY_RULE_VIOLATION": {
+          "recall": 0.0,
+          "specificity": 1.0,
+          "bal_acc": 0.5,
+          "precision": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "n_pos": 40,
+          "n_neg": 240
+        }
+      },
+      "group_bal_acc": {
+        "semantic": 0.5,
+        "geometry": 0.5
+      }
+    },
+    "C": {
+      "per_defect": {
+        "G1_TEXT_OVERFLOW": {
+          "recall": 0.0,
+          "specificity": 1.0,
+          "bal_acc": 0.5,
+          "precision": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "n_pos": 40,
+          "n_neg": 240
+        },
+        "G2_ELEMENT_OVERLAP": {
+          "recall": 0.0,
+          "specificity": 1.0,
+          "bal_acc": 0.5,
+          "precision": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "n_pos": 40,
+          "n_neg": 240
+        },
+        "G3_ALIGNMENT_OFFSET": {
+          "recall": 0.0,
+          "specificity": 1.0,
+          "bal_acc": 0.5,
+          "precision": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "n_pos": 40,
+          "n_neg": 240
+        },
+        "G5_BRAND_COLOR_VIOLATION": {
+          "recall": 0.0,
+          "specificity": 1.0,
+          "bal_acc": 0.5,
+          "precision": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "n_pos": 40,
+          "n_neg": 240
+        },
+        "G6_MARGIN_VIOLATION": {
+          "recall": 0.0,
+          "specificity": 1.0,
+          "bal_acc": 0.5,
+          "precision": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "n_pos": 40,
+          "n_neg": 240
+        },
+        "S4_DENSITY_RULE_VIOLATION": {
+          "recall": 0.0,
+          "specificity": 1.0,
+          "bal_acc": 0.5,
+          "precision": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "n_pos": 40,
+          "n_neg": 240
+        }
+      },
+      "group_bal_acc": {
+        "semantic": 0.5,
+        "geometry": 0.5
+      }
+    }
+  }
+}

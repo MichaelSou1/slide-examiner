@@ -1,0 +1,678 @@
+===== zs-8b =====
+[serve] zs-8b on GPUS=1,2 TP=2 port=8102 style=scoped robust=1
+[serve] zs-8b READY
+  -> pointwise
+  + 72 deck clean controls from /home/gpus/slide-examiner/data/part2/deck_clean_test.jsonl
+[zs-8b/scoped] 72 pos + 72 clean x 3 mod = 432 probes
+  100/432 77s
+  200/432 134s
+  300/432 173s
+  400/432 220s
+  432/432 258s
+{
+  "A": {
+    "per_defect": {
+      "S2_NARRATIVE_ORDER_BREAK": {
+        "recall": 0.222,
+        "specificity": 0.778,
+        "bal_acc": 0.5,
+        "precision": 0.333,
+        "f1": 0.267,
+        "fpr": 0.222,
+        "n_pos": 36,
+        "n_neg": 72
+      },
+      "S3_TERMINOLOGY_INCONSISTENCY": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "precision": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "n_pos": 36,
+        "n_neg": 72
+      }
+    },
+    "group_bal_acc": {
+      "semantic": 0.5,
+      "geometry": null
+    }
+  },
+  "B": {
+    "per_defect": {
+      "S2_NARRATIVE_ORDER_BREAK": {
+        "recall": 0.944,
+        "specificity": 0.347,
+        "bal_acc": 0.646,
+        "precision": 0.42,
+        "f1": 0.581,
+        "fpr": 0.653,
+        "n_pos": 36,
+        "n_neg": 72
+      },
+      "S3_TERMINOLOGY_INCONSISTENCY": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "precision": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "n_pos": 36,
+        "n_neg": 72
+      }
+    },
+    "group_bal_acc": {
+      "semantic": 0.646,
+      "geometry": null
+    }
+  },
+  "C": {
+    "per_defect": {
+      "S2_NARRATIVE_ORDER_BREAK": {
+        "recall": 0.333,
+        "specificity": 0.778,
+        "bal_acc": 0.556,
+        "precision": 0.429,
+        "f1": 0.375,
+        "fpr": 0.222,
+        "n_pos": 36,
+        "n_neg": 72
+      },
+      "S3_TERMINOLOGY_INCONSISTENCY": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "precision": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "n_pos": 36,
+        "n_neg": 72
+      }
+    },
+    "group_bal_acc": {
+      "semantic": 0.556,
+      "geometry": null
+    }
+  }
+}
+  -> pointwise
+  + 60 deck clean controls from /home/gpus/slide-examiner/data/part2/deck_clean_ood_defect.jsonl
+[zs-8b/scoped] 60 pos + 60 clean x 3 mod = 360 probes
+  100/360 44s
+  200/360 100s
+  300/360 128s
+  360/360 171s
+{
+  "A": {
+    "per_defect": {
+      "S5_MISSING_LOGIC_SECTION": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "precision": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "n_pos": 60,
+        "n_neg": 60
+      }
+    },
+    "group_bal_acc": {
+      "semantic": 0.5,
+      "geometry": null
+    }
+  },
+  "B": {
+    "per_defect": {
+      "S5_MISSING_LOGIC_SECTION": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "precision": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "n_pos": 60,
+        "n_neg": 60
+      }
+    },
+    "group_bal_acc": {
+      "semantic": 0.5,
+      "geometry": null
+    }
+  },
+  "C": {
+    "per_defect": {
+      "S5_MISSING_LOGIC_SECTION": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "precision": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "n_pos": 60,
+        "n_neg": 60
+      }
+    },
+    "group_bal_acc": {
+      "semantic": 0.5,
+      "geometry": null
+    }
+  }
+}
+  -> pointwise
+[zs-8b/trained] 96 pos + 96 clean x 3 mod = 576 probes
+  100/576 29s
+  200/576 65s
+  300/576 105s
+  400/576 126s
+  500/576 150s
+  576/576 172s
+{
+  "A": {
+    "per_defect": {
+      "S1_TITLE_BODY_MISMATCH": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "precision": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "n_pos": 36,
+        "n_neg": 96
+      },
+      "S4_DENSITY_RULE_VIOLATION": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "precision": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "n_pos": 60,
+        "n_neg": 96
+      }
+    },
+    "group_bal_acc": {
+      "semantic": 0.5,
+      "geometry": null
+    }
+  },
+  "B": {
+    "per_defect": {
+      "S1_TITLE_BODY_MISMATCH": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "precision": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "n_pos": 36,
+        "n_neg": 96
+      },
+      "S4_DENSITY_RULE_VIOLATION": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "precision": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "n_pos": 60,
+        "n_neg": 96
+      }
+    },
+    "group_bal_acc": {
+      "semantic": 0.5,
+      "geometry": null
+    }
+  },
+  "C": {
+    "per_defect": {
+      "S1_TITLE_BODY_MISMATCH": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "precision": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "n_pos": 36,
+        "n_neg": 96
+      },
+      "S4_DENSITY_RULE_VIOLATION": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "precision": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "n_pos": 60,
+        "n_neg": 96
+      }
+    },
+    "group_bal_acc": {
+      "semantic": 0.5,
+      "geometry": null
+    }
+  }
+}
+[teardown] killing zs-8b
+scripts/part2_deck_robustness_eval.sh: 第 59 行： 13252 已杀死               CUDA_VISIBLE_DEVICES="$GPUS" HF_HUB_OFFLINE=1 nohup "$VLLM" serve "$MODEL" --served-model-name "$NAME" --port "$PORT" --tensor-parallel-size "$TP" --gpu-memory-utilization 0.92 --max-model-len 8192 --limit-mm-per-prompt '{"image":6}' --enforce-eager --trust-remote-code $EXTRA > "$LOG" 2>&1  （工作目录：/tmp）
+[done] zs-8b
+===== zs-30b =====
+[serve] zs-30b on GPUS=1,2 TP=2 port=8103 style=scoped robust=1
+[serve] zs-30b READY
+  -> pointwise
+  + 72 deck clean controls from /home/gpus/slide-examiner/data/part2/deck_clean_test.jsonl
+[zs-30b/scoped] 72 pos + 72 clean x 3 mod = 432 probes
+  100/432 330s
+  200/432 650s
+  300/432 957s
+  400/432 1250s
+  432/432 1353s
+{
+  "A": {
+    "per_defect": {
+      "S2_NARRATIVE_ORDER_BREAK": {
+        "recall": 0.75,
+        "specificity": 0.347,
+        "bal_acc": 0.549,
+        "precision": 0.365,
+        "f1": 0.491,
+        "fpr": 0.653,
+        "n_pos": 36,
+        "n_neg": 72
+      },
+      "S3_TERMINOLOGY_INCONSISTENCY": {
+        "recall": 0.083,
+        "specificity": 0.903,
+        "bal_acc": 0.493,
+        "precision": 0.3,
+        "f1": 0.13,
+        "fpr": 0.097,
+        "n_pos": 36,
+        "n_neg": 72
+      }
+    },
+    "group_bal_acc": {
+      "semantic": 0.549,
+      "geometry": null
+    }
+  },
+  "B": {
+    "per_defect": {
+      "S2_NARRATIVE_ORDER_BREAK": {
+        "recall": 0.861,
+        "specificity": 0.014,
+        "bal_acc": 0.438,
+        "precision": 0.304,
+        "f1": 0.449,
+        "fpr": 0.986,
+        "n_pos": 36,
+        "n_neg": 72
+      },
+      "S3_TERMINOLOGY_INCONSISTENCY": {
+        "recall": 0.0,
+        "specificity": 0.986,
+        "bal_acc": 0.493,
+        "precision": 0.0,
+        "f1": 0.0,
+        "fpr": 0.014,
+        "n_pos": 36,
+        "n_neg": 72
+      }
+    },
+    "group_bal_acc": {
+      "semantic": 0.438,
+      "geometry": null
+    }
+  },
+  "C": {
+    "per_defect": {
+      "S2_NARRATIVE_ORDER_BREAK": {
+        "recall": 0.639,
+        "specificity": 0.389,
+        "bal_acc": 0.514,
+        "precision": 0.343,
+        "f1": 0.447,
+        "fpr": 0.611,
+        "n_pos": 36,
+        "n_neg": 72
+      },
+      "S3_TERMINOLOGY_INCONSISTENCY": {
+        "recall": 0.028,
+        "specificity": 1.0,
+        "bal_acc": 0.514,
+        "precision": 1.0,
+        "f1": 0.054,
+        "fpr": 0.0,
+        "n_pos": 36,
+        "n_neg": 72
+      }
+    },
+    "group_bal_acc": {
+      "semantic": 0.514,
+      "geometry": null
+    }
+  }
+}
+  -> pointwise
+  + 60 deck clean controls from /home/gpus/slide-examiner/data/part2/deck_clean_ood_defect.jsonl
+[zs-30b/scoped] 60 pos + 60 clean x 3 mod = 360 probes
+  100/360 297s
+  200/360 580s
+  300/360 861s
+  360/360 1052s
+{
+  "A": {
+    "per_defect": {
+      "S5_MISSING_LOGIC_SECTION": {
+        "recall": 0.5,
+        "specificity": 0.45,
+        "bal_acc": 0.475,
+        "precision": 0.476,
+        "f1": 0.488,
+        "fpr": 0.55,
+        "n_pos": 60,
+        "n_neg": 60
+      }
+    },
+    "group_bal_acc": {
+      "semantic": 0.475,
+      "geometry": null
+    }
+  },
+  "B": {
+    "per_defect": {
+      "S5_MISSING_LOGIC_SECTION": {
+        "recall": 0.35,
+        "specificity": 0.717,
+        "bal_acc": 0.533,
+        "precision": 0.553,
+        "f1": 0.429,
+        "fpr": 0.283,
+        "n_pos": 60,
+        "n_neg": 60
+      }
+    },
+    "group_bal_acc": {
+      "semantic": 0.533,
+      "geometry": null
+    }
+  },
+  "C": {
+    "per_defect": {
+      "S5_MISSING_LOGIC_SECTION": {
+        "recall": 0.383,
+        "specificity": 0.75,
+        "bal_acc": 0.567,
+        "precision": 0.605,
+        "f1": 0.469,
+        "fpr": 0.25,
+        "n_pos": 60,
+        "n_neg": 60
+      }
+    },
+    "group_bal_acc": {
+      "semantic": 0.567,
+      "geometry": null
+    }
+  }
+}
+  -> pointwise
+[zs-30b/trained] 96 pos + 96 clean x 3 mod = 576 probes
+  100/576 98s
+  200/576 181s
+  300/576 273s
+  400/576 354s
+  500/576 451s
+  576/576 578s
+{
+  "A": {
+    "per_defect": {
+      "S1_TITLE_BODY_MISMATCH": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "precision": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "n_pos": 36,
+        "n_neg": 96
+      },
+      "S4_DENSITY_RULE_VIOLATION": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "precision": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "n_pos": 60,
+        "n_neg": 96
+      }
+    },
+    "group_bal_acc": {
+      "semantic": 0.5,
+      "geometry": null
+    }
+  },
+  "B": {
+    "per_defect": {
+      "S1_TITLE_BODY_MISMATCH": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "precision": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "n_pos": 36,
+        "n_neg": 96
+      },
+      "S4_DENSITY_RULE_VIOLATION": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "precision": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "n_pos": 60,
+        "n_neg": 96
+      }
+    },
+    "group_bal_acc": {
+      "semantic": 0.5,
+      "geometry": null
+    }
+  },
+  "C": {
+    "per_defect": {
+      "S1_TITLE_BODY_MISMATCH": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "precision": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "n_pos": 36,
+        "n_neg": 96
+      },
+      "S4_DENSITY_RULE_VIOLATION": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "precision": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "n_pos": 60,
+        "n_neg": 96
+      }
+    },
+    "group_bal_acc": {
+      "semantic": 0.5,
+      "geometry": null
+    }
+  }
+}
+[teardown] killing zs-30b
+scripts/part2_deck_robustness_eval.sh: 第 59 行： 83326 已杀死               CUDA_VISIBLE_DEVICES="$GPUS" HF_HUB_OFFLINE=1 nohup "$VLLM" serve "$MODEL" --served-model-name "$NAME" --port "$PORT" --tensor-parallel-size "$TP" --gpu-memory-utilization 0.92 --max-model-len 8192 --limit-mm-per-prompt '{"image":6}' --enforce-eager --trust-remote-code $EXTRA > "$LOG" 2>&1  （工作目录：/tmp）
+[done] zs-30b
+===== ft-8b =====
+[serve] ft-8b on GPUS=1,2 TP=2 port=8104 style=trained robust=0
+[serve] ft-8b READY
+  -> pointwise
+  + 72 deck clean controls from /home/gpus/slide-examiner/data/part2/deck_clean_test.jsonl
+[ft-8b/trained] 72 pos + 72 clean x 3 mod = 432 probes
+  100/432 111s
+  200/432 208s
+  300/432 288s
+  400/432 369s
+  432/432 392s
+{
+  "A": {
+    "per_defect": {
+      "S2_NARRATIVE_ORDER_BREAK": {
+        "recall": 1.0,
+        "specificity": 0.0,
+        "bal_acc": 0.5,
+        "precision": 0.333,
+        "f1": 0.5,
+        "fpr": 1.0,
+        "n_pos": 36,
+        "n_neg": 72
+      },
+      "S3_TERMINOLOGY_INCONSISTENCY": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "precision": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "n_pos": 36,
+        "n_neg": 72
+      }
+    },
+    "group_bal_acc": {
+      "semantic": 0.5,
+      "geometry": null
+    }
+  },
+  "B": {
+    "per_defect": {
+      "S2_NARRATIVE_ORDER_BREAK": {
+        "recall": 1.0,
+        "specificity": 0.0,
+        "bal_acc": 0.5,
+        "precision": 0.333,
+        "f1": 0.5,
+        "fpr": 1.0,
+        "n_pos": 36,
+        "n_neg": 72
+      },
+      "S3_TERMINOLOGY_INCONSISTENCY": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "precision": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "n_pos": 36,
+        "n_neg": 72
+      }
+    },
+    "group_bal_acc": {
+      "semantic": 0.5,
+      "geometry": null
+    }
+  },
+  "C": {
+    "per_defect": {
+      "S2_NARRATIVE_ORDER_BREAK": {
+        "recall": 1.0,
+        "specificity": 0.0,
+        "bal_acc": 0.5,
+        "precision": 0.333,
+        "f1": 0.5,
+        "fpr": 1.0,
+        "n_pos": 36,
+        "n_neg": 72
+      },
+      "S3_TERMINOLOGY_INCONSISTENCY": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "precision": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "n_pos": 36,
+        "n_neg": 72
+      }
+    },
+    "group_bal_acc": {
+      "semantic": 0.5,
+      "geometry": null
+    }
+  }
+}
+  -> pointwise
+  + 60 deck clean controls from /home/gpus/slide-examiner/data/part2/deck_clean_ood_defect.jsonl
+[ft-8b/trained] 60 pos + 60 clean x 3 mod = 360 probes
+  100/360 89s
+  200/360 182s
+  300/360 275s
+  360/360 331s
+{
+  "A": {
+    "per_defect": {
+      "S5_MISSING_LOGIC_SECTION": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "precision": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "n_pos": 60,
+        "n_neg": 60
+      }
+    },
+    "group_bal_acc": {
+      "semantic": 0.5,
+      "geometry": null
+    }
+  },
+  "B": {
+    "per_defect": {
+      "S5_MISSING_LOGIC_SECTION": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "precision": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "n_pos": 60,
+        "n_neg": 60
+      }
+    },
+    "group_bal_acc": {
+      "semantic": 0.5,
+      "geometry": null
+    }
+  },
+  "C": {
+    "per_defect": {
+      "S5_MISSING_LOGIC_SECTION": {
+        "recall": 0.0,
+        "specificity": 1.0,
+        "bal_acc": 0.5,
+        "precision": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "n_pos": 60,
+        "n_neg": 60
+      }
+    },
+    "group_bal_acc": {
+      "semantic": 0.5,
+      "geometry": null
+    }
+  }
+}
+[teardown] killing ft-8b
+scripts/part2_deck_robustness_eval.sh: 第 59 行： 328034 已杀死               CUDA_VISIBLE_DEVICES="$GPUS" HF_HUB_OFFLINE=1 nohup "$VLLM" serve "$MODEL" --served-model-name "$NAME" --port "$PORT" --tensor-parallel-size "$TP" --gpu-memory-utilization 0.92 --max-model-len 8192 --limit-mm-per-prompt '{"image":6}' --enforce-eager --trust-remote-code $EXTRA > "$LOG" 2>&1  （工作目录：/tmp）
+[done] ft-8b
+===== ALL DECK+ROBUST EVAL DONE =====

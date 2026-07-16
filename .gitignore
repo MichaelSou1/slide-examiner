@@ -49,10 +49,28 @@ data/part1/*.jsonl
 data/part1_img/*.jsonl
 # part2: keep base decks + small composition json; drop heavy regenerable manifests/sft
 data/part2/*.jsonl
+!data/part2/*.jsonl
 data/part2/shards/
 data/part2/sft/*.jsonl
 data/derisk/
 *.log
+
+# Restored historical Part 2 v2 evidence is intentionally versioned.
+!runs/part2/
+runs/part2/*
+!runs/part2/*.log
+!runs/part2/examiner_lora_v2/
+runs/part2/examiner_lora_v2/*
+!runs/part2/examiner_lora_v2/*.json
+!runs/part2/examiner_lora_v2/*.jsonl
+!runs/part2/examiner_lora_v2/*.jinja
+!runs/part2/examiner_lora_v2/*.png
+!runs/part2/examiner_merged_v2/
+runs/part2/examiner_merged_v2/*
+!runs/part2/examiner_merged_v2/*.json
+!runs/part2/examiner_merged_v2/*.txt
+!runs/probe/part2_eval/
+!runs/probe/part2_eval/**
 
 # 编辑器/系统
 .DS_Store
