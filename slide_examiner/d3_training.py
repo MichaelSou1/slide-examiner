@@ -44,14 +44,24 @@ def balanced_smoke_rows(rows: list[dict[str, Any]], limit: int) -> list[dict[str
     """Reserve every available W7.4 semantic cell before adding diverse repeats."""
     selected: list[dict[str, Any]] = []
     remaining = list(rows)
+    available = {(row["sample_id"], row["availability"]) for row in rows}
+    chain_available = {(row.get("severity_chain"), row["availability"]) for row in rows}
+
+    def has_counterpart(row: dict[str, Any], availability: str) -> bool:
+        return ((row["sample_id"], availability) in available
+                or (row.get("severity_chain"), availability) in chain_available)
+
     required_cells = [
         lambda row: row["defect"].startswith("G7_") and row["availability"] == "image_only",
         *[(lambda row, prefix=prefix: row["defect"].split("_", 1)[0] == prefix
            and row["availability"] == "image_only") for prefix in ("G2", "G3", "G4", "G5", "G6")],
         lambda row: row["target_action"] == "CALL_LINTER",
         lambda row: row["defect"].split("_", 1)[0] in {"G1", "S6"}
-        and row["target_action"] == "REQUEST_REFERENCE",
-        lambda row: row["defect"].split("_", 1)[0] == "S2" and row["target_action"] == "REQUEST_DECK",
+        and row["target_action"] == "REQUEST_REFERENCE"
+        and has_counterpart(row, "reference_available"),
+        lambda row: row["defect"].split("_", 1)[0] == "S2"
+        and row["target_action"] == "REQUEST_DECK"
+        and has_counterpart(row, "deck_context_available"),
         lambda row: bool(row.get("is_clean_deck")),
         lambda row: row["defect"] == "NO_DEFECT" and not row.get("is_clean_deck"),
     ]

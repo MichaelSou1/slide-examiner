@@ -131,7 +131,17 @@ def test_balanced_rows_reserves_smoke_semantic_cells():
     ]
     for index, (defect, availability, action, clean_deck) in enumerate(cells):
         rows.append({"record_id": str(index), "defect": defect, "availability": availability,
-                     "target_action": action, "task": "route", "is_clean_deck": clean_deck})
+                     "target_action": action, "task": "route", "is_clean_deck": clean_deck,
+                     "sample_id": str(index), "severity_chain": str(index)})
+    # Escalation cells must have an executable counterpart in the input pool.
+    rows.append({"record_id": "ref", "defect": "S6_IMAGE_TEXT_CONTRADICTION",
+                 "availability": "reference_available", "target_action": "ANSWER",
+                 "task": "pair", "is_clean_deck": False, "sample_id": "7",
+                 "severity_chain": "7"})
+    rows.append({"record_id": "deck", "defect": "S2_NARRATIVE_ORDER_BREAK",
+                 "availability": "deck_context_available", "target_action": "ANSWER",
+                 "task": "detect", "is_clean_deck": False, "sample_id": "8",
+                 "severity_chain": "8"})
     selected = balanced_smoke_rows(rows, len(rows))
     assert {row["record_id"] for row in selected} == {row["record_id"] for row in rows}
 
