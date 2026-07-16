@@ -57,7 +57,16 @@ class D3Heads(nn.Module):
 
 
 def _images(row: dict[str, Any]) -> list[Image.Image]:
-    return [Image.open(path).convert("RGB") for path in row["images"]]
+    images = []
+    for value in row["images"]:
+        path = Path(value)
+        if not path.exists():
+            for marker in ("/runs/", "/data/", "/release/"):
+                if marker in value:
+                    path = REPO / marker.strip("/") / value.split(marker, 1)[1]
+                    break
+        images.append(Image.open(path).convert("RGB"))
+    return images
 
 
 def make_collator(processor: Any):
