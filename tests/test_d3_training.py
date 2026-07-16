@@ -6,7 +6,7 @@ import pytest
 from slide_examiner.d3_training import (
     ACTION_TO_ID, _answer_for, action_class_weights, action_sample_weights,
     authoritative_result, balanced_smoke_rows, build_d3_training_records,
-    evaluate_semantic_gate, relocate_path, run_linter,
+    evaluate_semantic_gate, fit_class_router, relocate_path, run_linter,
 )
 
 
@@ -172,3 +172,14 @@ def test_pair_records_include_both_orders_with_opposite_targets():
     assert {row["pair_order"] for row in pair} == {"clean_defective", "defective_clean"}
     assert {row["pair_target"] for row in pair} == {0.0, 1.0}
     assert pair[0]["images"] == list(reversed(pair[1]["images"]))
+
+
+def test_class_router_is_fitted_and_evaluated_without_manual_rules():
+    train = ([{"defect": "G7_X", "action_id": ACTION_TO_ID["ANSWER"]}] * 8
+             + [{"defect": "G2_X", "action_id": ACTION_TO_ID["DEFER"]}] * 8)
+    dev = [{"defect": "G7_X", "action_id": ACTION_TO_ID["ANSWER"]},
+           {"defect": "G2_X", "action_id": ACTION_TO_ID["DEFER"]}]
+    router = fit_class_router(train, dev, steps=200)
+    assert router["manual_route_used"] is False
+    assert router["estimator"].startswith("multinomial logistic")
+    assert router["dev_accuracy"] == 1.0

@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import math
 from collections import Counter, defaultdict
 from dataclasses import dataclass
 from pathlib import Path
@@ -114,6 +115,63 @@ def evaluate_semantic_gate(results: list[dict[str, Any]], counts: dict[str, int]
                                         "passed": runtime_ok}
     failures = [name for name, check in checks.items() if not check["passed"]]
     return {"passed": not failures, "checks": checks, "failure_reasons": failures}
+
+
+def fit_class_router(train: list[dict[str, Any]], dev: list[dict[str, Any]], *,
+                     steps: int = 400, learning_rate: float = 0.2,
+                     l2: float = 1e-3) -> dict[str, Any]:
+    """Fit a train-only multinomial class router and report held-out dev accuracy."""
+    classes = sorted({row["defect"].split("_", 1)[0] for row in train})
+    class_to_id = {name: index for index, name in enumerate(classes)}
+    weights = [[0.0 for _ in classes] for _ in ACTIONS]
+    bias = [0.0 for _ in ACTIONS]
+    for _ in range(steps):
+        grad_w = [[l2 * value for value in row] for row in weights]
+        grad_b = [0.0 for _ in ACTIONS]
+        for record in train:
+            feature = class_to_id[record["defect"].split("_", 1)[0]]
+            logits = [bias[action] + weights[action][feature] for action in range(len(ACTIONS))]
+            peak = max(logits)
+            exp = [math.exp(value - peak) for value in logits]
+            total = sum(exp)
+            truth = int(record["action_id"])
+            for action in range(len(ACTIONS)):
+                error = exp[action] / total - float(action == truth)
+                grad_w[action][feature] += error / len(train)
+                grad_b[action] += error / len(train)
+        for action in range(len(ACTIONS)):
+            bias[action] -= learning_rate * grad_b[action]
+            for feature in range(len(classes)):
+                weights[action][feature] -= learning_rate * grad_w[action][feature]
+
+    confusion = [[0 for _ in ACTIONS] for _ in ACTIONS]
+    predictions: dict[str, dict[str, Any]] = {}
+    for name, feature in class_to_id.items():
+        logits = [bias[action] + weights[action][feature] for action in range(len(ACTIONS))]
+        peak = max(logits)
+        exp = [math.exp(value - peak) for value in logits]
+        probs = [value / sum(exp) for value in exp]
+        predictions[name] = {"prediction": ACTIONS[max(range(len(ACTIONS)), key=probs.__getitem__)],
+                             "probabilities": dict(zip(ACTIONS, probs, strict=True))}
+    evaluated = 0
+    for record in dev:
+        defect = record["defect"].split("_", 1)[0]
+        if defect not in predictions:
+            continue
+        truth = int(record["action_id"])
+        pred = ACTION_TO_ID[predictions[defect]["prediction"]]
+        confusion[truth][pred] += 1
+        evaluated += 1
+    correct = sum(confusion[index][index] for index in range(len(ACTIONS)))
+    return {"fit_split": "train", "eval_split": "dev",
+            "estimator": "multinomial logistic regression on defect class",
+            "manual_route_used": False, "feature_classes": classes,
+            "training": {"steps": steps, "learning_rate": learning_rate, "l2": l2},
+            "weights": {action: dict(zip(classes, weights[index], strict=True))
+                        for index, action in enumerate(ACTIONS)},
+            "bias": dict(zip(ACTIONS, bias, strict=True)), "routes": predictions,
+            "dev_records": evaluated, "dev_accuracy": correct / evaluated if evaluated else None,
+            "action_labels": list(ACTIONS), "dev_confusion": confusion}
 
 
 def input_context(row: dict[str, Any]) -> dict[str, Any]:
@@ -397,20 +455,10 @@ def export_d3_training(repo: Path, out_dir: Path, *, max_per_cell: int | None = 
     out_dir.mkdir(parents=True, exist_ok=True)
     for split in ("train", "dev"):
         write_jsonl(out_dir / f"d3_{split}.jsonl", (r for r in records if r["split"] == split))
-    # Class router is learned only from train action counts, with Laplace smoothing.
-    counts: dict[str, Counter[str]] = defaultdict(Counter)
-    for row in records:
-        if row["split"] == "train":
-            counts[row["defect"].split("_", 1)[0]][row["target_action"]] += 1
-    class_router = {}
-    for defect, counter in sorted(counts.items()):
-        denom = sum(counter.values()) + len(ACTIONS)
-        probs = {action: (counter[action] + 1) / denom for action in ACTIONS}
-        class_router[defect] = {"counts": dict(counter), "probabilities": probs,
-                                "prediction": max(probs, key=probs.get)}
-    (out_dir / "class_router.json").write_text(json.dumps({
-        "fit_split": "train", "estimator": "Laplace-smoothed categorical MLE",
-        "manual_route_used": False, "routes": class_router}, ensure_ascii=False, indent=2))
+    class_router = fit_class_router([row for row in records if row["split"] == "train"],
+                                    [row for row in records if row["split"] == "dev"])
+    (out_dir / "class_router.json").write_text(json.dumps(
+        class_router, ensure_ascii=False, indent=2))
     summary.update({"train_sha256": sha256_file(out_dir / "d3_train.jsonl"),
                     "dev_sha256": sha256_file(out_dir / "d3_dev.jsonl"),
                     "class_router": "class_router.json", "losses": list(LOSS_NAMES)})
