@@ -5,7 +5,8 @@ import pytest
 
 from slide_examiner.d3_training import (
     ACTION_TO_ID, _answer_for, action_class_weights, action_sample_weights,
-    authoritative_result, balanced_smoke_rows, evaluate_semantic_gate, relocate_path, run_linter,
+    authoritative_result, balanced_smoke_rows, build_d3_training_records,
+    evaluate_semantic_gate, relocate_path, run_linter,
 )
 
 
@@ -158,3 +159,16 @@ def test_semantic_gate_requires_eligible_cells_and_zero_runtime_failures():
          "escalation": None, "is_clean_deck": True},
     ]
     assert evaluate_semantic_gate(results, counts)["passed"] is True
+
+
+def test_pair_records_include_both_orders_with_opposite_targets():
+    repo = Path(__file__).resolve().parents[1]
+    records, _ = build_d3_training_records(repo, max_per_cell=2)
+    grouped = {}
+    for row in records:
+        if row.get("pair_order") in {"clean_defective", "defective_clean"}:
+            grouped.setdefault(row["sample_id"], []).append(row)
+    pair = next(rows for rows in grouped.values() if len(rows) == 2)
+    assert {row["pair_order"] for row in pair} == {"clean_defective", "defective_clean"}
+    assert {row["pair_target"] for row in pair} == {0.0, 1.0}
+    assert pair[0]["images"] == list(reversed(pair[1]["images"]))

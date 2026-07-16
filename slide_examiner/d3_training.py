@@ -312,6 +312,9 @@ def build_d3_training_records(repo: Path, *, include_splits: set[str] | None = N
             "metadata": {"split": row["split"], "clean_deck_path": str(deck_path)},
         }
     targets = read_jsonl(repo / "release/part3/d3/training_targets.jsonl")
+    pair_orders: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    for order in read_jsonl(repo / "data/part3/d3/pairwise_orders.jsonl"):
+        pair_orders[order["sample_id"]].append(order)
     cell_counts: Counter[tuple[str, str, str, str]] = Counter()
     records: list[dict[str, Any]] = []
     skipped = Counter()
@@ -338,28 +341,44 @@ def build_d3_training_records(repo: Path, *, include_splits: set[str] | None = N
         else:
             severity_target = {"none": 0.0, "minor": 1 / 3, "moderate": 2 / 3, "severe": 1.0}[
                 severity_level_for_label(target["defect"], raw_severity).value]
-        content: list[dict[str, str]] = [{"type": "image", "image": path} for path in images]
-        content.append({"type": "text", "text": GENERIC_INSPECTION_INSTRUCTION + "\nINPUT_CONTEXT="
-                        + _structure_text(sample, target["availability"])})
-        records.append({
-            "record_id": hashlib.sha256(
-                f"{target['sample_id']}|{target['availability']}|{task}".encode()).hexdigest()[:20],
-            "sample_id": target["sample_id"], "split": target["split"], "defect": target["defect"],
-            "availability": target["availability"], "task": task,
-            "is_clean_deck": bool(sample.get("deck") and not sample.get("slide") and not sample.get("labels")),
-            "target_kind": target["target_kind"],
-            "target_action": target["target_action"], "action_id": ACTION_TO_ID[target["target_action"]],
-            "target_confidence": float(target.get("distillation_weight", 1.0)),
-            "severity": raw_severity, "severity_target": severity_target,
-            "severity_chain": f"{(sample.get('slide') or {}).get('slide_id', target['sample_id'])}|{target['defect']}",
-            "pair_target": (0.5 if target["target_kind"] == "clean_clean_pairwise" else
-                            1.0 if target["target_kind"] == "pairwise"
-                            and target["availability"] == "reference_available" else None),
-            "weight": float(target.get("distillation_weight", 1.0)),
-            "messages": [{"role": "user", "content": content},
-                         {"role": "assistant", "content": [{"type": "text", "text": json.dumps(output, ensure_ascii=False)}]}],
-            "images": images,
-        })
+        variants: list[tuple[str, list[str], float | None]] = [("single", images, None)]
+        if target["target_kind"] == "clean_clean_pairwise" and len(images) == 2:
+            variants = [("clean_clean_tie", images, 0.5)]
+        elif (target["target_kind"] == "pairwise" and target["availability"] == "reference_available"
+              and len(images) == 2 and pair_orders.get(target["sample_id"])):
+            variants = []
+            # Learn both candidate orders explicitly: the pair head predicts
+            # whether the first candidate is better, rather than memorising a
+            # canonical clean-first convention.
+            for order in sorted(pair_orders[target["sample_id"]], key=lambda row: row["order_index"]):
+                ordered_images = images if order["order"] == "clean_defective" else list(reversed(images))
+                variants.append((order["order"], ordered_images,
+                                 1.0 if order["better"] == "A" else 0.0))
+        elif target["target_kind"] == "pairwise" and target["availability"] == "reference_available":
+            variants = [("canonical_clean_first", images, 1.0)]
+        for pair_order, variant_images, pair_target in variants:
+            content: list[dict[str, str]] = [
+                {"type": "image", "image": path} for path in variant_images]
+            content.append({"type": "text", "text": GENERIC_INSPECTION_INSTRUCTION
+                            + "\nINPUT_CONTEXT=" + _structure_text(sample, target["availability"])})
+            records.append({
+                "record_id": hashlib.sha256(
+                    f"{target['sample_id']}|{target['availability']}|{task}|{pair_order}".encode()
+                ).hexdigest()[:20],
+                "sample_id": target["sample_id"], "split": target["split"], "defect": target["defect"],
+                "availability": target["availability"], "task": task,
+                "is_clean_deck": bool(sample.get("deck") and not sample.get("slide") and not sample.get("labels")),
+                "target_kind": target["target_kind"], "pair_order": pair_order,
+                "target_action": target["target_action"], "action_id": ACTION_TO_ID[target["target_action"]],
+                "target_confidence": float(target.get("distillation_weight", 1.0)),
+                "severity": raw_severity, "severity_target": severity_target,
+                "severity_chain": f"{(sample.get('slide') or {}).get('slide_id', target['sample_id'])}|{target['defect']}",
+                "pair_target": pair_target,
+                "weight": float(target.get("distillation_weight", 1.0)),
+                "messages": [{"role": "user", "content": content},
+                             {"role": "assistant", "content": [{"type": "text", "text": json.dumps(output, ensure_ascii=False)}]}],
+                "images": variant_images,
+            })
         cell_counts[cell] += 1
     summary = {
         "records": len(records), "splits": dict(Counter(r["split"] for r in records)),
