@@ -265,3 +265,17 @@ class LossWeights:
 
     def enabled(self) -> dict[str, float]:
         return {name: float(getattr(self, name)) for name in LOSS_NAMES}
+
+
+def action_class_weights(rows: list[dict[str, Any]], mode: str = "sqrt-inverse") -> list[float]:
+    """Return mean-normalised train-only weights for the route objective."""
+    counts = Counter(int(row["action_id"]) for row in rows)
+    if mode == "none":
+        return [1.0] * len(ACTIONS)
+    missing = [ACTIONS[index] for index in range(len(ACTIONS)) if not counts[index]]
+    if missing:
+        raise ValueError(f"training split is missing route actions: {missing}")
+    exponent = 1.0 if mode == "inverse" else 0.5
+    raw = [1.0 / (counts[index] ** exponent) for index in range(len(ACTIONS))]
+    mean = sum(raw) / len(raw)
+    return [value / mean for value in raw]

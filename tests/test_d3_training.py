@@ -1,7 +1,7 @@
 import json
 from pathlib import Path
 
-from slide_examiner.d3_training import ACTION_TO_ID, _answer_for, relocate_path
+from slide_examiner.d3_training import ACTION_TO_ID, _answer_for, action_class_weights, relocate_path
 
 
 def test_relocate_frozen_machine_path(tmp_path: Path):
@@ -42,3 +42,12 @@ def test_answer_evidence_source_tracks_available_context():
     target = {"target_action": "ANSWER", "availability": "reference_available",
               "target_kind": "negative", "distillation_weight": 1.0}
     assert _answer_for(sample, target)["evidence_source"] == "reference"
+
+
+def test_action_class_weights_upweight_rare_routes():
+    rows = ([{"action_id": ACTION_TO_ID["ANSWER"]}] * 16
+            + [{"action_id": action_id} for action, action_id in ACTION_TO_ID.items()
+               if action != "ANSWER"])
+    weights = action_class_weights(rows)
+    assert weights[ACTION_TO_ID["CALL_LINTER"]] > weights[ACTION_TO_ID["ANSWER"]]
+    assert abs(sum(weights) / len(weights) - 1.0) < 1e-8

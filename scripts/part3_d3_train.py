@@ -23,7 +23,7 @@ from transformers import AutoProcessor, Qwen3VLForConditionalGeneration
 from transformers import BitsAndBytesConfig
 
 from slide_examiner.d3_data import sha256_file
-from slide_examiner.d3_training import ACTIONS, LOSS_NAMES, LossWeights
+from slide_examiner.d3_training import ACTIONS, LOSS_NAMES, LossWeights, action_class_weights
 
 REPO = Path(__file__).resolve().parents[1]
 
@@ -93,12 +93,14 @@ def pooled_at_prompt(hidden: torch.Tensor, prompt_lengths: torch.Tensor) -> torc
 
 def compute_joint_loss(lm_loss: torch.Tensor, action_logits: torch.Tensor,
                        select_logits: torch.Tensor, severity_logits: torch.Tensor,
-                       rows: list[dict[str, Any]], weights: LossWeights) -> tuple[torch.Tensor, dict[str, torch.Tensor]]:
+                       rows: list[dict[str, Any]], weights: LossWeights,
+                       route_class_weights: torch.Tensor | None = None,
+                       ) -> tuple[torch.Tensor, dict[str, torch.Tensor]]:
     device = action_logits.device
     action = torch.tensor([row["action_id"] for row in rows], device=device)
     confidence = torch.tensor([row["target_confidence"] for row in rows], dtype=torch.float32, device=device)
     severity = torch.tensor([row["severity"] for row in rows], dtype=torch.float32, device=device)
-    route = F.cross_entropy(action_logits, action)
+    route = F.cross_entropy(action_logits, action, weight=route_class_weights)
     select = F.binary_cross_entropy_with_logits(select_logits, confidence.clamp(0, 1))
     severity_loss = F.smooth_l1_loss(torch.sigmoid(severity_logits), severity.clamp(0, 1))
     # Explicit same-source monotonic ranking when a batch contains a severity chain.
@@ -153,6 +155,8 @@ def main() -> None:
     parser.add_argument("--lora-alpha", type=int, default=32)
     parser.add_argument("--image-max-pixels", type=int, default=589824)
     parser.add_argument("--quantization", choices=("qlora", "bf16"), default="qlora")
+    parser.add_argument("--action-class-weighting", choices=("none", "sqrt-inverse", "inverse"),
+                        default="sqrt-inverse")
     for name in LOSS_NAMES:
         parser.add_argument(f"--loss-{name}", type=float, default=getattr(LossWeights(), name))
     args = parser.parse_args()
@@ -195,6 +199,8 @@ def main() -> None:
     weights = LossWeights(**{name: getattr(args, f"loss_{name}") for name in LOSS_NAMES})
     train = JsonlDataset(args.train, args.train_limit)
     dev = JsonlDataset(args.dev, args.dev_limit)
+    route_weight_values = action_class_weights(train.rows, args.action_class_weighting)
+    route_class_weights = torch.tensor(route_weight_values, dtype=torch.float32, device=device)
     loader = DataLoader(train, batch_size=args.batch_size, shuffle=True, collate_fn=make_collator(processor))
     history: list[dict[str, Any]] = []
     optimizer.zero_grad(set_to_none=True)
@@ -212,7 +218,7 @@ def main() -> None:
             pooled = pooled_at_prompt(outputs.hidden_states[-1], prompt_lengths).float()
             action_logits, select_logits, severity_logits = heads(pooled)
             total, losses = compute_joint_loss(outputs.loss, action_logits, select_logits,
-                                               severity_logits, rows, weights)
+                                               severity_logits, rows, weights, route_class_weights)
             (total / args.gradient_accumulation).backward()
             if step % args.gradient_accumulation == 0 or step == args.max_steps:
                 optimizer.step(); optimizer.zero_grad(set_to_none=True)
@@ -236,7 +242,7 @@ def main() -> None:
             pooled = pooled_at_prompt(outputs.hidden_states[-1], prompt_lengths).float()
             action_logits, select_logits, severity_logits = heads(pooled)
             total, _ = compute_joint_loss(outputs.loss, action_logits, select_logits,
-                                          severity_logits, rows, weights)
+                                          severity_logits, rows, weights, route_class_weights)
             truth, pred = rows[0]["action_id"], int(action_logits.argmax(-1).item())
             confusion[truth][pred] += 1
             dev_loss += float(total); dev_seen += 1
@@ -253,6 +259,8 @@ def main() -> None:
     config = {"parent_commit": parent, "base_model": args.model, "seed": args.seed,
               "max_steps": args.max_steps, "train_sha256": sha256_file(args.train),
               "dev_sha256": sha256_file(args.dev), "loss_weights": asdict(weights),
+              "action_class_weighting": args.action_class_weighting,
+              "action_class_weights": dict(zip(ACTIONS, route_weight_values, strict=True)),
               "quantization": args.quantization, "init_adapter": str(args.init_adapter) if args.init_adapter else None}
     save_checkpoint(model, heads, processor, args.output, config, metrics)
     print(json.dumps({"saved": str(args.output), **metrics}, ensure_ascii=False), flush=True)
