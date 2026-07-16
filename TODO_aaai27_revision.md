@@ -295,9 +295,9 @@
 
 ### 7.3 D3 模型、输出契约与联合损失
 
-- [ ] 扩展现有 examiner 输出而不破坏旧 parser：加入 `action`、`confidence`、`requested_context`、`evidence_source`；定义动作与 finding 的一致性校验，例如 `CALL_LINTER/DEFER` 不得伪造像素定位。
-- [ ] student 推理入口只接受一个 frozen generic inspection instruction；C3/pairwise/linter 只作为 teacher 或升级动作，不能在主结果中偷偷给 student defect-name oracle。
-- [ ] 实现联合目标并逐项可开关消融：
+- [x] 扩展现有 examiner 输出而不破坏旧 parser：已在 `PageExamResult` / `DeckExamResult` 加入 `action`、`confidence`、`requested_context`、`evidence_source`，旧字段保留默认值；一致性 validator 强制非 `ANSWER` 动作无 finding 且 `evidence_source=none`。实现与回归测试见 `slide_examiner/examiner_contract.py`、`tests/test_examiner_contract.py`（2026-07-16）。
+- [x] student 推理入口只接受一个 frozen generic inspection instruction；`scripts/part3_d3_infer.py` 仅使用训练记录首条 generic user message，C3/pairwise/linter 仅用于 teacher 或一次升级动作，不向首轮 student 暴露 defect-name oracle（2026-07-16）。
+- [x] 实现联合目标并逐项可开关消融（`scripts/part3_d3_train.py`、`slide_examiner/d3_training.py`；六项 loss 均有独立 `--loss-*` 权重，2026-07-16）：
   - $\mathcal L_{detect}$：结构化 finding / NO_DEFECT；
   - $\mathcal L_{distill}$：teacher label、evidence、location 与可选 soft confidence；
   - $\mathcal L_{pair}$：Bradley–Terry 或 margin ranking，含 clean-clean tie；
@@ -305,8 +305,8 @@
   - $\mathcal L_{route}$：teacher action 分类；
   - $\mathcal L_{select}$：confidence/defer 的 selective-risk 目标。
 - [ ] 先以 Qwen3-VL-8B + QLoRA 延续 Part 2 v2 配置，建立 `vanilla-v2 continue-train` 与 `from-base D3` 两条可比 run，防止收益仅来自更多训练 step；固定总 records/steps 的 compute-matched baseline。
-- [ ] 明确 router 形态并至少实现两级：class-level learned route 与 sample-level action prediction；禁止仅把人工 G7→C3、G2→linter 字典改名为 learned router。
-- [ ] 所有训练保存 train/eval loss、各子 loss、action confusion、G7 generic recall/FPR、G2–G6 image-only FP、checkpoint 选择依据；只用 dev 选 checkpoint。
+- [x] 明确 router 形态并至少实现两级：`class_router.json` 是仅用 train split 拟合的 multinomial logistic regression（dev accuracy 0.7387，`manual_route_used=false`）；D3 heads 是 sample-level action prediction，并由 generic inference 执行至多一次 escalation。实现见 `fit_class_router` / `D3Heads`，不是人工 defect→action 字典（2026-07-16）。
+- [x] 正式 run 保存逐 step train loss、完整 dev joint/sub-loss、action confusion/recall、G7 generic answer recall、G2–G6 image-only unsafe-answer rate、config、数据 hash 与 dev-only selection basis；artifact 见 150：`runs/part3/d3_formal/train_seed{17,73}/` 及三项消融目录。注意这些 head 指标只用于 dev 选择，finding/FPR 最终数仍须由 W7.6/7.7 端到端 scoring 给出（2026-07-16）。
 
 ### 7.4 端到端 smoke test 与“摘要锁定门”
 
@@ -322,7 +322,7 @@
 
 ### 7.5 正式训练与 dev-only 模型选择
 
-- [ ] 运行至少 3 个固定 seed；每个 seed 保存 base model、adapter、merged model、config、数据 hash、训练日志和推理版本。
+- [ ] 运行至少 3 个固定 seed；每个 seed 保存 base model、adapter、merged model、config、数据 hash、训练日志和推理版本。**进度（2026-07-16）**：seed 42/17/73 均已完成 768-step QLoRA 并保存 adapter、heads、config、hash 与日志；seed17/73 已跑完整 2,151 条 dev（joint loss 0.2332/0.2685），seed42 旧 run 仅评估前 320 条，且三 seed 尚未逐一 merge + 固化 inference artifact，故本项暂不勾选。
 - [ ] 只在 dev 上调：loss 权重、utility cost、teacher margin、confidence/defer threshold、最大 escalation 次数；W5 validation 用于对照和消融，不用于继续追 final-test 类别。
 - [ ] 冻结最终 D3 checkpoint 与 inference policy：generic first-pass → action → 最多一次工具/reference escalation → final finding/defer；记录最坏调用上限，防止成本无限增长。
 - [ ] 在碰 `final_test` 前生成 model card 式 run summary（放现有 report/run artifact，不新建无关文档）：选择原因、失败类别、threshold、预期主表列、代码/data/model hash。
@@ -331,7 +331,7 @@
 
 - [ ] Baselines：zero-shot 8B、zero-shot 30B、当前 vanilla Part 2 FT、fixed C0、uniform C3、人工 frozen route、compute-matched vanilla FT（相同数据量/step）。
 - [ ] Router 对照：人工 fixed route、learned class-level route、learned sample-level route、sample-level + escalation/defer。
-- [ ] Loss 消融：去 `distill`、去 `pair`、去 `severity`、去 `route`、去 `select/defer`；如果篇幅不足，正文保留前三个最能回答 RQ 的，其余进 supplement。
+- [ ] Loss 消融：去 `distill`、去 `pair`、去 `severity`、去 `route`、去 `select/defer`；如果篇幅不足，正文保留前三个最能回答 RQ 的，其余进 supplement。**进度（2026-07-16）**：同 seed、同 768 steps、同完整 2,151 dev 的去 `distill` / 去 `pair` / 去 `route` 已完成，artifact 为 150 的 `runs/part3/d3_formal/ablation_no_{distill,pair,route}_seed42/`；其中去 route 导致 `CALL_LINTER`/`REQUEST_DECK`/`DEFER` recall 全为 0、G7 answer recall 仅 0.25。去 `severity` 与去 `select/defer` 尚未运行，三项已有消融也仍待统一端到端 scoring，故不提前勾选。
 - [ ] Teacher 消融：C3 labels 直接 SFT vs attribution-selected teacher；证明收益不是“多收一批 C3 输出再微调”。
 - [ ] Prompt 内化对照：teacher-C3、vanilla-FT+generic、D3+generic、D3+C3；主结果必须是 D3+generic，D3+C3 只用于测残余 elicitation gap。
 - [ ] Availability/OOD：去掉 IR、去掉 reference、novel template、held-out severity；检查动作是否随可用证据改变，而不是只背 defect type。
