@@ -241,6 +241,8 @@ def main() -> None:
     parser.add_argument("--dev", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--init-adapter", type=Path)
+    parser.add_argument("--init-heads", type=Path,
+                        help="load an existing D3 auxiliary-head state (for continuation or eval-only max-steps=0)")
     parser.add_argument("--objective", choices=("d3", "vanilla"), default="d3",
                         help="d3 trains all auxiliary heads; vanilla trains only assistant-token SFT")
     parser.add_argument("--seed", type=int, default=42)
@@ -300,6 +302,10 @@ def main() -> None:
     if args.objective == "d3":
         hidden_size = model.get_base_model().config.text_config.hidden_size
         heads = D3Heads(hidden_size).to(device=device, dtype=torch.float32)
+        if args.init_heads:
+            heads.load_state_dict(torch.load(args.init_heads, map_location=device, weights_only=True))
+    elif args.init_heads:
+        raise ValueError("--init-heads is only valid with --objective d3")
     parameters = [p for p in model.parameters() if p.requires_grad]
     if heads is not None:
         parameters += list(heads.parameters())
@@ -440,7 +446,10 @@ def main() -> None:
               "action_class_weights": dict(zip(ACTIONS, route_weight_values, strict=True)),
               "action_balanced_sampling": args.action_balanced_sampling,
               "severity_chain_sampling": args.severity_chain_sampling,
-              "quantization": args.quantization, "init_adapter": str(args.init_adapter) if args.init_adapter else None}
+              "quantization": args.quantization,
+              "init_adapter": str(args.init_adapter) if args.init_adapter else None,
+              "init_heads": str(args.init_heads) if args.init_heads else None,
+              "final_test_read": False}
     save_checkpoint(model, heads, processor, args.output, config, metrics)
     print(json.dumps({"saved": str(args.output), **metrics}, ensure_ascii=False), flush=True)
 
