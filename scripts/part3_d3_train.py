@@ -18,12 +18,14 @@ import torch.nn.functional as F
 from PIL import Image
 from peft import LoraConfig, PeftModel, get_peft_model
 from torch import nn
-from torch.utils.data import DataLoader, Dataset
+from torch.utils.data import DataLoader, Dataset, WeightedRandomSampler
 from transformers import AutoProcessor, Qwen3VLForConditionalGeneration
 from transformers import BitsAndBytesConfig
 
 from slide_examiner.d3_data import sha256_file
-from slide_examiner.d3_training import ACTIONS, LOSS_NAMES, LossWeights, action_class_weights
+from slide_examiner.d3_training import (
+    ACTIONS, LOSS_NAMES, LossWeights, action_class_weights, action_sample_weights,
+)
 
 REPO = Path(__file__).resolve().parents[1]
 
@@ -163,6 +165,8 @@ def main() -> None:
     parser.add_argument("--quantization", choices=("qlora", "bf16"), default="qlora")
     parser.add_argument("--action-class-weighting", choices=("none", "sqrt-inverse", "inverse"),
                         default="sqrt-inverse")
+    parser.add_argument("--action-balanced-sampling", action=argparse.BooleanOptionalAction,
+                        default=True)
     for name in LOSS_NAMES:
         parser.add_argument(f"--loss-{name}", type=float, default=getattr(LossWeights(), name))
     args = parser.parse_args()
@@ -207,7 +211,13 @@ def main() -> None:
     dev = JsonlDataset(args.dev, args.dev_limit)
     route_weight_values = action_class_weights(train.rows, args.action_class_weighting)
     route_class_weights = torch.tensor(route_weight_values, dtype=torch.float32, device=device)
-    loader = DataLoader(train, batch_size=args.batch_size, shuffle=True, collate_fn=make_collator(processor))
+    sampler = None
+    if args.action_balanced_sampling:
+        generator = torch.Generator().manual_seed(args.seed)
+        sampler = WeightedRandomSampler(action_sample_weights(train.rows), len(train),
+                                        replacement=True, generator=generator)
+    loader = DataLoader(train, batch_size=args.batch_size, shuffle=sampler is None, sampler=sampler,
+                        collate_fn=make_collator(processor))
     history: list[dict[str, Any]] = []
     optimizer.zero_grad(set_to_none=True)
     model.train(); heads.train()
@@ -267,6 +277,7 @@ def main() -> None:
               "dev_sha256": sha256_file(args.dev), "loss_weights": asdict(weights),
               "action_class_weighting": args.action_class_weighting,
               "action_class_weights": dict(zip(ACTIONS, route_weight_values, strict=True)),
+              "action_balanced_sampling": args.action_balanced_sampling,
               "quantization": args.quantization, "init_adapter": str(args.init_adapter) if args.init_adapter else None}
     save_checkpoint(model, heads, processor, args.output, config, metrics)
     print(json.dumps({"saved": str(args.output), **metrics}, ensure_ascii=False), flush=True)

@@ -279,3 +279,12 @@ def action_class_weights(rows: list[dict[str, Any]], mode: str = "sqrt-inverse")
     raw = [1.0 / (counts[index] ** exponent) for index in range(len(ACTIONS))]
     mean = sum(raw) / len(raw)
     return [value / mean for value in raw]
+
+
+def action_sample_weights(rows: list[dict[str, Any]]) -> list[float]:
+    """Inverse-frequency weights yielding a uniform expected action mixture."""
+    counts = Counter(int(row["action_id"]) for row in rows)
+    missing = [ACTIONS[index] for index in range(len(ACTIONS)) if not counts[index]]
+    if missing:
+        raise ValueError(f"training split is missing route actions: {missing}")
+    return [1.0 / counts[int(row["action_id"])] for row in rows]

@@ -3,7 +3,9 @@ from pathlib import Path
 
 import pytest
 
-from slide_examiner.d3_training import ACTION_TO_ID, _answer_for, action_class_weights, relocate_path
+from slide_examiner.d3_training import (
+    ACTION_TO_ID, _answer_for, action_class_weights, action_sample_weights, relocate_path,
+)
 
 
 def test_relocate_frozen_machine_path(tmp_path: Path):
@@ -58,3 +60,13 @@ def test_action_class_weights_upweight_rare_routes():
 def test_action_class_weights_require_every_route():
     with pytest.raises(ValueError, match="missing route actions"):
         action_class_weights([{"action_id": ACTION_TO_ID["ANSWER"]}])
+
+
+def test_action_sample_weights_equalise_class_mass():
+    rows = ([{"action_id": ACTION_TO_ID["ANSWER"]}] * 4
+            + [{"action_id": action_id} for action, action_id in ACTION_TO_ID.items()
+               if action != "ANSWER"])
+    weights = action_sample_weights(rows)
+    mass = {action_id: sum(weight for row, weight in zip(rows, weights, strict=True)
+                           if row["action_id"] == action_id) for action_id in ACTION_TO_ID.values()}
+    assert set(mass.values()) == {1.0}
