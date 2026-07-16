@@ -174,7 +174,7 @@ def compute_joint_loss(lm_per_record: torch.Tensor, action_logits: torch.Tensor,
         route_per_record = route_per_record * route_class_weights[action]
     route = route_per_record.mean()
     select = F.binary_cross_entropy_with_logits(select_logits, confidence.clamp(0, 1))
-    severity_loss = F.smooth_l1_loss(torch.sigmoid(severity_logits), severity.clamp(0, 1))
+    severity_point = F.smooth_l1_loss(torch.sigmoid(severity_logits), severity.clamp(0, 1))
     # Explicit same-source monotonic ranking when a batch contains a severity chain.
     rank_terms = []
     for left in range(len(rows)):
@@ -185,8 +185,9 @@ def compute_joint_loss(lm_per_record: torch.Tensor, action_logits: torch.Tensor,
             if delta.abs() > 1e-8:
                 sign = delta.sign()
                 rank_terms.append(F.relu(0.1 - sign * (severity_logits[left] - severity_logits[right])))
-    if rank_terms:
-        severity_loss = severity_loss + torch.stack(rank_terms).mean()
+    severity_rank = (torch.stack(rank_terms).mean() if rank_terms
+                     else severity_logits.sum() * 0)
+    severity_loss = severity_point + severity_rank
     tasks = [row["task"] for row in rows]
     detect = _masked_mean(lm_per_record, torch.tensor([task == "detect" for task in tasks], device=device))
     distill = _masked_mean(lm_per_record, torch.tensor([task == "distill" for task in tasks], device=device))
@@ -197,7 +198,8 @@ def compute_joint_loss(lm_per_record: torch.Tensor, action_logits: torch.Tensor,
     else:
         pair = pair_logits.sum() * 0
     losses = {"detect": detect, "distill": distill, "pair": pair,
-              "severity": severity_loss, "route": route, "select": select}
+              "severity": severity_loss, "route": route, "select": select,
+              "severity_point": severity_point, "severity_rank": severity_rank}
     total = sum(float(getattr(weights, name)) * losses[name] for name in LOSS_NAMES)
     return total, losses
 
@@ -328,6 +330,8 @@ def main() -> None:
 
     model.eval(); heads.eval()
     confusion = [[0 for _ in ACTIONS] for _ in ACTIONS]
+    dev_loss_sums = Counter()
+    dev_route_rows: list[dict[str, Any]] = []
     dev_loss, dev_seen = 0.0, 0
     with torch.no_grad():
         for batch in DataLoader(dev, batch_size=1, shuffle=False, collate_fn=make_collator(processor)):
@@ -338,14 +342,43 @@ def main() -> None:
             pooled = pooled_at_prompt(outputs.hidden_states[-1], prompt_lengths).float()
             action_logits, select_logits, severity_logits, pair_logits = heads(pooled)
             lm_per_record = per_record_lm_loss(outputs.logits, batch["labels"])
-            total, _ = compute_joint_loss(lm_per_record, action_logits, select_logits,
-                                          severity_logits, pair_logits, rows, weights,
-                                          route_class_weights)
+            total, losses = compute_joint_loss(lm_per_record, action_logits, select_logits,
+                                               severity_logits, pair_logits, rows, weights,
+                                               route_class_weights)
             truth, pred = rows[0]["action_id"], int(action_logits.argmax(-1).item())
             confusion[truth][pred] += 1
+            dev_route_rows.append({"defect": rows[0]["defect"],
+                                   "availability": rows[0]["availability"],
+                                   "truth": truth, "pred": pred})
+            for name, loss in losses.items():
+                dev_loss_sums[name] += float(loss)
             dev_loss += float(total); dev_seen += 1
-    metrics = {"history": history, "dev_joint_loss": dev_loss / max(dev_seen, 1),
-               "dev_records": dev_seen, "action_labels": list(ACTIONS), "action_confusion": confusion}
+    action_recall = {}
+    for index, action in enumerate(ACTIONS):
+        support = sum(confusion[index])
+        action_recall[action] = confusion[index][index] / support if support else None
+    g7_rows = [row for row in dev_route_rows if row["defect"].startswith("G7_")
+               and row["availability"] == "image_only"]
+    geometry_rows = [row for row in dev_route_rows
+                     if row["defect"].split("_", 1)[0] in {"G2", "G3", "G4", "G5", "G6"}
+                     and row["availability"] == "image_only"]
+    metrics = {
+        "history": history,
+        "dev_joint_loss": dev_loss / max(dev_seen, 1),
+        "dev_sub_losses": {name: value / max(dev_seen, 1)
+                           for name, value in sorted(dev_loss_sums.items())},
+        "dev_records": dev_seen,
+        "action_labels": list(ACTIONS),
+        "action_confusion": confusion,
+        "action_recall": action_recall,
+        "g7_generic_answer_recall": (
+            sum(row["pred"] == ACTIONS.index("ANSWER") for row in g7_rows) / len(g7_rows)
+            if g7_rows else None),
+        "g2_g6_image_only_unsafe_answer_rate": (
+            sum(row["pred"] == ACTIONS.index("ANSWER") for row in geometry_rows) / len(geometry_rows)
+            if geometry_rows else None),
+        "dev_selection_basis": "minimum dev_joint_loss; no validation or final_test read",
+    }
     if args.parent_commit:
         parent = args.parent_commit
     else:

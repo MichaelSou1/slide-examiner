@@ -12,7 +12,9 @@ import torch
 from peft import PeftModel
 from transformers import AutoProcessor, BitsAndBytesConfig, Qwen3VLForConditionalGeneration
 
-from slide_examiner.d3_training import ACTIONS, authoritative_result, run_linter
+from slide_examiner.d3_training import (
+    ACTIONS, authoritative_result, balanced_smoke_rows, evaluate_semantic_gate, run_linter,
+)
 from slide_examiner.examiner_contract import (
     ExaminerAction,
     parse_deck_result,
@@ -44,22 +46,7 @@ def extract_json(text: str) -> dict[str, Any]:
 
 
 def balanced_rows(rows: list[dict[str, Any]], limit: int) -> list[dict[str, Any]]:
-    """Cover action/task/defect/availability cells before adding repeats."""
-    selected: list[dict[str, Any]] = []
-    remaining = list(rows)
-    seen = {key: Counter() for key in ("target_action", "task", "defect", "availability")}
-    while remaining and len(selected) < limit:
-        def score(row: dict[str, Any]) -> tuple[float, str]:
-            novelty = sum(1.0 / (1.0 + seen[key][str(row[key])]) for key in seen)
-            required = 2.0 if row["defect"].startswith("G7_") else 0.0
-            required += 1.0 if row["target_action"] in {"REQUEST_REFERENCE", "REQUEST_DECK"} else 0.0
-            return novelty + required, row["record_id"]
-        best = max(remaining, key=score)
-        remaining.remove(best)
-        selected.append(best)
-        for key in seen:
-            seen[key][str(best[key])] += 1
-    return selected
+    return balanced_smoke_rows(rows, limit)
 
 
 def parse_contract(text: str) -> tuple[dict[str, Any] | None, str | None]:
@@ -160,7 +147,9 @@ def main() -> None:
                               "reason": f"no {availability} counterpart for sample"}
         results.append({"record_id": row["record_id"], "sample_id": row["sample_id"],
                         "defect": row["defect"], "availability": row["availability"],
-                        "target_action": row["target_action"], **first, "escalation": escalation})
+                        "target_action": row["target_action"],
+                        "is_clean_deck": bool(row.get("is_clean_deck")),
+                        **first, "escalation": escalation})
     args.output.parent.mkdir(parents=True, exist_ok=True)
     with args.output.open("w") as stream:
         for result in results:
@@ -180,6 +169,7 @@ def main() -> None:
     }
     summary = {**counts, "records": len(results), "balanced": args.balanced,
                "semantic_counts": semantic,
+               "semantic_gate": evaluate_semantic_gate(results, counts),
                "action_distribution": dict(Counter(x["predicted_action"] for x in results)),
                "target_action_distribution": dict(Counter(x["target_action"] for x in results)),
                "parser_success": sum(x["parsed"] is not None for x in results),

@@ -39,6 +39,83 @@ ACTION_TO_ID = {name: index for index, name in enumerate(ACTIONS)}
 LOSS_NAMES = ("detect", "distill", "pair", "severity", "route", "select")
 
 
+def balanced_smoke_rows(rows: list[dict[str, Any]], limit: int) -> list[dict[str, Any]]:
+    """Reserve every available W7.4 semantic cell before adding diverse repeats."""
+    selected: list[dict[str, Any]] = []
+    remaining = list(rows)
+    required_cells = [
+        lambda row: row["defect"].startswith("G7_") and row["availability"] == "image_only",
+        *[(lambda row, prefix=prefix: row["defect"].split("_", 1)[0] == prefix
+           and row["availability"] == "image_only") for prefix in ("G2", "G3", "G4", "G5", "G6")],
+        lambda row: row["target_action"] == "CALL_LINTER",
+        lambda row: row["defect"].split("_", 1)[0] in {"G1", "S6"}
+        and row["target_action"] == "REQUEST_REFERENCE",
+        lambda row: row["defect"].split("_", 1)[0] == "S2" and row["target_action"] == "REQUEST_DECK",
+        lambda row: bool(row.get("is_clean_deck")),
+        lambda row: row["defect"] == "NO_DEFECT" and not row.get("is_clean_deck"),
+    ]
+    for predicate in required_cells:
+        if len(selected) >= limit:
+            break
+        candidate = next((row for row in remaining if predicate(row)), None)
+        if candidate is not None:
+            selected.append(candidate)
+            remaining.remove(candidate)
+    seen = {key: Counter() for key in ("target_action", "task", "defect", "availability")}
+    for row in selected:
+        for key in seen:
+            seen[key][str(row[key])] += 1
+    while remaining and len(selected) < limit:
+        def score(row: dict[str, Any]) -> tuple[float, str]:
+            novelty = sum(1.0 / (1.0 + seen[key][str(row[key])]) for key in seen)
+            return novelty, row["record_id"]
+        best = max(remaining, key=score)
+        remaining.remove(best)
+        selected.append(best)
+        for key in seen:
+            seen[key][str(best[key])] += 1
+    return selected
+
+
+def evaluate_semantic_gate(results: list[dict[str, Any]], counts: dict[str, int]) -> dict[str, Any]:
+    """Evaluate implementation semantics only; this is not a quality threshold."""
+    geometry = {"G2", "G3", "G4", "G5", "G6"}
+    checks: dict[str, dict[str, Any]] = {}
+
+    def add(name: str, eligible: list[dict[str, Any]], passed: int) -> None:
+        checks[name] = {"eligible": len(eligible), "passed_records": passed,
+                        "passed": bool(eligible) and passed == len(eligible)}
+
+    g7 = [x for x in results if x["defect"].startswith("G7_") and x["availability"] == "image_only"]
+    add("g7_image_only_legal_finding", g7, sum(
+        x["predicted_action"] == "ANSWER" and bool((x["parsed"] or {}).get("findings")) for x in g7))
+    geo = [x for x in results if x["defect"].split("_", 1)[0] in geometry
+           and x["availability"] == "image_only"]
+    add("g2_g6_image_only_safe_route", geo, sum(
+        x["predicted_action"] in {"CALL_LINTER", "DEFER"}
+        and not (x["parsed"] or {}).get("findings") for x in geo))
+    reference = [x for x in results if x["defect"].split("_", 1)[0] in {"G1", "S6"}
+                 and x["target_action"] == "REQUEST_REFERENCE"]
+    add("reference_escalation_completes", reference, sum(
+        x["predicted_action"] == "REQUEST_REFERENCE" and bool(x["escalation"])
+        and x["escalation"].get("final_action") in {"ANSWER", "DEFER"} for x in reference))
+    deck = [x for x in results if x["defect"].split("_", 1)[0] == "S2"
+            and x["target_action"] == "REQUEST_DECK"]
+    add("deck_escalation_completes", deck, sum(
+        x["predicted_action"] == "REQUEST_DECK" and bool(x["escalation"])
+        and x["escalation"].get("final_action") in {"ANSWER", "DEFER"} for x in deck))
+    clean_deck = [x for x in results if x.get("is_clean_deck")]
+    add("clean_deck_not_forced_positive", clean_deck, sum(
+        not (x["parsed"] or {}).get("findings") for x in clean_deck))
+    runtime_ok = all(counts[name] == 0 for name in (
+        "parser_failure", "action_loop", "teacher_failure", "consistency_failure", "escalation_failure"))
+    checks["runtime_failures_zero"] = {"eligible": len(results),
+                                        "passed_records": len(results) if runtime_ok else 0,
+                                        "passed": runtime_ok}
+    failures = [name for name, check in checks.items() if not check["passed"]]
+    return {"passed": not failures, "checks": checks, "failure_reasons": failures}
+
+
 def input_context(row: dict[str, Any]) -> dict[str, Any]:
     """Recover the non-oracle runtime payload embedded by the frozen serializer."""
     for item in row["messages"][0]["content"]:
@@ -269,6 +346,7 @@ def build_d3_training_records(repo: Path, *, include_splits: set[str] | None = N
                 f"{target['sample_id']}|{target['availability']}|{task}".encode()).hexdigest()[:20],
             "sample_id": target["sample_id"], "split": target["split"], "defect": target["defect"],
             "availability": target["availability"], "task": task,
+            "is_clean_deck": bool(sample.get("deck") and not sample.get("slide") and not sample.get("labels")),
             "target_kind": target["target_kind"],
             "target_action": target["target_action"], "action_id": ACTION_TO_ID[target["target_action"]],
             "target_confidence": float(target.get("distillation_weight", 1.0)),

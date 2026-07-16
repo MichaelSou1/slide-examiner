@@ -5,7 +5,7 @@ import pytest
 
 from slide_examiner.d3_training import (
     ACTION_TO_ID, _answer_for, action_class_weights, action_sample_weights,
-    authoritative_result, relocate_path, run_linter,
+    authoritative_result, balanced_smoke_rows, evaluate_semantic_gate, relocate_path, run_linter,
 )
 
 
@@ -111,3 +111,50 @@ def test_call_linter_executes_structure_and_returns_final_answer():
     assert result["action"] == "ANSWER"
     assert result["evidence_source"] == "linter"
     assert any(finding["type"] == "G2_ELEMENT_OVERLAP" for finding in result["findings"])
+
+
+def test_balanced_rows_reserves_smoke_semantic_cells():
+    rows = []
+    cells = [
+        ("G7_RENDER_CONTAINMENT_OVERFLOW", "image_only", "ANSWER", False),
+        ("G2_ELEMENT_OVERLAP", "image_only", "DEFER", False),
+        ("G3_ALIGNMENT_OFFSET", "image_only", "DEFER", False),
+        ("G4_FONT_SIZE_INCONSISTENCY", "image_only", "DEFER", False),
+        ("G5_BRAND_COLOR_VIOLATION", "image_only", "DEFER", False),
+        ("G6_MARGIN_VIOLATION", "image_only", "DEFER", False),
+        ("G2_ELEMENT_OVERLAP", "image_structure", "CALL_LINTER", False),
+        ("S6_IMAGE_TEXT_CONTRADICTION", "image_only", "REQUEST_REFERENCE", False),
+        ("S2_NARRATIVE_ORDER_BREAK", "image_structure", "REQUEST_DECK", False),
+        ("NO_DEFECT", "deck_context_available", "ANSWER", True),
+        ("NO_DEFECT", "image_only", "ANSWER", False),
+    ]
+    for index, (defect, availability, action, clean_deck) in enumerate(cells):
+        rows.append({"record_id": str(index), "defect": defect, "availability": availability,
+                     "target_action": action, "task": "route", "is_clean_deck": clean_deck})
+    selected = balanced_smoke_rows(rows, len(rows))
+    assert {row["record_id"] for row in selected} == {row["record_id"] for row in rows}
+
+
+def test_semantic_gate_requires_eligible_cells_and_zero_runtime_failures():
+    counts = {name: 0 for name in ("parser_failure", "action_loop", "teacher_failure",
+                                   "consistency_failure", "escalation_failure")}
+    results = [
+        {"defect": "G7_RENDER_CONTAINMENT_OVERFLOW", "availability": "image_only",
+         "predicted_action": "ANSWER", "parsed": {"findings": [{}]}, "target_action": "ANSWER",
+         "escalation": None, "is_clean_deck": False},
+        {"defect": "G2_ELEMENT_OVERLAP", "availability": "image_only",
+         "predicted_action": "DEFER", "parsed": {"findings": []}, "target_action": "DEFER",
+         "escalation": None, "is_clean_deck": False},
+        {"defect": "S6_IMAGE_TEXT_CONTRADICTION", "availability": "image_only",
+         "predicted_action": "REQUEST_REFERENCE", "parsed": {"findings": []},
+         "target_action": "REQUEST_REFERENCE", "is_clean_deck": False,
+         "escalation": {"final_action": "ANSWER"}},
+        {"defect": "S2_NARRATIVE_ORDER_BREAK", "availability": "image_structure",
+         "predicted_action": "REQUEST_DECK", "parsed": {"findings": []},
+         "target_action": "REQUEST_DECK", "is_clean_deck": False,
+         "escalation": {"final_action": "DEFER"}},
+        {"defect": "NO_DEFECT", "availability": "deck_context_available",
+         "predicted_action": "ANSWER", "parsed": {"findings": []}, "target_action": "ANSWER",
+         "escalation": None, "is_clean_deck": True},
+    ]
+    assert evaluate_semantic_gate(results, counts)["passed"] is True
