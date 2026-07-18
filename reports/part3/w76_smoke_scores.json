@@ -1,0 +1,210 @@
+{
+  "schema_version": 1,
+  "arms": {
+    "d3_generic": {
+      "records": 4,
+      "valid_records": 3,
+      "failure_rate": 0.25,
+      "per_class": {
+        "G2_ELEMENT_OVERLAP": {
+          "tp": 0,
+          "fn": 1,
+          "fp": 0,
+          "tn": 0,
+          "n_pos": 1,
+          "n_neg": 0,
+          "balanced_accuracy": {
+            "estimate": 0.0,
+            "low": 0.0,
+            "high": 0.8967253428113813,
+            "n_pos": 1,
+            "n_neg": 0
+          },
+          "precision": {
+            "estimate": 0.0,
+            "low": 0.0,
+            "high": 1.0,
+            "n": 0
+          },
+          "recall": {
+            "estimate": 0.0,
+            "low": 0.0,
+            "high": 0.7934506856227624,
+            "n": 1
+          },
+          "specificity": {
+            "estimate": 0.0,
+            "low": 0.0,
+            "high": 1.0,
+            "n": 0
+          },
+          "paired_clean_fpr": null,
+          "named_localization": {
+            "estimate": 0.0,
+            "low": 0.0,
+            "high": 1.0,
+            "n": 0
+          },
+          "failures": 0
+        },
+        "G3_ALIGNMENT_OFFSET": {
+          "tp": 0,
+          "fn": 1,
+          "fp": 0,
+          "tn": 0,
+          "n_pos": 1,
+          "n_neg": 0,
+          "balanced_accuracy": {
+            "estimate": 0.0,
+            "low": 0.0,
+            "high": 0.8967253428113813,
+            "n_pos": 1,
+            "n_neg": 0
+          },
+          "precision": {
+            "estimate": 0.0,
+            "low": 0.0,
+            "high": 1.0,
+            "n": 0
+          },
+          "recall": {
+            "estimate": 0.0,
+            "low": 0.0,
+            "high": 0.7934506856227624,
+            "n": 1
+          },
+          "specificity": {
+            "estimate": 0.0,
+            "low": 0.0,
+            "high": 1.0,
+            "n": 0
+          },
+          "paired_clean_fpr": null,
+          "named_localization": {
+            "estimate": 0.0,
+            "low": 0.0,
+            "high": 1.0,
+            "n": 0
+          },
+          "failures": 0
+        },
+        "G4_FONT_SIZE_INCONSISTENCY": {
+          "tp": 0,
+          "fn": 1,
+          "fp": 0,
+          "tn": 0,
+          "n_pos": 1,
+          "n_neg": 0,
+          "balanced_accuracy": {
+            "estimate": 0.0,
+            "low": 0.0,
+            "high": 0.8967253428113813,
+            "n_pos": 1,
+            "n_neg": 0
+          },
+          "precision": {
+            "estimate": 0.0,
+            "low": 0.0,
+            "high": 1.0,
+            "n": 0
+          },
+          "recall": {
+            "estimate": 0.0,
+            "low": 0.0,
+            "high": 0.7934506856227624,
+            "n": 1
+          },
+          "specificity": {
+            "estimate": 0.0,
+            "low": 0.0,
+            "high": 1.0,
+            "n": 0
+          },
+          "paired_clean_fpr": null,
+          "named_localization": {
+            "estimate": 0.0,
+            "low": 0.0,
+            "high": 1.0,
+            "n": 0
+          },
+          "failures": 0
+        },
+        "G7_RENDER_CONTAINMENT_OVERFLOW": {
+          "tp": 0,
+          "fn": 0,
+          "fp": 0,
+          "tn": 0,
+          "n_pos": 0,
+          "n_neg": 0,
+          "balanced_accuracy": {
+            "estimate": 0.0,
+            "low": 0.0,
+            "high": 1.0,
+            "n_pos": 0,
+            "n_neg": 0
+          },
+          "precision": {
+            "estimate": 0.0,
+            "low": 0.0,
+            "high": 1.0,
+            "n": 0
+          },
+          "recall": {
+            "estimate": 0.0,
+            "low": 0.0,
+            "high": 1.0,
+            "n": 0
+          },
+          "specificity": {
+            "estimate": 0.0,
+            "low": 0.0,
+            "high": 1.0,
+            "n": 0
+          },
+          "paired_clean_fpr": null,
+          "named_localization": {
+            "estimate": 0.0,
+            "low": 0.0,
+            "high": 1.0,
+            "n": 0
+          },
+          "failures": 1
+        }
+      },
+      "macro": {
+        "balanced_accuracy": null,
+        "precision": null,
+        "recall": null,
+        "specificity": null,
+        "paired_clean_fpr": null,
+        "named_localization": null,
+        "classes": 0
+      },
+      "routing_and_cost": {
+        "action_accuracy": 1.0,
+        "defer_rate": 1.0,
+        "coverage": 0.0,
+        "mean_model_calls": 1.0,
+        "mean_external_calls": 0.0,
+        "mean_prompt_tokens": 683.0,
+        "mean_completion_tokens": 0.0,
+        "mean_total_tokens": 683.0,
+        "mean_latency_seconds": 18.44547762100895
+      },
+      "risk_coverage": [
+        {
+          "covered": 0,
+          "coverage": 0.0,
+          "risk": 0.0
+        }
+      ]
+    }
+  },
+  "inputs": [
+    {
+      "path": "/tmp/w76_scored.jsonl",
+      "rows": 4,
+      "sha256": "615b8bb185ac60031710f0a2ba01b0cf3432d37a108c71af0da6e46df3247027"
+    }
+  ]
+}

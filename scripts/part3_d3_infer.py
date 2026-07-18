@@ -6,6 +6,7 @@ import argparse
 from collections import Counter
 import json
 from pathlib import Path
+import time
 from typing import Any
 
 import torch
@@ -130,6 +131,7 @@ def infer_once(processor: Any, model: Any, heads: D3Heads, row: dict[str, Any],
                        return_tensors="pt")
     inputs = {key: value.to(device) for key, value in inputs.items()}
     prompt_lengths = inputs["attention_mask"].sum(dim=1)
+    started = time.perf_counter()
     with torch.no_grad():
         output = model(**inputs, output_hidden_states=True, return_dict=True)
         pooled = pooled_at_prompt(output.hidden_states[-1], prompt_lengths).float()
@@ -149,24 +151,34 @@ def infer_once(processor: Any, model: Any, heads: D3Heads, row: dict[str, Any],
                     "raw": "", "generated_parsed": None, "generated_action": None,
                     "parsed": authoritative, "parse_error": None,
                     "action_mismatch": mismatch, "consistency_error": consistency_error,
-                    "contract_repaired": False, "fallback_defer": False}
+                    "contract_repaired": False, "fallback_defer": False,
+                    "usage": {"prompt_tokens": int(prompt_lengths.item()),
+                              "completion_tokens": 0,
+                              "total_tokens": int(prompt_lengths.item()),
+                              "latency_seconds": time.perf_counter() - started}}
         generated = model.generate(**inputs, max_new_tokens=max_new_tokens, do_sample=False)
     continuation = generated[0, inputs["input_ids"].shape[1]:]
     text = processor.decode(continuation, skip_special_tokens=True)
-    parsed, error, repaired = parse_contract(text)
-    fallback_defer = parsed is None
+    generated_parsed, error, repaired = parse_contract(text)
+    generated_action = (generated_parsed or {}).get("action")
+    fallback_defer = generated_parsed is None
     if fallback_defer:
         action = ExaminerAction.DEFER.value
         parsed, mismatch, consistency_error = authoritative_result(None, action)
     else:
-        parsed, mismatch, consistency_error = authoritative_result(parsed, action)
+        parsed, mismatch, consistency_error = authoritative_result(generated_parsed, action)
     return {"predicted_action": action, "raw_predicted_action": raw_action,
             "route_confidence": confidence,
-            "raw": text, "generated_parsed": parsed, "generated_action": (parsed or {}).get("action"),
-            "parsed": parsed, "parse_error": None if fallback_defer else error,
+            "raw": text, "generated_parsed": generated_parsed,
+            "generated_action": generated_action,
+            "parsed": parsed, "parse_error": error,
             "generation_error": error, "action_mismatch": mismatch,
             "consistency_error": consistency_error, "contract_repaired": repaired,
-            "fallback_defer": fallback_defer}
+            "fallback_defer": fallback_defer,
+            "usage": {"prompt_tokens": int(prompt_lengths.item()),
+                      "completion_tokens": int(continuation.numel()),
+                      "total_tokens": int(prompt_lengths.item() + continuation.numel()),
+                      "latency_seconds": time.perf_counter() - started}}
 
 
 def main() -> None:
@@ -177,7 +189,8 @@ def main() -> None:
                         help="Merged LM directory; D3 heads and policy still come from --run")
     parser.add_argument("--input", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
-    parser.add_argument("--limit", type=int, default=32)
+    parser.add_argument("--limit", default="32",
+                        help="Number of records, or 'all' for the complete input")
     parser.add_argument("--balanced", action="store_true")
     parser.add_argument("--max-new-tokens", type=int, default=384)
     parser.add_argument("--policy", type=Path,
@@ -195,16 +208,33 @@ def main() -> None:
     device = torch.device("cuda")
     processor, model, heads = load(args.run, args.base, device, args.merged_model)
     all_rows = JsonlDataset(args.input).rows
-    rows = balanced_rows(all_rows, args.limit) if args.balanced else all_rows[:args.limit]
+    if args.limit == "all":
+        limit = len(all_rows)
+    else:
+        try:
+            limit = int(args.limit)
+        except ValueError:
+            parser.error("--limit must be a positive integer or 'all'")
+        if limit < 1:
+            parser.error("--limit must be a positive integer or 'all'")
+    rows = balanced_rows(all_rows, limit) if args.balanced else all_rows[:limit]
     by_sample_availability = {(row["sample_id"], row["availability"]): row for row in all_rows}
     by_chain_availability: dict[tuple[str, str], dict[str, Any]] = {}
     for candidate in all_rows:
         by_chain_availability.setdefault(
             (candidate["severity_chain"], candidate["availability"]), candidate)
+    args.output.parent.mkdir(parents=True, exist_ok=True)
+    completed: set[str] = set()
+    if args.output.exists():
+        for line in args.output.read_text().splitlines():
+            if line.strip():
+                completed.add(str(json.loads(line)["record_id"]))
     results, counts = [], {"parser_failure": 0, "action_loop": 0, "teacher_failure": 0,
                            "action_mismatch": 0, "consistency_failure": 0,
                            "escalation_failure": 0}
     for row in rows:
+        if row["record_id"] in completed:
+            continue
         first = infer_once(processor, model, heads, row, device, args.max_new_tokens,
                            confidence_threshold=confidence_threshold,
                            max_escalations=max_escalations)
@@ -254,15 +284,44 @@ def main() -> None:
                 counts["escalation_failure"] += 1
                 escalation = {"requested_action": requested, "performed": False,
                               "reason": f"no {availability} counterpart for sample"}
-        results.append({"record_id": row["record_id"], "sample_id": row["sample_id"],
+        result = {"record_id": row["record_id"], "sample_id": row["sample_id"],
                         "defect": row["defect"], "availability": row["availability"],
                         "target_action": row["target_action"],
                         "is_clean_deck": bool(row.get("is_clean_deck")),
-                        **first, "escalation": escalation})
-    args.output.parent.mkdir(parents=True, exist_ok=True)
-    with args.output.open("w") as stream:
-        for result in results:
+                        **first, "escalation": escalation,
+                        "model_calls": 1 + int(bool(escalation and escalation.get("executor") == "student_followup")),
+                        "external_calls": int(bool(escalation and escalation.get("performed"))),
+                        "prompt_tokens": first["usage"]["prompt_tokens"] + int(
+                            ((escalation or {}).get("result") or {}).get("usage", {}).get("prompt_tokens", 0)),
+                        "completion_tokens": first["usage"]["completion_tokens"] + int(
+                            ((escalation or {}).get("result") or {}).get("usage", {}).get("completion_tokens", 0)),
+                        "total_tokens": first["usage"]["total_tokens"] + int(
+                            ((escalation or {}).get("result") or {}).get("usage", {}).get("total_tokens", 0)),
+                        "latency_seconds": first["usage"]["latency_seconds"] + float(
+                            ((escalation or {}).get("result") or {}).get("usage", {}).get("latency_seconds", 0.0))}
+        results.append(result)
+        with args.output.open("a") as stream:
             stream.write(json.dumps(result, ensure_ascii=False) + "\n")
+            stream.flush()
+    all_results = [json.loads(line) for line in args.output.read_text().splitlines() if line.strip()]
+    results = [result for result in all_results if result["record_id"] in {row["record_id"] for row in rows}]
+    counts = {
+        "parser_failure": sum(bool(result.get("parse_error")) + bool(
+            ((result.get("escalation") or {}).get("result") or {}).get("parse_error"))
+                              for result in results),
+        "action_loop": sum(bool(result.get("escalation")) and
+                           (result["escalation"].get("final_action") not in {"ANSWER", "DEFER"})
+                           for result in results),
+        "teacher_failure": 0,
+        "action_mismatch": sum(bool(result.get("action_mismatch")) + bool(
+            ((result.get("escalation") or {}).get("result") or {}).get("action_mismatch"))
+                               for result in results),
+        "consistency_failure": sum(bool(result.get("consistency_error")) + bool(
+            ((result.get("escalation") or {}).get("result") or {}).get("consistency_error"))
+                                   for result in results),
+        "escalation_failure": sum(bool(result.get("escalation")) and
+                                  not result["escalation"].get("performed") for result in results),
+    }
     semantic = {
         "g7_legal_answer": sum(x["defect"].startswith("G7_") and x["predicted_action"] == "ANSWER"
                                and bool((x["parsed"] or {}).get("findings")) for x in results),
@@ -276,7 +335,8 @@ def main() -> None:
         "performed_escalation": sum(bool(x["escalation"] and x["escalation"]["performed"])
                                     for x in results),
     }
-    summary = {**counts, "records": len(results), "balanced": args.balanced,
+    summary = {**counts, "records": len(results), "resumed_records": len(completed),
+               "balanced": args.balanced,
                "deployment": {"lm": "merged" if args.merged_model else "base_plus_adapter",
                               "model_path": str(args.merged_model or args.base),
                               "heads_path": str(args.run / "d3_heads.pt"),
