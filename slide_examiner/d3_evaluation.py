@@ -396,6 +396,38 @@ def exact_mcnemar(left: Sequence[dict[str, Any]], right: Sequence[dict[str, Any]
             "discordant": discordant, "p_value": p_value}
 
 
+def endpoint_rows(rows: Sequence[dict[str, Any]], endpoint: str
+                  ) -> tuple[list[dict[str, Any]], dict[str, Any]]:
+    """Project normalized traces onto an explicitly predeclared binary endpoint."""
+    aliases = {
+        "paired row correctness": "row_correctness",
+        "paired-clean false-positive avoidance": "paired_clean_fpr",
+        "paired-clean FPR": "paired_clean_fpr",
+        "G2-G6 row risk": "row_risk",
+    }
+    canonical = aliases.get(endpoint)
+    if canonical is None:
+        raise ValueError(f"unsupported comparison endpoint: {endpoint!r}")
+    eligible = [row for row in rows if not row.get("failure")]
+    if canonical == "paired_clean_fpr":
+        eligible = [row for row in eligible if row.get("is_clean")]
+    projected = []
+    adverse = 0
+    for row in eligible:
+        if canonical == "paired_clean_fpr":
+            outcome = not finding_present(row, str(row.get("defect") or ""))
+        else:
+            outcome = bool(row.get("correct"))
+        adverse += int(not outcome)
+        projected.append({**row, "correct": outcome})
+    return projected, {
+        "canonical_endpoint": canonical,
+        "eligible_rows": len(projected),
+        "adverse_events": adverse,
+        "adverse_rate": _ratio(adverse, len(projected)),
+    }
+
+
 def holm_family(tests: Sequence[dict[str, Any]], alpha: float = 0.05) -> dict[str, Any]:
     correction = holm_bonferroni([float(test["p_value"]) for test in tests], alpha)
     return {"method": "Holm", "alpha": alpha, "tests": [

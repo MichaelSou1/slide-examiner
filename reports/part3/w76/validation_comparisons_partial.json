@@ -1,0 +1,71 @@
+{
+  "method": "Holm",
+  "alpha": 0.05,
+  "tests": [
+    {
+      "name": "D3 generic vs vanilla FT generic on G7",
+      "left": "d3_generic_sample_escalation",
+      "right": "part2_v2_generic",
+      "defects": [
+        "G7_RENDER_CONTAINMENT_OVERFLOW"
+      ],
+      "endpoint": "paired row correctness",
+      "key": "record_id",
+      "pairs": 24,
+      "left_wins": 12,
+      "right_wins": 12,
+      "discordant": 24,
+      "p_value": 1.0,
+      "adjusted_p": 1.0,
+      "reject": false
+    },
+    {
+      "name": "D3 generic vs vanilla FT generic macro",
+      "left": "d3_generic_sample_escalation",
+      "right": "part2_v2_generic",
+      "endpoint": "paired row correctness",
+      "key": "record_id",
+      "pairs": 177,
+      "left_wins": 26,
+      "right_wins": 12,
+      "discordant": 38,
+      "p_value": 0.03355243967962451,
+      "adjusted_p": 0.10065731903887354,
+      "reject": false
+    },
+    {
+      "name": "learned route vs frozen route macro",
+      "left": "d3_generic_sample_escalation",
+      "right": "manual_frozen_route",
+      "endpoint": "paired row correctness",
+      "key": "record_id",
+      "pairs": 216,
+      "left_wins": 0,
+      "right_wins": 53,
+      "discordant": 53,
+      "p_value": 2.220446049250313e-16,
+      "adjusted_p": 8.881784197001252e-16,
+      "reject": true
+    },
+    {
+      "name": "D3 defer vs no defer on G2-G6",
+      "left": "d3_generic_sample_escalation",
+      "right": "learned_sample_route_no_escalation",
+      "defects": [
+        "G2_ELEMENT_OVERLAP",
+        "G3_ALIGNMENT_OFFSET",
+        "G5_BRAND_COLOR_VIOLATION",
+        "G6_MARGIN_VIOLATION"
+      ],
+      "endpoint": "paired row correctness",
+      "key": "record_id",
+      "pairs": 96,
+      "left_wins": 0,
+      "right_wins": 0,
+      "discordant": 0,
+      "p_value": 1.0,
+      "adjusted_p": 1.0,
+      "reject": false
+    }
+  ]
+}

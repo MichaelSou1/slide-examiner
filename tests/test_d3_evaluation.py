@@ -8,7 +8,7 @@ from scripts.part3_d3_evaluate import (
     materialize_paired_images, materialize_slideaudit,
 )
 from slide_examiner.d3_evaluation import (
-    exact_mcnemar, generated_route_action, holm_family, normalize_runtime_row, pareto_frontier,
+    endpoint_rows, exact_mcnemar, generated_route_action, holm_family, normalize_runtime_row, pareto_frontier,
     parse_generated_contract, prompt_row, score_arm, selective_risk_at_coverages,
     route_requires_heads, validate_deployment,
 )
@@ -62,6 +62,27 @@ def test_exact_mcnemar_rejects_non_unique_pair_key():
     right = [{"pair_id": "a", "correct": True}]
     with pytest.raises(ValueError, match="duplicate McNemar key"):
         exact_mcnemar(left, right, key="pair_id")
+
+
+def test_endpoint_rows_uses_only_clean_rows_for_paired_clean_fpr():
+    rows = [
+        _row("a", "G2_X", False, ["G2_X"], correct=True),
+        _row("a_clean", "G2_X", True, ["G2_X"], correct=False),
+        _row("b_clean", "G2_X", True, [], correct=True),
+    ]
+    projected, summary = endpoint_rows(rows, "paired-clean false-positive avoidance")
+    assert [row["correct"] for row in projected] == [False, True]
+    assert summary == {"canonical_endpoint": "paired_clean_fpr", "eligible_rows": 2,
+                       "adverse_events": 1, "adverse_rate": .5}
+
+
+def test_endpoint_rows_reports_g2_g6_row_risk_as_adverse_rate():
+    rows = [_row("a", "G2_X", False, ["G2_X"], correct=True),
+            _row("b", "G2_X", False, [], correct=False)]
+    projected, summary = endpoint_rows(rows, "G2-G6 row risk")
+    assert len(projected) == 2
+    assert summary["canonical_endpoint"] == "row_risk"
+    assert summary["adverse_rate"] == .5
 
 
 def test_selective_risk_at_frozen_coverage_grid_reports_unavailable_points():

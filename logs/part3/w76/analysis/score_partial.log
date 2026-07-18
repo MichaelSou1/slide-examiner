@@ -1,0 +1,15 @@
+{
+  "output": "reports/part3/w76/validation_scores_partial.json",
+  "arms": [
+    "compute_matched_vanilla_generic",
+    "d3_generic_sample_escalation",
+    "fixed_c0",
+    "learned_class_route",
+    "learned_sample_route_no_escalation",
+    "manual_frozen_route",
+    "part2_v2_generic",
+    "teacher_c3",
+    "uniform_c3",
+    "zero_shot_8b_generic"
+  ]
+}

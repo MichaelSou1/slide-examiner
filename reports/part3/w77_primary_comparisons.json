@@ -6,7 +6,8 @@
     {"name": "D3 generic vs vanilla FT generic on G7", "left": "d3_generic_sample_escalation", "right": "part2_v2_generic", "defects": ["G7_RENDER_CONTAINMENT_OVERFLOW"], "endpoint": "paired row correctness", "key": "record_id"},
     {"name": "D3 generic vs vanilla FT generic macro", "left": "d3_generic_sample_escalation", "right": "part2_v2_generic", "endpoint": "paired row correctness", "key": "record_id"},
     {"name": "learned route vs frozen route macro", "left": "d3_generic_sample_escalation", "right": "manual_frozen_route", "endpoint": "paired row correctness", "key": "record_id"},
-    {"name": "D3 defer vs no defer on G2-G6", "left": "d3_generic_sample_escalation", "right": "learned_sample_route_no_escalation", "defects": ["G2_ELEMENT_OVERLAP", "G3_ALIGNMENT_OFFSET", "G5_BRAND_COLOR_VIOLATION", "G6_MARGIN_VIOLATION"], "endpoint": "paired row correctness", "key": "record_id"}
+    {"name": "D3 defer vs no defer on G2-G6 paired-clean FPR", "left": "d3_generic_sample_escalation", "right": "learned_sample_route_no_escalation", "defects": ["G2_ELEMENT_OVERLAP", "G3_ALIGNMENT_OFFSET", "G5_BRAND_COLOR_VIOLATION", "G6_MARGIN_VIOLATION"], "endpoint": "paired-clean false-positive avoidance", "key": "record_id"},
+    {"name": "D3 defer vs no defer on G2-G6 row risk", "left": "d3_generic_sample_escalation", "right": "learned_sample_route_no_escalation", "defects": ["G2_ELEMENT_OVERLAP", "G3_ALIGNMENT_OFFSET", "G5_BRAND_COLOR_VIOLATION", "G6_MARGIN_VIOLATION"], "endpoint": "G2-G6 row risk", "key": "record_id"}
   ],
   "cost_comparison": {"left": "d3_generic_sample_escalation", "right": "manual_frozen_route", "endpoints": ["mean_model_calls", "mean_external_calls", "mean_total_tokens", "mean_latency_seconds"], "inferential": false},
   "exploratory": "Per-class comparisons outside the named G7 primary test are reported separately and are not added to this family."

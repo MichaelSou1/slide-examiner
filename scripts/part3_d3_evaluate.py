@@ -18,6 +18,7 @@ REPO = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO))
 
 from slide_examiner.d3_evaluation import (  # noqa: E402
+    endpoint_rows,
     exact_mcnemar,
     holm_family,
     normalize_runtime_row,
@@ -503,7 +504,12 @@ def compare(args: argparse.Namespace) -> None:
         if allowed:
             left = [row for row in left if row.get("defect") in allowed]
             right = [row for row in right if row.get("defect") in allowed]
-        test = exact_mcnemar(left, right, key=spec.get("key", "record_id"))
+        endpoint = str(spec.get("endpoint", "paired row correctness"))
+        left_endpoint, left_summary = endpoint_rows(left, endpoint)
+        right_endpoint, right_summary = endpoint_rows(right, endpoint)
+        test = exact_mcnemar(left_endpoint, right_endpoint, key=spec.get("key", "record_id"))
+        test["left_endpoint_summary"] = left_summary
+        test["right_endpoint_summary"] = right_summary
         tests.append({**spec, **test})
     result = holm_family(tests, float(specs.get("alpha", 0.05)))
     args.output.parent.mkdir(parents=True, exist_ok=True)
