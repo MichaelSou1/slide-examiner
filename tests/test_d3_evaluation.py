@@ -1,7 +1,11 @@
 import json
+from pathlib import Path
 import subprocess
+import sys
 
 import pytest
+
+REPO = Path(__file__).resolve().parents[1]
 
 from scripts.part3_d3_evaluate import (
     _api_messages, _relocatable, assert_final_test_unlocked, drop_availability, materialize_deck_pairs,
@@ -349,3 +353,10 @@ def test_final_test_guard_requires_committed_clean_registry(tmp_path):
     subprocess.run(["git", "commit", "-qm", "freeze"], cwd=tmp_path, check=True)
     with pytest.raises(RuntimeError, match="freeze_commit"):
         assert_final_test_unlocked(tmp_path, registry)
+
+
+def test_final_test_commands_expose_separate_guard_repo():
+    result = subprocess.run(
+        [sys.executable, str(REPO / "scripts/part3_d3_evaluate.py"),
+         "materialize", "--help"], capture_output=True, text=True, check=True)
+    assert "--guard-repo" in result.stdout

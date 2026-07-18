@@ -291,7 +291,7 @@ def materialize(args: argparse.Namespace) -> None:
     if args.split == "final_test":
         if not args.freeze_registry:
             raise RuntimeError("--freeze-registry is mandatory before reading final_test")
-        assert_final_test_unlocked(args.repo.resolve(), args.freeze_registry.resolve())
+        assert_final_test_unlocked(args.guard_repo.resolve(), args.freeze_registry.resolve())
     source_rows = [row for manifest in args.manifest for row in read_jsonl(manifest)]
     rows, summary = materialize_paired_images(
         source_rows, args.repo.resolve(), args.per_class, split=args.split,
@@ -320,7 +320,7 @@ def materialize_decks(args: argparse.Namespace) -> None:
     if args.split == "final_test":
         if not args.freeze_registry:
             raise RuntimeError("--freeze-registry is mandatory before reading final_test decks")
-        assert_final_test_unlocked(args.repo.resolve(), args.freeze_registry.resolve())
+        assert_final_test_unlocked(args.guard_repo.resolve(), args.freeze_registry.resolve())
     positives = [row for path in args.manifest for row in read_jsonl(path)]
     cleans = [row for path in args.clean_manifest for row in read_jsonl(path)]
     rows, summary = materialize_deck_pairs(
@@ -341,7 +341,7 @@ def render_decks(args: argparse.Namespace) -> None:
     if args.split == "final_test":
         if not args.freeze_registry:
             raise RuntimeError("--freeze-registry is mandatory before rendering final_test decks")
-        assert_final_test_unlocked(args.repo.resolve(), args.freeze_registry.resolve())
+        assert_final_test_unlocked(args.guard_repo.resolve(), args.freeze_registry.resolve())
     from slide_examiner.render import render_manifest
 
     target = render_manifest(
@@ -371,7 +371,7 @@ def normalize(args: argparse.Namespace) -> None:
     if args.split == "final_test":
         if not args.freeze_registry:
             raise RuntimeError("--freeze-registry is mandatory for final_test")
-        assert_final_test_unlocked(args.repo.resolve(), args.freeze_registry.resolve())
+        assert_final_test_unlocked(args.guard_repo.resolve(), args.freeze_registry.resolve())
     rows = [normalize_runtime_row(row, arm=args.arm) for row in read_jsonl(args.input)]
     for row in rows:
         row["split"] = args.split
@@ -601,6 +601,7 @@ def main() -> None:
     unlock_assertion.set_defaults(function=assert_unlocked)
     materializer = sub.add_parser("materialize")
     materializer.add_argument("--repo", type=Path, default=Path.cwd())
+    materializer.add_argument("--guard-repo", type=Path, default=Path.cwd())
     materializer.add_argument("--manifest", type=Path, nargs="+", required=True)
     materializer.add_argument("--output", type=Path, required=True)
     materializer.add_argument("--split", choices=("validation", "final_test"), required=True)
@@ -616,6 +617,7 @@ def main() -> None:
     slicer.set_defaults(function=materialize_slice)
     deck_materializer = sub.add_parser("materialize-decks")
     deck_materializer.add_argument("--repo", type=Path, default=Path.cwd())
+    deck_materializer.add_argument("--guard-repo", type=Path, default=Path.cwd())
     deck_materializer.add_argument("--manifest", type=Path, nargs="+", required=True)
     deck_materializer.add_argument("--clean-manifest", type=Path, nargs="+", required=True)
     deck_materializer.add_argument("--output", type=Path, required=True)
@@ -626,6 +628,7 @@ def main() -> None:
     deck_materializer.set_defaults(function=materialize_decks)
     deck_renderer = sub.add_parser("render-decks")
     deck_renderer.add_argument("--repo", type=Path, default=Path.cwd())
+    deck_renderer.add_argument("--guard-repo", type=Path, default=Path.cwd())
     deck_renderer.add_argument("--manifest", type=Path, required=True)
     deck_renderer.add_argument("--output-dir", type=Path, required=True)
     deck_renderer.add_argument("--output-manifest", type=Path, required=True)
@@ -641,6 +644,7 @@ def main() -> None:
     real_materializer.set_defaults(function=materialize_real)
     normalizer = sub.add_parser("normalize")
     normalizer.add_argument("--repo", type=Path, default=Path.cwd())
+    normalizer.add_argument("--guard-repo", type=Path, default=Path.cwd())
     normalizer.add_argument("--input", type=Path, required=True)
     normalizer.add_argument("--output", type=Path, required=True)
     normalizer.add_argument("--arm", required=True)
