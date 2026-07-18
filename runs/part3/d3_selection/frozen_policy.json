@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "status": "frozen_before_final_test",
+  "selection_split": "dev",
+  "validation_used": false,
+  "final_test_used": false,
+  "checkpoint": {
+    "run": "runs/part3/d3_formal_v2/train_seed73",
+    "step": 768,
+    "modelscope_path": "michaelsou/slide-examiner-d3-qwen3vl8b/formal_v2/train_seed73",
+    "base_model": "/data/public_data/xzs_data/Qwen3-VL-8B-Instruct",
+    "adapter_sha256": "d23efea79b223e0698710bceccd4155390621b476f5c4169b2773f2458e76537",
+    "heads_sha256": "d3987c3980c3e11ecfb4afc1704048fc05faa50c59fbb3df7d1dea16b30e6228"
+  },
+  "generic_first_pass": true,
+  "confidence_threshold": 0.0,
+  "low_confidence_action": "DEFER",
+  "confidence_threshold_rationale": "The select head target is distillation weight, not a calibrated correctness probability; no post-hoc threshold is added without dev calibration evidence.",
+  "max_escalations": 1,
+  "allowed_escalations": [
+    "CALL_LINTER",
+    "REQUEST_REFERENCE",
+    "REQUEST_DECK"
+  ],
+  "terminal_actions": [
+    "ANSWER",
+    "DEFER"
+  ],
+  "repeated_escalation_action": "DEFER",
+  "worst_case_model_calls": 2,
+  "worst_case_external_tool_calls": 1,
+  "utility": {
+    "lambda_c": 0.025,
+    "lambda_fp": 2.0,
+    "lambda_v": 0.2,
+    "margin_threshold": 0.025,
+    "selection_score": 0.6901315789473684,
+    "grid_size": 81,
+    "dev_samples": 912
+  },
+  "code_commit": "2bbef00639cdaa25ba9ccdd27a6fff9cd32b8733",
+  "data_sha256": {
+    "train": "8d283c67f87ee5d4552a220753009dd933b8f9365a4a1fc854b85414a400a6a5",
+    "dev": "132858199082f0e50320618bbd0b059bbf8fa27d72afcae56c84d628902a472a"
+  }
+}

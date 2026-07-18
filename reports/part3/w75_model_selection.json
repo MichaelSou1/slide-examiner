@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "title": "W7.5 D3 dev-only model selection",
+  "created_date": "2026-07-18",
+  "status": "frozen_before_final_test",
+  "selection_split": "dev",
+  "validation_used": false,
+  "final_test_read": false,
+  "selection_criterion": "minimum dev_joint_loss under the predeclared dev-only basis, with unsafe image-only ANSWER rate reported as a safety diagnostic",
+  "selected": {
+    "seed": 73,
+    "run": "runs/part3/d3_formal_v2/train_seed73",
+    "checkpoint_step": 768,
+    "reason": "Lowest dev joint loss (0.259068) and zero G2-G6 image-only unsafe ANSWER rate among the three fixed seeds."
+  },
+  "seed_comparison": [
+    {
+      "seed": 42,
+      "dev_joint_loss": 0.4339895749552091,
+      "action_recall": {
+        "ANSWER": 0.5729442970822282,
+        "CALL_LINTER": 0.8068965517241379,
+        "REQUEST_REFERENCE": 0.7013574660633484,
+        "REQUEST_DECK": 1.0,
+        "DEFER": 0.5528735632183908
+      },
+      "g2_g6_image_only_unsafe_answer_rate": 0.22413793103448276
+    },
+    {
+      "seed": 17,
+      "dev_joint_loss": 0.33104782761778184,
+      "action_recall": {
+        "ANSWER": 0.5702917771883289,
+        "CALL_LINTER": 1.0,
+        "REQUEST_REFERENCE": 0.9457013574660633,
+        "REQUEST_DECK": 1.0,
+        "DEFER": 0.5505747126436782
+      },
+      "g2_g6_image_only_unsafe_answer_rate": 0.18620689655172415
+    },
+    {
+      "seed": 73,
+      "dev_joint_loss": 0.25906762785548004,
+      "action_recall": {
+        "ANSWER": 0.3050397877984085,
+        "CALL_LINTER": 1.0,
+        "REQUEST_REFERENCE": 1.0,
+        "REQUEST_DECK": 1.0,
+        "DEFER": 1.0
+      },
+      "g2_g6_image_only_unsafe_answer_rate": 0.0
+    }
+  ],
+  "known_failures_and_tradeoffs": [
+    "Selected seed73 has ANSWER recall 0.305040, materially below seed42/17 (~0.57); safety-oriented routing sacrifices direct-answer coverage.",
+    "The confidence head is trained against distillation weight and is not calibrated as action correctness probability; threshold is therefore frozen at 0.0 rather than tuned post hoc.",
+    "Finding quality, paired-clean false-positive rate, and named-localization performance remain unmeasured until W7.6/W7.7 endpoint scoring."
+  ],
+  "inference_policy": {
+    "schema_version": 1,
+    "status": "frozen_before_final_test",
+    "selection_split": "dev",
+    "validation_used": false,
+    "final_test_used": false,
+    "checkpoint": {
+      "run": "runs/part3/d3_formal_v2/train_seed73",
+      "step": 768,
+      "modelscope_path": "michaelsou/slide-examiner-d3-qwen3vl8b/formal_v2/train_seed73",
+      "base_model": "/data/public_data/xzs_data/Qwen3-VL-8B-Instruct",
+      "adapter_sha256": "d23efea79b223e0698710bceccd4155390621b476f5c4169b2773f2458e76537",
+      "heads_sha256": "d3987c3980c3e11ecfb4afc1704048fc05faa50c59fbb3df7d1dea16b30e6228"
+    },
+    "generic_first_pass": true,
+    "confidence_threshold": 0.0,
+    "low_confidence_action": "DEFER",
+    "confidence_threshold_rationale": "The select head target is distillation weight, not a calibrated correctness probability; no post-hoc threshold is added without dev calibration evidence.",
+    "max_escalations": 1,
+    "allowed_escalations": [
+      "CALL_LINTER",
+      "REQUEST_REFERENCE",
+      "REQUEST_DECK"
+    ],
+    "terminal_actions": [
+      "ANSWER",
+      "DEFER"
+    ],
+    "repeated_escalation_action": "DEFER",
+    "worst_case_model_calls": 2,
+    "worst_case_external_tool_calls": 1,
+    "utility": {
+      "lambda_c": 0.025,
+      "lambda_fp": 2.0,
+      "lambda_v": 0.2,
+      "margin_threshold": 0.025,
+      "selection_score": 0.6901315789473684,
+      "grid_size": 81,
+      "dev_samples": 912
+    },
+    "code_commit": "2bbef00639cdaa25ba9ccdd27a6fff9cd32b8733",
+    "data_sha256": {
+      "train": "8d283c67f87ee5d4552a220753009dd933b8f9365a4a1fc854b85414a400a6a5",
+      "dev": "132858199082f0e50320618bbd0b059bbf8fa27d72afcae56c84d628902a472a"
+    }
+  },
+  "expected_primary_table_columns": {
+    "finding": [
+      "balanced_accuracy",
+      "precision",
+      "recall",
+      "specificity",
+      "paired_clean_fpr",
+      "wilson_95_ci",
+      "named_localization_accuracy"
+    ],
+    "routing_and_cost": [
+      "action_accuracy",
+      "defer_rate",
+      "coverage",
+      "model_calls",
+      "external_tool_calls",
+      "tokens",
+      "latency"
+    ]
+  },
+  "hashes": {
+    "code_commit": "2bbef00639cdaa25ba9ccdd27a6fff9cd32b8733",
+    "train_data_sha256": "8d283c67f87ee5d4552a220753009dd933b8f9365a4a1fc854b85414a400a6a5",
+    "dev_data_sha256": "132858199082f0e50320618bbd0b059bbf8fa27d72afcae56c84d628902a472a",
+    "adapter_sha256": "d23efea79b223e0698710bceccd4155390621b476f5c4169b2773f2458e76537",
+    "heads_sha256": "d3987c3980c3e11ecfb4afc1704048fc05faa50c59fbb3df7d1dea16b30e6228",
+    "run_config_sha256": "6694daaf56002366c609bc1f7f9b092bc461b2bbac0f4105ed283ebbab1efec0",
+    "checkpoint_inventory_sha256": "c86d7caecd502b3a17ca33147021f718e075dcc28073dd4ba93c4d1c869c88c8"
+  },
+  "artifacts": {
+    "policy": "runs/part3/d3_selection/frozen_policy.json",
+    "utility_selection": "release/part3/d3/utility_selection.json",
+    "dev_inference": "runs/part3/d3_selection/seed73_dev_balanced128.jsonl",
+    "dev_inference_summary": "runs/part3/d3_selection/seed73_dev_balanced128.summary.json",
+    "dev_inference_log": "logs/part3/w75_seed73_dev_balanced128.log"
+  },
+  "modelscope_path": "michaelsou/slide-examiner-d3-qwen3vl8b/formal_v2/train_seed73"
+}
