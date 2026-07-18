@@ -9,7 +9,7 @@ REPO = Path(__file__).resolve().parents[1]
 
 from scripts.part3_d3_evaluate import (
     _api_messages, _relocatable, assert_final_test_unlocked, drop_availability, materialize_deck_pairs,
-    materialize_paired_images, materialize_slideaudit,
+    materialize_paired_images, materialize_slideaudit, score_cohorts,
 )
 from slide_examiner.d3_evaluation import (
     endpoint_rows, exact_mcnemar, generated_route_action, holm_family, normalize_runtime_row, pareto_frontier,
@@ -107,6 +107,31 @@ def test_pareto_frontier_drops_dominated_arm():
               {"arm": "b", "accuracy": .8, "cost": 1},
               {"arm": "c", "accuracy": .9, "cost": 3}]
     assert {point["arm"] for point in pareto_frontier(points)} == {"b", "c"}
+
+
+def test_score_cohorts_keeps_heterogeneous_slices_separate(tmp_path):
+    primary = tmp_path / "primary.jsonl"
+    ood = tmp_path / "ood.jsonl"
+    primary.write_text(json.dumps({
+        **_row("primary", "G1_X", False, ["G1_X"]), "arm": "d3",
+        "record_id": "primary", "correct": True,
+    }) + "\n")
+    ood.write_text(json.dumps({
+        **_row("ood", "G1_X", False, []), "arm": "d3",
+        "record_id": "ood", "correct": False,
+    }) + "\n")
+    registry = tmp_path / "cohorts.json"
+    registry.write_text(json.dumps({"cohorts": {
+        "paired_image_primary": [str(primary)],
+        "heldout_severity": [str(ood)],
+    }}))
+    output = tmp_path / "scores.json"
+    score_cohorts(type("Args", (), {"registry": registry, "output": output})())
+
+    payload = json.loads(output.read_text())
+    assert payload["aggregation"] == "cohort_independent_no_cross_cohort_macro"
+    assert payload["cohorts"]["paired_image_primary"]["arms"]["d3"]["records"] == 1
+    assert payload["cohorts"]["heldout_severity"]["arms"]["d3"]["records"] == 1
 
 
 def test_normalize_runtime_row_uses_post_escalation_answer():
@@ -315,6 +340,43 @@ def test_materialize_deck_pairs_supports_final_test_pair_pointer(tmp_path):
     assert len(rows) == 4
     assert {row["split"] for row in rows} == {"final_test"}
     assert {row["is_clean"] for row in rows[:2]} == {False, True}
+
+
+def test_final_deck_shape_has_80_initial_rows_with_hidden_counterparts(tmp_path):
+    defects = ("S2_NARRATIVE_ORDER_BREAK", "S5_MISSING_LOGIC_SECTION")
+    positives, cleans = [], []
+    for defect in defects:
+        for index in range(20):
+            pair_id = f"{defect}-{index:02d}"
+            positives.append({
+                "sample_id": pair_id,
+                "labels": [{"type": defect}],
+                "metadata": {"page_image_paths": [f"{pair_id}-positive.png"]},
+            })
+            cleans.append({
+                "sample_id": f"{pair_id}-clean",
+                "labels": [],
+                "pair": {"paired_positive_id": pair_id},
+                "metadata": {"page_image_paths": [f"{pair_id}-clean.png"]},
+            })
+
+    rows, summary = materialize_deck_pairs(
+        positives, cleans, tmp_path, per_class=20, split="final_test")
+
+    assert summary["selected_pairs_per_class"] == {defect: 20 for defect in defects}
+    assert summary["initial_records"] == summary["initial_limit"] == 80
+    assert summary["counterpart_records"] == 80
+    assert len(rows) == 160
+    initial, counterparts = rows[:80], rows[80:]
+    assert all(row["availability"] == "image_only" for row in initial)
+    assert all(row["availability"] == "deck_context_available" for row in counterparts)
+    counterpart_keys = {
+        (row["severity_chain"], row["availability"]) for row in counterparts
+    }
+    assert all(
+        (row["severity_chain"], "deck_context_available") in counterpart_keys
+        for row in initial
+    )
 
 
 def test_materialize_slideaudit_uses_confident_absent_as_named_negative(tmp_path):

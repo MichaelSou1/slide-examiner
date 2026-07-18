@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "frozen_date": "2026-07-19",
+  "scope": [
+    "W7.6 validation",
+    "W7.7 final_test"
+  ],
+  "failure_counters": [
+    "parser_failure",
+    "action_loop",
+    "teacher_failure",
+    "action_mismatch",
+    "consistency_failure",
+    "escalation_failure"
+  ],
+  "scoring_policy": {
+    "runtime_or_parser_failure": "exclude from endpoint denominator and report the failure count and rate; never map a failure to a negative prediction",
+    "defer": "retain as an intentional selective prediction; exclude from covered-risk numerator and denominator while reporting defer rate and coverage",
+    "tool_unavailable": "retain the frozen first-pass action and report escalation_failure; do not synthesize evidence or substitute another arm",
+    "semantic_gate": "inspect each check's eligible flag and named counter; a false top-level passed value alone is not a system-error diagnosis",
+    "cohort_isolation": "score paired image, no-IR, no-reference, novel-template, held-out-severity, deck S2/S5, and SlideAudit cohorts independently",
+    "deck": "report S2 and S5 recall and specificity separately; do not replace them with a pooled balanced aggregate",
+    "slideaudit": "treat confident_absent as the named negative and paired_clean as false; report the image-only and no-native-IR/reference boundary"
+  },
+  "rerun_policy": {
+    "validation": "resume by record_id only after a logged infrastructure or process interruption; never rerun because an endpoint is unfavorable",
+    "final_test": "one attempt only; an additional attempt requires a logged system or parsing failure, an explicit new unlock decision, and preserved evidence from the failed attempt",
+    "forbidden_reasons": [
+      "unfavorable score",
+      "failed success threshold",
+      "checkpoint replacement",
+      "threshold retuning",
+      "primary endpoint replacement"
+    ]
+  },
+  "provenance": {
+    "protocol": "release/part3/d3/freeze.json",
+    "protocol_sha256": "7271ff8168fc9cde6acf0ea5e756a86cd496a727247951c638b563a675255c36",
+    "arm_registry": "reports/part3/w76_arm_registry.json",
+    "table_schema": "reports/part3/w77_table_schema.json"
+  },
+  "final_test_read": false
+}

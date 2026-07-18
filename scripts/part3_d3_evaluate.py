@@ -526,6 +526,34 @@ def score(args: argparse.Namespace) -> None:
     print(json.dumps({"output": str(args.output), "arms": sorted(result["arms"])}, indent=2))
 
 
+def score_cohorts(args: argparse.Namespace) -> None:
+    """Score named cohorts independently so heterogeneous slices are never macro-pooled."""
+    registry = json.loads(args.registry.read_text())
+    cohorts: dict[str, Any] = {}
+    for cohort, paths in registry["cohorts"].items():
+        inputs, rows = [], []
+        for value in paths:
+            path = Path(value)
+            arm_rows = read_jsonl(path)
+            rows.extend(arm_rows)
+            inputs.append({"path": str(path), "rows": len(arm_rows), "sha256": sha256(path)})
+        scored = score_rows(rows)
+        scored["inputs"] = inputs
+        cohorts[str(cohort)] = scored
+    result = {
+        "schema_version": 1,
+        "aggregation": "cohort_independent_no_cross_cohort_macro",
+        "registry": {"path": str(args.registry), "sha256": sha256(args.registry)},
+        "cohorts": cohorts,
+    }
+    args.output.parent.mkdir(parents=True, exist_ok=True)
+    args.output.write_text(json.dumps(result, ensure_ascii=False, indent=2))
+    print(json.dumps({
+        "output": str(args.output),
+        "cohorts": {name: sorted(value["arms"]) for name, value in cohorts.items()},
+    }, indent=2))
+
+
 def compare(args: argparse.Namespace) -> None:
     by_arm: dict[str, list[dict[str, Any]]] = {}
     for path in args.input:
@@ -667,6 +695,10 @@ def main() -> None:
     scorer.add_argument("--input", type=Path, nargs="+", required=True)
     scorer.add_argument("--output", type=Path, required=True)
     scorer.set_defaults(function=score)
+    cohort_scorer = sub.add_parser("score-cohorts")
+    cohort_scorer.add_argument("--registry", type=Path, required=True)
+    cohort_scorer.add_argument("--output", type=Path, required=True)
+    cohort_scorer.set_defaults(function=score_cohorts)
 
     comparator = sub.add_parser("compare")
     comparator.add_argument("--input", type=Path, nargs="+", required=True)

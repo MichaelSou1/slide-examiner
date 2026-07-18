@@ -1,0 +1,13 @@
+Loading weights:   0%|          | 0/750 [00:00<?, ?it/s]Loading weights:   0%|          | 1/750 [00:00<02:23,  5.22it/s]Loading weights:   0%|          | 2/750 [00:00<02:21,  5.27it/s]Loading weights:   1%|▏         | 10/750 [00:00<00:26, 27.78it/s]Loading weights:   4%|▎         | 27/750 [00:00<00:10, 69.74it/s]Loading weights:   6%|▌         | 45/750 [00:00<00:06, 102.37it/s]Loading weights:   8%|▊         | 60/750 [00:00<00:06, 114.15it/s]Loading weights:  11%|█         | 81/750 [00:00<00:04, 136.20it/s]Loading weights:  13%|█▎        | 96/750 [00:01<00:04, 139.83it/s]Loading weights:  15%|█▌        | 115/750 [00:01<00:04, 148.47it/s]Loading weights:  18%|█▊        | 136/750 [00:01<00:03, 158.99it/s]Loading weights:  20%|██        | 153/750 [00:01<00:03, 157.14it/s]Loading weights:  23%|██▎       | 170/750 [00:01<00:03, 158.71it/s]Loading weights:  25%|██▌       | 191/750 [00:01<00:03, 166.33it/s]Loading weights:  28%|██▊       | 208/750 [00:01<00:03, 164.38it/s]Loading weights:  30%|███       | 225/750 [00:01<00:03, 164.02it/s]Loading weights:  33%|███▎      | 246/750 [00:01<00:02, 171.50it/s]Loading weights:  35%|███▌      | 264/750 [00:02<00:02, 170.60it/s]Loading weights:  38%|███▊      | 282/750 [00:02<00:02, 163.91it/s]Loading weights:  40%|████      | 302/750 [00:02<00:02, 169.33it/s]Loading weights:  43%|████▎     | 323/750 [00:02<00:02, 174.85it/s]Loading weights:  45%|████▌     | 341/750 [00:02<00:02, 173.93it/s]Loading weights:  48%|████▊     | 359/750 [00:02<00:02, 165.85it/s]Loading weights:  51%|█████     | 379/750 [00:02<00:02, 169.09it/s]Loading weights:  53%|█████▎    | 401/750 [00:02<00:01, 182.97it/s]Loading weights:  76%|███████▌  | 571/750 [00:02<00:00, 607.75it/s]Loading weights:  97%|█████████▋| 725/750 [00:02<00:00, 872.13it/s]Loading weights: 100%|██████████| 750/750 [00:03<00:00, 246.96it/s]
+Traceback (most recent call last):
+  File "/data/slide-examiner/scripts/part3_d3_infer.py", line 491, in <module>
+    main()
+  File "/data/slide-examiner/scripts/part3_d3_infer.py", line 330, in main
+    first_results = [infer_once(
+  File "/data/slide-examiner/scripts/part3_d3_infer.py", line 146, in infer_once
+    image_list = _images(row)
+  File "/data/slide-examiner/scripts/part3_d3_train.py", line 95, in _images
+    images.append(Image.open(path).convert("RGB"))
+  File "/home/user/miniconda3/envs/WorldArena_VLM/lib/python3.10/site-packages/PIL/Image.py", line 3218, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: '/data/slide-examiner/runs/part2/rendered_clean/part2_ops_efficiency_S2_NARRATIVE_ORDER_BREAK_1_0009__freeform__CLEAN/page_000.png'
