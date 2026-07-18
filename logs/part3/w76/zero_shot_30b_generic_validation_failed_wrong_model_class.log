@@ -1,0 +1,81 @@
+[transformers] You are using a model of type `qwen3_vl_moe` to instantiate a model of type `qwen3_vl`. This may be expected if you are loading a checkpoint that shares a subset of the architecture (e.g., loading a `sam2_video` checkpoint into `Sam2Model`), but is otherwise not supported and can yield errors. Please verify that the checkpoint is compatible with the model you are instantiating.
+Loading weights:   0%|          | 0/738 [00:00<?, ?it/s]Loading weights:   0%|          | 2/738 [00:00<01:11, 10.25it/s]Loading weights:   8%|▊         | 57/738 [00:00<00:02, 236.05it/s]Loading weights:  21%|██        | 153/738 [00:00<00:01, 506.91it/s]Loading weights:  34%|███▍      | 254/738 [00:00<00:00, 681.10it/s]Loading weights:  49%|████▊     | 359/738 [00:00<00:00, 798.99it/s]Loading weights:  70%|██████▉   | 515/738 [00:00<00:00, 1038.24it/s]Loading weights:  94%|█████████▍| 695/738 [00:00<00:00, 1273.18it/s]Loading weights: 100%|██████████| 738/738 [00:00<00:00, 868.51it/s] 
+[transformers] [1mQwen3VLForConditionalGeneration LOAD REPORT[0m from: /data/models/Qwen3-VL-30B-A3B-Instruct
+Key                                                           | Status     | 
+--------------------------------------------------------------+------------+-
+model.language_model.layers.{0...47}.mlp.experts.gate_up_proj | UNEXPECTED | 
+model.language_model.layers.{0...47}.mlp.gate.weight          | UNEXPECTED | 
+model.language_model.layers.{0...47}.mlp.experts.down_proj    | UNEXPECTED | 
+model.language_model.layers.{0...47}.mlp.down_proj.weight     | MISSING    | 
+model.language_model.layers.{0...47}.mlp.up_proj.weight       | MISSING    | 
+model.language_model.layers.{0...47}.mlp.gate_proj.weight     | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+/data2/envs/qwenvl/lib/python3.10/site-packages/bitsandbytes/nn/modules.py:409: UserWarning: FP4 quantization state not initialized. Please call .cuda() or .to(device) on the LinearFP4 layer first.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/data/slide-examiner/scripts/part3_d3_infer.py", line 491, in <module>
+    main()
+  File "/data/slide-examiner/scripts/part3_d3_infer.py", line 330, in main
+    first_results = [infer_once(
+  File "/data/slide-examiner/scripts/part3_d3_infer.py", line 201, in infer_once
+    generated = model.generate(**inputs, max_new_tokens=max_new_tokens, do_sample=False)
+  File "/data2/envs/qwenvl/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+  File "/data2/envs/qwenvl/lib/python3.10/site-packages/transformers/generation/utils.py", line 2584, in generate
+    result = decoding_method(
+  File "/data2/envs/qwenvl/lib/python3.10/site-packages/transformers/generation/utils.py", line 2784, in _sample
+    outputs = self._prefill(
+  File "/data2/envs/qwenvl/lib/python3.10/site-packages/transformers/generation/utils.py", line 3830, in _prefill
+    return self(**model_inputs, return_dict=True)
+  File "/data2/envs/qwenvl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1776, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data2/envs/qwenvl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1787, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data2/envs/qwenvl/lib/python3.10/site-packages/transformers/utils/generic.py", line 907, in wrapper
+    output = func(self, *args, **kwargs)
+  File "/data2/envs/qwenvl/lib/python3.10/site-packages/transformers/models/qwen3_vl/modeling_qwen3_vl.py", line 1385, in forward
+    outputs = self.model(
+  File "/data2/envs/qwenvl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1776, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data2/envs/qwenvl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1787, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data2/envs/qwenvl/lib/python3.10/site-packages/transformers/utils/generic.py", line 907, in wrapper
+    output = func(self, *args, **kwargs)
+  File "/data2/envs/qwenvl/lib/python3.10/site-packages/transformers/models/qwen3_vl/modeling_qwen3_vl.py", line 1250, in forward
+    outputs = self.language_model(
+  File "/data2/envs/qwenvl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1776, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data2/envs/qwenvl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1787, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data2/envs/qwenvl/lib/python3.10/site-packages/transformers/utils/generic.py", line 1036, in wrapper
+    output = func(self, *args, **kwargs)
+  File "/data2/envs/qwenvl/lib/python3.10/site-packages/transformers/utils/output_capturing.py", line 252, in wrapper
+    outputs = func(self, *args, **kwargs)
+  File "/data2/envs/qwenvl/lib/python3.10/site-packages/transformers/models/qwen3_vl/modeling_qwen3_vl.py", line 824, in forward
+    layer_outputs = decoder_layer(
+  File "/data2/envs/qwenvl/lib/python3.10/site-packages/transformers/modeling_layers.py", line 93, in __call__
+    return super().__call__(*args, **kwargs)
+  File "/data2/envs/qwenvl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1776, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data2/envs/qwenvl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1787, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data2/envs/qwenvl/lib/python3.10/site-packages/transformers/models/qwen3_vl/modeling_qwen3_vl.py", line 567, in forward
+    hidden_states = self.mlp(hidden_states)
+  File "/data2/envs/qwenvl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1776, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data2/envs/qwenvl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1787, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data2/envs/qwenvl/lib/python3.10/site-packages/transformers/models/qwen3_vl/modeling_qwen3_vl.py", line 525, in forward
+    down_proj = self.down_proj(self.act_fn(self.gate_proj(x)) * self.up_proj(x))
+  File "/data2/envs/qwenvl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1776, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data2/envs/qwenvl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1787, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data2/envs/qwenvl/lib/python3.10/site-packages/bitsandbytes/nn/modules.py", line 529, in forward
+    fix_4bit_weight_quant_state_from_module(self)
+  File "/data2/envs/qwenvl/lib/python3.10/site-packages/bitsandbytes/nn/modules.py", line 415, in fix_4bit_weight_quant_state_from_module
+    assert module.weight.shape[1] == 1
+AssertionError

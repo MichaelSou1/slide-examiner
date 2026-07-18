@@ -11,7 +11,13 @@ from typing import Any
 
 import torch
 from peft import PeftModel
-from transformers import AutoProcessor, BitsAndBytesConfig, Qwen3VLForConditionalGeneration
+from transformers import (
+    AutoConfig,
+    AutoProcessor,
+    BitsAndBytesConfig,
+    Qwen3VLForConditionalGeneration,
+    Qwen3VLMoeForConditionalGeneration,
+)
 
 from slide_examiner.d3_evaluation import (
     generated_route_action,
@@ -36,8 +42,13 @@ def load(run: Path | None, base: str, device: torch.device,
     processor = AutoProcessor.from_pretrained(processor_source, trust_remote_code=True)
     if max_image_pixels is not None:
         processor.image_processor.size["longest_edge"] = max_image_pixels
+    model_source = merged_model or base
+    config = AutoConfig.from_pretrained(model_source, trust_remote_code=True)
+    model_class = (Qwen3VLMoeForConditionalGeneration
+                   if config.model_type == "qwen3_vl_moe"
+                   else Qwen3VLForConditionalGeneration)
     if merged_model is not None:
-        model = Qwen3VLForConditionalGeneration.from_pretrained(
+        model = model_class.from_pretrained(
             merged_model, torch_dtype=torch.bfloat16, device_map={"": 0},
             trust_remote_code=True, attn_implementation="sdpa",
         ).eval()
@@ -45,7 +56,7 @@ def load(run: Path | None, base: str, device: torch.device,
         quant = BitsAndBytesConfig(load_in_4bit=True, bnb_4bit_quant_type="nf4",
                                   bnb_4bit_compute_dtype=torch.bfloat16,
                                   bnb_4bit_use_double_quant=True)
-        model = Qwen3VLForConditionalGeneration.from_pretrained(
+        model = model_class.from_pretrained(
             base, torch_dtype=torch.bfloat16, quantization_config=quant, device_map={"": 0},
             trust_remote_code=True, attn_implementation="sdpa",
         )
