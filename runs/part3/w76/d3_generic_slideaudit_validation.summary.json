@@ -1,0 +1,92 @@
+{
+  "parser_failure": 0,
+  "action_loop": 5,
+  "teacher_failure": 0,
+  "action_mismatch": 0,
+  "consistency_failure": 0,
+  "escalation_failure": 5,
+  "records": 280,
+  "resumed_records": 27,
+  "balanced": false,
+  "deployment": {
+    "lm": "base_plus_adapter",
+    "model_path": "/data/public_data/xzs_data/Qwen3-VL-8B-Instruct",
+    "adapter_path": "runs/part3/d3_formal_v2/train_seed73/adapter",
+    "heads_path": "runs/part3/d3_formal_v2/train_seed73/d3_heads.pt",
+    "policy_path": "runs/part3/d3_selection/frozen_policy.json",
+    "confidence_threshold": 0.0,
+    "max_escalations": 1,
+    "route_mode": "sample",
+    "prompt_mode": "generic",
+    "class_router_path": null,
+    "fixed_action": null,
+    "batch_size": 1,
+    "max_image_pixels": 262144,
+    "route_only": false,
+    "worst_case_model_calls": 2,
+    "worst_case_tool_calls": 1
+  },
+  "semantic_counts": {
+    "g7_legal_answer": 0,
+    "geometry_image_only_safe_route": 176,
+    "reference_request": 0,
+    "performed_escalation": 0
+  },
+  "semantic_gate": {
+    "passed": false,
+    "checks": {
+      "g7_image_only_legal_finding": {
+        "eligible": 0,
+        "passed_records": 0,
+        "passed": false
+      },
+      "g2_g6_image_only_safe_route": {
+        "eligible": 200,
+        "passed_records": 176,
+        "passed": false
+      },
+      "reference_escalation_completes": {
+        "eligible": 0,
+        "passed_records": 0,
+        "passed": false
+      },
+      "deck_escalation_completes": {
+        "eligible": 0,
+        "passed_records": 0,
+        "passed": false
+      },
+      "clean_deck_not_forced_positive": {
+        "eligible": 0,
+        "passed_records": 0,
+        "passed": false
+      },
+      "runtime_failures_zero": {
+        "eligible": 280,
+        "passed_records": 0,
+        "passed": false
+      }
+    },
+    "failure_reasons": [
+      "g7_image_only_legal_finding",
+      "g2_g6_image_only_safe_route",
+      "reference_escalation_completes",
+      "deck_escalation_completes",
+      "clean_deck_not_forced_positive",
+      "runtime_failures_zero"
+    ]
+  },
+  "clean_control_definition": "is_clean_deck=true, or frozen-dev NO_DEFECT with deck_context_available",
+  "action_distribution": {
+    "DEFER": 246,
+    "ANSWER": 29,
+    "REQUEST_REFERENCE": 5
+  },
+  "target_action_distribution": {
+    "ANSWER": 280
+  },
+  "parser_success": 280,
+  "post_escalation_parser_success": 0,
+  "completed_escalation": 0,
+  "action_correct": 29,
+  "output": "runs/part3/w76/d3_generic_slideaudit_validation.jsonl"
+}
