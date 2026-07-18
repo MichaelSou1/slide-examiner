@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "per_class_columns": ["arm", "defect", "n_pos", "n_neg", "balanced_accuracy", "balanced_accuracy_ci_low", "balanced_accuracy_ci_high", "precision", "precision_ci_low", "precision_ci_high", "recall", "recall_ci_low", "recall_ci_high", "specificity", "specificity_ci_low", "specificity_ci_high", "paired_clean_fpr", "named_localization", "named_localization_ci_low", "named_localization_ci_high", "failures"],
+  "cost_columns": ["arm", "action_accuracy", "defer_rate", "coverage", "mean_model_calls", "mean_external_calls", "mean_prompt_tokens", "mean_completion_tokens", "mean_total_tokens", "mean_latency_seconds"],
+  "plots": ["risk_coverage.png", "accuracy_cost_pareto.png"],
+  "graceful_degradation_slices": ["no_ir", "no_reference"],
+  "deck_columns": ["arm", "defect", "clean_deck_training", "recall", "specificity"],
+  "missing_value_policy": "null with an explicit reason; never impute failures as negatives"
+}
