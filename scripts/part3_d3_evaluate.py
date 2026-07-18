@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+from collections import defaultdict
 import hashlib
 import json
 import subprocess
@@ -20,6 +21,7 @@ from slide_examiner.d3_evaluation import (  # noqa: E402
     pareto_frontier,
     score_rows,
 )
+from slide_examiner.d3_training import GENERIC_INSPECTION_INSTRUCTION  # noqa: E402
 
 
 def read_jsonl(path: Path) -> list[dict[str, Any]]:
@@ -70,6 +72,101 @@ def assert_final_test_unlocked(repo: Path, registry: Path) -> dict[str, Any]:
     if registry_after_freeze.returncode:
         raise RuntimeError("unlock registry was committed before freeze_commit")
     return payload
+
+
+def _relocatable(value: str, repo: Path) -> str:
+    """Normalize historical absolute paths to checkout-relative runtime paths."""
+    for marker in ("/runs/", "/data/", "/release/"):
+        if marker in value:
+            return str(Path(marker.strip("/")) / value.split(marker, 1)[1])
+    path = Path(value)
+    return str(path.relative_to(repo)) if path.is_absolute() and path.is_relative_to(repo) else value
+
+
+def _message(images: list[str], availability: str, structure: dict[str, Any] | None = None
+             ) -> list[dict[str, Any]]:
+    context: dict[str, Any] = {"availability": availability}
+    if structure is not None:
+        context["structure"] = structure
+    if availability == "reference_available":
+        context["reference_note"] = (
+            "The first image is the clean/reference candidate when two images are supplied.")
+    content = [{"type": "image", "image": path} for path in images]
+    content.append({"type": "text", "text": GENERIC_INSPECTION_INSTRUCTION
+                    + "\nINPUT_CONTEXT=" + json.dumps(context, ensure_ascii=False,
+                                                         separators=(",", ":"))})
+    return [{"role": "user", "content": content}]
+
+
+def materialize_paired_images(rows: list[dict[str, Any]], repo: Path, per_class: int,
+                              split: str = "validation"
+                              ) -> tuple[list[dict[str, Any]], dict[str, Any]]:
+    """Create frozen positive/clean initial rows followed by hidden escalation counterparts."""
+    by_defect: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    for row in rows:
+        if row.get("labels"):
+            by_defect[str(row["labels"][0]["type"])].append(row)
+    selected = [row for defect in sorted(by_defect)
+                for row in sorted(by_defect[defect], key=lambda item: str(item["sample_id"]))[:per_class]]
+    initial, counterparts = [], []
+    for source in selected:
+        defect = str(source["labels"][0]["type"])
+        pair_id = str(source["sample_id"])
+        severity = float(source["labels"][0].get("severity", 0.0))
+        pair = source.get("pair") or source.get("metadata") or {}
+        clean_image = _relocatable(str(pair["clean_image_path"]), repo)
+        defective_image = _relocatable(str(pair["defective_image_path"]), repo)
+        clean_slide = (json.loads((repo / _relocatable(str(pair["clean_slide_path"]), repo)).read_text())
+                       if pair.get("clean_slide_path") else None)
+        defective_slide = (json.loads(
+            (repo / _relocatable(str(pair["defective_slide_path"]), repo)).read_text())
+                            if pair.get("defective_slide_path") else source.get("slide"))
+        route = ("CALL_LINTER" if defect.split("_", 1)[0] in {"G2", "G3", "G4", "G5", "G6"}
+                 else "REQUEST_REFERENCE" if defect.split("_", 1)[0] in {"G1", "S6"}
+                 else "ANSWER")
+        for clean, image, structure in ((False, defective_image, defective_slide),
+                                        (True, clean_image, clean_slide)):
+            sample_id = pair_id + ("__clean" if clean else "__positive")
+            common = {"sample_id": sample_id, "pair_id": pair_id, "defect": defect,
+                      "is_clean": clean, "is_clean_deck": False, "severity": severity,
+                      "severity_chain": f"{sample_id}|{defect}", "split": split}
+            initial.append({**common, "record_id": sample_id + "__image_only",
+                            "availability": "image_only", "target_action": route,
+                            "images": [image], "messages": _message([image], "image_only")})
+            if route == "CALL_LINTER":
+                counterparts.append({**common, "record_id": sample_id + "__image_structure",
+                                     "availability": "image_structure", "target_action": "ANSWER",
+                                     "images": [image],
+                                     "messages": _message([image], "image_structure", structure)})
+            elif route == "REQUEST_REFERENCE":
+                images = [clean_image, image]
+                counterparts.append({**common, "record_id": sample_id + "__reference",
+                                     "availability": "reference_available", "target_action": "ANSWER",
+                                     "images": images,
+                                     "messages": _message(images, "reference_available")})
+    summary = {"source_rows": len(rows), "selected_pairs": len(selected),
+               "initial_records": len(initial), "counterpart_records": len(counterparts),
+               "initial_limit": len(initial),
+               "per_class_pairs": {defect: sum(row["defect"] == defect for row in initial) // 2
+                                   for defect in sorted(by_defect)}}
+    return initial + counterparts, summary
+
+
+def materialize(args: argparse.Namespace) -> None:
+    if args.split == "final_test":
+        if not args.freeze_registry:
+            raise RuntimeError("--freeze-registry is mandatory before reading final_test")
+        assert_final_test_unlocked(args.repo.resolve(), args.freeze_registry.resolve())
+    source_rows = [row for manifest in args.manifest for row in read_jsonl(manifest)]
+    rows, summary = materialize_paired_images(
+        source_rows, args.repo.resolve(), args.per_class, split=args.split)
+    write_jsonl(args.output, rows)
+    summary.update({"split": args.split,
+                    "manifests": [{"path": str(path), "sha256": sha256(path)}
+                                  for path in args.manifest], "output": str(args.output),
+                    "output_sha256": sha256(args.output)})
+    args.output.with_suffix(".summary.json").write_text(json.dumps(summary, indent=2))
+    print(json.dumps(summary, indent=2))
 
 
 def normalize(args: argparse.Namespace) -> None:
@@ -163,6 +260,14 @@ def plot(args: argparse.Namespace) -> None:
 def main() -> None:
     parser = argparse.ArgumentParser()
     sub = parser.add_subparsers(dest="command", required=True)
+    materializer = sub.add_parser("materialize")
+    materializer.add_argument("--repo", type=Path, default=Path.cwd())
+    materializer.add_argument("--manifest", type=Path, nargs="+", required=True)
+    materializer.add_argument("--output", type=Path, required=True)
+    materializer.add_argument("--split", choices=("validation", "final_test"), required=True)
+    materializer.add_argument("--per-class", type=int, default=12)
+    materializer.add_argument("--freeze-registry", type=Path)
+    materializer.set_defaults(function=materialize)
     normalizer = sub.add_parser("normalize")
     normalizer.add_argument("--repo", type=Path, default=Path.cwd())
     normalizer.add_argument("--input", type=Path, required=True)

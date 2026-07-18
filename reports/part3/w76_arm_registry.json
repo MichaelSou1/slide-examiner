@@ -1,7 +1,10 @@
 {
   "schema_version": 1,
   "created_date": "2026-07-18",
-  "selection_data": ["dev", "validation"],
+  "selection_data": [
+    "dev",
+    "validation"
+  ],
   "final_test_read": false,
   "primary_student": {
     "arm": "d3_generic_sample_escalation",
@@ -12,20 +15,108 @@
     "max_escalations": 1
   },
   "arms": [
-    {"id": "zero_shot_8b_generic", "model": "/data/public_data/xzs_data/Qwen3-VL-8B-Instruct", "prompt": "generic", "route": "none", "status": "available"},
-    {"id": "zero_shot_30b_generic", "model": null, "prompt": "generic", "route": "none", "status": "blocked", "blocker": "No verified 30B endpoint or local checkpoint is currently available; 27B traces must not be relabeled as 30B."},
-    {"id": "part2_v2_generic", "model": "runs/part2/examiner_lora_v2/adapter", "prompt": "generic", "route": "none", "status": "available"},
-    {"id": "fixed_c0", "model": "actual API model recorded per trace", "prompt": "C0", "route": "fixed", "status": "available"},
-    {"id": "uniform_c3", "model": "actual API model recorded per trace", "prompt": "C3", "route": "fixed", "status": "available"},
-    {"id": "manual_frozen_route", "model": "actual engine recorded per trace", "prompt": "frozen per-class", "route": "manual class-level", "status": "available"},
-    {"id": "compute_matched_vanilla_generic", "model": "runs/part3/d3_formal_v2/vanilla_compute_matched_seed42/adapter", "prompt": "generic", "route": "none", "status": "available"},
-    {"id": "learned_class_route", "model": "runs/part3/d3_formal_v2/train_seed73", "prompt": "generic", "route": "train-only multinomial class router", "status": "available"},
-    {"id": "learned_sample_route_no_escalation", "model": "runs/part3/d3_formal_v2/train_seed73", "prompt": "generic", "route": "sample-level", "max_escalations": 0, "status": "available"},
-    {"id": "d3_generic_sample_escalation", "model": "runs/part3/d3_formal_v2/train_seed73", "prompt": "generic", "route": "sample-level", "max_escalations": 1, "status": "available"},
-    {"id": "teacher_c3", "model": "actual API model recorded per trace", "prompt": "C3", "route": "none", "status": "available"},
-    {"id": "d3_c3", "model": "runs/part3/d3_formal_v2/train_seed73", "prompt": "C3", "route": "sample-level", "status": "implementation_pending"}
+    {
+      "id": "zero_shot_8b_generic",
+      "model": "/data/public_data/xzs_data/Qwen3-VL-8B-Instruct",
+      "prompt": "generic",
+      "route": "none",
+      "status": "available"
+    },
+    {
+      "id": "zero_shot_30b_generic",
+      "model": null,
+      "prompt": "generic",
+      "route": "none",
+      "status": "blocked",
+      "blocker": "2026-07-18 live check: huirui path /home/gpus/models/Qwen3-VL-30B-A3B-Instruct-AWQ is missing; host 150 timed out twice and remains unverified. No 27B trace may be relabeled as 30B."
+    },
+    {
+      "id": "part2_v2_generic",
+      "model": "runs/part2/examiner_lora_v2/adapter",
+      "prompt": "generic",
+      "route": "none",
+      "status": "available"
+    },
+    {
+      "id": "fixed_c0",
+      "model": "actual API model recorded per trace",
+      "prompt": "C0",
+      "route": "fixed",
+      "status": "available"
+    },
+    {
+      "id": "uniform_c3",
+      "model": "actual API model recorded per trace",
+      "prompt": "C3",
+      "route": "fixed",
+      "status": "available"
+    },
+    {
+      "id": "manual_frozen_route",
+      "model": "actual engine recorded per trace",
+      "prompt": "frozen per-class",
+      "route": "manual class-level",
+      "status": "available"
+    },
+    {
+      "id": "compute_matched_vanilla_generic",
+      "model": "runs/part3/d3_formal_v2/vanilla_compute_matched_seed42/adapter",
+      "prompt": "generic",
+      "route": "none",
+      "status": "available"
+    },
+    {
+      "id": "learned_class_route",
+      "model": "runs/part3/d3_formal_v2/train_seed73",
+      "prompt": "generic",
+      "route": "train-only multinomial class router",
+      "status": "available"
+    },
+    {
+      "id": "learned_sample_route_no_escalation",
+      "model": "runs/part3/d3_formal_v2/train_seed73",
+      "prompt": "generic",
+      "route": "sample-level",
+      "max_escalations": 0,
+      "status": "available"
+    },
+    {
+      "id": "d3_generic_sample_escalation",
+      "model": "runs/part3/d3_formal_v2/train_seed73",
+      "prompt": "generic",
+      "route": "sample-level",
+      "max_escalations": 1,
+      "status": "available"
+    },
+    {
+      "id": "teacher_c3",
+      "model": "actual API model recorded per trace",
+      "prompt": "C3",
+      "route": "none",
+      "status": "available"
+    },
+    {
+      "id": "d3_c3",
+      "model": "runs/part3/d3_formal_v2/train_seed73",
+      "prompt": "C3",
+      "route": "sample-level",
+      "status": "available"
+    }
   ],
-  "loss_ablations": ["no_distill", "no_pair", "no_severity", "no_route", "no_select"],
-  "required_slices": ["no_ir", "no_reference", "novel_template", "held_out_severity", "S2_clean_deck", "S5_clean_deck"],
+  "loss_ablations": [
+    "no_distill",
+    "no_pair",
+    "no_severity",
+    "no_route",
+    "no_select"
+  ],
+  "required_slices": [
+    "no_ir",
+    "no_reference",
+    "novel_template",
+    "held_out_severity",
+    "S2_clean_deck",
+    "S5_clean_deck"
+  ],
   "comparability_rule": "An arm name records the real model, prompt, route, split, and hashes. Historical traces are included only when sample IDs and split match; no proxy model is renamed to satisfy a requested parameter size."
 }

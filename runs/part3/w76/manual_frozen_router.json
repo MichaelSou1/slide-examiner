@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "created_date": "2026-07-18",
+  "fit_data": null,
+  "manual_route_used": true,
+  "frozen_before_validation_scoring": true,
+  "routes": {
+    "G1": {
+      "prediction": "REQUEST_REFERENCE"
+    },
+    "G2": {
+      "prediction": "CALL_LINTER"
+    },
+    "G3": {
+      "prediction": "CALL_LINTER"
+    },
+    "G4": {
+      "prediction": "CALL_LINTER"
+    },
+    "G5": {
+      "prediction": "CALL_LINTER"
+    },
+    "G6": {
+      "prediction": "CALL_LINTER"
+    },
+    "G7": {
+      "prediction": "ANSWER"
+    },
+    "NO": {
+      "prediction": "ANSWER"
+    },
+    "S1": {
+      "prediction": "ANSWER"
+    },
+    "S2": {
+      "prediction": "REQUEST_DECK"
+    },
+    "S3": {
+      "prediction": "REQUEST_DECK"
+    },
+    "S4": {
+      "prediction": "ANSWER"
+    },
+    "S5": {
+      "prediction": "REQUEST_DECK"
+    },
+    "S6": {
+      "prediction": "REQUEST_REFERENCE"
+    }
+  },
+  "rationale": "Frozen attribution-derived availability policy; no validation labels or outputs were used."
+}

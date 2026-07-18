@@ -1,0 +1,31 @@
+{
+  "source_rows": 1350,
+  "selected_pairs": 108,
+  "initial_records": 216,
+  "counterpart_records": 144,
+  "initial_limit": 216,
+  "per_class_pairs": {
+    "G1_TEXT_OVERFLOW": 12,
+    "G2_ELEMENT_OVERLAP": 12,
+    "G3_ALIGNMENT_OFFSET": 12,
+    "G5_BRAND_COLOR_VIOLATION": 12,
+    "G6_MARGIN_VIOLATION": 12,
+    "G7_RENDER_CONTAINMENT_OVERFLOW": 12,
+    "S1_TITLE_BODY_MISMATCH": 12,
+    "S4_DENSITY_RULE_VIOLATION": 12,
+    "S6_IMAGE_TEXT_CONTRADICTION": 12
+  },
+  "split": "validation",
+  "manifests": [
+    {
+      "path": "data/part3/w5_heldout.jsonl",
+      "sha256": "a5c3932f00f02aee179802f615c8d531c78a6787c956ffd97dcadd507ab4212e"
+    },
+    {
+      "path": "data/part3/w5_heldout_g7.jsonl",
+      "sha256": "d101566951a3afdef28122fb9ff0da7b37ad95d9ee91c69d98fdd322a2dfb56e"
+    }
+  ],
+  "output": "runs/part3/w76/validation_pairs12.jsonl",
+  "output_sha256": "a8bce67f03e95bb5ad268fbd9f790350dc73a79598d8b4445a7b527aed1fa96e"
+}

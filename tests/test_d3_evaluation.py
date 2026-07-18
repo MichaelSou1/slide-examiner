@@ -3,7 +3,7 @@ import subprocess
 
 import pytest
 
-from scripts.part3_d3_evaluate import assert_final_test_unlocked
+from scripts.part3_d3_evaluate import assert_final_test_unlocked, materialize_paired_images
 from slide_examiner.d3_evaluation import (
     exact_mcnemar, holm_family, normalize_runtime_row, pareto_frontier, prompt_row, score_arm,
     validate_deployment,
@@ -112,6 +112,33 @@ def test_lm_only_deployment_guards(run, merged, adapter, mode, error):
         assert error in actual
     else:
         assert actual is None
+
+
+def test_materialize_paired_images_preserves_defect_on_clean_twin(tmp_path):
+    clean = {"slide_id": "clean", "width": 10, "height": 10, "elements": []}
+    defective = {"slide_id": "defective", "width": 10, "height": 10, "elements": []}
+    (tmp_path / "clean.json").write_text(json.dumps(clean))
+    (tmp_path / "defective.json").write_text(json.dumps(defective))
+    row = {"sample_id": "pair-1", "labels": [{"type": "G2_ELEMENT_OVERLAP", "severity": 1}],
+           "pair": {"clean_image_path": "clean.png", "defective_image_path": "defective.png",
+                    "clean_slide_path": "clean.json", "defective_slide_path": "defective.json"}}
+    records, summary = materialize_paired_images([row], tmp_path, 1)
+    initial = records[:summary["initial_limit"]]
+    assert len(initial) == 2 and {item["is_clean"] for item in initial} == {False, True}
+    assert {item["defect"] for item in initial} == {"G2_ELEMENT_OVERLAP"}
+    assert {item["pair_id"] for item in initial} == {"pair-1"}
+    assert all(item["availability"] == "image_only" for item in initial)
+    assert len(records) == 4 and records[-1]["availability"] == "image_structure"
+
+
+def test_materialize_paired_images_uses_requested_split(tmp_path):
+    (tmp_path / "clean.json").write_text(json.dumps({"elements": []}))
+    (tmp_path / "defective.json").write_text(json.dumps({"elements": []}))
+    row = {"sample_id": "pair-1", "labels": [{"type": "G2_ELEMENT_OVERLAP"}],
+           "pair": {"clean_image_path": "clean.png", "defective_image_path": "defective.png",
+                    "clean_slide_path": "clean.json", "defective_slide_path": "defective.json"}}
+    records, _ = materialize_paired_images([row], tmp_path, 1, split="final_test")
+    assert {record["split"] for record in records} == {"final_test"}
 
 
 def test_final_test_guard_requires_committed_clean_registry(tmp_path):
