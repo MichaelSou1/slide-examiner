@@ -299,6 +299,20 @@ def test_materialize_deck_pairs_uses_deck_contract_and_paired_clean(tmp_path):
     assert "S2_NARRATIVE_ORDER_BREAK" in messages[-1]["content"][-1]["text"]
 
 
+def test_materialize_deck_pairs_supports_final_test_pair_pointer(tmp_path):
+    positive = {"sample_id": "deck-a", "labels": [{"type": "S5_MISSING_LOGIC_SECTION"}],
+                "metadata": {"page_image_paths": ["positive.png"]}}
+    clean = {"sample_id": "deck-a_CLEAN_DECK", "labels": [],
+             "pair": {"paired_positive_id": "deck-a"},
+             "metadata": {"page_image_paths": ["clean.png"]}}
+    rows, summary = materialize_deck_pairs(
+        [positive], [clean], tmp_path, 1, split="final_test")
+    assert summary["selected_pairs_per_class"] == {"S5_MISSING_LOGIC_SECTION": 1}
+    assert len(rows) == 4
+    assert {row["split"] for row in rows} == {"final_test"}
+    assert {row["is_clean"] for row in rows[:2]} == {False, True}
+
+
 def test_materialize_slideaudit_uses_confident_absent_as_named_negative(tmp_path):
     rows = [
         {"sample_id": "sa-pos", "image_path": "pos.png",

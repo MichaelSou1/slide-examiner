@@ -197,10 +197,16 @@ def _deck_message(images: list[str], sample_id: str) -> list[dict[str, Any]]:
 
 
 def materialize_deck_pairs(positive_rows: list[dict[str, Any]], clean_rows: list[dict[str, Any]],
-                           repo: Path, per_class: int = 12
+                           repo: Path, per_class: int = 12, split: str = "validation"
                            ) -> tuple[list[dict[str, Any]], dict[str, Any]]:
     """Build S2/S5 first-page requests plus complete paired positive/clean deck contexts."""
-    clean_by_source = {str(row["sample_id"]).removesuffix("__CLEAN"): row for row in clean_rows}
+    clean_by_source: dict[str, dict[str, Any]] = {}
+    for row in clean_rows:
+        paired_id = (row.get("pair") or {}).get("paired_positive_id")
+        if paired_id:
+            clean_by_source[str(paired_id)] = row
+        else:
+            clean_by_source[str(row["sample_id"]).removesuffix("__CLEAN")] = row
     by_defect: dict[str, list[dict[str, Any]]] = defaultdict(list)
     for row in positive_rows:
         for label in row.get("labels", []):
@@ -225,7 +231,7 @@ def materialize_deck_pairs(positive_rows: list[dict[str, Any]], clean_rows: list
                 common = {"sample_id": sample_id, "pair_id": pair_id, "defect": defect,
                           "is_clean": is_clean, "is_clean_deck": is_clean,
                           "severity": 0.0 if is_clean else 1.0,
-                          "severity_chain": f"{sample_id}|{defect}", "split": "validation"}
+                          "severity_chain": f"{sample_id}|{defect}", "split": split}
                 initial.append({**common, "record_id": sample_id + "__image_only",
                                 "availability": "image_only", "target_action": "REQUEST_DECK",
                                 "images": paths[:1],
@@ -305,19 +311,43 @@ def materialize_slice(args: argparse.Namespace) -> None:
 
 
 def materialize_decks(args: argparse.Namespace) -> None:
+    if args.split == "final_test":
+        if not args.freeze_registry:
+            raise RuntimeError("--freeze-registry is mandatory before reading final_test decks")
+        assert_final_test_unlocked(args.repo.resolve(), args.freeze_registry.resolve())
     positives = [row for path in args.manifest for row in read_jsonl(path)]
     cleans = [row for path in args.clean_manifest for row in read_jsonl(path)]
     rows, summary = materialize_deck_pairs(
-        positives, cleans, args.repo.resolve(), args.per_class)
+        positives, cleans, args.repo.resolve(), args.per_class, split=args.split)
     write_jsonl(args.output, rows)
     summary.update({
         "manifests": [{"path": str(path), "sha256": sha256(path)}
                       for path in [*args.manifest, *args.clean_manifest]],
         "output": str(args.output), "output_sha256": sha256(args.output),
-        "final_test_read": False,
+        "split": args.split, "final_test_read": args.split == "final_test",
     })
     args.output.with_suffix(".summary.json").write_text(json.dumps(summary, indent=2))
     print(json.dumps(summary, indent=2))
+
+
+def render_decks(args: argparse.Namespace) -> None:
+    """Guard final-test deck reads before rendering their page images."""
+    if args.split == "final_test":
+        if not args.freeze_registry:
+            raise RuntimeError("--freeze-registry is mandatory before rendering final_test decks")
+        assert_final_test_unlocked(args.repo.resolve(), args.freeze_registry.resolve())
+    from slide_examiner.render import render_manifest
+
+    target = render_manifest(
+        args.manifest,
+        args.output_dir,
+        output_manifest=args.output_manifest,
+        render_clean=False,
+        long_edge=args.long_edge,
+    )
+    print(json.dumps({"split": args.split, "output_manifest": str(target),
+                      "output_sha256": sha256(target),
+                      "final_test_read": args.split == "final_test"}, indent=2))
 
 
 def materialize_real(args: argparse.Namespace) -> None:
@@ -580,7 +610,19 @@ def main() -> None:
     deck_materializer.add_argument("--clean-manifest", type=Path, nargs="+", required=True)
     deck_materializer.add_argument("--output", type=Path, required=True)
     deck_materializer.add_argument("--per-class", type=int, default=12)
+    deck_materializer.add_argument("--split", choices=("validation", "final_test"),
+                                   default="validation")
+    deck_materializer.add_argument("--freeze-registry", type=Path)
     deck_materializer.set_defaults(function=materialize_decks)
+    deck_renderer = sub.add_parser("render-decks")
+    deck_renderer.add_argument("--repo", type=Path, default=Path.cwd())
+    deck_renderer.add_argument("--manifest", type=Path, required=True)
+    deck_renderer.add_argument("--output-dir", type=Path, required=True)
+    deck_renderer.add_argument("--output-manifest", type=Path, required=True)
+    deck_renderer.add_argument("--long-edge", type=int, default=1024)
+    deck_renderer.add_argument("--split", choices=("validation", "final_test"), required=True)
+    deck_renderer.add_argument("--freeze-registry", type=Path)
+    deck_renderer.set_defaults(function=render_decks)
     real_materializer = sub.add_parser("materialize-slideaudit")
     real_materializer.add_argument("--repo", type=Path, default=Path.cwd())
     real_materializer.add_argument("--manifest", type=Path, required=True)
