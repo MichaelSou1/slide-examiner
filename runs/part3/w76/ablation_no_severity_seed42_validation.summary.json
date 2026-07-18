@@ -1,0 +1,91 @@
+{
+  "parser_failure": 0,
+  "action_loop": 0,
+  "teacher_failure": 0,
+  "action_mismatch": 0,
+  "consistency_failure": 0,
+  "escalation_failure": 0,
+  "records": 216,
+  "resumed_records": 0,
+  "balanced": false,
+  "deployment": {
+    "lm": "base_plus_adapter",
+    "model_path": "/data/public_data/xzs_data/Qwen3-VL-8B-Instruct",
+    "adapter_path": "runs/part3/d3_formal_v2/ablation_no_severity_seed42/adapter",
+    "heads_path": "runs/part3/d3_formal_v2/ablation_no_severity_seed42/d3_heads.pt",
+    "policy_path": "runs/part3/d3_selection/frozen_policy.json",
+    "confidence_threshold": 0.0,
+    "max_escalations": 1,
+    "route_mode": "sample",
+    "prompt_mode": "generic",
+    "class_router_path": null,
+    "fixed_action": null,
+    "batch_size": 1,
+    "max_image_pixels": 262144,
+    "route_only": false,
+    "worst_case_model_calls": 2,
+    "worst_case_tool_calls": 1
+  },
+  "semantic_counts": {
+    "g7_legal_answer": 12,
+    "geometry_image_only_safe_route": 96,
+    "reference_request": 12,
+    "performed_escalation": 12
+  },
+  "semantic_gate": {
+    "passed": false,
+    "checks": {
+      "g7_image_only_legal_finding": {
+        "eligible": 24,
+        "passed_records": 12,
+        "passed": false
+      },
+      "g2_g6_image_only_safe_route": {
+        "eligible": 96,
+        "passed_records": 96,
+        "passed": true
+      },
+      "reference_escalation_completes": {
+        "eligible": 12,
+        "passed_records": 12,
+        "passed": true
+      },
+      "deck_escalation_completes": {
+        "eligible": 0,
+        "passed_records": 0,
+        "passed": false
+      },
+      "clean_deck_not_forced_positive": {
+        "eligible": 0,
+        "passed_records": 0,
+        "passed": false
+      },
+      "runtime_failures_zero": {
+        "eligible": 216,
+        "passed_records": 216,
+        "passed": true
+      }
+    },
+    "failure_reasons": [
+      "g7_image_only_legal_finding",
+      "deck_escalation_completes",
+      "clean_deck_not_forced_positive"
+    ]
+  },
+  "clean_control_definition": "is_clean_deck=true, or frozen-dev NO_DEFECT with deck_context_available",
+  "action_distribution": {
+    "REQUEST_REFERENCE": 12,
+    "DEFER": 174,
+    "ANSWER": 30
+  },
+  "target_action_distribution": {
+    "REQUEST_REFERENCE": 48,
+    "CALL_LINTER": 96,
+    "ANSWER": 72
+  },
+  "parser_success": 216,
+  "post_escalation_parser_success": 12,
+  "completed_escalation": 12,
+  "action_correct": 36,
+  "output": "runs/part3/w76/ablation_no_severity_seed42_validation.jsonl"
+}
