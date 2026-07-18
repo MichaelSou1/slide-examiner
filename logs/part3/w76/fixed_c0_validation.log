@@ -1,0 +1,37 @@
+{"completed": 10, "total": 216}
+{"completed": 20, "total": 216}
+{"completed": 30, "total": 216}
+{"completed": 40, "total": 216}
+{"completed": 50, "total": 216}
+{"completed": 60, "total": 216}
+{"completed": 70, "total": 216}
+{"completed": 80, "total": 216}
+{"completed": 90, "total": 216}
+{"completed": 100, "total": 216}
+{"completed": 110, "total": 216}
+{"completed": 120, "total": 216}
+{"completed": 130, "total": 216}
+{"completed": 140, "total": 216}
+{"completed": 150, "total": 216}
+{"completed": 160, "total": 216}
+{"completed": 170, "total": 216}
+{"completed": 180, "total": 216}
+{"completed": 190, "total": 216}
+{"completed": 200, "total": 216}
+{"completed": 210, "total": 216}
+{"completed": 216, "total": 216}
+{
+  "records": 216,
+  "failures": 12,
+  "model_requested": "qwen3.5-plus",
+  "models_actual": [
+    "qwen3.5-plus"
+  ],
+  "api_style": "chat",
+  "prompt_mode": "generic",
+  "input": "runs/part3/w76/validation_pairs12.jsonl",
+  "input_sha256": "a8bce67f03e95bb5ad268fbd9f790350dc73a79598d8b4445a7b527aed1fa96e",
+  "output": "runs/part3/w76/fixed_c0_validation.jsonl",
+  "output_sha256": "498130f0f57bb58c6c35bd7d5a47c4aaaca8f796406a1e1e616da193fb2dc085",
+  "final_test_read": false
+}

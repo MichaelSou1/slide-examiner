@@ -1,0 +1,15 @@
+{
+  "records": 216,
+  "failures": 12,
+  "model_requested": "qwen3.5-plus",
+  "models_actual": [
+    "qwen3.5-plus"
+  ],
+  "api_style": "chat",
+  "prompt_mode": "generic",
+  "input": "runs/part3/w76/validation_pairs12.jsonl",
+  "input_sha256": "a8bce67f03e95bb5ad268fbd9f790350dc73a79598d8b4445a7b527aed1fa96e",
+  "output": "runs/part3/w76/fixed_c0_validation.jsonl",
+  "output_sha256": "498130f0f57bb58c6c35bd7d5a47c4aaaca8f796406a1e1e616da193fb2dc085",
+  "final_test_read": false
+}
