@@ -40,6 +40,11 @@ def validate_deployment(run: Path | None, merged_model: Path | None,
     return None
 
 
+def route_requires_heads(route_mode: str) -> bool:
+    """Only learned sample-level routing needs a D3-head forward pass."""
+    return route_mode == "sample"
+
+
 def _ratio(k: int, n: int) -> float | None:
     return k / n if n else None
 

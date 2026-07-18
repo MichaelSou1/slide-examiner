@@ -6,7 +6,7 @@ import pytest
 from scripts.part3_d3_evaluate import assert_final_test_unlocked, materialize_paired_images
 from slide_examiner.d3_evaluation import (
     exact_mcnemar, holm_family, normalize_runtime_row, pareto_frontier, prompt_row, score_arm,
-    validate_deployment,
+    route_requires_heads, validate_deployment,
 )
 
 
@@ -112,6 +112,13 @@ def test_lm_only_deployment_guards(run, merged, adapter, mode, error):
         assert error in actual
     else:
         assert actual is None
+
+
+@pytest.mark.parametrize(("mode", "expected"), [
+    ("sample", True), ("class", False), ("fixed", False), ("answer", False),
+])
+def test_only_sample_router_requires_heads(mode, expected):
+    assert route_requires_heads(mode) is expected
 
 
 def test_materialize_paired_images_preserves_defect_on_clean_twin(tmp_path):

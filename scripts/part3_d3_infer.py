@@ -13,7 +13,7 @@ import torch
 from peft import PeftModel
 from transformers import AutoProcessor, BitsAndBytesConfig, Qwen3VLForConditionalGeneration
 
-from slide_examiner.d3_evaluation import prompt_row, validate_deployment
+from slide_examiner.d3_evaluation import prompt_row, route_requires_heads, validate_deployment
 from slide_examiner.d3_training import (
     ACTIONS, authoritative_result, balanced_smoke_rows, bounded_route_action,
     evaluate_semantic_gate, resolve_inference_policy, run_linter,
@@ -142,7 +142,7 @@ def infer_once(processor: Any, model: Any, heads: D3Heads | None, row: dict[str,
     prompt_lengths = inputs["attention_mask"].sum(dim=1)
     started = time.perf_counter()
     with torch.no_grad():
-        if route_mode == "answer":
+        if not route_requires_heads(route_mode):
             raw_action, confidence = ExaminerAction.ANSWER.value, 1.0
         else:
             if heads is None:
@@ -229,7 +229,7 @@ def main() -> None:
     parser.add_argument("--limit", default="32",
                         help="Number of records, or 'all' for the complete input")
     parser.add_argument("--balanced", action="store_true")
-    parser.add_argument("--max-new-tokens", type=int, default=384)
+    parser.add_argument("--max-new-tokens", type=int, default=192)
     parser.add_argument("--policy", type=Path,
                         help="Frozen inference-policy JSON; overrides threshold and escalation limit")
     parser.add_argument("--confidence-threshold", type=float, default=0.0)
