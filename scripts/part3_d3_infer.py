@@ -13,6 +13,7 @@ import torch
 from peft import PeftModel
 from transformers import AutoProcessor, BitsAndBytesConfig, Qwen3VLForConditionalGeneration
 
+from slide_examiner.d3_evaluation import prompt_row, validate_deployment
 from slide_examiner.d3_training import (
     ACTIONS, authoritative_result, balanced_smoke_rows, bounded_route_action,
     evaluate_semantic_gate, resolve_inference_policy, run_linter,
@@ -27,9 +28,10 @@ from slide_examiner.examiner_contract import (
 from scripts.part3_d3_train import D3Heads, JsonlDataset, _images, pooled_at_prompt
 
 
-def load(run: Path, base: str, device: torch.device, merged_model: Path | None = None):
+def load(run: Path | None, base: str, device: torch.device,
+         merged_model: Path | None = None, lm_adapter: Path | None = None):
     """Load either the QLoRA training bundle or its merged serving equivalent."""
-    processor_source = merged_model or (run / "adapter")
+    processor_source = merged_model or lm_adapter or ((run / "adapter") if run else base)
     processor = AutoProcessor.from_pretrained(processor_source, trust_remote_code=True)
     if merged_model is not None:
         model = Qwen3VLForConditionalGeneration.from_pretrained(
@@ -44,7 +46,10 @@ def load(run: Path, base: str, device: torch.device, merged_model: Path | None =
             base, torch_dtype=torch.bfloat16, quantization_config=quant, device_map={"": 0},
             trust_remote_code=True, attn_implementation="sdpa",
         )
-        model = PeftModel.from_pretrained(model, run / "adapter").eval()
+        adapter = lm_adapter or ((run / "adapter") if run else None)
+        model = PeftModel.from_pretrained(model, adapter).eval() if adapter else model.eval()
+    if run is None:
+        return processor, model, None
     config = model.get_base_model().config if hasattr(model, "get_base_model") else model.config
     hidden = config.text_config.hidden_size
     heads = D3Heads(hidden).to(device).eval()
@@ -121,12 +126,13 @@ def parse_contract(text: str) -> tuple[dict[str, Any] | None, str | None, bool]:
         return None, f"{type(exc).__name__}: {exc}", False
 
 
-def infer_once(processor: Any, model: Any, heads: D3Heads, row: dict[str, Any],
+def infer_once(processor: Any, model: Any, heads: D3Heads | None, row: dict[str, Any],
                device: torch.device, max_new_tokens: int, *, terminal: bool = False,
                confidence_threshold: float = 0.0, max_escalations: int = 1,
                route_mode: str = "sample", fixed_action: str | None = None,
                class_routes: dict[str, str] | None = None,
-               route_only: bool = False) -> dict[str, Any]:
+               route_only: bool = False, prompt_mode: str = "generic") -> dict[str, Any]:
+    row = prompt_row(row, prompt_mode)
     prompt = processor.apply_chat_template(row["messages"][:1], tokenize=False,
                                            add_generation_prompt=True)
     image_list = _images(row)
@@ -136,11 +142,16 @@ def infer_once(processor: Any, model: Any, heads: D3Heads, row: dict[str, Any],
     prompt_lengths = inputs["attention_mask"].sum(dim=1)
     started = time.perf_counter()
     with torch.no_grad():
-        output = model(**inputs, output_hidden_states=True, return_dict=True)
-        pooled = pooled_at_prompt(output.hidden_states[-1], prompt_lengths).float()
-        action_logits, select_logits, _, _ = heads(pooled)
-        raw_action = ACTIONS[int(action_logits.argmax(-1).item())]
-        confidence = float(torch.sigmoid(select_logits).item())
+        if route_mode == "answer":
+            raw_action, confidence = ExaminerAction.ANSWER.value, 1.0
+        else:
+            if heads is None:
+                raise ValueError("D3 heads are required unless route_mode=answer")
+            output = model(**inputs, output_hidden_states=True, return_dict=True)
+            pooled = pooled_at_prompt(output.hidden_states[-1], prompt_lengths).float()
+            action_logits, select_logits, _, _ = heads(pooled)
+            raw_action = ACTIONS[int(action_logits.argmax(-1).item())]
+            confidence = float(torch.sigmoid(select_logits).item())
         if route_mode == "fixed":
             raw_action = str(fixed_action)
             confidence = 1.0
@@ -206,10 +217,13 @@ def infer_once(processor: Any, model: Any, heads: D3Heads, row: dict[str, Any],
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--run", type=Path, required=True)
+    parser.add_argument("--run", type=Path,
+                        help="D3 run containing adapter/d3_heads.pt; optional for LM-only baselines")
     parser.add_argument("--base", default="/home/nvme04/models/Qwen3-VL-8B-Instruct")
     parser.add_argument("--merged-model", type=Path,
                         help="Merged LM directory; D3 heads and policy still come from --run")
+    parser.add_argument("--lm-adapter", type=Path,
+                        help="PEFT adapter for an LM-only baseline (Part 2 or compute-matched vanilla)")
     parser.add_argument("--input", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--limit", default="32",
@@ -220,7 +234,9 @@ def main() -> None:
                         help="Frozen inference-policy JSON; overrides threshold and escalation limit")
     parser.add_argument("--confidence-threshold", type=float, default=0.0)
     parser.add_argument("--max-escalations", type=int, choices=(0, 1), default=1)
-    parser.add_argument("--route-mode", choices=("sample", "class", "fixed"), default="sample")
+    parser.add_argument("--route-mode", choices=("sample", "class", "fixed", "answer"),
+                        default="sample")
+    parser.add_argument("--prompt-mode", choices=("generic", "c3"), default="generic")
     parser.add_argument("--class-router", type=Path,
                         help="class_router.json used when --route-mode=class")
     parser.add_argument("--fixed-action", choices=ACTIONS,
@@ -228,6 +244,10 @@ def main() -> None:
     parser.add_argument("--route-only", action="store_true",
                         help="Score router/action/cost without generating ANSWER JSON")
     args = parser.parse_args()
+    deployment_error = validate_deployment(
+        args.run, args.merged_model, args.lm_adapter, args.route_mode)
+    if deployment_error:
+        parser.error(deployment_error)
     policy = json.loads(args.policy.read_text()) if args.policy else {}
     try:
         confidence_threshold, max_escalations = resolve_inference_policy(
@@ -245,7 +265,8 @@ def main() -> None:
         class_routes = {name: str(route["prediction"])
                         for name, route in router_payload["routes"].items()}
     device = torch.device("cuda")
-    processor, model, heads = load(args.run, args.base, device, args.merged_model)
+    processor, model, heads = load(
+        args.run, args.base, device, args.merged_model, args.lm_adapter)
     all_rows = JsonlDataset(args.input).rows
     if args.limit == "all":
         limit = len(all_rows)
@@ -278,7 +299,7 @@ def main() -> None:
                            confidence_threshold=confidence_threshold,
                            max_escalations=max_escalations, route_mode=args.route_mode,
                            fixed_action=args.fixed_action, class_routes=class_routes,
-                           route_only=args.route_only)
+                           route_only=args.route_only, prompt_mode=args.prompt_mode)
         if first["parse_error"]:
             counts["parser_failure"] += 1
         counts["action_mismatch"] += int(first["action_mismatch"])
@@ -308,7 +329,7 @@ def main() -> None:
                                         confidence_threshold=confidence_threshold,
                                         max_escalations=max_escalations, route_mode=args.route_mode,
                                         fixed_action=args.fixed_action, class_routes=class_routes,
-                                        route_only=args.route_only)
+                                        route_only=args.route_only, prompt_mode=args.prompt_mode)
                     if second["parse_error"]:
                         counts["parser_failure"] += 1
                     counts["action_mismatch"] += int(second["action_mismatch"])
@@ -328,8 +349,10 @@ def main() -> None:
                 escalation = {"requested_action": requested, "performed": False,
                               "reason": f"no {availability} counterpart for sample"}
         result = {"record_id": row["record_id"], "sample_id": row["sample_id"],
+                        "pair_id": row.get("pair_id", row["sample_id"]),
                         "defect": row["defect"], "availability": row["availability"],
                         "target_action": row["target_action"],
+                        "is_clean": bool(row.get("is_clean")),
                         "is_clean_deck": bool(row.get("is_clean_deck")),
                         **first, "escalation": escalation,
                         "model_calls": 1 + int(bool(escalation and escalation.get("executor") == "student_followup")),
@@ -380,13 +403,18 @@ def main() -> None:
     }
     summary = {**counts, "records": len(results), "resumed_records": len(completed),
                "balanced": args.balanced,
-               "deployment": {"lm": "merged" if args.merged_model else "base_plus_adapter",
+               "deployment": {"lm": ("merged" if args.merged_model else
+                                      "base_plus_adapter" if (args.run or args.lm_adapter) else "base"),
                               "model_path": str(args.merged_model or args.base),
-                              "heads_path": str(args.run / "d3_heads.pt"),
-                              "policy_path": str(args.policy or args.run / "run_config.json"),
+                              "adapter_path": str(args.lm_adapter or (args.run / "adapter" if args.run else ""))
+                              or None,
+                              "heads_path": str(args.run / "d3_heads.pt") if args.run else None,
+                              "policy_path": (str(args.policy or args.run / "run_config.json")
+                                              if args.run else str(args.policy) if args.policy else None),
                               "confidence_threshold": confidence_threshold,
                               "max_escalations": max_escalations,
                               "route_mode": args.route_mode,
+                              "prompt_mode": args.prompt_mode,
                               "class_router_path": str(args.class_router) if args.class_router else None,
                               "fixed_action": args.fixed_action,
                               "route_only": args.route_only,

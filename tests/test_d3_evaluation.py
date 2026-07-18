@@ -5,7 +5,8 @@ import pytest
 
 from scripts.part3_d3_evaluate import assert_final_test_unlocked
 from slide_examiner.d3_evaluation import (
-    exact_mcnemar, holm_family, normalize_runtime_row, pareto_frontier, score_arm,
+    exact_mcnemar, holm_family, normalize_runtime_row, pareto_frontier, prompt_row, score_arm,
+    validate_deployment,
 )
 
 
@@ -80,6 +81,37 @@ def test_normalize_runtime_row_marks_parser_fallback_as_failure():
         "parse_error": "ValueError: no JSON object", "parsed": {"findings": []},
     })
     assert row["failure"] is True
+
+
+def test_prompt_modes_are_detached_and_c3_is_atomic():
+    row = {"defect": "G7_UNREADABLE_TEXT", "messages": [{"role": "user", "content": [
+        {"type": "image", "image": "slide.png"}, {"type": "text", "text": "Inspect."},
+    ]}]}
+    generic = prompt_row(row, "generic")
+    c3 = prompt_row(row, "c3")
+    assert generic == row and generic is not row
+    assert row["messages"][0]["content"][1]["text"] == "Inspect."
+    assert "ATOMIC_CHECK" in c3["messages"][0]["content"][1]["text"]
+    assert "G7_UNREADABLE_TEXT" in c3["messages"][0]["content"][1]["text"]
+
+
+@pytest.mark.parametrize(("run", "merged", "adapter", "mode", "error"), [
+    (None, None, None, "sample", "--run is required"),
+    (None, "merged", None, "answer", "--merged-model requires --run"),
+    ("d3", None, "part2", "answer", "--lm-adapter is only valid"),
+    (None, None, "part2", "answer", None),
+    ("d3", None, None, "sample", None),
+])
+def test_lm_only_deployment_guards(run, merged, adapter, mode, error):
+    from pathlib import Path
+
+    actual = validate_deployment(
+        Path(run) if run else None, Path(merged) if merged else None,
+        Path(adapter) if adapter else None, mode)
+    if error:
+        assert error in actual
+    else:
+        assert actual is None
 
 
 def test_final_test_guard_requires_committed_clean_registry(tmp_path):

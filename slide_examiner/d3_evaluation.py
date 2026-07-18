@@ -2,11 +2,42 @@
 from __future__ import annotations
 
 from collections import defaultdict
+import json
 from math import comb
+from pathlib import Path
 from statistics import mean
 from typing import Any, Iterable, Sequence
 
 from .statistics import balanced_accuracy_ci, holm_bonferroni, wilson_interval
+
+
+def prompt_row(row: dict[str, Any], prompt_mode: str) -> dict[str, Any]:
+    """Return a detached prompt and optionally append the atomic C3 query."""
+    prompted = json.loads(json.dumps(row))
+    if prompt_mode == "generic":
+        return prompted
+    suffix = (
+        "\nATOMIC_CHECK: Decide specifically whether the visible artifact exhibits "
+        f"{row['defect']}. Localize concrete visible evidence if present, but still return the "
+        "exact examiner JSON contract and request context or defer when evidence is insufficient."
+    )
+    for item in reversed(prompted["messages"][0]["content"]):
+        if item.get("type") == "text":
+            item["text"] = str(item.get("text", "")) + suffix
+            break
+    return prompted
+
+
+def validate_deployment(run: Path | None, merged_model: Path | None,
+                        lm_adapter: Path | None, route_mode: str) -> str | None:
+    """Return a CLI validation error without loading any model assets."""
+    if route_mode != "answer" and run is None:
+        return "--run is required unless --route-mode=answer"
+    if merged_model is not None and run is None:
+        return "--merged-model requires --run because it only replaces the D3 language model"
+    if lm_adapter is not None and run is not None:
+        return "--lm-adapter is only valid for LM-only --route-mode=answer runs without --run"
+    return None
 
 
 def _ratio(k: int, n: int) -> float | None:
