@@ -85,6 +85,12 @@ def assert_final_test_unlocked(repo: Path, registry: Path) -> dict[str, Any]:
     return payload
 
 
+def assert_unlocked(args: argparse.Namespace) -> None:
+    payload = assert_final_test_unlocked(args.repo.resolve(), args.freeze_registry.resolve())
+    print(json.dumps({"unlocked": True, "freeze_commit": payload["freeze_commit"],
+                      "registry": str(args.freeze_registry)}, indent=2))
+
+
 def _relocatable(value: str, repo: Path) -> str:
     """Normalize historical absolute paths to checkout-relative runtime paths."""
     for checkout_root in ("/data/slide-examiner/", "/home/gpus/slide-examiner/"):
@@ -589,6 +595,10 @@ def plot(args: argparse.Namespace) -> None:
 def main() -> None:
     parser = argparse.ArgumentParser()
     sub = parser.add_subparsers(dest="command", required=True)
+    unlock_assertion = sub.add_parser("assert-unlocked")
+    unlock_assertion.add_argument("--repo", type=Path, default=Path.cwd())
+    unlock_assertion.add_argument("--freeze-registry", type=Path, required=True)
+    unlock_assertion.set_defaults(function=assert_unlocked)
     materializer = sub.add_parser("materialize")
     materializer.add_argument("--repo", type=Path, default=Path.cwd())
     materializer.add_argument("--manifest", type=Path, nargs="+", required=True)
