@@ -36,6 +36,6 @@
   "manifest": "data/part2/manifest_slideaudit.jsonl",
   "manifest_sha256": "57f3a133ddc3846a8dcf547cbe51d06bbb5a172d85190d30d2d7b8588313be09",
   "output": "runs/part3/w76/validation_slideaudit.jsonl",
-  "output_sha256": "b6145cbb7a3d8b72837cb66951e20d85222123fbc0872f6ab0794f611506cd67",
+  "output_sha256": "cd009b49ea74160c558adfbc2bc250b5a7dd97b7131bcdb470e959d8d337c540",
   "final_test_read": false
 }
