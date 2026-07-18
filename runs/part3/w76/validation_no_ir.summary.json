@@ -1,0 +1,12 @@
+{
+  "unavailable": "image_structure",
+  "source_records": 360,
+  "kept_records": 264,
+  "removed_counterparts": 96,
+  "initial_records": 216,
+  "input": "runs/part3/w76/validation_pairs12.jsonl",
+  "input_sha256": "a8bce67f03e95bb5ad268fbd9f790350dc73a79598d8b4445a7b527aed1fa96e",
+  "output": "runs/part3/w76/validation_no_ir.jsonl",
+  "output_sha256": "0287a66ae858fc2076a7a9ebf95cbdefd028cb6d6093aa0d922e426786f6ed11",
+  "final_test_read": false
+}

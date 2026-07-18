@@ -109,7 +109,7 @@ def _message(images: list[str], availability: str, structure: dict[str, Any] | N
 
 
 def materialize_paired_images(rows: list[dict[str, Any]], repo: Path, per_class: int,
-                              split: str = "validation"
+                              split: str = "validation", offset_per_class: int = 0
                               ) -> tuple[list[dict[str, Any]], dict[str, Any]]:
     """Create frozen positive/clean initial rows followed by hidden escalation counterparts."""
     by_defect: dict[str, list[dict[str, Any]]] = defaultdict(list)
@@ -117,7 +117,8 @@ def materialize_paired_images(rows: list[dict[str, Any]], repo: Path, per_class:
         if row.get("labels"):
             by_defect[str(row["labels"][0]["type"])].append(row)
     selected = [row for defect in sorted(by_defect)
-                for row in sorted(by_defect[defect], key=lambda item: str(item["sample_id"]))[:per_class]]
+                for row in sorted(by_defect[defect], key=lambda item: str(item["sample_id"]))[
+                    offset_per_class:offset_per_class + per_class]]
     initial, counterparts = [], []
     for source in selected:
         defect = str(source["labels"][0]["type"])
@@ -156,10 +157,118 @@ def materialize_paired_images(rows: list[dict[str, Any]], repo: Path, per_class:
                                      "messages": _message(images, "reference_available")})
     summary = {"source_rows": len(rows), "selected_pairs": len(selected),
                "initial_records": len(initial), "counterpart_records": len(counterparts),
-               "initial_limit": len(initial),
+               "initial_limit": len(initial), "offset_per_class": offset_per_class,
                "per_class_pairs": {defect: sum(row["defect"] == defect for row in initial) // 2
                                    for defect in sorted(by_defect)}}
     return initial + counterparts, summary
+
+
+def drop_availability(rows: list[dict[str, Any]], unavailable: str
+                      ) -> tuple[list[dict[str, Any]], dict[str, Any]]:
+    """Remove unavailable escalation evidence while preserving the frozen initial cohort."""
+    if unavailable not in {"image_structure", "reference_available"}:
+        raise ValueError(f"unsupported unavailable evidence: {unavailable}")
+    kept = [row for row in rows if row.get("availability") != unavailable]
+    return kept, {
+        "unavailable": unavailable,
+        "source_records": len(rows),
+        "kept_records": len(kept),
+        "removed_counterparts": len(rows) - len(kept),
+        "initial_records": sum(row.get("availability") == "image_only" for row in kept),
+    }
+
+
+def _deck_message(images: list[str], sample_id: str) -> list[dict[str, Any]]:
+    context = {"availability": "deck_context_available", "deck_id": sample_id,
+               "page_order": list(range(len(images)))}
+    instruction = (
+        "Inspect the complete ordered slide deck for narrative-order breaks or missing logic "
+        "sections. Return the strict DeckExamResult JSON contract and ground any finding in "
+        "specific related_page_ids.\nINPUT_CONTEXT="
+        + json.dumps(context, ensure_ascii=False, separators=(",", ":"))
+    )
+    content = [{"type": "image", "image": image} for image in images]
+    content.append({"type": "text", "text": instruction})
+    return [{"role": "user", "content": content}]
+
+
+def materialize_deck_pairs(positive_rows: list[dict[str, Any]], clean_rows: list[dict[str, Any]],
+                           repo: Path, per_class: int = 12
+                           ) -> tuple[list[dict[str, Any]], dict[str, Any]]:
+    """Build S2/S5 first-page requests plus complete paired positive/clean deck contexts."""
+    clean_by_source = {str(row["sample_id"]).removesuffix("__CLEAN"): row for row in clean_rows}
+    by_defect: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    for row in positive_rows:
+        for label in row.get("labels", []):
+            defect = str(label.get("type", ""))
+            if defect in {"S2_NARRATIVE_ORDER_BREAK", "S5_MISSING_LOGIC_SECTION"}:
+                by_defect[defect].append(row)
+    initial, counterparts = [], []
+    selected_counts: dict[str, int] = {}
+    for defect in sorted(by_defect):
+        selected = [row for row in sorted(by_defect[defect], key=lambda item: str(item["sample_id"]))
+                    if str(row["sample_id"]) in clean_by_source][:per_class]
+        selected_counts[defect] = len(selected)
+        for positive in selected:
+            pair_id = str(positive["sample_id"])
+            clean = clean_by_source[pair_id]
+            for is_clean, source in ((False, positive), (True, clean)):
+                sample_id = pair_id + ("__clean" if is_clean else "__positive")
+                paths = [_relocatable(str(path), repo)
+                         for path in source.get("metadata", {}).get("page_image_paths", [])]
+                if not paths:
+                    raise ValueError(f"deck has no page images: {source['sample_id']}")
+                common = {"sample_id": sample_id, "pair_id": pair_id, "defect": defect,
+                          "is_clean": is_clean, "is_clean_deck": is_clean,
+                          "severity": 0.0 if is_clean else 1.0,
+                          "severity_chain": f"{sample_id}|{defect}", "split": "validation"}
+                initial.append({**common, "record_id": sample_id + "__image_only",
+                                "availability": "image_only", "target_action": "REQUEST_DECK",
+                                "images": paths[:1],
+                                "messages": _message(paths[:1], "image_only")})
+                counterparts.append({
+                    **common, "record_id": sample_id + "__deck_context",
+                    "availability": "deck_context_available", "target_action": "ANSWER",
+                    "images": paths, "messages": _deck_message(paths, sample_id),
+                })
+    summary = {"positive_source_rows": len(positive_rows), "clean_source_rows": len(clean_rows),
+               "selected_pairs_per_class": selected_counts, "initial_records": len(initial),
+               "counterpart_records": len(counterparts), "initial_limit": len(initial)}
+    return initial + counterparts, summary
+
+
+def materialize_slideaudit(rows: list[dict[str, Any]], repo: Path, per_class: int = 20
+                           ) -> tuple[list[dict[str, Any]], dict[str, Any]]:
+    """Build real image-only present/confident-absent cells without inventing IR/reference."""
+    defects = sorted({str(label["type"]) for row in rows for label in row.get("labels", [])})
+    output: list[dict[str, Any]] = []
+    counts: dict[str, dict[str, int]] = {}
+    for defect in defects:
+        positives = [row for row in rows
+                     if defect in {str(label["type"]) for label in row.get("labels", [])}]
+        negatives = [row for row in rows
+                     if defect in set(row.get("metadata", {}).get("confident_absent", []))
+                     and defect not in {str(label["type"]) for label in row.get("labels", [])}]
+        positives = sorted(positives, key=lambda item: str(item["sample_id"]))[:per_class]
+        negatives = sorted(negatives, key=lambda item: str(item["sample_id"]))[:per_class]
+        counts[defect] = {"positive": len(positives), "confident_absent": len(negatives)}
+        for is_clean, cohort in ((False, positives), (True, negatives)):
+            for source in cohort:
+                source_id = str(source["sample_id"])
+                sample_id = f"{source_id}__{defect}__{'absent' if is_clean else 'present'}"
+                image = _relocatable(str(source["image_path"]), repo)
+                output.append({
+                    "record_id": sample_id + "__image_only", "sample_id": sample_id,
+                    "pair_id": f"slideaudit__{defect}__{source_id}", "defect": defect,
+                    "is_clean": is_clean, "is_clean_deck": False, "severity": 1.0,
+                    "severity_chain": f"{sample_id}|{defect}", "split": "validation",
+                    "availability": "image_only", "target_action": "ANSWER",
+                    "images": [image], "messages": _message([image], "image_only"),
+                    "external_source": "SlideAudit",
+                    "negative_definition": "confident_absent" if is_clean else "present",
+                })
+    return output, {"source_rows": len(rows), "records": len(output),
+                    "per_class": counts, "native_ir": False, "native_reference": False}
 
 
 def materialize(args: argparse.Namespace) -> None:
@@ -169,12 +278,51 @@ def materialize(args: argparse.Namespace) -> None:
         assert_final_test_unlocked(args.repo.resolve(), args.freeze_registry.resolve())
     source_rows = [row for manifest in args.manifest for row in read_jsonl(manifest)]
     rows, summary = materialize_paired_images(
-        source_rows, args.repo.resolve(), args.per_class, split=args.split)
+        source_rows, args.repo.resolve(), args.per_class, split=args.split,
+        offset_per_class=args.offset_per_class)
     write_jsonl(args.output, rows)
     summary.update({"split": args.split,
                     "manifests": [{"path": str(path), "sha256": sha256(path)}
                                   for path in args.manifest], "output": str(args.output),
                     "output_sha256": sha256(args.output)})
+    args.output.with_suffix(".summary.json").write_text(json.dumps(summary, indent=2))
+    print(json.dumps(summary, indent=2))
+
+
+def materialize_slice(args: argparse.Namespace) -> None:
+    source = read_jsonl(args.input)
+    rows, summary = drop_availability(source, args.unavailable)
+    write_jsonl(args.output, rows)
+    summary.update({"input": str(args.input), "input_sha256": sha256(args.input),
+                    "output": str(args.output), "output_sha256": sha256(args.output),
+                    "final_test_read": False})
+    args.output.with_suffix(".summary.json").write_text(json.dumps(summary, indent=2))
+    print(json.dumps(summary, indent=2))
+
+
+def materialize_decks(args: argparse.Namespace) -> None:
+    positives = [row for path in args.manifest for row in read_jsonl(path)]
+    cleans = [row for path in args.clean_manifest for row in read_jsonl(path)]
+    rows, summary = materialize_deck_pairs(
+        positives, cleans, args.repo.resolve(), args.per_class)
+    write_jsonl(args.output, rows)
+    summary.update({
+        "manifests": [{"path": str(path), "sha256": sha256(path)}
+                      for path in [*args.manifest, *args.clean_manifest]],
+        "output": str(args.output), "output_sha256": sha256(args.output),
+        "final_test_read": False,
+    })
+    args.output.with_suffix(".summary.json").write_text(json.dumps(summary, indent=2))
+    print(json.dumps(summary, indent=2))
+
+
+def materialize_real(args: argparse.Namespace) -> None:
+    rows, summary = materialize_slideaudit(
+        read_jsonl(args.manifest), args.repo.resolve(), args.per_class)
+    write_jsonl(args.output, rows)
+    summary.update({"manifest": str(args.manifest), "manifest_sha256": sha256(args.manifest),
+                    "output": str(args.output), "output_sha256": sha256(args.output),
+                    "final_test_read": False})
     args.output.with_suffix(".summary.json").write_text(json.dumps(summary, indent=2))
     print(json.dumps(summary, indent=2))
 
@@ -212,19 +360,30 @@ def _api_messages(row: dict[str, Any], repo: Path, prompt_mode: str) -> list[dic
                 url = f"data:{mime};base64,{encoded}"
             item["type"] = "image_url"
             item["image_url"] = {"url": url}
+        is_deck = str(row.get("defect", "")).split("_", 1)[0] in {"S2", "S3", "S5"}
+        identifier = '"deck_id":"<sample id>"' if is_deck else '"page_id":"<sample id>"'
+        allowed_types = (
+            "S2_NARRATIVE_ORDER_BREAK, S3_TERMINOLOGY_INCONSISTENCY, "
+            "and S5_MISSING_LOGIC_SECTION" if is_deck else
+            "G1_TEXT_OVERFLOW, G2_ELEMENT_OVERLAP, G3_ALIGNMENT_OFFSET, "
+            "G4_FONT_SIZE_INCONSISTENCY, G5_BRAND_COLOR_VIOLATION, G6_MARGIN_VIOLATION, "
+            "G7_RENDER_CONTAINMENT_OVERFLOW, S1_TITLE_BODY_MISMATCH, "
+            "S4_DENSITY_RULE_VIOLATION, and S6_IMAGE_TEXT_CONTRADICTION"
+        )
+        locator = (
+            '{"level":"deck","related_page_ids":["<visible page id>"]}' if is_deck else
+            '{"level":"page","page_id":"<sample id>","element_id":"<visible element or null>",'
+            '"bbox":null,"related_page_ids":[]}'
+        )
         contract = (
             "\nSTRICT_OUTPUT_SCHEMA: Return JSON only. Use this exact shape: "
-            '{"page_id":"<sample id>","action":"ANSWER|CALL_LINTER|REQUEST_REFERENCE|'
+            "{" + identifier + ',"action":"ANSWER|CALL_LINTER|REQUEST_REFERENCE|'
             'REQUEST_DECK|DEFER","confidence":0.0,"requested_context":[],"evidence_source":'
             '"pixels|structure|reference|deck_context|linter|none","has_defect":false,'
-            '"findings":[],"clean_dimensions":[]}. Allowed finding types are '
-            'G1_TEXT_OVERFLOW, G2_ELEMENT_OVERLAP, G3_ALIGNMENT_OFFSET, '
-            'G4_FONT_SIZE_INCONSISTENCY, G5_BRAND_COLOR_VIOLATION, G6_MARGIN_VIOLATION, '
-            'G7_RENDER_CONTAINMENT_OVERFLOW, S1_TITLE_BODY_MISMATCH, '
-            'S4_DENSITY_RULE_VIOLATION, and S6_IMAGE_TEXT_CONTRADICTION. Each finding must be '
+            '"findings":[],"clean_dimensions":[]}. Allowed finding types are ' + allowed_types
+            + '. Each finding must be '
             '{"type":"<allowed type>","severity":"minor|moderate|severe",'
-            '"locator":{"level":"page","page_id":"<sample id>","element_id":"<visible '
-            'element or null>","bbox":null,"related_page_ids":[]},"evidence":"<visible '
+            '"locator":' + locator + ',"evidence":"<visible '
             'evidence>","fix_suggestion":"<specific fix>"}. Never emit finding strings or '
             'invent new type names; omit an unsupported observation instead. Return at most one '
             'finding, keep evidence and fix_suggestion under 30 words each, and do not explain '
@@ -397,8 +556,28 @@ def main() -> None:
     materializer.add_argument("--output", type=Path, required=True)
     materializer.add_argument("--split", choices=("validation", "final_test"), required=True)
     materializer.add_argument("--per-class", type=int, default=12)
+    materializer.add_argument("--offset-per-class", type=int, default=0)
     materializer.add_argument("--freeze-registry", type=Path)
     materializer.set_defaults(function=materialize)
+    slicer = sub.add_parser("materialize-slice")
+    slicer.add_argument("--input", type=Path, required=True)
+    slicer.add_argument("--output", type=Path, required=True)
+    slicer.add_argument("--unavailable", choices=("image_structure", "reference_available"),
+                        required=True)
+    slicer.set_defaults(function=materialize_slice)
+    deck_materializer = sub.add_parser("materialize-decks")
+    deck_materializer.add_argument("--repo", type=Path, default=Path.cwd())
+    deck_materializer.add_argument("--manifest", type=Path, nargs="+", required=True)
+    deck_materializer.add_argument("--clean-manifest", type=Path, nargs="+", required=True)
+    deck_materializer.add_argument("--output", type=Path, required=True)
+    deck_materializer.add_argument("--per-class", type=int, default=12)
+    deck_materializer.set_defaults(function=materialize_decks)
+    real_materializer = sub.add_parser("materialize-slideaudit")
+    real_materializer.add_argument("--repo", type=Path, default=Path.cwd())
+    real_materializer.add_argument("--manifest", type=Path, required=True)
+    real_materializer.add_argument("--output", type=Path, required=True)
+    real_materializer.add_argument("--per-class", type=int, default=20)
+    real_materializer.set_defaults(function=materialize_real)
     normalizer = sub.add_parser("normalize")
     normalizer.add_argument("--repo", type=Path, default=Path.cwd())
     normalizer.add_argument("--input", type=Path, required=True)

@@ -1,0 +1,12 @@
+{
+  "unavailable": "reference_available",
+  "source_records": 360,
+  "kept_records": 312,
+  "removed_counterparts": 48,
+  "initial_records": 216,
+  "input": "runs/part3/w76/validation_pairs12.jsonl",
+  "input_sha256": "a8bce67f03e95bb5ad268fbd9f790350dc73a79598d8b4445a7b527aed1fa96e",
+  "output": "runs/part3/w76/validation_no_reference.jsonl",
+  "output_sha256": "f02992a910bf3f135b4e1dbd56e2bddd5ef904235edb4a4324f8059c203e9490",
+  "final_test_read": false
+}

@@ -1,0 +1,25 @@
+{
+  "source_rows": 1200,
+  "selected_pairs": 72,
+  "initial_records": 144,
+  "counterpart_records": 120,
+  "initial_limit": 144,
+  "offset_per_class": 0,
+  "per_class_pairs": {
+    "G1_TEXT_OVERFLOW": 12,
+    "G2_ELEMENT_OVERLAP": 12,
+    "G3_ALIGNMENT_OFFSET": 12,
+    "G5_BRAND_COLOR_VIOLATION": 12,
+    "G6_MARGIN_VIOLATION": 12,
+    "S4_DENSITY_RULE_VIOLATION": 12
+  },
+  "split": "validation",
+  "manifests": [
+    {
+      "path": "data/part2/manifest_eval_ood_severity_rendered.jsonl",
+      "sha256": "3bef52116109b0b9457ed745b9fb57f27798ec7d63b546173501a2df5ceae49f"
+    }
+  ],
+  "output": "runs/part3/w76/validation_heldout_severity.jsonl",
+  "output_sha256": "b0f6b08676dc0d5bc5fc733ee68a0731fa67714ec9d2e4ab02e488050dbe0905"
+}

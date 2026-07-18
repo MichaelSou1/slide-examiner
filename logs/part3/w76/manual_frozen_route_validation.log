@@ -1,0 +1,91 @@
+Loading weights:   0%|          | 0/750 [00:00<?, ?it/s]Loading weights:   0%|          | 1/750 [00:00<06:56,  1.80it/s]Loading weights:   0%|          | 2/750 [00:00<06:01,  2.07it/s]Loading weights:   1%|          | 4/750 [00:01<02:44,  4.54it/s]Loading weights:   2%|▏         | 12/750 [00:01<00:42, 17.28it/s]Loading weights:   2%|▏         | 17/750 [00:01<00:33, 22.11it/s]Loading weights:   4%|▎         | 27/750 [00:01<00:19, 36.92it/s]Loading weights:   5%|▌         | 38/750 [00:01<00:14, 50.03it/s]Loading weights:   6%|▋         | 48/750 [00:01<00:11, 58.76it/s]Loading weights:   8%|▊         | 59/750 [00:01<00:10, 66.97it/s]Loading weights:   9%|▉         | 70/750 [00:01<00:09, 74.27it/s]Loading weights:  11%|█         | 81/750 [00:02<00:08, 81.72it/s]Loading weights:  12%|█▏        | 92/750 [00:02<00:07, 83.13it/s]Loading weights:  14%|█▎        | 103/750 [00:02<00:07, 84.29it/s]Loading weights:  15%|█▍        | 112/750 [00:02<00:07, 85.38it/s]Loading weights:  16%|█▌        | 121/750 [00:02<00:07, 84.37it/s]Loading weights:  17%|█▋        | 130/750 [00:02<00:07, 78.13it/s]Loading weights:  18%|█▊        | 138/750 [00:02<00:08, 72.35it/s]Loading weights:  20%|█▉        | 148/750 [00:02<00:08, 71.16it/s]Loading weights:  21%|██        | 156/750 [00:03<00:08, 68.19it/s]Loading weights:  22%|██▏       | 163/750 [00:03<00:10, 57.05it/s]Loading weights:  23%|██▎       | 169/750 [00:03<00:10, 56.50it/s]Loading weights:  23%|██▎       | 175/750 [00:03<00:10, 52.44it/s]Loading weights:  24%|██▍       | 181/750 [00:03<00:11, 49.22it/s]Loading weights:  25%|██▌       | 191/750 [00:03<00:09, 58.94it/s]Loading weights:  27%|██▋       | 202/750 [00:03<00:08, 63.22it/s]Loading weights:  28%|██▊       | 210/750 [00:04<00:08, 62.35it/s]Loading weights:  29%|██▉       | 217/750 [00:04<00:10, 50.78it/s]Loading weights:  30%|██▉       | 224/750 [00:04<00:10, 51.19it/s]Loading weights:  31%|███▏      | 235/750 [00:04<00:08, 61.96it/s]Loading weights:  33%|███▎      | 246/750 [00:04<00:07, 70.83it/s]Loading weights:  34%|███▍      | 257/750 [00:04<00:06, 77.34it/s]Loading weights:  36%|███▌      | 268/750 [00:04<00:05, 82.85it/s]Loading weights:  37%|███▋      | 279/750 [00:04<00:05, 86.33it/s]Loading weights:  39%|███▊      | 290/750 [00:05<00:05, 89.70it/s]Loading weights:  40%|████      | 301/750 [00:05<00:05, 82.58it/s]Loading weights:  42%|████▏     | 312/750 [00:05<00:05, 87.19it/s]Loading weights:  43%|████▎     | 323/750 [00:05<00:04, 86.75it/s]Loading weights:  44%|████▍     | 332/750 [00:05<00:05, 83.50it/s]Loading weights:  45%|████▌     | 341/750 [00:05<00:05, 81.52it/s]Loading weights:  47%|████▋     | 350/750 [00:05<00:04, 80.24it/s]Loading weights:  48%|████▊     | 359/750 [00:05<00:04, 79.86it/s]Loading weights:  49%|████▉     | 368/750 [00:06<00:05, 69.54it/s]Loading weights:  50%|█████     | 377/750 [00:06<00:05, 74.21it/s]Loading weights:  51%|█████▏    | 385/750 [00:06<00:05, 66.02it/s]Loading weights:  52%|█████▏    | 392/750 [00:06<00:05, 65.05it/s]Loading weights:  56%|█████▋    | 423/750 [00:06<00:02, 126.15it/s]Loading weights:  61%|██████    | 457/750 [00:06<00:01, 182.13it/s]Loading weights:  65%|██████▌   | 491/750 [00:06<00:01, 224.64it/s]Loading weights:  70%|███████   | 526/750 [00:06<00:00, 259.34it/s]Loading weights:  74%|███████▍  | 554/750 [00:07<00:00, 241.18it/s]Loading weights:  78%|███████▊  | 588/750 [00:07<00:00, 266.67it/s]Loading weights:  84%|████████▍ | 633/750 [00:07<00:00, 315.89it/s]Loading weights:  97%|█████████▋| 725/750 [00:07<00:00, 466.80it/s]Loading weights: 100%|██████████| 750/750 [00:07<00:00, 99.98it/s] 
+{
+  "parser_failure": 0,
+  "action_loop": 0,
+  "teacher_failure": 0,
+  "action_mismatch": 0,
+  "consistency_failure": 0,
+  "escalation_failure": 0,
+  "records": 216,
+  "resumed_records": 0,
+  "balanced": false,
+  "deployment": {
+    "lm": "base_plus_adapter",
+    "model_path": "/data/public_data/xzs_data/Qwen3-VL-8B-Instruct",
+    "adapter_path": "runs/part3/d3_formal_v2/train_seed73/adapter",
+    "heads_path": "runs/part3/d3_formal_v2/train_seed73/d3_heads.pt",
+    "policy_path": "runs/part3/d3_formal_v2/train_seed73/run_config.json",
+    "confidence_threshold": 0.0,
+    "max_escalations": 1,
+    "route_mode": "class",
+    "prompt_mode": "generic",
+    "class_router_path": "runs/part3/w76/manual_frozen_router.json",
+    "fixed_action": null,
+    "batch_size": 1,
+    "max_image_pixels": 262144,
+    "route_only": false,
+    "worst_case_model_calls": 2,
+    "worst_case_tool_calls": 1
+  },
+  "semantic_counts": {
+    "g7_legal_answer": 24,
+    "geometry_image_only_safe_route": 96,
+    "reference_request": 48,
+    "performed_escalation": 144
+  },
+  "semantic_gate": {
+    "passed": false,
+    "checks": {
+      "g7_image_only_legal_finding": {
+        "eligible": 24,
+        "passed_records": 24,
+        "passed": true
+      },
+      "g2_g6_image_only_safe_route": {
+        "eligible": 96,
+        "passed_records": 96,
+        "passed": true
+      },
+      "reference_escalation_completes": {
+        "eligible": 48,
+        "passed_records": 48,
+        "passed": true
+      },
+      "deck_escalation_completes": {
+        "eligible": 0,
+        "passed_records": 0,
+        "passed": false
+      },
+      "clean_deck_not_forced_positive": {
+        "eligible": 0,
+        "passed_records": 0,
+        "passed": false
+      },
+      "runtime_failures_zero": {
+        "eligible": 216,
+        "passed_records": 216,
+        "passed": true
+      }
+    },
+    "failure_reasons": [
+      "deck_escalation_completes",
+      "clean_deck_not_forced_positive"
+    ]
+  },
+  "clean_control_definition": "is_clean_deck=true, or frozen-dev NO_DEFECT with deck_context_available",
+  "action_distribution": {
+    "REQUEST_REFERENCE": 48,
+    "CALL_LINTER": 96,
+    "ANSWER": 72
+  },
+  "target_action_distribution": {
+    "REQUEST_REFERENCE": 48,
+    "CALL_LINTER": 96,
+    "ANSWER": 72
+  },
+  "parser_success": 216,
+  "post_escalation_parser_success": 144,
+  "completed_escalation": 144,
+  "action_correct": 216,
+  "output": "runs/part3/w76/manual_frozen_route_validation.jsonl"
+}

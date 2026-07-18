@@ -1,0 +1,32 @@
+{
+  "positive_source_rows": 1407,
+  "clean_source_rows": 192,
+  "selected_pairs_per_class": {
+    "S2_NARRATIVE_ORDER_BREAK": 12,
+    "S5_MISSING_LOGIC_SECTION": 12
+  },
+  "initial_records": 48,
+  "counterpart_records": 48,
+  "initial_limit": 48,
+  "manifests": [
+    {
+      "path": "data/part2/manifest_eval_test_rendered.jsonl",
+      "sha256": "2ac5a4640a04fcde8c1f40d605ac32b39821f68d049d8ac0f14747fd22a1df51"
+    },
+    {
+      "path": "data/part2/manifest_eval_ood_defect_rendered.jsonl",
+      "sha256": "9821d26cc3629e45d413182c9fd9e53df9e342d67a7111b35fd5ff13712b07ce"
+    },
+    {
+      "path": "data/part2/deck_clean_test.jsonl",
+      "sha256": "d4809a1a648f6a7be6e45266b41f43a1661be532d1918b80833c3c8a695f0b15"
+    },
+    {
+      "path": "data/part2/deck_clean_ood_defect.jsonl",
+      "sha256": "c95fb646c0f4ab9663ef195ba51d1212765f5dd277d9d25517e6f12f0f74708d"
+    }
+  ],
+  "output": "runs/part3/w76/validation_deck_s2_s5.jsonl",
+  "output_sha256": "ae4d60dc6c1af9d4175ad9f013fe13f3da56f0aa60347542a4428b5008a731c2",
+  "final_test_read": false
+}

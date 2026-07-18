@@ -3,7 +3,10 @@ import subprocess
 
 import pytest
 
-from scripts.part3_d3_evaluate import _api_messages, assert_final_test_unlocked, materialize_paired_images
+from scripts.part3_d3_evaluate import (
+    _api_messages, assert_final_test_unlocked, drop_availability, materialize_deck_pairs,
+    materialize_paired_images, materialize_slideaudit,
+)
 from slide_examiner.d3_evaluation import (
     exact_mcnemar, generated_route_action, holm_family, normalize_runtime_row, pareto_frontier,
     parse_generated_contract, prompt_row, score_arm, selective_risk_at_coverages,
@@ -231,6 +234,62 @@ def test_materialize_paired_images_uses_requested_split(tmp_path):
                     "clean_slide_path": "clean.json", "defective_slide_path": "defective.json"}}
     records, _ = materialize_paired_images([row], tmp_path, 1, split="final_test")
     assert {record["split"] for record in records} == {"final_test"}
+
+
+def test_materialize_paired_images_supports_disjoint_per_class_offset(tmp_path):
+    for index in range(2):
+        (tmp_path / f"clean-{index}.json").write_text(json.dumps({"elements": []}))
+        (tmp_path / f"defective-{index}.json").write_text(json.dumps({"elements": []}))
+    rows = [{
+        "sample_id": f"pair-{index}", "labels": [{"type": "G2_ELEMENT_OVERLAP"}],
+        "pair": {"clean_image_path": f"clean-{index}.png",
+                 "defective_image_path": f"defective-{index}.png",
+                 "clean_slide_path": f"clean-{index}.json",
+                 "defective_slide_path": f"defective-{index}.json"},
+    } for index in range(2)]
+    records, summary = materialize_paired_images(rows, tmp_path, 1, offset_per_class=1)
+    assert summary["offset_per_class"] == 1
+    assert {record["pair_id"] for record in records} == {"pair-1"}
+
+
+def test_drop_availability_preserves_initial_records_and_other_counterparts():
+    rows = [{"record_id": "a", "availability": "image_only"},
+            {"record_id": "b", "availability": "image_structure"},
+            {"record_id": "c", "availability": "reference_available"}]
+    kept, summary = drop_availability(rows, "image_structure")
+    assert [row["record_id"] for row in kept] == ["a", "c"]
+    assert summary["removed_counterparts"] == 1 and summary["initial_records"] == 1
+
+
+def test_materialize_deck_pairs_uses_deck_contract_and_paired_clean(tmp_path):
+    for name in ("p0.png", "p1.png", "c0.png", "c1.png"):
+        (tmp_path / name).write_bytes(b"png")
+    positive = {"sample_id": "deck-a", "labels": [{"type": "S2_NARRATIVE_ORDER_BREAK"}],
+                "metadata": {"page_image_paths": ["p0.png", "p1.png"]}}
+    clean = {"sample_id": "deck-a__CLEAN", "labels": [],
+             "metadata": {"page_image_paths": ["c0.png", "c1.png"]}}
+    rows, summary = materialize_deck_pairs([positive], [clean], tmp_path, 1)
+    assert summary["initial_limit"] == 2 and len(rows) == 4
+    assert {row["is_clean"] for row in rows[:2]} == {False, True}
+    assert all(row["target_action"] == "REQUEST_DECK" for row in rows[:2])
+    assert all(row["availability"] == "deck_context_available" for row in rows[2:])
+    messages = _api_messages(rows[2], tmp_path, "generic")
+    assert '"deck_id"' in messages[-1]["content"][-1]["text"]
+    assert "S2_NARRATIVE_ORDER_BREAK" in messages[-1]["content"][-1]["text"]
+
+
+def test_materialize_slideaudit_uses_confident_absent_as_named_negative(tmp_path):
+    rows = [
+        {"sample_id": "sa-pos", "image_path": "pos.png",
+         "labels": [{"type": "G1_TEXT_OVERFLOW"}], "metadata": {"confident_absent": []}},
+        {"sample_id": "sa-neg", "image_path": "neg.png", "labels": [],
+         "metadata": {"confident_absent": ["G1_TEXT_OVERFLOW"]}},
+    ]
+    output, summary = materialize_slideaudit(rows, tmp_path, 1)
+    assert len(output) == 2 and {row["is_clean"] for row in output} == {False, True}
+    assert {row["defect"] for row in output} == {"G1_TEXT_OVERFLOW"}
+    assert all(row["availability"] == "image_only" for row in output)
+    assert summary["native_ir"] is False and summary["native_reference"] is False
 
 
 def test_final_test_guard_requires_committed_clean_registry(tmp_path):
