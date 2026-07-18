@@ -6,6 +6,8 @@
 
 **硬截止（AoE = UTC-12）**：摘要 **2026-07-21** ｜ 正文 **2026-07-28** ｜ Supplement **2026-07-31**（OpenReview 提交）
 
+> **当前执行入口（2026-07-18）**：W7.0–W7.5 已完成并有 Git-tracked artifact；最终 checkpoint/policy 已冻结为 seed73 step768、confidence threshold `0.0`、最多一次 escalation（`reports/part3/w75_model_selection.json`、`runs/part3/d3_selection/frozen_policy.json`）。**下一步从 W7.6 baseline/router/teacher/prompt/availability/deck 对照开始，完成并冻结 W7.6 的评测矩阵与表格模板后才进入 W7.7；`final_test` 继续保持 untouched。** W4 当前只剩实际改写并提交方法性标题/Abstract，不得提前填结果数字。
+
 ## 审稿缩写索引
 
 - **W = Weakness**（审稿意见里的主要弱点）
@@ -108,7 +110,7 @@
       三家均过门 → Ernie/单模型/换方案的预案都不触发。C3 证据指认已核（示例点名溢出 bullet + region）。
 - [x] thinking 处理已核：qwen3-vl-plus 该端点 **默认 reasoning_tokens=0**（三种关法都接受、都 0）；gpt-5.1-nothinking 天然干净；gemini-2.5-flash 需 `{"enable_thinking":false}` + 放大 `--max-tokens 768`，且**仍会花 ~59 reasoning tokens 并在约 5/20 探针返回 None content**（门不受影响，全量 sweep 时按预案单独报 reasoning tokens）。
 - [x] **断点续跑 `--resume` 已实现**：增量写 `<out>.rows.jsonl`（每 sample flush）+ 启动**只跳成功行、重试失败行**（失败多为 429/限额，正是要续的）+ 结束聚合全量；非 resume 路径行为不变。实测：resume 精确「27 跳/13 重试」，配合退避 failures=0。
-- [x] **限额下执行顺序**：① 三模型 capable 冒烟 **已完成**；② **qwen3-vl-plus G7 四条件全量已跑完**（含 C0_rep）→ report/cost-table 出（见 2.2/2.3）；③ G1 后台运行中；④ Gemini/GPT 复制、⑤ 可选 Ernie 为后续可续跑批次。
+- [x] **限额下执行顺序已收口**：三模型 capable 冒烟及 qwen/gemini/gpt 的 G7+G1 四条件全量均已完成，report/cost-table 已生成（见 2.2/2.3）；可选 Ernie 不属于验收必需项，未触发。
 - [x] 并发与限流：`--max-retries=5` 指数退避（429「每分钟请求次数超过限制」按模型计、必现）；qwen3-vl-plus workers=3、gemini/gpt 冒烟用 workers=2；限额耗尽由 SDK 抛错、`--resume` 续跑。
 
 #### (d) 成本预算（公司付费，约束是每日限额而非总价）
@@ -208,11 +210,11 @@
 
 - [x] **重标前的定向 bug 复查（对着旧 audit 的三条打）**：v1 人工标注已直接暴露当前普通 spot-check 的 G3/G5 口径漂移；并已核对 E8 权威记录，确认问题不是“人看不出来而已”，而是 **抽样仍在用旧定义**。同时已修 `scripts/part3_spotcheck_sample.py`：后续普通 spot-check 不再从 generic part-2 抽 G3/G5，而改用 `data/part3/g3_relmisalign.jsonl` / `data/part3/g5_chromatic.jsonl` 的 E8 纠正语料。
 - [x] **replacement 抽样已完成**：为避免重刷 69 对，已生成只替换失效 G3/G5 的重标包——`docs/spotcheck/manifest_g3g5_replacement.json`（18 对：G3 8 + G5 10）与 `docs/spotcheck/annotate_g3g5_replacement_zh.html`。replacement 语料分别来自 `runs/part3/g3_rel/*`（relative misalignment）与 `runs/part3/g5_chroma/*`（chromatic hue swap）。
-- [x] **补标 replacement（现只剩 G5）**：G3 的 8 对已在 `docs/spotcheck/labels_g3_only_replacement.json` 中保留为有效人标；Michael 已在 `docs/spotcheck/annotate_current_g5_only_replacement_zh.html` 上完成 corrected G5 的 10 对重标，并导出 `docs/spotcheck/labels_g5_only_replacement_v2.json`。若能拉到第二标注者（同学），同样走 G5-only 页再标一份；否则仍可保留 Michael + Claude 交叉核验。
+- [x] **补标 replacement 已完成**：G3 的 8 对已在 `docs/spotcheck/labels_g3_only_replacement.json` 中保留为有效人标；Michael 已在 `docs/spotcheck/annotate_current_g5_only_replacement_zh.html` 上完成 corrected G5 的 10 对重标，并导出 `docs/spotcheck/labels_g5_only_replacement_v2.json`。第二标注者属于可选增强，不再作为本项完成条件。
 - [x] **出报告**：已用 `part3_spotcheck_report.py` 生成 `reports/_e8_spotcheck_v2.md` + `data/part3/e8_spotcheck_v2.json`；并将 `part3_spotcheck_irdiff.py` 升级为可审计 replacement G3/G5 的 v2 版本，产出 `data/part3/e8_ir_faithfulness_v2.json`。结果：**73/73 defect-visible、73/73 twin-clean、flagged pairs = 0；结构忠实性审计 55/55 present**。
 - [x] **新旧对照**：已用 `scripts/part3_spotcheck_merge_v2.py` 合并旧 labels + G3-only replacement + G5-only replacement，得到 `docs/spotcheck/manifest_v2.json` / `docs/spotcheck/labels_v2.json`；并落盘 `reports/_e8_spotcheck_v2_delta.md`。结果：**被替换之外的旧 55 对一条未变**，G3 从 `0/7 -> 8/8`，G5 从 `0/7 -> 10/10`，说明 v2 修复的是抽样口径而非整体人标漂移。
 - [x] 落稿（配合台账 L16）：正文 3–4 句引用 v2 数字，完整表进 supplement；Limitations "No human-inspector reference point" 句改写；v2 若揪出新语料 bug，修复记录进 supplement 的 perturbation-fidelity 部分（与 45% snapping 发现同一叙事线）。
-- [ ] 时间盒：bug 复查 + 抽样 + 标注 ≈ 3–4 小时，安排在 W2 跨模型跑批等待窗口；**07-24 前完成**。
+- [x] 时间盒已收口：bug 复查、replacement 抽样、标注、合并与新旧对照均于 2026-07-16 完成，早于 **07-24** 截止；权威产物见本节上述 v2 manifest/labels/report/audit。
 
 **验收**：无表征级因果断言残留（grep 复查）；coverage headline 数字与表格逐格一致；三层术语无混用。
 
@@ -225,7 +227,7 @@
 - [x] sec:g7 的 reward audit 压至 ~半页：主文现只保留 CLIP-IQA/LAION 同 backbone dissociation + perturbation-fidelity 45% 两点；per-scorer 表与其余讨论已移交 Technical Supplement/补充材料承接。
 - [x] sec:examiner 压缩：主文现只保留 in-distribution 超 30B、abstain 行为、sim-to-real 负结果三点；训练细节与细表改由 supplement 承接。
 - [x] 释放篇幅给 W2 ablation 段与 W3 scope 声明；主线现为 Intro → setup → diag → elicit（含 ablation）→ coverage → g7 → examiner(压缩) → external → limits。
-- [ ] **07-21 前重新锁定 Abstract**：2026-07-16 主线由 LTT 切换为 Diagnose→Distill→Defer（D3），原 W4 摘要不再视为锁定。只有完成 **W7.0–W7.4 的“摘要锁定门”** 后，才可锁定方法性摘要；此时只写已经实现并通过 smoke test 的方法，不提前写 D3 优于 baseline 的结果数字。最终结果性措辞须等 W7.7 untouched test 后再更新。
+- [ ] **07-21 前重新锁定 Abstract**：W7.0–W7.4 的“摘要锁定门”已于 2026-07-18 通过，当前已具备改写方法性标题/Abstract 的前置条件；本项仍待实际落稿并核对。只写已经实现并通过 smoke test 的方法，不提前写 D3 优于 baseline 的结果数字；最终结果性措辞须等 W7.7 untouched test 后再更新。
 - [ ] **07-21 前**：将通过 W7 摘要锁定门后的标题与 Abstract 提交 OpenReview。待完成（2026-07-16）：投稿人将在截止日前自行填写并保存；提交成功后再勾选，不以本地改稿代替。
 - [x] 备选标题已拟好（仅 E1 结果不利时启用）："Diagnose Before You Route: Sub-Perceptual, Format-Suppressed, and Reference-Assisted Failures in VLM Slide Inspection"。
 - [x] 页数检查：`AuthorKit27/submission/main.pdf` 当前总计 8 页，但第 8 页为 references 延续；`pdftotext -f 7 -l 7 main.pdf -` 可见 References 已在物理第 7 页底部开始，满足 AAAI-27 正文 7 页页限。
@@ -314,7 +316,7 @@
 
 ### 7.4 端到端 smoke test 与“摘要锁定门”
 
-> **当前入口（2026-07-17）**：现有 from-base seed 42/17/73 adapter + heads 和 huirui base model `/data/public_data/xzs_data/Qwen3-VL-8B-Instruct` 足以立即做非 `final_test` 的加载、generic inference、action escalation 与 scoring 前置 smoke；但 7.4 的完整链路包含 QLoRA，正式验收必须接入上面重做且完整备份的 from-base run。旧 Part 2 大文件和历史图片不是硬前置。**可先做推理侧准备，不能用不完整恢复件勾选 7.4 或锁定 Abstract。**
+> **验收状态（2026-07-18）**：7.4 已接入正式重跑的 from-base seed42 checkpoint，完成 QLoRA→merge/serve→generic inference→单次 escalation→scoring smoke；本节不再是当前阻塞项。后续模型选择以 7.5 冻结的 seed73 为准，seed42 仅保留为实现链路 smoke 证据。
 
 - [x] 用每类小样本跑通完整链路：manifest → teacher reward matrix → D3 records → QLoRA → merge/serve → generic inference → action escalation → scoring；使用正式重跑 seed42、冻结 dev 32 条 balanced smoke，产物为 `runs/part3/d3_smoke_v2/seed42_dev_balanced.jsonl` 及 `.summary.json`，merged model 外置于 `huirui`（2026-07-18；未读取 `final_test`）。
 - [x] smoke test 必须证明实现语义正确，而非追求最终数字：semantic gate 全通过，parser/action-loop/teacher/consistency/escalation failure 均为 0；冻结 dev 无 `is_clean_deck=true`，故明确以 `NO_DEFECT + deck_context_available` 作为可执行 clean control，不冒充原 marker：
@@ -334,6 +336,8 @@
 - [x] 在碰 `final_test` 前生成 model card 式 run summary：`reports/part3/w75_model_selection.json` 已记录选择原因、seed73 的 ANSWER recall `0.3050` 覆盖权衡、未完成 endpoint、threshold、预期主表列、代码/data/model hash、ModelScope 路径和 frozen-dev 端到端证据；明确 `validation_used=false`、`final_test_read=false`（2026-07-18）。
 
 ### 7.6 必做 baseline 与消融
+
+> **当前入口（2026-07-18）**：训练侧已有 compute-matched vanilla 与五项 loss ablation checkpoint，但“训练完成”不等于本节验收完成。现在须在不读取 `final_test` 的前提下，先把 baseline/router/teacher/prompt/availability/deck 各臂的统一推理与 scoring 跑在 dev/validation，生成可比较 artifact；不得仅凭 head loss 勾选。建议顺序：① baseline + router 主矩阵；② teacher/prompt 内化；③ availability/OOD + deck 专项；④ 冻结 W7.7 表格模板和一次性运行命令。
 
 - [ ] Baselines：zero-shot 8B、zero-shot 30B、当前 vanilla Part 2 FT、fixed C0、uniform C3、人工 frozen route、compute-matched vanilla FT（相同数据量/step）。
 - [ ] Router 对照：人工 fixed route、learned class-level route、learned sample-level route、sample-level + escalation/defer。
