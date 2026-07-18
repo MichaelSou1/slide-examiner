@@ -1,0 +1,93 @@
+Loading weights:   0%|          | 0/882 [00:00<?, ?it/s]Loading weights:   0%|          | 2/882 [00:00<01:25, 10.24it/s]Loading weights:   1%|          | 5/882 [00:00<01:10, 12.48it/s]Loading weights:   2%|▏         | 15/882 [00:00<00:24, 35.38it/s]Loading weights:   2%|▏         | 20/882 [00:00<00:24, 35.82it/s]Loading weights:   3%|▎         | 27/882 [00:00<00:23, 36.09it/s]Loading weights:   4%|▍         | 38/882 [00:01<00:20, 41.96it/s]Loading weights:   6%|▌         | 49/882 [00:01<00:18, 45.94it/s]Loading weights:   7%|▋         | 60/882 [00:01<00:16, 49.83it/s]Loading weights:   8%|▊         | 71/882 [00:01<00:15, 53.57it/s]Loading weights:   9%|▉         | 82/882 [00:01<00:15, 52.68it/s]Loading weights:  11%|█         | 93/882 [00:02<00:14, 53.47it/s]Loading weights:  12%|█▏        | 104/882 [00:02<00:14, 55.16it/s]Loading weights:  13%|█▎        | 115/882 [00:02<00:14, 53.64it/s]Loading weights:  14%|█▍        | 126/882 [00:02<00:14, 52.81it/s]Loading weights:  16%|█▌        | 137/882 [00:02<00:14, 52.19it/s]Loading weights:  17%|█▋        | 148/882 [00:03<00:13, 52.85it/s]Loading weights:  18%|█▊        | 159/882 [00:03<00:13, 54.35it/s]Loading weights:  19%|█▉        | 170/882 [00:03<00:13, 53.25it/s]Loading weights:  21%|██        | 181/882 [00:03<00:13, 52.38it/s]Loading weights:  22%|██▏       | 192/882 [00:03<00:13, 52.86it/s]Loading weights:  23%|██▎       | 203/882 [00:04<00:12, 54.26it/s]Loading weights:  24%|██▍       | 214/882 [00:04<00:12, 53.02it/s]Loading weights:  26%|██▌       | 225/882 [00:04<00:12, 52.13it/s]Loading weights:  27%|██▋       | 236/882 [00:04<00:12, 52.81it/s]Loading weights:  28%|██▊       | 247/882 [00:04<00:11, 54.32it/s]Loading weights:  29%|██▉       | 258/882 [00:05<00:11, 53.04it/s]Loading weights:  30%|███       | 269/882 [00:05<00:11, 52.19it/s]Loading weights:  32%|███▏      | 280/882 [00:05<00:11, 52.60it/s]Loading weights:  33%|███▎      | 291/882 [00:05<00:10, 54.00it/s]Loading weights:  34%|███▍      | 302/882 [00:05<00:10, 52.91it/s]Loading weights:  35%|███▌      | 313/882 [00:06<00:10, 52.03it/s]Loading weights:  37%|███▋      | 324/882 [00:06<00:10, 52.75it/s]Loading weights:  38%|███▊      | 335/882 [00:06<00:10, 54.34it/s]Loading weights:  39%|███▉      | 346/882 [00:06<00:09, 55.59it/s]Loading weights:  40%|████      | 357/882 [00:06<00:09, 57.07it/s]Loading weights:  42%|████▏     | 368/882 [00:07<00:08, 58.65it/s]Loading weights:  43%|████▎     | 379/882 [00:07<00:08, 59.77it/s]Loading weights:  44%|████▍     | 390/882 [00:07<00:08, 59.55it/s]Loading weights:  45%|████▌     | 401/882 [00:07<00:07, 60.30it/s]Loading weights:  47%|████▋     | 412/882 [00:07<00:07, 60.89it/s]Loading weights:  48%|████▊     | 423/882 [00:08<00:07, 61.41it/s]Loading weights:  49%|████▉     | 434/882 [00:08<00:07, 60.76it/s]Loading weights:  50%|█████     | 445/882 [00:08<00:07, 61.26it/s]Loading weights:  52%|█████▏    | 456/882 [00:08<00:06, 61.57it/s]Loading weights:  53%|█████▎    | 467/882 [00:08<00:06, 61.96it/s]Loading weights:  54%|█████▍    | 478/882 [00:08<00:06, 61.21it/s]Loading weights:  55%|█████▌    | 489/882 [00:09<00:06, 61.71it/s]Loading weights:  57%|█████▋    | 500/882 [00:09<00:06, 61.95it/s]Loading weights:  58%|█████▊    | 511/882 [00:09<00:05, 61.85it/s]Loading weights:  59%|█████▉    | 522/882 [00:09<00:05, 61.89it/s]Loading weights:  78%|███████▊  | 689/882 [00:09<00:00, 374.01it/s]Loading weights:  97%|█████████▋| 857/882 [00:09<00:00, 656.89it/s]Loading weights: 100%|██████████| 882/882 [00:09<00:00, 89.23it/s] 
+{
+  "parser_failure": 93,
+  "action_loop": 0,
+  "teacher_failure": 0,
+  "action_mismatch": 0,
+  "consistency_failure": 0,
+  "escalation_failure": 0,
+  "records": 216,
+  "resumed_records": 0,
+  "balanced": false,
+  "deployment": {
+    "lm": "base",
+    "model_path": "/data/models/Qwen3-VL-30B-A3B-Instruct",
+    "adapter_path": null,
+    "heads_path": null,
+    "policy_path": null,
+    "confidence_threshold": 0.0,
+    "max_escalations": 0,
+    "route_mode": "answer",
+    "prompt_mode": "generic",
+    "class_router_path": null,
+    "fixed_action": null,
+    "batch_size": 1,
+    "max_image_pixels": 262144,
+    "route_only": false,
+    "worst_case_model_calls": 1,
+    "worst_case_tool_calls": 0
+  },
+  "semantic_counts": {
+    "g7_legal_answer": 0,
+    "geometry_image_only_safe_route": 96,
+    "reference_request": 0,
+    "performed_escalation": 0
+  },
+  "semantic_gate": {
+    "passed": false,
+    "checks": {
+      "g7_image_only_legal_finding": {
+        "eligible": 24,
+        "passed_records": 0,
+        "passed": false
+      },
+      "g2_g6_image_only_safe_route": {
+        "eligible": 96,
+        "passed_records": 96,
+        "passed": true
+      },
+      "reference_escalation_completes": {
+        "eligible": 0,
+        "passed_records": 0,
+        "passed": false
+      },
+      "deck_escalation_completes": {
+        "eligible": 0,
+        "passed_records": 0,
+        "passed": false
+      },
+      "clean_deck_not_forced_positive": {
+        "eligible": 0,
+        "passed_records": 0,
+        "passed": false
+      },
+      "runtime_failures_zero": {
+        "eligible": 216,
+        "passed_records": 0,
+        "passed": false
+      }
+    },
+    "failure_reasons": [
+      "g7_image_only_legal_finding",
+      "reference_escalation_completes",
+      "deck_escalation_completes",
+      "clean_deck_not_forced_positive",
+      "runtime_failures_zero"
+    ]
+  },
+  "clean_control_definition": "is_clean_deck=true, or frozen-dev NO_DEFECT with deck_context_available",
+  "action_distribution": {
+    "CALL_LINTER": 123,
+    "DEFER": 93
+  },
+  "target_action_distribution": {
+    "REQUEST_REFERENCE": 48,
+    "CALL_LINTER": 96,
+    "ANSWER": 72
+  },
+  "parser_success": 216,
+  "post_escalation_parser_success": 0,
+  "completed_escalation": 0,
+  "action_correct": 56,
+  "output": "runs/part3/w76/zero_shot_30b_generic_validation.jsonl"
+}

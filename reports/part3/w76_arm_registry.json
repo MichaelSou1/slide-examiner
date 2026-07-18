@@ -24,11 +24,12 @@
     },
     {
       "id": "zero_shot_30b_generic",
-      "model": null,
+      "model": "/data/models/Qwen3-VL-30B-A3B-Instruct",
       "prompt": "generic",
       "route": "none",
-      "status": "blocked",
-      "blocker": "2026-07-18 live check: huirui path /home/gpus/models/Qwen3-VL-30B-A3B-Instruct-AWQ is missing; host 150 timed out twice and remains unverified. No 27B trace may be relabeled as 30B."
+      "status": "available",
+      "validation_artifact": "runs/part3/w76/zero_shot_30b_generic_validation.jsonl",
+      "note": "The official non-AWQ Qwen/Qwen3-VL-30B-A3B-Instruct checkpoint was downloaded and evaluated on huirui; no proxy model was relabeled."
     },
     {
       "id": "part2_v2_generic",
