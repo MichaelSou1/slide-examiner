@@ -3,9 +3,12 @@
 from __future__ import annotations
 
 import argparse
+import base64
 from collections import defaultdict
 import hashlib
 import json
+import mimetypes
+import os
 import subprocess
 import sys
 from pathlib import Path
@@ -19,7 +22,14 @@ from slide_examiner.d3_evaluation import (  # noqa: E402
     holm_family,
     normalize_runtime_row,
     pareto_frontier,
+    parse_generated_contract,
+    prompt_row,
     score_rows,
+)
+from slide_examiner.api_config import (  # noqa: E402
+    build_completion_with_metadata,
+    load_dotenv,
+    resolve_role,
 )
 from slide_examiner.d3_training import GENERIC_INSPECTION_INSTRUCTION  # noqa: E402
 
@@ -182,6 +192,127 @@ def normalize(args: argparse.Namespace) -> None:
                      indent=2))
 
 
+def _api_messages(row: dict[str, Any], repo: Path, prompt_mode: str) -> list[dict[str, Any]]:
+    """Convert a local D3 prompt into OpenAI-compatible multimodal messages."""
+    messages = json.loads(json.dumps(prompt_row(row, prompt_mode)["messages"]))
+    for message in messages:
+        content = message.get("content")
+        if not isinstance(content, list):
+            continue
+        for item in content:
+            if item.get("type") != "image":
+                continue
+            value = str(item.pop("image"))
+            path = Path(value) if Path(value).is_absolute() else repo / value
+            if value.startswith(("http://", "https://", "data:")):
+                url = value
+            else:
+                mime = mimetypes.guess_type(path.name)[0] or "image/png"
+                encoded = base64.b64encode(path.read_bytes()).decode("ascii")
+                url = f"data:{mime};base64,{encoded}"
+            item["type"] = "image_url"
+            item["image_url"] = {"url": url}
+        contract = (
+            "\nSTRICT_OUTPUT_SCHEMA: Return JSON only. Use this exact shape: "
+            '{"page_id":"<sample id>","action":"ANSWER|CALL_LINTER|REQUEST_REFERENCE|'
+            'REQUEST_DECK|DEFER","confidence":0.0,"requested_context":[],"evidence_source":'
+            '"pixels|structure|reference|deck_context|linter|none","has_defect":false,'
+            '"findings":[],"clean_dimensions":[]}. Allowed finding types are '
+            'G1_TEXT_OVERFLOW, G2_ELEMENT_OVERLAP, G3_ALIGNMENT_OFFSET, '
+            'G4_FONT_SIZE_INCONSISTENCY, G5_BRAND_COLOR_VIOLATION, G6_MARGIN_VIOLATION, '
+            'G7_RENDER_CONTAINMENT_OVERFLOW, S1_TITLE_BODY_MISMATCH, '
+            'S4_DENSITY_RULE_VIOLATION, and S6_IMAGE_TEXT_CONTRADICTION. Each finding must be '
+            '{"type":"<allowed type>","severity":"minor|moderate|severe",'
+            '"locator":{"level":"page","page_id":"<sample id>","element_id":"<visible '
+            'element or null>","bbox":null,"related_page_ids":[]},"evidence":"<visible '
+            'evidence>","fix_suggestion":"<specific fix>"}. Never emit finding strings or '
+            'invent new type names; omit an unsupported observation instead. Return at most one '
+            'finding, keep evidence and fix_suggestion under 30 words each, and do not explain '
+            'your reasoning outside the JSON.'
+        )
+        for item in reversed(content):
+            if item.get("type") == "text":
+                item["text"] = str(item.get("text", "")) + contract
+                break
+    return [{
+        "role": "system",
+        "content": "Return one compact JSON object only. Do not output reasoning or markdown.",
+    }, *messages]
+
+
+def api_infer(args: argparse.Namespace) -> None:
+    """Run API C0/C3 controls into the same row-level runtime contract."""
+    load_dotenv(args.env)
+    role = resolve_role("examiner", default_model=os.environ.get("OPENAI_MODEL"))
+    model = args.model or role["model"]
+    if not model:
+        raise RuntimeError("Set --model, PART3_EXAMINER_MODEL, or OPENAI_MODEL")
+    complete = build_completion_with_metadata(
+        str(model), role["base_url"], api_key_env=str(role["api_key_env"]),
+        api_style=str(role["api_style"]), max_tokens=args.max_tokens, temperature=0.0,
+    )
+    source = read_jsonl(args.input)
+    selected = source[:args.limit] if args.limit is not None else source
+    args.output.parent.mkdir(parents=True, exist_ok=True)
+    completed = ({str(row["record_id"]) for row in read_jsonl(args.output)}
+                 if args.output.exists() else set())
+    for index, row in enumerate(selected, 1):
+        record_id = str(row["record_id"])
+        if record_id in completed:
+            continue
+        trace: dict[str, Any] = {
+            "record_id": record_id, "sample_id": row["sample_id"],
+            "pair_id": row.get("pair_id"), "defect": row.get("defect"),
+            "availability": row.get("availability"), "target_action": row.get("target_action"),
+            "is_clean": row.get("is_clean", False), "is_clean_deck": row.get("is_clean_deck", False),
+            "api_model_requested": str(model), "api_style": str(role["api_style"]),
+            "prompt_mode": args.prompt_mode, "model_calls": 1, "external_calls": 0,
+        }
+        try:
+            response = complete(_api_messages(row, args.repo.resolve(), args.prompt_mode))
+            parsed, error, repaired = parse_generated_contract(str(response["text"]), row)
+            predicted_action = str((parsed or {}).get("action") or "DEFER")
+            trace.update({
+                "api_model_actual": response["model"], "raw": response["text"],
+                "parsed": parsed or {"has_defect": False, "findings": []},
+                "predicted_action": predicted_action, "raw_predicted_action": predicted_action,
+                "route_confidence": float((parsed or {}).get("confidence", 0.0) or 0.0),
+                "parse_error": error, "contract_repaired": repaired,
+                "prompt_tokens": response["prompt_tokens"],
+                "completion_tokens": response["completion_tokens"],
+                "total_tokens": response["total_tokens"],
+                "latency_seconds": response["latency_seconds"],
+                "failure": bool(error), "escalation": None,
+            })
+        except Exception as exc:  # noqa: BLE001 - preserve API failures in the trace
+            trace.update({
+                "api_model_actual": None, "raw": "", "parsed": {"has_defect": False, "findings": []},
+                "predicted_action": "DEFER", "raw_predicted_action": None,
+                "route_confidence": 0.0, "parse_error": None,
+                "api_error": f"{type(exc).__name__}: {exc}"[:1000], "contract_repaired": False,
+                "prompt_tokens": 0, "completion_tokens": 0, "total_tokens": 0,
+                "latency_seconds": 0.0, "failure": True, "escalation": None,
+            })
+        with args.output.open("a", encoding="utf-8") as stream:
+            stream.write(json.dumps(trace, ensure_ascii=False) + "\n")
+        if index % 10 == 0 or index == len(selected):
+            print(json.dumps({"completed": index, "total": len(selected)}))
+    selected_ids = {str(row["record_id"]) for row in selected}
+    rows = [row for row in read_jsonl(args.output) if str(row["record_id"]) in selected_ids]
+    summary = {
+        "records": len(rows), "failures": sum(bool(row.get("failure")) for row in rows),
+        "model_requested": str(model),
+        "models_actual": sorted({str(row["api_model_actual"]) for row in rows
+                                  if row.get("api_model_actual")}),
+        "api_style": str(role["api_style"]), "prompt_mode": args.prompt_mode,
+        "input": str(args.input), "input_sha256": sha256(args.input),
+        "output": str(args.output), "output_sha256": sha256(args.output),
+        "final_test_read": False,
+    }
+    args.output.with_suffix(".summary.json").write_text(json.dumps(summary, ensure_ascii=False, indent=2))
+    print(json.dumps(summary, ensure_ascii=False, indent=2))
+
+
 def score(args: argparse.Namespace) -> None:
     rows: list[dict[str, Any]] = []
     inputs = []
@@ -276,6 +407,17 @@ def main() -> None:
     normalizer.add_argument("--split", choices=("dev", "validation", "final_test"), required=True)
     normalizer.add_argument("--freeze-registry", type=Path)
     normalizer.set_defaults(function=normalize)
+
+    api_runner = sub.add_parser("api-infer")
+    api_runner.add_argument("--repo", type=Path, default=Path.cwd())
+    api_runner.add_argument("--env", type=Path, default=Path(".env"))
+    api_runner.add_argument("--input", type=Path, required=True)
+    api_runner.add_argument("--output", type=Path, required=True)
+    api_runner.add_argument("--prompt-mode", choices=("generic", "c3"), required=True)
+    api_runner.add_argument("--model")
+    api_runner.add_argument("--max-tokens", type=int, default=384)
+    api_runner.add_argument("--limit", type=int)
+    api_runner.set_defaults(function=api_infer)
 
     scorer = sub.add_parser("score")
     scorer.add_argument("--input", type=Path, nargs="+", required=True)

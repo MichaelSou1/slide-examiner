@@ -9,9 +9,11 @@ from __future__ import annotations
 
 import os
 from pathlib import Path
+import time
 from typing import Any, Callable
 
 Completion = Callable[[list[dict[str, Any]]], str]
+CompletionWithMetadata = Callable[[list[dict[str, Any]]], dict[str, Any]]
 
 
 def load_dotenv(path: str | Path = ".env", *, override: bool = False) -> dict[str, str]:
@@ -49,7 +51,14 @@ def _default_extra_body() -> dict[str, Any] | None:
     frozen-controls invariant holds).
     """
     if os.environ.get("PART3_DISABLE_THINKING", "").strip().lower() in ("1", "true", "yes", "on"):
-        return {"chat_template_kwargs": {"enable_thinking": False}}
+        # DashScope/Qwen's OpenAI-compatible API consumes ``enable_thinking``
+        # directly, while local vLLM servers consume it through the chat
+        # template kwargs. Supplying both keeps the frozen control effective on
+        # either backend instead of silently spending the output budget on CoT.
+        return {
+            "enable_thinking": False,
+            "chat_template_kwargs": {"enable_thinking": False},
+        }
     return None
 
 
@@ -133,5 +142,70 @@ def build_completion(
             chat_kwargs["extra_body"] = extra_body
         resp = client.chat.completions.create(**chat_kwargs)
         return resp.choices[0].message.content or "{}"
+
+    return complete
+
+
+def build_completion_with_metadata(
+    model: str,
+    base_url: str | None,
+    *,
+    api_key_env: str = "OPENAI_API_KEY",
+    api_style: str = "chat",
+    max_tokens: int = 2048,
+    temperature: float = 0.0,
+    extra_body: dict[str, Any] | None = None,
+) -> CompletionWithMetadata:
+    """Return a completion callable that preserves usage and latency metadata."""
+    style = (api_style or "chat").lower()
+    if extra_body is None:
+        extra_body = _default_extra_body()
+
+    def usage_value(usage: Any, name: str) -> int:
+        if usage is None:
+            return 0
+        value = usage.get(name, 0) if isinstance(usage, dict) else getattr(usage, name, 0)
+        try:
+            return int(value or 0)
+        except (TypeError, ValueError):
+            return 0
+
+    def complete(messages: list[dict[str, Any]]) -> dict[str, Any]:
+        from openai import OpenAI
+
+        key = os.environ.get(api_key_env) or os.environ.get("OPENAI_API_KEY") or "EMPTY"
+        client = OpenAI(api_key=key, base_url=base_url or None)
+        started = time.perf_counter()
+        if style == "responses":
+            kwargs: dict[str, Any] = {
+                "model": model, "input": messages, "max_output_tokens": max_tokens,
+            }
+            if temperature is not None:
+                kwargs["temperature"] = temperature
+            response = client.responses.create(**kwargs)
+            text = getattr(response, "output_text", None) or ""
+        else:
+            kwargs = {
+                "model": model, "messages": messages, "max_tokens": max_tokens,
+                "temperature": temperature,
+            }
+            if extra_body:
+                kwargs["extra_body"] = extra_body
+            response = client.chat.completions.create(**kwargs)
+            text = response.choices[0].message.content or ""
+        latency = time.perf_counter() - started
+        usage = getattr(response, "usage", None)
+        prompt_tokens = usage_value(usage, "prompt_tokens") or usage_value(usage, "input_tokens")
+        completion_tokens = (usage_value(usage, "completion_tokens")
+                             or usage_value(usage, "output_tokens"))
+        total_tokens = usage_value(usage, "total_tokens") or prompt_tokens + completion_tokens
+        return {
+            "text": text,
+            "model": str(getattr(response, "model", None) or model),
+            "prompt_tokens": prompt_tokens,
+            "completion_tokens": completion_tokens,
+            "total_tokens": total_tokens,
+            "latency_seconds": latency,
+        }
 
     return complete

@@ -3,7 +3,7 @@ import subprocess
 
 import pytest
 
-from scripts.part3_d3_evaluate import assert_final_test_unlocked, materialize_paired_images
+from scripts.part3_d3_evaluate import _api_messages, assert_final_test_unlocked, materialize_paired_images
 from slide_examiner.d3_evaluation import (
     exact_mcnemar, generated_route_action, holm_family, normalize_runtime_row, pareto_frontier,
     parse_generated_contract, prompt_row, score_arm, selective_risk_at_coverages,
@@ -114,6 +114,19 @@ def test_prompt_modes_are_detached_and_c3_is_atomic():
     assert row["messages"][0]["content"][1]["text"] == "Inspect."
     assert "ATOMIC_CHECK" in c3["messages"][0]["content"][1]["text"]
     assert "G7_UNREADABLE_TEXT" in c3["messages"][0]["content"][1]["text"]
+
+
+def test_api_messages_embeds_local_image_and_keeps_c3_prompt(tmp_path):
+    (tmp_path / "slide.png").write_bytes(b"png")
+    row = {"defect": "G7_UNREADABLE_TEXT", "messages": [{"role": "user", "content": [
+        {"type": "image", "image": "slide.png"}, {"type": "text", "text": "Inspect."},
+    ]}]}
+    messages = _api_messages(row, tmp_path, "c3")
+    assert messages[0]["role"] == "system"
+    image_item, text_item = messages[1]["content"]
+    assert image_item["type"] == "image_url"
+    assert image_item["image_url"]["url"].startswith("data:image/png;base64,")
+    assert "ATOMIC_CHECK" in text_item["text"]
 
 
 def test_parse_contract_repairs_non_answer_routing_envelope_without_findings():
