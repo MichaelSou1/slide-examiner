@@ -122,9 +122,9 @@
   "inference_budget": {
     "max_image_pixels": 262144,
     "batch_size": 1,
-    "max_new_tokens": 192,
+    "max_new_tokens": 384,
     "scope": "Frozen identically for every W7.6 validation arm and the one-shot W7.7 final run.",
-    "selection_basis": "Validation-only throughput smoke: 1920x1080 inputs fell from about 2147 to 359 prompt tokens and from about 52-57s to 10.31s for the measured row; padded batches of 2/4 were slower, so batch size remains 1. The original 96-token cap truncated otherwise usable Part 2 finding JSON during the first validation attempt, so the common completion cap is 192."
+    "selection_basis": "Validation-only throughput smoke: 1920x1080 inputs fell from about 2147 to 359 prompt tokens and from about 52-57s to 10.31s for the measured row; padded batches of 2/4 were slower, so batch size remains 1. Both the original 96-token cap and a subsequent 192-token smoke truncated repetitive but otherwise repairable Part 2 JSON; the common completion cap is therefore 384."
   },
   "superseded_traces": [
     {
@@ -137,7 +137,7 @@
       "arm": "zero_shot_8b_generic, part2_v2_generic, compute_matched_vanilla_generic",
       "path": "huirui:/data/slide-examiner/runs/part3/w76/*_superseded_parser_budget.jsonl",
       "status": "incomplete_not_for_scoring",
-      "reason": "Stopped after a live audit found that max_escalations=0 renamed generated external actions to DEFER and that the 96-token cap plus narrow repair rules caused avoidable parser failures. Formal reruns must start from empty traces."
+      "reason": "Stopped after live audits found that max_escalations=0 renamed generated external actions to DEFER and that the 96/192-token caps plus narrow repair rules caused avoidable parser failures. Formal reruns must start from empty traces."
     }
   ]
 }
