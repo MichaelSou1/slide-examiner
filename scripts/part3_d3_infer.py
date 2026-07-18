@@ -125,7 +125,8 @@ def infer_once(processor: Any, model: Any, heads: D3Heads, row: dict[str, Any],
                device: torch.device, max_new_tokens: int, *, terminal: bool = False,
                confidence_threshold: float = 0.0, max_escalations: int = 1,
                route_mode: str = "sample", fixed_action: str | None = None,
-               class_routes: dict[str, str] | None = None) -> dict[str, Any]:
+               class_routes: dict[str, str] | None = None,
+               route_only: bool = False) -> dict[str, Any]:
     prompt = processor.apply_chat_template(row["messages"][:1], tokenize=False,
                                            add_generation_prompt=True)
     image_list = _images(row)
@@ -163,6 +164,17 @@ def infer_once(processor: Any, model: Any, heads: D3Heads, row: dict[str, Any],
                     "parsed": authoritative, "parse_error": None,
                     "action_mismatch": mismatch, "consistency_error": consistency_error,
                     "contract_repaired": False, "fallback_defer": False,
+                    "usage": {"prompt_tokens": int(prompt_lengths.item()),
+                              "completion_tokens": 0,
+                              "total_tokens": int(prompt_lengths.item()),
+                              "latency_seconds": time.perf_counter() - started}}
+        if route_only:
+            return {"predicted_action": action, "raw_predicted_action": raw_action,
+                    "route_confidence": confidence, "raw": "", "generated_parsed": None,
+                    "generated_action": None, "parsed": None, "parse_error": None,
+                    "action_mismatch": False, "consistency_error": None,
+                    "contract_repaired": False, "fallback_defer": False,
+                    "route_only": True,
                     "usage": {"prompt_tokens": int(prompt_lengths.item()),
                               "completion_tokens": 0,
                               "total_tokens": int(prompt_lengths.item()),
@@ -213,6 +225,8 @@ def main() -> None:
                         help="class_router.json used when --route-mode=class")
     parser.add_argument("--fixed-action", choices=ACTIONS,
                         help="single action used when --route-mode=fixed")
+    parser.add_argument("--route-only", action="store_true",
+                        help="Score router/action/cost without generating ANSWER JSON")
     args = parser.parse_args()
     policy = json.loads(args.policy.read_text()) if args.policy else {}
     try:
@@ -263,7 +277,8 @@ def main() -> None:
         first = infer_once(processor, model, heads, row, device, args.max_new_tokens,
                            confidence_threshold=confidence_threshold,
                            max_escalations=max_escalations, route_mode=args.route_mode,
-                           fixed_action=args.fixed_action, class_routes=class_routes)
+                           fixed_action=args.fixed_action, class_routes=class_routes,
+                           route_only=args.route_only)
         if first["parse_error"]:
             counts["parser_failure"] += 1
         counts["action_mismatch"] += int(first["action_mismatch"])
@@ -292,7 +307,8 @@ def main() -> None:
                                         args.max_new_tokens, terminal=True,
                                         confidence_threshold=confidence_threshold,
                                         max_escalations=max_escalations, route_mode=args.route_mode,
-                                        fixed_action=args.fixed_action, class_routes=class_routes)
+                                        fixed_action=args.fixed_action, class_routes=class_routes,
+                                        route_only=args.route_only)
                     if second["parse_error"]:
                         counts["parser_failure"] += 1
                     counts["action_mismatch"] += int(second["action_mismatch"])
@@ -373,6 +389,7 @@ def main() -> None:
                               "route_mode": args.route_mode,
                               "class_router_path": str(args.class_router) if args.class_router else None,
                               "fixed_action": args.fixed_action,
+                              "route_only": args.route_only,
                               "worst_case_model_calls": 1 + max_escalations,
                               "worst_case_tool_calls": max_escalations},
                "semantic_counts": semantic,
