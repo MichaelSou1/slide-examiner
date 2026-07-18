@@ -141,7 +141,7 @@ def infer_once(processor: Any, model: Any, heads: D3Heads | None, row: dict[str,
     inputs = {key: value.to(device) for key, value in inputs.items()}
     prompt_lengths = inputs["attention_mask"].sum(dim=1)
     started = time.perf_counter()
-    with torch.no_grad():
+    with torch.inference_mode():
         if not route_requires_heads(route_mode):
             raw_action, confidence = ExaminerAction.ANSWER.value, 1.0
         else:
