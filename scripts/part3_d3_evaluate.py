@@ -210,7 +210,7 @@ def compare(args: argparse.Namespace) -> None:
         if allowed:
             left = [row for row in left if row.get("defect") in allowed]
             right = [row for row in right if row.get("defect") in allowed]
-        test = exact_mcnemar(left, right, key=spec.get("key", "pair_id"))
+        test = exact_mcnemar(left, right, key=spec.get("key", "record_id"))
         tests.append({**spec, **test})
     result = holm_family(tests, float(specs.get("alpha", 0.05)))
     args.output.parent.mkdir(parents=True, exist_ok=True)

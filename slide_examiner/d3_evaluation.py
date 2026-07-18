@@ -3,7 +3,7 @@ from __future__ import annotations
 
 from collections import defaultdict
 import json
-from math import comb
+from math import ceil, comb
 from pathlib import Path
 from statistics import mean
 from typing import Any, Iterable, Sequence
@@ -285,6 +285,40 @@ def selective_curve(rows: Sequence[dict[str, Any]]) -> list[dict[str, Any]]:
     return points
 
 
+def selective_risk_at_coverages(
+    rows: Sequence[dict[str, Any]], coverages: Sequence[float] = (0.5, 0.75, 0.9),
+) -> list[dict[str, Any]]:
+    """Evaluate selective risk at a predeclared coverage grid without interpolation."""
+    eligible = [row for row in rows if not row.get("failure")]
+    ranked = sorted(
+        (row for row in eligible if not row.get("deferred")),
+        key=lambda row: float(row.get("confidence") or 0.0),
+        reverse=True,
+    )
+    output = []
+    for target in coverages:
+        if not 0 < float(target) <= 1:
+            raise ValueError(f"coverage must be in (0, 1], got {target}")
+        required = ceil(float(target) * len(eligible))
+        if not eligible or required > len(ranked):
+            output.append({"target_coverage": float(target), "available": False,
+                           "covered": len(ranked),
+                           "achieved_coverage": _ratio(len(ranked), len(eligible)),
+                           "risk": None, "confidence_threshold": None})
+            continue
+        selected = ranked[:required]
+        errors = sum(not bool(row.get(
+            "correct", finding_present(row) != bool(row.get("is_clean"))))
+                     for row in selected)
+        output.append({"target_coverage": float(target), "available": True,
+                       "covered": required,
+                       "achieved_coverage": required / len(eligible),
+                       "risk": errors / required,
+                       "confidence_threshold": float(
+                           selected[-1].get("confidence") or 0.0)})
+    return output
+
+
 def score_arm(rows: Sequence[dict[str, Any]]) -> dict[str, Any]:
     defects = sorted({str(row["defect"]) for row in rows
                       if row.get("defect") and row.get("defect") != "NO_DEFECT"})
@@ -321,6 +355,7 @@ def score_arm(rows: Sequence[dict[str, Any]]) -> dict[str, Any]:
             "mean_latency_seconds": _mean(row.get("latency_seconds") for row in valid),
         },
         "risk_coverage": selective_curve(valid),
+        "fixed_coverage_risk": selective_risk_at_coverages(valid),
     }
 
 
@@ -333,12 +368,23 @@ def score_rows(rows: Sequence[dict[str, Any]]) -> dict[str, Any]:
 
 
 def exact_mcnemar(left: Sequence[dict[str, Any]], right: Sequence[dict[str, Any]],
-                  *, key: str = "pair_id") -> dict[str, Any]:
+                  *, key: str = "record_id") -> dict[str, Any]:
     """Two-sided exact McNemar test on aligned correctness rows."""
-    a = {str(row.get(key) or row.get("sample_id")): bool(row["correct"]) for row in left
-         if not row.get("failure") and "correct" in row}
-    b = {str(row.get(key) or row.get("sample_id")): bool(row["correct"]) for row in right
-         if not row.get("failure") and "correct" in row}
+    def keyed(rows: Sequence[dict[str, Any]], side: str) -> dict[str, bool]:
+        aligned: dict[str, bool] = {}
+        for row in rows:
+            if row.get("failure") or "correct" not in row:
+                continue
+            value = row.get(key)
+            if value is None:
+                raise ValueError(f"{side} row is missing McNemar key {key!r}")
+            identity = str(value)
+            if identity in aligned:
+                raise ValueError(f"duplicate McNemar key in {side}: {identity!r}")
+            aligned[identity] = bool(row["correct"])
+        return aligned
+
+    a, b = keyed(left, "left"), keyed(right, "right")
     common = sorted(a.keys() & b.keys())
     left_only = sum(a[item] and not b[item] for item in common)
     right_only = sum(not a[item] and b[item] for item in common)

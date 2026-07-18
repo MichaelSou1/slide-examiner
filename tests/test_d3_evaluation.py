@@ -6,7 +6,8 @@ import pytest
 from scripts.part3_d3_evaluate import assert_final_test_unlocked, materialize_paired_images
 from slide_examiner.d3_evaluation import (
     exact_mcnemar, generated_route_action, holm_family, normalize_runtime_row, pareto_frontier,
-    parse_generated_contract, prompt_row, score_arm, route_requires_heads, validate_deployment,
+    parse_generated_contract, prompt_row, score_arm, selective_risk_at_coverages,
+    route_requires_heads, validate_deployment,
 )
 
 
@@ -42,8 +43,8 @@ def test_score_arm_reports_paired_metrics_ci_routing_and_cost():
 
 
 def test_exact_mcnemar_and_holm_family():
-    left = [{"pair_id": str(i), "correct": i < 8} for i in range(10)]
-    right = [{"pair_id": str(i), "correct": i < 2} for i in range(10)]
+    left = [{"record_id": str(i), "correct": i < 8} for i in range(10)]
+    right = [{"record_id": str(i), "correct": i < 2} for i in range(10)]
     test = exact_mcnemar(left, right)
     assert test["left_wins"] == 6 and test["right_wins"] == 0
     assert test["p_value"] == 0.03125
@@ -51,6 +52,26 @@ def test_exact_mcnemar_and_holm_family():
                           {"name": "b", "p_value": .2}])
     assert family["tests"][0]["adjusted_p"] == .02
     assert family["tests"][0]["reject"] is True
+
+
+def test_exact_mcnemar_rejects_non_unique_pair_key():
+    left = [{"pair_id": "a", "correct": True}, {"pair_id": "a", "correct": False}]
+    right = [{"pair_id": "a", "correct": True}]
+    with pytest.raises(ValueError, match="duplicate McNemar key"):
+        exact_mcnemar(left, right, key="pair_id")
+
+
+def test_selective_risk_at_frozen_coverage_grid_reports_unavailable_points():
+    rows = [
+        {"correct": True, "confidence": .9, "deferred": False, "failure": False},
+        {"correct": False, "confidence": .8, "deferred": False, "failure": False},
+        {"correct": True, "confidence": .7, "deferred": False, "failure": False},
+        {"correct": True, "confidence": .1, "deferred": True, "failure": False},
+    ]
+    points = selective_risk_at_coverages(rows)
+    assert points[0]["covered"] == 2 and points[0]["risk"] == .5
+    assert points[1]["covered"] == 3 and points[1]["risk"] == pytest.approx(1 / 3)
+    assert points[2]["available"] is False and points[2]["risk"] is None
 
 
 def test_pareto_frontier_drops_dominated_arm():
