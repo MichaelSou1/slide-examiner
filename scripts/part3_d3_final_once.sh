@@ -24,7 +24,7 @@ if [[ -e "$ATTEMPT" || -e "$LOG" || -d "$OUT" ]]; then
 fi
 
 "$PYTHON" scripts/part3_d3_evaluate.py assert-unlocked \
-  --repo "$REPO" --freeze-registry "$REGISTRY"
+  --repo "$GUARD_REPO" --freeze-registry "$REGISTRY"
 
 mkdir -p "$OUT/raw" "$OUT/normalized" "$OUT/rendered_decks" "$REPORT/plots" "$LOG_DIR"
 "$PYTHON" - "$ATTEMPT" "$REGISTRY" <<'PY'
