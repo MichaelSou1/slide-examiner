@@ -86,6 +86,9 @@ def assert_final_test_unlocked(repo: Path, registry: Path) -> dict[str, Any]:
 
 def _relocatable(value: str, repo: Path) -> str:
     """Normalize historical absolute paths to checkout-relative runtime paths."""
+    for checkout_root in ("/data/slide-examiner/", "/home/gpus/slide-examiner/"):
+        if checkout_root in value:
+            return value.split(checkout_root, 1)[1]
     for marker in ("/runs/", "/data/", "/release/"):
         if marker in value:
             return str(Path(marker.strip("/")) / value.split(marker, 1)[1])

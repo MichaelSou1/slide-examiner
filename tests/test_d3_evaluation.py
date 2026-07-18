@@ -4,7 +4,7 @@ import subprocess
 import pytest
 
 from scripts.part3_d3_evaluate import (
-    _api_messages, assert_final_test_unlocked, drop_availability, materialize_deck_pairs,
+    _api_messages, _relocatable, assert_final_test_unlocked, drop_availability, materialize_deck_pairs,
     materialize_paired_images, materialize_slideaudit,
 )
 from slide_examiner.d3_evaluation import (
@@ -290,6 +290,14 @@ def test_materialize_slideaudit_uses_confident_absent_as_named_negative(tmp_path
     assert {row["defect"] for row in output} == {"G1_TEXT_OVERFLOW"}
     assert all(row["availability"] == "image_only" for row in output)
     assert summary["native_ir"] is False and summary["native_reference"] is False
+
+
+@pytest.mark.parametrize("value", [
+    "/data/slide-examiner/data/raw/slideaudit/images/slide.png",
+    "/home/gpus/slide-examiner/data/raw/slideaudit/images/slide.png",
+])
+def test_relocatable_strips_historical_checkout_roots(value, tmp_path):
+    assert _relocatable(value, tmp_path) == "data/raw/slideaudit/images/slide.png"
 
 
 def test_final_test_guard_requires_committed_clean_registry(tmp_path):
