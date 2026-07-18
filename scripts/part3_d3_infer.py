@@ -13,7 +13,8 @@ from peft import PeftModel
 from transformers import AutoProcessor, BitsAndBytesConfig, Qwen3VLForConditionalGeneration
 
 from slide_examiner.d3_training import (
-    ACTIONS, authoritative_result, balanced_smoke_rows, evaluate_semantic_gate, run_linter,
+    ACTIONS, authoritative_result, balanced_smoke_rows, bounded_route_action,
+    evaluate_semantic_gate, resolve_inference_policy, run_linter,
 )
 from slide_examiner.examiner_contract import (
     DECK_SCOPED_DEFECTS,
@@ -120,7 +121,8 @@ def parse_contract(text: str) -> tuple[dict[str, Any] | None, str | None, bool]:
 
 
 def infer_once(processor: Any, model: Any, heads: D3Heads, row: dict[str, Any],
-               device: torch.device, max_new_tokens: int, *, terminal: bool = False) -> dict[str, Any]:
+               device: torch.device, max_new_tokens: int, *, terminal: bool = False,
+               confidence_threshold: float = 0.0, max_escalations: int = 1) -> dict[str, Any]:
     prompt = processor.apply_chat_template(row["messages"][:1], tokenize=False,
                                            add_generation_prompt=True)
     image_list = _images(row)
@@ -132,18 +134,18 @@ def infer_once(processor: Any, model: Any, heads: D3Heads, row: dict[str, Any],
         output = model(**inputs, output_hidden_states=True, return_dict=True)
         pooled = pooled_at_prompt(output.hidden_states[-1], prompt_lengths).float()
         action_logits, select_logits, _, _ = heads(pooled)
-        action = ACTIONS[int(action_logits.argmax(-1).item())]
+        raw_action = ACTIONS[int(action_logits.argmax(-1).item())]
         confidence = float(torch.sigmoid(select_logits).item())
-        # Escalation is bounded to one action. Once requested context has been
-        # supplied, another tool/context request becomes an explicit DEFER.
-        if terminal and action not in {ExaminerAction.ANSWER.value, ExaminerAction.DEFER.value}:
-            action = ExaminerAction.DEFER.value
+        action = bounded_route_action(
+            raw_action, confidence, confidence_threshold=confidence_threshold,
+            terminal=terminal, max_escalations=max_escalations)
         # Routing is authoritative. Tool/reference/defer actions have a
         # deterministic legal envelope and must not depend on the LM emitting
         # a finding-shaped JSON object that will be discarded anyway.
         if action != ExaminerAction.ANSWER.value:
             authoritative, mismatch, consistency_error = authoritative_result(None, action)
-            return {"predicted_action": action, "route_confidence": confidence,
+            return {"predicted_action": action, "raw_predicted_action": raw_action,
+                    "route_confidence": confidence,
                     "raw": "", "generated_parsed": None, "generated_action": None,
                     "parsed": authoritative, "parse_error": None,
                     "action_mismatch": mismatch, "consistency_error": consistency_error,
@@ -158,7 +160,8 @@ def infer_once(processor: Any, model: Any, heads: D3Heads, row: dict[str, Any],
         parsed, mismatch, consistency_error = authoritative_result(None, action)
     else:
         parsed, mismatch, consistency_error = authoritative_result(parsed, action)
-    return {"predicted_action": action, "route_confidence": confidence,
+    return {"predicted_action": action, "raw_predicted_action": raw_action,
+            "route_confidence": confidence,
             "raw": text, "generated_parsed": parsed, "generated_action": (parsed or {}).get("action"),
             "parsed": parsed, "parse_error": None if fallback_defer else error,
             "generation_error": error, "action_mismatch": mismatch,
@@ -177,7 +180,18 @@ def main() -> None:
     parser.add_argument("--limit", type=int, default=32)
     parser.add_argument("--balanced", action="store_true")
     parser.add_argument("--max-new-tokens", type=int, default=384)
+    parser.add_argument("--policy", type=Path,
+                        help="Frozen inference-policy JSON; overrides threshold and escalation limit")
+    parser.add_argument("--confidence-threshold", type=float, default=0.0)
+    parser.add_argument("--max-escalations", type=int, choices=(0, 1), default=1)
     args = parser.parse_args()
+    policy = json.loads(args.policy.read_text()) if args.policy else {}
+    try:
+        confidence_threshold, max_escalations = resolve_inference_policy(
+            policy, confidence_threshold=args.confidence_threshold,
+            max_escalations=args.max_escalations)
+    except (TypeError, ValueError) as exc:
+        parser.error(str(exc))
     device = torch.device("cuda")
     processor, model, heads = load(args.run, args.base, device, args.merged_model)
     all_rows = JsonlDataset(args.input).rows
@@ -191,7 +205,9 @@ def main() -> None:
                            "action_mismatch": 0, "consistency_failure": 0,
                            "escalation_failure": 0}
     for row in rows:
-        first = infer_once(processor, model, heads, row, device, args.max_new_tokens)
+        first = infer_once(processor, model, heads, row, device, args.max_new_tokens,
+                           confidence_threshold=confidence_threshold,
+                           max_escalations=max_escalations)
         if first["parse_error"]:
             counts["parser_failure"] += 1
         counts["action_mismatch"] += int(first["action_mismatch"])
@@ -217,7 +233,9 @@ def main() -> None:
                                       "reason": f"{type(exc).__name__}: {exc}"}
                 else:
                     second = infer_once(processor, model, heads, followup_row, device,
-                                        args.max_new_tokens, terminal=True)
+                                        args.max_new_tokens, terminal=True,
+                                        confidence_threshold=confidence_threshold,
+                                        max_escalations=max_escalations)
                     if second["parse_error"]:
                         counts["parser_failure"] += 1
                     counts["action_mismatch"] += int(second["action_mismatch"])
@@ -262,7 +280,11 @@ def main() -> None:
                "deployment": {"lm": "merged" if args.merged_model else "base_plus_adapter",
                               "model_path": str(args.merged_model or args.base),
                               "heads_path": str(args.run / "d3_heads.pt"),
-                              "policy_path": str(args.run / "run_config.json")},
+                              "policy_path": str(args.policy or args.run / "run_config.json"),
+                              "confidence_threshold": confidence_threshold,
+                              "max_escalations": max_escalations,
+                              "worst_case_model_calls": 1 + max_escalations,
+                              "worst_case_tool_calls": max_escalations},
                "semantic_counts": semantic,
                "semantic_gate": evaluate_semantic_gate(results, counts),
                "clean_control_definition": (

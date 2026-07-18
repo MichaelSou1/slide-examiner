@@ -5,9 +5,10 @@ import pytest
 
 from slide_examiner.d3_training import (
     ACTION_TO_ID, _answer_for, action_class_weights, action_sample_weights,
-    authoritative_result, balanced_smoke_rows, build_d3_training_records,
+    authoritative_result, balanced_smoke_rows, bounded_route_action, build_d3_training_records,
     evaluate_semantic_gate, fit_class_router, is_optimizer_boundary,
-    mixed_objective_batches, relocate_path, resume_config_mismatches, run_linter,
+    mixed_objective_batches, relocate_path, resolve_inference_policy,
+    resume_config_mismatches, run_linter,
 )
 
 
@@ -60,6 +61,24 @@ def test_relocate_frozen_machine_path(tmp_path: Path):
 def test_action_ids_cover_contract_actions():
     assert set(ACTION_TO_ID) == {"ANSWER", "CALL_LINTER", "REQUEST_REFERENCE", "REQUEST_DECK", "DEFER"}
     assert len(set(ACTION_TO_ID.values())) == 5
+
+
+def test_frozen_policy_overrides_cli_defaults_and_rejects_unbounded_calls():
+    assert resolve_inference_policy(
+        {"confidence_threshold": 0.25, "max_escalations": 0},
+        confidence_threshold=0.9, max_escalations=1) == (0.25, 0)
+    with pytest.raises(ValueError, match=r"\[0, 1\]"):
+        resolve_inference_policy({"confidence_threshold": 1.01})
+    with pytest.raises(ValueError, match="only 0 or 1"):
+        resolve_inference_policy({"max_escalations": 2})
+
+
+def test_bounded_route_policy_defers_on_low_confidence_or_exhausted_budget():
+    assert bounded_route_action("ANSWER", 0.24, confidence_threshold=0.25) == "DEFER"
+    assert bounded_route_action("ANSWER", 0.25, confidence_threshold=0.25) == "ANSWER"
+    assert bounded_route_action("REQUEST_REFERENCE", 0.9, max_escalations=0) == "DEFER"
+    assert bounded_route_action("REQUEST_REFERENCE", 0.9, terminal=True) == "DEFER"
+    assert bounded_route_action("REQUEST_REFERENCE", 0.9) == "REQUEST_REFERENCE"
 
 
 def test_distill_target_preserves_teacher_locator_and_evidence():

@@ -579,3 +579,33 @@ def action_sample_weights(rows: list[dict[str, Any]]) -> list[float]:
     if missing:
         raise ValueError(f"training split is missing route actions: {missing}")
     return [1.0 / counts[int(row["action_id"])] for row in rows]
+
+
+def resolve_inference_policy(policy: dict[str, Any] | None, *,
+                             confidence_threshold: float = 0.0,
+                             max_escalations: int = 1) -> tuple[float, int]:
+    """Resolve and validate the bounded deployment policy without loading a model."""
+    policy = policy or {}
+    threshold = float(policy.get("confidence_threshold", confidence_threshold))
+    escalations = int(policy.get("max_escalations", max_escalations))
+    if not 0.0 <= threshold <= 1.0:
+        raise ValueError("confidence threshold must be in [0, 1]")
+    if escalations not in (0, 1):
+        raise ValueError("bounded inference supports only 0 or 1 escalation")
+    return threshold, escalations
+
+
+def bounded_route_action(raw_action: str, confidence: float, *,
+                         confidence_threshold: float = 0.0,
+                         terminal: bool = False,
+                         max_escalations: int = 1) -> str:
+    """Apply confidence and call-budget guards to a router prediction."""
+    threshold, escalations = resolve_inference_policy(
+        None, confidence_threshold=confidence_threshold, max_escalations=max_escalations)
+    if raw_action not in ACTIONS:
+        raise ValueError(f"unknown route action: {raw_action}")
+    if confidence < threshold:
+        return "DEFER"
+    if raw_action not in {"ANSWER", "DEFER"} and (terminal or escalations == 0):
+        return "DEFER"
+    return raw_action
