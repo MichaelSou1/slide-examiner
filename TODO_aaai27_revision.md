@@ -329,9 +329,9 @@
 ### 7.5 正式训练与 dev-only 模型选择
 
 - [x] 运行至少 3 个固定 seed；每个 seed 保存 base model 引用、adapter、heads、完整 trainer-state/optimizer/scheduler、config、数据 hash、训练日志和推理版本。seed 42/17/73 正式 run 均已完成；10 个 `formal_v2` run（含三 seed、continue-D3、compute-matched vanilla 和五项 loss 消融）的 192/384/576/768 checkpoint、最终 adapter/heads、训练状态与 SHA-256 inventory 已完整上传至 ModelScope `michaelsou/slide-examiner-d3-qwen3vl8b/formal_v2/`，冻结 train/dev 及其 10,068 个去重引用图片上传至 `michaelsou/slide-examiner-d3-training-w73`（2026-07-18；未读取或上传 `final_test`）。merged model 仅作为可再生成的 smoke 中间产物保留在远端，不重复上传 10 份基座权重。
-- [ ] 只在 dev 上调：loss 权重、utility cost、teacher margin、confidence/defer threshold、最大 escalation 次数；W5 validation 用于对照和消融，不用于继续追 final-test 类别。
-- [ ] 冻结最终 D3 checkpoint 与 inference policy：generic first-pass → action → 最多一次工具/reference escalation → final finding/defer；记录最坏调用上限，防止成本无限增长。
-- [ ] 在碰 `final_test` 前生成 model card 式 run summary（放现有 report/run artifact，不新建无关文档）：选择原因、失败类别、threshold、预期主表列、代码/data/model hash。
+- [x] 只在 dev 上调：loss 权重、utility cost、teacher margin、confidence/defer threshold、最大 escalation 次数；三 seed 按预声明 minimum dev joint loss 选择 seed73（`0.259068`），utility 冻结为 `lambda_c=0.025 / lambda_fp=2.0 / lambda_v=0.2 / margin=0.025`。select head 目标并非校准后的 correctness probability，因此不做无依据的事后 cutoff 搜索，confidence threshold 冻结为 `0.0`；最大 escalation 冻结为 `1`。W5 validation 与 `final_test` 均未用于选择（2026-07-18；`reports/part3/w75_model_selection.json`）。
+- [x] 冻结最终 D3 checkpoint 与 inference policy：seed73 step768，generic first-pass → action → 最多一次 linter/reference/deck escalation → final finding/defer；重复请求或预算耗尽显式转 `DEFER`。策略见 `runs/part3/d3_selection/frozen_policy.json`，最坏 2 次模型调用、1 次外部工具/上下文调用；128 条 frozen-dev balanced 端到端验收 action accuracy `109/128=0.8516`、semantic gate 全通过、六类 runtime failure 均为 0（2026-07-18）。
+- [x] 在碰 `final_test` 前生成 model card 式 run summary：`reports/part3/w75_model_selection.json` 已记录选择原因、seed73 的 ANSWER recall `0.3050` 覆盖权衡、未完成 endpoint、threshold、预期主表列、代码/data/model hash、ModelScope 路径和 frozen-dev 端到端证据；明确 `validation_used=false`、`final_test_read=false`（2026-07-18）。
 
 ### 7.6 必做 baseline 与消融
 

@@ -440,6 +440,8 @@ S6 二选一(2-AFC)强制选择复评 2026-06-16(`scripts/s6_forced_choice.py`,1
 
 > **W7.3 ModelScope 完整备份（2026-07-18）**：10 个 `d3_formal_v2` run 的四个周期 checkpoint、最终 QLoRA adapter / D3 heads、optimizer / scheduler / RNG / trainer state、metrics 与逐文件 SHA-256 inventory 已上传至 `michaelsou/slide-examiner-d3-qwen3vl8b/formal_v2/`；API 对 755 个正式文件逐项复核，SHA-256 全部匹配。实际训练使用的 path-normalized D3 train/dev JSONL、export summary 和 10,068 个去重引用图片归档于数据集 `michaelsou/slide-examiner-d3-training-w73`；两个仓库 README 均注明版本、目录、hash、复现方式以及“不含 `final_test`”边界。
 
+> **W7.5 dev-only 模型与策略冻结（2026-07-18；`final_test` untouched）**：按预声明 minimum dev joint loss 从 seed42/17/73 选择 seed73 step768（`0.259068`；同时 G2–G6 image-only unsafe ANSWER rate 为 `0`），但如实保留 ANSWER recall `0.3050` 的覆盖权衡。confidence threshold 因 select head 未校准而冻结为 `0.0`，最多一次 escalation，最坏 2 次模型调用 / 1 次外部调用。128 条 frozen-dev balanced 验收 action accuracy `109/128`，semantic gate 全通过且六类 runtime failure 均为 0。冻结策略与 model-card JSON 分别为 `runs/part3/d3_selection/frozen_policy.json`、`reports/part3/w75_model_selection.json`。
+
 > **降级 2026-06-19(本节以此 banner 为准,见 SPEC §5 降级 banner)**:本工作**重心是 VLM(N1 诊断 + N2 模板 + 注入缺陷训练的专用 examiner)**,**不是 skill 优化论文**。Part 3 仅为"examiner 越准→下游 deck 改得越好"的**轻量外在效用佐证**。
 > - **载体降级为"self-refine 主佐证 + GEPA 旁证"**:① self-refine(examiner 作 agent 反思信号,generate→critique→revise;零外部依赖、最直接;按 EvoPresent 已占范式,标 baseline-style、不当 headline)= **主佐证(待建,见 P10)**;② GEPA skill-space(旁证,已真实跑通)。
 > - **SkillOpt 移出主线、deferred**:上游 PyPI 包缺 prompt 资产、analyst 不真正调 optimizer(轨迹文件契约不符,0 calls;后端隔离测试本身可调通)、GitHub 不可达 → 忠实复现不可达。代码留 `slide_examiner/skillopt_adapter.py`,不进主线。"optimizer-agnostic" 降为"self-refine vs GEPA 两载体结论一致"的鲁棒性佐证。

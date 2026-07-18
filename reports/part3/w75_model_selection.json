@@ -138,5 +138,25 @@
     "dev_inference_summary": "runs/part3/d3_selection/seed73_dev_balanced128.summary.json",
     "dev_inference_log": "logs/part3/w75_seed73_dev_balanced128.log"
   },
-  "modelscope_path": "michaelsou/slide-examiner-d3-qwen3vl8b/formal_v2/train_seed73"
+  "modelscope_path": "michaelsou/slide-examiner-d3-qwen3vl8b/formal_v2/train_seed73",
+  "dev_end_to_end_evidence": {
+    "split": "frozen_dev",
+    "sampling": "balanced",
+    "records": 128,
+    "action_correct": 109,
+    "action_accuracy": 0.8515625,
+    "semantic_gate_passed": true,
+    "runtime_failures": {
+      "parser_failure": 0,
+      "action_loop": 0,
+      "teacher_failure": 0,
+      "action_mismatch": 0,
+      "consistency_failure": 0,
+      "escalation_failure": 0
+    },
+    "completed_escalations": 67,
+    "confidence_threshold": 0.0,
+    "max_escalations": 1,
+    "final_test_read": false
+  }
 }
