@@ -1,0 +1,89 @@
+{
+  "parser_failure": 0,
+  "action_loop": 0,
+  "teacher_failure": 0,
+  "action_mismatch": 0,
+  "consistency_failure": 0,
+  "escalation_failure": 0,
+  "records": 4,
+  "resumed_records": 0,
+  "balanced": false,
+  "deployment": {
+    "lm": "base",
+    "model_path": "/data/public_data/xzs_data/Qwen3-VL-8B-Instruct",
+    "adapter_path": null,
+    "heads_path": null,
+    "policy_path": null,
+    "confidence_threshold": 0.0,
+    "max_escalations": 0,
+    "route_mode": "answer",
+    "prompt_mode": "generic",
+    "class_router_path": null,
+    "fixed_action": null,
+    "batch_size": 1,
+    "max_image_pixels": 262144,
+    "route_only": false,
+    "worst_case_model_calls": 1,
+    "worst_case_tool_calls": 0
+  },
+  "semantic_counts": {
+    "g7_legal_answer": 0,
+    "geometry_image_only_safe_route": 0,
+    "reference_request": 0,
+    "performed_escalation": 0
+  },
+  "semantic_gate": {
+    "passed": false,
+    "checks": {
+      "g7_image_only_legal_finding": {
+        "eligible": 0,
+        "passed_records": 0,
+        "passed": false
+      },
+      "g2_g6_image_only_safe_route": {
+        "eligible": 0,
+        "passed_records": 0,
+        "passed": false
+      },
+      "reference_escalation_completes": {
+        "eligible": 0,
+        "passed_records": 0,
+        "passed": false
+      },
+      "deck_escalation_completes": {
+        "eligible": 0,
+        "passed_records": 0,
+        "passed": false
+      },
+      "clean_deck_not_forced_positive": {
+        "eligible": 0,
+        "passed_records": 0,
+        "passed": false
+      },
+      "runtime_failures_zero": {
+        "eligible": 4,
+        "passed_records": 4,
+        "passed": true
+      }
+    },
+    "failure_reasons": [
+      "g7_image_only_legal_finding",
+      "g2_g6_image_only_safe_route",
+      "reference_escalation_completes",
+      "deck_escalation_completes",
+      "clean_deck_not_forced_positive"
+    ]
+  },
+  "clean_control_definition": "is_clean_deck=true, or frozen-dev NO_DEFECT with deck_context_available",
+  "action_distribution": {
+    "CALL_LINTER": 4
+  },
+  "target_action_distribution": {
+    "REQUEST_REFERENCE": 4
+  },
+  "parser_success": 4,
+  "post_escalation_parser_success": 0,
+  "completed_escalation": 0,
+  "action_correct": 0,
+  "output": "runs/part3/w76/zero_shot_8b_parser_budget_smoke4.jsonl"
+}

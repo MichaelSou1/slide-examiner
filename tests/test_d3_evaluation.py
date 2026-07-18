@@ -5,10 +5,9 @@ import pytest
 
 from scripts.part3_d3_evaluate import assert_final_test_unlocked, materialize_paired_images
 from slide_examiner.d3_evaluation import (
-    exact_mcnemar, holm_family, normalize_runtime_row, pareto_frontier,
+    exact_mcnemar, generated_route_action, holm_family, normalize_runtime_row, pareto_frontier,
     parse_generated_contract, prompt_row, score_arm, route_requires_heads, validate_deployment,
 )
-from slide_examiner.d3_training import bounded_route_action
 
 
 def _row(sample, defect, clean, predicted, **extra):
@@ -110,14 +109,41 @@ def test_parse_contract_repairs_non_answer_routing_envelope_without_findings():
     assert parsed["evidence_source"] == "none"
 
 
-def test_generated_external_action_respects_zero_escalation_budget():
+def test_generated_external_action_is_not_renamed_by_zero_escalation_budget():
     parsed, error, _ = parse_generated_contract(json.dumps({
         "action": "REQUEST_REFERENCE", "confidence": .9,
         "requested_context": ["reference"], "evidence_source": "none",
         "has_defect": False, "findings": [], "clean_dimensions": [],
     }), {"record_id": "row-a", "defect": "S4_DENSITY"})
     assert error is None and parsed["action"] == "REQUEST_REFERENCE"
-    assert bounded_route_action(parsed["action"], 1.0, max_escalations=0) == "DEFER"
+    assert generated_route_action(parsed["action"]) == "REQUEST_REFERENCE"
+    assert generated_route_action(parsed["action"], terminal=True) == "DEFER"
+
+
+def test_parse_contract_repairs_common_zero_shot_answer_shape():
+    parsed, error, repaired = parse_generated_contract(json.dumps({
+        "action": "ANSWER", "confidence": 1.0, "requested_context": "",
+        "evidence_source": "image_only", "has_defect": False, "findings": [],
+        "clean_dimensions": {"width": 1920, "height": 1080},
+    }), {"sample_id": "page-a", "defect": "G2_ELEMENT_OVERLAP"})
+    assert error is None and repaired is True
+    assert parsed["page_id"] == "page-a"
+    assert parsed["action"] == "ANSWER"
+    assert parsed["requested_context"] == []
+    assert parsed["evidence_source"] == "pixels"
+    assert parsed["clean_dimensions"] == []
+
+
+def test_parse_contract_repairs_part2_legacy_clean_dimensions():
+    parsed, error, repaired = parse_generated_contract(json.dumps({
+        "has_defect": False, "findings": [],
+        "clean_dimensions": ["visible_text", "alignment", "typography",
+                             "title_fit", "figure_quality", "brand_element"],
+    }), {"record_id": "page-b", "defect": "G7_RENDER_CONTAINMENT_OVERFLOW"})
+    assert error is None and repaired is True
+    assert parsed["page_id"] == "page-b"
+    assert parsed["action"] == "ANSWER"
+    assert parsed["clean_dimensions"] == ["text_fit", "alignment", "typography"]
 
 
 @pytest.mark.parametrize(("run", "merged", "adapter", "mode", "error"), [

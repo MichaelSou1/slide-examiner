@@ -11,7 +11,9 @@ from typing import Any, Iterable, Sequence
 from .examiner_contract import (
     DECK_SCOPED_DEFECTS,
     PAGE_SCOPED_DEFECTS,
+    Dimension,
     ExaminerAction,
+    EvidenceSource,
     parse_deck_result,
     parse_page_result,
 )
@@ -25,15 +27,53 @@ def _extract_json(text: str) -> dict[str, Any]:
     return json.loads(text[start:end + 1])
 
 
-def _repair_contract(payload: dict[str, Any]) -> dict[str, Any] | None:
+def _repair_contract(payload: dict[str, Any], row: dict[str, Any] | None = None
+                    ) -> dict[str, Any] | None:
     """Apply conservative, content-preserving repairs to generated JSON."""
     repaired = json.loads(json.dumps(payload))
     if repaired.get("action") not in {action.value for action in ExaminerAction}:
         repaired["action"] = ExaminerAction.ANSWER.value
+    defect_class = str((row or {}).get("defect", "")).split("_", 1)[0]
+    is_deck = "deck_id" in repaired or defect_class in {"S2", "S3", "S5"}
+    id_key = "deck_id" if is_deck else "page_id"
+    repaired.pop("page_id" if is_deck else "deck_id", None)
+    repaired[id_key] = str(repaired.get(id_key)
+                           or (row or {}).get("sample_id")
+                           or (row or {}).get("record_id") or "unknown")
     findings = repaired.get("findings", [])
     if not isinstance(findings, list) or any(not isinstance(item, dict) for item in findings):
         return None
-    is_deck = "deck_id" in repaired
+    if repaired.get("has_defect") is None:
+        repaired["has_defect"] = bool(findings)
+    requested = repaired.get("requested_context")
+    if requested is None or requested == "":
+        requested = []
+    elif isinstance(requested, str):
+        requested = [requested]
+    if not isinstance(requested, list):
+        return None
+    valid_sources = {source.value for source in EvidenceSource}
+    repaired["requested_context"] = [str(item) for item in requested
+                                     if str(item) in valid_sources]
+    source = str(repaired.get("evidence_source") or "")
+    if source == "image_only":
+        source = EvidenceSource.PIXELS.value
+    repaired["evidence_source"] = (source if source in valid_sources
+                                    else EvidenceSource.PIXELS.value)
+    dimensions = repaired.get("clean_dimensions")
+    if not isinstance(dimensions, list):
+        dimensions = []
+    dimension_aliases = {
+        "visible_text": "text_fit", "title_fit": "text_fit",
+        "body_fit": "text_fit", "figure_fit": "text_fit",
+    }
+    valid_dimensions = {dimension.value for dimension in Dimension}
+    normalized_dimensions = []
+    for dimension in dimensions:
+        normalized = dimension_aliases.get(str(dimension), str(dimension))
+        if normalized in valid_dimensions and normalized not in normalized_dimensions:
+            normalized_dimensions.append(normalized)
+    repaired["clean_dimensions"] = normalized_dimensions
     allowed = DECK_SCOPED_DEFECTS if is_deck else PAGE_SCOPED_DEFECTS
     allowed_by_prefix = {item.value.split("_", 1)[0]: item.value for item in allowed}
     subject_id = str(repaired.get("deck_id" if is_deck else "page_id") or "unknown")
@@ -93,7 +133,7 @@ def parse_generated_contract(text: str, row: dict[str, Any] | None = None
         try:
             return parser(json.dumps(parsed)).model_dump(mode="json"), None, False
         except Exception as original:  # noqa: BLE001 - attempt bounded schema repair
-            repaired = _repair_non_answer(parsed, row) or _repair_contract(parsed)
+            repaired = _repair_non_answer(parsed, row) or _repair_contract(parsed, row)
             if repaired is not None:
                 parser = parse_deck_result if "deck_id" in repaired else parse_page_result
                 try:
@@ -137,6 +177,12 @@ def validate_deployment(run: Path | None, merged_model: Path | None,
 def route_requires_heads(route_mode: str) -> bool:
     """Only learned sample-level routing needs a D3-head forward pass."""
     return route_mode == "sample"
+
+
+def generated_route_action(raw_action: str, *, terminal: bool = False) -> str:
+    """Preserve an LM route on pass one; stop repeated requests on a follow-up."""
+    external_actions = {"CALL_LINTER", "REQUEST_REFERENCE", "REQUEST_DECK"}
+    return ExaminerAction.DEFER.value if terminal and raw_action in external_actions else raw_action
 
 
 def _ratio(k: int, n: int) -> float | None:

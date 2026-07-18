@@ -14,6 +14,7 @@ from peft import PeftModel
 from transformers import AutoProcessor, BitsAndBytesConfig, Qwen3VLForConditionalGeneration
 
 from slide_examiner.d3_evaluation import (
+    generated_route_action,
     parse_generated_contract,
     prompt_row,
     route_requires_heads,
@@ -100,8 +101,9 @@ def infer_answer_batch(processor: Any, model: Any, rows: list[dict[str, Any]],
         fallback_defer = generated_parsed is None
         raw_action = (ExaminerAction.DEFER.value if fallback_defer
                       else str(generated_parsed["action"]))
-        action = bounded_route_action(
-            raw_action, 1.0, max_escalations=max_escalations)
+        # The escalation budget controls execution, not what the LM predicted.
+        # Preserve route-like generations so zero-call baselines remain faithful.
+        action = generated_route_action(raw_action)
         parsed, mismatch, consistency_error = authoritative_result(
             generated_parsed if not fallback_defer else None, action)
         prompt_tokens = int(prompt_lengths[index].item())
@@ -207,8 +209,10 @@ def infer_once(processor: Any, model: Any, heads: D3Heads | None, row: dict[str,
         parsed, mismatch, consistency_error = authoritative_result(None, action)
     elif route_mode == "answer":
         raw_action = str(generated_action)
-        action = bounded_route_action(
-            raw_action, 1.0, terminal=terminal, max_escalations=max_escalations)
+        # On the first pass, retain the LM's generated action even when the
+        # external-call budget is zero. Only a terminal follow-up projects a
+        # repeated request to DEFER to prevent an action loop.
+        action = generated_route_action(raw_action, terminal=terminal)
         parsed, mismatch, consistency_error = authoritative_result(generated_parsed, action)
     else:
         parsed, mismatch, consistency_error = authoritative_result(generated_parsed, action)
