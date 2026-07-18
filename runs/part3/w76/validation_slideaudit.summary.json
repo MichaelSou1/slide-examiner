@@ -1,0 +1,41 @@
+{
+  "source_rows": 2399,
+  "records": 280,
+  "per_class": {
+    "G1_TEXT_OVERFLOW": {
+      "positive": 20,
+      "confident_absent": 20
+    },
+    "G2_ELEMENT_OVERLAP": {
+      "positive": 20,
+      "confident_absent": 20
+    },
+    "G3_ALIGNMENT_OFFSET": {
+      "positive": 20,
+      "confident_absent": 20
+    },
+    "G4_FONT_SIZE_INCONSISTENCY": {
+      "positive": 20,
+      "confident_absent": 20
+    },
+    "G5_BRAND_COLOR_VIOLATION": {
+      "positive": 20,
+      "confident_absent": 20
+    },
+    "G6_MARGIN_VIOLATION": {
+      "positive": 20,
+      "confident_absent": 20
+    },
+    "S4_DENSITY_RULE_VIOLATION": {
+      "positive": 20,
+      "confident_absent": 20
+    }
+  },
+  "native_ir": false,
+  "native_reference": false,
+  "manifest": "data/part2/manifest_slideaudit.jsonl",
+  "manifest_sha256": "57f3a133ddc3846a8dcf547cbe51d06bbb5a172d85190d30d2d7b8588313be09",
+  "output": "runs/part3/w76/validation_slideaudit.jsonl",
+  "output_sha256": "b6145cbb7a3d8b72837cb66951e20d85222123fbc0872f6ab0794f611506cd67",
+  "final_test_read": false
+}
