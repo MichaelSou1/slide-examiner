@@ -1,0 +1,679 @@
+=== [qwen3-vl-plus] tag=g1 cond=C0 mpd=40 -> data/part3/p1e2_qwen3-vl-plus_g1_C0.json ===
+[freeform-only] kept 465/807 records
+[qwen3-vl-plus/C0/scoped] 80 probes over defects=['G1_TEXT_OVERFLOW'] modalities=['A']
+  50/80 101s
+  80/80 164s
+{
+  "A": {
+    "per_defect": {
+      "G1_TEXT_OVERFLOW": {
+        "detection": {
+          "recall": 0.775,
+          "specificity": 0.931,
+          "bal_acc": 0.853,
+          "bal_acc_ci": [
+            0.703,
+            0.929
+          ],
+          "precision": 0.939,
+          "precision_ci": [
+            0.804,
+            0.983
+          ],
+          "fpr": 0.069,
+          "f1": 0.849,
+          "recall_ci": [
+            0.625,
+            0.877
+          ],
+          "tp": 31,
+          "fn": 9,
+          "fp": 2,
+          "tn": 27,
+          "n_pos": 40,
+          "n_neg": 29
+        },
+        "named": {
+          "recall": 0.7,
+          "specificity": 1.0,
+          "bal_acc": 0.85,
+          "bal_acc_ci": [
+            0.714,
+            0.91
+          ],
+          "precision": 1.0,
+          "precision_ci": [
+            0.879,
+            1.0
+          ],
+          "fpr": 0.0,
+          "f1": 0.824,
+          "recall_ci": [
+            0.546,
+            0.819
+          ],
+          "tp": 28,
+          "fn": 12,
+          "fp": 0,
+          "tn": 29,
+          "n_pos": 40,
+          "n_neg": 29
+        },
+        "headline_level": "detection"
+      }
+    }
+  }
+}
+=== [qwen3-vl-plus] tag=g1 cond=C0_full mpd=40 -> data/part3/p1e2_qwen3-vl-plus_g1_C0_full.json ===
+[freeform-only] kept 465/807 records
+[qwen3-vl-plus/C0_full/scoped] 80 probes over defects=['G1_TEXT_OVERFLOW'] modalities=['A']
+  50/80 120s
+  80/80 179s
+{
+  "A": {
+    "per_defect": {
+      "G1_TEXT_OVERFLOW": {
+        "detection": {
+          "recall": 0.613,
+          "specificity": 1.0,
+          "bal_acc": 0.806,
+          "bal_acc_ci": [
+            0.666,
+            0.881
+          ],
+          "precision": 1.0,
+          "precision_ci": [
+            0.832,
+            1.0
+          ],
+          "fpr": 0.0,
+          "f1": 0.76,
+          "recall_ci": [
+            0.438,
+            0.763
+          ],
+          "tp": 19,
+          "fn": 12,
+          "fp": 0,
+          "tn": 32,
+          "n_pos": 31,
+          "n_neg": 32
+        },
+        "named": {
+          "recall": 0.581,
+          "specificity": 1.0,
+          "bal_acc": 0.79,
+          "bal_acc_ci": [
+            0.65,
+            0.868
+          ],
+          "precision": 1.0,
+          "precision_ci": [
+            0.824,
+            1.0
+          ],
+          "fpr": 0.0,
+          "f1": 0.735,
+          "recall_ci": [
+            0.408,
+            0.736
+          ],
+          "tp": 18,
+          "fn": 13,
+          "fp": 0,
+          "tn": 32,
+          "n_pos": 31,
+          "n_neg": 32
+        },
+        "headline_level": "detection"
+      }
+    }
+  }
+}
+=== [qwen3-vl-plus] tag=g1 cond=C3 mpd=40 -> data/part3/p1e2_qwen3-vl-plus_g1_C3.json ===
+[freeform-only] kept 465/807 records
+[qwen3-vl-plus/C3/scoped] 80 probes over defects=['G1_TEXT_OVERFLOW'] modalities=['A']
+  50/80 114s
+  80/80 175s
+{
+  "A": {
+    "per_defect": {
+      "G1_TEXT_OVERFLOW": {
+        "detection": {
+          "recall": 0.0,
+          "specificity": 1.0,
+          "bal_acc": 0.5,
+          "bal_acc_ci": [
+            0.442,
+            0.56
+          ],
+          "precision": 0.0,
+          "precision_ci": null,
+          "fpr": 0.0,
+          "f1": 0.0,
+          "recall_ci": [
+            0.0,
+            0.121
+          ],
+          "tp": 0,
+          "fn": 28,
+          "fp": 0,
+          "tn": 29,
+          "n_pos": 28,
+          "n_neg": 29
+        },
+        "named": {
+          "recall": 0.0,
+          "specificity": 1.0,
+          "bal_acc": 0.5,
+          "bal_acc_ci": [
+            0.442,
+            0.56
+          ],
+          "precision": 0.0,
+          "precision_ci": null,
+          "fpr": 0.0,
+          "f1": 0.0,
+          "recall_ci": [
+            0.0,
+            0.121
+          ],
+          "tp": 0,
+          "fn": 28,
+          "fp": 0,
+          "tn": 29,
+          "n_pos": 28,
+          "n_neg": 29
+        },
+        "headline_level": "detection"
+      }
+    }
+  }
+}
+=== [qwen3-vl-plus] tag=g1 cond=C0_rep mpd=40 -> data/part3/p1e2_qwen3-vl-plus_g1_C0_rep.json ===
+[freeform-only] kept 465/807 records
+[qwen3-vl-plus/C0_rep/scoped] 80 probes over defects=['G1_TEXT_OVERFLOW'] modalities=['A']
+  50/80 1176s
+  80/80 1802s
+{
+  "A": {
+    "per_defect": {
+      "G1_TEXT_OVERFLOW": {
+        "detection": {
+          "recall": 0.725,
+          "specificity": 0.95,
+          "bal_acc": 0.837,
+          "bal_acc_ci": [
+            0.703,
+            0.913
+          ],
+          "precision": 0.935,
+          "precision_ci": [
+            0.793,
+            0.982
+          ],
+          "fpr": 0.05,
+          "f1": 0.817,
+          "recall_ci": [
+            0.572,
+            0.839
+          ],
+          "tp": 29,
+          "fn": 11,
+          "fp": 2,
+          "tn": 38,
+          "n_pos": 40,
+          "n_neg": 40
+        },
+        "named": {
+          "recall": 0.625,
+          "specificity": 1.0,
+          "bal_acc": 0.812,
+          "bal_acc_ci": [
+            0.691,
+            0.879
+          ],
+          "precision": 1.0,
+          "precision_ci": [
+            0.867,
+            1.0
+          ],
+          "fpr": 0.0,
+          "f1": 0.769,
+          "recall_ci": [
+            0.47,
+            0.758
+          ],
+          "tp": 25,
+          "fn": 15,
+          "fp": 0,
+          "tn": 40,
+          "n_pos": 40,
+          "n_neg": 40
+        },
+        "headline_level": "detection",
+        "detection_majority": {
+          "recall": 0.525,
+          "specificity": 0.975,
+          "bal_acc": 0.75,
+          "bal_acc_ci": [
+            0.623,
+            0.833
+          ],
+          "precision": 0.955,
+          "precision_ci": [
+            0.782,
+            0.992
+          ],
+          "fpr": 0.025,
+          "f1": 0.677,
+          "recall_ci": [
+            0.375,
+            0.671
+          ],
+          "tp": 21,
+          "fn": 19,
+          "fp": 1,
+          "tn": 39,
+          "n_pos": 40,
+          "n_neg": 40
+        },
+        "named_majority": {
+          "recall": 0.425,
+          "specificity": 1.0,
+          "bal_acc": 0.713,
+          "bal_acc_ci": [
+            0.599,
+            0.789
+          ],
+          "precision": 1.0,
+          "precision_ci": [
+            0.816,
+            1.0
+          ],
+          "fpr": 0.0,
+          "f1": 0.596,
+          "recall_ci": [
+            0.285,
+            0.578
+          ],
+          "tp": 17,
+          "fn": 23,
+          "fp": 0,
+          "tn": 40,
+          "n_pos": 40,
+          "n_neg": 40
+        }
+      }
+    }
+  }
+}
+[run_e2] done: qwen3-vl-plus tags=g1 conds=C0 C0_full C3 C0_rep
+[g1] first pass done, resume top-up ...
+=== [qwen3-vl-plus] tag=g1 cond=C0 mpd=40 -> data/part3/p1e2_qwen3-vl-plus_g1_C0.json ===
+[freeform-only] kept 465/807 records
+[qwen3-vl-plus/C0/scoped] 80 probes over defects=['G1_TEXT_OVERFLOW'] modalities=['A']
+[resume] 69 good rows in sidecar; 69 probes done, 11 to (re)run
+  11/11 7s
+{
+  "A": {
+    "per_defect": {
+      "G1_TEXT_OVERFLOW": {
+        "detection": {
+          "recall": 0.775,
+          "specificity": 0.95,
+          "bal_acc": 0.863,
+          "bal_acc_ci": [
+            0.73,
+            0.932
+          ],
+          "precision": 0.939,
+          "precision_ci": [
+            0.804,
+            0.983
+          ],
+          "fpr": 0.05,
+          "f1": 0.849,
+          "recall_ci": [
+            0.625,
+            0.877
+          ],
+          "tp": 31,
+          "fn": 9,
+          "fp": 2,
+          "tn": 38,
+          "n_pos": 40,
+          "n_neg": 40
+        },
+        "named": {
+          "recall": 0.7,
+          "specificity": 1.0,
+          "bal_acc": 0.85,
+          "bal_acc_ci": [
+            0.729,
+            0.91
+          ],
+          "precision": 1.0,
+          "precision_ci": [
+            0.879,
+            1.0
+          ],
+          "fpr": 0.0,
+          "f1": 0.824,
+          "recall_ci": [
+            0.546,
+            0.819
+          ],
+          "tp": 28,
+          "fn": 12,
+          "fp": 0,
+          "tn": 40,
+          "n_pos": 40,
+          "n_neg": 40
+        },
+        "headline_level": "detection"
+      }
+    }
+  }
+}
+=== [qwen3-vl-plus] tag=g1 cond=C0_full mpd=40 -> data/part3/p1e2_qwen3-vl-plus_g1_C0_full.json ===
+[freeform-only] kept 465/807 records
+[qwen3-vl-plus/C0_full/scoped] 80 probes over defects=['G1_TEXT_OVERFLOW'] modalities=['A']
+[resume] 63 good rows in sidecar; 63 probes done, 17 to (re)run
+  17/17 50s
+{
+  "A": {
+    "per_defect": {
+      "G1_TEXT_OVERFLOW": {
+        "detection": {
+          "recall": 0.618,
+          "specificity": 0.975,
+          "bal_acc": 0.796,
+          "bal_acc_ci": [
+            0.661,
+            0.878
+          ],
+          "precision": 0.955,
+          "precision_ci": [
+            0.782,
+            0.992
+          ],
+          "fpr": 0.025,
+          "f1": 0.75,
+          "recall_ci": [
+            0.45,
+            0.761
+          ],
+          "tp": 21,
+          "fn": 13,
+          "fp": 1,
+          "tn": 39,
+          "n_pos": 34,
+          "n_neg": 40
+        },
+        "named": {
+          "recall": 0.588,
+          "specificity": 1.0,
+          "bal_acc": 0.794,
+          "bal_acc_ci": [
+            0.667,
+            0.868
+          ],
+          "precision": 1.0,
+          "precision_ci": [
+            0.839,
+            1.0
+          ],
+          "fpr": 0.0,
+          "f1": 0.741,
+          "recall_ci": [
+            0.422,
+            0.736
+          ],
+          "tp": 20,
+          "fn": 14,
+          "fp": 0,
+          "tn": 40,
+          "n_pos": 34,
+          "n_neg": 40
+        },
+        "headline_level": "detection"
+      }
+    }
+  }
+}
+=== [qwen3-vl-plus] tag=g1 cond=C3 mpd=40 -> data/part3/p1e2_qwen3-vl-plus_g1_C3.json ===
+[freeform-only] kept 465/807 records
+[qwen3-vl-plus/C3/scoped] 80 probes over defects=['G1_TEXT_OVERFLOW'] modalities=['A']
+[resume] 57 good rows in sidecar; 57 probes done, 23 to (re)run
+  23/23 56s
+{
+  "A": {
+    "per_defect": {
+      "G1_TEXT_OVERFLOW": {
+        "detection": {
+          "recall": 0.0,
+          "specificity": 1.0,
+          "bal_acc": 0.5,
+          "bal_acc_ci": [
+            0.449,
+            0.544
+          ],
+          "precision": 0.0,
+          "precision_ci": null,
+          "fpr": 0.0,
+          "f1": 0.0,
+          "recall_ci": [
+            0.0,
+            0.088
+          ],
+          "tp": 0,
+          "fn": 40,
+          "fp": 0,
+          "tn": 34,
+          "n_pos": 40,
+          "n_neg": 34
+        },
+        "named": {
+          "recall": 0.0,
+          "specificity": 1.0,
+          "bal_acc": 0.5,
+          "bal_acc_ci": [
+            0.449,
+            0.544
+          ],
+          "precision": 0.0,
+          "precision_ci": null,
+          "fpr": 0.0,
+          "f1": 0.0,
+          "recall_ci": [
+            0.0,
+            0.088
+          ],
+          "tp": 0,
+          "fn": 40,
+          "fp": 0,
+          "tn": 34,
+          "n_pos": 40,
+          "n_neg": 34
+        },
+        "headline_level": "detection"
+      }
+    }
+  }
+}
+=== [qwen3-vl-plus] tag=g1 cond=C0_rep mpd=40 -> data/part3/p1e2_qwen3-vl-plus_g1_C0_rep.json ===
+[freeform-only] kept 465/807 records
+[qwen3-vl-plus/C0_rep/scoped] 80 probes over defects=['G1_TEXT_OVERFLOW'] modalities=['A']
+[resume] 80 good rows in sidecar; 80 probes done, 0 to (re)run
+{
+  "A": {
+    "per_defect": {
+      "G1_TEXT_OVERFLOW": {
+        "detection": {
+          "recall": 0.725,
+          "specificity": 0.95,
+          "bal_acc": 0.837,
+          "bal_acc_ci": [
+            0.703,
+            0.913
+          ],
+          "precision": 0.935,
+          "precision_ci": [
+            0.793,
+            0.982
+          ],
+          "fpr": 0.05,
+          "f1": 0.817,
+          "recall_ci": [
+            0.572,
+            0.839
+          ],
+          "tp": 29,
+          "fn": 11,
+          "fp": 2,
+          "tn": 38,
+          "n_pos": 40,
+          "n_neg": 40
+        },
+        "named": {
+          "recall": 0.625,
+          "specificity": 1.0,
+          "bal_acc": 0.812,
+          "bal_acc_ci": [
+            0.691,
+            0.879
+          ],
+          "precision": 1.0,
+          "precision_ci": [
+            0.867,
+            1.0
+          ],
+          "fpr": 0.0,
+          "f1": 0.769,
+          "recall_ci": [
+            0.47,
+            0.758
+          ],
+          "tp": 25,
+          "fn": 15,
+          "fp": 0,
+          "tn": 40,
+          "n_pos": 40,
+          "n_neg": 40
+        },
+        "headline_level": "detection",
+        "detection_majority": {
+          "recall": 0.525,
+          "specificity": 0.975,
+          "bal_acc": 0.75,
+          "bal_acc_ci": [
+            0.623,
+            0.833
+          ],
+          "precision": 0.955,
+          "precision_ci": [
+            0.782,
+            0.992
+          ],
+          "fpr": 0.025,
+          "f1": 0.677,
+          "recall_ci": [
+            0.375,
+            0.671
+          ],
+          "tp": 21,
+          "fn": 19,
+          "fp": 1,
+          "tn": 39,
+          "n_pos": 40,
+          "n_neg": 40
+        },
+        "named_majority": {
+          "recall": 0.425,
+          "specificity": 1.0,
+          "bal_acc": 0.713,
+          "bal_acc_ci": [
+            0.599,
+            0.789
+          ],
+          "precision": 1.0,
+          "precision_ci": [
+            0.816,
+            1.0
+          ],
+          "fpr": 0.0,
+          "f1": 0.596,
+          "recall_ci": [
+            0.285,
+            0.578
+          ],
+          "tp": 17,
+          "fn": 23,
+          "fp": 0,
+          "tn": 40,
+          "n_pos": 40,
+          "n_neg": 40
+        }
+      }
+    }
+  }
+}
+[run_e2] done: qwen3-vl-plus tags=g1 conds=C0 C0_full C3 C0_rep
+## E2 — compute-matched C0 ablation (paired-clean detection, modality A)
+
+Same model, image, and rendered corpus across conditions. **C0_rep** gives C0 the SAME K-call budget C3 spends in deployment (K=10), aggregated as **union** (any draw) and **maj** (majority of draws); **C0_full** matches C3's definitions + forced evidence in a single call. Δ = C3 balanced accuracy − the control's; McNemar p is the exact paired test, **Holm** = family-wise corrected over the 8 E2 tests (α=0.05, 8 rejected).
+
+| Model | Defect | C0 | C0_full | C0_rep union | C0_rep maj | C3 | Δ(C3−C0_rep·un) | Δ(C3−C0_full) |
+|---|---|---|---|---|---|---|---|---|
+| qwen3-vl-plus | G1 | 0.86 | 0.80 | 0.84 | 0.75 | 0.50 | -0.34 (p=0.0→0.0 ✅) | -0.30 (p=0.0→0.0 ✅) |
+| qwen3-vl-plus | G7 | 0.64 | 0.67 | 0.66 | 0.61 | 0.92 | +0.26 (p=0.0→0.0 ✅) | +0.24 (p=0.0→0.0 ✅) |
+
+### Budget (E3) — completion tokens per slide
+
+If C3 does not spend MORE output tokens than C0_full, the recovery cannot be a test-time-compute artifact. `calls/slide` shows C0_rep's K× multiplier.
+
+| Model | Cond | calls/slide | prompt tok/slide | completion tok/slide | reasoning tok/slide |
+|---|---|---|---|---|---|
+| qwen3-vl-plus | C0 | 1.0 | 1411.0 | 121.6 | 0.0 |
+| qwen3-vl-plus | C0_full | 1.0 | 1902.0 | 134.6 | 0.0 |
+| qwen3-vl-plus | C0_rep | 8.372 | 11813.6 | 1083.6 | 0.0 |
+| qwen3-vl-plus | C3 | 1.0 | 1098.0 | 34.7 | 0.0 |
+
+### Reading
+
+- **qwen3-vl-plus / G1**: N/A: C3 does not recover over C0 here (C3≤C0) — this is a reference-assisted / non-format-suppressed class, not a target of the compute-match; report as a negative control. (C0=0.86, C3=0.50; Δ C3−C0_rep,union = -0.34; Δ C3−C0_full = -0.30)
+- **qwen3-vl-plus / G7**: WIN: C3 still beats the compute-matched C0_rep — recovery is NOT test-time compute. (C0=0.64, C3=0.92; Δ C3−C0_rep,union = +0.26; Δ C3−C0_full = +0.24)
+
+**Test-family growth**: this report adds **8** paired McNemar tests — add these to the paper's Holm family and update the "N-test family" count.
+
+
+[e2-report] Holm family: {'n_tests': 8, 'method': 'holm', 'alpha': 0.05, 'n_reject': 8}
+[e2-report] -> reports/_e2_computematch.md ; data/part3/p1e2_summary.json
+## Elicitation cost / compute per slide
+
+Token counts are per probed slide (paired-clean: a slide and its clean twin each count once). Estimated latency = completion_tokens / 40 tok·s⁻¹ + 1.2 s × calls (single-stream; concurrency hides most of it). `calls/slide` makes the compute budget explicit — C3 and the single-call C0 variants spend one call; **C0_rep** spends K (the deployed router's per-slide atomic-question count), so if C3 matches or beats C0_rep the recovery is not a test-time-compute effect.
+
+| Model | Tag | Cond | calls/slide | input tok/slide | output tok/slide | total tok/slide | est. latency (s) |
+|---|---|---|---|---|---|---|---|
+| qwen3-vl-plus | G1 | C0 | 1 | 2570.6 | 63.1 | 2633.7 | 2.78 |
+| qwen3-vl-plus | G1 | C0_full | 1 | 3061.5 | 50.1 | 3111.6 | 2.45 |
+| qwen3-vl-plus | G1 | C0_rep | 7.463 | 19182.8 | 373.7 | 19556.5 | 18.3 |
+| qwen3-vl-plus | G1 | C3 | 1 | 2238 | 28 | 2266 | 1.9 |
+| qwen3-vl-plus | G7 | C0 | 1 | 1411 | 121.6 | 1532.6 | 4.24 |
+| qwen3-vl-plus | G7 | C0_full | 1 | 1902 | 134.6 | 2036.6 | 4.56 |
+| qwen3-vl-plus | G7 | C0_rep | 8.372 | 11813.6 | 1083.6 | 12897.2 | 37.14 |
+| qwen3-vl-plus | G7 | C3 | 1 | 1098 | 34.7 | 1132.7 | 2.07 |
+
+### Compute multiplier (C0_rep vs C0)
+
+| Model | Tag | C0 output tok | C0_rep output tok | C3 output tok | C0_rep/C0 calls | C3/C0 output |
+|---|---|---|---|---|---|---|
+| qwen3-vl-plus | G1 | 63.1 | 373.7 | 28 | 7.5× | 0.44 |
+| qwen3-vl-plus | G7 | 121.6 | 1083.6 | 34.7 | 8.4× | 0.29 |
+
+> 64 run(s) predate the usage log and are omitted (AFC×12, AFC_clean×12, C0×12, C0_named×12, C0plus×4, C3×12); re-run a slice with `--resume` to top up their token counts.
+
+
+[cost-table] 8 runs with usage, 64 without -> reports/cost_table.md
+[g1] DONE

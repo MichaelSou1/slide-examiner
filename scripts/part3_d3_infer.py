@@ -16,6 +16,8 @@ from slide_examiner.d3_training import (
     ACTIONS, authoritative_result, balanced_smoke_rows, evaluate_semantic_gate, run_linter,
 )
 from slide_examiner.examiner_contract import (
+    DECK_SCOPED_DEFECTS,
+    PAGE_SCOPED_DEFECTS,
     ExaminerAction,
     parse_deck_result,
     parse_page_result,
@@ -59,18 +61,66 @@ def balanced_rows(rows: list[dict[str, Any]], limit: int) -> list[dict[str, Any]
     return balanced_smoke_rows(rows, limit)
 
 
-def parse_contract(text: str) -> tuple[dict[str, Any] | None, str | None]:
+def _repair_contract(payload: dict[str, Any]) -> dict[str, Any] | None:
+    """Apply conservative, content-preserving repairs to generated JSON.
+
+    Repairs only normalize schema aliases and fill locators from identifiers
+    already emitted by the model. Free-form string findings are not promoted
+    into typed findings because doing so would require an oracle defect label.
+    """
+    repaired = json.loads(json.dumps(payload))
+    if repaired.get("action") not in {action.value for action in ExaminerAction}:
+        repaired["action"] = ExaminerAction.ANSWER.value
+    findings = repaired.get("findings", [])
+    if not isinstance(findings, list) or any(not isinstance(item, dict) for item in findings):
+        return None
+    is_deck = "deck_id" in repaired
+    allowed = DECK_SCOPED_DEFECTS if is_deck else PAGE_SCOPED_DEFECTS
+    allowed_by_prefix = {item.value.split("_", 1)[0]: item.value for item in allowed}
+    subject_id = str(repaired.get("deck_id" if is_deck else "page_id") or "unknown")
+    for finding in findings:
+        raw_type = str(finding.get("type", ""))
+        if raw_type not in {item.value for item in allowed}:
+            replacement = allowed_by_prefix.get(raw_type.split("_", 1)[0])
+            if replacement is None:
+                return None
+            finding["type"] = replacement
+        if str(finding.get("severity", "")).lower() in {"critical", "blocker"}:
+            finding["severity"] = "severe"
+        locator = finding.setdefault("locator", {})
+        locator.setdefault("level", "deck" if is_deck else "page")
+        # Locator has a page_id field for both page- and deck-level findings;
+        # deck identity remains on the enclosing DeckExamResult.
+        if not is_deck:
+            locator.setdefault("page_id", subject_id)
+        locator.setdefault("related_page_ids", [])
+        evidence = str(finding.get("evidence", "")).strip()
+        visible_id = locator.get("element_id") or locator.get("page_id")
+        if visible_id and str(visible_id).lower() not in evidence.lower():
+            finding["evidence"] = f"Visible element {visible_id}: {evidence}"
+    return repaired
+
+
+def parse_contract(text: str) -> tuple[dict[str, Any] | None, str | None, bool]:
     try:
         parsed = extract_json(text)
-        if "deck_id" in parsed:
-            return parse_deck_result(json.dumps(parsed)).model_dump(mode="json"), None
-        return parse_page_result(json.dumps(parsed)).model_dump(mode="json"), None
+        parser = parse_deck_result if "deck_id" in parsed else parse_page_result
+        try:
+            return parser(json.dumps(parsed)).model_dump(mode="json"), None, False
+        except Exception as original:  # noqa: BLE001 - attempt bounded schema repair
+            repaired = _repair_contract(parsed)
+            if repaired is not None:
+                try:
+                    return parser(json.dumps(repaired)).model_dump(mode="json"), None, True
+                except Exception:  # noqa: BLE001 - preserve the original useful error
+                    pass
+            return None, f"{type(original).__name__}: {original}", False
     except Exception as exc:  # noqa: BLE001 - parser failures are measured artifacts
-        return None, f"{type(exc).__name__}: {exc}"
+        return None, f"{type(exc).__name__}: {exc}", False
 
 
 def infer_once(processor: Any, model: Any, heads: D3Heads, row: dict[str, Any],
-               device: torch.device, max_new_tokens: int) -> dict[str, Any]:
+               device: torch.device, max_new_tokens: int, *, terminal: bool = False) -> dict[str, Any]:
     prompt = processor.apply_chat_template(row["messages"][:1], tokenize=False,
                                            add_generation_prompt=True)
     image_list = _images(row)
@@ -84,6 +134,10 @@ def infer_once(processor: Any, model: Any, heads: D3Heads, row: dict[str, Any],
         action_logits, select_logits, _, _ = heads(pooled)
         action = ACTIONS[int(action_logits.argmax(-1).item())]
         confidence = float(torch.sigmoid(select_logits).item())
+        # Escalation is bounded to one action. Once requested context has been
+        # supplied, another tool/context request becomes an explicit DEFER.
+        if terminal and action not in {ExaminerAction.ANSWER.value, ExaminerAction.DEFER.value}:
+            action = ExaminerAction.DEFER.value
         # Routing is authoritative. Tool/reference/defer actions have a
         # deterministic legal envelope and must not depend on the LM emitting
         # a finding-shaped JSON object that will be discarded anyway.
@@ -92,16 +146,24 @@ def infer_once(processor: Any, model: Any, heads: D3Heads, row: dict[str, Any],
             return {"predicted_action": action, "route_confidence": confidence,
                     "raw": "", "generated_parsed": None, "generated_action": None,
                     "parsed": authoritative, "parse_error": None,
-                    "action_mismatch": mismatch, "consistency_error": consistency_error}
+                    "action_mismatch": mismatch, "consistency_error": consistency_error,
+                    "contract_repaired": False, "fallback_defer": False}
         generated = model.generate(**inputs, max_new_tokens=max_new_tokens, do_sample=False)
     continuation = generated[0, inputs["input_ids"].shape[1]:]
     text = processor.decode(continuation, skip_special_tokens=True)
-    parsed, error = parse_contract(text)
-    authoritative, mismatch, consistency_error = authoritative_result(parsed, action)
+    parsed, error, repaired = parse_contract(text)
+    fallback_defer = parsed is None
+    if fallback_defer:
+        action = ExaminerAction.DEFER.value
+        parsed, mismatch, consistency_error = authoritative_result(None, action)
+    else:
+        parsed, mismatch, consistency_error = authoritative_result(parsed, action)
     return {"predicted_action": action, "route_confidence": confidence,
             "raw": text, "generated_parsed": parsed, "generated_action": (parsed or {}).get("action"),
-            "parsed": authoritative, "parse_error": error,
-            "action_mismatch": mismatch, "consistency_error": consistency_error}
+            "parsed": parsed, "parse_error": None if fallback_defer else error,
+            "generation_error": error, "action_mismatch": mismatch,
+            "consistency_error": consistency_error, "contract_repaired": repaired,
+            "fallback_defer": fallback_defer}
 
 
 def main() -> None:
@@ -154,7 +216,8 @@ def main() -> None:
                                       "provided_availability": availability,
                                       "reason": f"{type(exc).__name__}: {exc}"}
                 else:
-                    second = infer_once(processor, model, heads, followup_row, device, args.max_new_tokens)
+                    second = infer_once(processor, model, heads, followup_row, device,
+                                        args.max_new_tokens, terminal=True)
                     if second["parse_error"]:
                         counts["parser_failure"] += 1
                     counts["action_mismatch"] += int(second["action_mismatch"])
@@ -202,6 +265,9 @@ def main() -> None:
                               "policy_path": str(args.run / "run_config.json")},
                "semantic_counts": semantic,
                "semantic_gate": evaluate_semantic_gate(results, counts),
+               "clean_control_definition": (
+                   "is_clean_deck=true, or frozen-dev NO_DEFECT with deck_context_available"
+               ),
                "action_distribution": dict(Counter(x["predicted_action"] for x in results)),
                "target_action_distribution": dict(Counter(x["target_action"] for x in results)),
                "parser_success": sum(x["parsed"] is not None for x in results),

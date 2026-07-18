@@ -1,0 +1,79 @@
+Loading weights:   0%|          | 0/750 [00:00<?, ?it/s]Loading weights:   0%|          | 1/750 [00:00<05:47,  2.15it/s]Loading weights:   0%|          | 2/750 [00:00<04:55,  2.53it/s]Loading weights:   2%|▏         | 13/750 [00:00<00:34, 21.32it/s]Loading weights:   3%|▎         | 25/750 [00:01<00:17, 41.05it/s]Loading weights:   4%|▍         | 33/750 [00:01<00:14, 49.30it/s]Loading weights:   6%|▌         | 43/750 [00:01<00:11, 60.32it/s]Loading weights:   7%|▋         | 52/750 [00:01<00:10, 67.52it/s]Loading weights:   8%|▊         | 61/750 [00:01<00:09, 69.72it/s]Loading weights:  10%|▉         | 72/750 [00:01<00:08, 76.89it/s]Loading weights:  12%|█▏        | 92/750 [00:01<00:06, 101.14it/s]Loading weights:  14%|█▍        | 104/750 [00:01<00:06, 100.03it/s]Loading weights:  15%|█▌        | 115/750 [00:01<00:06, 91.40it/s] Loading weights:  17%|█▋        | 126/750 [00:02<00:06, 89.62it/s]Loading weights:  18%|█▊        | 137/750 [00:02<00:06, 90.70it/s]Loading weights:  20%|█▉        | 148/750 [00:02<00:06, 88.65it/s]Loading weights:  23%|██▎       | 169/750 [00:02<00:04, 118.24it/s]Loading weights:  24%|██▍       | 182/750 [00:02<00:05, 110.99it/s]Loading weights:  27%|██▋       | 202/750 [00:02<00:04, 129.11it/s]Loading weights:  29%|██▉       | 216/750 [00:02<00:05, 97.13it/s] Loading weights:  30%|███       | 228/750 [00:03<00:05, 92.98it/s]Loading weights:  32%|███▏      | 239/750 [00:03<00:06, 82.01it/s]Loading weights:  34%|███▎      | 252/750 [00:03<00:05, 91.19it/s]Loading weights:  35%|███▌      | 263/750 [00:03<00:05, 94.79it/s]Loading weights:  37%|███▋      | 278/750 [00:03<00:04, 103.35it/s]Loading weights:  39%|███▊      | 289/750 [00:03<00:04, 104.14it/s]Loading weights:  40%|████      | 300/750 [00:03<00:05, 84.50it/s] Loading weights:  41%|████▏     | 310/750 [00:04<00:05, 77.36it/s]Loading weights:  43%|████▎     | 319/750 [00:04<00:06, 66.67it/s]Loading weights:  44%|████▎     | 327/750 [00:04<00:06, 61.99it/s]Loading weights:  45%|████▍     | 334/750 [00:04<00:06, 60.65it/s]Loading weights:  45%|████▌     | 341/750 [00:04<00:06, 60.50it/s]Loading weights:  46%|████▋     | 348/750 [00:04<00:07, 54.19it/s]Loading weights:  48%|████▊     | 361/750 [00:04<00:05, 71.17it/s]Loading weights:  50%|████▉     | 372/750 [00:05<00:04, 80.50it/s]Loading weights:  51%|█████     | 381/750 [00:05<00:04, 80.00it/s]Loading weights:  52%|█████▏    | 391/750 [00:05<00:04, 80.50it/s]Loading weights:  65%|██████▍   | 484/750 [00:05<00:00, 302.19it/s]Loading weights:  79%|███████▉  | 594/750 [00:05<00:00, 516.73it/s]Loading weights:  94%|█████████▍| 705/750 [00:05<00:00, 680.85it/s]Loading weights: 100%|██████████| 750/750 [00:05<00:00, 132.95it/s]
+{
+  "parser_failure": 0,
+  "action_loop": 0,
+  "teacher_failure": 0,
+  "action_mismatch": 0,
+  "consistency_failure": 0,
+  "escalation_failure": 0,
+  "records": 32,
+  "balanced": true,
+  "deployment": {
+    "lm": "merged",
+    "model_path": "runs/part3/d3_merged_v2/train_seed42",
+    "heads_path": "runs/part3/d3_formal_v2/train_seed42/d3_heads.pt",
+    "policy_path": "runs/part3/d3_formal_v2/train_seed42/run_config.json"
+  },
+  "semantic_counts": {
+    "g7_legal_answer": 4,
+    "geometry_image_only_safe_route": 5,
+    "reference_request": 3,
+    "performed_escalation": 12
+  },
+  "semantic_gate": {
+    "passed": true,
+    "checks": {
+      "g7_image_only_legal_finding": {
+        "eligible": 1,
+        "passed_records": 1,
+        "passed": true
+      },
+      "g2_g6_image_only_safe_route": {
+        "eligible": 5,
+        "passed_records": 5,
+        "passed": true
+      },
+      "reference_escalation_completes": {
+        "eligible": 3,
+        "passed_records": 3,
+        "passed": true
+      },
+      "deck_escalation_completes": {
+        "eligible": 2,
+        "passed_records": 2,
+        "passed": true
+      },
+      "clean_deck_not_forced_positive": {
+        "eligible": 1,
+        "passed_records": 1,
+        "passed": true
+      },
+      "runtime_failures_zero": {
+        "eligible": 32,
+        "passed_records": 32,
+        "passed": true
+      }
+    },
+    "failure_reasons": []
+  },
+  "clean_control_definition": "is_clean_deck=true, or frozen-dev NO_DEFECT with deck_context_available",
+  "action_distribution": {
+    "ANSWER": 8,
+    "DEFER": 12,
+    "CALL_LINTER": 2,
+    "REQUEST_REFERENCE": 4,
+    "REQUEST_DECK": 6
+  },
+  "target_action_distribution": {
+    "ANSWER": 13,
+    "DEFER": 6,
+    "CALL_LINTER": 4,
+    "REQUEST_REFERENCE": 5,
+    "REQUEST_DECK": 4
+  },
+  "parser_success": 32,
+  "post_escalation_parser_success": 12,
+  "completed_escalation": 12,
+  "action_correct": 23,
+  "output": "runs/part3/d3_smoke_v2/seed42_dev_balanced.jsonl"
+}

@@ -1,0 +1,1244 @@
+[gemini-2.5-flash] START 09:18
+[gemini-2.5-flash] pass 1
+=== [gemini-2.5-flash] tag=g7 cond=C0 mpd=90 -> data/part3/p1e2_gemini-2.5-flash_g7_C0.json ===
+[freeform-only] kept 90/90 records
+[gemini-2.5-flash/C0/scoped] 180 probes over defects=['G7_RENDER_CONTAINMENT_OVERFLOW'] modalities=['A']
+  50/180 230s
+  100/180 477s
+  150/180 2226s
+  180/180 2385s
+{
+  "A": {
+    "per_defect": {
+      "G7_RENDER_CONTAINMENT_OVERFLOW": {
+        "detection": {
+          "recall": 0.759,
+          "specificity": 0.448,
+          "bal_acc": 0.603,
+          "bal_acc_ci": [
+            0.504,
+            0.695
+          ],
+          "precision": 0.579,
+          "precision_ci": [
+            0.487,
+            0.666
+          ],
+          "fpr": 0.552,
+          "f1": 0.657,
+          "recall_ci": [
+            0.659,
+            0.836
+          ],
+          "tp": 66,
+          "fn": 21,
+          "fp": 48,
+          "tn": 39,
+          "n_pos": 87,
+          "n_neg": 87
+        },
+        "named": {
+          "recall": 0.0,
+          "specificity": 1.0,
+          "bal_acc": 0.5,
+          "bal_acc_ci": [
+            0.479,
+            0.521
+          ],
+          "precision": 0.0,
+          "precision_ci": null,
+          "fpr": 0.0,
+          "f1": 0.0,
+          "recall_ci": [
+            0.0,
+            0.042
+          ],
+          "tp": 0,
+          "fn": 87,
+          "fp": 0,
+          "tn": 87,
+          "n_pos": 87,
+          "n_neg": 87
+        },
+        "headline_level": "detection"
+      }
+    }
+  }
+}
+=== [gemini-2.5-flash] tag=g7 cond=C0_full mpd=90 -> data/part3/p1e2_gemini-2.5-flash_g7_C0_full.json ===
+[freeform-only] kept 90/90 records
+[gemini-2.5-flash/C0_full/scoped] 180 probes over defects=['G7_RENDER_CONTAINMENT_OVERFLOW'] modalities=['A']
+  50/180 261s
+  100/180 520s
+  150/180 753s
+  180/180 901s
+{
+  "A": {
+    "per_defect": {
+      "G7_RENDER_CONTAINMENT_OVERFLOW": {
+        "detection": {
+          "recall": 0.805,
+          "specificity": 0.659,
+          "bal_acc": 0.732,
+          "bal_acc_ci": [
+            0.632,
+            0.812
+          ],
+          "precision": 0.7,
+          "precision_ci": [
+            0.604,
+            0.781
+          ],
+          "fpr": 0.341,
+          "f1": 0.749,
+          "recall_ci": [
+            0.709,
+            0.874
+          ],
+          "tp": 70,
+          "fn": 17,
+          "fp": 30,
+          "tn": 58,
+          "n_pos": 87,
+          "n_neg": 88
+        },
+        "named": {
+          "recall": 0.333,
+          "specificity": 0.966,
+          "bal_acc": 0.65,
+          "bal_acc_ci": [
+            0.574,
+            0.713
+          ],
+          "precision": 0.906,
+          "precision_ci": [
+            0.758,
+            0.968
+          ],
+          "fpr": 0.034,
+          "f1": 0.487,
+          "recall_ci": [
+            0.243,
+            0.438
+          ],
+          "tp": 29,
+          "fn": 58,
+          "fp": 3,
+          "tn": 85,
+          "n_pos": 87,
+          "n_neg": 88
+        },
+        "headline_level": "detection"
+      }
+    }
+  }
+}
+=== [gemini-2.5-flash] tag=g7 cond=C3 mpd=90 -> data/part3/p1e2_gemini-2.5-flash_g7_C3.json ===
+[freeform-only] kept 90/90 records
+[gemini-2.5-flash/C3/scoped] 180 probes over defects=['G7_RENDER_CONTAINMENT_OVERFLOW'] modalities=['A']
+  50/180 143s
+  100/180 310s
+  150/180 456s
+  180/180 551s
+{
+  "A": {
+    "per_defect": {
+      "G7_RENDER_CONTAINMENT_OVERFLOW": {
+        "detection": {
+          "recall": 0.852,
+          "specificity": 0.898,
+          "bal_acc": 0.875,
+          "bal_acc_ci": [
+            0.79,
+            0.928
+          ],
+          "precision": 0.893,
+          "precision_ci": [
+            0.809,
+            0.943
+          ],
+          "fpr": 0.102,
+          "f1": 0.872,
+          "recall_ci": [
+            0.763,
+            0.912
+          ],
+          "tp": 75,
+          "fn": 13,
+          "fp": 9,
+          "tn": 79,
+          "n_pos": 88,
+          "n_neg": 88
+        },
+        "named": {
+          "recall": 0.852,
+          "specificity": 0.898,
+          "bal_acc": 0.875,
+          "bal_acc_ci": [
+            0.79,
+            0.928
+          ],
+          "precision": 0.893,
+          "precision_ci": [
+            0.809,
+            0.943
+          ],
+          "fpr": 0.102,
+          "f1": 0.872,
+          "recall_ci": [
+            0.763,
+            0.912
+          ],
+          "tp": 75,
+          "fn": 13,
+          "fp": 9,
+          "tn": 79,
+          "n_pos": 88,
+          "n_neg": 88
+        },
+        "headline_level": "detection"
+      }
+    }
+  }
+}
+=== [gemini-2.5-flash] tag=g7 cond=C0_rep mpd=90 -> data/part3/p1e2_gemini-2.5-flash_g7_C0_rep.json ===
+[freeform-only] kept 90/90 records
+[gemini-2.5-flash/C0_rep/scoped] 180 probes over defects=['G7_RENDER_CONTAINMENT_OVERFLOW'] modalities=['A']
+  50/180 2462s
+  100/180 5172s
+  150/180 7559s
+  180/180 9286s
+{
+  "A": {
+    "per_defect": {
+      "G7_RENDER_CONTAINMENT_OVERFLOW": {
+        "detection": {
+          "recall": 0.989,
+          "specificity": 0.233,
+          "bal_acc": 0.611,
+          "bal_acc_ci": [
+            0.549,
+            0.664
+          ],
+          "precision": 0.563,
+          "precision_ci": [
+            0.485,
+            0.638
+          ],
+          "fpr": 0.767,
+          "f1": 0.718,
+          "recall_ci": [
+            0.94,
+            0.998
+          ],
+          "tp": 89,
+          "fn": 1,
+          "fp": 69,
+          "tn": 21,
+          "n_pos": 90,
+          "n_neg": 90
+        },
+        "named": {
+          "recall": 0.0,
+          "specificity": 1.0,
+          "bal_acc": 0.5,
+          "bal_acc_ci": [
+            0.48,
+            0.52
+          ],
+          "precision": 0.0,
+          "precision_ci": null,
+          "fpr": 0.0,
+          "f1": 0.0,
+          "recall_ci": [
+            0.0,
+            0.041
+          ],
+          "tp": 0,
+          "fn": 90,
+          "fp": 0,
+          "tn": 90,
+          "n_pos": 90,
+          "n_neg": 90
+        },
+        "headline_level": "detection",
+        "detection_majority": {
+          "recall": 0.722,
+          "specificity": 0.456,
+          "bal_acc": 0.589,
+          "bal_acc_ci": [
+            0.489,
+            0.681
+          ],
+          "precision": 0.57,
+          "precision_ci": [
+            0.478,
+            0.657
+          ],
+          "fpr": 0.544,
+          "f1": 0.637,
+          "recall_ci": [
+            0.622,
+            0.804
+          ],
+          "tp": 65,
+          "fn": 25,
+          "fp": 49,
+          "tn": 41,
+          "n_pos": 90,
+          "n_neg": 90
+        },
+        "named_majority": {
+          "recall": 0.0,
+          "specificity": 1.0,
+          "bal_acc": 0.5,
+          "bal_acc_ci": [
+            0.48,
+            0.52
+          ],
+          "precision": 0.0,
+          "precision_ci": null,
+          "fpr": 0.0,
+          "f1": 0.0,
+          "recall_ci": [
+            0.0,
+            0.041
+          ],
+          "tp": 0,
+          "fn": 90,
+          "fp": 0,
+          "tn": 90,
+          "n_pos": 90,
+          "n_neg": 90
+        }
+      }
+    }
+  }
+}
+=== [gemini-2.5-flash] tag=g1 cond=C0 mpd=40 -> data/part3/p1e2_gemini-2.5-flash_g1_C0.json ===
+[freeform-only] kept 465/807 records
+[gemini-2.5-flash/C0/scoped] 80 probes over defects=['G1_TEXT_OVERFLOW'] modalities=['A']
+  50/80 198s
+  80/80 321s
+{
+  "A": {
+    "per_defect": {
+      "G1_TEXT_OVERFLOW": {
+        "detection": {
+          "recall": 0.25,
+          "specificity": 0.775,
+          "bal_acc": 0.512,
+          "bal_acc_ci": [
+            0.383,
+            0.639
+          ],
+          "precision": 0.526,
+          "precision_ci": [
+            0.317,
+            0.727
+          ],
+          "fpr": 0.225,
+          "f1": 0.339,
+          "recall_ci": [
+            0.142,
+            0.402
+          ],
+          "tp": 10,
+          "fn": 30,
+          "fp": 9,
+          "tn": 31,
+          "n_pos": 40,
+          "n_neg": 40
+        },
+        "named": {
+          "recall": 0.0,
+          "specificity": 1.0,
+          "bal_acc": 0.5,
+          "bal_acc_ci": [
+            0.456,
+            0.544
+          ],
+          "precision": 0.0,
+          "precision_ci": null,
+          "fpr": 0.0,
+          "f1": 0.0,
+          "recall_ci": [
+            0.0,
+            0.088
+          ],
+          "tp": 0,
+          "fn": 40,
+          "fp": 0,
+          "tn": 40,
+          "n_pos": 40,
+          "n_neg": 40
+        },
+        "headline_level": "detection"
+      }
+    }
+  }
+}
+=== [gemini-2.5-flash] tag=g1 cond=C0_full mpd=40 -> data/part3/p1e2_gemini-2.5-flash_g1_C0_full.json ===
+[freeform-only] kept 465/807 records
+[gemini-2.5-flash/C0_full/scoped] 80 probes over defects=['G1_TEXT_OVERFLOW'] modalities=['A']
+  50/80 213s
+  80/80 334s
+{
+  "A": {
+    "per_defect": {
+      "G1_TEXT_OVERFLOW": {
+        "detection": {
+          "recall": 0.425,
+          "specificity": 0.8,
+          "bal_acc": 0.613,
+          "bal_acc_ci": [
+            0.469,
+            0.737
+          ],
+          "precision": 0.68,
+          "precision_ci": [
+            0.484,
+            0.828
+          ],
+          "fpr": 0.2,
+          "f1": 0.523,
+          "recall_ci": [
+            0.285,
+            0.578
+          ],
+          "tp": 17,
+          "fn": 23,
+          "fp": 8,
+          "tn": 32,
+          "n_pos": 40,
+          "n_neg": 40
+        },
+        "named": {
+          "recall": 0.05,
+          "specificity": 1.0,
+          "bal_acc": 0.525,
+          "bal_acc_ci": [
+            0.463,
+            0.583
+          ],
+          "precision": 1.0,
+          "precision_ci": [
+            0.342,
+            1.0
+          ],
+          "fpr": 0.0,
+          "f1": 0.095,
+          "recall_ci": [
+            0.014,
+            0.165
+          ],
+          "tp": 2,
+          "fn": 38,
+          "fp": 0,
+          "tn": 40,
+          "n_pos": 40,
+          "n_neg": 40
+        },
+        "headline_level": "detection"
+      }
+    }
+  }
+}
+=== [gemini-2.5-flash] tag=g1 cond=C3 mpd=40 -> data/part3/p1e2_gemini-2.5-flash_g1_C3.json ===
+[freeform-only] kept 465/807 records
+[gemini-2.5-flash/C3/scoped] 80 probes over defects=['G1_TEXT_OVERFLOW'] modalities=['A']
+  50/80 135s
+  80/80 214s
+{
+  "A": {
+    "per_defect": {
+      "G1_TEXT_OVERFLOW": {
+        "detection": {
+          "recall": 0.263,
+          "specificity": 1.0,
+          "bal_acc": 0.632,
+          "bal_acc_ci": [
+            0.528,
+            0.71
+          ],
+          "precision": 1.0,
+          "precision_ci": [
+            0.722,
+            1.0
+          ],
+          "fpr": 0.0,
+          "f1": 0.417,
+          "recall_ci": [
+            0.15,
+            0.42
+          ],
+          "tp": 10,
+          "fn": 28,
+          "fp": 0,
+          "tn": 37,
+          "n_pos": 38,
+          "n_neg": 37
+        },
+        "named": {
+          "recall": 0.263,
+          "specificity": 1.0,
+          "bal_acc": 0.632,
+          "bal_acc_ci": [
+            0.528,
+            0.71
+          ],
+          "precision": 1.0,
+          "precision_ci": [
+            0.722,
+            1.0
+          ],
+          "fpr": 0.0,
+          "f1": 0.417,
+          "recall_ci": [
+            0.15,
+            0.42
+          ],
+          "tp": 10,
+          "fn": 28,
+          "fp": 0,
+          "tn": 37,
+          "n_pos": 38,
+          "n_neg": 37
+        },
+        "headline_level": "detection"
+      }
+    }
+  }
+}
+=== [gemini-2.5-flash] tag=g1 cond=C0_rep mpd=40 -> data/part3/p1e2_gemini-2.5-flash_g1_C0_rep.json ===
+[freeform-only] kept 465/807 records
+[gemini-2.5-flash/C0_rep/scoped] 80 probes over defects=['G1_TEXT_OVERFLOW'] modalities=['A']
+  50/80 2231s
+  80/80 3489s
+{
+  "A": {
+    "per_defect": {
+      "G1_TEXT_OVERFLOW": {
+        "detection": {
+          "recall": 0.85,
+          "specificity": 0.25,
+          "bal_acc": 0.55,
+          "bal_acc_ci": [
+            0.426,
+            0.666
+          ],
+          "precision": 0.531,
+          "precision_ci": [
+            0.411,
+            0.648
+          ],
+          "fpr": 0.75,
+          "f1": 0.654,
+          "recall_ci": [
+            0.709,
+            0.929
+          ],
+          "tp": 34,
+          "fn": 6,
+          "fp": 30,
+          "tn": 10,
+          "n_pos": 40,
+          "n_neg": 40
+        },
+        "named": {
+          "recall": 0.075,
+          "specificity": 1.0,
+          "bal_acc": 0.537,
+          "bal_acc_ci": [
+            0.469,
+            0.599
+          ],
+          "precision": 1.0,
+          "precision_ci": [
+            0.439,
+            1.0
+          ],
+          "fpr": 0.0,
+          "f1": 0.14,
+          "recall_ci": [
+            0.026,
+            0.199
+          ],
+          "tp": 3,
+          "fn": 37,
+          "fp": 0,
+          "tn": 40,
+          "n_pos": 40,
+          "n_neg": 40
+        },
+        "headline_level": "detection",
+        "detection_majority": {
+          "recall": 0.225,
+          "specificity": 0.85,
+          "bal_acc": 0.537,
+          "bal_acc_ci": [
+            0.416,
+            0.652
+          ],
+          "precision": 0.6,
+          "precision_ci": [
+            0.357,
+            0.802
+          ],
+          "fpr": 0.15,
+          "f1": 0.327,
+          "recall_ci": [
+            0.123,
+            0.375
+          ],
+          "tp": 9,
+          "fn": 31,
+          "fp": 6,
+          "tn": 34,
+          "n_pos": 40,
+          "n_neg": 40
+        },
+        "named_majority": {
+          "recall": 0.0,
+          "specificity": 1.0,
+          "bal_acc": 0.5,
+          "bal_acc_ci": [
+            0.456,
+            0.544
+          ],
+          "precision": 0.0,
+          "precision_ci": null,
+          "fpr": 0.0,
+          "f1": 0.0,
+          "recall_ci": [
+            0.0,
+            0.088
+          ],
+          "tp": 0,
+          "fn": 40,
+          "fp": 0,
+          "tn": 40,
+          "n_pos": 40,
+          "n_neg": 40
+        }
+      }
+    }
+  }
+}
+[run_e2] done: gemini-2.5-flash tags=g7 g1 conds=C0 C0_full C3 C0_rep
+[gemini-2.5-flash] pass 2
+=== [gemini-2.5-flash] tag=g7 cond=C0 mpd=90 -> data/part3/p1e2_gemini-2.5-flash_g7_C0.json ===
+[freeform-only] kept 90/90 records
+[gemini-2.5-flash/C0/scoped] 180 probes over defects=['G7_RENDER_CONTAINMENT_OVERFLOW'] modalities=['A']
+[resume] 174 good rows in sidecar; 174 probes done, 6 to (re)run
+  6/6 46s
+{
+  "A": {
+    "per_defect": {
+      "G7_RENDER_CONTAINMENT_OVERFLOW": {
+        "detection": {
+          "recall": 0.759,
+          "specificity": 0.461,
+          "bal_acc": 0.61,
+          "bal_acc_ci": [
+            0.51,
+            0.7
+          ],
+          "precision": 0.579,
+          "precision_ci": [
+            0.487,
+            0.666
+          ],
+          "fpr": 0.539,
+          "f1": 0.657,
+          "recall_ci": [
+            0.659,
+            0.836
+          ],
+          "tp": 66,
+          "fn": 21,
+          "fp": 48,
+          "tn": 41,
+          "n_pos": 87,
+          "n_neg": 89
+        },
+        "named": {
+          "recall": 0.0,
+          "specificity": 1.0,
+          "bal_acc": 0.5,
+          "bal_acc_ci": [
+            0.479,
+            0.521
+          ],
+          "precision": 0.0,
+          "precision_ci": null,
+          "fpr": 0.0,
+          "f1": 0.0,
+          "recall_ci": [
+            0.0,
+            0.042
+          ],
+          "tp": 0,
+          "fn": 87,
+          "fp": 0,
+          "tn": 89,
+          "n_pos": 87,
+          "n_neg": 89
+        },
+        "headline_level": "detection"
+      }
+    }
+  }
+}
+=== [gemini-2.5-flash] tag=g7 cond=C0_full mpd=90 -> data/part3/p1e2_gemini-2.5-flash_g7_C0_full.json ===
+[freeform-only] kept 90/90 records
+[gemini-2.5-flash/C0_full/scoped] 180 probes over defects=['G7_RENDER_CONTAINMENT_OVERFLOW'] modalities=['A']
+[resume] 175 good rows in sidecar; 175 probes done, 5 to (re)run
+  5/5 45s
+{
+  "A": {
+    "per_defect": {
+      "G7_RENDER_CONTAINMENT_OVERFLOW": {
+        "detection": {
+          "recall": 0.805,
+          "specificity": 0.659,
+          "bal_acc": 0.732,
+          "bal_acc_ci": [
+            0.632,
+            0.812
+          ],
+          "precision": 0.7,
+          "precision_ci": [
+            0.604,
+            0.781
+          ],
+          "fpr": 0.341,
+          "f1": 0.749,
+          "recall_ci": [
+            0.709,
+            0.874
+          ],
+          "tp": 70,
+          "fn": 17,
+          "fp": 30,
+          "tn": 58,
+          "n_pos": 87,
+          "n_neg": 88
+        },
+        "named": {
+          "recall": 0.333,
+          "specificity": 0.966,
+          "bal_acc": 0.65,
+          "bal_acc_ci": [
+            0.574,
+            0.713
+          ],
+          "precision": 0.906,
+          "precision_ci": [
+            0.758,
+            0.968
+          ],
+          "fpr": 0.034,
+          "f1": 0.487,
+          "recall_ci": [
+            0.243,
+            0.438
+          ],
+          "tp": 29,
+          "fn": 58,
+          "fp": 3,
+          "tn": 85,
+          "n_pos": 87,
+          "n_neg": 88
+        },
+        "headline_level": "detection"
+      }
+    }
+  }
+}
+=== [gemini-2.5-flash] tag=g7 cond=C3 mpd=90 -> data/part3/p1e2_gemini-2.5-flash_g7_C3.json ===
+[freeform-only] kept 90/90 records
+[gemini-2.5-flash/C3/scoped] 180 probes over defects=['G7_RENDER_CONTAINMENT_OVERFLOW'] modalities=['A']
+[resume] 176 good rows in sidecar; 176 probes done, 4 to (re)run
+  4/4 10s
+{
+  "A": {
+    "per_defect": {
+      "G7_RENDER_CONTAINMENT_OVERFLOW": {
+        "detection": {
+          "recall": 0.856,
+          "specificity": 0.9,
+          "bal_acc": 0.878,
+          "bal_acc_ci": [
+            0.795,
+            0.93
+          ],
+          "precision": 0.895,
+          "precision_ci": [
+            0.813,
+            0.944
+          ],
+          "fpr": 0.1,
+          "f1": 0.875,
+          "recall_ci": [
+            0.768,
+            0.914
+          ],
+          "tp": 77,
+          "fn": 13,
+          "fp": 9,
+          "tn": 81,
+          "n_pos": 90,
+          "n_neg": 90
+        },
+        "named": {
+          "recall": 0.856,
+          "specificity": 0.9,
+          "bal_acc": 0.878,
+          "bal_acc_ci": [
+            0.795,
+            0.93
+          ],
+          "precision": 0.895,
+          "precision_ci": [
+            0.813,
+            0.944
+          ],
+          "fpr": 0.1,
+          "f1": 0.875,
+          "recall_ci": [
+            0.768,
+            0.914
+          ],
+          "tp": 77,
+          "fn": 13,
+          "fp": 9,
+          "tn": 81,
+          "n_pos": 90,
+          "n_neg": 90
+        },
+        "headline_level": "detection"
+      }
+    }
+  }
+}
+=== [gemini-2.5-flash] tag=g7 cond=C0_rep mpd=90 -> data/part3/p1e2_gemini-2.5-flash_g7_C0_rep.json ===
+[freeform-only] kept 90/90 records
+[gemini-2.5-flash/C0_rep/scoped] 180 probes over defects=['G7_RENDER_CONTAINMENT_OVERFLOW'] modalities=['A']
+[resume] 180 good rows in sidecar; 180 probes done, 0 to (re)run
+{
+  "A": {
+    "per_defect": {
+      "G7_RENDER_CONTAINMENT_OVERFLOW": {
+        "detection": {
+          "recall": 0.989,
+          "specificity": 0.233,
+          "bal_acc": 0.611,
+          "bal_acc_ci": [
+            0.549,
+            0.664
+          ],
+          "precision": 0.563,
+          "precision_ci": [
+            0.485,
+            0.638
+          ],
+          "fpr": 0.767,
+          "f1": 0.718,
+          "recall_ci": [
+            0.94,
+            0.998
+          ],
+          "tp": 89,
+          "fn": 1,
+          "fp": 69,
+          "tn": 21,
+          "n_pos": 90,
+          "n_neg": 90
+        },
+        "named": {
+          "recall": 0.0,
+          "specificity": 1.0,
+          "bal_acc": 0.5,
+          "bal_acc_ci": [
+            0.48,
+            0.52
+          ],
+          "precision": 0.0,
+          "precision_ci": null,
+          "fpr": 0.0,
+          "f1": 0.0,
+          "recall_ci": [
+            0.0,
+            0.041
+          ],
+          "tp": 0,
+          "fn": 90,
+          "fp": 0,
+          "tn": 90,
+          "n_pos": 90,
+          "n_neg": 90
+        },
+        "headline_level": "detection",
+        "detection_majority": {
+          "recall": 0.722,
+          "specificity": 0.456,
+          "bal_acc": 0.589,
+          "bal_acc_ci": [
+            0.489,
+            0.681
+          ],
+          "precision": 0.57,
+          "precision_ci": [
+            0.478,
+            0.657
+          ],
+          "fpr": 0.544,
+          "f1": 0.637,
+          "recall_ci": [
+            0.622,
+            0.804
+          ],
+          "tp": 65,
+          "fn": 25,
+          "fp": 49,
+          "tn": 41,
+          "n_pos": 90,
+          "n_neg": 90
+        },
+        "named_majority": {
+          "recall": 0.0,
+          "specificity": 1.0,
+          "bal_acc": 0.5,
+          "bal_acc_ci": [
+            0.48,
+            0.52
+          ],
+          "precision": 0.0,
+          "precision_ci": null,
+          "fpr": 0.0,
+          "f1": 0.0,
+          "recall_ci": [
+            0.0,
+            0.041
+          ],
+          "tp": 0,
+          "fn": 90,
+          "fp": 0,
+          "tn": 90,
+          "n_pos": 90,
+          "n_neg": 90
+        }
+      }
+    }
+  }
+}
+=== [gemini-2.5-flash] tag=g1 cond=C0 mpd=40 -> data/part3/p1e2_gemini-2.5-flash_g1_C0.json ===
+[freeform-only] kept 465/807 records
+[gemini-2.5-flash/C0/scoped] 80 probes over defects=['G1_TEXT_OVERFLOW'] modalities=['A']
+[resume] 80 good rows in sidecar; 80 probes done, 0 to (re)run
+{
+  "A": {
+    "per_defect": {
+      "G1_TEXT_OVERFLOW": {
+        "detection": {
+          "recall": 0.25,
+          "specificity": 0.775,
+          "bal_acc": 0.512,
+          "bal_acc_ci": [
+            0.383,
+            0.639
+          ],
+          "precision": 0.526,
+          "precision_ci": [
+            0.317,
+            0.727
+          ],
+          "fpr": 0.225,
+          "f1": 0.339,
+          "recall_ci": [
+            0.142,
+            0.402
+          ],
+          "tp": 10,
+          "fn": 30,
+          "fp": 9,
+          "tn": 31,
+          "n_pos": 40,
+          "n_neg": 40
+        },
+        "named": {
+          "recall": 0.0,
+          "specificity": 1.0,
+          "bal_acc": 0.5,
+          "bal_acc_ci": [
+            0.456,
+            0.544
+          ],
+          "precision": 0.0,
+          "precision_ci": null,
+          "fpr": 0.0,
+          "f1": 0.0,
+          "recall_ci": [
+            0.0,
+            0.088
+          ],
+          "tp": 0,
+          "fn": 40,
+          "fp": 0,
+          "tn": 40,
+          "n_pos": 40,
+          "n_neg": 40
+        },
+        "headline_level": "detection"
+      }
+    }
+  }
+}
+=== [gemini-2.5-flash] tag=g1 cond=C0_full mpd=40 -> data/part3/p1e2_gemini-2.5-flash_g1_C0_full.json ===
+[freeform-only] kept 465/807 records
+[gemini-2.5-flash/C0_full/scoped] 80 probes over defects=['G1_TEXT_OVERFLOW'] modalities=['A']
+[resume] 80 good rows in sidecar; 80 probes done, 0 to (re)run
+{
+  "A": {
+    "per_defect": {
+      "G1_TEXT_OVERFLOW": {
+        "detection": {
+          "recall": 0.425,
+          "specificity": 0.8,
+          "bal_acc": 0.613,
+          "bal_acc_ci": [
+            0.469,
+            0.737
+          ],
+          "precision": 0.68,
+          "precision_ci": [
+            0.484,
+            0.828
+          ],
+          "fpr": 0.2,
+          "f1": 0.523,
+          "recall_ci": [
+            0.285,
+            0.578
+          ],
+          "tp": 17,
+          "fn": 23,
+          "fp": 8,
+          "tn": 32,
+          "n_pos": 40,
+          "n_neg": 40
+        },
+        "named": {
+          "recall": 0.05,
+          "specificity": 1.0,
+          "bal_acc": 0.525,
+          "bal_acc_ci": [
+            0.463,
+            0.583
+          ],
+          "precision": 1.0,
+          "precision_ci": [
+            0.342,
+            1.0
+          ],
+          "fpr": 0.0,
+          "f1": 0.095,
+          "recall_ci": [
+            0.014,
+            0.165
+          ],
+          "tp": 2,
+          "fn": 38,
+          "fp": 0,
+          "tn": 40,
+          "n_pos": 40,
+          "n_neg": 40
+        },
+        "headline_level": "detection"
+      }
+    }
+  }
+}
+=== [gemini-2.5-flash] tag=g1 cond=C3 mpd=40 -> data/part3/p1e2_gemini-2.5-flash_g1_C3.json ===
+[freeform-only] kept 465/807 records
+[gemini-2.5-flash/C3/scoped] 80 probes over defects=['G1_TEXT_OVERFLOW'] modalities=['A']
+[resume] 75 good rows in sidecar; 75 probes done, 5 to (re)run
+  5/5 12s
+{
+  "A": {
+    "per_defect": {
+      "G1_TEXT_OVERFLOW": {
+        "detection": {
+          "recall": 0.275,
+          "specificity": 1.0,
+          "bal_acc": 0.637,
+          "bal_acc_ci": [
+            0.537,
+            0.714
+          ],
+          "precision": 1.0,
+          "precision_ci": [
+            0.741,
+            1.0
+          ],
+          "fpr": 0.0,
+          "f1": 0.431,
+          "recall_ci": [
+            0.161,
+            0.428
+          ],
+          "tp": 11,
+          "fn": 29,
+          "fp": 0,
+          "tn": 40,
+          "n_pos": 40,
+          "n_neg": 40
+        },
+        "named": {
+          "recall": 0.275,
+          "specificity": 1.0,
+          "bal_acc": 0.637,
+          "bal_acc_ci": [
+            0.537,
+            0.714
+          ],
+          "precision": 1.0,
+          "precision_ci": [
+            0.741,
+            1.0
+          ],
+          "fpr": 0.0,
+          "f1": 0.431,
+          "recall_ci": [
+            0.161,
+            0.428
+          ],
+          "tp": 11,
+          "fn": 29,
+          "fp": 0,
+          "tn": 40,
+          "n_pos": 40,
+          "n_neg": 40
+        },
+        "headline_level": "detection"
+      }
+    }
+  }
+}
+=== [gemini-2.5-flash] tag=g1 cond=C0_rep mpd=40 -> data/part3/p1e2_gemini-2.5-flash_g1_C0_rep.json ===
+[freeform-only] kept 465/807 records
+[gemini-2.5-flash/C0_rep/scoped] 80 probes over defects=['G1_TEXT_OVERFLOW'] modalities=['A']
+[resume] 80 good rows in sidecar; 80 probes done, 0 to (re)run
+{
+  "A": {
+    "per_defect": {
+      "G1_TEXT_OVERFLOW": {
+        "detection": {
+          "recall": 0.85,
+          "specificity": 0.25,
+          "bal_acc": 0.55,
+          "bal_acc_ci": [
+            0.426,
+            0.666
+          ],
+          "precision": 0.531,
+          "precision_ci": [
+            0.411,
+            0.648
+          ],
+          "fpr": 0.75,
+          "f1": 0.654,
+          "recall_ci": [
+            0.709,
+            0.929
+          ],
+          "tp": 34,
+          "fn": 6,
+          "fp": 30,
+          "tn": 10,
+          "n_pos": 40,
+          "n_neg": 40
+        },
+        "named": {
+          "recall": 0.075,
+          "specificity": 1.0,
+          "bal_acc": 0.537,
+          "bal_acc_ci": [
+            0.469,
+            0.599
+          ],
+          "precision": 1.0,
+          "precision_ci": [
+            0.439,
+            1.0
+          ],
+          "fpr": 0.0,
+          "f1": 0.14,
+          "recall_ci": [
+            0.026,
+            0.199
+          ],
+          "tp": 3,
+          "fn": 37,
+          "fp": 0,
+          "tn": 40,
+          "n_pos": 40,
+          "n_neg": 40
+        },
+        "headline_level": "detection",
+        "detection_majority": {
+          "recall": 0.225,
+          "specificity": 0.85,
+          "bal_acc": 0.537,
+          "bal_acc_ci": [
+            0.416,
+            0.652
+          ],
+          "precision": 0.6,
+          "precision_ci": [
+            0.357,
+            0.802
+          ],
+          "fpr": 0.15,
+          "f1": 0.327,
+          "recall_ci": [
+            0.123,
+            0.375
+          ],
+          "tp": 9,
+          "fn": 31,
+          "fp": 6,
+          "tn": 34,
+          "n_pos": 40,
+          "n_neg": 40
+        },
+        "named_majority": {
+          "recall": 0.0,
+          "specificity": 1.0,
+          "bal_acc": 0.5,
+          "bal_acc_ci": [
+            0.456,
+            0.544
+          ],
+          "precision": 0.0,
+          "precision_ci": null,
+          "fpr": 0.0,
+          "f1": 0.0,
+          "recall_ci": [
+            0.0,
+            0.088
+          ],
+          "tp": 0,
+          "fn": 40,
+          "fp": 0,
+          "tn": 40,
+          "n_pos": 40,
+          "n_neg": 40
+        }
+      }
+    }
+  }
+}
+[run_e2] done: gemini-2.5-flash tags=g7 g1 conds=C0 C0_full C3 C0_rep
+[gemini-2.5-flash] DONE

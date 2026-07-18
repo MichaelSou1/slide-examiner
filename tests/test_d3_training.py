@@ -6,8 +6,47 @@ import pytest
 from slide_examiner.d3_training import (
     ACTION_TO_ID, _answer_for, action_class_weights, action_sample_weights,
     authoritative_result, balanced_smoke_rows, build_d3_training_records,
-    evaluate_semantic_gate, fit_class_router, relocate_path, run_linter,
+    evaluate_semantic_gate, fit_class_router, is_optimizer_boundary,
+    mixed_objective_batches, relocate_path, resume_config_mismatches, run_linter,
 )
+
+
+def _sampler_rows() -> list[dict]:
+    return [
+        {"severity_chain": "a", "severity": 0.0, "severity_target": 0.0,
+         "task": "route", "action_id": ACTION_TO_ID["ANSWER"]},
+        {"severity_chain": "a", "severity": 1.0, "severity_target": 1.0,
+         "task": "route", "action_id": ACTION_TO_ID["DEFER"]},
+        {"severity_chain": "b", "severity": 0.2, "severity_target": 0.2,
+         "task": "detect", "action_id": ACTION_TO_ID["CALL_LINTER"]},
+        {"severity_chain": "b", "severity": 0.8, "severity_target": 0.8,
+         "task": "detect", "action_id": ACTION_TO_ID["REQUEST_REFERENCE"]},
+    ]
+
+
+def test_mixed_sampler_resume_is_exact_stream_suffix():
+    rows = _sampler_rows()
+    uninterrupted = list(mixed_objective_batches(rows, seed=42, batches=12))
+    resumed = list(mixed_objective_batches(rows, seed=42, batches=12, start_batch=5))
+    assert resumed == uninterrupted[5:]
+    assert len(resumed) == 7
+
+
+def test_gradient_accumulation_counts_optimizer_boundaries():
+    boundaries = [micro_step for micro_step in range(1, 9)
+                  if is_optimizer_boundary(micro_step, gradient_accumulation=2)]
+    assert boundaries == [2, 4, 6, 8]
+    assert len(boundaries) == 4
+    with pytest.raises(ValueError, match="must be positive"):
+        is_optimizer_boundary(1, gradient_accumulation=0)
+
+
+def test_resume_configuration_mismatch_is_reported():
+    saved = {"base_model": "model-a", "seed": 42, "gradient_accumulation": 1}
+    expected = {"base_model": "model-a", "seed": 73, "gradient_accumulation": 2}
+    assert resume_config_mismatches(saved, expected) == {
+        "seed": (42, 73), "gradient_accumulation": (1, 2),
+    }
 
 
 def test_relocate_frozen_machine_path(tmp_path: Path):
@@ -126,7 +165,7 @@ def test_balanced_rows_reserves_smoke_semantic_cells():
         ("G2_ELEMENT_OVERLAP", "image_structure", "CALL_LINTER", False),
         ("S6_IMAGE_TEXT_CONTRADICTION", "image_only", "REQUEST_REFERENCE", False),
         ("S2_NARRATIVE_ORDER_BREAK", "image_structure", "REQUEST_DECK", False),
-        ("NO_DEFECT", "deck_context_available", "ANSWER", True),
+        ("NO_DEFECT", "deck_context_available", "ANSWER", False),
         ("NO_DEFECT", "image_only", "ANSWER", False),
     ]
     for index, (defect, availability, action, clean_deck) in enumerate(cells):
@@ -171,7 +210,7 @@ def test_semantic_gate_requires_eligible_cells_and_zero_runtime_failures():
          "escalation": {"final_action": "DEFER"}},
         {"defect": "NO_DEFECT", "availability": "deck_context_available",
          "predicted_action": "ANSWER", "parsed": {"findings": []}, "target_action": "ANSWER",
-         "escalation": None, "is_clean_deck": True},
+         "escalation": None, "is_clean_deck": False},
     ]
     assert evaluate_semantic_gate(results, counts)["passed"] is True
 

@@ -1,0 +1,623 @@
+=== [qwen3-vl-plus] tag=g7 cond=C0 mpd=90 -> data/part3/p1e2_qwen3-vl-plus_g7_C0.json ===
+[freeform-only] kept 90/90 records
+[qwen3-vl-plus/C0/scoped] 180 probes over defects=['G7_RENDER_CONTAINMENT_OVERFLOW'] modalities=['A']
+  50/180 113s
+  100/180 224s
+  150/180 357s
+  180/180 443s
+{
+  "A": {
+    "per_defect": {
+      "G7_RENDER_CONTAINMENT_OVERFLOW": {
+        "detection": {
+          "recall": 0.927,
+          "specificity": 0.324,
+          "bal_acc": 0.626,
+          "bal_acc_ci": [
+            0.539,
+            0.702
+          ],
+          "precision": 0.603,
+          "precision_ci": [
+            0.516,
+            0.684
+          ],
+          "fpr": 0.676,
+          "f1": 0.731,
+          "recall_ci": [
+            0.849,
+            0.966
+          ],
+          "tp": 76,
+          "fn": 6,
+          "fp": 50,
+          "tn": 24,
+          "n_pos": 82,
+          "n_neg": 74
+        },
+        "named": {
+          "recall": 0.0,
+          "specificity": 1.0,
+          "bal_acc": 0.5,
+          "bal_acc_ci": [
+            0.475,
+            0.522
+          ],
+          "precision": 0.0,
+          "precision_ci": null,
+          "fpr": 0.0,
+          "f1": 0.0,
+          "recall_ci": [
+            0.0,
+            0.045
+          ],
+          "tp": 0,
+          "fn": 82,
+          "fp": 0,
+          "tn": 74,
+          "n_pos": 82,
+          "n_neg": 74
+        },
+        "headline_level": "detection"
+      }
+    }
+  }
+}
+=== [qwen3-vl-plus] tag=g7 cond=C0_full mpd=90 -> data/part3/p1e2_qwen3-vl-plus_g7_C0_full.json ===
+[freeform-only] kept 90/90 records
+[qwen3-vl-plus/C0_full/scoped] 180 probes over defects=['G7_RENDER_CONTAINMENT_OVERFLOW'] modalities=['A']
+  50/180 134s
+  100/180 251s
+  150/180 380s
+  180/180 449s
+{
+  "A": {
+    "per_defect": {
+      "G7_RENDER_CONTAINMENT_OVERFLOW": {
+        "detection": {
+          "recall": 1.0,
+          "specificity": 0.28,
+          "bal_acc": 0.64,
+          "bal_acc_ci": [
+            0.573,
+            0.695
+          ],
+          "precision": 0.597,
+          "precision_ci": [
+            0.512,
+            0.676
+          ],
+          "fpr": 0.72,
+          "f1": 0.748,
+          "recall_ci": [
+            0.954,
+            1.0
+          ],
+          "tp": 80,
+          "fn": 0,
+          "fp": 54,
+          "tn": 21,
+          "n_pos": 80,
+          "n_neg": 75
+        },
+        "named": {
+          "recall": 0.575,
+          "specificity": 0.667,
+          "bal_acc": 0.621,
+          "bal_acc_ci": [
+            0.51,
+            0.72
+          ],
+          "precision": 0.648,
+          "precision_ci": [
+            0.532,
+            0.749
+          ],
+          "fpr": 0.333,
+          "f1": 0.609,
+          "recall_ci": [
+            0.466,
+            0.677
+          ],
+          "tp": 46,
+          "fn": 34,
+          "fp": 25,
+          "tn": 50,
+          "n_pos": 80,
+          "n_neg": 75
+        },
+        "headline_level": "detection"
+      }
+    }
+  }
+}
+=== [qwen3-vl-plus] tag=g7 cond=C3 mpd=90 -> data/part3/p1e2_qwen3-vl-plus_g7_C3.json ===
+[freeform-only] kept 90/90 records
+[qwen3-vl-plus/C3/scoped] 180 probes over defects=['G7_RENDER_CONTAINMENT_OVERFLOW'] modalities=['A']
+  50/180 104s
+  100/180 220s
+  150/180 334s
+  180/180 396s
+{
+  "A": {
+    "per_defect": {
+      "G7_RENDER_CONTAINMENT_OVERFLOW": {
+        "detection": {
+          "recall": 0.939,
+          "specificity": 0.892,
+          "bal_acc": 0.916,
+          "bal_acc_ci": [
+            0.824,
+            0.962
+          ],
+          "precision": 0.899,
+          "precision_ci": [
+            0.805,
+            0.95
+          ],
+          "fpr": 0.108,
+          "f1": 0.919,
+          "recall_ci": [
+            0.854,
+            0.976
+          ],
+          "tp": 62,
+          "fn": 4,
+          "fp": 7,
+          "tn": 58,
+          "n_pos": 66,
+          "n_neg": 65
+        },
+        "named": {
+          "recall": 0.939,
+          "specificity": 0.892,
+          "bal_acc": 0.916,
+          "bal_acc_ci": [
+            0.824,
+            0.962
+          ],
+          "precision": 0.899,
+          "precision_ci": [
+            0.805,
+            0.95
+          ],
+          "fpr": 0.108,
+          "f1": 0.919,
+          "recall_ci": [
+            0.854,
+            0.976
+          ],
+          "tp": 62,
+          "fn": 4,
+          "fp": 7,
+          "tn": 58,
+          "n_pos": 66,
+          "n_neg": 65
+        },
+        "headline_level": "detection"
+      }
+    }
+  }
+}
+=== [qwen3-vl-plus] tag=g7 cond=C0_rep mpd=90 -> data/part3/p1e2_qwen3-vl-plus_g7_C0_rep.json ===
+[freeform-only] kept 90/90 records
+[qwen3-vl-plus/C0_rep/scoped] 180 probes over defects=['G7_RENDER_CONTAINMENT_OVERFLOW'] modalities=['A']
+  50/180 1272s
+  100/180 2556s
+  150/180 3745s
+  180/180 4533s
+{
+  "A": {
+    "per_defect": {
+      "G7_RENDER_CONTAINMENT_OVERFLOW": {
+        "detection": {
+          "recall": 0.978,
+          "specificity": 0.333,
+          "bal_acc": 0.656,
+          "bal_acc_ci": [
+            0.584,
+            0.715
+          ],
+          "precision": 0.595,
+          "precision_ci": [
+            0.514,
+            0.67
+          ],
+          "fpr": 0.667,
+          "f1": 0.739,
+          "recall_ci": [
+            0.923,
+            0.994
+          ],
+          "tp": 88,
+          "fn": 2,
+          "fp": 60,
+          "tn": 30,
+          "n_pos": 90,
+          "n_neg": 90
+        },
+        "named": {
+          "recall": 0.0,
+          "specificity": 1.0,
+          "bal_acc": 0.5,
+          "bal_acc_ci": [
+            0.48,
+            0.52
+          ],
+          "precision": 0.0,
+          "precision_ci": null,
+          "fpr": 0.0,
+          "f1": 0.0,
+          "recall_ci": [
+            0.0,
+            0.041
+          ],
+          "tp": 0,
+          "fn": 90,
+          "fp": 0,
+          "tn": 90,
+          "n_pos": 90,
+          "n_neg": 90
+        },
+        "headline_level": "detection",
+        "detection_majority": {
+          "recall": 0.878,
+          "specificity": 0.333,
+          "bal_acc": 0.606,
+          "bal_acc_ci": [
+            0.519,
+            0.683
+          ],
+          "precision": 0.568,
+          "precision_ci": [
+            0.485,
+            0.648
+          ],
+          "fpr": 0.667,
+          "f1": 0.69,
+          "recall_ci": [
+            0.794,
+            0.93
+          ],
+          "tp": 79,
+          "fn": 11,
+          "fp": 60,
+          "tn": 30,
+          "n_pos": 90,
+          "n_neg": 90
+        },
+        "named_majority": {
+          "recall": 0.0,
+          "specificity": 1.0,
+          "bal_acc": 0.5,
+          "bal_acc_ci": [
+            0.48,
+            0.52
+          ],
+          "precision": 0.0,
+          "precision_ci": null,
+          "fpr": 0.0,
+          "f1": 0.0,
+          "recall_ci": [
+            0.0,
+            0.041
+          ],
+          "tp": 0,
+          "fn": 90,
+          "fp": 0,
+          "tn": 90,
+          "n_pos": 90,
+          "n_neg": 90
+        }
+      }
+    }
+  }
+}
+[run_e2] done: qwen3-vl-plus tags=g7 conds=C0 C0_full C3 C0_rep
+=== [qwen3-vl-plus] tag=g7 cond=C0 mpd=90 -> data/part3/p1e2_qwen3-vl-plus_g7_C0.json ===
+[freeform-only] kept 90/90 records
+[qwen3-vl-plus/C0/scoped] 180 probes over defects=['G7_RENDER_CONTAINMENT_OVERFLOW'] modalities=['A']
+[resume] 156 good rows in sidecar; 156 probes done, 24 to (re)run
+  24/24 64s
+{
+  "A": {
+    "per_defect": {
+      "G7_RENDER_CONTAINMENT_OVERFLOW": {
+        "detection": {
+          "recall": 0.933,
+          "specificity": 0.345,
+          "bal_acc": 0.639,
+          "bal_acc_ci": [
+            0.558,
+            0.709
+          ],
+          "precision": 0.596,
+          "precision_ci": [
+            0.513,
+            0.673
+          ],
+          "fpr": 0.655,
+          "f1": 0.727,
+          "recall_ci": [
+            0.862,
+            0.969
+          ],
+          "tp": 84,
+          "fn": 6,
+          "fp": 57,
+          "tn": 30,
+          "n_pos": 90,
+          "n_neg": 87
+        },
+        "named": {
+          "recall": 0.0,
+          "specificity": 1.0,
+          "bal_acc": 0.5,
+          "bal_acc_ci": [
+            0.479,
+            0.52
+          ],
+          "precision": 0.0,
+          "precision_ci": null,
+          "fpr": 0.0,
+          "f1": 0.0,
+          "recall_ci": [
+            0.0,
+            0.041
+          ],
+          "tp": 0,
+          "fn": 90,
+          "fp": 0,
+          "tn": 87,
+          "n_pos": 90,
+          "n_neg": 87
+        },
+        "headline_level": "detection"
+      }
+    }
+  }
+}
+=== [qwen3-vl-plus] tag=g7 cond=C0_full mpd=90 -> data/part3/p1e2_qwen3-vl-plus_g7_C0_full.json ===
+[freeform-only] kept 90/90 records
+[qwen3-vl-plus/C0_full/scoped] 180 probes over defects=['G7_RENDER_CONTAINMENT_OVERFLOW'] modalities=['A']
+[resume] 155 good rows in sidecar; 155 probes done, 25 to (re)run
+  25/25 60s
+{
+  "A": {
+    "per_defect": {
+      "G7_RENDER_CONTAINMENT_OVERFLOW": {
+        "detection": {
+          "recall": 1.0,
+          "specificity": 0.345,
+          "bal_acc": 0.672,
+          "bal_acc_ci": [
+            0.606,
+            0.725
+          ],
+          "precision": 0.612,
+          "precision_ci": [
+            0.532,
+            0.687
+          ],
+          "fpr": 0.655,
+          "f1": 0.759,
+          "recall_ci": [
+            0.959,
+            1.0
+          ],
+          "tp": 90,
+          "fn": 0,
+          "fp": 57,
+          "tn": 30,
+          "n_pos": 90,
+          "n_neg": 87
+        },
+        "named": {
+          "recall": 0.589,
+          "specificity": 0.701,
+          "bal_acc": 0.645,
+          "bal_acc_ci": [
+            0.542,
+            0.736
+          ],
+          "precision": 0.671,
+          "precision_ci": [
+            0.561,
+            0.764
+          ],
+          "fpr": 0.299,
+          "f1": 0.627,
+          "recall_ci": [
+            0.486,
+            0.685
+          ],
+          "tp": 53,
+          "fn": 37,
+          "fp": 26,
+          "tn": 61,
+          "n_pos": 90,
+          "n_neg": 87
+        },
+        "headline_level": "detection"
+      }
+    }
+  }
+}
+=== [qwen3-vl-plus] tag=g7 cond=C3 mpd=90 -> data/part3/p1e2_qwen3-vl-plus_g7_C3.json ===
+[freeform-only] kept 90/90 records
+[qwen3-vl-plus/C3/scoped] 180 probes over defects=['G7_RENDER_CONTAINMENT_OVERFLOW'] modalities=['A']
+[resume] 131 good rows in sidecar; 131 probes done, 49 to (re)run
+  49/49 99s
+{
+  "A": {
+    "per_defect": {
+      "G7_RENDER_CONTAINMENT_OVERFLOW": {
+        "detection": {
+          "recall": 0.952,
+          "specificity": 0.881,
+          "bal_acc": 0.917,
+          "bal_acc_ci": [
+            0.839,
+            0.958
+          ],
+          "precision": 0.889,
+          "precision_ci": [
+            0.807,
+            0.939
+          ],
+          "fpr": 0.119,
+          "f1": 0.92,
+          "recall_ci": [
+            0.884,
+            0.981
+          ],
+          "tp": 80,
+          "fn": 4,
+          "fp": 10,
+          "tn": 74,
+          "n_pos": 84,
+          "n_neg": 84
+        },
+        "named": {
+          "recall": 0.952,
+          "specificity": 0.881,
+          "bal_acc": 0.917,
+          "bal_acc_ci": [
+            0.839,
+            0.958
+          ],
+          "precision": 0.889,
+          "precision_ci": [
+            0.807,
+            0.939
+          ],
+          "fpr": 0.119,
+          "f1": 0.92,
+          "recall_ci": [
+            0.884,
+            0.981
+          ],
+          "tp": 80,
+          "fn": 4,
+          "fp": 10,
+          "tn": 74,
+          "n_pos": 84,
+          "n_neg": 84
+        },
+        "headline_level": "detection"
+      }
+    }
+  }
+}
+=== [qwen3-vl-plus] tag=g7 cond=C0_rep mpd=90 -> data/part3/p1e2_qwen3-vl-plus_g7_C0_rep.json ===
+[freeform-only] kept 90/90 records
+[qwen3-vl-plus/C0_rep/scoped] 180 probes over defects=['G7_RENDER_CONTAINMENT_OVERFLOW'] modalities=['A']
+[resume] 180 good rows in sidecar; 180 probes done, 0 to (re)run
+{
+  "A": {
+    "per_defect": {
+      "G7_RENDER_CONTAINMENT_OVERFLOW": {
+        "detection": {
+          "recall": 0.978,
+          "specificity": 0.333,
+          "bal_acc": 0.656,
+          "bal_acc_ci": [
+            0.584,
+            0.715
+          ],
+          "precision": 0.595,
+          "precision_ci": [
+            0.514,
+            0.67
+          ],
+          "fpr": 0.667,
+          "f1": 0.739,
+          "recall_ci": [
+            0.923,
+            0.994
+          ],
+          "tp": 88,
+          "fn": 2,
+          "fp": 60,
+          "tn": 30,
+          "n_pos": 90,
+          "n_neg": 90
+        },
+        "named": {
+          "recall": 0.0,
+          "specificity": 1.0,
+          "bal_acc": 0.5,
+          "bal_acc_ci": [
+            0.48,
+            0.52
+          ],
+          "precision": 0.0,
+          "precision_ci": null,
+          "fpr": 0.0,
+          "f1": 0.0,
+          "recall_ci": [
+            0.0,
+            0.041
+          ],
+          "tp": 0,
+          "fn": 90,
+          "fp": 0,
+          "tn": 90,
+          "n_pos": 90,
+          "n_neg": 90
+        },
+        "headline_level": "detection",
+        "detection_majority": {
+          "recall": 0.878,
+          "specificity": 0.333,
+          "bal_acc": 0.606,
+          "bal_acc_ci": [
+            0.519,
+            0.683
+          ],
+          "precision": 0.568,
+          "precision_ci": [
+            0.485,
+            0.648
+          ],
+          "fpr": 0.667,
+          "f1": 0.69,
+          "recall_ci": [
+            0.794,
+            0.93
+          ],
+          "tp": 79,
+          "fn": 11,
+          "fp": 60,
+          "tn": 30,
+          "n_pos": 90,
+          "n_neg": 90
+        },
+        "named_majority": {
+          "recall": 0.0,
+          "specificity": 1.0,
+          "bal_acc": 0.5,
+          "bal_acc_ci": [
+            0.48,
+            0.52
+          ],
+          "precision": 0.0,
+          "precision_ci": null,
+          "fpr": 0.0,
+          "f1": 0.0,
+          "recall_ci": [
+            0.0,
+            0.041
+          ],
+          "tp": 0,
+          "fn": 90,
+          "fp": 0,
+          "tn": 90,
+          "n_pos": 90,
+          "n_neg": 90
+        }
+      }
+    }
+  }
+}
+[run_e2] done: qwen3-vl-plus tags=g7 conds=C0 C0_full C3 C0_rep

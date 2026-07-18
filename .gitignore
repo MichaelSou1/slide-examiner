@@ -22,7 +22,7 @@ htmlcov/
 venv/
 env/
 
-# 实验产物（由 CLI 生成，不入库）
+# 实验大文件和可再生中间产物默认不入库；训练/评测报告与日志除外
 runs/*
 !runs/rendered/
 runs/rendered/*
@@ -31,12 +31,9 @@ runs/rendered/*
 runs/probe/*
 !runs/probe/.gitkeep
 models/
-reports/*
-!reports/README.md
-!reports/*.md
-!reports/data_prep/
-reports/data_prep/*
-!reports/data_prep/.gitkeep
+# reports/ 下的所有训练报告和评测报告均需纳入 Git 追踪
+!reports/
+!reports/**
 data/raw/*
 data/ir/*
 data/manifests/*
@@ -54,6 +51,18 @@ data/part2/shards/
 data/part2/sft/*.jsonl
 data/derisk/
 *.log
+
+# 研究运行日志必须纳入 Git；嵌套目录（如 paper/）可继续忽略纯构建日志
+runs/**/*
+!runs/**/
+!runs/**/*.log
+# D3 正式训练/评测的小型可审计产物入库；adapter、checkpoint 和 *.pt 仍保持忽略
+!runs/part3/d3_formal_v2/**/*.json
+!runs/part3/d3_formal_v2/**/*.jsonl
+!runs/part3/d3_smoke_v2/**/*.json
+!runs/part3/d3_smoke_v2/**/*.jsonl
+!logs/
+!logs/**
 
 # Restored historical Part 2 v2 evidence is intentionally versioned.
 !runs/part2/

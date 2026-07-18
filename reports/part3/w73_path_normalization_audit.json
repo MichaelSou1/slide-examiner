@@ -1,0 +1,33 @@
+{
+  "created_at": "2026-07-18T02:30:00Z",
+  "source": "huirui:/data/slide-examiner/data/part3/d3/training_frozen_recovered",
+  "destination": "huirui:/data/slide-examiner/data/part3/d3/training_w73_path_normalized",
+  "normalization": "strip exact /data/slide-examiner/ prefix from all JSON string values",
+  "final_test_read": false,
+  "splits": {
+    "train": {
+      "rows": 18956,
+      "changed_rows": 18344,
+      "old_documented_sha256": "92d3b22a183a50f7550886a74d4fb480546390512379ceda384eba16201aa3b6",
+      "old_recovered_sha256": "864d298faff790dc4455d3b3c733d1c9d60138f724f07ba4d3d4bc99c33caf14",
+      "old_sha_matched": false,
+      "new_path_normalized_sha256": "8d283c67f87ee5d4552a220753009dd933b8f9365a4a1fc854b85414a400a6a5",
+      "only_paths_differ": true,
+      "all_normalized_images_exist": true,
+      "image_references": 24160,
+      "unique_image_references": 8352
+    },
+    "dev": {
+      "rows": 3844,
+      "changed_rows": 3736,
+      "old_documented_sha256": "1fe17574206f1fdfbdcccda8170585128fccb59a5a75d194601c1ed6a35c56ef",
+      "old_recovered_sha256": "fc3bbd219bf53f0ac3b24eabf297a26eda0d8125ac1313e853b4544827b75ab3",
+      "old_sha_matched": false,
+      "new_path_normalized_sha256": "132858199082f0e50320618bbd0b059bbf8fa27d72afcae56c84d628902a472a",
+      "only_paths_differ": true,
+      "all_normalized_images_exist": true,
+      "image_references": 4898,
+      "unique_image_references": 1716
+    }
+  }
+}

@@ -295,6 +295,10 @@
 
 ### 7.3 D3 模型、输出契约与联合损失
 
+> **服务器迁移复核最终结论（2026-07-17）**：ModelScope `michaelsou/slide-examiner-d3-qwen3vl8b` 已恢复到 `huirui:/data/slide-examiner/runs/part3/d3/checkpoints/`，其中 seed 42/17/73 的 adapter、D3 heads、run config 和 metrics 均存在且可解析；但标准 `trainer_state.json` / optimizer / scheduler state、continue-D3、compute-matched vanilla 和消融 checkpoint 已确认没有其他副本，**不再等待恢复，按冻结配置重做并完整备份**。现有 from-base checkpoint 仅用于 7.4 前置加载/inference smoke，不替代正式重跑验收。**无需重做 7.0–7.2，也无需重写 7.3 的代码部分。**
+
+> **训练数据路径规范化与重新冻结（2026-07-18；未读取 `final_test`）**：历史文档 SHA 保留为 train `92d3b22a183a50f7550886a74d4fb480546390512379ceda384eba16201aa3b6` / dev `1fe17574206f1fdfbdcccda8170585128fccb59a5a75d194601c1ed6a35c56ef`。`huirui` 恢复件实际 SHA 为 train `864d298faff790dc4455d3b3c733d1c9d60138f724f07ba4d3d4bc99c33caf14` / dev `fc3bbd219bf53f0ac3b24eabf297a26eda0d8125ac1313e853b4544827b75ab3`，因此 `old_sha_matched=false`，**不得声称命中历史 SHA**。将恢复件中精确前缀 `/data/slide-examiner/` 改为 repo-relative 后，正式新冻结 SHA 为 train `8d283c67f87ee5d4552a220753009dd933b8f9365a4a1fc854b85414a400a6a5` / dev `132858199082f0e50320618bbd0b059bbf8fa27d72afcae56c84d628902a472a`；逐行递归审计证明“恢复件→新冻结件”除路径字符串外相同（`only_paths_differ=true`），且所有图片存在。证据：`reports/part3/w73_path_normalization_audit.json`。该结论不等价于恢复件与历史 SHA 内容相同。
+
 - [x] 扩展现有 examiner 输出而不破坏旧 parser：已在 `PageExamResult` / `DeckExamResult` 加入 `action`、`confidence`、`requested_context`、`evidence_source`，旧字段保留默认值；一致性 validator 强制非 `ANSWER` 动作无 finding 且 `evidence_source=none`。实现与回归测试见 `slide_examiner/examiner_contract.py`、`tests/test_examiner_contract.py`（2026-07-16）。
 - [x] student 推理入口只接受一个 frozen generic inspection instruction；`scripts/part3_d3_infer.py` 仅使用训练记录首条 generic user message，C3/pairwise/linter 仅用于 teacher 或一次升级动作，不向首轮 student 暴露 defect-name oracle（2026-07-16）。
 - [x] 实现联合目标并逐项可开关消融（`scripts/part3_d3_train.py`、`slide_examiner/d3_training.py`；六项 loss 均有独立 `--loss-*` 权重，2026-07-16）：
@@ -304,25 +308,27 @@
   - $\mathcal L_{severity}$：同源 severity 单调性；
   - $\mathcal L_{route}$：teacher action 分类；
   - $\mathcal L_{select}$：confidence/defer 的 selective-risk 目标。
-- [x] 以 Qwen3-VL-8B + QLoRA 建立三条可比 run（150，2026-07-17，均未读取 `final_test`）：`from-base D3` 为 `runs/part3/d3_formal/train_seed42/`，`vanilla-v2 continue-train` 为先做 count-matched Part 2 v2 reconstruction（原未跟踪 SFT artifact 缺失，故不冒充 bitwise reproduction；2,035 train / 107 dev、4,070 microbatch、grad-accum 8、约 509 optimizer updates、约 2 epochs）再接 `runs/part3/d3_formal/continue_part2v2_d3_seed42/`，固定 D3 records/768 steps 的纯 SFT 对照为 `vanilla_compute_matched_seed42/`。三条 D3 数据 hash 均为 train `92d3b22a…aa3b6` / dev `1fe17574…c56ef`；完整 2,151 dev 复评见对应 `*_full_dev/`。from-base / continue 的 dev joint loss 为 0.2555 / 0.2771，G7 generic ANSWER recall 均 1.0，G2–G6 image-only unsafe ANSWER rate 为 0.1207 / 0.0；compute-matched vanilla 只定义 assistant-token SFT loss（0.02189），无 D3 action head，不能把该值与 joint loss直接排优劣。Part 2 reproduction 的 107 条 dev SFT loss 为 0.01902；旧 Part 2 端到端协议复评仍因缺失完整历史 OOD/S6 manifests 与 merge/serve artifact 留到 W7.4，不把该缺口伪装成已复现旧表。
+- [x] **重做三条可比 run 并完整备份**：① `from-base D3`；② count-matched Part 2 v2 reconstruction → continue-D3；③ 固定相同 D3 records/768 steps 的 compute-matched vanilla。D3 阶段统一使用 2026-07-18 新冻结数据 hash：train `8d283c67…00a6a5` / dev `13285819…0a472a`；历史 hash `92d3b22a…aa3b6` / `1fe17574…c56ef` 仅保留用于溯源，不冒充本次输入。三条 seed42 run 均完成 768 steps / 2,151 dev，dev loss 分别为 from-base joint `0.433990`、continue-D3 joint `0.368249`、vanilla assistant-token SFT `0.056560`；完整训练状态在 `huirui:/data/slide-examiner/runs/part3/d3_formal_v2/` 保存，小型报告与日志已加入 Git。Part 2 v2 reconstruction 的冻结真值为 2,034 train / 108 eval / 510 optimizer steps，train/eval loss `0.110885` / `0.015841`（2026-07-18；未读取 `final_test`）。
 - [x] 明确 router 形态并至少实现两级：`class_router.json` 是仅用 train split 拟合的 multinomial logistic regression（dev accuracy 0.7387，`manual_route_used=false`）；D3 heads 是 sample-level action prediction，并由 generic inference 执行至多一次 escalation。实现见 `fit_class_router` / `D3Heads`，不是人工 defect→action 字典（2026-07-16）。
-- [x] 正式 run 保存逐 step train loss、完整 dev joint/sub-loss、action confusion/recall、G7 generic answer recall、G2–G6 image-only unsafe-answer rate、config、数据 hash 与 dev-only selection basis；artifact 见 150：`runs/part3/d3_formal/train_seed{17,73}/` 及三项消融目录。注意这些 head 指标只用于 dev 选择，finding/FPR 最终数仍须由 W7.6/7.7 端到端 scoring 给出（2026-07-16）。
+- [x] **重做正式 from-base seed 42/17/73 run**：三 seed 均完成 768 steps、完整 2,151 dev，dev joint loss 为 seed42 `0.433990`、seed17 `0.331048`、seed73 `0.259068`；逐 step history、完整 dev 指标、config、冻结数据 hash、dev-only selection basis、adapter/heads 与 trainer/optimizer/scheduler/RNG 状态及 SHA-256 inventory 全部存在于 `runs/part3/d3_formal_v2/train_seed{42,17,73}/`（远端保存大文件，Git 跟踪小型 JSON/JSONL 与日志；2026-07-18）。注意这些 head 指标只用于 dev 选择，finding/FPR 最终数仍须由 W7.6/7.7 端到端 scoring 给出。
 
 ### 7.4 端到端 smoke test 与“摘要锁定门”
 
-- [ ] 用每类小样本跑通完整链路：manifest → teacher reward matrix → D3 records → QLoRA → merge/serve → generic inference → action escalation → scoring；产出可复现 run artifact。
-- [ ] smoke test 必须证明实现语义正确，而非追求最终数字：
+> **当前入口（2026-07-17）**：现有 from-base seed 42/17/73 adapter + heads 和 huirui base model `/data/public_data/xzs_data/Qwen3-VL-8B-Instruct` 足以立即做非 `final_test` 的加载、generic inference、action escalation 与 scoring 前置 smoke；但 7.4 的完整链路包含 QLoRA，正式验收必须接入上面重做且完整备份的 from-base run。旧 Part 2 大文件和历史图片不是硬前置。**可先做推理侧准备，不能用不完整恢复件勾选 7.4 或锁定 Abstract。**
+
+- [x] 用每类小样本跑通完整链路：manifest → teacher reward matrix → D3 records → QLoRA → merge/serve → generic inference → action escalation → scoring；使用正式重跑 seed42、冻结 dev 32 条 balanced smoke，产物为 `runs/part3/d3_smoke_v2/seed42_dev_balanced.jsonl` 及 `.summary.json`，merged model 外置于 `huirui`（2026-07-18；未读取 `final_test`）。
+- [x] smoke test 必须证明实现语义正确，而非追求最终数字：semantic gate 全通过，parser/action-loop/teacher/consistency/escalation failure 均为 0；冻结 dev 无 `is_clean_deck=true`，故明确以 `NO_DEFECT + deck_context_available` 作为可执行 clean control，不冒充原 marker：
   - generic prompt 下 G7 student 能输出合法 finding/evidence；
   - G2–G6 image-only 能输出 `CALL_LINTER` 或 `DEFER`，且不伪造 finding；
   - G1/S6 能请求 reference 并在获得 reference 后完成双顺序一致判断；
   - S2 clean deck 不再因缺负样本而恒报；
   - parser failure、teacher failure、action loop 均有显式计数。
-- [ ] **摘要锁定门（做到这里即可锁定并提交方法性 Abstract）**：W7.0 的 RQ/metrics/成功标准已冻结；W7.1 split 与防泄漏脚本通过；W7.2 teacher/action 数据有真实 artifact；W7.3 联合损失与统一 generic inference 已实现；W7.4 端到端 smoke test 全通过。此时摘要可写“we introduce attribution-guided distillation and selective tool/defer learning”，但**不得写性能提升、成本下降、覆盖数或‘模型已学会’等结果性结论**。
+- [x] **摘要锁定门（做到这里即可锁定并提交方法性 Abstract）**：W7.0 的 RQ/metrics/成功标准已冻结；W7.1 split 与防泄漏脚本通过；W7.2 teacher/action 数据有真实 artifact；W7.3 联合损失与统一 generic inference 已实现；W7.4 正式 seed42 QLoRA→merge→generic inference→单次 escalation→scoring smoke 全通过。此时摘要可写“we introduce attribution-guided distillation and selective tool/defer learning”，但**不得写性能提升、成本下降、覆盖数或‘模型已学会’等结果性结论**（2026-07-18）。
 - [ ] 摘要锁定后，除非方法失败导致 claim 不成立，只允许在 W7.7 后填入预先声明的 final-test 数字；禁止根据 validation 调换 primary endpoint。
 
 ### 7.5 正式训练与 dev-only 模型选择
 
-- [ ] 运行至少 3 个固定 seed；每个 seed 保存 base model、adapter、merged model、config、数据 hash、训练日志和推理版本。**进度（2026-07-16）**：seed 42/17/73 均已完成 768-step QLoRA 并保存 adapter、heads、config、hash 与日志；seed17/73 已跑完整 2,151 条 dev（joint loss 0.2332/0.2685），seed42 旧 run 仅评估前 320 条，且三 seed 尚未逐一 merge + 固化 inference artifact，故本项暂不勾选。
+- [x] 运行至少 3 个固定 seed；每个 seed 保存 base model 引用、adapter、heads、完整 trainer-state/optimizer/scheduler、config、数据 hash、训练日志和推理版本。seed 42/17/73 正式 run 均已完成；10 个 `formal_v2` run（含三 seed、continue-D3、compute-matched vanilla 和五项 loss 消融）的 192/384/576/768 checkpoint、最终 adapter/heads、训练状态与 SHA-256 inventory 已完整上传至 ModelScope `michaelsou/slide-examiner-d3-qwen3vl8b/formal_v2/`，冻结 train/dev 及其 10,068 个去重引用图片上传至 `michaelsou/slide-examiner-d3-training-w73`（2026-07-18；未读取或上传 `final_test`）。merged model 仅作为可再生成的 smoke 中间产物保留在远端，不重复上传 10 份基座权重。
 - [ ] 只在 dev 上调：loss 权重、utility cost、teacher margin、confidence/defer threshold、最大 escalation 次数；W5 validation 用于对照和消融，不用于继续追 final-test 类别。
 - [ ] 冻结最终 D3 checkpoint 与 inference policy：generic first-pass → action → 最多一次工具/reference escalation → final finding/defer；记录最坏调用上限，防止成本无限增长。
 - [ ] 在碰 `final_test` 前生成 model card 式 run summary（放现有 report/run artifact，不新建无关文档）：选择原因、失败类别、threshold、预期主表列、代码/data/model hash。
@@ -331,7 +337,7 @@
 
 - [ ] Baselines：zero-shot 8B、zero-shot 30B、当前 vanilla Part 2 FT、fixed C0、uniform C3、人工 frozen route、compute-matched vanilla FT（相同数据量/step）。
 - [ ] Router 对照：人工 fixed route、learned class-level route、learned sample-level route、sample-level + escalation/defer。
-- [ ] Loss 消融：去 `distill`、去 `pair`、去 `severity`、去 `route`、去 `select/defer`；如果篇幅不足，正文保留前三个最能回答 RQ 的，其余进 supplement。**进度（2026-07-16）**：同 seed、同 768 steps、同完整 2,151 dev 的去 `distill` / 去 `pair` / 去 `route` 已完成，artifact 为 150 的 `runs/part3/d3_formal/ablation_no_{distill,pair,route}_seed42/`；其中去 route 导致 `CALL_LINTER`/`REQUEST_DECK`/`DEFER` recall 全为 0、G7 answer recall 仅 0.25。去 `severity` 与去 `select/defer` 尚未运行，三项已有消融也仍待统一端到端 scoring，故不提前勾选。
+- [x] **重做完整 Loss 消融**：去 `distill`、去 `pair`、去 `severity`、去 `route`、去 `select/defer` 五项均已用统一 seed 42 完成 768 steps / 完整 2,151 dev；完整训练状态保存在 `huirui:/data/slide-examiner/runs/part3/d3_formal_v2/ablation_*_seed42/`，小型 metrics、config、逐 step history、SHA-256 inventory 与运行日志已加入 Git（2026-07-18；未读取 `final_test`）。旧 150 记录仅用于溯源，不再作为本次结果。若篇幅不足，正文保留最能回答 RQ 的三项，其余进 supplement。
 - [ ] Teacher 消融：C3 labels 直接 SFT vs attribution-selected teacher；证明收益不是“多收一批 C3 输出再微调”。
 - [ ] Prompt 内化对照：teacher-C3、vanilla-FT+generic、D3+generic、D3+C3；主结果必须是 D3+generic，D3+C3 只用于测残余 elicitation gap。
 - [ ] Availability/OOD：去掉 IR、去掉 reference、novel template、held-out severity；检查动作是否随可用证据改变，而不是只背 defect type。

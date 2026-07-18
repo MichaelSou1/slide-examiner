@@ -1,0 +1,55 @@
+{
+  "base_model": "/data/public_data/xzs_data/Qwen3-VL-8B-Instruct",
+  "seed": 42,
+  "objective": "d3",
+  "max_steps": 768,
+  "learning_rate": 0.0001,
+  "scheduler": "constant",
+  "warmup_steps": 0,
+  "batch_size": 2,
+  "gradient_accumulation": 1,
+  "lora_rank": 16,
+  "lora_alpha": 32,
+  "image_max_pixels": 589824,
+  "train_sha256": "8d283c67f87ee5d4552a220753009dd933b8f9365a4a1fc854b85414a400a6a5",
+  "dev_sha256": "132858199082f0e50320618bbd0b059bbf8fa27d72afcae56c84d628902a472a",
+  "loss_weights": {
+    "detect": 1.0,
+    "distill": 1.0,
+    "pair": 1.0,
+    "severity": 0.2,
+    "route": 0.5,
+    "select": 0.2
+  },
+  "quantization": "qlora",
+  "severity_chain_sampling": true,
+  "action_class_weighting": "sqrt-inverse",
+  "action_balanced_sampling": false,
+  "dev_limit": 2151,
+  "train_limit": null,
+  "save_steps": 192,
+  "parent_commit": "unavailable",
+  "final_test_read": false,
+  "action_class_weights": {
+    "ANSWER": 0.3852445397140064,
+    "CALL_LINTER": 0.7922492105912382,
+    "REQUEST_REFERENCE": 0.8475379873708141,
+    "REQUEST_DECK": 2.5175629673238213,
+    "DEFER": 0.45740529500011984
+  },
+  "init_adapter": "runs/part2/examiner_lora_v2/adapter",
+  "init_heads": null,
+  "resume_from_checkpoint": null,
+  "environment": {
+    "python": "3.10.20 (main, Mar 11 2026, 17:46:40) [GCC 14.3.0]",
+    "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.35",
+    "torch": "2.10.0+cu128",
+    "transformers": "5.12.1",
+    "peft": "0.19.1",
+    "cuda": "12.8",
+    "visible_gpus": "6",
+    "gpu_names": [
+      "NVIDIA H20"
+    ]
+  }
+}

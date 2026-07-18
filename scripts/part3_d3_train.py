@@ -6,8 +6,12 @@ import argparse
 import hashlib
 import json
 import math
+import os
+import platform
 import random
 import subprocess
+import sys
+import time
 from collections import Counter
 from dataclasses import asdict
 from pathlib import Path
@@ -25,9 +29,12 @@ from transformers import BitsAndBytesConfig
 from slide_examiner.d3_data import sha256_file
 from slide_examiner.d3_training import (
     ACTIONS, LOSS_NAMES, LossWeights, action_class_weights, action_sample_weights,
+    is_optimizer_boundary, mixed_objective_batches, resume_config_mismatches,
 )
 
 REPO = Path(__file__).resolve().parents[1]
+FROZEN_TRAIN_SHA256 = "8d283c67f87ee5d4552a220753009dd933b8f9365a4a1fc854b85414a400a6a5"
+FROZEN_DEV_SHA256 = "132858199082f0e50320618bbd0b059bbf8fa27d72afcae56c84d628902a472a"
 
 
 class JsonlDataset(Dataset):
@@ -46,38 +53,21 @@ class JsonlDataset(Dataset):
 class MixedObjectiveBatchSampler(Sampler[list[int]]):
     """Mix task/action-balanced batches with regular monotonic severity pairs."""
 
-    def __init__(self, rows: list[dict[str, Any]], seed: int, batches: int):
+    def __init__(self, rows: list[dict[str, Any]], seed: int, batches: int,
+                 start_batch: int = 0):
         self.rows, self.seed, self.batches = rows, seed, batches
-        chains: dict[str, list[int]] = {}
-        for index, row in enumerate(rows):
-            chains.setdefault(row["severity_chain"], []).append(index)
-        self.pairs = []
-        for indices in chains.values():
-            ordered = sorted(indices, key=lambda i: float(rows[i].get("severity_target", rows[i]["severity"])))
-            if (len(ordered) > 1 and
-                    rows[ordered[0]].get("severity_target", rows[ordered[0]]["severity"])
-                    != rows[ordered[-1]].get("severity_target", rows[ordered[-1]]["severity"])):
-                self.pairs.append((ordered[0], ordered[-1]))
-        if not self.pairs:
-            raise ValueError("no non-tied severity chains available for monotonic batches")
-        task_counts = Counter(row["task"] for row in rows)
-        action_counts = Counter(int(row["action_id"]) for row in rows)
-        self.sample_weights = [
-            0.5 / task_counts[row["task"]] + 0.5 / action_counts[int(row["action_id"])]
-            for row in rows
-        ]
+        self.start_batch = start_batch
+        # Validate the rows eagerly rather than failing in the DataLoader worker.
+        next(iter(mixed_objective_batches(rows, seed, 1)))
 
     def __iter__(self):
-        generator = random.Random(self.seed)
-        population = list(range(len(self.rows)))
-        for batch_index in range(self.batches):
-            if batch_index % 4 == 0:
-                yield list(generator.choice(self.pairs))
-            else:
-                yield generator.choices(population, weights=self.sample_weights, k=2)
+        # Recreate the same deterministic stream and discard already-consumed
+        # batches so a resumed run sees exactly the uninterrupted next batch.
+        yield from mixed_objective_batches(
+            self.rows, self.seed, self.batches, start_batch=self.start_batch)
 
     def __len__(self) -> int:
-        return self.batches
+        return max(0, self.batches - self.start_batch)
 
 
 class D3Heads(nn.Module):
@@ -223,15 +213,54 @@ def compute_joint_loss(lm_per_record: torch.Tensor, action_logits: torch.Tensor,
     return total, losses
 
 
+def _write_json(path: Path, value: Any) -> None:
+    """Atomically replace small run metadata so interrupted writes stay detectable."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    temporary = path.with_name(f".{path.name}.tmp")
+    temporary.write_text(json.dumps(value, indent=2, ensure_ascii=False) + "\n")
+    os.replace(temporary, path)
+
+
+def write_sha256_inventory(output: Path) -> dict[str, Any]:
+    """Hash every checkpoint artifact except the inventory itself."""
+    inventory_path = output / "sha256_inventory.json"
+    files = []
+    for path in sorted(output.rglob("*")):
+        if not path.is_file() or path == inventory_path or path.name.startswith(".sha256_inventory.json"):
+            continue
+        files.append({"path": path.relative_to(output).as_posix(),
+                      "bytes": path.stat().st_size, "sha256": sha256_file(path)})
+    inventory = {"algorithm": "sha256", "root": str(output), "files": files}
+    _write_json(inventory_path, inventory)
+    return inventory
+
+
 def save_checkpoint(model: nn.Module, heads: D3Heads | None, processor: Any, output: Path,
-                    config: dict[str, Any], metrics: dict[str, Any]) -> None:
+                    optimizer: torch.optim.Optimizer, scheduler: Any,
+                    config: dict[str, Any], trainer_state: dict[str, Any],
+                    metrics: dict[str, Any] | None = None) -> None:
     output.mkdir(parents=True, exist_ok=True)
     model.save_pretrained(output / "adapter")
     processor.save_pretrained(output / "adapter")
     if heads is not None:
         torch.save(heads.state_dict(), output / "d3_heads.pt")
-    (output / "run_config.json").write_text(json.dumps(config, indent=2, ensure_ascii=False))
-    (output / "metrics.json").write_text(json.dumps(metrics, indent=2, ensure_ascii=False))
+    torch.save(optimizer.state_dict(), output / "optimizer.pt")
+    torch.save(scheduler.state_dict(), output / "scheduler.pt")
+    rng_state = {"python": random.getstate(), "torch": torch.get_rng_state()}
+    if torch.cuda.is_available():
+        rng_state["cuda"] = torch.cuda.get_rng_state_all()
+    torch.save(rng_state, output / "rng_state.pt")
+    _write_json(output / "run_config.json", config)
+    _write_json(output / "trainer_state.json", trainer_state)
+    history = trainer_state.get("history", [])
+    history_text = "".join(json.dumps(item, ensure_ascii=False) + "\n" for item in history)
+    history_path = output / "train_history.jsonl"
+    history_temporary = history_path.with_name(f".{history_path.name}.tmp")
+    history_temporary.write_text(history_text)
+    os.replace(history_temporary, history_path)
+    if metrics is not None:
+        _write_json(output / "metrics.json", metrics)
+    write_sha256_inventory(output)
 
 
 def main() -> None:
@@ -251,6 +280,8 @@ def main() -> None:
     parser.add_argument("--train-limit", type=int)
     parser.add_argument("--dev-limit", type=int, default=32)
     parser.add_argument("--learning-rate", type=float, default=1e-4)
+    parser.add_argument("--scheduler", choices=("constant", "linear"), default="constant")
+    parser.add_argument("--warmup-steps", type=int, default=0)
     parser.add_argument("--gradient-accumulation", type=int, default=1)
     parser.add_argument("--batch-size", type=int, default=1)
     parser.add_argument("--severity-chain-sampling", action=argparse.BooleanOptionalAction,
@@ -258,6 +289,11 @@ def main() -> None:
     parser.add_argument("--lora-rank", type=int, default=16)
     parser.add_argument("--lora-alpha", type=int, default=32)
     parser.add_argument("--image-max-pixels", type=int, default=589824)
+    parser.add_argument("--save-steps", type=int, default=0,
+                        help="save a resumable checkpoint-N snapshot every N optimizer steps; 0 disables")
+    parser.add_argument("--resume-from-checkpoint", type=Path)
+    parser.add_argument("--allow-nonfrozen-data", action="store_true",
+                        help="explicitly allow hashes other than the frozen W7.3 train/dev pair (smoke only)")
     parser.add_argument("--quantization", choices=("qlora", "bf16"), default="qlora")
     parser.add_argument("--action-class-weighting", choices=("none", "sqrt-inverse", "inverse"),
                         default="sqrt-inverse")
@@ -266,6 +302,26 @@ def main() -> None:
     for name in LOSS_NAMES:
         parser.add_argument(f"--loss-{name}", type=float, default=getattr(LossWeights(), name))
     args = parser.parse_args()
+
+    if args.resume_from_checkpoint and (args.init_adapter or args.init_heads):
+        raise ValueError("--resume-from-checkpoint cannot be combined with --init-adapter/--init-heads")
+    if args.save_steps < 0:
+        raise ValueError("--save-steps must be non-negative")
+    train_sha256, dev_sha256 = sha256_file(args.train), sha256_file(args.dev)
+    if not args.allow_nonfrozen_data and (train_sha256, dev_sha256) != (
+            FROZEN_TRAIN_SHA256, FROZEN_DEV_SHA256):
+        raise ValueError(
+            "refusing non-frozen W7.3 data: "
+            f"train={train_sha256} dev={dev_sha256}; pass --allow-nonfrozen-data only for smoke runs")
+
+    if args.parent_commit:
+        parent = args.parent_commit
+    else:
+        try:
+            parent = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=REPO, text=True,
+                                             stderr=subprocess.DEVNULL).strip()
+        except Exception:
+            parent = "unavailable"
 
     random.seed(args.seed)
     torch.manual_seed(args.seed)
@@ -284,8 +340,9 @@ def main() -> None:
         )
         model_kwargs["device_map"] = {"": 0}
     model = Qwen3VLForConditionalGeneration.from_pretrained(args.model, **model_kwargs)
-    if args.init_adapter:
-        model = PeftModel.from_pretrained(model, args.init_adapter, is_trainable=True)
+    resume_adapter = args.resume_from_checkpoint / "adapter" if args.resume_from_checkpoint else None
+    if resume_adapter or args.init_adapter:
+        model = PeftModel.from_pretrained(model, resume_adapter or args.init_adapter, is_trainable=True)
     else:
         model = get_peft_model(model, LoraConfig(
             r=args.lora_rank, lora_alpha=args.lora_alpha, lora_dropout=0.05,
@@ -302,14 +359,25 @@ def main() -> None:
     if args.objective == "d3":
         hidden_size = model.get_base_model().config.text_config.hidden_size
         heads = D3Heads(hidden_size).to(device=device, dtype=torch.float32)
-        if args.init_heads:
-            heads.load_state_dict(torch.load(args.init_heads, map_location=device, weights_only=True))
+        heads_state = (args.resume_from_checkpoint / "d3_heads.pt"
+                       if args.resume_from_checkpoint else args.init_heads)
+        if heads_state:
+            heads.load_state_dict(torch.load(heads_state, map_location=device, weights_only=True))
     elif args.init_heads:
         raise ValueError("--init-heads is only valid with --objective d3")
     parameters = [p for p in model.parameters() if p.requires_grad]
     if heads is not None:
         parameters += list(heads.parameters())
     optimizer = torch.optim.AdamW(parameters, lr=args.learning_rate)
+    if args.scheduler == "constant":
+        scheduler = torch.optim.lr_scheduler.LambdaLR(optimizer, lambda _: 1.0)
+    else:
+        def lr_factor(current_step: int) -> float:
+            if args.warmup_steps and current_step < args.warmup_steps:
+                return current_step / max(args.warmup_steps, 1)
+            return max(0.0, (args.max_steps - current_step)
+                       / max(args.max_steps - args.warmup_steps, 1))
+        scheduler = torch.optim.lr_scheduler.LambdaLR(optimizer, lr_factor)
     weights = LossWeights(**{name: getattr(args, f"loss_{name}") for name in LOSS_NAMES})
     train = JsonlDataset(args.train, args.train_limit)
     dev = JsonlDataset(args.dev, args.dev_limit)
@@ -319,32 +387,116 @@ def main() -> None:
     else:
         route_weight_values = [1.0] * len(ACTIONS)
         route_class_weights = None
+    resume_state: dict[str, Any] = {}
+    if args.resume_from_checkpoint:
+        resume_state = json.loads((args.resume_from_checkpoint / "trainer_state.json").read_text())
+        resume_config = json.loads((args.resume_from_checkpoint / "run_config.json").read_text())
+        immutable_resume_fields = {
+            "base_model": args.model, "seed": args.seed, "objective": args.objective,
+            "max_steps": args.max_steps, "batch_size": args.batch_size,
+            "gradient_accumulation": args.gradient_accumulation,
+            "learning_rate": args.learning_rate, "scheduler": args.scheduler,
+            "warmup_steps": args.warmup_steps,
+            "lora_rank": args.lora_rank, "lora_alpha": args.lora_alpha,
+            "image_max_pixels": args.image_max_pixels,
+            "train_sha256": train_sha256, "dev_sha256": dev_sha256,
+            "quantization": args.quantization,
+            "loss_weights": asdict(weights),
+            "severity_chain_sampling": args.severity_chain_sampling,
+            "action_class_weighting": args.action_class_weighting,
+            "action_balanced_sampling": args.action_balanced_sampling,
+            "dev_limit": args.dev_limit, "train_limit": args.train_limit,
+            "save_steps": args.save_steps, "parent_commit": parent,
+        }
+        mismatches = resume_config_mismatches(resume_config, immutable_resume_fields)
+        if mismatches:
+            raise ValueError(f"resume configuration mismatch: {mismatches}")
+        if not args.severity_chain_sampling:
+            raise ValueError(
+                "exact resume currently requires --severity-chain-sampling; "
+                "shuffle/weighted sampler state is not replay-safe")
+
     sampler = None
     batch_sampler = None
+    consumed_batches = int(resume_state.get("global_step", 0)) * args.gradient_accumulation
+    total_batches = args.max_steps * args.gradient_accumulation
     if args.severity_chain_sampling:
         if args.batch_size != 2:
             raise ValueError("--severity-chain-sampling requires --batch-size 2")
-        batch_sampler = MixedObjectiveBatchSampler(train.rows, args.seed, args.max_steps)
+        batch_sampler = MixedObjectiveBatchSampler(
+            train.rows, args.seed, total_batches, start_batch=consumed_batches)
     elif args.action_balanced_sampling and args.objective == "d3":
         generator = torch.Generator().manual_seed(args.seed)
         sampler = WeightedRandomSampler(action_sample_weights(train.rows), len(train),
                                         replacement=True, generator=generator)
     if batch_sampler is not None:
-        loader = DataLoader(train, batch_sampler=batch_sampler, collate_fn=make_collator(processor))
+        loader = DataLoader(
+            train, batch_sampler=batch_sampler, collate_fn=make_collator(processor),
+            generator=torch.Generator().manual_seed(args.seed),
+        )
     else:
         loader = DataLoader(train, batch_size=args.batch_size, shuffle=sampler is None, sampler=sampler,
-                            collate_fn=make_collator(processor))
+                            collate_fn=make_collator(processor),
+                            generator=torch.Generator().manual_seed(args.seed))
     history: list[dict[str, Any]] = []
+    step = 0
+    micro_step = 0
+    epoch = 0
+    if args.resume_from_checkpoint:
+        step, epoch = int(resume_state["global_step"]), int(resume_state.get("epoch", 0))
+        micro_step = int(resume_state.get("micro_step", consumed_batches))
+        if micro_step != step * args.gradient_accumulation:
+            raise ValueError(
+                "resume checkpoint ends inside an accumulation window: "
+                f"global_step={step} micro_step={micro_step} "
+                f"gradient_accumulation={args.gradient_accumulation}")
+        history = list(resume_state.get("history", []))
+        optimizer.load_state_dict(torch.load(args.resume_from_checkpoint / "optimizer.pt",
+                                             map_location=device, weights_only=False))
+        scheduler.load_state_dict(torch.load(args.resume_from_checkpoint / "scheduler.pt",
+                                             map_location=device, weights_only=False))
+        rng_state = torch.load(args.resume_from_checkpoint / "rng_state.pt",
+                               map_location="cpu", weights_only=False)
+        random.setstate(rng_state["python"])
+        torch.set_rng_state(rng_state["torch"])
+        if torch.cuda.is_available() and "cuda" in rng_state:
+            torch.cuda.set_rng_state_all(rng_state["cuda"])
     optimizer.zero_grad(set_to_none=True)
     model.train()
     if heads is not None:
         heads.train()
-    step = 0
-    epoch = 0
+    run_started_at = time.time()
+    previous_elapsed_seconds = float(resume_state.get("elapsed_seconds", 0.0))
+
+    def trainer_state() -> dict[str, Any]:
+        return {"global_step": step, "micro_step": micro_step,
+                "epoch": epoch, "max_steps": args.max_steps,
+                "history": history,
+                "elapsed_seconds": previous_elapsed_seconds + time.time() - run_started_at,
+                "resume_from_checkpoint": (str(args.resume_from_checkpoint)
+                                           if args.resume_from_checkpoint else None)}
+
+    def checkpoint_config() -> dict[str, Any]:
+        return {"base_model": args.model, "seed": args.seed, "objective": args.objective,
+                "max_steps": args.max_steps, "learning_rate": args.learning_rate,
+                "scheduler": args.scheduler, "warmup_steps": args.warmup_steps,
+                "batch_size": args.batch_size,
+                "gradient_accumulation": args.gradient_accumulation,
+                "lora_rank": args.lora_rank, "lora_alpha": args.lora_alpha,
+                "image_max_pixels": args.image_max_pixels,
+                "train_sha256": train_sha256, "dev_sha256": dev_sha256,
+                "loss_weights": asdict(weights), "quantization": args.quantization,
+                "severity_chain_sampling": args.severity_chain_sampling,
+                "action_class_weighting": args.action_class_weighting,
+                "action_balanced_sampling": args.action_balanced_sampling,
+                "dev_limit": args.dev_limit, "train_limit": args.train_limit,
+                "save_steps": args.save_steps, "parent_commit": parent,
+                "final_test_read": False}
+
     while step < args.max_steps:
         epoch += 1
         for batch in loader:
-            step += 1
+            micro_step += 1
             rows = batch.pop("meta")
             prompt_lengths = batch.pop("prompt_lengths").to(device)
             batch = {key: value.to(device) for key, value in batch.items()}
@@ -360,13 +512,21 @@ def main() -> None:
                                                    severity_logits, pair_logits, rows, weights,
                                                    route_class_weights)
             (total / args.gradient_accumulation).backward()
-            if step % args.gradient_accumulation == 0 or step == args.max_steps:
-                optimizer.step(); optimizer.zero_grad(set_to_none=True)
-            item = {"step": step, "epoch": epoch, "total": float(total.detach()),
+            if not is_optimizer_boundary(micro_step, args.gradient_accumulation):
+                continue
+            learning_rate = optimizer.param_groups[0]["lr"]
+            optimizer.step(); scheduler.step(); optimizer.zero_grad(set_to_none=True)
+            step += 1
+            item = {"step": step, "micro_step": micro_step, "epoch": epoch,
+                    "total": float(total.detach()),
                     "lm": float(lm_per_record.mean().detach()),
                     **{name: float(loss.detach()) for name, loss in losses.items()}}
+            item["learning_rate"] = learning_rate
             history.append(item)
             print(json.dumps(item), flush=True)
+            if args.save_steps and step % args.save_steps == 0:
+                save_checkpoint(model, heads, processor, args.output / f"checkpoint-{step}",
+                                optimizer, scheduler, checkpoint_config(), trainer_state())
             if step >= args.max_steps:
                 break
 
@@ -430,27 +590,27 @@ def main() -> None:
                                 if heads is not None else
                                 "minimum assistant-token dev SFT loss; no validation or final_test read"),
     }
-    if args.parent_commit:
-        parent = args.parent_commit
-    else:
-        try:
-            parent = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=REPO, text=True,
-                                             stderr=subprocess.DEVNULL).strip()
-        except Exception:
-            parent = "unavailable"
-    config = {"parent_commit": parent, "base_model": args.model, "seed": args.seed,
-              "objective": args.objective,
-              "max_steps": args.max_steps, "train_sha256": sha256_file(args.train),
-              "dev_sha256": sha256_file(args.dev), "loss_weights": asdict(weights),
+    config = {**checkpoint_config(), "parent_commit": parent,
               "action_class_weighting": args.action_class_weighting,
               "action_class_weights": dict(zip(ACTIONS, route_weight_values, strict=True)),
               "action_balanced_sampling": args.action_balanced_sampling,
               "severity_chain_sampling": args.severity_chain_sampling,
-              "quantization": args.quantization,
               "init_adapter": str(args.init_adapter) if args.init_adapter else None,
               "init_heads": str(args.init_heads) if args.init_heads else None,
-              "final_test_read": False}
-    save_checkpoint(model, heads, processor, args.output, config, metrics)
+              "resume_from_checkpoint": (str(args.resume_from_checkpoint)
+                                         if args.resume_from_checkpoint else None),
+              "save_steps": args.save_steps,
+              "environment": {"python": sys.version, "platform": platform.platform(),
+                              "torch": torch.__version__,
+                              "transformers": __import__("transformers").__version__,
+                              "peft": __import__("peft").__version__,
+                              "cuda": torch.version.cuda,
+                              "visible_gpus": os.environ.get("CUDA_VISIBLE_DEVICES"),
+                              "gpu_names": ([torch.cuda.get_device_name(index)
+                                             for index in range(torch.cuda.device_count())]
+                                            if torch.cuda.is_available() else [])}}
+    save_checkpoint(model, heads, processor, args.output, optimizer, scheduler,
+                    config, trainer_state(), metrics)
     print(json.dumps({"saved": str(args.output), **metrics}, ensure_ascii=False), flush=True)
 
 

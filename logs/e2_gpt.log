@@ -1,0 +1,1216 @@
+[gpt-5.1-nothinking] START 09:18
+[gpt-5.1-nothinking] pass 1
+=== [gpt-5.1-nothinking] tag=g7 cond=C0 mpd=90 -> data/part3/p1e2_gpt-5.1-nothinking_g7_C0.json ===
+[freeform-only] kept 90/90 records
+[gpt-5.1-nothinking/C0/scoped] 180 probes over defects=['G7_RENDER_CONTAINMENT_OVERFLOW'] modalities=['A']
+  50/180 219s
+  100/180 459s
+  150/180 2067s
+  180/180 2201s
+{
+  "A": {
+    "per_defect": {
+      "G7_RENDER_CONTAINMENT_OVERFLOW": {
+        "detection": {
+          "recall": 0.37,
+          "specificity": 1.0,
+          "bal_acc": 0.685,
+          "bal_acc_ci": [
+            0.605,
+            0.742
+          ],
+          "precision": 1.0,
+          "precision_ci": [
+            0.875,
+            1.0
+          ],
+          "fpr": 0.0,
+          "f1": 0.54,
+          "recall_ci": [
+            0.268,
+            0.485
+          ],
+          "tp": 27,
+          "fn": 46,
+          "fp": 0,
+          "tn": 63,
+          "n_pos": 73,
+          "n_neg": 63
+        },
+        "named": {
+          "recall": 0.0,
+          "specificity": 1.0,
+          "bal_acc": 0.5,
+          "bal_acc_ci": [
+            0.471,
+            0.525
+          ],
+          "precision": 0.0,
+          "precision_ci": null,
+          "fpr": 0.0,
+          "f1": 0.0,
+          "recall_ci": [
+            0.0,
+            0.05
+          ],
+          "tp": 0,
+          "fn": 73,
+          "fp": 0,
+          "tn": 63,
+          "n_pos": 73,
+          "n_neg": 63
+        },
+        "headline_level": "detection"
+      }
+    }
+  }
+}
+=== [gpt-5.1-nothinking] tag=g7 cond=C0_full mpd=90 -> data/part3/p1e2_gpt-5.1-nothinking_g7_C0_full.json ===
+[freeform-only] kept 90/90 records
+[gpt-5.1-nothinking/C0_full/scoped] 180 probes over defects=['G7_RENDER_CONTAINMENT_OVERFLOW'] modalities=['A']
+  50/180 234s
+  100/180 497s
+  150/180 718s
+  180/180 848s
+{
+  "A": {
+    "per_defect": {
+      "G7_RENDER_CONTAINMENT_OVERFLOW": {
+        "detection": {
+          "recall": 0.603,
+          "specificity": 1.0,
+          "bal_acc": 0.801,
+          "bal_acc_ci": [
+            0.717,
+            0.852
+          ],
+          "precision": 1.0,
+          "precision_ci": [
+            0.924,
+            1.0
+          ],
+          "fpr": 0.0,
+          "f1": 0.752,
+          "recall_ci": [
+            0.492,
+            0.704
+          ],
+          "tp": 47,
+          "fn": 31,
+          "fp": 0,
+          "tn": 64,
+          "n_pos": 78,
+          "n_neg": 64
+        },
+        "named": {
+          "recall": 0.295,
+          "specificity": 1.0,
+          "bal_acc": 0.647,
+          "bal_acc_ci": [
+            0.574,
+            0.702
+          ],
+          "precision": 1.0,
+          "precision_ci": [
+            0.857,
+            1.0
+          ],
+          "fpr": 0.0,
+          "f1": 0.455,
+          "recall_ci": [
+            0.205,
+            0.404
+          ],
+          "tp": 23,
+          "fn": 55,
+          "fp": 0,
+          "tn": 64,
+          "n_pos": 78,
+          "n_neg": 64
+        },
+        "headline_level": "detection"
+      }
+    }
+  }
+}
+=== [gpt-5.1-nothinking] tag=g7 cond=C3 mpd=90 -> data/part3/p1e2_gpt-5.1-nothinking_g7_C3.json ===
+[freeform-only] kept 90/90 records
+[gpt-5.1-nothinking/C3/scoped] 180 probes over defects=['G7_RENDER_CONTAINMENT_OVERFLOW'] modalities=['A']
+  50/180 219s
+  100/180 434s
+  150/180 657s
+  180/180 785s
+{
+  "A": {
+    "per_defect": {
+      "G7_RENDER_CONTAINMENT_OVERFLOW": {
+        "detection": {
+          "recall": 0.647,
+          "specificity": 1.0,
+          "bal_acc": 0.824,
+          "bal_acc_ci": [
+            0.736,
+            0.875
+          ],
+          "precision": 1.0,
+          "precision_ci": [
+            0.92,
+            1.0
+          ],
+          "fpr": 0.0,
+          "f1": 0.786,
+          "recall_ci": [
+            0.528,
+            0.75
+          ],
+          "tp": 44,
+          "fn": 24,
+          "fp": 0,
+          "tn": 64,
+          "n_pos": 68,
+          "n_neg": 64
+        },
+        "named": {
+          "recall": 0.647,
+          "specificity": 1.0,
+          "bal_acc": 0.824,
+          "bal_acc_ci": [
+            0.736,
+            0.875
+          ],
+          "precision": 1.0,
+          "precision_ci": [
+            0.92,
+            1.0
+          ],
+          "fpr": 0.0,
+          "f1": 0.786,
+          "recall_ci": [
+            0.528,
+            0.75
+          ],
+          "tp": 44,
+          "fn": 24,
+          "fp": 0,
+          "tn": 64,
+          "n_pos": 68,
+          "n_neg": 64
+        },
+        "headline_level": "detection"
+      }
+    }
+  }
+}
+=== [gpt-5.1-nothinking] tag=g7 cond=C0_rep mpd=90 -> data/part3/p1e2_gpt-5.1-nothinking_g7_C0_rep.json ===
+[freeform-only] kept 90/90 records
+[gpt-5.1-nothinking/C0_rep/scoped] 180 probes over defects=['G7_RENDER_CONTAINMENT_OVERFLOW'] modalities=['A']
+  50/180 2294s
+  100/180 5590s
+  150/180 8217s
+  180/180 9627s
+{
+  "A": {
+    "per_defect": {
+      "G7_RENDER_CONTAINMENT_OVERFLOW": {
+        "detection": {
+          "recall": 0.567,
+          "specificity": 0.989,
+          "bal_acc": 0.778,
+          "bal_acc_ci": [
+            0.702,
+            0.831
+          ],
+          "precision": 0.981,
+          "precision_ci": [
+            0.899,
+            0.997
+          ],
+          "fpr": 0.011,
+          "f1": 0.718,
+          "recall_ci": [
+            0.464,
+            0.664
+          ],
+          "tp": 51,
+          "fn": 39,
+          "fp": 1,
+          "tn": 89,
+          "n_pos": 90,
+          "n_neg": 90
+        },
+        "named": {
+          "recall": 0.0,
+          "specificity": 1.0,
+          "bal_acc": 0.5,
+          "bal_acc_ci": [
+            0.48,
+            0.52
+          ],
+          "precision": 0.0,
+          "precision_ci": null,
+          "fpr": 0.0,
+          "f1": 0.0,
+          "recall_ci": [
+            0.0,
+            0.041
+          ],
+          "tp": 0,
+          "fn": 90,
+          "fp": 0,
+          "tn": 90,
+          "n_pos": 90,
+          "n_neg": 90
+        },
+        "headline_level": "detection",
+        "detection_majority": {
+          "recall": 0.267,
+          "specificity": 1.0,
+          "bal_acc": 0.633,
+          "bal_acc_ci": [
+            0.573,
+            0.683
+          ],
+          "precision": 1.0,
+          "precision_ci": [
+            0.862,
+            1.0
+          ],
+          "fpr": 0.0,
+          "f1": 0.421,
+          "recall_ci": [
+            0.186,
+            0.366
+          ],
+          "tp": 24,
+          "fn": 66,
+          "fp": 0,
+          "tn": 90,
+          "n_pos": 90,
+          "n_neg": 90
+        },
+        "named_majority": {
+          "recall": 0.0,
+          "specificity": 1.0,
+          "bal_acc": 0.5,
+          "bal_acc_ci": [
+            0.48,
+            0.52
+          ],
+          "precision": 0.0,
+          "precision_ci": null,
+          "fpr": 0.0,
+          "f1": 0.0,
+          "recall_ci": [
+            0.0,
+            0.041
+          ],
+          "tp": 0,
+          "fn": 90,
+          "fp": 0,
+          "tn": 90,
+          "n_pos": 90,
+          "n_neg": 90
+        }
+      }
+    }
+  }
+}
+=== [gpt-5.1-nothinking] tag=g1 cond=C0 mpd=40 -> data/part3/p1e2_gpt-5.1-nothinking_g1_C0.json ===
+[freeform-only] kept 465/807 records
+[gpt-5.1-nothinking/C0/scoped] 80 probes over defects=['G1_TEXT_OVERFLOW'] modalities=['A']
+  50/80 217s
+  80/80 412s
+{
+  "A": {
+    "per_defect": {
+      "G1_TEXT_OVERFLOW": {
+        "detection": {
+          "recall": 0.031,
+          "specificity": 1.0,
+          "bal_acc": 0.516,
+          "bal_acc_ci": [
+            0.444,
+            0.579
+          ],
+          "precision": 1.0,
+          "precision_ci": [
+            0.207,
+            1.0
+          ],
+          "fpr": 0.0,
+          "f1": 0.061,
+          "recall_ci": [
+            0.006,
+            0.157
+          ],
+          "tp": 1,
+          "fn": 31,
+          "fp": 0,
+          "tn": 29,
+          "n_pos": 32,
+          "n_neg": 29
+        },
+        "named": {
+          "recall": 0.0,
+          "specificity": 1.0,
+          "bal_acc": 0.5,
+          "bal_acc_ci": [
+            0.442,
+            0.554
+          ],
+          "precision": 0.0,
+          "precision_ci": null,
+          "fpr": 0.0,
+          "f1": 0.0,
+          "recall_ci": [
+            0.0,
+            0.107
+          ],
+          "tp": 0,
+          "fn": 32,
+          "fp": 0,
+          "tn": 29,
+          "n_pos": 32,
+          "n_neg": 29
+        },
+        "headline_level": "detection"
+      }
+    }
+  }
+}
+=== [gpt-5.1-nothinking] tag=g1 cond=C0_full mpd=40 -> data/part3/p1e2_gpt-5.1-nothinking_g1_C0_full.json ===
+[freeform-only] kept 465/807 records
+[gpt-5.1-nothinking/C0_full/scoped] 80 probes over defects=['G1_TEXT_OVERFLOW'] modalities=['A']
+  50/80 184s
+  80/80 321s
+{
+  "A": {
+    "per_defect": {
+      "G1_TEXT_OVERFLOW": {
+        "detection": {
+          "recall": 0.0,
+          "specificity": 1.0,
+          "bal_acc": 0.5,
+          "bal_acc_ci": [
+            0.44,
+            0.554
+          ],
+          "precision": 0.0,
+          "precision_ci": null,
+          "fpr": 0.0,
+          "f1": 0.0,
+          "recall_ci": [
+            0.0,
+            0.107
+          ],
+          "tp": 0,
+          "fn": 32,
+          "fp": 0,
+          "tn": 28,
+          "n_pos": 32,
+          "n_neg": 28
+        },
+        "named": {
+          "recall": 0.0,
+          "specificity": 1.0,
+          "bal_acc": 0.5,
+          "bal_acc_ci": [
+            0.44,
+            0.554
+          ],
+          "precision": 0.0,
+          "precision_ci": null,
+          "fpr": 0.0,
+          "f1": 0.0,
+          "recall_ci": [
+            0.0,
+            0.107
+          ],
+          "tp": 0,
+          "fn": 32,
+          "fp": 0,
+          "tn": 28,
+          "n_pos": 32,
+          "n_neg": 28
+        },
+        "headline_level": "detection"
+      }
+    }
+  }
+}
+=== [gpt-5.1-nothinking] tag=g1 cond=C3 mpd=40 -> data/part3/p1e2_gpt-5.1-nothinking_g1_C3.json ===
+[freeform-only] kept 465/807 records
+[gpt-5.1-nothinking/C3/scoped] 80 probes over defects=['G1_TEXT_OVERFLOW'] modalities=['A']
+  50/80 213s
+  80/80 347s
+{
+  "A": {
+    "per_defect": {
+      "G1_TEXT_OVERFLOW": {
+        "detection": {
+          "recall": 0.0,
+          "specificity": 1.0,
+          "bal_acc": 0.5,
+          "bal_acc_ci": [
+            0.443,
+            0.557
+          ],
+          "precision": 0.0,
+          "precision_ci": null,
+          "fpr": 0.0,
+          "f1": 0.0,
+          "recall_ci": [
+            0.0,
+            0.114
+          ],
+          "tp": 0,
+          "fn": 30,
+          "fp": 0,
+          "tn": 30,
+          "n_pos": 30,
+          "n_neg": 30
+        },
+        "named": {
+          "recall": 0.0,
+          "specificity": 1.0,
+          "bal_acc": 0.5,
+          "bal_acc_ci": [
+            0.443,
+            0.557
+          ],
+          "precision": 0.0,
+          "precision_ci": null,
+          "fpr": 0.0,
+          "f1": 0.0,
+          "recall_ci": [
+            0.0,
+            0.114
+          ],
+          "tp": 0,
+          "fn": 30,
+          "fp": 0,
+          "tn": 30,
+          "n_pos": 30,
+          "n_neg": 30
+        },
+        "headline_level": "detection"
+      }
+    }
+  }
+}
+=== [gpt-5.1-nothinking] tag=g1 cond=C0_rep mpd=40 -> data/part3/p1e2_gpt-5.1-nothinking_g1_C0_rep.json ===
+[freeform-only] kept 465/807 records
+[gpt-5.1-nothinking/C0_rep/scoped] 80 probes over defects=['G1_TEXT_OVERFLOW'] modalities=['A']
+  50/80 2261s
+  80/80 3591s
+{
+  "A": {
+    "per_defect": {
+      "G1_TEXT_OVERFLOW": {
+        "detection": {
+          "recall": 0.125,
+          "specificity": 1.0,
+          "bal_acc": 0.562,
+          "bal_acc_ci": [
+            0.483,
+            0.631
+          ],
+          "precision": 1.0,
+          "precision_ci": [
+            0.566,
+            1.0
+          ],
+          "fpr": 0.0,
+          "f1": 0.222,
+          "recall_ci": [
+            0.055,
+            0.261
+          ],
+          "tp": 5,
+          "fn": 35,
+          "fp": 0,
+          "tn": 40,
+          "n_pos": 40,
+          "n_neg": 40
+        },
+        "named": {
+          "recall": 0.0,
+          "specificity": 1.0,
+          "bal_acc": 0.5,
+          "bal_acc_ci": [
+            0.456,
+            0.544
+          ],
+          "precision": 0.0,
+          "precision_ci": null,
+          "fpr": 0.0,
+          "f1": 0.0,
+          "recall_ci": [
+            0.0,
+            0.088
+          ],
+          "tp": 0,
+          "fn": 40,
+          "fp": 0,
+          "tn": 40,
+          "n_pos": 40,
+          "n_neg": 40
+        },
+        "headline_level": "detection",
+        "detection_majority": {
+          "recall": 0.025,
+          "specificity": 1.0,
+          "bal_acc": 0.512,
+          "bal_acc_ci": [
+            0.458,
+            0.564
+          ],
+          "precision": 1.0,
+          "precision_ci": [
+            0.207,
+            1.0
+          ],
+          "fpr": 0.0,
+          "f1": 0.049,
+          "recall_ci": [
+            0.004,
+            0.129
+          ],
+          "tp": 1,
+          "fn": 39,
+          "fp": 0,
+          "tn": 40,
+          "n_pos": 40,
+          "n_neg": 40
+        },
+        "named_majority": {
+          "recall": 0.0,
+          "specificity": 1.0,
+          "bal_acc": 0.5,
+          "bal_acc_ci": [
+            0.456,
+            0.544
+          ],
+          "precision": 0.0,
+          "precision_ci": null,
+          "fpr": 0.0,
+          "f1": 0.0,
+          "recall_ci": [
+            0.0,
+            0.088
+          ],
+          "tp": 0,
+          "fn": 40,
+          "fp": 0,
+          "tn": 40,
+          "n_pos": 40,
+          "n_neg": 40
+        }
+      }
+    }
+  }
+}
+[run_e2] done: gpt-5.1-nothinking tags=g7 g1 conds=C0 C0_full C3 C0_rep
+[gpt-5.1-nothinking] pass 2
+=== [gpt-5.1-nothinking] tag=g7 cond=C0 mpd=90 -> data/part3/p1e2_gpt-5.1-nothinking_g7_C0.json ===
+[freeform-only] kept 90/90 records
+[gpt-5.1-nothinking/C0/scoped] 180 probes over defects=['G7_RENDER_CONTAINMENT_OVERFLOW'] modalities=['A']
+[resume] 136 good rows in sidecar; 136 probes done, 44 to (re)run
+  44/44 216s
+{
+  "A": {
+    "per_defect": {
+      "G7_RENDER_CONTAINMENT_OVERFLOW": {
+        "detection": {
+          "recall": 0.404,
+          "specificity": 1.0,
+          "bal_acc": 0.702,
+          "bal_acc_ci": [
+            0.632,
+            0.754
+          ],
+          "precision": 1.0,
+          "precision_ci": [
+            0.904,
+            1.0
+          ],
+          "fpr": 0.0,
+          "f1": 0.576,
+          "recall_ci": [
+            0.309,
+            0.508
+          ],
+          "tp": 36,
+          "fn": 53,
+          "fp": 0,
+          "tn": 84,
+          "n_pos": 89,
+          "n_neg": 84
+        },
+        "named": {
+          "recall": 0.0,
+          "specificity": 1.0,
+          "bal_acc": 0.5,
+          "bal_acc_ci": [
+            0.478,
+            0.521
+          ],
+          "precision": 0.0,
+          "precision_ci": null,
+          "fpr": 0.0,
+          "f1": 0.0,
+          "recall_ci": [
+            0.0,
+            0.041
+          ],
+          "tp": 0,
+          "fn": 89,
+          "fp": 0,
+          "tn": 84,
+          "n_pos": 89,
+          "n_neg": 84
+        },
+        "headline_level": "detection"
+      }
+    }
+  }
+}
+=== [gpt-5.1-nothinking] tag=g7 cond=C0_full mpd=90 -> data/part3/p1e2_gpt-5.1-nothinking_g7_C0_full.json ===
+[freeform-only] kept 90/90 records
+[gpt-5.1-nothinking/C0_full/scoped] 180 probes over defects=['G7_RENDER_CONTAINMENT_OVERFLOW'] modalities=['A']
+[resume] 142 good rows in sidecar; 142 probes done, 38 to (re)run
+  38/38 187s
+{
+  "A": {
+    "per_defect": {
+      "G7_RENDER_CONTAINMENT_OVERFLOW": {
+        "detection": {
+          "recall": 0.58,
+          "specificity": 1.0,
+          "bal_acc": 0.79,
+          "bal_acc_ci": [
+            0.716,
+            0.839
+          ],
+          "precision": 1.0,
+          "precision_ci": [
+            0.93,
+            1.0
+          ],
+          "fpr": 0.0,
+          "f1": 0.734,
+          "recall_ci": [
+            0.475,
+            0.677
+          ],
+          "tp": 51,
+          "fn": 37,
+          "fp": 0,
+          "tn": 85,
+          "n_pos": 88,
+          "n_neg": 85
+        },
+        "named": {
+          "recall": 0.295,
+          "specificity": 1.0,
+          "bal_acc": 0.648,
+          "bal_acc_ci": [
+            0.584,
+            0.699
+          ],
+          "precision": 1.0,
+          "precision_ci": [
+            0.871,
+            1.0
+          ],
+          "fpr": 0.0,
+          "f1": 0.456,
+          "recall_ci": [
+            0.21,
+            0.398
+          ],
+          "tp": 26,
+          "fn": 62,
+          "fp": 0,
+          "tn": 85,
+          "n_pos": 88,
+          "n_neg": 85
+        },
+        "headline_level": "detection"
+      }
+    }
+  }
+}
+=== [gpt-5.1-nothinking] tag=g7 cond=C3 mpd=90 -> data/part3/p1e2_gpt-5.1-nothinking_g7_C3.json ===
+[freeform-only] kept 90/90 records
+[gpt-5.1-nothinking/C3/scoped] 180 probes over defects=['G7_RENDER_CONTAINMENT_OVERFLOW'] modalities=['A']
+[resume] 132 good rows in sidecar; 132 probes done, 48 to (re)run
+  48/48 239s
+{
+  "A": {
+    "per_defect": {
+      "G7_RENDER_CONTAINMENT_OVERFLOW": {
+        "detection": {
+          "recall": 0.663,
+          "specificity": 1.0,
+          "bal_acc": 0.831,
+          "bal_acc_ci": [
+            0.758,
+            0.877
+          ],
+          "precision": 1.0,
+          "precision_ci": [
+            0.937,
+            1.0
+          ],
+          "fpr": 0.0,
+          "f1": 0.797,
+          "recall_ci": [
+            0.558,
+            0.754
+          ],
+          "tp": 57,
+          "fn": 29,
+          "fp": 0,
+          "tn": 86,
+          "n_pos": 86,
+          "n_neg": 86
+        },
+        "named": {
+          "recall": 0.663,
+          "specificity": 1.0,
+          "bal_acc": 0.831,
+          "bal_acc_ci": [
+            0.758,
+            0.877
+          ],
+          "precision": 1.0,
+          "precision_ci": [
+            0.937,
+            1.0
+          ],
+          "fpr": 0.0,
+          "f1": 0.797,
+          "recall_ci": [
+            0.558,
+            0.754
+          ],
+          "tp": 57,
+          "fn": 29,
+          "fp": 0,
+          "tn": 86,
+          "n_pos": 86,
+          "n_neg": 86
+        },
+        "headline_level": "detection"
+      }
+    }
+  }
+}
+=== [gpt-5.1-nothinking] tag=g7 cond=C0_rep mpd=90 -> data/part3/p1e2_gpt-5.1-nothinking_g7_C0_rep.json ===
+[freeform-only] kept 90/90 records
+[gpt-5.1-nothinking/C0_rep/scoped] 180 probes over defects=['G7_RENDER_CONTAINMENT_OVERFLOW'] modalities=['A']
+[resume] 180 good rows in sidecar; 180 probes done, 0 to (re)run
+{
+  "A": {
+    "per_defect": {
+      "G7_RENDER_CONTAINMENT_OVERFLOW": {
+        "detection": {
+          "recall": 0.567,
+          "specificity": 0.989,
+          "bal_acc": 0.778,
+          "bal_acc_ci": [
+            0.702,
+            0.831
+          ],
+          "precision": 0.981,
+          "precision_ci": [
+            0.899,
+            0.997
+          ],
+          "fpr": 0.011,
+          "f1": 0.718,
+          "recall_ci": [
+            0.464,
+            0.664
+          ],
+          "tp": 51,
+          "fn": 39,
+          "fp": 1,
+          "tn": 89,
+          "n_pos": 90,
+          "n_neg": 90
+        },
+        "named": {
+          "recall": 0.0,
+          "specificity": 1.0,
+          "bal_acc": 0.5,
+          "bal_acc_ci": [
+            0.48,
+            0.52
+          ],
+          "precision": 0.0,
+          "precision_ci": null,
+          "fpr": 0.0,
+          "f1": 0.0,
+          "recall_ci": [
+            0.0,
+            0.041
+          ],
+          "tp": 0,
+          "fn": 90,
+          "fp": 0,
+          "tn": 90,
+          "n_pos": 90,
+          "n_neg": 90
+        },
+        "headline_level": "detection",
+        "detection_majority": {
+          "recall": 0.267,
+          "specificity": 1.0,
+          "bal_acc": 0.633,
+          "bal_acc_ci": [
+            0.573,
+            0.683
+          ],
+          "precision": 1.0,
+          "precision_ci": [
+            0.862,
+            1.0
+          ],
+          "fpr": 0.0,
+          "f1": 0.421,
+          "recall_ci": [
+            0.186,
+            0.366
+          ],
+          "tp": 24,
+          "fn": 66,
+          "fp": 0,
+          "tn": 90,
+          "n_pos": 90,
+          "n_neg": 90
+        },
+        "named_majority": {
+          "recall": 0.0,
+          "specificity": 1.0,
+          "bal_acc": 0.5,
+          "bal_acc_ci": [
+            0.48,
+            0.52
+          ],
+          "precision": 0.0,
+          "precision_ci": null,
+          "fpr": 0.0,
+          "f1": 0.0,
+          "recall_ci": [
+            0.0,
+            0.041
+          ],
+          "tp": 0,
+          "fn": 90,
+          "fp": 0,
+          "tn": 90,
+          "n_pos": 90,
+          "n_neg": 90
+        }
+      }
+    }
+  }
+}
+=== [gpt-5.1-nothinking] tag=g1 cond=C0 mpd=40 -> data/part3/p1e2_gpt-5.1-nothinking_g1_C0.json ===
+[freeform-only] kept 465/807 records
+[gpt-5.1-nothinking/C0/scoped] 80 probes over defects=['G1_TEXT_OVERFLOW'] modalities=['A']
+[resume] 61 good rows in sidecar; 61 probes done, 19 to (re)run
+  19/19 78s
+{
+  "A": {
+    "per_defect": {
+      "G1_TEXT_OVERFLOW": {
+        "detection": {
+          "recall": 0.026,
+          "specificity": 1.0,
+          "bal_acc": 0.513,
+          "bal_acc_ci": [
+            0.456,
+            0.567
+          ],
+          "precision": 1.0,
+          "precision_ci": [
+            0.207,
+            1.0
+          ],
+          "fpr": 0.0,
+          "f1": 0.051,
+          "recall_ci": [
+            0.005,
+            0.135
+          ],
+          "tp": 1,
+          "fn": 37,
+          "fp": 0,
+          "tn": 38,
+          "n_pos": 38,
+          "n_neg": 38
+        },
+        "named": {
+          "recall": 0.0,
+          "specificity": 1.0,
+          "bal_acc": 0.5,
+          "bal_acc_ci": [
+            0.454,
+            0.546
+          ],
+          "precision": 0.0,
+          "precision_ci": null,
+          "fpr": 0.0,
+          "f1": 0.0,
+          "recall_ci": [
+            0.0,
+            0.092
+          ],
+          "tp": 0,
+          "fn": 38,
+          "fp": 0,
+          "tn": 38,
+          "n_pos": 38,
+          "n_neg": 38
+        },
+        "headline_level": "detection"
+      }
+    }
+  }
+}
+=== [gpt-5.1-nothinking] tag=g1 cond=C0_full mpd=40 -> data/part3/p1e2_gpt-5.1-nothinking_g1_C0_full.json ===
+[freeform-only] kept 465/807 records
+[gpt-5.1-nothinking/C0_full/scoped] 80 probes over defects=['G1_TEXT_OVERFLOW'] modalities=['A']
+[resume] 60 good rows in sidecar; 60 probes done, 20 to (re)run
+  20/20 96s
+{
+  "A": {
+    "per_defect": {
+      "G1_TEXT_OVERFLOW": {
+        "detection": {
+          "recall": 0.0,
+          "specificity": 1.0,
+          "bal_acc": 0.5,
+          "bal_acc_ci": [
+            0.452,
+            0.546
+          ],
+          "precision": 0.0,
+          "precision_ci": null,
+          "fpr": 0.0,
+          "f1": 0.0,
+          "recall_ci": [
+            0.0,
+            0.092
+          ],
+          "tp": 0,
+          "fn": 38,
+          "fp": 0,
+          "tn": 36,
+          "n_pos": 38,
+          "n_neg": 36
+        },
+        "named": {
+          "recall": 0.0,
+          "specificity": 1.0,
+          "bal_acc": 0.5,
+          "bal_acc_ci": [
+            0.452,
+            0.546
+          ],
+          "precision": 0.0,
+          "precision_ci": null,
+          "fpr": 0.0,
+          "f1": 0.0,
+          "recall_ci": [
+            0.0,
+            0.092
+          ],
+          "tp": 0,
+          "fn": 38,
+          "fp": 0,
+          "tn": 36,
+          "n_pos": 38,
+          "n_neg": 36
+        },
+        "headline_level": "detection"
+      }
+    }
+  }
+}
+=== [gpt-5.1-nothinking] tag=g1 cond=C3 mpd=40 -> data/part3/p1e2_gpt-5.1-nothinking_g1_C3.json ===
+[freeform-only] kept 465/807 records
+[gpt-5.1-nothinking/C3/scoped] 80 probes over defects=['G1_TEXT_OVERFLOW'] modalities=['A']
+[resume] 60 good rows in sidecar; 60 probes done, 20 to (re)run
+  20/20 90s
+{
+  "A": {
+    "per_defect": {
+      "G1_TEXT_OVERFLOW": {
+        "detection": {
+          "recall": 0.0,
+          "specificity": 1.0,
+          "bal_acc": 0.5,
+          "bal_acc_ci": [
+            0.454,
+            0.546
+          ],
+          "precision": 0.0,
+          "precision_ci": null,
+          "fpr": 0.0,
+          "f1": 0.0,
+          "recall_ci": [
+            0.0,
+            0.092
+          ],
+          "tp": 0,
+          "fn": 38,
+          "fp": 0,
+          "tn": 38,
+          "n_pos": 38,
+          "n_neg": 38
+        },
+        "named": {
+          "recall": 0.0,
+          "specificity": 1.0,
+          "bal_acc": 0.5,
+          "bal_acc_ci": [
+            0.454,
+            0.546
+          ],
+          "precision": 0.0,
+          "precision_ci": null,
+          "fpr": 0.0,
+          "f1": 0.0,
+          "recall_ci": [
+            0.0,
+            0.092
+          ],
+          "tp": 0,
+          "fn": 38,
+          "fp": 0,
+          "tn": 38,
+          "n_pos": 38,
+          "n_neg": 38
+        },
+        "headline_level": "detection"
+      }
+    }
+  }
+}
+=== [gpt-5.1-nothinking] tag=g1 cond=C0_rep mpd=40 -> data/part3/p1e2_gpt-5.1-nothinking_g1_C0_rep.json ===
+[freeform-only] kept 465/807 records
+[gpt-5.1-nothinking/C0_rep/scoped] 80 probes over defects=['G1_TEXT_OVERFLOW'] modalities=['A']
+[resume] 80 good rows in sidecar; 80 probes done, 0 to (re)run
+{
+  "A": {
+    "per_defect": {
+      "G1_TEXT_OVERFLOW": {
+        "detection": {
+          "recall": 0.125,
+          "specificity": 1.0,
+          "bal_acc": 0.562,
+          "bal_acc_ci": [
+            0.483,
+            0.631
+          ],
+          "precision": 1.0,
+          "precision_ci": [
+            0.566,
+            1.0
+          ],
+          "fpr": 0.0,
+          "f1": 0.222,
+          "recall_ci": [
+            0.055,
+            0.261
+          ],
+          "tp": 5,
+          "fn": 35,
+          "fp": 0,
+          "tn": 40,
+          "n_pos": 40,
+          "n_neg": 40
+        },
+        "named": {
+          "recall": 0.0,
+          "specificity": 1.0,
+          "bal_acc": 0.5,
+          "bal_acc_ci": [
+            0.456,
+            0.544
+          ],
+          "precision": 0.0,
+          "precision_ci": null,
+          "fpr": 0.0,
+          "f1": 0.0,
+          "recall_ci": [
+            0.0,
+            0.088
+          ],
+          "tp": 0,
+          "fn": 40,
+          "fp": 0,
+          "tn": 40,
+          "n_pos": 40,
+          "n_neg": 40
+        },
+        "headline_level": "detection",
+        "detection_majority": {
+          "recall": 0.025,
+          "specificity": 1.0,
+          "bal_acc": 0.512,
+          "bal_acc_ci": [
+            0.458,
+            0.564
+          ],
+          "precision": 1.0,
+          "precision_ci": [
+            0.207,
+            1.0
+          ],
+          "fpr": 0.0,
+          "f1": 0.049,
+          "recall_ci": [
+            0.004,
+            0.129
+          ],
+          "tp": 1,
+          "fn": 39,
+          "fp": 0,
+          "tn": 40,
+          "n_pos": 40,
+          "n_neg": 40
+        },
+        "named_majority": {
+          "recall": 0.0,
+          "specificity": 1.0,
+          "bal_acc": 0.5,
+          "bal_acc_ci": [
+            0.456,
+            0.544
+          ],
+          "precision": 0.0,
+          "precision_ci": null,
+          "fpr": 0.0,
+          "f1": 0.0,
+          "recall_ci": [
+            0.0,
+            0.088
+          ],
+          "tp": 0,
+          "fn": 40,
+          "fp": 0,
+          "tn": 40,
+          "n_pos": 40,
+          "n_neg": 40
+        }
+      }
+    }
+  }
+}
+[run_e2] done: gpt-5.1-nothinking tags=g7 g1 conds=C0 C0_full C3 C0_rep
+[gpt-5.1-nothinking] DONE
