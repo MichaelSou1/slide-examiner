@@ -16,7 +16,6 @@ from .examiner_contract import (
     ExaminerAction,
     ExamLevel,
     Locator,
-    Modality,
     PageExamResult,
     DeckExamResult,
     page_result_from_labels,
@@ -542,6 +541,34 @@ def export_d3_training(repo: Path, out_dir: Path, *, max_per_cell: int | None = 
                     "dev_sha256": sha256_file(out_dir / "d3_dev.jsonl"),
                     "class_router": "class_router.json", "losses": list(LOSS_NAMES)})
     (out_dir / "export_summary.json").write_text(json.dumps(summary, ensure_ascii=False, indent=2))
+    return summary
+
+
+def export_direct_c3_training(repo: Path, out_dir: Path) -> dict[str, Any]:
+    """Export the direct-C3 SFT control without attribution or auxiliary objectives."""
+    records, source_summary = build_d3_training_records(repo)
+    selected = [
+        {**row, "task": "detect", "target_kind": "direct_c3_label"}
+        for row in records
+        if row.get("target_kind") == "distill" and row.get("availability") == "image_only"
+    ]
+    out_dir.mkdir(parents=True, exist_ok=True)
+    for split in ("train", "dev"):
+        write_jsonl(out_dir / f"d3_{split}.jsonl",
+                    (row for row in selected if row["split"] == split))
+    summary = {
+        "schema_version": 1,
+        "control": "direct_c3_label_sft",
+        "selection": "all available evidence-valid C3_ATOMIC labels; image-only record once per sample",
+        "attribution_selection": False,
+        "auxiliary_objectives": False,
+        "records": len(selected),
+        "splits": dict(Counter(row["split"] for row in selected)),
+        "defects": dict(Counter(row["defect"] for row in selected)),
+        "source_records": source_summary["records"],
+        "final_test_read": False,
+    }
+    (out_dir / "summary.json").write_text(json.dumps(summary, ensure_ascii=False, indent=2) + "\n")
     return summary
 
 

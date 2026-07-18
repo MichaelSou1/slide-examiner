@@ -6,7 +6,7 @@ import pytest
 from slide_examiner.d3_training import (
     ACTION_TO_ID, _answer_for, action_class_weights, action_sample_weights,
     authoritative_result, balanced_smoke_rows, bounded_route_action, build_d3_training_records,
-    evaluate_semantic_gate, fit_class_router, is_optimizer_boundary,
+    evaluate_semantic_gate, export_direct_c3_training, fit_class_router, is_optimizer_boundary,
     mixed_objective_batches, relocate_path, resolve_inference_policy,
     resume_config_mismatches, run_linter,
 )
@@ -256,3 +256,15 @@ def test_class_router_is_fitted_and_evaluated_without_manual_rules():
     assert router["manual_route_used"] is False
     assert router["estimator"].startswith("multinomial logistic")
     assert router["dev_accuracy"] == 1.0
+
+
+def test_direct_c3_export_uses_each_evidence_valid_image_label_once(tmp_path: Path):
+    repo = Path(__file__).resolve().parents[1]
+    summary = export_direct_c3_training(repo, tmp_path)
+    assert summary["records"] == 90
+    assert summary["splits"] == {"train": 66, "dev": 24}
+    assert summary["attribution_selection"] is False
+    train = [json.loads(line) for line in (tmp_path / "d3_train.jsonl").read_text().splitlines()]
+    assert len({row["sample_id"] for row in train}) == 66
+    assert {row["availability"] for row in train} == {"image_only"}
+    assert {row["task"] for row in train} == {"detect"}
