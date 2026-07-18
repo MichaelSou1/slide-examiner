@@ -123,7 +123,9 @@ def parse_contract(text: str) -> tuple[dict[str, Any] | None, str | None, bool]:
 
 def infer_once(processor: Any, model: Any, heads: D3Heads, row: dict[str, Any],
                device: torch.device, max_new_tokens: int, *, terminal: bool = False,
-               confidence_threshold: float = 0.0, max_escalations: int = 1) -> dict[str, Any]:
+               confidence_threshold: float = 0.0, max_escalations: int = 1,
+               route_mode: str = "sample", fixed_action: str | None = None,
+               class_routes: dict[str, str] | None = None) -> dict[str, Any]:
     prompt = processor.apply_chat_template(row["messages"][:1], tokenize=False,
                                            add_generation_prompt=True)
     image_list = _images(row)
@@ -138,6 +140,15 @@ def infer_once(processor: Any, model: Any, heads: D3Heads, row: dict[str, Any],
         action_logits, select_logits, _, _ = heads(pooled)
         raw_action = ACTIONS[int(action_logits.argmax(-1).item())]
         confidence = float(torch.sigmoid(select_logits).item())
+        if route_mode == "fixed":
+            raw_action = str(fixed_action)
+            confidence = 1.0
+        elif route_mode == "class":
+            defect_class = str(row["defect"]).split("_", 1)[0]
+            if not class_routes or defect_class not in class_routes:
+                raise ValueError(f"class route missing for {defect_class}")
+            raw_action = class_routes[defect_class]
+            confidence = 1.0
         action = bounded_route_action(
             raw_action, confidence, confidence_threshold=confidence_threshold,
             terminal=terminal, max_escalations=max_escalations)
@@ -197,6 +208,11 @@ def main() -> None:
                         help="Frozen inference-policy JSON; overrides threshold and escalation limit")
     parser.add_argument("--confidence-threshold", type=float, default=0.0)
     parser.add_argument("--max-escalations", type=int, choices=(0, 1), default=1)
+    parser.add_argument("--route-mode", choices=("sample", "class", "fixed"), default="sample")
+    parser.add_argument("--class-router", type=Path,
+                        help="class_router.json used when --route-mode=class")
+    parser.add_argument("--fixed-action", choices=ACTIONS,
+                        help="single action used when --route-mode=fixed")
     args = parser.parse_args()
     policy = json.loads(args.policy.read_text()) if args.policy else {}
     try:
@@ -205,6 +221,15 @@ def main() -> None:
             max_escalations=args.max_escalations)
     except (TypeError, ValueError) as exc:
         parser.error(str(exc))
+    if args.route_mode == "class" and not args.class_router:
+        parser.error("--class-router is required for --route-mode=class")
+    if args.route_mode == "fixed" and not args.fixed_action:
+        parser.error("--fixed-action is required for --route-mode=fixed")
+    class_routes = None
+    if args.class_router:
+        router_payload = json.loads(args.class_router.read_text())
+        class_routes = {name: str(route["prediction"])
+                        for name, route in router_payload["routes"].items()}
     device = torch.device("cuda")
     processor, model, heads = load(args.run, args.base, device, args.merged_model)
     all_rows = JsonlDataset(args.input).rows
@@ -237,7 +262,8 @@ def main() -> None:
             continue
         first = infer_once(processor, model, heads, row, device, args.max_new_tokens,
                            confidence_threshold=confidence_threshold,
-                           max_escalations=max_escalations)
+                           max_escalations=max_escalations, route_mode=args.route_mode,
+                           fixed_action=args.fixed_action, class_routes=class_routes)
         if first["parse_error"]:
             counts["parser_failure"] += 1
         counts["action_mismatch"] += int(first["action_mismatch"])
@@ -265,7 +291,8 @@ def main() -> None:
                     second = infer_once(processor, model, heads, followup_row, device,
                                         args.max_new_tokens, terminal=True,
                                         confidence_threshold=confidence_threshold,
-                                        max_escalations=max_escalations)
+                                        max_escalations=max_escalations, route_mode=args.route_mode,
+                                        fixed_action=args.fixed_action, class_routes=class_routes)
                     if second["parse_error"]:
                         counts["parser_failure"] += 1
                     counts["action_mismatch"] += int(second["action_mismatch"])
@@ -343,6 +370,9 @@ def main() -> None:
                               "policy_path": str(args.policy or args.run / "run_config.json"),
                               "confidence_threshold": confidence_threshold,
                               "max_escalations": max_escalations,
+                              "route_mode": args.route_mode,
+                              "class_router_path": str(args.class_router) if args.class_router else None,
+                              "fixed_action": args.fixed_action,
                               "worst_case_model_calls": 1 + max_escalations,
                               "worst_case_tool_calls": max_escalations},
                "semantic_counts": semantic,
