@@ -5,9 +5,10 @@ import pytest
 
 from scripts.part3_d3_evaluate import assert_final_test_unlocked, materialize_paired_images
 from slide_examiner.d3_evaluation import (
-    exact_mcnemar, holm_family, normalize_runtime_row, pareto_frontier, prompt_row, score_arm,
-    route_requires_heads, validate_deployment,
+    exact_mcnemar, holm_family, normalize_runtime_row, pareto_frontier,
+    parse_generated_contract, prompt_row, score_arm, route_requires_heads, validate_deployment,
 )
+from slide_examiner.d3_training import bounded_route_action
 
 
 def _row(sample, defect, clean, predicted, **extra):
@@ -93,6 +94,30 @@ def test_prompt_modes_are_detached_and_c3_is_atomic():
     assert row["messages"][0]["content"][1]["text"] == "Inspect."
     assert "ATOMIC_CHECK" in c3["messages"][0]["content"][1]["text"]
     assert "G7_UNREADABLE_TEXT" in c3["messages"][0]["content"][1]["text"]
+
+
+def test_parse_contract_repairs_non_answer_routing_envelope_without_findings():
+    parsed, error, repaired = parse_generated_contract(json.dumps({
+        "action": "CALL_LINTER", "confidence": .95,
+        "requested_context": "presentation_quality", "evidence_source": "image_only",
+        "has_defect": None, "findings": None, "clean_dimensions": None,
+    }), {"sample_id": "sample-a", "defect": "G2_ELEMENT_OVERLAP"})
+    assert error is None and repaired is True
+    assert parsed["page_id"] == "sample-a"
+    assert parsed["action"] == "CALL_LINTER"
+    assert parsed["has_defect"] is False and parsed["findings"] == []
+    assert parsed["requested_context"] == ["structure"]
+    assert parsed["evidence_source"] == "none"
+
+
+def test_generated_external_action_respects_zero_escalation_budget():
+    parsed, error, _ = parse_generated_contract(json.dumps({
+        "action": "REQUEST_REFERENCE", "confidence": .9,
+        "requested_context": ["reference"], "evidence_source": "none",
+        "has_defect": False, "findings": [], "clean_dimensions": [],
+    }), {"record_id": "row-a", "defect": "S4_DENSITY"})
+    assert error is None and parsed["action"] == "REQUEST_REFERENCE"
+    assert bounded_route_action(parsed["action"], 1.0, max_escalations=0) == "DEFER"
 
 
 @pytest.mark.parametrize(("run", "merged", "adapter", "mode", "error"), [

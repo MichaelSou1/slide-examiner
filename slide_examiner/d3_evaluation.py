@@ -8,7 +8,101 @@ from pathlib import Path
 from statistics import mean
 from typing import Any, Iterable, Sequence
 
+from .examiner_contract import (
+    DECK_SCOPED_DEFECTS,
+    PAGE_SCOPED_DEFECTS,
+    ExaminerAction,
+    parse_deck_result,
+    parse_page_result,
+)
 from .statistics import balanced_accuracy_ci, holm_bonferroni, wilson_interval
+
+
+def _extract_json(text: str) -> dict[str, Any]:
+    start, end = text.find("{"), text.rfind("}")
+    if start < 0 or end < start:
+        raise ValueError("no JSON object")
+    return json.loads(text[start:end + 1])
+
+
+def _repair_contract(payload: dict[str, Any]) -> dict[str, Any] | None:
+    """Apply conservative, content-preserving repairs to generated JSON."""
+    repaired = json.loads(json.dumps(payload))
+    if repaired.get("action") not in {action.value for action in ExaminerAction}:
+        repaired["action"] = ExaminerAction.ANSWER.value
+    findings = repaired.get("findings", [])
+    if not isinstance(findings, list) or any(not isinstance(item, dict) for item in findings):
+        return None
+    is_deck = "deck_id" in repaired
+    allowed = DECK_SCOPED_DEFECTS if is_deck else PAGE_SCOPED_DEFECTS
+    allowed_by_prefix = {item.value.split("_", 1)[0]: item.value for item in allowed}
+    subject_id = str(repaired.get("deck_id" if is_deck else "page_id") or "unknown")
+    for finding in findings:
+        raw_type = str(finding.get("type", ""))
+        if raw_type not in {item.value for item in allowed}:
+            replacement = allowed_by_prefix.get(raw_type.split("_", 1)[0])
+            if replacement is None:
+                return None
+            finding["type"] = replacement
+        if str(finding.get("severity", "")).lower() in {"critical", "blocker"}:
+            finding["severity"] = "severe"
+        locator = finding.setdefault("locator", {})
+        locator.setdefault("level", "deck" if is_deck else "page")
+        if not is_deck:
+            locator.setdefault("page_id", subject_id)
+        locator.setdefault("related_page_ids", [])
+        evidence = str(finding.get("evidence", "")).strip()
+        visible_id = locator.get("element_id") or locator.get("page_id")
+        if visible_id and str(visible_id).lower() not in evidence.lower():
+            finding["evidence"] = f"Visible element {visible_id}: {evidence}"
+    return repaired
+
+
+def _repair_non_answer(payload: dict[str, Any], row: dict[str, Any] | None
+                       ) -> dict[str, Any] | None:
+    """Normalize a generated routing envelope without inventing findings."""
+    action = str(payload.get("action") or "")
+    if action not in {"CALL_LINTER", "REQUEST_REFERENCE", "REQUEST_DECK", "DEFER"}:
+        return None
+    repaired = json.loads(json.dumps(payload))
+    defect_class = str((row or {}).get("defect", "")).split("_", 1)[0]
+    is_deck = "deck_id" in repaired or defect_class in {"S2", "S3", "S5"}
+    id_key = "deck_id" if is_deck else "page_id"
+    repaired.pop("page_id" if is_deck else "deck_id", None)
+    repaired[id_key] = str(repaired.get(id_key)
+                           or (row or {}).get("sample_id")
+                           or (row or {}).get("record_id") or "unknown")
+    repaired["has_defect"] = False
+    repaired["findings"] = []
+    repaired["clean_dimensions"] = []
+    repaired["requested_context"] = {
+        "CALL_LINTER": ["structure"],
+        "REQUEST_REFERENCE": ["reference"],
+        "REQUEST_DECK": ["deck_context"],
+    }.get(action, [])
+    repaired["evidence_source"] = "none"
+    return repaired
+
+
+def parse_generated_contract(text: str, row: dict[str, Any] | None = None
+                             ) -> tuple[dict[str, Any] | None, str | None, bool]:
+    """Parse generated examiner JSON, including legal route-only envelopes."""
+    try:
+        parsed = _extract_json(text)
+        parser = parse_deck_result if "deck_id" in parsed else parse_page_result
+        try:
+            return parser(json.dumps(parsed)).model_dump(mode="json"), None, False
+        except Exception as original:  # noqa: BLE001 - attempt bounded schema repair
+            repaired = _repair_non_answer(parsed, row) or _repair_contract(parsed)
+            if repaired is not None:
+                parser = parse_deck_result if "deck_id" in repaired else parse_page_result
+                try:
+                    return parser(json.dumps(repaired)).model_dump(mode="json"), None, True
+                except Exception:  # noqa: BLE001 - preserve the original useful error
+                    pass
+            return None, f"{type(original).__name__}: {original}", False
+    except Exception as exc:  # noqa: BLE001 - parser failures are measured artifacts
+        return None, f"{type(exc).__name__}: {exc}", False
 
 
 def prompt_row(row: dict[str, Any], prompt_mode: str) -> dict[str, Any]:

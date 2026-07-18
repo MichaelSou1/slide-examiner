@@ -118,5 +118,20 @@
     "S2_clean_deck",
     "S5_clean_deck"
   ],
-  "comparability_rule": "An arm name records the real model, prompt, route, split, and hashes. Historical traces are included only when sample IDs and split match; no proxy model is renamed to satisfy a requested parameter size."
+  "comparability_rule": "An arm name records the real model, prompt, route, split, and hashes. Historical traces are included only when sample IDs and split match; no proxy model is renamed to satisfy a requested parameter size.",
+  "inference_budget": {
+    "max_image_pixels": 262144,
+    "batch_size": 1,
+    "max_new_tokens": 96,
+    "scope": "Frozen identically for every W7.6 validation arm and the one-shot W7.7 final run.",
+    "selection_basis": "Validation-only throughput smoke: 1920x1080 inputs fell from about 2147 to 359 prompt tokens and from about 52-57s to 10.31s for the measured row; padded batches of 2/4 were slower, so batch size remains 1."
+  },
+  "superseded_traces": [
+    {
+      "arm": "zero_shot_8b_generic",
+      "path": "runs/part3/w76/zero_shot_8b_validation_fullres_superseded.jsonl",
+      "status": "incomplete_not_for_scoring",
+      "reason": "Started before the common pixel budget and generated-route parser were frozen; retained only as an auditable raw trace."
+    }
+  ]
 }

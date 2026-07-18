@@ -13,26 +13,28 @@ import torch
 from peft import PeftModel
 from transformers import AutoProcessor, BitsAndBytesConfig, Qwen3VLForConditionalGeneration
 
-from slide_examiner.d3_evaluation import prompt_row, route_requires_heads, validate_deployment
+from slide_examiner.d3_evaluation import (
+    parse_generated_contract,
+    prompt_row,
+    route_requires_heads,
+    validate_deployment,
+)
 from slide_examiner.d3_training import (
     ACTIONS, authoritative_result, balanced_smoke_rows, bounded_route_action,
     evaluate_semantic_gate, resolve_inference_policy, run_linter,
 )
-from slide_examiner.examiner_contract import (
-    DECK_SCOPED_DEFECTS,
-    PAGE_SCOPED_DEFECTS,
-    ExaminerAction,
-    parse_deck_result,
-    parse_page_result,
-)
+from slide_examiner.examiner_contract import ExaminerAction
 from scripts.part3_d3_train import D3Heads, JsonlDataset, _images, pooled_at_prompt
 
 
 def load(run: Path | None, base: str, device: torch.device,
-         merged_model: Path | None = None, lm_adapter: Path | None = None):
+         merged_model: Path | None = None, lm_adapter: Path | None = None,
+         max_image_pixels: int | None = None):
     """Load either the QLoRA training bundle or its merged serving equivalent."""
     processor_source = merged_model or lm_adapter or ((run / "adapter") if run else base)
     processor = AutoProcessor.from_pretrained(processor_source, trust_remote_code=True)
+    if max_image_pixels is not None:
+        processor.image_processor.size["longest_edge"] = max_image_pixels
     if merged_model is not None:
         model = Qwen3VLForConditionalGeneration.from_pretrained(
             merged_model, torch_dtype=torch.bfloat16, device_map={"": 0},
@@ -57,73 +59,77 @@ def load(run: Path | None, base: str, device: torch.device,
     return processor, model, heads
 
 
-def extract_json(text: str) -> dict[str, Any]:
-    start, end = text.find("{"), text.rfind("}")
-    if start < 0 or end < start:
-        raise ValueError("no JSON object")
-    return json.loads(text[start:end + 1])
-
-
 def balanced_rows(rows: list[dict[str, Any]], limit: int) -> list[dict[str, Any]]:
     return balanced_smoke_rows(rows, limit)
 
 
-def _repair_contract(payload: dict[str, Any]) -> dict[str, Any] | None:
-    """Apply conservative, content-preserving repairs to generated JSON.
-
-    Repairs only normalize schema aliases and fill locators from identifiers
-    already emitted by the model. Free-form string findings are not promoted
-    into typed findings because doing so would require an oracle defect label.
-    """
-    repaired = json.loads(json.dumps(payload))
-    if repaired.get("action") not in {action.value for action in ExaminerAction}:
-        repaired["action"] = ExaminerAction.ANSWER.value
-    findings = repaired.get("findings", [])
-    if not isinstance(findings, list) or any(not isinstance(item, dict) for item in findings):
-        return None
-    is_deck = "deck_id" in repaired
-    allowed = DECK_SCOPED_DEFECTS if is_deck else PAGE_SCOPED_DEFECTS
-    allowed_by_prefix = {item.value.split("_", 1)[0]: item.value for item in allowed}
-    subject_id = str(repaired.get("deck_id" if is_deck else "page_id") or "unknown")
-    for finding in findings:
-        raw_type = str(finding.get("type", ""))
-        if raw_type not in {item.value for item in allowed}:
-            replacement = allowed_by_prefix.get(raw_type.split("_", 1)[0])
-            if replacement is None:
-                return None
-            finding["type"] = replacement
-        if str(finding.get("severity", "")).lower() in {"critical", "blocker"}:
-            finding["severity"] = "severe"
-        locator = finding.setdefault("locator", {})
-        locator.setdefault("level", "deck" if is_deck else "page")
-        # Locator has a page_id field for both page- and deck-level findings;
-        # deck identity remains on the enclosing DeckExamResult.
-        if not is_deck:
-            locator.setdefault("page_id", subject_id)
-        locator.setdefault("related_page_ids", [])
-        evidence = str(finding.get("evidence", "")).strip()
-        visible_id = locator.get("element_id") or locator.get("page_id")
-        if visible_id and str(visible_id).lower() not in evidence.lower():
-            finding["evidence"] = f"Visible element {visible_id}: {evidence}"
-    return repaired
-
-
-def parse_contract(text: str) -> tuple[dict[str, Any] | None, str | None, bool]:
+def infer_answer_batch(processor: Any, model: Any, rows: list[dict[str, Any]],
+                       device: torch.device, max_new_tokens: int, *,
+                       prompt_mode: str = "generic",
+                       max_escalations: int = 1) -> list[dict[str, Any]]:
+    """Generate independent LM-only ANSWER rows in one padded batch."""
+    prompted = [prompt_row(row, prompt_mode) for row in rows]
+    prompts = [processor.apply_chat_template(
+        row["messages"][:1], tokenize=False, add_generation_prompt=True)
+        for row in prompted]
+    images = [_images(row) for row in prompted]
+    previous_padding_side = processor.tokenizer.padding_side
+    processor.tokenizer.padding_side = "left"
     try:
-        parsed = extract_json(text)
-        parser = parse_deck_result if "deck_id" in parsed else parse_page_result
-        try:
-            return parser(json.dumps(parsed)).model_dump(mode="json"), None, False
-        except Exception as original:  # noqa: BLE001 - attempt bounded schema repair
-            repaired = _repair_contract(parsed)
-            if repaired is not None:
-                try:
-                    return parser(json.dumps(repaired)).model_dump(mode="json"), None, True
-                except Exception:  # noqa: BLE001 - preserve the original useful error
-                    pass
-            return None, f"{type(original).__name__}: {original}", False
-    except Exception as exc:  # noqa: BLE001 - parser failures are measured artifacts
-        return None, f"{type(exc).__name__}: {exc}", False
+        inputs = processor(
+            text=prompts, images=images if any(images) else None,
+            padding=True, return_tensors="pt")
+    finally:
+        processor.tokenizer.padding_side = previous_padding_side
+    inputs = {key: value.to(device) for key, value in inputs.items()}
+    prompt_lengths = inputs["attention_mask"].sum(dim=1)
+    input_width = inputs["input_ids"].shape[1]
+    started = time.perf_counter()
+    with torch.inference_mode():
+        generated = model.generate(
+            **inputs, max_new_tokens=max_new_tokens, do_sample=False,
+            pad_token_id=processor.tokenizer.pad_token_id)
+    elapsed = time.perf_counter() - started
+    special_ids = {item for item in (
+        processor.tokenizer.pad_token_id, processor.tokenizer.eos_token_id)
+        if item is not None}
+    outputs = []
+    for index, continuation in enumerate(generated[:, input_width:]):
+        text = processor.decode(continuation, skip_special_tokens=True)
+        generated_parsed, error, repaired = parse_generated_contract(text, prompted[index])
+        fallback_defer = generated_parsed is None
+        raw_action = (ExaminerAction.DEFER.value if fallback_defer
+                      else str(generated_parsed["action"]))
+        action = bounded_route_action(
+            raw_action, 1.0, max_escalations=max_escalations)
+        parsed, mismatch, consistency_error = authoritative_result(
+            generated_parsed if not fallback_defer else None, action)
+        prompt_tokens = int(prompt_lengths[index].item())
+        completion_tokens = sum(token not in special_ids for token in continuation.tolist())
+        outputs.append({
+            "predicted_action": action,
+            "raw_predicted_action": raw_action,
+            "route_confidence": 1.0,
+            "raw": text,
+            "generated_parsed": generated_parsed,
+            "generated_action": (generated_parsed or {}).get("action"),
+            "parsed": parsed,
+            "parse_error": error,
+            "generation_error": error,
+            "action_mismatch": mismatch,
+            "consistency_error": consistency_error,
+            "contract_repaired": repaired,
+            "fallback_defer": fallback_defer,
+            "usage": {
+                "prompt_tokens": prompt_tokens,
+                "completion_tokens": completion_tokens,
+                "total_tokens": prompt_tokens + completion_tokens,
+                # Synchronous batch latency is the latency experienced by each request.
+                "latency_seconds": elapsed,
+                "batch_size": len(rows),
+            },
+        })
+    return outputs
 
 
 def infer_once(processor: Any, model: Any, heads: D3Heads | None, row: dict[str, Any],
@@ -193,12 +199,17 @@ def infer_once(processor: Any, model: Any, heads: D3Heads | None, row: dict[str,
         generated = model.generate(**inputs, max_new_tokens=max_new_tokens, do_sample=False)
     continuation = generated[0, inputs["input_ids"].shape[1]:]
     text = processor.decode(continuation, skip_special_tokens=True)
-    generated_parsed, error, repaired = parse_contract(text)
+    generated_parsed, error, repaired = parse_generated_contract(text, row)
     generated_action = (generated_parsed or {}).get("action")
     fallback_defer = generated_parsed is None
     if fallback_defer:
         action = ExaminerAction.DEFER.value
         parsed, mismatch, consistency_error = authoritative_result(None, action)
+    elif route_mode == "answer":
+        raw_action = str(generated_action)
+        action = bounded_route_action(
+            raw_action, 1.0, terminal=terminal, max_escalations=max_escalations)
+        parsed, mismatch, consistency_error = authoritative_result(generated_parsed, action)
     else:
         parsed, mismatch, consistency_error = authoritative_result(generated_parsed, action)
     return {"predicted_action": action, "raw_predicted_action": raw_action,
@@ -230,6 +241,10 @@ def main() -> None:
                         help="Number of records, or 'all' for the complete input")
     parser.add_argument("--balanced", action="store_true")
     parser.add_argument("--max-new-tokens", type=int, default=192)
+    parser.add_argument("--batch-size", type=int, default=1,
+                        help="Padded generation batch size for route-mode=answer")
+    parser.add_argument("--max-image-pixels", type=int,
+                        help="Processor pixel budget per image; frozen identically across arms")
     parser.add_argument("--policy", type=Path,
                         help="Frozen inference-policy JSON; overrides threshold and escalation limit")
     parser.add_argument("--confidence-threshold", type=float, default=0.0)
@@ -259,6 +274,12 @@ def main() -> None:
         parser.error("--class-router is required for --route-mode=class")
     if args.route_mode == "fixed" and not args.fixed_action:
         parser.error("--fixed-action is required for --route-mode=fixed")
+    if args.batch_size < 1:
+        parser.error("--batch-size must be positive")
+    if args.max_image_pixels is not None and args.max_image_pixels < 1:
+        parser.error("--max-image-pixels must be positive")
+    if args.batch_size > 1 and args.route_mode != "answer":
+        parser.error("--batch-size > 1 currently requires --route-mode=answer")
     class_routes = None
     if args.class_router:
         router_payload = json.loads(args.class_router.read_text())
@@ -266,7 +287,8 @@ def main() -> None:
                         for name, route in router_payload["routes"].items()}
     device = torch.device("cuda")
     processor, model, heads = load(
-        args.run, args.base, device, args.merged_model, args.lm_adapter)
+        args.run, args.base, device, args.merged_model, args.lm_adapter,
+        args.max_image_pixels)
     all_rows = JsonlDataset(args.input).rows
     if args.limit == "all":
         limit = len(all_rows)
@@ -292,63 +314,81 @@ def main() -> None:
     results, counts = [], {"parser_failure": 0, "action_loop": 0, "teacher_failure": 0,
                            "action_mismatch": 0, "consistency_failure": 0,
                            "escalation_failure": 0}
-    for row in rows:
-        if row["record_id"] in completed:
-            continue
-        first = infer_once(processor, model, heads, row, device, args.max_new_tokens,
-                           confidence_threshold=confidence_threshold,
-                           max_escalations=max_escalations, route_mode=args.route_mode,
-                           fixed_action=args.fixed_action, class_routes=class_routes,
-                           route_only=args.route_only, prompt_mode=args.prompt_mode)
-        if first["parse_error"]:
-            counts["parser_failure"] += 1
-        counts["action_mismatch"] += int(first["action_mismatch"])
-        counts["consistency_failure"] += int(bool(first["consistency_error"]))
-        escalation = None
-        requested = first["predicted_action"]
-        availability = {"CALL_LINTER": "image_structure", "REQUEST_REFERENCE": "reference_available",
-                        "REQUEST_DECK": "deck_context_available"}.get(requested)
-        if availability:
-            followup_row = (by_sample_availability.get((row["sample_id"], availability))
-                            or by_chain_availability.get((row["severity_chain"], availability)))
-            if followup_row:
-                if requested == "CALL_LINTER":
-                    try:
-                        final = run_linter(followup_row)
-                        escalation = {"requested_action": requested, "performed": True,
-                                      "provided_availability": availability, "executor": "geometry_linter",
-                                      "final_action": "ANSWER", "final_parsed": final}
-                    except Exception as exc:  # noqa: BLE001 - explicit runtime failure artifact
-                        counts["escalation_failure"] += 1
-                        escalation = {"requested_action": requested, "performed": False,
-                                      "provided_availability": availability,
-                                      "reason": f"{type(exc).__name__}: {exc}"}
+    pending = [row for row in rows if row["record_id"] not in completed]
+    work_batches = [pending[offset:offset + args.batch_size]
+                    for offset in range(0, len(pending), args.batch_size)]
+    for batch in work_batches:
+        if args.batch_size > 1:
+            first_results = infer_answer_batch(
+                processor, model, batch, device, args.max_new_tokens,
+                prompt_mode=args.prompt_mode, max_escalations=max_escalations)
+        else:
+            first_results = [infer_once(
+                processor, model, heads, batch[0], device, args.max_new_tokens,
+                confidence_threshold=confidence_threshold,
+                max_escalations=max_escalations, route_mode=args.route_mode,
+                fixed_action=args.fixed_action, class_routes=class_routes,
+                route_only=args.route_only, prompt_mode=args.prompt_mode)]
+        for row, first in zip(batch, first_results, strict=True):
+            if first["parse_error"]:
+                counts["parser_failure"] += 1
+            counts["action_mismatch"] += int(first["action_mismatch"])
+            counts["consistency_failure"] += int(bool(first["consistency_error"]))
+            escalation = None
+            requested = first["predicted_action"]
+            availability = ({
+                "CALL_LINTER": "image_structure",
+                "REQUEST_REFERENCE": "reference_available",
+                "REQUEST_DECK": "deck_context_available",
+            }.get(requested) if max_escalations else None)
+            if availability:
+                followup_row = (by_sample_availability.get((row["sample_id"], availability))
+                                or by_chain_availability.get((row["severity_chain"], availability)))
+                if followup_row:
+                    if requested == "CALL_LINTER":
+                        try:
+                            final = run_linter(followup_row)
+                            escalation = {"requested_action": requested, "performed": True,
+                                          "provided_availability": availability,
+                                          "executor": "geometry_linter",
+                                          "final_action": "ANSWER", "final_parsed": final}
+                        except Exception as exc:  # noqa: BLE001 - explicit runtime failure artifact
+                            counts["escalation_failure"] += 1
+                            escalation = {"requested_action": requested, "performed": False,
+                                          "provided_availability": availability,
+                                          "reason": f"{type(exc).__name__}: {exc}"}
+                    else:
+                        second = infer_once(processor, model, heads, followup_row, device,
+                                            args.max_new_tokens, terminal=True,
+                                            confidence_threshold=confidence_threshold,
+                                            max_escalations=max_escalations,
+                                            route_mode=args.route_mode,
+                                            fixed_action=args.fixed_action,
+                                            class_routes=class_routes,
+                                            route_only=args.route_only,
+                                            prompt_mode=args.prompt_mode)
+                        if second["parse_error"]:
+                            counts["parser_failure"] += 1
+                        counts["action_mismatch"] += int(second["action_mismatch"])
+                        counts["consistency_failure"] += int(bool(second["consistency_error"]))
+                        final_action = second["predicted_action"]
+                        if final_action not in {"ANSWER", "DEFER"}:
+                            counts["action_loop"] += 1
+                            counts["escalation_failure"] += 1
+                        escalation = {
+                            "requested_action": requested, "performed": True,
+                            "provided_availability": availability,
+                            "executor": "student_followup",
+                            "counterpart_match": (
+                                "sample_id" if followup_row["sample_id"] == row["sample_id"]
+                                else "severity_chain"),
+                            "final_action": final_action, "final_parsed": second["parsed"],
+                            "result": second}
                 else:
-                    second = infer_once(processor, model, heads, followup_row, device,
-                                        args.max_new_tokens, terminal=True,
-                                        confidence_threshold=confidence_threshold,
-                                        max_escalations=max_escalations, route_mode=args.route_mode,
-                                        fixed_action=args.fixed_action, class_routes=class_routes,
-                                        route_only=args.route_only, prompt_mode=args.prompt_mode)
-                    if second["parse_error"]:
-                        counts["parser_failure"] += 1
-                    counts["action_mismatch"] += int(second["action_mismatch"])
-                    counts["consistency_failure"] += int(bool(second["consistency_error"]))
-                    final_action = second["predicted_action"]
-                    if final_action not in {"ANSWER", "DEFER"}:
-                        counts["action_loop"] += 1
-                        counts["escalation_failure"] += 1
-                    escalation = {"requested_action": requested, "performed": True,
-                                  "provided_availability": availability, "executor": "student_followup",
-                                  "counterpart_match": ("sample_id" if followup_row["sample_id"] == row["sample_id"]
-                                                        else "severity_chain"),
-                                  "final_action": final_action, "final_parsed": second["parsed"],
-                                  "result": second}
-            else:
-                counts["escalation_failure"] += 1
-                escalation = {"requested_action": requested, "performed": False,
-                              "reason": f"no {availability} counterpart for sample"}
-        result = {"record_id": row["record_id"], "sample_id": row["sample_id"],
+                    counts["escalation_failure"] += 1
+                    escalation = {"requested_action": requested, "performed": False,
+                                  "reason": f"no {availability} counterpart for sample"}
+            result = {"record_id": row["record_id"], "sample_id": row["sample_id"],
                         "pair_id": row.get("pair_id", row["sample_id"]),
                         "defect": row["defect"], "availability": row["availability"],
                         "target_action": row["target_action"],
@@ -365,10 +405,10 @@ def main() -> None:
                             ((escalation or {}).get("result") or {}).get("usage", {}).get("total_tokens", 0)),
                         "latency_seconds": first["usage"]["latency_seconds"] + float(
                             ((escalation or {}).get("result") or {}).get("usage", {}).get("latency_seconds", 0.0))}
-        results.append(result)
-        with args.output.open("a") as stream:
-            stream.write(json.dumps(result, ensure_ascii=False) + "\n")
-            stream.flush()
+            results.append(result)
+            with args.output.open("a") as stream:
+                stream.write(json.dumps(result, ensure_ascii=False) + "\n")
+                stream.flush()
     all_results = [json.loads(line) for line in args.output.read_text().splitlines() if line.strip()]
     results = [result for result in all_results if result["record_id"] in {row["record_id"] for row in rows}]
     counts = {
@@ -417,6 +457,8 @@ def main() -> None:
                               "prompt_mode": args.prompt_mode,
                               "class_router_path": str(args.class_router) if args.class_router else None,
                               "fixed_action": args.fixed_action,
+                              "batch_size": args.batch_size,
+                              "max_image_pixels": args.max_image_pixels,
                               "route_only": args.route_only,
                               "worst_case_model_calls": 1 + max_escalations,
                               "worst_case_tool_calls": max_escalations},
