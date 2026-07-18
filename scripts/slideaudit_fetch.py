@@ -26,7 +26,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[1]
-MIRROR = "https://raw.kkgithub.com/zhuohaouw/SlideAudit/main"
+MIRROR = "https://raw.githubusercontent.com/zhuohaouw/SlideAudit/main"
 RAW = REPO / "data" / "raw" / "slideaudit"
 ANN = RAW / "annotations"
 IMG = RAW / "images"
