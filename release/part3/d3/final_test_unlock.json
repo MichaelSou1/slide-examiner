@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "checkpoint": "runs/part3/d3_formal_v2/train_seed73/checkpoint-768",
+  "policy": "runs/part3/d3_selection/frozen_policy.json",
+  "primary_comparisons": "reports/part3/w77_primary_comparisons.json",
+  "table_schema": "reports/part3/w77_table_schema.json",
+  "one_shot_command": "REPO=/data/slide-examiner GUARD_REPO=<clean-guard-checkout> PYTHON=/home/user/miniconda3/envs/WorldArena_VLM/bin/python CUDA_DEVICE=<idle-gpu> <clean-guard-checkout>/scripts/part3_d3_final_once.sh <clean-guard-checkout>/release/part3/d3/final_test_unlock.json",
+  "final_test_protocol_sha256": "7271ff8168fc9cde6acf0ea5e756a86cd496a727247951c638b563a675255c36",
+  "freeze_commit": "b7ba7c4243bbbf523197d69a7898aed2a507759f"
+}
