@@ -1,0 +1,154 @@
+{
+  "schema_version": 1,
+  "arms": {
+    "d3_generic_deck_s2_s5": {
+      "records": 80,
+      "valid_records": 80,
+      "failure_rate": 0.0,
+      "per_class": {
+        "S2_NARRATIVE_ORDER_BREAK": {
+          "tp": 0,
+          "fn": 20,
+          "fp": 0,
+          "tn": 20,
+          "n_pos": 20,
+          "n_neg": 20,
+          "balanced_accuracy": {
+            "estimate": 0.5,
+            "low": 0.4194374209735904,
+            "high": 0.5805625790264096,
+            "n_pos": 20,
+            "n_neg": 20
+          },
+          "precision": {
+            "estimate": 0.0,
+            "low": 0.0,
+            "high": 1.0,
+            "n": 0
+          },
+          "recall": {
+            "estimate": 0.0,
+            "low": 0.0,
+            "high": 0.1611251580528193,
+            "n": 20
+          },
+          "specificity": {
+            "estimate": 1.0,
+            "low": 0.8388748419471808,
+            "high": 1.0,
+            "n": 20
+          },
+          "paired_clean_fpr": 0.0,
+          "named_localization": {
+            "estimate": 0.0,
+            "low": 0.0,
+            "high": 1.0,
+            "n": 0
+          },
+          "failures": 0
+        },
+        "S5_MISSING_LOGIC_SECTION": {
+          "tp": 0,
+          "fn": 20,
+          "fp": 0,
+          "tn": 20,
+          "n_pos": 20,
+          "n_neg": 20,
+          "balanced_accuracy": {
+            "estimate": 0.5,
+            "low": 0.4194374209735904,
+            "high": 0.5805625790264096,
+            "n_pos": 20,
+            "n_neg": 20
+          },
+          "precision": {
+            "estimate": 0.0,
+            "low": 0.0,
+            "high": 1.0,
+            "n": 0
+          },
+          "recall": {
+            "estimate": 0.0,
+            "low": 0.0,
+            "high": 0.1611251580528193,
+            "n": 20
+          },
+          "specificity": {
+            "estimate": 1.0,
+            "low": 0.8388748419471808,
+            "high": 1.0,
+            "n": 20
+          },
+          "paired_clean_fpr": 0.0,
+          "named_localization": {
+            "estimate": 0.0,
+            "low": 0.0,
+            "high": 1.0,
+            "n": 0
+          },
+          "failures": 0
+        }
+      },
+      "macro": {
+        "balanced_accuracy": 0.5,
+        "precision": 0.0,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "paired_clean_fpr": 0.0,
+        "named_localization": 0.0,
+        "classes": 2
+      },
+      "routing_and_cost": {
+        "action_accuracy": 0.0,
+        "defer_rate": 1.0,
+        "coverage": 0.0,
+        "mean_model_calls": 1.0,
+        "mean_external_calls": 0.0,
+        "mean_prompt_tokens": 359.0,
+        "mean_completion_tokens": 0.0,
+        "mean_total_tokens": 359.0,
+        "mean_latency_seconds": 6.357707024240517
+      },
+      "risk_coverage": [
+        {
+          "covered": 0,
+          "coverage": 0.0,
+          "risk": 0.0
+        }
+      ],
+      "fixed_coverage_risk": [
+        {
+          "target_coverage": 0.5,
+          "available": false,
+          "covered": 0,
+          "achieved_coverage": 0.0,
+          "risk": null,
+          "confidence_threshold": null
+        },
+        {
+          "target_coverage": 0.75,
+          "available": false,
+          "covered": 0,
+          "achieved_coverage": 0.0,
+          "risk": null,
+          "confidence_threshold": null
+        },
+        {
+          "target_coverage": 0.9,
+          "available": false,
+          "covered": 0,
+          "achieved_coverage": 0.0,
+          "risk": null,
+          "confidence_threshold": null
+        }
+      ]
+    }
+  },
+  "inputs": [
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/normalized/d3_generic_deck_s2_s5.jsonl",
+      "rows": 80,
+      "sha256": "1a366436bf91ad78f0a9ed22e9e936aa7b3f1f0fab3d9323645634672a37e683"
+    }
+  ]
+}

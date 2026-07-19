@@ -1,0 +1,3127 @@
+{
+  "schema_version": 1,
+  "final_test_read": true,
+  "attempt_status": "failed",
+  "files": [
+    {
+      "path": "/data/slide-examiner/logs/part3/w77/final_test_attempt2.log",
+      "bytes": 33704,
+      "sha256": "1b334c7c3898683b2f883a3c32551bd7dc25355b4d5664ea13fd66418690b1d7"
+    },
+    {
+      "path": "/data/slide-examiner/reports/part3/w77/final_test_attempt2/attempt.json",
+      "bytes": 324,
+      "sha256": "702d0e4061ea47ff3b7efb5735ee4e56b4c05caaeb81a9dcef74096722d50b55"
+    },
+    {
+      "path": "/data/slide-examiner/reports/part3/w77/final_test_attempt2/image_scores.json",
+      "bytes": 233576,
+      "sha256": "aae3b78ca43047290692fcff58013bd3cb84baacf35614334f945e3cb5a01594"
+    },
+    {
+      "path": "/data/slide-examiner/reports/part3/w77/final_test_attempt2/primary_comparisons.json",
+      "bytes": 4337,
+      "sha256": "79f7c81691ca58cf7b5f14da031b187455d3573b51c98433123de60fddceda6a"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/final_deck_rendered.jsonl",
+      "bytes": 2760948,
+      "sha256": "e473e152c3a1feb5284662f9ed87f809e9a8c21a6ce8450efde912d7e8e0e8e2"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/final_deck_runtime.jsonl",
+      "bytes": 257560,
+      "sha256": "fc714d8842c8aabb3f1a75a6c0002e6775dee32c80c075943108ffc258e103e4"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/final_deck_runtime.summary.json",
+      "bytes": 890,
+      "sha256": "f66e148095b66898a90b594060dee5170dfe724ef930c4bfbc4ce26a1cabaf6a"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/final_image_runtime.jsonl",
+      "bytes": 1967486,
+      "sha256": "852cb69a4599c9ef680710d469ba0f0ce9e5cb9d53d6d4fa40aabbfbbe2b6589"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/final_image_runtime.summary.json",
+      "bytes": 908,
+      "sha256": "74d45f87727ab2fc973d54d44b814f472b11603abd281e2b24009936fd38cc58"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/normalized/d3_generic_deck_s2_s5.jsonl",
+      "bytes": 107080,
+      "sha256": "1a366436bf91ad78f0a9ed22e9e936aa7b3f1f0fab3d9323645634672a37e683"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/normalized/d3_generic_sample_escalation.jsonl",
+      "bytes": 1083926,
+      "sha256": "75eee4ec3d388293c74856a9f911e65d717d45639dd23273818bf271061546e4"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/normalized/learned_sample_route_no_escalation.jsonl",
+      "bytes": 975032,
+      "sha256": "df3ef8d63094fd39e8762d7a4a345dadfb907e972cbc0673e383f93410b9438f"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/normalized/manual_frozen_route.jsonl",
+      "bytes": 1321132,
+      "sha256": "01ba2b9e1b1b5892cd949b93e9cc2b45513e0bfdca53bb1dae221078a6529d28"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/normalized/part2_v2_generic.jsonl",
+      "bytes": 1352033,
+      "sha256": "f76cc18070d3c3bc967e2b1380c0361fd18ebb3286a8a8338e8636e4557cfd5b"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/raw/d3_generic_deck_s2_s5.jsonl",
+      "bytes": 89847,
+      "sha256": "c5bde2c1eebc8a7f13e7633a845f34d544a41530fa89b1b4cada3fea24e90b59"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/raw/d3_generic_deck_s2_s5.summary.json",
+      "bytes": 2511,
+      "sha256": "fc084844ef820cd806336862266279e5d48bd81f285d2d247fc7e9fff01b1349"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/raw/d3_generic_sample_escalation.jsonl",
+      "bytes": 960294,
+      "sha256": "e536924c119fcf7ce27686fad70ba6cf4ce419e097b2bfe48f4c0f2b67567f57"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/raw/d3_generic_sample_escalation.summary.json",
+      "bytes": 2559,
+      "sha256": "46b8c81d4f8ba8408f82d3bdfef031a38016fe8621f0d15ce8e8dd5e6fdda582"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/raw/learned_sample_route_no_escalation.jsonl",
+      "bytes": 848553,
+      "sha256": "f76fb4088b527cade8320b6c2e761bb7845c68d91e852020913f1fdfd75a280c"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/raw/learned_sample_route_no_escalation.summary.json",
+      "bytes": 2562,
+      "sha256": "34efbc285245b54cda411414bb8b2984c16ad73bb29bf5bdf786a0581f398330"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/raw/manual_frozen_route.jsonl",
+      "bytes": 1211006,
+      "sha256": "beb1c0e30ddd1abe4cc3639d320833ebd515d7c03a587f1f7caa2dea6f19c320"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/raw/manual_frozen_route.summary.json",
+      "bytes": 2639,
+      "sha256": "52c468d7fddabb2d0a3b30e4a02e742b0daed95f891f6e990e01203019b0b04e"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/raw/part2_v2_generic.jsonl",
+      "bytes": 1246075,
+      "sha256": "7835e476fa46caa31e7758cc056247d799cf90fc9f0ff2bf3495f3274935a309"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/raw/part2_v2_generic.summary.json",
+      "bytes": 2498,
+      "sha256": "2ed80707fa4d31ac33af45eb5ead44d2f9ee4535413a0af8964390d055a1d0af"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_00_CLEAN_DECK/page_000.html",
+      "bytes": 3436,
+      "sha256": "017c56744e2792df90b87ea29a5548cf477c288dd18d826f371f87f7e389c310"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_00_CLEAN_DECK/page_000.png",
+      "bytes": 27878,
+      "sha256": "2c97dc7d177f724f51366e0b6181a977355e22e5d235fe7502d330f5d4bda486"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_00_CLEAN_DECK/page_001.html",
+      "bytes": 3423,
+      "sha256": "b9f8e8ff270629071dc191728c3ac49fb23feb99114acadb59885ccb9620d14a"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_00_CLEAN_DECK/page_001.png",
+      "bytes": 27672,
+      "sha256": "95a6c0ba709d9a5f7f416277db7ffd523dd3101f49aee37e7207407670716c42"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_00_CLEAN_DECK/page_002.html",
+      "bytes": 3438,
+      "sha256": "74d71bea64aff46af7d80a076ca74bef7abb056effaadf1a0e867f89cd748e15"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_00_CLEAN_DECK/page_002.png",
+      "bytes": 28101,
+      "sha256": "f37cb7e2dc5ebf9b999d601c5a1eccf22e48b7a34a974def3b0fc025efdb50c5"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_00_CLEAN_DECK/page_003.html",
+      "bytes": 3413,
+      "sha256": "0e9893a385cf23237469670778f7c736647c6f062a76a1eb0c208ea8e35d4ad6"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_00_CLEAN_DECK/page_003.png",
+      "bytes": 27556,
+      "sha256": "8d4bf70f3a543c4571d9908f76fd51fce66ac4bfd3bd25559ef022babdd5e8a3"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_00_S2_NARRATIVE_ORDER_BREAK/page_000.html",
+      "bytes": 3423,
+      "sha256": "b9f8e8ff270629071dc191728c3ac49fb23feb99114acadb59885ccb9620d14a"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_00_S2_NARRATIVE_ORDER_BREAK/page_000.png",
+      "bytes": 27672,
+      "sha256": "95a6c0ba709d9a5f7f416277db7ffd523dd3101f49aee37e7207407670716c42"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_00_S2_NARRATIVE_ORDER_BREAK/page_001.html",
+      "bytes": 3436,
+      "sha256": "017c56744e2792df90b87ea29a5548cf477c288dd18d826f371f87f7e389c310"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_00_S2_NARRATIVE_ORDER_BREAK/page_001.png",
+      "bytes": 27878,
+      "sha256": "2c97dc7d177f724f51366e0b6181a977355e22e5d235fe7502d330f5d4bda486"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_00_S2_NARRATIVE_ORDER_BREAK/page_002.html",
+      "bytes": 3438,
+      "sha256": "74d71bea64aff46af7d80a076ca74bef7abb056effaadf1a0e867f89cd748e15"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_00_S2_NARRATIVE_ORDER_BREAK/page_002.png",
+      "bytes": 28101,
+      "sha256": "f37cb7e2dc5ebf9b999d601c5a1eccf22e48b7a34a974def3b0fc025efdb50c5"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_00_S2_NARRATIVE_ORDER_BREAK/page_003.html",
+      "bytes": 3413,
+      "sha256": "0e9893a385cf23237469670778f7c736647c6f062a76a1eb0c208ea8e35d4ad6"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_00_S2_NARRATIVE_ORDER_BREAK/page_003.png",
+      "bytes": 27556,
+      "sha256": "8d4bf70f3a543c4571d9908f76fd51fce66ac4bfd3bd25559ef022babdd5e8a3"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_01_CLEAN_DECK/page_000.html",
+      "bytes": 3421,
+      "sha256": "7b05b661d227a0f885a8a71acc741dce4803241afaa0bdc50dcedff896c798d7"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_01_CLEAN_DECK/page_000.png",
+      "bytes": 26518,
+      "sha256": "630090a99e52dd26829c6d29d4e5fc3b0490ffe542a3f7ca8f6ea0fa701d1e59"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_01_CLEAN_DECK/page_001.html",
+      "bytes": 3436,
+      "sha256": "98fd9bcb450b7e525f0117638d9c107030443b014139e3e337f1971e6d5df05f"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_01_CLEAN_DECK/page_001.png",
+      "bytes": 28195,
+      "sha256": "5d50de7fa7da26f453cb4ba98486f6d58776224fca4ce9f6fa2e3ff7d69d40b9"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_01_CLEAN_DECK/page_002.html",
+      "bytes": 3423,
+      "sha256": "d9750949d5ade51434fa9d11bc1755b9314670c36e7ff6b707749d5e91d5746f"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_01_CLEAN_DECK/page_002.png",
+      "bytes": 27906,
+      "sha256": "65168da11f8dfee90501966a14dfd7d8743938cd7812f25d9d83a217cb5dc7df"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_01_CLEAN_DECK/page_003.html",
+      "bytes": 3441,
+      "sha256": "7952a07f233d0d3df9f7e67143bfbafb39578e94aa079ec3edf7bf4e8f734b16"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_01_CLEAN_DECK/page_003.png",
+      "bytes": 27643,
+      "sha256": "c5b5e47db8806f740b8968581ceaf4a08962460cfd6935a9904efc6b7d25cbc8"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_01_S2_NARRATIVE_ORDER_BREAK/page_000.html",
+      "bytes": 3436,
+      "sha256": "98fd9bcb450b7e525f0117638d9c107030443b014139e3e337f1971e6d5df05f"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_01_S2_NARRATIVE_ORDER_BREAK/page_000.png",
+      "bytes": 28195,
+      "sha256": "5d50de7fa7da26f453cb4ba98486f6d58776224fca4ce9f6fa2e3ff7d69d40b9"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_01_S2_NARRATIVE_ORDER_BREAK/page_001.html",
+      "bytes": 3421,
+      "sha256": "7b05b661d227a0f885a8a71acc741dce4803241afaa0bdc50dcedff896c798d7"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_01_S2_NARRATIVE_ORDER_BREAK/page_001.png",
+      "bytes": 26518,
+      "sha256": "630090a99e52dd26829c6d29d4e5fc3b0490ffe542a3f7ca8f6ea0fa701d1e59"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_01_S2_NARRATIVE_ORDER_BREAK/page_002.html",
+      "bytes": 3423,
+      "sha256": "d9750949d5ade51434fa9d11bc1755b9314670c36e7ff6b707749d5e91d5746f"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_01_S2_NARRATIVE_ORDER_BREAK/page_002.png",
+      "bytes": 27906,
+      "sha256": "65168da11f8dfee90501966a14dfd7d8743938cd7812f25d9d83a217cb5dc7df"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_01_S2_NARRATIVE_ORDER_BREAK/page_003.html",
+      "bytes": 3441,
+      "sha256": "7952a07f233d0d3df9f7e67143bfbafb39578e94aa079ec3edf7bf4e8f734b16"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_01_S2_NARRATIVE_ORDER_BREAK/page_003.png",
+      "bytes": 27643,
+      "sha256": "c5b5e47db8806f740b8968581ceaf4a08962460cfd6935a9904efc6b7d25cbc8"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_02_CLEAN_DECK/page_000.html",
+      "bytes": 3438,
+      "sha256": "293b6b8658e3644c310143393e97160dba27468afa0b981ca07cfef104f7f41f"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_02_CLEAN_DECK/page_000.png",
+      "bytes": 27852,
+      "sha256": "b115d64d546d602649dad8e3573fffc59e1fd72e8535daab5272c3d8e27aa751"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_02_CLEAN_DECK/page_001.html",
+      "bytes": 3423,
+      "sha256": "2893e4ce7b6224f93db63371ba0f6263d8d64db1ef534d39975ebeacb3e1e17b"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_02_CLEAN_DECK/page_001.png",
+      "bytes": 28033,
+      "sha256": "737fb5cf03b1586d16fea66fea67408f1caa7112fe64b9d9e56eda4cc48f508f"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_02_CLEAN_DECK/page_002.html",
+      "bytes": 3431,
+      "sha256": "eddb0c2d94ef5f7b62b591773ecf3055d6657efa8df4ef8989422b2c9ec96e5f"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_02_CLEAN_DECK/page_002.png",
+      "bytes": 27965,
+      "sha256": "464f4291b37162b6298b413431a7e558cf2387683efde6aaabe46c8db5f4b323"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_02_CLEAN_DECK/page_003.html",
+      "bytes": 3431,
+      "sha256": "ca65b53039c7ef398e16b5a837adea75102206c43d0481d9d4b4b15c8e24ddbf"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_02_CLEAN_DECK/page_003.png",
+      "bytes": 26787,
+      "sha256": "a8799f3f936741598a2a5e5f10a9d23a7922e2b135e7beeed917c5f765bf4b23"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_02_S2_NARRATIVE_ORDER_BREAK/page_000.html",
+      "bytes": 3423,
+      "sha256": "2893e4ce7b6224f93db63371ba0f6263d8d64db1ef534d39975ebeacb3e1e17b"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_02_S2_NARRATIVE_ORDER_BREAK/page_000.png",
+      "bytes": 28033,
+      "sha256": "737fb5cf03b1586d16fea66fea67408f1caa7112fe64b9d9e56eda4cc48f508f"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_02_S2_NARRATIVE_ORDER_BREAK/page_001.html",
+      "bytes": 3438,
+      "sha256": "293b6b8658e3644c310143393e97160dba27468afa0b981ca07cfef104f7f41f"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_02_S2_NARRATIVE_ORDER_BREAK/page_001.png",
+      "bytes": 27852,
+      "sha256": "b115d64d546d602649dad8e3573fffc59e1fd72e8535daab5272c3d8e27aa751"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_02_S2_NARRATIVE_ORDER_BREAK/page_002.html",
+      "bytes": 3431,
+      "sha256": "eddb0c2d94ef5f7b62b591773ecf3055d6657efa8df4ef8989422b2c9ec96e5f"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_02_S2_NARRATIVE_ORDER_BREAK/page_002.png",
+      "bytes": 27965,
+      "sha256": "464f4291b37162b6298b413431a7e558cf2387683efde6aaabe46c8db5f4b323"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_02_S2_NARRATIVE_ORDER_BREAK/page_003.html",
+      "bytes": 3431,
+      "sha256": "ca65b53039c7ef398e16b5a837adea75102206c43d0481d9d4b4b15c8e24ddbf"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_02_S2_NARRATIVE_ORDER_BREAK/page_003.png",
+      "bytes": 26787,
+      "sha256": "a8799f3f936741598a2a5e5f10a9d23a7922e2b135e7beeed917c5f765bf4b23"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_03_CLEAN_DECK/page_000.html",
+      "bytes": 3436,
+      "sha256": "53e1a2a8d817e377568492c8f5cdd0c77901d1b7e20f2893f017a3f6937f3934"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_03_CLEAN_DECK/page_000.png",
+      "bytes": 28054,
+      "sha256": "012454a51d7add1e45c361b1840abbc321efb5ea9e167cf2ad28887f9ffae1db"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_03_CLEAN_DECK/page_001.html",
+      "bytes": 3433,
+      "sha256": "e8d6d8e48fcba26aae727aeb3bdf8430a1b3dffd1df60cc3a700473e3386f310"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_03_CLEAN_DECK/page_001.png",
+      "bytes": 27786,
+      "sha256": "0c463c2b092bf9610c890ad12b26eb05724a35b3f429f52a2acc5c73e6e96558"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_03_CLEAN_DECK/page_002.html",
+      "bytes": 3431,
+      "sha256": "eadc88e82b3cda64b488991f5deed7e0827ae142f5daa727707fc3320d7ef2a4"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_03_CLEAN_DECK/page_002.png",
+      "bytes": 27797,
+      "sha256": "ebb37daecc34d37162aa35634eeff7d0a5105defe1dc883265d99bae6b7ffe9b"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_03_CLEAN_DECK/page_003.html",
+      "bytes": 3433,
+      "sha256": "194128528e6d8901f8f03291871a6675edb125fbba82cb1d860e525aeff976fc"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_03_CLEAN_DECK/page_003.png",
+      "bytes": 27743,
+      "sha256": "59c8af9adfc7ff82774f561c0f716d8c0f3dbdf91bb50f23ca6582b1bec9b76e"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_03_S2_NARRATIVE_ORDER_BREAK/page_000.html",
+      "bytes": 3433,
+      "sha256": "e8d6d8e48fcba26aae727aeb3bdf8430a1b3dffd1df60cc3a700473e3386f310"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_03_S2_NARRATIVE_ORDER_BREAK/page_000.png",
+      "bytes": 27786,
+      "sha256": "0c463c2b092bf9610c890ad12b26eb05724a35b3f429f52a2acc5c73e6e96558"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_03_S2_NARRATIVE_ORDER_BREAK/page_001.html",
+      "bytes": 3436,
+      "sha256": "53e1a2a8d817e377568492c8f5cdd0c77901d1b7e20f2893f017a3f6937f3934"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_03_S2_NARRATIVE_ORDER_BREAK/page_001.png",
+      "bytes": 28054,
+      "sha256": "012454a51d7add1e45c361b1840abbc321efb5ea9e167cf2ad28887f9ffae1db"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_03_S2_NARRATIVE_ORDER_BREAK/page_002.html",
+      "bytes": 3431,
+      "sha256": "eadc88e82b3cda64b488991f5deed7e0827ae142f5daa727707fc3320d7ef2a4"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_03_S2_NARRATIVE_ORDER_BREAK/page_002.png",
+      "bytes": 27797,
+      "sha256": "ebb37daecc34d37162aa35634eeff7d0a5105defe1dc883265d99bae6b7ffe9b"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_03_S2_NARRATIVE_ORDER_BREAK/page_003.html",
+      "bytes": 3433,
+      "sha256": "194128528e6d8901f8f03291871a6675edb125fbba82cb1d860e525aeff976fc"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_03_S2_NARRATIVE_ORDER_BREAK/page_003.png",
+      "bytes": 27743,
+      "sha256": "59c8af9adfc7ff82774f561c0f716d8c0f3dbdf91bb50f23ca6582b1bec9b76e"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_04_CLEAN_DECK/page_000.html",
+      "bytes": 3426,
+      "sha256": "5a99b0e09f1a91fc7fbd0468626cdcc42201e7729ba759db5b1c6b3535cc5219"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_04_CLEAN_DECK/page_000.png",
+      "bytes": 27813,
+      "sha256": "709ec10887db3ca14875fae6c1819f61cf5b13cbd0fb5299c1e03c3a6edba09a"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_04_CLEAN_DECK/page_001.html",
+      "bytes": 3438,
+      "sha256": "3a3dd1130d86186d6570d7432f2e974edce068502502bca5a2ecf8a1c7cb680f"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_04_CLEAN_DECK/page_001.png",
+      "bytes": 27993,
+      "sha256": "475acac8ba13cb39b3f780c2db237ccf7ee46fe45802c87208bba360969b5c45"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_04_CLEAN_DECK/page_002.html",
+      "bytes": 3441,
+      "sha256": "ddf062c7042bffa2df9cc449934b7032aeec11fb11eb58d77613d0c4fca18107"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_04_CLEAN_DECK/page_002.png",
+      "bytes": 28082,
+      "sha256": "0f25a1aa7106a75cebe8fbf0d7b55265f53931bfc52ed65d40b1a280bb53e916"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_04_CLEAN_DECK/page_003.html",
+      "bytes": 3431,
+      "sha256": "848e3cb1bf9c4a639e89e685a1d17710b2a343005bdfccd776ce69d76b31b6cf"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_04_CLEAN_DECK/page_003.png",
+      "bytes": 26757,
+      "sha256": "ca1252c885abe9c2e83d281651eb836f5f6922c0bc5e1afdc35e2a6e2890d6ab"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_04_S2_NARRATIVE_ORDER_BREAK/page_000.html",
+      "bytes": 3438,
+      "sha256": "3a3dd1130d86186d6570d7432f2e974edce068502502bca5a2ecf8a1c7cb680f"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_04_S2_NARRATIVE_ORDER_BREAK/page_000.png",
+      "bytes": 27993,
+      "sha256": "475acac8ba13cb39b3f780c2db237ccf7ee46fe45802c87208bba360969b5c45"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_04_S2_NARRATIVE_ORDER_BREAK/page_001.html",
+      "bytes": 3426,
+      "sha256": "5a99b0e09f1a91fc7fbd0468626cdcc42201e7729ba759db5b1c6b3535cc5219"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_04_S2_NARRATIVE_ORDER_BREAK/page_001.png",
+      "bytes": 27813,
+      "sha256": "709ec10887db3ca14875fae6c1819f61cf5b13cbd0fb5299c1e03c3a6edba09a"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_04_S2_NARRATIVE_ORDER_BREAK/page_002.html",
+      "bytes": 3441,
+      "sha256": "ddf062c7042bffa2df9cc449934b7032aeec11fb11eb58d77613d0c4fca18107"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_04_S2_NARRATIVE_ORDER_BREAK/page_002.png",
+      "bytes": 28082,
+      "sha256": "0f25a1aa7106a75cebe8fbf0d7b55265f53931bfc52ed65d40b1a280bb53e916"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_04_S2_NARRATIVE_ORDER_BREAK/page_003.html",
+      "bytes": 3431,
+      "sha256": "848e3cb1bf9c4a639e89e685a1d17710b2a343005bdfccd776ce69d76b31b6cf"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_04_S2_NARRATIVE_ORDER_BREAK/page_003.png",
+      "bytes": 26757,
+      "sha256": "ca1252c885abe9c2e83d281651eb836f5f6922c0bc5e1afdc35e2a6e2890d6ab"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_05_CLEAN_DECK/page_000.html",
+      "bytes": 3426,
+      "sha256": "ad739e534b0b6f7f9cb212d1be21f0707839b14ebed0b380cdf725e6ad2d2b81"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_05_CLEAN_DECK/page_000.png",
+      "bytes": 28236,
+      "sha256": "d2ba94702ca59ea45f6ff6bd8dfa3e048261bde94571c3f3931e288cf424827b"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_05_CLEAN_DECK/page_001.html",
+      "bytes": 3428,
+      "sha256": "630271a4083c718926af3b985f70236e0b3974c5c01330941cbe18a91bdca7de"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_05_CLEAN_DECK/page_001.png",
+      "bytes": 27820,
+      "sha256": "8558b8b5186ffee88303a35457e41f4e9cbe7ce16488b2e1b837b6f660f20ad3"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_05_CLEAN_DECK/page_002.html",
+      "bytes": 3411,
+      "sha256": "e2551156a659f9045609b792d60922fe275355ec4343f21ee3ded520682803bf"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_05_CLEAN_DECK/page_002.png",
+      "bytes": 26168,
+      "sha256": "cc5e3c160498ce2a27d75c1c0708a5f57e7d2aec421e00fdc86727f128ac88f8"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_05_CLEAN_DECK/page_003.html",
+      "bytes": 3433,
+      "sha256": "b6321425392b554171375249a1f47dd53a1558fd464136b17b94526da93f58ec"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_05_CLEAN_DECK/page_003.png",
+      "bytes": 27925,
+      "sha256": "b8308a7340c465b67b139e785058ab100a202531e6022579785b51476d00a2f3"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_05_S2_NARRATIVE_ORDER_BREAK/page_000.html",
+      "bytes": 3428,
+      "sha256": "630271a4083c718926af3b985f70236e0b3974c5c01330941cbe18a91bdca7de"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_05_S2_NARRATIVE_ORDER_BREAK/page_000.png",
+      "bytes": 27820,
+      "sha256": "8558b8b5186ffee88303a35457e41f4e9cbe7ce16488b2e1b837b6f660f20ad3"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_05_S2_NARRATIVE_ORDER_BREAK/page_001.html",
+      "bytes": 3426,
+      "sha256": "ad739e534b0b6f7f9cb212d1be21f0707839b14ebed0b380cdf725e6ad2d2b81"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_05_S2_NARRATIVE_ORDER_BREAK/page_001.png",
+      "bytes": 28236,
+      "sha256": "d2ba94702ca59ea45f6ff6bd8dfa3e048261bde94571c3f3931e288cf424827b"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_05_S2_NARRATIVE_ORDER_BREAK/page_002.html",
+      "bytes": 3411,
+      "sha256": "e2551156a659f9045609b792d60922fe275355ec4343f21ee3ded520682803bf"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_05_S2_NARRATIVE_ORDER_BREAK/page_002.png",
+      "bytes": 26168,
+      "sha256": "cc5e3c160498ce2a27d75c1c0708a5f57e7d2aec421e00fdc86727f128ac88f8"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_05_S2_NARRATIVE_ORDER_BREAK/page_003.html",
+      "bytes": 3433,
+      "sha256": "b6321425392b554171375249a1f47dd53a1558fd464136b17b94526da93f58ec"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_05_S2_NARRATIVE_ORDER_BREAK/page_003.png",
+      "bytes": 27925,
+      "sha256": "b8308a7340c465b67b139e785058ab100a202531e6022579785b51476d00a2f3"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_06_CLEAN_DECK/page_000.html",
+      "bytes": 3426,
+      "sha256": "d23d0938614fcb8c8da836865e84d0095c45cf4145ff4cc7494bd85154dbefc7"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_06_CLEAN_DECK/page_000.png",
+      "bytes": 28086,
+      "sha256": "abd037f7335a61a02a54c8adebfe1ede3f4ce9fb344e2f8208d747af22bf9fac"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_06_CLEAN_DECK/page_001.html",
+      "bytes": 3433,
+      "sha256": "c65d482abec03f29019465c6c367e0198fc895d362244d5bac82fc9f469cf8a7"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_06_CLEAN_DECK/page_001.png",
+      "bytes": 27727,
+      "sha256": "ba4b4c71f4f4c8d7e4b23e2ab0cade753d8453ab41632b6babdb1873018de557"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_06_CLEAN_DECK/page_002.html",
+      "bytes": 3433,
+      "sha256": "73b9e1d27135652b31a899d70cfe84511ce2cf886d70819535aeefca530a43f7"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_06_CLEAN_DECK/page_002.png",
+      "bytes": 27905,
+      "sha256": "f47703476ee0344221de7d1a5510361b30f8991e506e09397dbeb29bad838645"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_06_CLEAN_DECK/page_003.html",
+      "bytes": 3444,
+      "sha256": "5aadb93e672970dfa3431e81782483737e8b12c527ae42cc77fda25f7776b7c4"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_06_CLEAN_DECK/page_003.png",
+      "bytes": 27930,
+      "sha256": "e05832987f7a59e58bae2eef3fc687c763a33d300077558ea072fa5aee6a00f6"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_06_S2_NARRATIVE_ORDER_BREAK/page_000.html",
+      "bytes": 3433,
+      "sha256": "c65d482abec03f29019465c6c367e0198fc895d362244d5bac82fc9f469cf8a7"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_06_S2_NARRATIVE_ORDER_BREAK/page_000.png",
+      "bytes": 27727,
+      "sha256": "ba4b4c71f4f4c8d7e4b23e2ab0cade753d8453ab41632b6babdb1873018de557"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_06_S2_NARRATIVE_ORDER_BREAK/page_001.html",
+      "bytes": 3426,
+      "sha256": "d23d0938614fcb8c8da836865e84d0095c45cf4145ff4cc7494bd85154dbefc7"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_06_S2_NARRATIVE_ORDER_BREAK/page_001.png",
+      "bytes": 28086,
+      "sha256": "abd037f7335a61a02a54c8adebfe1ede3f4ce9fb344e2f8208d747af22bf9fac"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_06_S2_NARRATIVE_ORDER_BREAK/page_002.html",
+      "bytes": 3433,
+      "sha256": "73b9e1d27135652b31a899d70cfe84511ce2cf886d70819535aeefca530a43f7"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_06_S2_NARRATIVE_ORDER_BREAK/page_002.png",
+      "bytes": 27905,
+      "sha256": "f47703476ee0344221de7d1a5510361b30f8991e506e09397dbeb29bad838645"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_06_S2_NARRATIVE_ORDER_BREAK/page_003.html",
+      "bytes": 3444,
+      "sha256": "5aadb93e672970dfa3431e81782483737e8b12c527ae42cc77fda25f7776b7c4"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_06_S2_NARRATIVE_ORDER_BREAK/page_003.png",
+      "bytes": 27930,
+      "sha256": "e05832987f7a59e58bae2eef3fc687c763a33d300077558ea072fa5aee6a00f6"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_07_CLEAN_DECK/page_000.html",
+      "bytes": 3431,
+      "sha256": "4728f66f37134a52e3d22ad5114866c26932420a5fc7c502025f837eadacf5e2"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_07_CLEAN_DECK/page_000.png",
+      "bytes": 26539,
+      "sha256": "d6d5842b1e1b3a4ad2706fad926b0634d67458929f2f145da33e6bf877d0cd32"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_07_CLEAN_DECK/page_001.html",
+      "bytes": 3444,
+      "sha256": "1994cf0c372971269be16328cb46e33130c52b63ea3399a8aedc791ad462d587"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_07_CLEAN_DECK/page_001.png",
+      "bytes": 27661,
+      "sha256": "6b07a828924fd07457b40915af74b51209f8598c9cd518ee7547bcc8742ae582"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_07_CLEAN_DECK/page_002.html",
+      "bytes": 3433,
+      "sha256": "3cf986cf24b21c5d159f11c20eae76a120d341ed675e7463cc5f2f158ee8de7a"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_07_CLEAN_DECK/page_002.png",
+      "bytes": 27775,
+      "sha256": "e240ace26ef858622c0f5c69392404827cc2b3241985408361b090775954cc5c"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_07_CLEAN_DECK/page_003.html",
+      "bytes": 3433,
+      "sha256": "27217033c202a48e77f691bd0488808712e60194ee2a29ac52a5b5e8947b8faf"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_07_CLEAN_DECK/page_003.png",
+      "bytes": 27940,
+      "sha256": "d0290d119647e557cf9ef60ed78a09b59ea3ebb231d36d35388d360d8482b465"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_07_S2_NARRATIVE_ORDER_BREAK/page_000.html",
+      "bytes": 3444,
+      "sha256": "1994cf0c372971269be16328cb46e33130c52b63ea3399a8aedc791ad462d587"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_07_S2_NARRATIVE_ORDER_BREAK/page_000.png",
+      "bytes": 27661,
+      "sha256": "6b07a828924fd07457b40915af74b51209f8598c9cd518ee7547bcc8742ae582"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_07_S2_NARRATIVE_ORDER_BREAK/page_001.html",
+      "bytes": 3431,
+      "sha256": "4728f66f37134a52e3d22ad5114866c26932420a5fc7c502025f837eadacf5e2"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_07_S2_NARRATIVE_ORDER_BREAK/page_001.png",
+      "bytes": 26539,
+      "sha256": "d6d5842b1e1b3a4ad2706fad926b0634d67458929f2f145da33e6bf877d0cd32"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_07_S2_NARRATIVE_ORDER_BREAK/page_002.html",
+      "bytes": 3433,
+      "sha256": "3cf986cf24b21c5d159f11c20eae76a120d341ed675e7463cc5f2f158ee8de7a"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_07_S2_NARRATIVE_ORDER_BREAK/page_002.png",
+      "bytes": 27775,
+      "sha256": "e240ace26ef858622c0f5c69392404827cc2b3241985408361b090775954cc5c"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_07_S2_NARRATIVE_ORDER_BREAK/page_003.html",
+      "bytes": 3433,
+      "sha256": "27217033c202a48e77f691bd0488808712e60194ee2a29ac52a5b5e8947b8faf"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_07_S2_NARRATIVE_ORDER_BREAK/page_003.png",
+      "bytes": 27940,
+      "sha256": "d0290d119647e557cf9ef60ed78a09b59ea3ebb231d36d35388d360d8482b465"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_08_CLEAN_DECK/page_000.html",
+      "bytes": 3426,
+      "sha256": "0b8821a50e4908f7278cb6a3e05ca5a924e8881aa11d5204f993660f1ad5a0a6"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_08_CLEAN_DECK/page_000.png",
+      "bytes": 28143,
+      "sha256": "9edb1ae16b13dd1900e03377e629e37ee52428c81fde86d913e57318ee7294ad"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_08_CLEAN_DECK/page_001.html",
+      "bytes": 3436,
+      "sha256": "e6b813a7f5aacb1e8453ebde4de3d379c804ae359e87d068af197fb90ae92a0a"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_08_CLEAN_DECK/page_001.png",
+      "bytes": 28035,
+      "sha256": "abb37f94e99545bed109c74b46bd6d1d22e47eb64cbc205b1cfeb0c3536208ab"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_08_CLEAN_DECK/page_002.html",
+      "bytes": 3444,
+      "sha256": "b4c4e40f99c420b6929a55793adc0687fe3e18d2b996fd25986fd61fe2a34767"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_08_CLEAN_DECK/page_002.png",
+      "bytes": 27942,
+      "sha256": "d36a560bd38cfcfdd0b25ac162d3008f8a02f5c6f9d54a2e05753a8444e47e47"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_08_CLEAN_DECK/page_003.html",
+      "bytes": 3444,
+      "sha256": "8bab6e4a945475dfd09a7850f4fee1fcd024c7d948addc8f10efa0c3cdd776cd"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_08_CLEAN_DECK/page_003.png",
+      "bytes": 27664,
+      "sha256": "3fb14f31efbe5bc509ca83d5ecc2f49ceca8c6244914d3de9e90199d00b5aca7"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_08_S2_NARRATIVE_ORDER_BREAK/page_000.html",
+      "bytes": 3436,
+      "sha256": "e6b813a7f5aacb1e8453ebde4de3d379c804ae359e87d068af197fb90ae92a0a"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_08_S2_NARRATIVE_ORDER_BREAK/page_000.png",
+      "bytes": 28035,
+      "sha256": "abb37f94e99545bed109c74b46bd6d1d22e47eb64cbc205b1cfeb0c3536208ab"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_08_S2_NARRATIVE_ORDER_BREAK/page_001.html",
+      "bytes": 3426,
+      "sha256": "0b8821a50e4908f7278cb6a3e05ca5a924e8881aa11d5204f993660f1ad5a0a6"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_08_S2_NARRATIVE_ORDER_BREAK/page_001.png",
+      "bytes": 28143,
+      "sha256": "9edb1ae16b13dd1900e03377e629e37ee52428c81fde86d913e57318ee7294ad"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_08_S2_NARRATIVE_ORDER_BREAK/page_002.html",
+      "bytes": 3444,
+      "sha256": "b4c4e40f99c420b6929a55793adc0687fe3e18d2b996fd25986fd61fe2a34767"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_08_S2_NARRATIVE_ORDER_BREAK/page_002.png",
+      "bytes": 27942,
+      "sha256": "d36a560bd38cfcfdd0b25ac162d3008f8a02f5c6f9d54a2e05753a8444e47e47"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_08_S2_NARRATIVE_ORDER_BREAK/page_003.html",
+      "bytes": 3444,
+      "sha256": "8bab6e4a945475dfd09a7850f4fee1fcd024c7d948addc8f10efa0c3cdd776cd"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_08_S2_NARRATIVE_ORDER_BREAK/page_003.png",
+      "bytes": 27664,
+      "sha256": "3fb14f31efbe5bc509ca83d5ecc2f49ceca8c6244914d3de9e90199d00b5aca7"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_09_CLEAN_DECK/page_000.html",
+      "bytes": 3433,
+      "sha256": "7560f2172eb8fa42f69fdbbf5ed3dad5b3e4a2cdc28664e606c03f7c892cca6f"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_09_CLEAN_DECK/page_000.png",
+      "bytes": 27916,
+      "sha256": "b2e04043cd131a16c9dfa08ac6b15f738e97491a457362bcf9b47b9c9bcc43c1"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_09_CLEAN_DECK/page_001.html",
+      "bytes": 3424,
+      "sha256": "1bbd651944ac011bb53355300a9192e4cb2c589ac170a7a399bef8507e9c2e8b"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_09_CLEAN_DECK/page_001.png",
+      "bytes": 27307,
+      "sha256": "aeaf8751deb1e3c45714a60866e64e1d9c8c95030603a14f6fe991628a9d7e31"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_09_CLEAN_DECK/page_002.html",
+      "bytes": 3441,
+      "sha256": "0a1ef1e3f7c8180d9b0bb8f853df403427993e239a9f0ecc3273a21759664f19"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_09_CLEAN_DECK/page_002.png",
+      "bytes": 28060,
+      "sha256": "0d59f501ce7ca58be47871e871875711633633587adb0a1069f8c8c056aecab7"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_09_CLEAN_DECK/page_003.html",
+      "bytes": 3434,
+      "sha256": "251f16fcd41b5b46a1600e2c2ba26aff5a23649293fdc5a39a6194edbcf71e3d"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_09_CLEAN_DECK/page_003.png",
+      "bytes": 27609,
+      "sha256": "bf831455b96f34d1857eb9cec394f4c1d40cddf5700b30a4fde2ff783c83190c"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_09_S2_NARRATIVE_ORDER_BREAK/page_000.html",
+      "bytes": 3424,
+      "sha256": "1bbd651944ac011bb53355300a9192e4cb2c589ac170a7a399bef8507e9c2e8b"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_09_S2_NARRATIVE_ORDER_BREAK/page_000.png",
+      "bytes": 27307,
+      "sha256": "aeaf8751deb1e3c45714a60866e64e1d9c8c95030603a14f6fe991628a9d7e31"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_09_S2_NARRATIVE_ORDER_BREAK/page_001.html",
+      "bytes": 3433,
+      "sha256": "7560f2172eb8fa42f69fdbbf5ed3dad5b3e4a2cdc28664e606c03f7c892cca6f"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_09_S2_NARRATIVE_ORDER_BREAK/page_001.png",
+      "bytes": 27916,
+      "sha256": "b2e04043cd131a16c9dfa08ac6b15f738e97491a457362bcf9b47b9c9bcc43c1"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_09_S2_NARRATIVE_ORDER_BREAK/page_002.html",
+      "bytes": 3441,
+      "sha256": "0a1ef1e3f7c8180d9b0bb8f853df403427993e239a9f0ecc3273a21759664f19"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_09_S2_NARRATIVE_ORDER_BREAK/page_002.png",
+      "bytes": 28060,
+      "sha256": "0d59f501ce7ca58be47871e871875711633633587adb0a1069f8c8c056aecab7"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_09_S2_NARRATIVE_ORDER_BREAK/page_003.html",
+      "bytes": 3434,
+      "sha256": "251f16fcd41b5b46a1600e2c2ba26aff5a23649293fdc5a39a6194edbcf71e3d"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_09_S2_NARRATIVE_ORDER_BREAK/page_003.png",
+      "bytes": 27609,
+      "sha256": "bf831455b96f34d1857eb9cec394f4c1d40cddf5700b30a4fde2ff783c83190c"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_10_CLEAN_DECK/page_000.html",
+      "bytes": 3421,
+      "sha256": "5603cdc93536cb17378f15d17aa83be3e22b1cbf9dc43f917032381bd6a2b608"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_10_CLEAN_DECK/page_000.png",
+      "bytes": 27753,
+      "sha256": "2d829bd23c9d0d0746924c23f4ece8acc2ca240a9a7964bbe570ab3bc1aff06d"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_10_CLEAN_DECK/page_001.html",
+      "bytes": 3431,
+      "sha256": "492139b2a8e0012541e4204148bc1517f15a52bb4870cfc1b8033a1cbc8d5954"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_10_CLEAN_DECK/page_001.png",
+      "bytes": 28055,
+      "sha256": "164f18056232b9240ea2ceffbe20f3330c150fe11db5ed3657881ef82593e5d0"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_10_CLEAN_DECK/page_002.html",
+      "bytes": 3421,
+      "sha256": "208e7f946caa68f24f2c7c160f07f22308a8fac24fe61ff45a236fb2d599111e"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_10_CLEAN_DECK/page_002.png",
+      "bytes": 26528,
+      "sha256": "e44dc0da9002cf4578436939fd929d82cb0f1e5e4897a3d5a92fd874db3af906"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_10_CLEAN_DECK/page_003.html",
+      "bytes": 3426,
+      "sha256": "44dbc043ce442c29558f5778799ba8fc2b2a78813ab2e9b21400aad2094d3ca0"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_10_CLEAN_DECK/page_003.png",
+      "bytes": 27689,
+      "sha256": "5b4b59090d53007480a889a92a2c9c89b23d01ce059c1186a980a8e9cb1d5559"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_10_S2_NARRATIVE_ORDER_BREAK/page_000.html",
+      "bytes": 3431,
+      "sha256": "492139b2a8e0012541e4204148bc1517f15a52bb4870cfc1b8033a1cbc8d5954"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_10_S2_NARRATIVE_ORDER_BREAK/page_000.png",
+      "bytes": 28055,
+      "sha256": "164f18056232b9240ea2ceffbe20f3330c150fe11db5ed3657881ef82593e5d0"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_10_S2_NARRATIVE_ORDER_BREAK/page_001.html",
+      "bytes": 3421,
+      "sha256": "5603cdc93536cb17378f15d17aa83be3e22b1cbf9dc43f917032381bd6a2b608"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_10_S2_NARRATIVE_ORDER_BREAK/page_001.png",
+      "bytes": 27753,
+      "sha256": "2d829bd23c9d0d0746924c23f4ece8acc2ca240a9a7964bbe570ab3bc1aff06d"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_10_S2_NARRATIVE_ORDER_BREAK/page_002.html",
+      "bytes": 3421,
+      "sha256": "208e7f946caa68f24f2c7c160f07f22308a8fac24fe61ff45a236fb2d599111e"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_10_S2_NARRATIVE_ORDER_BREAK/page_002.png",
+      "bytes": 26528,
+      "sha256": "e44dc0da9002cf4578436939fd929d82cb0f1e5e4897a3d5a92fd874db3af906"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_10_S2_NARRATIVE_ORDER_BREAK/page_003.html",
+      "bytes": 3426,
+      "sha256": "44dbc043ce442c29558f5778799ba8fc2b2a78813ab2e9b21400aad2094d3ca0"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_10_S2_NARRATIVE_ORDER_BREAK/page_003.png",
+      "bytes": 27689,
+      "sha256": "5b4b59090d53007480a889a92a2c9c89b23d01ce059c1186a980a8e9cb1d5559"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_11_CLEAN_DECK/page_000.html",
+      "bytes": 3431,
+      "sha256": "b24e1963b510b88744dad8e133768368ad41e71d6b5efac1028039eddb2fc8e6"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_11_CLEAN_DECK/page_000.png",
+      "bytes": 27811,
+      "sha256": "e4947ed6d441dfb1e2f6419673a0c4e141a90a85740adafbcbec1da8712cce37"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_11_CLEAN_DECK/page_001.html",
+      "bytes": 3431,
+      "sha256": "0cb9093c9b79811454e27f10f95b4e1f3a32f8eb0558407d7e5eaeeff429ac1e"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_11_CLEAN_DECK/page_001.png",
+      "bytes": 27783,
+      "sha256": "182f84e414d356410832690119ae2d080d9b4e47d8b0dc8e6c23153cbe571d05"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_11_CLEAN_DECK/page_002.html",
+      "bytes": 3426,
+      "sha256": "c604b8f034cc409a4f0808c1b48dc7e1eb010b250c9ff950fde84b4261e0ce60"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_11_CLEAN_DECK/page_002.png",
+      "bytes": 28098,
+      "sha256": "02456bf7f00bddf93387cf4d7ce4f115268a9a8a46265a278b15bcb434565d95"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_11_CLEAN_DECK/page_003.html",
+      "bytes": 3426,
+      "sha256": "753a06d5b590978eb7f54d361a75a90cd24e97683b672fb92916267bd74a1b71"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_11_CLEAN_DECK/page_003.png",
+      "bytes": 28157,
+      "sha256": "80f099a0f6ff6d1b73e4534551e2b4e495849f75c481509b47d2a3dc1f73ce9a"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_11_S2_NARRATIVE_ORDER_BREAK/page_000.html",
+      "bytes": 3431,
+      "sha256": "0cb9093c9b79811454e27f10f95b4e1f3a32f8eb0558407d7e5eaeeff429ac1e"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_11_S2_NARRATIVE_ORDER_BREAK/page_000.png",
+      "bytes": 27783,
+      "sha256": "182f84e414d356410832690119ae2d080d9b4e47d8b0dc8e6c23153cbe571d05"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_11_S2_NARRATIVE_ORDER_BREAK/page_001.html",
+      "bytes": 3431,
+      "sha256": "b24e1963b510b88744dad8e133768368ad41e71d6b5efac1028039eddb2fc8e6"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_11_S2_NARRATIVE_ORDER_BREAK/page_001.png",
+      "bytes": 27811,
+      "sha256": "e4947ed6d441dfb1e2f6419673a0c4e141a90a85740adafbcbec1da8712cce37"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_11_S2_NARRATIVE_ORDER_BREAK/page_002.html",
+      "bytes": 3426,
+      "sha256": "c604b8f034cc409a4f0808c1b48dc7e1eb010b250c9ff950fde84b4261e0ce60"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_11_S2_NARRATIVE_ORDER_BREAK/page_002.png",
+      "bytes": 28098,
+      "sha256": "02456bf7f00bddf93387cf4d7ce4f115268a9a8a46265a278b15bcb434565d95"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_11_S2_NARRATIVE_ORDER_BREAK/page_003.html",
+      "bytes": 3426,
+      "sha256": "753a06d5b590978eb7f54d361a75a90cd24e97683b672fb92916267bd74a1b71"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_11_S2_NARRATIVE_ORDER_BREAK/page_003.png",
+      "bytes": 28157,
+      "sha256": "80f099a0f6ff6d1b73e4534551e2b4e495849f75c481509b47d2a3dc1f73ce9a"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_12_CLEAN_DECK/page_000.html",
+      "bytes": 3421,
+      "sha256": "6ee4e76e9113681be9c10a08f4502547273bfeb8e76107f6fbc7b16aaa8120e2"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_12_CLEAN_DECK/page_000.png",
+      "bytes": 26550,
+      "sha256": "98bf886a2830e94ea0a1c483506f782287a6a7b756e789be204cbbd410fc740e"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_12_CLEAN_DECK/page_001.html",
+      "bytes": 3434,
+      "sha256": "afc27d31591e5b0e334a116ef3576f337e79e2fc5af3f29b52d6db42bcd05712"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_12_CLEAN_DECK/page_001.png",
+      "bytes": 27648,
+      "sha256": "6110e55f11ebd20cfcc3e4520319d4bb5df7ef393a18ae3df50aa3b56aad8866"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_12_CLEAN_DECK/page_002.html",
+      "bytes": 3434,
+      "sha256": "017fc65b41cc927ea674d4af1930324fe355f155ab28454852bdc9c49b0295e8"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_12_CLEAN_DECK/page_002.png",
+      "bytes": 27806,
+      "sha256": "a6399c9510817182cb084e85d127b8367ada9148bf56f79908b01cb68a579c27"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_12_CLEAN_DECK/page_003.html",
+      "bytes": 3428,
+      "sha256": "a00ba65b88905062045b75bc88df885d738a15025745e9e1abb2d8694a9d263c"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_12_CLEAN_DECK/page_003.png",
+      "bytes": 27966,
+      "sha256": "ff6ef4a1b0c4f1f3e65ca867502a708821860744e676ece596b15d47aac0df2a"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_12_S2_NARRATIVE_ORDER_BREAK/page_000.html",
+      "bytes": 3434,
+      "sha256": "afc27d31591e5b0e334a116ef3576f337e79e2fc5af3f29b52d6db42bcd05712"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_12_S2_NARRATIVE_ORDER_BREAK/page_000.png",
+      "bytes": 27648,
+      "sha256": "6110e55f11ebd20cfcc3e4520319d4bb5df7ef393a18ae3df50aa3b56aad8866"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_12_S2_NARRATIVE_ORDER_BREAK/page_001.html",
+      "bytes": 3421,
+      "sha256": "6ee4e76e9113681be9c10a08f4502547273bfeb8e76107f6fbc7b16aaa8120e2"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_12_S2_NARRATIVE_ORDER_BREAK/page_001.png",
+      "bytes": 26550,
+      "sha256": "98bf886a2830e94ea0a1c483506f782287a6a7b756e789be204cbbd410fc740e"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_12_S2_NARRATIVE_ORDER_BREAK/page_002.html",
+      "bytes": 3434,
+      "sha256": "017fc65b41cc927ea674d4af1930324fe355f155ab28454852bdc9c49b0295e8"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_12_S2_NARRATIVE_ORDER_BREAK/page_002.png",
+      "bytes": 27806,
+      "sha256": "a6399c9510817182cb084e85d127b8367ada9148bf56f79908b01cb68a579c27"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_12_S2_NARRATIVE_ORDER_BREAK/page_003.html",
+      "bytes": 3428,
+      "sha256": "a00ba65b88905062045b75bc88df885d738a15025745e9e1abb2d8694a9d263c"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_12_S2_NARRATIVE_ORDER_BREAK/page_003.png",
+      "bytes": 27966,
+      "sha256": "ff6ef4a1b0c4f1f3e65ca867502a708821860744e676ece596b15d47aac0df2a"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_13_CLEAN_DECK/page_000.html",
+      "bytes": 3431,
+      "sha256": "b01137a96cd62d3acc1a4d287a9b83794b293e99629bf79122f35f645f389e37"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_13_CLEAN_DECK/page_000.png",
+      "bytes": 28070,
+      "sha256": "ad596d4e600ec7a5d10c6d51e60ac41d04187e63248a2686cdf77bd8bc621175"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_13_CLEAN_DECK/page_001.html",
+      "bytes": 3423,
+      "sha256": "fb7e0b29a977fd0f27e9deb7c16fdc24570ffb256b3711dd2a15b6da4e4f2d27"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_13_CLEAN_DECK/page_001.png",
+      "bytes": 27576,
+      "sha256": "054515ce436b4b02817a79c30a0440898f0d32bed3222f273ea7171e3f426a79"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_13_CLEAN_DECK/page_002.html",
+      "bytes": 3436,
+      "sha256": "3920f6b1d266b3e51105121b3a2a4a0f9b0ac08da908f6a097a81e24e3791c7d"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_13_CLEAN_DECK/page_002.png",
+      "bytes": 28164,
+      "sha256": "f850706b0582db0b64c2b2a234331b3c3853d318c58001704f1610c30e53f420"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_13_CLEAN_DECK/page_003.html",
+      "bytes": 3434,
+      "sha256": "795ba00343c470818102a35a51d3d66b49c3eb4f6b88e19eeaaafff7c7b49eb4"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_13_CLEAN_DECK/page_003.png",
+      "bytes": 27835,
+      "sha256": "14b6b00eabd3a25dbef60a9cfdcb2986a626af196ee6f758a8ac5dd5c948c436"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_13_S2_NARRATIVE_ORDER_BREAK/page_000.html",
+      "bytes": 3423,
+      "sha256": "fb7e0b29a977fd0f27e9deb7c16fdc24570ffb256b3711dd2a15b6da4e4f2d27"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_13_S2_NARRATIVE_ORDER_BREAK/page_000.png",
+      "bytes": 27576,
+      "sha256": "054515ce436b4b02817a79c30a0440898f0d32bed3222f273ea7171e3f426a79"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_13_S2_NARRATIVE_ORDER_BREAK/page_001.html",
+      "bytes": 3431,
+      "sha256": "b01137a96cd62d3acc1a4d287a9b83794b293e99629bf79122f35f645f389e37"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_13_S2_NARRATIVE_ORDER_BREAK/page_001.png",
+      "bytes": 28070,
+      "sha256": "ad596d4e600ec7a5d10c6d51e60ac41d04187e63248a2686cdf77bd8bc621175"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_13_S2_NARRATIVE_ORDER_BREAK/page_002.html",
+      "bytes": 3436,
+      "sha256": "3920f6b1d266b3e51105121b3a2a4a0f9b0ac08da908f6a097a81e24e3791c7d"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_13_S2_NARRATIVE_ORDER_BREAK/page_002.png",
+      "bytes": 28164,
+      "sha256": "f850706b0582db0b64c2b2a234331b3c3853d318c58001704f1610c30e53f420"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_13_S2_NARRATIVE_ORDER_BREAK/page_003.html",
+      "bytes": 3434,
+      "sha256": "795ba00343c470818102a35a51d3d66b49c3eb4f6b88e19eeaaafff7c7b49eb4"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_13_S2_NARRATIVE_ORDER_BREAK/page_003.png",
+      "bytes": 27835,
+      "sha256": "14b6b00eabd3a25dbef60a9cfdcb2986a626af196ee6f758a8ac5dd5c948c436"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_14_CLEAN_DECK/page_000.html",
+      "bytes": 3423,
+      "sha256": "434c10ba8c6723a142e2244f860ee7504531c911ea4b87239f12c1fcc667cbdb"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_14_CLEAN_DECK/page_000.png",
+      "bytes": 27591,
+      "sha256": "95971acca7e0747485d6be16cf94304ca6772de08f1219801190f23bd29fd843"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_14_CLEAN_DECK/page_001.html",
+      "bytes": 3438,
+      "sha256": "bb230f4495864c138dd78e41fe9c4537c12230b01c112a9351b73ec1df8f34a9"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_14_CLEAN_DECK/page_001.png",
+      "bytes": 27999,
+      "sha256": "8242face95c35573a47f51f24ad879fed5ba3472536f7fc04405a9e6b37f43b9"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_14_CLEAN_DECK/page_002.html",
+      "bytes": 3423,
+      "sha256": "bb4ab2e731fdcd87bd96cf82724488adbf7526903a830b34147dff345aa3c54d"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_14_CLEAN_DECK/page_002.png",
+      "bytes": 27539,
+      "sha256": "248498f44173dee6bc0cc197f5d91926565d32bab7b6aec3fbb9cdceb7758da7"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_14_CLEAN_DECK/page_003.html",
+      "bytes": 3444,
+      "sha256": "216fff15416639ecfee3fb1d5825513d9b700ea7b45246ae656d0d39f166b0a5"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_14_CLEAN_DECK/page_003.png",
+      "bytes": 28014,
+      "sha256": "3bb4839f5c7420ff57111b885d7909f898adebaac6ea05f5018c96d1d71aeb84"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_14_S2_NARRATIVE_ORDER_BREAK/page_000.html",
+      "bytes": 3438,
+      "sha256": "bb230f4495864c138dd78e41fe9c4537c12230b01c112a9351b73ec1df8f34a9"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_14_S2_NARRATIVE_ORDER_BREAK/page_000.png",
+      "bytes": 27999,
+      "sha256": "8242face95c35573a47f51f24ad879fed5ba3472536f7fc04405a9e6b37f43b9"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_14_S2_NARRATIVE_ORDER_BREAK/page_001.html",
+      "bytes": 3423,
+      "sha256": "434c10ba8c6723a142e2244f860ee7504531c911ea4b87239f12c1fcc667cbdb"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_14_S2_NARRATIVE_ORDER_BREAK/page_001.png",
+      "bytes": 27591,
+      "sha256": "95971acca7e0747485d6be16cf94304ca6772de08f1219801190f23bd29fd843"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_14_S2_NARRATIVE_ORDER_BREAK/page_002.html",
+      "bytes": 3423,
+      "sha256": "bb4ab2e731fdcd87bd96cf82724488adbf7526903a830b34147dff345aa3c54d"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_14_S2_NARRATIVE_ORDER_BREAK/page_002.png",
+      "bytes": 27539,
+      "sha256": "248498f44173dee6bc0cc197f5d91926565d32bab7b6aec3fbb9cdceb7758da7"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_14_S2_NARRATIVE_ORDER_BREAK/page_003.html",
+      "bytes": 3444,
+      "sha256": "216fff15416639ecfee3fb1d5825513d9b700ea7b45246ae656d0d39f166b0a5"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_14_S2_NARRATIVE_ORDER_BREAK/page_003.png",
+      "bytes": 28014,
+      "sha256": "3bb4839f5c7420ff57111b885d7909f898adebaac6ea05f5018c96d1d71aeb84"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_15_CLEAN_DECK/page_000.html",
+      "bytes": 3421,
+      "sha256": "42b99c1e457183b8a8fbeb58c8a0d774d95c3aa8bfdaa36e501ed04740fc8579"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_15_CLEAN_DECK/page_000.png",
+      "bytes": 26558,
+      "sha256": "226628ee779d2e74a6b5ddf2e30cce73f04144b1a241cd6e9048c561b047b630"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_15_CLEAN_DECK/page_001.html",
+      "bytes": 3428,
+      "sha256": "1728ab32ddaf4f1f9a75c24ca78b34a7c229b05e8b0834e5218dcb2072557f78"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_15_CLEAN_DECK/page_001.png",
+      "bytes": 28045,
+      "sha256": "81a93fba7a7d728ff5c4a3b736e25eea8283dbecdac5d34fe966c12cbbf8a284"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_15_CLEAN_DECK/page_002.html",
+      "bytes": 3435,
+      "sha256": "ca3ab660246a08374f509cebe4a8a3cf6a479356e654d35a9dc75ebe07d0d71f"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_15_CLEAN_DECK/page_002.png",
+      "bytes": 27629,
+      "sha256": "61ac94d044a4d10f8d41a09b4c90ae6c003cd9365fb55dd7be56cdda893de5ad"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_15_CLEAN_DECK/page_003.html",
+      "bytes": 3436,
+      "sha256": "1e7bd6fb5dfab496ac6d5cb9fa9e6b0b2e3860e9c17bb0355c7ea1e7c0b259c7"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_15_CLEAN_DECK/page_003.png",
+      "bytes": 28078,
+      "sha256": "69468c1cd480a87d52a45641f0a6d62c48c5e8f222295fd5ab899326eb55a41d"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_15_S2_NARRATIVE_ORDER_BREAK/page_000.html",
+      "bytes": 3428,
+      "sha256": "1728ab32ddaf4f1f9a75c24ca78b34a7c229b05e8b0834e5218dcb2072557f78"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_15_S2_NARRATIVE_ORDER_BREAK/page_000.png",
+      "bytes": 28045,
+      "sha256": "81a93fba7a7d728ff5c4a3b736e25eea8283dbecdac5d34fe966c12cbbf8a284"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_15_S2_NARRATIVE_ORDER_BREAK/page_001.html",
+      "bytes": 3421,
+      "sha256": "42b99c1e457183b8a8fbeb58c8a0d774d95c3aa8bfdaa36e501ed04740fc8579"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_15_S2_NARRATIVE_ORDER_BREAK/page_001.png",
+      "bytes": 26558,
+      "sha256": "226628ee779d2e74a6b5ddf2e30cce73f04144b1a241cd6e9048c561b047b630"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_15_S2_NARRATIVE_ORDER_BREAK/page_002.html",
+      "bytes": 3435,
+      "sha256": "ca3ab660246a08374f509cebe4a8a3cf6a479356e654d35a9dc75ebe07d0d71f"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_15_S2_NARRATIVE_ORDER_BREAK/page_002.png",
+      "bytes": 27629,
+      "sha256": "61ac94d044a4d10f8d41a09b4c90ae6c003cd9365fb55dd7be56cdda893de5ad"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_15_S2_NARRATIVE_ORDER_BREAK/page_003.html",
+      "bytes": 3436,
+      "sha256": "1e7bd6fb5dfab496ac6d5cb9fa9e6b0b2e3860e9c17bb0355c7ea1e7c0b259c7"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_15_S2_NARRATIVE_ORDER_BREAK/page_003.png",
+      "bytes": 28078,
+      "sha256": "69468c1cd480a87d52a45641f0a6d62c48c5e8f222295fd5ab899326eb55a41d"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_16_CLEAN_DECK/page_000.html",
+      "bytes": 3436,
+      "sha256": "25093cc95c654bc803ee2a8f5c374dbb659118f2d448cfcc066ac7f55bd7c1d0"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_16_CLEAN_DECK/page_000.png",
+      "bytes": 27850,
+      "sha256": "550f96a9cc4658d7402a2e6d536de32c5860d409344e121c6f8af593bdfe9bab"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_16_CLEAN_DECK/page_001.html",
+      "bytes": 3421,
+      "sha256": "1c03614dd0c5b934f24300577cf1846c5d7f0daed4aca8926e4961000d233084"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_16_CLEAN_DECK/page_001.png",
+      "bytes": 26525,
+      "sha256": "b3358f7943ead7eeb05f17012dd8ce02ef0eca510a48ca62e404d9b920e9058e"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_16_CLEAN_DECK/page_002.html",
+      "bytes": 3431,
+      "sha256": "f4127f2f590b6ee330a72b30615b393c676ff46ba919cbf08312fdb18a6e94b1"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_16_CLEAN_DECK/page_002.png",
+      "bytes": 27769,
+      "sha256": "792a7bb81e8f6b730e044f042c596edfc6c1044e49b598497700a574662ac0b8"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_16_CLEAN_DECK/page_003.html",
+      "bytes": 3428,
+      "sha256": "7e976b386cfc951eb07eaffabcb57c26bcdbcf3ea5da44527309c38eee2e04a2"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_16_CLEAN_DECK/page_003.png",
+      "bytes": 28084,
+      "sha256": "2ba7ce9e0a89478179a66fef8bffedc52f10b780b0a811def66baf84bc7be4fb"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_16_S2_NARRATIVE_ORDER_BREAK/page_000.html",
+      "bytes": 3421,
+      "sha256": "1c03614dd0c5b934f24300577cf1846c5d7f0daed4aca8926e4961000d233084"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_16_S2_NARRATIVE_ORDER_BREAK/page_000.png",
+      "bytes": 26525,
+      "sha256": "b3358f7943ead7eeb05f17012dd8ce02ef0eca510a48ca62e404d9b920e9058e"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_16_S2_NARRATIVE_ORDER_BREAK/page_001.html",
+      "bytes": 3436,
+      "sha256": "25093cc95c654bc803ee2a8f5c374dbb659118f2d448cfcc066ac7f55bd7c1d0"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_16_S2_NARRATIVE_ORDER_BREAK/page_001.png",
+      "bytes": 27850,
+      "sha256": "550f96a9cc4658d7402a2e6d536de32c5860d409344e121c6f8af593bdfe9bab"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_16_S2_NARRATIVE_ORDER_BREAK/page_002.html",
+      "bytes": 3431,
+      "sha256": "f4127f2f590b6ee330a72b30615b393c676ff46ba919cbf08312fdb18a6e94b1"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_16_S2_NARRATIVE_ORDER_BREAK/page_002.png",
+      "bytes": 27769,
+      "sha256": "792a7bb81e8f6b730e044f042c596edfc6c1044e49b598497700a574662ac0b8"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_16_S2_NARRATIVE_ORDER_BREAK/page_003.html",
+      "bytes": 3428,
+      "sha256": "7e976b386cfc951eb07eaffabcb57c26bcdbcf3ea5da44527309c38eee2e04a2"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_16_S2_NARRATIVE_ORDER_BREAK/page_003.png",
+      "bytes": 28084,
+      "sha256": "2ba7ce9e0a89478179a66fef8bffedc52f10b780b0a811def66baf84bc7be4fb"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_17_CLEAN_DECK/page_000.html",
+      "bytes": 3418,
+      "sha256": "6bc0659b415fe3c53f632bd98c9e2ef43240520118579a00e010aea4dfe525bf"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_17_CLEAN_DECK/page_000.png",
+      "bytes": 27713,
+      "sha256": "ad9b7b83a1f0e48306c8c878923fbd9c5aaed92a472fd26c47f2b6fb2a744907"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_17_CLEAN_DECK/page_001.html",
+      "bytes": 3434,
+      "sha256": "f87705fd4143fbba2f45707cf86a1e9f99c5f860ad3ee8496e43970cc8e9e9cb"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_17_CLEAN_DECK/page_001.png",
+      "bytes": 27692,
+      "sha256": "71bb670626a69d4d8e5772cef240b2a4145c3bbd3ea6c45f83f519ca313bdac9"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_17_CLEAN_DECK/page_002.html",
+      "bytes": 3426,
+      "sha256": "4bbc238789a235bc0c42695487212a31e4568e0ee35aeae08d19a3b833dd519f"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_17_CLEAN_DECK/page_002.png",
+      "bytes": 28086,
+      "sha256": "0ee3f0b3db0c491868d1c184a8a03e868e6e04aa0b5650d13d7c3edc50903091"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_17_CLEAN_DECK/page_003.html",
+      "bytes": 3421,
+      "sha256": "2972bb4ae43dedae5a6d9ba8240052af66e5115276c9aac06cc90078fb01d0bd"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_17_CLEAN_DECK/page_003.png",
+      "bytes": 26244,
+      "sha256": "6d531755ba91972bc7950a872d5c337e91d212fbea9c36817f90785d04b2c835"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_17_S2_NARRATIVE_ORDER_BREAK/page_000.html",
+      "bytes": 3434,
+      "sha256": "f87705fd4143fbba2f45707cf86a1e9f99c5f860ad3ee8496e43970cc8e9e9cb"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_17_S2_NARRATIVE_ORDER_BREAK/page_000.png",
+      "bytes": 27692,
+      "sha256": "71bb670626a69d4d8e5772cef240b2a4145c3bbd3ea6c45f83f519ca313bdac9"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_17_S2_NARRATIVE_ORDER_BREAK/page_001.html",
+      "bytes": 3418,
+      "sha256": "6bc0659b415fe3c53f632bd98c9e2ef43240520118579a00e010aea4dfe525bf"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_17_S2_NARRATIVE_ORDER_BREAK/page_001.png",
+      "bytes": 27713,
+      "sha256": "ad9b7b83a1f0e48306c8c878923fbd9c5aaed92a472fd26c47f2b6fb2a744907"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_17_S2_NARRATIVE_ORDER_BREAK/page_002.html",
+      "bytes": 3426,
+      "sha256": "4bbc238789a235bc0c42695487212a31e4568e0ee35aeae08d19a3b833dd519f"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_17_S2_NARRATIVE_ORDER_BREAK/page_002.png",
+      "bytes": 28086,
+      "sha256": "0ee3f0b3db0c491868d1c184a8a03e868e6e04aa0b5650d13d7c3edc50903091"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_17_S2_NARRATIVE_ORDER_BREAK/page_003.html",
+      "bytes": 3421,
+      "sha256": "2972bb4ae43dedae5a6d9ba8240052af66e5115276c9aac06cc90078fb01d0bd"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_17_S2_NARRATIVE_ORDER_BREAK/page_003.png",
+      "bytes": 26244,
+      "sha256": "6d531755ba91972bc7950a872d5c337e91d212fbea9c36817f90785d04b2c835"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_18_CLEAN_DECK/page_000.html",
+      "bytes": 3428,
+      "sha256": "630f32e30098f5f31e0003c42c3c1a1c9fc91bed1fa9b7ebcac541fd101ea85a"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_18_CLEAN_DECK/page_000.png",
+      "bytes": 27706,
+      "sha256": "d83cc1456c3f802ea66ad15e8efe769a57e68f33860db2954d11490b715edd2b"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_18_CLEAN_DECK/page_001.html",
+      "bytes": 3433,
+      "sha256": "5cd16104a168e8b1884046aa4b31ead17421b4580a34b1ad2a3d065840bf87f0"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_18_CLEAN_DECK/page_001.png",
+      "bytes": 27947,
+      "sha256": "4d9a4d72580f6f38ee0e33b907b06972daad41b1478c4abf46ea75da25d3803a"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_18_CLEAN_DECK/page_002.html",
+      "bytes": 3423,
+      "sha256": "604c67efbd63d0747e4bf85dbd941e309fe12cfe0bc9a0d22c628d2c8065faf2"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_18_CLEAN_DECK/page_002.png",
+      "bytes": 27922,
+      "sha256": "59fe4cbd0afecb5b557e63e1e6e37265e73e0b32b7df04896b3fb0b050176a82"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_18_CLEAN_DECK/page_003.html",
+      "bytes": 3428,
+      "sha256": "f9e37069728863724ceb73c3e7476ee44e14d9e5ddb3fefc2d79ef42c38e6004"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_18_CLEAN_DECK/page_003.png",
+      "bytes": 27714,
+      "sha256": "c83623931e15f9367220016b874dbb71225374b9ff0fb0f2ad11a1cd94b0fe2c"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_18_S2_NARRATIVE_ORDER_BREAK/page_000.html",
+      "bytes": 3433,
+      "sha256": "5cd16104a168e8b1884046aa4b31ead17421b4580a34b1ad2a3d065840bf87f0"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_18_S2_NARRATIVE_ORDER_BREAK/page_000.png",
+      "bytes": 27947,
+      "sha256": "4d9a4d72580f6f38ee0e33b907b06972daad41b1478c4abf46ea75da25d3803a"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_18_S2_NARRATIVE_ORDER_BREAK/page_001.html",
+      "bytes": 3428,
+      "sha256": "630f32e30098f5f31e0003c42c3c1a1c9fc91bed1fa9b7ebcac541fd101ea85a"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_18_S2_NARRATIVE_ORDER_BREAK/page_001.png",
+      "bytes": 27706,
+      "sha256": "d83cc1456c3f802ea66ad15e8efe769a57e68f33860db2954d11490b715edd2b"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_18_S2_NARRATIVE_ORDER_BREAK/page_002.html",
+      "bytes": 3423,
+      "sha256": "604c67efbd63d0747e4bf85dbd941e309fe12cfe0bc9a0d22c628d2c8065faf2"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_18_S2_NARRATIVE_ORDER_BREAK/page_002.png",
+      "bytes": 27922,
+      "sha256": "59fe4cbd0afecb5b557e63e1e6e37265e73e0b32b7df04896b3fb0b050176a82"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_18_S2_NARRATIVE_ORDER_BREAK/page_003.html",
+      "bytes": 3428,
+      "sha256": "f9e37069728863724ceb73c3e7476ee44e14d9e5ddb3fefc2d79ef42c38e6004"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_18_S2_NARRATIVE_ORDER_BREAK/page_003.png",
+      "bytes": 27714,
+      "sha256": "c83623931e15f9367220016b874dbb71225374b9ff0fb0f2ad11a1cd94b0fe2c"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_19_CLEAN_DECK/page_000.html",
+      "bytes": 3431,
+      "sha256": "9e43412521653037acf83a161eeffb626af8eb5ed377073eee748209c65dadea"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_19_CLEAN_DECK/page_000.png",
+      "bytes": 26501,
+      "sha256": "3e83424b470281b914a0483507d1edcfee09851a1f1ee69d288fe97e0542bced"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_19_CLEAN_DECK/page_001.html",
+      "bytes": 3436,
+      "sha256": "86c1b43e032d209924ad59f120b8f728a87fe66778ee02a29057456477277937"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_19_CLEAN_DECK/page_001.png",
+      "bytes": 28116,
+      "sha256": "ee114812f3fbb4a34ffd1021bf3a8a4ecd760c0ab3074e99d404d32085a763b9"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_19_CLEAN_DECK/page_002.html",
+      "bytes": 3436,
+      "sha256": "2e64687d7179e95a7042b597c925a567e39487677b15ef465506957151e3452e"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_19_CLEAN_DECK/page_002.png",
+      "bytes": 27926,
+      "sha256": "982c2de1b941026250a03dc7481c981d6dd424c5ea21cca3fb6ad24bf2c8062d"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_19_CLEAN_DECK/page_003.html",
+      "bytes": 3431,
+      "sha256": "4644cd176dbcbf895f52a83fc35e5b5e47bd69d703eec2878fa15e8855f56c5b"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_19_CLEAN_DECK/page_003.png",
+      "bytes": 27915,
+      "sha256": "feccca6c3817812d7822c130526ed09f986fad3640f4515491089a880d228fe4"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_19_S2_NARRATIVE_ORDER_BREAK/page_000.html",
+      "bytes": 3436,
+      "sha256": "86c1b43e032d209924ad59f120b8f728a87fe66778ee02a29057456477277937"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_19_S2_NARRATIVE_ORDER_BREAK/page_000.png",
+      "bytes": 28116,
+      "sha256": "ee114812f3fbb4a34ffd1021bf3a8a4ecd760c0ab3074e99d404d32085a763b9"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_19_S2_NARRATIVE_ORDER_BREAK/page_001.html",
+      "bytes": 3431,
+      "sha256": "9e43412521653037acf83a161eeffb626af8eb5ed377073eee748209c65dadea"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_19_S2_NARRATIVE_ORDER_BREAK/page_001.png",
+      "bytes": 26501,
+      "sha256": "3e83424b470281b914a0483507d1edcfee09851a1f1ee69d288fe97e0542bced"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_19_S2_NARRATIVE_ORDER_BREAK/page_002.html",
+      "bytes": 3436,
+      "sha256": "2e64687d7179e95a7042b597c925a567e39487677b15ef465506957151e3452e"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_19_S2_NARRATIVE_ORDER_BREAK/page_002.png",
+      "bytes": 27926,
+      "sha256": "982c2de1b941026250a03dc7481c981d6dd424c5ea21cca3fb6ad24bf2c8062d"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_19_S2_NARRATIVE_ORDER_BREAK/page_003.html",
+      "bytes": 3431,
+      "sha256": "4644cd176dbcbf895f52a83fc35e5b5e47bd69d703eec2878fa15e8855f56c5b"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_0_19_S2_NARRATIVE_ORDER_BREAK/page_003.png",
+      "bytes": 27915,
+      "sha256": "feccca6c3817812d7822c130526ed09f986fad3640f4515491089a880d228fe4"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_00_CLEAN_DECK/page_000.html",
+      "bytes": 3428,
+      "sha256": "7d4137760436faf608a5379b576667a1de6a07fc0e150e08fd71c87eb4800045"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_00_CLEAN_DECK/page_000.png",
+      "bytes": 27786,
+      "sha256": "03d38bc9e65c1ca6e293168d9127287b9e82a64dd45394763f84b33ec7fdb66e"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_00_CLEAN_DECK/page_001.html",
+      "bytes": 3438,
+      "sha256": "3da91b673b901cee53827a57cd94352ae2f0208d3c514cfd425a3b7983c1e935"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_00_CLEAN_DECK/page_001.png",
+      "bytes": 27683,
+      "sha256": "031089110c04934ec69988c0655e98ab7e4deef0075997735651b535fdb186f7"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_00_CLEAN_DECK/page_002.html",
+      "bytes": 3444,
+      "sha256": "8e63719ded941bd8d1e3521ed2864b93e805a840f782585b7324dd929ce78d3d"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_00_CLEAN_DECK/page_002.png",
+      "bytes": 27481,
+      "sha256": "142298f4277dc9da16eb5276cc9b5335e8a24d7a5ed85d851d771b379dd11cef"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_00_CLEAN_DECK/page_003.html",
+      "bytes": 3431,
+      "sha256": "ff6829218699aa3827c67ad46668762b47f34f318d01e419fe815a57b3361916"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_00_CLEAN_DECK/page_003.png",
+      "bytes": 27934,
+      "sha256": "87cff0c8ab851f39363624d1e03feabe85beab3a91cfe6a24602766541bc779b"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_00_S5_MISSING_LOGIC_SECTION/page_000.html",
+      "bytes": 3428,
+      "sha256": "7d4137760436faf608a5379b576667a1de6a07fc0e150e08fd71c87eb4800045"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_00_S5_MISSING_LOGIC_SECTION/page_000.png",
+      "bytes": 27786,
+      "sha256": "03d38bc9e65c1ca6e293168d9127287b9e82a64dd45394763f84b33ec7fdb66e"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_00_S5_MISSING_LOGIC_SECTION/page_001.html",
+      "bytes": 3438,
+      "sha256": "3da91b673b901cee53827a57cd94352ae2f0208d3c514cfd425a3b7983c1e935"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_00_S5_MISSING_LOGIC_SECTION/page_001.png",
+      "bytes": 27683,
+      "sha256": "031089110c04934ec69988c0655e98ab7e4deef0075997735651b535fdb186f7"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_00_S5_MISSING_LOGIC_SECTION/page_002.html",
+      "bytes": 3444,
+      "sha256": "8e63719ded941bd8d1e3521ed2864b93e805a840f782585b7324dd929ce78d3d"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_00_S5_MISSING_LOGIC_SECTION/page_002.png",
+      "bytes": 27481,
+      "sha256": "142298f4277dc9da16eb5276cc9b5335e8a24d7a5ed85d851d771b379dd11cef"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_01_CLEAN_DECK/page_000.html",
+      "bytes": 3426,
+      "sha256": "966c5bf7180ce3677b8fcc1ba6cd5613596b5afa7e3a767021568ff2381e2658"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_01_CLEAN_DECK/page_000.png",
+      "bytes": 28229,
+      "sha256": "a8b21cc8fc6769d650cf452b6b2a66ce5ea783d15e94b907ed8249f658aba1ef"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_01_CLEAN_DECK/page_001.html",
+      "bytes": 3428,
+      "sha256": "77acacd38366eba57aee771b832318008521f687a0236c9285753b60e915514f"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_01_CLEAN_DECK/page_001.png",
+      "bytes": 27805,
+      "sha256": "9b1c9e6bde6c7465e76a6e6d3170a54a4faaef7958eac6bbea25b2efe0622b48"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_01_CLEAN_DECK/page_002.html",
+      "bytes": 3438,
+      "sha256": "0d05b83509dc73fe7c75b3af1f4b8068a9865fdfd2583cbf2887ebf764f6db56"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_01_CLEAN_DECK/page_002.png",
+      "bytes": 27449,
+      "sha256": "7969d585fe20749149dbc441337fc3f98ebd2606f308acb56ccf26cc5a9a932c"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_01_CLEAN_DECK/page_003.html",
+      "bytes": 3421,
+      "sha256": "4cb719db86d78a12e66fb38c1e6a935758e795c38a996148418d4292da6f587d"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_01_CLEAN_DECK/page_003.png",
+      "bytes": 26445,
+      "sha256": "a7b99727bbe5eb9edc65730f907a9f931ebe12c16247533666879c86bd21d12a"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_01_S5_MISSING_LOGIC_SECTION/page_000.html",
+      "bytes": 3426,
+      "sha256": "966c5bf7180ce3677b8fcc1ba6cd5613596b5afa7e3a767021568ff2381e2658"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_01_S5_MISSING_LOGIC_SECTION/page_000.png",
+      "bytes": 28229,
+      "sha256": "a8b21cc8fc6769d650cf452b6b2a66ce5ea783d15e94b907ed8249f658aba1ef"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_01_S5_MISSING_LOGIC_SECTION/page_001.html",
+      "bytes": 3428,
+      "sha256": "77acacd38366eba57aee771b832318008521f687a0236c9285753b60e915514f"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_01_S5_MISSING_LOGIC_SECTION/page_001.png",
+      "bytes": 27805,
+      "sha256": "9b1c9e6bde6c7465e76a6e6d3170a54a4faaef7958eac6bbea25b2efe0622b48"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_01_S5_MISSING_LOGIC_SECTION/page_002.html",
+      "bytes": 3438,
+      "sha256": "0d05b83509dc73fe7c75b3af1f4b8068a9865fdfd2583cbf2887ebf764f6db56"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_01_S5_MISSING_LOGIC_SECTION/page_002.png",
+      "bytes": 27449,
+      "sha256": "7969d585fe20749149dbc441337fc3f98ebd2606f308acb56ccf26cc5a9a932c"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_02_CLEAN_DECK/page_000.html",
+      "bytes": 3433,
+      "sha256": "d22afe49d383f1599a695b56b8112a3e06b2794f0b1a00ab3740d77b2ed7212c"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_02_CLEAN_DECK/page_000.png",
+      "bytes": 27643,
+      "sha256": "36a8a80a4562025e8fc1033561a940c25d3e043c910f970094669420eb1092ad"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_02_CLEAN_DECK/page_001.html",
+      "bytes": 3431,
+      "sha256": "b12b2cedf3ce4d516911520994ee2da56e860187443613b8cee6879a593457a4"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_02_CLEAN_DECK/page_001.png",
+      "bytes": 26421,
+      "sha256": "9323c3bb9890b0ab0d2fb0309818d2c0518c7e0cea20b8497176ef1d8edc245a"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_02_CLEAN_DECK/page_002.html",
+      "bytes": 3438,
+      "sha256": "6f03cc01d128a740ed903b12c4b70cc41eb8301c30a9acb86cda15aff089b7d3"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_02_CLEAN_DECK/page_002.png",
+      "bytes": 27664,
+      "sha256": "5daf4c9e50e8d35e5c0d87fed86572010e3ae37a99601754aef6cb0bbb3e7e50"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_02_CLEAN_DECK/page_003.html",
+      "bytes": 3423,
+      "sha256": "daf45e8af26756d0a4bfa5fee5daa016b026901f201d7ff4d4b984b6b8deb1ef"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_02_CLEAN_DECK/page_003.png",
+      "bytes": 27591,
+      "sha256": "8247c03a465a18e311e0326a5cd6a791bf858cd8cf9dc77d1757daac2d967dc9"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_02_S5_MISSING_LOGIC_SECTION/page_000.html",
+      "bytes": 3433,
+      "sha256": "d22afe49d383f1599a695b56b8112a3e06b2794f0b1a00ab3740d77b2ed7212c"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_02_S5_MISSING_LOGIC_SECTION/page_000.png",
+      "bytes": 27643,
+      "sha256": "36a8a80a4562025e8fc1033561a940c25d3e043c910f970094669420eb1092ad"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_02_S5_MISSING_LOGIC_SECTION/page_001.html",
+      "bytes": 3431,
+      "sha256": "b12b2cedf3ce4d516911520994ee2da56e860187443613b8cee6879a593457a4"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_02_S5_MISSING_LOGIC_SECTION/page_001.png",
+      "bytes": 26421,
+      "sha256": "9323c3bb9890b0ab0d2fb0309818d2c0518c7e0cea20b8497176ef1d8edc245a"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_02_S5_MISSING_LOGIC_SECTION/page_002.html",
+      "bytes": 3438,
+      "sha256": "6f03cc01d128a740ed903b12c4b70cc41eb8301c30a9acb86cda15aff089b7d3"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_02_S5_MISSING_LOGIC_SECTION/page_002.png",
+      "bytes": 27664,
+      "sha256": "5daf4c9e50e8d35e5c0d87fed86572010e3ae37a99601754aef6cb0bbb3e7e50"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_03_CLEAN_DECK/page_000.html",
+      "bytes": 3421,
+      "sha256": "694707b1cc43bb260ec6fd0a99e852a49eea13f52ab2ea6d1bffcc49dc2065c9"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_03_CLEAN_DECK/page_000.png",
+      "bytes": 26391,
+      "sha256": "525ea1f7bbbbce5602e088db96a615ecaf7bef2fcc4c411cd5680b76b8c60b75"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_03_CLEAN_DECK/page_001.html",
+      "bytes": 3434,
+      "sha256": "e12306cc1e1c37414f92e1ac0c98fd5656e5f2cb983459d60ab3f90332c8c48c"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_03_CLEAN_DECK/page_001.png",
+      "bytes": 27692,
+      "sha256": "a5315dd41da157c3c18b7186b2a315ee824a80e88ba5bb6318923fcb30681857"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_03_CLEAN_DECK/page_002.html",
+      "bytes": 3444,
+      "sha256": "0e9dd88309b8bee8197567ff1d2f4ef0477c2ad13053e0cb7797532957522094"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_03_CLEAN_DECK/page_002.png",
+      "bytes": 27681,
+      "sha256": "8a33674395414b3b260d8dd51b35d95752c5245479b4797efa9498230fe46c97"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_03_CLEAN_DECK/page_003.html",
+      "bytes": 3418,
+      "sha256": "234009da86726359e9742f6e2a94d5778cf88ef42f3f600ea15441c40c593444"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_03_CLEAN_DECK/page_003.png",
+      "bytes": 27737,
+      "sha256": "c941ff78fce9e302226e5cf5c5b1d12f4693c27f6125dfc38b4e964d52ea62cd"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_03_S5_MISSING_LOGIC_SECTION/page_000.html",
+      "bytes": 3421,
+      "sha256": "694707b1cc43bb260ec6fd0a99e852a49eea13f52ab2ea6d1bffcc49dc2065c9"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_03_S5_MISSING_LOGIC_SECTION/page_000.png",
+      "bytes": 26391,
+      "sha256": "525ea1f7bbbbce5602e088db96a615ecaf7bef2fcc4c411cd5680b76b8c60b75"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_03_S5_MISSING_LOGIC_SECTION/page_001.html",
+      "bytes": 3434,
+      "sha256": "e12306cc1e1c37414f92e1ac0c98fd5656e5f2cb983459d60ab3f90332c8c48c"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_03_S5_MISSING_LOGIC_SECTION/page_001.png",
+      "bytes": 27692,
+      "sha256": "a5315dd41da157c3c18b7186b2a315ee824a80e88ba5bb6318923fcb30681857"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_03_S5_MISSING_LOGIC_SECTION/page_002.html",
+      "bytes": 3444,
+      "sha256": "0e9dd88309b8bee8197567ff1d2f4ef0477c2ad13053e0cb7797532957522094"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_03_S5_MISSING_LOGIC_SECTION/page_002.png",
+      "bytes": 27681,
+      "sha256": "8a33674395414b3b260d8dd51b35d95752c5245479b4797efa9498230fe46c97"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_04_CLEAN_DECK/page_000.html",
+      "bytes": 3434,
+      "sha256": "2799b320ab671b74aac97819c560a0e221d4cfcab827e176f3179005be082e83"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_04_CLEAN_DECK/page_000.png",
+      "bytes": 27566,
+      "sha256": "8353492e173c8e42864018331938010b3cf14d056d8b95b1d85da64456939650"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_04_CLEAN_DECK/page_001.html",
+      "bytes": 3444,
+      "sha256": "3afac9946310f3d247261c797223f3f6bbedf8d61ecdb3c9585cbcc426fb9d1e"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_04_CLEAN_DECK/page_001.png",
+      "bytes": 27949,
+      "sha256": "3f68efbc934b31fc9ec4232afff9f494690266d00acd8290e11e804f41617f96"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_04_CLEAN_DECK/page_002.html",
+      "bytes": 3423,
+      "sha256": "6b2fc8ac219aa985a757f43c0e135945be96361c36f944a145fd17f8cf5f5d85"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_04_CLEAN_DECK/page_002.png",
+      "bytes": 27967,
+      "sha256": "3de954cb13c56364a75cb46d833848618d8878cbf7541a43a941341443d2dd1d"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_04_CLEAN_DECK/page_003.html",
+      "bytes": 3431,
+      "sha256": "00ecc5c594ad1b15f0272e5880e54064b3ba69e1d640f7792cad3e494e9f55cd"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_04_CLEAN_DECK/page_003.png",
+      "bytes": 27744,
+      "sha256": "ef8f933ea23d342925073355b2bc836b41c3afb17ef4bdfc339b55345d1ad002"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_04_S5_MISSING_LOGIC_SECTION/page_000.html",
+      "bytes": 3434,
+      "sha256": "2799b320ab671b74aac97819c560a0e221d4cfcab827e176f3179005be082e83"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_04_S5_MISSING_LOGIC_SECTION/page_000.png",
+      "bytes": 27566,
+      "sha256": "8353492e173c8e42864018331938010b3cf14d056d8b95b1d85da64456939650"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_04_S5_MISSING_LOGIC_SECTION/page_001.html",
+      "bytes": 3444,
+      "sha256": "3afac9946310f3d247261c797223f3f6bbedf8d61ecdb3c9585cbcc426fb9d1e"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_04_S5_MISSING_LOGIC_SECTION/page_001.png",
+      "bytes": 27949,
+      "sha256": "3f68efbc934b31fc9ec4232afff9f494690266d00acd8290e11e804f41617f96"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_04_S5_MISSING_LOGIC_SECTION/page_002.html",
+      "bytes": 3423,
+      "sha256": "6b2fc8ac219aa985a757f43c0e135945be96361c36f944a145fd17f8cf5f5d85"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_04_S5_MISSING_LOGIC_SECTION/page_002.png",
+      "bytes": 27967,
+      "sha256": "3de954cb13c56364a75cb46d833848618d8878cbf7541a43a941341443d2dd1d"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_05_CLEAN_DECK/page_000.html",
+      "bytes": 3423,
+      "sha256": "d29d20094396cb7c90faf7646397d8d5bac66a20ddf7c2ba005160cd4b0874c1"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_05_CLEAN_DECK/page_000.png",
+      "bytes": 27904,
+      "sha256": "57f0376ccb54ab62a41a80385af84f2be9e00175e012341c2af22bd2dc2344ff"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_05_CLEAN_DECK/page_001.html",
+      "bytes": 3426,
+      "sha256": "189e01dc8ed4d271b425e5653bcc627647acccc95c3e53d86707a7181414e0f1"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_05_CLEAN_DECK/page_001.png",
+      "bytes": 28067,
+      "sha256": "1dfc69ed7b445e6744013e7a9bd8cb0fb1495cc596c9ba76bdfc18c2437307f1"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_05_CLEAN_DECK/page_002.html",
+      "bytes": 3431,
+      "sha256": "f698b996c5fa6f3389f687a94441229a11112a61b47422276ace345fbbf5217d"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_05_CLEAN_DECK/page_002.png",
+      "bytes": 26515,
+      "sha256": "1461638d62620212876bb83b53bb55bf3abb317880a6de2b535a4246a296b0ff"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_05_CLEAN_DECK/page_003.html",
+      "bytes": 3434,
+      "sha256": "f9a0580204d0b09af062c04cde3a883c88055fec7b41b169b4b0908461408334"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_05_CLEAN_DECK/page_003.png",
+      "bytes": 27444,
+      "sha256": "4ea67501e6059e915df56f1133ddcc4427516930c572ce13f9f275dc1834ff33"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_05_S5_MISSING_LOGIC_SECTION/page_000.html",
+      "bytes": 3423,
+      "sha256": "d29d20094396cb7c90faf7646397d8d5bac66a20ddf7c2ba005160cd4b0874c1"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_05_S5_MISSING_LOGIC_SECTION/page_000.png",
+      "bytes": 27904,
+      "sha256": "57f0376ccb54ab62a41a80385af84f2be9e00175e012341c2af22bd2dc2344ff"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_05_S5_MISSING_LOGIC_SECTION/page_001.html",
+      "bytes": 3426,
+      "sha256": "189e01dc8ed4d271b425e5653bcc627647acccc95c3e53d86707a7181414e0f1"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_05_S5_MISSING_LOGIC_SECTION/page_001.png",
+      "bytes": 28067,
+      "sha256": "1dfc69ed7b445e6744013e7a9bd8cb0fb1495cc596c9ba76bdfc18c2437307f1"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_05_S5_MISSING_LOGIC_SECTION/page_002.html",
+      "bytes": 3431,
+      "sha256": "f698b996c5fa6f3389f687a94441229a11112a61b47422276ace345fbbf5217d"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_05_S5_MISSING_LOGIC_SECTION/page_002.png",
+      "bytes": 26515,
+      "sha256": "1461638d62620212876bb83b53bb55bf3abb317880a6de2b535a4246a296b0ff"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_06_CLEAN_DECK/page_000.html",
+      "bytes": 3416,
+      "sha256": "712bc94fe2e86ec2caa32f9b9a3b7bded6b29d3ac55c537faded22bf25a0e46a"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_06_CLEAN_DECK/page_000.png",
+      "bytes": 27826,
+      "sha256": "9ecabac0dd63c7de84a2347f797c3c028feb0e610820d786b923daab5d7c0cc3"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_06_CLEAN_DECK/page_001.html",
+      "bytes": 3431,
+      "sha256": "dcddd5946b87f3d520644de47fa1844c5c7bedd261e13a8cceeb23b96468a953"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_06_CLEAN_DECK/page_001.png",
+      "bytes": 26786,
+      "sha256": "5222b53753cd09d4e7691640732aac7d542081d6bfd7231ff3668348ed441227"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_06_CLEAN_DECK/page_002.html",
+      "bytes": 3426,
+      "sha256": "67de24f6395f5b9552cf7302b2bbb235cf2b72e7a606c7089face8051ba432cd"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_06_CLEAN_DECK/page_002.png",
+      "bytes": 28025,
+      "sha256": "833442f8c875a1a3976ba91576d9ff5b81324f5035403e49d9b29b32e047d7a9"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_06_CLEAN_DECK/page_003.html",
+      "bytes": 3423,
+      "sha256": "d6fc6bfc7ac3b9128800bab7fe74a2d4bede6a635652a6da7d0c996ab87d55a2"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_06_CLEAN_DECK/page_003.png",
+      "bytes": 27939,
+      "sha256": "9d396267e35af373d5c0a311c1ec8ee210d2ad7558ddaf1bac6a5436aeadf23d"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_06_S5_MISSING_LOGIC_SECTION/page_000.html",
+      "bytes": 3416,
+      "sha256": "712bc94fe2e86ec2caa32f9b9a3b7bded6b29d3ac55c537faded22bf25a0e46a"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_06_S5_MISSING_LOGIC_SECTION/page_000.png",
+      "bytes": 27826,
+      "sha256": "9ecabac0dd63c7de84a2347f797c3c028feb0e610820d786b923daab5d7c0cc3"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_06_S5_MISSING_LOGIC_SECTION/page_001.html",
+      "bytes": 3431,
+      "sha256": "dcddd5946b87f3d520644de47fa1844c5c7bedd261e13a8cceeb23b96468a953"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_06_S5_MISSING_LOGIC_SECTION/page_001.png",
+      "bytes": 26786,
+      "sha256": "5222b53753cd09d4e7691640732aac7d542081d6bfd7231ff3668348ed441227"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_06_S5_MISSING_LOGIC_SECTION/page_002.html",
+      "bytes": 3426,
+      "sha256": "67de24f6395f5b9552cf7302b2bbb235cf2b72e7a606c7089face8051ba432cd"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_06_S5_MISSING_LOGIC_SECTION/page_002.png",
+      "bytes": 28025,
+      "sha256": "833442f8c875a1a3976ba91576d9ff5b81324f5035403e49d9b29b32e047d7a9"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_07_CLEAN_DECK/page_000.html",
+      "bytes": 3434,
+      "sha256": "16d02f493a5f3365b81fb84810487d794168135be54eb81c9c56871f1afe21f7"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_07_CLEAN_DECK/page_000.png",
+      "bytes": 27705,
+      "sha256": "7ef2d03fe39fdfceaeb2590890b5b5d0d450e1b38f20ba1c079b65ec8e884fe4"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_07_CLEAN_DECK/page_001.html",
+      "bytes": 3428,
+      "sha256": "c1d1e721c02da8cea41f7f39c7484a26300065f03563510a3b95d07050f2bc6d"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_07_CLEAN_DECK/page_001.png",
+      "bytes": 28046,
+      "sha256": "d860c5faf18ea902ee7c772f7c3e6cb1231d49b27f5f1d503dbd6f396a441299"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_07_CLEAN_DECK/page_002.html",
+      "bytes": 3441,
+      "sha256": "cb0740b39f834da17a3b60a96e81e23289a92a6c1deb53e61ea8749a6eea51ae"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_07_CLEAN_DECK/page_002.png",
+      "bytes": 28221,
+      "sha256": "447c7ca079a43ff50ead3785fd951680503f6078227c9c820c29c77332811890"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_07_CLEAN_DECK/page_003.html",
+      "bytes": 3431,
+      "sha256": "4d0c57ba2b24d635a84e49b5c63034ee41e95a777c1441884cf4f4fff3ce4b48"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_07_CLEAN_DECK/page_003.png",
+      "bytes": 26335,
+      "sha256": "dbfb09cf124bd95caaa6b60f0689e7b280ba58403939cbcd65297e96d3fc93d7"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_07_S5_MISSING_LOGIC_SECTION/page_000.html",
+      "bytes": 3434,
+      "sha256": "16d02f493a5f3365b81fb84810487d794168135be54eb81c9c56871f1afe21f7"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_07_S5_MISSING_LOGIC_SECTION/page_000.png",
+      "bytes": 27705,
+      "sha256": "7ef2d03fe39fdfceaeb2590890b5b5d0d450e1b38f20ba1c079b65ec8e884fe4"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_07_S5_MISSING_LOGIC_SECTION/page_001.html",
+      "bytes": 3428,
+      "sha256": "c1d1e721c02da8cea41f7f39c7484a26300065f03563510a3b95d07050f2bc6d"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_07_S5_MISSING_LOGIC_SECTION/page_001.png",
+      "bytes": 28046,
+      "sha256": "d860c5faf18ea902ee7c772f7c3e6cb1231d49b27f5f1d503dbd6f396a441299"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_07_S5_MISSING_LOGIC_SECTION/page_002.html",
+      "bytes": 3441,
+      "sha256": "cb0740b39f834da17a3b60a96e81e23289a92a6c1deb53e61ea8749a6eea51ae"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_07_S5_MISSING_LOGIC_SECTION/page_002.png",
+      "bytes": 28221,
+      "sha256": "447c7ca079a43ff50ead3785fd951680503f6078227c9c820c29c77332811890"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_08_CLEAN_DECK/page_000.html",
+      "bytes": 3421,
+      "sha256": "45b1ceecad9ea0f9da835f512613261f608e2d2523a4edc09010c706748cdf72"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_08_CLEAN_DECK/page_000.png",
+      "bytes": 26505,
+      "sha256": "1c5608bf0b38bdb561be8f9c037fa64ae0ea88be8a84073cc18d64bd765a9509"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_08_CLEAN_DECK/page_001.html",
+      "bytes": 3421,
+      "sha256": "7bfbdb7a057d3e4d4d282b8d9bcd7a6ec6c93c862ba2733f44ce70c696bed13b"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_08_CLEAN_DECK/page_001.png",
+      "bytes": 26399,
+      "sha256": "db0f111b313f0fa91dde5480c976897cf9279a3252be6df3123ef9d5ad130252"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_08_CLEAN_DECK/page_002.html",
+      "bytes": 3431,
+      "sha256": "5d96a8aa30cf82831247c5d543bdf200edbd035af99f47347c4eedf19c5be306"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_08_CLEAN_DECK/page_002.png",
+      "bytes": 26322,
+      "sha256": "71f51b78d3ded2d9c5f222de2bf595fbdb1a81d623e844491402f221a36bfbf2"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_08_CLEAN_DECK/page_003.html",
+      "bytes": 3441,
+      "sha256": "0c9a81ed6c38a6d2a00e8f6b5c78e45e97d167d4b1ac9de0b7c2580884300976"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_08_CLEAN_DECK/page_003.png",
+      "bytes": 28154,
+      "sha256": "b1a27bac041f8708e80a1632bd20ddc537792b4f4b631b5428188432328ee932"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_08_S5_MISSING_LOGIC_SECTION/page_000.html",
+      "bytes": 3421,
+      "sha256": "45b1ceecad9ea0f9da835f512613261f608e2d2523a4edc09010c706748cdf72"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_08_S5_MISSING_LOGIC_SECTION/page_000.png",
+      "bytes": 26505,
+      "sha256": "1c5608bf0b38bdb561be8f9c037fa64ae0ea88be8a84073cc18d64bd765a9509"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_08_S5_MISSING_LOGIC_SECTION/page_001.html",
+      "bytes": 3421,
+      "sha256": "7bfbdb7a057d3e4d4d282b8d9bcd7a6ec6c93c862ba2733f44ce70c696bed13b"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_08_S5_MISSING_LOGIC_SECTION/page_001.png",
+      "bytes": 26399,
+      "sha256": "db0f111b313f0fa91dde5480c976897cf9279a3252be6df3123ef9d5ad130252"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_08_S5_MISSING_LOGIC_SECTION/page_002.html",
+      "bytes": 3431,
+      "sha256": "5d96a8aa30cf82831247c5d543bdf200edbd035af99f47347c4eedf19c5be306"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_08_S5_MISSING_LOGIC_SECTION/page_002.png",
+      "bytes": 26322,
+      "sha256": "71f51b78d3ded2d9c5f222de2bf595fbdb1a81d623e844491402f221a36bfbf2"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_09_CLEAN_DECK/page_000.html",
+      "bytes": 3428,
+      "sha256": "169f33a33c807f43933ed074ce266c6feff35efa1bc57587965c5d60bd212222"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_09_CLEAN_DECK/page_000.png",
+      "bytes": 27854,
+      "sha256": "46a71e92690881d4d83cd75f28ed338c62b490593b63d4364d02fb317383b31e"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_09_CLEAN_DECK/page_001.html",
+      "bytes": 3441,
+      "sha256": "ba738042c437a30c92a0b281803b262ac2fce70466aacd4238c3ef862dc9f1c1"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_09_CLEAN_DECK/page_001.png",
+      "bytes": 28098,
+      "sha256": "5579582f0e05358417645b6ed19a6243d35aac1ef93b47a6b04a20a0df4b911b"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_09_CLEAN_DECK/page_002.html",
+      "bytes": 3416,
+      "sha256": "642ab7ade01e8fe10f5d130dce8f28b9c1d3f1746369465cf9d9372ed6f59983"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_09_CLEAN_DECK/page_002.png",
+      "bytes": 27730,
+      "sha256": "cb957a804dc2358117882ca1dc4bcfb2ce5e751324c9ae39f3304d03e76b1a84"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_09_CLEAN_DECK/page_003.html",
+      "bytes": 3411,
+      "sha256": "2cf7f5861d6c8cc0db3a953717de6a87d0706f33feae11d09f35101a68e894cc"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_09_CLEAN_DECK/page_003.png",
+      "bytes": 26069,
+      "sha256": "7284bb642ae07bff2de9248f1f1fe815b8303d145d99217df80a4630d57e3e2d"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_09_S5_MISSING_LOGIC_SECTION/page_000.html",
+      "bytes": 3428,
+      "sha256": "169f33a33c807f43933ed074ce266c6feff35efa1bc57587965c5d60bd212222"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_09_S5_MISSING_LOGIC_SECTION/page_000.png",
+      "bytes": 27854,
+      "sha256": "46a71e92690881d4d83cd75f28ed338c62b490593b63d4364d02fb317383b31e"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_09_S5_MISSING_LOGIC_SECTION/page_001.html",
+      "bytes": 3441,
+      "sha256": "ba738042c437a30c92a0b281803b262ac2fce70466aacd4238c3ef862dc9f1c1"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_09_S5_MISSING_LOGIC_SECTION/page_001.png",
+      "bytes": 28098,
+      "sha256": "5579582f0e05358417645b6ed19a6243d35aac1ef93b47a6b04a20a0df4b911b"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_09_S5_MISSING_LOGIC_SECTION/page_002.html",
+      "bytes": 3416,
+      "sha256": "642ab7ade01e8fe10f5d130dce8f28b9c1d3f1746369465cf9d9372ed6f59983"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_09_S5_MISSING_LOGIC_SECTION/page_002.png",
+      "bytes": 27730,
+      "sha256": "cb957a804dc2358117882ca1dc4bcfb2ce5e751324c9ae39f3304d03e76b1a84"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_10_CLEAN_DECK/page_000.html",
+      "bytes": 3444,
+      "sha256": "367272a095bd808306d63b0c7bb09748bc5c4f6d7b62f6f41c60de3cd3b8ecb9"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_10_CLEAN_DECK/page_000.png",
+      "bytes": 27834,
+      "sha256": "f5bd7e2887021fe3e22bcea142805d27f8ef39d531d07960f1a9974a4c52771a"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_10_CLEAN_DECK/page_001.html",
+      "bytes": 3426,
+      "sha256": "41a8b179b81b958feedb985f2fb1132f222f7bc41ea64db5b3fed11bdd87efd0"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_10_CLEAN_DECK/page_001.png",
+      "bytes": 28249,
+      "sha256": "e81ebea29586f5ce0b8d10dcf4c6bc167f6dfd64a4447528501c861426bf0ab5"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_10_CLEAN_DECK/page_002.html",
+      "bytes": 3436,
+      "sha256": "e6620f209d1c558c096a4de90ca6661babb6433c1006a68696ee1b5fdfcc8fe5"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_10_CLEAN_DECK/page_002.png",
+      "bytes": 28006,
+      "sha256": "fc6cf6a2d6a26894a8471d80fa0c97deaefb5b45f8e563986d5331353ed23d6d"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_10_CLEAN_DECK/page_003.html",
+      "bytes": 3426,
+      "sha256": "2c84a0414635692d1b97f265cb832825915558b9402105b51e0b3b0781628ec7"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_10_CLEAN_DECK/page_003.png",
+      "bytes": 27640,
+      "sha256": "39f6bca7a6ff3921b32316c1652b827c6d45ab0cf868d2b579acd33d6d277f4b"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_10_S5_MISSING_LOGIC_SECTION/page_000.html",
+      "bytes": 3444,
+      "sha256": "367272a095bd808306d63b0c7bb09748bc5c4f6d7b62f6f41c60de3cd3b8ecb9"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_10_S5_MISSING_LOGIC_SECTION/page_000.png",
+      "bytes": 27834,
+      "sha256": "f5bd7e2887021fe3e22bcea142805d27f8ef39d531d07960f1a9974a4c52771a"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_10_S5_MISSING_LOGIC_SECTION/page_001.html",
+      "bytes": 3426,
+      "sha256": "41a8b179b81b958feedb985f2fb1132f222f7bc41ea64db5b3fed11bdd87efd0"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_10_S5_MISSING_LOGIC_SECTION/page_001.png",
+      "bytes": 28249,
+      "sha256": "e81ebea29586f5ce0b8d10dcf4c6bc167f6dfd64a4447528501c861426bf0ab5"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_10_S5_MISSING_LOGIC_SECTION/page_002.html",
+      "bytes": 3436,
+      "sha256": "e6620f209d1c558c096a4de90ca6661babb6433c1006a68696ee1b5fdfcc8fe5"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_10_S5_MISSING_LOGIC_SECTION/page_002.png",
+      "bytes": 28006,
+      "sha256": "fc6cf6a2d6a26894a8471d80fa0c97deaefb5b45f8e563986d5331353ed23d6d"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_11_CLEAN_DECK/page_000.html",
+      "bytes": 3426,
+      "sha256": "24bda74b1a31bc00e61f96aedf2c9c5dcd43b58d9d8597b0ca28dc0612676e9f"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_11_CLEAN_DECK/page_000.png",
+      "bytes": 28058,
+      "sha256": "1c35a84e51840bacdd91b185cbca641e37a527bc1dd57f27443877dea369127b"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_11_CLEAN_DECK/page_001.html",
+      "bytes": 3441,
+      "sha256": "dc1d9b66681eb22cb2f34aa630098051afc25958712dc2fcc4298e2759918755"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_11_CLEAN_DECK/page_001.png",
+      "bytes": 28063,
+      "sha256": "6285d84c6dd0fe4c299eba4d9f1f4114cb234eb01b0dc1987be1f89f2cd6e2d8"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_11_CLEAN_DECK/page_002.html",
+      "bytes": 3425,
+      "sha256": "fbbe12e9ef0e1d8ae876f7e32d7f49986af27b2ada3b7a7f8cedcdb1ddd29d86"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_11_CLEAN_DECK/page_002.png",
+      "bytes": 27623,
+      "sha256": "558f3214b4d126d4955992876934b417e9f926fb74a1a338c991b4a6933e6cf7"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_11_CLEAN_DECK/page_003.html",
+      "bytes": 3426,
+      "sha256": "b5a445cb6201b0bf272082368666e3602695f4c56fc688aa2b4741230e95a628"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_11_CLEAN_DECK/page_003.png",
+      "bytes": 28206,
+      "sha256": "c746ab4277cc798fdb71ff2b185e96dd98ce21a176c7893fd5c6f04cb15ccd43"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_11_S5_MISSING_LOGIC_SECTION/page_000.html",
+      "bytes": 3426,
+      "sha256": "24bda74b1a31bc00e61f96aedf2c9c5dcd43b58d9d8597b0ca28dc0612676e9f"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_11_S5_MISSING_LOGIC_SECTION/page_000.png",
+      "bytes": 28058,
+      "sha256": "1c35a84e51840bacdd91b185cbca641e37a527bc1dd57f27443877dea369127b"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_11_S5_MISSING_LOGIC_SECTION/page_001.html",
+      "bytes": 3441,
+      "sha256": "dc1d9b66681eb22cb2f34aa630098051afc25958712dc2fcc4298e2759918755"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_11_S5_MISSING_LOGIC_SECTION/page_001.png",
+      "bytes": 28063,
+      "sha256": "6285d84c6dd0fe4c299eba4d9f1f4114cb234eb01b0dc1987be1f89f2cd6e2d8"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_11_S5_MISSING_LOGIC_SECTION/page_002.html",
+      "bytes": 3425,
+      "sha256": "fbbe12e9ef0e1d8ae876f7e32d7f49986af27b2ada3b7a7f8cedcdb1ddd29d86"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_11_S5_MISSING_LOGIC_SECTION/page_002.png",
+      "bytes": 27623,
+      "sha256": "558f3214b4d126d4955992876934b417e9f926fb74a1a338c991b4a6933e6cf7"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_12_CLEAN_DECK/page_000.html",
+      "bytes": 3434,
+      "sha256": "4bc2bc199cbeb6d99121dec72288ea15230760464bde0ba64e801ed2f218f77d"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_12_CLEAN_DECK/page_000.png",
+      "bytes": 27649,
+      "sha256": "0d351c15f2e5f35b5945374f607eeecf39627e2fd4b5dd077391dd05d3a48ebe"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_12_CLEAN_DECK/page_001.html",
+      "bytes": 3431,
+      "sha256": "79a82197736925a403d81976888b6deefe4d832ec7414d44dc2b7bdc1233ec49"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_12_CLEAN_DECK/page_001.png",
+      "bytes": 28104,
+      "sha256": "ab096d77b9124632b336755acfb3b6d2ae21bfd65f267a067310db5d06be84eb"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_12_CLEAN_DECK/page_002.html",
+      "bytes": 3438,
+      "sha256": "762d64a860c6c163e3441c161e15e45967dd366ad82eec312e0ecc846b2d8647"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_12_CLEAN_DECK/page_002.png",
+      "bytes": 28075,
+      "sha256": "a822468a28e7b90dc8d6e36403f21a7fb08fbe353ac25adecaeb8996790d250f"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_12_CLEAN_DECK/page_003.html",
+      "bytes": 3428,
+      "sha256": "36659c9e3df370bebb430376aafca5167df5ba688f1739a7f8c542842f637e5d"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_12_CLEAN_DECK/page_003.png",
+      "bytes": 27855,
+      "sha256": "7d76c33f3b0d4077771f8192bbd4961b5f49c52c310c987150d615e4effe9db0"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_12_S5_MISSING_LOGIC_SECTION/page_000.html",
+      "bytes": 3434,
+      "sha256": "4bc2bc199cbeb6d99121dec72288ea15230760464bde0ba64e801ed2f218f77d"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_12_S5_MISSING_LOGIC_SECTION/page_000.png",
+      "bytes": 27649,
+      "sha256": "0d351c15f2e5f35b5945374f607eeecf39627e2fd4b5dd077391dd05d3a48ebe"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_12_S5_MISSING_LOGIC_SECTION/page_001.html",
+      "bytes": 3431,
+      "sha256": "79a82197736925a403d81976888b6deefe4d832ec7414d44dc2b7bdc1233ec49"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_12_S5_MISSING_LOGIC_SECTION/page_001.png",
+      "bytes": 28104,
+      "sha256": "ab096d77b9124632b336755acfb3b6d2ae21bfd65f267a067310db5d06be84eb"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_12_S5_MISSING_LOGIC_SECTION/page_002.html",
+      "bytes": 3438,
+      "sha256": "762d64a860c6c163e3441c161e15e45967dd366ad82eec312e0ecc846b2d8647"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_12_S5_MISSING_LOGIC_SECTION/page_002.png",
+      "bytes": 28075,
+      "sha256": "a822468a28e7b90dc8d6e36403f21a7fb08fbe353ac25adecaeb8996790d250f"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_13_CLEAN_DECK/page_000.html",
+      "bytes": 3434,
+      "sha256": "ab40dce8bdc77f0f9dfc0a717114fd04c21b67e57250b94081c57b33f28a5e7c"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_13_CLEAN_DECK/page_000.png",
+      "bytes": 27681,
+      "sha256": "a872d32f6f82ff560f6a00e306d3053725fa32aeb30eb6c184155b00b4672123"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_13_CLEAN_DECK/page_001.html",
+      "bytes": 3441,
+      "sha256": "6bbe1eaa33dbc03847406c12b01a3b7009dd1632ca44e558698abf9e1808ac8c"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_13_CLEAN_DECK/page_001.png",
+      "bytes": 28141,
+      "sha256": "994ff4ee0f97e93fb061e0d83f9af0ad77346c6daa6d80ad08dc1e37b9dc9035"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_13_CLEAN_DECK/page_002.html",
+      "bytes": 3441,
+      "sha256": "5751a5d24266604462b94c09506a11042317ea07d00a79f3ab5910fd19ddca77"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_13_CLEAN_DECK/page_002.png",
+      "bytes": 28096,
+      "sha256": "cef8ef1841b89a6ff66a5ba7ca8986124e8dbf553fba77560e1ce5a97d381c20"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_13_CLEAN_DECK/page_003.html",
+      "bytes": 3441,
+      "sha256": "c217b9a8510679ec789f8a3301ef64491d3273f1805cfe834f9cb2b95d59428f"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_13_CLEAN_DECK/page_003.png",
+      "bytes": 27606,
+      "sha256": "a77fed4500e4867a03348557b801fe3501a2d1b5a93b74adf5a68e0ab0235b7f"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_13_S5_MISSING_LOGIC_SECTION/page_000.html",
+      "bytes": 3434,
+      "sha256": "ab40dce8bdc77f0f9dfc0a717114fd04c21b67e57250b94081c57b33f28a5e7c"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_13_S5_MISSING_LOGIC_SECTION/page_000.png",
+      "bytes": 27681,
+      "sha256": "a872d32f6f82ff560f6a00e306d3053725fa32aeb30eb6c184155b00b4672123"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_13_S5_MISSING_LOGIC_SECTION/page_001.html",
+      "bytes": 3441,
+      "sha256": "6bbe1eaa33dbc03847406c12b01a3b7009dd1632ca44e558698abf9e1808ac8c"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_13_S5_MISSING_LOGIC_SECTION/page_001.png",
+      "bytes": 28141,
+      "sha256": "994ff4ee0f97e93fb061e0d83f9af0ad77346c6daa6d80ad08dc1e37b9dc9035"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_13_S5_MISSING_LOGIC_SECTION/page_002.html",
+      "bytes": 3441,
+      "sha256": "5751a5d24266604462b94c09506a11042317ea07d00a79f3ab5910fd19ddca77"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_13_S5_MISSING_LOGIC_SECTION/page_002.png",
+      "bytes": 28096,
+      "sha256": "cef8ef1841b89a6ff66a5ba7ca8986124e8dbf553fba77560e1ce5a97d381c20"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_14_CLEAN_DECK/page_000.html",
+      "bytes": 3431,
+      "sha256": "b758d9fa70bfecb9888a70acc18ef0b1cde06476f0c4d330dbe99e5ccef19baa"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_14_CLEAN_DECK/page_000.png",
+      "bytes": 26373,
+      "sha256": "5a95cba4fdfc479a18e68e0fb0dbc7a18dbcf37d090682e3be12660b936b852c"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_14_CLEAN_DECK/page_001.html",
+      "bytes": 3423,
+      "sha256": "d45468580e67909f589bccd387a44098ee9acbcc9c4da2817f708a6dd3f890bf"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_14_CLEAN_DECK/page_001.png",
+      "bytes": 27885,
+      "sha256": "dc1c5c9f0fed3d2b77ff3f94e9f956663864a42c3a9edb2af6cef3780e1935df"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_14_CLEAN_DECK/page_002.html",
+      "bytes": 3431,
+      "sha256": "5182ae52613fd82d0c29fe9c097140d0594051e0771fc32236d4b881259867d0"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_14_CLEAN_DECK/page_002.png",
+      "bytes": 27835,
+      "sha256": "0972b2c49fbdf3edb7abd5a161896f0b0a142e3fc9b9e131815f1da3b2e4255c"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_14_CLEAN_DECK/page_003.html",
+      "bytes": 3438,
+      "sha256": "9b1b4feb0ea8e152d4b21049e1d45b203cadf112009503edb8f5f2a3c4006e1a"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_14_CLEAN_DECK/page_003.png",
+      "bytes": 28052,
+      "sha256": "3d73432401934ffb584d21539cdb3e440d49bd8fcb425e67840008d85794e418"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_14_S5_MISSING_LOGIC_SECTION/page_000.html",
+      "bytes": 3431,
+      "sha256": "b758d9fa70bfecb9888a70acc18ef0b1cde06476f0c4d330dbe99e5ccef19baa"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_14_S5_MISSING_LOGIC_SECTION/page_000.png",
+      "bytes": 26373,
+      "sha256": "5a95cba4fdfc479a18e68e0fb0dbc7a18dbcf37d090682e3be12660b936b852c"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_14_S5_MISSING_LOGIC_SECTION/page_001.html",
+      "bytes": 3423,
+      "sha256": "d45468580e67909f589bccd387a44098ee9acbcc9c4da2817f708a6dd3f890bf"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_14_S5_MISSING_LOGIC_SECTION/page_001.png",
+      "bytes": 27885,
+      "sha256": "dc1c5c9f0fed3d2b77ff3f94e9f956663864a42c3a9edb2af6cef3780e1935df"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_14_S5_MISSING_LOGIC_SECTION/page_002.html",
+      "bytes": 3431,
+      "sha256": "5182ae52613fd82d0c29fe9c097140d0594051e0771fc32236d4b881259867d0"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_14_S5_MISSING_LOGIC_SECTION/page_002.png",
+      "bytes": 27835,
+      "sha256": "0972b2c49fbdf3edb7abd5a161896f0b0a142e3fc9b9e131815f1da3b2e4255c"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_15_CLEAN_DECK/page_000.html",
+      "bytes": 3431,
+      "sha256": "7514b9a8738c223b4dba7152f9d7ca0ac037d495d5dd52f8c58671f1a90c25be"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_15_CLEAN_DECK/page_000.png",
+      "bytes": 27734,
+      "sha256": "d71901b4606c8cc7d38b1c4bf5b051bb46e9ec1373bfe1136d64a19b6c816da4"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_15_CLEAN_DECK/page_001.html",
+      "bytes": 3423,
+      "sha256": "11b50b9922eb7be1a79f9c60388330717534630f66901bdeaabd9cadc7483423"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_15_CLEAN_DECK/page_001.png",
+      "bytes": 27867,
+      "sha256": "e3eceba1c2676f8b8dc255bb35b551820d639ac78c79b4110ed53defaa9a47b1"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_15_CLEAN_DECK/page_002.html",
+      "bytes": 3423,
+      "sha256": "1ae49e363703acc5a1506675bfde6e678310764738397796b5aea5c8b7a3f672"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_15_CLEAN_DECK/page_002.png",
+      "bytes": 27384,
+      "sha256": "1737d8980693e9ff97b9b45af34b45de7473d8c971882445df408e151b120fa9"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_15_CLEAN_DECK/page_003.html",
+      "bytes": 3421,
+      "sha256": "b529bb69487a3e7b91661e785c8e94c241414be52dd522a1db38ec683add6881"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_15_CLEAN_DECK/page_003.png",
+      "bytes": 26517,
+      "sha256": "25308c219d76e360e730cbad482bad2f2ec34ab6960b7d08461925f809903ec1"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_15_S5_MISSING_LOGIC_SECTION/page_000.html",
+      "bytes": 3431,
+      "sha256": "7514b9a8738c223b4dba7152f9d7ca0ac037d495d5dd52f8c58671f1a90c25be"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_15_S5_MISSING_LOGIC_SECTION/page_000.png",
+      "bytes": 27734,
+      "sha256": "d71901b4606c8cc7d38b1c4bf5b051bb46e9ec1373bfe1136d64a19b6c816da4"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_15_S5_MISSING_LOGIC_SECTION/page_001.html",
+      "bytes": 3423,
+      "sha256": "11b50b9922eb7be1a79f9c60388330717534630f66901bdeaabd9cadc7483423"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_15_S5_MISSING_LOGIC_SECTION/page_001.png",
+      "bytes": 27867,
+      "sha256": "e3eceba1c2676f8b8dc255bb35b551820d639ac78c79b4110ed53defaa9a47b1"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_15_S5_MISSING_LOGIC_SECTION/page_002.html",
+      "bytes": 3423,
+      "sha256": "1ae49e363703acc5a1506675bfde6e678310764738397796b5aea5c8b7a3f672"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_15_S5_MISSING_LOGIC_SECTION/page_002.png",
+      "bytes": 27384,
+      "sha256": "1737d8980693e9ff97b9b45af34b45de7473d8c971882445df408e151b120fa9"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_16_CLEAN_DECK/page_000.html",
+      "bytes": 3428,
+      "sha256": "7033bd0598bccb8dc1d8a61b3cafdac1193e3c25a70e92b353d95b7e7d5538ed"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_16_CLEAN_DECK/page_000.png",
+      "bytes": 28143,
+      "sha256": "b9e4a4c63f5fe8672dcb08ac4c998dbbec9e68e0cfac221e5dd8e81eaac98b41"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_16_CLEAN_DECK/page_001.html",
+      "bytes": 3431,
+      "sha256": "53754a5fb26d3286bd0b720762ac798a6d7fdc3be0dc8f3e516ad0ef1945eda0"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_16_CLEAN_DECK/page_001.png",
+      "bytes": 28068,
+      "sha256": "4eff6c01a65ed38b8b7c27e1426af2019e97d24c8f23f7cc3ca7110ed3a79afa"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_16_CLEAN_DECK/page_002.html",
+      "bytes": 3438,
+      "sha256": "ba2c4ba416e9ed1246f11f18949fb84f3c863b75ea9807d6bb45871d8078949f"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_16_CLEAN_DECK/page_002.png",
+      "bytes": 28049,
+      "sha256": "2404c95c856afca722d988ae2c74bd1962c32721ee651410acc1520efb266caf"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_16_CLEAN_DECK/page_003.html",
+      "bytes": 3431,
+      "sha256": "351b7b8575409406451ac5ed76361b8b1a827b84c63a1c36f1bd12582f84ca99"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_16_CLEAN_DECK/page_003.png",
+      "bytes": 28085,
+      "sha256": "0e13dbe4d56e262fad8b8afb4c30f1638d7787ff99cf4843a66a91e42b79f87c"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_16_S5_MISSING_LOGIC_SECTION/page_000.html",
+      "bytes": 3428,
+      "sha256": "7033bd0598bccb8dc1d8a61b3cafdac1193e3c25a70e92b353d95b7e7d5538ed"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_16_S5_MISSING_LOGIC_SECTION/page_000.png",
+      "bytes": 28143,
+      "sha256": "b9e4a4c63f5fe8672dcb08ac4c998dbbec9e68e0cfac221e5dd8e81eaac98b41"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_16_S5_MISSING_LOGIC_SECTION/page_001.html",
+      "bytes": 3431,
+      "sha256": "53754a5fb26d3286bd0b720762ac798a6d7fdc3be0dc8f3e516ad0ef1945eda0"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_16_S5_MISSING_LOGIC_SECTION/page_001.png",
+      "bytes": 28068,
+      "sha256": "4eff6c01a65ed38b8b7c27e1426af2019e97d24c8f23f7cc3ca7110ed3a79afa"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_16_S5_MISSING_LOGIC_SECTION/page_002.html",
+      "bytes": 3438,
+      "sha256": "ba2c4ba416e9ed1246f11f18949fb84f3c863b75ea9807d6bb45871d8078949f"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_16_S5_MISSING_LOGIC_SECTION/page_002.png",
+      "bytes": 28049,
+      "sha256": "2404c95c856afca722d988ae2c74bd1962c32721ee651410acc1520efb266caf"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_17_CLEAN_DECK/page_000.html",
+      "bytes": 3434,
+      "sha256": "e7c91da787af0f05e6ae0a32e40e82bc0424457f7b97b0c9b6c32a48d66c817a"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_17_CLEAN_DECK/page_000.png",
+      "bytes": 27746,
+      "sha256": "3b7d5a8293127ca29d11094eef1d7b02fe419fc8a157bb0d537e2d9a052c8210"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_17_CLEAN_DECK/page_001.html",
+      "bytes": 3421,
+      "sha256": "eddac89c294d16b096ae4312c5a93113bf77fbb49be31d6f81e93210ff1fb039"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_17_CLEAN_DECK/page_001.png",
+      "bytes": 26449,
+      "sha256": "6e74afcab13c5fbc3aa091c0f89750bd5c67ce0665312ffa82c1ca871a30877d"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_17_CLEAN_DECK/page_002.html",
+      "bytes": 3421,
+      "sha256": "25b1943a4dad29f3eaf43e86607f00f80d7c5bb0d37cfd2009756ad04546e818"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_17_CLEAN_DECK/page_002.png",
+      "bytes": 26569,
+      "sha256": "bb7e77b406067779a9fabfd33d521b5edb40c49feade4f2a3d8063a971be67a2"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_17_CLEAN_DECK/page_003.html",
+      "bytes": 3444,
+      "sha256": "005074533e0cdb6d2279ed561e60fb0ce3a2d33f241e3e9eca25de3eef8e2fa3"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_17_CLEAN_DECK/page_003.png",
+      "bytes": 27683,
+      "sha256": "ca15e8be8721891e61f3c31304f5849ca0336312f05eab4ad8277ec4111108c4"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_17_S5_MISSING_LOGIC_SECTION/page_000.html",
+      "bytes": 3434,
+      "sha256": "e7c91da787af0f05e6ae0a32e40e82bc0424457f7b97b0c9b6c32a48d66c817a"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_17_S5_MISSING_LOGIC_SECTION/page_000.png",
+      "bytes": 27746,
+      "sha256": "3b7d5a8293127ca29d11094eef1d7b02fe419fc8a157bb0d537e2d9a052c8210"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_17_S5_MISSING_LOGIC_SECTION/page_001.html",
+      "bytes": 3421,
+      "sha256": "eddac89c294d16b096ae4312c5a93113bf77fbb49be31d6f81e93210ff1fb039"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_17_S5_MISSING_LOGIC_SECTION/page_001.png",
+      "bytes": 26449,
+      "sha256": "6e74afcab13c5fbc3aa091c0f89750bd5c67ce0665312ffa82c1ca871a30877d"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_17_S5_MISSING_LOGIC_SECTION/page_002.html",
+      "bytes": 3421,
+      "sha256": "25b1943a4dad29f3eaf43e86607f00f80d7c5bb0d37cfd2009756ad04546e818"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_17_S5_MISSING_LOGIC_SECTION/page_002.png",
+      "bytes": 26569,
+      "sha256": "bb7e77b406067779a9fabfd33d521b5edb40c49feade4f2a3d8063a971be67a2"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_18_CLEAN_DECK/page_000.html",
+      "bytes": 3428,
+      "sha256": "0c0ea1fbd7b97326fb50bd03f8c81307084037b7e7c5f608c4e4a674640f0b4c"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_18_CLEAN_DECK/page_000.png",
+      "bytes": 27679,
+      "sha256": "753dbf7cafac5ef70d357ccaf49c81ef584c6f7ea8d076344b8aa0474ea44355"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_18_CLEAN_DECK/page_001.html",
+      "bytes": 3428,
+      "sha256": "e10859b0b72d95e525a2e56240d23be985add39b441badb4e1eda3e962e8bbce"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_18_CLEAN_DECK/page_001.png",
+      "bytes": 27779,
+      "sha256": "99e73cba92f83f22660a857b856d2c9990a48865136b688af30288eea432c45b"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_18_CLEAN_DECK/page_002.html",
+      "bytes": 3421,
+      "sha256": "8a0417905aa295ce1e8c8717835ab8c7c20c436d276f8f7e4277b65c4e235fb2"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_18_CLEAN_DECK/page_002.png",
+      "bytes": 26648,
+      "sha256": "c2466b03fecccfa58c2211130d41d9d7462a5b3c5e9c885ac30f0cd566d3e6d2"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_18_CLEAN_DECK/page_003.html",
+      "bytes": 3434,
+      "sha256": "391c1aad22c3128183761bee8935978b3ede46e2b5380d822c45d29ca4466e56"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_18_CLEAN_DECK/page_003.png",
+      "bytes": 27833,
+      "sha256": "ef38116f3bd1d80a666fe0d39788970c455bd7c558c1cf753293d1017f7f7b5f"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_18_S5_MISSING_LOGIC_SECTION/page_000.html",
+      "bytes": 3428,
+      "sha256": "0c0ea1fbd7b97326fb50bd03f8c81307084037b7e7c5f608c4e4a674640f0b4c"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_18_S5_MISSING_LOGIC_SECTION/page_000.png",
+      "bytes": 27679,
+      "sha256": "753dbf7cafac5ef70d357ccaf49c81ef584c6f7ea8d076344b8aa0474ea44355"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_18_S5_MISSING_LOGIC_SECTION/page_001.html",
+      "bytes": 3428,
+      "sha256": "e10859b0b72d95e525a2e56240d23be985add39b441badb4e1eda3e962e8bbce"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_18_S5_MISSING_LOGIC_SECTION/page_001.png",
+      "bytes": 27779,
+      "sha256": "99e73cba92f83f22660a857b856d2c9990a48865136b688af30288eea432c45b"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_18_S5_MISSING_LOGIC_SECTION/page_002.html",
+      "bytes": 3421,
+      "sha256": "8a0417905aa295ce1e8c8717835ab8c7c20c436d276f8f7e4277b65c4e235fb2"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_18_S5_MISSING_LOGIC_SECTION/page_002.png",
+      "bytes": 26648,
+      "sha256": "c2466b03fecccfa58c2211130d41d9d7462a5b3c5e9c885ac30f0cd566d3e6d2"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_19_CLEAN_DECK/page_000.html",
+      "bytes": 3428,
+      "sha256": "0258247843962d68938f8aa1760af0321cadf374920ed14ddcfaad66853cdd23"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_19_CLEAN_DECK/page_000.png",
+      "bytes": 27747,
+      "sha256": "9df80411d7bec6fcc4659438173937e06eaa30ee5211f447d6abda6f27939c09"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_19_CLEAN_DECK/page_001.html",
+      "bytes": 3423,
+      "sha256": "6b2996c09bba20baa783d96b6874265c3f05e4ee111579d98b0faed392e7a974"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_19_CLEAN_DECK/page_001.png",
+      "bytes": 28098,
+      "sha256": "3f1a290f5170ee169255fbd695b992b111e022ce4d48300e635dd8231d587bad"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_19_CLEAN_DECK/page_002.html",
+      "bytes": 3434,
+      "sha256": "b56211712815759fcd510adda4be9f6e523c2582814210e83901284932deb172"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_19_CLEAN_DECK/page_002.png",
+      "bytes": 27660,
+      "sha256": "6e9cfa8b9ed69e13e4a86aeba5631fb8a1b3144a189b01f6040d68ccc887e8b4"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_19_CLEAN_DECK/page_003.html",
+      "bytes": 3421,
+      "sha256": "b79ce7fc0e13c881be218007900c8b31deb5fb4e6c3f3aba25f8198eb2750222"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_19_CLEAN_DECK/page_003.png",
+      "bytes": 26458,
+      "sha256": "b81379cd514af05dbf6bda5e38def598747cc84c43abb117ecba21fce44a3178"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_19_S5_MISSING_LOGIC_SECTION/page_000.html",
+      "bytes": 3428,
+      "sha256": "0258247843962d68938f8aa1760af0321cadf374920ed14ddcfaad66853cdd23"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_19_S5_MISSING_LOGIC_SECTION/page_000.png",
+      "bytes": 27747,
+      "sha256": "9df80411d7bec6fcc4659438173937e06eaa30ee5211f447d6abda6f27939c09"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_19_S5_MISSING_LOGIC_SECTION/page_001.html",
+      "bytes": 3423,
+      "sha256": "6b2996c09bba20baa783d96b6874265c3f05e4ee111579d98b0faed392e7a974"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_19_S5_MISSING_LOGIC_SECTION/page_001.png",
+      "bytes": 28098,
+      "sha256": "3f1a290f5170ee169255fbd695b992b111e022ce4d48300e635dd8231d587bad"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_19_S5_MISSING_LOGIC_SECTION/page_002.html",
+      "bytes": 3434,
+      "sha256": "b56211712815759fcd510adda4be9f6e523c2582814210e83901284932deb172"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/rendered_decks/d3final_2026071608_1_19_S5_MISSING_LOGIC_SECTION/page_002.png",
+      "bytes": 27660,
+      "sha256": "6e9cfa8b9ed69e13e4a86aeba5631fb8a1b3144a189b01f6040d68ccc887e8b4"
+    }
+  ]
+}

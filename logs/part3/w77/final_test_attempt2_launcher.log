@@ -1,0 +1,569 @@
+watcher_started_utc=2026-07-19T04:40:13Z
+guard_commit=88c79a897a0e858ef5eea8e919b0287b4cc59499
+manual_launch_authorized_utc=2026-07-19T10:04:16Z gpu=3 availability_rule=sufficient_free_vram
+{
+  "unlocked": true,
+  "freeze_commit": "b7ba7c4243bbbf523197d69a7898aed2a507759f",
+  "registry": "/data/slide-examiner-w77-retry-88c79a8/release/part3/d3/final_test_retry_unlock.json"
+}
+{
+  "source_rows": 270,
+  "selected_pairs": 270,
+  "initial_records": 540,
+  "counterpart_records": 360,
+  "initial_limit": 540,
+  "offset_per_class": 0,
+  "per_class_pairs": {
+    "G1_TEXT_OVERFLOW": 30,
+    "G2_ELEMENT_OVERLAP": 30,
+    "G3_ALIGNMENT_OFFSET": 30,
+    "G5_BRAND_COLOR_VIOLATION": 30,
+    "G6_MARGIN_VIOLATION": 30,
+    "G7_RENDER_CONTAINMENT_OVERFLOW": 30,
+    "S1_TITLE_BODY_MISMATCH": 30,
+    "S4_DENSITY_RULE_VIOLATION": 30,
+    "S6_IMAGE_TEXT_CONTRADICTION": 30
+  },
+  "split": "final_test",
+  "manifests": [
+    {
+      "path": "/data/slide-examiner-w77-retry-88c79a8/data/part3/d3/final_test_image.jsonl",
+      "sha256": "e243131cbae8143b9407f43d2f494217f06d1826388e6f234d5623cce6661c29"
+    }
+  ],
+  "output": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/final_image_runtime.jsonl",
+  "output_sha256": "852cb69a4599c9ef680710d469ba0f0ce9e5cb9d53d6d4fa40aabbfbbe2b6589"
+}
+{
+  "split": "final_test",
+  "output_manifest": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/final_deck_rendered.jsonl",
+  "output_sha256": "e473e152c3a1feb5284662f9ed87f809e9a8c21a6ce8450efde912d7e8e0e8e2",
+  "final_test_read": true
+}
+{
+  "positive_source_rows": 80,
+  "clean_source_rows": 80,
+  "selected_pairs_per_class": {
+    "S2_NARRATIVE_ORDER_BREAK": 20,
+    "S5_MISSING_LOGIC_SECTION": 20
+  },
+  "initial_records": 80,
+  "counterpart_records": 80,
+  "initial_limit": 80,
+  "manifests": [
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/final_deck_rendered.jsonl",
+      "sha256": "e473e152c3a1feb5284662f9ed87f809e9a8c21a6ce8450efde912d7e8e0e8e2"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/final_deck_rendered.jsonl",
+      "sha256": "e473e152c3a1feb5284662f9ed87f809e9a8c21a6ce8450efde912d7e8e0e8e2"
+    }
+  ],
+  "output": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/final_deck_runtime.jsonl",
+  "output_sha256": "fc714d8842c8aabb3f1a75a6c0002e6775dee32c80c075943108ffc258e103e4",
+  "split": "final_test",
+  "final_test_read": true
+}
+Loading weights:   0%|          | 0/750 [00:00<?, ?it/s]Loading weights:   0%|          | 1/750 [00:00<02:49,  4.42it/s]Loading weights:   0%|          | 2/750 [00:00<02:49,  4.42it/s]Loading weights:   1%|          | 6/750 [00:00<00:54, 13.63it/s]Loading weights:   3%|▎         | 26/750 [00:00<00:11, 61.79it/s]Loading weights:   5%|▌         | 38/750 [00:00<00:09, 77.17it/s]Loading weights:   7%|▋         | 50/750 [00:00<00:08, 86.44it/s]Loading weights:   9%|▉         | 67/750 [00:00<00:06, 108.00it/s]Loading weights:  11%|█         | 81/750 [00:01<00:05, 115.40it/s]Loading weights:  13%|█▎        | 94/750 [00:01<00:05, 111.78it/s]Loading weights:  15%|█▌        | 114/750 [00:01<00:04, 129.31it/s]Loading weights:  17%|█▋        | 128/750 [00:01<00:05, 123.98it/s]Loading weights:  19%|█▉        | 144/750 [00:01<00:04, 132.75it/s]Loading weights:  21%|██        | 158/750 [00:01<00:04, 132.87it/s]Loading weights:  23%|██▎       | 172/750 [00:01<00:04, 127.60it/s]Loading weights:  25%|██▌       | 191/750 [00:01<00:04, 137.69it/s]Loading weights:  27%|██▋       | 205/750 [00:02<00:04, 131.76it/s]Loading weights:  30%|██▉       | 224/750 [00:02<00:03, 140.87it/s]Loading weights:  32%|███▏      | 239/750 [00:02<00:03, 138.77it/s]Loading weights:  34%|███▍      | 257/750 [00:02<00:03, 144.27it/s]Loading weights:  36%|███▋      | 272/750 [00:02<00:03, 140.41it/s]Loading weights:  39%|███▊      | 290/750 [00:02<00:03, 144.94it/s]Loading weights:  41%|████      | 305/750 [00:02<00:03, 140.83it/s]Loading weights:  43%|████▎     | 323/750 [00:02<00:02, 145.23it/s]Loading weights:  45%|████▌     | 338/750 [00:02<00:02, 138.54it/s]Loading weights:  47%|████▋     | 352/750 [00:03<00:03, 116.78it/s]Loading weights:  49%|████▉     | 367/750 [00:03<00:03, 122.71it/s]Loading weights:  51%|█████     | 380/750 [00:03<00:03, 114.25it/s]Loading weights:  53%|█████▎    | 395/750 [00:03<00:02, 121.18it/s]Loading weights:  69%|██████▉   | 521/750 [00:03<00:00, 413.64it/s]Loading weights:  83%|████████▎ | 621/750 [00:03<00:00, 503.33it/s]Loading weights:  98%|█████████▊| 733/750 [00:03<00:00, 650.44it/s]Loading weights: 100%|██████████| 750/750 [00:03<00:00, 192.39it/s]
+{
+  "parser_failure": 0,
+  "action_loop": 0,
+  "teacher_failure": 0,
+  "action_mismatch": 0,
+  "consistency_failure": 0,
+  "escalation_failure": 0,
+  "records": 540,
+  "resumed_records": 0,
+  "balanced": false,
+  "deployment": {
+    "lm": "base_plus_adapter",
+    "model_path": "/data/public_data/xzs_data/Qwen3-VL-8B-Instruct",
+    "adapter_path": "/data/slide-examiner/runs/part3/d3_formal_v2/train_seed73/adapter",
+    "heads_path": "/data/slide-examiner/runs/part3/d3_formal_v2/train_seed73/d3_heads.pt",
+    "policy_path": "/data/slide-examiner-w77-retry-88c79a8/runs/part3/d3_selection/frozen_policy.json",
+    "confidence_threshold": 0.0,
+    "max_escalations": 1,
+    "route_mode": "sample",
+    "prompt_mode": "generic",
+    "class_router_path": null,
+    "fixed_action": null,
+    "batch_size": 1,
+    "max_image_pixels": 262144,
+    "route_only": false,
+    "worst_case_model_calls": 2,
+    "worst_case_tool_calls": 1
+  },
+  "semantic_counts": {
+    "g7_legal_answer": 60,
+    "geometry_image_only_safe_route": 240,
+    "reference_request": 30,
+    "performed_escalation": 30
+  },
+  "semantic_gate": {
+    "passed": false,
+    "checks": {
+      "g7_image_only_legal_finding": {
+        "eligible": 60,
+        "passed_records": 60,
+        "passed": true
+      },
+      "g2_g6_image_only_safe_route": {
+        "eligible": 240,
+        "passed_records": 240,
+        "passed": true
+      },
+      "reference_escalation_completes": {
+        "eligible": 30,
+        "passed_records": 30,
+        "passed": true
+      },
+      "deck_escalation_completes": {
+        "eligible": 0,
+        "passed_records": 0,
+        "passed": false
+      },
+      "clean_deck_not_forced_positive": {
+        "eligible": 0,
+        "passed_records": 0,
+        "passed": false
+      },
+      "runtime_failures_zero": {
+        "eligible": 540,
+        "passed_records": 540,
+        "passed": true
+      }
+    },
+    "failure_reasons": [
+      "deck_escalation_completes",
+      "clean_deck_not_forced_positive"
+    ]
+  },
+  "clean_control_definition": "is_clean_deck=true, or frozen-dev NO_DEFECT with deck_context_available",
+  "action_distribution": {
+    "REQUEST_REFERENCE": 30,
+    "DEFER": 393,
+    "ANSWER": 117
+  },
+  "target_action_distribution": {
+    "REQUEST_REFERENCE": 120,
+    "CALL_LINTER": 240,
+    "ANSWER": 180
+  },
+  "parser_success": 540,
+  "post_escalation_parser_success": 30,
+  "completed_escalation": 30,
+  "action_correct": 129,
+  "output": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/raw/d3_generic_sample_escalation.jsonl"
+}
+{
+  "output": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/normalized/d3_generic_sample_escalation.jsonl",
+  "rows": 540,
+  "sha256": "75eee4ec3d388293c74856a9f911e65d717d45639dd23273818bf271061546e4"
+}
+Loading weights:   0%|          | 0/750 [00:00<?, ?it/s]Loading weights:   0%|          | 1/750 [00:00<04:55,  2.53it/s]Loading weights:   0%|          | 2/750 [00:00<04:54,  2.54it/s]Loading weights:   1%|          | 4/750 [00:00<02:18,  5.37it/s]Loading weights:   2%|▏         | 12/750 [00:01<00:37, 19.50it/s]Loading weights:   2%|▏         | 17/750 [00:01<00:28, 25.32it/s]Loading weights:   4%|▎         | 27/750 [00:01<00:17, 40.92it/s]Loading weights:   5%|▍         | 37/750 [00:01<00:13, 52.86it/s]Loading weights:   6%|▌         | 45/750 [00:01<00:12, 58.60it/s]Loading weights:   7%|▋         | 52/750 [00:01<00:11, 58.26it/s]Loading weights:   8%|▊         | 60/750 [00:01<00:11, 60.15it/s]Loading weights:   9%|▉         | 70/750 [00:01<00:10, 67.73it/s]Loading weights:  10%|█         | 78/750 [00:01<00:09, 68.09it/s]Loading weights:  11%|█▏        | 86/750 [00:02<00:10, 66.28it/s]Loading weights:  12%|█▏        | 93/750 [00:02<00:10, 65.48it/s]Loading weights:  14%|█▎        | 103/750 [00:02<00:09, 71.54it/s]Loading weights:  15%|█▍        | 111/750 [00:02<00:08, 71.75it/s]Loading weights:  16%|█▌        | 119/750 [00:02<00:08, 70.70it/s]Loading weights:  17%|█▋        | 127/750 [00:02<00:09, 65.84it/s]Loading weights:  18%|█▊        | 137/750 [00:02<00:08, 71.95it/s]Loading weights:  20%|█▉        | 147/750 [00:02<00:08, 75.31it/s]Loading weights:  21%|██        | 155/750 [00:03<00:07, 75.57it/s]Loading weights:  22%|██▏       | 163/750 [00:03<00:08, 72.89it/s]Loading weights:  23%|██▎       | 171/750 [00:03<00:08, 67.89it/s]Loading weights:  24%|██▍       | 181/750 [00:03<00:07, 72.49it/s]Loading weights:  25%|██▌       | 191/750 [00:03<00:07, 75.14it/s]Loading weights:  27%|██▋       | 199/750 [00:03<00:07, 74.83it/s]Loading weights:  28%|██▊       | 207/750 [00:03<00:07, 69.47it/s]Loading weights:  29%|██▊       | 215/750 [00:03<00:08, 64.44it/s]Loading weights:  30%|███       | 225/750 [00:04<00:07, 70.28it/s]Loading weights:  31%|███▏      | 235/750 [00:04<00:06, 74.75it/s]Loading weights:  32%|███▏      | 243/750 [00:04<00:06, 75.59it/s]Loading weights:  33%|███▎      | 251/750 [00:04<00:07, 69.53it/s]Loading weights:  35%|███▍      | 259/750 [00:04<00:07, 61.86it/s]Loading weights:  36%|███▌      | 269/750 [00:04<00:07, 68.49it/s]Loading weights:  37%|███▋      | 279/750 [00:04<00:06, 73.08it/s]Loading weights:  38%|███▊      | 287/750 [00:04<00:06, 73.11it/s]Loading weights:  39%|███▉      | 295/750 [00:05<00:06, 70.17it/s]Loading weights:  40%|████      | 303/750 [00:05<00:06, 64.94it/s]Loading weights:  42%|████▏     | 313/750 [00:05<00:06, 70.23it/s]Loading weights:  43%|████▎     | 323/750 [00:05<00:05, 73.93it/s]Loading weights:  44%|████▍     | 331/750 [00:05<00:05, 74.23it/s]Loading weights:  45%|████▌     | 339/750 [00:05<00:05, 72.38it/s]Loading weights:  46%|████▋     | 347/750 [00:05<00:05, 67.64it/s]Loading weights:  48%|████▊     | 357/750 [00:05<00:05, 74.97it/s]Loading weights:  49%|████▉     | 367/750 [00:05<00:04, 79.99it/s]Loading weights:  50%|█████     | 376/750 [00:06<00:04, 81.46it/s]Loading weights:  51%|█████▏    | 385/750 [00:06<00:04, 78.68it/s]Loading weights:  52%|█████▏    | 393/750 [00:06<00:04, 74.21it/s]Loading weights:  56%|█████▌    | 419/750 [00:06<00:02, 123.47it/s]Loading weights:  61%|██████    | 454/750 [00:06<00:01, 185.09it/s]Loading weights:  65%|██████▌   | 489/750 [00:06<00:01, 228.90it/s]Loading weights:  70%|██████▉   | 523/750 [00:06<00:00, 259.49it/s]Loading weights:  74%|███████▍  | 558/750 [00:06<00:00, 284.43it/s]Loading weights:  79%|███████▉  | 593/750 [00:06<00:00, 301.56it/s]Loading weights:  84%|████████▎ | 628/750 [00:07<00:00, 314.68it/s]Loading weights:  88%|████████▊ | 663/750 [00:07<00:00, 323.46it/s]Loading weights:  93%|█████████▎| 697/750 [00:07<00:00, 326.95it/s]Loading weights:  97%|█████████▋| 730/750 [00:07<00:00, 312.99it/s]Loading weights: 100%|██████████| 750/750 [00:07<00:00, 100.32it/s]
+{
+  "parser_failure": 76,
+  "action_loop": 0,
+  "teacher_failure": 0,
+  "action_mismatch": 0,
+  "consistency_failure": 0,
+  "escalation_failure": 0,
+  "records": 540,
+  "resumed_records": 0,
+  "balanced": false,
+  "deployment": {
+    "lm": "base_plus_adapter",
+    "model_path": "/data/public_data/xzs_data/Qwen3-VL-8B-Instruct",
+    "adapter_path": "/data/slide-examiner/runs/part2/examiner_lora_v2/adapter",
+    "heads_path": null,
+    "policy_path": null,
+    "confidence_threshold": 0.0,
+    "max_escalations": 0,
+    "route_mode": "answer",
+    "prompt_mode": "generic",
+    "class_router_path": null,
+    "fixed_action": null,
+    "batch_size": 1,
+    "max_image_pixels": 262144,
+    "route_only": false,
+    "worst_case_model_calls": 1,
+    "worst_case_tool_calls": 0
+  },
+  "semantic_counts": {
+    "g7_legal_answer": 0,
+    "geometry_image_only_safe_route": 2,
+    "reference_request": 0,
+    "performed_escalation": 0
+  },
+  "semantic_gate": {
+    "passed": false,
+    "checks": {
+      "g7_image_only_legal_finding": {
+        "eligible": 60,
+        "passed_records": 0,
+        "passed": false
+      },
+      "g2_g6_image_only_safe_route": {
+        "eligible": 240,
+        "passed_records": 2,
+        "passed": false
+      },
+      "reference_escalation_completes": {
+        "eligible": 0,
+        "passed_records": 0,
+        "passed": false
+      },
+      "deck_escalation_completes": {
+        "eligible": 0,
+        "passed_records": 0,
+        "passed": false
+      },
+      "clean_deck_not_forced_positive": {
+        "eligible": 0,
+        "passed_records": 0,
+        "passed": false
+      },
+      "runtime_failures_zero": {
+        "eligible": 540,
+        "passed_records": 0,
+        "passed": false
+      }
+    },
+    "failure_reasons": [
+      "g7_image_only_legal_finding",
+      "g2_g6_image_only_safe_route",
+      "reference_escalation_completes",
+      "deck_escalation_completes",
+      "clean_deck_not_forced_positive",
+      "runtime_failures_zero"
+    ]
+  },
+  "clean_control_definition": "is_clean_deck=true, or frozen-dev NO_DEFECT with deck_context_available",
+  "action_distribution": {
+    "DEFER": 76,
+    "ANSWER": 464
+  },
+  "target_action_distribution": {
+    "REQUEST_REFERENCE": 120,
+    "CALL_LINTER": 240,
+    "ANSWER": 180
+  },
+  "parser_success": 540,
+  "post_escalation_parser_success": 0,
+  "completed_escalation": 0,
+  "action_correct": 148,
+  "output": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/raw/part2_v2_generic.jsonl"
+}
+{
+  "output": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/normalized/part2_v2_generic.jsonl",
+  "rows": 540,
+  "sha256": "f76cc18070d3c3bc967e2b1380c0361fd18ebb3286a8a8338e8636e4557cfd5b"
+}
+Loading weights:   0%|          | 0/750 [00:00<?, ?it/s]Loading weights:   0%|          | 1/750 [00:00<03:44,  3.33it/s]Loading weights:   0%|          | 2/750 [00:00<03:39,  3.40it/s]Loading weights:   1%|          | 5/750 [00:00<01:22,  9.02it/s]Loading weights:   2%|▏         | 17/750 [00:00<00:21, 33.78it/s]Loading weights:   4%|▍         | 32/750 [00:00<00:11, 62.16it/s]Loading weights:   6%|▌         | 45/750 [00:01<00:08, 79.62it/s]Loading weights:   8%|▊         | 59/750 [00:01<00:07, 90.71it/s]Loading weights:   9%|▉         | 71/750 [00:01<00:07, 94.25it/s]Loading weights:  11%|█         | 83/750 [00:01<00:06, 97.66it/s]Loading weights:  13%|█▎        | 98/750 [00:01<00:05, 111.04it/s]Loading weights:  15%|█▍        | 112/750 [00:01<00:05, 118.56it/s]Loading weights:  17%|█▋        | 125/750 [00:01<00:05, 117.74it/s]Loading weights:  18%|█▊        | 138/750 [00:01<00:05, 107.86it/s]Loading weights:  20%|██        | 153/750 [00:01<00:05, 117.41it/s]Loading weights:  22%|██▏       | 167/750 [00:02<00:04, 123.26it/s]Loading weights:  24%|██▍       | 180/750 [00:02<00:04, 121.12it/s]Loading weights:  26%|██▌       | 193/750 [00:02<00:04, 112.17it/s]Loading weights:  28%|██▊       | 208/750 [00:02<00:04, 122.14it/s]Loading weights:  30%|██▉       | 224/750 [00:02<00:04, 125.22it/s]Loading weights:  32%|███▏      | 237/750 [00:02<00:04, 117.31it/s]Loading weights:  34%|███▍      | 254/750 [00:02<00:03, 129.86it/s]Loading weights:  36%|███▌      | 268/750 [00:02<00:03, 128.92it/s]Loading weights:  38%|███▊      | 282/750 [00:02<00:03, 121.72it/s]Loading weights:  40%|███▉      | 298/750 [00:03<00:03, 131.29it/s]Loading weights:  42%|████▏     | 312/750 [00:03<00:03, 131.10it/s]Loading weights:  43%|████▎     | 326/750 [00:03<00:03, 124.03it/s]Loading weights:  46%|████▌     | 342/750 [00:03<00:03, 132.63it/s]Loading weights:  47%|████▋     | 356/750 [00:03<00:02, 131.56it/s]Loading weights:  49%|████▉     | 370/750 [00:03<00:03, 123.65it/s]Loading weights:  51%|█████▏    | 386/750 [00:03<00:02, 130.79it/s]Loading weights:  54%|█████▍    | 407/750 [00:03<00:02, 151.43it/s]Loading weights:  73%|███████▎  | 547/750 [00:03<00:00, 499.95it/s]Loading weights:  90%|█████████ | 677/750 [00:04<00:00, 717.17it/s]Loading weights: 100%|██████████| 750/750 [00:04<00:00, 178.88it/s]
+{
+  "parser_failure": 0,
+  "action_loop": 0,
+  "teacher_failure": 0,
+  "action_mismatch": 0,
+  "consistency_failure": 0,
+  "escalation_failure": 0,
+  "records": 540,
+  "resumed_records": 0,
+  "balanced": false,
+  "deployment": {
+    "lm": "base_plus_adapter",
+    "model_path": "/data/public_data/xzs_data/Qwen3-VL-8B-Instruct",
+    "adapter_path": "/data/slide-examiner/runs/part3/d3_formal_v2/train_seed73/adapter",
+    "heads_path": "/data/slide-examiner/runs/part3/d3_formal_v2/train_seed73/d3_heads.pt",
+    "policy_path": "/data/slide-examiner-w77-retry-88c79a8/runs/part3/d3_selection/frozen_policy.json",
+    "confidence_threshold": 0.0,
+    "max_escalations": 1,
+    "route_mode": "class",
+    "prompt_mode": "generic",
+    "class_router_path": "/data/slide-examiner-w77-retry-88c79a8/runs/part3/w76/manual_frozen_router.json",
+    "fixed_action": null,
+    "batch_size": 1,
+    "max_image_pixels": 262144,
+    "route_only": false,
+    "worst_case_model_calls": 2,
+    "worst_case_tool_calls": 1
+  },
+  "semantic_counts": {
+    "g7_legal_answer": 60,
+    "geometry_image_only_safe_route": 240,
+    "reference_request": 120,
+    "performed_escalation": 360
+  },
+  "semantic_gate": {
+    "passed": false,
+    "checks": {
+      "g7_image_only_legal_finding": {
+        "eligible": 60,
+        "passed_records": 60,
+        "passed": true
+      },
+      "g2_g6_image_only_safe_route": {
+        "eligible": 240,
+        "passed_records": 240,
+        "passed": true
+      },
+      "reference_escalation_completes": {
+        "eligible": 120,
+        "passed_records": 120,
+        "passed": true
+      },
+      "deck_escalation_completes": {
+        "eligible": 0,
+        "passed_records": 0,
+        "passed": false
+      },
+      "clean_deck_not_forced_positive": {
+        "eligible": 0,
+        "passed_records": 0,
+        "passed": false
+      },
+      "runtime_failures_zero": {
+        "eligible": 540,
+        "passed_records": 540,
+        "passed": true
+      }
+    },
+    "failure_reasons": [
+      "deck_escalation_completes",
+      "clean_deck_not_forced_positive"
+    ]
+  },
+  "clean_control_definition": "is_clean_deck=true, or frozen-dev NO_DEFECT with deck_context_available",
+  "action_distribution": {
+    "REQUEST_REFERENCE": 120,
+    "CALL_LINTER": 240,
+    "ANSWER": 180
+  },
+  "target_action_distribution": {
+    "REQUEST_REFERENCE": 120,
+    "CALL_LINTER": 240,
+    "ANSWER": 180
+  },
+  "parser_success": 540,
+  "post_escalation_parser_success": 360,
+  "completed_escalation": 360,
+  "action_correct": 540,
+  "output": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/raw/manual_frozen_route.jsonl"
+}
+{
+  "output": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/normalized/manual_frozen_route.jsonl",
+  "rows": 540,
+  "sha256": "01ba2b9e1b1b5892cd949b93e9cc2b45513e0bfdca53bb1dae221078a6529d28"
+}
+Loading weights:   0%|          | 0/750 [00:00<?, ?it/s]Loading weights:   0%|          | 1/750 [00:00<03:42,  3.36it/s]Loading weights:   0%|          | 2/750 [00:00<03:41,  3.37it/s]Loading weights:   1%|          | 4/750 [00:00<01:47,  6.95it/s]Loading weights:   2%|▏         | 15/750 [00:00<00:24, 30.07it/s]Loading weights:   3%|▎         | 26/750 [00:00<00:15, 47.67it/s]Loading weights:   5%|▍         | 37/750 [00:01<00:11, 59.50it/s]Loading weights:   6%|▋         | 48/750 [00:01<00:10, 67.63it/s]Loading weights:   8%|▊         | 59/750 [00:01<00:09, 74.35it/s]Loading weights:   9%|▉         | 70/750 [00:01<00:08, 78.76it/s]Loading weights:  11%|█         | 81/750 [00:01<00:08, 82.73it/s]Loading weights:  12%|█▏        | 92/750 [00:01<00:07, 84.68it/s]Loading weights:  14%|█▎        | 103/750 [00:01<00:07, 85.62it/s]Loading weights:  15%|█▌        | 114/750 [00:01<00:07, 85.82it/s]Loading weights:  16%|█▋        | 123/750 [00:02<00:07, 86.62it/s]Loading weights:  18%|█▊        | 132/750 [00:02<00:07, 84.91it/s]Loading weights:  19%|█▉        | 141/750 [00:02<00:07, 82.65it/s]Loading weights:  20%|██        | 150/750 [00:02<00:07, 81.11it/s]Loading weights:  21%|██▏       | 160/750 [00:02<00:07, 81.98it/s]Loading weights:  23%|██▎       | 171/750 [00:02<00:06, 84.14it/s]Loading weights:  24%|██▍       | 182/750 [00:02<00:06, 86.72it/s]Loading weights:  26%|██▌       | 193/750 [00:02<00:06, 88.32it/s]Loading weights:  27%|██▋       | 204/750 [00:02<00:06, 89.64it/s]Loading weights:  29%|██▊       | 215/750 [00:03<00:05, 90.73it/s]Loading weights:  30%|███       | 226/750 [00:03<00:05, 91.94it/s]Loading weights:  32%|███▏      | 237/750 [00:03<00:05, 92.45it/s]Loading weights:  33%|███▎      | 248/750 [00:03<00:05, 92.05it/s]Loading weights:  35%|███▍      | 259/750 [00:03<00:05, 91.56it/s]Loading weights:  36%|███▌      | 270/750 [00:03<00:05, 90.48it/s]Loading weights:  37%|███▋      | 281/750 [00:03<00:05, 89.54it/s]Loading weights:  39%|███▉      | 292/750 [00:03<00:05, 90.01it/s]Loading weights:  40%|████      | 303/750 [00:04<00:05, 89.21it/s]Loading weights:  42%|████▏     | 314/750 [00:04<00:04, 88.89it/s]Loading weights:  43%|████▎     | 325/750 [00:04<00:04, 88.87it/s]Loading weights:  45%|████▍     | 336/750 [00:04<00:04, 90.96it/s]Loading weights:  46%|████▋     | 347/750 [00:04<00:04, 91.27it/s]Loading weights:  48%|████▊     | 358/750 [00:04<00:04, 92.20it/s]Loading weights:  49%|████▉     | 369/750 [00:04<00:04, 92.63it/s]Loading weights:  51%|█████     | 380/750 [00:04<00:03, 92.67it/s]Loading weights:  52%|█████▏    | 391/750 [00:05<00:03, 91.98it/s]Loading weights:  56%|█████▌    | 419/750 [00:05<00:02, 141.55it/s]Loading weights:  61%|██████    | 456/750 [00:05<00:01, 202.96it/s]Loading weights:  66%|██████▌   | 492/750 [00:05<00:01, 245.63it/s]Loading weights:  70%|███████   | 527/750 [00:05<00:00, 273.86it/s]Loading weights:  75%|███████▌  | 564/750 [00:05<00:00, 299.85it/s]Loading weights:  80%|████████  | 601/750 [00:05<00:00, 318.23it/s]Loading weights:  85%|████████▌ | 638/750 [00:05<00:00, 333.26it/s]Loading weights:  90%|████████▉ | 673/750 [00:05<00:00, 336.53it/s]Loading weights:  94%|█████████▍| 708/750 [00:05<00:00, 338.81it/s]Loading weights:  99%|█████████▉| 743/750 [00:06<00:00, 293.91it/s]Loading weights: 100%|██████████| 750/750 [00:06<00:00, 122.72it/s]
+{
+  "parser_failure": 0,
+  "action_loop": 0,
+  "teacher_failure": 0,
+  "action_mismatch": 0,
+  "consistency_failure": 0,
+  "escalation_failure": 0,
+  "records": 540,
+  "resumed_records": 0,
+  "balanced": false,
+  "deployment": {
+    "lm": "base_plus_adapter",
+    "model_path": "/data/public_data/xzs_data/Qwen3-VL-8B-Instruct",
+    "adapter_path": "/data/slide-examiner/runs/part3/d3_formal_v2/train_seed73/adapter",
+    "heads_path": "/data/slide-examiner/runs/part3/d3_formal_v2/train_seed73/d3_heads.pt",
+    "policy_path": "/data/slide-examiner/runs/part3/d3_formal_v2/train_seed73/run_config.json",
+    "confidence_threshold": 0.0,
+    "max_escalations": 0,
+    "route_mode": "sample",
+    "prompt_mode": "generic",
+    "class_router_path": null,
+    "fixed_action": null,
+    "batch_size": 1,
+    "max_image_pixels": 262144,
+    "route_only": false,
+    "worst_case_model_calls": 1,
+    "worst_case_tool_calls": 0
+  },
+  "semantic_counts": {
+    "g7_legal_answer": 60,
+    "geometry_image_only_safe_route": 240,
+    "reference_request": 0,
+    "performed_escalation": 0
+  },
+  "semantic_gate": {
+    "passed": false,
+    "checks": {
+      "g7_image_only_legal_finding": {
+        "eligible": 60,
+        "passed_records": 60,
+        "passed": true
+      },
+      "g2_g6_image_only_safe_route": {
+        "eligible": 240,
+        "passed_records": 240,
+        "passed": true
+      },
+      "reference_escalation_completes": {
+        "eligible": 0,
+        "passed_records": 0,
+        "passed": false
+      },
+      "deck_escalation_completes": {
+        "eligible": 0,
+        "passed_records": 0,
+        "passed": false
+      },
+      "clean_deck_not_forced_positive": {
+        "eligible": 0,
+        "passed_records": 0,
+        "passed": false
+      },
+      "runtime_failures_zero": {
+        "eligible": 540,
+        "passed_records": 540,
+        "passed": true
+      }
+    },
+    "failure_reasons": [
+      "reference_escalation_completes",
+      "deck_escalation_completes",
+      "clean_deck_not_forced_positive"
+    ]
+  },
+  "clean_control_definition": "is_clean_deck=true, or frozen-dev NO_DEFECT with deck_context_available",
+  "action_distribution": {
+    "DEFER": 423,
+    "ANSWER": 117
+  },
+  "target_action_distribution": {
+    "REQUEST_REFERENCE": 120,
+    "CALL_LINTER": 240,
+    "ANSWER": 180
+  },
+  "parser_success": 540,
+  "post_escalation_parser_success": 0,
+  "completed_escalation": 0,
+  "action_correct": 99,
+  "output": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/raw/learned_sample_route_no_escalation.jsonl"
+}
+{
+  "output": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/normalized/learned_sample_route_no_escalation.jsonl",
+  "rows": 540,
+  "sha256": "df3ef8d63094fd39e8762d7a4a345dadfb907e972cbc0673e383f93410b9438f"
+}
+Loading weights:   0%|          | 0/750 [00:00<?, ?it/s]Loading weights:   0%|          | 1/750 [00:00<03:33,  3.51it/s]Loading weights:   0%|          | 2/750 [00:00<03:31,  3.53it/s]Loading weights:   1%|          | 5/750 [00:00<01:20,  9.28it/s]Loading weights:   2%|▏         | 16/750 [00:00<00:22, 31.99it/s]Loading weights:   4%|▎         | 27/750 [00:00<00:14, 48.87it/s]Loading weights:   5%|▌         | 38/750 [00:01<00:11, 61.25it/s]Loading weights:   7%|▋         | 49/750 [00:01<00:10, 69.82it/s]Loading weights:   8%|▊         | 60/750 [00:01<00:09, 75.88it/s]Loading weights:   9%|▉         | 71/750 [00:01<00:08, 81.46it/s]Loading weights:  11%|█         | 82/750 [00:01<00:07, 84.32it/s]Loading weights:  12%|█▏        | 93/750 [00:01<00:07, 87.62it/s]Loading weights:  14%|█▍        | 104/750 [00:01<00:07, 90.11it/s]Loading weights:  15%|█▌        | 115/750 [00:01<00:07, 90.60it/s]Loading weights:  17%|█▋        | 126/750 [00:01<00:06, 91.24it/s]Loading weights:  18%|█▊        | 137/750 [00:02<00:06, 90.03it/s]Loading weights:  20%|█▉        | 148/750 [00:02<00:06, 92.06it/s]Loading weights:  21%|██        | 159/750 [00:02<00:06, 93.03it/s]Loading weights:  23%|██▎       | 170/750 [00:02<00:06, 93.66it/s]Loading weights:  24%|██▍       | 181/750 [00:02<00:06, 93.26it/s]Loading weights:  26%|██▌       | 192/750 [00:02<00:06, 93.00it/s]Loading weights:  27%|██▋       | 203/750 [00:02<00:05, 91.72it/s]Loading weights:  29%|██▊       | 214/750 [00:02<00:05, 90.72it/s]Loading weights:  30%|███       | 225/750 [00:03<00:05, 91.58it/s]Loading weights:  31%|███▏      | 236/750 [00:03<00:05, 92.17it/s]Loading weights:  33%|███▎      | 247/750 [00:03<00:05, 92.51it/s]Loading weights:  34%|███▍      | 258/750 [00:03<00:05, 92.31it/s]Loading weights:  36%|███▌      | 269/750 [00:03<00:05, 92.46it/s]Loading weights:  37%|███▋      | 280/750 [00:03<00:05, 92.93it/s]Loading weights:  39%|███▉      | 291/750 [00:03<00:04, 92.37it/s]Loading weights:  40%|████      | 302/750 [00:03<00:04, 91.71it/s]Loading weights:  42%|████▏     | 313/750 [00:04<00:04, 93.50it/s]Loading weights:  43%|████▎     | 324/750 [00:04<00:04, 93.52it/s]Loading weights:  45%|████▍     | 335/750 [00:04<00:04, 93.56it/s]Loading weights:  46%|████▌     | 346/750 [00:04<00:04, 93.08it/s]Loading weights:  48%|████▊     | 357/750 [00:04<00:04, 91.70it/s]Loading weights:  49%|████▉     | 368/750 [00:04<00:04, 91.71it/s]Loading weights:  51%|█████     | 379/750 [00:04<00:04, 91.05it/s]Loading weights:  52%|█████▏    | 390/750 [00:04<00:03, 90.90it/s]Loading weights:  55%|█████▌    | 416/750 [00:04<00:02, 134.50it/s]Loading weights:  60%|██████    | 452/750 [00:05<00:01, 195.00it/s]Loading weights:  65%|██████▌   | 489/750 [00:05<00:01, 241.24it/s]Loading weights:  70%|███████   | 526/750 [00:05<00:00, 276.60it/s]Loading weights:  75%|███████▌  | 565/750 [00:05<00:00, 307.62it/s]Loading weights:  81%|████████  | 604/750 [00:05<00:00, 329.51it/s]Loading weights:  85%|████████▌ | 641/750 [00:05<00:00, 340.98it/s]Loading weights:  91%|█████████ | 679/750 [00:05<00:00, 347.72it/s]Loading weights:  95%|█████████▌| 715/750 [00:05<00:00, 347.88it/s]Loading weights: 100%|██████████| 750/750 [00:05<00:00, 300.07it/s]Loading weights: 100%|██████████| 750/750 [00:05<00:00, 126.56it/s]
+{
+  "parser_failure": 0,
+  "action_loop": 0,
+  "teacher_failure": 0,
+  "action_mismatch": 0,
+  "consistency_failure": 0,
+  "escalation_failure": 0,
+  "records": 80,
+  "resumed_records": 0,
+  "balanced": false,
+  "deployment": {
+    "lm": "base_plus_adapter",
+    "model_path": "/data/public_data/xzs_data/Qwen3-VL-8B-Instruct",
+    "adapter_path": "/data/slide-examiner/runs/part3/d3_formal_v2/train_seed73/adapter",
+    "heads_path": "/data/slide-examiner/runs/part3/d3_formal_v2/train_seed73/d3_heads.pt",
+    "policy_path": "/data/slide-examiner-w77-retry-88c79a8/runs/part3/d3_selection/frozen_policy.json",
+    "confidence_threshold": 0.0,
+    "max_escalations": 1,
+    "route_mode": "sample",
+    "prompt_mode": "generic",
+    "class_router_path": null,
+    "fixed_action": null,
+    "batch_size": 1,
+    "max_image_pixels": 262144,
+    "route_only": false,
+    "worst_case_model_calls": 2,
+    "worst_case_tool_calls": 1
+  },
+  "semantic_counts": {
+    "g7_legal_answer": 0,
+    "geometry_image_only_safe_route": 0,
+    "reference_request": 0,
+    "performed_escalation": 0
+  },
+  "semantic_gate": {
+    "passed": false,
+    "checks": {
+      "g7_image_only_legal_finding": {
+        "eligible": 0,
+        "passed_records": 0,
+        "passed": false
+      },
+      "g2_g6_image_only_safe_route": {
+        "eligible": 0,
+        "passed_records": 0,
+        "passed": false
+      },
+      "reference_escalation_completes": {
+        "eligible": 0,
+        "passed_records": 0,
+        "passed": false
+      },
+      "deck_escalation_completes": {
+        "eligible": 0,
+        "passed_records": 0,
+        "passed": false
+      },
+      "clean_deck_not_forced_positive": {
+        "eligible": 40,
+        "passed_records": 40,
+        "passed": true
+      },
+      "runtime_failures_zero": {
+        "eligible": 80,
+        "passed_records": 80,
+        "passed": true
+      }
+    },
+    "failure_reasons": [
+      "g7_image_only_legal_finding",
+      "g2_g6_image_only_safe_route",
+      "reference_escalation_completes",
+      "deck_escalation_completes"
+    ]
+  },
+  "clean_control_definition": "is_clean_deck=true, or frozen-dev NO_DEFECT with deck_context_available",
+  "action_distribution": {
+    "DEFER": 80
+  },
+  "target_action_distribution": {
+    "REQUEST_DECK": 80
+  },
+  "parser_success": 80,
+  "post_escalation_parser_success": 0,
+  "completed_escalation": 0,
+  "action_correct": 0,
+  "output": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/raw/d3_generic_deck_s2_s5.jsonl"
+}
+{
+  "output": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/normalized/d3_generic_deck_s2_s5.jsonl",
+  "rows": 80,
+  "sha256": "1a366436bf91ad78f0a9ed22e9e936aa7b3f1f0fab3d9323645634672a37e683"
+}
+{
+  "output": "/data/slide-examiner/reports/part3/w77/final_test_attempt2/image_scores.json",
+  "arms": [
+    "d3_generic_sample_escalation",
+    "learned_sample_route_no_escalation",
+    "manual_frozen_route",
+    "part2_v2_generic"
+  ]
+}
+{
+  "output": "/data/slide-examiner/reports/part3/w77/final_test_attempt2/primary_comparisons.json",
+  "tests": 5
+}
+Traceback (most recent call last):
+  File "/data/slide-examiner-w77-retry-88c79a8/scripts/part3_d3_evaluate.py", line 757, in <module>
+    main()
+  File "/data/slide-examiner-w77-retry-88c79a8/scripts/part3_d3_evaluate.py", line 753, in main
+    args.function(args)
+  File "/data/slide-examiner-w77-retry-88c79a8/scripts/part3_d3_evaluate.py", line 613, in plot
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'

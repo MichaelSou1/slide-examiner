@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-07-19T16:11:42.183907+00:00",
+  "host": "huirui",
+  "source_attempt": {
+    "path": "reports/part3/w77/final_test_attempt2/attempt.json",
+    "attempt": 2,
+    "status": "failed",
+    "exit_code": 1,
+    "failure_reason": "ModuleNotFoundError: No module named matplotlib during plotting after inference, normalization, image scoring, and primary comparisons completed"
+  },
+  "recovery": {
+    "postprocess_only": true,
+    "inference_rerun": false,
+    "commands": [
+      "part3_d3_evaluate.py plot",
+      "part3_d3_evaluate.py score (deck only)"
+    ],
+    "status": "completed"
+  },
+  "inference_row_counts": {
+    "d3_generic_sample_escalation": {
+      "raw": 540,
+      "normalized": 540
+    },
+    "part2_v2_generic": {
+      "raw": 540,
+      "normalized": 540
+    },
+    "manual_frozen_route": {
+      "raw": 540,
+      "normalized": 540
+    },
+    "learned_sample_route_no_escalation": {
+      "raw": 540,
+      "normalized": 540
+    },
+    "d3_generic_deck_s2_s5": {
+      "raw": 80,
+      "normalized": 80
+    }
+  },
+  "normalized_artifacts": [
+    {
+      "path": "runs/part3/w77/final_test_attempt2/normalized/d3_generic_deck_s2_s5.jsonl",
+      "bytes": 107080,
+      "sha256": "1a366436bf91ad78f0a9ed22e9e936aa7b3f1f0fab3d9323645634672a37e683"
+    },
+    {
+      "path": "runs/part3/w77/final_test_attempt2/normalized/d3_generic_sample_escalation.jsonl",
+      "bytes": 1083926,
+      "sha256": "75eee4ec3d388293c74856a9f911e65d717d45639dd23273818bf271061546e4"
+    },
+    {
+      "path": "runs/part3/w77/final_test_attempt2/normalized/learned_sample_route_no_escalation.jsonl",
+      "bytes": 975032,
+      "sha256": "df3ef8d63094fd39e8762d7a4a345dadfb907e972cbc0673e383f93410b9438f"
+    },
+    {
+      "path": "runs/part3/w77/final_test_attempt2/normalized/manual_frozen_route.jsonl",
+      "bytes": 1321132,
+      "sha256": "01ba2b9e1b1b5892cd949b93e9cc2b45513e0bfdca53bb1dae221078a6529d28"
+    },
+    {
+      "path": "runs/part3/w77/final_test_attempt2/normalized/part2_v2_generic.jsonl",
+      "bytes": 1352033,
+      "sha256": "f76cc18070d3c3bc967e2b1380c0361fd18ebb3286a8a8338e8636e4557cfd5b"
+    }
+  ],
+  "postprocessed_artifacts": [
+    {
+      "path": "reports/part3/w77/final_test_attempt2/deck_scores.json",
+      "bytes": 3825,
+      "sha256": "2c29daeca25e9f3a2ac5b4b5f6668c41f6cad8d4e816953b7608884d78fa6907"
+    },
+    {
+      "path": "reports/part3/w77/final_test_attempt2/plots/accuracy_cost_pareto.png",
+      "bytes": 60637,
+      "sha256": "fbcab6380fe47a1b504893dcfda94f87e36b5c93d2528617172a1989ebfe0c69"
+    },
+    {
+      "path": "reports/part3/w77/final_test_attempt2/plots/risk_coverage.png",
+      "bytes": 87443,
+      "sha256": "7f09c30b185b39d3d7d21933a0985e89a0817ecfe590db66d429a95e3c35d115"
+    },
+    {
+      "path": "logs/part3/w77/final_test_attempt2_postprocess.log",
+      "bytes": 3142,
+      "sha256": "ffd558d2e905fef29b6233bb1c3f214f3d56280fddcf7544a445b30bd349deca"
+    }
+  ],
+  "immutable_failure_evidence": [
+    {
+      "path": "reports/part3/w77/final_test_attempt2/attempt.json",
+      "bytes": 324,
+      "sha256": "702d0e4061ea47ff3b7efb5735ee4e56b4c05caaeb81a9dcef74096722d50b55"
+    },
+    {
+      "path": "reports/part3/w77/final_test_attempt2/run_inventory.json",
+      "bytes": 161812,
+      "sha256": "3ab046252d9caed06f0faf55bf5ac00aefa110946be7255f8f02fbd531860279"
+    },
+    {
+      "path": "logs/part3/w77/final_test_attempt2.log",
+      "bytes": 33704,
+      "sha256": "1b334c7c3898683b2f883a3c32551bd7dc25355b4d5664ea13fd66418690b1d7"
+    },
+    {
+      "path": "logs/part3/w77/final_test_attempt2_launcher.log",
+      "bytes": 34082,
+      "sha256": "3242d7bfa1004d9519dd584ed83a9c01102cb4719bef1c053a015e7dac4aa071"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "positive_source_rows": 80,
+  "clean_source_rows": 80,
+  "selected_pairs_per_class": {
+    "S2_NARRATIVE_ORDER_BREAK": 20,
+    "S5_MISSING_LOGIC_SECTION": 20
+  },
+  "initial_records": 80,
+  "counterpart_records": 80,
+  "initial_limit": 80,
+  "manifests": [
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/final_deck_rendered.jsonl",
+      "sha256": "e473e152c3a1feb5284662f9ed87f809e9a8c21a6ce8450efde912d7e8e0e8e2"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/final_deck_rendered.jsonl",
+      "sha256": "e473e152c3a1feb5284662f9ed87f809e9a8c21a6ce8450efde912d7e8e0e8e2"
+    }
+  ],
+  "output": "/data/slide-examiner/runs/part3/w77/final_test_attempt2/final_deck_runtime.jsonl",
+  "output_sha256": "fc714d8842c8aabb3f1a75a6c0002e6775dee32c80c075943108ffc258e103e4",
+  "split": "final_test",
+  "final_test_read": true
+}

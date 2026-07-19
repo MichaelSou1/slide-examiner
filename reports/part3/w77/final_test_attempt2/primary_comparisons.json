@@ -1,0 +1,151 @@
+{
+  "method": "Holm",
+  "alpha": 0.05,
+  "tests": [
+    {
+      "name": "D3 generic vs vanilla FT generic on G7",
+      "left": "d3_generic_sample_escalation",
+      "right": "part2_v2_generic",
+      "defects": [
+        "G7_RENDER_CONTAINMENT_OVERFLOW"
+      ],
+      "endpoint": "paired row correctness",
+      "key": "record_id",
+      "pairs": 46,
+      "left_wins": 16,
+      "right_wins": 28,
+      "discordant": 44,
+      "p_value": 0.09614175442061423,
+      "left_endpoint_summary": {
+        "canonical_endpoint": "row_correctness",
+        "eligible_rows": 60,
+        "adverse_events": 36,
+        "adverse_rate": 0.6
+      },
+      "right_endpoint_summary": {
+        "canonical_endpoint": "row_correctness",
+        "eligible_rows": 46,
+        "adverse_events": 18,
+        "adverse_rate": 0.391304347826087
+      },
+      "adjusted_p": 0.38456701768245694,
+      "reject": false
+    },
+    {
+      "name": "D3 generic vs vanilla FT generic macro",
+      "left": "d3_generic_sample_escalation",
+      "right": "part2_v2_generic",
+      "endpoint": "paired row correctness",
+      "key": "record_id",
+      "pairs": 464,
+      "left_wins": 37,
+      "right_wins": 28,
+      "discordant": 65,
+      "p_value": 0.3210841356849956,
+      "left_endpoint_summary": {
+        "canonical_endpoint": "row_correctness",
+        "eligible_rows": 540,
+        "adverse_events": 237,
+        "adverse_rate": 0.4388888888888889
+      },
+      "right_endpoint_summary": {
+        "canonical_endpoint": "row_correctness",
+        "eligible_rows": 464,
+        "adverse_events": 196,
+        "adverse_rate": 0.4224137931034483
+      },
+      "adjusted_p": 0.9632524070549868,
+      "reject": false
+    },
+    {
+      "name": "learned route vs frozen route macro",
+      "left": "d3_generic_sample_escalation",
+      "right": "manual_frozen_route",
+      "endpoint": "paired row correctness",
+      "key": "record_id",
+      "pairs": 540,
+      "left_wins": 0,
+      "right_wins": 133,
+      "discordant": 133,
+      "p_value": 1.8367099231598242e-40,
+      "left_endpoint_summary": {
+        "canonical_endpoint": "row_correctness",
+        "eligible_rows": 540,
+        "adverse_events": 237,
+        "adverse_rate": 0.4388888888888889
+      },
+      "right_endpoint_summary": {
+        "canonical_endpoint": "row_correctness",
+        "eligible_rows": 540,
+        "adverse_events": 104,
+        "adverse_rate": 0.1925925925925926
+      },
+      "adjusted_p": 9.183549615799121e-40,
+      "reject": true
+    },
+    {
+      "name": "D3 defer vs no defer on G2-G6 paired-clean FPR",
+      "left": "d3_generic_sample_escalation",
+      "right": "learned_sample_route_no_escalation",
+      "defects": [
+        "G2_ELEMENT_OVERLAP",
+        "G3_ALIGNMENT_OFFSET",
+        "G5_BRAND_COLOR_VIOLATION",
+        "G6_MARGIN_VIOLATION"
+      ],
+      "endpoint": "paired-clean false-positive avoidance",
+      "key": "record_id",
+      "pairs": 120,
+      "left_wins": 0,
+      "right_wins": 0,
+      "discordant": 0,
+      "p_value": 1.0,
+      "left_endpoint_summary": {
+        "canonical_endpoint": "paired_clean_fpr",
+        "eligible_rows": 120,
+        "adverse_events": 0,
+        "adverse_rate": 0.0
+      },
+      "right_endpoint_summary": {
+        "canonical_endpoint": "paired_clean_fpr",
+        "eligible_rows": 120,
+        "adverse_events": 0,
+        "adverse_rate": 0.0
+      },
+      "adjusted_p": 1.0,
+      "reject": false
+    },
+    {
+      "name": "D3 defer vs no defer on G2-G6 row risk",
+      "left": "d3_generic_sample_escalation",
+      "right": "learned_sample_route_no_escalation",
+      "defects": [
+        "G2_ELEMENT_OVERLAP",
+        "G3_ALIGNMENT_OFFSET",
+        "G5_BRAND_COLOR_VIOLATION",
+        "G6_MARGIN_VIOLATION"
+      ],
+      "endpoint": "G2-G6 row risk",
+      "key": "record_id",
+      "pairs": 240,
+      "left_wins": 0,
+      "right_wins": 0,
+      "discordant": 0,
+      "p_value": 1.0,
+      "left_endpoint_summary": {
+        "canonical_endpoint": "row_risk",
+        "eligible_rows": 240,
+        "adverse_events": 120,
+        "adverse_rate": 0.5
+      },
+      "right_endpoint_summary": {
+        "canonical_endpoint": "row_risk",
+        "eligible_rows": 240,
+        "adverse_events": 120,
+        "adverse_rate": 0.5
+      },
+      "adjusted_p": 1.0,
+      "reject": false
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "status": "failed",
+  "started_at_utc": "2026-07-19T10:04:17.301859+00:00",
+  "host": "huirui",
+  "unlock_registry": "/data/slide-examiner-w77-retry-88c79a8/release/part3/d3/final_test_retry_unlock.json",
+  "attempt": 2,
+  "exit_code": 1,
+  "finished_at_utc": "2026-07-19T16:05:43.180941+00:00"
+}

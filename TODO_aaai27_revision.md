@@ -326,7 +326,7 @@
   - S2 clean deck 不再因缺负样本而恒报；
   - parser failure、teacher failure、action loop 均有显式计数。
 - [x] **摘要锁定门（做到这里即可锁定并提交方法性 Abstract）**：W7.0 的 RQ/metrics/成功标准已冻结；W7.1 split 与防泄漏脚本通过；W7.2 teacher/action 数据有真实 artifact；W7.3 联合损失与统一 generic inference 已实现；W7.4 正式 seed42 QLoRA→merge→generic inference→单次 escalation→scoring smoke 全通过。此时摘要可写“we introduce attribution-guided distillation and selective tool/defer learning”，但**不得写性能提升、成本下降、覆盖数或‘模型已学会’等结果性结论**（2026-07-18）。
-- [ ] 摘要锁定后，除非方法失败导致 claim 不成立，只允许在 W7.7 后填入预先声明的 final-test 数字；禁止根据 validation 调换 primary endpoint。
+- [x] 摘要锁定后，除非方法失败导致 claim 不成立，只允许在 W7.7 后填入预先声明的 final-test 数字；W7.7 已按冻结 endpoint 完成且未因 negative 调换 primary endpoint（2026-07-19）。本项仅表示结果数字现已可用，不表示 W4 的 Abstract/Conclusion 已实际改写或提交。
 
 ### 7.5 正式训练与 dev-only 模型选择
 
@@ -351,13 +351,17 @@
 
 ### 7.7 冻结评测、统计与最终摘要数字
 
-- [ ] 方法、checkpoint、threshold、primary comparisons 和表格模板全部冻结并 commit 后，才解锁 `final_test`；只运行一次，失败重跑仅限有日志可证的系统/解析错误，不能因结果差换 checkpoint。
-- [ ] 主表逐类报告 balanced accuracy、precision/recall/specificity、paired-clean FPR、Wilson CI、named localization；另表报告 action accuracy、defer/coverage、calls、tokens、latency。
-- [ ] 画 risk–coverage 与 accuracy–cost Pareto；固定 coverage 点比较 selective risk，并报告工具不可用时的 graceful degradation。
-- [ ] 预先定义并执行最小检验族：D3-generic vs vanilla-FT-generic（G7 与 macro）、learned route vs frozen route（macro/cost）、D3 defer vs no-defer（G2–G6 FPR/risk）；Holm 校正，探索性 per-class 检验单列，不把所有表格数字塞进一个族。
-- [ ] 外部真实迁移继续使用 SlideAudit，并明确其无 IR/reference 的输入边界；若 D3 仍 sim-to-real 失败，作为核心 negative 如实保留，不用合成 final test 覆盖。
-- [ ] **只有完成本节后，才可在 Abstract/Conclusion 填最终结果性数字**：优先写 generic-prompt G7 recovery、macro bal-acc、paired-clean FPR 与平均调用成本；`m/9 covered` 不再作为 headline，更不得写 `certified`。
-- [ ] 若 full D3 未达到预设成功门槛：保留诊断与 honest negative；按消融定位是 teacher 不可蒸馏、router 不泛化还是 defer 过度，不回退到事后 LTT 包装负结果。
+> **W7.7 frozen final-test 验收（2026-07-19）**：freeze commit `b7ba7c4` 后才解锁 untouched final test。attempt 1 因缺 `playwright` 在推理前失败，证据原样保留；唯一 infrastructure retry（attempt 2）完成全部 4×540 image rows 与 80 deck rows、normalization、image scoring 和 5 项 Holm comparisons 后，绘图阶段因缺 `matplotlib` 以 `status=failed` / exit 1 终止。该失败标记及原 inventory 未被篡改；安装依赖后只基于既有 normalized JSONL 补做 plot 与 deck score，`postprocess_inventory.json` 明确 `inference_rerun=false`、`postprocess_only=true`。正式结果位于 `reports/part3/w77/final_test_attempt2/`，raw/normalized/runtime 与完整日志位于 `runs/part3/w77/final_test_attempt2/`、`logs/part3/w77/`。
+>
+> **最终 honest-negative 快照**：D3 generic macro bal-acc `0.5796`、recall `0.2333`、specificity `0.9259`、paired-clean FPR `0.0741`、coverage `0.2722`、mean calls `1.0556`、mean tokens `451.06`、latency `12.14s`，50/75/90% fixed coverage 均不可达；人工 frozen route bal-acc `0.8259` / coverage `0.7778`，显著优于 learned route（Holm-adjusted `p=9.18e-40`）。D3 对 Part 2 的 G7 与 macro 均不显著（adjusted `p=0.3846/0.9633`），defer 对 G2–G6 FPR/risk 无改善（两项 adjusted `p=1.0`）；deck S2/S5 全部 defer（bal-acc `0.5`、recall `0`、coverage `0`）。因此 full D3 未达到成功门，learned router 未泛化且 escalation/defer 未带来预期改善，不换 checkpoint、不回退包装为 LTT。SlideAudit 继续引用 W7.6 的独立无 IR/reference 迁移结果（bal-acc `0.5034`、5 个 action-loop/escalation failures），不冒充 synthetic final-test 覆盖。
+
+- [x] 方法、checkpoint、threshold、primary comparisons 和表格模板全部冻结并 commit 后，才解锁 `final_test`；只运行一次，失败重跑仅限有日志可证的系统/解析错误，不能因结果差换 checkpoint。
+- [x] 主表逐类报告 balanced accuracy、precision/recall/specificity、paired-clean FPR、Wilson CI、named localization；另表报告 action accuracy、defer/coverage、calls、tokens、latency。
+- [x] 画 risk–coverage 与 accuracy–cost Pareto；固定 coverage 点比较 selective risk，并报告工具不可用时的 graceful degradation。
+- [x] 预先定义并执行最小检验族：D3-generic vs vanilla-FT-generic（G7 与 macro）、learned route vs frozen route（macro/cost）、D3 defer vs no-defer（G2–G6 FPR/risk）；5 项检验已做 Holm 校正，探索性 per-class 数字不并入该族。
+- [x] 外部真实迁移继续使用 SlideAudit，并明确其无 IR/reference 的输入边界；D3 sim-to-real 失败作为核心 negative 如实保留，未用合成 final test 覆盖。
+- [x] **只有完成本节后，才可在 Abstract/Conclusion 填最终结果性数字**：W7.7 已完成，现可使用上述冻结 final-test 数字；本项不表示 W4 的正文改写已经完成。`m/9 covered` 不再作为 headline，更不得写 `certified`。
+- [x] full D3 未达到预设成功门槛：已保留诊断与 honest negative，定位为 learned router 不泛化、defer/escalation 过度且无 G2–G6 风险收益；未换 checkpoint，未回退到事后 LTT 包装负结果。
 
 ### 7.8 论文重构与验收
 
