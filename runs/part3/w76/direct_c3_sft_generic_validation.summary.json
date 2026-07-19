@@ -1,0 +1,90 @@
+{
+  "parser_failure": 0,
+  "action_loop": 0,
+  "teacher_failure": 0,
+  "action_mismatch": 0,
+  "consistency_failure": 0,
+  "escalation_failure": 0,
+  "records": 216,
+  "resumed_records": 0,
+  "balanced": false,
+  "deployment": {
+    "lm": "base_plus_adapter",
+    "model_path": "/data/public_data/xzs_data/Qwen3-VL-8B-Instruct",
+    "adapter_path": "runs/part3/d3_formal_v2/direct_c3_seed42/adapter",
+    "heads_path": null,
+    "policy_path": null,
+    "confidence_threshold": 0.0,
+    "max_escalations": 0,
+    "route_mode": "answer",
+    "prompt_mode": "generic",
+    "class_router_path": null,
+    "fixed_action": null,
+    "batch_size": 1,
+    "max_image_pixels": 262144,
+    "route_only": false,
+    "worst_case_model_calls": 1,
+    "worst_case_tool_calls": 0
+  },
+  "semantic_counts": {
+    "g7_legal_answer": 24,
+    "geometry_image_only_safe_route": 0,
+    "reference_request": 0,
+    "performed_escalation": 0
+  },
+  "semantic_gate": {
+    "passed": false,
+    "checks": {
+      "g7_image_only_legal_finding": {
+        "eligible": 24,
+        "passed_records": 24,
+        "passed": true
+      },
+      "g2_g6_image_only_safe_route": {
+        "eligible": 96,
+        "passed_records": 0,
+        "passed": false
+      },
+      "reference_escalation_completes": {
+        "eligible": 0,
+        "passed_records": 0,
+        "passed": false
+      },
+      "deck_escalation_completes": {
+        "eligible": 0,
+        "passed_records": 0,
+        "passed": false
+      },
+      "clean_deck_not_forced_positive": {
+        "eligible": 0,
+        "passed_records": 0,
+        "passed": false
+      },
+      "runtime_failures_zero": {
+        "eligible": 216,
+        "passed_records": 216,
+        "passed": true
+      }
+    },
+    "failure_reasons": [
+      "g2_g6_image_only_safe_route",
+      "reference_escalation_completes",
+      "deck_escalation_completes",
+      "clean_deck_not_forced_positive"
+    ]
+  },
+  "clean_control_definition": "is_clean_deck=true, or frozen-dev NO_DEFECT with deck_context_available",
+  "action_distribution": {
+    "ANSWER": 216
+  },
+  "target_action_distribution": {
+    "REQUEST_REFERENCE": 48,
+    "CALL_LINTER": 96,
+    "ANSWER": 72
+  },
+  "parser_success": 216,
+  "post_escalation_parser_success": 0,
+  "completed_escalation": 0,
+  "action_correct": 72,
+  "output": "runs/part3/w76/direct_c3_sft_generic_validation.jsonl"
+}

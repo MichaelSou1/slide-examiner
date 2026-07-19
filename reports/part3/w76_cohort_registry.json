@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "scope": "W7.6 validation only",
+  "aggregation": "cohort_independent_no_cross_cohort_macro",
+  "primary_comparisons_cohort": "paired_image_primary",
+  "cohorts": {
+    "paired_image_primary": [
+      "runs/part3/w76/normalized/zero_shot_8b_generic.jsonl",
+      "runs/part3/w76/normalized/zero_shot_30b_generic.jsonl",
+      "runs/part3/w76/normalized/part2_v2_generic.jsonl",
+      "runs/part3/w76/normalized/fixed_c0.jsonl",
+      "runs/part3/w76/normalized/uniform_c3.jsonl",
+      "runs/part3/w76/normalized/manual_frozen_route.jsonl",
+      "runs/part3/w76/normalized/compute_matched_vanilla_generic.jsonl",
+      "runs/part3/w76/normalized/learned_class_route.jsonl",
+      "runs/part3/w76/normalized/learned_sample_route_no_escalation.jsonl",
+      "runs/part3/w76/normalized/d3_generic_sample_escalation.jsonl",
+      "runs/part3/w76/normalized/teacher_c3.jsonl",
+      "runs/part3/w76/normalized/d3_c3.jsonl",
+      "runs/part3/w76/normalized/direct_c3_sft_generic.jsonl",
+      "runs/part3/w76/normalized/ablation_no_distill.jsonl",
+      "runs/part3/w76/normalized/ablation_no_pair.jsonl",
+      "runs/part3/w76/normalized/ablation_no_severity.jsonl",
+      "runs/part3/w76/normalized/ablation_no_route.jsonl",
+      "runs/part3/w76/normalized/ablation_no_select.jsonl"
+    ],
+    "availability_no_ir": [
+      "runs/part3/w76/normalized/d3_generic_no_ir.jsonl"
+    ],
+    "availability_no_reference": [
+      "runs/part3/w76/normalized/d3_generic_no_reference.jsonl"
+    ],
+    "novel_template": [
+      "runs/part3/w76/normalized/d3_generic_novel_template.jsonl"
+    ],
+    "heldout_severity": [
+      "runs/part3/w76/normalized/d3_generic_heldout_severity.jsonl"
+    ],
+    "deck_s2_s5": [
+      "runs/part3/w76/normalized/d3_generic_deck_s2_s5.jsonl"
+    ],
+    "slideaudit": [
+      "runs/part3/w76/normalized/d3_generic_slideaudit.jsonl"
+    ]
+  }
+}

@@ -134,6 +134,26 @@ def test_score_cohorts_keeps_heterogeneous_slices_separate(tmp_path):
     assert payload["cohorts"]["heldout_severity"]["arms"]["d3"]["records"] == 1
 
 
+def test_plot_selects_named_cohort_from_cohort_scores(tmp_path):
+    score_path = tmp_path / "scores.json"
+    score_path.write_text(json.dumps({"cohorts": {"paired_image_primary": {"arms": {
+        "d3": {
+            "risk_coverage": [{"coverage": 1.0, "risk": 0.25}],
+            "macro": {"balanced_accuracy": 0.75},
+            "routing_and_cost": {"mean_total_tokens": 10.0},
+        }
+    }}}}))
+    output_dir = tmp_path / "plots"
+    completed = subprocess.run([
+        sys.executable, str(REPO / "scripts/part3_d3_evaluate.py"), "plot",
+        "--scores", str(score_path), "--cohort", "paired_image_primary",
+        "--output-dir", str(output_dir),
+    ], cwd=REPO, check=False, capture_output=True, text=True)
+    assert completed.returncode == 0, completed.stderr
+    assert (output_dir / "risk_coverage.png").is_file()
+    assert (output_dir / "accuracy_cost_pareto.png").is_file()
+
+
 def test_normalize_runtime_row_uses_post_escalation_answer():
     row = normalize_runtime_row({
         "sample_id": "pair-a-positive", "pair_id": "pair-a", "defect": "G2_X",
@@ -422,3 +442,26 @@ def test_final_test_commands_expose_separate_guard_repo():
         [sys.executable, str(REPO / "scripts/part3_d3_evaluate.py"),
          "materialize", "--help"], capture_output=True, text=True, check=True)
     assert "--guard-repo" in result.stdout
+
+
+def test_final_once_executes_frozen_code_from_guard_checkout():
+    script = (REPO / "scripts/part3_d3_final_once.sh").read_text()
+    assert 'CODE_ROOT="$GUARD_REPO"' in script
+    assert '"$CODE_ROOT/scripts/part3_d3_evaluate.py"' in script
+    assert '"$CODE_ROOT/scripts/part3_d3_infer.py"' in script
+    assert 'export PYTHONPATH="$CODE_ROOT' in script
+    assert 'POLICY="$CODE_ROOT/runs/part3/d3_selection/frozen_policy.json"' in script
+    assert '"$CODE_ROOT/data/part3/d3/final_test_image.jsonl"' in script
+    assert '"$CODE_ROOT/data/part3/d3/final_test_deck.jsonl"' in script
+    assert '"$CODE_ROOT/reports/part3/w77_primary_comparisons.json"' in script
+
+
+def test_final_once_inventories_final_attempt_state():
+    script = (REPO / "scripts/part3_d3_final_once.sh").read_text()
+    finish = script[script.index("finish_attempt()") : script.index("trap finish_attempt EXIT")]
+    assert 'payload.update({' in finish
+    assert 'target.write_text(json.dumps({' in finish
+    assert finish.index('payload.update({') < finish.index('target.write_text(json.dumps({')
+    assert '"attempt_status": payload["status"]' in finish
+    assert 'Path(sys.argv[6])' in finish
+    assert '({log} if log.is_file() else set())' in finish

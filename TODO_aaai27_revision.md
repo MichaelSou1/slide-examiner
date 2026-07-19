@@ -339,13 +339,15 @@
 
 > **当前入口（2026-07-18）**：训练侧已有 compute-matched vanilla 与五项 loss ablation checkpoint，但“训练完成”不等于本节验收完成。现在须在不读取 `final_test` 的前提下，先把 baseline/router/teacher/prompt/availability/deck 各臂的统一推理与 scoring 跑在 dev/validation，生成可比较 artifact；不得仅凭 head loss 勾选。建议顺序：① baseline + router 主矩阵；② teacher/prompt 内化；③ availability/OOD + deck 专项；④ 冻结 W7.7 表格模板和一次性运行命令。
 
-- [ ] Baselines：zero-shot 8B、zero-shot 30B、当前 vanilla Part 2 FT、fixed C0、uniform C3、人工 frozen route、compute-matched vanilla FT（相同数据量/step）。
-- [ ] Router 对照：人工 fixed route、learned class-level route、learned sample-level route、sample-level + escalation/defer。
+> **W7.6 validation 验收（2026-07-19；`final_test` untouched）**：24 个预定 arm/slice 已全部完成并分别保留 raw JSONL、summary、normalized JSONL 与完整日志；正式 cohort-isolated 汇总为 `reports/part3/w76/validation_scores.json`，预声明 Holm 检验为 `reports/part3/w76/validation_comparisons.json`，图为 `reports/part3/w76/plots/`。paired-image primary 有 18 arms × 216 rows；no-IR/no-reference/novel-template 各 216 rows，held-out severity 144 rows，deck 48 rows，SlideAudit 280 rows。结果如实保留明显 negative：D3-generic macro bal-acc `0.5972`，低于人工 frozen route `0.8426`；G7 对 Part 2 无优势（24 pairs，Holm-adjusted `p=1.0`）；direct-C3 SFT generic bal-acc `0.5000`，未显示“只增加 C3 labels”即可替代 attribution-selected supervision；deck S2/S5 recall `0` / specificity `1`；SlideAudit bal-acc `0.5034`、5 个 action-loop/escalation failures。zero-shot 30B 的 93/216 parser failures 也按冻结 policy 原样计数，未因结果不利重跑。
+
+- [x] Baselines：zero-shot 8B、zero-shot 30B、当前 vanilla Part 2 FT、fixed C0、uniform C3、人工 frozen route、compute-matched vanilla FT（相同数据量/step）。18-arm primary cohort 与逐 arm 输入 hash 见 `reports/part3/w76/validation_scores.json`；raw/summary/normalized/log 均在 `runs/part3/w76/`、`logs/part3/w76/`（2026-07-19）。
+- [x] Router 对照：人工 fixed route、learned class-level route、learned sample-level route、sample-level + escalation/defer。validation 上人工 frozen route macro bal-acc `0.8426`，显著优于 learned sample route `0.5972`（216 aligned pairs，Holm-adjusted `p=1.11e-15`），因此 learned-router 泛化失败作为核心 negative 保留（2026-07-19）。
 - [x] **重做完整 Loss 消融**：去 `distill`、去 `pair`、去 `severity`、去 `route`、去 `select/defer` 五项均已用统一 seed 42 完成 768 steps / 完整 2,151 dev；完整训练状态保存在 `huirui:/data/slide-examiner/runs/part3/d3_formal_v2/ablation_*_seed42/`，小型 metrics、config、逐 step history、SHA-256 inventory 与运行日志已加入 Git（2026-07-18；未读取 `final_test`）。旧 150 记录仅用于溯源，不再作为本次结果。若篇幅不足，正文保留最能回答 RQ 的三项，其余进 supplement。
-- [ ] Teacher 消融：C3 labels 直接 SFT vs attribution-selected teacher；证明收益不是“多收一批 C3 输出再微调”。
-- [ ] Prompt 内化对照：teacher-C3、vanilla-FT+generic、D3+generic、D3+C3；主结果必须是 D3+generic，D3+C3 只用于测残余 elicitation gap。
-- [ ] Availability/OOD：去掉 IR、去掉 reference、novel template、held-out severity；检查动作是否随可用证据改变，而不是只背 defect type。
-- [ ] Deck 负例专项：S2/S5 在补 clean-deck 前后对照，分别报告 recall 与 specificity，禁止用 balanced aggregate 掩盖恒报。
+- [x] Teacher 消融：新增 direct-C3-label SFT seed42（768 steps）并与 attribution-selected D3 统一用 generic prompt 验证；direct-C3 bal-acc `0.5000` / recall `0.1111`，D3-generic 为 `0.5972` / `0.2870`。该结果支持“标签量本身不足”，但不声称 full D3 达到成功门槛；训练/中断恢复证据在 `runs/part3/d3_formal_v2/direct_c3_seed42*` 与 `logs/part3/w76/direct_c3_train*.log`（2026-07-19）。
+- [x] Prompt 内化对照：teacher-C3、vanilla-FT+generic、D3+generic、D3+C3 已进入同一 primary cohort；D3+C3 bal-acc `0.6991` 高于 D3-generic `0.5972`，显示仍有明显 elicitation gap，主结果仍严格使用 D3+generic（2026-07-19）。
+- [x] Availability/OOD：no-IR、no-reference、novel-template、held-out-severity 作为独立 cohort 评分，未与 primary 宏平均混合；bal-acc 分别为 `0.5972 / 0.6094 / 0.6019 / 0.5833`。no-reference 有 12 个预期 action-loop/escalation failures，按不可用证据 slice 如实保留（2026-07-19；`reports/part3/w76_cohort_registry.json`）。
+- [x] Deck 负例专项：S2/S5 的 48 rows（24 positive + 24 clean）独立报告；D3 全部 defer，recall `0`、specificity `1`、coverage `0`，明确为失败而非用 balanced aggregate 掩盖恒报（2026-07-19）。
 
 ### 7.7 冻结评测、统计与最终摘要数字
 

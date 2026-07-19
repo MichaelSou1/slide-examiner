@@ -584,7 +584,17 @@ def compare(args: argparse.Namespace) -> None:
 def plot(args: argparse.Namespace) -> None:
     import matplotlib.pyplot as plt
 
-    scored = json.loads(args.scores.read_text())["arms"]
+    payload = json.loads(args.scores.read_text())
+    if getattr(args, "cohort", None):
+        try:
+            scored = payload["cohorts"][args.cohort]["arms"]
+        except KeyError as error:
+            available = sorted(payload.get("cohorts", {}))
+            raise ValueError(
+                f"cohort {args.cohort!r} not found; available cohorts: {available}"
+            ) from error
+    else:
+        scored = payload["arms"]
     args.output_dir.mkdir(parents=True, exist_ok=True)
     fig, axis = plt.subplots(figsize=(6.4, 4.2))
     for arm, metrics in scored.items():
@@ -709,6 +719,7 @@ def main() -> None:
     plotter = sub.add_parser("plot")
     plotter.add_argument("--scores", type=Path, required=True)
     plotter.add_argument("--output-dir", type=Path, required=True)
+    plotter.add_argument("--cohort", help="Named cohort in a score-cohorts output")
     plotter.set_defaults(function=plot)
     args = parser.parse_args()
     args.function(args)

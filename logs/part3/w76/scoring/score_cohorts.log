@@ -1,0 +1,43 @@
+{
+  "output": "reports/part3/w76/validation_scores.json",
+  "cohorts": {
+    "paired_image_primary": [
+      "ablation_no_distill",
+      "ablation_no_pair",
+      "ablation_no_route",
+      "ablation_no_select",
+      "ablation_no_severity",
+      "compute_matched_vanilla_generic",
+      "d3_c3",
+      "d3_generic_sample_escalation",
+      "direct_c3_sft_generic",
+      "fixed_c0",
+      "learned_class_route",
+      "learned_sample_route_no_escalation",
+      "manual_frozen_route",
+      "part2_v2_generic",
+      "teacher_c3",
+      "uniform_c3",
+      "zero_shot_30b_generic",
+      "zero_shot_8b_generic"
+    ],
+    "availability_no_ir": [
+      "d3_generic_no_ir"
+    ],
+    "availability_no_reference": [
+      "d3_generic_no_reference"
+    ],
+    "novel_template": [
+      "d3_generic_novel_template"
+    ],
+    "heldout_severity": [
+      "d3_generic_heldout_severity"
+    ],
+    "deck_s2_s5": [
+      "d3_generic_deck_s2_s5"
+    ],
+    "slideaudit": [
+      "d3_generic_slideaudit"
+    ]
+  }
+}

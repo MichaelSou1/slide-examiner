@@ -102,6 +102,16 @@
       "prompt": "C3",
       "route": "sample-level",
       "status": "available"
+    },
+    {
+      "id": "direct_c3_sft_generic",
+      "model": "runs/part3/d3_formal_v2/direct_c3_seed42/adapter",
+      "prompt": "generic",
+      "route": "none",
+      "max_escalations": 0,
+      "status": "available",
+      "validation_artifact": "runs/part3/w76/direct_c3_sft_generic_validation.jsonl",
+      "note": "Direct C3-label SFT control trained for 768 steps with seed 42; used to separate label-volume effects from attribution-selected teacher supervision."
     }
   ],
   "loss_ablations": [

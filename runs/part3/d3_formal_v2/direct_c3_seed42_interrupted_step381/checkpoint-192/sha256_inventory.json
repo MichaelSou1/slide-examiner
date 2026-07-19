@@ -1,0 +1,71 @@
+{
+  "algorithm": "sha256",
+  "root": "runs/part3/d3_formal_v2/direct_c3_seed42/checkpoint-192",
+  "files": [
+    {
+      "path": "adapter/README.md",
+      "bytes": 5248,
+      "sha256": "eeefb3da222e29be6f44179fb13970eb111de7d4af65be064fbd72c6e38e0582"
+    },
+    {
+      "path": "adapter/adapter_config.json",
+      "bytes": 1126,
+      "sha256": "6d88143e0468e52d83fcce735428b06feb677bc0875b9c8c682b3febbcc4ff42"
+    },
+    {
+      "path": "adapter/adapter_model.safetensors",
+      "bytes": 174663096,
+      "sha256": "3feff02b80d09cc924c3c27e9564230a44388554dd982abf33aea89f62aea8be"
+    },
+    {
+      "path": "adapter/chat_template.jinja",
+      "bytes": 5292,
+      "sha256": "3636d0f0bd6bef02654cdffdc447b79cb2cef8ab02cc75267345946291a489e4"
+    },
+    {
+      "path": "adapter/processor_config.json",
+      "bytes": 1189,
+      "sha256": "db520fc329f0d536e728aa48dac9819fac422f36b21171dc2bb86e0af0f80401"
+    },
+    {
+      "path": "adapter/tokenizer.json",
+      "bytes": 11422818,
+      "sha256": "8579e1ca7cc5d82a9e0202eed555529996f4ffe7f563c2979a0290cf3db452d3"
+    },
+    {
+      "path": "adapter/tokenizer_config.json",
+      "bytes": 758,
+      "sha256": "647db15541296bec5046415daa3086cefb2d8ec42f3f10ef87188aa92bc4aa24"
+    },
+    {
+      "path": "optimizer.pt",
+      "bytes": 349601739,
+      "sha256": "5d3ee3bd2f89bdda4f04c42ba5ce9413b1d9212d05e1d891c2a839b5e7a5e212"
+    },
+    {
+      "path": "rng_state.pt",
+      "bytes": 10741,
+      "sha256": "4c002a86a5037e2bf164e06d573af155efa6e184dcceb54f11c51de716b107c4"
+    },
+    {
+      "path": "run_config.json",
+      "bytes": 896,
+      "sha256": "6b32771bcb6b7e0c935fe56374b0f4d01d686b1aacca492abfe8733068d91cb7"
+    },
+    {
+      "path": "scheduler.pt",
+      "bytes": 1401,
+      "sha256": "5e567666f00058154d61fa0f7723f50fba073f7ac0935659a77a5824191a8704"
+    },
+    {
+      "path": "train_history.jsonl",
+      "bytes": 39084,
+      "sha256": "d17f97c030a45c50900fc64dbf9df47ea54db19bf8d10e0db233c316980fd570"
+    },
+    {
+      "path": "trainer_state.json",
+      "bytes": 55193,
+      "sha256": "0a749e840d1c73744cb2b360045619fced567233c7c6e0fffc3115af1a7af565"
+    }
+  ]
+}

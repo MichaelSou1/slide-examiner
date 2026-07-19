@@ -1,0 +1,13 @@
+{
+  "risk_coverage": "reports/part3/w76/plots/risk_coverage.png",
+  "pareto": "reports/part3/w76/plots/accuracy_cost_pareto.png",
+  "frontier": [
+    "ablation_no_select",
+    "compute_matched_vanilla_generic",
+    "d3_c3",
+    "learned_class_route",
+    "learned_sample_route_no_escalation",
+    "manual_frozen_route",
+    "part2_v2_generic"
+  ]
+}

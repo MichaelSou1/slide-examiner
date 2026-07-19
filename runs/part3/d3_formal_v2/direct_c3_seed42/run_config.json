@@ -1,0 +1,55 @@
+{
+  "base_model": "/data/public_data/xzs_data/Qwen3-VL-8B-Instruct",
+  "seed": 42,
+  "objective": "vanilla",
+  "max_steps": 768,
+  "learning_rate": 0.0001,
+  "scheduler": "constant",
+  "warmup_steps": 0,
+  "batch_size": 2,
+  "gradient_accumulation": 1,
+  "lora_rank": 16,
+  "lora_alpha": 32,
+  "image_max_pixels": 589824,
+  "train_sha256": "24e64f2bcb21fff77a380c7c39e4fb79c2c110b462680c56c1d42197deb969cb",
+  "dev_sha256": "e91b79b2d31e1a1b99da450ed985aae961202a84c4dfe47589d5599f6900e50d",
+  "loss_weights": {
+    "detect": 1.0,
+    "distill": 1.0,
+    "pair": 1.0,
+    "severity": 0.2,
+    "route": 0.5,
+    "select": 0.2
+  },
+  "quantization": "qlora",
+  "severity_chain_sampling": false,
+  "action_class_weighting": "sqrt-inverse",
+  "action_balanced_sampling": false,
+  "dev_limit": 32,
+  "train_limit": null,
+  "save_steps": 192,
+  "parent_commit": "e8ac685",
+  "final_test_read": false,
+  "action_class_weights": {
+    "ANSWER": 1.0,
+    "CALL_LINTER": 1.0,
+    "REQUEST_REFERENCE": 1.0,
+    "REQUEST_DECK": 1.0,
+    "DEFER": 1.0
+  },
+  "init_adapter": null,
+  "init_heads": null,
+  "resume_from_checkpoint": null,
+  "environment": {
+    "python": "3.10.20 (main, Mar 11 2026, 17:46:40) [GCC 14.3.0]",
+    "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.35",
+    "torch": "2.9.1+cu128",
+    "transformers": "5.10.0.dev0",
+    "peft": "0.19.1",
+    "cuda": "12.8",
+    "visible_gpus": "1",
+    "gpu_names": [
+      "NVIDIA H20"
+    ]
+  }
+}
