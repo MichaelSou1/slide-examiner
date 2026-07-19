@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "final_test_read": true,
+  "attempt_status": "failed",
+  "files": [
+    {
+      "path": "/data/slide-examiner/logs/part3/w77/final_test_once.log",
+      "bytes": 2029,
+      "sha256": "6c178bd3409b1536c03c33897ec6865c56e4441d4fc9d020b467cb166561249a"
+    },
+    {
+      "path": "/data/slide-examiner/reports/part3/w77/final_test/attempt.json",
+      "bytes": 318,
+      "sha256": "339a60d7c1e73a41794bd553e87834b6a62ec7d3fa1fa7c0e86220d7d1b42b6a"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test/final_image_runtime.jsonl",
+      "bytes": 1967486,
+      "sha256": "852cb69a4599c9ef680710d469ba0f0ce9e5cb9d53d6d4fa40aabbfbbe2b6589"
+    },
+    {
+      "path": "/data/slide-examiner/runs/part3/w77/final_test/final_image_runtime.summary.json",
+      "bytes": 899,
+      "sha256": "9501ae7562218765c67c9b56e21a92e06ef22f266cba15289e105b3bce727c04"
+    }
+  ]
+}

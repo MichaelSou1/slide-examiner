@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "status": "failed",
+  "started_at_utc": "2026-07-19T04:26:08.725738+00:00",
+  "host": "huirui",
+  "unlock_registry": "/data/slide-examiner-w77-guard-8cc2ee9/release/part3/d3/final_test_unlock.json",
+  "attempt": 1,
+  "exit_code": 1,
+  "finished_at_utc": "2026-07-19T04:26:09.532466+00:00"
+}

@@ -1,0 +1,52 @@
+{
+  "unlocked": true,
+  "freeze_commit": "b7ba7c4243bbbf523197d69a7898aed2a507759f",
+  "registry": "/data/slide-examiner-w77-guard-8cc2ee9/release/part3/d3/final_test_unlock.json"
+}
+{
+  "source_rows": 270,
+  "selected_pairs": 270,
+  "initial_records": 540,
+  "counterpart_records": 360,
+  "initial_limit": 540,
+  "offset_per_class": 0,
+  "per_class_pairs": {
+    "G1_TEXT_OVERFLOW": 30,
+    "G2_ELEMENT_OVERLAP": 30,
+    "G3_ALIGNMENT_OFFSET": 30,
+    "G5_BRAND_COLOR_VIOLATION": 30,
+    "G6_MARGIN_VIOLATION": 30,
+    "G7_RENDER_CONTAINMENT_OVERFLOW": 30,
+    "S1_TITLE_BODY_MISMATCH": 30,
+    "S4_DENSITY_RULE_VIOLATION": 30,
+    "S6_IMAGE_TEXT_CONTRADICTION": 30
+  },
+  "split": "final_test",
+  "manifests": [
+    {
+      "path": "/data/slide-examiner-w77-guard-8cc2ee9/data/part3/d3/final_test_image.jsonl",
+      "sha256": "e243131cbae8143b9407f43d2f494217f06d1826388e6f234d5623cce6661c29"
+    }
+  ],
+  "output": "/data/slide-examiner/runs/part3/w77/final_test/final_image_runtime.jsonl",
+  "output_sha256": "852cb69a4599c9ef680710d469ba0f0ce9e5cb9d53d6d4fa40aabbfbbe2b6589"
+}
+Traceback (most recent call last):
+  File "/data/slide-examiner-w77-guard-8cc2ee9/slide_examiner/render.py", line 251, in _rasterize_jobs
+    from playwright.sync_api import sync_playwright
+ModuleNotFoundError: No module named 'playwright'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/data/slide-examiner-w77-guard-8cc2ee9/scripts/part3_d3_evaluate.py", line 729, in <module>
+    main()
+  File "/data/slide-examiner-w77-guard-8cc2ee9/scripts/part3_d3_evaluate.py", line 725, in main
+    args.function(args)
+  File "/data/slide-examiner-w77-guard-8cc2ee9/scripts/part3_d3_evaluate.py", line 347, in render_decks
+    target = render_manifest(
+  File "/data/slide-examiner-w77-guard-8cc2ee9/slide_examiner/render.py", line 687, in render_manifest
+    _rasterize_jobs(raster_jobs)
+  File "/data/slide-examiner-w77-guard-8cc2ee9/slide_examiner/render.py", line 253, in _rasterize_jobs
+    raise RuntimeError("Playwright is required for raster rendering. Install playwright.") from exc
+RuntimeError: Playwright is required for raster rendering. Install playwright.
