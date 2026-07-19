@@ -34,8 +34,8 @@
 \newcommand{\ci}[1]{\,{\scriptsize[#1]}}
 
 \title{\bf Technical Supplement:\\
-``It's the Elicitation, Not the Eyes: Diagnosing VLM Failures in Slide
-Quality Inspection and Routing a Symbolic--Neural Critic''}
+``Diagnose Before You Inspect: Failure Attribution Prescribes a
+Deterministic Symbolic--Neural Critic for Slides''}
 \author{Anonymous Authors (AAAI-27 Submission)}
 \date{}
 
@@ -206,7 +206,7 @@ The instantiated C3 question for each evaluated class was:
 
 Table~\ref{tab:coverage-precision} is the precision companion to the main
 paper's balanced-accuracy coverage table, using the same E8-corrected corpora,
-model, named-attribution rule, and routing. ``Linter+C3'' is the configured
+model, named-attribution rule, and deterministic assignment. ``Linter+C3'' is the configured
 per-class composition (linter on linter-owned classes, C3 otherwise), not an
 unscored OR assembled from marginal rates. A displayed zero includes cells in
 which the scorer made no positive predictions, for which the analysis code's
@@ -221,7 +221,7 @@ table. Values in brackets are 95\% Wilson intervals when defined.}
 \label{tab:coverage-precision}
 \begin{tabular}{@{}lccccc@{}}
 \toprule
-class & linter & VLM-C0 & VLM-C3 & linter+C3 & routed \\
+class & linter & VLM-C0 & VLM-C3 & linter+C3 & prescribed \\
 \midrule
 \g{G1} & 1.00 [.91,1] & 0 & 0 & 1.00 [.91,1] & 1.00 [.91,1] \\
 \g{G2} & 1.00 [.86,1] & 1.00 [.82,1] & 1.00 [.88,1] & 1.00 [.86,1] & 1.00 [.86,1] \\
@@ -404,10 +404,19 @@ stress test below locates the clipping boundary where this conclusion ceases to 
 \label{figA:artifact}
 \end{figure}
 
-\section{Frozen-route held-out and extreme-offset addenda}
+\section{Diagnosis--method correspondence, frozen confirmation, and extreme-offset addenda}
 \label{app:w5-heldout}
 
-\paragraph{Independent held-out protocol.}
+\paragraph{Paper-wide multiplicity update.}
+The final correction family contains 85 reported significance tests: the
+original 61 elicitation, examiner, and reward tests plus all 24 contrasts from
+the compute-matched ablation. At $\alpha=.05$, 35 survive Holm (FWER) and 47
+survive Benjamini--Hochberg (FDR); the released
+\texttt{data/part3/p3\_multiplicity.json} records every raw and adjusted
+$p$-value. The 24-test within-ablation Holm family is additionally reported for
+the focused compute-matched comparison below.
+
+\paragraph{Held-out validation protocol.}
 We generated a seed-controlled calibration corpus from templates not used by
 the development experiments: a coloured header, accent rail, footer, and
 visible diagram are varied across eight layouts and six topics. Each of nine
@@ -416,7 +425,7 @@ labelled sample has a unique clean twin; all 1,350 pairs differ in rendered
 pixels. The fidelity gate found all 750 declared-geometry positives and zero
 target or incidental linter findings on their clean controls. For \g{G7}, all
 150 declared IRs are linter-blind and all 150 rendered overflow pairs pass the
-localization check. We then evaluated the corrected frozen route exactly once:
+localization check. We then evaluated the fixed deterministic composition on this corpus:
 \g{G1}/\g{G2}/\g{G3}/\g{G5}/\g{G6}$\to$linter,
 \g{G7}$\to$VLM-C3, \g{S1}/\g{S6}$\to$VLM-C0, and
 \g{S4}$\to$text LLM. Table~\ref{tab:w5-heldout} reports named attribution;
@@ -425,13 +434,13 @@ all cells use $n_+=n_-=150$.
 \begin{table}[h]
 \centering
 \small
-\caption{One-shot corrected frozen-route evaluation on the independent
-held-out corpus. Intervals are 95\% Wilson intervals. The predeclared covered
+\caption{Corrected deterministic-composition evaluation on the held-out
+validation corpus. Intervals are 95\% Wilson intervals. The predeclared covered
 criterion is balanced accuracy and precision both $\ge .70$.}
 \label{tab:w5-heldout}
 \begin{tabular}{@{}lccc@{}}
 \toprule
-Class (route) & Balanced accuracy & Precision & Covered \\
+Class (method) & Balanced accuracy & Precision & Covered \\
 \midrule
 \g{G1} (linter) & 1.000 [.975,1] & 1.000 [.975,1] & yes \\
 \g{G2} (linter) & 1.000 [.975,1] & 1.000 [.975,1] & yes \\
@@ -448,11 +457,89 @@ Macro mean & .957 & --- & 8/9 \\
 \end{tabular}
 \end{table}
 
-The held-out result preserves the routing conclusion but also exposes a
+The held-out result supports the method correspondence but also exposes a
 specific limitation rather than hiding it in a mean: \g{S6} has perfect recall
-but 97/150 clean false positives, so its C0 route fails the strict precision
-criterion on the novel diagram family. The corrected \g{S1} visual route, by
+but 97/150 clean false positives, so its C0 method fails the strict precision
+criterion on the novel diagram family. The corrected \g{S1} visual method, by
 contrast, transfers without an error.
+
+\paragraph{Does the diagnosis predict the useful inspection method?}
+Table~\ref{tab:diagnosis-method} audits every proposed correspondence against
+an inappropriate method and labels the result rather than retaining only
+successful cells. ``Supporting'' means the prescribed method improves the
+matched comparison in its stated setting; ``mixed'' marks a method that works
+only with the diagnosed input or domain; and ``failed'' records a tested
+extension that did not recover the signal.
+
+\begin{table*}[h]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\caption{Failure diagnosis $\rightarrow$ prescribed inspection method $\rightarrow$ existing evidence.
+All sample counts and results refer to frozen artifacts listed below.}
+\label{tab:diagnosis-method}
+\begin{tabular}{@{}p{.16\textwidth}p{.16\textwidth}p{.38\textwidth}p{.19\textwidth}@{}}
+\toprule
+Diagnosis / classes & Prescribed method & Matched result and mismatch check & Verdict / boundary \\
+\midrule
+Lossless declared structure; \g{G1--G6} & geometry linter & With native lossless IR, held-out validation is 1.000 balanced accuracy and precision on \g{G1,G2,G3,G5,G6}, each $n_+=n_-=150$; pointwise VLM cells are .50--.71. Image-only \g{G1} instead needs the reference method below. & supporting conditional on native IR \\
+Explicit terminology; \g{S3} & terminology linter & 1.000 balanced accuracy, recall 1.00, and 0 FP on 40 clean deck controls, versus .69 for the VLM. & supporting \\
+Format-suppressed render overflow; \g{G7} & atomic C3 with evidence & Three vendors: C3 .92/.88/.83 versus ten-draw C0 majority .61/.59/.63 ($\Delta=.31/.29/.20$); all survive the 24-test Holm family. C3 uses one call and 34.7/37.5/40.5 output tokens. & supporting; confirmation transfer is mixed \\
+Reference availability; \g{G1}, \g{S6} & pairwise / clean-reference comparison & \g{G1}: 2-AFC 1.000 for both 8B and 30B, 24 pairs/48 ordering trials, versus pointwise .50/.65. \g{S6}: 24/24 2-AFC, both orders 12/12, versus pointwise .500 with 24/24 clean FP. & supporting only when a reference exists \\
+Page semantics; \g{S1}, \g{S4} & finetuned examiner & Correspondence evidence: in-domain balanced accuracy 1.000 for both (36 and 60 positives), versus zero-shot 8B .778/.529 and zero-shot 30B .933/.774; \g{S4} recall contrast $p=4.53\times10^{-7}$. W5 instantiates \g{S1} with VLM-C0 and \g{S4} with a text LLM, as listed above. & supporting in-domain \\
+Pixels without native structure & recovered-structure linter & Recovered linter is at chance on \g{G1,G3,G4,G5}; \g{G2} reaches only .54--.55 versus native .67 and VLM .87; element IoU recall is .30--.39. & failed \\
+Novel diagrams / \g{S6} & single-image C0 & Held-out validation recall 1.000 but precision .607 because 97/150 clean controls fire; the later frozen image-arm check is .500. & mixed / clean-FP boundary \\
+Real image-only layouts; \g{S4} & finetuned examiner & Synthetic held-out 1.000 drops to .501 on \textsc{SlideAudit}; zero-shot 30B reaches .702 and its recall advantage has $p=1.13\times10^{-5}$. & failed sim-to-real transfer \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\paragraph{Later frozen image-arm check.}
+After the method assignment was frozen, we generated a disjoint seed-controlled
+image set. Its seed (2026071607), generated identifiers, content instances, and
+image hashes do not overlap the W5 validation set (seed 20260716). Each class
+contains $30$ positives and $30$ clean controls. Table~\ref{tab:frozen-confirmation}
+reports the completed frozen image arm separately from the preceding $150+150$
+held-out validation; it is not another estimate on that corpus. Macro balanced
+accuracy is .8259, precision .7273, recall .7259, specificity .9259, and named
+localization .7778.
+
+\begin{table}[h]
+\centering
+\small
+\caption{Disjoint frozen image-arm check ($n_+=n_-=30$ per class).}
+\label{tab:frozen-confirmation}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Class & Balanced accuracy & Precision & Named localization \\
+\midrule
+\g{G1} & .500 & 0 & 0 \\
+\g{G2} & 1.000 & 1.000 & 1.000 \\
+\g{G3} & 1.000 & 1.000 & 1.000 \\
+\g{G5} & 1.000 & 1.000 & 1.000 \\
+\g{G6} & 1.000 & 1.000 & 1.000 \\
+\g{G7} & .567 & .545 & 1.000 \\
+\g{S1} & .867 & 1.000 & 1.000 \\
+\g{S4} & 1.000 & 1.000 & 1.000 \\
+\g{S6} & .500 & 0 & 0 \\
+\midrule
+Macro & .8259 & .7273 & .7778 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The two failures are informative: the arm begins from one image and requests a
+reference for \g{G1} and \g{S6}, but its follow-up executor returns no comparison
+verdict; those requests are therefore counted as misses and both classes remain
+at chance. \g{G7}'s drop to .567 marks a further transfer limit for atomic C3
+rather than invalidating its development and compute-matched recovery. The image
+arm completed all 540 records with zero runtime failures. The encompassing run
+is nevertheless marked failed because two deck-only semantic-gate checks had
+zero eligible records; no deck result is claimed here. Authority for the two stages is
+\texttt{release/part3/w5/heldout\_routed.json} and
+\texttt{reports/part3/w77/final\_test\_attempt2/image\_scores.json}; the
+per-example frozen assignments are in
+\texttt{runs/part3/w77/final\_test\_attempt2/normalized/manual\_frozen\_route.jsonl}.
 
 \paragraph{Extreme \g{G6} magnitude boundary.}
 To stress the moderate-offset result without changing its operationalization,
@@ -506,7 +593,7 @@ in every channel on real cluttered decks.}
 \includegraphics[width=0.7\linewidth]{figs/fig3_coverage_heatmap.png}
 \caption{\textbf{Coverage by engine} (companion to Table~2 of the main paper).
 Per-defect balanced accuracy for the linter, VLM-C0, VLM-C3, linter+VLM-C3,
-and the routed hybrid. Minimal linter$\oplus$C3 has the highest mean balanced accuracy;
+and the prescribed composition. Minimal linter$\oplus$C3 has the highest mean balanced accuracy;
 \g{G7} (boxed) is the linter-blind cell rescued by C3.}
 \label{figA:coverage}
 \end{figure}
@@ -529,15 +616,15 @@ side by side.}
 
 These vector ``concept'' figures (with text overlays) were used in the
 single-column technical report and are reproduced here for readers who prefer
-the pictorial version of the protocol and routing arguments. They convey no
+the pictorial version of the protocol and composition arguments. They convey no
 information beyond the body prose and the data figures above; they are
 included for readability.
 
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.95\linewidth]{figs/fig1_routing.png}
-\caption{\textbf{Diagnosis $\to$ architecture.} Route each defect to the
-engine that owns its bottleneck: declared geometry to a symbolic linter,
+\caption{\textbf{Diagnosis $\to$ architecture.} Assign each defect to the
+method that addresses its bottleneck: declared geometry to a symbolic linter,
 format-suppressed perceivable classes to a re-elicited VLM, text/deck
 semantics to an LLM. The \g{G7} callout marks the linter-blind
 render-overflow class caught only by an engine with a rendered-quality

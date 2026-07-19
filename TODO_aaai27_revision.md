@@ -227,7 +227,7 @@
 - [x] sec:g7 的 reward audit 压至 ~半页：主文现只保留 CLIP-IQA/LAION 同 backbone dissociation + perturbation-fidelity 45% 两点；per-scorer 表与其余讨论已移交 Technical Supplement/补充材料承接。
 - [x] sec:examiner 压缩：主文现只保留 in-distribution 超 30B、abstain 行为、sim-to-real 负结果三点；训练细节与细表改由 supplement 承接。
 - [x] 释放篇幅给 W2 ablation 段与 W3 scope 声明；主线现为 Intro → setup → diag → elicit（含 ablation）→ coverage → g7 → examiner(压缩) → external → limits。
-- [ ] **07-21 前重新锁定 Abstract**：以 W5/W5+ 为唯一主线，写清“分析失败原因 → 选择对应检查方法 → 组合成 deterministic critic”；可分别报告 W5 held-out validation `.957` 与独立 frozen confirmation `.8259`，不得写 learned router、D3、distill、defer 或其负结果。
+- [x] **07-21 前重新锁定 Abstract**：以 W5/W5+ 为唯一主线，写清“分析失败原因 → 选择对应检查方法 → 组合成 deterministic critic”；分别报告 W5 held-out validation `.957` 与后续 disjoint frozen image-arm check `.8259`（正文四舍五入为 `.826`，未决 reference request 按 miss 计），且不写 learned router、D3、distill、defer 或其负结果。已同步 `AuthorKit27/submission/main.tex` 与 `paper/main.tex`（2026-07-20）。
 - [ ] **07-21 前**：将 W5+ 标题与 Abstract 提交 OpenReview。投稿人将在截止日前自行填写并保存；提交成功后再勾选，不以本地改稿代替。
 - [x] 备选标题已拟好（仅 E1 结果不利时启用）："Diagnose Before You Route: Sub-Perceptual, Format-Suppressed, and Reference-Assisted Failures in VLM Slide Inspection"。
 - [x] 页数检查：`AuthorKit27/submission/main.pdf` 当前总计 8 页，但第 8 页为 references 延续；`pdftotext -f 7 -l 7 main.pdf -` 可见 References 已在物理第 7 页底部开始，满足 AAAI-27 正文 7 页页限。
@@ -244,18 +244,18 @@
 
 > **决策（2026-07-20）**：不再训练或宣传 learned router。论文的问题收束为：前面对失败原因的分析，能否正确告诉我们应该使用 linter、C3、reference-assisted comparison 或 finetuned examiner。新增工作以现有 artifact 的整理、统计与写作为主，不需要 GPU。
 
-- [ ] **5+.1 整理“失败原因 → 检查方法 → 实验结果”总表**：至少覆盖以下四类对应关系，并给出真实样本量、bal-acc/precision/recall 或现有显著性证据，不只写定性判断：
+- [x] **5+.1 整理“失败原因 → 检查方法 → 实验结果”总表**：至少覆盖以下四类对应关系，并给出真实样本量、bal-acc/precision/recall 或现有显著性证据，不只写定性判断：
   - lossless structure 可直接判断的 geometry / terminology → symbolic linter；
   - format-suppressed 的 G7 → targeted atomic C3；
   - 必须比较参考页的 G1/S6 → pairwise/reference-assisted inspection；
   - page-semantic 的 S1/S4 → finetuned examiner。
   产物应写入现有 `AuthorKit27/submission/main.tex` / `supplement.tex` 对应表或段落；如需机器可读中间结果，优先复用现有 `reports/` 文件，不新开算法或训练任务。
-- [ ] **5+.2 做错配对照检查**：从现有 C0/C3/linter/pairwise/finetuned 结果中确认“预测的方法”相对不合适方法确有收益；逐类标明 supporting、mixed 或 failed，不能只挑成功格。重点保留 S6 clean FP、recovered-structure 失败与 SlideAudit sim-to-real gap 作为边界。
-- [x] **5+.3 独立 frozen confirmation 已有结果**：方法冻结后生成并一次性运行的独立 image set 为 9 类各 30 positive/clean pair；deterministic manual frozen route 的 macro bal-acc 为 `.8259`、named localization 为 `.7778`。权威产物：`reports/part3/w77/final_test_attempt2/image_scores.json`、`runs/part3/w77/final_test_attempt2/normalized/manual_frozen_route.jsonl`。该结果可作为 W5+ 的独立 confirmation，但论文不得把其中 learned-router 对照写成方法贡献。
-- [ ] **5+.4 统一两套数字的口径**：正文与 supplement 必须明确区分 W5 held-out validation（`.957`，9×150 pairs，结果已看过）和后续 independent frozen confirmation（`.8259`，9×30 pairs，方法冻结后一次性运行）；不得只报较高数字，也不得混成同一数据集。
-- [ ] **5+.5 重写论文主线**：贡献顺序固定为①失败归因；② compute-matched 证明 targeted elicitation 的恢复不是单纯多算力；③归因指导 deterministic symbolic–neural critic；④独立 confirmation 与真实迁移边界。标题、Abstract、Fig.1、Introduction、Method、Results、Conclusion 同步，不把 deterministic assignment 夸成 learned algorithm。
-- [ ] **5+.6 清理路由模型叙事**：全文清除 learned router、D3、Diagnose→Distill→Defer、action head、selective defer/escalation 等主张；对原稿中的 `route/routing/routed` 逐处检查，能改成 `prescribed critic`、`deterministic composition` 或“选择对应检查方法”的就改，避免标题和贡献让人误以为提出了路由模型。
-- [ ] **5+.7 验收**：总表中的每个数字都能回指现有 artifact；W5 `.957` 与 confirmation `.8259` 口径无混淆；正文不出现 learned-router 结果；无需新增训练或 GPU 实验；投稿版与 tech-report 科学内容同步并通过构建、页限和数字一致性检查。
+- [x] **5+.2 做错配对照检查**：从现有 C0/C3/linter/pairwise/finetuned 结果中确认“预测的方法”相对不合适方法确有收益；逐类标明 supporting、mixed 或 failed，不能只挑成功格。总表已加入 `AuthorKit27/submission/supplement.tex`，并保留 S6 clean FP、recovered-structure 失败与 SlideAudit sim-to-real gap（2026-07-20）。
+- [x] **5+.3 disjoint frozen image-arm check 已有结果**：方法 assignment 冻结后生成的 image set 为 9 类各 30 positive/clean pair；与 W5 的 seed、ID、content instance、path 和 image hash 均无交集。completed image arm 的 macro bal-acc 为 `.8259`、named localization 为 `.7778`；G1/S6 请求 reference 后的 follow-up 未返回 verdict，按 miss 计。权威产物：`reports/part3/w77/final_test_attempt2/image_scores.json`、`runs/part3/w77/final_test_attempt2/normalized/manual_frozen_route.jsonl`。外层 attempt 因两个无 eligible record 的 deck-only gate 标记 failed，论文不声称 deck 结果，也不把 learned-router 对照写成方法贡献。
+- [x] **5+.4 统一两套数字的口径**：正文与 supplement 已明确区分 W5 held-out validation（`.957`，9×150 positive/clean）和后续 disjoint frozen image-arm check（`.8259`，9×30 positive/clean，未决 reference request 按 miss 计），并在 supplement 给出后者逐类表及外层 attempt 状态说明（2026-07-20）。
+- [x] **5+.5 重写论文主线**：贡献顺序已统一为①失败归因；② compute-matched 排除额外算力解释；③归因指导 deterministic symbolic–neural critic；④后续 disjoint frozen image-arm check 与真实迁移边界。标题、Abstract、Fig.1 caption、Introduction、Method、Results、Conclusion 已同步（2026-07-20）。
+- [x] **5+.6 清理路由模型叙事**：投稿正文与 tech-report 的叙事已改为 `prescribed critic` / `deterministic composition` / method assignment；正文对 learned router、D3、distill、defer、action head、selective defer/escalation 的审计为零命中。仅 artifact 路径与既有图片文件名保留 `route/routing`（2026-07-20）。
+- [x] **5+.7 验收**：总表数字均回指既有 artifact；`.957` / `.8259` 口径分离；未新增训练或 GPU 实验；投稿正文、14 页 supplement 与 18 页 tech-report 均构建通过，投稿正文 8 页且 References 仍从物理第 7 页开始；关键数字一致（2026-07-20）。
 
 ### 已归档、不进入论文的探索
 
@@ -265,12 +265,12 @@
 
 ## W6 全文终校 + 提交 ｜ D13–14（07-27~28）
 
-- [ ] 逐条对照审稿 9 条 weakness + 8 个 question，确认每条：已修复 / Limitations 有明示 scope。
-- [ ] W1 的机器检查重跑（空引用、占位引用均零命中）。
-- [ ] 数字一致性：Abstract / Fig.1 caption / Table 3 / Conclusion 的 coverage 与 bal-acc 数字互相一致（W3.4 改动后极易漏）。
-- [ ] Holm/BH 检验族数字更新（"61-test family" → 实际新数）；正文只保留 W2 与 W5/W5+ 实际使用的检验，清除 D3/LTT 检验族口径。
-- [ ] 匿名检查（投稿版无作者信息、无 acknowledgment、self-citation 匿名化）；`grep -i "surh6\|Ruihan\|Sun Yat-sen" AuthorKit27/submission/main.tex` 零命中。
-- [ ] paper/main.tex（tech-report 版）同步所有科学内容改动。
-- [ ] **07-28 AoE 提交正文**；**07-31 AoE 提交 supplement**（含 W2 表、W5.2 表、per-cell precision、S1 双路由数、cost table）。
+- [x] 逐条对照审稿 9 条 weakness + 8 个 question，确认每条：已修复 / Limitations 有明示 scope。
+- [x] W1 的机器检查重跑（空引用、占位引用均零命中）。
+- [x] 数字一致性：Abstract / Fig.1 caption / Table 3 / Conclusion 的 coverage 与 bal-acc 数字互相一致（W3.4 改动后极易漏）。
+- [x] Holm/BH 检验族数字更新（"61-test family" → 实际新数）；正文只保留 W2 与 W5/W5+ 实际使用的检验，清除 D3/LTT 检验族口径。
+- [x] 匿名检查（投稿版无作者信息、无 acknowledgment、self-citation 匿名化）；`grep -i "surh6\|Ruihan\|Sun Yat-sen" AuthorKit27/submission/main.tex` 零命中。
+- [x] paper/main.tex（tech-report 版）同步所有科学内容改动。
+- [ ] **07-28 AoE 提交正文**；**07-31 AoE 提交 supplement**（本地 8 页正文与 14 页 supplement 已完成终校并重建；等待投稿人在 OpenReview 实际上传确认后勾选）。
 
 ---

@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1784103914.45556 "main.aux" "main.bbl" "main" 1784103915.30859 0
+["bibtex main"] 1784491731.54243 "main.aux" "main.bbl" "main" 1784491732.51164 0
   "./aaai2027.bst" 1783392311.85366 30207 bd248dfe461b9b2fc7481a44feafe197 ""
   "./refs.bib" 1784042903.14422 8445 56cef54136c067811f81ec1b9117584c ""
-  "main.aux" 1784103915.07258 3218 a6f5efd1acf78bff7010f9738a3ef380 "pdflatex"
+  "main.aux" 1784491732.27827 2528 aab06581ddeb378fd49c8565dc10fbd2 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1784103914.52326 "main.tex" "main.pdf" "main" 1784103915.3091 0
+["pdflatex"] 1784491731.63732 "main.tex" "main.pdf" "main" 1784491732.51199 0
   "/Users/rhsu/miniconda3/envs/tex/texlive/2026/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/Users/rhsu/miniconda3/envs/tex/texlive/2026/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf-pc.enc" 1698694482 3136 bbe665bd0bb471a2da1e8fd326cff9fa ""
   "/Users/rhsu/miniconda3/envs/tex/texlive/2026/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc" 1698694482 2914 fdbc4a54b9bc76f4551b5303f2737d33 ""
@@ -39,7 +39,6 @@
   "/Users/rhsu/miniconda3/envs/tex/texlive/2026/texmf-dist/fonts/tfm/public/newtx/ntx-Regular-tlf-sc-t1.tfm" 1708895146 12276 8de6ae5fb2f9bd3a12436b80d518726e ""
   "/Users/rhsu/miniconda3/envs/tex/texlive/2026/texmf-dist/fonts/tfm/public/newtx/ntx-Regular-tlf-t1.tfm" 1708895146 11580 86fb9f1fbe830bcc3e5ca9d9fb704e6b ""
   "/Users/rhsu/miniconda3/envs/tex/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1248133631 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
-  "/Users/rhsu/miniconda3/envs/tex/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb" 1248133631 36281 c355509802a035cadc5f15869451dcee ""
   "/Users/rhsu/miniconda3/envs/tex/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb" 1248133631 36094 798f80770b3b148ceedd006d487db67c ""
   "/Users/rhsu/miniconda3/envs/tex/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
   "/Users/rhsu/miniconda3/envs/tex/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb" 1248133631 32734 69e00a6b65cedb993666e42eedb3d48f ""
@@ -49,7 +48,6 @@
   "/Users/rhsu/miniconda3/envs/tex/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb" 1248133631 32587 1788b0c1c5b39540c96f5e42ccd6dae8 ""
   "/Users/rhsu/miniconda3/envs/tex/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1248133631 32716 08e384dc442464e7285e891af9f45947 ""
   "/Users/rhsu/miniconda3/envs/tex/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb" 1248133631 32442 c975af247b6702f7ca0c299af3616b80 ""
-  "/Users/rhsu/miniconda3/envs/tex/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb" 1248133631 31764 459c573c03a4949a528c2cc7f557e217 ""
   "/Users/rhsu/miniconda3/envs/tex/texlive/2026/texmf-dist/fonts/type1/public/newtx/ztmb.pfb" 1698694482 255251 958c6ad4e5518904a53cf1118c612893 ""
   "/Users/rhsu/miniconda3/envs/tex/texlive/2026/texmf-dist/fonts/type1/public/newtx/ztmbi.pfb" 1698694482 260277 d8cc942b73ad2a9ea225abf808398c6d ""
   "/Users/rhsu/miniconda3/envs/tex/texlive/2026/texmf-dist/fonts/type1/public/newtx/ztmr.pfb" 1698694482 286816 82db2bfe6920054b1a43661c07078412 ""
@@ -134,9 +132,9 @@
   "/Users/rhsu/miniconda3/envs/tex/texlive/2026/texmf.cnf" 1783355917.49146 499 a1b5e4c4c64ec890b89d3603396aac74 ""
   "aaai2027.sty" 1783392311.85007 16915 1b1c792e2acfbbd8b672259e267b95d8 ""
   "figs/fig_teaser_notext.pdf" 1783392311.84321 3422 cc2846c34935cd8e7b41ea735ab37420 ""
-  "main.aux" 1784103915.07258 3218 a6f5efd1acf78bff7010f9738a3ef380 "pdflatex"
-  "main.bbl" 1784103914.52027 7084 b9efdebd12f63b037609364daaf8e69c "bibtex main"
-  "main.tex" 1784103735.68453 50705 3110ac9140e6ee669daa2ad3e3249046 ""
+  "main.aux" 1784491732.27827 2528 aab06581ddeb378fd49c8565dc10fbd2 "pdflatex"
+  "main.bbl" 1784491731.62816 5202 a83e0cccfbf938c89e4b8d97561e595f "bibtex main"
+  "main.tex" 1784491670.68288 48732 9a1b73ea3c38ebdea6c728eac7301b07 ""
   (generated)
   "main.aux"
   "main.log"

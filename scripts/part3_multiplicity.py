@@ -12,6 +12,8 @@ Family collected:
                    from ``runs/probe/part2_summary.json`` (S4 density synth + real).
   * reward       — each reward model's G7 preference vs chance (one-proportion z),
                    from ``data/part3/p3_audit_multi.json``.
+  * compute      — all 24 paired McNemar contrasts from the compute-matched
+                   C0/C3 ablation in ``data/part3/p1e2_summary.json``.
 
 Usage:
   python scripts/part3_multiplicity.py \
@@ -20,6 +22,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import csv
 import json
 import sys
 from math import sqrt
@@ -39,6 +42,10 @@ SHORT = {"G1_TEXT_OVERFLOW": "G1", "S6_IMAGE_TEXT_CONTRADICTION": "S6", G7: "G7"
 # the four CAPABLE models; C2 recovers declared-geometry G1 on the two strong Qwens.
 CAPABLE_G7_C3 = {"qwen35-9b", "qwen35-27b", "qwen36-27b", "gemma4-31b"}
 STRONG_G1_C2 = {"qwen35-27b", "qwen36-27b"}
+FROZEN_EXAMINER_TESTS = (
+    ("examiner:S4-density-synth(ft8b>zs30b)", 4.5292925276996243e-07),
+    ("examiner:S4-density-real(zs30b>ft8b)", 1.1254527653825619e-05),
+)
 
 
 def _is_headline_elicit(model: str, defect: str, cond: str) -> bool:
@@ -72,18 +79,23 @@ def _p1e1_g7_c3() -> dict:
     for model in CAPABLE_G7_C3:
         hits: dict = {}
         for cond in ("C0", "C3"):
-            f = REPO / f"data/part3/p1e1_{model}_g7_{cond}_rows.jsonl"
-            if not f.exists():
+            cm = {}
+            jsonl = REPO / f"data/part3/p1e1_{model}_g7_{cond}_rows.jsonl"
+            csv_release = REPO / f"release/part3/rows/p1e1_{model}_g7_{cond}_rows.csv"
+            if jsonl.exists():
+                rows = (json.loads(line) for line in jsonl.open() if line.strip())
+            elif csv_release.exists():
+                rows = csv.DictReader(csv_release.open())
+            else:
                 hits = {}
                 break
-            cm = {}
-            for line in f.open():
-                if not line.strip():
+            for r in rows:
+                failure = r.get("failure")
+                if failure is True or str(failure).lower() == "true":
                     continue
-                r = json.loads(line)
-                if r.get("failure"):
-                    continue
-                cm[r["sample_id"]] = bool(r["has_defect"]) == (not r.get("is_clean"))
+                has_defect = r["has_defect"] is True or str(r["has_defect"]).lower() == "true"
+                is_clean = r.get("is_clean") is True or str(r.get("is_clean")).lower() == "true"
+                cm[r["sample_id"]] = has_defect == (not is_clean)
             hits[cond] = cm
         if hits.get("C0") and hits.get("C3"):
             p, b, c = mcnemar_p(hits["C0"], hits["C3"])
@@ -149,7 +161,34 @@ def pooled_headline() -> list[dict]:
 def collect_examiner() -> list[dict]:
     p = REPO / "runs/probe/part2_summary.json"
     if not p.exists():
-        return []
+        # The raw Part-2 aggregate is not redistributed in every checkout, but
+        # these two paper-reported contrasts are frozen in the released
+        # multiplicity artifact.  Reuse only those exact p-values so rebuilding
+        # the enlarged family cannot silently drop two existing tests.
+        frozen = REPO / "data/part3/p3_multiplicity.json"
+        if frozen.exists():
+            prior = json.loads(frozen.read_text())
+            recovered = [
+                {
+                    "source": "examiner",
+                    "contrast": test["contrast"],
+                    "p": float(test["p"]),
+                    "headline": True,
+                }
+                for test in prior.get("tests", [])
+                if test.get("source") == "examiner"
+            ]
+            if recovered:
+                return recovered
+        return [
+            {
+                "source": "examiner",
+                "contrast": contrast,
+                "p": p_value,
+                "headline": True,
+            }
+            for contrast, p_value in FROZEN_EXAMINER_TESTS
+        ]
     try:
         from part2_synthesis import best_cell_semantic, g, p_recall
     except Exception:  # noqa: BLE001
@@ -191,6 +230,37 @@ def collect_reward() -> list[dict]:
     return out
 
 
+def collect_compute_match() -> list[dict]:
+    """Collect the complete, pre-declared 24-test compute-matched family.
+
+    The standalone E2 report also applies Holm within these 24 contrasts.  The
+    paper-wide audit must additionally include them in the single family formed
+    with the 61 previously reported tests, yielding the final 85-test family.
+    """
+    p = REPO / "data/part3/p1e2_summary.json"
+    if not p.exists():
+        return []
+    summary = json.loads(p.read_text())
+    out = []
+    for model, defects in summary.get("conditions", {}).items():
+        for defect, payload in defects.items():
+            short = SHORT.get(defect, defect)
+            for label, contrast in payload.get("contrasts", {}).items():
+                pv = contrast.get("mcnemar_p")
+                if pv is None:
+                    continue
+                # The three majority-vote contrasts on G7 are the paper's
+                # compute-matched headline tests.
+                headline = defect == G7 and label == "C3_vs_C0_rep_maj"
+                out.append({
+                    "source": "compute_match",
+                    "contrast": f"{model}/{short}/{label} McNemar",
+                    "p": float(pv),
+                    "headline": headline,
+                })
+    return out
+
+
 def correct(tests: list[dict]) -> dict:
     pvals = [t["p"] for t in tests]
     holm = holm_bonferroni(pvals)
@@ -221,12 +291,13 @@ def md(tests: list[dict], summ: dict, pooled: list[dict]) -> str:
     L = [f"# Multiplicity correction (E2)\n",
          md_pooled(pooled),
          f"Family of **{summ['n_tests']}** reported significance tests across elicitation "
-         f"(paired McNemar), examiner (two-proportion z), and reward (G7 preference vs chance). "
+         f"(paired McNemar), compute-matched ablations (paired McNemar), examiner "
+         f"(two-proportion z), and reward (G7 preference vs chance). "
          f"Holm (FWER) survivors: **{summ['n_reject_holm']}**; Benjamini-Hochberg (FDR) "
          f"survivors: **{summ['n_reject_bh']}** at α=0.05.\n",
          "| Source | Contrast | raw p | Holm p | Holm✓ | BH p | BH✓ | headline |",
          "|---|---|---|---|---|---|---|---|"]
-    order = {"examiner": 0, "elicitation": 1, "reward": 2}
+    order = {"compute_match": 0, "examiner": 1, "elicitation": 2, "reward": 3}
     for t in sorted(tests, key=lambda x: (order.get(x["source"], 9), x["p"])):
         L.append(f"| {t['source']} | {t['contrast']} | {_e(t['p'])} | {_e(t['holm_p'])} | "
                  f"{'✓' if t['holm_reject'] else '·'} | {_e(t['bh_p'])} | "
@@ -251,7 +322,8 @@ def main():
     ap.add_argument("--json", default="data/part3/p3_multiplicity.json")
     args = ap.parse_args()
 
-    tests = collect_elicitation() + collect_examiner() + collect_reward()
+    tests = (collect_elicitation() + collect_examiner() + collect_reward()
+             + collect_compute_match())
     if not tests:
         raise SystemExit("no p-values collected — are the summary artifacts present?")
     pooled = pooled_headline()
