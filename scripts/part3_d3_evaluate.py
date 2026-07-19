@@ -82,6 +82,34 @@ def assert_final_test_unlocked(repo: Path, registry: Path) -> dict[str, Any]:
         ["git", "merge-base", "--is-ancestor", frozen, first_commit[-1]], cwd=repo)
     if registry_after_freeze.returncode:
         raise RuntimeError("unlock registry was committed before freeze_commit")
+    retry_attempt = payload.get("retry_attempt")
+    if retry_attempt is not None:
+        retry_required = {"original_unlock", "retry_reason", "failure_evidence_sha256"}
+        retry_missing = sorted(retry_required - payload.keys())
+        if retry_missing:
+            raise RuntimeError(f"retry registry is incomplete: {retry_missing}")
+        if retry_attempt != 2:
+            raise RuntimeError("only the explicitly authorized infrastructure retry attempt 2 is allowed")
+        original_path = repo / str(payload["original_unlock"])
+        original = json.loads(original_path.read_text())
+        frozen_fields = ("checkpoint", "policy", "primary_comparisons", "table_schema",
+                         "final_test_protocol_sha256", "freeze_commit")
+        changed = [field for field in frozen_fields if payload.get(field) != original.get(field)]
+        if changed:
+            raise RuntimeError(f"retry changed frozen final-test fields: {changed}")
+        evidence = payload["failure_evidence_sha256"]
+        if not isinstance(evidence, dict) or not evidence:
+            raise RuntimeError("retry registry must hash preserved attempt-1 evidence")
+        for relative_path, expected_hash in evidence.items():
+            evidence_path = repo / relative_path
+            if not evidence_path.is_file() or sha256(evidence_path) != expected_hash:
+                raise RuntimeError(f"attempt-1 evidence mismatch: {relative_path}")
+        attempt = json.loads((repo / "reports/part3/w77/final_test/attempt.json").read_text())
+        failure_log = (repo / "logs/part3/w77/final_test_once.log").read_text()
+        if attempt.get("status") != "failed" or attempt.get("attempt") != 1:
+            raise RuntimeError("retry requires the preserved failed attempt-1 marker")
+        if "ModuleNotFoundError: No module named 'playwright'" not in failure_log:
+            raise RuntimeError("retry reason is not supported by the preserved infrastructure log")
     return payload
 
 

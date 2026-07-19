@@ -465,3 +465,11 @@ def test_final_once_inventories_final_attempt_state():
     assert '"attempt_status": payload["status"]' in finish
     assert 'Path(sys.argv[6])' in finish
     assert '({log} if log.is_file() else set())' in finish
+
+
+def test_final_once_keeps_retry_outputs_separate():
+    script = (REPO / "scripts/part3_d3_final_once.sh").read_text()
+    assert 'retry_attempt", 1' in script
+    assert 'final_test_attempt2' in script
+    assert 'final_test_attempt2.log' in script
+    assert '"attempt": attempt_number' in script

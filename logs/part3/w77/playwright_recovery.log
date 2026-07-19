@@ -1,0 +1,11 @@
+{
+  "split": "validation",
+  "output_manifest": "/data/slide-examiner/runs/part3/w77/playwright_smoke_default/rendered_manifest.jsonl",
+  "output_sha256": "d7ea3d89216b2aeac83a5ab94e5b9fbc2a37ab4c5f73ace3572fdc0bdd483872",
+  "final_test_read": false
+}
+playwright_version=1.57.0
+chromium_build=1200
+python=/home/user/miniconda3/envs/WorldArena_VLM/bin/python
+source_split=validation
+final_test_read=false

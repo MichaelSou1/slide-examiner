@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "checkpoint": "runs/part3/d3_formal_v2/train_seed73/checkpoint-768",
+  "policy": "runs/part3/d3_selection/frozen_policy.json",
+  "primary_comparisons": "reports/part3/w77_primary_comparisons.json",
+  "table_schema": "reports/part3/w77_table_schema.json",
+  "one_shot_command": "REPO=/data/slide-examiner GUARD_REPO=<clean-retry-guard-checkout> PYTHON=/home/user/miniconda3/envs/WorldArena_VLM/bin/python CUDA_DEVICE=<idle-gpu> <clean-retry-guard-checkout>/scripts/part3_d3_final_once.sh <clean-retry-guard-checkout>/release/part3/d3/final_test_retry_unlock.json",
+  "final_test_protocol_sha256": "7271ff8168fc9cde6acf0ea5e756a86cd496a727247951c638b563a675255c36",
+  "freeze_commit": "b7ba7c4243bbbf523197d69a7898aed2a507759f",
+  "retry_attempt": 2,
+  "original_unlock": "release/part3/d3/final_test_unlock.json",
+  "retry_reason": "Attempt 1 read the frozen manifests but failed before model inference because WorldArena_VLM lacked the Python Playwright package. This authorization permits exactly one infrastructure-only retry after Playwright 1.57.0 and Chromium build 1200 pass a non-final-test rendering smoke. No method, checkpoint, policy, threshold, comparison, schema, or endpoint changed.",
+  "failure_evidence_sha256": {
+    "logs/part3/w77/final_test_launcher.log": "dd71bab6ddede8709dfa949d724935d8593f55498e92c39a0feed11f66c1a4e1",
+    "logs/part3/w77/final_test_once.log": "6c178bd3409b1536c03c33897ec6865c56e4441d4fc9d020b467cb166561249a",
+    "reports/part3/w77/final_test/attempt.json": "339a60d7c1e73a41794bd553e87834b6a62ec7d3fa1fa7c0e86220d7d1b42b6a",
+    "reports/part3/w77/final_test/run_inventory.json": "559119a94ade49bd87a2570692e474cb5e497bfa1adc2ef8f22dbeef863f9429",
+    "runs/part3/w77/final_test/final_image_runtime.jsonl": "852cb69a4599c9ef680710d469ba0f0ce9e5cb9d53d6d4fa40aabbfbbe2b6589",
+    "runs/part3/w77/final_test/final_image_runtime.summary.json": "9501ae7562218765c67c9b56e21a92e06ef22f266cba15289e105b3bce727c04"
+  },
+  "infrastructure_recovery": {
+    "python": "/home/user/miniconda3/envs/WorldArena_VLM/bin/python",
+    "playwright_version": "1.57.0",
+    "chromium_build": "1200",
+    "smoke_manifest": "runs/part3/w77/playwright_smoke_default/non_final_manifest.jsonl",
+    "smoke_output": "runs/part3/w77/playwright_smoke_default/rendered_manifest.jsonl",
+    "smoke_log": "logs/part3/w77/playwright_recovery.log",
+    "smoke_split": "validation",
+    "final_test_read_by_smoke": false
+  }
+}

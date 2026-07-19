@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-# Frozen W7.7 final-test runner. This script intentionally refuses a second attempt.
+# Frozen W7.7 final-test runner. Attempt 2 is allowed only by a committed,
+# evidence-bound infrastructure-retry registry and always uses separate outputs.
 set -Eeuo pipefail
 
 REPO="${REPO:-$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)}"
@@ -9,13 +10,30 @@ PYTHON="${PYTHON:-python}"
 BASE_MODEL="${BASE_MODEL:-/data/public_data/xzs_data/Qwen3-VL-8B-Instruct}"
 CUDA_DEVICE="${CUDA_DEVICE:-0}"
 REGISTRY="${1:-$GUARD_REPO/release/part3/d3/final_test_unlock.json}"
-OUT="$REPO/runs/part3/w77/final_test"
-REPORT="$REPO/reports/part3/w77/final_test"
 LOG_DIR="$REPO/logs/part3/w77"
-ATTEMPT="$REPORT/attempt.json"
-LOG="$LOG_DIR/final_test_once.log"
 
 cd "$REPO"
+
+"$PYTHON" "$CODE_ROOT/scripts/part3_d3_evaluate.py" assert-unlocked \
+  --repo "$GUARD_REPO" --freeze-registry "$REGISTRY"
+ATTEMPT_NUMBER=$("$PYTHON" - "$REGISTRY" <<'PY'
+import json, sys
+print(json.load(open(sys.argv[1])).get("retry_attempt", 1))
+PY
+)
+if [[ "$ATTEMPT_NUMBER" == "1" ]]; then
+  OUT="$REPO/runs/part3/w77/final_test"
+  REPORT="$REPO/reports/part3/w77/final_test"
+  LOG="$LOG_DIR/final_test_once.log"
+elif [[ "$ATTEMPT_NUMBER" == "2" ]]; then
+  OUT="$REPO/runs/part3/w77/final_test_attempt2"
+  REPORT="$REPO/reports/part3/w77/final_test_attempt2"
+  LOG="$LOG_DIR/final_test_attempt2.log"
+else
+  echo "Refusing unsupported final_test attempt: $ATTEMPT_NUMBER" >&2
+  exit 65
+fi
+ATTEMPT="$REPORT/attempt.json"
 
 # The attempt marker is the one-shot boundary. A failed attempt is never silently resumed;
 # any policy-permitted infrastructure retry must first be documented and explicitly unlocked.
@@ -24,14 +42,12 @@ if [[ -d "$REPORT" || -e "$LOG" || -d "$OUT" ]]; then
   exit 64
 fi
 
-"$PYTHON" "$CODE_ROOT/scripts/part3_d3_evaluate.py" assert-unlocked \
-  --repo "$GUARD_REPO" --freeze-registry "$REGISTRY"
-
 mkdir -p "$OUT/raw" "$OUT/normalized" "$OUT/rendered_decks" "$REPORT/plots" "$LOG_DIR"
-"$PYTHON" - "$ATTEMPT" "$REGISTRY" <<'PY'
+"$PYTHON" - "$ATTEMPT" "$REGISTRY" "$ATTEMPT_NUMBER" <<'PY'
 import datetime, json, socket, sys
 from pathlib import Path
-path, registry = map(Path, sys.argv[1:])
+path, registry = map(Path, sys.argv[1:3])
+attempt_number = int(sys.argv[3])
 path.parent.mkdir(parents=True, exist_ok=True)
 path.write_text(json.dumps({
     "schema_version": 1,
@@ -39,7 +55,7 @@ path.write_text(json.dumps({
     "started_at_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(),
     "host": socket.gethostname(),
     "unlock_registry": str(registry),
-    "attempt": 1,
+    "attempt": attempt_number,
 }, indent=2) + "\n")
 PY
 
