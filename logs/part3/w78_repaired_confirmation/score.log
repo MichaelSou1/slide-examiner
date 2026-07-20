@@ -1,0 +1,6 @@
+{
+  "output": "reports/part3/w78_repaired_confirmation/scores.json",
+  "arms": [
+    "repaired_confirmation"
+  ]
+}

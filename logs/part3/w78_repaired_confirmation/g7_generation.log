@@ -1,0 +1,19 @@
+[G7 self-check] linter-blind on 30/30 = 1.000 (threshold 0.9)
+[render] 60 images ...
+Traceback (most recent call last):
+  File "/Users/rhsu/Desktop/27Fall/slide-examiner/slide_examiner/render.py", line 251, in _rasterize_jobs
+    from playwright.sync_api import sync_playwright
+ModuleNotFoundError: No module named 'playwright'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/rhsu/Desktop/27Fall/slide-examiner/scripts/part3_build_g7.py", line 246, in <module>
+    main()
+    ~~~~^^
+  File "/Users/rhsu/Desktop/27Fall/slide-examiner/scripts/part3_build_g7.py", line 216, in main
+    _rasterize_jobs(jobs)
+    ~~~~~~~~~~~~~~~^^^^^^
+  File "/Users/rhsu/Desktop/27Fall/slide-examiner/slide_examiner/render.py", line 253, in _rasterize_jobs
+    raise RuntimeError("Playwright is required for raster rendering. Install playwright.") from exc
+RuntimeError: Playwright is required for raster rendering. Install playwright.

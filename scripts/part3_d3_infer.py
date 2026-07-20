@@ -23,6 +23,7 @@ from slide_examiner.d3_evaluation import (
     generated_route_action,
     parse_generated_contract,
     prompt_row,
+    reference_followup_kwargs,
     route_requires_heads,
     validate_deployment,
 )
@@ -241,6 +242,16 @@ def infer_once(processor: Any, model: Any, heads: D3Heads | None, row: dict[str,
                       "latency_seconds": time.perf_counter() - started}}
 
 
+
+def infer_reference_followup(processor: Any, model: Any, heads: D3Heads | None,
+                             row: dict[str, Any], device: torch.device,
+                             max_new_tokens: int) -> dict[str, Any]:
+    """Compare an acquired reference exactly once and force a terminal answer attempt."""
+    return infer_once(
+        processor, model, heads, row, device, max_new_tokens,
+        **reference_followup_kwargs(),
+    )
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--run", type=Path,
@@ -373,15 +384,21 @@ def main() -> None:
                                           "provided_availability": availability,
                                           "reason": f"{type(exc).__name__}: {exc}"}
                     else:
-                        second = infer_once(processor, model, heads, followup_row, device,
-                                            args.max_new_tokens, terminal=True,
-                                            confidence_threshold=confidence_threshold,
-                                            max_escalations=max_escalations,
-                                            route_mode=args.route_mode,
-                                            fixed_action=args.fixed_action,
-                                            class_routes=class_routes,
-                                            route_only=args.route_only,
-                                            prompt_mode=args.prompt_mode)
+                        if requested == ExaminerAction.REQUEST_REFERENCE.value:
+                            second = infer_reference_followup(
+                                processor, model, heads, followup_row, device,
+                                args.max_new_tokens)
+                        else:
+                            second = infer_once(
+                                processor, model, heads, followup_row, device,
+                                args.max_new_tokens, terminal=True,
+                                confidence_threshold=confidence_threshold,
+                                max_escalations=max_escalations,
+                                route_mode=args.route_mode,
+                                fixed_action=args.fixed_action,
+                                class_routes=class_routes,
+                                route_only=args.route_only,
+                                prompt_mode=args.prompt_mode)
                         if second["parse_error"]:
                             counts["parser_failure"] += 1
                         counts["action_mismatch"] += int(second["action_mismatch"])
@@ -393,7 +410,9 @@ def main() -> None:
                         escalation = {
                             "requested_action": requested, "performed": True,
                             "provided_availability": availability,
-                            "executor": "student_followup",
+                            "executor": ("reference_comparison" if requested ==
+                                         ExaminerAction.REQUEST_REFERENCE.value else
+                                         "student_followup"),
                             "counterpart_match": (
                                 "sample_id" if followup_row["sample_id"] == row["sample_id"]
                                 else "severity_chain"),
@@ -410,7 +429,8 @@ def main() -> None:
                         "is_clean": bool(row.get("is_clean")),
                         "is_clean_deck": bool(row.get("is_clean_deck")),
                         **first, "escalation": escalation,
-                        "model_calls": 1 + int(bool(escalation and escalation.get("executor") == "student_followup")),
+                        "model_calls": 1 + int(bool(escalation and escalation.get("executor") in
+                                                      {"student_followup", "reference_comparison"})),
                         "external_calls": int(bool(escalation and escalation.get("performed"))),
                         "prompt_tokens": first["usage"]["prompt_tokens"] + int(
                             ((escalation or {}).get("result") or {}).get("usage", {}).get("prompt_tokens", 0)),

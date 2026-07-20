@@ -1,0 +1,22 @@
+{
+  "base": null,
+  "base_sha256": null,
+  "replacements": [
+    {
+      "path": "runs/part3/w78_repaired_confirmation/reference_repaired_raw.jsonl",
+      "sha256": "41b27c6268b84814ef37e75ee9fdcc171328f3c7961250db65048b5bd823aab9"
+    },
+    {
+      "path": "runs/part3/w78_repaired_confirmation/g7_raw.jsonl",
+      "sha256": "92440fb4d1af5e951e8b1d9baf9c9ddce74658b625ca57b691725e3f755e67fa"
+    }
+  ],
+  "records": 180,
+  "output": "runs/part3/w78_repaired_confirmation/repaired_180_raw.jsonl",
+  "output_sha256": "23c0026da9bafeffeca3f459e21f48aaa3cd4f5b09afc5ba4e81661fc20de7c0",
+  "per_class": {
+    "G1": 60,
+    "G7": 60,
+    "S6": 60
+  }
+}

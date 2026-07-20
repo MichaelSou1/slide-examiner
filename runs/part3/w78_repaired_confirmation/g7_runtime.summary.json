@@ -1,0 +1,20 @@
+{
+  "source_rows": 30,
+  "selected_pairs": 30,
+  "initial_records": 60,
+  "counterpart_records": 0,
+  "initial_limit": 60,
+  "offset_per_class": 0,
+  "per_class_pairs": {
+    "G7_RENDER_CONTAINMENT_OVERFLOW": 30
+  },
+  "split": "validation",
+  "manifests": [
+    {
+      "path": "runs/part3/w78_repaired_confirmation/g7_manifest.jsonl",
+      "sha256": "96804f73cb8500c196b3b88dcd4087c21de041afc35bafbdcb2da422bc980125"
+    }
+  ],
+  "output": "runs/part3/w78_repaired_confirmation/g7_runtime.jsonl",
+  "output_sha256": "3729860584de65e3220939c73f89bb7fd57cbd5add11a0b2cbef4c207168e737"
+}

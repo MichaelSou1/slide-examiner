@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="405" viewBox="0 0 1200 405">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#19324A" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrowNavy" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#28465F"/>
+    </marker>
+    <marker id="arrowTeal" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#188F89"/>
+    </marker>
+    <style>
+      .title { font: 700 24px Arial, Helvetica, sans-serif; fill: #17324D; }
+      .panel-title { font: 700 20px Arial, Helvetica, sans-serif; fill: #17324D; }
+      .stage { font: 700 14px Arial, Helvetica, sans-serif; letter-spacing: 1.2px; fill: #617486; }
+      .body { font: 16px Arial, Helvetica, sans-serif; fill: #324B60; }
+      .small { font: 14px Arial, Helvetica, sans-serif; fill: #617486; }
+      .tool { font: 700 17px Arial, Helvetica, sans-serif; fill: #FFFFFF; }
+      .icon-stroke { fill: none; stroke: #28465F; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+      .teal-stroke { fill: none; stroke: #188F89; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+      .coral-stroke { fill: none; stroke: #D95D55; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="405" fill="#FFFFFF"/>
+  <text x="600" y="30" text-anchor="middle" class="title">Diagnosis determines the evidence and the inspector</text>
+
+  <!-- Panel A -->
+  <g filter="url(#shadow)">
+    <rect x="18" y="48" width="374" height="300" rx="14" fill="#F7FAFC" stroke="#C9D6E0" stroke-width="1.5"/>
+  </g>
+  <rect x="18" y="48" width="7" height="300" rx="4" fill="#3B6E93"/>
+  <circle cx="48" cy="79" r="16" fill="#DCEAF3"/>
+  <text x="48" y="85" text-anchor="middle" class="panel-title">A</text>
+  <text x="75" y="85" class="panel-title">Sub-perceptual geometry</text>
+  <text x="42" y="117" class="stage">OBSERVED FAILURE</text>
+
+  <!-- slide and ruler -->
+  <rect x="43" y="132" width="122" height="78" rx="5" fill="#FFFFFF" stroke="#91A7B8" stroke-width="2"/>
+  <rect x="56" y="145" width="66" height="8" rx="2" fill="#B8CEDD"/>
+  <rect x="56" y="163" width="42" height="29" rx="3" fill="#D9E7EF"/>
+  <rect x="106" y="169" width="43" height="23" rx="3" fill="#F1C97B" stroke="#D95D55" stroke-width="2"/>
+  <path d="M112 127 H157 M112 122 V132 M157 122 V132" class="coral-stroke"/>
+  <text x="104" y="226" text-anchor="middle" class="small">pixels look plausible</text>
+
+  <line x1="177" y1="174" x2="212" y2="174" stroke="#28465F" stroke-width="2.5" marker-end="url(#arrowNavy)"/>
+
+  <!-- IR geometry -->
+  <rect x="222" y="132" width="142" height="78" rx="7" fill="#EAF2F7" stroke="#3B6E93" stroke-width="2"/>
+  <path d="M239 193 V149 M239 193 H345" class="icon-stroke"/>
+  <path d="M249 184 V177 M263 184 V173 M277 184 V177 M291 184 V173 M305 184 V177 M319 184 V173 M333 184 V177" class="icon-stroke" stroke-width="2"/>
+  <rect x="261" y="150" width="64" height="25" rx="3" fill="#FFFFFF" stroke="#188F89" stroke-width="3"/>
+  <path d="M254 147 L261 150 M254 178 L261 175" class="teal-stroke"/>
+  <text x="293" y="226" text-anchor="middle" class="small">declared boxes expose offset</text>
+
+  <path d="M112 243 C112 263 112 263 112 276" class="teal-stroke" marker-end="url(#arrowTeal)"/>
+  <rect x="46" y="282" width="320" height="46" rx="9" fill="#188F89"/>
+  <text x="206" y="311" text-anchor="middle" class="tool">Native-IR geometry linter</text>
+
+  <!-- Panel B -->
+  <g filter="url(#shadow)">
+    <rect x="413" y="48" width="374" height="300" rx="14" fill="#F7FAFC" stroke="#C9D6E0" stroke-width="1.5"/>
+  </g>
+  <rect x="413" y="48" width="7" height="300" rx="4" fill="#E2A63B"/>
+  <circle cx="443" cy="79" r="16" fill="#F8E8C5"/>
+  <text x="443" y="85" text-anchor="middle" class="panel-title">B</text>
+  <text x="470" y="85" class="panel-title">Format-suppressed evidence</text>
+  <text x="437" y="117" class="stage">OBSERVED FAILURE</text>
+
+  <!-- broad rubric -->
+  <rect x="438" y="132" width="122" height="78" rx="7" fill="#FFFFFF" stroke="#91A7B8" stroke-width="2"/>
+  <path d="M453 150 H490 M453 164 H500 M453 178 H484 M453 192 H496" stroke="#91A7B8" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="535" cy="150" r="5" fill="#C9D6E0"/>
+  <circle cx="535" cy="164" r="5" fill="#C9D6E0"/>
+  <circle cx="535" cy="178" r="5" fill="#D95D55"/>
+  <circle cx="535" cy="192" r="5" fill="#C9D6E0"/>
+  <path d="M529 172 L541 184 M541 172 L529 184" class="coral-stroke"/>
+  <text x="499" y="226" text-anchor="middle" class="small">whole rubric misses class</text>
+
+  <line x1="572" y1="174" x2="607" y2="174" stroke="#28465F" stroke-width="2.5" marker-end="url(#arrowNavy)"/>
+
+  <!-- atomic visual query -->
+  <rect x="617" y="132" width="142" height="78" rx="7" fill="#FFF8EA" stroke="#E2A63B" stroke-width="2"/>
+  <rect x="631" y="145" width="74" height="48" rx="4" fill="#FFFFFF" stroke="#91A7B8" stroke-width="2"/>
+  <rect x="642" y="155" width="43" height="12" rx="2" fill="#C7DCE8"/>
+  <rect x="665" y="174" width="48" height="9" rx="2" fill="#F1C97B" stroke="#D95D55" stroke-width="2"/>
+  <circle cx="718" cy="160" r="15" fill="none" stroke="#188F89" stroke-width="4"/>
+  <path d="M729 171 L743 185" class="teal-stroke" stroke-width="5"/>
+  <path d="M701 181 L707 187 L720 172" class="teal-stroke"/>
+  <text x="688" y="226" text-anchor="middle" class="small">one class, localized evidence</text>
+
+  <path d="M507 243 C507 263 507 263 507 276" class="teal-stroke" marker-end="url(#arrowTeal)"/>
+  <rect x="441" y="282" width="320" height="46" rx="9" fill="#188F89"/>
+  <text x="601" y="311" text-anchor="middle" class="tool">Atomic render-aware query</text>
+
+  <!-- Panel C -->
+  <g filter="url(#shadow)">
+    <rect x="808" y="48" width="374" height="300" rx="14" fill="#F7FAFC" stroke="#C9D6E0" stroke-width="1.5"/>
+  </g>
+  <rect x="808" y="48" width="7" height="300" rx="4" fill="#D95D55"/>
+  <circle cx="838" cy="79" r="16" fill="#F7DFDD"/>
+  <text x="838" y="85" text-anchor="middle" class="panel-title">C</text>
+  <text x="865" y="85" class="panel-title">Reference-assisted evidence</text>
+  <text x="832" y="117" class="stage">OBSERVED FAILURE</text>
+
+  <!-- single ambiguous slide -->
+  <rect x="833" y="132" width="122" height="78" rx="5" fill="#FFFFFF" stroke="#91A7B8" stroke-width="2"/>
+  <rect x="846" y="145" width="65" height="8" rx="2" fill="#B8CEDD"/>
+  <circle cx="864" cy="179" r="14" fill="#F1C97B"/>
+  <rect x="886" y="164" width="53" height="29" rx="3" fill="#D9E7EF"/>
+  <text x="894" y="226" text-anchor="middle" class="small">single view is ambiguous</text>
+
+  <line x1="967" y1="174" x2="1002" y2="174" stroke="#28465F" stroke-width="2.5" marker-end="url(#arrowNavy)"/>
+
+  <!-- paired comparison -->
+  <rect x="1012" y="132" width="142" height="78" rx="7" fill="#FCEFED" stroke="#D95D55" stroke-width="2"/>
+  <rect x="1022" y="146" width="53" height="40" rx="3" fill="#FFFFFF" stroke="#91A7B8" stroke-width="1.8"/>
+  <rect x="1091" y="146" width="53" height="40" rx="3" fill="#FFFFFF" stroke="#91A7B8" stroke-width="1.8"/>
+  <circle cx="1038" cy="169" r="8" fill="#F1C97B"/>
+  <rect x="1049" y="158" width="19" height="19" rx="2" fill="#D9E7EF"/>
+  <circle cx="1104" cy="169" r="8" fill="#F1C97B"/>
+  <rect x="1117" y="158" width="19" height="19" rx="2" fill="#D9E7EF" stroke="#D95D55" stroke-width="2"/>
+  <path d="M1079 153 V181" stroke="#617486" stroke-width="2" stroke-dasharray="4 4"/>
+  <path d="M1127 137 V151 M1120 144 H1134" class="teal-stroke"/>
+  <text x="1083" y="226" text-anchor="middle" class="small">paired views reveal change</text>
+
+  <path d="M902 243 C902 263 902 263 902 276" class="teal-stroke" marker-end="url(#arrowTeal)"/>
+  <rect x="836" y="282" width="320" height="46" rx="9" fill="#188F89"/>
+  <text x="996" y="311" text-anchor="middle" class="tool">Clean-reference comparison</text>
+
+  <!-- convergence -->
+  <path d="M206 348 V367 H566" class="icon-stroke" stroke-width="2.2"/>
+  <path d="M601 348 V367" class="icon-stroke" stroke-width="2.2"/>
+  <path d="M996 348 V367 H636" class="icon-stroke" stroke-width="2.2"/>
+  <path d="M566 367 H578" class="teal-stroke" marker-end="url(#arrowTeal)"/>
+  <path d="M636 367 H624" class="teal-stroke" marker-end="url(#arrowTeal)"/>
+  <path d="M601 367 V379" class="teal-stroke" marker-end="url(#arrowTeal)"/>
+  <path d="M601 357 L614 362 V372 C614 381 608 388 601 392 C594 388 588 381 588 372 V362 Z" fill="#17324D"/>
+  <path d="M595 373 L599 377 L607 368" fill="none" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="628" y="389" class="small" fill="#17324D">frozen critic</text>
+</svg>

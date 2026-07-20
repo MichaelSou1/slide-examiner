@@ -32,12 +32,11 @@
 
 \newcommand{\g}[1]{\textsf{#1}}        % defect-class names
 \newcommand{\best}[1]{\textbf{#1}}
-\newcommand{\ci}[1]{\,{\scriptsize[#1]}}   % compact 95% Wilson interval
+\newcommand{\ci}[1]{\,{\scriptsize[#1]}}   % compact component-wise Wilson-derived interval
 
 \pdfinfo{/TemplateVersion (2027.1)}
 
-\title{Diagnose Before You Inspect:\\
-Failure Attribution Prescribes a Deterministic\\
+\title{Failure Attribution Guides a Deterministic\\
 Symbolic--Neural Critic for Slides}
 \author{Anonymous Authors}
 \affiliations{}
@@ -48,25 +47,23 @@ Symbolic--Neural Critic for Slides}
 \begin{abstract}
 \noindent
 Vision--language models (VLMs) routinely pass slides with visible defects, but a failed inspection does not
-identify why the model failed. We test whether separating failure mechanisms can determine the appropriate
-inspection method. Using a structured-geometry oracle that is lossless with respect to the declared IR, we distinguish defects
-that fall below the models' effective perceptual threshold, defects that are visible but suppressed by a whole-rubric prompt, and
-\emph{reference-assisted} defects that become resolvable only when a clean twin is available. The resulting
-critic assigns declared geometry and terminology to symbolic linters, format-suppressed defects to atomic VLM
-queries with required evidence, reference-assisted defects to paired comparison, and page semantics to a
-finetuned examiner. On three vendors, atomic elicitation outperforms a compute-matched self-consistency baseline
-with a single call. The deterministic composition reaches 0.957 macro balanced accuracy on held-out validation.
-A later frozen check on a disjoint set scores lower when unresolved reference requests count as misses. Clean
-controls for the reference-assisted class, pixel-recovered structure, and real \textsc{SlideAudit} layouts
-identify the conditions under which this assignment transfers.
+identify why the model failed. We test whether separating failure mechanisms can guide the choice of inspection
+method. A structured-geometry oracle distinguishes defects below the tested perceptual threshold, defects
+suppressed by a whole-rubric prompt, and \emph{reference-assisted} defects that become identifiable only when a
+clean twin is available. This diagnosis informs a manually specified critic that is subsequently frozen:
+trusted native geometry goes to symbolic linters, render-only failures to atomic VLM queries, and semantic
+content to direct neural inspection. Across three vendors, one atomic query improves balanced accuracy by
+0.20--0.31 over a budget-favored control using ten repeated whole-rubric samples. On a disjoint nine-class
+image arm, the frozen critic reaches 0.826 macro balanced accuracy. Its four trusted-native-IR classes are
+perfect, while weaker neural transfer and unresolved reference requests delimit the result.
 \end{abstract}
 
 \begin{figure}[!t]
 \centering
 \includegraphics[width=0.94\columnwidth]{figs/fig_teaser.pdf}
 \caption{\textbf{Diagnose before inspection.}
-A geometry oracle attributes each failure, then routes it to symbolic linting, atomic VLM elicitation,
-reference comparison, or semantic examination for deterministic fusion by the hybrid critic.}
+A geometry oracle attributes each failure and guides a manually specified division of labor among symbolic
+linting, atomic VLM elicitation, reference requests, and direct semantic inspection.}
 \label{fig:teaser}
 \end{figure}
 
@@ -113,12 +110,11 @@ The paper makes four connected contributions. First, the structured-oracle proto
 format-suppressed, and reference-assisted failures, and we repeat the attribution on real CC-licensed layouts
 (Secs.~\ref{sec:diag} and~\ref{sec:external}). Second, defect-specific elicitation recovers signals suppressed
 by a whole-rubric prompt, whereas \g{G1} text overflow and \g{S6} image/text contradiction still require a clean
-reference (Sec.~\ref{sec:hybrid}). Third, a compute-matched control shows that this recovery is not explained by
-additional test-time compute: for \g{G7}, one atomic call exceeds ten-draw self-consistency by 0.20--0.31 across
-three vendors. Finally, the resulting deterministic composition, which uses no learned assignment model,
-reaches 0.957 macro balanced accuracy on held-out validation. A later frozen image-arm check reaches 0.826 on a
-disjoint set when unresolved reference requests count as misses. Clean-control errors, failed structure
-recovery, and transfer to real layouts define the scope of these results.
+reference (Sec.~\ref{sec:hybrid}). Third, a budget-favored repeated-C0 control shows that additional sampling
+cannot explain the atomic-query recovery across three vendors. Finally, diagnostic and development evidence
+guides a manually specified critic, which is frozen before evaluation on a disjoint nine-class image arm. The
+Technical Supplement reports the development-stage method selection, full per-class results, and post-hoc
+executor audits separately.
 
 % =====================================================================
 \section{Related work}
@@ -179,38 +175,37 @@ agent-generated decks \g{G7} is common, affecting most slides of a Zenodo10K sli
 AutoPresent slice.\footnote{93-deck Zenodo10K slice: 81/93 decks affected (857/3167 legal boxes); 14-deck
 AutoPresent slice: 8/14 decks (20/50 legal boxes).}
 
-\begin{table}[tb]
+\begin{table*}[t]
 \centering
 \small
-\caption{Defect taxonomy. The geometry group is detected symbolically; the semantic group is the examiner's
-domain; \g{G7} is constructed to be linter-blind. ``Channel'' is the engine the diagnosis assigns
-(Sec.~\ref{sec:diag}--\ref{sec:hybrid}).}
+\caption{Defect taxonomy. Geometry classes with trustworthy declared structure are handled symbolically;
+semantic classes require text or visual reasoning; \g{G7} is constructed to be linter-blind. ``Channel'' is
+the inspection engine suggested by the diagnosis (Sec.~\ref{sec:diag}--\ref{sec:hybrid}).}
 \label{tab:taxonomy}
-\setlength{\tabcolsep}{4pt}
-\resizebox{\columnwidth}{!}{%
-\begin{tabular}{@{}llll@{}}
+\setlength{\tabcolsep}{7pt}
+\renewcommand{\arraystretch}{1.08}
+\begin{tabular}{@{}p{0.09\textwidth}p{0.25\textwidth}p{0.43\textwidth}p{0.14\textwidth}@{}}
 \toprule
-Group & Class & Description & Channel \\
+Group & Class & Operational description & Diagnostic channel \\
 \midrule
-\multirow{6}{*}{Geometry} & \g{G1} text overflow & text exceeds its box & VLM+linter \\
- & \g{G2} element overlap & boxes intersect & linter \\
- & \g{G3} alignment offset & small mis-alignment & linter \\
- & \g{G4} font-size inconsistency & off-grid font size & linter \\
- & \g{G5} brand-color violation & off-palette color (CIELAB color difference $\Delta E$) & linter \\
- & \g{G6} margin violation & element past safe margin & linter \\
+\multirow{6}{*}{Geometry} & \g{G1} text overflow & text exceeds its declared box & VLM + linter \\
+ & \g{G2} element overlap & declared element boxes intersect & linter \\
+ & \g{G3} alignment offset & element departs from the alignment grid & linter \\
+ & \g{G4} font-size inconsistency & font size departs from the deck scale & linter \\
+ & \g{G5} brand-color violation & color is off-palette under CIELAB $\Delta E$ & linter \\
+ & \g{G6} margin violation & element crosses the declared safe margin & linter \\
 \midrule
-\multirow{6}{*}{Semantic} & \g{S1} title/body mismatch & body contradicts title & VLM \\
- & \g{S2} narrative-order break & deck sections out of order & LLM \\
- & \g{S3} terminology inconsistency & term drift across deck & term linter \\
- & \g{S4} density violation & slide over/under-packed & LLM \\
- & \g{S5} missing logic section & dropped argument step & LLM \\
- & \g{S6} image/text contradiction & figure contradicts caption & VLM \\
+\multirow{6}{*}{Semantic} & \g{S1} title/body mismatch & body content contradicts the title & VLM \\
+ & \g{S2} narrative-order break & deck sections appear out of logical order & LLM \\
+ & \g{S3} terminology inconsistency & a concept's terminology drifts across the deck & term linter \\
+ & \g{S4} density violation & slide is substantially over- or under-packed & LLM \\
+ & \g{S5} missing logic section & a required step in the argument is absent & LLM \\
+ & \g{S6} image/text contradiction & a figure contradicts its caption or surrounding claim & VLM \\
 \midrule
-Render & \g{G7} containment overflow & legal box, rendered overflow & VLM (atomic) \\
+Render & \g{G7} containment overflow & declared box is legal, but rendered content crosses it & VLM (atomic) \\
 \bottomrule
-\end{tabular}}
-
-\end{table}
+\end{tabular}
+\end{table*}
 
 \paragraph{Attribution modalities and metric.}
 To attribute a failure, we define four input conditions. Condition A contains only the rendered image.
@@ -224,14 +219,39 @@ model's internal representations. If it fails under both, the class is unsolved 
 interface, and we assign it to a symbolic method.\footnote{The oracle's ground-truth labels are stripped from the model's view by a
 regression-tested de-leaking pass, so B tests perception of structure, not label leakage. B$'$ is a control,
 not a second oracle: a caption re-injects the perceptual error it is meant to factor out, so B's advantage is
-by construction.} We report \emph{balanced accuracy on the paired clean controls}: a detection
-counts only if it fires on the defective slide and stays silent on its matched clean twin, so a model cannot
-score by flagging everything.
+by construction.} The defective slide and its matched clean twin form the basic scoring pair: a detection
+counts only if it fires on the defective member and stays silent on the clean member, so a model cannot score
+by flagging everything. Balanced-accuracy intervals are component-wise Wilson-derived intervals, formed from
+the Wilson intervals for recall and specificity. Two orderings of a 2-AFC pair are order controls, not
+independent defect instances; full intervals and ordering-level results are in the Technical Supplement.
 
 \paragraph{Two linters.}
 A geometry linter detects \g{G1}--\g{G6} from coordinates and rules (brand color via CIELAB $\Delta E_{2000}$, not RGB
 distance), at zero false positives on clean slides. A terminology linter handles \g{S3} from an occurrence
-table plus near-duplicate clustering, image-free. Both are the ``detectors of record'' prescribed by the diagnosis.
+table plus near-duplicate clustering, image-free. Both are the ``detectors of record'' selected from the diagnosis.
+
+\begin{table*}[t]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.03}
+\caption{Attribution-to-intervention correspondence. Each assignment is accompanied by a mismatched-method
+comparison and its observed boundary; BA denotes balanced accuracy. Results marked ``development'' informed the
+manual specification and are not part of the later frozen evaluation.}
+\label{tab:diagnosis-method}
+\begin{tabular}{@{}p{0.16\textwidth}p{0.16\textwidth}p{0.43\textwidth}p{0.17\textwidth}@{}}
+\toprule
+Diagnosis / classes & Assigned intervention & Matched evidence and mismatch check & Evidential boundary \\
+\midrule
+Declared geometry; \g{G1--G6} & native-IR geometry linter & Development BA/precision is 1.000 on \g{G1,G2,G3,G5,G6} ($n_+=n_-=150$ each), while pointwise VLM cells are 0.50--0.71. & requires trustworthy native IR \\
+Explicit terminology; \g{S3} & terminology linter & BA is 1.000 with zero false positives on 40 clean deck controls, versus 0.69 for the VLM. & deck-level text required \\
+Format-suppressed render overflow; \g{G7} & atomic C3 query with evidence & Across three vendors, one C3 call reaches 0.92/0.88/0.83 versus 0.61/0.59/0.63 for ten-draw C0 majority ($\Delta=0.31/0.29/0.20$). & weak models and frozen transfer remain mixed \\
+Reference-assisted; \g{G1,S6} & clean-reference comparison & Two-alternative choice reaches 0.97--1.00, whereas single-image pointwise inspection is 0.50--0.65. & reference must exist and be compared \\
+Page semantics; \g{S1,S4} & neural semantic inspection & In-domain examiner BA is 1.000 for both classes, versus 0.778/0.529 for the zero-shot 8B model. & \g{S4} sim-to-real transfer fails \\
+Pixels without native structure & recovered-structure linter & It stays at chance on \g{G1,G3,G4,G5}; \g{G2} reaches only 0.54--0.55, with element IoU recall 0.30--0.39. & tested extension fails \\
+\bottomrule
+\end{tabular}
+\end{table*}
 
 % =====================================================================
 \section{Diagnosis: two kinds of blindness}\label{sec:diag}
@@ -269,6 +289,27 @@ the re-operationalisation says it should be: \g{G3} shifts from 0/7 on the old e
 8/8 on the corrected within-list misalignment sample, and \g{G5} from 0/7 to 10/10 on the corrected
 within-list chromatic clash sample; the non-replaced 55 pairs are unchanged.
 
+\begin{table*}[t]
+\centering
+\small
+\setlength{\tabcolsep}{7pt}
+\renewcommand{\arraystretch}{1.12}
+\caption{Frozen nine-class image-arm specification. ``Native IR'' denotes trusted source structure, not boxes
+recovered from pixels. A missing terminal verdict is retained as \textsc{defer} and scored as a miss.}
+\label{tab:frozen-spec}
+\begin{tabular}{@{}p{0.16\textwidth}p{0.22\textwidth}p{0.52\textwidth}@{}}
+\toprule
+Classes & Required input & Frozen executor and unresolved behavior \\
+\midrule
+\g{G2,G3,G5,G6} & rendered image + native IR & geometry linter operating on trusted source structure \\
+\g{G7} & single rendered image & atomic evidence-bearing VLM query with localization \\
+\g{S1} & single rendered image & open pointwise VLM query (C0) \\
+\g{S4} & single rendered image & direct semantic answer \\
+\g{G1,S6} & image + clean reference & request a reference; no comparison verdict $\to$ \textsc{defer}/miss \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
 \paragraph{Terminology remains unresolved.}
 Not every consistency defect is format-suppressed. \g{S3} terminology inconsistency is \emph{not} rescued by
 forced choice (0.625, heavy position bias): reading the same term across deck pages and spotting a subtle
@@ -277,7 +318,7 @@ the full deck text with both variants present, also fails (0.56): with both vari
 input, this failure cannot be OCR, and instead reflects cross-page term-matching that does not survive the
 yes/no framing. The image channel is consistent with fine-grained glyph discrimination and the oracle channel
 fails even with the text in hand, so neither neural method is reliable. \g{S3} is therefore assigned to a symbolic terminology linter,
-which reaches balanced accuracy 1.000 against the VLM's 0.69, a negative result that changes the prescribed method.
+which reaches balanced accuracy 1.000 against the VLM's 0.69, a negative result that changes the selected method.
 
 \paragraph{The \g{G6} page-offset boundary depends on magnitude.}
 Re-posing a defect as a within-slide contrast does not rescue every class. It fails outright on \g{G6}. We
@@ -303,12 +344,31 @@ trap for any dataset that derives labels from the IR but evaluates on the render
 to a reward-model failure in Sec.~\ref{sec:g7}.
 
 % =====================================================================
-\section{From diagnosis to a deterministic symbolic--neural critic}\label{sec:hybrid}
+\section{A diagnosis-informed, subsequently frozen critic}\label{sec:hybrid}
 % =====================================================================
 
-The diagnosis says a single model is the wrong unit. We prescribe a fixed correspondence from diagnosed failure
-type to inspection method, validate the elicitation recovery across models, and stress the composition with the
-constructed render class \g{G7}. This assignment is deterministic, not learned from class outcomes.
+The diagnosis says a single model is the wrong unit. Diagnostic experiments and development-stage validation
+guide a manual correspondence from failure type to inspection method; this correspondence is not a learned
+router and is frozen before the disjoint evaluation. Table~\ref{tab:diagnosis-method} tests this correspondence
+against mismatched methods rather than reporting only successful assignments. The Technical Supplement reports
+the inspected development validation and its executor mapping separately from the frozen result.
+
+Together these contrasts make the assignment rule operational: use a deterministic checker when the predicate
+is fully defined in trustworthy source structure; use an atomic render-aware query when the defect exists only
+in pixels and whole-rubric elicitation suppresses it; request a clean comparator when single-slide evidence is
+insufficient; and reserve neural semantic inspection for predicates not expressible as deterministic geometry
+or terminology rules. Failure under the required input is retained as a boundary rather than rerouted post hoc.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=0.98\textwidth]{figs/fig_failure_to_intervention.pdf}
+\caption{Diagnosis-informed intervention design. Sub-perceptual defects are exposed by declared source
+geometry; format-suppressed defects are recovered by an atomic, localized render query; and ambiguous
+single-slide evidence is resolved with a clean reference. The diagram summarizes the manually specified
+correspondence rather than a learned router; Table~\ref{tab:diagnosis-method} reports its empirical support
+and boundaries.}
+\label{fig:failure-to-intervention}
+\end{figure*}
 
 \subsection{Elicitation separates format suppression from unresolved capability limits}\label{sec:elicit}
 
@@ -337,7 +397,7 @@ atomic query.
 \paragraph{Naming and query format have different effects.}
 Is it naming the class that helps, or changing how we ask? Two controls separate this. \emph{C0+} is C0 with
 \g{G7} added to the rubric's defect list. It retains the one-call format but gives the model a name for the
-class. \emph{C0\_named} instead asks about \g{G7} alone, on its own yes/no call. Table~\ref{tab:format} shows the split. Adding the name to the one-call rubric (C0+) recovers recall (234
+class. \emph{C0\_named} instead asks about \g{G7} alone, on its own yes/no call. Adding the name to the one-call rubric (C0+) recovers recall (234
 defectives newly flagged, $p{=}7\!\times\!10^{-71}$), but it reduces specificity: clean slides are over-flagged
 on 55\% of pairs, compared with 2.4\% for C3, so balanced accuracy remains lower. Asking about \g{G7} on its own call (C0\_named) recovers
 both, and supplying a clean reference slide adds nothing on top. So for \g{G7} the suppressor is the
@@ -347,37 +407,17 @@ help. Those classes need the clean reference slide (pairwise choice $\to0.97$--$
 \emph{reference-assisted} effect rather than single-slide format suppression. A clean-vs-clean control rules out a
 forced-pick artifact (capable models answer ``tie'' on $92$--$100\%$ of clean pairs).
 
-\paragraph{The recovery persists under compute matching.}
-The remaining alternative is that C3 wins only because it spends more test-time compute than the one-call rubric.
-We test that directly on three API-served models spanning distinct vendors, holding the image and rendered corpus
-fixed and matching C3's budget with repeated C0 draws. The compute-matched control is \emph{self-consistency}: majority
-vote over $K{=}10$ independent C0 samples. On \g{G7}, C3 still beats that compute-matched control on all three
-vendors ($0.92/0.88/0.83$ vs. $0.61/0.59/0.63$; $\Delta{=}+0.31/+0.29/+0.20$), and all three contrasts survive
-Holm correction within the full 24-test family (reported in the supplement). The budget points the same way:
-C3 is the cheapest condition in completion tokens ($34.7/37.5/40.5$ output tok per slide, one call) while the
-matched self-consistency baseline spends 8--10 calls per slide and still loses. A larger sampling budget therefore does not account for the recovery in this experiment. Changing the
-whole-taxonomy pointwise format recovers detection without increasing test-time compute. We report the union aggregation of the same draws, the
-definition-matched one-call control, and the \g{G1} negative control in the supplement.
+\paragraph{The recovery persists against a budget-favored repeated-C0 control.}
+The remaining alternative is that atomic elicitation wins only because it spends more test-time compute than a
+whole-rubric call. We therefore compare one C3 call with majority vote over ten independent C0 samples on three
+API-served vendors. C3 improves balanced accuracy by 0.20--0.31 even though repeated C0 receives the larger
+sampling budget. Thus extra sampling cannot explain the recovery. These contrasts are included in the
+paper-wide 85-test Holm family; a focused 24-test analysis is reported only as a descriptive companion in the
+Technical Supplement.
 
-\begin{table}[tb]
-\centering\small
-\setlength{\tabcolsep}{4pt}
-\caption{Naming vs.\ format on \g{G7}. Adding the class name to the one-call rubric (C0+) recovers recall
-but wrecks specificity (55\% clean over-flag); asking about \g{G7} on its own call (C0\_named, C3) recovers
-both. C0\_named matches C3, so a clean reference adds nothing for \g{G7}.}
-\label{tab:format}
-\setlength{\tabcolsep}{3pt}
-\begin{tabular}{@{}p{0.46\columnwidth}cc@{}}
-\toprule
-elicitation (\g{G7}) & clean over-flag & bal-acc \\
-\midrule
-C0 (whole-tax., unnamed)      & 2.4\% & 0.50 \\
-C0+ (whole-tax., \g{G7} named) & 55\% & 0.58--0.82 \\
-C0\_named (atomic, no ref.)   & 2.4\% & \best{0.93--1.00} \\
-C3 (atomic, +forced loc.)     & 2.4\% & \best{0.93--1.00} \\
-\bottomrule
-\end{tabular}
-\end{table}
+Naming and format controls in the Technical Supplement show that adding \g{G7} to the whole-rubric list
+recovers recall but harms specificity, whereas an atomic query recovers both; a clean reference adds no further
+benefit for this class.
 
 \paragraph{Elicitation depends on model capability and defect class.}
 The best elicitation depends jointly on model capability and defect class. No single prompt covers all cases, so
@@ -389,77 +429,27 @@ alignment). Absolute geometry on bare real pixels stays modest outside blatant o
 needs the linter, hence the structure bare images lack, so on image-only real data the hybrid degrades to
 VLM-only, a ceiling set by missing structure, not method.
 
-\subsection{The minimal hybrid critic covers the most}\label{sec:coverage}
+\subsection{Frozen critic specification and disjoint evaluation}\label{sec:coverage}
 
-\paragraph{The assigned methods provide complementary coverage.}
-On a separate novel-template held-out validation set ($150$ positives and $150$ clean controls per
-class), the corrected deterministic composition reaches macro balanced accuracy .957 and
-covers 8/9 classes; the sole miss is \g{S6} (.677 balanced accuracy, .607
-precision), whose perfect recall is offset by clean false positives (full table
-and fidelity audit in the Technical Supplement).
-On a later disjoint seed-controlled set generated after the method assignment was frozen ($30$ positives and
-$30$ clean controls per class), the completed frozen image arm scores macro balanced accuracy .826 and named
-localization .778, with unresolved clean-reference requests counted as misses. These are distinct stages and
-datasets: the former is held-out validation whose results had already been inspected, while the latter is a
-separate frozen check rather than a rerun on that corpus.
-We score each critic by \emph{named attribution}: a detection is correct only if it names the right defect
-type on the defective slide and stays silent on the matched clean slide. We call a class ``covered'' when this
-balanced accuracy exceeds 0.75 (with the 95\% Wilson lower bound above 0.65, so the cell is not just lucky).
-Coverage tracks the diagnosis: declared geometry is covered by the linter, the format-suppressed classes by a
-C3-elicited VLM. The mean balanced accuracy summarizes this complementary coverage. The minimal hybrid of a linter and one
-C3-elicited VLM reaches 0.86, compared with 0.59 for the conventional pointwise VLM-C0 and 0.66 for the linter
-alone (Table~\ref{tab:coverage}). Under the same strict covered criterion, the
-minimal hybrid clears 6 of the 9 image-level classes; \g{G6} at 0.75\ci{.67,.80} misses by the paper's own
-``exceeds'' rule, and \g{S1} under linter+C3 misses because its lower bound stays below 0.65. The nine classes
-are the image-level ones; \g{G4}/\g{S3} are linter-owned and \g{S2}/\g{S5} are deck-scope
-(Sec.~\ref{sec:examiner}). Note that this assignment needs no per-class tuning: the rule follows from the
-diagnosis, not from optimizing over class outcomes, so the coverage table is what the diagnosis predicts rather
-than a tuned architecture.
+Table~\ref{tab:frozen-spec} is the executable specification used for the frozen nine-class image arm. It is a
+manual, diagnosis-informed design rather than a learned router. A missing terminal verdict is \textsc{defer};
+for evaluation, \textsc{defer} is conservatively scored as a miss.
 
-\begin{table}[tb]
-\centering\scriptsize
-\setlength{\tabcolsep}{2.5pt}
-\caption{Per-class named-attribution balanced accuracy [95\% Wilson]; $n$ = paired positives (G1 40, G2 40, G3
-70, G5 40, G6 80, G7 40, S1 18, S4 36, S6 12; precision per cell in the Technical Supplement). The minimal
-linter+VLM-C3 hybrid has the highest mean balanced accuracy. ``covered'' means bal-acc $>0.75$ and Wilson
-lower bound $>0.65$; under that rule, linter+VLM-C3 and the prescribed composition each clear 6/9 classes.
-The prescribed column reports the corrected \g{S1} method; the frozen text-only \g{S1} baseline (0.25, precision 0.09)
-is reported in the prose below. Small \g{S1}/\g{S6} cells are method-selection diagnostics, not confirmatory (those
-claims rest on the elicitation decomposition and 2-AFC).}
-\label{tab:coverage}
-\setlength{\tabcolsep}{2.5pt}
-\resizebox{\columnwidth}{!}{%
-\begin{tabular}{@{}lccccc@{}}
-\toprule
-Class & linter & VLM-C0 & VLM-C3 & linter+C3 & prescribed \\
-\midrule
-\g{G1} overflow      & 1.00\ci{.91,1} & 0.50\ci{.46,.54} & 0.50\ci{.46,.54} & \best{1.00\ci{.91,1}} & \best{1.00\ci{.91,1}} \\
-\g{G2} overlap       & 0.80\ci{.68,.87} & 0.71\ci{.60,.79} & \best{0.86\ci{.74,.92}} & 0.80\ci{.68,.87} & 0.80\ci{.68,.87} \\
-\g{G3} alignment     & 0.93\ci{.85,.96} & 0.62\ci{.55,.68} & 0.71\ci{.63,.77} & \best{0.93\ci{.85,.96}} & \best{0.93\ci{.85,.96}} \\
-\g{G5} color         & 1.00\ci{.91,1} & 0.50\ci{.46,.54} & 0.68\ci{.57,.75} & \best{1.00\ci{.91,1}} & \best{1.00\ci{.91,1}} \\
-\g{G6} margin        & 0.75\ci{.67,.80} & 0.51\ci{.40,.61} & 0.51\ci{.47,.55} & \best{0.75\ci{.67,.80}} & \best{0.75\ci{.67,.80}} \\
-\g{G7} render-overflow & 0.00\ci{0,.54} & 0.50\ci{.46,.54} & \best{1.00\ci{.91,1}} & \best{1.00\ci{.91,1}} & \best{1.00\ci{.91,1}} \\
-\g{S1} title/body    & 0.50\ci{.41,.59} & \best{0.94\ci{.75,.98}} & 0.83\ci{.63,.92} & 0.83\ci{.63,.92} & \best{0.94\ci{.75,.98}} \\
-\g{S4} density       & 0.50\ci{.45,.55} & 0.51\ci{.44,.59} & \best{0.93\ci{.81,.97}} & \best{0.93\ci{.81,.97}} & 0.72\ci{.60,.80} \\
-\g{S6} image/text    & 0.50\ci{.38,.62} & 0.50\ci{.38,.62} & 0.50\ci{.38,.62} & 0.50\ci{.38,.62} & 0.50\ci{.38,.62} \\
-\midrule
-mean / covered & 0.66 \,/\, 4/9 & 0.59 \,/\, 1/9 & 0.72 \,/\, 3/9 & \best{0.86 \,/\, 6/9} & 0.85 \,/\, 6/9 \\
-\bottomrule
-\end{tabular}
-}
-\end{table}
+\g{G4}/\g{S3} remain linter-owned but are outside this nine-class image arm; \g{S2}/\g{S5} are deck-scope and
+also excluded. On the disjoint arm, the frozen critic obtains 0.826 macro balanced accuracy. All four
+trusted-native-IR linter classes are perfect; the three direct-neural classes average 0.811. Neither
+reference request produces a terminal comparison verdict, so \g{G1}/\g{S6} are scored as misses. This supports
+the hybrid division of labor primarily where trustworthy source structure exists, rather than confirming every
+neural or reference-dependent component. Full per-class precision, recall, localization, and development-stage
+comparisons are in the Technical Supplement.
 
-\paragraph{The \g{S1} diagnosis changes its assignment.}
-We initially assigned \g{S1} title/body mismatch to the text LLM, but the text-only probe over-flags (0.25,
-precision 0.09) while the image-bearing VLM names it reliably (0.94, precision 0.90): title/body mismatch
-needs the \emph{rendered layout}, not just the text. We therefore report both numbers: the frozen text-only
-baseline and the corrected VLM method. Under the corrected assignment, \g{S1}
-uses the VLM under its open pointwise prompt (C0, 0.94) rather than C3 (0.83), since recall is already
-saturated and C3 only adds false positives. This case shows how the diagnosis changes method selection. The one
-image-level class the hybrid does not cover is \g{S6} image/text contradiction, at 0.50 single-image for every
-engine; the pairwise test shows the model \emph{does} perceive it (recall 1.0, specificity $\sim$0,
-over-asserting rather than missing), so this is a reference-assisted effect, not a blind spot, in contrast to
-the moderate, unclipped \g{G6} page-offset regime.
+\paragraph{A neural transfer boundary.}
+For \g{G7}, development performance drops from 0.937 to 0.567 on the frozen arm. We treat this as a transfer
+failure rather than evidence of universal neural recovery; the available artifacts do not identify a unique
+cause. Pairwise probes likewise show that \g{G1}/\g{S6} can be distinguished when a clean twin is already
+provided, but the frozen executor does not complete reference request $\to$ comparison $\to$ verdict. The
+Technical Supplement reports development validation, same-set executor diagnostics, and limited-class
+follow-ups without treating them as frozen full-system evidence.
 
 \subsection{\g{G7}: the linter-blind class that specialised rewards also miss}\label{sec:g7}
 
@@ -483,30 +473,16 @@ construction: any reward model trained or evaluated on snap-rendered images with
 these zero-signal pairs. Perturbation fidelity must be checked at the pixel level, not assumed from the IR.
 
 % =====================================================================
-\section{The semantic engine: a specialist examiner}\label{sec:examiner}
+\section{A specialist examiner as an in-domain probe}\label{sec:examiner}
 % =====================================================================
 
-The hybrid's semantic engine can be a zero-shot model, but a small specialist does better on its own ground.
-We finetune Qwen3-VL-8B with QLoRA on 2{,}142 injected supervision records; the training mix is summarized in
-the Technical Supplement.
-
-\paragraph{The 8B examiner exceeds a zero-shot 30B on in-distribution semantics.}
-On in-domain held-out page-semantic inspection, the finetuned 8B reaches balanced accuracy 1.000 on both
-\g{S1} title/body and \g{S4} density, beating both zero-shot baselines including the 30B. On these in-distribution semantic tasks, the specialist 8B exceeds the larger zero-shot model. The largest gap is \g{S4} density (1.00 vs.\ 0.77 for the
-30B), and both in-distribution contrasts survive Holm correction over the final 85-test family. Full format-control
-and severity breakdowns are in the Technical Supplement.
-
-\paragraph{The examiner abstains on geometry.}
-Under image-only inspection, the finetuned model stays at 0.50 on \g{G2}--\g{G6} with \emph{zero} false
-positives: trained with image-only abstention targets, it declines to hallucinate geometry from pixels and
-leaves those classes to the linter, the designed behavior, and the reason the hybrid's geometry column comes
-from the linter rather than the VLM.
-
-\paragraph{The examiner does not transfer to bare real pixels.}
-The examiner does not transfer as a bare-pixel real-world inspector. On image-only \textsc{SlideAudit}, its
-synthetic \g{S4} strength collapses to chance (0.50), whereas only the zero-shot 30B shows real density signal
-($p{=}1.1\!\times\!10^{-5}$). Scale, not finetuning, carries bare-pixel transfer: the examiner learned a
-distribution, not universal slide quality.
+We separately finetune Qwen3-VL-8B with QLoRA on injected supervision to probe whether specialization helps
+page-semantic inspection. This examiner is not the frozen \g{S4} executor in Table~\ref{tab:frozen-spec}, and
+its intrinsic scores are not substituted into the frozen system result. In-domain, it outperforms larger
+zero-shot baselines on \g{S1} title/body mismatch and \g{S4} density while abstaining on geometry, as intended.
+On image-only \textsc{SlideAudit} and a deployed-agent deck, however, the ranking reverses: the specialist does
+not transfer as a universal bare-pixel inspector. Full training, controls, and results are in the Technical
+Supplement.
 
 % =====================================================================
 \section{External validity}\label{sec:external}
@@ -562,30 +538,26 @@ the VLM.
 \section{Limitations}\label{sec:limits}
 % =====================================================================
 
-We now report a human spot-check on the rebuilt corpus, but not an inter-annotator or deployment-time human
-baseline. On the rebuilt v2 sample, every sampled defect is judged visible and every clean twin clean (73/73;
-55/55 source-faithful on the auditable structure-carrying subset), so the paper's use of \g{G3}/\g{G5} rests
-on corrected human-verified samples rather than the stale legacy framing. Three scope bounds remain. First, the
-real-layout attribution (\S\ref{sec:external}) uses \emph{injected} defects, so image-only \textsc{SlideAudit}
-is the complementary real probe. Second, the reward-audit document-reward miss is instance-level, so the
-categorical read rests on the two general-multimodal backbones and the same-backbone CLIP-IQA/LAION
-dissociation. Third, the examiner$\to$generation downstream effect is near-null: quality stays at
-$\Delta q{=}{+}0.00$ where a coverage critique moves it by ${+}0.32$. The contribution is the
-\emph{diagnosis} and deterministic method prescription, not a claim to match human inspectors.
+The full critic assumes a generation pipeline with trustworthy native IR; pixel-only or open-world inputs reduce
+it to VLM-only inspection, and structure recovered from pixels does not restore the linter's guarantees. The
+real-layout study uses injected defects, with image-only \textsc{SlideAudit} as a complementary probe. Reported
+class intervals are component-wise Wilson-derived, but we do not estimate system-level macro uncertainty with
+templates or decks as clusters. Finally, examiner feedback yields near-zero downstream generation gain: this
+paper supports failure diagnosis and detection, not the claim that a critic necessarily improves generated
+slides. The human audit is a corpus spot-check rather than an inter-annotator or deployment-time baseline.
 
 % =====================================================================
 \section{Conclusion}
 % =====================================================================
 
-A slide-defect critic should not be one model. Failure attribution prescribes deterministic composition:
-declared geometry goes to a symbolic linter, format suppression to targeted single-slide elicitation,
-comparison-resolvable defects to paired references, and page semantics to a semantic text/examiner module.
-Atomic recovery beats compute-matched controls without extra inference. The composition reaches .957 on
-held-out validation; a later frozen image-arm check scores .826 with unresolved reference requests counted as
-misses. \g{S6} clean false positives, failed pixel-recovered structure, and the \textsc{SlideAudit} transfer
-gap delimit the result. \emph{Reproducibility:} code, linters, harness, and reward adapters are in the Code and
-Data Supplement; family-size updates are reported there.
+Failure attribution guides a manually specified, subsequently frozen division of labor: trusted declared
+geometry goes to symbolic linting, render-only failures to targeted elicitation, and semantics to direct neural
+inspection. The disjoint evaluation supports this design most strongly for native-IR classes, while neural
+transfer and incomplete reference comparison remain explicit boundaries. The result therefore applies to
+IR-owning generation pipelines, not to a universal pixel-only slide critic. \emph{Reproducibility:} code,
+linters, harness, detailed results, and executor audits are in the Code and Data Supplement.
 
+\clearpage
 \bibliography{refs}
 
 \end{document}

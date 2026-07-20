@@ -35,3 +35,8 @@ This repository tracks the Slide-Examiner research implementation against
   summary, trained checkpoint, report, or panel file.
 - Before starting substantial work, skim `specs/todo.md`; before finishing, check
   whether any TODO state needs updating.
+
+
+## LaTex Suite Availability
+
+- The LaTeX toolchain is available in the conda environment named "tex".

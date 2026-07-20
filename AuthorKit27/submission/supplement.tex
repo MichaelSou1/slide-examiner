@@ -34,8 +34,8 @@
 \newcommand{\ci}[1]{\,{\scriptsize[#1]}}
 
 \title{\bf Technical Supplement:\\
-``Diagnose Before You Inspect: Failure Attribution Prescribes a
-Deterministic Symbolic--Neural Critic for Slides''}
+``Failure Attribution Guides a Deterministic
+Symbolic--Neural Critic for Slides''}
 \author{Anonymous Authors (AAAI-27 Submission)}
 \date{}
 
@@ -48,7 +48,8 @@ but omitted there for space: the SlideAudit crosswalk and full transfer table
 (\S\ref{app:coverage-precision}),
 the full multi-reward / VLM-judge audit grid with per-class preference accuracies
 (\S\ref{app:reward}), the full page-semantic examiner table including the
-deck-scope negative result (\S\ref{app:examiner}), and the extended figures
+deck-scope negative result (\S\ref{app:examiner}), the development and frozen
+executor evaluations (\S\ref{app:w5-heldout}), and the extended figures
 (\S\ref{app:figs}). All numbers are transcribed verbatim from the frozen
 analysis reports and rollout records that accompany this submission as the Code
 and Data Supplement; the held-out and stress-test addenda are identified
@@ -107,20 +108,20 @@ positives) is the valid-record count after parsing.
 \footnotesize
 \setlength{\tabcolsep}{3.5pt}
 \caption{Complete \textsc{SlideAudit} transfer results for Qwen3.5-27B,
-image-only modality. Each result is balanced accuracy [95\% Wilson]; precision
+image-only modality. Each result is balanced accuracy [component-wise Wilson-derived interval]; precision
 [95\% Wilson]. $n_+/n_-$ gives the effective scored counts.}
 \label{tab:slideaudit-transfer}
 \begin{tabular}{@{}lccc@{}}
 \toprule
 class & C0 whole-taxonomy & C3 atomic & $n_+/n_-$ \\
 \midrule
-\g{G1} overflow & .550 [.476,.615]; 1.000 [.510,1] & .625 [.501,.727]; .812 [.570,.934] & 40/40 \\
-\g{G2} overlap  & .963 [.857,.987]; .930 [.814,.976] & .938 [.818,.980]; .949 [.831,.986] & 40/40 \\
-\g{G3} alignment & .558 [.439,.687]; .571 [.250,.842] & .723 [.552,.850]; .706 [.469,.867] & 21/40 \\
-\g{G4} font size & .588 [.479,.681]; .818 [.523,.949] & .637 [.506,.745]; .789 [.567,.915] & 40/40 \\
-\g{G5} colour & .516 [.459,.581]; 1.000 [.207,1] & .814 [.668,.900]; .913 [.732,.976] & 31/40 \\
-\g{G6} margin & .512 [.458,.564]; 1.000 [.207,1] & .550 [.431,.660]; .643 [.388,.837] & 40/40 \\
-\g{S4} density & .680 [.553,.776]; .889 [.672,.969] & .738 [.600,.834]; .880 [.700,.958] & 39/40; 40/40 \\
+\g{G1} overflow & 0.550 [0.476,0.615]; 1.000 [0.510,1] & 0.625 [0.501,0.727]; 0.812 [0.570,0.934] & 40/40 \\
+\g{G2} overlap  & 0.963 [0.857,0.987]; 0.930 [0.814,0.976] & 0.938 [0.818,0.980]; 0.949 [0.831,0.986] & 40/40 \\
+\g{G3} alignment & 0.558 [0.439,0.687]; 0.571 [0.250,0.842] & 0.723 [0.552,0.850]; 0.706 [0.469,0.867] & 21/40 \\
+\g{G4} font size & 0.588 [0.479,0.681]; 0.818 [0.523,0.949] & 0.637 [0.506,0.745]; 0.789 [0.567,0.915] & 40/40 \\
+\g{G5} colour & 0.516 [0.459,0.581]; 1.000 [0.207,1] & 0.814 [0.668,0.900]; 0.913 [0.732,0.976] & 31/40 \\
+\g{G6} margin & 0.512 [0.458,0.564]; 1.000 [0.207,1] & 0.550 [0.431,0.660]; 0.643 [0.388,0.837] & 40/40 \\
+\g{S4} density & 0.680 [0.553,0.776]; 0.889 [0.672,0.969] & 0.738 [0.600,0.834]; 0.880 [0.700,0.958] & 39/40; 40/40 \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -216,22 +217,21 @@ declared point-estimate convention is precision zero.
 \centering
 \small
 \setlength{\tabcolsep}{5pt}
-\caption{Per-cell precision corresponding exactly to the main paper's coverage
-table. Values in brackets are 95\% Wilson intervals when defined.}
+\caption{Per-cell precision corresponding to the development coverage analysis. Values in brackets are 95\% Wilson intervals when defined.}
 \label{tab:coverage-precision}
 \begin{tabular}{@{}lccccc@{}}
 \toprule
-class & linter & VLM-C0 & VLM-C3 & linter+C3 & prescribed \\
+class & linter & VLM-C0 & VLM-C3 & linter+C3 & selected \\
 \midrule
-\g{G1} & 1.00 [.91,1] & 0 & 0 & 1.00 [.91,1] & 1.00 [.91,1] \\
-\g{G2} & 1.00 [.86,1] & 1.00 [.82,1] & 1.00 [.88,1] & 1.00 [.86,1] & 1.00 [.86,1] \\
-\g{G3} & 1.00 [.94,1] & 1.00 [.82,1] & 1.00 [.88,1] & 1.00 [.94,1] & 1.00 [.94,1] \\
-\g{G5} & 1.00 [.91,1] & 0 & 1.00 [.79,1] & 1.00 [.91,1] & 1.00 [.91,1] \\
-\g{G6} & 1.00 [.91,1] & 0 & .506 [.429,.584] & 1.00 [.91,1] & 1.00 [.91,1] \\
-\g{G7} & 0 & 0 & 1.00 [.91,1] & 1.00 [.91,1] & 1.00 [.91,1] \\
-\g{S1} & 0 & .900 [.699,.972] & .750 [.551,.880] & .750 [.551,.880] & .900 [.699,.972] \\
-\g{S4} & 0 & .667 [.208,.939] & 1.00 [.89,1] & 1.00 [.89,1] & 1.00 [.806,1] \\
-\g{S6} & 0 & .500 [.314,.686] & .500 [.314,.686] & .500 [.314,.686] & .500 [.314,.686] \\
+\g{G1} & 1.00 [0.91,1] & 0 & 0 & 1.00 [0.91,1] & 1.00 [0.91,1] \\
+\g{G2} & 1.00 [0.86,1] & 1.00 [0.82,1] & 1.00 [0.88,1] & 1.00 [0.86,1] & 1.00 [0.86,1] \\
+\g{G3} & 1.00 [0.94,1] & 1.00 [0.82,1] & 1.00 [0.88,1] & 1.00 [0.94,1] & 1.00 [0.94,1] \\
+\g{G5} & 1.00 [0.91,1] & 0 & 1.00 [0.79,1] & 1.00 [0.91,1] & 1.00 [0.91,1] \\
+\g{G6} & 1.00 [0.91,1] & 0 & 0.506 [0.429,0.584] & 1.00 [0.91,1] & 1.00 [0.91,1] \\
+\g{G7} & 0 & 0 & 1.00 [0.91,1] & 1.00 [0.91,1] & 1.00 [0.91,1] \\
+\g{S1} & 0 & 0.900 [0.699,0.972] & 0.750 [0.551,0.880] & 0.750 [0.551,0.880] & 0.900 [0.699,0.972] \\
+\g{S4} & 0 & 0.667 [0.208,0.939] & 1.00 [0.89,1] & 1.00 [0.89,1] & 1.00 [0.806,1] \\
+\g{S6} & 0 & 0.500 [0.314,0.686] & 0.500 [0.314,0.686] & 0.500 [0.314,0.686] & 0.500 [0.314,0.686] \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -264,15 +264,15 @@ the linter-only blind spot \g{G7} is.}
 \toprule
 Reward scorer & category & \g{G1} & \g{G2} & \g{G5} & \textbf{\g{G7}} & \g{S4} & \g{S6} \\
 \midrule
-DocReward-3B   & document   & 0.93 & 1.00 & 0.72 & $\times$\,\textbf{0.48}\,{\scriptsize$[.38,.58]$} & 1.00 & 1.00 \\
+DocReward-3B   & document   & 0.93 & 1.00 & 0.72 & $\times$\,\textbf{0.48}\,{\scriptsize$[0.38,0.58]$} & 1.00 & 1.00 \\
 \midrule
-Skywork-VL-7B  & general-mm & 0.94 & 0.72 & 0.57 & \checkmark\,\textbf{0.79}\,{\scriptsize$[.69,.86]$} & 0.92 & 1.00 \\
-PickScore-v1   & general-mm & 0.74 & 0.59 & 0.70 & \checkmark\,\textbf{0.71}\,{\scriptsize$[.61,.80]$} & 1.00 & 0.72 \\
+Skywork-VL-7B  & general-mm & 0.94 & 0.72 & 0.57 & \checkmark\,\textbf{0.79}\,{\scriptsize$[0.69,0.86]$} & 0.92 & 1.00 \\
+PickScore-v1   & general-mm & 0.74 & 0.59 & 0.70 & \checkmark\,\textbf{0.71}\,{\scriptsize$[0.61,0.80]$} & 1.00 & 0.72 \\
 \midrule
-LAION-Aesth.   & aesthetic  & 0.37 & 0.91 & 0.78 & $\times$\,\textbf{0.57}\,{\scriptsize$[.46,.66]$} & 0.75 & 0.61 \\
-CLIP-IQA       & aesthetic  & 0.44 & 0.50 & 0.65 & \checkmark\,\textbf{0.83}\,{\scriptsize$[.74,.90]$} & 0.50 & 0.72 \\
+LAION-Aesth.   & aesthetic  & 0.37 & 0.91 & 0.78 & $\times$\,\textbf{0.57}\,{\scriptsize$[0.46,0.66]$} & 0.75 & 0.61 \\
+CLIP-IQA       & aesthetic  & 0.44 & 0.50 & 0.65 & \checkmark\,\textbf{0.83}\,{\scriptsize$[0.74,0.90]$} & 0.50 & 0.72 \\
 \midrule
-Qwen3.7-Max judge & frontier VLM & 0.13 & 0.92 & -- & \checkmark\,\textbf{1.00}\,{\scriptsize$[.86,1]$} & 1.00 & -- \\
+Qwen3.7-Max judge & frontier VLM & 0.13 & 0.92 & -- & \checkmark\,\textbf{1.00}\,{\scriptsize$[0.86,1]$} & 1.00 & -- \\
 \midrule
 \multicolumn{2}{@{}l}{$n$ (paired; non-VLM rows)} & 54 & 54 & 80 & 90 & 36 & 18 \\
 \multicolumn{2}{@{}l}{$n$ (Qwen3.7-Max judge row)} & 24 & 24 & -- & 24 & 24 & -- \\
@@ -288,10 +288,14 @@ Table~\ref{tab:examiner-full} reproduces the page-semantic inspection table
 of \S6 of the main paper, here shown with the deck-scope \g{S2}/\g{S5}
 negative result and the full per-cell context.
 
+This examiner is evaluated as an independent in-domain semantic probe; it is
+not the frozen \g{S4} executor and its scores are not substituted into the
+frozen nine-class macro.
+
 \begin{table}[h]
 \centering
 \small
-\caption{Page-semantic inspection, balanced accuracy [95\% Wilson] on paired
+\caption{Page-semantic inspection, balanced accuracy [component-wise Wilson-derived interval] on paired
 clean (best modality). The finetuned 8B examiner beats both zero-shot
 baselines, including the 30B, \emph{in-distribution}. Deck-scope \g{S2}/\g{S5}
 are a negative result. $n$ = paired positives (2-AFC rows = forced-choice
@@ -301,13 +305,13 @@ pairs); the \g{S6} 2-AFC rests on only 12 pairs and is descriptive only.}
 \toprule
 class & \textbf{ft-8B} & zs-8B & zs-30B & $n$ \\
 \midrule
-\g{S1} title/body  & \best{1.000}\ci{.95,1} & 0.778\ci{.69,.85} & 0.933\ci{.87,.95} & 36 \\
-\g{S4} density     & \best{1.000}\ci{.97,1} & 0.529\ci{.50,.58} & 0.774\ci{.69,.84} & 60 \\
-\g{G1} overflow (2-AFC) & \best{1.000}\ci{.97,1} & 0.975\ci{.93,.99} & 0.700\ci{.61,.77} & 120 \\
-\g{S6} image/text (2-AFC) & \best{1.000}\ci{.76,1} & 1.000\ci{.76,1} & 0.500\ci{.25,.75} & 12 \\
+\g{S1} title/body  & \best{1.000}\ci{0.95,1} & 0.778\ci{0.69,0.85} & 0.933\ci{0.87,0.95} & 36 \\
+\g{S4} density     & \best{1.000}\ci{0.97,1} & 0.529\ci{0.50,0.58} & 0.774\ci{0.69,0.84} & 60 \\
+\g{G1} overflow (2-AFC) & \best{1.000}\ci{0.97,1} & 0.975\ci{0.93,0.99} & 0.700\ci{0.61,0.77} & 120 \\
+\g{S6} image/text (2-AFC) & \best{1.000}\ci{0.76,1} & 1.000\ci{0.76,1} & 0.500\ci{0.25,0.75} & 12 \\
 \midrule
-\g{S2} narrative (deck) & 0.500$^\dagger$\ci{.45,.53} & 0.646\ci{.53,.72} & 0.549\ci{.42,.66} & 36 \\
-\g{S5} missing-logic (deck) & 0.500\ci{.47,.53} & 0.500\ci{.47,.53} & 0.567\ci{.45,.68} & 60 \\
+\g{S2} narrative (deck) & 0.500$^\dagger$\ci{0.45,0.53} & 0.646\ci{0.53,0.72} & 0.549\ci{0.42,0.66} & 36 \\
+\g{S5} missing-logic (deck) & 0.500\ci{0.47,0.53} & 0.500\ci{0.47,0.53} & 0.567\ci{0.45,0.68} & 60 \\
 \bottomrule
 \end{tabular}
 \\[2pt]
@@ -342,17 +346,17 @@ verification rates on the paired clean render.}
 \toprule
 class & defect visible & twin clean & $n$ \\
 \midrule
-\g{G1} & 1.00\ci{.70,1} & 1.00\ci{.70,1} & 9 \\
-\g{G2} & 1.00\ci{.65,1} & 1.00\ci{.65,1} & 7 \\
-\g{G3} & 1.00\ci{.68,1} & 1.00\ci{.68,1} & 8 \\
-\g{G5} & 1.00\ci{.72,1} & 1.00\ci{.72,1} & 10 \\
-\g{G6} & 1.00\ci{.65,1} & 1.00\ci{.65,1} & 7 \\
-\g{G7} & 1.00\ci{.70,1} & 1.00\ci{.70,1} & 9 \\
-\g{S1} & 1.00\ci{.65,1} & 1.00\ci{.65,1} & 7 \\
-\g{S4} & 1.00\ci{.65,1} & 1.00\ci{.65,1} & 7 \\
-\g{S6} & 1.00\ci{.70,1} & 1.00\ci{.70,1} & 9 \\
+\g{G1} & 1.00\ci{0.70,1} & 1.00\ci{0.70,1} & 9 \\
+\g{G2} & 1.00\ci{0.65,1} & 1.00\ci{0.65,1} & 7 \\
+\g{G3} & 1.00\ci{0.68,1} & 1.00\ci{0.68,1} & 8 \\
+\g{G5} & 1.00\ci{0.72,1} & 1.00\ci{0.72,1} & 10 \\
+\g{G6} & 1.00\ci{0.65,1} & 1.00\ci{0.65,1} & 7 \\
+\g{G7} & 1.00\ci{0.70,1} & 1.00\ci{0.70,1} & 9 \\
+\g{S1} & 1.00\ci{0.65,1} & 1.00\ci{0.65,1} & 7 \\
+\g{S4} & 1.00\ci{0.65,1} & 1.00\ci{0.65,1} & 7 \\
+\g{S6} & 1.00\ci{0.70,1} & 1.00\ci{0.70,1} & 9 \\
 \midrule
-\textbf{overall} & \textbf{1.00\ci{.95,1}} & \textbf{1.00\ci{.95,1}} & \textbf{73} \\
+\textbf{overall} & \textbf{1.00\ci{0.95,1}} & \textbf{1.00\ci{0.95,1}} & \textbf{73} \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -407,18 +411,31 @@ stress test below locates the clipping boundary where this conclusion ceases to 
 \section{Diagnosis--method correspondence, frozen confirmation, and extreme-offset addenda}
 \label{app:w5-heldout}
 
-\paragraph{Paper-wide multiplicity update.}
-The final correction family contains 85 reported significance tests: the
-original 61 elicitation, examiner, and reward tests plus all 24 contrasts from
-the compute-matched ablation. At $\alpha=.05$, 35 survive Holm (FWER) and 47
-survive Benjamini--Hochberg (FDR); the released
-\texttt{data/part3/p3\_multiplicity.json} records every raw and adjusted
-$p$-value. The 24-test within-ablation Holm family is additionally reported for
-the focused compute-matched comparison below.
+\paragraph{Scoring units, intervals, and multiplicity.}
+A paired clean/defective slide is the basic scoring unit throughout the paired
+image experiments. In 2-AFC controls, presenting both orders is an order-bias
+check on the same pair, not two independent defect instances. Balanced accuracy
+is the mean of recall and specificity; its bracketed interval is
+\emph{component-wise Wilson-derived}, obtained by averaging the Wilson bounds
+for those two binomial components. Precision, recall, and specificity intervals
+are ordinary Wilson intervals for their corresponding counts. We do not attach
+a macro confidence interval: the current analysis lacks system-level uncertainty
+clustered by template or deck.
 
-\paragraph{Held-out validation protocol.}
-We generated a seed-controlled calibration corpus from templates not used by
-the development experiments: a coloured header, accent rail, footer, and
+The paper-wide primary correction family contains 85 reported significance
+tests: the original 61 elicitation, examiner, and reward tests plus all 24
+contrasts from the repeated-C0 control analysis. At $\alpha=0.05$, 35 survive
+Holm (FWER) and 47 survive Benjamini--Hochberg (FDR); the released
+\path{data/part3/p3_multiplicity.json} records every raw and adjusted
+$p$-value. The 24-test within-analysis family is retained only as a focused,
+descriptive companion, not as the paper-wide primary family. The repeated-C0
+control uses ten samples and therefore receives more inference budget than the
+single C3 call; it tests whether extra sampling can explain the C3 recovery and
+does not assert equal compute budgets.
+
+\paragraph{Development-stage held-out validation protocol.}
+During development, we generated a seed-controlled calibration corpus from
+templates not used by the preceding diagnostic experiments: a coloured header, accent rail, footer, and
 visible diagram are varied across eight layouts and six topics. Each of nine
 classes has 150 defective slides and 150 same-base clean controls. Every
 labelled sample has a unique clean twin; all 1,350 pairs differ in rendered
@@ -429,44 +446,50 @@ localization check. We then evaluated the fixed deterministic composition on thi
 \g{G1}/\g{G2}/\g{G3}/\g{G5}/\g{G6}$\to$linter,
 \g{G7}$\to$VLM-C3, \g{S1}/\g{S6}$\to$VLM-C0, and
 \g{S4}$\to$text LLM. Table~\ref{tab:w5-heldout} reports named attribution;
-all cells use $n_+=n_-=150$.
+all cells use $n_+=n_-=150$. Although template-held-out, these results were
+inspected and used for method selection, so they are development evidence rather
+than an untouched final test.
 
 \begin{table}[h]
 \centering
 \small
-\caption{Corrected deterministic-composition evaluation on the held-out
-validation corpus. Intervals are 95\% Wilson intervals. The predeclared covered
-criterion is balanced accuracy and precision both $\ge .70$.}
+\caption{Development-stage deterministic-composition evaluation on the
+template-held-out validation corpus. Balanced-accuracy intervals are component-wise Wilson-derived. The predeclared covered
+criterion is balanced accuracy and precision both $\ge 0.70$.}
 \label{tab:w5-heldout}
 \begin{tabular}{@{}lccc@{}}
 \toprule
 Class (method) & Balanced accuracy & Precision & Covered \\
 \midrule
-\g{G1} (linter) & 1.000 [.975,1] & 1.000 [.975,1] & yes \\
-\g{G2} (linter) & 1.000 [.975,1] & 1.000 [.975,1] & yes \\
-\g{G3} (linter) & 1.000 [.975,1] & 1.000 [.975,1] & yes \\
-\g{G5} (linter) & 1.000 [.975,1] & 1.000 [.975,1] & yes \\
-\g{G6} (linter) & 1.000 [.975,1] & 1.000 [.975,1] & yes \\
-\g{G7} (VLM-C3) & .937 [.886,.965] & .917 [.863,.951] & yes \\
-\g{S1} (VLM-C0) & 1.000 [.975,1] & 1.000 [.975,1] & yes \\
-\g{S4} (text LLM) & 1.000 [.975,1] & 1.000 [.975,1] & yes \\
-\g{S6} (VLM-C0) & .677 [.628,.716] & .607 [.545,.666] & no \\
+\g{G1} (linter) & 1.000 [0.975,1] & 1.000 [0.975,1] & yes \\
+\g{G2} (linter) & 1.000 [0.975,1] & 1.000 [0.975,1] & yes \\
+\g{G3} (linter) & 1.000 [0.975,1] & 1.000 [0.975,1] & yes \\
+\g{G5} (linter) & 1.000 [0.975,1] & 1.000 [0.975,1] & yes \\
+\g{G6} (linter) & 1.000 [0.975,1] & 1.000 [0.975,1] & yes \\
+\g{G7} (VLM-C3) & 0.937 [0.886,0.965] & 0.917 [0.863,0.951] & yes \\
+\g{S1} (VLM-C0) & 1.000 [0.975,1] & 1.000 [0.975,1] & yes \\
+\g{S4} (text LLM) & 1.000 [0.975,1] & 1.000 [0.975,1] & yes \\
+\g{S6} (VLM-C0) & 0.677 [0.628,0.716] & 0.607 [0.545,0.666] & no \\
 \midrule
-Macro mean & .957 & --- & 8/9 \\
+Macro mean & 0.957 & --- & 8/9 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-The held-out result supports the method correspondence but also exposes a
+The development result supports the method correspondence but also exposes a
 specific limitation rather than hiding it in a mean: \g{S6} has perfect recall
 but 97/150 clean false positives, so its C0 method fails the strict precision
 criterion on the novel diagram family. The corrected \g{S1} visual method, by
-contrast, transfers without an error.
+contrast, transfers without an error. This 0.957 development instance maps
+\g{G7}$\to$C3, \g{S1}$\to$C0, \g{S4}$\to$text LLM, and
+\g{S6}$\to$C0; it is not executor-identical to the later frozen image arm,
+which uses direct semantic answering for \g{S4} and requests clean references
+for \g{G1}/\g{S6}.
 
 \paragraph{Does the diagnosis predict the useful inspection method?}
 Table~\ref{tab:diagnosis-method} audits every proposed correspondence against
 an inappropriate method and labels the result rather than retaining only
-successful cells. ``Supporting'' means the prescribed method improves the
+successful cells. ``Supporting'' means the diagnosis-informed method improves the
 matched comparison in its stated setting; ``mixed'' marks a method that works
 only with the diagnosed input or domain; and ``failed'' records a tested
 extension that did not recover the signal.
@@ -475,79 +498,129 @@ extension that did not recover the signal.
 \centering
 \small
 \setlength{\tabcolsep}{4pt}
-\caption{Failure diagnosis $\rightarrow$ prescribed inspection method $\rightarrow$ existing evidence.
+\caption{Failure diagnosis $\rightarrow$ diagnosis-informed inspection method $\rightarrow$ existing evidence.
 All sample counts and results refer to frozen artifacts listed below.}
 \label{tab:diagnosis-method}
-\begin{tabular}{@{}p{.16\textwidth}p{.16\textwidth}p{.38\textwidth}p{.19\textwidth}@{}}
+\begin{tabular}{@{}p{0.16\textwidth}p{0.16\textwidth}p{0.38\textwidth}p{0.19\textwidth}@{}}
 \toprule
-Diagnosis / classes & Prescribed method & Matched result and mismatch check & Verdict / boundary \\
+Diagnosis / classes & Diagnosis-informed method & Matched result and mismatch check & Verdict / boundary \\
 \midrule
-Lossless declared structure; \g{G1--G6} & geometry linter & With native lossless IR, held-out validation is 1.000 balanced accuracy and precision on \g{G1,G2,G3,G5,G6}, each $n_+=n_-=150$; pointwise VLM cells are .50--.71. Image-only \g{G1} instead needs the reference method below. & supporting conditional on native IR \\
-Explicit terminology; \g{S3} & terminology linter & 1.000 balanced accuracy, recall 1.00, and 0 FP on 40 clean deck controls, versus .69 for the VLM. & supporting \\
-Format-suppressed render overflow; \g{G7} & atomic C3 with evidence & Three vendors: C3 .92/.88/.83 versus ten-draw C0 majority .61/.59/.63 ($\Delta=.31/.29/.20$); all survive the 24-test Holm family. C3 uses one call and 34.7/37.5/40.5 output tokens. & supporting; confirmation transfer is mixed \\
-Reference availability; \g{G1}, \g{S6} & pairwise / clean-reference comparison & \g{G1}: 2-AFC 1.000 for both 8B and 30B, 24 pairs/48 ordering trials, versus pointwise .50/.65. \g{S6}: 24/24 2-AFC, both orders 12/12, versus pointwise .500 with 24/24 clean FP. & supporting only when a reference exists \\
-Page semantics; \g{S1}, \g{S4} & finetuned examiner & Correspondence evidence: in-domain balanced accuracy 1.000 for both (36 and 60 positives), versus zero-shot 8B .778/.529 and zero-shot 30B .933/.774; \g{S4} recall contrast $p=4.53\times10^{-7}$. W5 instantiates \g{S1} with VLM-C0 and \g{S4} with a text LLM, as listed above. & supporting in-domain \\
-Pixels without native structure & recovered-structure linter & Recovered linter is at chance on \g{G1,G3,G4,G5}; \g{G2} reaches only .54--.55 versus native .67 and VLM .87; element IoU recall is .30--.39. & failed \\
-Novel diagrams / \g{S6} & single-image C0 & Held-out validation recall 1.000 but precision .607 because 97/150 clean controls fire; the later frozen image-arm check is .500. & mixed / clean-FP boundary \\
-Real image-only layouts; \g{S4} & finetuned examiner & Synthetic held-out 1.000 drops to .501 on \textsc{SlideAudit}; zero-shot 30B reaches .702 and its recall advantage has $p=1.13\times10^{-5}$. & failed sim-to-real transfer \\
+Lossless declared structure; \g{G1--G6} & geometry linter & With native lossless IR, held-out validation is 1.000 balanced accuracy and precision on \g{G1,G2,G3,G5,G6}, each $n_+=n_-=150$; pointwise VLM cells are 0.50--0.71. Image-only \g{G1} instead needs the reference method below. & supporting conditional on native IR \\
+Explicit terminology; \g{S3} & terminology linter & 1.000 balanced accuracy, recall 1.00, and 0 FP on 40 clean deck controls, versus 0.69 for the VLM. & supporting \\
+Format-suppressed render overflow; \g{G7} & atomic C3 with evidence & Three vendors: C3 0.92/0.88/0.83 versus ten-draw C0 majority 0.61/0.59/0.63 ($\Delta=0.31/0.29/0.20$); all survive the 24-test Holm family. C3 uses one call and 34.7/37.5/40.5 output tokens. & supporting; confirmation transfer is mixed \\
+Reference availability; \g{G1}, \g{S6} & pairwise / clean-reference comparison & \g{G1}: 2-AFC 1.000 for both 8B and 30B, 24 pairs/48 ordering trials, versus pointwise 0.50/0.65. \g{S6}: 24/24 2-AFC, both orders 12/12, versus pointwise 0.500 with 24/24 clean FP. & supporting only when a reference exists \\
+Page semantics; \g{S1}, \g{S4} & finetuned examiner & Correspondence evidence: in-domain balanced accuracy 1.000 for both (36 and 60 positives), versus zero-shot 8B 0.778/0.529 and zero-shot 30B 0.933/0.774; \g{S4} recall contrast $p=4.53\times10^{-7}$. W5 instantiates \g{S1} with VLM-C0 and \g{S4} with a text LLM, as listed above. & supporting in-domain \\
+Pixels without native structure & recovered-structure linter & Recovered linter is at chance on \g{G1,G3,G4,G5}; \g{G2} reaches only 0.54--0.55 versus native 0.67 and VLM 0.87; element IoU recall is 0.30--0.39. & failed \\
+Novel diagrams / \g{S6} & single-image C0 & Held-out validation recall 1.000 but precision 0.607 because 97/150 clean controls fire; the later frozen image-arm check is 0.500. & mixed / clean-FP boundary \\
+Real image-only layouts; \g{S4} & finetuned examiner & Synthetic held-out 1.000 drops to 0.501 on \textsc{SlideAudit}; zero-shot 30B reaches 0.702 and its recall advantage has $p=1.13\times10^{-5}$. & failed sim-to-real transfer \\
 \bottomrule
 \end{tabular}
 \end{table*}
 
 \paragraph{Later frozen image-arm check.}
-After the method assignment was frozen, we generated a disjoint seed-controlled
+After method selection was complete, we generated a disjoint seed-controlled
 image set. Its seed (2026071607), generated identifiers, content instances, and
-image hashes do not overlap the W5 validation set (seed 20260716). Each class
-contains $30$ positives and $30$ clean controls. Table~\ref{tab:frozen-confirmation}
-reports the completed frozen image arm separately from the preceding $150+150$
-held-out validation; it is not another estimate on that corpus. Macro balanced
-accuracy is .8259, precision .7273, recall .7259, specificity .9259, and named
-localization .7778.
+image hashes do not overlap the development validation set (seed 20260716).
+Each class contains 30 positive/clean pairs. The scoring unit is one pair, and
+all unresolved reference follow-ups are retained as \textsc{defer} and scored as
+misses. This is the frozen nine-class image-arm result used as the main paper's
+headline confirmation; it is not another estimate on the development corpus.
 
 \begin{table}[h]
 \centering
-\small
-\caption{Disjoint frozen image-arm check ($n_+=n_-=30$ per class).}
+\scriptsize
+\setlength{\tabcolsep}{3.2pt}
+\caption{Complete disjoint frozen image-arm results ($n_+=n_-=30$ per class).
+BA intervals are component-wise Wilson-derived; P/R/Spec/Loc are point estimates.
+Loc is named localization conditional on a positive prediction. ``TP/FN/FP/TN''
+exposes the underlying paired counts.}
 \label{tab:frozen-confirmation}
-\begin{tabular}{@{}lccc@{}}
+\begin{tabular}{@{}lcccccc@{}}
 \toprule
-Class & Balanced accuracy & Precision & Named localization \\
+Class & BA [interval] & P & R & Spec & Loc & TP/FN/FP/TN \\
 \midrule
-\g{G1} & .500 & 0 & 0 \\
-\g{G2} & 1.000 & 1.000 & 1.000 \\
-\g{G3} & 1.000 & 1.000 & 1.000 \\
-\g{G5} & 1.000 & 1.000 & 1.000 \\
-\g{G6} & 1.000 & 1.000 & 1.000 \\
-\g{G7} & .567 & .545 & 1.000 \\
-\g{S1} & .867 & 1.000 & 1.000 \\
-\g{S4} & 1.000 & 1.000 & 1.000 \\
-\g{S6} & .500 & 0 & 0 \\
+\g{G1} & 0.500 [0.443,0.557] & 0.000 & 0.000 & 1.000 & 0.000 & 0/30/0/30 \\
+\g{G2} & 1.000 [0.886,1] & 1.000 & 1.000 & 1.000 & 1.000 & 30/0/0/30 \\
+\g{G3} & 1.000 [0.886,1] & 1.000 & 1.000 & 1.000 & 1.000 & 30/0/0/30 \\
+\g{G5} & 1.000 [0.886,1] & 1.000 & 1.000 & 1.000 & 1.000 & 30/0/0/30 \\
+\g{G6} & 1.000 [0.886,1] & 1.000 & 1.000 & 1.000 & 1.000 & 30/0/0/30 \\
+\g{G7} & 0.567 [0.410,0.709] & 0.545 & 0.800 & 0.333 & 1.000 & 24/6/20/10 \\
+\g{S1} & 0.867 [0.721,0.929] & 1.000 & 0.733 & 1.000 & 1.000 & 22/8/0/30 \\
+\g{S4} & 1.000 [0.886,1] & 1.000 & 1.000 & 1.000 & 1.000 & 30/0/0/30 \\
+\g{S6} & 0.500 [0.443,0.557] & 0.000 & 0.000 & 1.000 & 0.000 & 0/30/0/30 \\
 \midrule
-Macro & .8259 & .7273 & .7778 \\
+Macro & 0.826 & 0.727 & 0.726 & 0.926 & 0.778 & --- \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-The two failures are informative: the arm begins from one image and requests a
-reference for \g{G1} and \g{S6}, but its follow-up executor returns no comparison
-verdict; those requests are therefore counted as misses and both classes remain
-at chance. \g{G7}'s drop to .567 marks a further transfer limit for atomic C3
-rather than invalidating its development and compute-matched recovery. The image
-arm completed all 540 records with zero runtime failures. The encompassing run
-is nevertheless marked failed because two deck-only semantic-gate checks had
-zero eligible records; no deck result is claimed here. Authority for the two stages is
-\texttt{release/part3/w5/heldout\_routed.json} and
-\texttt{reports/part3/w77/final\_test\_attempt2/image\_scores.json}; the
-per-example frozen assignments are in
+The four native-IR linter classes average 1.000 balanced accuracy; the direct
+neural classes \g{G7}/\g{S1}/\g{S4} average 0.811; and the two reference-request
+classes \g{G1}/\g{S6} average 0.500. Removing the four linter-owned classes leaves
+a five-class macro of 0.687. These are arithmetic summaries of the table, not
+new experiments, and no macro interval is claimed. The full nine-class macro is
+0.826. It is supported strongly by trusted-native-IR linting and should not be
+read as confirmation of every neural or reference-dependent route.
+
+The arm acquired a clean reference for \g{G1} and \g{S6}, but its follow-up
+executor produced no terminal comparison verdict; those requests therefore
+remain \textsc{defer}/miss. For \g{G7}, development balanced accuracy 0.937 drops
+to 0.567 here. We report this as a transfer failure; the available artifacts do
+not establish a unique cause. The arm completed all 540 records with zero
+runtime failures. The encompassing run is nevertheless marked failed because
+two deck-only semantic-gate checks had zero eligible records; no deck result is
+claimed. Authority is
+\texttt{reports/part3/w77/final\_test\_attempt2/image\_scores.json}, with
+per-example assignments in
 \texttt{runs/part3/w77/final\_test\_attempt2/normalized/manual\_frozen\_route.jsonl}.
+
+\paragraph{Post-hoc executor diagnostic and limited-class confirmation.}
+After inspecting the frozen run, we connected the acquired reference to a
+terminal comparison executor and replaced the generic \g{G7} executor with the
+intended atomic C3 query. Applying those repairs to the \emph{same} 540 records
+raises the nine-class macro balanced accuracy from 0.826 to 0.913. Because the
+wiring was chosen after seeing the frozen result, 0.913 is a post-hoc same-set
+diagnostic, not a replacement headline or an independent system estimate.
+
+\begin{table}[h]
+\centering
+\small
+\setlength{\tabcolsep}{5pt}
+\caption{Executor-repair evidence, separated by evidential status. The same-set
+row is post-hoc and spans all nine classes. The independent row was generated
+after repair but covers only \g{G1}/\g{G7}/\g{S6}; its macro must not be compared
+as a nine-class system score.}
+\label{tab:executor-repair}
+\begin{tabular}{@{}llcccc@{}}
+\toprule
+Evaluation & Scope & \g{G1} & \g{G7} & \g{S6} & Macro BA \\
+\midrule
+Frozen original & 9 classes & 0.500 & 0.567 & 0.500 & 0.826 \\
+Post-hoc same-set repair & 9 classes & 0.550 & 0.833 & 0.967 & 0.913 \\
+Independent follow-up & 3 classes & 0.500 & 0.833 & 1.000 & 0.778 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The independent follow-up contains 30 positive/clean pairs for \g{G1} and
+\g{G7}; 13 \g{S6} positive records were invalid, leaving 17 positives and 30
+clean controls for that class. Thus its 0.778 macro covers only three classes and
+is not a full-system confirmation. It confirms that the repaired \g{S6} and
+atomic \g{G7} paths can produce terminal verdicts in this limited setting, while
+\g{G1} remains at chance. The same-set repaired diagnostic has 540/540 valid records. The independent
+follow-up has 167/180 valid records because of the 13 invalid \g{S6} positives;
+these validity counts are reported rather than silently changing the denominator.
+The corresponding artifacts are
+\texttt{reports/part3/w77\_repaired\_diagnostic/before\_after\_scores.json} and
+\texttt{reports/part3/w78\_repaired\_confirmation/summary.json}.
 
 \paragraph{Extreme \g{G6} magnitude boundary.}
 To stress the moderate-offset result without changing its operationalization,
 we rigidly translated the whole content group left by 144 px, preserving all
 internal alignments and placing its left edge exactly 48 px beyond the canvas.
 On 12 positive and 12 paired-clean slides, both pointwise C0 and atomic C3 reach
-.958 [.702,.993] detection balanced accuracy (11/12 positives, 12/12 clean;
-precision 1.000 [.741,1]). Their attribution differs: C0 detects generic damage
+0.958 [0.702,0.993] detection balanced accuracy (11/12 positives, 12/12 clean;
+precision 1.000 [0.741,1]). Their attribution differs: C0 detects generic damage
 but names \g{G6} on 0/12, whereas C3 names it on 11/12. Therefore the earlier
 failure is a moderate-magnitude global-position blind spot, not a claim that a
 VLM remains blind after the page visibly clips content.
@@ -581,7 +654,7 @@ and \g{S6} the paired reference does (blue). The AFC\_clean guess-floor
 \caption{\textbf{The perception/capability split reproduces on real layouts}
 (referenced in \S7). \textsc{Zenodo10K} real renders + lossless
 \texttt{python-pptx} oracle; mean over 3 VLMs / 3 families, balanced accuracy
-on paired clean; 95\% Wilson on counts pooled across models ($n{=}76$--$90$
+on paired clean; component-wise Wilson-derived intervals on counts pooled across models ($n{=}76$--$90$
 per class). Coarse defects are image-sufficient; \g{G6} margin is a perception
 bottleneck the oracle rescues (B${>}$A); \g{G3} alignment stays near chance
 in every channel on real cluttered decks.}
@@ -593,7 +666,7 @@ in every channel on real cluttered decks.}
 \includegraphics[width=0.7\linewidth]{figs/fig3_coverage_heatmap.png}
 \caption{\textbf{Coverage by engine} (companion to Table~2 of the main paper).
 Per-defect balanced accuracy for the linter, VLM-C0, VLM-C3, linter+VLM-C3,
-and the prescribed composition. Minimal linter$\oplus$C3 has the highest mean balanced accuracy;
+and the diagnosis-informed composition. Minimal linter$\oplus$C3 has the highest mean balanced accuracy;
 \g{G7} (boxed) is the linter-blind cell rescued by C3.}
 \label{figA:coverage}
 \end{figure}

@@ -1,0 +1,28 @@
+{
+  "base": "runs/part3/w77/final_test_attempt2/raw/manual_frozen_route.jsonl",
+  "base_sha256": "beb1c0e30ddd1abe4cc3639d320833ebd515d7c03a587f1f7caa2dea6f19c320",
+  "replacements": [
+    {
+      "path": "runs/part3/w77_repaired_diagnostic/reference_repaired_raw.jsonl",
+      "sha256": "688803b0f7533956bff4bfe3732ab8901387e8a6bc92e3fa108ce45960974011"
+    },
+    {
+      "path": "runs/part3/w77_repaired_diagnostic/g7_c3_raw.jsonl",
+      "sha256": "ebaabaf0ecafc84b13e8c5ce840c687d12e43ec82cf92a3facb1900cee170bc2"
+    }
+  ],
+  "records": 540,
+  "output": "runs/part3/w77_repaired_diagnostic/repaired_540_raw.jsonl",
+  "output_sha256": "3894c428bdfc73d13797fdf2b87b41a5266078030f8a4cdf233c137c1b832f48",
+  "per_class": {
+    "G1": 60,
+    "G2": 60,
+    "G3": 60,
+    "G5": 60,
+    "G6": 60,
+    "G7": 60,
+    "S1": 60,
+    "S4": 60,
+    "S6": 60
+  }
+}

@@ -1,0 +1,37 @@
+{"completed": 10, "total": 60}
+{"completed": 20, "total": 60}
+{"completed": 30, "total": 60}
+{"completed": 40, "total": 60}
+{"completed": 50, "total": 60}
+{"completed": 60, "total": 60}
+{
+  "records": 60,
+  "failures": 12,
+  "executor": "qwen_c3_g7",
+  "model_requested": "qwen3-vl-plus",
+  "models_actual": [
+    "qwen3-vl-plus"
+  ],
+  "prompt_sha256": "9c4399a08917ef7b331be2b6699ff0d189b9b06602a52a49340046f67ca8ed81",
+  "input": "runs/part3/w77/final_test_attempt2/final_image_runtime.jsonl",
+  "input_sha256": "852cb69a4599c9ef680710d469ba0f0ce9e5cb9d53d6d4fa40aabbfbbe2b6589",
+  "output": "runs/part3/w77_repaired_diagnostic/g7_c3_raw.jsonl",
+  "output_sha256": "702782c3a5ca46d47431b4a55a364f0e5facfa9f27af5551f54257ee3edb518e",
+  "final_test_read": false
+}
+{"completed": 40, "total": 60}
+{
+  "records": 60,
+  "failures": 0,
+  "executor": "qwen_c3_g7",
+  "model_requested": "qwen3-vl-plus",
+  "models_actual": [
+    "qwen3-vl-plus"
+  ],
+  "prompt_sha256": "9c4399a08917ef7b331be2b6699ff0d189b9b06602a52a49340046f67ca8ed81",
+  "input": "runs/part3/w77/final_test_attempt2/final_image_runtime.jsonl",
+  "input_sha256": "852cb69a4599c9ef680710d469ba0f0ce9e5cb9d53d6d4fa40aabbfbbe2b6589",
+  "output": "runs/part3/w77_repaired_diagnostic/g7_c3_raw.jsonl",
+  "output_sha256": "ebaabaf0ecafc84b13e8c5ce840c687d12e43ec82cf92a3facb1900cee170bc2",
+  "final_test_read": false
+}

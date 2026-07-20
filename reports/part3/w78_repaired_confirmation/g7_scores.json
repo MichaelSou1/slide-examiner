@@ -1,0 +1,473 @@
+{
+  "schema_version": 1,
+  "arms": {
+    "repaired_confirmation": {
+      "records": 60,
+      "valid_records": 60,
+      "failure_rate": 0.0,
+      "per_class": {
+        "G7_RENDER_CONTAINMENT_OVERFLOW": {
+          "tp": 29,
+          "fn": 1,
+          "fp": 9,
+          "tn": 21,
+          "n_pos": 30,
+          "n_neg": 30,
+          "balanced_accuracy": {
+            "estimate": 0.8333333333333333,
+            "low": 0.6772691077493795,
+            "high": 0.9137219634679747,
+            "n_pos": 30,
+            "n_neg": 30
+          },
+          "precision": {
+            "estimate": 0.7631578947368421,
+            "low": 0.607931876367602,
+            "high": 0.8700629298294591,
+            "n": 38
+          },
+          "recall": {
+            "estimate": 0.9666666666666667,
+            "low": 0.8332960900859084,
+            "high": 0.9940914096183876,
+            "n": 30
+          },
+          "specificity": {
+            "estimate": 0.7,
+            "low": 0.5212421254128505,
+            "high": 0.833352517317562,
+            "n": 30
+          },
+          "paired_clean_fpr": 0.3,
+          "named_localization": {
+            "estimate": 1.0,
+            "low": 0.8830302015002593,
+            "high": 1.0,
+            "n": 29
+          },
+          "failures": 0
+        }
+      },
+      "macro": {
+        "balanced_accuracy": 0.8333333333333333,
+        "precision": 0.7631578947368421,
+        "recall": 0.9666666666666667,
+        "specificity": 0.7,
+        "paired_clean_fpr": 0.3,
+        "named_localization": 1.0,
+        "classes": 1
+      },
+      "routing_and_cost": {
+        "action_accuracy": 1.0,
+        "defer_rate": 0.0,
+        "coverage": 1.0,
+        "mean_model_calls": 1.0,
+        "mean_external_calls": 0.0,
+        "mean_prompt_tokens": 1049.0,
+        "mean_completion_tokens": 35.71666666666667,
+        "mean_total_tokens": 1084.7166666666667,
+        "mean_latency_seconds": 2.182935931259999
+      },
+      "risk_coverage": [
+        {
+          "covered": 0,
+          "coverage": 0.0,
+          "risk": 0.0
+        },
+        {
+          "covered": 1,
+          "coverage": 0.016666666666666666,
+          "risk": 0.0,
+          "confidence_threshold": 1.0
+        },
+        {
+          "covered": 2,
+          "coverage": 0.03333333333333333,
+          "risk": 0.0,
+          "confidence_threshold": 1.0
+        },
+        {
+          "covered": 3,
+          "coverage": 0.05,
+          "risk": 0.0,
+          "confidence_threshold": 1.0
+        },
+        {
+          "covered": 4,
+          "coverage": 0.06666666666666667,
+          "risk": 0.0,
+          "confidence_threshold": 1.0
+        },
+        {
+          "covered": 5,
+          "coverage": 0.08333333333333333,
+          "risk": 0.0,
+          "confidence_threshold": 1.0
+        },
+        {
+          "covered": 6,
+          "coverage": 0.1,
+          "risk": 0.0,
+          "confidence_threshold": 1.0
+        },
+        {
+          "covered": 7,
+          "coverage": 0.11666666666666667,
+          "risk": 0.0,
+          "confidence_threshold": 1.0
+        },
+        {
+          "covered": 8,
+          "coverage": 0.13333333333333333,
+          "risk": 0.0,
+          "confidence_threshold": 1.0
+        },
+        {
+          "covered": 9,
+          "coverage": 0.15,
+          "risk": 0.0,
+          "confidence_threshold": 1.0
+        },
+        {
+          "covered": 10,
+          "coverage": 0.16666666666666666,
+          "risk": 0.1,
+          "confidence_threshold": 1.0
+        },
+        {
+          "covered": 11,
+          "coverage": 0.18333333333333332,
+          "risk": 0.09090909090909091,
+          "confidence_threshold": 1.0
+        },
+        {
+          "covered": 12,
+          "coverage": 0.2,
+          "risk": 0.08333333333333333,
+          "confidence_threshold": 1.0
+        },
+        {
+          "covered": 13,
+          "coverage": 0.21666666666666667,
+          "risk": 0.07692307692307693,
+          "confidence_threshold": 1.0
+        },
+        {
+          "covered": 14,
+          "coverage": 0.23333333333333334,
+          "risk": 0.07142857142857142,
+          "confidence_threshold": 1.0
+        },
+        {
+          "covered": 15,
+          "coverage": 0.25,
+          "risk": 0.06666666666666667,
+          "confidence_threshold": 1.0
+        },
+        {
+          "covered": 16,
+          "coverage": 0.26666666666666666,
+          "risk": 0.0625,
+          "confidence_threshold": 1.0
+        },
+        {
+          "covered": 17,
+          "coverage": 0.2833333333333333,
+          "risk": 0.058823529411764705,
+          "confidence_threshold": 1.0
+        },
+        {
+          "covered": 18,
+          "coverage": 0.3,
+          "risk": 0.05555555555555555,
+          "confidence_threshold": 1.0
+        },
+        {
+          "covered": 19,
+          "coverage": 0.31666666666666665,
+          "risk": 0.05263157894736842,
+          "confidence_threshold": 1.0
+        },
+        {
+          "covered": 20,
+          "coverage": 0.3333333333333333,
+          "risk": 0.05,
+          "confidence_threshold": 1.0
+        },
+        {
+          "covered": 21,
+          "coverage": 0.35,
+          "risk": 0.047619047619047616,
+          "confidence_threshold": 1.0
+        },
+        {
+          "covered": 22,
+          "coverage": 0.36666666666666664,
+          "risk": 0.045454545454545456,
+          "confidence_threshold": 1.0
+        },
+        {
+          "covered": 23,
+          "coverage": 0.38333333333333336,
+          "risk": 0.043478260869565216,
+          "confidence_threshold": 0.95
+        },
+        {
+          "covered": 24,
+          "coverage": 0.4,
+          "risk": 0.041666666666666664,
+          "confidence_threshold": 0.95
+        },
+        {
+          "covered": 25,
+          "coverage": 0.4166666666666667,
+          "risk": 0.04,
+          "confidence_threshold": 0.95
+        },
+        {
+          "covered": 26,
+          "coverage": 0.43333333333333335,
+          "risk": 0.038461538461538464,
+          "confidence_threshold": 0.95
+        },
+        {
+          "covered": 27,
+          "coverage": 0.45,
+          "risk": 0.037037037037037035,
+          "confidence_threshold": 0.95
+        },
+        {
+          "covered": 28,
+          "coverage": 0.4666666666666667,
+          "risk": 0.03571428571428571,
+          "confidence_threshold": 0.95
+        },
+        {
+          "covered": 29,
+          "coverage": 0.48333333333333334,
+          "risk": 0.034482758620689655,
+          "confidence_threshold": 0.95
+        },
+        {
+          "covered": 30,
+          "coverage": 0.5,
+          "risk": 0.03333333333333333,
+          "confidence_threshold": 0.95
+        },
+        {
+          "covered": 31,
+          "coverage": 0.5166666666666667,
+          "risk": 0.03225806451612903,
+          "confidence_threshold": 0.95
+        },
+        {
+          "covered": 32,
+          "coverage": 0.5333333333333333,
+          "risk": 0.03125,
+          "confidence_threshold": 0.95
+        },
+        {
+          "covered": 33,
+          "coverage": 0.55,
+          "risk": 0.030303030303030304,
+          "confidence_threshold": 0.95
+        },
+        {
+          "covered": 34,
+          "coverage": 0.5666666666666667,
+          "risk": 0.029411764705882353,
+          "confidence_threshold": 0.95
+        },
+        {
+          "covered": 35,
+          "coverage": 0.5833333333333334,
+          "risk": 0.02857142857142857,
+          "confidence_threshold": 0.95
+        },
+        {
+          "covered": 36,
+          "coverage": 0.6,
+          "risk": 0.027777777777777776,
+          "confidence_threshold": 0.95
+        },
+        {
+          "covered": 37,
+          "coverage": 0.6166666666666667,
+          "risk": 0.05405405405405406,
+          "confidence_threshold": 0.95
+        },
+        {
+          "covered": 38,
+          "coverage": 0.6333333333333333,
+          "risk": 0.05263157894736842,
+          "confidence_threshold": 0.95
+        },
+        {
+          "covered": 39,
+          "coverage": 0.65,
+          "risk": 0.07692307692307693,
+          "confidence_threshold": 0.95
+        },
+        {
+          "covered": 40,
+          "coverage": 0.6666666666666666,
+          "risk": 0.075,
+          "confidence_threshold": 0.95
+        },
+        {
+          "covered": 41,
+          "coverage": 0.6833333333333333,
+          "risk": 0.07317073170731707,
+          "confidence_threshold": 0.95
+        },
+        {
+          "covered": 42,
+          "coverage": 0.7,
+          "risk": 0.09523809523809523,
+          "confidence_threshold": 0.95
+        },
+        {
+          "covered": 43,
+          "coverage": 0.7166666666666667,
+          "risk": 0.09302325581395349,
+          "confidence_threshold": 0.95
+        },
+        {
+          "covered": 44,
+          "coverage": 0.7333333333333333,
+          "risk": 0.11363636363636363,
+          "confidence_threshold": 0.95
+        },
+        {
+          "covered": 45,
+          "coverage": 0.75,
+          "risk": 0.1111111111111111,
+          "confidence_threshold": 0.95
+        },
+        {
+          "covered": 46,
+          "coverage": 0.7666666666666667,
+          "risk": 0.10869565217391304,
+          "confidence_threshold": 0.95
+        },
+        {
+          "covered": 47,
+          "coverage": 0.7833333333333333,
+          "risk": 0.10638297872340426,
+          "confidence_threshold": 0.95
+        },
+        {
+          "covered": 48,
+          "coverage": 0.8,
+          "risk": 0.10416666666666667,
+          "confidence_threshold": 0.95
+        },
+        {
+          "covered": 49,
+          "coverage": 0.8166666666666667,
+          "risk": 0.10204081632653061,
+          "confidence_threshold": 0.95
+        },
+        {
+          "covered": 50,
+          "coverage": 0.8333333333333334,
+          "risk": 0.1,
+          "confidence_threshold": 0.95
+        },
+        {
+          "covered": 51,
+          "coverage": 0.85,
+          "risk": 0.09803921568627451,
+          "confidence_threshold": 0.95
+        },
+        {
+          "covered": 52,
+          "coverage": 0.8666666666666667,
+          "risk": 0.11538461538461539,
+          "confidence_threshold": 0.95
+        },
+        {
+          "covered": 53,
+          "coverage": 0.8833333333333333,
+          "risk": 0.11320754716981132,
+          "confidence_threshold": 0.95
+        },
+        {
+          "covered": 54,
+          "coverage": 0.9,
+          "risk": 0.12962962962962962,
+          "confidence_threshold": 0.95
+        },
+        {
+          "covered": 55,
+          "coverage": 0.9166666666666666,
+          "risk": 0.12727272727272726,
+          "confidence_threshold": 0.95
+        },
+        {
+          "covered": 56,
+          "coverage": 0.9333333333333333,
+          "risk": 0.14285714285714285,
+          "confidence_threshold": 0.95
+        },
+        {
+          "covered": 57,
+          "coverage": 0.95,
+          "risk": 0.14035087719298245,
+          "confidence_threshold": 0.95
+        },
+        {
+          "covered": 58,
+          "coverage": 0.9666666666666667,
+          "risk": 0.15517241379310345,
+          "confidence_threshold": 0.95
+        },
+        {
+          "covered": 59,
+          "coverage": 0.9833333333333333,
+          "risk": 0.15254237288135594,
+          "confidence_threshold": 0.95
+        },
+        {
+          "covered": 60,
+          "coverage": 1.0,
+          "risk": 0.16666666666666666,
+          "confidence_threshold": 0.95
+        }
+      ],
+      "fixed_coverage_risk": [
+        {
+          "target_coverage": 0.5,
+          "available": true,
+          "covered": 30,
+          "achieved_coverage": 0.5,
+          "risk": 0.03333333333333333,
+          "confidence_threshold": 0.95
+        },
+        {
+          "target_coverage": 0.75,
+          "available": true,
+          "covered": 45,
+          "achieved_coverage": 0.75,
+          "risk": 0.1111111111111111,
+          "confidence_threshold": 0.95
+        },
+        {
+          "target_coverage": 0.9,
+          "available": true,
+          "covered": 54,
+          "achieved_coverage": 0.9,
+          "risk": 0.12962962962962962,
+          "confidence_threshold": 0.95
+        }
+      ]
+    }
+  },
+  "inputs": [
+    {
+      "path": "runs/part3/w78_repaired_confirmation/g7_normalized.jsonl",
+      "rows": 60,
+      "sha256": "3946319f943cc76dc8111a13a1aba2647b89f1ae65a60419001995a8d36dfcec"
+    }
+  ]
+}

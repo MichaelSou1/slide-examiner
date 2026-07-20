@@ -1,15 +1,17 @@
 % ---- fig_teaser: text overlay (font follows the paper, edit here) ----
 % tip: add  grid,tics=10  to the options below to align, then remove.
 \begin{overpic}[width=\linewidth,percent]{figs/fig_teaser_notext.pdf}%
-  \put(14.17,24.33){\makebox(0,0)[b]{\footnotesize\color{figslate} input slide}}
-  \put(35.83,33.25){\makebox(0,0)[b]{\scriptsize\color{figink} perception /}}
-  \put(35.83,31.58){\makebox(0,0)[b]{\scriptsize\color{figink} reasoning}}
-  \put(35.83,30.08){\makebox(0,0)[b]{\scriptsize\bfseries\color{figink} diagnosis}}
-  \put(57.08,43.25){\makebox(0,0)[b]{\footnotesize\bfseries\color{figblue} symbolic linter}}
-  \put(57.08,41.42){\makebox(0,0)[b]{\scriptsize\color{figslate} declared geometry}}
-  \put(57.08,9.08){\makebox(0,0)[b]{\footnotesize\bfseries\color{figorange} re-elicited VLM}}
-  \put(57.08,7.25){\makebox(0,0)[b]{\scriptsize\color{figslate} format-suppressed}}
-  \put(88.96,24.08){\makebox(0,0)[b]{\footnotesize\bfseries\color{figink} hybrid critic}}
-%  \put(50.0,60.5){\makebox(0,0)[b]{\small\bfseries\color{figink} Diagnosis routes each defect to its bottleneck-appropriate engine}}   % title -- drop if you use \caption
-  \put(50.0,1.83){\makebox(0,0)[b]{\scriptsize\itshape\color{figslate} G7 render-overflow (legal box, overflowing pixels) is linter-blind by construction; only a rendered-quality read-out catches it}}
+  \put(17.78,115.56){\makebox(0,0)[b]{\footnotesize\bfseries\color{figink} Rendered pixels}}
+  \put(50.0,115.56){\makebox(0,0)[b]{\footnotesize\bfseries\color{figink} Geometry oracle}}
+  \put(82.22,115.56){\makebox(0,0)[b]{\footnotesize\bfseries\color{figink} Clean reference}}
+%  \put(30.56,88.19){\makebox(0,0)[lb]{\small\bfseries\color{figink} Failure attribution}}   % title -- drop if you use \caption
+  \put(15.14,72.78){\makebox(0,0)[b]{\scriptsize\bfseries\color{figink} Symbolic linter}}
+  \put(84.86,72.78){\makebox(0,0)[b]{\scriptsize\bfseries\color{figink} Atomic VLM}}
+  \put(15.14,46.67){\makebox(0,0)[b]{\scriptsize\bfseries\color{figink} Reference compare}}
+  \put(84.86,46.67){\makebox(0,0)[b]{\scriptsize\bfseries\color{figink} Semantic examiner}}
+  \put(50.0,72.78){\makebox(0,0)[b]{\footnotesize\bfseries\color{figink} Rendered overflow}}
+%  \put(30.56,15.97){\makebox(0,0)[lb]{\small\bfseries\color{figink} Hybrid critic}}   % title -- drop if you use \caption
+  \put(17.22,3.06){\makebox(0,0)[lb]{\footnotesize\bfseries\color{figink} Detect}}
+  \put(45.56,3.06){\makebox(0,0)[lb]{\footnotesize\bfseries\color{figink} Localize}}
+  \put(73.89,3.06){\makebox(0,0)[lb]{\footnotesize\bfseries\color{figink} Repair}}
 \end{overpic}

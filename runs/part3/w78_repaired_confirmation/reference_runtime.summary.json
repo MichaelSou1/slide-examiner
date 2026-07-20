@@ -1,0 +1,21 @@
+{
+  "source_rows": 60,
+  "selected_pairs": 60,
+  "initial_records": 120,
+  "counterpart_records": 120,
+  "initial_limit": 120,
+  "offset_per_class": 0,
+  "per_class_pairs": {
+    "G1_TEXT_OVERFLOW": 30,
+    "S6_IMAGE_TEXT_CONTRADICTION": 30
+  },
+  "split": "validation",
+  "manifests": [
+    {
+      "path": "runs/part3/w78_repaired_confirmation/reference_manifest.jsonl",
+      "sha256": "7223632b9e34096ed940d94644f3fb42d66961047c1f8b928f92d49ab36bc39c"
+    }
+  ],
+  "output": "runs/part3/w78_repaired_confirmation/reference_runtime.jsonl",
+  "output_sha256": "d7bf563665043ff3af2c478fe1bd13afd7a709576c01460201ff68e10e1547e2"
+}

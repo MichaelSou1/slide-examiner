@@ -33,6 +33,7 @@ from slide_examiner.api_config import (  # noqa: E402
     resolve_role,
 )
 from slide_examiner.d3_training import GENERIC_INSPECTION_INSTRUCTION  # noqa: E402
+from slide_examiner.defect_types import G7_RENDER_CONTAINMENT_OVERFLOW, G7_SPEC  # noqa: E402
 
 
 def read_jsonl(path: Path) -> list[dict[str, Any]]:
@@ -408,6 +409,65 @@ def normalize(args: argparse.Namespace) -> None:
                      indent=2))
 
 
+
+G7_C3_SYSTEM = (
+    "You are a meticulous slide-quality inspector. Check only the one requested visible "
+    "defect and return one compact JSON object without reasoning or markdown."
+)
+G7_C3_SCHEMA = (
+    'Return exactly {"present":true|false,"evidence_element":"<concrete element or '
+    'empty>","evidence_region":"<top-left|top|top-right|left|center|right|bottom-left|'
+    'bottom|bottom-right|empty>","confidence":0.0}. If present is true, name a concrete '
+    'visible evidence_element; otherwise present will be treated as false.'
+)
+
+
+def g7_c3_messages(row: dict[str, Any], repo: Path) -> list[dict[str, Any]]:
+    """Build the frozen W5 atomic G7 question for one local synthetic image."""
+    if str(row.get("defect")) != G7_RENDER_CONTAINMENT_OVERFLOW:
+        raise ValueError("G7 C3 executor accepts only G7 rows")
+    images = list(row.get("images") or [])
+    if len(images) != 1:
+        raise ValueError("G7 C3 executor requires exactly one image")
+    value = str(images[0])
+    path = Path(value) if Path(value).is_absolute() else repo / value
+    mime = mimetypes.guess_type(path.name)[0] or "image/png"
+    encoded = base64.b64encode(path.read_bytes()).decode("ascii")
+    return [
+        {"role": "system", "content": G7_C3_SYSTEM},
+        {"role": "user", "content": [
+            {"type": "image_url", "image_url": {"url": f"data:{mime};base64,{encoded}"}},
+            {"type": "text", "text": f"Question: {G7_SPEC.elicit_question}\n\n{G7_C3_SCHEMA}"},
+        ]},
+    ]
+
+
+def parse_g7_c3_response(text: str, row: dict[str, Any]) -> dict[str, Any]:
+    """Map W5 C3's binary response into the common examiner runtime contract."""
+    from slide_examiner.adapters import parse_examiner_json
+
+    payload = parse_examiner_json(text)
+    present = bool(payload.get("present"))
+    element = str(payload.get("evidence_element") or "").strip()
+    region = str(payload.get("evidence_region") or "").strip()
+    concrete = bool(element) and element.lower() not in {"empty", "none", "n/a"}
+    asserted = present and concrete
+    confidence = float(payload.get("confidence", 0.0) or 0.0)
+    finding = {
+        "type": G7_RENDER_CONTAINMENT_OVERFLOW,
+        "severity": "moderate",
+        "locator": {"level": "page", "page_id": str(row["sample_id"]),
+                    "element_id": element, "bbox": None, "related_page_ids": []},
+        "evidence": f"Visible containment overflow at {region or 'unspecified region'}: {element}.",
+        "fix_suggestion": "Keep the rendered content inside its intended container.",
+    }
+    return {
+        "page_id": str(row["sample_id"]), "action": "ANSWER", "confidence": confidence,
+        "requested_context": [], "evidence_source": "pixels", "has_defect": asserted,
+        "findings": [finding] if asserted else [],
+        "clean_dimensions": [] if asserted else ["render_containment"],
+    }
+
 def _api_messages(row: dict[str, Any], repo: Path, prompt_mode: str) -> list[dict[str, Any]]:
     """Convert a local D3 prompt into OpenAI-compatible multimodal messages."""
     messages = json.loads(json.dumps(prompt_row(row, prompt_mode)["messages"]))
@@ -539,6 +599,101 @@ def api_infer(args: argparse.Namespace) -> None:
     args.output.with_suffix(".summary.json").write_text(json.dumps(summary, ensure_ascii=False, indent=2))
     print(json.dumps(summary, ensure_ascii=False, indent=2))
 
+
+
+def g7_c3_infer(args: argparse.Namespace) -> None:
+    """Run the frozen qwen3-vl-plus W5 C3 executor over G7 runtime rows."""
+    load_dotenv(args.env)
+    role = resolve_role("examiner", default_model=os.environ.get("OPENAI_MODEL"))
+    model = args.model or "qwen3-vl-plus"
+    if model != "qwen3-vl-plus":
+        raise RuntimeError("repaired G7 executor is frozen to qwen3-vl-plus")
+    complete = build_completion_with_metadata(
+        model, role["base_url"], api_key_env=str(role["api_key_env"]),
+        api_style=str(role["api_style"]), max_tokens=args.max_tokens, temperature=0.0)
+    source = [row for row in read_jsonl(args.input)
+              if row.get("availability") == "image_only"
+              and str(row.get("defect")) == G7_RENDER_CONTAINMENT_OVERFLOW]
+    if args.limit is not None:
+        source = source[:args.limit]
+    args.output.parent.mkdir(parents=True, exist_ok=True)
+    completed = ({str(row["record_id"]) for row in read_jsonl(args.output)}
+                 if args.output.exists() else set())
+    prompt_sha = hashlib.sha256(
+        (G7_C3_SYSTEM + G7_SPEC.elicit_question + G7_C3_SCHEMA).encode()).hexdigest()
+    for index, row in enumerate(source, 1):
+        if str(row["record_id"]) in completed:
+            continue
+        trace = {key: row.get(key) for key in (
+            "record_id", "sample_id", "pair_id", "defect", "availability",
+            "target_action", "is_clean", "is_clean_deck")}
+        trace.update({"executor": "qwen_c3_g7", "api_model_requested": model,
+                      "prompt_sha256": prompt_sha, "model_calls": 1, "external_calls": 0,
+                      "escalation": None})
+        try:
+            response = complete(g7_c3_messages(row, args.repo.resolve()))
+            parsed = parse_g7_c3_response(str(response["text"]), row)
+            trace.update({"api_model_actual": response["model"], "raw": response["text"],
+                          "parsed": parsed, "predicted_action": "ANSWER",
+                          "raw_predicted_action": "ANSWER", "route_confidence": parsed["confidence"],
+                          "parse_error": None, "contract_repaired": False, "failure": False,
+                          "prompt_tokens": response["prompt_tokens"],
+                          "completion_tokens": response["completion_tokens"],
+                          "total_tokens": response["total_tokens"],
+                          "latency_seconds": response["latency_seconds"]})
+        except Exception as exc:  # noqa: BLE001
+            trace.update({"api_model_actual": None, "raw": "", "parsed": {"has_defect": False,
+                          "findings": []}, "predicted_action": "DEFER", "raw_predicted_action": None,
+                          "route_confidence": 0.0, "parse_error": None,
+                          "api_error": f"{type(exc).__name__}: {exc}"[:1000],
+                          "contract_repaired": False, "failure": True,
+                          "prompt_tokens": 0, "completion_tokens": 0, "total_tokens": 0,
+                          "latency_seconds": 0.0})
+        with args.output.open("a", encoding="utf-8") as stream:
+            stream.write(json.dumps(trace, ensure_ascii=False) + "\n")
+        if index % 10 == 0 or index == len(source):
+            print(json.dumps({"completed": index, "total": len(source)}))
+    rows = read_jsonl(args.output)
+    summary = {"records": len(rows), "failures": sum(bool(x.get("failure")) for x in rows),
+               "executor": "qwen_c3_g7", "model_requested": model,
+               "models_actual": sorted({str(x["api_model_actual"]) for x in rows
+                                        if x.get("api_model_actual")}),
+               "prompt_sha256": prompt_sha, "input": str(args.input),
+               "input_sha256": sha256(args.input), "output": str(args.output),
+               "output_sha256": sha256(args.output), "final_test_read": False}
+    args.output.with_suffix(".summary.json").write_text(json.dumps(summary, indent=2))
+    print(json.dumps(summary, indent=2))
+
+
+def merge_repaired(args: argparse.Namespace) -> None:
+    """Merge disjoint repaired executor traces without altering preserved source runs."""
+    replacements = [row for path in args.replacement for row in read_jsonl(path)]
+    replacement_by_id = {str(row["record_id"]): row for row in replacements}
+    if len(replacement_by_id) != len(replacements):
+        raise RuntimeError("replacement traces contain duplicate record_id values")
+    if args.base:
+        base = read_jsonl(args.base)
+        merged = [replacement_by_id.pop(str(row["record_id"]), row) for row in base]
+        if replacement_by_id:
+            raise RuntimeError(f"replacement rows absent from base: {sorted(replacement_by_id)[:3]}")
+    else:
+        merged = replacements
+    ids = [str(row["record_id"]) for row in merged]
+    if len(ids) != len(set(ids)):
+        raise RuntimeError("merged trace contains duplicate record_id values")
+    write_jsonl(args.output, merged)
+    summary = {
+        "base": str(args.base) if args.base else None,
+        "base_sha256": sha256(args.base) if args.base else None,
+        "replacements": [{"path": str(path), "sha256": sha256(path)}
+                         for path in args.replacement],
+        "records": len(merged), "output": str(args.output),
+        "output_sha256": sha256(args.output),
+        "per_class": dict(sorted(__import__("collections").Counter(
+            str(row.get("defect", "")).split("_", 1)[0] for row in merged).items())),
+    }
+    args.output.with_suffix(".summary.json").write_text(json.dumps(summary, indent=2))
+    print(json.dumps(summary, indent=2))
 
 def score(args: argparse.Namespace) -> None:
     rows: list[dict[str, Any]] = []
@@ -728,6 +883,22 @@ def main() -> None:
     api_runner.add_argument("--max-tokens", type=int, default=384)
     api_runner.add_argument("--limit", type=int)
     api_runner.set_defaults(function=api_infer)
+
+    g7_runner = sub.add_parser("g7-c3-infer")
+    g7_runner.add_argument("--repo", type=Path, default=Path.cwd())
+    g7_runner.add_argument("--env", type=Path, default=Path(".env"))
+    g7_runner.add_argument("--input", type=Path, required=True)
+    g7_runner.add_argument("--output", type=Path, required=True)
+    g7_runner.add_argument("--model", default="qwen3-vl-plus")
+    g7_runner.add_argument("--max-tokens", type=int, default=256)
+    g7_runner.add_argument("--limit", type=int)
+    g7_runner.set_defaults(function=g7_c3_infer)
+
+    merger = sub.add_parser("merge-repaired")
+    merger.add_argument("--base", type=Path)
+    merger.add_argument("--replacement", type=Path, nargs="+", required=True)
+    merger.add_argument("--output", type=Path, required=True)
+    merger.set_defaults(function=merge_repaired)
 
     scorer = sub.add_parser("score")
     scorer.add_argument("--input", type=Path, nargs="+", required=True)

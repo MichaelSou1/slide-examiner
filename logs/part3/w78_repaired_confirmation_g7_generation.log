@@ -1,0 +1,4 @@
+[G7 self-check] linter-blind on 30/30 = 1.000 (threshold 0.9)
+[render] 60 images ...
+[done] 30 G7 pairs -> /data/slide-examiner/runs/part3/w78_repaired_confirmation/g7_manifest.jsonl
+  per-variant: {'card_height': 10, 'unbreakable_text': 10, 'image_objectfit': 10}

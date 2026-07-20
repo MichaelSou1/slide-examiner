@@ -146,21 +146,43 @@ def parse_generated_contract(text: str, row: dict[str, Any] | None = None
 
 
 def prompt_row(row: dict[str, Any], prompt_mode: str) -> dict[str, Any]:
-    """Return a detached prompt and optionally append the atomic C3 query."""
+    """Return a detached prompt with the requested executor-specific instruction."""
     prompted = json.loads(json.dumps(row))
     if prompt_mode == "generic":
         return prompted
-    suffix = (
-        "\nATOMIC_CHECK: Decide specifically whether the visible artifact exhibits "
-        f"{row['defect']}. Localize concrete visible evidence if present, but still return the "
-        "exact examiner JSON contract and request context or defer when evidence is insufficient."
-    )
+    if prompt_mode == "reference":
+        suffix = (
+            "\nREFERENCE_COMPARISON: The first image is the clean reference and the second "
+            "image is the candidate under inspection. Compare them and directly ANSWER whether "
+            f"the candidate exhibits {row['defect']}. Check only this target defect, localize "
+            "concrete visible evidence when present, and do not request more context."
+        )
+    else:
+        suffix = (
+            "\nATOMIC_CHECK: Decide specifically whether the visible artifact exhibits "
+            f"{row['defect']}. Localize concrete visible evidence if present, but still return the "
+            "exact examiner JSON contract and request context or defer when evidence is insufficient."
+        )
     for item in reversed(prompted["messages"][0]["content"]):
         if item.get("type") == "text":
             item["text"] = str(item.get("text", "")) + suffix
             break
     return prompted
 
+
+
+def reference_followup_kwargs() -> dict[str, Any]:
+    """Return the fixed terminal policy used after a clean reference is acquired."""
+    return {
+        "terminal": True,
+        "confidence_threshold": 0.0,
+        "max_escalations": 0,
+        "route_mode": "fixed",
+        "fixed_action": ExaminerAction.ANSWER.value,
+        "class_routes": None,
+        "route_only": False,
+        "prompt_mode": "reference",
+    }
 
 def validate_deployment(run: Path | None, merged_model: Path | None,
                         lm_adapter: Path | None, route_mode: str) -> str | None:

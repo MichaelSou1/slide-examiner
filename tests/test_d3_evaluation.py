@@ -8,13 +8,14 @@ import pytest
 REPO = Path(__file__).resolve().parents[1]
 
 from scripts.part3_d3_evaluate import (
-    _api_messages, _relocatable, assert_final_test_unlocked, drop_availability, materialize_deck_pairs,
-    materialize_paired_images, materialize_slideaudit, score_cohorts,
+    _api_messages, _relocatable, assert_final_test_unlocked, drop_availability, g7_c3_messages,
+    materialize_deck_pairs, materialize_paired_images, materialize_slideaudit,
+    merge_repaired, parse_g7_c3_response, score_cohorts,
 )
 from slide_examiner.d3_evaluation import (
     endpoint_rows, exact_mcnemar, generated_route_action, holm_family, normalize_runtime_row, pareto_frontier,
     parse_generated_contract, prompt_row, score_arm, selective_risk_at_coverages,
-    route_requires_heads, validate_deployment,
+    reference_followup_kwargs, route_requires_heads, validate_deployment,
 )
 
 
@@ -47,6 +48,72 @@ def test_score_arm_reports_paired_metrics_ci_routing_and_cost():
     assert result["routing_and_cost"]["action_accuracy"] == .75
     assert result["routing_and_cost"]["coverage"] == .75
     assert result["routing_and_cost"]["mean_total_tokens"] == 75
+
+
+
+
+
+def test_merge_repaired_replaces_rows_without_mutating_base(tmp_path):
+    from argparse import Namespace
+
+    base = tmp_path / "base.jsonl"
+    replacement = tmp_path / "replacement.jsonl"
+    output = tmp_path / "merged.jsonl"
+    base.write_text('{"record_id":"a","defect":"G7_X","value":"old"}\n'
+                    '{"record_id":"b","defect":"S1_X","value":"keep"}\n')
+    replacement.write_text('{"record_id":"a","defect":"G7_X","value":"new"}\n')
+    original = base.read_bytes()
+    merge_repaired(Namespace(base=base, replacement=[replacement], output=output))
+    rows = [json.loads(line) for line in output.read_text().splitlines()]
+    assert [row["value"] for row in rows] == ["new", "keep"]
+    assert base.read_bytes() == original
+
+
+def test_g7_c3_executor_rejects_non_g7_and_maps_forced_evidence(tmp_path):
+    image = tmp_path / "slide.png"
+    image.write_bytes(b"png")
+    row = {"sample_id": "g7_1", "defect": "G7_RENDER_CONTAINMENT_OVERFLOW",
+           "images": [str(image)]}
+    messages = g7_c3_messages(row, tmp_path)
+    assert "spill outside the box" in messages[1]["content"][1]["text"]
+    parsed = parse_g7_c3_response(
+        '{"present":true,"evidence_element":"bottom list item",'
+        '"evidence_region":"bottom","confidence":0.9}', row)
+    assert parsed["has_defect"] is True
+    assert parsed["findings"][0]["type"] == "G7_RENDER_CONTAINMENT_OVERFLOW"
+    no_evidence = parse_g7_c3_response(
+        '{"present":true,"evidence_element":"","evidence_region":"",'
+        '"confidence":0.9}', row)
+    assert no_evidence["has_defect"] is False and no_evidence["findings"] == []
+    with pytest.raises(ValueError, match="only G7"):
+        g7_c3_messages({**row, "defect": "S1_TITLE_BODY_MISMATCH"}, tmp_path)
+
+
+def test_reference_prompt_orders_clean_then_candidate_and_forbids_rerequest():
+    row = {
+        "defect": "G1_TEXT_OVERFLOW",
+        "messages": [{"role": "user", "content": [
+            {"type": "image", "image": "clean.png"},
+            {"type": "image", "image": "candidate.png"},
+            {"type": "text", "text": "inspect"},
+        ]}],
+    }
+    prompted = prompt_row(row, "reference")
+    content = prompted["messages"][0]["content"]
+    assert [item["image"] for item in content if item["type"] == "image"] == [
+        "clean.png", "candidate.png"]
+    instruction = content[-1]["text"]
+    assert "first image is the clean reference" in instruction
+    assert "second image is the candidate" in instruction
+    assert "do not request more context" in instruction
+
+
+def test_reference_followup_forces_terminal_answer():
+    assert reference_followup_kwargs() == {
+        "terminal": True, "confidence_threshold": 0.0, "max_escalations": 0,
+        "route_mode": "fixed", "fixed_action": "ANSWER", "class_routes": None,
+        "route_only": False, "prompt_mode": "reference",
+    }
 
 
 def test_exact_mcnemar_and_holm_family():

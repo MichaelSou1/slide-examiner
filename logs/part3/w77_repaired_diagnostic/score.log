@@ -1,0 +1,7 @@
+{
+  "output": "reports/part3/w77_repaired_diagnostic/before_after_scores.json",
+  "arms": [
+    "manual_frozen_route",
+    "repaired_executor"
+  ]
+}

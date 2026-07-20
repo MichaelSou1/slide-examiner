@@ -257,6 +257,15 @@
 - [x] **5+.6 清理路由模型叙事**：投稿正文与 tech-report 的叙事已改为 `prescribed critic` / `deterministic composition` / method assignment；正文对 learned router、D3、distill、defer、action head、selective defer/escalation 的审计为零命中。仅 artifact 路径与既有图片文件名保留 `route/routing`（2026-07-20）。
 - [x] **5+.7 验收**：总表数字均回指既有 artifact；`.957` / `.8259` 口径分离；未新增训练或 GPU 实验；投稿正文、14 页 supplement 与 18 页 tech-report 均构建通过，投稿正文 8 页且 References 仍从物理第 7 页开始；关键数字一致（2026-07-20）。
 
+### W5++：executor repair 与独立确认（2026-07-20）
+
+- [x] **修复 reference follow-up 接线**：拿到 clean reference 后强制进入 terminal `ANSWER` comparison，不再重复执行 class route。G1/S6 的旧集 120 条 follow-up 均实际生成（零 `completion_tokens=0`、零循环、零 `DEFER`）；权威产物：`runs/part3/w77_repaired_diagnostic/reference_repaired_raw.jsonl`。
+- [x] **G7 接回论文 W5 executor**：固定 `qwen3-vl-plus`、atomic C3 问句、temperature 0、forced-localization gate；旧集 G7 从 `.567` 升至 `.833`，clean false positives 从 20/30 降至 9/30。权威产物：`runs/part3/w77_repaired_diagnostic/g7_c3_raw.jsonl`。
+- [x] **保留原结果并完成 post-hoc same-set diagnostic**：未覆盖 `w77/final_test_attempt2`；repaired 540-row macro bal-acc `.913`，G1/S6/G7 为 `.550/.967/.833`。报告：`reports/part3/w77_repaired_diagnostic/before_after_scores.json`。
+- [x] **运行前冻结新 confirmation**：新 seed `2026072001`（G1/S6）与 `2026072002`（G7），每类 30 positive/clean；manifest、图片和 executor 代码 hash 在推理前写入 `runs/part3/w78_repaired_confirmation/freeze_registry.json`。
+- [x] **完成独立三类 confirmation**：macro bal-acc `.778`（167/180 contract-valid；13 个 S6 positive 为 finding-only JSON parser failures，按 failure 排除而非按 negative 计）；G1/S6/G7 为 `.500/1.000/.833`。Reference loop 已闭环，但 G1 仍未迁移；不得把 `.778` 外推为九类 macro。报告：`reports/part3/w78_repaired_confirmation/scores.json`。
+- [x] **论文口径更新**：投稿正文区分 `.957` inspected held-out validation、原始 `.826` frozen check、post-hoc `.913` same-set repair 与 pre-frozen new three-class `.778` confirmation，并明确 G1 failure；不删除负结果。
+
 ### 已归档、不进入论文的探索
 
 - [x] learned router / D3 / distill / defer 实验已经完成并保留在仓库与远端 artifact 中，但因未达到预设成功门槛，**不作为论文方法、贡献、主结果或负结果讨论**。不删除已有报告、日志、模型和 checkpoint，不重跑、不继续调参，也不把它包装成 LTT 或其他新名字。

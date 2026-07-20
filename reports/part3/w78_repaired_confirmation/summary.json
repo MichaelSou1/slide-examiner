@@ -1,0 +1,333 @@
+{
+  "schema_version": 1,
+  "created_date": "2026-07-20",
+  "scientific_labels": {
+    "old": "original frozen check",
+    "diagnostic": "post-hoc repaired-executor same-set diagnostic",
+    "confirmation": "independent confirmation after executor repair"
+  },
+  "original": {
+    "macro": {
+      "balanced_accuracy": 0.825925925925926,
+      "precision": 0.7272727272727273,
+      "recall": 0.725925925925926,
+      "specificity": 0.9259259259259259,
+      "paired_clean_fpr": 0.07407407407407407,
+      "named_localization": 0.7777777777777778,
+      "classes": 9
+    },
+    "per_class": {
+      "G1_TEXT_OVERFLOW": {
+        "tp": 0,
+        "fn": 30,
+        "fp": 0,
+        "tn": 30,
+        "balanced_accuracy": {
+          "estimate": 0.5,
+          "low": 0.4432433034130157,
+          "high": 0.5567566965869843,
+          "n_pos": 30,
+          "n_neg": 30
+        }
+      },
+      "G2_ELEMENT_OVERLAP": {
+        "tp": 30,
+        "fn": 0,
+        "fp": 0,
+        "tn": 30,
+        "balanced_accuracy": {
+          "estimate": 1.0,
+          "low": 0.8864866068260314,
+          "high": 1.0,
+          "n_pos": 30,
+          "n_neg": 30
+        }
+      },
+      "G3_ALIGNMENT_OFFSET": {
+        "tp": 30,
+        "fn": 0,
+        "fp": 0,
+        "tn": 30,
+        "balanced_accuracy": {
+          "estimate": 1.0,
+          "low": 0.8864866068260314,
+          "high": 1.0,
+          "n_pos": 30,
+          "n_neg": 30
+        }
+      },
+      "G5_BRAND_COLOR_VIOLATION": {
+        "tp": 30,
+        "fn": 0,
+        "fp": 0,
+        "tn": 30,
+        "balanced_accuracy": {
+          "estimate": 1.0,
+          "low": 0.8864866068260314,
+          "high": 1.0,
+          "n_pos": 30,
+          "n_neg": 30
+        }
+      },
+      "G6_MARGIN_VIOLATION": {
+        "tp": 30,
+        "fn": 0,
+        "fp": 0,
+        "tn": 30,
+        "balanced_accuracy": {
+          "estimate": 1.0,
+          "low": 0.8864866068260314,
+          "high": 1.0,
+          "n_pos": 30,
+          "n_neg": 30
+        }
+      },
+      "G7_RENDER_CONTAINMENT_OVERFLOW": {
+        "tp": 24,
+        "fn": 6,
+        "fp": 20,
+        "tn": 10,
+        "balanced_accuracy": {
+          "estimate": 0.5666666666666667,
+          "low": 0.40962400835263946,
+          "high": 0.7085742058908314,
+          "n_pos": 30,
+          "n_neg": 30
+        }
+      },
+      "S1_TITLE_BODY_MISMATCH": {
+        "tp": 22,
+        "fn": 8,
+        "fp": 0,
+        "tn": 30,
+        "balanced_accuracy": {
+          "estimate": 0.8666666666666667,
+          "low": 0.7210034949370712,
+          "high": 0.9290866834020184,
+          "n_pos": 30,
+          "n_neg": 30
+        }
+      },
+      "S4_DENSITY_RULE_VIOLATION": {
+        "tp": 30,
+        "fn": 0,
+        "fp": 0,
+        "tn": 30,
+        "balanced_accuracy": {
+          "estimate": 1.0,
+          "low": 0.8864866068260314,
+          "high": 1.0,
+          "n_pos": 30,
+          "n_neg": 30
+        }
+      },
+      "S6_IMAGE_TEXT_CONTRADICTION": {
+        "tp": 0,
+        "fn": 30,
+        "fp": 0,
+        "tn": 30,
+        "balanced_accuracy": {
+          "estimate": 0.5,
+          "low": 0.4432433034130157,
+          "high": 0.5567566965869843,
+          "n_pos": 30,
+          "n_neg": 30
+        }
+      }
+    }
+  },
+  "diagnostic": {
+    "macro": {
+      "balanced_accuracy": 0.912962962962963,
+      "precision": 0.9736842105263158,
+      "recall": 0.8592592592592593,
+      "specificity": 0.9666666666666667,
+      "paired_clean_fpr": 0.03333333333333333,
+      "named_localization": 1.0,
+      "classes": 9
+    },
+    "per_class": {
+      "G1_TEXT_OVERFLOW": {
+        "tp": 3,
+        "fn": 27,
+        "fp": 0,
+        "tn": 30,
+        "balanced_accuracy": {
+          "estimate": 0.55,
+          "low": 0.4605432477866828,
+          "high": 0.6281054128959204,
+          "n_pos": 30,
+          "n_neg": 30
+        }
+      },
+      "G2_ELEMENT_OVERLAP": {
+        "tp": 30,
+        "fn": 0,
+        "fp": 0,
+        "tn": 30,
+        "balanced_accuracy": {
+          "estimate": 1.0,
+          "low": 0.8864866068260314,
+          "high": 1.0,
+          "n_pos": 30,
+          "n_neg": 30
+        }
+      },
+      "G3_ALIGNMENT_OFFSET": {
+        "tp": 30,
+        "fn": 0,
+        "fp": 0,
+        "tn": 30,
+        "balanced_accuracy": {
+          "estimate": 1.0,
+          "low": 0.8864866068260314,
+          "high": 1.0,
+          "n_pos": 30,
+          "n_neg": 30
+        }
+      },
+      "G5_BRAND_COLOR_VIOLATION": {
+        "tp": 30,
+        "fn": 0,
+        "fp": 0,
+        "tn": 30,
+        "balanced_accuracy": {
+          "estimate": 1.0,
+          "low": 0.8864866068260314,
+          "high": 1.0,
+          "n_pos": 30,
+          "n_neg": 30
+        }
+      },
+      "G6_MARGIN_VIOLATION": {
+        "tp": 30,
+        "fn": 0,
+        "fp": 0,
+        "tn": 30,
+        "balanced_accuracy": {
+          "estimate": 1.0,
+          "low": 0.8864866068260314,
+          "high": 1.0,
+          "n_pos": 30,
+          "n_neg": 30
+        }
+      },
+      "G7_RENDER_CONTAINMENT_OVERFLOW": {
+        "tp": 29,
+        "fn": 1,
+        "fp": 9,
+        "tn": 21,
+        "balanced_accuracy": {
+          "estimate": 0.8333333333333333,
+          "low": 0.6772691077493795,
+          "high": 0.9137219634679747,
+          "n_pos": 30,
+          "n_neg": 30
+        }
+      },
+      "S1_TITLE_BODY_MISMATCH": {
+        "tp": 22,
+        "fn": 8,
+        "fp": 0,
+        "tn": 30,
+        "balanced_accuracy": {
+          "estimate": 0.8666666666666667,
+          "low": 0.7210034949370712,
+          "high": 0.9290866834020184,
+          "n_pos": 30,
+          "n_neg": 30
+        }
+      },
+      "S4_DENSITY_RULE_VIOLATION": {
+        "tp": 30,
+        "fn": 0,
+        "fp": 0,
+        "tn": 30,
+        "balanced_accuracy": {
+          "estimate": 1.0,
+          "low": 0.8864866068260314,
+          "high": 1.0,
+          "n_pos": 30,
+          "n_neg": 30
+        }
+      },
+      "S6_IMAGE_TEXT_CONTRADICTION": {
+        "tp": 28,
+        "fn": 2,
+        "fp": 0,
+        "tn": 30,
+        "balanced_accuracy": {
+          "estimate": 0.9666666666666667,
+          "low": 0.8366260115999311,
+          "high": 0.9907614881043648,
+          "n_pos": 30,
+          "n_neg": 30
+        }
+      }
+    }
+  },
+  "confirmation": {
+    "scope": "G1/S6/G7 only",
+    "macro": {
+      "balanced_accuracy": 0.7777777777777778,
+      "precision": 0.5877192982456141,
+      "recall": 0.6555555555555556,
+      "specificity": 0.9,
+      "paired_clean_fpr": 0.09999999999999999,
+      "named_localization": 0.6666666666666666,
+      "classes": 3
+    },
+    "per_class": {
+      "G1_TEXT_OVERFLOW": {
+        "tp": 0,
+        "fn": 30,
+        "fp": 0,
+        "tn": 30,
+        "balanced_accuracy": {
+          "estimate": 0.5,
+          "low": 0.4432433034130157,
+          "high": 0.5567566965869843,
+          "n_pos": 30,
+          "n_neg": 30
+        }
+      },
+      "G7_RENDER_CONTAINMENT_OVERFLOW": {
+        "tp": 29,
+        "fn": 1,
+        "fp": 9,
+        "tn": 21,
+        "balanced_accuracy": {
+          "estimate": 0.8333333333333333,
+          "low": 0.6772691077493795,
+          "high": 0.9137219634679747,
+          "n_pos": 30,
+          "n_neg": 30
+        }
+      },
+      "S6_IMAGE_TEXT_CONTRADICTION": {
+        "tp": 17,
+        "fn": 0,
+        "fp": 0,
+        "tn": 30,
+        "balanced_accuracy": {
+          "estimate": 1.0,
+          "low": 0.85108423590859,
+          "high": 1.0,
+          "n_pos": 17,
+          "n_neg": 30
+        }
+      }
+    }
+  },
+  "acceptance": {
+    "reference_zero_completion": 0,
+    "reference_action_loops": 0,
+    "g7_old_clean_fp": 20,
+    "g7_repaired_clean_fp": 9
+  },
+  "limitations": [
+    "G1 remains at chance on the independent confirmation",
+    "confirmation macro covers three classes only",
+    "post-hoc diagnostic is not a replacement for the original frozen check"
+  ]
+}

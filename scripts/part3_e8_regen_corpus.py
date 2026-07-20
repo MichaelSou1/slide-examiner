@@ -164,11 +164,15 @@ def _heldout_slides(seed: int, n: int, template_family: str = "w5_novel_seeded")
 
 
 def build_heldout(seed: int, pairs_per_class: int, runs: Path, out: Path,
-                  template_family: str = "w5_novel_seeded") -> None:
+                  template_family: str = "w5_novel_seeded",
+                  classes: tuple[str, ...] = HELDOUT_CLASSES) -> None:
     # Allocate a disjoint clean base slide to every class/pair.  This prevents a
     # clean render from being reused across labels and keeps paired controls
     # independent of the development corpora and of one another.
-    slides = _heldout_slides(seed, pairs_per_class * len(HELDOUT_CLASSES), template_family)
+    unknown = sorted(set(classes) - set(HELDOUT_CLASSES))
+    if unknown:
+        raise ValueError(f"unsupported held-out classes: {unknown}")
+    slides = _heldout_slides(seed, pairs_per_class * len(classes), template_family)
     injectors = {
         "G1_TEXT_OVERFLOW": lambda s: inject_text_overflow(s, element_id=next(e.element_id for e in s.elements if e.metadata.get("role") == "body"), overflow_px=64),
         "G2_ELEMENT_OVERLAP": lambda s: inject_overlap(s, source_element_id=next(e.element_id for e in s.elements if e.metadata.get("role") == "diagram"), target_element_id=next(e.element_id for e in s.elements if e.metadata.get("role") == "body"), dx=(760 if template_family == "d3_split_panel_v1" else -400), dy=0, severity_iou=.35),
@@ -180,7 +184,7 @@ def build_heldout(seed: int, pairs_per_class: int, runs: Path, out: Path,
         "S6_IMAGE_TEXT_CONTRADICTION": inject_image_text_contradiction,
     }
     samples = []
-    for class_index, defect in enumerate(HELDOUT_CLASSES):
+    for class_index, defect in enumerate(classes):
         class_slides = slides[class_index * pairs_per_class:(class_index + 1) * pairs_per_class]
         for slide in class_slides:
             injected = injectors[defect](slide)
@@ -232,12 +236,15 @@ def main() -> None:
     ap.add_argument("--pairs-per-class", type=int, default=150)
     ap.add_argument("--heldout-runs", type=Path, default=REPO / "runs/part3/w5_heldout")
     ap.add_argument("--heldout-out", type=Path, default=REPO / "data/part3/w5_heldout.jsonl")
+    ap.add_argument("--heldout-classes", nargs="+", choices=HELDOUT_CLASSES,
+                    default=list(HELDOUT_CLASSES))
     args = ap.parse_args()
 
     if args.target == "heldout":
         if args.pairs_per_class < 1:
             ap.error("--pairs-per-class must be >= 1")
-        build_heldout(args.seed, args.pairs_per_class, args.heldout_runs, args.heldout_out)
+        build_heldout(args.seed, args.pairs_per_class, args.heldout_runs, args.heldout_out,
+                      classes=tuple(args.heldout_classes))
         return
 
     targets = ["part1", "coverage"] if args.target == "both" else [args.target]

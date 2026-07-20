@@ -1,0 +1,203 @@
+{
+  "slide_id": "w5cal_2026072001_0053",
+  "width": 1920,
+  "height": 1080,
+  "elements": [
+    {
+      "element_id": "h53",
+      "type": "background",
+      "bbox": {
+        "x": 48,
+        "y": 36,
+        "width": 1824,
+        "height": 114
+      },
+      "text": "",
+      "style": {
+        "fill_color": "#132a3a"
+      },
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {
+        "role": "decoration"
+      }
+    },
+    {
+      "element_id": "rail53",
+      "type": "shape",
+      "bbox": {
+        "x": 1818,
+        "y": 180,
+        "width": 48,
+        "height": 820
+      },
+      "text": "",
+      "style": {
+        "fill_color": "#24b6a4"
+      },
+      "z": 0,
+      "placeholder_id": null,
+      "metadata": {
+        "role": "decoration"
+      }
+    },
+    {
+      "element_id": "title53",
+      "type": "title",
+      "bbox": {
+        "x": 120,
+        "y": 58,
+        "width": 1600,
+        "height": 64
+      },
+      "text": "Industrial heat recovery: cohort 54",
+      "style": {
+        "font_size_pt": 30,
+        "color": "#ffffff"
+      },
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {
+        "role": "title",
+        "text_level": "title",
+        "allow_overlap_with": [
+          "h53"
+        ]
+      }
+    },
+    {
+      "element_id": "body53_0",
+      "type": "text",
+      "bbox": {
+        "x": 120,
+        "y": 225,
+        "width": 1140,
+        "height": 82
+      },
+      "text": "HeatBack completed the independent baseline audit",
+      "style": {
+        "font_size_pt": 22,
+        "color": "#263238"
+      },
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {
+        "role": "body",
+        "text_level": "body"
+      }
+    },
+    {
+      "element_id": "body53_1",
+      "type": "text",
+      "bbox": {
+        "x": 120,
+        "y": 350,
+        "width": 1140,
+        "height": 82
+      },
+      "text": "The first region established a measurable efficiency baseline",
+      "style": {
+        "font_size_pt": 22,
+        "color": "#263238"
+      },
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {
+        "role": "body",
+        "text_level": "body"
+      }
+    },
+    {
+      "element_id": "body53_2",
+      "type": "text",
+      "bbox": {
+        "x": 120,
+        "y": 475,
+        "width": 1140,
+        "height": 82
+      },
+      "text": "Operators approved the staged deployment safeguards",
+      "style": {
+        "font_size_pt": 22,
+        "color": "#263238"
+      },
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {
+        "role": "body",
+        "text_level": "body"
+      }
+    },
+    {
+      "element_id": "body53_3",
+      "type": "text",
+      "bbox": {
+        "x": 120,
+        "y": 600,
+        "width": 1140,
+        "height": 82
+      },
+      "text": "The next checkpoint links funding to verified efficiency",
+      "style": {
+        "font_size_pt": 22,
+        "color": "#263238"
+      },
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {
+        "role": "body",
+        "text_level": "body"
+      }
+    },
+    {
+      "element_id": "fig53",
+      "type": "diagram",
+      "bbox": {
+        "x": 1390,
+        "y": 240,
+        "width": 390,
+        "height": 410
+      },
+      "text": "",
+      "style": {
+        "fill_color": "#eaf8f6",
+        "color": "#24b6a4"
+      },
+      "z": 1,
+      "placeholder_id": null,
+      "metadata": {
+        "role": "diagram",
+        "diagram_claim": "Verified efficiency advanced in every measured quarter",
+        "diagram_false_claim": "Verified efficiency regressed in every measured quarter",
+        "diagram_trend": "up"
+      }
+    },
+    {
+      "element_id": "footer53",
+      "type": "text",
+      "bbox": {
+        "x": 260,
+        "y": 940,
+        "width": 1420,
+        "height": 44
+      },
+      "text": "CALIBRATION 2026072001 · HeatBack · independently generated",
+      "style": {
+        "font_size_pt": 13,
+        "color": "#59636a"
+      },
+      "z": 2,
+      "placeholder_id": null,
+      "metadata": {
+        "role": "footer",
+        "text_level": "footer"
+      }
+    }
+  ],
+  "metadata": {
+    "source": "w5_novel_seeded",
+    "seed": 2026072001,
+    "template_family": "w5_novel_seeded",
+    "template_variant": "w5_novel_seeded_5"
+  }
+}
