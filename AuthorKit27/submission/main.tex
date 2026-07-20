@@ -46,23 +46,22 @@ Symbolic--Neural Critic for Slides}
 
 \begin{abstract}
 \noindent
-Vision--language models (VLMs) routinely pass slides with visible defects, but a failed inspection does not
-identify why the model failed. We test whether separating failure mechanisms can guide the choice of inspection
+Vision--language models (VLMs) can pass slides with visible defects, yet the inspection result alone does not
+identify the source of failure. We test whether separating failure mechanisms can guide the choice of inspection
 method. A structured-geometry oracle distinguishes defects below the tested perceptual threshold, defects
 suppressed by a whole-rubric prompt, and \emph{reference-assisted} defects that become identifiable only when a
-clean twin is available. This diagnosis informs a manually specified critic that is subsequently frozen:
+clean twin is available. This diagnosis informs a manually specified critic, frozen before evaluation:
 trusted native geometry goes to symbolic linters, render-only failures to atomic VLM queries, and semantic
 content to direct neural inspection. Across three vendors, one atomic query improves balanced accuracy by
 0.20--0.31 over a budget-favored control using ten repeated whole-rubric samples. On a disjoint nine-class
-image arm, the frozen critic reaches 0.826 macro balanced accuracy. Its four trusted-native-IR classes are
-perfect, while weaker neural transfer and unresolved reference requests delimit the result.
+image arm, the frozen critic reaches 0.826 macro balanced accuracy. Its four trusted-native-IR classes reach
+perfect balanced accuracy. Weaker neural transfer and unresolved reference requests delimit the result.
 \end{abstract}
 
 \begin{figure}[!t]
 \centering
 \includegraphics[width=0.94\columnwidth]{figs/fig_teaser.pdf}
-\caption{\textbf{Diagnose before inspection.}
-A geometry oracle attributes each failure and guides a manually specified division of labor among symbolic
+\caption{A geometry oracle attributes each failure before guiding a manually specified division of labor among symbolic
 linting, atomic VLM elicitation, reference requests, and direct semantic inspection.}
 \label{fig:teaser}
 \end{figure}
@@ -72,49 +71,49 @@ linting, atomic VLM elicitation, reference requests, and direct semantic inspect
 % =====================================================================
 
 Slide- and document-generation agents need critics that can locate layout and content defects before an output
-is returned or revised. A common choice is a general-purpose vision--language model (VLM) prompted to grade the
-rendered slide against a rubric. Yet the resulting judgment does not reveal why a defect was missed. For
-example, a strong VLM may answer ``no defect'' when a title visibly spills out of its box. The same answer is
-consistent with two different failures: the model may not resolve the overflow, or the prompt may fail to elicit
-a signal the model can use. These explanations imply different remedies, ranging from better visual input to a
-different query or a symbolic tool.
+is returned or revised. General-purpose vision--language models (VLMs) offer a convenient critic because they
+can grade a rendered slide directly against a rubric. Their verdicts, however, leave a practical ambiguity. A
+model may answer ``no defect'' when a title visibly spills out of its box either because it cannot resolve the
+overflow or because the prompt fails to elicit a usable signal. The two explanations call for different
+remedies: better visual evidence in the first case, and a different query or symbolic tool in the second.
 
-This distinction becomes more important when defects vary in scale and in the evidence required to identify
-them. Some defects are \emph{sub-perceptual} under the tested protocol, such as a three-pixel alignment offset
+The ambiguity extends beyond a single overflow example because slide defects vary in scale and in the evidence
+needed to identify them. Some defects are \emph{sub-perceptual} under the tested protocol, such as a three-pixel
+alignment offset
 or a one-point font mismatch below the models' effective acuity. Changing the prompt, scale, or resolution does
 not recover them. Other defects are \emph{format-suppressed}: the model detects them when asked one targeted
 question with required evidence, but misses them when one pointwise call must score the full rubric. A third
 set is \emph{reference-assisted}. These defects become resolvable when the model can compare the slide with a
-clean twin, but not from the single slide alone. Treating all three outcomes as generic failures of ``visual
-understanding'' obscures which intervention is appropriate.
+clean twin, but not from the single slide alone. A generic label such as ``visual understanding failure''
+collapses these outcomes and obscures the appropriate intervention.
 
-We measure this distinction with an attribution protocol based on a structured-geometry oracle that is lossless with respect to the declared IR.
-Each slide has an intermediate representation (IR) containing element bounding boxes, text, and style. We
-present matched defective and clean slides as an image, the structured oracle, a VLM-generated caption, or the
+To separate these outcomes, we use an attribution protocol based on a structured-geometry oracle that is
+lossless with respect to the declared intermediate representation (IR). The IR contains element bounding boxes,
+text, and style. We present matched defective and clean slides as an image, the structured oracle, a VLM-generated caption, or the
 image together with the oracle. We cross these inputs with detection, localization, and repair tasks. Unlike a
 model-generated caption, the oracle exposes the declared structure without first passing it through another
 visual model. Success with the oracle after failure on the image therefore operationally identifies a
 perception bottleneck at the tested interface. Failure with both inputs indicates that changing the neural input
 alone does not solve the class.
 
-The attribution results determine a fixed division of labor (Fig.~\ref{fig:teaser}). Symbolic linters inspect
+The resulting attribution determines a fixed division of labor (Fig.~\ref{fig:teaser}). Symbolic linters inspect
 declared geometry and terminology. A language model handles text and structural semantics. VLMs inspect
 perceivable defects under the elicitation format supported by the diagnosis, using either an atomic query or a
 clean reference. We also construct \g{G7}, a render-containment overflow whose declared box is legal although
 its rendered content crosses the boundary. This class tests the part of the design that a structure-only linter
-cannot observe. The complete symbolic--neural critic assumes an IR-owning generation agent. When only
+cannot observe. This symbolic--neural critic assumes an IR-owning generation agent. When only
 third-party pixels are available, the linter lacks its required input and the available critic reduces to the
 re-elicited VLM (Sec.~\ref{sec:external}).
 
-The paper makes four connected contributions. First, the structured-oracle protocol separates sub-perceptual,
-format-suppressed, and reference-assisted failures, and we repeat the attribution on real CC-licensed layouts
-(Secs.~\ref{sec:diag} and~\ref{sec:external}). Second, defect-specific elicitation recovers signals suppressed
-by a whole-rubric prompt, whereas \g{G1} text overflow and \g{S6} image/text contradiction still require a clean
-reference (Sec.~\ref{sec:hybrid}). Third, a budget-favored repeated-C0 control shows that additional sampling
-cannot explain the atomic-query recovery across three vendors. Finally, diagnostic and development evidence
-guides a manually specified critic, which is frozen before evaluation on a disjoint nine-class image arm. The
-Technical Supplement reports the development-stage method selection, full per-class results, and post-hoc
-executor audits separately.
+The study follows this progression from diagnosis to inspection design. The structured-oracle protocol first
+separates sub-perceptual, format-suppressed, and reference-assisted failures, including on real CC-licensed
+layouts (Secs.~\ref{sec:diag} and~\ref{sec:external}). Defect-specific elicitation then recovers signals
+suppressed by a whole-rubric prompt, whereas \g{G1} text overflow and \g{S6} image/text contradiction still
+require a clean reference (Sec.~\ref{sec:hybrid}). A repeated-C0 control with a larger sampling budget tests
+whether compute alone explains the recovery across three vendors. These diagnostic and development results
+specify a manual critic that is frozen before evaluation on a disjoint nine-class image arm. The Technical
+Supplement keeps development-stage method selection, full per-class results, and post-hoc executor audits
+separate.
 
 % =====================================================================
 \section{Related work}
@@ -132,8 +131,8 @@ critic's inspection method.
 \paragraph{Perception/reasoning attribution.}
 Concurrent work uses natural-language descriptions to separate perception from reasoning in abstract
 visual-reasoning benchmarks~\citep{reasoningbench}. Our setting instead provides a structured representation of
-boxes, text, and style, together with exact labels from controlled injection. The representation avoids using a
-caption as the oracle and lets the attribution select a downstream inspection method. The \textsc{LED}
+boxes, text, and style, together with exact labels from controlled injection. Unlike a model-written caption, this representation does not pass the evidence through the visual model being
+diagnosed. The attribution can then inform the downstream inspection method. The \textsc{LED}
 benchmark also injects empirically grounded structural errors, but it evaluates errors in document-layout-analysis
 predictions and studies limitations of overlap-based metrics~\citep{led}. We inject errors into rendered slide
 artifacts and use the resulting diagnosis to compose a critic.
@@ -142,9 +141,8 @@ artifacts and use the resulting diagnosis to compose a critic.
 VLM judges can preserve rankings while producing uncertain absolute scores~\citep{rankscore}.
 Pairwise assessment has also improved zero-shot NLG evaluation for some LLMs, although it exhibits positional
 bias~\citep{comparative}. Protocol choice can introduce other biases as well: pairwise judgments may be more
-sensitive than absolute scores to distractor features~\citep{pairpoint}. Our experiments use relative and atomic
-queries as diagnostic interventions rather than assuming that either is generally superior. The useful result
-is their class boundary: they recover \g{G1} text overflow and \g{S6} image/text contradiction, but not fine
+sensitive than absolute scores to distractor features~\citep{pairpoint}. We use relative and atomic queries as diagnostic interventions rather than assume that either is generally
+superior. Their class boundary is the relevant result: they recover \g{G1} text overflow and \g{S6} image/text contradiction, but not fine
 \g{G3} alignment or \g{S3} terminology drift.
 
 \paragraph{Slide generation, evaluation, and reward.}
@@ -163,11 +161,11 @@ published scorers and one closed VLM judge on the constructed render class (Sec.
 
 \paragraph{Task and representation.}
 The critic inspects a single rendered slide, optionally with its declared structure, and must \emph{flag and
-localize} defects of a fixed set of types; a detection counts only when it fires on a defective slide and stays
-silent on its matched clean twin. Every slide is an intermediate representation (IR) of typed elements with
-bounding boxes, text, and style; we inject defects programmatically into the IR and render, yielding exact
-labels and matched (defective, clean) pairs. The taxonomy (Table~\ref{tab:taxonomy}) has a \emph{geometry}
-group \g{G1}--\g{G6}, a \emph{semantic} group \g{S1}--\g{S6}, and one constructed render class \g{G7}; it is
+localize} defects of a fixed set of types. A detection counts only when it fires on a defective slide and stays
+silent on its matched clean twin. Each slide is represented by an intermediate representation (IR) of typed elements with bounding boxes, text,
+and style. We inject defects programmatically into the IR and render it, yielding exact labels and matched
+(defective, clean) pairs. The taxonomy (Table~\ref{tab:taxonomy}) has a \emph{geometry}
+group \g{G1}--\g{G6}, a \emph{semantic} group \g{S1}--\g{S6}, and one constructed render class \g{G7}. It is
 aligned to the expert-derived \textsc{SlideAudit} taxonomy~\citep{slideaudit} via a bidirectional map (crosswalk in
 the supplement), and results are reported in its canonical classes. We add \g{G7} to test the linter's blind spot: the declared box is legal (inside the safe margin, no
 overlap) but the rendered content overflows its container, so the defect exists \emph{only} in pixels. On real
@@ -178,8 +176,8 @@ AutoPresent slice: 8/14 decks (20/50 legal boxes).}
 \begin{table*}[t]
 \centering
 \small
-\caption{Defect taxonomy. Geometry classes with trustworthy declared structure are handled symbolically;
-semantic classes require text or visual reasoning; \g{G7} is constructed to be linter-blind. ``Channel'' is
+\caption{Defect taxonomy. Geometry classes with trustworthy declared structure are handled symbolically.
+Semantic classes require text or visual reasoning, and \g{G7} is constructed to be linter-blind. ``Channel'' is
 the inspection engine suggested by the diagnosis (Sec.~\ref{sec:diag}--\ref{sec:hybrid}).}
 \label{tab:taxonomy}
 \setlength{\tabcolsep}{7pt}
@@ -211,23 +209,24 @@ Render & \g{G7} containment overflow & declared box is legal, but rendered conte
 To attribute a failure, we define four input conditions. Condition A contains only the rendered image.
 Condition B contains the structured oracle, which preserves element boxes, text, and style from the source
 IR without loss. Condition B$'$ contains a VLM-written caption and serves as a lossy control. Condition C combines the image
-and oracle. Under each condition, we ask the model to detect, localize, and repair the defect. The attribution reads off the A-vs-B contrast: if
+and oracle. Under each condition, we ask the model to detect, localize, and repair the defect. The A-vs-B contrast provides the attribution. If
 the model fails on the image alone (A) but succeeds given the oracle (B), we call the class
 \emph{perception-bottlenecked} operationally: the task becomes solvable when the same information is made
-explicit in structure that is lossless with respect to the declared IR. This is a diagnosis of which engine can solve the class, not a claim about the
-model's internal representations. If it fails under both, the class is unsolved even at the structured
+explicit in structure that is lossless with respect to the declared IR. This diagnosis identifies which engine
+can solve the class. It does not make a claim about the model's internal representations. If it fails under both, the class is unsolved even at the structured
 interface, and we assign it to a symbolic method.\footnote{The oracle's ground-truth labels are stripped from the model's view by a
 regression-tested de-leaking pass, so B tests perception of structure, not label leakage. B$'$ is a control,
 not a second oracle: a caption re-injects the perceptual error it is meant to factor out, so B's advantage is
 by construction.} The defective slide and its matched clean twin form the basic scoring pair: a detection
 counts only if it fires on the defective member and stays silent on the clean member, so a model cannot score
 by flagging everything. Balanced-accuracy intervals are component-wise Wilson-derived intervals, formed from
-the Wilson intervals for recall and specificity. Two orderings of a 2-AFC pair are order controls, not
-independent defect instances; full intervals and ordering-level results are in the Technical Supplement.
+the Wilson intervals for recall and specificity. For two-alternative forced choice (2-AFC), the two orderings are order controls rather than independent defect
+instances. Full intervals and ordering-level results are in the Technical Supplement.
 
 \paragraph{Two linters.}
-A geometry linter detects \g{G1}--\g{G6} from coordinates and rules (brand color via CIELAB $\Delta E_{2000}$, not RGB
-distance), at zero false positives on clean slides. A terminology linter handles \g{S3} from an occurrence
+A geometry linter detects \g{G1}--\g{G6} from coordinates and rules, using the CIELAB color-difference
+measure $\Delta E_{2000}$ rather than RGB distance for brand color. It produces zero false positives on clean
+slides. A terminology linter handles \g{S3} from an occurrence
 table plus near-duplicate clustering, image-free. Both are the ``detectors of record'' selected from the diagnosis.
 
 \begin{table*}[t]
@@ -236,7 +235,7 @@ table plus near-duplicate clustering, image-free. Both are the ``detectors of re
 \setlength{\tabcolsep}{4pt}
 \renewcommand{\arraystretch}{1.03}
 \caption{Attribution-to-intervention correspondence. Each assignment is accompanied by a mismatched-method
-comparison and its observed boundary; BA denotes balanced accuracy. Results marked ``development'' informed the
+comparison and its observed boundary. BA denotes balanced accuracy. Results marked ``development'' informed the
 manual specification and are not part of the later frozen evaluation.}
 \label{tab:diagnosis-method}
 \begin{tabular}{@{}p{0.16\textwidth}p{0.16\textwidth}p{0.43\textwidth}p{0.17\textwidth}@{}}
@@ -260,10 +259,10 @@ Pixels without native structure & recovered-structure linter & It stays at chanc
 \paragraph{Pointwise image-only inspection misses fine geometry.}
 Under the conventional setup, one slide receives one rubric score with no reference slide for comparison. We
 call this \emph{pointwise image-only} inspection. In this setting, \g{G2}--\g{G6} sit at chance for 4B and 8B models, and a 30B breaks only
-\g{G1} overflow. The floor remains under the tested changes: swapping the vision encoder across \emph{five}
+\g{G1} overflow. The floor persists under the tested changes. swapping the vision encoder across \emph{five}
 families (SigLIP2, an LLM-based encoder, InternViT, a native-resolution NaViT, MoonViT) leaves every model at
-the random line (differing only in abstain-vs-over-flag bias), and raising resolution 1536$\to$2048 changes
-nothing. The lever is elicitation and magnitude, not encoder or pixel budget, so the floor is a property of
+the random line, differing only in abstain-vs-over-flag bias. Raising resolution 1536$\to$2048 changes
+nothing. Elicitation and magnitude change this result, whereas encoder choice and pixel budget do not. The observed floor is thus a property of
 the \emph{pointwise} protocol, not a hard capability limit. For declared geometry, the symbolic linter reads coordinates directly and reaches balanced accuracy 0.75--1.0
 with zero false positives where the IR is available.
 
@@ -271,23 +270,22 @@ with zero false positives where the IR is available.
 The same setting hides a second, opposite phenomenon. For \g{G1} overflow and \g{S6} image/text contradiction,
 pointwise balanced accuracy is 0.50, indistinguishable from the sub-threshold tail, yet a
 two-alternative forced choice between the defective and clean slide jumps to 1.00: the defect is perceivable,
-but the single-slide pointwise call does not surface it. We therefore treat \g{G1}/\g{S6} as
+but the single-slide pointwise call does not surface it. We treat \g{G1}/\g{S6} as
 \emph{reference-assisted}: recovery needs the clean twin, not just a renamed single-image question. \g{G3}
 alignment behaves differently, but only \emph{above a magnitude threshold}: sweeping the injected offset as an
 internal contrast (one element shifted from its aligned sibling column), the forced choice saturates to $1.00$
 by $16$\,px ($0.83\%$ of slide width) while the sub-threshold tail ($\le8$\,px) stays at chance even side by
-side. So fine alignment is not a class-level capability floor: above threshold it is format-suppressed and
-recoverable, with a sub-perceptual residue only in the small-offset tail. The connecting thread is a
+side. Fine alignment is thus not a class-level capability floor: above threshold it is format-suppressed and
+recoverable, with a sub-perceptual residue only in the small-offset tail. Together, these results reveal a
 \emph{magnitude-gated} recoverable-versus-sub-perceptual boundary rather than a clean geometric/semantic split,
 and \g{S3} terminology (below) remains the one defect no elicitation rescues.
 
 On the rebuilt corpus we also now have a human spot-check on the actual pairs cited here, not just the earlier
 diagnosis runs. Replacing only the stale legacy \g{G3}/\g{G5} samples and keeping the other 55 pairs fixed,
 the v2 pass verifies every sampled defect as visible and every clean twin as clean (73/73, Wilson lower bound
-0.95 for both), with source-structure faithfulness 55/55 on the auditable classes. The delta is exactly where
-the re-operationalisation says it should be: \g{G3} shifts from 0/7 on the old external-reference sample to
+0.95 for both), with source-structure faithfulness 55/55 on the auditable classes. The changed cases match the re-operationalisation: \g{G3} shifts from 0/7 on the old external-reference sample to
 8/8 on the corrected within-list misalignment sample, and \g{G5} from 0/7 to 10/10 on the corrected
-within-list chromatic clash sample; the non-replaced 55 pairs are unchanged.
+within-list chromatic clash sample. The non-replaced 55 pairs are unchanged.
 
 \begin{table*}[t]
 \centering
@@ -315,9 +313,9 @@ Not every consistency defect is format-suppressed. \g{S3} terminology inconsiste
 forced choice (0.625, heavy position bias): reading the same term across deck pages and spotting a subtle
 variant is below threshold even side by side. The structured-oracle channel, which feeds the model
 the full deck text with both variants present, also fails (0.56): with both variants already explicit in the
-input, this failure cannot be OCR, and instead reflects cross-page term-matching that does not survive the
-yes/no framing. The image channel is consistent with fine-grained glyph discrimination and the oracle channel
-fails even with the text in hand, so neither neural method is reliable. \g{S3} is therefore assigned to a symbolic terminology linter,
+input, this failure cannot be attributed to OCR. It instead reflects cross-page term matching that does not
+survive the yes/no framing. The image channel is consistent with fine-grained glyph discrimination and the oracle channel
+fails even with the text in hand, so neither neural method is reliable. We assign \g{S3} to a symbolic terminology linter,
 which reaches balanced accuracy 1.000 against the VLM's 0.69, a negative result that changes the selected method.
 
 \paragraph{The \g{G6} page-offset boundary depends on magnitude.}
@@ -325,47 +323,47 @@ Re-posing a defect as a within-slide contrast does not rescue every class. It fa
 redefine \g{G6} margin as a \emph{page offset}: the whole content block is shifted toward one edge (every
 element together, so internal alignment is preserved and the defect cannot be misalignment), leaving one
 margin crowded against (or running off) the edge and the opposite side empty.\footnote{The original \g{S6}
-render omitted the figure element, so the cross-modal contradiction was literally unseeable (recall $0$); on
+render omitted the figure element, so the cross-modal contradiction was literally unseeable (recall $0$). On
 the valid-figure corpus the \g{S6} 2-AFC reproduces at $0.75$--$1.00$ across all six VLMs, confirming it is a
 render artifact, not blindness.} Across all six VLMs and both pointwise framings the page offset stays at
-chance (roster-mean C3 $0.50$), and the pairwise test that separates \emph{data artifacts} (\g{S6}, which
+chance (roster-mean C3 $0.50$). The pairwise test that separates \emph{data artifacts} (\g{S6}, which
 recovers to perfect once the figure is rendered) from genuine blindness leaves \g{G6} on the floor for
 \emph{every} model. A stress-test addendum identifies the boundary: when the same rigid offset moves
 content 48 px beyond the page edge, both C0 and C3 detect the defect at 0.958 balanced accuracy (11/12 positives,
-12/12 clean controls), although C0 never names \g{G6} while C3 does. Thus the blind spot is genuine over the
-tested moderate, unclipped range but not magnitude-invariant; overt clipping restores visibility. Declared
+12/12 clean controls), although C0 never names \g{G6} while C3 does. The blind spot is genuine over the
+tested moderate, unclipped range but not magnitude-invariant. Overt clipping restores visibility. Declared
 geometry is still assigned to the linter because it detects both regimes without relying on this visual threshold.
 
 \paragraph{Template snapping can remove injected defects.}
 Enterprise ``snap-to-master'' templates re-fit element boxes to a grid before rendering, and we find a
 template silently \emph{absorbs} 45\% of injected geometry defects: overlap, alignment, and margin violations
-become pixel-identical to their clean twins after snapping, while overflow (content-determined) survives, a
-trap for any dataset that derives labels from the IR but evaluates on the rendered image, quantified and tied
-to a reward-model failure in Sec.~\ref{sec:g7}.
+become pixel-identical to their clean twins after snapping, while content-determined overflow survives. This
+creates a trap for datasets that derive labels from the IR but evaluate rendered images. Section~\ref{sec:g7}
+quantifies the effect and connects it to reward-model evaluation.
 
 % =====================================================================
-\section{A diagnosis-informed, subsequently frozen critic}\label{sec:hybrid}
+\section{A frozen critic guided by diagnosis}\label{sec:hybrid}
 % =====================================================================
 
-The diagnosis says a single model is the wrong unit. Diagnostic experiments and development-stage validation
-guide a manual correspondence from failure type to inspection method; this correspondence is not a learned
-router and is frozen before the disjoint evaluation. Table~\ref{tab:diagnosis-method} tests this correspondence
+The diagnosis shows why a single inspection method is insufficient. Diagnostic experiments and development-stage validation
+guide a manual correspondence from failure type to inspection method. This correspondence is not a learned
+router, and it is frozen before the disjoint evaluation. Table~\ref{tab:diagnosis-method} tests this correspondence
 against mismatched methods rather than reporting only successful assignments. The Technical Supplement reports
 the inspected development validation and its executor mapping separately from the frozen result.
 
 Together these contrasts make the assignment rule operational: use a deterministic checker when the predicate
-is fully defined in trustworthy source structure; use an atomic render-aware query when the defect exists only
-in pixels and whole-rubric elicitation suppresses it; request a clean comparator when single-slide evidence is
-insufficient; and reserve neural semantic inspection for predicates not expressible as deterministic geometry
+is fully defined in trustworthy source structure. Use an atomic render-aware query when the defect exists only
+in pixels and whole-rubric elicitation suppresses it. Request a clean comparator when single-slide evidence is
+insufficient, and reserve neural semantic inspection for predicates not expressible as deterministic geometry
 or terminology rules. Failure under the required input is retained as a boundary rather than rerouted post hoc.
 
 \begin{figure*}[t]
 \centering
 \includegraphics[width=0.98\textwidth]{figs/fig_failure_to_intervention.pdf}
 \caption{Diagnosis-informed intervention design. Sub-perceptual defects are exposed by declared source
-geometry; format-suppressed defects are recovered by an atomic, localized render query; and ambiguous
-single-slide evidence is resolved with a clean reference. The diagram summarizes the manually specified
-correspondence rather than a learned router; Table~\ref{tab:diagnosis-method} reports its empirical support
+geometry. An atomic, localized render query recovers format-suppressed defects, while a clean reference
+resolves ambiguous single-slide evidence. The diagram summarizes the manually specified
+correspondence rather than a learned router. Table~\ref{tab:diagnosis-method} reports its empirical support
 and boundaries.}
 \label{fig:failure-to-intervention}
 \end{figure*}
@@ -377,19 +375,19 @@ Holding the model and image fixed, we compare four prompting conditions. C0 is o
 defect type against a rubric. C1 asks for a free-form description before classification. C2 uses a
 synthetic-twin pair in which the clean reference is re-rendered to a grid. C3 issues one yes/no query per defect
 type and requires localization of the offending element. The primary comparison is C3 against C0. The model,
-image, and taxonomy remain fixed; only the whole-rubric versus atomic evidence-bearing format changes. A gain
-under C3 therefore identifies sensitivity to the elicitation format under this controlled comparison.
+image, and taxonomy remain fixed. Only the whole-rubric versus atomic evidence-bearing format changes, so a
+gain under C3 identifies sensitivity to the elicitation format under this controlled comparison.
 
 \paragraph{C3 recovers \g{G7} within the capable subset.}
 We scope the claim to models that can see \g{G7} at all: a model counts as ``capable'' only if, under C3, it
 both detects the overflow (balanced accuracy $\ge0.70$ and precision $\ge0.70$ on paired clean controls) and
-points at the overflowing element; selected on the same test items, this subset is descriptive rather than
-confirmatory. This excludes InternVL-8B and Ovis-9B, which stay near chance, a
-capability boundary rather than a format effect. On the four capable models (three scales, three vendors), C3
+points at the overflowing element. Because selection uses the same test items, this subset is descriptive rather
+than confirmatory. InternVL-8B and Ovis-9B stay near chance and are excluded. Their result marks a capability boundary rather
+than a format effect. On the four capable models (three scales, three vendors), C3
 recovers what C0 suppresses: balanced accuracy $0.50$--$0.79\!\to\!0.93$--$1.00$, precision $0.88$--$1.00$.
 The effect appears across models. Pairing each slide across the four models, C3 fixes 233 \g{G7} items that C0
 missed against 2 reversals (McNemar $\chi^2_1{=}227$, $p<10^{-50}$).\footnote{Per-model $p\le1.5\!\times\!10^{-11}$,
-all surviving Holm correction over the final paper-wide 85-test family; the two reversals are on Gemma4-31B
+all surviving Holm correction over the final paper-wide 85-test family. The two reversals are on Gemma4-31B
 (C3 recall $88/90$). Full table in the supplement.} C0's one-call rubric does not include \g{G7}, which is a render class outside the original taxonomy. C3 asks
 about that class directly. The next controls separate the effect of naming the class from the effect of using an
 atomic query.
@@ -411,12 +409,12 @@ forced-pick artifact (capable models answer ``tie'' on $92$--$100\%$ of clean pa
 The remaining alternative is that atomic elicitation wins only because it spends more test-time compute than a
 whole-rubric call. We therefore compare one C3 call with majority vote over ten independent C0 samples on three
 API-served vendors. C3 improves balanced accuracy by 0.20--0.31 even though repeated C0 receives the larger
-sampling budget. Thus extra sampling cannot explain the recovery. These contrasts are included in the
-paper-wide 85-test Holm family; a focused 24-test analysis is reported only as a descriptive companion in the
+sampling budget. Extra sampling therefore cannot explain the recovery. These contrasts are included in the
+paper-wide 85-test Holm family. A focused 24-test analysis is reported only as a descriptive companion in the
 Technical Supplement.
 
 Naming and format controls in the Technical Supplement show that adding \g{G7} to the whole-rubric list
-recovers recall but harms specificity, whereas an atomic query recovers both; a clean reference adds no further
+recovers recall but harms specificity, whereas an atomic query recovers both. A clean reference adds no further
 benefit for this class.
 
 \paragraph{Elicitation depends on model capability and defect class.}
@@ -432,12 +430,13 @@ VLM-only, a ceiling set by missing structure, not method.
 \subsection{Frozen critic specification and disjoint evaluation}\label{sec:coverage}
 
 Table~\ref{tab:frozen-spec} is the executable specification used for the frozen nine-class image arm. It is a
-manual, diagnosis-informed design rather than a learned router. A missing terminal verdict is \textsc{defer};
-for evaluation, \textsc{defer} is conservatively scored as a miss.
+manual, diagnosis-informed design rather than a learned router. A missing terminal verdict is \textsc{defer}.
+For evaluation, \textsc{defer} is conservatively scored as a miss.
 
-\g{G4}/\g{S3} remain linter-owned but are outside this nine-class image arm; \g{S2}/\g{S5} are deck-scope and
-also excluded. On the disjoint arm, the frozen critic obtains 0.826 macro balanced accuracy. All four
-trusted-native-IR linter classes are perfect; the three direct-neural classes average 0.811. Neither
+\g{G4}/\g{S3} remain linter-owned but are outside this nine-class image arm. The deck-scope classes
+\g{S2}/\g{S5} are also excluded. On the disjoint arm, the frozen critic obtains 0.826 macro balanced accuracy. All four
+trusted-native-IR linter classes reach 1.000 balanced accuracy. The three direct-neural classes average 0.811.
+Neither
 reference request produces a terminal comparison verdict, so \g{G1}/\g{S6} are scored as misses. This supports
 the hybrid division of labor primarily where trustworthy source structure exists, rather than confirming every
 neural or reference-dependent component. Full per-class precision, recall, localization, and development-stage
@@ -445,7 +444,7 @@ comparisons are in the Technical Supplement.
 
 \paragraph{A neural transfer boundary.}
 For \g{G7}, development performance drops from 0.937 to 0.567 on the frozen arm. We treat this as a transfer
-failure rather than evidence of universal neural recovery; the available artifacts do not identify a unique
+failure rather than evidence of universal neural recovery. The available artifacts do not identify a unique
 cause. Pairwise probes likewise show that \g{G1}/\g{S6} can be distinguished when a clean twin is already
 provided, but the frozen executor does not complete reference request $\to$ comparison $\to$ verdict. The
 Technical Supplement reports development validation, same-set executor diagnostics, and limited-class
@@ -455,21 +454,19 @@ follow-ups without treating them as frozen full-system evidence.
 
 \paragraph{Construction and scorer response.}
 \g{G7} makes the linter's blind spot falsifiable: a declared box that is legal (in-margin, non-overlapping) but
-whose rendered content overflows its container. The IR carries only legal short text; the overflow lives in the
+whose rendered content overflows its container. The IR carries only legal short text. The overflow lives in the
 renderer, so the linter and any structure-only model are blind by construction. A self-check confirms zero
 findings on 90/90 \g{G7} defectives. We then audit five published scorers plus one frontier VLM judge on the
-same paired slides. The same-backbone comparison provides the most direct separation: CLIP-IQA detects \g{G7}, whereas the LAION
+same paired slides. The same-backbone comparison isolates the difference most directly: CLIP-IQA detects \g{G7}, whereas the LAION
 aesthetic head on the same CLIP-L/14 backbone is at chance. Skywork, PickScore, and Qwen3.7-Max also detect the
-class, whereas DocReward does not (full per-scorer table in the Technical Supplement). So on the
+class, whereas DocReward does not (full per-scorer table in the Technical Supplement). On the
 scorers tested, \g{G7} tracks a rendered-quality read-out rather than the training-domain label.
 
 \paragraph{Template snapping removes 45\% of injected geometry.}
 The reward audit ties to the template result of Sec.~\ref{sec:diag}. Rendering every injected defective both
-faithfully and snapped-to-master, 45\% of injected geometry defects (100\% of overlap, alignment, margin; 20\%
-of overflow) become pixel-identical to their clean twin after snapping. Feeding the \emph{snapped} pairs to all
+faithfully and snapped-to-master, 45\% of injected geometry defects (100\% of overlap, alignment, and margin, and 20\% of overflow) become pixel-identical to their clean twin after snapping. Feeding the \emph{snapped} pairs to all
 five scorers gives preference accuracy 0.00 at a reward gap of exactly 0.000: identical inputs force identical
-scores. This is a dataset-integrity hazard, not a reward-model deficiency, and it is model-agnostic by
-construction: any reward model trained or evaluated on snap-rendered images with IR-derived labels inherits
+scores. This is a dataset-integrity hazard rather than a reward-model deficiency. It is model-agnostic by construction: any reward model trained or evaluated on snap-rendered images with IR-derived labels inherits
 these zero-signal pairs. Perturbation fidelity must be checked at the pixel level, not assumed from the IR.
 
 % =====================================================================
@@ -491,10 +488,8 @@ Supplement.
 \paragraph{A real pre-sales agent deck exposes distribution shift.}
 On a real 16-slide proposal from a deployed PowerPoint agent, the verifiable defect is 20 unfilled template
 placeholders (``add a title here'') across 7 slides. This semantic-completeness defect is outside the linter's
-rules.
-The zero-shot 30B is the best detector (recall 1.0, names the placeholder on 4/7 slides, scores them 0.03
-vs.\ 0.64 for clean), while the \emph{finetuned} 8B, top of the intrinsic ranking, is among the \emph{worst}
-here (0/7), and the linter's apparent recall is spurious geometry noise: on a novel defect the ranking is by
+rules. The zero-shot 30B is the best detector (recall 1.0, names the placeholder on 4/7 slides, scores them 0.03
+vs.\ 0.64 for clean), while the finetuned 8B, top of the intrinsic ranking, is among the worst here (0/7), and the linter's apparent recall is spurious geometry noise: on a novel defect the ranking is by
 general-VLM ability rather than specialist in-distribution quality. The examiner learned a distribution, not
 universal quality. Feeding the flagged placeholders back to the generator for one revision drives the defect
 from 20 to 0.
@@ -507,42 +502,44 @@ structural oracle and obtain the oracle without human or model annotation:
 (the IR$\to$render gap that \g{G7} exploits is exactly what this oracle does \emph{not} capture). From 26 real
 decks we inject one single-shape defect per slide \emph{in PPTX XML space} (overflow, overlap, alignment,
 font, margin) and render both the clean and defective one-slide deck with the same renderer (LibreOffice), so
-the paired pixel diff isolates the injected defect on real pixels (209 paired slides, 5 classes, 3 VLMs / 3
-families). Two results follow. First, the \S\ref{sec:diag} ``snap absorbs 45\%'' hazard is
-\emph{template-specific}: real free-form decks absorb only 7\% (render-fidelity 0.93), a positive control.
-Second, \emph{all three} attribution outcomes appear on real geometry: coarse defects
-(overflow, overlap) are image-sufficient (A~$0.70$--$0.74$, structure adds nothing); a margin bleed is a
-perception bottleneck the oracle rescues for weaker VLMs (A~$0.59 \to$ B~$0.70$); and fine alignment stays
-near chance in \emph{every} channel for \emph{every} model (A$=$B$=$C$\approx 0.50$; a supra-threshold
-$44$\,px internal-contrast re-run reproduces this, A/B/C~$0.51$--$0.54$, $n{=}41$). This is \emph{not} a hard
+the paired pixel difference isolates the injected defect on real pixels (209 paired slides, 5 classes, 3 VLMs
+from 3 families). The first result is that the \S\ref{sec:diag} ``snap absorbs 45\%'' hazard is
+\emph{template-specific}: real free-form decks absorb only 7\% (render-fidelity 0.93), a positive control. The second result is that all three attribution outcomes appear on real geometry: coarse defects
+(overflow, overlap) are image-sufficient (A~$0.70$--$0.74$, structure adds nothing). A margin bleed is a
+perception bottleneck that the oracle rescues for weaker VLMs (A~$0.59 \to$ B~$0.70$), while fine alignment stays
+near chance in every channel for every model (A$=$B$=$C$\approx 0.50$). A supra-threshold
+$44$\,px internal-contrast re-run reproduces this result, with A/B/C at $0.51$--$0.54$ and $n{=}41$). This is
+not a hard
 capability floor (on clean slides the same defect recovers under targeted elicitation once it clears acuity),
 but on real cluttered layouts the model does not isolate the misaligned element reliably among genuine
-layout variation, and specificity collapses, so for declared geometry the symbolic linter remains the reliable detector regardless.
+layout variation, and specificity collapses. For declared geometry, the symbolic linter remains the reliable
+detector.
 
 \paragraph{Pixel-recovered structure does not restore the linter.}
 A third-party PDF/PNG deck ships no IR, so we ask whether \emph{recovering} element structure from pixels
-re-arms the linter. Following DocLayNet/PubLayNet~\citep{doclaynet,publaynet}, PP-DocLayoutV2 returns region
-boxes per render (class-agnostic non-maximum suppression removes cross-class duplicates) that feed the \emph{same} linter. The
-answer is a pre-registered negative: recovered structure leaves the linter at chance on
+re-arms the linter. Document-layout datasets such as DocLayNet and PubLayNet define region annotations for recovering document
+structure~\citep{doclaynet,publaynet}. In our test, PP-DocLayoutV2 returns region boxes per render.
+Class-agnostic non-maximum suppression removes cross-class duplicates before the boxes feed the \emph{same}
+linter. The pre-registered result is negative: recovered structure leaves the linter at chance on
 \g{G1}/\g{G3}/\g{G4} and rescues only overlap partially (\g{G2} $0.54$ vs.\ native-IR $0.67$ vs.\ VLM-only
-$0.87$); the detector \emph{over-segments} ($\approx2\times$ more boxes, recovery recall at intersection-over-union (IoU)${\geq}0.5$
+$0.87$). The detector \emph{over-segments} ($\approx2\times$ more boxes, recovery recall at intersection-over-union (IoU)${\geq}0.5$
 only $0.30$--$0.39$), so collisions split and overlap recall falls $0.78\to0.29$. On image-only
 \textsc{SlideAudit} the recovered linter clears chance only on \g{G2} ($0.55$) while the C3-elicited VLM
 reaches $0.94$. On real third-party decks even \emph{native} IR is weakened (no position/font bookkeeping, so
 \g{G3}/\g{G4} rules are at chance and margin/overlap rules \emph{over-fire}, specificity $0.11$/$0.56$), so
 the VLM-only engine has higher balanced accuracy on every coarse class in this setting. The linter's advantage
-is limited to in-distribution, clean native IR; with open-world inputs, the deployable critic remains bounded by
+is limited to in-distribution, clean native IR. With open-world inputs, the deployable critic remains bounded by
 the VLM.
 
 % =====================================================================
 \section{Limitations}\label{sec:limits}
 % =====================================================================
 
-The full critic assumes a generation pipeline with trustworthy native IR; pixel-only or open-world inputs reduce
+The full critic assumes a generation pipeline with trustworthy native IR. Pixel-only or open-world inputs reduce
 it to VLM-only inspection, and structure recovered from pixels does not restore the linter's guarantees. The
 real-layout study uses injected defects, with image-only \textsc{SlideAudit} as a complementary probe. Reported
 class intervals are component-wise Wilson-derived, but we do not estimate system-level macro uncertainty with
-templates or decks as clusters. Finally, examiner feedback yields near-zero downstream generation gain: this
+templates or decks as clusters. Examiner feedback yields near-zero downstream generation gain: this
 paper supports failure diagnosis and detection, not the claim that a critic necessarily improves generated
 slides. The human audit is a corpus spot-check rather than an inter-annotator or deployment-time baseline.
 
@@ -550,10 +547,10 @@ slides. The human audit is a corpus spot-check rather than an inter-annotator or
 \section{Conclusion}
 % =====================================================================
 
-Failure attribution guides a manually specified, subsequently frozen division of labor: trusted declared
+Failure attribution guides a manually specified division of labor that is frozen before evaluation: trusted declared
 geometry goes to symbolic linting, render-only failures to targeted elicitation, and semantics to direct neural
-inspection. The disjoint evaluation supports this design most strongly for native-IR classes, while neural
-transfer and incomplete reference comparison remain explicit boundaries. The result therefore applies to
+inspection. The disjoint evaluation supports this design most strongly for native-IR classes. Neural transfer
+and incomplete reference comparison remain explicit boundaries. The result applies to
 IR-owning generation pipelines, not to a universal pixel-only slide critic. \emph{Reproducibility:} code,
 linters, harness, detailed results, and executor audits are in the Code and Data Supplement.
 
