@@ -45,7 +45,8 @@ Symbolic--Neural Critic for Slides''}
 This supplement extends the main paper with material referenced from the body
 but omitted there for space: the SlideAudit crosswalk and full transfer table
 (\S\ref{app:crosswalk}), the coverage precision companion
-(\S\ref{app:coverage-precision}),
+(\S\ref{app:coverage-precision}), the three-vendor repeated-C0 control
+(\S\ref{app:compute-control}),
 the full multi-reward / VLM-judge audit grid with per-class preference accuracies
 (\S\ref{app:reward}), the full page-semantic examiner table including the
 deck-scope negative result (\S\ref{app:examiner}), the development and frozen
@@ -407,6 +408,78 @@ model at the tested moderate, unclipped magnitudes. A separate extreme-offset
 stress test below locates the clipping boundary where this conclusion ceases to hold.}
 \label{figA:artifact}
 \end{figure}
+
+% =====================================================================
+\section{Repeated whole-rubric control across three vendors}
+\label{app:compute-control}
+% =====================================================================
+
+The main paper compares one atomic \g{G7} query (C3) against ten independent
+whole-rubric C0 samples. Table~\ref{tab:compute-control} gives the complete
+three-vendor result, including two prespecified companion aggregations that are
+not headline results in the main paper. \emph{Self-consistency} is majority
+vote over the repeated C0 samples. \emph{Union} flags a slide when any C0 draw
+flags it; this OR rule relaxes the decision threshold as the number of draws
+grows and is therefore not a standard accuracy-oriented compute-scaling rule.
+\emph{C0-full} is a single whole-taxonomy call supplied with per-class
+definitions and required evidence. All conditions use the same rendered pairs,
+and balanced accuracy is computed against paired clean controls.
+
+\begin{table}[h]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\caption{Complete \g{G7} compute-control results. C3 uses one call. Repeated
+C0 receives ten attempted draws; provider failures leave 8.37--10.0 successful
+calls per slide. $\Delta$ is C3 minus self-consistency. All three $\Delta$
+contrasts survive Holm correction in the 24-test E2 family.}
+\label{tab:compute-control}
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+Vendor model & C0 & Self-cons. & Union & C0-full & C3 / $\Delta$ \\
+\midrule
+Gemini-2.5-Flash & .61 & .59 & .61 & .73 & .88 / +.29 \\
+GPT-5.1 (no thinking) & .70 & .63 & .78 & .79 & .83 / +.20 \\
+Qwen3-VL-Plus & .64 & .61 & .66 & .67 & .92 / +.31 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The negative-control class \g{G1} does not show a general atomic-query gain:
+C3 versus C0 is .64 versus .51 for Gemini, .50 versus .51 for GPT, and .50
+versus .86 for Qwen. This agrees with the attribution result that \g{G1} is
+reference-assisted rather than merely format-suppressed. The union and C0-full
+companions also prevent interpreting the \g{G7} result as universal: union
+nearly closes the GPT gap (.78 versus .83), and C0-full is statistically tied
+with C3 for GPT, while C3 remains higher for Gemini and Qwen.
+
+\begin{table}[h]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\caption{Inference budget per \g{G7} slide. Tokens are provider-reported means.
+C3 uses fewer successful calls and fewer completion tokens than repeated C0 in
+all three vendors; Gemini additionally reports reasoning tokens.}
+\label{tab:compute-budget}
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+Condition & Calls & Prompt tok. & Completion tok. & Reasoning tok. \\
+\midrule
+Gemini repeated C0 & 10.00 & 23716.7 & 1531.1 & 11631.4 \\
+Gemini C3 & 1.00 & 2024.0 & 37.5 & 401.8 \\
+GPT repeated C0 & 8.54 & 12261.5 & 348.4 & 0 \\
+GPT C3 & 1.00 & 1123.0 & 40.5 & 0 \\
+Qwen repeated C0 & 8.37 & 11813.6 & 1083.6 & 0 \\
+Qwen C3 & 1.00 & 1098.0 & 34.7 & 0 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The paper-wide primary multiplicity family contains the original 61 tests plus
+all 24 E2 contrasts (85 total). At $\alpha=.05$, 35 survive Holm correction and
+47 survive Benjamini--Hochberg correction. The Code and Data Supplement includes
+the E2 summary, all per-slide rows, provider usage fields, and the complete
+multiplicity table.
 
 \section{Diagnosis--method correspondence, frozen confirmation, and extreme-offset addenda}
 \label{app:w5-heldout}

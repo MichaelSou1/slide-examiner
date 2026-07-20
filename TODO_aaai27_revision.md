@@ -255,7 +255,7 @@
 - [x] **5+.4 统一两套数字的口径**：正文与 supplement 已明确区分 W5 held-out validation（`.957`，9×150 positive/clean）和后续 disjoint frozen image-arm check（`.8259`，9×30 positive/clean，未决 reference request 按 miss 计），并在 supplement 给出后者逐类表及外层 attempt 状态说明（2026-07-20）。
 - [x] **5+.5 重写论文主线**：贡献顺序已统一为①失败归因；② compute-matched 排除额外算力解释；③归因指导 deterministic symbolic–neural critic；④后续 disjoint frozen image-arm check 与真实迁移边界。标题、Abstract、Fig.1 caption、Introduction、Method、Results、Conclusion 已同步（2026-07-20）。
 - [x] **5+.6 清理路由模型叙事**：投稿正文与 tech-report 的叙事已改为 `prescribed critic` / `deterministic composition` / method assignment；正文对 learned router、D3、distill、defer、action head、selective defer/escalation 的审计为零命中。仅 artifact 路径与既有图片文件名保留 `route/routing`（2026-07-20）。
-- [x] **5+.7 验收**：总表数字均回指既有 artifact；`.957` / `.8259` 口径分离；未新增训练或 GPU 实验；投稿正文、14 页 supplement 与 18 页 tech-report 均构建通过，投稿正文 8 页且 References 仍从物理第 7 页开始；关键数字一致（2026-07-20）。
+- [x] **5+.7 验收**：总表数字均回指既有 artifact；`.957` / `.8259` 口径分离；未新增训练或 GPU 实验；投稿正文、16 页 supplement 与 18 页 tech-report 均构建通过，投稿正文 8 页且 References 仍从物理第 7 页开始；关键数字一致。Reproducibility Checklist 与 Code and Data Supplement 已同步当前正文，后者纳入 E2、W5、冻结 image arm 和 executor confirmation 产物（2026-07-20）。
 
 ### W5++：executor repair 与独立确认（2026-07-20）
 
