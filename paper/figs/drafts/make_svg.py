@@ -18,6 +18,10 @@ BLUE   = "#3F6FB5"   # linter / perception-true path
 BLUE_L = "#AFC6E6"
 ORANGE = "#E07F2C"   # VLM / format-suppressed path
 ORANGE_L = "#F2C79A"
+TEAL   = "#2A9D8F"   # reference-assisted comparison
+TEAL_L = "#C7E8E3"
+PURPLE = "#7A5DBB"   # semantic examiner
+PURPLE_L = "#DDD4F0"
 GREY   = "#9AA4B0"
 GREY_L = "#E7EBF0"
 PANEL  = "#F5F7FA"
@@ -26,7 +30,7 @@ RED    = "#D24A43"
 GREEN  = "#4E9A6B"
 NEUT   = "#8A93A0"
 
-FONT = "Helvetica Neue, Helvetica, Arial, sans-serif"
+FONT = "Arial, Helvetica, sans-serif"
 
 # ---- low-level helpers ---------------------------------------------------
 def rrect(x, y, w, h, r, fill="none", stroke="none", sw=0, dash=None, op=1):
@@ -173,52 +177,125 @@ def slide_card(x, y, w, h, accent=BLUE, accent_l=BLUE_L, sw=2.2, stroke=INK,
 # FIG 1 — teaser: diagnosis routes to two engines, converge in hybrid critic
 # =========================================================================
 def fig_teaser():
-    W, H = 1200, 770
-    defs = (arrow_marker("aGrey", SLATE) + arrow_marker("aBlue", BLUE) +
-            arrow_marker("aOrange", ORANGE))
+    """Portrait single-column overview: evidence -> attribution -> routed critic."""
+    W, H = 720, 900
+    defs = (arrow_marker("tGrey", SLATE) + arrow_marker("tBlue", BLUE) +
+            arrow_marker("tOrange", ORANGE) + arrow_marker("tTeal", TEAL) +
+            arrow_marker("tPurple", PURPLE))
     b = []
-    # input slide
-    card, _ = slide_card(60, 300, 220, 150, accent=SLATE, accent_l=GREY_L, lines=3)
-    b.append(card)
-    b.append(txt(170, 478, "input slide", size=19, fill=SLATE))
-    # diamond diagnosis
-    dcx, dcy, dr = 430, 375, 72
-    b.append(f'<polygon points="{dcx},{dcy-dr} {dcx+dr},{dcy} {dcx},{dcy+dr} {dcx-dr},{dcy}" '
-             f'fill="{PANEL}" stroke="{INK}" stroke-width="2.2"/>')
-    b.append(txt(dcx, dcy-4, "perception /", size=17, fill=INK))
-    b.append(txt(dcx, dcy+16, "reasoning", size=17, fill=INK))
-    b.append(txt(dcx, dcy+34, "diagnosis", size=17, fill=INK, weight="600"))
-    # arrow input->diamond
-    b.append(path(f'M285,375 L{dcx-dr-6},375', stroke=SLATE, sw=3, marker="aGrey"))
-    # top branch -> linter
-    lx, ly, lw, lh = 600, 95, 170, 130
-    b.append(path(f'M{dcx},{dcy-dr} V160 H{lx-6}', stroke=BLUE, sw=3, marker="aBlue"))
-    b.append(rrect(lx, ly, lw, lh, 12, fill="#fff", stroke=BLUE, sw=2.4))
-    b.append(icon_ruler(lx+lw/2, ly+lh*0.42, 34, color=BLUE))
-    b.append(txt(lx+lw/2, ly+lh+26, "symbolic linter", size=19, fill=BLUE, weight="600"))
-    b.append(txt(lx+lw/2, ly+lh+48, "declared geometry", size=16, fill=SLATE))
-    # bottom branch -> VLM
-    vx, vy, vw, vh = 600, 500, 170, 135
-    b.append(path(f'M{dcx},{dcy+dr} V570 H{vx-6}', stroke=ORANGE, sw=3, marker="aOrange"))
-    b.append(rrect(vx, vy, vw, vh, 12, fill="#fff", stroke=ORANGE, sw=2.4))
-    b.append(icon_eye(vx+vw/2, vy+34, 26, color=ORANGE))
-    sc,_ = slide_card(vx+vw*0.22, vy+58, vw*0.56, vh*0.42, accent=ORANGE, accent_l=ORANGE_L, sw=1.6, lines=2)
-    b.append(sc)
-    b.append(txt(vx+vw/2, vy+vh+26, "re-elicited VLM", size=19, fill=ORANGE, weight="600"))
-    b.append(txt(vx+vw/2, vy+vh+48, "format-suppressed", size=16, fill=SLATE))
-    # hybrid critic
-    hx, hy, hw, hh = 980, 295, 175, 160
-    b.append(path(f'M{lx+lw},160 H{hx+hw/2} V{hy-6}', stroke=BLUE, sw=3, marker="aBlue"))
-    b.append(path(f'M{vx+vw},567 H{hx+hw/2} V{hy+hh+6}', stroke=ORANGE, sw=3, marker="aOrange"))
-    b.append(rrect(hx, hy, hw, hh, 12, fill=PANEL, stroke=INK, sw=2.4))
-    b.append(icon_scale(hx+hw/2, hy+hh*0.42, 38))
-    b.append(txt(hx+hw/2, hy+hh+26, "hybrid critic", size=20, fill=INK, weight="600"))
-    # title + G7 footnote
-    b.append(txt(W/2, 44, "Diagnosis routes each defect to its bottleneck-appropriate engine",
-                 size=23, fill=INK, weight="600"))
-    b.append(txt(W/2, 748, "G7 render-overflow (legal box, overflowing pixels) is linter-blind by "
-                 "construction; only a rendered-quality read-out catches it",
-                 size=16, fill=SLATE, style="italic"))
+
+    # Top evidence tray: three genuinely different views of the same slide.
+    b.append(rrect(18, 18, 684, 154, 18, fill=PANEL, stroke=GREY_L, sw=2))
+    evidence = [(36, BLUE, BLUE_L, "Rendered pixels"),
+                (268, SLATE, GREY_L, "Geometry oracle"),
+                (500, TEAL, TEAL_L, "Clean reference")]
+    for x, color, light, label in evidence:
+        b.append(rrect(x, 36, 184, 116, 12, fill="#FFFFFF", stroke=color, sw=2.2))
+        b.append(rrect(x+12, 48, 160, 26, 7, fill=light))
+        b.append(txt(x+92, 68, label, size=16, fill=INK, weight="600"))
+    # rendered slide thumbnail
+    b.append(rrect(54, 86, 148, 50, 5, fill="#FFFFFF", stroke=BLUE, sw=1.4))
+    b.append(mountain(62, 93, 48, 34, bg=BLUE_L, ink=BLUE))
+    for i, w in enumerate((72, 60, 68)):
+        b.append(bar(120, 95+i*10, w, 5, fill=GREY, r=2))
+    # structured wireframe thumbnail
+    b.append(rrect(286, 86, 148, 50, 5, fill="#FFFFFF", stroke=SLATE, sw=1.4))
+    b.append(rrect(295, 94, 56, 34, 3, fill="none", stroke=BLUE, sw=1.4, dash="4 3"))
+    b.append(rrect(360, 94, 65, 14, 3, fill="none", stroke=SLATE, sw=1.4, dash="4 3"))
+    b.append(rrect(360, 114, 65, 14, 3, fill="none", stroke=SLATE, sw=1.4, dash="4 3"))
+    # clean paired thumbnail
+    b.append(rrect(518, 86, 148, 50, 5, fill="#FFFFFF", stroke=TEAL, sw=1.4))
+    b.append(mountain(526, 93, 48, 34, bg=TEAL_L, ink=TEAL))
+    for i, w in enumerate((72, 60, 68)):
+        b.append(bar(584, 95+i*10, w, 5, fill=GREY, r=2))
+    b.append(check_badge(659, 89, 9, color=TEAL))
+
+    # Evidence is attributed before a critic is selected.
+    for x in (128, 360, 592):
+        b.append(path(f"M{x},152 V188", stroke=SLATE, sw=2.6))
+    b.append(path("M128,188 H592", stroke=SLATE, sw=2.6))
+    b.append(path("M360,188 V207", stroke=SLATE, sw=3, marker="tGrey"))
+    b.append(rrect(118, 214, 484, 88, 18, fill="#FFFFFF", stroke=INK, sw=2.6))
+    b.append(rrect(138, 232, 54, 52, 12, fill=GREY_L))
+    b.append(icon_crosshair(165, 258, 20, color=INK))
+    b.append(txt(220, 265, "Failure attribution", size=22, fill=INK, anchor="start", weight="600"))
+    # four colored channel sockets make the routing explicit without prose
+    for cx, color in ((459, BLUE), (493, ORANGE), (527, TEAL), (561, PURPLE)):
+        b.append(f'<circle cx="{cx}" cy="258" r="9" fill="{color}"/>')
+
+    # Draw routing first so cards mask the portions that pass behind them.
+    # Route attribution to pods; pods converge on deterministic fusion.
+    b.append(path("M310,302 V320 H109 V338", stroke=BLUE, sw=2.5, marker="tBlue"))
+    b.append(path("M410,302 V320 H611 V338", stroke=ORANGE, sw=2.5, marker="tOrange"))
+    b.append(path("M286,302 V326 H210 V600 H200", stroke=TEAL, sw=2.5, marker="tTeal"))
+    b.append(path("M434,302 V326 H510 V600 H520", stroke=PURPLE, sw=2.5, marker="tPurple"))
+    for x, y, color in ((109,480,BLUE),(611,480,ORANGE),(109,668,TEAL),(611,668,PURPLE)):
+        b.append(path(f"M{x},{y} V706 H360", stroke=color, sw=2.5))
+
+    # Routed analysis pods flank the central counterexample.
+    pods = [(24, 344, BLUE, BLUE_L, "Symbolic linter", "ruler"),
+            (526, 344, ORANGE, ORANGE_L, "Atomic VLM", "eye"),
+            (24, 532, TEAL, TEAL_L, "Reference check", "compare"),
+            (526, 532, PURPLE, PURPLE_L, "Semantic examiner", "semantic")]
+    for x, y, color, light, label, kind in pods:
+        b.append(rrect(x, y, 170, 136, 14, fill="#FFFFFF", stroke=color, sw=2.4))
+        b.append(rrect(x+10, y+10, 150, 30, 8, fill=light))
+        b.append(txt(x+85, y+32, label, size=15, fill=INK, weight="600"))
+        if kind == "ruler":
+            b.append(icon_ruler(x+85, y+87, 28, color=color))
+        elif kind == "eye":
+            b.append(icon_eye(x+85, y+87, 29, color=color))
+        elif kind == "compare":
+            b.append(rrect(x+38, y+63, 44, 51, 5, fill="#fff", stroke=color, sw=1.8))
+            b.append(rrect(x+88, y+63, 44, 51, 5, fill="#fff", stroke=color, sw=1.8))
+            b.append(line(x+73, y+88, x+97, y+88, stroke=color, sw=2.2))
+            b.append(check_badge(x+126, y+111, 9, color=color))
+        else:
+            # compact node graph: semantics/content relationships
+            pts = [(x+55,y+88),(x+84,y+66),(x+116,y+88),(x+84,y+111)]
+            for a,c in ((0,1),(1,2),(2,3),(3,0),(0,2)):
+                b.append(line(*pts[a], *pts[c], stroke=color, sw=1.8))
+            for px,py in pts:
+                b.append(f'<circle cx="{px}" cy="{py}" r="7" fill="{color}"/>')
+
+    # Central crux: identical declarations, different rendered containment.
+    b.append(rrect(212, 334, 296, 344, 18, fill=PANEL, stroke=INK, sw=2.6))
+    b.append(rrect(228, 350, 264, 38, 9, fill=GREY_L))
+    b.append(txt(360, 376, "Rendered overflow", size=18, fill=INK, weight="600"))
+    # legal declared boxes (same geometry)
+    for y in (414, 535):
+        b.append(rrect(258, y, 204, 86, 8, fill="#FFFFFF", stroke=DASHC, sw=2, dash="7 5"))
+        b.append(rrect(274, y+15, 38, 38, 5, fill=BLUE_L))
+        b.append(bar(326, y+18, 112, 8, fill=GREY, r=3))
+        b.append(bar(326, y+34, 92, 8, fill=GREY, r=3))
+    b.append(check_badge(476, 428, 12, color=GREEN))
+    # second rendered line crosses the legal boundary; eye catches it
+    b.append(bar(326, 581, 154, 8, fill=ORANGE, r=3))
+    b.append(path("M466,593 C486,601 490,614 476,628", stroke=ORANGE, sw=2.4, marker="tOrange"))
+    b.append(icon_eye(461, 647, 18, color=ORANGE))
+    b.append(cross_badge(245, 549, 12, color=RED))
+    # a pale divider emphasizes controlled-pair logic
+    b.append(line(238, 518, 482, 518, stroke=GREY, sw=1.5, dash="3 5"))
+
+    b.append(path("M360,678 V724", stroke=INK, sw=3, marker="tGrey"))
+    b.append(rrect(116, 730, 488, 94, 18, fill="#FFFFFF", stroke=INK, sw=2.8))
+    b.append(rrect(136, 748, 58, 58, 14, fill=GREY_L))
+    b.append(icon_scale(165, 777, 22, color=INK, lc=BLUE, rc=ORANGE))
+    b.append(txt(220, 785, "Hybrid critic", size=22, fill=INK, anchor="start", weight="600"))
+    for cx, color in ((488, BLUE), (522, ORANGE), (556, TEAL)):
+        b.append(f'<circle cx="{cx}" cy="777" r="10" fill="{color}" opacity="0.9"/>')
+
+    # Compact actions; the caption carries the explanation.
+    for x, color, label, glyph in ((72, BLUE, "Detect", "eye"),
+                                   (276, ORANGE, "Localize", "target"),
+                                   (480, TEAL, "Repair", "wrench")):
+        b.append(path(f"M360,824 V840 H{x+84} V850", stroke=SLATE, sw=2.2))
+        b.append(rrect(x, 850, 168, 42, 12, fill="#FFFFFF", stroke=color, sw=2))
+        if glyph == "eye": b.append(icon_eye(x+28, 871, 13, color=color))
+        elif glyph == "target": b.append(icon_crosshair(x+28, 871, 13, color=color))
+        else: b.append(icon_wrench(x+28, 871, 13, color=color))
+        b.append(txt(x+52, 878, label, size=18, fill=INK, anchor="start", weight="600"))
+
     return svg_wrap(W, H, "".join(b), defs)
 
 # =========================================================================
@@ -416,7 +493,7 @@ FIGS = {
 import re
 
 COLOR_NAME = {INK:"figink", SLATE:"figslate", BLUE:"figblue", ORANGE:"figorange",
-              RED:"figred", GREEN:"figgreen", GREY:"figgrey", DASHC:"figslate"}
+              TEAL:"figteal", PURPLE:"figpurple", RED:"figred", GREEN:"figgreen", GREY:"figgrey", DASHC:"figslate"}
 
 def latex_escape(s):
     s = (s.replace("&", r"\&").replace("%", r"\%").replace("#", r"\#")
@@ -457,6 +534,8 @@ PREAMBLE = "\n".join([
     r"\definecolor{figslate}{HTML}{5A6675}",
     r"\definecolor{figblue}{HTML}{3F6FB5}",
     r"\definecolor{figorange}{HTML}{E07F2C}",
+    r"\definecolor{figteal}{HTML}{2A9D8F}",
+    r"\definecolor{figpurple}{HTML}{7A5DBB}",
     r"\definecolor{figred}{HTML}{D24A43}",
     r"\definecolor{figgreen}{HTML}{4E9A6B}",
     r"\definecolor{figgrey}{HTML}{9AA4B0}",

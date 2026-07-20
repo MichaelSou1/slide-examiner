@@ -27,6 +27,8 @@
 \definecolor{figorange}{HTML}{E07F2C}
 \definecolor{figred}{HTML}{D24A43}
 \definecolor{figgrey}{HTML}{9AA4B0}
+\definecolor{figteal}{HTML}{2A9D8F}
+\definecolor{figpurple}{HTML}{7A5DBB}
 
 \newcommand{\g}[1]{\textsf{#1}}        % defect-class names
 \newcommand{\best}[1]{\textbf{#1}}
@@ -61,6 +63,15 @@ reference-assisted class, on pixel-recovered structure, and on real \textsc{Slid
 prescription transfers.
 \end{abstract}
 
+\begin{figure}[!t]
+\centering
+\includegraphics[width=0.94\columnwidth]{figs/fig_teaser.pdf}
+\caption{\textbf{Diagnose before inspection.}
+A geometry oracle attributes each failure, then routes it to symbolic linting, atomic VLM elicitation,
+reference comparison, or semantic examination for deterministic fusion by the hybrid critic.}
+\label{fig:teaser}
+\end{figure}
+
 % =====================================================================
 \section{Introduction}
 % =====================================================================
@@ -73,31 +84,7 @@ see the overflow) or of \emph{elicitation} (it sees, but the way we ask buries t
 the answer decides whether the remedy is a larger model, a different prompt, or a different tool entirely. We
 treat that question as the design problem and answer it empirically.
 
-\begin{figure*}[tb]
-\centering
-\begin{overpic}[width=0.82\textwidth,percent]{figs/fig_teaser_notext.pdf}%
-  \put(14.17,24.33){\makebox(0,0)[b]{\footnotesize\color{figslate} input slide}}
-  \put(35.83,33.25){\makebox(0,0)[b]{\scriptsize\color{figink} perception /}}
-  \put(35.83,31.58){\makebox(0,0)[b]{\scriptsize\color{figink} reasoning}}
-  \put(35.83,30.08){\makebox(0,0)[b]{\scriptsize\bfseries\color{figink} diagnosis}}
-  \put(57.08,43.25){\makebox(0,0)[b]{\footnotesize\bfseries\color{figblue} symbolic linter}}
-  \put(57.08,41.42){\makebox(0,0)[b]{\scriptsize\color{figslate} declared geometry}}
-  \put(57.08,9.08){\makebox(0,0)[b]{\footnotesize\bfseries\color{figorange} re-elicited VLM}}
-  \put(57.08,7.25){\makebox(0,0)[b]{\scriptsize\color{figslate} format-suppressed}}
-  \put(88.96,24.08){\makebox(0,0)[b]{\footnotesize\bfseries\color{figink} hybrid critic}}
-  \put(50.0,1.83){\makebox(0,0)[b]{\scriptsize\itshape\color{figslate} G7 render-overflow (legal box, overflowing pixels) is linter-blind by construction; only a rendered-quality read-out catches it}}
-\end{overpic}
-\caption{\textbf{The paper in one picture.} A perception/reasoning diagnosis (Sec.~\ref{sec:diag}) shows
-slide-inspection failures are of two kinds. Declared-geometry defects are exact and cheap for a symbolic linter,
-with a sub-threshold acuity tail nothing recovers; merely format-suppressed defects are recovered by a
-vision--language model under a changed elicitation. The diagnosed bottleneck deterministically selects the
-inspection method, yielding a hybrid critic (Sec.~\ref{sec:hybrid}). A constructed render-overflow class (legal declared box,
-overflowing pixels) is the crux: invisible to the linter by construction, it is caught only by engines with a
-rendered-quality read-out (a re-elicited VLM, a frontier VLM judge, or general perceptual reward models), not by
-domain-labelled scorers, so its detection tracks perceptual capability rather than training domain
-(Sec.~\ref{sec:g7}).}
-\label{fig:teaser}
-\end{figure*}
+
 
 A VLM that ``cannot see'' a slide defect is hiding two failures of opposite character, and separating them is
 the whole problem. Some defects are \emph{sub-perceptual} (i.e., below the tested models' effective
